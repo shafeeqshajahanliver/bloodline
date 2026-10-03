@@ -12,8 +12,8 @@ Every fact records where it came from. Confidence values used throughout:
 | File | Contents | Source |
 |---|---|---|
 | `wikidata.json` | Credits, countries, languages, genres, based-on, derivatives, awards, runtime, budget, box office, external IDs (IMDb, TMDB, Letterboxd, Rotten Tomatoes) | Wikidata (CC0) |
-| `wikipedia.<lang>.md` | Full article text by section (plot, production, themes, reception) in English and the film's own language | Wikipedia (CC BY-SA) |
-| `wikipedia.json` | Which language Wikipedias cover the film (a rough measure of global reach), article revisions used | Wikipedia |
+| `wikipedia.<lang>.md` | Full article text by section (plot, production, themes, reception). English for every film that has an article; the original-language article too when the English plot is missing or under 150 words | Wikipedia (CC BY-SA) |
+| `wikipedia.json` / `wikipedia.none` | Which language Wikipedias cover the film (a rough measure of global reach); per article: title, URL, last-edited date, sections, plot section name and word count | Wikipedia |
 | `story.json` | Archetypes, motifs (with evidence), lineage links (with evidence, source and confidence) | Curated |
 | `corrections.json` | Fixes to upstream data, with reasons. Applied when the graph is built; source files stay untouched | Curated |
 | `script/screenplay.txt` (+ `.pdf`), `source.json` | Screenplay text and where it came from | IMSDb, Script Slug |

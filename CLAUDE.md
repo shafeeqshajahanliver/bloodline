@@ -19,7 +19,7 @@ Private research corpus of 500 horror films, owned by Shafeeq Shajahan (Shaf). F
 - Run scripts from the repo root with `PYTHONPATH=tools`, e.g. `PYTHONPATH=tools python3 tools/build_graph.py`.
 - After a data change: `tools/coverage.py`, `tools/eras.py`, `tools/build_graph.py`. All three are deterministic; on unchanged data they reproduce the committed files exactly.
 - Collection is resumable: `tools/run_batch.py --only tier1,subs,scares,scripts,stills`. It skips anything collected or marked absent (`*.none`, `script/none`).
-- Keep requests to Wikipedia slow (1 per 2–3 s) and use an identifying User-Agent (`common.py` sets one).
+- Keep requests to Wikipedia slow (1 per 3 s) with an identifying User-Agent. The Wikipedia API (`api.php`, REST) throttles this environment after a few calls; `index.php?action=raw` works, which is what `tools/tier1_wikipedia_bulk.py` uses. Wikidata's `wbsearchentities` is also throttled; use the SPARQL endpoint (with `mwapi` EntitySearch) instead.
 
 ## Repo notes
 

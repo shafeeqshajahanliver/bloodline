@@ -17,6 +17,7 @@ It is the research base for the podcast *You've Heard This Before* and for inter
 | **The list** | 500 films with country, region and two archetype tags each | Curated (`films.csv`) |
 | **Archetypes** | 27 recurring story shapes, each with its beat and documented folk roots on at least two continents | Curated (`archetypes.csv`) |
 | **Facts** | Cast, crew, companies, countries, languages, runtime, budget, awards, external IDs | Wikidata |
+| **Plot summaries** | Full Wikipedia articles by section: plot, production, reception, themes | Wikipedia |
 | **Dialogue** | Subtitles and measures: words per minute, share of runtime with dialogue, longest silences | OPUS OpenSubtitles corpus |
 | **Scares** | Jump-scare timings and ratings | Where's the Jump |
 | **Screenplays** | Script text and measures: interior/exterior split, night scenes | IMSDb, Script Slug |
@@ -86,6 +87,7 @@ Python 3. Install with `pip install -r requirements.txt`; `pdftotext` and `ffmpe
 |---|---|
 | Match films to Wikidata and IMDb | `tools/resolve_ids.py` (hand-checked matches in `tools/ids_manual.json` override the automatic ones) |
 | Collect data (resumable, skips what's done) | `tools/run_batch.py --only tier1,subs,scares,scripts,stills` |
+| Wikipedia articles (resumable, ~1 request per 3 s) | `tools/tier1_wikipedia_bulk.py [film ids]` |
 | Subtitles for given films | `tools/tier2_subtitles.py <film ids>` |
 | Full-film colour and pacing | `tools/tier3_visual.py <video> <film id>` |
 | Rebuild reports and graph | `tools/coverage.py`, `tools/eras.py`, `tools/build_graph.py` |
