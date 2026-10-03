@@ -4,13 +4,13 @@ Generated 2026-10-03.
 
 | Layer | Films | Share |
 |---|---|---|
-| Matched IDs | 482 | 96% |
-| Facts (Wikidata) | 482 | 96% |
+| Matched IDs | 498 | 100% |
+| Facts (Wikidata) | 498 | 100% |
 | English subtitles | 426 | 85% |
 | Original-language subtitles | 63 | 13% |
-| Screenplay | 115 | 23% |
-| Jump scares | 188 | 38% |
-| Stills | 260 | 52% |
+| Screenplay | 116 | 23% |
+| Jump scares | 189 | 38% |
+| Stills | 264 | 53% |
 | Full-film visuals | 1 | 0% |
 | Story layer (archetypes, motifs, lineage) | 10 | 2% |
 
@@ -18,11 +18,11 @@ Generated 2026-10-03.
 
 | Region | Films | Subtitles (EN) | Screenplay | Jump scares | Stills |
 |---|---|---|---|---|---|
-| North America | 223 | 187 | 99 | 116 | 129 |
-| Continental Europe | 77 | 69 | 3 | 21 | 45 |
+| North America | 223 | 187 | 100 | 117 | 130 |
+| Continental Europe | 77 | 69 | 3 | 21 | 46 |
 | UK & Ireland | 58 | 50 | 10 | 30 | 48 |
-| East Asia | 47 | 42 | 0 | 9 | 16 |
-| Southeast Asia | 34 | 24 | 0 | 4 | 3 |
+| East Asia | 47 | 42 | 0 | 9 | 17 |
+| Southeast Asia | 34 | 24 | 0 | 4 | 4 |
 | Latin America | 18 | 16 | 1 | 0 | 9 |
 | South Asia | 16 | 15 | 0 | 0 | 0 |
 | Australia & NZ | 15 | 14 | 2 | 6 | 6 |
@@ -31,21 +31,5 @@ Generated 2026-10-03.
 
 ## Films with no IDs (need a manual match)
 
-- Sumpah Orang Minyak (1958)
-- A Bay of Blood (1971)
-- Salem's Lot (1979)
-- Satan's Slave (1982)
-- Perfect Blue (1997)
-- Ju-on: The Grudge (2002)
-- Dabbe (2006)
-- KM 31 (2006)
-- Hantu Kak Limah Balik Rumah (2010)
-- Rare Exports (2010)
 - Seru (2011)
-- Corazon: The First Aswang (2012)
-- Siccin (2014)
-- IT (2017)
-- Dukun (2018)
-- The Nightshifter (2018)
 - Tokoloshe (2018)
-- Tiger Stripes (2023)

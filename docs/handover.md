@@ -1,5 +1,7 @@
 # Bloodline: handover to Claude Code
 
+> **Snapshot from 3 October 2026,** written when the project moved from Claude Cowork to Claude Code. Counts and gaps here are as of that handover; `reports/coverage.md` has the current numbers. Since then: 16 of the 18 unmatched films were matched by hand (`tools/ids_manual.json`), 21 archetype tags were revised (`reference/tag-changes.csv`), and `schema.md` and this file moved into `docs/`.
+
 Bloodline is a private research corpus of 500 horror films. Shafeeq Shajahan (Shaf) owns it. It was built in a Claude Cowork session between 1 and 3 October 2026, and this file carries everything needed to continue in Claude Code.
 
 Put this file in the repository root. Copy the "Working rules" section into `CLAUDE.md` so it applies to every session.

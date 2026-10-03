@@ -1,6 +1,6 @@
 # Bloodline
 
-Private research corpus of 500 horror films, owned by Shafeeq Shajahan (Shaf). Full context, data structure, archetype codes, tool list and next steps are in `HANDOVER.md`; read it before substantial work. `schema.md` defines every file. Archetype codes, beats and folk roots are in `archetypes.csv`.
+Private research corpus of 500 horror films, owned by Shafeeq Shajahan (Shaf). Full context, data structure, archetype codes, tool list and next steps are in `docs/handover.md`; read it before substantial work. `docs/schema.md` defines every file. Archetype codes, beats and folk roots are in `archetypes.csv`.
 
 ## Working rules
 
@@ -23,6 +23,6 @@ Private research corpus of 500 horror films, owned by Shafeeq Shajahan (Shaf). F
 
 ## Repo notes
 
-- Git history starts with the 10-film pilot (5 commits from Cowork), then the 500-film import. Section 2 of `HANDOVER.md` describes a fresh `git init`; that was not needed because history was preserved.
+- Git history starts with the 10-film pilot (5 commits from Cowork), then the 500-film import. Section 2 of `docs/handover.md` describes a fresh `git init`; that was not needed because history was preserved.
 - `graph/` is generated. Never hand-edit it.
 - `_cache/` (subtitle-archive indexes) is gitignored and rebuilt on demand.

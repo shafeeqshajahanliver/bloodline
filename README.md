@@ -1,32 +1,101 @@
-# Bloodline: story DNA of 500 horror films
+# Bloodline
 
-A private research corpus of 500 horror films, built to find the shared patterns ("story DNA") behind them, for the podcast *You've Heard This Before* and the Liver & Lung interactive pieces.
+**The story DNA of 500 horror films.**
 
-**Private use only.** This repository contains screenplays and film stills under copyright. Keep it private; do not publish raw files. Derived measurements (counts, colour values, timings) are what can be shared.
+Horror keeps telling the same stories. A wronged woman comes back. A house remembers what was done in it. Someone invites the thing in. Bloodline maps 500 horror films from 1913 to 2025 and 44 countries to find those shared patterns, and traces each one back to the folk tales, legends and real events it descends from.
 
-## Layout
+It is the research base for the podcast *You've Heard This Before* and for interactive pieces by Liver & Lung.
 
-- `films.csv`: the master list of all 500 films, with archetype tags (first pass) and status.
-- `archetypes.csv`: the 27 archetype codes (26 plus one on probation) with their beat and documented folk roots.
-- `reference/horror-500-story-dna.xlsx`: the original spreadsheet the list and tags came from (Films, Archetypes, Regions tabs). `films.csv` and `archetypes.csv` are the working copies.
-- `films/<year-title>/`: one folder per film. See `schema.md` for every file.
-- `sources/`: articles on legends and real events that films descend from.
-- `graph/`: **generated** network files (`nodes.csv`, `edges.csv`, `shared_nodes.json`). Never edit by hand: run `python3 tools/build_graph.py`.
-- `reports/`: coverage, gaps and findings.
-- `tools/`: the scripts that collected everything, so any step can be re-run or extended to the next films.
+> **Status:** research in progress. Archetype tags are a first pass and not yet reviewed. Trends are leads to test, not conclusions.
 
-## Status
+---
 
-Automated collection has run across all 500 films; see `reports/coverage.md` for what each source covered and `reports/findings-500.md` for first trends. The pilot 10 also have a hand-curated story layer (motifs and lineage with evidence).
+## What's in it
+
+| Layer | What it holds | Source |
+|---|---|---|
+| **The list** | 500 films with country, region and two archetype tags each | Curated (`films.csv`) |
+| **Archetypes** | 27 recurring story shapes, each with its beat and documented folk roots on at least two continents | Curated (`archetypes.csv`) |
+| **Facts** | Cast, crew, companies, countries, languages, runtime, budget, awards, external IDs | Wikidata |
+| **Dialogue** | Subtitles and measures: words per minute, share of runtime with dialogue, longest silences | OPUS OpenSubtitles corpus |
+| **Scares** | Jump-scare timings and ratings | Where's the Jump |
+| **Screenplays** | Script text and measures: interior/exterior split, night scenes | IMSDb, Script Slug |
+| **Visuals** | Curated stills with brightness, saturation and a colour strip | FILMGRAB |
+| **Story layer** | Motifs and lineage links, each with evidence and a confidence level (10 pilot films so far) | Curated |
+| **Graph** | A network of films, people, archetypes, motifs and sources | Generated (`graph/`) |
+
+Current coverage for each layer is in [`reports/coverage.md`](reports/coverage.md).
+
+## First findings
+
+From [`reports/findings-500.md`](reports/findings-500.md) and [`reports/pilot-findings.md`](reports/pilot-findings.md):
+
+- **Horror got quieter.** Films before 1960 run at around 106 words a minute; from the 1960s on it's about 75.
+- **The first scare moved forward ten minutes,** from around minute 28 in the 1960s and 70s to around minute 18 from 1980, and it has stayed there.
+- **Jump scares peaked and retreated:** a median of 9 per film in 2000–14, down to 5 since 2015, in line with the rise of slower "elevated" horror.
+- **The mother is the hub.** In the 10-film pilot, a dead or dangerous mother appears in 6 films, more than any other motif.
+
+Jump-scare and screenplay data comes from fan and English-language sources, so trends built on them describe US and UK horror more than horror in general.
+
+## The 27 archetypes
+
+| | | |
+|---|---|---|
+| The Woman Who Comes Back | The House Remembers | The Inherited Curse |
+| The Thing You Took Home | The Voice Inside | The Bargain |
+| The Wrong Child | The Devouring Mother | The Double |
+| The Beast Within | The One Who Feeds | The Dead Won't Stay Dead |
+| The Book You Shouldn't Read | You Invited It In | The Bad Host |
+| The Village Needs Blood | The Hunger | The Thing Outside |
+| Stray From the Path | The Thing We Made | The Body Betrays |
+| The Contagion | The Witch at the Edge of the Woods | Nobody Believes Her |
+| The Descent | The Rule | The Endless Night *(on probation)* |
+
+Each one must have documented roots on at least two continents, appear in roughly 3 to 30 films, and not be a catch-all like "good versus evil". Beats and roots are in [`archetypes.csv`](archetypes.csv).
+
+## How it's organised
+
+```
+films.csv            the 500 films: tags, IDs, and which data layers each one has
+archetypes.csv       the 27 archetypes: code, beat, folk roots
+films/<year-title>/  one folder per film (see docs/schema.md for every file)
+graph/               network files, generated by tools/build_graph.py
+reports/             coverage, findings, era figures
+sources/             articles on the legends and real events films descend from
+reference/           the original spreadsheet and a log of every tag change
+tools/               the scripts that collected and measured everything
+docs/                schema and project handover notes
+```
+
+## Principles
+
+- **Every fact says where it came from** and when it was retrieved.
+- **Interpretation is kept apart from fact.** Archetypes and motifs carry a confidence level: `sourced` (stated in a cited text), `observed` (a reading of the film), `claude-knowledge` (needs checking) or `first pass` (awaiting review).
+- **Source data is never edited.** Fixes go in a per-film `corrections.json`, applied when the graph is built.
+- **Gaps are recorded, not hidden.** A `*.none` file means a source was checked and had nothing.
+
+## Exploring the graph
+
+`graph/nodes.csv` and `graph/edges.csv` load straight into Kumu, Cosmograph or Gephi. Colour by node `type` (film, person, archetype, motif, source, country, language, company).
 
 ## Re-running
 
-- `tools/resolve_ids.py`: match films.csv to Wikidata and IMDb
-- `tools/run_batch.py --only tier1,subs,scares,scripts,stills [--part i/n]`: resumable collection
-- `tools/tier1_bulk.py`: faster facts collection when Wikidata throttles
-- `tools/tier2_subtitles.py <film ids>`: subtitles from the OPUS OpenSubtitles corpus (no login)
-- `tools/subs_quality.py`, `tools/script_stats.py`, `tools/coverage.py`, `tools/eras.py`, `tools/build_graph.py`: measures, reports and graph
+Python 3. Install with `pip install -r requirements.txt`; `pdftotext` and `ffmpeg` are also needed for screenplays and full-film analysis. Run everything from the repo root with `PYTHONPATH=tools`.
 
-## Loading the graph
+| Step | Script |
+|---|---|
+| Match films to Wikidata and IMDb | `tools/resolve_ids.py`. 16 films were matched by hand (`tools/ids_manual.json`); a re-run does not yet keep those, so copy them back into `tools/ids.json` afterwards |
+| Collect data (resumable, skips what's done) | `tools/run_batch.py --only tier1,subs,scares,scripts,stills` |
+| Subtitles for given films | `tools/tier2_subtitles.py <film ids>` |
+| Full-film colour and pacing | `tools/tier3_visual.py <video> <film id>` |
+| Rebuild reports and graph | `tools/coverage.py`, `tools/eras.py`, `tools/build_graph.py` |
 
-Kumu, Cosmograph or Gephi can import `graph/nodes.csv` and `graph/edges.csv` directly. Node `type` (film, person, archetype, motif, source, country, language, company) is the natural colour key.
+## Rights
+
+The repository mixes material with different rights:
+
+- **Facts from Wikidata** are CC0. **Wikipedia text** (in `sources/` and the pilot films) is CC BY-SA.
+- **Screenplays, subtitles and film stills** are copyrighted by their owners and are held here for private, non-commercial research only. They are not covered by any licence and should not be reused.
+- **Derived measurements** (counts, timings, colour values) and the curated layers (archetypes, motifs, lineage) are the project's own work.
+
+No licence has been chosen yet for the code and curated data, so all rights are reserved for now.
