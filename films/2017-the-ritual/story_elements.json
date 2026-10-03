@@ -1,61 +1,439 @@
 {
  "film": "2017-the-ritual",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "ancient forest god", "detail": "Moder, a moose-like jötunn", "quote": "the creature is the giant moose-like jötunn \"Moder\", an ancient god-like entity and offspring of Loki", "confidence": "sourced"},
-   {"value": "cult", "quote": "grants the cult immortality in exchange for sacrifices", "confidence": "sourced"}
+   {
+    "value": "ancient forest god",
+    "detail": "Moder, a moose-like jötunn",
+    "quote": "the creature is the giant moose-like jötunn \"Moder\", an ancient god-like entity and offspring of Loki",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:00",
+      "quote": "A god. Ancient. One of the Jotunn."
+     }
+    ]
+   },
+   {
+    "value": "cult",
+    "quote": "grants the cult immortality in exchange for sacrifices",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:30",
+      "quote": "Your ritual begins tonight."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "ancient myth", "quote": "an ancient god-like entity and offspring of Loki", "confidence": "sourced"}
+   {
+    "value": "ancient myth",
+    "quote": "an ancient god-like entity and offspring of Loki",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:09",
+      "quote": "A bastard offspring of Loki."
+     }
+    ]
+   },
+   {
+    "value": "nordic gods",
+    "source": "subtitles",
+    "at": "00:06:49",
+    "quote": "These mountains were smashed out by Nordic gods with big bastard hammers.",
+    "confidence": "observed"
+   }
   ],
   "wants": [
-   {"value": "worship or sacrifice", "quote": "Luke is to either worship Moder or be sacrificed", "confidence": "sourced"}
+   {
+    "value": "worship or sacrifice",
+    "quote": "Luke is to either worship Moder or be sacrificed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:37",
+      "quote": "You will kneel before the god. If not, it will hang you from the trees."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "cowardice in a crisis", "detail": "Luke hid while Rob was killed", "quote": "Dom calls Luke a coward for letting Rob die", "confidence": "sourced"}
+   {
+    "value": "cowardice in a crisis",
+    "detail": "Luke hid while Rob was killed",
+    "quote": "Dom calls Luke a coward for letting Rob die",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:32",
+      "quote": "Fucking coward."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "a journey", "detail": "memorial hiking trip", "quote": "the remaining four start a hiking trip along Kungsleden in northern Sweden in memory of Rob", "confidence": "sourced"},
-   {"value": "leaving the path", "quote": "Hutch suggests cutting through the forest rather than following the marked trail", "confidence": "sourced"}
+   {
+    "value": "a journey",
+    "detail": "memorial hiking trip",
+    "quote": "the remaining four start a hiking trip along Kungsleden in northern Sweden in memory of Rob",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:43",
+      "quote": "Except we wouldn't be here, though, would we?"
+     }
+    ]
+   },
+   {
+    "value": "leaving the path",
+    "quote": "Hutch suggests cutting through the forest rather than following the marked trail",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:47",
+      "quote": "through here, we cut the journey in half."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "bound to the forest", "quote": "Unable to leave the forest, Moder roars at Luke", "confidence": "sourced"},
-   {"value": "victims marked", "quote": "An elderly woman inspects Luke's chest wounds, revealing she bears a similar marking", "confidence": "sourced"},
-   {"value": "preys on guilt", "quote": "crippling his mind with hallucinations of Rob's death", "confidence": "sourced"}
+   {
+    "value": "bound to the forest",
+    "quote": "Unable to leave the forest, Moder roars at Luke",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:17",
+      "quote": "We worship it. It keeps us here."
+     }
+    ]
+   },
+   {
+    "value": "victims marked",
+    "quote": "An elderly woman inspects Luke's chest wounds, revealing she bears a similar marking",
+    "confidence": "sourced"
+   },
+   {
+    "value": "preys on guilt",
+    "quote": "crippling his mind with hallucinations of Rob's death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "its name is not spoken",
+    "source": "subtitles",
+    "at": "01:18:12",
+    "quote": "We do not say its name.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "friends", "relation_to_threat": "stranger", "quote": "four friends on a hiking trip through a Swedish old-growth forest", "confidence": "sourced"},
-   {"value": "guilty survivor", "relation_to_threat": "stranger", "detail": "Luke", "quote": "While Luke hides, the robbers harass and eventually kill Rob", "confidence": "sourced"}
+   {
+    "value": "friends",
+    "relation_to_threat": "stranger",
+    "quote": "four friends on a hiking trip through a Swedish old-growth forest",
+    "confidence": "sourced"
+   },
+   {
+    "value": "guilty survivor",
+    "relation_to_threat": "stranger",
+    "detail": "Luke",
+    "quote": "While Luke hides, the robbers harass and eventually kill Rob",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "lone survivor escapes", "quote": "he walks away and finds a road as Moder retreats into the dark forest", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "Moder retreats into the dark forest", "confidence": "observed"}
+   {
+    "value": "lone survivor escapes",
+    "quote": "he walks away and finds a road as Moder retreats into the dark forest",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat survives",
+    "quote": "Moder retreats into the dark forest",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "moose", "state": "gutted and hanged", "when": "early", "role": "omen", "quote": "the group comes across a gutted and hanged moose, and Runic symbols carved in the trees", "confidence": "sourced"},
-   {"value": "runic symbols", "state": "carved in trees", "when": "early", "role": "omen", "quote": "Runic symbols carved in the trees", "confidence": "sourced"},
-   {"value": "twig effigy", "state": "antlers for hands", "when": "early", "role": "symbol", "quote": "an effigy of a decapitated human torso made of twigs, with antlers for hands", "confidence": "sourced"},
-   {"value": "abandoned tent", "state": "overgrown", "when": "middle", "role": "omen", "quote": "an abandoned tent overgrown in foliage, with a backpack and wallet that has a credit card that expired in 1984", "confidence": "sourced"},
-   {"value": "body impaled on branches", "when": "middle", "role": "threat", "quote": "they find a gutted Hutch impaled on tree branches", "confidence": "sourced"},
-   {"value": "mummified worshippers", "state": "moving, set alight", "when": "late", "role": "threat", "quote": "a congregation of mummified worshipers that begin to move and sets them alight", "confidence": "sourced"},
-   {"value": "axe", "when": "ending", "role": "weapon", "quote": "Luke refuses to submit, strikes it with the axe, then flees", "confidence": "sourced"},
-   {"value": "sunlight", "when": "ending", "role": "turn", "quote": "He runs towards the hill, seeing rays of sunlight, and emerges in an open field", "confidence": "sourced"}
+   {
+    "value": "moose",
+    "state": "gutted and hanged",
+    "when": "early",
+    "role": "omen",
+    "quote": "the group comes across a gutted and hanged moose, and Runic symbols carved in the trees",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:52",
+      "quote": "It's been gutted."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:54:17",
+      "quote": "It had to be to put that fucking elk in the tree."
+     }
+    ]
+   },
+   {
+    "value": "runic symbols",
+    "state": "carved in trees",
+    "when": "early",
+    "role": "omen",
+    "quote": "Runic symbols carved in the trees",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:01",
+      "quote": "You see these things? Man-made."
+     }
+    ]
+   },
+   {
+    "value": "twig effigy",
+    "state": "antlers for hands",
+    "when": "early",
+    "role": "symbol",
+    "quote": "an effigy of a decapitated human torso made of twigs, with antlers for hands",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:16",
+      "quote": "What the fuck is that?"
+     }
+    ]
+   },
+   {
+    "value": "abandoned tent",
+    "state": "overgrown",
+    "when": "middle",
+    "role": "omen",
+    "quote": "an abandoned tent overgrown in foliage, with a backpack and wallet that has a credit card that expired in 1984",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:45",
+      "quote": "I think it's a tent or something."
+     }
+    ]
+   },
+   {
+    "value": "body impaled on branches",
+    "when": "middle",
+    "role": "threat",
+    "quote": "they find a gutted Hutch impaled on tree branches",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mummified worshippers",
+    "state": "moving, set alight",
+    "when": "late",
+    "role": "threat",
+    "quote": "a congregation of mummified worshipers that begin to move and sets them alight",
+    "confidence": "sourced"
+   },
+   {
+    "value": "axe",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "Luke refuses to submit, strikes it with the axe, then flees",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:16",
+      "quote": "Drop the axe."
+     }
+    ]
+   },
+   {
+    "value": "sunlight",
+    "when": "ending",
+    "role": "turn",
+    "quote": "He runs towards the hill, seeing rays of sunlight, and emerges in an open field",
+    "confidence": "sourced"
+   },
+   {
+    "value": "wedding ring",
+    "when": "opening",
+    "role": "omen",
+    "detail": "the robbers demand Robert's ring",
+    "source": "subtitles",
+    "at": "00:03:59",
+    "quote": "No. It's my wedding ring.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "thunderstorm",
+    "when": "early",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:19:45",
+    "quote": "(THUNDER CRASHING)",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bears",
+    "when": "early",
+    "role": "omen",
+    "detail": "joked about before they enter the forest",
+    "source": "subtitles",
+    "at": "00:14:43",
+    "quote": "Are there bears in this forest? Course there's fucking bears.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "friend killed, hero hides", "when": "opening", "quote": "While Luke hides, the robbers harass and eventually kill Rob", "confidence": "sourced"},
-   {"order": 2, "value": "shortcut through forest", "when": "early", "role": "trigger", "quote": "Hutch suggests cutting through the forest rather than following the marked trail", "confidence": "sourced"},
-   {"order": 3, "value": "night in a cursed cabin", "when": "early", "quote": "a torrential rainstorm forces them to take shelter in an abandoned cabin", "confidence": "sourced"},
-   {"order": 4, "value": "friends picked off", "when": "middle", "quote": "Phil is dragged away and killed by an unseen creature", "confidence": "sourced"},
-   {"order": 5, "value": "captured by cult", "when": "late", "role": "turn", "quote": "Luke and Dom awake to find themselves restrained in a basement", "confidence": "sourced"},
-   {"order": 6, "value": "sacrifice", "when": "late", "quote": "it is the creature as it picks him up and impales him on a nearby tree", "confidence": "sourced"},
-   {"order": 7, "value": "refusal to submit", "when": "ending", "role": "turn", "quote": "Luke refuses to submit, strikes it with the axe, then flees", "confidence": "sourced"},
-   {"order": 8, "value": "escape into daylight", "when": "ending", "quote": "he walks away and finds a road as Moder retreats into the dark forest", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "friend killed, hero hides",
+    "when": "opening",
+    "quote": "While Luke hides, the robbers harass and eventually kill Rob",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:48",
+      "quote": "Just take his watch."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "shortcut through forest",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Hutch suggests cutting through the forest rather than following the marked trail",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:47",
+      "quote": "through here, we cut the journey in half."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "gutted elk found",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:18:51",
+    "quote": "(FLIES BUZZING)",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "night in a cursed cabin",
+    "when": "early",
+    "quote": "a torrential rainstorm forces them to take shelter in an abandoned cabin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:16",
+      "quote": "What the fuck is that?"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "strange path followed",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "00:33:11",
+    "quote": "Is that a path?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "friends picked off",
+    "when": "middle",
+    "quote": "Phil is dragged away and killed by an unseen creature",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:28",
+      "quote": "There are people and they killed our fucking friend!"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "captured by cult",
+    "when": "late",
+    "role": "turn",
+    "quote": "Luke and Dom awake to find themselves restrained in a basement",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:43",
+      "quote": "(CROWD CHANTING)"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "sacrifice",
+    "when": "late",
+    "quote": "it is the creature as it picks him up and impales him on a nearby tree",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "refusal to submit",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Luke refuses to submit, strikes it with the axe, then flees",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "escape into daylight",
+    "when": "ending",
+    "quote": "he walks away and finds a road as Moder retreats into the dark forest",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:18",
+      "quote": "(FIERCE ROAR)"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

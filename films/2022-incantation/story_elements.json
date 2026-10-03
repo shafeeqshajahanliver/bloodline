@@ -1,63 +1,513 @@
 {
  "film": "2022-incantation",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "malevolent deity", "detail": "Mother-Buddha", "quote": "Mother-Buddha is, in fact, a malevolent entity brought from Southeast Asia to Yunnan", "confidence": "sourced"},
-   {"value": "curse", "quote": "lift the curse afflicting her six-year-old daughter, Dodo", "confidence": "sourced"}
+   {
+    "value": "malevolent deity",
+    "detail": "Mother-Buddha",
+    "quote": "Mother-Buddha is, in fact, a malevolent entity brought from Southeast Asia to Yunnan",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:43:18",
+      "quote": "The Mother-Buddha's face is the heart of the curse."
+     }
+    ]
+   },
+   {
+    "value": "curse",
+    "quote": "lift the curse afflicting her six-year-old daughter, Dodo",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:46",
+      "quote": "And with this curse, the more you understand it, the more you'd be affected by its power."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "from outside", "quote": "a malevolent entity brought from Southeast Asia to Yunnan", "confidence": "sourced"},
-   {"value": "worshipped by a clan", "quote": "the villagers practice an esoteric Yunnan religion centered around an ancestral deity called Mother-Buddha", "confidence": "sourced"}
+   {
+    "value": "from outside",
+    "quote": "a malevolent entity brought from Southeast Asia to Yunnan",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:37",
+      "quote": "is actually an ancient religious blessing. This religion spread from Southeast Asia to Yunnan,"
+     }
+    ]
+   },
+   {
+    "value": "worshipped by a clan",
+    "quote": "the villagers practice an esoteric Yunnan religion centered around an ancestral deity called Mother-Buddha",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:26",
+      "quote": "What are they worshipping?"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to spread", "quote": "as more people chant it, the curse spreads", "confidence": "sourced"}
+   {
+    "value": "to spread",
+    "quote": "as more people chant it, the curse spreads",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:43:06",
+      "quote": "it's a spell for diffusing Mother-Buddha's curse onto strangers."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "breaking a taboo", "quote": "break a serious religious taboo while documenting a ritual for their online video channel", "confidence": "sourced"},
-   {"value": "child abandoned", "quote": "Ronan leaves her at a foster care home and seeks psychiatric help", "confidence": "observed"}
+   {
+    "value": "breaking a taboo",
+    "quote": "break a serious religious taboo while documenting a ritual for their online video channel",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:00",
+      "quote": "tunnel that you must not enter."
+     }
+    ]
+   },
+   {
+    "value": "child abandoned",
+    "quote": "Ronan leaves her at a foster care home and seeks psychiatric help",
+    "confidence": "observed"
+   }
   ],
   "trigger": [
-   {"value": "entering forbidden place", "quote": "a tunnel that the clan has expressly forbidden the trio from entering", "confidence": "sourced"},
-   {"value": "filming a ritual", "quote": "documenting a ritual for their online video channel", "confidence": "sourced"}
+   {
+    "value": "entering forbidden place",
+    "quote": "a tunnel that the clan has expressly forbidden the trio from entering",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:13",
+      "quote": "The infamous place you must not go to."
+     }
+    ]
+   },
+   {
+    "value": "filming a ritual",
+    "quote": "documenting a ritual for their online video channel",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:22",
+      "quote": "She's being possessed live on camera."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "must not look", "detail": "the deity's face must stay veiled", "quote": "Mother-Buddha's face must remain covered because it is the source of the curse", "confidence": "sourced"},
-   {"value": "chanting accepts the curse", "quote": "Submitting one's name along with the incantation signifies agreement to bear her curse", "confidence": "sourced"},
-   {"value": "survive by sharing it", "quote": "the curse spreads, reducing the burden on any single individual", "confidence": "sourced"},
-   {"value": "watching footage possesses", "quote": "After watching the restored footage, he becomes possessed and kills himself", "confidence": "sourced"}
+   {
+    "value": "must not look",
+    "detail": "the deity's face must stay veiled",
+    "quote": "Mother-Buddha's face must remain covered because it is the source of the curse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:43:23",
+      "quote": "That's why they cover it up and never look at it."
+     }
+    ]
+   },
+   {
+    "value": "chanting accepts the curse",
+    "quote": "Submitting one's name along with the incantation signifies agreement to bear her curse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:59",
+      "quote": "I wish to share in this curse and offer up my name."
+     }
+    ]
+   },
+   {
+    "value": "survive by sharing it",
+    "quote": "the curse spreads, reducing the burden on any single individual",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:43:09",
+      "quote": "The more people bearing the curse, the more diluted it becomes."
+     }
+    ]
+   },
+   {
+    "value": "watching footage possesses",
+    "quote": "After watching the restored footage, he becomes possessed and kills himself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:04",
+      "quote": "Even just watching the video filmed inside this tunnel would kill you."
+     }
+    ]
+   },
+   {
+    "value": "real name must not be used",
+    "source": "subtitles",
+    "at": "00:32:22",
+    "quote": "After offering up your real name, remember, you cannot use it here anymore.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "seven days of fasting",
+    "source": "subtitles",
+    "at": "01:05:23",
+    "quote": "Don't let the child eat anything for seven days straight.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "mother and daughter", "relation_to_threat": "family", "detail": "Li Ronan and Dodo", "quote": "Dodo becomes troubled by a malevolent presence and develops a debilitating illness", "confidence": "sourced"},
-   {"value": "the viewer", "relation_to_threat": "stranger", "quote": "intending to curse the viewers in order to save her daughter", "confidence": "sourced"},
-   {"value": "helpers", "relation_to_threat": "stranger", "quote": "The priest and his wife are then violently killed", "confidence": "sourced"}
+   {
+    "value": "mother and daughter",
+    "relation_to_threat": "family",
+    "detail": "Li Ronan and Dodo",
+    "quote": "Dodo becomes troubled by a malevolent presence and develops a debilitating illness",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the viewer",
+    "relation_to_threat": "stranger",
+    "quote": "intending to curse the viewers in order to save her daughter",
+    "confidence": "sourced"
+   },
+   {
+    "value": "helpers",
+    "relation_to_threat": "stranger",
+    "quote": "The priest and his wife are then violently killed",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "cycle passes on", "detail": "the curse spread to the audience", "quote": "implying that the burden of her curse has been shared with everyone who watched the film", "confidence": "sourced"},
-   {"value": "mother sacrifices herself", "quote": "She then becomes possessed and dies", "confidence": "sourced"}
+   {
+    "value": "cycle passes on",
+    "detail": "the curse spread to the audience",
+    "quote": "implying that the burden of her curse has been shared with everyone who watched the film",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:16",
+      "quote": "If I can manipulate more people to see this video and this symbol,"
+     }
+    ]
+   },
+   {
+    "value": "mother sacrifices herself",
+    "quote": "She then becomes possessed and dies",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:09",
+      "quote": "to forget your name? And forget me."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "insignia", "when": "opening", "role": "trigger", "quote": "implores the viewer to memorize an insignia and chant an incantation", "confidence": "sourced"},
-   {"value": "runes on skin", "when": "early", "role": "omen", "quote": "The unconscious child, whose body is covered in runes", "confidence": "sourced"},
-   {"value": "tunnel", "when": "early", "role": "setting", "quote": "left in front of a tunnel that the clan has expressly forbidden the trio from entering", "confidence": "sourced"},
-   {"value": "found footage", "state": "damaged, restored", "when": "middle", "role": "clue", "quote": "has the damaged tunnel footage professionally restored", "confidence": "sourced"},
-   {"value": "veiled face", "when": "late", "role": "threat", "quote": "When Dom removes the veil covering Mother-Buddha's face, he becomes possessed and dies", "confidence": "sourced"},
-   {"value": "altar", "when": "ending", "role": "setting", "quote": "At the altar, she reveals Mother-Buddha's face on camera", "confidence": "sourced"}
+   {
+    "value": "insignia",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "implores the viewer to memorize an insignia and chant an incantation",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:44",
+      "quote": "please look at this symbol until, until you've memorized it."
+     }
+    ]
+   },
+   {
+    "value": "runes on skin",
+    "when": "early",
+    "role": "omen",
+    "quote": "The unconscious child, whose body is covered in runes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:09",
+      "quote": "Can we take a look at your hand?"
+     }
+    ]
+   },
+   {
+    "value": "tunnel",
+    "when": "early",
+    "role": "setting",
+    "quote": "left in front of a tunnel that the clan has expressly forbidden the trio from entering",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:28",
+      "quote": "the tunnel that has no phone signal"
+     }
+    ]
+   },
+   {
+    "value": "found footage",
+    "state": "damaged, restored",
+    "when": "middle",
+    "role": "clue",
+    "quote": "has the damaged tunnel footage professionally restored",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:24",
+      "quote": "INSIDE THE TUNNEL.MOV"
+     }
+    ]
+   },
+   {
+    "value": "veiled face",
+    "when": "late",
+    "role": "threat",
+    "quote": "When Dom removes the veil covering Mother-Buddha's face, he becomes possessed and dies",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:43:18",
+      "quote": "The Mother-Buddha's face is the heart of the curse."
+     }
+    ]
+   },
+   {
+    "value": "altar",
+    "when": "ending",
+    "role": "setting",
+    "quote": "At the altar, she reveals Mother-Buddha's face on camera",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:44",
+      "quote": "We have to set up the altar."
+     }
+    ]
+   },
+   {
+    "value": "ferris wheel",
+    "when": "opening",
+    "role": "symbol",
+    "detail": "the viewer is asked to turn it with their mind",
+    "source": "subtitles",
+    "at": "00:01:09",
+    "quote": "Please use your mind to move the rotation of the Ferris wheel to the right.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "barking like a dog",
+    "when": "early",
+    "role": "symbol",
+    "detail": "a game between Dodo and her mother; Dodo also longs for a dog called Woofy",
+    "source": "subtitles",
+    "at": "00:07:47",
+    "quote": "[both imitate dog barking]",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:35",
+      "quote": "Look at Woofy."
+     }
+    ]
+   },
+   {
+    "value": "swarming bugs",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:22:46",
+    "quote": "There are bugs here. Look, they're all over.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pig's head and goat",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:54:09",
+    "quote": "A pig's head.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mirrors",
+    "when": "late",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "01:28:51",
+    "quote": "There are so many mirrors here too.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "direct address to viewer", "when": "opening", "role": "omen", "quote": "A woman named Li Ronan implores the viewer to memorize an insignia", "confidence": "sourced"},
-   {"order": 2, "value": "taboo broken", "when": "early", "role": "trigger", "quote": "Dom and Yuan enter the tunnel; Yuan soon emerges screaming, while Dom's dead body is carried out", "confidence": "sourced"},
-   {"order": 3, "value": "child falls ill", "when": "middle", "quote": "Dodo becomes troubled by a malevolent presence and develops a debilitating illness", "confidence": "sourced"},
-   {"order": 4, "value": "rule broken, helpers die", "when": "middle", "quote": "Ronan desperately feeds her. The priest and his wife are then violently killed", "confidence": "sourced"},
-   {"order": 5, "value": "footage reveals origin", "when": "late", "role": "clue", "quote": "The footage reveals that Dom and Yuan encountered disturbing ritualistic objects throughout the tunnel", "confidence": "sourced"},
-   {"order": 6, "value": "narrator's deception revealed", "when": "late", "role": "turn", "quote": "Ronan confesses that she has been deceiving the viewers all along", "confidence": "sourced"},
-   {"order": 7, "value": "curse turned on audience", "when": "ending", "quote": "she reveals Mother-Buddha's face on camera, intending to curse the viewers", "confidence": "sourced"},
-   {"order": 8, "value": "child saved", "when": "ending", "quote": "The film concludes with a happy and healthy Dodo", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "direct address to viewer",
+    "when": "opening",
+    "role": "omen",
+    "quote": "A woman named Li Ronan implores the viewer to memorize an insignia",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:32",
+      "quote": "Do you believe in such things as blessings?"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "taboo broken",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Dom and Yuan enter the tunnel; Yuan soon emerges screaming, while Dom's dead body is carried out",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:00",
+      "quote": "tunnel that you must not enter."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "name offered to the deity",
+    "when": "early",
+    "role": "trigger",
+    "source": "subtitles",
+    "at": "00:32:00",
+    "quote": "What is your name? HOU-HO-XIU-YI, SI-SEI-WU-MA",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "child falls ill",
+    "when": "middle",
+    "quote": "Dodo becomes troubled by a malevolent presence and develops a debilitating illness",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:39",
+      "quote": "Dodo, Dodo, look at me. Dodo. Look at me, Dodo!"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "rule broken, helpers die",
+    "when": "middle",
+    "quote": "Ronan desperately feeds her. The priest and his wife are then violently killed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:23",
+      "quote": "Don't let the child eat anything for seven days straight."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "footage reveals origin",
+    "when": "late",
+    "role": "clue",
+    "quote": "The footage reveals that Dom and Yuan encountered disturbing ritualistic objects throughout the tunnel",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:14",
+      "quote": "The video clip of the tunnel has finally been repaired."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "narrator's deception revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Ronan confesses that she has been deceiving the viewers all along",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:47",
+      "quote": "is not a blessing. It's a Minnan dialect saying"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "curse turned on audience",
+    "when": "ending",
+    "quote": "she reveals Mother-Buddha's face on camera, intending to curse the viewers",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "child saved",
+    "when": "ending",
+    "quote": "The film concludes with a happy and healthy Dodo",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "final question to viewer",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:45:53",
+    "quote": "What is your name? [screeching]",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

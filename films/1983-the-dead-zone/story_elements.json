@@ -1,56 +1,352 @@
 {
  "film": "1983-the-dead-zone",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "future tyrant", "detail": "Greg Stillson, who will start a nuclear war", "quote": "has a vision of Stillson as president ordering a pre-emptive nuclear strike", "confidence": "sourced"},
-   {"value": "serial killer", "detail": "deputy Frank Dodd", "quote": "he discovers that deputy Frank Dodd is the killer", "confidence": "sourced"},
-   {"value": "burden of a gift", "detail": "Johnny's psychic visions weaken him", "quote": "he grows physically weaker due to his psychic abilities", "confidence": "sourced"}
+   {
+    "value": "future tyrant",
+    "detail": "Greg Stillson, who will start a nuclear war",
+    "quote": "has a vision of Stillson as president ordering a pre-emptive nuclear strike",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "I'm talking about all out nuclear war. Greg Stillson is going to push the button!"
+     }
+    ]
+   },
+   {
+    "value": "serial killer",
+    "detail": "deputy Frank Dodd",
+    "quote": "he discovers that deputy Frank Dodd is the killer",
+    "confidence": "sourced"
+   },
+   {
+    "value": "burden of a gift",
+    "detail": "Johnny's psychic visions weaken him",
+    "quote": "he grows physically weaker due to his psychic abilities",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "accident", "detail": "car crash and coma give Johnny his powers", "quote": "he has a car accident that leaves him in a coma", "confidence": "sourced"}
+   {
+    "value": "accident",
+    "detail": "car crash and coma give Johnny his powers",
+    "quote": "he has a car accident that leaves him in a coma",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "His head smashing into the cement abutment of a highway overpass."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "power", "detail": "Stillson's political ambition", "quote": "a superficially charismatic third-party candidate for the United States Senate", "confidence": "observed"}
+   {
+    "value": "power",
+    "detail": "Stillson's political ambition",
+    "quote": "a superficially charismatic third-party candidate for the United States Senate",
+    "confidence": "observed"
+   }
   ],
   "trigger": [
-   {"value": "waking from a coma", "quote": "a schoolteacher, Johnny Smith, who awakens from a coma to find that he has psychic powers", "confidence": "sourced"}
+   {
+    "value": "waking from a coma",
+    "quote": "a schoolteacher, Johnny Smith, who awakens from a coma to find that he has psychic powers",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "visions through touch", "quote": "the ability to psychically see aspects of people's lives (past, present, and future) through physical contact", "confidence": "sourced"},
-   {"value": "future can be changed", "quote": "Johnny realizes that he has a \"dead zone\" in his visions, where the future is changeable", "confidence": "sourced"}
+   {
+    "value": "visions through touch",
+    "quote": "the ability to psychically see aspects of people's lives (past, present, and future) through physical contact",
+    "confidence": "sourced"
+   },
+   {
+    "value": "future can be changed",
+    "quote": "Johnny realizes that he has a \"dead zone\" in his visions, where the future is changeable",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "like sitting behind a pillar at the hockey game"
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "the seer himself", "relation_to_threat": "self", "detail": "Johnny", "quote": "Johnny lies dying as Sarah embraces him and tells him that she loves him", "confidence": "sourced"},
-   {"value": "lost lover", "relation_to_threat": "lover", "detail": "Sarah, now married", "quote": "Johnny learns that five years have passed, and Sarah is now a married mother", "confidence": "sourced"},
-   {"value": "children", "relation_to_threat": "stranger", "detail": "the boys at the pond", "quote": "Chris, however, stays home and lives, while the two other boys drown", "confidence": "sourced"}
+   {
+    "value": "the seer himself",
+    "relation_to_threat": "self",
+    "detail": "Johnny",
+    "quote": "Johnny lies dying as Sarah embraces him and tells him that she loves him",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lost lover",
+    "relation_to_threat": "lover",
+    "detail": "Sarah, now married",
+    "quote": "Johnny learns that five years have passed, and Sarah is now a married mother",
+    "confidence": "sourced"
+   },
+   {
+    "value": "children",
+    "relation_to_threat": "stranger",
+    "detail": "the boys at the pond",
+    "quote": "Chris, however, stays home and lives, while the two other boys drown",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "self-sacrifice", "quote": "what he is about to do will cost him his life, but is a worthwhile sacrifice", "confidence": "sourced"},
-   {"value": "catastrophe averted", "quote": "Stillson's career ends in disgrace and he commits suicide, thus averting the nuclear attack", "confidence": "sourced"}
+   {
+    "value": "self-sacrifice",
+    "quote": "what he is about to do will cost him his life, but is a worthwhile sacrifice",
+    "confidence": "sourced"
+   },
+   {
+    "value": "catastrophe averted",
+    "quote": "Stillson's career ends in disgrace and he commits suicide, thus averting the nuclear attack",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "roller coaster", "when": "opening", "role": "omen", "quote": "After having a headache following a ride on a roller coaster", "confidence": "sourced"},
-   {"value": "hand", "state": "touched", "when": "early", "role": "trigger", "quote": "As he touches a nurse's hand, he sees her daughter trapped in a fire", "confidence": "sourced"},
-   {"value": "cane", "when": "early", "role": "symbol", "quote": "retains a limp and must use a cane", "confidence": "sourced"},
-   {"value": "frozen pond", "state": "boys drowning", "when": "middle", "role": "turn", "quote": "a vision of Chris and two other boys drowning in a local pond during an ice hockey game", "confidence": "sourced"},
-   {"value": "rifle", "when": "ending", "role": "weapon", "quote": "Johnny also sneaks in with a rifle; he shoots at Stillson but misses", "confidence": "sourced"},
-   {"value": "baby as shield", "when": "ending", "role": "turn", "quote": "Stillson grabs Sarah's baby and holds him as a human shield", "confidence": "sourced"},
-   {"value": "photograph", "when": "ending", "role": "weapon", "quote": "which a photographer captures on film", "confidence": "sourced"}
+   {
+    "value": "burning tires",
+    "state": "smoking on the ice",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "Two rubber tires burn aimlessly in a far corner of the pond belching pungent black smoke",
+    "confidence": "sourced",
+    "detail": "the smell returns with his visions",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "And this smell, something from my childhood ... tires burning."
+     }
+    ]
+   },
+   {
+    "value": "number on the wall",
+    "state": "dripping paint",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "A freshly painted number 39 scrawled in menacing, two-foot high letters.",
+    "confidence": "sourced",
+    "detail": "draft only: Johnny paints 39 in a trance before his crash"
+   },
+   {
+    "value": "roller coaster",
+    "when": "opening",
+    "role": "omen",
+    "quote": "After having a headache following a ride on a roller coaster",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hand",
+    "state": "touched",
+    "when": "early",
+    "role": "trigger",
+    "quote": "As he touches a nurse's hand, he sees her daughter trapped in a fire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "His grip on Mavis' hand tightens until his knuckles turn white."
+     }
+    ]
+   },
+   {
+    "value": "cane",
+    "when": "early",
+    "role": "symbol",
+    "quote": "retains a limp and must use a cane",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "emerging from the shop, walking with the assistance of the cane."
+     }
+    ]
+   },
+   {
+    "value": "frozen pond",
+    "state": "boys drowning",
+    "when": "middle",
+    "role": "turn",
+    "quote": "a vision of Chris and two other boys drowning in a local pond during an ice hockey game",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rifle",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "Johnny also sneaks in with a rifle; he shoots at Stillson but misses",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "hooks his cane over his left forearm and holds the rifle"
+     }
+    ]
+   },
+   {
+    "value": "baby as shield",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Stillson grabs Sarah's baby and holds him as a human shield",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "snatches him from his mother's arms and holds him up as a shield"
+     }
+    ]
+   },
+   {
+    "value": "photograph",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "which a photographer captures on film",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "accident and coma", "when": "opening", "role": "trigger", "quote": "As he drives home through stormy weather, he has a car accident that leaves him in a coma", "confidence": "sourced"},
-   {"order": 2, "value": "gift discovered", "when": "early", "quote": "As he touches a nurse's hand, he sees her daughter trapped in a fire", "confidence": "sourced"},
-   {"order": 3, "value": "killer unmasked", "when": "middle", "quote": "Through a vision at the crime scene, he discovers that deputy Frank Dodd is the killer", "confidence": "sourced"},
-   {"order": 4, "value": "future changed", "when": "middle", "role": "turn", "quote": "Chris, however, stays home and lives, while the two other boys drown", "confidence": "sourced"},
-   {"order": 5, "value": "apocalypse foreseen", "when": "late", "role": "turn", "quote": "Johnny shakes Stillson's hand and has a vision of Stillson as president ordering a pre-emptive nuclear strike", "confidence": "sourced"},
-   {"order": 6, "value": "assassination attempt", "when": "ending", "quote": "he shoots at Stillson but misses", "confidence": "sourced"},
-   {"order": 7, "value": "hero dies, world saved", "when": "ending", "quote": "thus averting the nuclear attack. Johnny lies dying as Sarah embraces him", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "childhood fall on the ice",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "His head connecting with the ice. The terrible THUDDING sound en impact.",
+    "confidence": "sourced",
+    "detail": "1980 first-draft prologue at Willow Pond, 1952: six-year-old Johnny's first vision follows the fall"
+   },
+   {
+    "order": 2,
+    "value": "accident and coma",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "As he drives home through stormy weather, he has a car accident that leaves him in a coma",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "jackknifing on the highway only yards ahead"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "gift discovered",
+    "when": "early",
+    "quote": "As he touches a nurse's hand, he sees her daughter trapped in a fire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Call the fire department!"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "killer unmasked",
+    "when": "middle",
+    "quote": "Through a vision at the crime scene, he discovers that deputy Frank Dodd is the killer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "He knew her ... her ... her name is Carol."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "future changed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Chris, however, stays home and lives, while the two other boys drown",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "apocalypse foreseen",
+    "when": "late",
+    "role": "turn",
+    "quote": "Johnny shakes Stillson's hand and has a vision of Stillson as president ordering a pre-emptive nuclear strike",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Johnny extends his hand and Stillson takes it in both his own, shaking it vigorously."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "assassination attempt",
+    "when": "ending",
+    "quote": "he shoots at Stillson but misses",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Johnny has him in his sights, pulls the trigger but the safety lock is on"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "hero dies, world saved",
+    "when": "ending",
+    "quote": "thus averting the nuclear attack. Johnny lies dying as Sarah embraces him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The Nurse checks Johnny's pulse -- nothing."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "killer returns, closing attack",
+    "when": "ending",
+    "role": "turn",
+    "source": "screenplay",
+    "quote": "The image is identical to Johnny's dream. Everything seems to be repeating itself.",
+    "confidence": "sourced",
+    "detail": "draft only: Dodd, still at large, attacks Sarah in the hospital garage and Herb stops him with Johnny's cane",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "A cane -- Johnny's cane -- slicing powerfully through the air toward Dodd's head"
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

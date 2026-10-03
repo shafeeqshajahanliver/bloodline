@@ -1,62 +1,478 @@
 {
  "film": "2017-the-killing-of-a-sacred-deer",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "uncanny avenger", "detail": "Martin Lang, a teenage boy", "quote": "a teenage boy with a connection to his past, after which they mysteriously begin to fall ill", "confidence": "sourced"},
-   {"value": "unexplained curse", "detail": "paralysis, refusing food, bleeding eyes", "quote": "beginning with paralysis, an inability to eat, and finally bleeding from the eyes", "confidence": "sourced"}
+   {
+    "value": "uncanny avenger",
+    "detail": "Martin Lang, a teenage boy",
+    "quote": "a teenage boy with a connection to his past, after which they mysteriously begin to fall ill",
+    "confidence": "sourced"
+   },
+   {
+    "value": "unexplained curse",
+    "detail": "paralysis, refusing food, bleeding eyes",
+    "quote": "beginning with paralysis, an inability to eat, and finally bleeding from the eyes",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "person who died wronged", "detail": "Martin's father, who died in Steven's surgery", "quote": "Martin then reveals that his father died while Steven was operating on him", "confidence": "sourced"}
+   {
+    "value": "person who died wronged",
+    "detail": "Martin's father, who died in Steven's surgery",
+    "quote": "Martin then reveals that his father died while Steven was operating on him",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "justice", "quote": "Martin asserts that this is merely justice for his father", "confidence": "sourced"},
-   {"value": "a life for a life", "quote": "believes that to make things even, Steven must kill a member of his own family", "confidence": "sourced"}
+   {
+    "value": "justice",
+    "quote": "Martin asserts that this is merely justice for his father",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:12",
+      "quote": "I don't know if what is happening is fair, but... it's the only thing I can think of that's close to justice."
+     }
+    ]
+   },
+   {
+    "value": "a life for a life",
+    "quote": "believes that to make things even, Steven must kill a member of his own family",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:14",
+      "quote": "to balance things out, understand?"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "medical negligence", "quote": "he had consumed alcohol before performing Martin's father's surgery", "confidence": "sourced"}
+   {
+    "value": "medical negligence",
+    "quote": "he had consumed alcohol before performing Martin's father's surgery",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:56",
+      "quote": "Had you been drinking when you operated on his father?"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "bringing a stranger into the family", "quote": "Steven invites Martin to meet his family", "confidence": "sourced"}
+   {
+    "value": "bringing a stranger into the family",
+    "quote": "Steven invites Martin to meet his family",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:14",
+      "quote": "I'd like you to come by my house one day to meet my wife and children."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "sacrifice one or all die", "quote": "if Steven refuses, all four will eventually die within a few days", "confidence": "sourced"},
-   {"value": "stages of sickness", "quote": "beginning with paralysis, an inability to eat, and finally bleeding from the eyes", "confidence": "sourced"},
-   {"value": "cannot be stopped by force", "quote": "Unintimidated, Martin bites Steven's arm, before biting his own arm as an example of retributive justice", "confidence": "observed"}
+   {
+    "value": "sacrifice one or all die",
+    "quote": "if Steven refuses, all four will eventually die within a few days",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:18",
+      "quote": "But, if you don't do it, they will all get sick and die."
+     }
+    ]
+   },
+   {
+    "value": "stages of sickness",
+    "quote": "beginning with paralysis, an inability to eat, and finally bleeding from the eyes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:24",
+      "quote": "One: paralysis of the limbs. Two: refusal of food to the point of starvation. Three: bleeding from the eyes. Four: death."
+     }
+    ]
+   },
+   {
+    "value": "cannot be stopped by force",
+    "quote": "Unintimidated, Martin bites Steven's arm, before biting his own arm as an example of retributive justice",
+    "confidence": "observed"
+   }
   ],
   "who_suffers": [
-   {"value": "surgeon", "relation_to_threat": "stranger", "detail": "Steven Murphy", "quote": "Martin blames Steven for his death", "confidence": "sourced"},
-   {"value": "children", "relation_to_threat": "family", "detail": "Kim and Bob", "quote": "Kim and Bob argue over which one of them Steven will kill", "confidence": "sourced"},
-   {"value": "wife", "relation_to_threat": "family", "detail": "Anna", "quote": "She encourages Steven to kill one of the children rather than her", "confidence": "sourced"}
+   {
+    "value": "surgeon",
+    "relation_to_threat": "stranger",
+    "detail": "Steven Murphy",
+    "quote": "Martin blames Steven for his death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "children",
+    "relation_to_threat": "family",
+    "detail": "Kim and Bob",
+    "quote": "Kim and Bob argue over which one of them Steven will kill",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:16",
+      "quote": "Kill me right here in front of your eyes so that you can be sure that I die"
+     }
+    ]
+   },
+   {
+    "value": "wife",
+    "relation_to_threat": "family",
+    "detail": "Anna",
+    "quote": "She encourages Steven to kill one of the children rather than her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:21",
+      "quote": "Bob will die. Kim will die. Your wife will die."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "child sacrificed", "quote": "He narrowly misses Kim and Anna, but the third shot kills Bob", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "Martin enters the diner where he and Steven used to meet, where the remaining Murphys are", "confidence": "sourced"}
+   {
+    "value": "child sacrificed",
+    "quote": "He narrowly misses Kim and Anna, but the third shot kills Bob",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat survives",
+    "quote": "Martin enters the diner where he and Steven used to meet, where the remaining Murphys are",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "open heart surgery", "when": "opening", "role": "omen", "quote": "After performing an open heart surgery, Steven Murphy", "confidence": "sourced"},
-   {"value": "diner", "when": "opening", "role": "setting", "quote": "goes to a diner where he meets 16-year-old Martin Lang", "confidence": "sourced"},
-   {"value": "paralysed legs", "when": "middle", "role": "threat", "quote": "Bob finds himself unable to move his legs", "confidence": "sourced"},
-   {"value": "feeding tubes", "when": "middle", "role": "threat", "quote": "she and Bob are both given feeding tubes", "confidence": "sourced"},
-   {"value": "bite", "state": "self-inflicted", "when": "late", "role": "symbol", "quote": "before biting his own arm as an example of retributive justice", "confidence": "sourced"},
-   {"value": "bleeding eyes", "when": "ending", "role": "omen", "quote": "When Bob begins bleeding from his eyes", "confidence": "sourced"},
-   {"value": "rifle", "when": "ending", "role": "weapon", "quote": "repeatedly fires a rifle while spinning in a circle", "confidence": "sourced"},
-   {"value": "covered heads", "state": "bound with duct tape", "when": "ending", "role": "setting", "quote": "places him, Kim, and Anna in a circle, bound with duct tape, and covers their heads", "confidence": "sourced"}
+   {
+    "value": "open heart surgery",
+    "when": "opening",
+    "role": "omen",
+    "quote": "After performing an open heart surgery, Steven Murphy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "They are performing open heart surgery."
+     }
+    ]
+   },
+   {
+    "value": "diner",
+    "when": "opening",
+    "role": "setting",
+    "quote": "goes to a diner where he meets 16-year-old Martin Lang",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:33",
+      "quote": "Do you mind if I go grab something to eat before we go? I'm starving."
+     }
+    ]
+   },
+   {
+    "value": "wristwatch",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:03:33",
+    "quote": "Nice watch.",
+    "confidence": "sourced",
+    "detail": "Steven gives Martin a watch; Martin swaps the metal strap for leather, and Steven and Matthew wear the same model",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:28",
+      "quote": "And to show you my new strap I got for my watch."
+     }
+    ]
+   },
+   {
+    "value": "paralysed legs",
+    "when": "middle",
+    "role": "threat",
+    "quote": "Bob finds himself unable to move his legs",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:49",
+      "quote": "Dad, my legs, they're numb."
+     }
+    ]
+   },
+   {
+    "value": "feeding tubes",
+    "when": "middle",
+    "role": "threat",
+    "quote": "she and Bob are both given feeding tubes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "A nurse inserts nasogastric feeding tubes into the noses of both children."
+     }
+    ]
+   },
+   {
+    "value": "bite",
+    "state": "self-inflicted",
+    "when": "late",
+    "role": "symbol",
+    "quote": "before biting his own arm as an example of retributive justice",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:26",
+      "quote": "No, there's only one way to make you and me both feel better."
+     },
+     {
+      "source": "screenplay",
+      "quote": "Martin bites his own arm and spits out a small piece of flesh."
+     }
+    ]
+   },
+   {
+    "value": "spaghetti",
+    "when": "late",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:15:05",
+    "quote": "someone told me that I eat spaghetti the exact same way he did.",
+    "confidence": "sourced",
+    "detail": "Martin's speech about inheriting his dead father's way of eating"
+   },
+   {
+    "value": "cut hair",
+    "state": "cut by the sick boy himself",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:33:24",
+    "quote": "I cut my hair just as you wanted me to.",
+    "confidence": "sourced",
+    "detail": "Bob's long hair, nagged about at the first dinner, cut to win his father's favour"
+   },
+   {
+    "value": "iphigenia essay",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:35:41",
+    "quote": "She wrote a brilliant essay on the tragedy of Iphigenia",
+    "confidence": "sourced",
+    "detail": "the school praises Kim's essay on the myth the film retells"
+   },
+   {
+    "value": "bleeding eyes",
+    "when": "ending",
+    "role": "omen",
+    "quote": "When Bob begins bleeding from his eyes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:49:50",
+      "quote": "Bob's eyes are bleeding."
+     }
+    ]
+   },
+   {
+    "value": "rifle",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "repeatedly fires a rifle while spinning in a circle",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:51:24",
+      "quote": "RIFLE COCKING"
+     }
+    ]
+   },
+   {
+    "value": "covered heads",
+    "state": "bound with duct tape",
+    "when": "ending",
+    "role": "setting",
+    "quote": "places him, Kim, and Anna in a circle, bound with duct tape, and covers their heads",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "He puts on a black balaclava that covers his entire face, so that he can't see anything."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "stranger befriended", "when": "opening", "quote": "goes to a diner where he meets 16-year-old Martin Lang, whose father died a few years earlier", "confidence": "sourced"},
-   {"order": 2, "value": "stranger enters the family", "when": "early", "role": "trigger", "quote": "Martin makes a good impression on everyone, but seems to especially get along with Kim", "confidence": "sourced"},
-   {"order": 3, "value": "child falls ill", "when": "middle", "quote": "One morning, Bob finds himself unable to move his legs", "confidence": "sourced"},
-   {"order": 4, "value": "terms of the curse given", "when": "middle", "role": "turn", "quote": "Steven must kill a member of his own family", "confidence": "sourced"},
-   {"order": 5, "value": "guilt confessed", "when": "middle", "role": "clue", "quote": "admitting that he had consumed alcohol before performing Martin's father's surgery", "confidence": "sourced"},
-   {"order": 6, "value": "avenger tortured", "when": "late", "quote": "Steven ties Martin up in their basement, beats him, and shoots his legs", "confidence": "sourced"},
-   {"order": 7, "value": "family turns on itself", "when": "late", "quote": "Kim and Bob argue over which one of them Steven will kill", "confidence": "sourced"},
-   {"order": 8, "value": "random sacrifice", "when": "ending", "quote": "the third shot kills Bob", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "stranger befriended",
+    "when": "opening",
+    "quote": "goes to a diner where he meets 16-year-old Martin Lang, whose father died a few years earlier",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:27",
+      "quote": "Sorry to keep you waiting. Ah, did you eat?"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "stranger enters the family",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Martin makes a good impression on everyone, but seems to especially get along with Kim",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:14",
+      "quote": "I'd like you to come by my house one day to meet my wife and children."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "child falls ill",
+    "when": "middle",
+    "quote": "One morning, Bob finds himself unable to move his legs",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:48",
+      "quote": "I can't feel my legs."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "terms of the curse given",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Steven must kill a member of his own family",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:11",
+      "quote": "Just as you killed a member of my family, now you gotta kill a member of your family"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "guilt confessed",
+    "when": "middle",
+    "role": "clue",
+    "quote": "admitting that he had consumed alcohol before performing Martin's father's surgery",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:55",
+      "quote": "He'd had two drinks that morning before we went in to prepare."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "avenger tortured",
+    "when": "late",
+    "quote": "Steven ties Martin up in their basement, beats him, and shoots his legs",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:59",
+      "quote": "TOOTH ROLLS AWAY"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "family turns on itself",
+    "when": "late",
+    "quote": "Kim and Bob argue over which one of them Steven will kill",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:41:30",
+      "quote": "is to kill a child. Because we can have another child."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "random sacrifice",
+    "when": "ending",
+    "quote": "the third shot kills Bob",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:52:25",
+      "quote": "GUNSHOT - (THUD)"
+     },
+     {
+      "source": "screenplay",
+      "quote": "He sees Bob, hit in the chest. Motionless."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "survivors face avenger again",
+    "when": "ending",
+    "role": "turn",
+    "source": "screenplay",
+    "quote": "Martin walks in, limping from the bullet wound. He stares at them as he walks past",
+    "confidence": "sourced",
+    "detail": "closing scene in a fast-food diner; Kim walks normally again"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

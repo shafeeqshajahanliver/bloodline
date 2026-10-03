@@ -1,58 +1,420 @@
 {
  "film": "2019-vivarium",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "place", "detail": "Yonder, an endless identical housing development", "quote": "trapped in a strange, vivarium-like neighbourhood", "confidence": "sourced"},
-   {"value": "inhuman child", "detail": "the boy, a mimicking humanoid creature", "quote": "a couple (Eisenberg and Poots) who are forced to care for a mysterious humanoid creature", "confidence": "sourced"}
+   {
+    "value": "place",
+    "detail": "Yonder, an endless identical housing development",
+    "quote": "trapped in a strange, vivarium-like neighbourhood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:38",
+      "quote": "This house is forever."
+     }
+    ]
+   },
+   {
+    "value": "inhuman child",
+    "detail": "the boy, a mimicking humanoid creature",
+    "quote": "a couple (Eisenberg and Poots) who are forced to care for a mysterious humanoid creature",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:19",
+      "quote": "Are you overwhelmed again, Mother?"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "unexplained", "detail": "creatures with throat sacs behind it", "quote": "a strange book filled with symbols and drawings of humanoid figures with throat sacs", "confidence": "sourced"}
+   {
+    "value": "unexplained",
+    "detail": "creatures with throat sacs behind it",
+    "quote": "a strange book filled with symbols and drawings of humanoid figures with throat sacs",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "a surrogate parent", "quote": "a message instructing them to raise the child in order to be released", "confidence": "sourced"},
-   {"value": "to replace someone", "detail": "the boy takes Martin's place", "quote": "When a couple walks in the door, the boy greets them just as Martin did", "confidence": "sourced"}
+   {
+    "value": "a surrogate parent",
+    "quote": "a message instructing them to raise the child in order to be released",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:30",
+      "quote": "Someone who prepares her son for the world."
+     }
+    ]
+   },
+   {
+    "value": "to replace someone",
+    "detail": "the boy takes Martin's place",
+    "quote": "When a couple walks in the door, the boy greets them just as Martin did",
+    "confidence": "sourced"
+   },
+   {
+    "value": "a nest",
+    "detail": "the cuckoo lesson that frames the film",
+    "source": "subtitles",
+    "at": "00:03:41",
+    "quote": "Because it needed a nest.",
+    "confidence": "observed"
+   }
   ],
   "trigger": [
-   {"value": "viewing a new home", "quote": "visit a housing development called Yonder, where all the homes appear identical", "confidence": "sourced"}
+   {
+    "value": "viewing a new home",
+    "quote": "visit a housing development called Yonder, where all the homes appear identical",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:57",
+      "quote": "Welcome to Yonder."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "every road leads back", "quote": "attempt to escape on foot but repeatedly return to the same house", "confidence": "sourced"},
-   {"value": "released by raising the child", "quote": "a message instructing them to raise the child in order to be released", "confidence": "sourced"},
-   {"value": "parents die after raising", "quote": "explaining that mothers die after raising their sons", "confidence": "sourced"},
-   {"value": "damage undone overnight", "quote": "By morning, however, the fire has left no damage", "confidence": "sourced"}
+   {
+    "value": "every road leads back",
+    "quote": "attempt to escape on foot but repeatedly return to the same house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:08",
+      "quote": "Why the fuck do we keep seeing number nine?"
+     }
+    ]
+   },
+   {
+    "value": "released by raising the child",
+    "quote": "a message instructing them to raise the child in order to be released",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:14",
+      "quote": "maybe it's time he was released."
+     }
+    ]
+   },
+   {
+    "value": "parents die after raising",
+    "quote": "explaining that mothers die after raising their sons",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:40",
+      "quote": "She dies. You go to sleep now."
+     }
+    ]
+   },
+   {
+    "value": "damage undone overnight",
+    "quote": "By morning, however, the fire has left no damage",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mimics its keepers",
+    "source": "subtitles",
+    "at": "00:42:57",
+    "quote": "[imitates Tom] Gemma, please, just let me do this, okay?",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "couple", "relation_to_threat": "stranger", "detail": "Gemma and Tom", "quote": "Primary school teacher Gemma and her boyfriend Tom, a landscaper, visit a housing development called Yonder", "confidence": "sourced"},
-   {"value": "previous victims", "relation_to_threat": "stranger", "quote": "Tom continues to dig and finds a corpse in a vacuum bag", "confidence": "sourced"}
+   {
+    "value": "couple",
+    "relation_to_threat": "stranger",
+    "detail": "Gemma and Tom",
+    "quote": "Primary school teacher Gemma and her boyfriend Tom, a landscaper, visit a housing development called Yonder",
+    "confidence": "sourced"
+   },
+   {
+    "value": "previous victims",
+    "relation_to_threat": "stranger",
+    "quote": "Tom continues to dig and finds a corpse in a vacuum bag",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "everyone dies", "quote": "She dies as he zips her in. The boy buries her with Tom", "confidence": "sourced"},
-   {"value": "cycle passes on", "quote": "When a couple walks in the door, the boy greets them just as Martin did", "confidence": "sourced"}
+   {
+    "value": "everyone dies",
+    "quote": "She dies as he zips her in. The boy buries her with Tom",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:38",
+      "quote": "[body thuds]"
+     }
+    ]
+   },
+   {
+    "value": "cycle passes on",
+    "quote": "When a couple walks in the door, the boy greets them just as Martin did",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "identical houses", "when": "opening", "role": "setting", "quote": "where all the homes appear identical", "confidence": "sourced"},
-   {"value": "box", "state": "contains a baby", "when": "early", "role": "trigger", "quote": "a new box appears, this time containing a baby boy", "confidence": "sourced"},
-   {"value": "vacuum bag", "when": "late", "role": "symbol", "quote": "Tom dies and the boy zips him into a vacuum bag and throws it into the hole", "confidence": "sourced"},
-   {"value": "hole", "state": "dug in the garden", "when": "middle", "role": "clue", "quote": "Tom begins digging a hole in the garden while growing withdrawn", "confidence": "sourced"},
-   {"value": "pickaxe", "when": "late", "role": "weapon", "quote": "At her breaking point, Gemma wounds the boy with the pickaxe", "confidence": "sourced"},
-   {"value": "throat sacs", "when": "middle", "role": "clue", "quote": "he makes rasping sounds and inflates his own throat sacs", "confidence": "sourced"},
-   {"value": "name tag", "when": "ending", "role": "turn", "quote": "Martin gives the boy his name tag and dies", "confidence": "sourced"}
+   {
+    "value": "identical houses",
+    "when": "opening",
+    "role": "setting",
+    "quote": "where all the homes appear identical",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:11",
+      "quote": "If I see another row of green houses..."
+     }
+    ]
+   },
+   {
+    "value": "box",
+    "state": "contains a baby",
+    "when": "early",
+    "role": "trigger",
+    "quote": "a new box appears, this time containing a baby boy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:20",
+      "quote": "The box is gone."
+     }
+    ]
+   },
+   {
+    "value": "vacuum bag",
+    "when": "late",
+    "role": "symbol",
+    "quote": "Tom dies and the boy zips him into a vacuum bag and throws it into the hole",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:55",
+      "quote": "[air hissing]"
+     }
+    ]
+   },
+   {
+    "value": "hole",
+    "state": "dug in the garden",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Tom begins digging a hole in the garden while growing withdrawn",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:53",
+      "quote": "Just let me dig, okay?"
+     }
+    ]
+   },
+   {
+    "value": "pickaxe",
+    "when": "late",
+    "role": "weapon",
+    "quote": "At her breaking point, Gemma wounds the boy with the pickaxe",
+    "confidence": "sourced"
+   },
+   {
+    "value": "throat sacs",
+    "when": "middle",
+    "role": "clue",
+    "quote": "he makes rasping sounds and inflates his own throat sacs",
+    "confidence": "sourced"
+   },
+   {
+    "value": "name tag",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Martin gives the boy his name tag and dies",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cuckoo and dead chicks",
+    "when": "opening",
+    "role": "omen",
+    "state": "dead, pushed from the nest",
+    "detail": "Gemma's pupils find dead fledglings beneath a tree",
+    "source": "subtitles",
+    "at": "00:03:31",
+    "quote": "Who did that to the poor baby birds?",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:37",
+      "quote": "Maybe it was a cuckoo."
+     }
+    ]
+   },
+   {
+    "value": "cloud-shaped clouds",
+    "when": "middle",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:55:27",
+    "quote": "All the clouds here are shaped like clouds.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child barks like a dog",
+    "when": "middle",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:29:03",
+    "quote": "[boy imitates barking]",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "strange estate agent", "when": "opening", "role": "omen", "quote": "an unusual real estate agent named Martin, who unsettlingly mimics Gemma's answer", "confidence": "sourced"},
-   {"order": 2, "value": "trapped in a loop", "when": "opening", "role": "trigger", "quote": "inexplicably end up going back to house 9", "confidence": "sourced"},
-   {"order": 3, "value": "child delivered", "when": "early", "quote": "a new box appears, this time containing a baby boy", "confidence": "sourced"},
-   {"order": 4, "value": "child grows unnaturally", "when": "middle", "quote": "the child has grown rapidly to the size of a ten-year-old", "confidence": "sourced"},
-   {"order": 5, "value": "previous victim found", "when": "late", "role": "clue", "quote": "Tom continues to dig and finds a corpse in a vacuum bag", "confidence": "sourced"},
-   {"order": 6, "value": "partner dies", "when": "late", "quote": "Tom dies and the boy zips him into a vacuum bag", "confidence": "sourced"},
-   {"order": 7, "value": "other victims glimpsed", "when": "late", "quote": "rooms in other houses with more boys and several strangers, one of whom is dead", "confidence": "sourced"},
-   {"order": 8, "value": "creature takes over role", "when": "ending", "role": "turn", "quote": "When a couple walks in the door, the boy greets them just as Martin did", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "dead fledglings found",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:31",
+    "quote": "Who did that to the poor baby birds?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "strange estate agent",
+    "when": "opening",
+    "role": "omen",
+    "quote": "an unusual real estate agent named Martin, who unsettlingly mimics Gemma's answer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:02",
+      "quote": "Martin, you are one strange and persuasive motherfucker."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "trapped in a loop",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "inexplicably end up going back to house 9",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:27",
+      "quote": "Number fucking nine again."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "child delivered",
+    "when": "early",
+    "quote": "a new box appears, this time containing a baby boy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:26",
+      "quote": "[baby coos]"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "child grows unnaturally",
+    "when": "middle",
+    "quote": "the child has grown rapidly to the size of a ten-year-old",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:19",
+      "quote": "Are you overwhelmed again, Mother?"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "attempt to starve it",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "00:48:48",
+    "quote": "I'm gonna starve it.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "previous victim found",
+    "when": "late",
+    "role": "clue",
+    "quote": "Tom continues to dig and finds a corpse in a vacuum bag",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "partner dies",
+    "when": "late",
+    "quote": "Tom dies and the boy zips him into a vacuum bag",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "other victims glimpsed",
+    "when": "late",
+    "quote": "rooms in other houses with more boys and several strangers, one of whom is dead",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "creature takes over role",
+    "when": "ending",
+    "role": "turn",
+    "quote": "When a couple walks in the door, the boy greets them just as Martin did",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:44",
+      "quote": "[shop bell rings]"
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

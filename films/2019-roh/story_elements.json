@@ -1,58 +1,443 @@
 {
  "film": "2019-roh",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "demon in disguise", "detail": "Tok, an iblis", "quote": "She reveals that she is an iblis that exists by possessing humans to gain control of their souls", "confidence": "sourced"},
-   {"value": "strange child", "detail": "Adik", "quote": "a family living in a forest is visited by a strange little girl, who comes with a frightening prediction", "confidence": "sourced"},
-   {"value": "forest spirit", "quote": "a restless forest spirit that is cursed to endlessly hunt animals and children", "confidence": "sourced"}
+   {
+    "value": "demon in disguise",
+    "detail": "Tok, an iblis",
+    "quote": "She reveals that she is an iblis that exists by possessing humans to gain control of their souls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:46",
+      "quote": "All we need to do is whisper. And you obeyed our whispers."
+     }
+    ]
+   },
+   {
+    "value": "strange child",
+    "detail": "Adik",
+    "quote": "a family living in a forest is visited by a strange little girl, who comes with a frightening prediction",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:41",
+      "quote": "When the moon is full, all of you will die."
+     }
+    ]
+   },
+   {
+    "value": "forest spirit",
+    "quote": "a restless forest spirit that is cursed to endlessly hunt animals and children",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:18",
+      "quote": "or some people called It... the ghost hunter."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "unexplained", "quote": "She reveals that she is an iblis", "confidence": "observed"}
+   {
+    "value": "unexplained",
+    "quote": "She reveals that she is an iblis",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:11",
+      "quote": "SATAN SAID: \" I AM BETTER THAN HIM. YOU CREATED ME FROM FIRE AND CREATED HIM FROM CLAY. \""
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "souls", "quote": "exists by possessing humans to gain control of their souls", "confidence": "sourced"}
+   {
+    "value": "souls",
+    "quote": "exists by possessing humans to gain control of their souls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:30",
+      "quote": "Where do you think... your soul will go?"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:14:28",
+      "quote": "This body is for the next child."
+     }
+    ]
+   },
+   {
+    "value": "to hunt deer and children",
+    "detail": "the forest spirit of the mother's legend",
+    "source": "subtitles",
+    "at": "00:12:54",
+    "quote": "slaying innumerable creatures especially... deers and children.",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "taking in a stranger", "quote": "They take her in and call her Adik for little sister", "confidence": "sourced"}
+   {
+    "value": "taking in a stranger",
+    "quote": "They take her in and call her Adik for little sister",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "death by full moon", "quote": "She tells them that they will all be dead by the next full moon before slitting her own throat", "confidence": "sourced"},
-   {"value": "protective chant with rocks", "quote": "victims can save themselves by knocking two rocks together and chanting a mantra", "confidence": "sourced"},
-   {"value": "sacrifice must be complete", "quote": "instructs Angah to sacrifice two white pigeons but the boy secretly lets one of the birds go free", "confidence": "sourced"}
+   {
+    "value": "death by full moon",
+    "quote": "She tells them that they will all be dead by the next full moon before slitting her own throat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:41",
+      "quote": "When the moon is full, all of you will die."
+     }
+    ]
+   },
+   {
+    "value": "protective chant with rocks",
+    "quote": "victims can save themselves by knocking two rocks together and chanting a mantra",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:02",
+      "quote": "pick up two stones knock them while calling out \" Grandpa, bring us their hearts \""
+     }
+    ]
+   },
+   {
+    "value": "sacrifice must be complete",
+    "quote": "instructs Angah to sacrifice two white pigeons but the boy secretly lets one of the birds go free",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dogs and nightjars signal it",
+    "source": "subtitles",
+    "at": "00:13:42",
+    "quote": "When you hear dogs barking... or the sound of nightjars flying in flock at night you'll know that It's nearby.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "distrust the senses in the forest",
+    "source": "subtitles",
+    "at": "00:11:13",
+    "quote": "Never believe everything that you see or hear... in the jungle.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "widowed mother and children", "relation_to_threat": "stranger", "quote": "two children, Along and Angah, live in a ramshackle shed in the forest with their widowed mother, Mak", "confidence": "sourced"},
-   {"value": "grieving father", "relation_to_threat": "family", "detail": "the hunter, Adik's father", "quote": "The hunter, who is Adik's father, finds her body and grieves", "confidence": "sourced"}
+   {
+    "value": "widowed mother and children",
+    "relation_to_threat": "stranger",
+    "quote": "two children, Along and Angah, live in a ramshackle shed in the forest with their widowed mother, Mak",
+    "confidence": "sourced"
+   },
+   {
+    "value": "grieving father",
+    "relation_to_threat": "family",
+    "detail": "the hunter, Adik's father",
+    "quote": "The hunter, who is Adik's father, finds her body and grieves",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:16",
+      "quote": "I couldn't save him. Same as my daughter."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "everyone dies", "quote": "Along burning down the family home with her mother, weakened by loss of blood from slit wrists, and dead brother inside it", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "The iblis taunts the hunter that he has not managed to save Angah from his fate", "confidence": "observed"}
+   {
+    "value": "everyone dies",
+    "quote": "Along burning down the family home with her mother, weakened by loss of blood from slit wrists, and dead brother inside it",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat survives",
+    "quote": "The iblis taunts the hunter that he has not managed to save Angah from his fate",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:08",
+      "quote": "You were given so many signs. You could've saved that family."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "deer", "state": "dead, hanging in branches", "when": "opening", "role": "omen", "quote": "they discover a dead deer hanging by its neck caught between branches high off the ground", "confidence": "sourced"},
-   {"value": "raw birds", "state": "eaten", "when": "early", "role": "omen", "quote": "the family wakes to see Adik eating raw birds", "confidence": "sourced"},
-   {"value": "rocks", "state": "appeared overnight", "when": "early", "role": "omen", "quote": "rocks that mysteriously appeared around the house the night before", "confidence": "sourced"},
-   {"value": "crawl space", "when": "middle", "role": "setting", "quote": "Along encounters a specter that looks like Adik in the crawl space under their house", "confidence": "sourced"},
-   {"value": "white pigeons", "state": "one freed", "when": "middle", "role": "turn", "quote": "sacrifice two white pigeons but the boy secretly lets one of the birds go free", "confidence": "sourced"},
-   {"value": "spear", "when": "late", "role": "weapon", "quote": "he himself is run through with a spear by Mak", "confidence": "sourced"},
-   {"value": "shallow grave", "when": "ending", "role": "clue", "quote": "Tok performing a ritual over Adik's body which is buried in a shallow grave", "confidence": "sourced"},
-   {"value": "burning house", "when": "ending", "role": "symbol", "quote": "The film ends with Along burning down the family home", "confidence": "sourced"}
+   {
+    "value": "deer",
+    "state": "dead, hanging in branches",
+    "when": "opening",
+    "role": "omen",
+    "quote": "they discover a dead deer hanging by its neck caught between branches high off the ground",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:38",
+      "quote": "This noon at the trap we saw a deer. Dead. Hung by a tree."
+     }
+    ]
+   },
+   {
+    "value": "raw birds",
+    "state": "eaten",
+    "when": "early",
+    "role": "omen",
+    "quote": "the family wakes to see Adik eating raw birds",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rocks",
+    "state": "appeared overnight",
+    "when": "early",
+    "role": "omen",
+    "quote": "rocks that mysteriously appeared around the house the night before",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:45",
+      "quote": "These stones are bad omens."
+     }
+    ]
+   },
+   {
+    "value": "crawl space",
+    "when": "middle",
+    "role": "setting",
+    "quote": "Along encounters a specter that looks like Adik in the crawl space under their house",
+    "confidence": "sourced"
+   },
+   {
+    "value": "white pigeons",
+    "state": "one freed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "sacrifice two white pigeons but the boy secretly lets one of the birds go free",
+    "confidence": "sourced"
+   },
+   {
+    "value": "spear",
+    "when": "late",
+    "role": "weapon",
+    "quote": "he himself is run through with a spear by Mak",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:51",
+      "quote": "Don't you think that guy looks like a hunter? He even has a spear."
+     }
+    ]
+   },
+   {
+    "value": "shallow grave",
+    "when": "ending",
+    "role": "clue",
+    "quote": "Tok performing a ritual over Adik's body which is buried in a shallow grave",
+    "confidence": "sourced"
+   },
+   {
+    "value": "burning house",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "The film ends with Along burning down the family home",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fire and clay",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:00:11",
+    "quote": "SATAN SAID: \" I AM BETTER THAN HIM. YOU CREATED ME FROM FIRE AND CREATED HIM FROM CLAY. \"",
+    "confidence": "sourced",
+    "detail": "Quranic epigraph; the demon returns to fire, clay and ashes in the closing speech",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:27",
+      "quote": "This is just a body... that will rot and become clay."
+     }
+    ]
+   },
+   {
+    "value": "ghostly dogs",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:12:10",
+    "quote": "It likes to roam around the jungle with Its ghostly dogs.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "nightjars",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:13:46",
+    "quote": "or the sound of nightjars flying in flock at night",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "dead animal omen", "when": "opening", "role": "omen", "quote": "they discover a dead deer hanging by its neck", "confidence": "sourced"},
-   {"order": 2, "value": "stranger child taken in", "when": "opening", "role": "trigger", "quote": "They take her in and call her Adik for little sister", "confidence": "sourced"},
-   {"order": 3, "value": "prophecy and suicide", "when": "early", "quote": "they will all be dead by the next full moon before slitting her own throat", "confidence": "sourced"},
-   {"order": 4, "value": "helper arrives", "when": "early", "role": "turn", "quote": "an old lady who calls herself Tok", "confidence": "sourced"},
-   {"order": 5, "value": "ritual broken", "when": "middle", "quote": "the boy secretly lets one of the birds go free", "confidence": "sourced"},
-   {"order": 6, "value": "child's death", "when": "middle", "quote": "Along slams her head repeatedly into a sharp metal protrusion on the floor and dies", "confidence": "sourced"},
-   {"order": 7, "value": "mutual killings", "when": "late", "quote": "the hunter finds Angah and slits his throat before he himself is run through with a spear by Mak", "confidence": "sourced"},
-   {"order": 8, "value": "helper revealed as demon", "when": "ending", "role": "turn", "quote": "She reveals that she is an iblis", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "scripture epigraph",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:11",
+    "quote": "SATAN SAID: \" I AM BETTER THAN HIM.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "dead animal omen",
+    "when": "opening",
+    "role": "omen",
+    "quote": "they discover a dead deer hanging by its neck",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:38",
+      "quote": "This noon at the trap we saw a deer. Dead. Hung by a tree."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "mother tells forest legend",
+    "when": "opening",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:12:35",
+    "quote": "It swore a solemn oath to not return home until It got what It hunted for.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "stranger child taken in",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "They take her in and call her Adik for little sister",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:05",
+      "quote": "Child, where are you from?"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "prophecy and suicide",
+    "when": "early",
+    "quote": "they will all be dead by the next full moon before slitting her own throat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:41",
+      "quote": "When the moon is full, all of you will die."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "helper arrives",
+    "when": "early",
+    "role": "turn",
+    "quote": "an old lady who calls herself Tok",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "ritual broken",
+    "when": "middle",
+    "quote": "the boy secretly lets one of the birds go free",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "child's death",
+    "when": "middle",
+    "quote": "Along slams her head repeatedly into a sharp metal protrusion on the floor and dies",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "mutual killings",
+    "when": "late",
+    "quote": "the hunter finds Angah and slits his throat before he himself is run through with a spear by Mak",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:59",
+      "quote": "I've killed the boy."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "helper revealed as demon",
+    "when": "ending",
+    "role": "turn",
+    "quote": "She reveals that she is an iblis",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:43",
+      "quote": "\" Humans \"? What do you mean? Who are you exactly?"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "demon's closing sermon",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:19:44",
+    "quote": "Will your soul... rise like fire that reaches the heavens... or will your soul fall like ashes... that scatter over the ground?",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

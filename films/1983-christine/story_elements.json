@@ -1,61 +1,444 @@
 {
  "film": "1983-christine",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "possessed object", "detail": "Christine, a sentient 1958 Plymouth Fury", "quote": "a sentient 1958 Plymouth Fury, named \"Christine\", that exhibits a toxic personality and becomes a bad influence on him", "confidence": "sourced"},
-   {"value": "corrupted friend", "detail": "Arnie", "quote": "Arnie develops a rebellious, arrogant personality, worrying his parents and Dennis", "confidence": "sourced"}
+   {
+    "value": "possessed object",
+    "detail": "Christine, a sentient 1958 Plymouth Fury",
+    "quote": "a sentient 1958 Plymouth Fury, named \"Christine\", that exhibits a toxic personality and becomes a bad influence on him",
+    "confidence": "sourced"
+   },
+   {
+    "value": "corrupted friend",
+    "detail": "Arnie",
+    "quote": "Arnie develops a rebellious, arrogant personality, worrying his parents and Dennis",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "unexplained", "detail": "evil from the production line", "quote": "a newly-built red 1958 Plymouth Fury slams its hood shut by itself onto a worker's hand", "confidence": "observed"}
+   {
+    "value": "unexplained",
+    "detail": "evil from the production line",
+    "quote": "a newly-built red 1958 Plymouth Fury slams its hood shut by itself onto a worker's hand",
+    "confidence": "observed"
+   }
   ],
   "wants": [
-   {"value": "possession of its owner", "detail": "jealous of Leigh", "quote": "Christine briefly locks her doors to keep Arnie from coming to her rescue", "confidence": "observed"},
-   {"value": "revenge", "detail": "on the gang who vandalised her", "quote": "the car kills Buddy and all his gang members", "confidence": "observed"}
+   {
+    "value": "possession of its owner",
+    "detail": "jealous of Leigh",
+    "quote": "Christine briefly locks her doors to keep Arnie from coming to her rescue",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:56",
+      "quote": "IF ANY SHITTER EVER CAME BETWEEN HIM AND CHRISTINE,"
+     }
+    ]
+   },
+   {
+    "value": "revenge",
+    "detail": "on the gang who vandalised her",
+    "quote": "the car kills Buddy and all his gang members",
+    "confidence": "observed"
+   },
+   {
+    "value": "to be the only love",
+    "source": "subtitles",
+    "at": "00:46:52",
+    "quote": "GIRLS ARE SUPPOSED TO BE JEALOUS OF OTHER GIRLS, NOT CARS. THIS CAR'S A GIRL.",
+    "confidence": "observed",
+    "detail": "the car is jealous of Arnie's girlfriend"
+   }
   ],
   "wrong": [
-   {"value": "bullying", "quote": "Arnold \"Arnie\" Cunningham is bullied on the first day of school by classmate Buddy Repperton and his gang", "confidence": "sourced"}
+   {
+    "value": "bullying",
+    "quote": "Arnold \"Arnie\" Cunningham is bullied on the first day of school by classmate Buddy Repperton and his gang",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:28",
+      "quote": "STICK HIM, BUDDY."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "taking an object", "detail": "buying the car", "quote": "In spite of Dennis' objections, Arnie purchases the car", "confidence": "sourced"}
+   {
+    "value": "taking an object",
+    "detail": "buying the car",
+    "quote": "In spite of Dennis' objections, Arnie purchases the car",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:27",
+      "quote": "AND I KNOW I CAN FIX HER UP."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "repairs itself", "quote": "Arnie returns to the garage alone and witnesses Christine repairing herself", "confidence": "sourced"},
-   {"value": "past owners die", "quote": "his sister-in-law and later his brother both committed suicide in it", "confidence": "sourced"}
+   {
+    "value": "repairs itself",
+    "quote": "Arnie returns to the garage alone and witnesses Christine repairing herself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Her dented door breaks the silence of the garage with a QUIET PUNK! PUNK! PUNK! as the metal undents itself"
+     }
+    ]
+   },
+   {
+    "value": "past owners die",
+    "quote": "his sister-in-law and later his brother both committed suicide in it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:26",
+      "quote": "I KNOW HE DIED CHOKING ON EXHAUST FUMES."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "bullied teenager", "relation_to_threat": "self", "detail": "Arnie, the owner", "quote": "Arnie is thrown through the windshield and impaled on a shard of glass", "confidence": "sourced"},
-   {"value": "bullies", "relation_to_threat": "stranger", "quote": "Over two evenings, the car kills Buddy and all his gang members", "confidence": "sourced"},
-   {"value": "girlfriend", "relation_to_threat": "lover", "detail": "Leigh Cabot", "quote": "While alone in the car, Leigh nearly chokes to death on a hamburger", "confidence": "sourced"},
-   {"value": "best friend", "relation_to_threat": "stranger", "detail": "Dennis Guilder", "quote": "Dennis battles Christine with the bulldozer", "confidence": "sourced"}
+   {
+    "value": "bullied teenager",
+    "relation_to_threat": "self",
+    "detail": "Arnie, the owner",
+    "quote": "Arnie is thrown through the windshield and impaled on a shard of glass",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bullies",
+    "relation_to_threat": "stranger",
+    "quote": "Over two evenings, the car kills Buddy and all his gang members",
+    "confidence": "sourced"
+   },
+   {
+    "value": "girlfriend",
+    "relation_to_threat": "lover",
+    "detail": "Leigh Cabot",
+    "quote": "While alone in the car, Leigh nearly chokes to death on a hamburger",
+    "confidence": "sourced"
+   },
+   {
+    "value": "best friend",
+    "relation_to_threat": "stranger",
+    "detail": "Dennis Guilder",
+    "quote": "Dennis battles Christine with the bulldozer",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "the remains of Christine are crushed into a cube at a junkyard", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "Unseen by them, Christine's grille twitches slightly", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "the remains of Christine are crushed into a cube at a junkyard",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "they watch an auto compacter CRUSH a barely identifiable mass of red-and- white metal into a small, dense square."
+     }
+    ]
+   },
+   {
+    "value": "threat survives",
+    "quote": "Unseen by them, Christine's grille twitches slightly",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "car", "state": "red, newly built", "when": "opening", "role": "threat", "quote": "a newly-built red 1958 Plymouth Fury slams its hood shut by itself onto a worker's hand", "confidence": "sourced"},
-   {"value": "car radio", "state": "playing 1950s rock", "when": "early", "role": "omen", "quote": "when Christine's radio begins playing 1950s rock and roll music, he flees", "confidence": "sourced"},
-   {"value": "locked doors", "when": "middle", "role": "threat", "quote": "Christine briefly locks her doors to keep Arnie from coming to her rescue", "confidence": "sourced"},
-   {"value": "fire", "state": "car in flames", "when": "late", "role": "threat", "quote": "Christine drives away in flames and returns to the garage", "confidence": "sourced"},
-   {"value": "bulldozer", "when": "ending", "role": "weapon", "quote": "smash her with a bulldozer", "confidence": "sourced"},
-   {"value": "shard of glass", "when": "ending", "role": "weapon", "quote": "impaled on a shard of glass", "confidence": "sourced"},
-   {"value": "grille", "state": "twitching", "when": "ending", "role": "symbol", "quote": "Unseen by them, Christine's grille twitches slightly", "confidence": "sourced"}
+   {
+    "value": "car",
+    "state": "red, newly built",
+    "when": "opening",
+    "role": "threat",
+    "quote": "a newly-built red 1958 Plymouth Fury slams its hood shut by itself onto a worker's hand",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "We are looking at a red-and-white Plymouth Fury."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:17:48",
+      "quote": "HER NAME'S CHRISTINE."
+     }
+    ]
+   },
+   {
+    "value": "car radio",
+    "state": "playing 1950s rock",
+    "when": "early",
+    "role": "omen",
+    "quote": "when Christine's radio begins playing 1950s rock and roll music, he flees",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:58",
+      "quote": "THE RADIO CAME ON."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:50:21",
+      "quote": "THAT RADIO? IT ONLY GETS THOSE OLD SONGS."
+     }
+    ]
+   },
+   {
+    "value": "locked doors",
+    "when": "middle",
+    "role": "threat",
+    "quote": "Christine briefly locks her doors to keep Arnie from coming to her rescue",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:08",
+      "quote": "MY DOOR WAS LOCKED."
+     },
+     {
+      "source": "screenplay",
+      "quote": "He tries to get in, but his door is locked."
+     }
+    ]
+   },
+   {
+    "value": "fire",
+    "state": "car in flames",
+    "when": "late",
+    "role": "threat",
+    "quote": "Christine drives away in flames and returns to the garage",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "emerges Christine, totally engulfed in flames. She is a ball of fire, and she moves right toward Buddy."
+     }
+    ]
+   },
+   {
+    "value": "bulldozer",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "smash her with a bulldozer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The old bulldozer sits prominently amidst abstract piles of truck and auto wreckage."
+     }
+    ]
+   },
+   {
+    "value": "shard of glass",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "impaled on a shard of glass",
+    "confidence": "sourced"
+   },
+   {
+    "value": "grille",
+    "state": "twitching",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "Unseen by them, Christine's grille twitches slightly",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "the crushed block of red-and-white steel appears to give a barely perceptible twitch. Probably just the light."
+     }
+    ]
+   },
+   {
+    "value": "odometer running backwards",
+    "state": "mileage falling",
+    "when": "middle",
+    "role": "clue",
+    "source": "screenplay",
+    "quote": "somebody tampered with your odometer. Your mileage is lower than last time I saw you.",
+    "confidence": "observed",
+    "detail": "the car winding back its own mileage as it renews itself"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "evil at birth", "when": "opening", "role": "omen", "quote": "another worker is found dead inside the car after dropping cigar ash on its seats", "confidence": "sourced"},
-   {"order": 2, "value": "outsider bullied", "when": "early", "quote": "is bullied on the first day of school by classmate Buddy Repperton and his gang", "confidence": "sourced"},
-   {"order": 3, "value": "object acquired", "when": "early", "role": "trigger", "quote": "In spite of Dennis' objections, Arnie purchases the car", "confidence": "sourced"},
-   {"order": 4, "value": "dark history revealed", "when": "middle", "role": "clue", "quote": "his five-year-old niece choked to death in the car", "confidence": "sourced"},
-   {"order": 5, "value": "jealous attack on girlfriend", "when": "middle", "quote": "Leigh nearly chokes to death on a hamburger", "confidence": "sourced"},
-   {"order": 6, "value": "revenge killings", "when": "late", "quote": "the car kills Buddy and all his gang members, blowing up a gas station in the process", "confidence": "sourced"},
-   {"order": 7, "value": "owner dies", "when": "ending", "quote": "Christine responds by playing \"Pledging My Love\" on her radio as Arnie dies", "confidence": "sourced"},
-   {"order": 8, "value": "closing sting", "when": "ending", "role": "turn", "quote": "Unseen by them, Christine's grille twitches slightly", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "opening song as boast",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:02:08",
+    "quote": "THAT I WAS BAD TO THE BONE",
+    "confidence": "observed",
+    "detail": "'Bad to the Bone' plays over the Detroit assembly line, and again over the end credits"
+   },
+   {
+    "order": 2,
+    "value": "evil at birth",
+    "when": "opening",
+    "role": "omen",
+    "quote": "another worker is found dead inside the car after dropping cigar ash on its seats",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The black man tumbles out the door."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "outsider bullied",
+    "when": "early",
+    "quote": "is bullied on the first day of school by classmate Buddy Repperton and his gang",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:36",
+      "quote": "BUDDY REPPERTON HAS HIS LUNCH."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "object acquired",
+    "when": "early",
+    "role": "trigger",
+    "quote": "In spite of Dennis' objections, Arnie purchases the car",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:40",
+      "quote": "GREAT. DARNELL'S JUNKYARD IS FULL OF OFFICIAL ANTIQUES. I'M BUYING HER."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "dark history revealed",
+    "when": "middle",
+    "role": "clue",
+    "quote": "his five-year-old niece choked to death in the car",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:08",
+      "quote": "NOT A CARE IN THE WORLD EXCEPT FOR CHRISTINE. ONLY TIME I INTERFERED WAS WHEN RITA KILLED HERSELF."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "car vandalised by bullies",
+    "when": "middle",
+    "role": "trigger",
+    "source": "screenplay",
+    "quote": "forced the hood back against the smashed wind-- shield, breaking its hinges.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "jealous attack on girlfriend",
+    "when": "middle",
+    "quote": "Leigh nearly chokes to death on a hamburger",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:31",
+      "quote": "AS IF THE CAR WERE JEALOUS, ARNIE."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "final confrontation",
+    "when": "late",
+    "source": "screenplay",
+    "quote": "The monster BULLDOZER RUMBLES LOUDLY toward the huge door",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "revenge killings",
+    "when": "late",
+    "quote": "the car kills Buddy and all his gang members, blowing up a gas station in the process",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:23",
+      "quote": "YOU HEAR ABOUT WHAT HAPPENED TO MOOCHIE?"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "owner dies",
+    "when": "ending",
+    "quote": "Christine responds by playing \"Pledging My Love\" on her radio as Arnie dies",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:41:54",
+      "quote": "ARNIE'S DEAD."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "closing sting",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Unseen by them, Christine's grille twitches slightly",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:46:02",
+      "quote": "GOD, I HATE ROCK AND ROLL."
+     },
+     {
+      "source": "screenplay",
+      "quote": "MUSIC can be heard, as if coming from the crushed debris"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

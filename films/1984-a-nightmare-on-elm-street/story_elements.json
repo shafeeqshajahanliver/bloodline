@@ -1,63 +1,535 @@
 {
  "film": "1984-a-nightmare-on-elm-street",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "undead killer in dreams", "detail": "Freddy Krueger", "quote": "an undead child killer who murders teenagers through their dreams", "confidence": "sourced"}
+   {
+    "value": "undead killer in dreams",
+    "detail": "Freddy Krueger",
+    "quote": "an undead child killer who murders teenagers through their dreams",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "person killed by a mob", "detail": "Krueger burned alive by Elm Street parents", "quote": "He was then burned alive by the victims' parents, alongside other Elm Street residents, who sought vigilante justice", "confidence": "sourced"},
-   {"value": "child murderer", "quote": "Krueger was a child murderer who killed 20 children but was released on a technicality", "confidence": "sourced"}
+   {
+    "value": "person killed by a mob",
+    "detail": "Krueger burned alive by Elm Street parents",
+    "quote": "He was then burned alive by the victims' parents, alongside other Elm Street residents, who sought vigilante justice",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:12",
+      "quote": "then lit the whole thing up and watched it burn."
+     }
+    ]
+   },
+   {
+    "value": "child murderer",
+    "quote": "Krueger was a child murderer who killed 20 children but was released on a technicality",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:09",
+      "quote": "He was a filthy child murderer who killed at least 20 kids in the neighborhood."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "revenge", "quote": "as retribution against their parents who burned him alive", "confidence": "sourced"},
-   {"value": "fear", "quote": "Realizing that Krueger is fueled by his victims' fear", "confidence": "sourced"}
+   {
+    "value": "revenge",
+    "quote": "as retribution against their parents who burned him alive",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fear",
+    "quote": "Realizing that Krueger is fueled by his victims' fear",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:05",
+      "quote": "I take back every bit of energy I gave you."
+     }
+    ]
+   },
+   {
+    "value": "the heroine herself",
+    "source": "subtitles",
+    "at": "01:07:16",
+    "quote": "I'm your boyfriend now, Nancy.",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "vigilante killing", "quote": "Krueger targeted her and her friends because their parents were accomplices to his homicide", "confidence": "sourced"},
-   {"value": "sins of the parents", "quote": "the sins of the parents are visited upon the children", "confidence": "sourced"}
+   {
+    "value": "vigilante killing",
+    "quote": "Krueger targeted her and her friends because their parents were accomplices to his homicide",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sins of the parents",
+    "quote": "the sins of the parents are visited upon the children",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "shared nightmares", "quote": "divulge that they too had nightmares about the same disfigured man", "confidence": "sourced"}
+   {
+    "value": "shared nightmares",
+    "quote": "divulge that they too had nightmares about the same disfigured man",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "kills through dreams", "quote": "When Tina falls asleep, she dreams of the disfigured man attacking her, while Rod sees her fatally slashed by an unseen force", "confidence": "sourced"},
-   {"value": "must stay awake", "quote": "She then relies on caffeine to stay awake", "confidence": "sourced"},
-   {"value": "can be pulled into reality", "quote": "lures Krueger out of her nightmare and into the real world", "confidence": "sourced"},
-   {"value": "powerless without fear", "quote": "she calmly turns her back to him, and Krueger evaporates", "confidence": "sourced"}
+   {
+    "value": "kills through dreams",
+    "quote": "When Tina falls asleep, she dreams of the disfigured man attacking her, while Rod sees her fatally slashed by an unseen force",
+    "confidence": "sourced"
+   },
+   {
+    "value": "must stay awake",
+    "quote": "She then relies on caffeine to stay awake",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:01",
+      "quote": "stop drinking that damn coffee."
+     }
+    ]
+   },
+   {
+    "value": "can be pulled into reality",
+    "quote": "lures Krueger out of her nightmare and into the real world",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:18",
+      "quote": "I grab the guy in my dream. You see me struggling, so you wake me up."
+     }
+    ]
+   },
+   {
+    "value": "powerless without fear",
+    "quote": "she calmly turns her back to him, and Krueger evaporates",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:55:08",
+      "quote": "They turn their back on it. Take away its energy and it disappears."
+     }
+    ]
+   },
+   {
+    "value": "knowing it's a dream wakes you",
+    "source": "subtitles",
+    "at": "00:05:25",
+    "quote": "Just tell yourself that's all it is while you're having it. Once you do that, you wake right up.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "teenagers", "relation_to_threat": "community", "detail": "children of the parents who killed him", "quote": "a group of teenagers who are targeted by Krueger", "confidence": "sourced"},
-   {"value": "mother", "relation_to_threat": "community", "detail": "Marge, one of the parents", "quote": "Marge is grabbed by Krueger through the front door window", "confidence": "sourced"}
+   {
+    "value": "teenagers",
+    "relation_to_threat": "community",
+    "detail": "children of the parents who killed him",
+    "quote": "a group of teenagers who are targeted by Krueger",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother",
+    "relation_to_threat": "community",
+    "detail": "Marge, one of the parents",
+    "quote": "Marge is grabbed by Krueger through the front door window",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "false resolution", "quote": "Nancy steps outside into a foggy morning where all her friends and her mother are still alive", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "Marge is grabbed by Krueger through the front door window", "confidence": "sourced"}
+   {
+    "value": "false resolution",
+    "quote": "Nancy steps outside into a foggy morning where all her friends and her mother are still alive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:36",
+      "quote": "It's gonna burn off soon, or it wouldn't be so bright."
+     }
+    ]
+   },
+   {
+    "value": "threat survives",
+    "quote": "Marge is grabbed by Krueger through the front door window",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:33",
+      "quote": "No, Mother!"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "bladed glove", "when": "opening", "role": "weapon", "quote": "a disfigured man wearing a bladed glove attacks her in a boiler room", "confidence": "sourced"},
-   {"value": "boiler room", "when": "opening", "role": "setting", "quote": "attacks her in a boiler room", "confidence": "sourced"},
-   {"value": "slashed nightgown", "when": "opening", "role": "omen", "quote": "Her mother points out the mysterious slashes on her nightgown", "confidence": "sourced"},
-   {"value": "bathtub", "when": "middle", "role": "threat", "quote": "Nancy falls asleep in the bathtub and is nearly drowned by the man", "confidence": "sourced"},
-   {"value": "fedora", "state": "pulled from a dream", "when": "middle", "role": "clue", "quote": "Nancy grabs the man's fedora with the name \"Fred Krueger\" written in it and pulls it into the real world", "confidence": "sourced"},
-   {"value": "burn mark", "when": "middle", "role": "clue", "quote": "leaves a burn mark on her forearm", "confidence": "sourced"},
-   {"value": "girls skipping rope", "state": "chanting", "when": "ending", "role": "omen", "quote": "Three girls in white dresses playing jump rope chant Krueger's nursery rhyme", "confidence": "sourced"},
-   {"value": "fire", "when": "late", "role": "weapon", "quote": "The booby traps allow her to light him on fire and lock him in the basement", "confidence": "sourced"}
+   {
+    "value": "bladed glove",
+    "when": "opening",
+    "role": "weapon",
+    "quote": "a disfigured man wearing a bladed glove attacks her in a boiler room",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:04",
+      "quote": "He had knives for fingers."
+     },
+     {
+      "source": "screenplay",
+      "quote": "Then the MAN'S HAND slips into this glove-like apparatus, filling it out and transforming it into an awesome, deadly claw-hand"
+     }
+    ]
+   },
+   {
+    "value": "boiler room",
+    "when": "opening",
+    "role": "setting",
+    "quote": "attacks her in a boiler room",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:54",
+      "quote": "We found him in an old abandoned boiler room where he used to take his kids."
+     },
+     {
+      "source": "screenplay",
+      "quote": "Suddenly TINA's a tiny figure running among huge boilers steam pipes and catwalks"
+     }
+    ]
+   },
+   {
+    "value": "slashed nightgown",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Her mother points out the mysterious slashes on her nightgown",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "There are four long slashes up its middle, cleanly cut as if by scalpels."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:04:01",
+      "quote": "Tina, honey, you gotta cut your fingernails"
+     }
+    ]
+   },
+   {
+    "value": "bathtub",
+    "when": "middle",
+    "role": "threat",
+    "quote": "Nancy falls asleep in the bathtub and is nearly drowned by the man",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:43",
+      "quote": "I just slipped getting out of the tub, Mom."
+     },
+     {
+      "source": "screenplay",
+      "quote": "The next instant she's jerked with incredible violence straight down beneath the surface of the tub"
+     }
+    ]
+   },
+   {
+    "value": "fedora",
+    "state": "pulled from a dream",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Nancy grabs the man's fedora with the name \"Fred Krueger\" written in it and pulls it into the real world",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:47",
+      "quote": "It even has his name written in it."
+     }
+    ]
+   },
+   {
+    "value": "burn mark",
+    "when": "middle",
+    "role": "clue",
+    "quote": "leaves a burn mark on her forearm",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:50",
+      "quote": "I burned it in English class."
+     }
+    ]
+   },
+   {
+    "value": "girls skipping rope",
+    "state": "chanting",
+    "when": "ending",
+    "role": "omen",
+    "quote": "Three girls in white dresses playing jump rope chant Krueger's nursery rhyme",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:46",
+      "quote": "One, two Freddy's coming for you"
+     }
+    ]
+   },
+   {
+    "value": "fire",
+    "when": "late",
+    "role": "weapon",
+    "quote": "The booby traps allow her to light him on fire and lock him in the basement",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Just as the burning, blind monster tops the stairs"
+     }
+    ]
+   },
+   {
+    "value": "lamb",
+    "state": "bleating in the dream",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:23",
+    "quote": "SHEEP BLEATING AND BABY CRYING",
+    "confidence": "sourced",
+    "detail": "a lamb crosses Tina's path in the opening nightmare",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "A LAMB, white and blank-faced, skitters across her path and on into the dark. No reason why it's there."
+     }
+    ]
+   },
+   {
+    "value": "red and green sweater",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:07:36",
+    "quote": "I dreamed about a guy in a dirty red and green sweater.",
+    "confidence": "sourced",
+    "detail": "the detail that tells Tina and Nancy they share one dream"
+   },
+   {
+    "value": "telephone with a mouth",
+    "when": "late",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "01:07:16",
+    "quote": "I'm your boyfriend now, Nancy.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "It's changed from a normal telephone mouthpiece to an actual mouth -- Fred Krueger's mouth"
+     }
+    ]
+   },
+   {
+    "value": "hidden glove",
+    "state": "kept by the mother",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:58:32",
+    "quote": "I even took his knives.",
+    "confidence": "sourced",
+    "detail": "Marge keeps Krueger's glove hidden in the cellar",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "opens it and displays the long, rusted blades and their glove-like apparatus."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "nightmare leaves a mark", "when": "opening", "role": "omen", "quote": "Her mother points out the mysterious slashes on her nightgown", "confidence": "sourced"},
-   {"order": 2, "value": "first death", "when": "early", "quote": "Rod sees her fatally slashed by an unseen force", "confidence": "sourced"},
-   {"order": 3, "value": "innocent blamed", "when": "early", "quote": "arrests Rod despite his pleas of innocence", "confidence": "sourced"},
-   {"order": 4, "value": "object brought from dream", "when": "middle", "role": "clue", "quote": "pulls it into the real world", "confidence": "sourced"},
-   {"order": 5, "value": "parents' crime revealed", "when": "middle", "role": "turn", "quote": "He was then burned alive by the victims' parents", "confidence": "sourced"},
-   {"order": 6, "value": "trap set", "when": "late", "quote": "She rigs booby traps and successfully lures Krueger out of her nightmare", "confidence": "sourced"},
-   {"order": 7, "value": "threat denied", "when": "ending", "quote": "she calmly turns her back to him, and Krueger evaporates", "confidence": "sourced"},
-   {"order": 8, "value": "closing sting", "when": "ending", "role": "turn", "quote": "Marge is grabbed by Krueger through the front door window", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "killer forges his weapon",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "the HAND grabs a grimey WORKGLOVE and slashes at it with a straight razor, until its fingertips are off.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "nightmare leaves a mark",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Her mother points out the mysterious slashes on her nightgown",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "There are four long slashes up its middle, cleanly cut as if by scalpels."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "first death",
+    "when": "early",
+    "quote": "Rod sees her fatally slashed by an unseen force",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:04",
+      "quote": "Rod, help me! Oh, God!"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "innocent blamed",
+    "when": "early",
+    "quote": "arrests Rod despite his pleas of innocence",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:18",
+      "quote": "Hey, you think I did it?"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "object brought from dream",
+    "when": "middle",
+    "role": "clue",
+    "quote": "pulls it into the real world",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:47",
+      "quote": "It even has his name written in it."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "parents' crime revealed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "He was then burned alive by the victims' parents",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:26",
+      "quote": "He's dead, honey, because Mommy killed him."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "threat calls the heroine",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:07:16",
+    "quote": "I'm your boyfriend now, Nancy.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "boyfriend killed at midnight",
+    "when": "late",
+    "source": "subtitles",
+    "at": "01:08:10",
+    "quote": "It is now 12 midnight",
+    "confidence": "observed",
+    "detail": "Glen falls asleep and is pulled into his bed"
+   },
+   {
+    "order": 9,
+    "value": "trap set",
+    "when": "late",
+    "quote": "She rigs booby traps and successfully lures Krueger out of her nightmare",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:29",
+      "quote": "Okay, Krueger. We play in your court."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "threat denied",
+    "when": "ending",
+    "quote": "she calmly turns her back to him, and Krueger evaporates",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:05",
+      "quote": "I take back every bit of energy I gave you. You're nothing."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "closing sting",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Marge is grabbed by Krueger through the front door window",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:33",
+      "quote": "No, Mother!"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

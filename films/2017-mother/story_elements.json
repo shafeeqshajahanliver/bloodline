@@ -1,64 +1,513 @@
 {
  "film": "2017-mother",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "invading strangers", "quote": "whose tranquil life with her husband at their country home is disrupted by the arrival of a mysterious couple", "confidence": "sourced"},
-   {"value": "fan cult", "quote": "military forces turn up to battle members of the cult that has sprung up around Him", "confidence": "sourced"},
-   {"value": "creator god husband", "quote": "Javier, whose character is a poet, represents a form of God, a creator", "confidence": "sourced"}
+   {
+    "value": "invading strangers",
+    "quote": "whose tranquil life with her husband at their country home is disrupted by the arrival of a mysterious couple",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fan cult",
+    "quote": "military forces turn up to battle members of the cult that has sprung up around Him",
+    "confidence": "sourced"
+   },
+   {
+    "value": "creator god husband",
+    "quote": "Javier, whose character is a poet, represents a form of God, a creator",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:52:33",
+      "quote": "I am I."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:53:25",
+      "quote": "I couldn't create if it was."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "invited by husband", "quote": "Him begs her to let them stay, revealing that Man is actually a fan whose dying wish was to meet Him", "confidence": "sourced"},
-   {"value": "allegory of creation", "quote": "Michelle Pfeiffer is an Eve to Ed Harris's Adam, there's Cain and Abel and the setting sometimes resembles the Garden of Eden", "confidence": "sourced"}
+   {
+    "value": "invited by husband",
+    "quote": "Him begs her to let them stay, revealing that Man is actually a fan whose dying wish was to meet Him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:19",
+      "quote": "Nonsense. No, no. No, it's late. Stay the night."
+     }
+    ]
+   },
+   {
+    "value": "allegory of creation",
+    "quote": "Michelle Pfeiffer is an Eve to Ed Harris's Adam, there's Cain and Abel and the setting sometimes resembles the Garden of Eden",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "adoration", "detail": "Him wants his fans", "quote": "his fans want to see their newborn son, and he does not want them to leave", "confidence": "sourced"},
-   {"value": "to consume", "quote": "Mother finds people eating her son's mutilated corpse", "confidence": "sourced"}
+   {
+    "value": "adoration",
+    "detail": "Him wants his fans",
+    "quote": "his fans want to see their newborn son, and he does not want them to leave",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:51:22",
+      "quote": "You just loved how much I loved you."
+     }
+    ]
+   },
+   {
+    "value": "to consume",
+    "quote": "Mother finds people eating her son's mutilated corpse",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "violation of mother earth", "quote": "depicts the rape and torment of Mother Earth", "confidence": "sourced"},
-   {"value": "brother kills brother", "quote": "Oldest Son wounds his brother", "confidence": "sourced"}
+   {
+    "value": "violation of mother earth",
+    "quote": "depicts the rape and torment of Mother Earth",
+    "confidence": "sourced"
+   },
+   {
+    "value": "brother kills brother",
+    "quote": "Oldest Son wounds his brother",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "a stranger at the door", "quote": "a stranger called Man turns up at the house, claiming to be an orthopedic surgeon and asking for a room", "confidence": "sourced"},
-   {"value": "breaking a sacred object", "quote": "when Man and Woman accidentally shatter the crystal object, Him becomes angry and boards up his study", "confidence": "sourced"}
+   {
+    "value": "a stranger at the door",
+    "quote": "a stranger called Man turns up at the house, claiming to be an orthopedic surgeon and asking for a room",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:03",
+      "quote": "Well, they told me I could find a room here."
+     }
+    ]
+   },
+   {
+    "value": "breaking a sacred object",
+    "quote": "when Man and Woman accidentally shatter the crystal object, Him becomes angry and boards up his study",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "cycle restarts from a heart", "quote": "he removes her heart from her chest, tearing it open to reveal a new crystal object", "confidence": "sourced"},
-   {"value": "house is alive", "quote": "she occasionally visualizes a beating heart within its walls", "confidence": "sourced"}
+   {
+    "value": "cycle restarts from a heart",
+    "quote": "he removes her heart from her chest, tearing it open to reveal a new crystal object",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:13",
+      "quote": "It gave me the strength to start again."
+     },
+     {
+      "source": "screenplay",
+      "quote": "He pulls out a MASS of beating ash."
+     }
+    ]
+   },
+   {
+    "value": "house is alive",
+    "quote": "she occasionally visualizes a beating heart within its walls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:50:01",
+      "quote": "(PULSATING STOPS)"
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "wife", "relation_to_threat": "lover", "detail": "Mother, the poet's wife and muse", "quote": "Mother, the poet's wife and muse, awakens in her bed and wonders aloud where Him is", "confidence": "sourced"},
-   {"value": "newborn", "relation_to_threat": "family", "quote": "They pass the baby around wildly until he is inadvertently killed", "confidence": "sourced"}
+   {
+    "value": "wife",
+    "relation_to_threat": "lover",
+    "detail": "Mother, the poet's wife and muse",
+    "quote": "Mother, the poet's wife and muse, awakens in her bed and wonders aloud where Him is",
+    "confidence": "sourced"
+   },
+   {
+    "value": "newborn",
+    "relation_to_threat": "family",
+    "quote": "They pass the baby around wildly until he is inadvertently killed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:27",
+      "quote": "- It's a boy. - (COOING)"
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "cycle begins again", "quote": "A new Mother appears in her bed and awakens, wondering aloud where Him is", "confidence": "sourced"},
-   {"value": "house burned down", "quote": "ignites the oil, causing an explosion that incinerates the crowd and destroys the house", "confidence": "sourced"}
+   {
+    "value": "cycle begins again",
+    "quote": "A new Mother appears in her bed and awakens, wondering aloud where Him is",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:56:19",
+      "quote": "Baby? (SOFT MUSIC PLAYING)"
+     }
+    ]
+   },
+   {
+    "value": "house burned down",
+    "quote": "ignites the oil, causing an explosion that incinerates the crowd and destroys the house",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "crystal object", "state": "placed, shattered, renewed", "when": "opening", "role": "symbol", "quote": "places a crystal object on a pedestal in his study", "confidence": "sourced"},
-   {"value": "beating heart in walls", "when": "opening", "role": "omen", "quote": "she occasionally visualizes a beating heart within its walls", "confidence": "sourced"},
-   {"value": "wound on the side", "when": "early", "role": "clue", "quote": "Mother observes a wound on his side", "confidence": "sourced"},
-   {"value": "frog", "when": "middle", "role": "omen", "quote": "including a fly, a frog, and blood that will not stop dripping", "confidence": "sourced"},
-   {"value": "blood", "state": "dripping without end", "when": "middle", "role": "omen", "quote": "blood that will not stop dripping", "confidence": "sourced"},
-   {"value": "oil tank", "state": "hidden in basement", "when": "middle", "role": "weapon", "quote": "She follows the blood to a tank of heating oil hidden behind the basement walls", "confidence": "sourced"},
-   {"value": "broken sink", "state": "flooding", "when": "middle", "role": "turn", "quote": "when they break a sink, partially flooding the house", "confidence": "sourced"},
-   {"value": "fire", "when": "ending", "role": "turn", "quote": "Him is unscathed by the inferno, but Mother is severely burned", "confidence": "sourced"}
+   {
+    "value": "crystal object",
+    "state": "placed, shattered, renewed",
+    "when": "opening",
+    "role": "symbol",
+    "quote": "places a crystal object on a pedestal in his study",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Hands place a CRYSTAL FORMATION on a burnt shelf."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:33:46",
+      "quote": "It's amazing. What is it?"
+     }
+    ]
+   },
+   {
+    "value": "beating heart in walls",
+    "when": "opening",
+    "role": "omen",
+    "quote": "she occasionally visualizes a beating heart within its walls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:38",
+      "quote": "(RUMBLING) (PULSATING)"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:49:56",
+      "quote": "(PULSATING WEAKLY)"
+     }
+    ]
+   },
+   {
+    "value": "wound on the side",
+    "when": "early",
+    "role": "clue",
+    "quote": "Mother observes a wound on his side",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "There's something on his back. An open wound maybe?"
+     }
+    ]
+   },
+   {
+    "value": "frog",
+    "when": "middle",
+    "role": "omen",
+    "quote": "including a fly, a frog, and blood that will not stop dripping",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:09",
+      "quote": "(CROAKS) (GASPS)"
+     },
+     {
+      "source": "screenplay",
+      "quote": "a lone TOAD hops out from the darkness."
+     }
+    ]
+   },
+   {
+    "value": "blood",
+    "state": "dripping without end",
+    "when": "middle",
+    "role": "omen",
+    "quote": "blood that will not stop dripping",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:39",
+      "quote": "A boy died here today. I mopped up his blood."
+     }
+    ]
+   },
+   {
+    "value": "oil tank",
+    "state": "hidden in basement",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "She follows the blood to a tank of heating oil hidden behind the basement walls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Inside is the huge oil tank for the house."
+     }
+    ]
+   },
+   {
+    "value": "broken sink",
+    "state": "flooding",
+    "when": "middle",
+    "role": "turn",
+    "quote": "when they break a sink, partially flooding the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:31",
+      "quote": "That sink's not braced yet."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:04:58",
+      "quote": "This sink. There's nothing wrong with it."
+     }
+    ]
+   },
+   {
+    "value": "fire",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Him is unscathed by the inferno, but Mother is severely burned",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "FIRE Everywhere."
+     }
+    ]
+   },
+   {
+    "value": "yellow powder tincture",
+    "when": "early",
+    "role": "clue",
+    "source": "screenplay",
+    "quote": "She finds one with yellow powder. She adds it to a glass of water. She drinks the tincture.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "flesh in the toilet",
+    "state": "sucked down the drain",
+    "when": "middle",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "It opens up revealing blood, pus and ribs.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "photos of the husband",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:34:42",
+    "quote": "He has one of those pictures of you in his luggage.",
+    "confidence": "sourced",
+    "detail": "the stranger is a fan of the poet"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "house reborn from ashes", "when": "opening", "quote": "the building morphs into a beautiful home in an edenic landscape", "confidence": "sourced"},
-   {"order": 2, "value": "stranger arrives", "when": "early", "role": "trigger", "quote": "a stranger called Man turns up at the house", "confidence": "sourced"},
-   {"order": 3, "value": "sacred object broken", "when": "early", "quote": "accidentally shatter the crystal object", "confidence": "sourced"},
-   {"order": 4, "value": "brother kills brother", "when": "middle", "quote": "Him informs Mother that Younger Brother has died", "confidence": "sourced"},
-   {"order": 5, "value": "pregnancy", "when": "middle", "role": "turn", "quote": "Mother announces she is pregnant, which elates Him and inspires him to start writing again", "confidence": "sourced"},
-   {"order": 6, "value": "mob overruns home", "when": "late", "quote": "droves of fans pour inside and begin to wreak havoc, damaging the house", "confidence": "sourced"},
-   {"order": 7, "value": "baby killed and eaten", "when": "late", "role": "turn", "quote": "Mother finds people eating her son's mutilated corpse", "confidence": "sourced"},
-   {"order": 8, "value": "fire and rebirth", "when": "ending", "quote": "He places it on the pedestal, transforming the house back into a beautiful home", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "house reborn from ashes",
+    "when": "opening",
+    "quote": "the building morphs into a beautiful home in an edenic landscape",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Slowly color repairs the shelf, returning it to an un-burnt state."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "opening call to an empty bed",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:52",
+    "quote": "Baby? (CREAKS IN DISTANCE)",
+    "confidence": "observed",
+    "detail": "the same word closes the film with a new woman"
+   },
+   {
+    "order": 3,
+    "value": "stranger arrives",
+    "when": "early",
+    "role": "trigger",
+    "quote": "a stranger called Man turns up at the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:45",
+      "quote": "(KNOCK ON DOOR)"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "sacred object broken",
+    "when": "early",
+    "quote": "accidentally shatter the crystal object",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:20",
+      "quote": "(LOUD CRASH)"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "wake held in the home",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "00:56:47",
+    "quote": "We lost our baby today.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "guests break the sink",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:04:58",
+    "quote": "This sink. There's nothing wrong with it.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "brother kills brother",
+    "when": "middle",
+    "quote": "Him informs Mother that Younger Brother has died",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:45",
+      "quote": "HIM: What have you done to your brother?"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "pregnancy",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Mother announces she is pregnant, which elates Him and inspires him to start writing again",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:56",
+      "quote": "I'm pregnant."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "mob overruns home",
+    "when": "late",
+    "quote": "droves of fans pour inside and begin to wreak havoc, damaging the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:31",
+      "quote": "(CROWD CLAMORING)"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "baby killed and eaten",
+    "when": "late",
+    "role": "turn",
+    "quote": "Mother finds people eating her son's mutilated corpse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:47:18",
+      "quote": "- That's the sound of life. - (PEOPLE CHOMPING)"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "house heart stops",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:50:01",
+    "quote": "(PULSATING STOPS)",
+    "confidence": "sourced"
+   },
+   {
+    "order": 12,
+    "value": "fire and rebirth",
+    "when": "ending",
+    "quote": "He places it on the pedestal, transforming the house back into a beautiful home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:53:36",
+      "quote": "Now I must try it all again."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

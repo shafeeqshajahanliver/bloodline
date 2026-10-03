@@ -1,64 +1,442 @@
 {
  "film": "2023-cobweb",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "hidden monstrous sibling", "detail": "Sarah, locked in the walls", "quote": "Sarah finally crawls out, revealing herself to be a grotesque, disfigured being", "confidence": "sourced"},
-   {"value": "abusive parents", "quote": "Peter is a shy, bullied, eight-year-old boy living with his overbearing and emotionally distant parents", "confidence": "sourced"}
+   {
+    "value": "hidden monstrous sibling",
+    "detail": "Sarah, locked in the walls",
+    "quote": "Sarah finally crawls out, revealing herself to be a grotesque, disfigured being",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:08",
+      "quote": "It's my sister."
+     }
+    ]
+   },
+   {
+    "value": "abusive parents",
+    "quote": "Peter is a shy, bullied, eight-year-old boy living with his overbearing and emotionally distant parents",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:46",
+      "quote": "Mom and Dad? They hate me, Peter."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "born to the family", "quote": "she was born severely deformed, causing her to look like a monster", "confidence": "sourced"},
-   {"value": "made by imprisonment", "quote": "she was forced to live a wretched, feral existence in the dark, learning to crawl on the walls", "confidence": "sourced"}
+   {
+    "value": "born to the family",
+    "quote": "she was born severely deformed, causing her to look like a monster",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:54",
+      "quote": "I was just born this way."
+     }
+    ]
+   },
+   {
+    "value": "made by imprisonment",
+    "quote": "she was forced to live a wretched, feral existence in the dark, learning to crawl on the walls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:53",
+      "quote": "I was suffering among cobwebs and rats, learning how to climb."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "revenge", "quote": "she has been manipulating Peter into taking revenge on their parents for locking her away", "confidence": "sourced"},
-   {"value": "the life denied her", "quote": "has resented him for being able to live the normal life she had been denied", "confidence": "sourced"}
+   {
+    "value": "revenge",
+    "quote": "she has been manipulating Peter into taking revenge on their parents for locking her away",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the life denied her",
+    "quote": "has resented him for being able to live the normal life she had been denied",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:48",
+      "quote": "While you were whining in this warm bed,"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "child locked away by parents", "quote": "whom their parents locked away after deciding they did not want her anymore", "confidence": "sourced"},
-   {"value": "murder of a child", "quote": "a trick-or-treater they murdered after she attempted to help Sarah", "confidence": "sourced"}
+   {
+    "value": "child locked away by parents",
+    "quote": "whom their parents locked away after deciding they did not want her anymore",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:04",
+      "quote": "THE GIRL: It was Halloween. Before they locked me in the wall."
+     }
+    ]
+   },
+   {
+    "value": "murder of a child",
+    "quote": "a trick-or-treater they murdered after she attempted to help Sarah",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:13",
+      "quote": "A trick-or-treater came to the door."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "noise in the wall", "quote": "Peter is woken up by the sound of tapping from the inside of a wall in his bedroom", "confidence": "sourced"}
+   {
+    "value": "noise in the wall",
+    "quote": "Peter is woken up by the sound of tapping from the inside of a wall in his bedroom",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:49",
+      "quote": "(MUFFLED KNOCKING)"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "must not let it out", "quote": "Right before Carol dies, she warns him, \"Don't let her out.\"", "confidence": "sourced"},
-   {"value": "deceives with a child's voice", "quote": "Sarah tries to manipulate Peter again in her fake small-girl-voice", "confidence": "sourced"}
+   {
+    "value": "must not let it out",
+    "quote": "Right before Carol dies, she warns him, \"Don't let her out.\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:05",
+      "quote": "Don't let her out."
+     }
+    ]
+   },
+   {
+    "value": "deceives with a child's voice",
+    "quote": "Sarah tries to manipulate Peter again in her fake small-girl-voice",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:13",
+      "quote": "Peter. I was worried about you."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "young boy", "relation_to_threat": "family", "detail": "Peter", "quote": "Sarah captures her brother, and locks him behind the door in the wall", "confidence": "sourced"},
-   {"value": "parents", "relation_to_threat": "family", "quote": "Mark succumbing to the poison and Carol accidentally stabbing herself with a kitchen knife", "confidence": "sourced"},
-   {"value": "bullies", "relation_to_threat": "stranger", "quote": "after invading the house, they are all killed by Sarah", "confidence": "sourced"},
-   {"value": "teacher", "relation_to_threat": "stranger", "detail": "Miss Devine", "quote": "Miss Devine arrives and attempts to help Peter escape, Sarah scratches her", "confidence": "sourced"}
+   {
+    "value": "young boy",
+    "relation_to_threat": "family",
+    "detail": "Peter",
+    "quote": "Sarah captures her brother, and locks him behind the door in the wall",
+    "confidence": "sourced"
+   },
+   {
+    "value": "parents",
+    "relation_to_threat": "family",
+    "quote": "Mark succumbing to the poison and Carol accidentally stabbing herself with a kitchen knife",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bullies",
+    "relation_to_threat": "stranger",
+    "quote": "after invading the house, they are all killed by Sarah",
+    "confidence": "sourced"
+   },
+   {
+    "value": "teacher",
+    "relation_to_threat": "stranger",
+    "detail": "Miss Devine",
+    "quote": "Miss Devine arrives and attempts to help Peter escape, Sarah scratches her",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat imprisoned", "quote": "they subdue Sarah together, and they imprison her in the pit", "confidence": "sourced"},
-   {"value": "threat lingers", "quote": "he can never live without thinking she’ll be there in the shadows", "confidence": "sourced"}
+   {
+    "value": "threat imprisoned",
+    "quote": "they subdue Sarah together, and they imprison her in the pit",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat lingers",
+    "quote": "he can never live without thinking she’ll be there in the shadows",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:24",
+      "quote": "every tap in the wall, you'll think of me."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "tapping in the wall", "when": "opening", "role": "omen", "quote": "the sound of tapping from the inside of a wall in his bedroom", "confidence": "sourced"},
-   {"value": "child's drawing", "state": "\"help me\"", "when": "early", "role": "clue", "quote": "a picture Peter drew of himself scared in bed with the words \"Help me\"", "confidence": "sourced"},
-   {"value": "pumpkin", "state": "smashed", "when": "early", "role": "symbol", "quote": "Brian, a bully, destroys Peter's prize pumpkin", "confidence": "sourced"},
-   {"value": "pit with grate", "when": "middle", "role": "setting", "quote": "he discovers a pit covered with a grate", "confidence": "sourced"},
-   {"value": "skull in the garden", "when": "middle", "role": "clue", "quote": "he uncovers the skull of the young girl there", "confidence": "sourced"},
-   {"value": "rat poison", "when": "late", "role": "weapon", "quote": "slipping rat poison into their soup", "confidence": "sourced"},
-   {"value": "door behind clock", "when": "late", "role": "trigger", "quote": "Peter unlocks a hidden door behind the grandfather clock in their parents' bedroom", "confidence": "sourced"},
-   {"value": "long hair", "when": "ending", "role": "turn", "quote": "grabbing Sarah's long hair that reaches from the top of the pit to its bottom", "confidence": "sourced"}
+   {
+    "value": "tapping in the wall",
+    "when": "opening",
+    "role": "omen",
+    "quote": "the sound of tapping from the inside of a wall in his bedroom",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:49",
+      "quote": "(MUFFLED KNOCKING)"
+     }
+    ]
+   },
+   {
+    "value": "child's drawing",
+    "state": "\"help me\"",
+    "when": "early",
+    "role": "clue",
+    "quote": "a picture Peter drew of himself scared in bed with the words \"Help me\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:48",
+      "quote": "The children were drawing for Halloween."
+     }
+    ]
+   },
+   {
+    "value": "pumpkin",
+    "state": "smashed",
+    "when": "early",
+    "role": "symbol",
+    "quote": "Brian, a bully, destroys Peter's prize pumpkin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:25",
+      "quote": "We're going to bury the pumpkins,"
+     }
+    ]
+   },
+   {
+    "value": "pit with grate",
+    "when": "middle",
+    "role": "setting",
+    "quote": "he discovers a pit covered with a grate",
+    "confidence": "sourced"
+   },
+   {
+    "value": "skull in the garden",
+    "when": "middle",
+    "role": "clue",
+    "quote": "he uncovers the skull of the young girl there",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rat poison",
+    "when": "late",
+    "role": "weapon",
+    "quote": "slipping rat poison into their soup",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:41",
+      "quote": "You know what? I bet it's rats."
+     }
+    ]
+   },
+   {
+    "value": "cobwebs and rats",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:12:53",
+    "quote": "I was suffering among cobwebs and rats, learning how to climb.",
+    "confidence": "sourced",
+    "detail": "what Sarah lived among inside the walls; the film's title"
+   },
+   {
+    "value": "door behind clock",
+    "when": "late",
+    "role": "trigger",
+    "quote": "Peter unlocks a hidden door behind the grandfather clock in their parents' bedroom",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:29",
+      "quote": "(CLOCK TICKING)"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:40:10",
+      "quote": "Big enough to move the clock that hides the door."
+     }
+    ]
+   },
+   {
+    "value": "long hair",
+    "when": "ending",
+    "role": "turn",
+    "quote": "grabbing Sarah's long hair that reaches from the top of the pit to its bottom",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "child forbidden to go out", "when": "opening", "quote": "his parents forbid him due to the disappearance of a young girl in the neighborhood", "confidence": "sourced"},
-   {"order": 2, "value": "voice in the wall", "when": "early", "role": "omen", "quote": "Peter talks with a voice coming from the wall", "confidence": "sourced"},
-   {"order": 3, "value": "parents' crime revealed", "when": "middle", "role": "turn", "quote": "the voice explains that she is Peter's older sister Sarah", "confidence": "sourced"},
-   {"order": 4, "value": "child kills parents", "when": "middle", "quote": "His only chance to avoid sharing her fate is to kill them", "confidence": "sourced"},
-   {"order": 5, "value": "monster released", "when": "late", "role": "turn", "quote": "Sarah finally crawls out, revealing herself to be a grotesque, disfigured being", "confidence": "sourced"},
-   {"order": 6, "value": "manipulation revealed", "when": "late", "role": "turn", "quote": "She reveals that she has been manipulating Peter", "confidence": "sourced"},
-   {"order": 7, "value": "rescue by teacher", "when": "ending", "quote": "she breaks a hole in the wall, lets Peter out", "confidence": "sourced"},
-   {"order": 8, "value": "monster re-imprisoned", "when": "ending", "quote": "they subdue Sarah together, and they imprison her in the pit", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "fears dismissed by parent",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:06:44",
+    "quote": "They're just in your head.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "child forbidden to go out",
+    "when": "opening",
+    "quote": "his parents forbid him due to the disappearance of a young girl in the neighborhood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:58",
+      "quote": "She went out trick-or-treating and she disappeared."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "voice in the wall",
+    "when": "early",
+    "role": "omen",
+    "quote": "Peter talks with a voice coming from the wall",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:34",
+      "quote": "Wake up, Peter."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "parents' crime revealed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "the voice explains that she is Peter's older sister Sarah",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:57",
+      "quote": "I'm your sister."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "child kills parents",
+    "when": "middle",
+    "quote": "His only chance to avoid sharing her fate is to kill them",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "monster released",
+    "when": "late",
+    "role": "turn",
+    "quote": "Sarah finally crawls out, revealing herself to be a grotesque, disfigured being",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:08",
+      "quote": "It's my sister."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "manipulation revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "She reveals that she has been manipulating Peter",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:48",
+      "quote": "While you were whining in this warm bed,"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "rescue by teacher",
+    "when": "ending",
+    "quote": "she breaks a hole in the wall, lets Peter out",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "monster re-imprisoned",
+    "when": "ending",
+    "quote": "they subdue Sarah together, and they imprison her in the pit",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "taunt from the pit",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:21:57",
+    "quote": "Do you really think this is gonna keep me down here?",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:24",
+      "quote": "every tap in the wall, you'll think of me."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

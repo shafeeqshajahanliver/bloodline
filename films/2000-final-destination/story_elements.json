@@ -7,6 +7,12 @@
     "Lead",
     "Plot"
    ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
   }
  ],
  "plot_quality": "full",
@@ -22,21 +28,42 @@
    {
     "value": "cheating death",
     "quote": "the survivors who cheated death have disrupted Death's plan",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:20",
+      "quote": "I saw death's plan, then we cheated it."
+     }
+    ]
    }
   ],
   "wants": [
    {
     "value": "to restore its plan",
     "quote": "Death is now claiming the lives of those who were meant to die in the accident",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:02",
+      "quote": "that death has a new design for all of you."
+     }
+    ]
    }
   ],
   "trigger": [
    {
     "value": "premonition of disaster",
     "quote": "Alex has a premonition that the plane will explode in mid-air, killing everybody on board",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:57",
+      "quote": "I saw the plane explode."
+     }
+    ]
    },
    {
     "value": "escaping a fated death",
@@ -48,12 +75,26 @@
    {
     "value": "dies in original order",
     "quote": "Death is reclaiming the survivors in the order they would have died in the disaster",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:25",
+      "quote": "The path of the explosion."
+     }
+    ]
    },
    {
     "value": "intervention skips victim",
     "quote": "because he intervened in Carter's death, it skipped to the next person in the sequence",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:44",
+      "quote": "Somebody's gotta intervene before death can skip them."
+     }
+    ]
    },
    {
     "value": "deaths look like accidents",
@@ -63,7 +104,28 @@
    {
     "value": "cannot be stopped",
     "quote": "Fearing their struggle is unfinished",
-    "confidence": "observed"
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:50",
+      "quote": "For all I know, it could circle back and get us all again."
+     }
+    ]
+   },
+   {
+    "value": "death sends omens",
+    "source": "subtitles",
+    "at": "00:46:28",
+    "quote": "to the signs it's willing to show us.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "defiance angers death",
+    "source": "subtitles",
+    "at": "00:45:24",
+    "quote": "of disrespecting the design could incite a fury",
+    "confidence": "sourced"
    }
   ],
   "who_suffers": [
@@ -109,14 +171,27 @@
     "when": "opening",
     "role": "omen",
     "quote": "None of them except Clear believe Alex about his vision until the plane explodes shortly after take-off",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:08",
+      "quote": "The fucking plane's gonna explode."
+     }
+    ]
    },
    {
     "value": "water puddle",
     "when": "early",
     "role": "weapon",
     "quote": "Tod slips on a puddle of water from the toilet and falls into the bathtub",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "a puddle forms, creeping toward the heel of Tod's stocking feet."
+     }
+    ]
    },
    {
     "value": "clothes line",
@@ -124,7 +199,18 @@
     "when": "early",
     "role": "weapon",
     "quote": "a clothes line wraps around his neck, strangling him to death",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "the thin clothesline coils around his neck."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:44:06",
+      "quote": "If he was pulling at the wire, he wasn't trying to kill himself."
+     }
+    ]
    },
    {
     "value": "bus",
@@ -132,14 +218,31 @@
     "when": "early",
     "role": "weapon",
     "quote": "is suddenly run over by a speeding bus as she steps into the street",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "a bus suddenly speeds INTO FRAME and, THUD! plows directly right into her..."
+     }
+    ]
    },
    {
     "value": "train",
     "when": "middle",
     "role": "weapon",
     "quote": "the car is smashed by an oncoming train",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:26",
+      "quote": "[TRAIN SIGNAL RINGING]"
+     },
+     {
+      "source": "screenplay",
+      "quote": "The train appears around the blind bend..."
+     }
+    ]
    },
    {
     "value": "electrical cables",
@@ -147,7 +250,18 @@
     "when": "late",
     "role": "weapon",
     "quote": "surrounded by loose electrical cables that ignite a gasoline leak around her",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:21",
+      "quote": "I was thrown from that power line by the explosion."
+     },
+     {
+      "source": "screenplay",
+      "quote": "THE POWER LINE whips, the frayed wires hitting the puddle of water..."
+     }
+    ]
    },
    {
     "value": "neon sign",
@@ -156,68 +270,196 @@
     "role": "weapon",
     "quote": "a parking sign towards a neon sign that begins falling towards him",
     "confidence": "sourced"
+   },
+   {
+    "value": "recurring song",
+    "state": "plays before deaths",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:09:23",
+    "quote": "John Denver. Died in a plane crash.",
+    "confidence": "sourced",
+    "detail": "John Denver's 'Rocky Mountain High' plays at the gate, at Tod's and Ms Lewton's deaths and in the Paris café",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:52",
+      "quote": "[JOHN DENVER'S \" ROCKY MOUNTAIN HIGH \" PLAYS ON STEREO]"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:31:00",
+      "quote": "[SINGING \" ROCKY MOUNTAIN HIGH \"]"
+     }
+    ]
+   },
+   {
+    "value": "guillotine picture",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "REVEALING A GULLOTINE from the Reign of Terror.",
+    "confidence": "sourced",
+    "detail": "a Paris guidebook blown open by a table fan"
+   },
+   {
+    "value": "matching numbers",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:07:27",
+    "quote": "Your birthday's the same as your departure time.",
+    "confidence": "sourced",
+    "detail": "Alex's birthday matches the flight's departure time"
    }
   ],
   "beats": [
    {
     "order": 1,
-    "value": "premonition of disaster",
+    "value": "lucky charm packed",
     "when": "opening",
     "role": "omen",
-    "quote": "Alex has a premonition that the plane will explode in mid-air",
+    "source": "subtitles",
+    "at": "00:03:17",
+    "quote": "Yeah, it's like the tag made the last flight without the plane crashing or anything.",
     "confidence": "sourced"
    },
    {
     "order": 2,
-    "value": "survivors escape fate",
+    "value": "birthday matches departure",
     "when": "opening",
-    "role": "trigger",
-    "quote": "None of them except Clear believe Alex about his vision until the plane explodes shortly after take-off",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:07:27",
+    "quote": "Your birthday's the same as your departure time.",
     "confidence": "sourced"
    },
    {
     "order": 3,
-    "value": "first survivor dies",
-    "when": "early",
-    "quote": "a clothes line wraps around his neck, strangling him to death",
-    "confidence": "sourced"
+    "value": "premonition of disaster",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Alex has a premonition that the plane will explode in mid-air",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:20",
+      "quote": "And then the whole plane just explodes. And it was so real."
+     }
+    ]
    },
    {
     "order": 4,
-    "value": "rule explained by stranger",
-    "when": "early",
-    "role": "clue",
-    "quote": "mortician William Bludworth reveals that the survivors who cheated death have disrupted Death's plan",
-    "confidence": "sourced"
+    "value": "survivors escape fate",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "None of them except Clear believe Alex about his vision until the plane explodes shortly after take-off",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:57",
+      "quote": "Well, the cause for the explosion is still undetermined."
+     }
+    ]
    },
    {
     "order": 5,
-    "value": "pattern deduced",
-    "when": "middle",
-    "role": "turn",
-    "quote": "Alex concludes that Death is reclaiming the survivors in the order they would have died",
-    "confidence": "sourced"
+    "value": "first survivor dies",
+    "when": "early",
+    "quote": "a clothes line wraps around his neck, strangling him to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:53",
+      "quote": "[JOHN DENVER'S \" ROCKY MOUNTAIN HIGH \" PLAYS ON STEREO]"
+     }
+    ]
    },
    {
     "order": 6,
-    "value": "save skips the sequence",
+    "value": "omens debated",
     "when": "middle",
-    "quote": "Alex deduces that because he intervened in Carter's death, it skipped to the next person in the sequence",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:46:54",
+    "quote": "I mean, you can find death omens anywhere you want to.",
     "confidence": "sourced"
    },
    {
     "order": 7,
-    "value": "last-minute rescue",
-    "when": "late",
-    "quote": "He grabs the cable, allowing her to escape the car just before it explodes",
-    "confidence": "sourced"
+    "value": "rule explained by stranger",
+    "when": "early",
+    "role": "clue",
+    "quote": "mortician William Bludworth reveals that the survivors who cheated death have disrupted Death's plan",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:40",
+      "quote": "it's all part of death's sadistic design leading to the grave."
+     }
+    ]
    },
    {
     "order": 8,
+    "value": "pattern deduced",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Alex concludes that Death is reclaiming the survivors in the order they would have died",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:34",
+      "quote": "That's death's design. Miss Lewton's next."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "save skips the sequence",
+    "when": "middle",
+    "quote": "Alex deduces that because he intervened in Carter's death, it skipped to the next person in the sequence",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:39",
+      "quote": "it skipped Carter, went to the next in the path of the explosion, Billy."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "last-minute rescue",
+    "when": "late",
+    "quote": "He grabs the cable, allowing her to escape the car just before it explodes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:30",
+      "quote": "When I do this, it'll skip you, and it'll be over."
+     }
+    ]
+   },
+   {
+    "order": 11,
     "value": "death returns",
     "when": "ending",
     "quote": "the sign swings back toward him, implying his death",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:14",
+      "quote": "I told you, you were next."
+     }
+    ]
    }
   ]
  },
@@ -226,5 +468,6 @@
  ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }
