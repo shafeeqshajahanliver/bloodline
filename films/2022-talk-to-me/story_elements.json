@@ -1,64 +1,525 @@
 {
  "film": "2022-talk-to-me",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "possessing spirits", "quote": "The spirits overtake Riley's body, and they make him violently attempt suicide", "confidence": "sourced"},
-   {"value": "cursed object", "detail": "a severed embalmed hand", "quote": "contact spirits using a mysterious severed and embalmed hand", "confidence": "sourced"},
-   {"value": "deceiving spirit of a parent", "detail": "Rhea's spirit", "quote": "Rhea's spirit tells Mia that Max is lying", "confidence": "sourced"}
+   {
+    "value": "possessing spirits",
+    "quote": "The spirits overtake Riley's body, and they make him violently attempt suicide",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:45",
+      "quote": "[in gravelly monotone] They like you."
+     }
+    ]
+   },
+   {
+    "value": "cursed object",
+    "detail": "a severed embalmed hand",
+    "quote": "contact spirits using a mysterious severed and embalmed hand",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:26",
+      "quote": "Apparently, it was the hand of someone who could connect with the dead, right,"
+     }
+    ]
+   },
+   {
+    "value": "deceiving spirit of a parent",
+    "detail": "Rhea's spirit",
+    "quote": "Rhea's spirit tells Mia that Max is lying",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:01",
+      "quote": "You have to put him out of his misery."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "summoned by ritual", "quote": "Holding the hand and saying \"Talk to me\" will summon a random deceased person's spirit", "confidence": "sourced"}
+   {
+    "value": "summoned by ritual",
+    "quote": "Holding the hand and saying \"Talk to me\" will summon a random deceased person's spirit",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:14",
+      "quote": "\" Talk to me. \""
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "a body", "quote": "saying \"I let you in\" immediately after allows the spirit to possess them", "confidence": "sourced"},
-   {"value": "to keep the victim", "quote": "when Rhea says \"We'll have him forever\"", "confidence": "sourced"}
+   {
+    "value": "a body",
+    "quote": "saying \"I let you in\" immediately after allows the spirit to possess them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:33",
+      "quote": "[Hayley] I let you in. I let you in."
+     }
+    ]
+   },
+   {
+    "value": "to keep the victim",
+    "quote": "when Rhea says \"We'll have him forever\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:38",
+      "quote": "[Rhea] I can protect him. We'll have him forever."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "mother's suicide", "quote": "Max reveals that Rhea had killed herself, reading her suicide letter out loud to Mia", "confidence": "sourced"}
+   {
+    "value": "mother's suicide",
+    "quote": "Max reveals that Rhea had killed herself, reading her suicide letter out loud to Mia",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:39",
+      "quote": "I hope you find it in your heart to forgive me."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "party game ritual", "quote": "sneak out to a gathering hosted by Hayley and Joss, where the main attraction is a severed embalmed hand", "confidence": "sourced"},
-   {"value": "breaking the time limit", "quote": "Mia stops the group from ending the possession to keep talking to her mother", "confidence": "sourced"}
+   {
+    "value": "party game ritual",
+    "quote": "sneak out to a gathering hosted by Hayley and Joss, where the main attraction is a severed embalmed hand",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:08",
+      "quote": "It's Hayley's video. They're doing it again tonight."
+     }
+    ]
+   },
+   {
+    "value": "breaking the time limit",
+    "quote": "Mia stops the group from ending the possession to keep talking to her mother",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:39",
+      "quote": "No, no. Please don't close it off."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "ninety-second limit", "quote": "someone else must end the possession before 90 seconds by pulling away the embalmed hand and blowing out a candle", "confidence": "sourced"},
-   {"value": "must invite the spirit", "quote": "saying \"I let you in\" immediately after allows the spirit to possess them", "confidence": "sourced"},
-   {"value": "body expels spirits in time", "quote": "a living body will naturally expel invading spirits over time", "confidence": "sourced"}
+   {
+    "value": "ninety-second limit",
+    "quote": "someone else must end the possession before 90 seconds by pulling away the embalmed hand and blowing out a candle",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:08",
+      "quote": "As soon as she lets it in, it cannot go for more than 90 seconds."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:18:12",
+      "quote": "What happens after 90 seconds? They'll want to stay."
+     }
+    ]
+   },
+   {
+    "value": "must invite the spirit",
+    "quote": "saying \"I let you in\" immediately after allows the spirit to possess them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:38",
+      "quote": "No, you didn't do it right. You gotta say, \" I let you in. \""
+     }
+    ]
+   },
+   {
+    "value": "body expels spirits in time",
+    "quote": "a living body will naturally expel invading spirits over time",
+    "confidence": "sourced"
+   },
+   {
+    "value": "die possessed and they keep you",
+    "source": "subtitles",
+    "at": "00:18:23",
+    "quote": "And if you die while they're in you, well, they'll have you forever.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "candle opens the door",
+    "source": "subtitles",
+    "at": "00:18:39",
+    "quote": "Light the candle to open the door. Blow it out to close it.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "teenagers", "relation_to_threat": "stranger", "quote": "The film follows a group of teenagers discovering they can contact spirits", "confidence": "sourced"},
-   {"value": "friend's little brother", "relation_to_threat": "stranger", "detail": "Riley", "quote": "He is hospitalized in critical condition", "confidence": "sourced"},
-   {"value": "grieving daughter", "relation_to_threat": "family", "detail": "Mia", "quote": "Mia falls on the road and is struck head-on", "confidence": "sourced"},
-   {"value": "father", "relation_to_threat": "family", "detail": "Max", "quote": "causing her to stab the real Max inadvertently", "confidence": "sourced"}
+   {
+    "value": "teenagers",
+    "relation_to_threat": "stranger",
+    "quote": "The film follows a group of teenagers discovering they can contact spirits",
+    "confidence": "sourced"
+   },
+   {
+    "value": "friend's little brother",
+    "relation_to_threat": "stranger",
+    "detail": "Riley",
+    "quote": "He is hospitalized in critical condition",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:34",
+      "quote": "Mum, Riley's in hospital."
+     }
+    ]
+   },
+   {
+    "value": "grieving daughter",
+    "relation_to_threat": "family",
+    "detail": "Mia",
+    "quote": "Mia falls on the road and is struck head-on",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:22",
+      "quote": "It was Mum's two years."
+     }
+    ]
+   },
+   {
+    "value": "father",
+    "relation_to_threat": "family",
+    "detail": "Max",
+    "quote": "causing her to stab the real Max inadvertently",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "victim becomes threat", "quote": "Mia possesses  the partygoer as the movie ends", "confidence": "sourced"},
-   {"value": "cycle passes on", "quote": "a partygoer holding her hand is urged to speak and tells Mia, \"I let you in.\"", "confidence": "sourced"}
+   {
+    "value": "victim becomes threat",
+    "quote": "Mia possesses  the partygoer as the movie ends",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:32",
+      "quote": "[in English] I let you in."
+     }
+    ]
+   },
+   {
+    "value": "cycle passes on",
+    "quote": "a partygoer holding her hand is urged to speak and tells Mia, \"I let you in.\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:23",
+      "quote": "[speaks Greek]"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "embalmed hand", "when": "early", "role": "threat", "quote": "the main attraction is a severed embalmed hand along with lighting a candle", "confidence": "sourced"},
-   {"value": "candle", "when": "early", "role": "symbol", "quote": "pulling away the embalmed hand and blowing out a candle", "confidence": "sourced"},
-   {"value": "head against table", "when": "middle", "role": "turn", "quote": "banging his head against the table and walls", "confidence": "sourced"},
-   {"value": "feet", "state": "sucked", "when": "middle", "role": "threat", "quote": "she witnesses a spirit appear and suck on Daniel's feet", "confidence": "sourced"},
-   {"value": "wheelchair", "when": "late", "role": "turn", "quote": "Mia pushing Riley in a wheelchair toward the busy highway", "confidence": "sourced"},
-   {"value": "mirror", "state": "no reflection", "when": "ending", "role": "turn", "quote": "She has no reflection in the mirror", "confidence": "sourced"},
-   {"value": "knife", "when": "opening", "role": "weapon", "quote": "Duckett stabs Cole and kills himself", "confidence": "sourced"}
+   {
+    "value": "embalmed hand",
+    "when": "early",
+    "role": "threat",
+    "quote": "the main attraction is a severed embalmed hand along with lighting a candle",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:09",
+      "quote": "It's the hand of a psychic. Got cut off and embalmed. Legit."
+     }
+    ]
+   },
+   {
+    "value": "candle",
+    "when": "early",
+    "role": "symbol",
+    "quote": "pulling away the embalmed hand and blowing out a candle",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:39",
+      "quote": "Light the candle to open the door. Blow it out to close it."
+     }
+    ]
+   },
+   {
+    "value": "head against table",
+    "when": "middle",
+    "role": "turn",
+    "quote": "banging his head against the table and walls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:37",
+      "quote": "He smashed his face really bad."
+     }
+    ]
+   },
+   {
+    "value": "feet",
+    "state": "sucked",
+    "when": "middle",
+    "role": "threat",
+    "quote": "she witnesses a spirit appear and suck on Daniel's feet",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:06",
+      "quote": "You were sucking my feet, Mia. You had my foot in your mouth!"
+     }
+    ]
+   },
+   {
+    "value": "wheelchair",
+    "when": "late",
+    "role": "turn",
+    "quote": "Mia pushing Riley in a wheelchair toward the busy highway",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mirror",
+    "state": "no reflection",
+    "when": "ending",
+    "role": "turn",
+    "quote": "She has no reflection in the mirror",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:51",
+      "quote": "I'm looking in the mirror and my reflection is gone."
+     }
+    ]
+   },
+   {
+    "value": "knife",
+    "when": "opening",
+    "role": "weapon",
+    "quote": "Duckett stabs Cole and kills himself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:46",
+      "quote": "[knife scrapes]"
+     }
+    ]
+   },
+   {
+    "value": "kangaroo",
+    "state": "hit by the car, left dying",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:07:20",
+    "quote": "[kangaroo groaning]",
+    "confidence": "sourced",
+    "detail": "Mia cannot bring herself to finish off the dying animal; the line 'put him out of his misery' returns when the spirit urges her to kill Riley, and the kangaroo's sounds return as she dies",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:31",
+      "quote": "Can you at least put it out of its misery?"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:24:29",
+      "quote": "[kangaroo groans]"
+     }
+    ]
+   },
+   {
+    "value": "phone videos",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:10:08",
+    "quote": "It's Hayley's video. They're doing it again tonight.",
+    "confidence": "sourced",
+    "detail": "possessions are filmed and shared online"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "possessed brother's violence", "when": "opening", "role": "omen", "quote": "When he finds Duckett and attempts to bring him home, Duckett stabs Cole and kills himself", "confidence": "sourced"},
-   {"order": 2, "value": "ritual at a party", "when": "early", "role": "trigger", "quote": "Mia volunteers to go first and is possessed by a spirit that displays a menacing focus on Riley", "confidence": "sourced"},
-   {"order": 3, "value": "rule broken for a dead mother", "when": "middle", "role": "turn", "quote": "Mia stops the group from ending the possession to keep talking to her mother", "confidence": "sourced"},
-   {"order": 4, "value": "child self-harms", "when": "middle", "quote": "they make him violently attempt suicide by banging his head against the table and walls", "confidence": "sourced"},
-   {"order": 5, "value": "family truth revealed", "when": "late", "role": "turn", "quote": "Max reveals that Rhea had killed herself", "confidence": "sourced"},
-   {"order": 6, "value": "spirit urges killing", "when": "late", "quote": "Rhea tells Mia to push Riley into the road", "confidence": "sourced"},
-   {"order": 7, "value": "self-sacrifice", "when": "ending", "quote": "Mia falls on the road and is struck head-on", "confidence": "sourced"},
-   {"order": 8, "value": "becomes the summoned spirit", "when": "ending", "quote": "She grabs it and is suddenly summoned to a house party in Greece", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "possessed brother's violence",
+    "when": "opening",
+    "role": "omen",
+    "quote": "When he finds Duckett and attempts to bring him home, Duckett stabs Cole and kills himself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:17",
+      "quote": "[Duckett] Pop said you're gonna hurt a lot of people."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "animal hit on the road",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:07:20",
+    "quote": "[kangaroo groaning]",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:48",
+      "quote": "Don't answer it! I let a kangaroo suffer."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "ritual at a party",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Mia volunteers to go first and is possessed by a spirit that displays a menacing focus on Riley",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:33",
+      "quote": "[Hayley] I let you in. I let you in."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "rule broken for a dead mother",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Mia stops the group from ending the possession to keep talking to her mother",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:38",
+      "quote": "Hey, that's 50 seconds."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "child self-harms",
+    "when": "middle",
+    "quote": "they make him violently attempt suicide by banging his head against the table and walls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:30",
+      "quote": "No! No, no, Riley!"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "family truth revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Max reveals that Rhea had killed herself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:39",
+      "quote": "I hope you find it in your heart to forgive me."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "spirit urges killing",
+    "when": "late",
+    "quote": "Rhea tells Mia to push Riley into the road",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:27",
+      "quote": "Take him, my darling girl."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "self-sacrifice",
+    "when": "ending",
+    "quote": "Mia falls on the road and is struck head-on",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:53",
+      "quote": "[music playing on radio] - [tires screech]"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "becomes the summoned spirit",
+    "when": "ending",
+    "quote": "She grabs it and is suddenly summoned to a house party in Greece",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:32",
+      "quote": "[in English] I let you in."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

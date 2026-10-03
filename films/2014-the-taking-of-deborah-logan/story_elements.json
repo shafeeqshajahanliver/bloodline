@@ -1,61 +1,495 @@
 {
  "film": "2014-the-taking-of-deborah-logan",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "possessing spirit", "detail": "Henri Desjardins, a ritual killer", "quote": "They suspect Deborah is possessed by Desjardins", "confidence": "sourced"},
-   {"value": "dementia", "quote": "a documentary crew making a film about Alzheimer's patients who uncover something sinister", "confidence": "observed"}
+   {
+    "value": "possessing spirit",
+    "detail": "Henri Desjardins, a ritual killer",
+    "quote": "They suspect Deborah is possessed by Desjardins",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:05",
+      "quote": "It was sometimes her, it was sometimes Desjardins"
+     }
+    ]
+   },
+   {
+    "value": "dementia",
+    "quote": "a documentary crew making a film about Alzheimer's patients who uncover something sinister",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:53",
+      "quote": "Eventually, it erases a person's oldest and most precious memories."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "murdered killer", "detail": "Deborah killed Desjardins and buried him in the yard", "quote": "Deborah murdered Desjardins and buried his body in the yard", "confidence": "sourced"}
+   {
+    "value": "murdered killer",
+    "detail": "Deborah killed Desjardins and buried him in the yard",
+    "quote": "Deborah murdered Desjardins and buried his body in the yard",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:31",
+      "quote": "She buried him in the backyard."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "immortality", "quote": "Desjardins was supposedly recreating an ancient Monacan ritual to make himself immortal", "confidence": "sourced"},
-   {"value": "to complete a ritual", "detail": "a fifth girl", "quote": "The ritual required the deaths of five girls who had recently had their first period", "confidence": "sourced"}
+   {
+    "value": "immortality",
+    "quote": "Desjardins was supposedly recreating an ancient Monacan ritual to make himself immortal",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:02",
+      "quote": "The blood of their oestrus was offered to the demon in exchange for immortality."
+     }
+    ]
+   },
+   {
+    "value": "to complete a ritual",
+    "detail": "a fifth girl",
+    "quote": "The ritual required the deaths of five girls who had recently had their first period",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:48",
+      "quote": "The Monacan ritual required five victims to attain immortality"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "ritual murder of girls", "quote": "a series of cannibalistic ritualized murders of four young girls", "confidence": "sourced"},
-   {"value": "secret killing to protect child", "quote": "To protect Sarah, Deborah murdered Desjardins and buried his body in the yard", "confidence": "sourced"}
+   {
+    "value": "ritual murder of girls",
+    "quote": "a series of cannibalistic ritualized murders of four young girls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:32",
+      "quote": "Parts of their bodies had been cannibalised and traces of rattlesnake venom"
+     }
+    ]
+   },
+   {
+    "value": "secret killing to protect child",
+    "quote": "To protect Sarah, Deborah murdered Desjardins and buried his body in the yard",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "filming a documentary", "quote": "Students Mia Hu, Gavin, and Luis starts a project documenting Deborah Logan", "confidence": "sourced"}
+   {
+    "value": "filming a documentary",
+    "quote": "Students Mia Hu, Gavin, and Luis starts a project documenting Deborah Logan",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:22",
+      "quote": "The story of Alzheimer's is never about one person."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "burn the remains", "quote": "They manage to burn Desjardins' corpse and Deborah became herself again", "confidence": "sourced"},
-   {"value": "five sacrifices for immortality", "quote": "The ritual required the deaths of five girls", "confidence": "sourced"}
+   {
+    "value": "burn the remains",
+    "quote": "They manage to burn Desjardins' corpse and Deborah became herself again",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:28",
+      "quote": "a witchdoctor came and burned the boy's body, flesh to ash, purification by fire."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:08:21",
+      "quote": "It didn't burn. It didn't burn!"
+     }
+    ]
+   },
+   {
+    "value": "five sacrifices for immortality",
+    "quote": "The ritual required the deaths of five girls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:48",
+      "quote": "The Monacan ritual required five victims to attain immortality"
+     }
+    ]
+   },
+   {
+    "value": "spirit lives in a host",
+    "source": "subtitles",
+    "at": "00:58:23",
+    "quote": "However, the notion of spiritual parasites does exists among many thousands of cultures",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "elderly mother", "relation_to_threat": "family", "detail": "Deborah, who killed Desjardins", "quote": "an elderly woman with Alzheimer's disease living with her daughter Sarah", "confidence": "sourced"},
-   {"value": "daughter", "relation_to_threat": "family", "detail": "Sarah, once meant as the fifth victim", "quote": "Desjardins planned to use Sarah as his fifth victim", "confidence": "sourced"},
-   {"value": "young girl", "relation_to_threat": "stranger", "detail": "Cara Minetti, a cancer patient", "quote": "Deborah had unsuccessfully tried to abduct Cara Minetti, a young cancer patient", "confidence": "sourced"},
-   {"value": "documentary crew", "relation_to_threat": "stranger", "quote": "cameraman Luis notices that her actions defy ordinary explanations", "confidence": "sourced"}
+   {
+    "value": "elderly mother",
+    "relation_to_threat": "family",
+    "detail": "Deborah, who killed Desjardins",
+    "quote": "an elderly woman with Alzheimer's disease living with her daughter Sarah",
+    "confidence": "sourced"
+   },
+   {
+    "value": "daughter",
+    "relation_to_threat": "family",
+    "detail": "Sarah, once meant as the fifth victim",
+    "quote": "Desjardins planned to use Sarah as his fifth victim",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:09",
+      "quote": "saying some shit about snakes, \" be my fifth \""
+     }
+    ]
+   },
+   {
+    "value": "young girl",
+    "relation_to_threat": "stranger",
+    "detail": "Cara Minetti, a cancer patient",
+    "quote": "Deborah had unsuccessfully tried to abduct Cara Minetti, a young cancer patient",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:38",
+      "quote": "cancer patient Cara Minetti is resting comfortably"
+     }
+    ]
+   },
+   {
+    "value": "documentary crew",
+    "relation_to_threat": "stranger",
+    "quote": "cameraman Luis notices that her actions defy ordinary explanations",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "false resolution", "quote": "Deborah became herself again, the possession apparently ended", "confidence": "sourced"},
-   {"value": "threat passes to child", "quote": "Cara smiles sinisterly, implying she is now possessed by Desjardins, who has completed the ritual", "confidence": "sourced"}
+   {
+    "value": "false resolution",
+    "quote": "Deborah became herself again, the possession apparently ended",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat passes to child",
+    "quote": "Cara smiles sinisterly, implying she is now possessed by Desjardins, who has completed the ritual",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:38",
+      "quote": "What are you looking forward to doing in your ripe old age?"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:23:50",
+      "quote": "I have one."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "snakes", "when": "early", "role": "omen", "quote": "record Deborah speaking French about sacrifices and snakes", "confidence": "sourced"},
-   {"value": "switchboard line", "state": "ringing continually", "when": "early", "role": "clue", "quote": "the line for 337 at her switchboard continually rings", "confidence": "sourced"},
-   {"value": "buried body", "state": "in the yard", "when": "late", "role": "clue", "quote": "The group finds the body's remains and tries to burn them", "confidence": "sourced"},
-   {"value": "abandoned mine", "when": "late", "role": "setting", "quote": "takes her to the abandoned mine where the previous victims were killed", "confidence": "sourced"},
-   {"value": "unhinged jaw", "state": "swallowing a child", "when": "late", "role": "threat", "quote": "she is trying to swallow Cara's head in a snake-like manner", "confidence": "sourced"},
-   {"value": "news footage", "when": "ending", "role": "turn", "quote": "news footage shows that Deborah was deemed unfit to stand trial", "confidence": "sourced"}
+   {
+    "value": "snakes",
+    "when": "early",
+    "role": "omen",
+    "quote": "record Deborah speaking French about sacrifices and snakes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:08",
+      "quote": "(SNAKE HISSES)"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:40:09",
+      "quote": "saying some shit about snakes"
+     }
+    ]
+   },
+   {
+    "value": "switchboard line",
+    "state": "ringing continually",
+    "when": "early",
+    "role": "clue",
+    "quote": "the line for 337 at her switchboard continually rings",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:14",
+      "quote": "It was 337. Over and over."
+     }
+    ]
+   },
+   {
+    "value": "buried body",
+    "state": "in the yard",
+    "when": "late",
+    "role": "clue",
+    "quote": "The group finds the body's remains and tries to burn them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:40",
+      "quote": "We gotta burn this."
+     }
+    ]
+   },
+   {
+    "value": "abandoned mine",
+    "when": "late",
+    "role": "setting",
+    "quote": "takes her to the abandoned mine where the previous victims were killed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:47",
+      "quote": "There's only one place he'd go - the cave system."
+     }
+    ]
+   },
+   {
+    "value": "unhinged jaw",
+    "state": "swallowing a child",
+    "when": "late",
+    "role": "threat",
+    "quote": "she is trying to swallow Cara's head in a snake-like manner",
+    "confidence": "sourced"
+   },
+   {
+    "value": "news footage",
+    "when": "ending",
+    "role": "turn",
+    "quote": "news footage shows that Deborah was deemed unfit to stand trial",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:30",
+      "quote": "reportedly abducted Cara Minetti from Exuma Hospital"
+     }
+    ]
+   },
+   {
+    "value": "fly",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:20:49",
+    "quote": "(FLY BUZZES)",
+    "confidence": "sourced"
+   },
+   {
+    "value": "garden spade",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:26:33",
+    "quote": "You were stabbing at the ground with your spade over and over, digging hole after hole.",
+    "confidence": "sourced",
+    "detail": "Deborah's night digging marks where the body lies"
+   },
+   {
+    "value": "snake eating itself",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:43:43",
+    "quote": "the cauterised symbol of the snake consuming itself.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "vomited earthworms",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:47:47",
+    "quote": "She puked fucking earthworms.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "documenting an ill woman", "when": "opening", "role": "trigger", "quote": "starts a project documenting Deborah Logan", "confidence": "sourced"},
-   {"order": 2, "value": "strange behaviour explained away", "when": "early", "quote": "her personal physician states are normal for someone with an aggressive form of Alzheimer's", "confidence": "sourced"},
-   {"order": 3, "value": "old murders linked", "when": "early", "role": "clue", "quote": "the line belonged to local physician Henri Desjardins, who disappeared", "confidence": "sourced"},
-   {"order": 4, "value": "possession suspected", "when": "middle", "role": "turn", "quote": "They suspect Deborah is possessed by Desjardins", "confidence": "sourced"},
-   {"order": 5, "value": "mother's past crime revealed", "when": "middle", "role": "turn", "quote": "Harris reveals to Sarah that years ago, Deborah found out that Desjardins planned to use Sarah", "confidence": "sourced"},
-   {"order": 6, "value": "child abducted to ritual site", "when": "late", "quote": "Deborah escapes her restraints, abducts Cara", "confidence": "sourced"},
-   {"order": 7, "value": "remains burned", "when": "late", "quote": "They manage to burn Desjardins' corpse", "confidence": "sourced"},
-   {"order": 8, "value": "possessed child smiles", "when": "ending", "quote": "Cara smiles sinisterly, implying she is now possessed", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "documenting an ill woman",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "starts a project documenting Deborah Logan",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:22",
+      "quote": "The story of Alzheimer's is never about one person."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "night digging in the garden",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:26:33",
+    "quote": "You were stabbing at the ground with your spade over and over",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "strange behaviour explained away",
+    "when": "early",
+    "quote": "her personal physician states are normal for someone with an aggressive form of Alzheimer's",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:06",
+      "quote": "is not typically associated with Alzheimer's."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "dead switchboard rings",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:34:33",
+    "quote": "(PHONE RINGS LOUDLY)",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "old murders linked",
+    "when": "early",
+    "role": "clue",
+    "quote": "the line belonged to local physician Henri Desjardins, who disappeared",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:08",
+      "quote": "Desjardins is never seen again and his whereabouts become the stuff of legend."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "possession suspected",
+    "when": "middle",
+    "role": "turn",
+    "quote": "They suspect Deborah is possessed by Desjardins",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:13",
+      "quote": "to the extent that she believes she is Desjardins."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "mother's past crime revealed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Harris reveals to Sarah that years ago, Deborah found out that Desjardins planned to use Sarah",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "first burning fails",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:08:21",
+    "quote": "It didn't burn. It didn't burn!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "child abducted to ritual site",
+    "when": "late",
+    "quote": "Deborah escapes her restraints, abducts Cara",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:44",
+      "quote": "Well, he's gotta complete the ritual, right, the fifth girl?"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "remains burned",
+    "when": "late",
+    "quote": "They manage to burn Desjardins' corpse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:25",
+      "quote": "Then we can burn the remains just like Schiffer said."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "possessed child smiles",
+    "when": "ending",
+    "quote": "Cara smiles sinisterly, implying she is now possessed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:54",
+      "quote": "It's a secret."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }
