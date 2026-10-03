@@ -1,0 +1,28 @@
+# Bloodline
+
+Private research corpus of 500 horror films, owned by Shafeeq Shajahan (Shaf). Full context, data structure, archetype codes, tool list and next steps are in `HANDOVER.md`; read it before substantial work. `schema.md` defines every file.
+
+## Working rules
+
+- Shaf is non-technical. Explain in plain English, lead with what the data shows, and keep code out of the conversation unless he asks.
+- Never sign in with Shaf's credentials or use his API keys. If a step needs a login, he runs it himself. Never read `.env`.
+- Never work around a site that blocks automated access (e.g. Does the Dog Die). Record it as a gap.
+- Keep the repo private. Don't commit PDFs or video; use Git LFS for images.
+- Never edit source files to fix data. Use `films/<id>/corrections.json`.
+- Every new fact carries a source, retrieval date and confidence level (`sourced`, `observed`, `claude-knowledge`, `first pass`). Interpretive tags stay labelled as first pass until Shaf reviews them.
+- Regenerate `graph/` and `reports/coverage.md` after any data change.
+- Check year and country when matching titles; remakes and same-name films are common.
+
+## Running things
+
+- Install dependencies: `pip install -r requirements.txt`. `pdftotext` and `ffmpeg` are needed for screenplays and full-film analysis.
+- Run scripts from the repo root with `PYTHONPATH=tools`, e.g. `PYTHONPATH=tools python3 tools/build_graph.py`.
+- After a data change: `tools/coverage.py`, `tools/eras.py`, `tools/build_graph.py`. All three are deterministic; on unchanged data they reproduce the committed files exactly.
+- Collection is resumable: `tools/run_batch.py --only tier1,subs,scares,scripts,stills`. It skips anything collected or marked absent (`*.none`, `script/none`).
+- Keep requests to Wikipedia slow (1 per 2–3 s) and use an identifying User-Agent (`common.py` sets one).
+
+## Repo notes
+
+- Git history starts with the 10-film pilot (5 commits from Cowork), then the 500-film import. Section 2 of `HANDOVER.md` describes a fresh `git init`; that was not needed because history was preserved.
+- `graph/` is generated. Never hand-edit it.
+- `_cache/` (subtitle-archive indexes) is gitignored and rebuilt on demand.
