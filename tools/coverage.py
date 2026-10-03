@@ -23,6 +23,23 @@ for r in rows:
 md=f"# Coverage: all 500 films\n\nGenerated {datetime.date.today()}.\n\n| Layer | Films | Share |\n|---|---|---|\n"+"".join(f"| {N[k]} | {tot[k]} | {tot[k]/5:.0f}% |\n" for k in H)
 md+="\n## By region (films with each layer / films in region)\n\n| Region | Films | Plot | Story elements | Subtitles (EN) | Screenplay | Jump scares | Stills |\n|---|---|---|---|---|---|---|---|\n"
 for g,n in regn.most_common(): md+=f"| {g} | {n} | {reg[g]['plot']} | {reg[g]['story']} | {reg[g]['subs_en']} | {reg[g]['screenplay']} | {reg[g]['scares']} | {reg[g]['stills']} |\n"
+
+# Story elements: one row per dimension
+SD=[("threat","Threat"),("origin","Origin of the threat"),("wants","What it wants"),("wrong","The wrong underneath"),("trigger","Trigger"),("rules","Rules"),("who_suffers","Who suffers"),("ending","Ending"),("images","Images"),("beats","Beats")]
+sf=collections.Counter(); sn=collections.Counter(); se=collections.Counter(); sv=collections.defaultdict(set); sr=collections.defaultdict(collections.Counter); thin=0; nst=0
+for r in rows:
+    p=f"films/{r['id']}/story_elements.json"
+    if not os.path.exists(p): continue
+    d=json.load(open(p)); nst+=1; thin+=d.get("plot_quality")!="full"
+    for k,_ in SD:
+        es=d.get("dimensions",{}).get(k,[])
+        if es: sf[k]+=1; sr[r["region"]][k]+=1
+        if k in d.get("not_stated",[]): sn[k]+=1
+        se[k]+=len(es); sv[k]|={e["value"] for e in es}
+md+=f"\n## Story elements by dimension\n\n{nst} films have story elements ({thin} from a thin plot). Each entry is quoted from the film's Wikipedia article; values are not yet merged, so 'distinct values' overstates variety.\n\n| Dimension | Films filled | Share | Not stated | Entries | Per film | Distinct values |\n|---|---|---|---|---|---|---|\n"
+md+="".join(f"| {n} | {sf[k]} | {sf[k]/5:.0f}% | {sn[k]} | {se[k]} | {se[k]/max(1,sf[k]):.1f} | {len(sv[k])} |\n" for k,n in SD)
+md+="\n### By region (films with each dimension filled / films in region)\n\n| Region | Films | "+" | ".join(n for _,n in SD)+" |\n|---|---|"+"---|"*len(SD)+"\n"
+for g,n in regn.most_common(): md+=f"| {g} | {n} | "+" | ".join(str(sr[g][k]) for k,_ in SD)+" |\n"
 md+="\n## Films with no IDs (need a manual match)\n\n"+"".join(f"- {r['title']} ({r['year']})\n" for r in rows if not per[r['id']]['ids'])
 open("reports/coverage.md","w").write(md)
 # write status back into films.csv
