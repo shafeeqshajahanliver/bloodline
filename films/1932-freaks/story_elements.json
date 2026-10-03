@@ -1,58 +1,389 @@
 {
  "film": "1932-freaks",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "scheming seductress", "detail": "Cleopatra, a trapeze artist plotting to poison Hans", "quote": "a conniving trapeze artist who joins a group of carnival sideshow performers with a plan to seduce and murder a dwarf", "confidence": "sourced"},
-   {"value": "avenging group", "detail": "the sideshow performers who hunt Cleopatra down", "quote": "giving Cleopatra the chance to escape into the forest, closely pursued by them", "confidence": "sourced"}
+   {
+    "value": "scheming seductress",
+    "detail": "Cleopatra, a trapeze artist plotting to poison Hans",
+    "quote": "a conniving trapeze artist who joins a group of carnival sideshow performers with a plan to seduce and murder a dwarf",
+    "confidence": "sourced"
+   },
+   {
+    "value": "avenging group",
+    "detail": "the sideshow performers who hunt Cleopatra down",
+    "quote": "giving Cleopatra the chance to escape into the forest, closely pursued by them",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "greed", "detail": "Cleopatra learns of Hans's inheritance", "quote": "seduces a carnival sideshow dwarf named Hans after learning of his large inheritance", "confidence": "sourced"}
+   {
+    "value": "greed",
+    "detail": "Cleopatra learns of Hans's inheritance",
+    "quote": "seduces a carnival sideshow dwarf named Hans after learning of his large inheritance",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:13",
+      "quote": "WHAT WOULD KILL A FREAK TO GET HIS MONEY."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "money", "detail": "Hans's inheritance", "quote": "Cleopatra also conspires with circus strongman Hercules to kill Hans so she will inherit his wealth", "confidence": "sourced"},
-   {"value": "revenge", "detail": "the performers punish Cleopatra", "quote": "secretly plots with the other entertainers", "confidence": "observed"}
+   {
+    "value": "money",
+    "detail": "Hans's inheritance",
+    "quote": "Cleopatra also conspires with circus strongman Hercules to kill Hans so she will inherit his wealth",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:08",
+      "quote": "A FORTUNE! I BET THE LITTLE APE'S WORTH BILLIONS!"
+     }
+    ]
+   },
+   {
+    "value": "revenge",
+    "detail": "the performers punish Cleopatra",
+    "quote": "secretly plots with the other entertainers",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "poisoning a spouse", "quote": "At their wedding Cleopatra begins poisoning Hans's wine", "confidence": "sourced"},
-   {"value": "contempt for outsiders", "detail": "Cleopatra rejects the performers' initiation", "quote": "Cleopatra refuses it in disgust and drives them away, then berates Hans", "confidence": "sourced"}
+   {
+    "value": "poisoning a spouse",
+    "quote": "At their wedding Cleopatra begins poisoning Hans's wine",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:55",
+      "quote": "YOU GOT THIS BOTTLE OF POISON TO KILL."
+     }
+    ]
+   },
+   {
+    "value": "contempt for outsiders",
+    "detail": "Cleopatra rejects the performers' initiation",
+    "quote": "Cleopatra refuses it in disgust and drives them away, then berates Hans",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:34",
+      "quote": "FREAKS! FREAKS! FREAKS!"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "marriage for money", "quote": "Hans, enamored with Cleopatra, ultimately marries her", "confidence": "sourced"}
+   {
+    "value": "marriage for money",
+    "quote": "Hans, enamored with Cleopatra, ultimately marries her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:25",
+      "quote": "I COULD MARRY HIM. YES, HE WOULD MARRY ME!"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "outsiders protect their own", "quote": "Dwarf Angeleno leads the \"freaks\" in an initiation ceremony for Cleopatra", "confidence": "observed"}
+   {
+    "value": "outsiders protect their own",
+    "quote": "Dwarf Angeleno leads the \"freaks\" in an initiation ceremony for Cleopatra",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:57",
+      "quote": "THEIR CODE IS A LAW UNTO THEMSELVES. OFFEND ONE, AND YOU OFFEND THEM ALL."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "deceived husband", "relation_to_threat": "lover", "detail": "Hans", "quote": "Hans realizes that he has been played for a fool", "confidence": "sourced"},
-   {"value": "villain punished", "relation_to_threat": "self", "detail": "Cleopatra mutilated into the human duck", "quote": "she performs at a carnival as a grotesque \"human duck\", with her legs cut off and one eye gouged out", "confidence": "sourced"},
-   {"value": "witness", "relation_to_threat": "stranger", "detail": "Venus, targeted by Hercules", "quote": "Hercules goes to kill sea lion trainer Venus for knowing about the plot", "confidence": "sourced"}
+   {
+    "value": "deceived husband",
+    "relation_to_threat": "lover",
+    "detail": "Hans",
+    "quote": "Hans realizes that he has been played for a fool",
+    "confidence": "sourced"
+   },
+   {
+    "value": "villain punished",
+    "relation_to_threat": "self",
+    "detail": "Cleopatra mutilated into the human duck",
+    "quote": "she performs at a carnival as a grotesque \"human duck\", with her legs cut off and one eye gouged out",
+    "confidence": "sourced"
+   },
+   {
+    "value": "witness",
+    "relation_to_threat": "stranger",
+    "detail": "Venus, targeted by Hercules",
+    "quote": "Hercules goes to kill sea lion trainer Venus for knowing about the plot",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "villain transformed as punishment", "quote": "she performs at a carnival as a grotesque \"human duck\"", "confidence": "sourced"},
-   {"value": "reconciliation", "detail": "alternate ending: Frieda forgives Hans", "quote": "Frieda tells Hans she knows he just wanted to demand the bottle of poison from Cleopatra", "confidence": "sourced"}
+   {
+    "value": "villain transformed as punishment",
+    "quote": "she performs at a carnival as a grotesque \"human duck\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:54",
+      "quote": "OTHERS, THAT IT WAS THE CODE OF THE FREAKS."
+     }
+    ]
+   },
+   {
+    "value": "reconciliation",
+    "detail": "alternate ending: Frieda forgives Hans",
+    "quote": "Frieda tells Hans she knows he just wanted to demand the bottle of poison from Cleopatra",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:30",
+      "quote": "DON'T CRY. I LOVE YOU."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "wine cup", "state": "ceremonial, refused", "when": "middle", "role": "turn", "quote": "When he offers her the ceremonial wine cup, Cleopatra refuses it in disgust", "confidence": "sourced"},
-   {"value": "poison", "state": "in wine and medicine", "when": "middle", "role": "weapon", "quote": "appears to take the poisoned medicine that she is giving him", "confidence": "sourced"},
-   {"value": "storm", "when": "late", "role": "setting", "quote": "Hans's circus wagon is overturned in a storm", "confidence": "sourced"},
-   {"value": "forest", "when": "late", "role": "setting", "quote": "escape into the forest, closely pursued by them", "confidence": "sourced"},
-   {"value": "mutilated body", "state": "legs cut off, eye gouged", "when": "ending", "role": "symbol", "quote": "with her legs cut off and one eye gouged out", "confidence": "sourced"},
-   {"value": "circus", "state": "travelling", "when": "opening", "role": "setting", "quote": "set amongst the backdrop of a travelling French circus", "confidence": "sourced"}
+   {
+    "value": "wine cup",
+    "state": "ceremonial, refused",
+    "when": "middle",
+    "role": "turn",
+    "quote": "When he offers her the ceremonial wine cup, Cleopatra refuses it in disgust",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:59",
+      "quote": "A LOVING CUP! A LOVING CUP!"
+     }
+    ]
+   },
+   {
+    "value": "wedding feast chant",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:42:01",
+    "quote": "WE ACCEPT HER, ONE OF US",
+    "confidence": "sourced",
+    "detail": "the 'gooba-gobble' chant welcoming Cleopatra, which she answers with insults"
+   },
+   {
+    "value": "poison",
+    "state": "in wine and medicine",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "appears to take the poisoned medicine that she is giving him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:39",
+      "quote": "POISON. A VERY BAD CASE OF PTOMAINE POISONING."
+     }
+    ]
+   },
+   {
+    "value": "storm",
+    "when": "late",
+    "role": "setting",
+    "quote": "Hans's circus wagon is overturned in a storm",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:59",
+      "quote": "OTHERS, THE STORM."
+     }
+    ]
+   },
+   {
+    "value": "forest",
+    "when": "late",
+    "role": "setting",
+    "quote": "escape into the forest, closely pursued by them",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mutilated body",
+    "state": "legs cut off, eye gouged",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "with her legs cut off and one eye gouged out",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:48",
+      "quote": "HOW SHE GOT THAT WAY WILL NEVER BE KNOWN."
+     }
+    ]
+   },
+   {
+    "value": "circus",
+    "state": "travelling",
+    "when": "opening",
+    "role": "setting",
+    "quote": "set amongst the backdrop of a travelling French circus",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:25",
+      "quote": "JUST AS THEY ARE REPRESENTED ON THE BANNER, YOU WILL SEE THEM ON THE INSIDE!"
+     }
+    ]
+   },
+   {
+    "value": "peacock of the air",
+    "state": "trapeze star, later a squawking hen",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:01:44",
+    "quote": "SHE WAS KNOWN AS THE PEACOCK OF THE AIR.",
+    "confidence": "sourced",
+    "detail": "Cleopatra's bird billing returns as the squawking bird-woman of the last scene",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:02",
+      "quote": "BELIEVE IT OR NOT, THERE SHE IS."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "seduction for inheritance", "when": "opening", "role": "trigger", "quote": "seduces a carnival sideshow dwarf named Hans after learning of his large inheritance", "confidence": "sourced"},
-   {"order": 2, "value": "wedding and poisoning", "when": "middle", "quote": "At their wedding Cleopatra begins poisoning Hans's wine but drunkenly kisses Hercules in front of Hans", "confidence": "sourced"},
-   {"order": 3, "value": "outsiders rejected", "when": "middle", "role": "turn", "quote": "Cleopatra refuses it in disgust and drives them away", "confidence": "sourced"},
-   {"order": 4, "value": "victim secretly plots back", "when": "middle", "role": "turn", "quote": "appears to take the poisoned medicine that she is giving him, but secretly plots with the other entertainers", "confidence": "sourced"},
-   {"order": 5, "value": "chase in a storm", "when": "late", "quote": "Hans's circus wagon is overturned in a storm, giving Cleopatra the chance to escape into the forest", "confidence": "sourced"},
-   {"order": 6, "value": "villain mutilated", "when": "ending", "quote": "The freaks capture Cleopatra. Some time later, she performs at a carnival as a grotesque \"human duck\"", "confidence": "sourced"},
-   {"order": 7, "value": "forgiveness", "when": "ending", "quote": "The two then share a heartwarming hug", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "barker frames the tale",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:31",
+    "quote": "WE DIDN'T LIE TO YOU, FOLKS. WE TOLD YOU WE HAD LIVING, BREATHING MONSTROSITIES.",
+    "confidence": "sourced",
+    "detail": "a sideshow barker introduces the 'most astounding living monstrosity'; the story is a flashback to how she got that way"
+   },
+   {
+    "order": 2,
+    "value": "seduction for inheritance",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "seduces a carnival sideshow dwarf named Hans after learning of his large inheritance",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:18",
+      "quote": "OF THE FORTUNE HE HAS INHERITED."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "wedding and poisoning",
+    "when": "middle",
+    "quote": "At their wedding Cleopatra begins poisoning Hans's wine but drunkenly kisses Hercules in front of Hans",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "outsiders rejected",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Cleopatra refuses it in disgust and drives them away",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:30",
+      "quote": "DIRTY... SLIMY..."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "victim secretly plots back",
+    "when": "middle",
+    "role": "turn",
+    "quote": "appears to take the poisoned medicine that she is giving him, but secretly plots with the other entertainers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:49",
+      "quote": "I MUST HURRY NOW AND FIX YOUR MEDICINE, MY DARLING, OR I WILL BE LATE."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "chase in a storm",
+    "when": "late",
+    "quote": "Hans's circus wagon is overturned in a storm, giving Cleopatra the chance to escape into the forest",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:07",
+      "quote": "HERCULES! HERCULES! HERCULES!"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "villain mutilated",
+    "when": "ending",
+    "quote": "The freaks capture Cleopatra. Some time later, she performs at a carnival as a grotesque \"human duck\"",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "forgiveness",
+    "when": "ending",
+    "quote": "The two then share a heartwarming hug",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:04",
+      "quote": "BUT, HANS, YOU TRIED TO STOP THEM. IT WAS ONLY THE POISON YOU WANTED. IT WASN'T YOUR FAULT."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

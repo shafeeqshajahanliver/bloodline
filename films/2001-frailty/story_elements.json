@@ -1,62 +1,530 @@
 {
  "film": "2001-frailty",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "religious killer father", "detail": "Meiks, who believes God commands him", "quote": "their father, who believes that he has been commanded by God to destroy demons disguised as people", "confidence": "sourced"},
-   {"value": "serial killer", "detail": "the real Fenton, the God's Hand killer", "quote": "had grown up to become the actual God's Hand serial killer", "confidence": "sourced"}
+   {
+    "value": "religious killer father",
+    "detail": "Meiks, who believes God commands him",
+    "quote": "their father, who believes that he has been commanded by God to destroy demons disguised as people",
+    "confidence": "sourced"
+   },
+   {
+    "value": "serial killer",
+    "detail": "the real Fenton, the God's Hand killer",
+    "quote": "had grown up to become the actual God's Hand serial killer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:15",
+      "quote": "Fenton was the killer."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "divine command", "quote": "One night Meiks claims that an angel visited him and tasked their family with \"destroying\" demons", "confidence": "sourced"}
+   {
+    "value": "divine command",
+    "quote": "One night Meiks claims that an angel visited him and tasked their family with \"destroying\" demons",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:14",
+      "quote": "He said he'd had a vision that night. A vision from God."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to destroy hidden demons", "quote": "tasked their family with \"destroying\" demons disguised as humans on Earth", "confidence": "sourced"}
+   {
+    "value": "to destroy hidden demons",
+    "quote": "tasked their family with \"destroying\" demons disguised as humans on Earth",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:26",
+      "quote": "We don't fear these demons. We destroy them."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "secret murders", "detail": "the victims' hidden crimes", "quote": "all of their victims were guilty of terrible crimes", "confidence": "sourced"},
-   {"value": "matricide", "quote": "Adam then lays his hands on Doyle and confirms that Doyle murdered his own mother", "confidence": "sourced"}
+   {
+    "value": "secret murders",
+    "detail": "the victims' hidden crimes",
+    "quote": "all of their victims were guilty of terrible crimes",
+    "confidence": "sourced"
+   },
+   {
+    "value": "matricide",
+    "quote": "Adam then lays his hands on Doyle and confirms that Doyle murdered his own mother",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:10",
+      "quote": "But that's not going to bring your mother back, is it?"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "a vision", "quote": "Guided by visions, Meiks acquires three \"holy\" weapons", "confidence": "sourced"},
-   {"value": "a confession", "quote": "Fenton Meiks visits FBI Agent Wesley Doyle's Dallas office and claims his brother Adam is behind the \"God's Hand\" serial killings", "confidence": "sourced"}
+   {
+    "value": "a vision",
+    "quote": "Guided by visions, Meiks acquires three \"holy\" weapons",
+    "confidence": "sourced"
+   },
+   {
+    "value": "a confession",
+    "quote": "Fenton Meiks visits FBI Agent Wesley Doyle's Dallas office and claims his brother Adam is behind the \"God's Hand\" serial killings",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "touch reveals sins", "quote": "Upon touching her with his bare hand, Meiks claims to see visions of her evil", "confidence": "sourced"},
-   {"value": "divine list of names", "quote": "He also receives a list of names of people whom he believes to be demons in disguise", "confidence": "sourced"},
-   {"value": "witnesses are blinded", "quote": "with Meiks claiming that God would blind any witnesses", "confidence": "sourced"}
+   {
+    "value": "touch reveals sins",
+    "quote": "Upon touching her with his bare hand, Meiks claims to see visions of her evil",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:52",
+      "quote": "The angel said when I lay my hands on them,"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:24:03",
+      "quote": "and once they're back here, I take the gloves off and reveal them."
+     }
+    ]
+   },
+   {
+    "value": "divine list of names",
+    "quote": "He also receives a list of names of people whom he believes to be demons in disguise",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:07",
+      "quote": "God will be sending us a list of the first seven demons soon."
+     }
+    ]
+   },
+   {
+    "value": "witnesses are blinded",
+    "quote": "with Meiks claiming that God would blind any witnesses",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:32",
+      "quote": "I told you, God will blind them for us."
+     }
+    ]
+   },
+   {
+    "value": "only kill those named",
+    "source": "subtitles",
+    "at": "00:25:11",
+    "quote": "If we were to use your list, we wouldn't be destroying demons,",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "sons", "relation_to_threat": "family", "detail": "Fenton and Adam", "quote": "Meiks locks Fenton in the cellar for more than a week with only a cup of water per day", "confidence": "sourced"},
-   {"value": "investigator", "relation_to_threat": "stranger", "detail": "FBI agent Doyle, on the list", "quote": "Adam reveals that Doyle was on the original revealed list", "confidence": "sourced"},
-   {"value": "townspeople", "relation_to_threat": "community", "quote": "Doyle is horrified to see the number of graves in the garden", "confidence": "observed"}
+   {
+    "value": "sons",
+    "relation_to_threat": "family",
+    "detail": "Fenton and Adam",
+    "quote": "Meiks locks Fenton in the cellar for more than a week with only a cup of water per day",
+    "confidence": "sourced"
+   },
+   {
+    "value": "investigator",
+    "relation_to_threat": "stranger",
+    "detail": "FBI agent Doyle, on the list",
+    "quote": "Adam reveals that Doyle was on the original revealed list",
+    "confidence": "sourced"
+   },
+   {
+    "value": "townspeople",
+    "relation_to_threat": "community",
+    "quote": "Doyle is horrified to see the number of graves in the garden",
+    "confidence": "observed"
+   }
   ],
   "ending": [
-   {"value": "threat survives", "detail": "Adam, now sheriff, continues the mission", "quote": "He assures her that God's will has been done", "confidence": "sourced"},
-   {"value": "supernatural confirmed", "quote": "The security tapes from the FBI office are inexplicably obscured by static whenever Adam is in frame", "confidence": "observed"}
+   {
+    "value": "threat survives",
+    "detail": "Adam, now sheriff, continues the mission",
+    "quote": "He assures her that God's will has been done",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:47",
+      "quote": "God's will has been served."
+     }
+    ]
+   },
+   {
+    "value": "supernatural confirmed",
+    "quote": "The security tapes from the FBI office are inexplicably obscured by static whenever Adam is in frame",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:12",
+      "quote": "I can't explain it... All the tapes look like this."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "rose garden", "state": "full of graves", "when": "opening", "role": "setting", "quote": "Fenton buried him in a rose garden in their hometown of Thurman, Texas", "confidence": "sourced"},
-   {"value": "axe", "state": "carved with a name", "when": "early", "role": "weapon", "quote": "an axe carved with the name \"Otis\"", "confidence": "sourced"},
-   {"value": "work gloves", "when": "early", "role": "weapon", "quote": "a pair of work gloves, and a section of pipe", "confidence": "sourced"},
-   {"value": "list of names", "when": "early", "role": "clue", "quote": "He also receives a list of names", "confidence": "sourced"},
-   {"value": "hole dug in yard", "state": "turned into a cellar", "when": "middle", "role": "setting", "quote": "He then makes Fenton dig a large hole in the backyard", "confidence": "sourced"},
-   {"value": "shed", "when": "middle", "role": "setting", "quote": "The brothers again watch as Meiks murders the man in their backyard shed", "confidence": "sourced"},
-   {"value": "security tape static", "when": "ending", "role": "turn", "quote": "inexplicably obscured by static whenever Adam is in frame", "confidence": "sourced"}
+   {
+    "value": "rose garden",
+    "state": "full of graves",
+    "when": "opening",
+    "role": "setting",
+    "quote": "Fenton buried him in a rose garden in their hometown of Thurman, Texas",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:08",
+      "quote": "You have to take me to the rose garden."
+     }
+    ]
+   },
+   {
+    "value": "axe",
+    "state": "carved with a name",
+    "when": "early",
+    "role": "weapon",
+    "quote": "an axe carved with the name \"Otis\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Dad comes in excited, holding an ordinary wood-handle axe and an old pair of work gloves."
+     }
+    ]
+   },
+   {
+    "value": "work gloves",
+    "when": "early",
+    "role": "weapon",
+    "quote": "a pair of work gloves, and a section of pipe",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:03",
+      "quote": "and once they're back here, I take the gloves off and reveal them."
+     }
+    ]
+   },
+   {
+    "value": "list of names",
+    "when": "early",
+    "role": "clue",
+    "quote": "He also receives a list of names",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:07",
+      "quote": "God will be sending us a list of the first seven demons soon."
+     }
+    ]
+   },
+   {
+    "value": "hole dug in yard",
+    "state": "turned into a cellar",
+    "when": "middle",
+    "role": "setting",
+    "quote": "He then makes Fenton dig a large hole in the backyard",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:20",
+      "quote": "I want you to dig a hole right here."
+     }
+    ]
+   },
+   {
+    "value": "shed",
+    "when": "middle",
+    "role": "setting",
+    "quote": "The brothers again watch as Meiks murders the man in their backyard shed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:21",
+      "quote": "Come into the shed."
+     }
+    ]
+   },
+   {
+    "value": "security tape static",
+    "when": "ending",
+    "role": "turn",
+    "quote": "inexplicably obscured by static whenever Adam is in frame",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:12",
+      "quote": "I can't explain it... All the tapes look like this."
+     }
+    ]
+   },
+   {
+    "value": "lost dog ruse",
+    "when": "middle",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "00:44:39",
+    "quote": "My dog, she's...",
+    "confidence": "observed",
+    "detail": "Fenton is made to cry about a dog under a car to lure Edward March",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "My... my ... dog's under there ... and ... and ... he ... he ... won ' t ..."
+     }
+    ]
+   },
+   {
+    "value": "child's crayon list",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:24:36",
+    "quote": "Dad, look, I got a list too.",
+    "confidence": "sourced",
+    "detail": "young Adam writes his own list of 'demons', starting with a school bully",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "There are seven names written on it in crayon."
+     }
+    ]
+   },
+   {
+    "value": "storm cellar",
+    "when": "middle",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:54:43",
+    "quote": "We started the cellar after that.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "gospel song",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:06:27",
+    "quote": "There'll be peace",
+    "confidence": "observed",
+    "detail": "Peace in the Valley plays at the opening and over the narrator's final story",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Johnny Cash's Peace in the Valley plays softly from inside the house."
+     }
+    ]
+   },
+   {
+    "value": "face no one remembers",
+    "when": "ending",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:30:50",
+    "quote": "Look, I told you, it's just a blur.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "stranger confesses to investigator", "when": "opening", "quote": "claims his brother Adam is behind the \"God's Hand\" serial killings", "confidence": "sourced"},
-   {"order": 2, "value": "father receives divine mission", "when": "early", "role": "trigger", "quote": "Meiks claims that an angel visited him", "confidence": "sourced"},
-   {"order": 3, "value": "first killing witnessed by children", "when": "early", "quote": "Meiks kills the woman with the axe and makes the boys help him bury her body", "confidence": "sourced"},
-   {"order": 4, "value": "innocent killed to keep secret", "when": "middle", "quote": "As the sheriff turns to leave, Meiks kills him with the axe", "confidence": "sourced"},
-   {"order": 5, "value": "doubting son imprisoned", "when": "middle", "quote": "Meiks locks Fenton in the cellar for more than a week", "confidence": "sourced"},
-   {"order": 6, "value": "son kills father", "when": "late", "role": "turn", "quote": "Fenton strikes Meiks in the chest with the axe", "confidence": "sourced"},
-   {"order": 7, "value": "narrator's identity revealed", "when": "ending", "role": "turn", "quote": "The adult \"Fenton\" then reveals that he is actually Adam", "confidence": "sourced"},
-   {"order": 8, "value": "investigator killed", "when": "ending", "quote": "Confident that God will protect him, Adam kills Doyle and buries him", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "stranger confesses to investigator",
+    "when": "opening",
+    "quote": "claims his brother Adam is behind the \"God's Hand\" serial killings",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:59",
+      "quote": "I know who the God's Hand Killer is."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "brother's desperate phone call",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:05:50",
+    "quote": "Demons are taking over the world!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "father receives divine mission",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Meiks claims that an angel visited him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:45",
+      "quote": "An angel came to him and told him the truth of this world."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "younger son makes his own list",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:24:36",
+    "quote": "Dad, look, I got a list too.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "first killing witnessed by children",
+    "when": "early",
+    "quote": "Meiks kills the woman with the axe and makes the boys help him bury her body",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:03",
+      "quote": "I destroyed her. She was a demon."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "innocent killed to keep secret",
+    "when": "middle",
+    "quote": "As the sheriff turns to leave, Meiks kills him with the axe",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:56",
+      "quote": "AX THUDS"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "doubting son imprisoned",
+    "when": "middle",
+    "quote": "Meiks locks Fenton in the cellar for more than a week",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:47",
+      "quote": "Pray to God, Fenton."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "doubter has a vision",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:10:32",
+    "quote": "He had finally sent me a vision.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "son kills father",
+    "when": "late",
+    "role": "turn",
+    "quote": "Fenton strikes Meiks in the chest with the axe",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Dad falls back onto the floor with the axe buried in his chest."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "narrator's identity revealed",
+    "when": "ending",
+    "role": "turn",
+    "quote": "The adult \"Fenton\" then reveals that he is actually Adam",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:45",
+      "quote": "If the man standing in front of you is Adam Meiks."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "investigator killed",
+    "when": "ending",
+    "quote": "Confident that God will protect him, Adam kills Doyle and buries him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:51",
+      "quote": "You were on my list."
+     }
+    ]
+   },
+   {
+    "order": 12,
+    "value": "killer resumes life as sheriff",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:34:47",
+    "quote": "God's will has been served.",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

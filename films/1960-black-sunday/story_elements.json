@@ -1,66 +1,513 @@
 {
  "film": "1960-black-sunday",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "witch", "detail": "Princess Asa Vajda, a vampiric witch", "quote": "Princess Asa Vajda, a vampiric witch, and her paramour, Javutich, are sentenced to death for sorcery", "confidence": "sourced"},
-   {"value": "undead servant", "detail": "Javutich, risen from his grave", "quote": "He rises from his grave and goes to Prince Vajda's castle", "confidence": "sourced"}
+   {
+    "value": "witch",
+    "detail": "Princess Asa Vajda, a vampiric witch",
+    "quote": "Princess Asa Vajda, a vampiric witch, and her paramour, Javutich, are sentenced to death for sorcery",
+    "confidence": "sourced"
+   },
+   {
+    "value": "undead servant",
+    "detail": "Javutich, risen from his grave",
+    "quote": "He rises from his grave and goes to Prince Vajda's castle",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "person executed", "detail": "Asa put to death by her brother", "quote": "a witch who is put to death by her brother, only to return two centuries later", "confidence": "sourced"},
-   {"value": "revived by blood", "quote": "Kruvajan's blood brings Asa back to life", "confidence": "sourced"}
+   {
+    "value": "person executed",
+    "detail": "Asa put to death by her brother",
+    "quote": "a witch who is put to death by her brother, only to return two centuries later",
+    "confidence": "sourced"
+   },
+   {
+    "value": "revived by blood",
+    "quote": "Kruvajan's blood brings Asa back to life",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:25",
+      "quote": "They will restore to me the life that you now rob from me."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "revenge", "detail": "on her brother's descendants", "quote": "Asa vows revenge and puts a curse on Griabi's descendants", "confidence": "sourced"},
-   {"value": "a body", "detail": "to drain Katia, her reincarnation", "quote": "Asa's plan is to revive herself by draining Katia of her life since Katia is physically Asa reincarnated", "confidence": "sourced"}
+   {
+    "value": "revenge",
+    "detail": "on her brother's descendants",
+    "quote": "Asa vows revenge and puts a curse on Griabi's descendants",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:35",
+      "quote": "All of your blood will give me the strength to accomplish my vengeance."
+     }
+    ]
+   },
+   {
+    "value": "a body",
+    "detail": "to drain Katia, her reincarnation",
+    "quote": "Asa's plan is to revive herself by draining Katia of her life since Katia is physically Asa reincarnated",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:36",
+      "quote": "You felt like me because you were destined to become me,"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "sorcery", "quote": "are sentenced to death for sorcery by Asa's brother Griabi", "confidence": "sourced"},
-   {"value": "sibling executes sibling", "quote": "a witch who is put to death by her brother", "confidence": "sourced"}
+   {
+    "value": "sorcery",
+    "quote": "are sentenced to death for sorcery by Asa's brother Griabi",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:49",
+      "quote": "Too many evil deeds have you done to satisfy your monstrous love"
+     }
+    ]
+   },
+   {
+    "value": "sibling executes sibling",
+    "quote": "a witch who is put to death by her brother",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:44",
+      "quote": "And as your brother, I repudiate you."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "disturbing a tomb", "detail": "Kruvajan breaks the glass and removes the mask", "quote": "He removes Asa's death mask, revealing a partially preserved corpse", "confidence": "sourced"},
-   {"value": "blood spilled on corpse", "quote": "He cuts his hand on the broken glass, and some of his blood drips onto Asa", "confidence": "sourced"}
+   {
+    "value": "disturbing a tomb",
+    "detail": "Kruvajan breaks the glass and removes the mask",
+    "quote": "He removes Asa's death mask, revealing a partially preserved corpse",
+    "confidence": "sourced"
+   },
+   {
+    "value": "blood spilled on corpse",
+    "quote": "He cuts his hand on the broken glass, and some of his blood drips onto Asa",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "warded off by crucifix", "quote": "Vajda holds up a crucifix to ward off the reanimated corpse", "confidence": "sourced"},
-   {"value": "kiss turns victim to servant", "quote": "Asa then kisses him, turning him into her servant", "confidence": "sourced"},
-   {"value": "destroyed by fire", "quote": "torch-carrying villagers, and they burn Asa to death", "confidence": "sourced"},
-   {"value": "killed by nail through eye", "quote": "they kill him by driving a nail through his eye", "confidence": "sourced"}
+   {
+    "value": "warded off by crucifix",
+    "quote": "Vajda holds up a crucifix to ward off the reanimated corpse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:39",
+      "quote": "The cross will protect you."
+     }
+    ]
+   },
+   {
+    "value": "kiss turns victim to servant",
+    "quote": "Asa then kisses him, turning him into her servant",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:41",
+      "quote": "Come! Kiss me! My lips will transform you."
+     }
+    ]
+   },
+   {
+    "value": "destroyed by fire",
+    "quote": "torch-carrying villagers, and they burn Asa to death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "killed by nail through eye",
+    "quote": "they kill him by driving a nail through his eye",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:34",
+      "quote": "Before the sun goes down, go to the crypt and pierce the left eye of the witch."
+     }
+    ]
+   },
+   {
+    "value": "returns each century",
+    "detail": "on St George's Day",
+    "source": "subtitles",
+    "at": "00:22:47",
+    "quote": "And to their faces was nailed the mask of Satan. A hundred years later, again on St George's Day,",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "descendants", "relation_to_threat": "family", "detail": "the Vajda family", "quote": "seek revenge upon his descendants", "confidence": "sourced"},
-   {"value": "young woman", "relation_to_threat": "family", "detail": "Katia, Asa's reincarnation", "quote": "Asa drains Katia of her youth", "confidence": "sourced"},
-   {"value": "doctor", "relation_to_threat": "stranger", "detail": "Kruvajan, who disturbed the tomb", "quote": "The witch hypnotizes Kruvajan and says she needs the rest of his blood", "confidence": "sourced"}
+   {
+    "value": "descendants",
+    "relation_to_threat": "family",
+    "detail": "the Vajda family",
+    "quote": "seek revenge upon his descendants",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:18",
+      "quote": "and in the blood of your sons and the sons of their sons"
+     }
+    ]
+   },
+   {
+    "value": "young woman",
+    "relation_to_threat": "family",
+    "detail": "Katia, Asa's reincarnation",
+    "quote": "Asa drains Katia of her youth",
+    "confidence": "sourced"
+   },
+   {
+    "value": "doctor",
+    "relation_to_threat": "stranger",
+    "detail": "Kruvajan, who disturbed the tomb",
+    "quote": "The witch hypnotizes Kruvajan and says she needs the rest of his blood",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "detail": "Asa burned by villagers", "quote": "The priest then arrives with many torch-carrying villagers, and they burn Asa to death", "confidence": "sourced"},
-   {"value": "victim restored", "quote": "Katia awakens from her stupor, her life and beauty restored, and is reunited with Gorobec", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "detail": "Asa burned by villagers",
+    "quote": "The priest then arrives with many torch-carrying villagers, and they burn Asa to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:28",
+      "quote": "but today her innocent victims have broken the spell of Satan."
+     }
+    ]
+   },
+   {
+    "value": "victim restored",
+    "quote": "Katia awakens from her stupor, her life and beauty restored, and is reunited with Gorobec",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "spiked mask", "state": "hammered into flesh", "when": "opening", "role": "symbol", "quote": "Bronze masks with sharp spikes on the inside are placed over Asa and Javutich's faces and hammered into their flesh", "confidence": "sourced"},
-   {"value": "storm", "state": "sudden", "when": "opening", "role": "omen", "quote": "a sudden storm prevents the villagers from burning them at the stake", "confidence": "sourced"},
-   {"value": "bat", "state": "struck at", "when": "early", "role": "omen", "quote": "breaks the panel (and the cross above it) by accident while striking a bat", "confidence": "sourced"},
-   {"value": "blood", "state": "dripping on corpse", "when": "early", "role": "trigger", "quote": "some of his blood drips onto Asa", "confidence": "sourced"},
-   {"value": "crucifix", "state": "removed, then protective", "when": "middle", "role": "weapon", "quote": "the crucifix around Katia's neck thwarts her", "confidence": "sourced"},
-   {"value": "painting", "state": "of the undead servant", "when": "middle", "role": "clue", "quote": "She identifies Kruvajan's escort with a painting of Javutich", "confidence": "sourced"},
-   {"value": "skeletal body", "state": "fleshless", "when": "ending", "role": "turn", "quote": "opens her robe, revealing a fleshless skeletal frame", "confidence": "sourced"},
-   {"value": "death pit", "when": "late", "role": "setting", "quote": "Javutich throws Constantine into a death pit and takes Katia to Asa", "confidence": "sourced"}
+   {
+    "value": "spiked mask",
+    "state": "hammered into flesh",
+    "when": "opening",
+    "role": "symbol",
+    "quote": "Bronze masks with sharp spikes on the inside are placed over Asa and Javutich's faces and hammered into their flesh",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:07",
+      "quote": "Cover her face with the mask of Satan."
+     }
+    ]
+   },
+   {
+    "value": "storm",
+    "state": "sudden",
+    "when": "opening",
+    "role": "omen",
+    "quote": "a sudden storm prevents the villagers from burning them at the stake",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:36",
+      "quote": "the sudden fury of the elements extinguishes the purifying flames."
+     }
+    ]
+   },
+   {
+    "value": "bat",
+    "state": "struck at",
+    "when": "early",
+    "role": "omen",
+    "quote": "breaks the panel (and the cross above it) by accident while striking a bat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:48",
+      "quote": "Usually bats shy away from human beings."
+     }
+    ]
+   },
+   {
+    "value": "blood",
+    "state": "dripping on corpse",
+    "when": "early",
+    "role": "trigger",
+    "quote": "some of his blood drips onto Asa",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:33",
+      "quote": "Just a drop or two of blood, that's all."
+     }
+    ]
+   },
+   {
+    "value": "crucifix",
+    "state": "removed, then protective",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "the crucifix around Katia's neck thwarts her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:22",
+      "quote": "and maintained that a cross visible to her through the glass"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:45:20",
+      "quote": "holding this cross to keep back some horrible apparition."
+     }
+    ]
+   },
+   {
+    "value": "painting",
+    "state": "of the undead servant",
+    "when": "middle",
+    "role": "clue",
+    "quote": "She identifies Kruvajan's escort with a painting of Javutich",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:44",
+      "quote": "Katia, that portrait has always had a strange effect on you. I wonder why."
+     }
+    ]
+   },
+   {
+    "value": "skeletal body",
+    "state": "fleshless",
+    "when": "ending",
+    "role": "turn",
+    "quote": "opens her robe, revealing a fleshless skeletal frame",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:31",
+      "quote": "Don't be deceived by her face. Look at her body."
+     }
+    ]
+   },
+   {
+    "value": "death pit",
+    "when": "late",
+    "role": "setting",
+    "quote": "Javutich throws Constantine into a death pit and takes Katia to Asa",
+    "confidence": "sourced"
+   },
+   {
+    "value": "howling dogs",
+    "state": "later found with throats slashed",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:46:25",
+    "quote": "Oh, dear, those dogs keep howling so!",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:31",
+      "quote": "This is where I found the dogs with their throats slashed,"
+     }
+    ]
+   },
+   {
+    "value": "church bells",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:05:50",
+    "quote": "And for all that long night, the church bells toll to keep away the spirits of evil.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "grasping branch",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:08:24",
+    "quote": "That branch reached out and tried to choke me.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "wind in organ pipes",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:10:01",
+    "quote": "It's just the wind in the pipes of this broken-down organ.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "witch executed, curses family", "when": "opening", "quote": "Asa vows revenge and puts a curse on Griabi's descendants", "confidence": "sourced"},
-   {"order": 2, "value": "travellers disturb tomb", "when": "early", "role": "trigger", "quote": "the two wander into a nearby ancient crypt and discover Asa's tomb", "confidence": "sourced"},
-   {"order": 3, "value": "witch revived", "when": "early", "quote": "Kruvajan's blood brings Asa back to life", "confidence": "sourced"},
-   {"order": 4, "value": "patriarch murdered", "when": "middle", "quote": "this allows Javutich to return later and murder him", "confidence": "sourced"},
-   {"order": 5, "value": "undead victim destroyed", "when": "middle", "quote": "they kill him by driving a nail through his eye", "confidence": "sourced"},
-   {"order": 6, "value": "witch impersonates heroine", "when": "late", "role": "turn", "quote": "Asa pretends to be Katia and tells Gorobec that Katia is the witch", "confidence": "sourced"},
-   {"order": 7, "value": "witch burned", "when": "ending", "quote": "they burn Asa to death", "confidence": "sourced"},
-   {"order": 8, "value": "lovers reunited", "when": "ending", "quote": "her life and beauty restored, and is reunited with Gorobec", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "narrated prologue",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:28",
+    "quote": "NARRATOR: In the 17th century, Satan was abroad on the Earth",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "witch executed, curses family",
+    "when": "opening",
+    "quote": "Asa vows revenge and puts a curse on Griabi's descendants",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:15",
+      "quote": "My revenge will strike down you and your accursed house,"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "coachman fears the witch",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:07:26",
+    "quote": "I understand. You're afraid of the witch!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "travellers disturb tomb",
+    "when": "early",
+    "role": "trigger",
+    "quote": "the two wander into a nearby ancient crypt and discover Asa's tomb",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:09",
+      "quote": "See this bronze mask?"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "witch revived",
+    "when": "early",
+    "quote": "Kruvajan's blood brings Asa back to life",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:31",
+      "quote": "Just a few drops of your blood brought me to life again."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "patriarch murdered",
+    "when": "middle",
+    "quote": "this allows Javutich to return later and murder him",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "secret passage found",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:07:06",
+    "quote": "It's pitch-black inside here. A secret passageway.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "undead victim destroyed",
+    "when": "middle",
+    "quote": "they kill him by driving a nail through his eye",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "witch impersonates heroine",
+    "when": "late",
+    "role": "turn",
+    "quote": "Asa pretends to be Katia and tells Gorobec that Katia is the witch",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:55",
+      "quote": "No, I am not your love. There she lies, dead."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "witch burned",
+    "when": "ending",
+    "quote": "they burn Asa to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:24",
+      "quote": "a storm prevented the flames from destroying her wicked soul,"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "lovers reunited",
+    "when": "ending",
+    "quote": "her life and beauty restored, and is reunited with Gorobec",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }
