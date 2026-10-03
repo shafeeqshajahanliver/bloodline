@@ -30,7 +30,7 @@ Current coverage for each layer is in [`reports/coverage.md`](reports/coverage.m
 
 From [`reports/findings-500.md`](reports/findings-500.md) and [`reports/pilot-findings.md`](reports/pilot-findings.md):
 
-- **Horror got quieter.** Films before 1960 run at around 106 words a minute; from the 1960s on it's about 75.
+- **Horror got quieter.** Films before 1960 run at around 105 words a minute; from the 1960s on it's about 75.
 - **The first scare moved forward ten minutes,** from around minute 28 in the 1960s and 70s to around minute 18 from 1980, and it has stayed there.
 - **Jump scares peaked and retreated:** a median of 9 per film in 2000–14, down to 5 since 2015, in line with the rise of slower "elevated" horror.
 - **The mother is the hub.** In the 10-film pilot, a dead or dangerous mother appears in 6 films, more than any other motif.
@@ -84,7 +84,7 @@ Python 3. Install with `pip install -r requirements.txt`; `pdftotext` and `ffmpe
 
 | Step | Script |
 |---|---|
-| Match films to Wikidata and IMDb | `tools/resolve_ids.py`. 16 films were matched by hand (`tools/ids_manual.json`); a re-run does not yet keep those, so copy them back into `tools/ids.json` afterwards |
+| Match films to Wikidata and IMDb | `tools/resolve_ids.py` (hand-checked matches in `tools/ids_manual.json` override the automatic ones) |
 | Collect data (resumable, skips what's done) | `tools/run_batch.py --only tier1,subs,scares,scripts,stills` |
 | Subtitles for given films | `tools/tier2_subtitles.py <film ids>` |
 | Full-film colour and pacing | `tools/tier3_visual.py <video> <film id>` |

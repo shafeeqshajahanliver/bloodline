@@ -41,6 +41,11 @@ for r in rows:
     best=sorted(byq.values(),key=score)
     out[r["id"]]={"match":best[0] if best else None,"alternatives":best[1:3]}
     ok+=bool(best)
+# Manual matches (checked by hand) override the automatic ones
+import os
+if os.path.exists("tools/ids_manual.json"):
+    for k,v in json.load(open("tools/ids_manual.json")).items():
+        if v.get("match"): out[k]={"match":v["match"],"alternatives":[]}
 json.dump(out,open("tools/ids.json","w"),indent=1,ensure_ascii=False)
 print("matched",ok,"of",len(rows),"with imdb",sum(1 for v in out.values() if v["match"] and v["match"]["imdb"]))
 print("ambiguous",sum(1 for v in out.values() if v["alternatives"]))
