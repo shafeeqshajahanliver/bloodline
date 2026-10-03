@@ -1,4 +1,4 @@
-# Story DNA: horror
+# Bloodline: story DNA of 500 horror films
 
 A private research corpus of 500 horror films, built to find the shared patterns ("story DNA") behind them, for the podcast *You've Heard This Before* and the Liver & Lung interactive pieces.
 
