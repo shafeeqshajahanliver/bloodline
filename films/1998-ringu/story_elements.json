@@ -1,0 +1,61 @@
+{
+ "film": "1998-ringu",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes and interpretations"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "vengeful ghost", "detail": "Sadako, a psychic girl who died in a well", "quote": "Sadako's vengeful spirit staggers from the well and out of the TV", "confidence": "sourced"},
+   {"value": "cursed object", "detail": "a videotape that kills its viewers", "quote": "a videotape that curses its viewers to die in seven days", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "person who died wronged", "detail": "Sadako, trapped in a well by Dr. Ikuma", "quote": "they learn that Dr. Ikuma trapped Sadako inside the well", "confidence": "sourced"},
+   {"value": "emotion recorded onto technology", "detail": "her rage imprinted on a videotape", "quote": "the curse was born when a videotape \"recorded\" the rage she had projected", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "revenge", "quote": "Sadako's vengeful spirit staggers from the well", "confidence": "observed"},
+   {"value": "to spread", "detail": "the curse continues only if copied", "quote": "copy the tape and show it to someone else within seven days", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "child killed by a parent figure", "detail": "Dr. Ikuma, Shizuko's lover, traps Sadako in a well", "quote": "Dr. Ikuma trapped Sadako inside the well", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "watching a cursed object", "quote": "she and her friends watched a strange videotape and received an inexplicable phone call", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "death after seven days", "quote": "whoever watches the tape dies seven days after doing so", "confidence": "sourced"},
+   {"value": "survive by passing it on", "quote": "copy the tape and show it to someone else within seven days", "confidence": "sourced"},
+   {"value": "warning phone call", "quote": "curses its viewers to die in seven days after a foreboding phone call", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "teenagers", "relation_to_threat": "stranger", "quote": "During a sleepover, high schoolers Tomoko and Masami discuss an urban legend", "confidence": "sourced"},
+   {"value": "mother and son", "relation_to_threat": "stranger", "detail": "Reiko and Yōichi", "quote": "Reiko catches Yōichi, her son with Ryūji, watching the tape", "confidence": "sourced"},
+   {"value": "investigator", "relation_to_threat": "stranger", "quote": "Reiko Asakawa, Tomoko's aunt and a journalist investigating this urban legend", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "cycle passes on", "detail": "Reiko takes the tape to her father to save her son", "quote": "Desperate to save Yōichi, Reiko drives to her father's home to show him the tape", "confidence": "sourced"},
+   {"value": "false resolution", "detail": "the curse seems broken, then strikes Ryūji", "quote": "leading them to believe the curse is broken", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "videotape", "state": "cursed", "when": "opening", "role": "threat", "quote": "she and her friends watched a strange videotape", "confidence": "sourced"},
+   {"value": "well", "state": "sealed", "when": "early", "role": "clue", "quote": "ends with a shot of a well", "confidence": "sourced"},
+   {"value": "television", "state": "turns on by itself", "when": "opening", "role": "omen", "quote": "Tomoko witnesses the TV turn on by itself", "confidence": "sourced"},
+   {"value": "phone call", "state": "screeching", "when": "early", "role": "omen", "quote": "receives a phone call emitting the screeching sounds from the tape", "confidence": "sourced"},
+   {"value": "water", "state": "drained", "when": "late", "role": "setting", "quote": "They drain the water and find Sadako's remains", "confidence": "sourced"},
+   {"value": "remains in a well", "when": "late", "role": "clue", "quote": "They drain the water and find Sadako's remains", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "legend told at a sleepover", "when": "opening", "role": "omen", "quote": "During a sleepover, high schoolers Tomoko and Masami discuss an urban legend", "confidence": "sourced"},
+   {"order": 2, "value": "first death", "when": "opening", "quote": "Tomoko witnesses the TV turn on by itself and is killed by an unseen figure", "confidence": "sourced"},
+   {"order": 3, "value": "protagonist becomes cursed", "when": "early", "role": "trigger", "quote": "Convinced she has been cursed, Reiko takes the tape and leaves the cabin", "confidence": "sourced"},
+   {"order": 4, "value": "child endangered", "when": "early", "role": "turn", "quote": "Reiko catches Yōichi, her son with Ryūji, watching the tape", "confidence": "sourced"},
+   {"order": 5, "value": "past crime revealed", "when": "late", "role": "turn", "quote": "Through another vision, they learn that Dr. Ikuma trapped Sadako inside the well", "confidence": "sourced"},
+   {"order": 6, "value": "body recovered", "when": "late", "quote": "They drain the water and find Sadako's remains", "confidence": "sourced"},
+   {"order": 7, "value": "false relief, then death", "when": "ending", "role": "turn", "quote": "Sadako's vengeful spirit staggers from the well and out of the TV, advancing toward Ryūji and killing him", "confidence": "sourced"},
+   {"order": 8, "value": "curse passed to family", "when": "ending", "quote": "Reiko drives to her father's home to show him the tape", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}
