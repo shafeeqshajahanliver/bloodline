@@ -21,8 +21,8 @@ for r in rows:
     for k,v in h.items():
         if v: tot[k]+=1; reg[r["region"]][k]+=1
 md=f"# Coverage: all 500 films\n\nGenerated {datetime.date.today()}.\n\n| Layer | Films | Share |\n|---|---|---|\n"+"".join(f"| {N[k]} | {tot[k]} | {tot[k]/5:.0f}% |\n" for k in H)
-md+="\n## By region (films with each layer / films in region)\n\n| Region | Films | Plot | Subtitles (EN) | Screenplay | Jump scares | Stills |\n|---|---|---|---|---|---|---|\n"
-for g,n in regn.most_common(): md+=f"| {g} | {n} | {reg[g]['plot']} | {reg[g]['subs_en']} | {reg[g]['screenplay']} | {reg[g]['scares']} | {reg[g]['stills']} |\n"
+md+="\n## By region (films with each layer / films in region)\n\n| Region | Films | Plot | Story elements | Subtitles (EN) | Screenplay | Jump scares | Stills |\n|---|---|---|---|---|---|---|---|\n"
+for g,n in regn.most_common(): md+=f"| {g} | {n} | {reg[g]['plot']} | {reg[g]['story']} | {reg[g]['subs_en']} | {reg[g]['screenplay']} | {reg[g]['scares']} | {reg[g]['stills']} |\n"
 md+="\n## Films with no IDs (need a manual match)\n\n"+"".join(f"- {r['title']} ({r['year']})\n" for r in rows if not per[r['id']]['ids'])
 open("reports/coverage.md","w").write(md)
 # write status back into films.csv
