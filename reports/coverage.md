@@ -1,35 +1,51 @@
-# Pilot coverage
+# Coverage: all 500 films
 
-Generated 2026-10-03. A dash means the source had nothing for this film.
+Generated 2026-10-03.
 
-| Film | Year | Cast (Wikidata) | Wikipedia | Lineage links | Motifs | Screenplay | Jump scares | Visuals |
-|---|---|---|---|---|---|---|---|---|
-| Nosferatu | 1922 | 17 | en+de | 2 | 6 | – | – | full film |
-| Psycho | 1960 | 17 | en | 2 | 5 | yes | 2 | 66 stills |
-| The Exorcist | 1973 | 12 | en | 3 | 5 | yes | 11 | 28 stills |
-| Ringu | 1998 | 9 | en+ja | 4 | 5 | – | 6 | 66 stills |
-| Pontianak Harum Sundal Malam | 2004 | 2 | en+ms | 2 | 5 | – | – | – |
-| Train to Busan | 2016 | 8 | en+ko | 2 | 5 | – | 4 | 44 stills |
-| Get Out | 2017 | 12 | en | 0 | 6 | yes | 10 | 66 stills |
-| Hereditary | 2018 | 5 | en | 1 | 6 | yes | 8 | 66 stills |
-| Tumbbad | 2018 | 6 | en+hi | 4 | 6 | – | – | – |
-| La Llorona | 2019 | 4 | en+es | 2 | 5 | – | – | 66 stills |
-
-## Gaps and what fills them
-
-| Gap | Films | Fix |
+| Layer | Films | Share |
 |---|---|---|
-| Subtitles (full dialogue) | all 10 | OpenSubtitles account (Shaf setting up) |
-| Screenplay | Nosferatu (silent: intertitles only), Ringu, Pontianak, Train to Busan, Tumbbad, La Llorona | Subtitles are the substitute; Nosferatu intertitles can be transcribed from the film |
-| Jump-scare data | Nosferatu, Pontianak, Tumbbad, La Llorona | Not on Where's the Jump. Could be measured from the film's sound if Shaf owns copies |
-| Stills | Pontianak, Tumbbad | Not on FILMGRAB. TMDB account (Shaf setting up) or own copies |
-| Full-film visual measures | all except Nosferatu | Needs copies Shaf owns; then `tools/tier3_visual.py` runs unchanged |
-| Content flags | all 10 | Does the Dog Die blocks automated access (403). Not worked around |
+| Matched IDs | 482 | 96% |
+| Facts (Wikidata) | 482 | 96% |
+| English subtitles | 426 | 85% |
+| Original-language subtitles | 63 | 13% |
+| Screenplay | 115 | 23% |
+| Jump scares | 188 | 38% |
+| Stills | 260 | 52% |
+| Full-film visuals | 1 | 0% |
+| Story layer (archetypes, motifs, lineage) | 10 | 2% |
 
-## Data-quality notes
+## By region (films with each layer / films in region)
 
-- **Get Out** is listed on Wikidata as a US–Japan production. Nothing supports Japan; removed via `films/2017-get-out/corrections.json`, source data left untouched.
-- **The Exorcist** screenplay is a fan transcript of the finished film, not Blatty's shooting script.
-- **FILMGRAB's first "Psycho" result was the 1998 remake.** Caught and replaced; the stills script should check the year on every page.
-- **Nosferatu** visual measures come from a 320×240 copy of the tinted restoration. Fine for colour and rhythm, too small for detailed frames.
-- The source gaps fall unevenly: every gap in jump-scare and stills coverage is a non-Anglophone film except Nosferatu. Fan-built datasets reproduce the canon's bias, so the global films will always need more manual work.
+| Region | Films | Subtitles (EN) | Screenplay | Jump scares | Stills |
+|---|---|---|---|---|---|
+| North America | 223 | 187 | 99 | 116 | 129 |
+| Continental Europe | 77 | 69 | 3 | 21 | 45 |
+| UK & Ireland | 58 | 50 | 10 | 30 | 48 |
+| East Asia | 47 | 42 | 0 | 9 | 16 |
+| Southeast Asia | 34 | 24 | 0 | 4 | 3 |
+| Latin America | 18 | 16 | 1 | 0 | 9 |
+| South Asia | 16 | 15 | 0 | 0 | 0 |
+| Australia & NZ | 15 | 14 | 2 | 6 | 6 |
+| Middle East & North Africa | 7 | 5 | 0 | 2 | 3 |
+| Sub-Saharan Africa | 5 | 4 | 0 | 0 | 1 |
+
+## Films with no IDs (need a manual match)
+
+- Sumpah Orang Minyak (1958)
+- A Bay of Blood (1971)
+- Salem's Lot (1979)
+- Satan's Slave (1982)
+- Perfect Blue (1997)
+- Ju-on: The Grudge (2002)
+- Dabbe (2006)
+- KM 31 (2006)
+- Hantu Kak Limah Balik Rumah (2010)
+- Rare Exports (2010)
+- Seru (2011)
+- Corazon: The First Aswang (2012)
+- Siccin (2014)
+- IT (2017)
+- Dukun (2018)
+- The Nightshifter (2018)
+- Tokoloshe (2018)
+- Tiger Stripes (2023)

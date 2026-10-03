@@ -9,11 +9,13 @@ FAM=[("deer","the deer on the road"),("well","water, wells and drowning"),("wate
 def fam(m):
     m=m.lower(); return sorted({f for k,f in FAM if k in m}) or [m]
 N={}; E=[]
-def node(i,typ,label,**a): N.setdefault(i,{"id":i,"type":typ,"label":label,**a})
+def node(i,typ,label,**a): N.setdefault(i,{"id":i,"type":typ,"label":label or i,**a})
 def slug(s): return re.sub(r"[^a-z0-9]+","-",s.lower()).strip("-")
 idx={r["id"]:r for r in csv.DictReader(open("films.csv"))}
 for d in sorted(glob.glob("films/*/")):
-    fid=d.rstrip("/").split("/")[-1]; wd=json.load(open(d+"wikidata.json")); st=json.load(open(d+"story.json"))
+    fid=d.rstrip("/").split("/")[-1]
+    if not os.path.exists(d+"wikidata.json"): continue
+    wd=json.load(open(d+"wikidata.json")); st=json.load(open(d+"story.json")) if os.path.exists(d+"story.json") else {"archetypes":[],"motifs":[],"lineage":[]}
     wp=json.load(open(d+"wikipedia.json")) if os.path.exists(d+"wikipedia.json") else {}
     sc=json.load(open(d+"scares.json")) if os.path.exists(d+"scares.json") else {}
     vm=json.load(open(d+"visuals/measures.json")) if os.path.exists(d+"visuals/measures.json") else {}
@@ -22,18 +24,22 @@ for d in sorted(glob.glob("films/*/")):
     if os.path.exists(d+"corrections.json"):
         for c in json.load(open(d+"corrections.json")).get("remove",[]):
             wd[c["field"]]=[x for x in wd.get(c["field"],[]) if x["name"]!=c["name"]]
+    dm=json.load(open(d+"dialogue/measures.json"))["by_language"].get("en",{}) if os.path.exists(d+"dialogue/measures.json") else {}
     r=idx[fid]
     node(fid,"film",r["title"],year=r["year"],country=r["country"],region=r["region"],duration_min=wd.get("duration_min"),
-         wikipedia_languages=len(wp.get("wikipedia_languages",[])),jump_scares=len(sc.get("scares",[])) if sc else "",jump_rating=sc.get("rating","") if sc else "",
+         wikipedia_languages=len(wp.get("wikipedia_languages",wd.get("wikipedia_languages",[]))),jump_scares=len(sc.get("scares",[])) if sc else "",jump_rating=sc.get("rating","") if sc else "",
          first_scare_min=round(sc["scares"][0]["seconds"]/60,1) if sc.get("scares") else "",
          brightness=vm.get("brightness_mean",vs.get("brightness_mean","")),saturation=vm.get("saturation_mean",vs.get("saturation_mean","")),
-         avg_shot_length_s=vm.get("average_shot_length_s",""),script_night_share=ss.get("night_share",""),script_interior_share=round(ss["interior"]/ss["scene_headings"],2) if ss else "",
-         imdb=wd.get("imdb_id",""),tmdb=wd.get("tmdb_id",""),wikidata=wd["wikidata_qid"])
+         avg_shot_length_s=vm.get("average_shot_length_s",""),script_night_share=ss.get("night_share",""),script_interior_share=round(ss["interior"]/ss["scene_headings"],2) if ss and ss.get("scene_headings") else "",
+         imdb=wd.get("imdb_id",""),words_per_minute=dm.get("words_per_minute",""),dialogue_share=dm.get("share_of_runtime_with_dialogue",""),longest_silence_s=(dm.get("longest_silences") or [{}])[0].get("seconds",""),tmdb=wd.get("tmdb_id",""),wikidata=wd["wikidata_qid"])
     for key,rel,typ in [("directors","directed_by","person"),("screenwriters","written_by","person"),("cinematographers","shot_by","person"),("composers","scored_by","person"),("editors","edited_by","person"),("countries","from_country","country"),("original_languages","in_language","language"),("production_companies","made_by","company")]:
         for x in wd.get(key,[]):
             node(x["id"],typ,x["name"]); E.append((fid,x["id"],rel,"Wikidata","sourced"))
     for x in wd.get("cast",[])[:6]:
         node(x["id"],"person",x["name"]); E.append((fid,x["id"],"stars","Wikidata","sourced"))
+    if not st["archetypes"]:
+        NM={"WOM":"The Woman Who Comes Back","HOU":"The House Remembers","CUR":"The Inherited Curse","OBJ":"The Thing You Took Home","POS":"The Voice Inside","BAR":"The Bargain","CHI":"The Wrong Child","MOT":"The Devouring Mother","DOU":"The Double","BEA":"The Beast Within","FEE":"The One Who Feeds","REV":"The Dead Won't Stay Dead","BOO":"The Book You Shouldn't Read","INV":"You Invited It In","HOS":"The Bad Host","SAC":"The Village Needs Blood","HUN":"The Hunger","OUT":"The Thing Outside","PAT":"Stray From the Path","MAD":"The Thing We Made","BOD":"The Body Betrays","CON":"The Contagion","WIT":"The Witch at the Edge of the Woods","CAS":"Nobody Believes Her","DES":"The Descent","RUL":"The Rule","LOO":"The Endless Night"}
+        st["archetypes"]=[{"name":NM[c],"role":role} for c,role in ((r["archetype_primary"],"primary"),(r["archetype_secondary"],"secondary")) if c]
     for a in st["archetypes"]:
         aid="arch-"+slug(a["name"]); node(aid,"archetype",a["name"]); E.append((fid,aid,"carries_archetype",a["role"],"first pass"))
     for m in st["motifs"]:

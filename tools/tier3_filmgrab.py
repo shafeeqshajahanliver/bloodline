@@ -19,7 +19,7 @@ for fid,u in P.items():
             if "/wp-content/uploads/" in h and h not in imgs: imgs.append(re.sub(r"-\d+x\d+(\.\w+)$",r"\1",h))
     d=fdir(fid)+"/visuals/stills"; os.makedirs(d,exist_ok=True)
     stats=[]; saved=[]
-    for i,h in enumerate(imgs[:80]):
+    for i,h in enumerate(imgs[:int(os.environ.get("MAX_STILLS","80"))]):
         try:
             b=S.get(h,timeout=60).content; im=Image.open(BytesIO(b)).convert("RGB")
         except Exception as e: continue
