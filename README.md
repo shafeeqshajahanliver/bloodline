@@ -4,7 +4,7 @@
 
 Horror keeps telling the same stories. A wronged woman comes back. A house remembers what was done in it. Someone invites the thing in. Bloodline maps 500 horror films from 1913 to 2025 and 44 countries to find those shared patterns, and traces each one back to the folk tales, legends and real events it descends from.
 
-It is the research base for the podcast *You've Heard This Before* and for interactive pieces by Liver & Lung.
+It is the research base for interactive pieces by Liver & Lung.
 
 > **Status:** research in progress. Archetype tags and story elements are a first pass and not yet reviewed. Trends are leads to test, not conclusions.
 

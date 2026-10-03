@@ -12,7 +12,6 @@ Put this file in the repository root. Copy the "Working rules" section into `CLA
 
 - **Purpose:** find the shared "story DNA" across horror films. That means archetypes, motifs, lineage back to folk tales, and measurable trends (dialogue, scares, colour, pacing).
 - **Who it feeds:**
-  - Shaf's podcast *You've Heard This Before*. Each episode traces one story archetype from a specific cultural tale to modern film. Acts: The Story, The DNA, The Code.
   - Interactive pieces for the Liver & Lung website (Shaf's British-Malaysian theatre company), mainly:
     - a "DNA strip" view, where each film is a strip of coloured archetype bands;
     - a lineage view (tale → film → remake).
