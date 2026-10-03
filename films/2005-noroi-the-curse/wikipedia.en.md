@@ -1,0 +1,38 @@
+# Noroi: The Curse
+
+Source: https://en.wikipedia.org/wiki/Noroi%3A_The_Curse (last edited Thu, 27 Aug 2026 16:18:01 GMT). Text CC BY-SA 4.0, retrieved 2026-10-03.
+
+## Lead
+
+is a 2005 Japanese horror film directed by Kōji Shiraishi, who  the screenplay with Naoyuki Yokota. It stars Jin Muraki as a paranormal researcher investigating mysterious events for a documentary. It is presented as the finished documentary, using pseudo-documentary and found footage techniques. The cast also includes Marika Matsumoto as a fictionalized version of herself alongside Rio Kanno, Tomono Kuga, Satoru Jitsunashi with cameos from Japanese comedian duo Ungirls, former AV actress Maria Takagi, actor and director Dankan, late TV personality and former AV actress Ai Iijima, and author Hiroshi Aramata.
+
+Noroi: The Curse was released in Japan on August 20, 2005, and has received limited distribution elsewhere. It garnered generally positive reviews, with critics commending the presentation, performances, atmosphere, and pacing.
+
+## Plot
+
+Masafumi Kobayashi is a paranormal researcher who has produced a series of books and documentaries on supernatural activity around Japan. During the production of a documentary titled The Curse, Kobayashi disappeared after his house burnt down, and his wife Keiko was found dead in the ruins. The aforementioned documentary begins to play, shown mostly through the recordings of Kobayashi's cameraman, Miyajima.
+
+A year and a half earlier, Kobayashi investigated a woman named Junko Ishii and her son after a neighbor heard the sound of crying babies coming from her house. Ishii soon moves away, and Kobayashi and Miyajima return to her former residence to find dead pigeons in the yard. Ishii's neighbor and her daughter died five days later in a mysterious car crash. Around the same time, Kana Yano, a girl who exhibits strong psychic abilities on a variety television program, disappears. Speaking to her parents, Kobayashi learns that a man named Mitsuo Hori visited Kana. Hori, an eccentric psychic, claims that the girl was taken by "ectoplasmic worms." Hori's obscure directions lead Kobayashi and Miyajima to observe a man named Osawa, who takes pigeons into his home in a nearby apartment block. Osawa is later reported missing.
+
+After filming at a shrine, actress Marika Matsumoto collapses screaming after hearing a mysterious voice, and later finds herself fashioning yarn and wires into interconnected loops in her sleep. Kobayashi sets up a camera to record her one night and captures a deep voice saying the word "kagutaba." Kobayashi visits a local historian who tells him that Kagutaba is the name of a demon. The residents of a village called Shimokage in Nagano Prefecture once summoned Kagutaba, but imprisoned it for disobeying their commands. An annual ritual was performed to appease Kagutaba until the village was abandoned in 1978 to make way for a dam. The final ritual, which was filmed, was performed by a priest and his daughter. At the end of the ritual, the daughter became hysterical in what the villagers believed to be demonic possession by Kagutaba. Kobayashi discovers that the daughter was Ishii and that she worked at a nursing school where she helped perform illegal late-term abortions and stole the fetuses.
+
+Marika reveals that her neighbour Midori has hanged herself. Midori, along with six other people, including Osawa, hanged themselves in a park using nooses similar in fashion to Marika's loops. After Marika experiences strange behavior, she goes with Kobayashi, Miyajima, and Hori to the Shimokage dam to perform the ritual to appease Kagutaba, hoping that doing so will free her from the demon's influence. After Kobayashi and Marika perform the ritual, Hori becomes agitated and runs into a nearby forest; Kobayashi follows him. Marika exhibits signs of possession, fleeing into the forest. Meanwhile, Kobayashi and Hori find the villagers' dogs slaughtered near a secluded shrine in the woods. Kobayashi's camera captures an apparition of Kana under a torii, surrounded by writhing fetuses. Marika abruptly recovers.
+
+After delivering Marika and Hori to a hospital, Kobayashi and Miyajima break into Ishii's current home, which is covered with looped rope. Inside, they find that she has hanged herself, and Ishii's young son is cradling the dead body of Kana. The boy is later found not to be Ishii's biological son. Kobayashi and his wife adopt the boy.
+
+Kobayashi returns to the historian, who shows him a scroll depicting how Kagutaba was first summoned, wherein dead baby monkeys were fed to a priestess medium. Ishii tried replicating this by feeding the stolen fetuses to Kana. Marika recovers, and Hori is placed in a mental institution. He escapes, but his dead body is found violently shoved into a duct three days after the fire at Kobayashi’s residence.
+
+After Kobayashi's disappearance, a package arrives at his publisher containing his video camera. The tape inside shows the events that led to the destruction of Kobayashi's house: a crazed Hori arrives at the house, saying the boy is possessed by Kagutaba, incapacitates Kobayashi, and bludgeons the child with a rock. The bloodied boy briefly takes on the appearance of Kagutaba, and a ghostly Kana appears in the corner. Hori leaves with the boy and Keiko becomes possessed, pouring gasoline on herself and setting herself alight. As the house burns and Kobayashi struggles to get to his feet, the film abruptly ends. A postscript reveals that Kobayashi is still missing.
+
+## Release
+
+The film was released in Japan in 2005. "Noroi: The Curse" (2005) experienced a minimal theatrical release and reportedly generated approximately $7,400 at the global box office, primarily from international markets. With an estimated production budget of $2 million, the film was a financial failure. Nonetheless, it has since attained cult classic status, recognised for its effective implementation of found-footage horror, rather than for its financial performance.
+
+Since its release, distribution of the film outside of Japan has been limited. On June 1, 2017, it was made available for streaming in Canada on the video on demand service Shudder. The film was released on Blu-ray through Arrow Video as part of their J-Horror Rising Box set. In 2025, it occasionally appeared on a double feature with the American found footage film .ask as part of that film's roadshow premiere.
+
+## Reception
+
+Koichi Irikura of Cinema Today included Noroi: The Curse in his list of the best "documentary-style" horror films, calling the screenplay "excellent". Niina Doherty of HorrorNews.net called Noroi: The Curse "the best found footage film of the decade", referring to it as "well crafted, credible and most important of all, genuinely scary." Rob Hunter of Film School Rejects praised the film for "delivering an engrossing and increasingly terrifying experience packaged in the form of a supremely competent production." Joshua Meyer of /Film wrote that the film, with its "intricate mythology", is "like seeing a whole season of The X-Files condensed down into two unsettling hours."
+
+Writer Megan Negrych noted that the film "weaves together a complex story of curses, demons, and the forgotten with strong attention paid to atmospheric tension and the slow-building narrative to pursue a more subtle and highly effective horror experience." Meagan Navarro of Bloody Disgusting emphasized the film's "methodical storytelling", writing: "For many, it works. For others, it'll drag without a satisfying payoff to merit the pacing. Wherever you fall on the spectrum of enjoyment, Noroi's place in horror remains fascinating."
+
