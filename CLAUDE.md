@@ -11,6 +11,7 @@ Private research corpus of 500 horror films, owned by Shafeeq Shajahan (Shaf). F
 - Never edit source files to fix data. Use `films/<id>/corrections.json`.
 - Every new fact carries a source, retrieval date and confidence level (`sourced`, `observed`, `claude-knowledge`, `first pass`). Interpretive tags stay labelled as first pass until Shaf reviews them.
 - Regenerate `graph/` and `reports/coverage.md` after any data change.
+- Story elements (`films/<id>/story_elements.json`) follow `docs/story-elements.md`: every entry needs a verbatim quote from the film's Wikipedia article. Run `tools/validate_story.py` after any change, and `tools/story_report.py` to refresh `reports/story-elements.md`.
 - Check year and country when matching titles; remakes and same-name films are common.
 
 ## Running things

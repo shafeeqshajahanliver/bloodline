@@ -6,7 +6,7 @@ Horror keeps telling the same stories. A wronged woman comes back. A house remem
 
 It is the research base for the podcast *You've Heard This Before* and for interactive pieces by Liver & Lung.
 
-> **Status:** research in progress. Archetype tags are a first pass and not yet reviewed. Trends are leads to test, not conclusions.
+> **Status:** research in progress. Archetype tags and story elements are a first pass and not yet reviewed. Trends are leads to test, not conclusions.
 
 ---
 
@@ -22,21 +22,25 @@ It is the research base for the podcast *You've Heard This Before* and for inter
 | **Scares** | Jump-scare timings and ratings | Where's the Jump |
 | **Screenplays** | Script text and measures: interior/exterior split, night scenes | IMSDb, Script Slug |
 | **Visuals** | Curated stills with brightness, saturation and a colour strip | FILMGRAB |
-| **Story layer** | Motifs and lineage links, each with evidence and a confidence level (10 pilot films so far) | Curated |
+| **Story elements** | Each film described along 10 dimensions (threat, origin, what it wants, the wrong underneath, trigger, rules, who suffers, ending, images, beats), every entry quoted from its Wikipedia article. 497 films | Read from Wikipedia (`story_elements.json`) |
+| **Pilot story layer** | Hand-curated motifs and lineage links with evidence and confidence (10 pilot films) | Curated (`story.json`) |
 | **Graph** | A network of films, people, archetypes, motifs and sources | Generated (`graph/`) |
 
 Current coverage for each layer is in [`reports/coverage.md`](reports/coverage.md).
 
 ## First findings
 
-From [`reports/findings-500.md`](reports/findings-500.md) and [`reports/pilot-findings.md`](reports/pilot-findings.md):
+From [`reports/findings-500.md`](reports/findings-500.md), [`reports/story-elements.md`](reports/story-elements.md) and [`reports/pilot-findings.md`](reports/pilot-findings.md). All are leads to test.
 
-- **Horror got quieter.** Films before 1960 run at around 105 words a minute; from the 1960s on it's about 75.
+- **Horror stopped letting the monster lose.** Before 1960, 59% of films end with the threat beaten and 12% with it surviving or passing on. Since 2000 it's about 17% beaten and 50% surviving.
+- **The threat moved closer to home.** The share of films where the victims are the threat's own family, or the threat is the self, rose from 49% before 1960 to 62% since 2015.
+- **Horror got quieter.** Counting English-language films only, dialogue fell from about 122 words a minute before 1960 to about 88 from the 1960s, and 81 since 2015. The share of runtime with dialogue has fallen every era, from 51% to 39%. (Subtitles of non-English films run far lower, around 56 words a minute, because translation compresses speech, so they are compared separately.)
 - **The first scare moved forward ten minutes,** from around minute 28 in the 1960s and 70s to around minute 18 from 1980, and it has stayed there.
 - **Jump scares peaked and retreated:** a median of 9 per film in 2000–14, down to 5 since 2015, in line with the rise of slower "elevated" horror.
-- **The mother is the hub.** In the 10-film pilot, a dead or dangerous mother appears in 6 films, more than any other motif.
+- **An animal is the commonest omen.** Dogs are a warning sign in 28 films, cats in 14, and goats, deer, crows and snakes recur.
+- **Every South Asian film in the list has a past wrong driving it** (16 of 16), against 74% in North America, and endings where the dead are laid to rest or appeased are more common in South, Southeast and East Asia than in the US.
 
-Jump-scare and screenplay data comes from fan and English-language sources, so trends built on them describe US and UK horror more than horror in general.
+Jump-scare and screenplay data comes from fan and English-language sources, so trends built on them describe US and UK horror more than horror in general. Plot summaries and story elements cover every region.
 
 ## The 27 archetypes
 
@@ -54,6 +58,38 @@ Jump-scare and screenplay data comes from fan and English-language sources, so t
 
 Each one must have documented roots on at least two continents, appear in roughly 3 to 30 films, and not be a catch-all like "good versus evil". Beats and roots are in [`archetypes.csv`](archetypes.csv).
 
+## Methodology
+
+**The list.** 500 films compiled from critics' and fan canons, deliberately weighted towards global horror (though North America, the UK and continental Europe still make up 72%). Each film was matched to Wikidata and IMDb automatically, checking year and country; 16 hard cases were matched by hand (`tools/ids_manual.json`). Two films (Seru, The Tokoloshe) have no Wikidata item.
+
+**Collected layers.** Facts come from Wikidata, plots from Wikipedia (English, plus the original-language article when the English plot is missing or under 150 words), subtitles from the OPUS OpenSubtitles research corpus (the file closest to the film's runtime is chosen and flagged if it is more than 5 minutes off), jump scares from Where's the Jump, screenplays from IMSDb and Script Slug, and stills from FILMGRAB, always checking the page's year. Every file records its source and retrieval date; a `*.none` file means the source was checked and had nothing. Sites that block automated access are recorded as gaps, not worked around.
+
+**Story elements (bottom-up).** Rather than sorting films into predefined categories, each film is described along ten independent dimensions read from its Wikipedia plot:
+
+| Dimension | Question |
+|---|---|
+| Threat | What is the danger? |
+| Origin | Where did it come from? |
+| What it wants | What drives it? |
+| The wrong underneath | What past act sits underneath? |
+| Trigger | What sets the story off? |
+| Rules | How does the threat work, and how can it be stopped? |
+| Who suffers | Who is endangered, and how are they related to the threat? |
+| Ending | How does it resolve? |
+| Images | Concrete images, with their state, when they appear and their role (omen, clue, weapon…) |
+| Beats | Key events in order, with when they happen |
+
+How it works:
+
+- **Open vocabulary.** Values are short generic phrases written by the reader, not picked from a list, so patterns can emerge from the films rather than from a scheme imposed on them. Merging near-duplicates into a shared vocabulary is the next step.
+- **No quote, no entry.** Every entry carries a verbatim passage from the article. `tools/validate_story.py` rejects any quote that does not appear word for word in the article, plus quotes under 5 or over 40 words.
+- **Gaps are explicit.** A dimension the article doesn't cover is marked `not_stated`, which is different from absent.
+- **Confidence.** `sourced` when the quote states it directly, `observed` when it is a reasonable reading of the quoted passage (553 of 15,086 entries).
+- **Who did the reading.** The plots were read by Claude, split across parallel helpers working from one schema (`docs/story-elements.md`) and one worked example (Ringu). Every entry is a first pass until reviewed.
+- **Known limit.** Plot summaries keep plot and drop texture, so images and omens are undercounted. Get Out's deer, for instance, is not in its Wikipedia plot.
+
+**Archetypes.** The 27 archetypes are a separate, top-down lens: first-pass tags on every film, to be tested against the bottom-up story elements rather than treated as findings.
+
 ## How it's organised
 
 ```
@@ -65,7 +101,7 @@ reports/             coverage, findings, era figures
 sources/             articles on the legends and real events films descend from
 reference/           the original spreadsheet and a log of every tag change
 tools/               the scripts that collected and measured everything
-docs/                schema and project handover notes
+docs/                schema, story-elements method and project handover notes
 ```
 
 ## Principles
@@ -90,14 +126,16 @@ Python 3. Install with `pip install -r requirements.txt`; `pdftotext` and `ffmpe
 | Wikipedia articles (resumable, ~1 request per 3 s) | `tools/tier1_wikipedia_bulk.py [film ids]` |
 | Subtitles for given films | `tools/tier2_subtitles.py <film ids>` |
 | Full-film colour and pacing | `tools/tier3_visual.py <video> <film id>` |
-| Rebuild reports and graph | `tools/coverage.py`, `tools/eras.py`, `tools/build_graph.py` |
+| Read a film's plot for the story layer | `tools/plot_text.py <film id>` |
+| Check story elements | `tools/validate_story.py [film ids]` |
+| Rebuild reports and graph | `tools/coverage.py`, `tools/eras.py`, `tools/story_report.py`, `tools/build_graph.py` |
 
 ## Rights
 
 The repository mixes material with different rights:
 
-- **Facts from Wikidata** are CC0. **Wikipedia text** (in `sources/` and the pilot films) is CC BY-SA.
+- **Facts from Wikidata** are CC0. **Wikipedia text** (in `sources/` and each film's `wikipedia.*.md`, and the quotes in `story_elements.json`) is CC BY-SA.
 - **Screenplays, subtitles and film stills** are copyrighted by their owners and are held here for private, non-commercial research only. They are not covered by any licence and should not be reused.
-- **Derived measurements** (counts, timings, colour values) and the curated layers (archetypes, motifs, lineage) are the project's own work.
+- **Derived measurements** (counts, timings, colour values) and the curated layers (archetypes, story element values, motifs, lineage) are the project's own work.
 
 No licence has been chosen yet for the code and curated data, so all rights are reserved for now.
