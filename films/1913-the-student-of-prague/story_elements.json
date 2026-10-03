@@ -1,0 +1,61 @@
+{
+ "film": "1913-the-student-of-prague",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot summary"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "doppelganger", "detail": "Balduin's mirror double, taken from him by Scapinelli", "quote": "the double appears again and terrorizes both lovers", "confidence": "sourced"},
+   {"value": "devil figure", "detail": "Scapinelli, a diabolical old gentleman in black", "quote": "he is approached by a diabolical old gentleman dressed in black named Scapinelli", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "pact with the devil", "detail": "Balduin sells anything in his lodgings for 100,000 gold pieces", "quote": "Balduin agrees and signs a contract thinking he owns nothing", "confidence": "sourced"},
+   {"value": "reflection made separate", "quote": "Scapinelli calls forth Balduin's reflection from the mirror and absconds with it", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to destroy its original", "detail": "the double ruins Balduin's love and honour", "quote": "his double again appears at the duel in his place and kills the rival suitor", "confidence": "observed"},
+   {"value": "a soul", "detail": "Scapinelli collects on the contract", "quote": "Scapinelli arrives, takes the contract Balduin signed with him and tears it up", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "selling oneself for wealth", "detail": "Balduin trades for gold to woo the Countess", "quote": "offers Balduin 100,000 pieces of gold in exchange for any item to be found in his student lodgings", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "signing a contract", "quote": "Balduin agrees and signs a contract thinking he owns nothing", "confidence": "sourced"},
+   {"value": "poverty", "quote": "Despondent over his lack of funds, he is approached by a diabolical old gentleman", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "no reflection", "quote": "The baffled student realizes that he now produces no mirror image", "confidence": "sourced"},
+   {"value": "killing the double kills you", "quote": "he fires at it and it vanishes, but soon he becomes stricken himself and falls dead", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "poor student", "relation_to_threat": "self", "detail": "Balduin", "quote": "a poor university student named Balduin is the city's wildest carouser and greatest swordsman", "confidence": "sourced"},
+   {"value": "lover", "relation_to_threat": "lover", "detail": "Countess Margit", "quote": "becomes frightened by Balduin's lack of a mirror reflection followed quickly by the sudden appearance of the double", "confidence": "sourced"},
+   {"value": "rival suitor", "relation_to_threat": "stranger", "detail": "Baron Waldis-Schwarzenberg", "quote": "his double again appears at the duel in his place and kills the rival suitor", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "protagonist dies", "quote": "soon he becomes stricken himself and falls dead", "confidence": "sourced"},
+   {"value": "threat survives", "detail": "the double sits on his grave", "quote": "we see Balduin's double sitting atop his fresh grave, stroking a raven, and glowering menacingly at the viewer", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "mirror", "state": "empty of reflection", "when": "early", "role": "trigger", "quote": "Scapinelli calls forth Balduin's reflection from the mirror and absconds with it", "confidence": "sourced"},
+   {"value": "contract", "state": "signed, later torn up", "when": "early", "role": "trigger", "quote": "takes the contract Balduin signed with him and tears it up, throws it like confetti", "confidence": "sourced"},
+   {"value": "graveyard", "when": "middle", "role": "setting", "quote": "Balduin and the Countess meet secretly at an old Jewish graveyard", "confidence": "sourced"},
+   {"value": "sabres", "when": "middle", "role": "weapon", "quote": "the Baron challenges Balduin to a duel with sabres", "confidence": "sourced"},
+   {"value": "pistol", "when": "ending", "role": "weapon", "quote": "Balduin returns to his own now lavish lodgings and retrieves a pistol", "confidence": "sourced"},
+   {"value": "raven", "state": "stroked by the double", "when": "ending", "role": "symbol", "quote": "sitting atop his fresh grave, stroking a raven", "confidence": "sourced"},
+   {"value": "handkerchief", "state": "stolen as evidence", "when": "middle", "role": "clue", "quote": "she has stolen the handkerchief as evidence", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "poor hero meets tempter", "when": "opening", "quote": "Despondent over his lack of funds, he is approached by a diabolical old gentleman dressed in black", "confidence": "sourced"},
+   {"order": 2, "value": "pact signed, reflection taken", "when": "early", "role": "trigger", "quote": "Scapinelli calls forth Balduin's reflection from the mirror and absconds with it", "confidence": "sourced"},
+   {"order": 3, "value": "double haunts the lovers", "when": "middle", "quote": "the double appears again and terrorizes both lovers", "confidence": "sourced"},
+   {"order": 4, "value": "double kills in his place", "when": "middle", "role": "turn", "quote": "his double again appears at the duel in his place and kills the rival suitor", "confidence": "sourced"},
+   {"order": 5, "value": "lover rejects him", "when": "late", "quote": "She collapses in a swoon", "confidence": "sourced"},
+   {"order": 6, "value": "shoots double, dies himself", "when": "ending", "quote": "When the double appears there he fires at it and it vanishes, but soon he becomes stricken himself and falls dead", "confidence": "sourced"},
+   {"order": 7, "value": "double on the grave", "when": "ending", "role": "turn", "quote": "Balduin's double sitting atop his fresh grave, stroking a raven", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

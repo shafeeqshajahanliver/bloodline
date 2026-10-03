@@ -1,0 +1,59 @@
+{
+ "film": "1932-the-mummy",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "revived mummy", "detail": "Imhotep, an ancient Egyptian high priest, disguised as Ardath Bey", "quote": "the film features Karloff as Imhotep, an ancient Egyptian mummy who was killed for attempting to resurrect his dead lover", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "person who died wronged", "detail": "Imhotep was buried alive as punishment for sacrilege", "quote": "although Imhotep had been wrapped like a traditional mummy, he had been buried alive", "confidence": "sourced"},
+   {"value": "awakened by reading aloud", "detail": "Norton reads the Scroll of Thoth", "quote": "He translates the symbols and then reads the words aloud, causing Imhotep to rise from the dead", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "reunion with lost lover", "detail": "Ankh-es-en-Amon, whom he believes reincarnated in Helen", "quote": "searches for Anck-es-en-Amon, who he believes has been reincarnated in the modern world", "confidence": "sourced"},
+   {"value": "immortal bride", "quote": "he attempts to make her his immortal bride by killing, mummifying, and resurrecting her", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "forbidden resurrection attempt", "detail": "Imhotep tried to resurrect the princess", "quote": "his horrific death was punishment for sacrilege, as he attempted to resurrect his lover", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "opening a cursed tomb object", "detail": "Norton opens the cursed casket despite a warning", "quote": "Despite Muller's warning, Sir Joseph's assistant, Ralph Norton, opens it and finds an ancient, life-giving scroll", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "power bound to a scroll", "detail": "burning the Scroll of Thoth ends his immortality", "quote": "sets the Scroll of Thoth on fire, breaking the spell that had given Imhotep his immortality", "confidence": "sourced"},
+   {"value": "hypnotic control", "quote": "hypnotizes Joseph's Nubian servant to be his slave and bring the Scroll to him", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "archaeologists", "relation_to_threat": "stranger", "detail": "Norton goes insane; Sir Joseph is killed", "quote": "Sir Joseph's assistant Norton went insane and died laughing shortly afterward", "confidence": "sourced"},
+   {"value": "woman resembling lost lover", "relation_to_threat": "lover", "detail": "Helen Grosvenor", "quote": "Helen Grosvenor, a half-Egyptian woman who bears a striking resemblance to the princess", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat destroyed", "detail": "Isis burns the scroll and Imhotep turns to dust", "quote": "his body dies and turns to dust", "confidence": "sourced"},
+   {"value": "victim freed", "quote": "Ankh-es-en-Amon's spirit leaves Helen's body, as Helen awakens as herself", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "mummy", "state": "buried alive", "when": "opening", "role": "threat", "quote": "finds the mummy of an ancient Egyptian high priest named Imhotep", "confidence": "sourced"},
+   {"value": "cursed casket", "state": "opened", "when": "opening", "role": "trigger", "quote": "Also buried with Imhotep is a casket bearing a curse", "confidence": "sourced"},
+   {"value": "scroll", "state": "read aloud, later burned", "when": "opening", "role": "trigger", "quote": "an ancient, life-giving scroll, the \"Scroll of Thoth\"", "confidence": "sourced"},
+   {"value": "hysterical laughter", "state": "madness", "when": "opening", "role": "omen", "quote": "Norton is horrified and laughs hysterically as Imhotep shuffles off with the scroll", "confidence": "sourced"},
+   {"value": "tomb", "state": "unearthed", "when": "early", "role": "setting", "quote": "shows them where to dig to find the tomb of the princess Ankh-es-en-Amon", "confidence": "sourced"},
+   {"value": "statue of isis", "state": "raises its arm", "when": "ending", "role": "weapon", "quote": "The statue of Isis raises its arm and emits a flash", "confidence": "sourced"},
+   {"value": "dust", "state": "body crumbling", "when": "ending", "role": "symbol", "quote": "his body dies and turns to dust", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "mummy found by expedition", "when": "opening", "quote": "an archaeological expedition led by Sir Joseph Whemple finds the mummy", "confidence": "sourced"},
+   {"order": 2, "value": "warning ignored, threat awakened", "when": "opening", "role": "trigger", "quote": "Despite Muller's warning, Sir Joseph's assistant, Ralph Norton, opens it", "confidence": "sourced"},
+   {"order": 3, "value": "threat hides in modern society", "when": "early", "quote": "Imhotep has assimilated into modern society, taking the identity of an eccentric Egyptian historian named Ardath Bey", "confidence": "sourced"},
+   {"order": 4, "value": "reincarnated lover found", "when": "middle", "role": "turn", "quote": "Ardath soon meets Helen Grosvenor, a half-Egyptian woman who bears a striking resemblance to the princess", "confidence": "sourced"},
+   {"order": 5, "value": "protector killed", "when": "middle", "quote": "when Joseph tries to do so, Ardath uses his magical powers to kill him", "confidence": "sourced"},
+   {"order": 6, "value": "past crime revealed", "when": "late", "role": "turn", "quote": "reveals to her that his horrific death was punishment for sacrilege", "confidence": "sourced"},
+   {"order": 7, "value": "ritual sacrifice interrupted", "when": "ending", "quote": "Frank and Muller come to her rescue and distract Ardath", "confidence": "sourced"},
+   {"order": 8, "value": "divine intervention destroys threat", "when": "ending", "quote": "The statue of Isis raises its arm and emits a flash that sets the Scroll of Thoth on fire", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

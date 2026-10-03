@@ -1,0 +1,61 @@
+{
+ "film": "1922-nosferatu",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "vampire", "detail": "Count Orlok", "quote": "It stars Max Schreck as Count Orlok, a vampire who preys on the wife (Greta Schröder) of his estate agent", "confidence": "sourced"},
+   {"value": "plague", "detail": "spread by rats from his ship", "quote": "the local doctors attribute to an unspecified plague caused by the rats from the ship", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "from outside", "detail": "a foreign count from the Carpathians who arrives by ship", "quote": "When the foreign Orlok arrives in Wisborg by ship, he brings with him a swarm of rats", "confidence": "sourced"},
+   {"value": "made by a demon", "detail": "the makers gave Orlok a lineage from Belial", "quote": "Orlok is the creation of Belial, one of the Satanic archdemons", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "blood", "quote": "Orlok tries to suck the blood out, but his repulsed guest pulls his hand away", "confidence": "sourced"},
+   {"value": "a woman", "detail": "Ellen, whose portrait he admires", "quote": "Admiring the portrait, the count remarks that she has a \"lovely neck\"", "confidence": "observed"}
+  ],
+  "trigger": [
+   {"value": "a journey", "detail": "Hutter sent to Transylvania to sell a house", "quote": "Thomas Hutter is sent to Transylvania by his employer, the eccentric estate agent Herr Knock, to visit a new client, Count Orlok", "confidence": "sourced"},
+   {"value": "selling a house", "quote": "Orlok signs the documents to purchase the house", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "pure woman's willing sacrifice", "quote": "a vampire can be destroyed if a pure-hearted woman distracts the vampire from the approaching dawn with her beauty and by offering him her blood of her own free will", "confidence": "sourced"},
+   {"value": "destroyed by sunlight", "quote": "the sun rises and its rays cause Orlok to vanish in a puff of smoke", "confidence": "sourced"},
+   {"value": "must be invited", "quote": "Ellen opens her window to invite Orlok in", "confidence": "observed"}
+  ],
+  "who_suffers": [
+   {"value": "husband", "relation_to_threat": "stranger", "detail": "Thomas Hutter, the estate agent's clerk", "quote": "Hutter wakes up the next morning to find fresh punctures on his neck", "confidence": "sourced"},
+   {"value": "wife", "relation_to_threat": "stranger", "detail": "Ellen, who sacrifices herself", "quote": "Ellen decides to sacrifice herself to stop Orlok", "confidence": "sourced"},
+   {"value": "townspeople", "relation_to_threat": "community", "quote": "Many deaths in the town follow Orlok's arrival", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat destroyed", "quote": "the sun rises and its rays cause Orlok to vanish in a puff of smoke", "confidence": "sourced"},
+   {"value": "self-sacrifice", "detail": "Ellen dies after giving her blood", "quote": "Ellen lives just long enough to be embraced by her grief-stricken husband", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "book about vampires", "state": "scoffed at", "when": "opening", "role": "clue", "quote": "he finds a book about vampires, which he initially scoffs at but puts in his baggage", "confidence": "sourced"},
+   {"value": "blood", "state": "from a cut thumb", "when": "early", "role": "omen", "quote": "he accidentally cuts his thumb; Orlok tries to suck the blood out", "confidence": "sourced"},
+   {"value": "portrait", "state": "admired", "when": "early", "role": "trigger", "quote": "notices on the table a miniature portrait of Hutter's wife, Ellen", "confidence": "sourced"},
+   {"value": "door", "state": "opens by itself", "when": "middle", "role": "threat", "quote": "the door begins to slowly open by itself and, as Orlok enters", "confidence": "sourced"},
+   {"value": "coffin", "state": "occupied", "when": "middle", "role": "clue", "quote": "he finds the coffin in which Orlok is resting dormant in the crypt", "confidence": "sourced"},
+   {"value": "rats", "state": "swarming", "when": "middle", "role": "threat", "quote": "Orlok's coffins are taken aboard a schooner, which the sailors open only to discover rats", "confidence": "sourced"},
+   {"value": "ship", "state": "crew dead", "when": "middle", "role": "setting", "quote": "All of the crewmen later die, and Orlok takes control of the vessel", "confidence": "sourced"},
+   {"value": "sunlight", "state": "rising", "when": "ending", "role": "weapon", "quote": "the sun rises and its rays cause Orlok to vanish in a puff of smoke", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "sent on a journey", "when": "opening", "role": "trigger", "quote": "Thomas Hutter is sent to Transylvania by his employer, the eccentric estate agent Herr Knock", "confidence": "sourced"},
+   {"order": 2, "value": "locals warn of the host", "when": "opening", "role": "omen", "quote": "the locals are terrified by the mere mention of Orlok's name", "confidence": "sourced"},
+   {"order": 3, "value": "first bite", "when": "early", "quote": "Hutter wakes up the next morning to find fresh punctures on his neck", "confidence": "sourced"},
+   {"order": 4, "value": "monster's resting place found", "when": "middle", "role": "turn", "quote": "In a vault, he finds the coffin in which Orlok is resting dormant in the crypt", "confidence": "sourced"},
+   {"order": 5, "value": "voyage of death", "when": "middle", "quote": "All of the crewmen later die, and Orlok takes control of the vessel", "confidence": "sourced"},
+   {"order": 6, "value": "plague hits the town", "when": "late", "quote": "Many deaths in the town follow Orlok's arrival", "confidence": "sourced"},
+   {"order": 7, "value": "woman sacrifices herself", "when": "ending", "role": "turn", "quote": "After he leaves, Orlok enters and drinks her blood, but the sun rises", "confidence": "sourced"},
+   {"order": 8, "value": "lair shown destroyed", "when": "ending", "quote": "The film's final image is that of Orlok's castle, destroyed.", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

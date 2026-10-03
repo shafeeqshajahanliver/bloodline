@@ -1,0 +1,60 @@
+{
+ "film": "1945-the-picture-of-dorian-gray",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "cursed portrait", "detail": "Dorian's portrait ages and warps instead of him", "quote": "the portrait of the young, handsome, Dorian Gray has warped into a hideous, demon-like creature reflecting his many sins", "confidence": "sourced"},
+   {"value": "the self", "detail": "Dorian's own sinful life", "quote": "becomes more dedicated to a sinful and heartless life", "confidence": "observed"}
+  ],
+  "origin": [
+   {"value": "wish granted by magic", "detail": "a wish made before an Egyptian cat statue", "quote": "He makes this wish in the presence of an Egyptian cat statue with supposed magical powers", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "eternal youth", "quote": "Gray wishes his portrait could age instead of him", "confidence": "sourced"},
+   {"value": "pleasure", "quote": "Wotton persuades Gray the only worthwhile life is dedicated to pleasure", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "jilted lover's suicide", "detail": "Sibyl Vane", "quote": "After callously breaking off his engagement to tavern singer Sibyl Vane", "confidence": "sourced"},
+   {"value": "murder", "detail": "Dorian kills Basil Hallward", "quote": "When Hallward sees his painting, Gray murders his friend and seals his body in the school room", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "a wish", "quote": "Contemplating this, Gray wishes his portrait could age instead of him", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "portrait carries his sins", "quote": "warped into a hideous, demon-like creature reflecting his many sins", "confidence": "sourced"},
+   {"value": "harming the image harms him", "quote": "He stabs the portrait in the heart, seeking to end the spell, but cries out as if he has also been stabbed", "confidence": "sourced"},
+   {"value": "secret must be hidden", "quote": "The portrait has remained locked away, with Gray holding the only key", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "lover", "relation_to_threat": "lover", "detail": "Sibyl Vane", "quote": "Gray, after Sibyl's suicide, becomes more dedicated to a sinful and heartless life", "confidence": "sourced"},
+   {"value": "friends", "relation_to_threat": "community", "detail": "Hallward murdered, Campbell driven to suicide", "quote": "Campbell, distraught at his role in destroying Hallward's corpse, commits suicide", "confidence": "sourced"},
+   {"value": "the protagonist himself", "relation_to_threat": "self", "quote": "discover Gray dead next to the portrait, his deformed body now reflecting his sins in physical form", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "protagonist dies", "quote": "discover Gray dead next to the portrait", "confidence": "sourced"},
+   {"value": "curse reverses at death", "quote": "The portrait, by contrast, once more shows Dorian Gray as a young, innocent man", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "portrait", "state": "warping into a monster", "when": "opening", "role": "threat", "quote": "Gray finds the portrait has begun to change and wonders if his wish may have come true", "confidence": "sourced"},
+   {"value": "cat statue", "state": "magical", "when": "opening", "role": "omen", "quote": "an Egyptian cat statue with supposed magical powers", "confidence": "sourced"},
+   {"value": "locked room", "detail": "old schoolroom", "when": "early", "role": "setting", "quote": "He has the portrait locked away in his old schoolroom", "confidence": "sourced"},
+   {"value": "key", "when": "middle", "role": "symbol", "quote": "with Gray holding the only key", "confidence": "sourced"},
+   {"value": "knife", "state": "stabbing the portrait", "when": "ending", "role": "weapon", "quote": "He stabs the portrait in the heart, seeking to end the spell", "confidence": "sourced"},
+   {"value": "corpse", "state": "sealed away", "when": "middle", "role": "clue", "quote": "seals his body in the school room next to the portrait", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "portrait painted, wish made", "when": "opening", "role": "trigger", "quote": "Gray wishes his portrait could age instead of him", "confidence": "sourced"},
+   {"order": 2, "value": "first sign of change", "when": "early", "role": "omen", "quote": "Gray finds the portrait has begun to change and wonders if his wish may have come true", "confidence": "sourced"},
+   {"order": 3, "value": "years pass unaging", "when": "middle", "quote": "Years later, Dorian is 40 but still looks 22", "confidence": "sourced"},
+   {"order": 4, "value": "murder of a friend", "when": "middle", "role": "turn", "quote": "When Hallward sees his painting, Gray murders his friend", "confidence": "sourced"},
+   {"order": 5, "value": "avenger killed by accident", "when": "late", "quote": "is shot by accident during a hunting party", "confidence": "sourced"},
+   {"order": 6, "value": "attempt to break spell", "when": "ending", "quote": "He stabs the portrait in the heart, seeking to end the spell", "confidence": "sourced"},
+   {"order": 7, "value": "death and restoration", "when": "ending", "quote": "The portrait, by contrast, once more shows Dorian Gray as a young, innocent man", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}
