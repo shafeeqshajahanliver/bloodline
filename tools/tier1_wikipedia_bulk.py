@@ -11,7 +11,7 @@ LANG = {"Spanish":"es","Japanese":"ja","Italian":"it","French":"fr","Korean":"ko
         "Thai":"th","Norwegian":"no","Mandarin":"zh","Standard Chinese":"zh","Chinese":"zh","Standard Taiwanese Mandarin":"zh","Cantonese":"zh-yue","Malayalam":"ml",
         "Swedish":"sv","Portuguese":"pt","Brazilian Portuguese":"pt","Turkish":"tr","Czech":"cs","Persian":"fa","Finnish":"fi","Arabic":"ar","Polish":"pl","Russian":"ru",
         "Alavese Basque":"eu","Wolof":"wo","Vietnamese":"vi","Xhosa":"xh","Icelandic":"is","Tagalog":"tl","Tamil":"ta","Danish":"da","Dutch":"nl","Hungarian":"hu"}
-PLOT = re.compile(r"^(plot|synopsis|story|plot summary|summary|premise|storyline|sinopsis|plot synopsis)$", re.I)
+PLOT = re.compile(r"^(plot|synopsis|story|plot summary|summary|premise|storyline|plot synopsis|sinopsis|sinopse|trama|handlung|inhalt|intrigue|résumé|hikâye|konu|jalan cerita|alur|plot cerita|cốt truyện|줄거리|あらすじ|ストーリー|剧情|劇情|情节|故事|कथानक|कहानी|الحبكة|القصة|ملخص|сюжет|fabuła|fabel|handling|juoni|argumento|historia)$", re.I)
 WAIT = 3.0
 
 def get(url, **kw):
