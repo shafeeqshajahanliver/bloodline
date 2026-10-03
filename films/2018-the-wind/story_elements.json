@@ -1,62 +1,477 @@
 {
  "film": "2018-the-wind",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "demon", "detail": "the \"demons of the prairie\"", "quote": "Lizzy finds a  tract about the \"demons of the prairie\"", "confidence": "sourced"},
-   {"value": "the self", "detail": "Lizzy's jealousy and \"prairie madness\"", "quote": "she murdered Emma and the unborn child out of jealousy", "confidence": "sourced"}
+   {
+    "value": "demon",
+    "detail": "the \"demons of the prairie\"",
+    "quote": "Lizzy finds a  tract about the \"demons of the prairie\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:03",
+      "quote": "And the next time you think you see a demon.. ... shoot it."
+     }
+    ]
+   },
+   {
+    "value": "the self",
+    "detail": "Lizzy's jealousy and \"prairie madness\"",
+    "quote": "she murdered Emma and the unborn child out of jealousy",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "isolation", "quote": "claiming it would reignite her prairie madness from when she was pregnant", "confidence": "observed"}
+   {
+    "value": "isolation",
+    "quote": "claiming it would reignite her prairie madness from when she was pregnant",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:04",
+      "quote": "The wind never stops."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "a child", "quote": "Emma later claims to be haunted by a demon seeking her child", "confidence": "sourced"}
+   {
+    "value": "a child",
+    "quote": "Emma later claims to be haunted by a demon seeking her child",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:53",
+      "quote": "And now it wants my baby."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "infidelity", "quote": "Emma describes her disdain for Gideon and claims to bear Isaac's child", "confidence": "sourced"},
-   {"value": "murder", "quote": "she murdered Emma and the unborn child out of jealousy", "confidence": "sourced"}
+   {
+    "value": "infidelity",
+    "quote": "Emma describes her disdain for Gideon and claims to bear Isaac's child",
+    "confidence": "sourced"
+   },
+   {
+    "value": "murder",
+    "quote": "she murdered Emma and the unborn child out of jealousy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:05",
+      "quote": "- She was pregnant. - Oh, God, no."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "new neighbours arrive", "quote": "They are later joined by the Harpers, Emma and Gideon, who move into a nearby abandoned cabin", "confidence": "sourced"},
-   {"value": "settling the frontier", "quote": "left St. Louis to settle on the western frontier", "confidence": "sourced"}
+   {
+    "value": "new neighbours arrive",
+    "quote": "They are later joined by the Harpers, Emma and Gideon, who move into a nearby abandoned cabin",
+    "confidence": "sourced"
+   },
+   {
+    "value": "settling the frontier",
+    "quote": "left St. Louis to settle on the western frontier",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "targets the pregnant", "quote": "Emma later claims to be haunted by a demon seeking her child", "confidence": "observed"},
-   {"value": "comes when alone", "quote": "As they depart, Lizzy's fear of demons resurfaces", "confidence": "observed"}
+   {
+    "value": "targets the pregnant",
+    "quote": "Emma later claims to be haunted by a demon seeking her child",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:00",
+      "quote": "You're with a child."
+     }
+    ]
+   },
+   {
+    "value": "comes when alone",
+    "quote": "As they depart, Lizzy's fear of demons resurfaces",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:57",
+      "quote": "I shouldn't have left you alone like this."
+     }
+    ]
+   },
+   {
+    "value": "speaks in whispers",
+    "detail": "Emma hears it whispering at night; Gideon says it is the wind",
+    "source": "subtitles",
+    "at": "00:37:51",
+    "quote": "tells me it's the wind.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "isolated wife", "relation_to_threat": "self", "detail": "Lizzy, who lost a stillborn son", "quote": "As the wives bond, Lizzy confides in Emma about her stillborn son", "confidence": "sourced"},
-   {"value": "pregnant neighbour", "relation_to_threat": "stranger", "detail": "Emma", "quote": "Emma suddenly shoots herself in the head with Lizzy's shotgun", "confidence": "sourced"},
-   {"value": "husband", "relation_to_threat": "lover", "detail": "Isaac", "quote": "frees herself and fatally stabs Isaac with a glass shard", "confidence": "sourced"}
+   {
+    "value": "isolated wife",
+    "relation_to_threat": "self",
+    "detail": "Lizzy, who lost a stillborn son",
+    "quote": "As the wives bond, Lizzy confides in Emma about her stillborn son",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pregnant neighbour",
+    "relation_to_threat": "stranger",
+    "detail": "Emma",
+    "quote": "Emma suddenly shoots herself in the head with Lizzy's shotgun",
+    "confidence": "sourced"
+   },
+   {
+    "value": "husband",
+    "relation_to_threat": "lover",
+    "detail": "Isaac",
+    "quote": "frees herself and fatally stabs Isaac with a glass shard",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "ambiguous", "detail": "demon or madness", "quote": "Lizzy, denying the murder, frees herself and fatally stabs Isaac with a glass shard", "confidence": "observed"},
-   {"value": "protagonist was the killer", "quote": "Isaac, having found Emma's diary, confronts Lizzy after realizing the truth: she murdered Emma", "confidence": "sourced"}
+   {
+    "value": "ambiguous",
+    "detail": "demon or madness",
+    "quote": "Lizzy, denying the murder, frees herself and fatally stabs Isaac with a glass shard",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:09",
+      "quote": "There is nothing!"
+     }
+    ]
+   },
+   {
+    "value": "protagonist was the killer",
+    "quote": "Isaac, having found Emma's diary, confronts Lizzy after realizing the truth: she murdered Emma",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:15",
+      "quote": "- You killed her. - No. It wasn't me."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "abandoned cabin", "when": "opening", "role": "setting", "quote": "who move into a nearby abandoned cabin", "confidence": "sourced"},
-   {"value": "hiding under a bed", "when": "early", "role": "omen", "quote": "One night, Emma is found hiding underneath her bed", "confidence": "sourced"},
-   {"value": "shotgun", "when": "early", "role": "weapon", "quote": "shoots herself in the head with Lizzy's shotgun", "confidence": "sourced"},
-   {"value": "diary", "when": "middle", "role": "clue", "quote": "she finds a diary in which Emma describes her disdain for Gideon", "confidence": "sourced"},
-   {"value": "reverend", "state": "turns into a demon", "when": "middle", "role": "threat", "quote": "a local reverend travels through the area looking for shelter but transforms into a demon later that night", "confidence": "sourced"},
-   {"value": "tract", "state": "warning of demons", "when": "late", "role": "clue", "quote": "he gave her a similar tract warning about the demons of the prairie", "confidence": "sourced"},
-   {"value": "shattering windows", "when": "late", "role": "threat", "quote": "shattering the windows and throwing her across the room", "confidence": "sourced"},
-   {"value": "glass shard", "when": "ending", "role": "weapon", "quote": "fatally stabs Isaac with a glass shard", "confidence": "sourced"}
+   {
+    "value": "crows",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:04:39",
+    "quote": "[crow cawing]",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:47",
+      "quote": "[crows cawing]"
+     }
+    ]
+   },
+   {
+    "value": "abandoned cabin",
+    "when": "opening",
+    "role": "setting",
+    "quote": "who move into a nearby abandoned cabin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:17",
+      "quote": "You out here alone? I came across an empty cabin about a mile east of here."
+     }
+    ]
+   },
+   {
+    "value": "hiding under a bed",
+    "when": "early",
+    "role": "omen",
+    "quote": "One night, Emma is found hiding underneath her bed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:34",
+      "quote": "Pull your wife out from under the bed and tie her to it."
+     }
+    ]
+   },
+   {
+    "value": "wolves at night",
+    "when": "early",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:10:42",
+    "quote": "[wolves growling]",
+    "confidence": "sourced"
+   },
+   {
+    "value": "shotgun",
+    "when": "early",
+    "role": "weapon",
+    "quote": "shoots herself in the head with Lizzy's shotgun",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:27",
+      "quote": "She had my gun."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:18:25",
+      "quote": "How did she get your gun, Lizzy?"
+     }
+    ]
+   },
+   {
+    "value": "diary",
+    "when": "middle",
+    "role": "clue",
+    "quote": "she finds a diary in which Emma describes her disdain for Gideon",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:59",
+      "quote": "For I have never, not in my entire life seen anything like this land."
+     }
+    ]
+   },
+   {
+    "value": "reverend",
+    "state": "turns into a demon",
+    "when": "middle",
+    "role": "threat",
+    "quote": "a local reverend travels through the area looking for shelter but transforms into a demon later that night",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:40",
+      "quote": "Reverend, don't answer the door for anyone.. ... not after dark."
+     }
+    ]
+   },
+   {
+    "value": "tract",
+    "state": "warning of demons",
+    "when": "late",
+    "role": "clue",
+    "quote": "he gave her a similar tract warning about the demons of the prairie",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:07",
+      "quote": "Mara, damner of souls."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:51:34",
+      "quote": "Succorbenoth, bringer of jealous thoughts."
+     }
+    ]
+   },
+   {
+    "value": "whispering wind",
+    "state": "never stops",
+    "when": "middle",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:47:05",
+    "quote": "[indistinct whispering]",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:43",
+      "quote": "[indistinct whispering]"
+     }
+    ]
+   },
+   {
+    "value": "shattering windows",
+    "when": "late",
+    "role": "threat",
+    "quote": "shattering the windows and throwing her across the room",
+    "confidence": "sourced"
+   },
+   {
+    "value": "glass shard",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "fatally stabs Isaac with a glass shard",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "settlers alone on the frontier", "when": "opening", "quote": "Elizabeth \"Lizzy\" and Isaac Macklin left St. Louis to settle on the western frontier", "confidence": "sourced"},
-   {"order": 2, "value": "neighbour fears a demon", "when": "early", "role": "omen", "quote": "Emma later claims to be haunted by a demon seeking her child", "confidence": "sourced"},
-   {"order": 3, "value": "pregnant woman's death", "when": "early", "quote": "When her pregnancy nears its term, Emma suddenly shoots herself in the head", "confidence": "sourced"},
-   {"order": 4, "value": "left alone", "when": "middle", "quote": "As they depart, Lizzy's fear of demons resurfaces", "confidence": "sourced"},
-   {"order": 5, "value": "visitor becomes demon", "when": "middle", "role": "turn", "quote": "transforms into a demon later that night. He attacks Lizzy", "confidence": "sourced"},
-   {"order": 6, "value": "unseen attack", "when": "late", "quote": "Lizzy is immediately assaulted by an unseen force", "confidence": "sourced"},
-   {"order": 7, "value": "protagonist accused of murder", "when": "ending", "role": "turn", "quote": "she murdered Emma and the unborn child out of jealousy", "confidence": "sourced"},
-   {"order": 8, "value": "husband killed", "when": "ending", "quote": "fatally stabs Isaac with a glass shard", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "settlers alone on the frontier",
+    "when": "opening",
+    "quote": "Elizabeth \"Lizzy\" and Isaac Macklin left St. Louis to settle on the western frontier",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "neighbour fears a demon",
+    "when": "early",
+    "role": "omen",
+    "quote": "Emma later claims to be haunted by a demon seeking her child",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:45",
+      "quote": "I hear it too, whispering."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "pregnant woman's death",
+    "when": "early",
+    "quote": "When her pregnancy nears its term, Emma suddenly shoots herself in the head",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:03",
+      "quote": "We gotta get the baby out!"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:55:15",
+      "quote": "Why isn't the baby crying?"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "wolves at the door",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:10:42",
+    "quote": "[wolves growling]",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "left alone",
+    "when": "middle",
+    "quote": "As they depart, Lizzy's fear of demons resurfaces",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:20",
+      "quote": "Couple of days, maybe."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "visitor becomes demon",
+    "when": "middle",
+    "role": "turn",
+    "quote": "transforms into a demon later that night. He attacks Lizzy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:49",
+      "quote": "Move to the window so I can see you."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "unseen attack",
+    "when": "late",
+    "quote": "Lizzy is immediately assaulted by an unseen force",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "protagonist accused of murder",
+    "when": "ending",
+    "role": "turn",
+    "quote": "she murdered Emma and the unborn child out of jealousy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:15",
+      "quote": "- You killed her. - No. It wasn't me."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "husband killed",
+    "when": "ending",
+    "quote": "fatally stabs Isaac with a glass shard",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:07",
+      "quote": "It's right there."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "first night on the land",
+    "when": "ending",
+    "role": "mirror",
+    "detail": "the closing flashback: newly arrived Lizzy already senses something",
+    "source": "subtitles",
+    "at": "01:22:25",
+    "quote": "There's something out there.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:34",
+      "quote": "This land, there's something wrong with it."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

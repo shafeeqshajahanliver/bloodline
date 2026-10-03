@@ -1,60 +1,432 @@
 {
  "film": "2022-men",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "village of men", "detail": "all sharing one face", "quote": "becomes disturbed and tormented by the strange men in the village, all portrayed by Rory Kinnear", "confidence": "sourced"},
-   {"value": "folk spirit", "detail": "the naked man in Green Man form", "quote": "The naked man, now in full Green Man form, approaches Harper", "confidence": "sourced"}
+   {
+    "value": "village of men",
+    "detail": "all sharing one face",
+    "quote": "becomes disturbed and tormented by the strange men in the village, all portrayed by Rory Kinnear",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:28",
+      "quote": "who tells me I'm a stupid bitch."
+     }
+    ]
+   },
+   {
+    "value": "folk spirit",
+    "detail": "the naked man in Green Man form",
+    "quote": "The naked man, now in full Green Man form, approaches Harper",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "unexplained", "detail": "the men carry James's injuries", "quote": "the stuck knife ripping his arm in an extreme injury resembling the one James sustained during his fall", "confidence": "observed"}
+   {
+    "value": "unexplained",
+    "detail": "the men carry James's injuries",
+    "quote": "the stuck knife ripping his arm in an extreme injury resembling the one James sustained during his fall",
+    "confidence": "observed"
+   }
   ],
   "wants": [
-   {"value": "her love", "quote": "When Harper asks him what he wants from her, James responds that he wants her love", "confidence": "sourced"}
+   {
+    "value": "her love",
+    "quote": "When Harper asks him what he wants from her, James responds that he wants her love",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:59",
+      "quote": "What is it that you want from me? Your love."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "domestic abuse", "quote": "Harper, tired of James's emotional abuse and manipulation, intended to divorce him", "confidence": "sourced"},
-   {"value": "suicide as threat", "quote": "James threatened suicide in response", "confidence": "sourced"}
+   {
+    "value": "domestic abuse",
+    "quote": "Harper, tired of James's emotional abuse and manipulation, intended to divorce him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:05",
+      "quote": "And I am going to divorce you, okay? I am. I am."
+     }
+    ]
+   },
+   {
+    "value": "suicide as threat",
+    "quote": "James threatened suicide in response",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:42",
+      "quote": "I'll kill myself."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "a journey", "detail": "a holiday after her husband's death", "quote": "Harper Marlowe decides to spend a holiday alone in the Herefordshire village of Cotson", "confidence": "sourced"}
+   {
+    "value": "a journey",
+    "detail": "a holiday after her husband's death",
+    "quote": "Harper Marlowe decides to spend a holiday alone in the Herefordshire village of Cotson",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:20",
+      "quote": "I booked it under Mrs. Marlowe."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "victim blamed", "quote": "suggests that she is partially responsible for James's death because she did not allow him to apologise", "confidence": "sourced"},
-   {"value": "wounds transfer", "quote": "Both the boy and the vicar appear inside the house in turn, each of them now similarly injured", "confidence": "sourced"},
-   {"value": "endless rebirth", "quote": "The naked man gives birth to the young boy, who in turn gives birth to the vicar, then Geoffrey, and finally James", "confidence": "sourced"}
+   {
+    "value": "victim blamed",
+    "quote": "suggests that she is partially responsible for James's death because she did not allow him to apologise",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:28",
+      "quote": "did you give him a chance to apologize?"
+     }
+    ]
+   },
+   {
+    "value": "wounds transfer",
+    "quote": "Both the boy and the vicar appear inside the house in turn, each of them now similarly injured",
+    "confidence": "sourced"
+   },
+   {
+    "value": "endless rebirth",
+    "quote": "The naked man gives birth to the young boy, who in turn gives birth to the vicar, then Geoffrey, and finally James",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "widow", "relation_to_threat": "lover", "detail": "Harper", "quote": "a widow who travels on holiday to a countryside village", "confidence": "sourced"}
+   {
+    "value": "widow",
+    "relation_to_threat": "lover",
+    "detail": "Harper",
+    "quote": "a widow who travels on holiday to a countryside village",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:37",
+      "quote": "I have a weapon!"
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "ambiguous", "quote": "She follows a blood trail and finds Harper, who smiles when she sees her", "confidence": "sourced"},
-   {"value": "survivor endures", "quote": "Riley—who is pregnant—arrives at the house in the morning", "confidence": "observed"}
+   {
+    "value": "ambiguous",
+    "quote": "She follows a blood trail and finds Harper, who smiles when she sees her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "survivor endures",
+    "quote": "Riley—who is pregnant—arrives at the house in the morning",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "fence", "state": "impaling", "when": "opening", "role": "omen", "quote": "fall from an upstairs balcony to his death, being partially impaled by a fence", "confidence": "sourced"},
-   {"value": "railway tunnel", "when": "early", "role": "setting", "quote": "comes across a disused railway tunnel", "confidence": "sourced"},
-   {"value": "naked man", "state": "watching", "when": "early", "role": "threat", "quote": "notices a naked man standing in the distance, watching her", "confidence": "sourced"},
-   {"value": "letter box", "when": "early", "role": "threat", "quote": "the naked man sticks his hand through the letter box", "confidence": "sourced"},
-   {"value": "carved font", "when": "middle", "role": "symbol", "quote": "images of the Green Man and Sheela na gig are carved on a font", "confidence": "sourced"},
-   {"value": "crow", "state": "dead", "when": "middle", "role": "omen", "quote": "the window broke due to a crow, which he then euthanises by breaking its neck", "confidence": "sourced"},
-   {"value": "knife", "when": "late", "role": "weapon", "quote": "she stabs him through the arm", "confidence": "sourced"},
-   {"value": "blood trail", "when": "ending", "role": "clue", "quote": "She follows a blood trail and finds Harper", "confidence": "sourced"}
+   {
+    "value": "fence",
+    "state": "impaling",
+    "when": "opening",
+    "role": "omen",
+    "quote": "fall from an upstairs balcony to his death, being partially impaled by a fence",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:27",
+      "quote": "went to their balcony, tried to climb down to ours,"
+     }
+    ]
+   },
+   {
+    "value": "railway tunnel",
+    "when": "early",
+    "role": "setting",
+    "quote": "comes across a disused railway tunnel",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:15",
+      "quote": "TUNE ECHOING"
+     }
+    ]
+   },
+   {
+    "value": "naked man",
+    "state": "watching",
+    "when": "early",
+    "role": "threat",
+    "quote": "notices a naked man standing in the distance, watching her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:37",
+      "quote": "that they just released the naked weirdo"
+     }
+    ]
+   },
+   {
+    "value": "letter box",
+    "when": "early",
+    "role": "threat",
+    "quote": "the naked man sticks his hand through the letter box",
+    "confidence": "sourced"
+   },
+   {
+    "value": "carved font",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "images of the Green Man and Sheela na gig are carved on a font",
+    "confidence": "sourced"
+   },
+   {
+    "value": "crow",
+    "state": "dead",
+    "when": "middle",
+    "role": "omen",
+    "quote": "the window broke due to a crow, which he then euthanises by breaking its neck",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:42",
+      "quote": "The broken wing, you see. Nothing to be done."
+     }
+    ]
+   },
+   {
+    "value": "knife",
+    "when": "late",
+    "role": "weapon",
+    "quote": "she stabs him through the arm",
+    "confidence": "sourced"
+   },
+   {
+    "value": "blood trail",
+    "when": "ending",
+    "role": "clue",
+    "quote": "She follows a blood trail and finds Harper",
+    "confidence": "sourced"
+   },
+   {
+    "value": "apple tree",
+    "state": "forbidden fruit",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:06:11",
+    "quote": "Mustn't do that. Forbidden fruit.",
+    "confidence": "sourced",
+    "detail": "Harper eats an apple from the garden on arrival; Geoffrey jokes it is forbidden",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:05",
+      "quote": "Apple from the garden?"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:55:01",
+      "quote": "Just one of your apples, Geoff."
+     }
+    ]
+   },
+   {
+    "value": "echoing song",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:21:15",
+    "quote": "HARPER'S ECHOING SONG PLAYING",
+    "confidence": "sourced",
+    "detail": "the notes Harper sang in the tunnel return in the score",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:05",
+      "quote": "HARPER'S ECHOING SONG PLAYING"
+     }
+    ]
+   },
+   {
+    "value": "love song",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:01:21",
+    "quote": "Love is the opening door",
+    "confidence": "sourced",
+    "detail": "the song that opens the film returns after James asks for her love",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:12",
+      "quote": "Love is the opening door"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "husband's death", "when": "opening", "quote": "She then witnessed him fall from an upstairs balcony to his death", "confidence": "sourced"},
-   {"order": 2, "value": "retreat to the countryside", "when": "early", "role": "trigger", "quote": "Harper Marlowe decides to spend a holiday alone in the Herefordshire village of Cotson", "confidence": "sourced"},
-   {"order": 3, "value": "stalked by a naked man", "when": "early", "quote": "notices a naked man standing in the distance, watching her", "confidence": "sourced"},
-   {"order": 4, "value": "blamed by a priest", "when": "middle", "role": "turn", "quote": "suggests that she is partially responsible for James's death", "confidence": "sourced"},
-   {"order": 5, "value": "omen at the window", "when": "middle", "role": "omen", "quote": "the window broke due to a crow", "confidence": "sourced"},
-   {"order": 6, "value": "home invasion", "when": "late", "quote": "When the vicar attempts to rape Harper, she stabs him in the stomach and escapes the house", "confidence": "sourced"},
-   {"order": 7, "value": "chain of births", "when": "ending", "role": "turn", "quote": "The naked man gives birth to the young boy, who in turn gives birth to the vicar", "confidence": "sourced"},
-   {"order": 8, "value": "friend arrives at dawn", "when": "ending", "quote": "Riley—who is pregnant—arrives at the house in the morning", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "husband's death",
+    "when": "opening",
+    "quote": "She then witnessed him fall from an upstairs balcony to his death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:42",
+      "quote": "I'll kill myself."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "retreat to the countryside",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Harper Marlowe decides to spend a holiday alone in the Herefordshire village of Cotson",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:20",
+      "quote": "I booked it under Mrs. Marlowe."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "forbidden fruit eaten",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:06:11",
+    "quote": "Mustn't do that. Forbidden fruit.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "stalked by a naked man",
+    "when": "early",
+    "quote": "notices a naked man standing in the distance, watching her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:40",
+      "quote": "HOARSE SCREAM"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "boy demands a game",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:43:23",
+    "quote": "Hide and seek? You hide. I'll seek.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "blamed by a priest",
+    "when": "middle",
+    "role": "turn",
+    "quote": "suggests that she is partially responsible for James's death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:56",
+      "quote": "that if you'd given him the chance to apologize,"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "omen at the window",
+    "when": "middle",
+    "role": "omen",
+    "quote": "the window broke due to a crow",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:42",
+      "quote": "The broken wing, you see. Nothing to be done."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "home invasion",
+    "when": "late",
+    "quote": "When the vicar attempts to rape Harper, she stabs him in the stomach and escapes the house",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "chain of births",
+    "when": "ending",
+    "role": "turn",
+    "quote": "The naked man gives birth to the young boy, who in turn gives birth to the vicar",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "husband asks for her love",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:33:59",
+    "quote": "What is it that you want from me? Your love.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "friend arrives at dawn",
+    "when": "ending",
+    "quote": "Riley—who is pregnant—arrives at the house in the morning",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }
