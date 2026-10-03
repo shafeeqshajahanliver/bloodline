@@ -13,7 +13,7 @@ Generated 2026-10-03.
 | Jump scares | 189 | 38% |
 | Stills | 264 | 53% |
 | Full-film visuals | 1 | 0% |
-| Story layer (archetypes, motifs, lineage) | 10 | 2% |
+| Story elements (bottom-up, quoted) | 497 | 99% |
 
 ## By region (films with each layer / films in region)
 

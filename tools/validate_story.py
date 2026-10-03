@@ -6,6 +6,7 @@ DIMS = ["threat", "origin", "wants", "wrong", "trigger", "rules", "who_suffers",
 WHEN = {"opening", "early", "middle", "late", "ending"}
 ROLE = {"omen", "trigger", "mirror", "threat", "weapon", "clue", "symbol", "setting", "turn"}
 REL = {"stranger", "family", "lover", "community", "self", "unknown"}
+CJK = re.compile(r"[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]")
 def norm(s):
     s = s.replace("’", "'").replace("‘", "'").replace("“", '"').replace("”", '"').replace("–", "-").replace("—", "-")
     return re.sub(r"\s+", " ", s).strip().lower()
@@ -27,9 +28,12 @@ def check(fid):
             tag = f"{k}[{i}]"
             v = e.get("value", "")
             if not v or len(v.split()) > 6: errs.append(f"{tag}: value missing or over 6 words")
+            elif v != v.lower(): errs.append(f"{tag}: value not lower case: {v}")
             q = e.get("quote", "")
-            if len(q.split()) < 3: errs.append(f"{tag}: quote too short")
-            elif norm(q) not in text: errs.append(f"{tag}: quote not found in article: {q[:60]}")
+            nw = len(q) // 2 if CJK.search(q) else len(q.split())  # no spaces in CJK text: count ~2 characters per word
+            if nw < 5: errs.append(f"{tag}: quote under 5 words")
+            elif nw > 40: errs.append(f"{tag}: quote over 40 words")
+            if nw >= 1 and norm(q) not in text: errs.append(f"{tag}: quote not found in article: {q[:60]}")
             if e.get("confidence") not in ("sourced", "observed"): errs.append(f"{tag}: confidence")
             if k in ("images", "beats"):
                 if e.get("when") not in WHEN: errs.append(f"{tag}: when")

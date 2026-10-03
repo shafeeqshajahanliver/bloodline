@@ -34,7 +34,9 @@ for k in DIMS:
     md.append(f"\n{len(cnt[k])} distinct values in total.")
 md.append("\n## Who suffers: relation to the threat\n\n" + ", ".join(f"{k} ({v})" for k, v in rel.most_common()))
 md.append("\n## Images used as omens\n\n" + ", ".join(f"{v} ({c})" for v, c in omen.most_common(25)))
-animals = [a for a in omen if any(w in a for w in ("deer", "dog", "cat", "bird", "crow", "raven", "goat", "horse", "rabbit", "fox", "owl", "snake", "moth", "fly", "rat", "wolf", "insect", "animal", "pig", "cow", "sheep", "lamb", "fish"))]
+import re
+ANIMAL = re.compile(r"\b(deer|dogs?|cats?|kitten|birds?|crows?|ravens?|goats?|horses?|rabbits?|fox|owls?|snakes?|moths?|fly|flies|rats?|wolf|wolves|insects?|animals?|pigs?|cow|sheep|lamb|fish|pigeons?|reindeer|bat|frogs?|kangaroo|baboon|chimp\w*|monkey|spider|scorpion|lizards?|gulls?|hens?|elephant)\b")
+animals = [a for a in omen if ANIMAL.search(a) and not re.search(r"\b(statue|doll|smell|nets)\b", a)]
 md.append("\n### Animals as omens\n\n" + "\n".join(f"- {a}: " + ", ".join(sorted(films[f]["title"] + " (" + films[f]["year"] + ")" for f in omen_films[a])) for a in sorted(animals, key=lambda a: -len(omen_films[a]))))
 md.append("\n## How films open (opening beats)\n\n" + ", ".join(f"{v} ({c})" for v, c in opening.most_common(30)))
 open("reports/story-elements.md", "w").write("\n".join(md) + "\n")

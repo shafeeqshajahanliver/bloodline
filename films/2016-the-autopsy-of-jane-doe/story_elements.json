@@ -1,58 +1,236 @@
 {
  "film": "2016-the-autopsy-of-jane-doe",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "witch", "detail": "Jane Doe, an immortal corpse", "quote": "her brutal murder inadvertently transformed her into a real witch, rendering her immortal", "confidence": "sourced"},
-   {"value": "reanimated corpses", "quote": "the disfigured face of one of the missing corpses, apparently reanimated", "confidence": "sourced"}
+   {
+    "value": "witch",
+    "detail": "Jane Doe, an immortal corpse",
+    "quote": "her brutal murder inadvertently transformed her into a real witch, rendering her immortal",
+    "confidence": "sourced"
+   },
+   {
+    "value": "reanimated corpses",
+    "quote": "the disfigured face of one of the missing corpses, apparently reanimated",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "person who died wronged", "detail": "tortured as a witch in 1693", "quote": "Jane had been tortured to death after being accused of witchcraft", "confidence": "sourced"}
+   {
+    "value": "person who died wronged",
+    "detail": "tortured as a witch in 1693",
+    "quote": "Jane had been tortured to death after being accused of witchcraft",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to make others suffer", "quote": "she is keeping them alive because she wants them to suffer the way she has", "confidence": "sourced"}
+   {
+    "value": "to make others suffer",
+    "quote": "she is keeping them alive because she wants them to suffer the way she has",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "witch trial torture", "quote": "Leviticus 20:27, which condemns witches, and the year 1693, the date of the Salem witch trials", "confidence": "sourced"}
+   {
+    "value": "witch trial torture",
+    "quote": "Leviticus 20:27, which condemns witches, and the year 1693, the date of the Salem witch trials",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "examining a body", "quote": "father-and-son coroners who experience supernatural phenomena while examining the body of an unidentified woman", "confidence": "sourced"}
+   {
+    "value": "examining a body",
+    "quote": "father-and-son coroners who experience supernatural phenomena while examining the body of an unidentified woman",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "feels inflicted pain", "quote": "able to feel whatever pain her body endures, though she appears to be dead", "confidence": "sourced"},
-   {"value": "cannot be destroyed", "quote": "Tommy extinguishes the quickly-spreading fire but finds the body still intact", "confidence": "sourced"},
-   {"value": "heals by transferring wounds", "quote": "Wounds similar to Jane's are inflicted against Tommy; Jane's wounds simultaneously heal", "confidence": "sourced"},
-   {"value": "traps victims inside", "quote": "the elevator is broken and a fallen tree is blocking the only exit", "confidence": "sourced"}
+   {
+    "value": "feels inflicted pain",
+    "quote": "able to feel whatever pain her body endures, though she appears to be dead",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cannot be destroyed",
+    "quote": "Tommy extinguishes the quickly-spreading fire but finds the body still intact",
+    "confidence": "sourced"
+   },
+   {
+    "value": "heals by transferring wounds",
+    "quote": "Wounds similar to Jane's are inflicted against Tommy; Jane's wounds simultaneously heal",
+    "confidence": "sourced"
+   },
+   {
+    "value": "traps victims inside",
+    "quote": "the elevator is broken and a fallen tree is blocking the only exit",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "father and son", "relation_to_threat": "stranger", "detail": "coroners Tommy and Austin Tilden", "quote": "a morgue staffed by local coroner Tommy Tilden and his son Austin", "confidence": "sourced"},
-   {"value": "girlfriend", "relation_to_threat": "stranger", "detail": "Emma, killed by mistake", "quote": "discover that he has just killed Emma, who had just returned to meet Austin", "confidence": "sourced"},
-   {"value": "household", "relation_to_threat": "stranger", "quote": "the basement of a house where an inexplicable multiple homicide took place", "confidence": "sourced"}
+   {
+    "value": "father and son",
+    "relation_to_threat": "stranger",
+    "detail": "coroners Tommy and Austin Tilden",
+    "quote": "a morgue staffed by local coroner Tommy Tilden and his son Austin",
+    "confidence": "sourced"
+   },
+   {
+    "value": "girlfriend",
+    "relation_to_threat": "stranger",
+    "detail": "Emma, killed by mistake",
+    "quote": "discover that he has just killed Emma, who had just returned to meet Austin",
+    "confidence": "sourced"
+   },
+   {
+    "value": "household",
+    "relation_to_threat": "stranger",
+    "quote": "the basement of a house where an inexplicable multiple homicide took place",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "everyone dies", "quote": "causing him to trip over the stair railing and fall to his death", "confidence": "sourced"},
-   {"value": "cycle passes on", "quote": "During the ambulance ride, the radio spontaneously turns on, and Jane's toe twitches", "confidence": "sourced"}
+   {
+    "value": "everyone dies",
+    "quote": "causing him to trip over the stair railing and fall to his death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cycle passes on",
+    "quote": "During the ambulance ride, the radio spontaneously turns on, and Jane's toe twitches",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "corpse", "state": "intact, half-buried", "when": "opening", "role": "threat", "quote": "finds the intact, half-buried corpse of an unidentified Jane Doe in the basement", "confidence": "sourced"},
-   {"value": "cloudy eyes", "when": "early", "role": "clue", "quote": "her eyes are cloudy, suggesting she has been dead for several days", "confidence": "sourced"},
-   {"value": "tooth wrapped in cloth", "when": "middle", "role": "clue", "quote": "he finds Jane's missing tooth in her stomach, wrapped in a piece of cloth", "confidence": "sourced"},
-   {"value": "cat", "state": "mortally wounded", "when": "middle", "role": "omen", "quote": "finding their cat, Stanley, mortally wounded", "confidence": "sourced"},
-   {"value": "radio", "state": "changes by itself", "when": "middle", "role": "omen", "quote": "The radio spontaneously begins changing stations", "confidence": "sourced"},
-   {"value": "axe", "when": "late", "role": "weapon", "quote": "Austin hacks at it with an emergency axe", "confidence": "sourced"},
-   {"value": "symbols carved in skin", "when": "middle", "role": "clue", "quote": "similar symbols are carved into the inside of her skin", "confidence": "sourced"},
-   {"value": "twitching toe", "when": "ending", "role": "omen", "quote": "Jane's toe twitches", "confidence": "sourced"}
+   {
+    "value": "corpse",
+    "state": "intact, half-buried",
+    "when": "opening",
+    "role": "threat",
+    "quote": "finds the intact, half-buried corpse of an unidentified Jane Doe in the basement",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cloudy eyes",
+    "when": "early",
+    "role": "clue",
+    "quote": "her eyes are cloudy, suggesting she has been dead for several days",
+    "confidence": "sourced"
+   },
+   {
+    "value": "tooth wrapped in cloth",
+    "when": "middle",
+    "role": "clue",
+    "quote": "he finds Jane's missing tooth in her stomach, wrapped in a piece of cloth",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cat",
+    "state": "mortally wounded",
+    "when": "middle",
+    "role": "omen",
+    "quote": "finding their cat, Stanley, mortally wounded",
+    "confidence": "sourced"
+   },
+   {
+    "value": "radio",
+    "state": "changes by itself",
+    "when": "middle",
+    "role": "omen",
+    "quote": "The radio spontaneously begins changing stations",
+    "confidence": "sourced"
+   },
+   {
+    "value": "axe",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Austin hacks at it with an emergency axe",
+    "confidence": "sourced"
+   },
+   {
+    "value": "symbols carved in skin",
+    "when": "middle",
+    "role": "clue",
+    "quote": "similar symbols are carved into the inside of her skin",
+    "confidence": "sourced"
+   },
+   {
+    "value": "twitching toe",
+    "when": "ending",
+    "role": "omen",
+    "quote": "the radio spontaneously turns on, and Jane's toe twitches.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "body found at crime scene", "when": "opening", "quote": "the sheriff department finds the intact, half-buried corpse of an unidentified Jane Doe", "confidence": "sourced"},
-   {"order": 2, "value": "autopsy reveals impossibilities", "when": "early", "role": "clue", "quote": "Despite no external signs of trauma, her wrist and ankle bones are shattered", "confidence": "sourced"},
-   {"order": 3, "value": "pet killed", "when": "middle", "role": "omen", "quote": "finding their cat, Stanley, mortally wounded", "confidence": "sourced"},
-   {"order": 4, "value": "trapped inside", "when": "middle", "quote": "the elevator is broken and a fallen tree is blocking the only exit", "confidence": "sourced"},
-   {"order": 5, "value": "loved one killed by mistake", "when": "late", "role": "turn", "quote": "discover that he has just killed Emma", "confidence": "sourced"},
-   {"order": 6, "value": "witch backstory decoded", "when": "late", "role": "clue", "quote": "Tommy deduces that Jane had been tortured to death after being accused of witchcraft", "confidence": "sourced"},
-   {"order": 7, "value": "father sacrifices himself", "when": "late", "quote": "Tommy offers Jane himself as a sacrifice, begging her to spare Austin", "confidence": "sourced"},
-   {"order": 8, "value": "son dies, corpse moves on", "when": "ending", "quote": "the radio spontaneously turns on, and Jane's toe twitches", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "body found at crime scene",
+    "when": "opening",
+    "quote": "the sheriff department finds the intact, half-buried corpse of an unidentified Jane Doe",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "autopsy reveals impossibilities",
+    "when": "early",
+    "role": "clue",
+    "quote": "Despite no external signs of trauma, her wrist and ankle bones are shattered",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "pet killed",
+    "when": "middle",
+    "role": "omen",
+    "quote": "finding their cat, Stanley, mortally wounded",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "trapped inside",
+    "when": "middle",
+    "quote": "the elevator is broken and a fallen tree is blocking the only exit",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "loved one killed by mistake",
+    "when": "late",
+    "role": "turn",
+    "quote": "discover that he has just killed Emma",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "witch backstory decoded",
+    "when": "late",
+    "role": "clue",
+    "quote": "Tommy deduces that Jane had been tortured to death after being accused of witchcraft",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "father sacrifices himself",
+    "when": "late",
+    "quote": "Tommy offers Jane himself as a sacrifice, begging her to spare Austin",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "son dies, corpse moves on",
+    "when": "ending",
+    "quote": "the radio spontaneously turns on, and Jane's toe twitches",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],

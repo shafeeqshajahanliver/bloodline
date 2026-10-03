@@ -1,0 +1,66 @@
+{
+ "film": "2024-longlegs",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "occult serial killer", "detail": "Longlegs", "quote": "an occult-obsessed serial killer responsible for a string of family murders across Oregon", "confidence": "sourced"},
+   {"value": "cursed object", "detail": "Satanic dolls", "quote": "create Satanic dolls that Ruth, posing as a nun, delivered to households", "confidence": "sourced"},
+   {"value": "mother as accomplice", "detail": "Ruth", "quote": "Ruth approaches the car and fatally shoots Browning", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "satanic pact", "quote": "In return for sparing Lee, Longlegs demanded Ruth's servitude", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to serve the devil", "quote": "Longlegs claims to serve \"the man downstairs\"", "confidence": "sourced"},
+   {"value": "to complete a pattern", "detail": "an occult triangle of dates", "quote": "Lee rushes to save the Carters, whose deaths would complete Longlegs' triangle", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "parent sells out child", "detail": "Ruth's servitude in exchange for Lee's life", "quote": "Longlegs demanded Ruth's servitude; Ruth agreed", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "investigator assigned case", "quote": "FBI agent Lee Harker is assigned by her supervisor, William Carter, to a case involving a series of murder–suicides", "confidence": "sourced"},
+   {"value": "receiving a gift", "detail": "a doll delivered to the household", "quote": "She finds Ruth has already delivered the doll and possessed the family", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "father kills family", "quote": "Each case consists of a father killing his family, then himself", "confidence": "sourced"},
+   {"value": "targets daughters' birthdays", "quote": "each family had a 9-year-old daughter born on the 14th day of the month", "confidence": "sourced"},
+   {"value": "doll controls mind", "quote": "Lee's doll blocked her memories of Longlegs while influencing her with his magic", "confidence": "sourced"},
+   {"value": "destroy the doll", "quote": "Lee tries to destroy the doll, but her revolver is now empty", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "families", "relation_to_threat": "stranger", "quote": "a series of murder–suicides in Oregon", "confidence": "sourced"},
+   {"value": "investigator", "relation_to_threat": "family", "detail": "Lee, spared as a child, linked through her mother", "quote": "a Polaroid that reveals Longlegs to be the man who visited a young Lee on her birthday", "confidence": "sourced"},
+   {"value": "supervisor's family", "relation_to_threat": "stranger", "detail": "the Carters", "quote": "After William murders his wife, Anna, Lee fatally shoots him to protect Ruby", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat survives", "detail": "the doll remains intact", "quote": "Lee puts her gun down, telling Ruby they must go, but both stare continuously at the doll", "confidence": "sourced"},
+   {"value": "protagonist kills parent", "quote": "Ruth lunges at Ruby with a dagger, forcing Lee to kill her", "confidence": "sourced"},
+   {"value": "closing sting", "quote": "giddily sings \"Happy Birthday\" to Lee Harker", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "polaroid camera", "state": "child's", "when": "opening", "role": "clue", "quote": "a young girl with a Polaroid camera follows a mysterious voice", "confidence": "sourced"},
+   {"value": "pale makeup", "when": "opening", "role": "omen", "quote": "encounters an erratic man in pale makeup", "confidence": "sourced"},
+   {"value": "coded letters", "state": "satanic glyphs", "when": "early", "role": "clue", "quote": "leaving behind a letter with Satanic glyphs signed \"Longlegs\"", "confidence": "sourced"},
+   {"value": "calendar triangle", "when": "early", "role": "clue", "quote": "their respective dates form an occult triangle symbol on a calendar, with one date missing", "confidence": "sourced"},
+   {"value": "birthday card", "state": "coded", "when": "early", "role": "omen", "quote": "Lee receives a coded birthday card from Longlegs", "confidence": "sourced"},
+   {"value": "doll", "state": "metal orb in head", "when": "middle", "role": "threat", "quote": "a doll containing a high-energy metal orb inside its head", "confidence": "sourced"},
+   {"value": "metal table", "when": "late", "role": "turn", "quote": "taking his own life by repeatedly bashing his face and forehead onto the metal table", "confidence": "sourced"},
+   {"value": "dagger", "when": "ending", "role": "weapon", "quote": "Ruth lunges at Ruby with a dagger", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "child meets the killer", "when": "opening", "role": "omen", "quote": "a young girl with a Polaroid camera follows a mysterious voice and encounters an erratic man in pale makeup", "confidence": "sourced"},
+   {"order": 2, "value": "investigator assigned", "when": "early", "role": "trigger", "quote": "FBI agent Lee Harker is assigned by her supervisor, William Carter", "confidence": "sourced"},
+   {"order": 3, "value": "pattern found", "when": "early", "role": "clue", "quote": "their respective dates form an occult triangle symbol on a calendar", "confidence": "sourced"},
+   {"order": 4, "value": "investigator's past revealed", "when": "middle", "role": "turn", "quote": "a Polaroid that reveals Longlegs to be the man who visited a young Lee on her birthday", "confidence": "sourced"},
+   {"order": 5, "value": "killer's suicide", "when": "late", "quote": "taking his own life by repeatedly bashing his face and forehead onto the metal table", "confidence": "sourced"},
+   {"order": 6, "value": "mother revealed as accomplice", "when": "late", "role": "turn", "quote": "Ruth agreed, allowing Longlegs to live in the Harker basement", "confidence": "sourced"},
+   {"order": 7, "value": "family possessed, kills", "when": "ending", "quote": "After William murders his wife, Anna, Lee fatally shoots him to protect Ruby", "confidence": "sourced"},
+   {"order": 8, "value": "doll remains", "when": "ending", "quote": "both stare continuously at the doll", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}
