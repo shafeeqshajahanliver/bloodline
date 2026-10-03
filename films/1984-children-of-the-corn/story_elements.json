@@ -1,63 +1,413 @@
 {
  "film": "1984-children-of-the-corn",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "child cult", "detail": "Gatlin's children led by Isaac and Malachai", "quote": "indoctrinates them into a religious cult based around a bloodthirsty deity", "confidence": "sourced"},
-   {"value": "false god", "detail": "\"He Who Walks Behind the Rows\"", "quote": "a malevolent entity referred to as \"He Who Walks Behind the Rows\"", "confidence": "sourced"}
+   {
+    "value": "child cult",
+    "detail": "Gatlin's children led by Isaac and Malachai",
+    "quote": "indoctrinates them into a religious cult based around a bloodthirsty deity",
+    "confidence": "sourced"
+   },
+   {
+    "value": "false god",
+    "detail": "\"He Who Walks Behind the Rows\"",
+    "quote": "a malevolent entity referred to as \"He Who Walks Behind the Rows\"",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "failed harvest", "quote": "When the corn crop fails one year, the townsfolk turn to prayer to ensure a successful harvest", "confidence": "sourced"}
+   {
+    "value": "failed harvest",
+    "quote": "When the corn crop fails one year, the townsfolk turn to prayer to ensure a successful harvest",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "sacrifice", "quote": "entices the town's children to ritually murder all the town's adults", "confidence": "sourced"},
-   {"value": "a good harvest", "quote": "to ensure a successful corn harvest", "confidence": "sourced"}
+   {
+    "value": "sacrifice",
+    "quote": "entices the town's children to ritually murder all the town's adults",
+    "confidence": "sourced"
+   },
+   {
+    "value": "a good harvest",
+    "quote": "to ensure a successful corn harvest",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the outsider's surrender",
+    "detail": "Malachai demands Burt give himself up for Vicky",
+    "source": "screenplay",
+    "quote": "Her blood will spill, Outlander! Unless you give yourself up unto Him.",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "children kill parents", "quote": "murdering all of the adults in town as human sacrifices", "confidence": "sourced"}
+   {
+    "value": "children kill parents",
+    "quote": "murdering all of the adults in town as human sacrifices",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "outsiders pass through", "quote": "Vicky and her husband, Burt, travel through rural Nebraska on their way to Seattle", "confidence": "sourced"},
-   {"value": "accident on the road", "quote": "he stumbles out into the road and Burt accidentally runs over him", "confidence": "sourced"}
+   {
+    "value": "outsiders pass through",
+    "quote": "Vicky and her husband, Burt, travel through rural Nebraska on their way to Seattle",
+    "confidence": "sourced"
+   },
+   {
+    "value": "accident on the road",
+    "quote": "he stumbles out into the road and Burt accidentally runs over him",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "adults taken at eighteen", "quote": "Amos has turned 18, so is considered old enough for his \"passing\"—joining their god in the cornfield", "confidence": "sourced"},
-   {"value": "destroyed by fire", "quote": "the cornfield must be destroyed by fire in order to stop the false god", "confidence": "sourced"},
-   {"value": "breaking the pact brings punishment", "quote": "Isaac warns that sacrificing him will break their pact with He Who Walks Behind the Rows and the children will be punished", "confidence": "sourced"}
+   {
+    "value": "adults taken at eighteen",
+    "quote": "Amos has turned 18, so is considered old enough for his \"passing\"—joining their god in the cornfield",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Not die. We go to Him, on the first night of our 19th year."
+     }
+    ]
+   },
+   {
+    "value": "destroyed by fire",
+    "quote": "the cornfield must be destroyed by fire in order to stop the false god",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "BURT Lake of fire...Fire! He must have been trying to burn the field."
+     }
+    ]
+   },
+   {
+    "value": "breaking the pact brings punishment",
+    "quote": "Isaac warns that sacrificing him will break their pact with He Who Walks Behind the Rows and the children will be punished",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "ISAAC No! You blaspheme! He will punish you! The jaws of Hell will devour you. All of you!"
+     }
+    ]
+   },
+   {
+    "value": "drawings and music forbidden",
+    "source": "screenplay",
+    "quote": "you know crayons and drawings are forbidden.... just like having a record player.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "god walks at night",
+    "source": "screenplay",
+    "quote": "It is coming Night, and Night is His time!",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "couple on a journey", "relation_to_threat": "stranger", "detail": "Burt and Vicky", "quote": "as well as a couple driving across the country", "confidence": "sourced"},
-   {"value": "adults of the town", "relation_to_threat": "family", "quote": "murdering all of the adults in town as human sacrifices", "confidence": "sourced"},
-   {"value": "cult leader", "relation_to_threat": "community", "detail": "Isaac, sacrificed by his own followers", "quote": "During Isaac's sacrifice, a supernatural light appears and devours him", "confidence": "sourced"}
+   {
+    "value": "couple on a journey",
+    "relation_to_threat": "stranger",
+    "detail": "Burt and Vicky",
+    "quote": "as well as a couple driving across the country",
+    "confidence": "sourced"
+   },
+   {
+    "value": "adults of the town",
+    "relation_to_threat": "family",
+    "quote": "murdering all of the adults in town as human sacrifices",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cult leader",
+    "relation_to_threat": "community",
+    "detail": "Isaac, sacrificed by his own followers",
+    "quote": "During Isaac's sacrifice, a supernatural light appears and devours him",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "Burt tosses a Molotov cocktail into the field, setting it alight and destroying the demon along with Isaac", "confidence": "sourced"},
-   {"value": "survivors rescue children", "quote": "they depart with the children on foot", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "Burt tosses a Molotov cocktail into the field, setting it alight and destroying the demon along with Isaac",
+    "confidence": "sourced"
+   },
+   {
+    "value": "survivors rescue children",
+    "quote": "they depart with the children on foot",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "cornfield", "when": "opening", "role": "setting", "quote": "an agricultural community surrounded by huge cornfields", "confidence": "sourced"},
-   {"value": "boy with cut throat", "when": "early", "role": "omen", "quote": "Burt discovers that his throat was cut beforehand", "confidence": "sourced"},
-   {"value": "cross", "when": "middle", "role": "threat", "quote": "they place her on a cross to be sacrificed", "confidence": "sourced"},
-   {"value": "blood", "state": "drunk from pentagram cut", "when": "middle", "role": "symbol", "quote": "drinking his blood from a pentagram-shaped cut on his body", "confidence": "sourced"},
-   {"value": "supernatural light", "state": "devouring", "when": "late", "role": "threat", "quote": "a supernatural light appears and devours him", "confidence": "sourced"},
-   {"value": "walking corpse", "when": "late", "role": "threat", "quote": "the walking corpse of Isaac returns to punish Malachai", "confidence": "sourced"},
-   {"value": "bible", "when": "ending", "role": "clue", "quote": "Reading from Job's Bible, Vicky realizes that the cornfield must be destroyed by fire", "confidence": "sourced"},
-   {"value": "fire", "when": "ending", "role": "weapon", "quote": "Burt tosses a Molotov cocktail into the field, setting it alight", "confidence": "sourced"}
+   {
+    "value": "cornfield",
+    "when": "opening",
+    "role": "setting",
+    "quote": "an agricultural community surrounded by huge cornfields",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The corn rustles ever so slightly in front of him, but there is no breeze."
+     }
+    ]
+   },
+   {
+    "value": "boy with cut throat",
+    "when": "early",
+    "role": "omen",
+    "quote": "Burt discovers that his throat was cut beforehand",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The eyes are open and we can see very plainly that Joseph's throat has been cut from ear to ear."
+     }
+    ]
+   },
+   {
+    "value": "cross",
+    "when": "middle",
+    "role": "threat",
+    "quote": "they place her on a cross to be sacrificed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Vicky, now unconscious, is still up on the cross next to The Blue Man."
+     }
+    ]
+   },
+   {
+    "value": "blood",
+    "state": "drunk from pentagram cut",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "drinking his blood from a pentagram-shaped cut on his body",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Deigan takes these and makes an incision in his chest, over his heart. He begins to draw a PENTAGRAM."
+     }
+    ]
+   },
+   {
+    "value": "supernatural light",
+    "state": "devouring",
+    "when": "late",
+    "role": "threat",
+    "quote": "a supernatural light appears and devours him",
+    "confidence": "sourced"
+   },
+   {
+    "value": "walking corpse",
+    "when": "late",
+    "role": "threat",
+    "quote": "the walking corpse of Isaac returns to punish Malachai",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Isaac is already long since dead. He drags Malachai back into the corn with irresistible strength."
+     }
+    ]
+   },
+   {
+    "value": "bible",
+    "when": "ending",
+    "role": "clue",
+    "quote": "Reading from Job's Bible, Vicky realizes that the cornfield must be destroyed by fire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "It's from REVELATIONS, CHAPTER 20. VERSE 10 is circled in RED."
+     }
+    ]
+   },
+   {
+    "value": "fire",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "Burt tosses a Molotov cocktail into the field, setting it alight",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "THE CORNFIELD EXPLODES IN FLAME becoming a veritable LAKE OF FIRE."
+     }
+    ]
+   },
+   {
+    "value": "crayon drawings",
+    "state": "forbidden, prophetic",
+    "when": "opening",
+    "role": "clue",
+    "source": "screenplay",
+    "quote": "Semi-conscious in her fever, Sarah spills a box of CRAYONS and clutches a BLACK one.",
+    "confidence": "sourced",
+    "detail": "Sarah's drawings record the massacre and foretell the outsiders' arrival",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "you know crayons and drawings are forbidden.... just like having a record player."
+     }
+    ]
+   },
+   {
+    "value": "dog",
+    "state": "runs into the corn, lost",
+    "when": "early",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "Sarge, barking feverishly, runs into the cornfield.",
+    "confidence": "sourced",
+    "detail": "Diehl's hound Sarge vanishes into the corn before Diehl is killed"
+   },
+   {
+    "value": "corn crucifix",
+    "when": "early",
+    "role": "symbol",
+    "source": "screenplay",
+    "quote": "The cob has been cut in half lengthwise and notched at the top into a cross. It's a monstrous corruption.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "names written in blood",
+    "when": "middle",
+    "role": "clue",
+    "source": "screenplay",
+    "quote": "He unfurls it, revealing a list of names, all written in blood like Amos'.",
+    "confidence": "sourced",
+    "detail": "a scroll of every child who went to Him on turning nineteen"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "children massacre adults", "when": "opening", "quote": "Isaac and his subordinate, Malachai, lead the children in a revolution, murdering all of the adults in town", "confidence": "sourced"},
-   {"order": 2, "value": "couple hits fleeing boy", "when": "early", "role": "trigger", "quote": "he stumbles out into the road and Burt accidentally runs over him", "confidence": "sourced"},
-   {"order": 3, "value": "last adult killed", "when": "early", "quote": "Malachai breaks the pact and murders him after Diehl tries to steer the couple away from Gatlin", "confidence": "sourced"},
-   {"order": 4, "value": "wife taken for sacrifice", "when": "middle", "quote": "Malachai and his followers capture Vicky and take her to the cornfield", "confidence": "sourced"},
-   {"order": 5, "value": "cult turns on its leader", "when": "late", "role": "turn", "quote": "Malachai takes over, tired of Isaac's preaching, and orders Isaac to be sacrificed instead of Vicky", "confidence": "sourced"},
-   {"order": 6, "value": "god takes its due", "when": "late", "quote": "During Isaac's sacrifice, a supernatural light appears and devours him", "confidence": "sourced"},
-   {"order": 7, "value": "field burned", "when": "ending", "quote": "Burt tosses a Molotov cocktail into the field, setting it alight and destroying the demon", "confidence": "sourced"},
-   {"order": 8, "value": "escape on foot", "when": "ending", "quote": "Rachel attacks Burt, but Vicky knocks her out and they depart with the children on foot", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "children massacre adults",
+    "when": "opening",
+    "quote": "Isaac and his subordinate, Malachai, lead the children in a revolution, murdering all of the adults in town",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "MARIE Has four cups of coffee on a tray. She slips a white powder into them from a packet in her hand."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "couple hits fleeing boy",
+    "when": "early",
+    "role": "trigger",
+    "quote": "he stumbles out into the road and Burt accidentally runs over him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "There's a loud THUMP as it strikes Joseph's body, which was crumpling even before impact."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "dog vanishes into the corn",
+    "when": "early",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "Sarge, barking feverishly, runs into the cornfield.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "last adult killed",
+    "when": "early",
+    "quote": "Malachai breaks the pact and murders him after Diehl tries to steer the couple away from Gatlin",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "prophecy of the outsiders",
+    "when": "middle",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "I will send outlanders amongst you, a man and a woman, and these outlanders will be un- believers and profaners of the Holy",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "wife taken for sacrifice",
+    "when": "middle",
+    "quote": "Malachai and his followers capture Vicky and take her to the cornfield",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "cult turns on its leader",
+    "when": "late",
+    "role": "turn",
+    "quote": "Malachai takes over, tired of Isaac's preaching, and orders Isaac to be sacrificed instead of Vicky",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "god takes its due",
+    "when": "late",
+    "quote": "During Isaac's sacrifice, a supernatural light appears and devours him",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "field burned",
+    "when": "ending",
+    "quote": "Burt tosses a Molotov cocktail into the field, setting it alight and destroying the demon",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "THE CORNFIELD EXPLODES IN FLAME becoming a veritable LAKE OF FIRE."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "god sinks into the earth",
+    "when": "ending",
+    "role": "turn",
+    "source": "screenplay",
+    "quote": "and then IMPLODES IN ON ITSELF, turning into a vortex that disappears down into the earth.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "escape on foot",
+    "when": "ending",
+    "quote": "Rachel attacks Burt, but Vicky knocks her out and they depart with the children on foot",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

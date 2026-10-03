@@ -1,63 +1,454 @@
 {
  "film": "1971-let-s-scare-jessica-to-death",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vampire", "detail": "Emily, possibly the drowned Abigail Bishop", "quote": "another strange, mysterious young woman she has let into her home may actually be a vampire", "confidence": "sourced"},
-   {"value": "hostile townspeople", "detail": "scarred locals who follow Emily", "quote": "She observes that the townspeople all bear scars on their necks or wrists", "confidence": "sourced"},
-   {"value": "madness", "quote": "Jessica laments her inability to discern between madness and sanity", "confidence": "observed"}
+   {
+    "value": "vampire",
+    "detail": "Emily, possibly the drowned Abigail Bishop",
+    "quote": "another strange, mysterious young woman she has let into her home may actually be a vampire",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hostile townspeople",
+    "detail": "scarred locals who follow Emily",
+    "quote": "She observes that the townspeople all bear scars on their necks or wrists",
+    "confidence": "sourced"
+   },
+   {
+    "value": "madness",
+    "quote": "Jessica laments her inability to discern between madness and sanity",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:46",
+      "quote": "Madness or sanity, I don't know which is which."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "woman who drowned", "detail": "Abigail Bishop, drowned in 1880 before her wedding", "quote": "Abigail drowned in 1880 just before her wedding day. Legend claims that she is still alive, roving the island as a vampire", "confidence": "sourced"}
+   {
+    "value": "woman who drowned",
+    "detail": "Abigail Bishop, drowned in 1880 before her wedding",
+    "quote": "Abigail drowned in 1880 just before her wedding day. Legend claims that she is still alive, roving the island as a vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:59",
+      "quote": "He tell you the stories about Abigail Bishop drowning?"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "blood", "quote": "Emily attempts to bite Jessica's neck", "confidence": "observed"},
-   {"value": "to spread", "detail": "the whole town bears bite scars", "quote": "the townspeople all bear scars on their necks or wrists", "confidence": "observed"}
+   {
+    "value": "blood",
+    "quote": "Emily attempts to bite Jessica's neck",
+    "confidence": "observed"
+   },
+   {
+    "value": "to spread",
+    "detail": "the whole town bears bite scars",
+    "quote": "the townspeople all bear scars on their necks or wrists",
+    "confidence": "observed"
+   },
+   {
+    "value": "to take her husband",
+    "source": "subtitles",
+    "at": "01:22:55",
+    "quote": "You're home. Duncan is mine now. You're home now.",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "death before a wedding", "quote": "Abigail drowned in 1880 just before her wedding day", "confidence": "observed"}
+   {
+    "value": "death before a wedding",
+    "quote": "Abigail drowned in 1880 just before her wedding day",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:37",
+      "quote": "Abigail never got to wear that wedding dress."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "moving into a new home", "detail": "a rundown farmhouse", "quote": "purchased a rundown farmhouse outside of the city", "confidence": "sourced"},
-   {"value": "an invitation", "quote": "When Emily offers to move on, Jessica invites her to dine with them and stay the night", "confidence": "sourced"}
+   {
+    "value": "moving into a new home",
+    "detail": "a rundown farmhouse",
+    "quote": "purchased a rundown farmhouse outside of the city",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:36",
+      "quote": "It's a farm on Cove Road called the Old Bishop Place."
+     }
+    ]
+   },
+   {
+    "value": "an invitation",
+    "quote": "When Emily offers to move on, Jessica invites her to dine with them and stay the night",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "must be invited in", "quote": "mysterious young woman she has let into her home", "confidence": "observed"},
-   {"value": "no one believes her", "quote": "for fear that they will think she is relapsing", "confidence": "observed"}
+   {
+    "value": "must be invited in",
+    "quote": "mysterious young woman she has let into her home",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:42",
+      "quote": "Look, why don't you stay and have dinner with us and spend the night?"
+     }
+    ]
+   },
+   {
+    "value": "no one believes her",
+    "quote": "for fear that they will think she is relapsing",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:16",
+      "quote": "Don't tell them. They won't believe you."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "fragile woman", "relation_to_threat": "stranger", "detail": "Jessica, just released from a mental institution", "quote": "Jessica has been released from a mental institution to the care of her husband", "confidence": "sourced"},
-   {"value": "husband", "relation_to_threat": "family", "detail": "Duncan, seduced by Emily", "quote": "Jessica forces him to sleep on the couch, where he is seduced by Emily", "confidence": "sourced"},
-   {"value": "friend", "relation_to_threat": "stranger", "detail": "Woody", "quote": "comes across Woody's corpse, his throat slashed", "confidence": "sourced"}
+   {
+    "value": "fragile woman",
+    "relation_to_threat": "stranger",
+    "detail": "Jessica, just released from a mental institution",
+    "quote": "Jessica has been released from a mental institution to the care of her husband",
+    "confidence": "sourced"
+   },
+   {
+    "value": "husband",
+    "relation_to_threat": "family",
+    "detail": "Duncan, seduced by Emily",
+    "quote": "Jessica forces him to sleep on the couch, where he is seduced by Emily",
+    "confidence": "sourced"
+   },
+   {
+    "value": "friend",
+    "relation_to_threat": "stranger",
+    "detail": "Woody",
+    "quote": "comes across Woody's corpse, his throat slashed",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "protagonist kills loved one", "detail": "she stabs a figure that turns out to be Duncan", "quote": "As the body floats away, Jessica sees that it is Duncan", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "From the shore, Emily and the townsmen watch her", "confidence": "sourced"},
-   {"value": "ambiguous", "quote": "Jessica laments her inability to discern between madness and sanity", "confidence": "sourced"}
+   {
+    "value": "protagonist kills loved one",
+    "detail": "she stabs a figure that turns out to be Duncan",
+    "quote": "As the body floats away, Jessica sees that it is Duncan",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat survives",
+    "quote": "From the shore, Emily and the townsmen watch her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ambiguous",
+    "quote": "Jessica laments her inability to discern between madness and sanity",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:22",
+      "quote": "Nightmares or dreams."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "water", "state": "something grabs from below", "when": "early", "role": "threat", "quote": "Jessica is grabbed by someone under the water in the cove while she is swimming", "confidence": "sourced"},
-   {"value": "portrait", "state": "returns by itself", "when": "middle", "role": "clue", "quote": "finds the portrait of the Bishop family, which she and Duncan had sold to Dorker the previous day, back in the attic", "confidence": "sourced"},
-   {"value": "bandages and scars", "when": "early", "role": "omen", "quote": "the men in the nearby town, all of whom are bandaged in some way", "confidence": "sourced"},
-   {"value": "wedding gown", "state": "rising from water", "when": "late", "role": "threat", "quote": "reemerging from the water in a Victorian wedding gown", "confidence": "sourced"},
-   {"value": "grave", "when": "middle", "role": "clue", "quote": "make a headstone rubbing on Abigail Bishop's grave", "confidence": "sourced"},
-   {"value": "corpse in a bass case", "when": "late", "role": "turn", "quote": "knocking over Duncan's bass case, which contains the corpse of the mute blonde woman", "confidence": "sourced"},
-   {"value": "knife", "when": "late", "role": "weapon", "quote": "Emily then enters the room brandishing a knife", "confidence": "sourced"}
+   {
+    "value": "water",
+    "state": "something grabs from below",
+    "when": "early",
+    "role": "threat",
+    "quote": "Jessica is grabbed by someone under the water in the cove while she is swimming",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:38",
+      "quote": "Out there. In the water."
+     }
+    ]
+   },
+   {
+    "value": "portrait",
+    "state": "returns by itself",
+    "when": "middle",
+    "role": "clue",
+    "quote": "finds the portrait of the Bishop family, which she and Duncan had sold to Dorker the previous day, back in the attic",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:31",
+      "quote": "I was just looking at the picture. It looks so much like you."
+     }
+    ]
+   },
+   {
+    "value": "bandages and scars",
+    "when": "early",
+    "role": "omen",
+    "quote": "the men in the nearby town, all of whom are bandaged in some way",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:52",
+      "quote": "Look at those bandages. I think these guys are left over from the Civil War."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:36:34",
+      "quote": "Duncan, why are they all bandaged?"
+     }
+    ]
+   },
+   {
+    "value": "wedding gown",
+    "state": "rising from water",
+    "when": "late",
+    "role": "threat",
+    "quote": "reemerging from the water in a Victorian wedding gown",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:22",
+      "quote": "Do you like my new dress? My new, old dress?"
+     }
+    ]
+   },
+   {
+    "value": "grave",
+    "when": "middle",
+    "role": "clue",
+    "quote": "make a headstone rubbing on Abigail Bishop's grave",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:17",
+      "quote": "\" Frail as the leaves that shiver on a spray."
+     }
+    ]
+   },
+   {
+    "value": "corpse in a bass case",
+    "when": "late",
+    "role": "turn",
+    "quote": "knocking over Duncan's bass case, which contains the corpse of the mute blonde woman",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:26",
+      "quote": "What have we got in the case? My mother-in-law."
+     }
+    ]
+   },
+   {
+    "value": "knife",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Emily then enters the room brandishing a knife",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mole",
+    "state": "dead",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:43:16",
+    "quote": "- What is it? - It's a mole.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:08",
+      "quote": "or whatever it is that killed the antique dealer killed the mole."
+     }
+    ]
+   },
+   {
+    "value": "hearse",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:11:43",
+    "quote": "Then I saw this hearse coming up the drive.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:10",
+      "quote": "Have you seen the man... The driver of the hearse?"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "moving in, stranger found", "when": "opening", "role": "trigger", "quote": "they are surprised to find a mysterious drifter, Emily, squatting in the home", "confidence": "sourced"},
-   {"order": 2, "value": "voices and apparitions", "when": "early", "role": "omen", "quote": "Jessica begins hearing voices and sees a mysterious young blonde woman looking at her from a distance", "confidence": "sourced"},
-   {"order": 3, "value": "local legend told", "when": "middle", "quote": "Legend claims that she is still alive, roving the island as a vampire", "confidence": "sourced"},
-   {"order": 4, "value": "body vanishes", "when": "middle", "quote": "By the time Jessica finds Duncan, however, the body is gone", "confidence": "sourced"},
-   {"order": 5, "value": "likeness revealed", "when": "middle", "role": "turn", "quote": "Abigail Bishop, as seen on the photo, bears a striking resemblance to Emily", "confidence": "sourced"},
-   {"order": 6, "value": "vampire attack", "when": "late", "quote": "Emily attempts to bite Jessica's neck, but Jessica flees", "confidence": "sourced"},
-   {"order": 7, "value": "whole town turned", "when": "late", "role": "turn", "quote": "She observes that the townspeople all bear scars on their necks or wrists", "confidence": "sourced"},
-   {"order": 8, "value": "kills husband by mistake", "when": "ending", "quote": "she stabs the person in the back several times with a pole hook", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "framing narration",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:32",
+    "quote": "I sit here and I can't believe that it happened.",
+    "confidence": "sourced",
+    "detail": "repeated word for word at the close",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:07",
+      "quote": "I sit here and I can't believe that it happened."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "moving in, stranger found",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "they are surprised to find a mysterious drifter, Emily, squatting in the home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:40",
+      "quote": "- What's the matter? - Someone's upstairs."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "voices and apparitions",
+    "when": "early",
+    "role": "omen",
+    "quote": "Jessica begins hearing voices and sees a mysterious young blonde woman looking at her from a distance",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:21",
+      "quote": "Jessica, why have you come here?"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "local legend told",
+    "when": "middle",
+    "quote": "Legend claims that she is still alive, roving the island as a vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:52",
+      "quote": "She drowned in the cove behind her house."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "body vanishes",
+    "when": "middle",
+    "quote": "By the time Jessica finds Duncan, however, the body is gone",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "voice lures her to stay",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:06:56",
+    "quote": "You're home now.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "likeness revealed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Abigail Bishop, as seen on the photo, bears a striking resemblance to Emily",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "vampire attack",
+    "when": "late",
+    "quote": "Emily attempts to bite Jessica's neck, but Jessica flees",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "dead girl's warning understood",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:18:37",
+    "quote": "The girl that led me to the body, she was warning me.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "whole town turned",
+    "when": "late",
+    "role": "turn",
+    "quote": "She observes that the townspeople all bear scars on their necks or wrists",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:32",
+      "quote": "The ferry isn't running for you."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "kills husband by mistake",
+    "when": "ending",
+    "quote": "she stabs the person in the back several times with a pole hook",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }
