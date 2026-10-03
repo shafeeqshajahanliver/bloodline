@@ -1,0 +1,130 @@
+# Invasion of the Body Snatchers
+
+Source: https://en.wikipedia.org/wiki/Invasion_of_the_Body_Snatchers (last edited Tue, 08 Sep 2026 21:15:35 GMT). Text CC BY-SA 4.0, retrieved 2026-10-03.
+
+## Lead
+
+Invasion of the Body Snatchers is a 1956 American science-fiction horror film directed by Don Siegel and produced by Walter Wanger. It is adapted by Daniel Mainwaring from Jack Finney's 1954 science-fiction novel The Body Snatchers, originally serialized in Collier's magazine. It stars Kevin McCarthy and Dana Wynter, with supporting roles played by Larry Gates, King Donovan, Carolyn Jones, Jean Willes and Ralph Dumke.
+
+The film's storyline concerns an extraterrestrial invasion that begins in the fictional California town of Santa Mira. Alien plant spores have fallen from space and grown into large seed pods, each one capable of producing a visually identical copy of a human. As each pod reaches full development, it assimilates the physical traits, memories, and personalities of each sleeping person placed near it until only the replacement is left; these duplicates, however, are devoid of all human emotion. Little by little, a local doctor uncovers this "quiet" invasion and attempts to stop it.
+
+The black-and-white film was exhibited in 2.00:1 Superscope and shot in the film noir style. Daniel Mainwaring adapted the screenplay. The film was an independent production but distributed  by Allied Artists Pictures as a double feature with the British science-fiction film The Atomic Man (and in some markets with Indestructible Man).
+
+The film premiered on February 5, 1956. Largely ignored by critics upon release, it proved a financial success and has been retrospectively praised as one of the best and most influential science-fiction films of the 1950s, spawning several remakes and other derivative works. The slang expression "pod people" that arose in late 20th-century U.S. culture refers to the emotionless duplicates seen in the film. Invasion of the Body Snatchers was selected in 1994 for preservation in the United States National Film Registry by the Library of Congress for being "culturally, historically, or aesthetically significant."
+
+## Plot
+
+A psychiatrist, Dr. Hill, is called to a Los Angeles hospital, where a man named Dr. Miles Bennell is being held in custody. Miles recounts the events leading up to his arrest and arrival at the hospital.
+
+In the nearby town of Santa Mira, Miles sees a number of patients suffering from the belief that their relatives have been replaced with identical-looking impostors. Psychiatrist Dr. Dan Kauffman assures Miles that these cases are merely a mass hysteria. Miles's ex-girlfriend Becky Driscoll has recently come back to town after settling a divorce, and they rekindle their relationship. The couple are called to the home of Miles's friend Jack Belicec, who has found a body in his basement. It has no features or fingerprints, but under their observation it takes on the features of Jack. Remembering that Becky's father was uncharacteristically emerging from his basement, Miles searches there and finds a duplicate of Becky. When Miles calls Dan to the scene, the bodies have disappeared, and Dan tells Miles that he is falling for the same hysteria.
+
+Distraught by the incidents, Jack and his wife Teddy spend the night at Miles's place. They find duplicates of themselves emerging from pods in Miles's greenhouse and conclude that the townspeople are being replaced while asleep with copies. Miles tries to make a call to authorities, but the operator claims that all lines are busy and he cannot be put through, so Jack and Teddy drive off to seek help in the next town. Miles and Becky realize that all of Santa Mira's inhabitants have been replaced. They hide at Miles's office for the night.
+
+They observe truckloads of the pods arrive downtown. Chief Nick Grivett directs the others to take them to towns to be planted and used to replace their populations. Dan and Jack arrive at Miles's office with pods for Becky and Miles, and say they and Teddy are now members of an extraterrestrial race that arrived on Earth through seeds which sprouted the pods. After their takeover, humanity will lose all emotions and sense of individuality.
+
+Using misdirection, Miles and Becky overcome and knock out their captors, and leave the office. To avoid recapture, they pretend Dan succeeded in replacing them with emotionless pod people. However, Becky screams at a near-traffic accident, exposing their humanity to the aliens. An alarm is sounded and the couple flees.
+
+The couple hide in a mine outside town. After their pursuers move on they hear music, and Miles leaves Becky to investigate. He sees a farm with hundreds of pods being loaded onto trucks. Miles returns to find Becky succumbing to fatigue. Upon kissing her, he realizes that she has been replaced by a pod person. Becky sounds the alarm as Miles runs away. Desperate, he screams at the drivers on the highway for help.
+
+Miles finishes his story. A driver is wheeled into the hall on a gurney after having been injured in an accident. The attendant recounts that the man had to be dug out from under a load of mysterious pods coming from Santa Mira. With a key detail thus confirmed, Dr. Hill now believes Miles's story. He alerts the police to block the roads in and out of Santa Mira and calls the Federal Bureau of Investigation.
+
+## Production
+
+Novel and screenplay
+Jack Finney's novel ends with the extraterrestrials, who have a lifespan of no more than five years, leaving Earth after they realize that humans are offering strong resistance, despite having little reasonable chance against the alien invasion.
+
+Budgeting and casting
+Invasion of the Body Snatchers was originally scheduled for a 24-day shoot and a budget of US$454,864. The studio later asked Wanger to cut the budget significantly. The producer proposed a shooting schedule of 20 days and a budget of $350,000.
+
+Initially, Wanger considered Gig Young, Dick Powell, Joseph Cotten, and several others for the role of Miles. For Becky, he considered casting Anne Bancroft, Donna Reed, Kim Hunter, Vera Miles, and others. With the lower budget, however, he abandoned these choices and offered the part to Richard Kiley, who had just starred in The Phenix City Story for Allied Artists. Kiley turned the role down and Wanger cast Kevin McCarthy, an Academy Award nominee five years earlier for Death of a Salesman, and relative newcomer Dana Wynter, who had done several major dramatic roles on television.
+
+Future director Sam Peckinpah had a small part as Charlie, a meter reader. Peckinpah was a dialogue coach on five Siegel films in the mid-1950s, including this one, and reportedly worked as an uncredited script doctor for it.
+
+Principal photography
+Originally, producer Wanger and Siegel wanted to film Invasion of the Body Snatchers on location in Mill Valley, California, the town just north of San Francisco, that Jack Finney described in his novel. In the first week of January 1955, Siegel, Wanger, and screenwriter Daniel Mainwaring visited Finney to talk about the film version and to look at Mill Valley. The location proved too expensive, and Siegel with Allied Artist executives, found locations resembling Mill Valley in the Los Angeles area, including Sierra Madre, Chatsworth, Glendale, Los Feliz, Bronson, and Beachwood Canyons, all of which went on to make up the fictional town of "Santa Mira" for the film. In addition to these outdoor locations, much of the film was shot in the Allied Artists studio on the east side of Hollywood.
+
+Invasion of the Body Snatchers was shot by cinematographer Ellsworth Fredericks in 23 days between March 23 and April 27, 1955. The cast and crew worked a six-day week with Sundays off. The production went over schedule by three days because of the night-for-night shooting that Siegel wanted. Additional photography took place in September 1955, filming a frame story on which the studio had insisted (see Original ending). The final budget was $382,190.
+
+Post-production
+The project was originally named The Body Snatchers after the Finney serial, but Wanger wanted to avoid confusion with the 1945 Val Lewton film The Body Snatcher. The producer was unable to come up with a title and accepted the studio's choice, They Come from Another World and that was assigned in summer 1955. Siegel objected to this title and suggested two alternatives, Better Off Dead and Sleep No More, while Wanger offered Evil in the Night and World in Danger. None of these was chosen, and the studio settled on Invasion of the Body Snatchers in late 1955. The film was released at the time in France under the mistranslated title  (literally: Invasion of the defilers of tombs), which remains unchanged today.
+
+Wanger wanted to add a variety of speeches and prefaces. He suggested a voice-over introduction for Miles. While the film was being shot, Wanger tried to get permission in England to use a Winston Churchill quotation as a preface to the film. The producer sought out Orson Welles to voice the preface and a trailer for the film. He wrote speeches for Welles' opening on June 15, 1955, and worked to persuade Welles to do it, but was unsuccessful. Wanger considered science-fiction author Ray Bradbury, instead, but this did not happen, either. Mainwaring eventually wrote the voice-over narration himself.
+
+The studio scheduled three film previews on the last days of June and the first day of July 1955. According to Wanger's memoranda at the time, the previews were successful. Later reports by Mainwaring and Siegel, however, contradict this, claiming that audiences could not follow the film and laughed in the wrong places. In response, the studio removed much of the film's humor, "humanity", and "quality", according to Wanger. He scheduled another preview in mid-August that also did not go well. In later interviews, Siegel pointed out studio policy was to not mix humor with horror.
+
+Wanger saw the final cut in December 1955 and protested the use of the Superscope aspect ratio. Its use had been included in early plans for the film, but the first print was not made until December. Wanger felt that the film lost sharpness and detail. Siegel originally shot Invasion of the Body Snatchers in the 1.85:1 aspect ratio. Superscope was a post-production laboratory process designed to create an anamorphic print from nonanamorphic source material that would be projected at an aspect ratio of 2.00:1.
+
+Original ending
+
+Both Siegel and Mainwaring were satisfied with the film as shot. The original ending did not include the flashback framing, and ended with Miles screaming as truckloads of pods pass him on the road. The studio, wary of a pessimistic conclusion, insisted on adding a prologue and epilogue suggesting a more optimistic outcome to the story, leading to the flashback framing. In this version, the film begins with Bennell in custody in a hospital emergency ward, telling a consulting psychiatrist (Whit Bissell) his story. In the closing scenes, pods are discovered at a highway accident, confirming Bennell's warning, and the authorities are alerted, likely stopping the pod distribution and resolving the extraterrestrial threat.
+
+Mainwaring scripted this framing story and Siegel shot it on September 16, 1955, at the Allied Artists studio. In a later interview, Siegel complained, "The film was nearly ruined by those in charge at Allied Artists who added a preface and ending that I don't like." In his autobiography Siegel added that "Wanger was very much against this, as was I. However, he begged me to shoot it to protect the film, and I reluctantly consented [...]."
+
+While the Internet Movie Database states that the film had been revised to its original ending for a re-release in 1979, Steve Biodrowski of Cinefantastique magazine notes that the film was still being shown with the complete footage, including a 2005 screening at the Academy of Motion Picture Arts and Sciences honoring director Don Siegel.
+
+Although most reviewers disliked it, George Turner (in American Cinematographer) and Danny Peary (in Cult Movies) endorsed the subsequently added frame story. Nonetheless, Peary emphasized that the added scenes changed significantly what he saw as the film's original intention.
+
+Theatrical release
+When the film was released domestically in February 1956, many theaters displayed several pods made of papier-mâché in theater lobbies and entrances, along with large lifelike black-and-white cutouts of McCarthy and Wynter running away from a crowd. The film earned more than $1 million in the first month, and in 1956 alone earned more than $2.5 million in the U.S. When the film was released in the UK (with cuts imposed by the British censors) in late 1956, the film earned the equivalent of more than half-a-million dollars in ticket sales.
+
+## Reception and legacy
+
+Critical reception
+Though Invasion of the Body Snatchers was largely ignored by critics on its initial run, Filmsite.org ranked it as one of the best films of 1956. The film holds a 98% approval rating and 9.1/10 rating at the film review aggregator website Rotten Tomatoes. The site's consensus reads: "One of the best political allegories of the 1950s, Invasion of the Body Snatchers is an efficient, chilling blend of sci-fi and horror." Metacritic, which uses a weighted average, assigned the  a score of 92 out of 100, based on 16 critics, indicating "universal acclaim".
+
+In recent years, critics such as Dan Druker of the Chicago Reader have called the film a "genuine Sci-Fi classic." Leonard Maltin described Invasion of the Body Snatchers as "influential, and still very scary." Time Out called the film one of the "most resonant" and "one of the simplest" of the genre. Mark Steyn described it as "a big film", despite its limited budget.
+
+Invasion of the Body Snatchers was selected in 1994 for preservation in the United States National Film Registry by the Library of Congress as being "culturally, historically, or aesthetically significant". In June 2008, the American Film Institute revealed its "Ten top Ten"—the best 10 films in 10 "classic" American film genres—after polling more than 1,500 people from the creative community. Invasion of the Body Snatchers was acknowledged as the 9th-best film in the science-fiction genre. The film was also placed on AFI's AFI's 100 Years ... 100 Thrills, a list of America's most heart-pounding films.
+
+The film was included on Bravo's 100 Scariest Movie Moments. Similarly, the Chicago Film Critics Association named it the 29th scariest film ever made. IGN ranked it as the 15th-best sci-fi picture. Time magazine included Invasion of the Body Snatchers on their list of 100 all-time best films, the top 10 1950s Sci-Fi Movies, and Top 25 Horror Films. In 1999, Entertainment Weekly listed it as the 53rd best movie of all time. Similarly, the book Four Star Movies: The 101 Greatest Films of All Time placed the movie at #60.
+
+Themes
+Some reviewers saw in the story a commentary on the dangers facing the United States for turning a blind eye to McCarthyism. Leonard Maltin wrote of a McCarthy-era subtext, or of bland conformity in postwar Eisenhower-era America. Others viewed it as an allegory for the loss of personal autonomy and individualism in the Soviet Union or communist systems in general.
+
+For the BBC, David Wood summarized the circulating popular interpretations of the film as: "The sense of postwar, anticommunist paranoia is acute, as is the temptation to view the film as a metaphor for the tyranny of the McCarthy era." Danny Peary in Cult Movies pointed out that the studio-mandated addition of the framing story had changed the film's stance from anti-McCarthyite to anti-communist. Michael Dodd of The Missing Slate has called the movie "one of the most multifaceted horror films ever made", arguing that by "simultaneously exploiting the contemporary fear of infiltration by undesirable elements, as well as a burgeoning concern over homeland totalitarianism in the wake of Senator Joseph McCarthy's notorious communist witch hunt, it may be the clearest window into the American psyche that horror cinema has ever provided."
+
+In An Illustrated History of the Horror Film, Carlos Clarens saw a trend manifesting itself in science-fiction films, dealing with dehumanization and fear of the loss of individual identity, being historically connected to the end of "the Korean War and the well-publicized reports of brainwashing techniques." Comparing Invasion of the Body Snatchers with Robert Aldrich's Kiss Me Deadly and Orson Welles' Touch of Evil, Brian Neve found a sense of disillusionment rather than straightforward messages, with all three films being "less radical in any positive sense than reflective of the decline of [the screenwriters'] great liberal hopes."
+
+Despite a general agreement among film critics regarding these political connotations of the film, actor Kevin McCarthy said in an interview included on the 1998 DVD release that he felt no political allegory was intended. The interviewer stated that he had spoken with the author of the novel, Jack Finney, who professed no specific political allegory in the work.
+
+In his autobiography, I Thought We Were Making Movies, Not History, Walter Mirisch writes: "People began to read meanings into pictures that were never intended. The Invasion of the Body Snatchers is an example of that. I remember reading a magazine article arguing that the picture was intended as an allegory about the communist infiltration of America. From personal knowledge, neither Walter Wanger nor Don Siegel, who directed it, nor Dan Mainwaring, who wrote the script nor original author Jack Finney, nor myself, saw it as anything other than a thriller, pure and simple."
+
+Don Siegel spoke more openly of an existing allegorical subtext, but denied a strictly political point of view: "[...] I felt that this was a very important story. I think that the world is populated by pods and I wanted to show them. I think so many people have no feeling about cultural things, no feeling of pain, of sorrow. [...] The political reference to Senator McCarthy and totalitarianism was inescapable but I tried not to emphasize it because I feel that motion pictures are primarily to entertain and I did not want to preach." Film scholar J.P. Telotte wrote that Siegel intended for pods to be seductive; their spokesperson, a psychiatrist, was chosen to provide an authoritative voice that would appeal to the desire to "abdicate from human responsibility in an increasingly complex and confusing modern world."
+
+Subsequent adaptations
+Three subsequent adaptations of The Body Snatchers have been made: Invasion of the Body Snatchers (1978), Body Snatchers (1993), and The Invasion (2007).
+
+An untitled fifth adaptation from Warner Bros. was reported to be in development in 2017. David Leslie Johnson was signed to be the screenwriter.
+
+## Home media
+
+The film was released on DVD in 1998 by U.S.-label Republic (an identical re-release by Artisan followed in 2002); it includes the Superscope version plus a 1.375:1 Academy ratio version. The latter is not the original full frame edition but a pan and scan reworking of the Superscope edition that loses visual detail.
+
+DVD editions exist on the British market (including a computer-colorized version), German market (as ), and Spanish market (as ).
+
+Several Blu-ray Disc versions have been released, including two bare-bones Blu-ray Disc editions by Olive Films in 2012 and German company Al!ve (under the title ) in 2018. Sinister Films released a Blu-ray in Italy on March 18, 2014. This version, under the title , contained many special features, including an interview with lead actor Kevin McCarthy and the 1957 Studio One episode entitled "The Night America Trembled", an unreleased filmed reconstruction of the famous Orson Welles radio transmission "War of the Worlds", starring Ed Asner, James Coburn, and Warren Beatty. Olive Films subsequently released a special-edition Blu-ray in 2018, containing extensive bonus features including several featurettes, two audio commentaries, one with film historian Richard Harland Smith and a second with Kevin McCarthy and Dana Wynter, and filmmaker Joe Dante, and a 1985 archival interview with McCarthy.
+
+## Related works
+
+Robert A. Heinlein had previously developed this subject in his 1951 novel The Puppet Masters, written in 1950. The Puppet Masters was later plagiarized as the 1958 film The Brain Eaters, and adapted under contract in the 1994 film The Puppet Masters. A similar theme was used in the 1953 film Invaders From Mars.
+
+Several thematically related works followed Finney's 1955 novel The Body Snatchers, including Val Guest's Quatermass 2 and Gene Fowler's I Married a Monster from Outer Space.
+
+The 1986 film Troll has a snippet of a movie seen on TV in which Spot (a dog) and Tweetie (a canary) are declared to be pod persons.
+
+A Looney Tunes parody of the film was released, entitled Invasion of the Bunny Snatchers (1992). The adaptation was directed by Greg Ford and places Bugs Bunny, Daffy Duck, Elmer Fudd, Yosemite Sam, and Porky Pig in the various roles of the story.
+
+In 2018, theater company Team Starkid created the musical parody The Guy Who Didn't Like Musicals, the story of a Midwestern town that is overtaken by a singing alien hivemind. The musical parodies numerous horror and musical tropes, while the main character also wears within the show a suit reminiscent of Bennell's wardrobe.
+
+The May 1981 issue of National Lampoon featured a parody titled "Invasion of the Money Snatchers"; the gentile population of Whiteville is taken over by pastrami sandwiches from outer space and turned into Jews.
+
+The Host segments of the Mystery Science Theater 3000 episode The Giant Spider Invasion parody this film. In the episode, as Pearl, Brain Guy, and Professor Bobo are out camping, they end up discovering flowers that they nickname "Zucchini Throw Pillows" which are actually Body Snatcher Aliens in disguise. They end up getting sent to the Satellite of Love along with the titular movie, causing Pearl, Brain Guy, and all the Bots (except Mike and Bobo) to become affected. Per Mike's encouragement, Bobo manages to save everyone by destroying the mother body snatcher alien, killing all the aliens and turning everyone affected back to normal. But because Pearl missed out on the SOL Crew's reactions to the movie, she forces them to watch it again.
+
+Halloween III: Season of the Witch, a 1982 film with similar themes involving androids, is also largely set in a California town named Santa Mira.
+
+The fourth episode of Ben 10, titled "Permanent Retirement", features an alien race called the Limax, who abduct and replace the residents of a retirement village, in order to use the humans as food.
+
+The film was also parodied in the 2012 SpongeBob SquarePants episode "Planet of the Jellyfish" (referencing Planet of the Vampires and Planet of the Apes) featuring characters from Bikini Bottom being replaced by alien clones in their sleep. In the episode, the clones' weakness is mayonnaise.
+
+The film also inspired the 2025 Apple TV series Pluribus, in which the entire world is rapidly dominated by an alien virus. The unaffected protagonist calls affected humans "pod people."
+
