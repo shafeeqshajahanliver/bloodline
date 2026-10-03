@@ -1,60 +1,354 @@
 {
  "film": "2017-hagazussa",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "the self", "detail": "Albrun's descent into psychosis", "quote": "eats a mushroom, which causes hallucinations and psychosis", "confidence": "sourced"},
-   {"value": "witch", "detail": "Albrun, branded a witch by villagers", "quote": "bang on their door, call them witches, and insist that they should be burned", "confidence": "sourced"},
-   {"value": "hostile village", "quote": "is rejected by the townspeople (due to their superstitions) and confronted by unruly boys who treat her as a pariah", "confidence": "sourced"}
+   {
+    "value": "the self",
+    "detail": "Albrun's descent into psychosis",
+    "quote": "eats a mushroom, which causes hallucinations and psychosis",
+    "confidence": "sourced"
+   },
+   {
+    "value": "witch",
+    "detail": "Albrun, branded a witch by villagers",
+    "quote": "bang on their door, call them witches, and insist that they should be burned",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:18",
+      "quote": "You should be burned down , you witches ."
+     }
+    ]
+   },
+   {
+    "value": "hostile village",
+    "quote": "is rejected by the townspeople (due to their superstitions) and confronted by unruly boys who treat her as a pariah",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:35",
+      "quote": "Go back to where you came from ."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "inherited", "detail": "from her mother, also called a witch", "quote": "In seclusion, Albrun hears voices from the woods, including that of her mother", "confidence": "observed"}
+   {
+    "value": "inherited",
+    "detail": "from her mother, also called a witch",
+    "quote": "In seclusion, Albrun hears voices from the woods, including that of her mother",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:51",
+      "quote": "The morbid case of your mother"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "revenge", "quote": "Furious, Albrun brings a dead rat to the local water source to poison the water", "confidence": "sourced"}
+   {
+    "value": "revenge",
+    "quote": "Furious, Albrun brings a dead rat to the local water source to poison the water",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "rape", "quote": "The man then begins raping Albrun as Swinda holds her down", "confidence": "sourced"},
-   {"value": "persecution of outsiders", "quote": "an area which is fraught with belief in witches and fear of heathens and other non-Christian cultures", "confidence": "sourced"},
-   {"value": "parent abuses child", "quote": "culminating in a sexual assault against her daughter", "confidence": "sourced"}
+   {
+    "value": "rape",
+    "quote": "The man then begins raping Albrun as Swinda holds her down",
+    "confidence": "sourced"
+   },
+   {
+    "value": "persecution of outsiders",
+    "quote": "an area which is fraught with belief in witches and fear of heathens and other non-Christian cultures",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:18",
+      "quote": "Of those who don 't carry Gods light in their hearts ."
+     }
+    ]
+   },
+   {
+    "value": "parent abuses child",
+    "quote": "culminating in a sexual assault against her daughter",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "mother's death", "quote": "In the morning, Albrun finds her mother's corpse covered with snakes in the woods", "confidence": "sourced"},
-   {"value": "betrayal by a friend", "quote": "Swinda then throws Albrun to the ground", "confidence": "sourced"}
+   {
+    "value": "mother's death",
+    "quote": "In the morning, Albrun finds her mother's corpse covered with snakes in the woods",
+    "confidence": "sourced"
+   },
+   {
+    "value": "betrayal by a friend",
+    "quote": "Swinda then throws Albrun to the ground",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "isolated woman", "relation_to_threat": "self", "detail": "Albrun", "quote": "goat-herder Albrun, who leads a secluded life in a remote part of the 15th-century Alps", "confidence": "sourced"},
-   {"value": "baby", "relation_to_threat": "family", "quote": "she walks into the stagnant pond with her daughter, letting her drown", "confidence": "sourced"},
-   {"value": "villagers", "relation_to_threat": "community", "quote": "sees many dead bodies being transported away", "confidence": "observed"}
+   {
+    "value": "isolated woman",
+    "relation_to_threat": "self",
+    "detail": "Albrun",
+    "quote": "goat-herder Albrun, who leads a secluded life in a remote part of the 15th-century Alps",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:11",
+      "quote": "Why are you up here all by yourself ?"
+     }
+    ]
+   },
+   {
+    "value": "baby",
+    "relation_to_threat": "family",
+    "quote": "she walks into the stagnant pond with her daughter, letting her drown",
+    "confidence": "sourced"
+   },
+   {
+    "value": "villagers",
+    "relation_to_threat": "community",
+    "quote": "sees many dead bodies being transported away",
+    "confidence": "observed"
+   }
   ],
   "ending": [
-   {"value": "protagonist dies", "quote": "Albrun lies down and dies on the mountaintop. Her body spontaneously combusts with the rising sun", "confidence": "sourced"},
-   {"value": "victim becomes threat", "quote": "Albrun brings a dead rat to the local water source to poison the water", "confidence": "observed"}
+   {
+    "value": "protagonist dies",
+    "quote": "Albrun lies down and dies on the mountaintop. Her body spontaneously combusts with the rising sun",
+    "confidence": "sourced"
+   },
+   {
+    "value": "victim becomes threat",
+    "quote": "Albrun brings a dead rat to the local water source to poison the water",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "goat-horned men", "when": "opening", "role": "omen", "quote": "men disguised in goat skins and horns approach their cottage", "confidence": "sourced"},
-   {"value": "snakes", "state": "covering a corpse, crossing a sleeper", "when": "early", "role": "omen", "quote": "Albrun finds her mother's corpse covered with snakes in the woods", "confidence": "sourced"},
-   {"value": "goats", "state": "stolen, one butchered", "when": "middle", "role": "turn", "quote": "her goats have all been stolen except for one, which has been butchered and mutilated", "confidence": "sourced"},
-   {"value": "skull", "state": "painted with flowers", "when": "middle", "role": "symbol", "quote": "he hands Albrun her mother's polished skull, painted with flowers and greenery", "confidence": "sourced"},
-   {"value": "dead rat", "when": "late", "role": "weapon", "quote": "Albrun brings a dead rat to the local water source to poison the water", "confidence": "sourced"},
-   {"value": "mushroom", "when": "late", "role": "trigger", "quote": "she stops in the wood and eats a mushroom, which causes hallucinations and psychosis", "confidence": "sourced"},
-   {"value": "pond", "state": "stagnant", "when": "late", "role": "setting", "quote": "she walks into the stagnant pond with her daughter, letting her drown", "confidence": "sourced"},
-   {"value": "boiling soup", "when": "ending", "role": "turn", "quote": "she places her dead daughter into the soup that is boiling on the fire", "confidence": "sourced"}
+   {
+    "value": "goat-horned men",
+    "when": "opening",
+    "role": "omen",
+    "quote": "men disguised in goat skins and horns approach their cottage",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:18",
+      "quote": "You should be burned down , you witches ."
+     }
+    ]
+   },
+   {
+    "value": "snakes",
+    "state": "covering a corpse, crossing a sleeper",
+    "when": "early",
+    "role": "omen",
+    "quote": "Albrun finds her mother's corpse covered with snakes in the woods",
+    "confidence": "sourced"
+   },
+   {
+    "value": "goats",
+    "state": "stolen, one butchered",
+    "when": "middle",
+    "role": "turn",
+    "quote": "her goats have all been stolen except for one, which has been butchered and mutilated",
+    "confidence": "sourced"
+   },
+   {
+    "value": "skull",
+    "state": "painted with flowers",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "he hands Albrun her mother's polished skull, painted with flowers and greenery",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dead rat",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Albrun brings a dead rat to the local water source to poison the water",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mushroom",
+    "when": "late",
+    "role": "trigger",
+    "quote": "she stops in the wood and eats a mushroom, which causes hallucinations and psychosis",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pond",
+    "state": "stagnant",
+    "when": "late",
+    "role": "setting",
+    "quote": "she walks into the stagnant pond with her daughter, letting her drown",
+    "confidence": "sourced"
+   },
+   {
+    "value": "boiling soup",
+    "when": "ending",
+    "role": "turn",
+    "quote": "she places her dead daughter into the soup that is boiling on the fire",
+    "confidence": "sourced"
+   },
+   {
+    "value": "goat milk",
+    "state": "called rotten",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:29:39",
+    "quote": "Nobody wants your rotten milk here .",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "traveller's warning", "when": "opening", "role": "omen", "quote": "A traveler warns them to go back for fear of meeting the Perchta", "confidence": "sourced"},
-   {"order": 2, "value": "accused as witches", "when": "opening", "quote": "call them witches, and insist that they should be burned", "confidence": "sourced"},
-   {"order": 3, "value": "mother dies", "when": "early", "quote": "Albrun finds her mother's corpse covered with snakes in the woods", "confidence": "sourced"},
-   {"order": 4, "value": "outcast by village", "when": "middle", "quote": "is rejected by the townspeople (due to their superstitions)", "confidence": "sourced"},
-   {"order": 5, "value": "betrayal and rape", "when": "middle", "role": "turn", "quote": "The man then begins raping Albrun as Swinda holds her down", "confidence": "sourced"},
-   {"order": 6, "value": "revenge by poison", "when": "late", "quote": "to poison the water and then urinates and menstruates into it", "confidence": "sourced"},
-   {"order": 7, "value": "child drowned", "when": "late", "quote": "she walks into the stagnant pond with her daughter, letting her drown", "confidence": "sourced"},
-   {"order": 8, "value": "death and burning", "when": "ending", "quote": "Her body spontaneously combusts with the rising sun", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "traveller's warning",
+    "when": "opening",
+    "role": "omen",
+    "quote": "A traveler warns them to go back for fear of meeting the Perchta",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:50",
+      "quote": "Watch out that Perchta doesn 't get you ."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "accused as witches",
+    "when": "opening",
+    "quote": "call them witches, and insist that they should be burned",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:18",
+      "quote": "You should be burned down , you witches ."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "mother dies",
+    "when": "early",
+    "quote": "Albrun finds her mother's corpse covered with snakes in the woods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:11",
+      "quote": "Albrun . It 's so dark ."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "outcast by village",
+    "when": "middle",
+    "quote": "is rejected by the townspeople (due to their superstitions)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:42",
+      "quote": "You ugly witch !"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "summoned by the priest",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "00:31:47",
+    "quote": "The priest sent me .",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "betrayal and rape",
+    "when": "middle",
+    "role": "turn",
+    "quote": "The man then begins raping Albrun as Swinda holds her down",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:03",
+      "quote": "That 's her ."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "revenge by poison",
+    "when": "late",
+    "quote": "to poison the water and then urinates and menstruates into it",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "child drowned",
+    "when": "late",
+    "quote": "she walks into the stagnant pond with her daughter, letting her drown",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "death and burning",
+    "when": "ending",
+    "quote": "Her body spontaneously combusts with the rising sun",
+    "confidence": "sourced"
+   }
+  ],
+  "rules": [
+   {
+    "value": "perchta walks on twelfth night",
+    "source": "subtitles",
+    "at": "00:04:46",
+    "quote": "It 's Twelfth Night tonight . Watch out that Perchta doesn 't get you .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sacrilege must be cleansed",
+    "detail": "the priest's rule for the community",
+    "source": "subtitles",
+    "at": "00:35:36",
+    "quote": "But to strengthen the faith of an righteous community it requires all sacrilege be cleansed .",
+    "confidence": "observed"
+   }
   ]
  },
- "not_stated": ["rules"],
+ "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

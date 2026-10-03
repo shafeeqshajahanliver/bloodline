@@ -1,63 +1,483 @@
 {
  "film": "2014-the-canal",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Synopsis"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Synopsis"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "ghostly figure", "quote": "David sees what he believes to be a ghostly figure murder his wife", "confidence": "sourced"},
-   {"value": "the self", "detail": "David killed his wife himself", "quote": "the voice in the toilet ordered him to kill his wife and, in a rage, he drowned her in the canal", "confidence": "sourced"}
+   {
+    "value": "ghostly figure",
+    "quote": "David sees what he believes to be a ghostly figure murder his wife",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:04",
+      "quote": "This is the man who killed Alice ."
+     }
+    ]
+   },
+   {
+    "value": "the self",
+    "detail": "David killed his wife himself",
+    "quote": "the voice in the toilet ordered him to kill his wife and, in a rage, he drowned her in the canal",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:15",
+      "quote": "You killed Alice ?"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "past murders in the house", "quote": "a reel of footage to be archived that shows that his house was the setting for a brutal murder in 1902", "confidence": "sourced"},
-   {"value": "devil worship", "quote": "the tunnel was used by devil worshippers to sacrifice local children", "confidence": "observed"}
+   {
+    "value": "past murders in the house",
+    "quote": "a reel of footage to be archived that shows that his house was the setting for a brutal murder in 1902",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:33",
+      "quote": "There was a murder here . A man ... killed his wife . It happened in this room ."
+     }
+    ]
+   },
+   {
+    "value": "devil worship",
+    "quote": "the tunnel was used by devil worshippers to sacrifice local children",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:42",
+      "quote": "Clare , sacrificed children in this room ..."
+     }
+    ]
+   },
+   {
+    "value": "repeated killings in the house",
+    "detail": "a previous owner also tried to kill her family and blamed a demon",
+    "source": "subtitles",
+    "at": "00:53:46",
+    "quote": "Was a young woman who tried burn his house while his family slept .",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to make him kill", "quote": "the voice in the toilet ordered him to kill his wife", "confidence": "sourced"},
-   {"value": "family together forever", "quote": "tells Billy that they can be together (including Alice) forever in the house", "confidence": "sourced"}
+   {
+    "value": "to make him kill",
+    "quote": "the voice in the toilet ordered him to kill his wife",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:03",
+      "quote": "Said he was a demon living behind walls ."
+     }
+    ]
+   },
+   {
+    "value": "family together forever",
+    "quote": "tells Billy that they can be together (including Alice) forever in the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:54",
+      "quote": "You want to stay with us forever"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "infidelity", "quote": "he suspects that his wife Alice has been cheating on him with Alex", "confidence": "sourced"},
-   {"value": "murder of a spouse", "quote": "in a rage, he drowned her in the canal", "confidence": "sourced"}
+   {
+    "value": "infidelity",
+    "quote": "he suspects that his wife Alice has been cheating on him with Alex",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:43",
+      "quote": "and saw them in bed together ."
+     }
+    ]
+   },
+   {
+    "value": "murder of a spouse",
+    "quote": "in a rage, he drowned her in the canal",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:10",
+      "quote": "Drowned ."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "discovering betrayal", "quote": "David's fears are confirmed when he follows Alice after work and sees her have sex with Alex", "confidence": "sourced"},
-   {"value": "watching old footage", "quote": "Claire gives him a reel of footage to be archived", "confidence": "sourced"}
+   {
+    "value": "discovering betrayal",
+    "quote": "David's fears are confirmed when he follows Alice after work and sees her have sex with Alex",
+    "confidence": "sourced"
+   },
+   {
+    "value": "watching old footage",
+    "quote": "Claire gives him a reel of footage to be archived",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:30",
+      "quote": "Saw a film of 1902 , our house was in it ."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "visible only on film", "quote": "he borrows early 20th-century cameras to shoot footage around his home and the canal", "confidence": "observed"},
-   {"value": "voice commands murder", "quote": "A creepy voice whispers unintelligibly to him", "confidence": "sourced"}
+   {
+    "value": "visible only on film",
+    "quote": "he borrows early 20th-century cameras to shoot footage around his home and the canal",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:24",
+      "quote": "I have evidence , I caught something on film ."
+     }
+    ]
+   },
+   {
+    "value": "voice commands murder",
+    "quote": "A creepy voice whispers unintelligibly to him",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "wife", "relation_to_threat": "lover", "detail": "Alice", "quote": "The police eventually find her body at the bottom of the canal", "confidence": "sourced"},
-   {"value": "son", "relation_to_threat": "family", "detail": "Billy", "quote": "Back in the house, the real estate salesperson smiles as she sees Billy in his upstairs room closing a door", "confidence": "sourced"},
-   {"value": "colleague", "relation_to_threat": "stranger", "detail": "Claire", "quote": "When Claire saw nothing on the footage, he strangled her himself", "confidence": "sourced"}
+   {
+    "value": "wife",
+    "relation_to_threat": "lover",
+    "detail": "Alice",
+    "quote": "The police eventually find her body at the bottom of the canal",
+    "confidence": "sourced"
+   },
+   {
+    "value": "son",
+    "relation_to_threat": "family",
+    "detail": "Billy",
+    "quote": "Back in the house, the real estate salesperson smiles as she sees Billy in his upstairs room closing a door",
+    "confidence": "sourced"
+   },
+   {
+    "value": "colleague",
+    "relation_to_threat": "stranger",
+    "detail": "Claire",
+    "quote": "When Claire saw nothing on the footage, he strangled her himself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:47",
+      "quote": "David ... nothing there ."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "victim becomes threat", "detail": "David returns as a ghost and draws Billy back", "quote": "David's ghost appears from crack in the wall and tells Billy that they can be together", "confidence": "sourced"},
-   {"value": "cycle passes on", "quote": "Billy jumps out of his grandmother's car as they drive down the road", "confidence": "observed"}
+   {
+    "value": "victim becomes threat",
+    "detail": "David returns as a ghost and draws Billy back",
+    "quote": "David's ghost appears from crack in the wall and tells Billy that they can be together",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:30",
+      "quote": "I 'm here with your mother"
+     }
+    ]
+   },
+   {
+    "value": "cycle passes on",
+    "quote": "Billy jumps out of his grandmother's car as they drive down the road",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "film reel", "state": "old footage", "when": "opening", "role": "clue", "quote": "a reel of footage to be archived that shows that his house was the setting for a brutal murder in 1902", "confidence": "sourced"},
-   {"value": "hammer", "state": "thrown into canal", "when": "opening", "role": "weapon", "quote": "David grabs a hammer but, coming to his senses, throws it into a nearby canal", "confidence": "sourced"},
-   {"value": "public toilet", "state": "haunted", "when": "opening", "role": "setting", "quote": "a nearby public toilet that his son Billy believes to be haunted", "confidence": "sourced"},
-   {"value": "canal", "state": "body at the bottom", "when": "early", "role": "setting", "quote": "The police eventually find her body at the bottom of the canal", "confidence": "sourced"},
-   {"value": "hole in the wall", "state": "ghost emerges", "when": "late", "role": "threat", "quote": "a ghostly figure that approaches closer and closer, until it emerges from a hole in the wall", "confidence": "sourced"},
-   {"value": "hidden tunnel", "state": "leads to canal", "when": "late", "role": "setting", "quote": "he flees with Billy into a hidden tunnel that leads to the canal", "confidence": "sourced"},
-   {"value": "closet", "state": "locked", "when": "middle", "role": "setting", "quote": "locks her in a closet with Billy as he searches the house", "confidence": "sourced"}
+   {
+    "value": "film reel",
+    "state": "old footage",
+    "when": "opening",
+    "role": "clue",
+    "quote": "a reel of footage to be archived that shows that his house was the setting for a brutal murder in 1902",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:58",
+      "quote": "CRIME SCENE 1902"
+     }
+    ]
+   },
+   {
+    "value": "hammer",
+    "state": "thrown into canal",
+    "when": "opening",
+    "role": "weapon",
+    "quote": "David grabs a hammer but, coming to his senses, throws it into a nearby canal",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:53",
+      "quote": "Found a hammer in the channel , with your fingerprints on it ."
+     }
+    ]
+   },
+   {
+    "value": "public toilet",
+    "state": "haunted",
+    "when": "opening",
+    "role": "setting",
+    "quote": "a nearby public toilet that his son Billy believes to be haunted",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:22",
+      "quote": "A girl in our school saw a ghost there ."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:39:57",
+      "quote": "so sick just had to go to the public baths ..."
+     }
+    ]
+   },
+   {
+    "value": "canal",
+    "state": "body at the bottom",
+    "when": "early",
+    "role": "setting",
+    "quote": "The police eventually find her body at the bottom of the canal",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:25",
+      "quote": "WOMAN BODY FOUND IN THE CANAL"
+     }
+    ]
+   },
+   {
+    "value": "hole in the wall",
+    "state": "ghost emerges",
+    "when": "late",
+    "role": "threat",
+    "quote": "a ghostly figure that approaches closer and closer, until it emerges from a hole in the wall",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:06",
+      "quote": "The walls , Clare ."
+     }
+    ]
+   },
+   {
+    "value": "hidden tunnel",
+    "state": "leads to canal",
+    "when": "late",
+    "role": "setting",
+    "quote": "he flees with Billy into a hidden tunnel that leads to the canal",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:57",
+      "quote": "They dragged the bodies through here ... sewers and dumped in the canal ."
+     }
+    ]
+   },
+   {
+    "value": "closet",
+    "state": "locked",
+    "when": "middle",
+    "role": "setting",
+    "quote": "locks her in a closet with Billy as he searches the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:53",
+      "quote": "Enclose nannies in closets and hearing voices ... ?"
+     }
+    ]
+   },
+   {
+    "value": "newspaper clippings",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:42:20",
+    "quote": "MURDERER 'S WIFE ESCAPA , NANA KILLER , THEN DROWNING CHILDREN AND HERSELF , IN CHANNEL",
+    "confidence": "sourced"
+   },
+   {
+    "value": "old camera",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:43:07",
+    "quote": "The old camera .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "deep water warning sign",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:04:06",
+    "quote": "DEEP WATER HAZARD STAY AWAY",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "suspected affair", "when": "opening", "quote": "he suspects that his wife Alice has been cheating on him with Alex", "confidence": "sourced"},
-   {"order": 2, "value": "house's past revealed", "when": "opening", "role": "omen", "quote": "shows that his house was the setting for a brutal murder in 1902", "confidence": "sourced"},
-   {"order": 3, "value": "wife vanishes", "when": "early", "quote": "before passing out, David sees what he believes to be a ghostly figure murder his wife", "confidence": "sourced"},
-   {"order": 4, "value": "obsessive investigation", "when": "middle", "quote": "he becomes obsessed with a series of unsolved, 100-year-old murders", "confidence": "sourced"},
-   {"order": 5, "value": "police suspicion", "when": "middle", "quote": "When the police find the hammer in the canal, they become suspicious that David murdered his wife", "confidence": "sourced"},
-   {"order": 6, "value": "protagonist revealed as killer", "when": "late", "role": "turn", "quote": "he drowned her in the canal. When Claire saw nothing on the footage, he strangled her himself", "confidence": "sourced"},
-   {"order": 7, "value": "pulled under", "when": "ending", "quote": "When David reaches the canal, a ghostly figure pulls him under", "confidence": "sourced"},
-   {"order": 8, "value": "child drawn back to house", "when": "ending", "quote": "the real estate salesperson smiles as she sees Billy in his upstairs room closing a door", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "old films as ghosts",
+    "when": "opening",
+    "role": "omen",
+    "detail": "David tells an audience that the people in early films are real ghosts",
+    "source": "subtitles",
+    "at": "00:01:42",
+    "quote": "So , in a sense , is and see real ghosts .",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "suspected affair",
+    "when": "opening",
+    "quote": "he suspects that his wife Alice has been cheating on him with Alex",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:43",
+      "quote": "and saw them in bed together ."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "house's past revealed",
+    "when": "opening",
+    "role": "omen",
+    "quote": "shows that his house was the setting for a brutal murder in 1902",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:30",
+      "quote": "Saw a film of 1902 , our house was in it ."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "wife vanishes",
+    "when": "early",
+    "quote": "before passing out, David sees what he believes to be a ghostly figure murder his wife",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:21",
+      "quote": "and he was , he was trying to kill ."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "obsessive investigation",
+    "when": "middle",
+    "quote": "he becomes obsessed with a series of unsolved, 100-year-old murders",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:27",
+      "quote": "The killings that occurred in the city around the canal ."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "police suspicion",
+    "when": "middle",
+    "quote": "When the police find the hammer in the canal, they become suspicious that David murdered his wife",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:53",
+      "quote": "Found a hammer in the channel , with your fingerprints on it ."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "protagonist revealed as killer",
+    "when": "late",
+    "role": "turn",
+    "quote": "he drowned her in the canal. When Claire saw nothing on the footage, he strangled her himself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:15",
+      "quote": "You killed Alice ?"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "pulled under",
+    "when": "ending",
+    "quote": "When David reaches the canal, a ghostly figure pulls him under",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "child drawn back to house",
+    "when": "ending",
+    "quote": "the real estate salesperson smiles as she sees Billy in his upstairs room closing a door",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:37",
+      "quote": "IS SOLD"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

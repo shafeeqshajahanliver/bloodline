@@ -1,60 +1,380 @@
 {
  "film": "2020-host",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "demon", "quote": "a group of friends who inadvertently summon a demon during an online séance", "confidence": "sourced"}
+   {
+    "value": "demon",
+    "quote": "a group of friends who inadvertently summon a demon during an online séance",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "summoned by ritual", "detail": "a séance over Zoom", "quote": "a group of friends who inadvertently summon a demon during an online séance", "confidence": "sourced"},
-   {"value": "invented dead person", "quote": "Jemma's prank, fabricating a deceased person, may have led a demon to take on the guise of the deceased person", "confidence": "sourced"}
+   {
+    "value": "summoned by ritual",
+    "detail": "a séance over Zoom",
+    "quote": "a group of friends who inadvertently summon a demon during an online séance",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:59",
+      "quote": "Spirit, we invite you to use us to pass on any communication you might have."
+     }
+    ]
+   },
+   {
+    "value": "invented dead person",
+    "quote": "Jemma's prank, fabricating a deceased person, may have led a demon to take on the guise of the deceased person",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:11",
+      "quote": "What's going on? Wait. Jack's not real. Jemma made him up."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to enter our world", "quote": "allowing the demon to pass into the living's world", "confidence": "sourced"}
+   {
+    "value": "to enter our world",
+    "quote": "allowing the demon to pass into the living's world",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "disrespecting the dead", "quote": "who emphasizes that they should not disrespect the spirits, though only Haley and Caroline take it seriously", "confidence": "sourced"}
+   {
+    "value": "disrespecting the dead",
+    "quote": "who emphasizes that they should not disrespect the spirits, though only Haley and Caroline take it seriously",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:29",
+      "quote": "I told you not to disrespect the spirits."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "a séance", "quote": "Haley has arranged for them to partake in a virtual séance led by the medium Seylan", "confidence": "sourced"},
-   {"value": "a prank", "quote": "a laughing Jemma to admit that she made the story up because she was bored", "confidence": "sourced"}
+   {
+    "value": "a séance",
+    "quote": "Haley has arranged for them to partake in a virtual séance led by the medium Seylan",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:59",
+      "quote": "Spirit, we invite you to use us to pass on any communication you might have."
+     }
+    ]
+   },
+   {
+    "value": "a prank",
+    "quote": "a laughing Jemma to admit that she made the story up because she was bored",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:24",
+      "quote": "Do you know anyone called Jack who's passed? Yeah."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "do not disrespect spirits", "quote": "they should not disrespect the spirits", "confidence": "sourced"},
-   {"value": "wears a false identity", "quote": "take on the guise of the deceased person and the identity like a mask", "confidence": "sourced"},
-   {"value": "closing the circle fails", "quote": "The girls attempt to close the circle following her instructions", "confidence": "observed"}
+   {
+    "value": "do not disrespect spirits",
+    "quote": "they should not disrespect the spirits",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:20",
+      "quote": "so it's very important that you respect the spirits and you respect each other."
+     }
+    ]
+   },
+   {
+    "value": "wears a false identity",
+    "quote": "take on the guise of the deceased person and the identity like a mask",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:49",
+      "quote": "Imagine, like, you created a mask, so now anything can come through and wear that mask."
+     }
+    ]
+   },
+   {
+    "value": "closing the circle fails",
+    "quote": "The girls attempt to close the circle following her instructions",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:09",
+      "quote": "And then, um, open your eyes and blow out the candles and that'll break the circle."
+     }
+    ]
+   },
+   {
+    "value": "cut the cord to be safe",
+    "source": "subtitles",
+    "at": "00:14:54",
+    "quote": "I'd like you to visualize a cord or a rope around your waist that's leading towards your front door,",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "friends", "relation_to_threat": "stranger", "quote": "friends Haley, Jemma, Radina, Emma, Caroline, and Teddy join the weekly Zoom call", "confidence": "sourced"},
-   {"value": "partner", "relation_to_threat": "stranger", "detail": "Jinny", "quote": "Jinny is lifted into the air and has her neck snapped", "confidence": "sourced"}
+   {
+    "value": "friends",
+    "relation_to_threat": "stranger",
+    "quote": "friends Haley, Jemma, Radina, Emma, Caroline, and Teddy join the weekly Zoom call",
+    "confidence": "sourced"
+   },
+   {
+    "value": "partner",
+    "relation_to_threat": "stranger",
+    "detail": "Jinny",
+    "quote": "Jinny is lifted into the air and has her neck snapped",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "everyone dies", "detail": "implied for the final two", "quote": "The demon appears in the final flash of light, and rushes at them as the Zoom call timer expires", "confidence": "observed"},
-   {"value": "threat survives", "quote": "The demon appears in the final flash of light, and rushes at them", "confidence": "sourced"}
+   {
+    "value": "everyone dies",
+    "detail": "implied for the final two",
+    "quote": "The demon appears in the final flash of light, and rushes at them as the Zoom call timer expires",
+    "confidence": "observed"
+   },
+   {
+    "value": "threat survives",
+    "quote": "The demon appears in the final flash of light, and rushes at them",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "video call", "when": "opening", "role": "setting", "quote": "takes place entirely on a Zoom video call", "confidence": "sourced"},
-   {"value": "chair", "state": "pulled by itself", "when": "early", "role": "omen", "quote": "Haley's chair is suddenly pulled across the room", "confidence": "sourced"},
-   {"value": "hanging corpse", "when": "early", "role": "omen", "quote": "the legs of a hanging corpse appear in Caroline's attic", "confidence": "sourced"},
-   {"value": "wine glass", "state": "shattering", "when": "early", "role": "omen", "quote": "Emma's wine glass shatters untouched", "confidence": "sourced"},
-   {"value": "mask filter", "when": "middle", "role": "clue", "quote": "the filter places a mask on the face of an invisible figure which then turns to look at her", "confidence": "sourced"},
-   {"value": "flour footprints", "when": "middle", "role": "clue", "quote": "She scatters flour on the floor, in which footprints approaching her appear", "confidence": "sourced"},
-   {"value": "music box", "when": "late", "role": "weapon", "quote": "the demon distracts him with an eerie music box", "confidence": "sourced"},
-   {"value": "camera flash", "when": "ending", "role": "setting", "quote": "using the flash from Haley's camera to light the way", "confidence": "sourced"}
+   {
+    "value": "video call",
+    "when": "opening",
+    "role": "setting",
+    "quote": "takes place entirely on a Zoom video call",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:15",
+      "quote": "but there's no reason why spirit can't communicate with us over the Internet."
+     }
+    ]
+   },
+   {
+    "value": "chair",
+    "state": "pulled by itself",
+    "when": "early",
+    "role": "omen",
+    "quote": "Haley's chair is suddenly pulled across the room",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hanging corpse",
+    "when": "early",
+    "role": "omen",
+    "quote": "the legs of a hanging corpse appear in Caroline's attic",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:53",
+      "quote": "He hanged himself."
+     }
+    ]
+   },
+   {
+    "value": "wine glass",
+    "state": "shattering",
+    "when": "early",
+    "role": "omen",
+    "quote": "Emma's wine glass shatters untouched",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:35",
+      "quote": "Emma, your glass. I swear to God. I didn't do anything."
+     }
+    ]
+   },
+   {
+    "value": "mask filter",
+    "when": "middle",
+    "role": "clue",
+    "quote": "the filter places a mask on the face of an invisible figure which then turns to look at her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:37",
+      "quote": "Emma! Emma, turn the filters off."
+     }
+    ]
+   },
+   {
+    "value": "flour footprints",
+    "when": "middle",
+    "role": "clue",
+    "quote": "She scatters flour on the floor, in which footprints approaching her appear",
+    "confidence": "sourced"
+   },
+   {
+    "value": "music box",
+    "when": "late",
+    "role": "weapon",
+    "quote": "the demon distracts him with an eerie music box",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:07",
+      "quote": "God bless him. If it's playing, watch out."
+     }
+    ]
+   },
+   {
+    "value": "camera flash",
+    "when": "ending",
+    "role": "setting",
+    "quote": "using the flash from Haley's camera to light the way",
+    "confidence": "sourced"
+   },
+   {
+    "value": "candle",
+    "when": "early",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:13:32",
+    "quote": "The candle is going to be our guiding focus and it's going to encourage the spirit.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "online séance", "when": "opening", "role": "trigger", "quote": "Haley has arranged for them to partake in a virtual séance led by the medium Seylan", "confidence": "sourced"},
-   {"order": 2, "value": "fake story told", "when": "early", "quote": "a laughing Jemma to admit that she made the story up because she was bored", "confidence": "sourced"},
-   {"order": 3, "value": "first phenomena", "when": "early", "role": "omen", "quote": "Haley's chair is suddenly pulled across the room, to the shock of the group", "confidence": "sourced"},
-   {"order": 4, "value": "medium explains, circle closed", "when": "middle", "role": "turn", "quote": "She instructs them to close the séance, but the demon interrupts her", "confidence": "sourced"},
-   {"order": 5, "value": "false relief", "when": "middle", "quote": "Relieved that the ordeal seems to be over, the group members begin preparing to leaving the call", "confidence": "sourced"},
-   {"order": 6, "value": "friends killed one by one", "when": "late", "quote": "Caroline's camera turns back on to show the demon smashing her head into her keyboard", "confidence": "sourced"},
-   {"order": 7, "value": "last two attacked as call ends", "when": "ending", "quote": "The demon appears in the final flash of light, and rushes at them as the Zoom call timer expires", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "mocking drinking game",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:10:43",
+    "quote": "but can we do a... cheeky little shot every time she says \" astroplane \".",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "online séance",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Haley has arranged for them to partake in a virtual séance led by the medium Seylan",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:59",
+      "quote": "Spirit, we invite you to use us to pass on any communication you might have."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "fake story told",
+    "when": "early",
+    "quote": "a laughing Jemma to admit that she made the story up because she was bored",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:53",
+      "quote": "He hanged himself."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "first phenomena",
+    "when": "early",
+    "role": "omen",
+    "quote": "Haley's chair is suddenly pulled across the room, to the shock of the group",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "medium explains, circle closed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "She instructs them to close the séance, but the demon interrupts her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:49",
+      "quote": "Imagine, like, you created a mask, so now anything can come through and wear that mask."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "false relief",
+    "when": "middle",
+    "quote": "Relieved that the ordeal seems to be over, the group members begin preparing to leaving the call",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "friends killed one by one",
+    "when": "late",
+    "quote": "Caroline's camera turns back on to show the demon smashing her head into her keyboard",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:39",
+      "quote": "You're gonna die if you don't listen to me."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "last two attacked as call ends",
+    "when": "ending",
+    "quote": "The demon appears in the final flash of light, and rushes at them as the Zoom call timer expires",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:55:36",
+      "quote": "We need to get out, Haley."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

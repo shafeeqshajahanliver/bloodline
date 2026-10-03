@@ -1,59 +1,484 @@
 {
  "film": "2014-housebound",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "apparent haunting", "quote": "a woman sentenced to house arrest in a potentially haunted house", "confidence": "sourced"},
-   {"value": "hidden killer", "detail": "Dennis, the psychologist", "quote": "he attempts to kill Miriam and Kylie, while incapacitating Amos", "confidence": "sourced"},
-   {"value": "person living in the walls", "detail": "Eugene, a savant", "quote": "a serial killer living in the hidden passageways", "confidence": "sourced"}
+   {
+    "value": "apparent haunting",
+    "quote": "a woman sentenced to house arrest in a potentially haunted house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:43",
+      "quote": "I'm not the only one who thought there was a ghost in this house, Kylie."
+     }
+    ]
+   },
+   {
+    "value": "hidden killer",
+    "detail": "Dennis, the psychologist",
+    "quote": "he attempts to kill Miriam and Kylie, while incapacitating Amos",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:21",
+      "quote": "A year before Elizabeth Chalmers was killed you came here on work experience."
+     }
+    ]
+   },
+   {
+    "value": "person living in the walls",
+    "detail": "Eugene, a savant",
+    "quote": "a serial killer living in the hidden passageways",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:33",
+      "quote": "I said, \"Mum, there's a man who lives in the walls.\""
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "past murder in the house", "quote": "their home was once a halfway house and the site of a horrific murder", "confidence": "sourced"}
+   {
+    "value": "past murder in the house",
+    "quote": "their home was once a halfway house and the site of a horrific murder",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:11",
+      "quote": "for the church-owned and operated halfway house"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to hide a past crime", "quote": "When she confronts him with evidence that he was an intern at the halfway house, he attempts to kill Miriam and Kylie", "confidence": "observed"}
+   {
+    "value": "to hide a past crime",
+    "quote": "When she confronts him with evidence that he was an intern at the halfway house, he attempts to kill Miriam and Kylie",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:16",
+      "quote": "I don't need you to tell me what I did was wrong."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "murder", "quote": "the site of a horrific murder", "confidence": "sourced"}
+   {
+    "value": "murder",
+    "quote": "the site of a horrific murder",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:54",
+      "quote": "and stabbed over 60 times with a carving fork."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "confinement at home", "quote": "she is sentenced to house arrest for eight months under the care of her mother, Miriam", "confidence": "sourced"}
+   {
+    "value": "confinement at home",
+    "quote": "she is sentenced to house arrest for eight months under the care of her mother, Miriam",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:30",
+      "quote": "I therefore ordering an urgent report into the suitability of her mother's house"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "cannot leave the house", "quote": "Kylie's ankle monitor will alert the police if she ever leaves the premises of her mother's house", "confidence": "sourced"},
-   {"value": "haunting has a human cause", "quote": "Realising that their paranormal activity has been Eugene all this time", "confidence": "sourced"}
+   {
+    "value": "cannot leave the house",
+    "quote": "Kylie's ankle monitor will alert the police if she ever leaves the premises of her mother's house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:06",
+      "quote": "Now, in the event that there's an unauthorized absence,"
+     }
+    ]
+   },
+   {
+    "value": "haunting has a human cause",
+    "quote": "Realising that their paranormal activity has been Eugene all this time",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:51",
+      "quote": "This explanis everything. There was never any ghost or the noises."
+     }
+    ]
+   },
+   {
+    "value": "ghosts are cold",
+    "source": "subtitles",
+    "at": "00:32:11",
+    "quote": "Ghosts have a lower body temperature than humans.",
+    "confidence": "sourced",
+    "detail": "Amos's ghost-hunting theory"
+   }
   ],
   "who_suffers": [
-   {"value": "troubled daughter", "relation_to_threat": "stranger", "detail": "Kylie", "quote": "Kylie Bucknell, a troubled young woman, attempts to steal the safe from an ATM", "confidence": "sourced"},
-   {"value": "mother", "relation_to_threat": "stranger", "detail": "Miriam", "quote": "Dennis stabs Eugene, knocks out Kylie, and begins to strangle Miriam", "confidence": "sourced"},
-   {"value": "step-father", "relation_to_threat": "family", "detail": "accidentally stabbed by Kylie", "quote": "she panics and accidentally stabs Graeme", "confidence": "sourced"}
+   {
+    "value": "troubled daughter",
+    "relation_to_threat": "stranger",
+    "detail": "Kylie",
+    "quote": "Kylie Bucknell, a troubled young woman, attempts to steal the safe from an ATM",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother",
+    "relation_to_threat": "stranger",
+    "detail": "Miriam",
+    "quote": "Dennis stabs Eugene, knocks out Kylie, and begins to strangle Miriam",
+    "confidence": "sourced"
+   },
+   {
+    "value": "step-father",
+    "relation_to_threat": "family",
+    "detail": "accidentally stabbed by Kylie",
+    "quote": "she panics and accidentally stabs Graeme",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "Eugene throws a switch, and high voltage explodes Dennis' head", "confidence": "sourced"},
-   {"value": "outsider accepted", "quote": "Eugene has seemingly become an accepted (albeit mostly unseen) member of the household", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "Eugene throws a switch, and high voltage explodes Dennis' head",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:46:36",
+      "quote": "What shall I say? There's been a murder? Attempted murder?"
+     }
+    ]
+   },
+   {
+    "value": "outsider accepted",
+    "quote": "Eugene has seemingly become an accepted (albeit mostly unseen) member of the household",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:48:52",
+      "quote": "It's just turned itself off."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "ankle monitor", "when": "opening", "role": "setting", "quote": "Kylie's ankle monitor will alert the police if she ever leaves the premises", "confidence": "sourced"},
-   {"value": "disembodied hand", "when": "early", "role": "omen", "quote": "After a disembodied hand grabs her in the basement", "confidence": "sourced"},
-   {"value": "basement", "when": "early", "role": "setting", "quote": "a disembodied hand grabs her in the basement", "confidence": "sourced"},
-   {"value": "partial denture", "when": "middle", "role": "clue", "quote": "They discover evidence of the crime, including a partial denture", "confidence": "sourced"},
-   {"value": "secret hallways", "when": "late", "role": "setting", "quote": "Kylie discovers Eugene's secret hallways in their house", "confidence": "sourced"},
-   {"value": "high voltage switch", "when": "ending", "role": "weapon", "quote": "Eugene throws a switch, and high voltage explodes Dennis' head", "confidence": "sourced"}
+   {
+    "value": "ankle monitor",
+    "when": "opening",
+    "role": "setting",
+    "quote": "Kylie's ankle monitor will alert the police if she ever leaves the premises",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:14",
+      "quote": "The bracelet has a fiber optic cable inside it."
+     }
+    ]
+   },
+   {
+    "value": "disembodied hand",
+    "when": "early",
+    "role": "omen",
+    "quote": "After a disembodied hand grabs her in the basement",
+    "confidence": "sourced"
+   },
+   {
+    "value": "basement",
+    "when": "early",
+    "role": "setting",
+    "quote": "a disembodied hand grabs her in the basement",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:45",
+      "quote": "There was one this night, and I was in the basement"
+     }
+    ]
+   },
+   {
+    "value": "partial denture",
+    "when": "middle",
+    "role": "clue",
+    "quote": "They discover evidence of the crime, including a partial denture",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:10",
+      "quote": "How many 15-year-old girls do you know with dentures?"
+     }
+    ]
+   },
+   {
+    "value": "secret hallways",
+    "when": "late",
+    "role": "setting",
+    "quote": "Kylie discovers Eugene's secret hallways in their house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:47",
+      "quote": "Look. You see that? That hole leads to a passageway inside the walls."
+     }
+    ]
+   },
+   {
+    "value": "high voltage switch",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "Eugene throws a switch, and high voltage explodes Dennis' head",
+    "confidence": "sourced"
+   },
+   {
+    "value": "teddy bear",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:35:11",
+    "quote": "Spend eight hours waiting for a teddy bear to crawl out of a fireplace.",
+    "confidence": "sourced",
+    "detail": "the talking bear Miriam says moves by itself"
+   },
+   {
+    "value": "skinned possums",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:55:54",
+    "quote": "Well, he's skinning possums. That'll be the smell.",
+    "confidence": "sourced",
+    "detail": "the neighbour's rancid smell, a false lead"
+   },
+   {
+    "value": "antique watch brooch",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:55:05",
+    "quote": "For starters, who kills someone over a brooch?",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:15",
+      "quote": "The brooch belonged to my son Eugene."
+     }
+    ]
+   },
+   {
+    "value": "carving fork",
+    "when": "middle",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "00:44:11",
+    "quote": "She was stabbed 67 times with a meat fork.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "drawings of the family",
+    "when": "ending",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:41:50",
+    "quote": "That's you on the first day of school.",
+    "confidence": "sourced",
+    "detail": "Eugene has watched and drawn Kylie's whole childhood from the walls",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:24",
+      "quote": "And that's us waiting for you to come back."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "failed robbery", "when": "opening", "quote": "attempts to steal the safe from an ATM but she fails to escape and is arrested", "confidence": "sourced"},
-   {"order": 2, "value": "confined to the family home", "when": "opening", "role": "trigger", "quote": "she is sentenced to house arrest for eight months", "confidence": "sourced"},
-   {"order": 3, "value": "mother says house is haunted", "when": "early", "role": "omen", "quote": "Kylie is further frustrated when Miriam claims the house is haunted", "confidence": "sourced"},
-   {"order": 4, "value": "past murder revealed", "when": "middle", "role": "clue", "quote": "their home was once a halfway house and the site of a horrific murder", "confidence": "sourced"},
-   {"order": 5, "value": "wrong suspect", "when": "middle", "quote": "the neighbour says that he is not the killer", "confidence": "sourced"},
-   {"order": 6, "value": "figure in the walls", "when": "late", "role": "turn", "quote": "Kylie discovers Eugene's secret hallways in their house and comes face to face with Eugene", "confidence": "sourced"},
-   {"order": 7, "value": "trusted helper is the killer", "when": "late", "role": "turn", "quote": "Once Dennis reveals that he wears a partial denture, Kylie becomes suspicious of him", "confidence": "sourced"},
-   {"order": 8, "value": "killer destroyed, ghost befriended", "when": "ending", "quote": "Eugene throws a switch, and high voltage explodes Dennis' head", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "failed robbery",
+    "when": "opening",
+    "quote": "attempts to steal the safe from an ATM but she fails to escape and is arrested",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:11",
+      "quote": "Take your time, Justin. - I'm fucking trying."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "confined to the family home",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "she is sentenced to house arrest for eight months",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:30",
+      "quote": "I therefore ordering an urgent report into the suitability of her mother's house"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "mother says house is haunted",
+    "when": "early",
+    "role": "omen",
+    "quote": "Kylie is further frustrated when Miriam claims the house is haunted",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:27",
+      "quote": "You honestly think this house is haunted?"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "spirit addressed",
+    "when": "early",
+    "source": "subtitles",
+    "at": "00:28:13",
+    "quote": "To the restless spirit that lives in this house, what is your business here?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "past murder revealed",
+    "when": "middle",
+    "role": "clue",
+    "quote": "their home was once a halfway house and the site of a horrific murder",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:49",
+      "quote": "Elizabeth Chalmers, or Lizzy as she was more commonly known,"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "wrong suspect",
+    "when": "middle",
+    "quote": "the neighbour says that he is not the killer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:55:54",
+      "quote": "Well, he's skinning possums. That'll be the smell."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "figure in the walls",
+    "when": "late",
+    "role": "turn",
+    "quote": "Kylie discovers Eugene's secret hallways in their house and comes face to face with Eugene",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:16",
+      "quote": "and there was this guy in the walls, and he's pale."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "trusted helper is the killer",
+    "when": "late",
+    "role": "turn",
+    "quote": "Once Dennis reveals that he wears a partial denture, Kylie becomes suspicious of him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:21",
+      "quote": "A year before Elizabeth Chalmers was killed you came here on work experience."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "hidden watcher's drawings",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:41:50",
+    "quote": "That's you on the first day of school.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "killer destroyed, ghost befriended",
+    "when": "ending",
+    "quote": "Eugene throws a switch, and high voltage explodes Dennis' head",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:46:36",
+      "quote": "What shall I say? There's been a murder? Attempted murder?"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "monitor switches itself off",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:48:52",
+    "quote": "It's just turned itself off.",
+    "confidence": "observed"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,61 +1,481 @@
 {
  "film": "2009-antichrist",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Analysis"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Analysis"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "grieving wife", "detail": "the woman, turned violent", "quote": "the woman manifests increasingly violent sexual behavior and sadomasochism", "confidence": "sourced"},
-   {"value": "nature as evil", "quote": "that nature is \"Satan's church\"", "confidence": "sourced"}
+   {
+    "value": "grieving wife",
+    "detail": "the woman, turned violent",
+    "quote": "the woman manifests increasingly violent sexual behavior and sadomasochism",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:40",
+      "quote": "Hit me so it hurts ."
+     }
+    ]
+   },
+   {
+    "value": "nature as evil",
+    "quote": "that nature is \"Satan's church\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:48",
+      "quote": "Nature is Satan 's church ."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "grief", "quote": "a married couple who experience the accidental death of their infant son", "confidence": "sourced"},
-   {"value": "belief in women's evil", "quote": "she came to believe that all women are inherently evil", "confidence": "sourced"}
+   {
+    "value": "grief",
+    "quote": "a married couple who experience the accidental death of their infant son",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:01",
+      "quote": "my grief pattern is atypical ."
+     }
+    ]
+   },
+   {
+    "value": "belief in women's evil",
+    "quote": "she came to believe that all women are inherently evil",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:50",
+      "quote": "Women do not control their own bodies . Nature does ."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "child allowed to die", "quote": "she saw Nic climbing up to the window on the night of his death and intentionally allowed him to fall from it", "confidence": "sourced"},
-   {"value": "child harmed by a parent", "quote": "she had been systematically putting Nic's shoes on the wrong feet, resulting in a foot deformity", "confidence": "sourced"},
-   {"value": "witch hunts", "quote": "violent portraits of witch hunts", "confidence": "sourced"}
+   {
+    "value": "child allowed to die",
+    "quote": "she saw Nic climbing up to the window on the night of his death and intentionally allowed him to fall from it",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child harmed by a parent",
+    "quote": "she had been systematically putting Nic's shoes on the wrong feet, resulting in a foot deformity",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:29",
+      "quote": "Are you aware that you put Nic 's shoes on wrong in this picture ?"
+     }
+    ]
+   },
+   {
+    "value": "witch hunts",
+    "quote": "violent portraits of witch hunts",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:21",
+      "quote": "Do you know how many innocent women were killed ... in the 16th century alone just for being women ?"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "death of a child", "quote": "their unsupervised infant son, Nic, climbs up to the bedroom window and falls out of it to his death", "confidence": "sourced"},
-   {"value": "retreat to a cabin", "quote": "They hike to their isolated cabin in the woods, called Eden", "confidence": "sourced"}
+   {
+    "value": "death of a child",
+    "quote": "their unsupervised infant son, Nic, climbs up to the bedroom window and falls out of it to his death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "retreat to a cabin",
+    "quote": "They hike to their isolated cabin in the woods, called Eden",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:32",
+      "quote": "that you and Nic were going to go to Eden , just the two of you ."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "death comes with three beggars", "quote": "only \"when the Three Beggars arrive\" can he die", "confidence": "sourced"}
+   {
+    "value": "death comes with three beggars",
+    "quote": "only \"when the Three Beggars arrive\" can he die",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:57",
+      "quote": "When the three beggars arrive , someone must die ."
+     }
+    ]
+   },
+   {
+    "value": "witches can raise hail",
+    "source": "subtitles",
+    "at": "01:10:21",
+    "quote": "The sisters from Ratisbon could start a hailstorm .",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "couple", "relation_to_threat": "lover", "quote": "a married couple who experience the accidental death of their infant son", "confidence": "sourced"},
-   {"value": "husband", "relation_to_threat": "lover", "detail": "the man, a therapist", "quote": "She drills a hole through his leg, bolting a heavy grindstone through the wound", "confidence": "sourced"},
-   {"value": "child", "relation_to_threat": "family", "detail": "Nic", "quote": "intentionally allowed him to fall from it, displaying her perceived evil", "confidence": "sourced"}
+   {
+    "value": "couple",
+    "relation_to_threat": "lover",
+    "quote": "a married couple who experience the accidental death of their infant son",
+    "confidence": "sourced"
+   },
+   {
+    "value": "husband",
+    "relation_to_threat": "lover",
+    "detail": "the man, a therapist",
+    "quote": "She drills a hole through his leg, bolting a heavy grindstone through the wound",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:03",
+      "quote": "We gotta get this thing off my leg ."
+     }
+    ]
+   },
+   {
+    "value": "child",
+    "relation_to_threat": "family",
+    "detail": "Nic",
+    "quote": "intentionally allowed him to fall from it, displaying her perceived evil",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "Finally free, he strangles her to death then builds a pyre, lighting it to cremate her body", "confidence": "sourced"},
-   {"value": "ambiguous", "detail": "a procession of faceless women", "quote": "watches in awe as a procession of hundreds of women", "confidence": "observed"}
+   {
+    "value": "threat destroyed",
+    "quote": "Finally free, he strangles her to death then builds a pyre, lighting it to cremate her body",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ambiguous",
+    "detail": "a procession of faceless women",
+    "quote": "watches in awe as a procession of hundreds of women",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:40:20",
+      "quote": "[ \" Lascia ch 'io pianga \" from Rinaldo : Woman Singing In Italian ]"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "open window", "when": "opening", "role": "trigger", "quote": "climbs up to the bedroom window and falls out of it to his death", "confidence": "sourced"},
-   {"value": "deer", "state": "stillborn fawn hanging from her", "when": "early", "role": "omen", "quote": "he encounters a deer that shows no fear of him and has a stillborn fawn hanging halfway out of her", "confidence": "sourced"},
-   {"value": "acorns", "state": "pelting the roof", "when": "middle", "role": "omen", "quote": "acorns rapidly pelt the metal roof", "confidence": "sourced"},
-   {"value": "ticks", "state": "fed on blood", "when": "middle", "role": "omen", "quote": "he wakes up with a hand covered in ticks that have fed on his blood", "confidence": "sourced"},
-   {"value": "fox", "state": "self-disemboweling, speaking", "when": "middle", "role": "omen", "quote": "he encounters a self-disemboweling red fox that tells him \"chaos reigns.\"", "confidence": "sourced"},
-   {"value": "dead tree", "state": "bodies in roots", "when": "middle", "role": "setting", "quote": "an ominous dead tree where bodies are intertwined within the exposed roots", "confidence": "sourced"},
-   {"value": "grindstone", "state": "bolted through leg", "when": "late", "role": "weapon", "quote": "bolting a heavy grindstone through the wound", "confidence": "sourced"},
-   {"value": "crow", "state": "buried alive", "when": "late", "role": "omen", "quote": "Following the sound of a crow he found buried alive in the hole", "confidence": "sourced"},
-   {"value": "shoes on wrong feet", "when": "late", "role": "clue", "quote": "putting Nic's shoes on the wrong feet", "confidence": "sourced"}
+   {
+    "value": "open window",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "climbs up to the bedroom window and falls out of it to his death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "deer",
+    "state": "stillborn fawn hanging from her",
+    "when": "early",
+    "role": "omen",
+    "quote": "he encounters a deer that shows no fear of him and has a stillborn fawn hanging halfway out of her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:13",
+      "quote": "The little deers ... are hiding among the ferns ..."
+     }
+    ]
+   },
+   {
+    "value": "acorns",
+    "state": "pelting the roof",
+    "when": "middle",
+    "role": "omen",
+    "quote": "acorns rapidly pelt the metal roof",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:55",
+      "quote": "It 's just the stupid acorns ."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:52:25",
+      "quote": "The acorns fell on the roof then too ."
+     }
+    ]
+   },
+   {
+    "value": "ticks",
+    "state": "fed on blood",
+    "when": "middle",
+    "role": "omen",
+    "quote": "he wakes up with a hand covered in ticks that have fed on his blood",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fox",
+    "state": "self-disemboweling, speaking",
+    "when": "middle",
+    "role": "omen",
+    "quote": "he encounters a self-disemboweling red fox that tells him \"chaos reigns.\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:45",
+      "quote": "[ Deep Voice ] Chaos ... reigns !"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:30:47",
+      "quote": "is the old fox hole ."
+     }
+    ]
+   },
+   {
+    "value": "dead tree",
+    "state": "bodies in roots",
+    "when": "middle",
+    "role": "setting",
+    "quote": "an ominous dead tree where bodies are intertwined within the exposed roots",
+    "confidence": "sourced"
+   },
+   {
+    "value": "grindstone",
+    "state": "bolted through leg",
+    "when": "late",
+    "role": "weapon",
+    "quote": "bolting a heavy grindstone through the wound",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:03",
+      "quote": "We gotta get this thing off my leg ."
+     }
+    ]
+   },
+   {
+    "value": "crow",
+    "state": "buried alive",
+    "when": "late",
+    "role": "omen",
+    "quote": "Following the sound of a crow he found buried alive in the hole",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:55",
+      "quote": "[ Crow Cawing ]"
+     }
+    ]
+   },
+   {
+    "value": "shoes on wrong feet",
+    "when": "late",
+    "role": "clue",
+    "quote": "putting Nic's shoes on the wrong feet",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:29",
+      "quote": "Are you aware that you put Nic 's shoes on wrong in this picture ?"
+     }
+    ]
+   },
+   {
+    "value": "hailstones",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:35:14",
+    "quote": "[ Hailstones Landing On Roof ]",
+    "confidence": "sourced"
+   },
+   {
+    "value": "phantom child's cry",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:48:37",
+    "quote": "[ Nic Crying ]",
+    "confidence": "sourced"
+   },
+   {
+    "value": "opera aria",
+    "when": "opening",
+    "role": "symbol",
+    "detail": "Handel's 'Lascia ch'io pianga' over the prologue and epilogue",
+    "source": "subtitles",
+    "at": "00:00:48",
+    "quote": "[ \" Lascia ch 'io pianga \" from Rinaldo : Woman Singing In Italian ]",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "child falls to death", "when": "opening", "role": "trigger", "quote": "An unnamed couple have sex in their Seattle apartment while their unsupervised infant son, Nic, climbs up to the bedroom window", "confidence": "sourced"},
-   {"order": 2, "value": "retreat to the woods", "when": "early", "quote": "They hike to their isolated cabin in the woods, called Eden", "confidence": "sourced"},
-   {"order": 3, "value": "animal omens", "when": "middle", "role": "omen", "quote": "he encounters a self-disemboweling red fox that tells him \"chaos reigns.\"", "confidence": "sourced"},
-   {"order": 4, "value": "dark research found", "when": "middle", "role": "clue", "quote": "In the dark attic, the man finds the woman's thesis studies", "confidence": "sourced"},
-   {"order": 5, "value": "abuse of child discovered", "when": "late", "role": "turn", "quote": "the man becomes aware that she had been systematically putting Nic's shoes on the wrong feet", "confidence": "sourced"},
-   {"order": 6, "value": "wife maims husband", "when": "late", "quote": "She drills a hole through his leg, bolting a heavy grindstone through the wound", "confidence": "sourced"},
-   {"order": 7, "value": "confession", "when": "late", "role": "turn", "quote": "she saw Nic climbing up to the window on the night of his death and intentionally allowed him to fall from it", "confidence": "sourced"},
-   {"order": 8, "value": "husband kills and burns wife", "when": "ending", "quote": "he strangles her to death then builds a pyre, lighting it to cremate her body", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "child falls to death",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "An unnamed couple have sex in their Seattle apartment while their unsupervised infant son, Nic, climbs up to the bedroom window",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:48",
+      "quote": "[ \" Lascia ch 'io pianga \" from Rinaldo : Woman Singing In Italian ]"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "retreat to the woods",
+    "when": "early",
+    "quote": "They hike to their isolated cabin in the woods, called Eden",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:21",
+      "quote": "Imagine you arrive at Eden through the woods ."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "animal omens",
+    "when": "middle",
+    "role": "omen",
+    "quote": "he encounters a self-disemboweling red fox that tells him \"chaos reigns.\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:45",
+      "quote": "[ Deep Voice ] Chaos ... reigns !"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "dark research found",
+    "when": "middle",
+    "role": "clue",
+    "quote": "In the dark attic, the man finds the woman's thesis studies",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:11",
+      "quote": "That kind of nature was the subject of my thesis ."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "abuse of child discovered",
+    "when": "late",
+    "role": "turn",
+    "quote": "the man becomes aware that she had been systematically putting Nic's shoes on the wrong feet",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:29",
+      "quote": "Are you aware that you put Nic 's shoes on wrong in this picture ?"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "wife maims husband",
+    "when": "late",
+    "quote": "She drills a hole through his leg, bolting a heavy grindstone through the wound",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:35",
+      "quote": "[ Hand Drill Squeaking ]"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "three beggars named",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:29:47",
+    "quote": "The three beggars aren 't here yet .",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "confession",
+    "when": "late",
+    "role": "turn",
+    "quote": "she saw Nic climbing up to the window on the night of his death and intentionally allowed him to fall from it",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "husband kills and burns wife",
+    "when": "ending",
+    "quote": "he strangles her to death then builds a pyre, lighting it to cremate her body",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:35",
+      "quote": "[ Choking ]"
+     }
+    ]
+   }
+  ],
+  "wants": [
+   {
+    "value": "to keep him from leaving",
+    "detail": "she maims her husband so he cannot leave her",
+    "source": "subtitles",
+    "at": "01:15:05",
+    "quote": "Bastard ! You 're leaving me , aren 't you ?",
+    "confidence": "observed"
+   }
   ]
  },
- "not_stated": ["wants"],
+ "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

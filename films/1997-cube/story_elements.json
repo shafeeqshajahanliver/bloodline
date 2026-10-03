@@ -1,56 +1,436 @@
 {
  "film": "1997-cube",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "deadly maze", "quote": "seven individuals trapped in a bizarre and deadly labyrinth of cube-shaped rooms", "confidence": "sourced"},
-   {"value": "fellow prisoner", "detail": "Quentin turns murderous", "quote": "then deliberately drops her to her death, telling the others that she slipped", "confidence": "sourced"}
+   {
+    "value": "deadly maze",
+    "quote": "seven individuals trapped in a bizarre and deadly labyrinth of cube-shaped rooms",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fellow prisoner",
+    "detail": "Quentin turns murderous",
+    "quote": "then deliberately drops her to her death, telling the others that she slipped",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:22",
+      "quote": "I SAID COME HERE RIGHT NOW-W-W-W!"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "faceless bureaucracy", "quote": "The Cube was created accidentally by a bureaucracy, and that its original purpose has been forgotten", "confidence": "sourced"}
+   {
+    "value": "faceless bureaucracy",
+    "quote": "The Cube was created accidentally by a bureaucracy, and that its original purpose has been forgotten",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:33",
+      "quote": "NOBODY IS IN CHARGE. IT'S A HEADLESS BLUNDER"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:36:24",
+      "quote": "NOBODY KNEW WHAT IT WAS."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "nothing stated", "detail": "the Cube exists only to justify itself", "quote": "they have been placed inside only to justify its existence", "confidence": "sourced"}
+   {
+    "value": "nothing stated",
+    "detail": "the Cube exists only to justify itself",
+    "quote": "they have been placed inside only to justify its existence",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:05",
+      "quote": "BUT IF THIS PLACE EVER HAD A PURPOSE, THEN IT GOT MISCOMMUNICATED OR LOST IN THE SHUFFLE."
+     }
+    ]
+   },
+   {
+    "value": "prisoners are the purpose",
+    "detail": "Quentin's claim that the cube exists to hold them",
+    "source": "subtitles",
+    "at": "01:01:35",
+    "quote": "WE ARE THE PURPOSE. THE CUBE... IS US.",
+    "confidence": "observed"
+   }
   ],
   "trigger": [
-   {"value": "waking up trapped", "quote": "A man named Alderson awakens in a room that has hatches on each wall and floor", "confidence": "sourced"}
+   {
+    "value": "waking up trapped",
+    "quote": "A man named Alderson awakens in a room that has hatches on each wall and floor",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "numbers mark the traps", "quote": "traps are not tagged by prime numbers, but by powers of prime numbers", "confidence": "sourced"},
-   {"value": "rooms move", "quote": "the rooms are moving, and will eventually line up with the exit", "confidence": "sourced"},
-   {"value": "sound triggers traps", "quote": "a room with a sound activated spiked wall trap", "confidence": "sourced"}
+   {
+    "value": "numbers mark the traps",
+    "quote": "traps are not tagged by prime numbers, but by powers of prime numbers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:01",
+      "quote": "PRIME NUMBERS. I CAN'T BELIEVE I DIDN'T SEE IT BEFORE."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:11:37",
+      "quote": "FIRST, I THOUGHT THAT THEY WERE IDENTIFIED BY PRIME NUMBERS, BUT THEY'RE NOT."
+     }
+    ]
+   },
+   {
+    "value": "rooms move",
+    "quote": "the rooms are moving, and will eventually line up with the exit",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:21",
+      "quote": "PERMUTATIONS. A LIST OF ALL THE COORDINATES THAT THE ROOM PASSES THROUGH."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:07:37",
+      "quote": "WE HAVEN'T BEEN MOVING IN CIRCLES. THE ROOMS HAVE."
+     }
+    ]
+   },
+   {
+    "value": "sound triggers traps",
+    "quote": "a room with a sound activated spiked wall trap",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:42",
+      "quote": "SOUND ACTIVATED."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:45:29",
+      "quote": "WE JUST HAVE TO BE QUIET."
+     }
+    ]
+   },
+   {
+    "value": "traps sense living bodies",
+    "source": "subtitles",
+    "at": "00:13:33",
+    "quote": "THE BOOT'S NOT ALIVE. DETECTS HYDROGEN SULFIDE EXCRETED FROM THE SKIN.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "exit room lies outside",
+    "detail": "the bridge room's coordinate places it outside the cube",
+    "source": "subtitles",
+    "at": "01:09:21",
+    "quote": "THAT COORDINATE PLACED THE ROOM OUTSIDE THE CUBE.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "strangers", "relation_to_threat": "stranger", "quote": "Five different people all meet in another room", "confidence": "sourced"},
-   {"value": "builder of the trap", "relation_to_threat": "self", "detail": "Worth, who designed the shell", "quote": "he was hired to design the maze’s shell", "confidence": "sourced"}
+   {
+    "value": "strangers",
+    "relation_to_threat": "stranger",
+    "quote": "Five different people all meet in another room",
+    "confidence": "sourced"
+   },
+   {
+    "value": "builder of the trap",
+    "relation_to_threat": "self",
+    "detail": "Worth, who designed the shell",
+    "quote": "he was hired to design the maze’s shell",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:20",
+      "quote": "I DESIGNED THE OUTER SHELL."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "lone innocent escapes", "detail": "Kazan, the savant", "quote": "Kazan wanders out into the light", "confidence": "sourced"},
-   {"value": "most die", "quote": "Quentin reappears and, using a detached door lever, fatally stabs Leaven and Worth", "confidence": "sourced"}
+   {
+    "value": "lone innocent escapes",
+    "detail": "Kazan, the savant",
+    "quote": "Kazan wanders out into the light",
+    "confidence": "sourced"
+   },
+   {
+    "value": "most die",
+    "quote": "Quentin reappears and, using a detached door lever, fatally stabs Leaven and Worth",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "wire trap", "state": "slicing", "when": "opening", "role": "threat", "quote": "killed by a hidden trelliswork-like wire trap that slices his body into cubes", "confidence": "sourced"},
-   {"value": "hatches", "state": "on every wall", "when": "opening", "role": "setting", "quote": "a room that has hatches on each wall and floor, each leading to other rooms", "confidence": "sourced"},
-   {"value": "numbers on plates", "state": "etched", "when": "early", "role": "clue", "quote": "each hatch has plates with three sets of numbers etched into them", "confidence": "sourced"},
-   {"value": "boot", "state": "thrown as test", "when": "early", "role": "clue", "quote": "by throwing his boot into a room", "confidence": "sourced"},
-   {"value": "corpse", "state": "reappearing", "when": "late", "role": "clue", "quote": "Rennes's corpse is in the room, proving they have moved in a circle", "confidence": "sourced"},
-   {"value": "rope of clothing", "state": "slipping", "when": "middle", "role": "turn", "quote": "Holloway tries to swing over to the shell using a rope made of clothing", "confidence": "sourced"},
-   {"value": "bright light", "state": "beyond the exit", "when": "ending", "role": "symbol", "quote": "they open the hatch, revealing a bright light", "confidence": "sourced"}
+   {
+    "value": "wire trap",
+    "state": "slicing",
+    "when": "opening",
+    "role": "threat",
+    "quote": "killed by a hidden trelliswork-like wire trap that slices his body into cubes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:27",
+      "quote": "[LOUD HISSING]"
+     }
+    ]
+   },
+   {
+    "value": "hatches",
+    "state": "on every wall",
+    "when": "opening",
+    "role": "setting",
+    "quote": "a room that has hatches on each wall and floor, each leading to other rooms",
+    "confidence": "sourced"
+   },
+   {
+    "value": "numbers on plates",
+    "state": "etched",
+    "when": "early",
+    "role": "clue",
+    "quote": "each hatch has plates with three sets of numbers etched into them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:21",
+      "quote": "CODED CARTESIAN COORDINATES."
+     }
+    ]
+   },
+   {
+    "value": "boot",
+    "state": "thrown as test",
+    "when": "early",
+    "role": "clue",
+    "quote": "by throwing his boot into a room",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:19",
+      "quote": "WE CAN AVOID THE TRAPS USING THE BOOT."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:11:30",
+      "quote": "YOU THREW OUT OUR LAST BOOT, YOU FUCKING IDIOT."
+     }
+    ]
+   },
+   {
+    "value": "outer shell",
+    "state": "sealed",
+    "when": "middle",
+    "role": "setting",
+    "detail": "the hollow sarcophagus around the cube that Worth designed",
+    "source": "subtitles",
+    "at": "00:35:25",
+    "quote": "THE SHELL. THE SARCOPHAGUS.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:50",
+      "quote": "MY OLD FRIEND THE SHELL."
+     }
+    ]
+   },
+   {
+    "value": "corpse",
+    "state": "reappearing",
+    "when": "late",
+    "role": "clue",
+    "quote": "Rennes's corpse is in the room, proving they have moved in a circle",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:40",
+      "quote": "WE'VE BEEN GOING IN CIRCLES."
+     }
+    ]
+   },
+   {
+    "value": "rope of clothing",
+    "state": "slipping",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Holloway tries to swing over to the shell using a rope made of clothing",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:31",
+      "quote": "WE MAKE A ROPE OUT OF CLOTHES."
+     }
+    ]
+   },
+   {
+    "value": "bright light",
+    "state": "beyond the exit",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "they open the hatch, revealing a bright light",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:48",
+      "quote": "BOUNDLESS HUMAN STUPIDITY."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "first death by trap", "when": "opening", "quote": "He enters another room and is killed by a hidden trelliswork-like wire trap", "confidence": "sourced"},
-   {"order": 2, "value": "strangers band together", "when": "early", "quote": "Five different people all meet in another room", "confidence": "sourced"},
-   {"order": 3, "value": "leader killed", "when": "early", "quote": "he is killed by an acid trap", "confidence": "sourced"},
-   {"order": 4, "value": "insider confesses", "when": "middle", "role": "clue", "quote": "Worth admits to Quentin in an ensuing argument that he was hired to design the maze’s shell", "confidence": "sourced"},
-   {"order": 5, "value": "protector turns killer", "when": "middle", "role": "turn", "quote": "Quentin catches it at the last second and pulls her up, but then deliberately drops her to her death", "confidence": "sourced"},
-   {"order": 6, "value": "puzzle solved", "when": "late", "role": "turn", "quote": "Kazan is revealed as a savant who can calculate factorizations in his head instantaneously", "confidence": "sourced"},
-   {"order": 7, "value": "killer strikes at exit", "when": "ending", "quote": "using a detached door lever, fatally stabs Leaven and Worth", "confidence": "sourced"},
-   {"order": 8, "value": "one walks free", "when": "ending", "quote": "Kazan wanders out into the light", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "first death by trap",
+    "when": "opening",
+    "quote": "He enters another room and is killed by a hidden trelliswork-like wire trap",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "strangers band together",
+    "when": "early",
+    "quote": "Five different people all meet in another room",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "leader killed",
+    "when": "early",
+    "quote": "he is killed by an acid trap",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:19",
+      "quote": "[SCREAMING CONTINUES]"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "the numbers decoded",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:20:01",
+    "quote": "PRIME NUMBERS. I CAN'T BELIEVE I DIDN'T SEE IT BEFORE.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "insider confesses",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Worth admits to Quentin in an ensuing argument that he was hired to design the maze’s shell",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:35",
+      "quote": "I WAS CONTRACTED TO DRAW PLANS FOR A HOLLOW SHELL."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "protector turns killer",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Quentin catches it at the last second and pulls her up, but then deliberately drops her to her death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:43",
+      "quote": "GIVE US THE BOOT, YOU PIG!"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "puzzle solved",
+    "when": "late",
+    "role": "turn",
+    "quote": "Kazan is revealed as a savant who can calculate factorizations in his head instantaneously",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:21",
+      "quote": "TO FIND THE PERMUTATIONS, THEY'RE SUBTRACTED FROM ONE ANOTHER."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "back to the first room",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:19:25",
+    "quote": "THIS IS THE ROOM WE STARTED IN.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "killer strikes at exit",
+    "when": "ending",
+    "quote": "using a detached door lever, fatally stabs Leaven and Worth",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:24",
+      "quote": "KAZAN, GET OUT THROUGH THE DOOR!"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "one walks free",
+    "when": "ending",
+    "quote": "Kazan wanders out into the light",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }
