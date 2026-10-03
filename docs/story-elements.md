@@ -43,3 +43,16 @@ Extra fields:
 - Several entries per dimension are fine. Aim for 1 to 3 per dimension, 3 to 8 images and 4 to 8 beats.
 - `plot_quality`: `full` (plot section of 150+ words), `thin` (under 150), `none` (no plot section; then only the lead is used).
 - `status` stays `first pass, unreviewed` until Shaf reviews it.
+
+## Refining with subtitles and screenplays
+
+Wikipedia plots keep the plot and drop texture (Get Out's deer is not in its plot summary). A second pass refines each film using its subtitles (`dialogue/subtitles.*.srt`, which often include sound captions such as "(DEER GROANING)") and screenplay (`script/screenplay.txt`, 116 films).
+
+- `moments`: any entry can carry a list of moments that pin it to the film: `{"source": "subtitles", "at": "HH:MM:SS", "quote": "..."}` or `{"source": "screenplay", "quote": "..."}`. Subtitle times are those of the subtitle file, which may be a slightly different cut from other versions.
+- New entries found only in subtitles or the screenplay set `"source": "subtitles"` (with `at`) or `"source": "screenplay"` and quote that file. Entries without `source` come from Wikipedia.
+- Quotes from subtitles and screenplays may be 2 to 40 words (sound captions are short). The validator matches them on letters and digits only, because the subtitle files put spaces before punctuation, and checks that a subtitle quote appears within a minute after its `at` time.
+- Up to 12 beats and 12 images once refined. `refined` records the date of the pass.
+- Screenplays are drafts and may differ from the finished film; prefer subtitles for timing.
+- Tools: `tools/film_sources.py <id>` prints the current elements, all sound captions with times, the opening and closing ten minutes of dialogue, and the screenplay's scene list and opening and closing pages. `tools/find_moment.py <id> <terms>` searches subtitles and screenplay.
+
+Worked example of a refined film: `films/2017-get-out/story_elements.json`.

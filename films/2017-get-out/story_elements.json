@@ -8,6 +8,12 @@
     "Plot",
     "Themes and interpretations"
    ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
   }
  ],
  "plot_quality": "full",
@@ -77,7 +83,14 @@
     "value": "hypnotic trigger",
     "detail": "a spoon stirring in a teacup",
     "quote": "using the sound of a spoon stirring in a teacup as a hypnotic trigger",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:10",
+      "quote": "Phase one was the hypnotism. That's how they sedate you."
+     }
+    ]
    },
    {
     "value": "camera flash breaks control",
@@ -127,11 +140,44 @@
     "confidence": "sourced"
    },
    {
+    "value": "deer",
+    "state": "hit by the car, dying",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:10:56",
+    "quote": "(DEER GROANING)",
+    "confidence": "sourced",
+    "detail": "Rose hits a deer on the drive upstate; it returns as Dean's hatred of deer, the mounted head and the antlers Chris kills Dean with",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The deer lays there gasping for breaths and watching him with a black wet eye. Chris is transfixed."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:15:17",
+      "quote": "I do not like the deer. I'm sick of it."
+     }
+    ]
+   },
+   {
     "value": "teacup and spoon",
     "when": "early",
     "role": "weapon",
     "quote": "the sound of a spoon stirring in a teacup",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:09",
+      "quote": "(SPOON CLINKING)"
+     },
+     {
+      "source": "screenplay",
+      "quote": "She begins to stir slowly, CLINKING the SPOON softly and rhythmically against the sides of the cup."
+     }
+    ]
    },
    {
     "value": "sunken place",
@@ -146,7 +192,18 @@
     "when": "middle",
     "role": "weapon",
     "quote": "When Chris photographs Logan with flash on, Logan lunges toward Chris",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:16",
+      "quote": "You know, it was your flash. That's what set him off."
+     },
+     {
+      "source": "screenplay",
+      "quote": "He raises his phone toward Andre/Logan and the group and snaps a picture. The FLASH POPS."
+     }
+    ]
    },
    {
     "value": "photos of past partners",
@@ -160,7 +217,13 @@
     "when": "late",
     "role": "weapon",
     "quote": "plugging his ears with cotton stuffing from the armchair",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "a rip in the leather arm of the chair revealing its cotton stuffing"
+     }
+    ]
    },
    {
     "value": "basement armchair",
@@ -175,6 +238,21 @@
     "role": "symbol",
     "quote": "she hangs photographs of her ex-partners on her wall like hunting trophies",
     "confidence": "sourced"
+   },
+   {
+    "value": "mounted deer head",
+    "state": "taxidermy, then used as a weapon",
+    "when": "late",
+    "role": "weapon",
+    "source": "screenplay",
+    "quote": "a deer's head is mounted above an old-school floor-standing television",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "He punctures Dean through his neck and shoulder with the antlers."
+     }
+    ]
    }
   ],
   "beats": [
@@ -188,6 +266,22 @@
    },
    {
     "order": 2,
+    "value": "animal hit on the road",
+    "when": "early",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "A cop car is now pulled up to where the deer was hit.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:56",
+      "quote": "(DEER GROANING)"
+     }
+    ]
+   },
+   {
+    "order": 3,
     "value": "visit to partner's family",
     "when": "early",
     "role": "trigger",
@@ -195,14 +289,14 @@
     "confidence": "sourced"
    },
    {
-    "order": 3,
+    "order": 4,
     "value": "hypnotised without consent",
     "when": "early",
     "quote": "Missy manipulates Chris into an individual hypnotherapy session",
     "confidence": "sourced"
    },
    {
-    "order": 4,
+    "order": 5,
     "value": "warning to leave",
     "when": "middle",
     "role": "omen",
@@ -210,7 +304,16 @@
     "confidence": "sourced"
    },
    {
-    "order": 5,
+    "order": 6,
+    "value": "victim auctioned",
+    "when": "middle",
+    "role": "turn",
+    "source": "screenplay",
+    "quote": "The auction is flying now. Dean's hand signals are going fast.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
     "value": "lover revealed as accomplice",
     "when": "middle",
     "role": "turn",
@@ -218,7 +321,7 @@
     "confidence": "sourced"
    },
    {
-    "order": 6,
+    "order": 8,
     "value": "scheme explained",
     "when": "late",
     "role": "turn",
@@ -226,14 +329,14 @@
     "confidence": "sourced"
    },
    {
-    "order": 7,
+    "order": 9,
     "value": "escape and killing of captors",
     "when": "late",
     "quote": "Chris awakens and bludgeons him",
     "confidence": "sourced"
    },
    {
-    "order": 8,
+    "order": 10,
     "value": "friend arrives as rescuer",
     "when": "ending",
     "quote": "A police car arrives; Rose cries out for help, but Rod emerges from the car",
@@ -244,5 +347,6 @@
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }
