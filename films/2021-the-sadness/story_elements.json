@@ -1,63 +1,429 @@
 {
  "film": "2021-the-sadness",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "virus", "detail": "the Alvin virus", "quote": "a viral pandemic that turns people into homicidal maniacs", "confidence": "sourced"},
-   {"value": "infected people", "quote": "creating an irresistible and aggressive desire to act out their most violent, sadistic impulses while retaining their intelligence and speech", "confidence": "sourced"},
-   {"value": "mad doctor", "detail": "Dr. Alan Wong", "quote": "he is conducting human trials by injecting the virus on newborn infants", "confidence": "sourced"}
+   {
+    "value": "virus",
+    "detail": "the Alvin virus",
+    "quote": "a viral pandemic that turns people into homicidal maniacs",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:55:18",
+      "quote": "transforms normal people into homicidal sadistic maniacs."
+     }
+    ]
+   },
+   {
+    "value": "infected people",
+    "quote": "creating an irresistible and aggressive desire to act out their most violent, sadistic impulses while retaining their intelligence and speech",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mad doctor",
+    "detail": "Dr. Alan Wong",
+    "quote": "he is conducting human trials by injecting the virus on newborn infants",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:31",
+      "quote": "So I injected them all with the virus."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "disease mutation", "quote": "The virologists warns that the virus would mutate", "confidence": "sourced"}
+   {
+    "value": "disease mutation",
+    "quote": "The virologists warns that the virus would mutate",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:35",
+      "quote": "that are very clearly from the lyssa order of viruses. That's the same order that rabies is a part of."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:20:30",
+      "quote": "I believe this viral mutation happened by natural processes."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "cruelty", "quote": "act out their most violent, sadistic impulses", "confidence": "sourced"},
-   {"value": "to spread", "quote": "killing and infecting several other passengers", "confidence": "sourced"}
+   {
+    "value": "cruelty",
+    "quote": "act out their most violent, sadistic impulses",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:07",
+      "quote": "I killed those babies... and... It felt so good... so good."
+     }
+    ]
+   },
+   {
+    "value": "to spread",
+    "quote": "killing and infecting several other passengers",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "government neglect", "quote": "the government, prioritizing their efforts for a re-election, responds by downplaying the viral threat", "confidence": "sourced"},
-   {"value": "experiments on infants", "quote": "injecting the virus on newborn infants in a bid to discover an antibody", "confidence": "sourced"}
+   {
+    "value": "government neglect",
+    "quote": "the government, prioritizing their efforts for a re-election, responds by downplaying the viral threat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:02",
+      "quote": "It's an election year... and they don't want to risk... driving the country into a recession."
+     }
+    ]
+   },
+   {
+    "value": "experiments on infants",
+    "quote": "injecting the virus on newborn infants in a bid to discover an antibody",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:31",
+      "quote": "So I injected them all with the virus."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "warning ignored", "quote": "responds by downplaying the viral threat, while most of the general public expresses skepticism", "confidence": "sourced"}
+   {
+    "value": "warning ignored",
+    "quote": "responds by downplaying the viral threat, while most of the general public expresses skepticism",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:49",
+      "quote": "And all that stuff on the news the pandemic, the virus... it's a hoax."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "spread by fluids", "quote": "spits a thick mucus on one of the customers, who then turns on and kills other nearby patrons", "confidence": "sourced"},
-   {"value": "infected keep their minds", "quote": "while retaining their intelligence and speech", "confidence": "sourced"}
+   {
+    "value": "spread by fluids",
+    "quote": "spits a thick mucus on one of the customers, who then turns on and kills other nearby patrons",
+    "confidence": "sourced"
+   },
+   {
+    "value": "infected keep their minds",
+    "quote": "while retaining their intelligence and speech",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:12",
+      "quote": "They likely understand that the things they are doing are vile and repugnant."
+     }
+    ]
+   },
+   {
+    "value": "desire cannot be resisted",
+    "source": "subtitles",
+    "at": "01:21:20",
+    "quote": "But the desire is too strong for them to resist.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "infected weep as they kill",
+    "source": "subtitles",
+    "at": "01:21:38",
+    "quote": "Who knows, maybe they're crying because they feel guilty.",
+    "confidence": "observed"
+   }
   ],
   "who_suffers": [
-   {"value": "couple", "relation_to_threat": "lover", "detail": "Jim and Kat", "quote": "a young couple attempting to reunite amidst a viral pandemic", "confidence": "sourced"},
-   {"value": "commuters", "relation_to_threat": "stranger", "quote": "an infected man stabbing indiscriminately, killing and infecting several other passengers", "confidence": "sourced"},
-   {"value": "city", "relation_to_threat": "community", "quote": "a hospital – filled with weary survivors and police officers", "confidence": "sourced"}
+   {
+    "value": "couple",
+    "relation_to_threat": "lover",
+    "detail": "Jim and Kat",
+    "quote": "a young couple attempting to reunite amidst a viral pandemic",
+    "confidence": "sourced"
+   },
+   {
+    "value": "commuters",
+    "relation_to_threat": "stranger",
+    "quote": "an infected man stabbing indiscriminately, killing and infecting several other passengers",
+    "confidence": "sourced"
+   },
+   {
+    "value": "city",
+    "relation_to_threat": "community",
+    "quote": "a hospital – filled with weary survivors and police officers",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "lover becomes threat", "quote": "the virus has given him purpose, and that he intends to torture and kill her", "confidence": "sourced"},
-   {"value": "ambiguous", "quote": "The fate of Kat is unknown as the camera pans to a lifeless Jim with a deathly grin on his face", "confidence": "sourced"}
+   {
+    "value": "lover becomes threat",
+    "quote": "the virus has given him purpose, and that he intends to torture and kill her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:46",
+      "quote": "I finally have a purpose in life."
+     }
+    ]
+   },
+   {
+    "value": "ambiguous",
+    "quote": "The fate of Kat is unknown as the camera pans to a lifeless Jim with a deathly grin on his face",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "old woman covered in blood", "when": "opening", "role": "omen", "quote": "he spots an elderly woman covered in blood on a nearby roof but disappears when he looks away", "confidence": "sourced"},
-   {"value": "corpse on a stretcher", "when": "early", "role": "omen", "quote": "they pass by an ambulance with a corpse on the stretcher", "confidence": "sourced"},
-   {"value": "mucus", "when": "early", "role": "threat", "quote": "spits a thick mucus on one of the customers", "confidence": "sourced"},
-   {"value": "pruning shears", "when": "early", "role": "weapon", "quote": "cuts off his fingers using his pruning shears", "confidence": "sourced"},
-   {"value": "umbrella", "when": "middle", "role": "weapon", "quote": "stabs Molly in the eye using his umbrella", "confidence": "sourced"},
-   {"value": "axe", "when": "middle", "role": "weapon", "quote": "decapitates a bystander with an axe", "confidence": "sourced"},
-   {"value": "grenade", "when": "middle", "role": "turn", "quote": "the president being blown up by an infected army general with a grenade", "confidence": "sourced"},
-   {"value": "fire extinguisher", "when": "late", "role": "weapon", "quote": "Kat repeatedly bludgeons the businessman to death with the fire extinguisher", "confidence": "sourced"}
+   {
+    "value": "old woman covered in blood",
+    "when": "opening",
+    "role": "omen",
+    "quote": "he spots an elderly woman covered in blood on a nearby roof but disappears when he looks away",
+    "confidence": "sourced"
+   },
+   {
+    "value": "corpse on a stretcher",
+    "when": "early",
+    "role": "omen",
+    "quote": "they pass by an ambulance with a corpse on the stretcher",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mucus",
+    "when": "early",
+    "role": "threat",
+    "quote": "spits a thick mucus on one of the customers",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pruning shears",
+    "when": "early",
+    "role": "weapon",
+    "quote": "cuts off his fingers using his pruning shears",
+    "confidence": "sourced"
+   },
+   {
+    "value": "umbrella",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "stabs Molly in the eye using his umbrella",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:32",
+      "quote": "We can get your eye taken care of."
+     }
+    ]
+   },
+   {
+    "value": "axe",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "decapitates a bystander with an axe",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:10",
+      "quote": "Where's the axe?"
+     }
+    ]
+   },
+   {
+    "value": "grenade",
+    "when": "middle",
+    "role": "turn",
+    "quote": "the president being blown up by an infected army general with a grenade",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fire extinguisher",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Kat repeatedly bludgeons the businessman to death with the fire extinguisher",
+    "confidence": "sourced"
+   },
+   {
+    "value": "infected infants",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:25:02",
+    "quote": "But there were 8 infants abandoned here.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:43",
+      "quote": "\" 8th floor maternity ward. This man has a gun. \""
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "warnings dismissed", "when": "opening", "role": "omen", "quote": "Medical experts and government officials in Taiwan argue over the \"Alvin virus\"", "confidence": "sourced"},
-   {"order": 2, "value": "first attack in a cafe", "when": "early", "role": "trigger", "quote": "the same elderly woman appears and spits a thick mucus on one of the customers", "confidence": "sourced"},
-   {"order": 3, "value": "massacre on a train", "when": "early", "quote": "they witness an infected man stabbing indiscriminately", "confidence": "sourced"},
-   {"order": 4, "value": "leader killed, order collapses", "when": "middle", "role": "turn", "quote": "the president being blown up by an infected army general with a grenade during his televised address", "confidence": "sourced"},
-   {"order": 5, "value": "doctor explains the virus", "when": "late", "role": "clue", "quote": "the virus hijacks the limbic system of the brain", "confidence": "sourced"},
-   {"order": 6, "value": "heroine found immune", "when": "late", "quote": "When Wong finds that Kat is seemingly immune", "confidence": "sourced"},
-   {"order": 7, "value": "lover arrives infected", "when": "ending", "role": "turn", "quote": "Jim arrives at the hospital, revealing that he was already infected with the Alvin virus", "confidence": "sourced"},
-   {"order": 8, "value": "fate unknown, screams", "when": "ending", "quote": "a lifeless Jim with a deathly grin on his face as gunshots sound, and Kat screams in pain", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "lovers wake together",
+    "when": "opening",
+    "source": "subtitles",
+    "at": "00:02:36",
+    "quote": "How come you always wake up just before my alarm goes off?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "warnings dismissed",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Medical experts and government officials in Taiwan argue over the \"Alvin virus\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:50",
+      "quote": "There have been zero deaths, so why the scare tactics?"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "first attack in a cafe",
+    "when": "early",
+    "role": "trigger",
+    "quote": "the same elderly woman appears and spits a thick mucus on one of the customers",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "stranger harasses heroine",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:24:42",
+    "quote": "I actually see you on the train pretty often...",
+    "confidence": "sourced",
+    "detail": "the businessman who later hunts Kat"
+   },
+   {
+    "order": 5,
+    "value": "massacre on a train",
+    "when": "early",
+    "quote": "they witness an infected man stabbing indiscriminately",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "leader killed, order collapses",
+    "when": "middle",
+    "role": "turn",
+    "quote": "the president being blown up by an infected army general with a grenade during his televised address",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:21",
+      "quote": "Now I present our president, Guo-rong Xie."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "doctor explains the virus",
+    "when": "late",
+    "role": "clue",
+    "quote": "the virus hijacks the limbic system of the brain",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:13",
+      "quote": "It affects the limbic system in our brain."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "heroine found immune",
+    "when": "late",
+    "quote": "When Wong finds that Kat is seemingly immune",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:04",
+      "quote": "You don't seem infected. You might be immune."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "doctor confesses killing infants",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:25:25",
+    "quote": "Then I realized, maybe one of these babies might be able to generate valuable antibodies.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "lover arrives infected",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Jim arrives at the hospital, revealing that he was already infected with the Alvin virus",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:00",
+      "quote": "Kat... I made it."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "fate unknown, screams",
+    "when": "ending",
+    "quote": "a lifeless Jim with a deathly grin on his face as gunshots sound, and Kat screams in pain",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:35",
+      "quote": "Hey, I really love you."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,34 +1,434 @@
 {
  "film": "2018-dachra",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}, {"file": "wikipedia.ar.md", "sections": ["Lead"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "wikipedia.ar.md",
+   "sections": [
+    "Lead"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "thin",
  "dimensions": {
   "threat": [
-   {"value": "cannibal witches", "quote": "they find themselves beset by cannibal witches", "confidence": "sourced"},
-   {"value": "village", "quote": "the trail leads them out to an isolated village", "confidence": "observed"}
+   {
+    "value": "cannibal witches",
+    "quote": "they find themselves beset by cannibal witches",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:22",
+      "quote": "Witchcraft is what these women practice."
+     }
+    ]
+   },
+   {
+    "value": "village",
+    "quote": "the trail leads them out to an isolated village",
+    "confidence": "observed"
+   }
   ],
   "trigger": [
-   {"value": "investigating a cold case", "quote": "set off to investigate a cold case for a school film project", "confidence": "sourced"},
-   {"value": "journey to remote village", "detail": "uncovering a Tunisian village's secret", "quote": "قصة 3 شباب جامعيين يدرسون بكلية الإعلام، يستكشفون سر قرية تونسية", "confidence": "sourced"}
+   {
+    "value": "investigating a cold case",
+    "quote": "set off to investigate a cold case for a school film project",
+    "confidence": "sourced"
+   },
+   {
+    "value": "journey to remote village",
+    "detail": "uncovering a Tunisian village's secret",
+    "quote": "قصة 3 شباب جامعيين يدرسون بكلية الإعلام، يستكشفون سر قرية تونسية",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "students", "relation_to_threat": "stranger", "detail": "Yasmine, Walid and Bilel", "quote": "Three journalism students, Yasmine, Walid and Bilel, set off to investigate a cold case", "confidence": "sourced"},
-   {"value": "earlier survivor", "relation_to_threat": "unknown", "detail": "Mongia, mutilated 20 years before", "quote": "Mongia, the mutilated survivor of an attack 20 years before", "confidence": "sourced"}
+   {
+    "value": "students",
+    "relation_to_threat": "stranger",
+    "detail": "Yasmine, Walid and Bilel",
+    "quote": "Three journalism students, Yasmine, Walid and Bilel, set off to investigate a cold case",
+    "confidence": "sourced"
+   },
+   {
+    "value": "earlier survivor",
+    "relation_to_threat": "unknown",
+    "detail": "Mongia, mutilated 20 years before",
+    "quote": "Mongia, the mutilated survivor of an attack 20 years before",
+    "confidence": "sourced"
+   },
+   {
+    "value": "abducted children",
+    "relation_to_threat": "stranger",
+    "source": "subtitles",
+    "at": "01:32:36",
+    "quote": "But the shouts are human. Children.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rescued child grown up",
+    "relation_to_threat": "unknown",
+    "detail": "Yasmine, the girl with the crescent birthmark saved in 1995",
+    "source": "subtitles",
+    "at": "01:35:13",
+    "quote": "On her left hand, a birthmark. A crescent moon...",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "mental hospital", "when": "early", "role": "setting", "quote": "After visiting a mental hospital to interview Mongia", "confidence": "sourced"},
-   {"value": "mutilated survivor", "when": "early", "role": "omen", "quote": "Mongia, the mutilated survivor of an attack 20 years before", "confidence": "sourced"},
-   {"value": "isolated village", "when": "middle", "role": "setting", "quote": "the trail leads them out to an isolated village", "confidence": "sourced"}
+   {
+    "value": "mental hospital",
+    "when": "early",
+    "role": "setting",
+    "quote": "After visiting a mental hospital to interview Mongia",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:12",
+      "quote": "but you're babbling about sorcery and witches."
+     }
+    ]
+   },
+   {
+    "value": "mutilated survivor",
+    "when": "early",
+    "role": "omen",
+    "quote": "Mongia, the mutilated survivor of an attack 20 years before",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:18",
+      "quote": "They stitched her up and she tore it open."
+     }
+    ]
+   },
+   {
+    "value": "isolated village",
+    "when": "middle",
+    "role": "setting",
+    "quote": "the trail leads them out to an isolated village",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:38",
+      "quote": "by the road near the forest,"
+     }
+    ]
+   },
+   {
+    "value": "key in the eye",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:24",
+    "quote": "He has the key in his eye.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "girl eating in the woods",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:48:51",
+    "quote": "What's she eating?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "meat hanging",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:27:24",
+    "quote": "Meat hanging all over.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:32",
+      "quote": "No, you have to. I brought some fresh meat."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "woman in black",
+    "when": "late",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "01:28:39",
+    "quote": "The woman in black. Dressed in black, her face covered. Everyone fears her.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sacks carried at night",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:32:33",
+    "quote": "I thought the bags contained goats.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "red ribbon",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:35:00",
+    "quote": "A girl of 3 or 4 was in the bag. A red ribbon covered her face.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "crescent birthmark",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:35:13",
+    "quote": "On her left hand, a birthmark. A crescent moon...",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "students take on cold case", "when": "opening", "role": "trigger", "quote": "Three journalism students, Yasmine, Walid and Bilel, set off to investigate a cold case for a school film project.", "confidence": "sourced"},
-   {"order": 2, "value": "survivor interviewed", "when": "early", "role": "omen", "quote": "After visiting a mental hospital to interview Mongia, the mutilated survivor", "confidence": "sourced"},
-   {"order": 3, "value": "journey to the village", "when": "middle", "quote": "the trail leads them out to an isolated village", "confidence": "sourced"},
-   {"order": 4, "value": "trapped by witches", "when": "late", "role": "turn", "quote": "Before they fully understand what is happening, they find themselves beset by cannibal witches.", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "digging at night",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:05",
+    "quote": "Start digging there!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "students take on cold case",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Three journalism students, Yasmine, Walid and Bilel, set off to investigate a cold case for a school film project.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "survivor interviewed",
+    "when": "early",
+    "role": "omen",
+    "quote": "After visiting a mental hospital to interview Mongia, the mutilated survivor",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:31",
+      "quote": "The area you were found in."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "journey to the village",
+    "when": "middle",
+    "quote": "the trail leads them out to an isolated village",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:46",
+      "quote": "Don't be wimps. It's just a walk in the forest."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "feral girl in the woods",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:48:51",
+    "quote": "What's she eating?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "meal of strange meat",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:53:32",
+    "quote": "No, you have to. I brought some fresh meat.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "old journal read",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:27:01",
+    "quote": "September 12th, 1995.",
+    "detail": "a journalist's 1995 account of the village",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:05",
+      "quote": "They made me a dinner of meat."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "heroine's origin revealed",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:35:13",
+    "quote": "On her left hand, a birthmark.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:00",
+      "quote": "Tell her nothing till she grows up."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "birth with knives",
+    "when": "late",
+    "source": "subtitles",
+    "at": "01:38:37",
+    "quote": "They deliver babies with knives?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "trapped by witches",
+    "when": "late",
+    "role": "turn",
+    "quote": "Before they fully understand what is happening, they find themselves beset by cannibal witches.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:07",
+      "quote": "- They'll kill us! - Who?"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "protective verses recited",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:45:26",
+    "quote": "\" I seek refuge with the Lord of Mankind,",
+    "confidence": "sourced"
+   },
+   {
+    "order": 12,
+    "value": "film loops to its start",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:50:39",
+    "quote": "She's the one.",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:49:25",
+      "quote": "M0ngia!"
+     }
+    ]
+   }
+  ],
+  "origin": [
+   {
+    "value": "witchcraft practice",
+    "detail": "a village of women who practise sorcery for paying visitors",
+    "source": "subtitles",
+    "at": "01:32:22",
+    "quote": "Witchcraft is what these women practice. That's why they come to them.",
+    "confidence": "sourced"
+   }
+  ],
+  "wants": [
+   {
+    "value": "children as treasure keys",
+    "detail": "marked children used in rituals to extract buried treasure",
+    "source": "subtitles",
+    "at": "01:32:29",
+    "quote": "What we suspected seems true. Extracting treasures.",
+    "confidence": "sourced"
+   }
+  ],
+  "wrong": [
+   {
+    "value": "child abduction",
+    "detail": "beggars, orphans and children taken from hospitals",
+    "source": "subtitles",
+    "at": "01:32:52",
+    "quote": "Silly beliefs, but they took many children.",
+    "confidence": "sourced"
+   }
+  ],
+  "rules": [
+   {
+    "value": "marked children hold the key",
+    "detail": "'zouhri': a spot in the eye or a long line in the palm",
+    "source": "subtitles",
+    "at": "01:32:44",
+    "quote": "They call them \" zouhri \", holders of the key,",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:24",
+      "quote": "He has the key in his eye."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "protective verses",
+    "detail": "the grandfather taught Yasmine Quranic verses against the threat",
+    "source": "subtitles",
+    "at": "01:45:26",
+    "quote": "\" I seek refuge with the Lord of Mankind,",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:03",
+      "quote": "Recite the verses I taught you."
+     }
+    ]
+   }
+  ],
+  "ending": [
+   {
+    "value": "ambiguous",
+    "detail": "the film loops back to its beginning with the line 'She's the one.'",
+    "source": "subtitles",
+    "at": "01:50:39",
+    "quote": "She's the one.",
+    "confidence": "observed"
+   }
   ]
  },
- "not_stated": ["origin", "wants", "wrong", "rules", "ending"],
+ "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

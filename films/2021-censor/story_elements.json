@@ -7,6 +7,9 @@
     "Lead",
     "Plot"
    ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
   }
  ],
  "plot_quality": "full",
@@ -21,7 +24,14 @@
    {
     "value": "violent media",
     "quote": "a tabloid newspaper links the killings to a film Enid had rated several months prior",
-    "confidence": "observed"
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:10",
+      "quote": "News presenter: As Britain is invaded by a wave of depraved and corrupt horror videos,"
+     }
+    ]
    }
   ],
   "origin": [
@@ -29,33 +39,68 @@
     "value": "childhood trauma",
     "detail": "her sister's disappearance",
     "quote": "Enid's sister Nina, who disappeared when the two were little",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:05",
+      "quote": "Man: (muffled) Why did you leave her in the forest?"
+     }
+    ]
    }
   ],
   "wants": [
    {
     "value": "to recover a lost sibling",
     "quote": "believing that Alice is her missing sister who needs to be saved from the exploitation film industry",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:46",
+      "quote": "No, everything that I have done is to protect you. All right? To make things right."
+     }
+    ]
    }
   ],
   "wrong": [
    {
     "value": "lost child",
     "quote": "Enid's parents have since declared Nina legally dead, but Enid believes she is still alive",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:12",
+      "quote": "This is a death certificate."
+     }
+    ]
    }
   ],
   "trigger": [
    {
     "value": "watching something",
     "quote": "While watching, Enid notices that the film depicts events evocative of her memories of Nina's disappearance",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:47",
+      "quote": "What have we got now then? (sighs) Don't Go In The Church."
+     }
+    ]
    },
    {
     "value": "public blame",
     "quote": "naming her as the censor who approved it",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:46",
+      "quote": "calling him the' Amnesiac Killer'. He's saying he can't remember what happened."
+     }
+    ]
    }
   ],
   "who_suffers": [
@@ -79,6 +124,14 @@
     "detail": "Alice Lee, mistaken for the sister",
     "quote": "A terrified Alice denies that she is Enid's sister and flees from Enid",
     "confidence": "sourced"
+   },
+   {
+    "value": "grieving parents",
+    "relation_to_threat": "family",
+    "source": "subtitles",
+    "at": "00:11:13",
+    "quote": "You've never been clear on exactly what you remember.",
+    "confidence": "observed"
    }
   ],
   "ending": [
@@ -107,7 +160,14 @@
     "when": "early",
     "role": "omen",
     "quote": "Enid starts receiving threatening and insulting phone calls",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:37",
+      "quote": "Enid: (over answering machine) This is Enid Baines."
+     }
+    ]
    },
    {
     "value": "film award",
@@ -129,7 +189,14 @@
     "when": "late",
     "role": "setting",
     "quote": "before collapsing in the woods",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:10",
+      "quote": "Near Frederick's. In the forest where we shot the original."
+     }
+    ]
    },
    {
     "value": "remote control",
@@ -144,25 +211,102 @@
     "role": "symbol",
     "quote": "a VHS tape with the title Censor comes out of a VCR",
     "confidence": "sourced"
+   },
+   {
+    "value": "death certificate",
+    "when": "opening",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:10:12",
+    "quote": "This is a death certificate.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:00",
+      "quote": "So, are you deciding that she's dead?"
+     }
+    ]
+   },
+   {
+    "value": "eye gouging scene",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:19",
+    "quote": "See it less as an eye gouging, more part of a grand tradition.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "spinning game",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:22:03",
+    "quote": "Young Enid: Nina, spin. One, two, three.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "contagious evil",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:41:05",
+    "quote": "Alice: He's calling for me. The evil is contagious.",
+    "confidence": "sourced",
+    "detail": "line from the film-within-the-film"
    }
   ],
   "beats": [
    {
     "order": 1,
-    "value": "strict censor with lost sister",
+    "value": "censor cuts a horror film",
     "when": "opening",
-    "quote": "Enid's co-workers call her \"Little Miss Perfect\" due to her insistence that violent content be cut or banned",
+    "source": "subtitles",
+    "at": "00:04:02",
+    "quote": "We can't afford to make mistakes. I'm cutting it.",
     "confidence": "sourced"
    },
    {
     "order": 2,
-    "value": "blamed for a real murder",
-    "when": "early",
-    "quote": "Shortly after a man murders his wife and children",
-    "confidence": "sourced"
+    "value": "strict censor with lost sister",
+    "when": "opening",
+    "quote": "Enid's co-workers call her \"Little Miss Perfect\" due to her insistence that violent content be cut or banned",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:51",
+      "quote": "It's the, er, it's the eye gouging... it's too, it's too realistic."
+     }
+    ]
    },
    {
     "order": 3,
+    "value": "lost sister declared dead",
+    "when": "early",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:11:00",
+    "quote": "So, are you deciding that she's dead? But this marks her death as that day.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "blamed for a real murder",
+    "when": "early",
+    "quote": "Shortly after a man murders his wife and children",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:08",
+      "quote": "then he tore off and ate her face. W... went on to shoot his two children, dead."
+     }
+    ]
+   },
+   {
+    "order": 5,
     "value": "film mirrors her past",
     "when": "early",
     "role": "turn",
@@ -170,33 +314,65 @@
     "confidence": "sourced"
    },
    {
-    "order": 4,
+    "order": 6,
     "value": "obsession with an actress",
     "when": "middle",
     "quote": "Enid notices that the film's lead, Alice Lee, bears a resemblance to her missing sister",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:06",
+      "quote": "There's this actress. Her name is Alice Lee."
+     }
+    ]
    },
    {
-    "order": 5,
+    "order": 7,
     "value": "accidental killing",
     "when": "middle",
     "quote": "Smart dies as Enid stares in shock",
     "confidence": "sourced"
    },
    {
-    "order": 6,
+    "order": 8,
     "value": "rampage on film set",
     "when": "late",
     "quote": "Enid kills an actor named Charles with an axe",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:08",
+      "quote": "(Alice screams) Charles!"
+     }
+    ]
    },
    {
-    "order": 7,
+    "order": 9,
     "value": "fantasy ending revealed as false",
     "when": "ending",
     "role": "turn",
     "quote": "Enid's fantasy is sporadically interrupted, revealing that she has kidnapped Alice",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:18",
+      "quote": "Nina! You came back to save me."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "crime rate drops to zero",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:16:16",
+    "quote": "The crime rate in Britain has actually dropped to zero.",
+    "confidence": "sourced",
+    "detail": "the fantasy news bulletin"
    }
   ]
  },
@@ -205,5 +381,6 @@
  ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

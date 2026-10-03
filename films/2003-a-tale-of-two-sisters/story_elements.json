@@ -1,64 +1,440 @@
 {
  "film": "2003-a-tale-of-two-sisters",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "the self", "detail": "Su-mi's split personality", "quote": "Su-mi is suffering from dissociative identity disorder and has two personalities", "confidence": "sourced"},
-   {"value": "ghost", "detail": "Su-yeon and the mother", "quote": "Su-yeon's ghost crawls out of the wardrobe towards Eun-joo", "confidence": "sourced"},
-   {"value": "stepmother", "quote": "living with their new unhinged stepmother", "confidence": "sourced"}
+   {
+    "value": "the self",
+    "detail": "Su-mi's split personality",
+    "quote": "Su-mi is suffering from dissociative identity disorder and has two personalities",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:39",
+      "quote": "Su-yeon is dead! No, I don't remember!"
+     }
+    ]
+   },
+   {
+    "value": "ghost",
+    "detail": "Su-yeon and the mother",
+    "quote": "Su-yeon's ghost crawls out of the wardrobe towards Eun-joo",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:57",
+      "quote": "There was a girl under the sink."
+     }
+    ]
+   },
+   {
+    "value": "stepmother",
+    "quote": "living with their new unhinged stepmother",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:54",
+      "quote": "I'm the only one in this world you can call mother, got it?"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "person who died wronged", "detail": "Su-yeon, left to die under the wardrobe", "quote": "leaves Su-yeon to die just to spite her", "confidence": "sourced"},
-   {"value": "guilt", "quote": "Su-yeon is also revealed to be long dead, her presence having been a hallucination by Su-Mi", "confidence": "observed"}
+   {
+    "value": "person who died wronged",
+    "detail": "Su-yeon, left to die under the wardrobe",
+    "quote": "leaves Su-yeon to die just to spite her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "guilt",
+    "quote": "Su-yeon is also revealed to be long dead, her presence having been a hallucination by Su-Mi",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:06",
+      "quote": "Su-yeon is dead. So pull yourself together."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "revenge", "detail": "the ghost comes for Eun-joo", "quote": "Luring her to her former bedroom, Su-yeon's ghost crawls out of the wardrobe towards Eun-joo", "confidence": "observed"}
+   {
+    "value": "revenge",
+    "detail": "the ghost comes for Eun-joo",
+    "quote": "Luring her to her former bedroom, Su-yeon's ghost crawls out of the wardrobe towards Eun-joo",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "adultery", "quote": "Moo-hyeon engages in an adulterous affair with Eun-joo, when she was still their in-home nurse", "confidence": "sourced"},
-   {"value": "child left to die", "quote": "unknown to Su-mi, leaves Su-yeon to die just to spite her", "confidence": "sourced"},
-   {"value": "mother's suicide", "quote": "drives their mother to kill herself in Su-yeon's bedroom wardrobe", "confidence": "sourced"}
+   {
+    "value": "adultery",
+    "quote": "Moo-hyeon engages in an adulterous affair with Eun-joo, when she was still their in-home nurse",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child left to die",
+    "quote": "unknown to Su-mi, leaves Su-yeon to die just to spite her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:49:47",
+      "quote": "You might regret this moment. Keep that in mind!"
+     }
+    ]
+   },
+   {
+    "value": "mother's suicide",
+    "quote": "drives their mother to kill herself in Su-yeon's bedroom wardrobe",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:48",
+      "quote": "we agreed not to talk about that closet."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "returning home", "quote": "She is eventually released and returns home to her family's secluded country estate", "confidence": "sourced"}
+   {
+    "value": "returning home",
+    "quote": "She is eventually released and returns home to her family's secluded country estate",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:01",
+      "quote": "Welcome home! It's been such a long time."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "the dead are imagined", "quote": "It is ultimately revealed that Su-mi and her father were alone in the house all along", "confidence": "sourced"}
+   {
+    "value": "the dead are imagined",
+    "quote": "It is ultimately revealed that Su-mi and her father were alone in the house all along",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:51",
+      "quote": "Su-yeon... is dead."
+     }
+    ]
+   },
+   {
+    "value": "wardrobe must not be mentioned",
+    "source": "subtitles",
+    "at": "00:42:48",
+    "quote": "we agreed not to talk about that closet. You promised, right?",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "sisters", "relation_to_threat": "family", "quote": "Su-yeon dies, begging her sister to help her with her last breath", "confidence": "sourced"},
-   {"value": "stepmother", "relation_to_threat": "family", "detail": "the real Eun-joo", "quote": "That night, Eun-joo hears the same tune and footsteps in Su-yeon's old bedroom", "confidence": "sourced"},
-   {"value": "relatives", "relation_to_threat": "family", "detail": "aunt Mi-hee", "quote": "Mi-hee suffers a violent seizure and almost suffocates", "confidence": "sourced"}
+   {
+    "value": "sisters",
+    "relation_to_threat": "family",
+    "quote": "Su-yeon dies, begging her sister to help her with her last breath",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:51:01",
+      "quote": "Help me... Su-mi..."
+     }
+    ]
+   },
+   {
+    "value": "stepmother",
+    "relation_to_threat": "family",
+    "detail": "the real Eun-joo",
+    "quote": "That night, Eun-joo hears the same tune and footsteps in Su-yeon's old bedroom",
+    "confidence": "sourced"
+   },
+   {
+    "value": "relatives",
+    "relation_to_threat": "family",
+    "detail": "aunt Mi-hee",
+    "quote": "Mi-hee suffers a violent seizure and almost suffocates",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "twist reveal", "quote": "It is ultimately revealed that Su-mi and her father were alone in the house all along", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "Su-yeon's ghost crawls out of the wardrobe towards Eun-joo", "confidence": "sourced"},
-   {"value": "past tragedy shown", "quote": "A flashback reveals the day that led Su-mi to be institutionalized", "confidence": "sourced"}
+   {
+    "value": "twist reveal",
+    "quote": "It is ultimately revealed that Su-mi and her father were alone in the house all along",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:51",
+      "quote": "Su-yeon... is dead."
+     }
+    ]
+   },
+   {
+    "value": "threat survives",
+    "quote": "Su-yeon's ghost crawls out of the wardrobe towards Eun-joo",
+    "confidence": "sourced"
+   },
+   {
+    "value": "past tragedy shown",
+    "quote": "A flashback reveals the day that led Su-mi to be institutionalized",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:51:01",
+      "quote": "Help me... Su-mi..."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "wardrobe", "state": "collapsed, haunted", "when": "early", "role": "threat", "quote": "rejects her request to remove a wardrobe in Su-yeon's room, as it seems to upset Su-yeon", "confidence": "sourced"},
-   {"value": "dead birds", "when": "middle", "role": "omen", "quote": "Eun-joo later finds her pet birds killed and her personal photos defaced", "confidence": "sourced"},
-   {"value": "bruises", "when": "early", "role": "clue", "quote": "She discovers bruises on Su-yeon's arms and suspects Eun-joo to be responsible", "confidence": "sourced"},
-   {"value": "hair clip", "when": "middle", "role": "clue", "quote": "She sees a hair clip on the ground, but the ghost girl violently grabs her arm", "confidence": "sourced"},
-   {"value": "bloodied sack", "when": "middle", "role": "turn", "quote": "Eun-joo drags a bloodied sack through the house, whipping it in anger", "confidence": "sourced"},
-   {"value": "porcelain dolls", "when": "late", "role": "clue", "quote": "The \"body\" in the sack that Su-mi was whipping was actually porcelain dolls", "confidence": "sourced"},
-   {"value": "family photos", "when": "early", "role": "clue", "quote": "Su-mi finds family photos which reveal that Eun-joo was formerly an in-home nurse", "confidence": "sourced"},
-   {"value": "kitchen sink", "state": "girl beneath it", "when": "middle", "role": "threat", "quote": "she saw \"a girl\" beneath the kitchen sink during her seizure", "confidence": "sourced"}
+   {
+    "value": "wardrobe",
+    "state": "collapsed, haunted",
+    "when": "early",
+    "role": "threat",
+    "quote": "rejects her request to remove a wardrobe in Su-yeon's room, as it seems to upset Su-yeon",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:20",
+      "quote": "and always locks Su-yeon up in the closet!"
+     }
+    ]
+   },
+   {
+    "value": "dead birds",
+    "when": "middle",
+    "role": "omen",
+    "quote": "Eun-joo later finds her pet birds killed and her personal photos defaced",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bruises",
+    "when": "early",
+    "role": "clue",
+    "quote": "She discovers bruises on Su-yeon's arms and suspects Eun-joo to be responsible",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hair clip",
+    "when": "middle",
+    "role": "clue",
+    "quote": "She sees a hair clip on the ground, but the ghost girl violently grabs her arm",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bloodied sack",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Eun-joo drags a bloodied sack through the house, whipping it in anger",
+    "confidence": "sourced"
+   },
+   {
+    "value": "porcelain dolls",
+    "when": "late",
+    "role": "clue",
+    "quote": "The \"body\" in the sack that Su-mi was whipping was actually porcelain dolls",
+    "confidence": "sourced"
+   },
+   {
+    "value": "family photos",
+    "when": "early",
+    "role": "clue",
+    "quote": "Su-mi finds family photos which reveal that Eun-joo was formerly an in-home nurse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:37",
+      "quote": "Feel happy after seeing the photos?"
+     }
+    ]
+   },
+   {
+    "value": "kitchen sink",
+    "state": "girl beneath it",
+    "when": "middle",
+    "role": "threat",
+    "quote": "she saw \"a girl\" beneath the kitchen sink during her seizure",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:57",
+      "quote": "There was a girl under the sink."
+     }
+    ]
+   },
+   {
+    "value": "menstrual blood",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:39:26",
+    "quote": "Are you having your period?",
+    "confidence": "sourced",
+    "detail": "both sisters bleed on the same day; the line returns when Su-mi's delusion breaks",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:46",
+      "quote": "How could we both get our periods on the same date?"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "return from institution", "when": "opening", "role": "trigger", "quote": "She is eventually released and returns home to her family's secluded country estate", "confidence": "sourced"},
-   {"order": 2, "value": "ghost in nightmare", "when": "early", "role": "omen", "quote": "Su-yeon has a nightmare of her late mother's ghost and flees into Su-mi's room for comfort", "confidence": "sourced"},
-   {"order": 3, "value": "abuse suspected", "when": "early", "quote": "She discovers bruises on Su-yeon's arms and suspects Eun-joo to be responsible", "confidence": "sourced"},
-   {"order": 4, "value": "haunting at dinner", "when": "middle", "quote": "Mi-hee suffers a violent seizure and almost suffocates", "confidence": "sourced"},
-   {"order": 5, "value": "sister revealed dead", "when": "middle", "role": "turn", "quote": "exasperatedly reveals that Su-yeon is dead", "confidence": "sourced"},
-   {"order": 6, "value": "split personality revealed", "when": "late", "role": "turn", "quote": "has two personalities: herself, and a ruder, more distant variation of her stepmother Eun-joo", "confidence": "sourced"},
-   {"order": 7, "value": "ghost emerges", "when": "ending", "quote": "Su-yeon's ghost crawls out of the wardrobe towards Eun-joo", "confidence": "sourced"},
-   {"order": 8, "value": "original sin shown", "when": "ending", "role": "turn", "quote": "Su-yeon dies, begging her sister to help her with her last breath", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "psychiatrist's questions",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:58",
+    "quote": "Do you know who this is? Don't know? It's your family.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "return from institution",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "She is eventually released and returns home to her family's secluded country estate",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:01",
+      "quote": "Welcome home! It's been such a long time."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "ghost in nightmare",
+    "when": "early",
+    "role": "omen",
+    "quote": "Su-yeon has a nightmare of her late mother's ghost and flees into Su-mi's room for comfort",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:50",
+      "quote": "Was it the closet?"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "abuse suspected",
+    "when": "early",
+    "quote": "She discovers bruises on Su-yeon's arms and suspects Eun-joo to be responsible",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "periods on the same day",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:39:26",
+    "quote": "Are you having your period?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "haunting at dinner",
+    "when": "middle",
+    "quote": "Mi-hee suffers a violent seizure and almost suffocates",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:57",
+      "quote": "There was a girl under the sink."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "sister revealed dead",
+    "when": "middle",
+    "role": "turn",
+    "quote": "exasperatedly reveals that Su-yeon is dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:51",
+      "quote": "Su-yeon... is dead."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "split personality revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "has two personalities: herself, and a ruder, more distant variation of her stepmother Eun-joo",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:37",
+      "quote": "How could we both get our periods on the same date? Su-yeon is dead!"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "ghost emerges",
+    "when": "ending",
+    "quote": "Su-yeon's ghost crawls out of the wardrobe towards Eun-joo",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "original sin shown",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Su-yeon dies, begging her sister to help her with her last breath",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:49:47",
+      "quote": "You might regret this moment."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

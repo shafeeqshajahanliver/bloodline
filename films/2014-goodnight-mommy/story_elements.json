@@ -1,59 +1,486 @@
 {
  "film": "2014-goodnight-mommy",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "the self", "detail": "Elias, grieving and hallucinating", "quote": "Elias has been hallucinating his presence", "confidence": "sourced"},
-   {"value": "impostor parent", "detail": "as the twins believe", "quote": "believing that she is not the same person as the one who went to surgery", "confidence": "sourced"}
+   {
+    "value": "the self",
+    "detail": "Elias, grieving and hallucinating",
+    "quote": "Elias has been hallucinating his presence",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:28",
+      "quote": "But I can't see him!"
+     }
+    ]
+   },
+   {
+    "value": "impostor parent",
+    "detail": "as the twins believe",
+    "quote": "believing that she is not the same person as the one who went to surgery",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:01",
+      "quote": "She's so different."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "grief", "detail": "Lukas died in an accident", "quote": "Lukas is dead, having died in an accident prior to the events of the movie", "confidence": "sourced"}
+   {
+    "value": "grief",
+    "detail": "Lukas died in an accident",
+    "quote": "Lukas is dead, having died in an accident prior to the events of the movie",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:41",
+      "quote": "It's not your fault Lukas died."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "the real mother back", "quote": "wondering if she is their real mother", "confidence": "sourced"},
-   {"value": "a confession", "quote": "torture her to make her confess", "confidence": "sourced"}
+   {
+    "value": "the real mother back",
+    "quote": "wondering if she is their real mother",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:38",
+      "quote": "Where's our mom?"
+     }
+    ]
+   },
+   {
+    "value": "a confession",
+    "quote": "torture her to make her confess",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:09",
+      "quote": "Let her prove she's our mom."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "death of a child", "quote": "She tearfully insists to Elias that Lukas's death was not his fault", "confidence": "sourced"}
+   {
+    "value": "death of a child",
+    "quote": "She tearfully insists to Elias that Lukas's death was not his fault",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:46",
+      "quote": "The accident wasn't your fault."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "parent returns changed", "detail": "after cosmetic surgery", "quote": "After undergoing cosmetic facial surgery, a mother returns home", "confidence": "sourced"}
+   {
+    "value": "parent returns changed",
+    "detail": "after cosmetic surgery",
+    "quote": "After undergoing cosmetic facial surgery, a mother returns home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:47",
+      "quote": "The doctor said I need rest."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "strict house rules", "quote": "orders the twins to keep the blinds closed during the day, imposes a strict rule of silence inside the house", "confidence": "sourced"},
-   {"value": "real mother would see him", "quote": "believing his real mother would be able to see Lukas", "confidence": "sourced"}
+   {
+    "value": "strict house rules",
+    "quote": "orders the twins to keep the blinds closed during the day, imposes a strict rule of silence inside the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:54",
+      "quote": "I want absolute quiet in the house."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:16:07",
+      "quote": "We'll keep the blinds closed. I have to avoid sunlight."
+     }
+    ]
+   },
+   {
+    "value": "real mother would see him",
+    "quote": "believing his real mother would be able to see Lukas",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:47",
+      "quote": "Mom could see him."
+     }
+    ]
+   },
+   {
+    "value": "test of true identity",
+    "source": "subtitles",
+    "at": "01:23:54",
+    "quote": "Ask her what my favorite song is. What's Lukas' favorite song?",
+    "confidence": "sourced",
+    "detail": "the twins quiz her on what only their real mother would know"
+   }
   ],
   "who_suffers": [
-   {"value": "mother", "relation_to_threat": "family", "quote": "The mother burns to death before the firefighters arrive", "confidence": "sourced"},
-   {"value": "child", "relation_to_threat": "self", "detail": "Elias", "quote": "Elias has been hallucinating his presence", "confidence": "sourced"}
+   {
+    "value": "mother",
+    "relation_to_threat": "family",
+    "quote": "The mother burns to death before the firefighters arrive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:25",
+      "quote": "Help! Help!"
+     }
+    ]
+   },
+   {
+    "value": "child",
+    "relation_to_threat": "self",
+    "detail": "Elias",
+    "quote": "Elias has been hallucinating his presence",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:09",
+      "quote": "I have to make him stop. He has to face it."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "parent killed by child", "quote": "The mother burns to death before the firefighters arrive", "confidence": "sourced"},
-   {"value": "ghostly reunion", "quote": "a ghostly shot of the mother reunited with her sons at a cornfield", "confidence": "sourced"}
+   {
+    "value": "parent killed by child",
+    "quote": "The mother burns to death before the firefighters arrive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:04",
+      "quote": "No, Elias. Don't!"
+     }
+    ]
+   },
+   {
+    "value": "ghostly reunion",
+    "quote": "a ghostly shot of the mother reunited with her sons at a cornfield",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:29",
+      "quote": "God, the Lord, doth mark their number"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "bandages", "state": "covering the face", "when": "opening", "role": "symbol", "quote": "Her head is covered in bandages, with only her eyes and mouth visible", "confidence": "sourced"},
-   {"value": "blinds", "state": "kept closed", "when": "early", "role": "setting", "quote": "keep the blinds closed during the day", "confidence": "sourced"},
-   {"value": "photograph", "state": "of a double", "when": "middle", "role": "clue", "quote": "an old photograph of the mother with another unknown woman wearing identical clothes", "confidence": "sourced"},
-   {"value": "tape", "state": "over mouth", "when": "middle", "role": "weapon", "quote": "sealing her mouth with tape to prevent her from screaming", "confidence": "sourced"},
-   {"value": "super glue", "state": "on lips", "when": "middle", "role": "weapon", "quote": "The twins seal her lips with super glue", "confidence": "sourced"},
-   {"value": "curtain", "state": "set on fire", "when": "ending", "role": "weapon", "quote": "grabs his arm and lights up the curtain", "confidence": "sourced"},
-   {"value": "cornfield", "when": "ending", "role": "setting", "quote": "reunited with her sons at a cornfield near their home", "confidence": "sourced"}
+   {
+    "value": "bandages",
+    "state": "covering the face",
+    "when": "opening",
+    "role": "symbol",
+    "quote": "Her head is covered in bandages, with only her eyes and mouth visible",
+    "confidence": "sourced"
+   },
+   {
+    "value": "blinds",
+    "state": "kept closed",
+    "when": "early",
+    "role": "setting",
+    "quote": "keep the blinds closed during the day",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:00",
+      "quote": "(blinds closing)"
+     }
+    ]
+   },
+   {
+    "value": "photograph",
+    "state": "of a double",
+    "when": "middle",
+    "role": "clue",
+    "quote": "an old photograph of the mother with another unknown woman wearing identical clothes",
+    "confidence": "sourced"
+   },
+   {
+    "value": "tape",
+    "state": "over mouth",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "sealing her mouth with tape to prevent her from screaming",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:21",
+      "quote": "(cutting tape)"
+     }
+    ]
+   },
+   {
+    "value": "super glue",
+    "state": "on lips",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "The twins seal her lips with super glue",
+    "confidence": "sourced"
+   },
+   {
+    "value": "curtain",
+    "state": "set on fire",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "grabs his arm and lights up the curtain",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cornfield",
+    "when": "ending",
+    "role": "setting",
+    "quote": "reunited with her sons at a cornfield near their home",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lullaby",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:00:21",
+    "quote": "Lullaby and goodnight",
+    "confidence": "sourced",
+    "detail": "Brahms's lullaby opens the film and Elias hums it at the end",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:13",
+      "quote": "(Elias humming Lullaby and Good Night)"
+     }
+    ]
+   },
+   {
+    "value": "injured cat",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:26:44",
+    "quote": "(animal whimpering)",
+    "confidence": "observed"
+   },
+   {
+    "value": "lighter",
+    "when": "early",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "00:30:04",
+    "quote": "Why is there a lighter in here? I wanted to burn some books.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dead pet",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:41:05",
+    "quote": "Lukas, look. What's wrong with him?",
+    "confidence": "observed",
+    "detail": "Leo, the twins' hissing pet, is found dead and they blame their mother",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:26",
+      "quote": "I'm sure it was Mom."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "mother returns bandaged", "when": "opening", "role": "trigger", "quote": "After undergoing cosmetic facial surgery, a mother returns home", "confidence": "sourced"},
-   {"order": 2, "value": "strange cruelty", "when": "early", "quote": "lashes out at Elias physically", "confidence": "sourced"},
-   {"order": 3, "value": "photo raises doubt", "when": "middle", "role": "clue", "quote": "These doubts are confirmed when they find an old photograph", "confidence": "sourced"},
-   {"order": 4, "value": "children torture the mother", "when": "middle", "role": "turn", "quote": "the twins tie the woman to the bed and torture her to make her confess", "confidence": "sourced"},
-   {"order": 5, "value": "help turned away", "when": "middle", "quote": "is too late to attract the employees' attention", "confidence": "sourced"},
-   {"order": 6, "value": "dead twin revealed", "when": "late", "role": "turn", "quote": "The mother then reveals that Lukas is dead", "confidence": "sourced"},
-   {"order": 7, "value": "house set alight", "when": "ending", "quote": "The mother burns to death before the firefighters arrive", "confidence": "sourced"},
-   {"order": 8, "value": "ghostly reunion", "when": "ending", "quote": "a ghostly shot of the mother reunited with her sons", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "twins play hide and seek",
+    "when": "opening",
+    "source": "subtitles",
+    "at": "00:05:34",
+    "quote": "Lukas? Lukas?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "mother returns bandaged",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "After undergoing cosmetic facial surgery, a mother returns home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:06",
+      "quote": "(blinds closing) Mom?"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "new rules announced",
+    "when": "early",
+    "source": "subtitles",
+    "at": "00:15:50",
+    "quote": "And I expect your support. There'll be some new rules.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "strange cruelty",
+    "when": "early",
+    "quote": "lashes out at Elias physically",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:26",
+      "quote": "Mama! Get off!"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "pet found dead",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:41:05",
+    "quote": "Lukas, look. What's wrong with him?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "photo raises doubt",
+    "when": "middle",
+    "role": "clue",
+    "quote": "These doubts are confirmed when they find an old photograph",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "children torture the mother",
+    "when": "middle",
+    "role": "turn",
+    "quote": "the twins tie the woman to the bed and torture her to make her confess",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:24",
+      "quote": "Lukas said, \" Where is our mom? \" Untie me now."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "help turned away",
+    "when": "middle",
+    "quote": "is too late to attract the employees' attention",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:35",
+      "quote": "Hello, Red Cross!"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "identity quiz",
+    "when": "late",
+    "source": "subtitles",
+    "at": "01:23:54",
+    "quote": "Ask her what my favorite song is.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "dead twin revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "The mother then reveals that Lukas is dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:41",
+      "quote": "It's not your fault Lukas died."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "house set alight",
+    "when": "ending",
+    "quote": "The mother burns to death before the firefighters arrive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:04",
+      "quote": "No, Elias. Don't!"
+     }
+    ]
+   },
+   {
+    "order": 12,
+    "value": "ghostly reunion",
+    "when": "ending",
+    "quote": "a ghostly shot of the mother reunited with her sons",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:29",
+      "quote": "God, the Lord, doth mark their number"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

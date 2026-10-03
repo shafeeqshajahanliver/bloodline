@@ -1,59 +1,396 @@
 {
  "film": "2018-eerie",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vengeful ghost", "detail": "Eri, a bullied student who hanged herself", "quote": "Eri, a former student who has been watching the whole school for years", "confidence": "sourced"},
-   {"value": "possessing spirit", "quote": "Eri manages to possess Julian, who chases Pat across the school", "confidence": "sourced"}
+   {
+    "value": "vengeful ghost",
+    "detail": "Eri, a bullied student who hanged herself",
+    "quote": "Eri, a former student who has been watching the whole school for years",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:24",
+      "quote": "when you reach the last cubicle, that's where she hung herself. Her name... is Erika."
+     }
+    ]
+   },
+   {
+    "value": "possessing spirit",
+    "quote": "Eri manages to possess Julian, who chases Pat across the school",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:31",
+      "quote": "Now we'll know what they all say and think."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "person who died wronged", "quote": "being bullied by the other students, the nuns punishing her, her mother cutting her hair unflatteringly leading to more bullying, culminating to hanging herself in the bathroom", "confidence": "sourced"}
+   {
+    "value": "person who died wronged",
+    "quote": "being bullied by the other students, the nuns punishing her, her mother cutting her hair unflatteringly leading to more bullying, culminating to hanging herself in the bathroom",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:46",
+      "quote": "I can still hear the nuns screaming."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "revenge", "quote": "She also tells her about her plans for Pat who is next", "confidence": "observed"}
+   {
+    "value": "revenge",
+    "quote": "She also tells her about her plans for Pat who is next",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:21",
+      "quote": "My mother, she was easy to kill. She was weak. But my father... he was even weaker."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "bullying", "quote": "being bullied by the other students, the nuns punishing her", "confidence": "sourced"},
-   {"value": "failure to help a child", "quote": "Sor Alice tells Pat about her time as the guidance counselor, failing to help Eri", "confidence": "sourced"}
+   {
+    "value": "bullying",
+    "quote": "being bullied by the other students, the nuns punishing her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:12",
+      "quote": "when she was bullied by Mary?"
+     }
+    ]
+   },
+   {
+    "value": "failure to help a child",
+    "quote": "Sor Alice tells Pat about her time as the guidance counselor, failing to help Eri",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:41",
+      "quote": "Erika Sayco was like that. The way of God was the only way I knew to help her."
+     }
+    ]
+   },
+   {
+    "value": "failure to save a brother",
+    "source": "subtitles",
+    "at": "00:54:41",
+    "quote": "I couldn't save my brother, Anna... or Clara.",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "a student's death", "quote": "The unexpected and gruesome death of a student threatens the existence of an old Catholic school for girls", "confidence": "sourced"}
+   {
+    "value": "a student's death",
+    "quote": "The unexpected and gruesome death of a student threatens the existence of an old Catholic school for girls",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "kills through possessed people", "quote": "she manages to possess her father to strangle her mother and Mang Fidel to strangle Clara", "confidence": "sourced"},
-   {"value": "seen by a clairvoyant", "quote": "Pat's unusual talents lead her to know Eri", "confidence": "sourced"}
+   {
+    "value": "kills through possessed people",
+    "quote": "she manages to possess her father to strangle her mother and Mang Fidel to strangle Clara",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:58",
+      "quote": "Inside the car, outside of Sta. Lucia, he strangled her."
+     }
+    ]
+   },
+   {
+    "value": "seen by a clairvoyant",
+    "quote": "Pat's unusual talents lead her to know Eri",
+    "confidence": "sourced"
+   },
+   {
+    "value": "spirits stay for a reason",
+    "source": "subtitles",
+    "at": "01:09:53",
+    "quote": "There's a reason why spirits remain on this earth.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "school curfew",
+    "source": "subtitles",
+    "at": "00:36:12",
+    "quote": "There will be a new set of rules here at Sta. Lucia. Students are not allowed to walk around, unless in pairs.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "students", "relation_to_threat": "community", "detail": "Clara", "quote": "Mang Fidel to strangle Clara", "confidence": "sourced"},
-   {"value": "counsellor", "relation_to_threat": "community", "detail": "Pat Consolacion", "quote": "a clairvoyant guidance counselor called Pat Consolacion", "confidence": "sourced"},
-   {"value": "mother", "relation_to_threat": "family", "quote": "possess her father to strangle her mother", "confidence": "sourced"}
+   {
+    "value": "students",
+    "relation_to_threat": "community",
+    "detail": "Clara",
+    "quote": "Mang Fidel to strangle Clara",
+    "confidence": "sourced"
+   },
+   {
+    "value": "counsellor",
+    "relation_to_threat": "community",
+    "detail": "Pat Consolacion",
+    "quote": "a clairvoyant guidance counselor called Pat Consolacion",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother",
+    "relation_to_threat": "family",
+    "quote": "possess her father to strangle her mother",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "ghost defeated by another ghost", "quote": "Clara comes out and pushes Eri and herself off the roof to save Pat", "confidence": "sourced"},
-   {"value": "protagonist dies", "detail": "Pat learns she was killed and continues as a ghost", "quote": "The film ends with Pat finding out that Julian managed to kill her", "confidence": "sourced"}
+   {
+    "value": "ghost defeated by another ghost",
+    "quote": "Clara comes out and pushes Eri and herself off the roof to save Pat",
+    "confidence": "sourced"
+   },
+   {
+    "value": "protagonist dies",
+    "detail": "Pat learns she was killed and continues as a ghost",
+    "quote": "The film ends with Pat finding out that Julian managed to kill her",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "nun's habit", "when": "early", "role": "clue", "quote": "Pat disguises herself as a nun and gains access to Eri's file", "confidence": "sourced"},
-   {"value": "confessional", "when": "middle", "role": "setting", "quote": "They talk within the confessional, where Eri confesses about her deeds", "confidence": "sourced"},
-   {"value": "cut hair", "when": "middle", "role": "clue", "quote": "her mother cutting her hair unflatteringly leading to more bullying", "confidence": "sourced"},
-   {"value": "bathroom", "when": "middle", "role": "setting", "quote": "culminating to hanging herself in the bathroom", "confidence": "sourced"},
-   {"value": "rooftop", "when": "late", "role": "setting", "quote": "leading to a confrontation on a rooftop", "confidence": "sourced"},
-   {"value": "chapel wake", "when": "ending", "role": "turn", "quote": "finding Joyce in her wake in the school chapel", "confidence": "sourced"}
+   {
+    "value": "nun's habit",
+    "when": "early",
+    "role": "clue",
+    "quote": "Pat disguises herself as a nun and gains access to Eri's file",
+    "confidence": "sourced"
+   },
+   {
+    "value": "confessional",
+    "when": "middle",
+    "role": "setting",
+    "quote": "They talk within the confessional, where Eri confesses about her deeds",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:29",
+      "quote": "You won't see me. I won't see you. But we'll talk."
+     }
+    ]
+   },
+   {
+    "value": "cut hair",
+    "when": "middle",
+    "role": "clue",
+    "quote": "her mother cutting her hair unflatteringly leading to more bullying",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:28",
+      "quote": "my mother cut my hair so short... So... ugly."
+     }
+    ]
+   },
+   {
+    "value": "bathroom",
+    "when": "middle",
+    "role": "setting",
+    "quote": "culminating to hanging herself in the bathroom",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:41",
+      "quote": "She hung herself in the comfort room of Sta. Lucia."
+     }
+    ]
+   },
+   {
+    "value": "rooftop",
+    "when": "late",
+    "role": "setting",
+    "quote": "leading to a confrontation on a rooftop",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:48",
+      "quote": "That's why I stay on the rooftop, so I can clear my mind."
+     }
+    ]
+   },
+   {
+    "value": "chapel wake",
+    "when": "ending",
+    "role": "turn",
+    "quote": "finding Joyce in her wake in the school chapel",
+    "confidence": "sourced"
+   },
+   {
+    "value": "butterfly collection",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:33:15",
+    "quote": "How old are these butterflies?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "last cubicle",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:02:07",
+    "quote": "Every midnight at the end of the third floor corridor, beside the stairwell, you'll find a comfort room.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "student's death", "when": "opening", "role": "trigger", "quote": "The unexpected and gruesome death of a student threatens the existence of an old Catholic school", "confidence": "sourced"},
-   {"order": 2, "value": "strict nun suspected", "when": "opening", "quote": "Most students suspect it is the strict and borderline abusive Mother Alice", "confidence": "sourced"},
-   {"order": 3, "value": "clairvoyant meets the ghost", "when": "early", "quote": "Pat's unusual talents lead her to know Eri", "confidence": "sourced"},
-   {"order": 4, "value": "past failure confessed", "when": "middle", "role": "clue", "quote": "Sor Alice tells Pat about her time as the guidance counselor, failing to help Eri", "confidence": "sourced"},
-   {"order": 5, "value": "ghost confesses", "when": "middle", "role": "turn", "quote": "They talk within the confessional, where Eri confesses about her deeds", "confidence": "sourced"},
-   {"order": 6, "value": "possessed chase", "when": "late", "quote": "Eri manages to possess Julian, who chases Pat across the school", "confidence": "sourced"},
-   {"order": 7, "value": "rescued by a victim's ghost", "when": "late", "quote": "Clara comes out and pushes Eri and herself off the roof to save Pat", "confidence": "sourced"},
-   {"order": 8, "value": "heroine was dead", "when": "ending", "role": "turn", "quote": "Pat finding out that Julian managed to kill her, finding Joyce in her wake in the school chapel", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "legend told",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:44",
+    "quote": "I've been in Sta. Lucia longer than I can remember.",
+    "confidence": "sourced",
+    "detail": "a narrator tells the legend of the girl who hanged herself"
+   },
+   {
+    "order": 2,
+    "value": "night ritual in dormitory",
+    "when": "opening",
+    "role": "trigger",
+    "source": "subtitles",
+    "at": "00:02:55",
+    "quote": "Do you trust me? Do you know what this is?",
+    "confidence": "observed"
+   },
+   {
+    "order": 3,
+    "value": "student's death",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "The unexpected and gruesome death of a student threatens the existence of an old Catholic school",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "strict nun suspected",
+    "when": "opening",
+    "quote": "Most students suspect it is the strict and borderline abusive Mother Alice",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "clairvoyant meets the ghost",
+    "when": "early",
+    "quote": "Pat's unusual talents lead her to know Eri",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:42",
+      "quote": "Good evening, Eri. How have you been?"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "past failure confessed",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Sor Alice tells Pat about her time as the guidance counselor, failing to help Eri",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:25",
+      "quote": "I was a guidance counselor before."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "ghost confesses",
+    "when": "middle",
+    "role": "turn",
+    "quote": "They talk within the confessional, where Eri confesses about her deeds",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "possessed chase",
+    "when": "late",
+    "quote": "Eri manages to possess Julian, who chases Pat across the school",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:38",
+      "quote": "Eri, don't do this, please, let's talk. Let Julian go."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "rescued by a victim's ghost",
+    "when": "late",
+    "quote": "Clara comes out and pushes Eri and herself off the roof to save Pat",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "heroine was dead",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Pat finding out that Julian managed to kill her, finding Joyce in her wake in the school chapel",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:51",
+      "quote": "Miss Pat, if you can hear me... If you can really hear me, please, help me."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "ghost promises to stay",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:35:01",
+    "quote": "I'm right here, Joyce. I'll always be here.",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

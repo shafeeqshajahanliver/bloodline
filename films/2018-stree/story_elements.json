@@ -1,61 +1,537 @@
 {
  "film": "2018-stree",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vengeful ghost", "detail": "Stree, a spirit who abducts men", "quote": "the spirit of a woman who abducts men during a four-day annual festival, leaving behind only their clothes", "confidence": "sourced"}
+   {
+    "value": "vengeful ghost",
+    "detail": "Stree, a spirit who abducts men",
+    "quote": "the spirit of a woman who abducts men during a four-day annual festival, leaving behind only their clothes",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "person who died wronged", "detail": "a courtesan murdered by the town's men", "quote": "Stree was once a beautiful courtesan who truly loved a man and was murdered by men in the town before she could marry him", "confidence": "sourced"}
+   {
+    "value": "person who died wronged",
+    "detail": "a courtesan murdered by the town's men",
+    "quote": "Stree was once a beautiful courtesan who truly loved a man and was murdered by men in the town before she could marry him",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "love and respect", "quote": "Vicky understands her desire for love and respect", "confidence": "sourced"},
-   {"value": "to take men", "quote": "the spirit of a woman who abducts men", "confidence": "sourced"}
+   {
+    "value": "love and respect",
+    "quote": "Vicky understands her desire for love and respect",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:27",
+      "quote": "Stree wants her wedding night which was left incomplete."
+     }
+    ]
+   },
+   {
+    "value": "to take men",
+    "quote": "the spirit of a woman who abducts men",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:53",
+      "quote": "She abducts male, leaving only his clothes behind."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "murder of a woman", "quote": "was murdered by men in the town before she could marry him", "confidence": "sourced"}
+   {
+    "value": "murder of a woman",
+    "quote": "was murdered by men in the town before she could marry him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:24",
+      "quote": "And if she crosses her limit, then burn her alive at the cross."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "annual festival", "quote": "abducts men during a four-day annual festival", "confidence": "sourced"},
-   {"value": "friend abducted", "quote": "When their friend Jana is abducted, Vicky grows wary of the woman", "confidence": "sourced"}
+   {
+    "value": "annual festival",
+    "quote": "abducts men during a four-day annual festival",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:53",
+      "quote": "where no male steps out alone during these days of the festival."
+     }
+    ]
+   },
+   {
+    "value": "friend abducted",
+    "quote": "When their friend Jana is abducted, Vicky grows wary of the woman",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:53",
+      "quote": "Only his clothes. Stree took him."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "wall inscription protects", "quote": "townsfolk inscribe O Stree Kal Aana () on their walls and men refrain from going out after 10 PM", "confidence": "sourced"},
-   {"value": "power in her braid", "quote": "cut off Stree's braid, her source of power", "confidence": "sourced"},
-   {"value": "prophesied hero", "quote": "a man born under an oak tree to a courtesan will defeat Stree", "confidence": "sourced"},
-   {"value": "appeased by honour", "quote": "sees a statue erected in her honour with the phrase O Stree Raksha Karna (), prompting her to leave peacefully", "confidence": "sourced"}
+   {
+    "value": "wall inscription protects",
+    "quote": "townsfolk inscribe O Stree Kal Aana () on their walls and men refrain from going out after 10 PM",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:28",
+      "quote": "Vicky, any house that has this ink outside their house will always be safe from' Stree'."
+     }
+    ]
+   },
+   {
+    "value": "power in her braid",
+    "quote": "cut off Stree's braid, her source of power",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:55:40",
+      "quote": "Then cut off her braid. This will make her powerless."
+     }
+    ]
+   },
+   {
+    "value": "prophesied hero",
+    "quote": "a man born under an oak tree to a courtesan will defeat Stree",
+    "confidence": "sourced"
+   },
+   {
+    "value": "appeased by honour",
+    "quote": "sees a statue erected in her honour with the phrase O Stree Raksha Karna (), prompting her to leave peacefully",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:27",
+      "quote": "Stree wants her wedding night which was left incomplete."
+     }
+    ]
+   },
+   {
+    "value": "calls three times",
+    "source": "subtitles",
+    "at": "00:24:55",
+    "quote": "No man could ever resist the Stree when she calls out for the third time.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:03",
+      "quote": "If you ever come across the Stree then she will first call out your name."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "turning around means yes",
+    "source": "subtitles",
+    "at": "01:16:18",
+    "quote": "And if you turn around. Then she will think it's a yes.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "asks permission first",
+    "source": "subtitles",
+    "at": "01:16:13",
+    "quote": "She doesn't use force against your will, like men. She will first ask for your permission.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "never enters the temple",
+    "source": "subtitles",
+    "at": "01:03:02",
+    "quote": "She never enters the temple, always stays out. She doesn't take the offerings either.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "men of the town", "relation_to_threat": "community", "quote": "locals believe in the legend of Stree, the spirit of a woman who abducts men", "confidence": "sourced"},
-   {"value": "friends", "relation_to_threat": "community", "detail": "Vicky, Bittu, Jana", "quote": "When their friend Jana is abducted", "confidence": "sourced"}
+   {
+    "value": "men of the town",
+    "relation_to_threat": "community",
+    "quote": "locals believe in the legend of Stree, the spirit of a woman who abducts men",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:53",
+      "quote": "She abducts male, leaving only his clothes behind."
+     }
+    ]
+   },
+   {
+    "value": "friends",
+    "relation_to_threat": "community",
+    "detail": "Vicky, Bittu, Jana",
+    "quote": "When their friend Jana is abducted",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:28",
+      "quote": "Go and ask her, your Stree, where she took Jana. I miss him."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "threat appeased", "quote": "prompting her to leave peacefully", "confidence": "sourced"},
-   {"value": "power passes to another", "detail": "the mysterious woman takes the braid", "quote": "she is shown attaching Stree's braid to her own and vanishes", "confidence": "sourced"}
+   {
+    "value": "threat appeased",
+    "quote": "prompting her to leave peacefully",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:03:12",
+      "quote": "O STREE PROTECT US."
+     }
+    ]
+   },
+   {
+    "value": "power passes to another",
+    "detail": "the mysterious woman takes the braid",
+    "quote": "she is shown attaching Stree's braid to her own and vanishes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:01:46",
+      "quote": "Just cut off her braid. She will become powerless, and won't die."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "empty clothes", "state": "left behind", "when": "opening", "role": "omen", "quote": "leaving behind only their clothes", "confidence": "sourced"},
-   {"value": "wall writing", "state": "protective, later erased", "when": "opening", "role": "symbol", "quote": "he erases the protective wall inscriptions, causing more abductions", "confidence": "sourced"},
-   {"value": "lehenga", "state": "to be stitched", "when": "early", "role": "clue", "quote": "meets a mysterious woman who asks him to stich a lehenga", "confidence": "sourced"},
-   {"value": "burnt book", "state": "partially burnt", "when": "middle", "role": "clue", "quote": "They find a partially burnt book titled Chanderi Puran", "confidence": "sourced"},
-   {"value": "fort", "state": "spirit's lair", "when": "middle", "role": "setting", "quote": "Believing her spirit to reside in a nearby fort", "confidence": "sourced"},
-   {"value": "braid", "state": "cut off", "when": "late", "role": "weapon", "quote": "The woman advises Vicky to cut off Stree's braid", "confidence": "sourced"},
-   {"value": "statue", "state": "erected in her honour", "when": "ending", "role": "symbol", "quote": "sees a statue erected in her honour", "confidence": "sourced"}
+   {
+    "value": "empty clothes",
+    "state": "left behind",
+    "when": "opening",
+    "role": "omen",
+    "quote": "leaving behind only their clothes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:53",
+      "quote": "She abducts male, leaving only his clothes behind."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:34:59",
+      "quote": "Whenever she takes any man with her, she leaves his clothes behind."
+     }
+    ]
+   },
+   {
+    "value": "wall writing",
+    "state": "protective, later erased",
+    "when": "opening",
+    "role": "symbol",
+    "quote": "he erases the protective wall inscriptions, causing more abductions",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:28",
+      "quote": "Vicky, any house that has this ink outside their house will always be safe from' Stree'."
+     }
+    ]
+   },
+   {
+    "value": "lehenga",
+    "state": "to be stitched",
+    "when": "early",
+    "role": "clue",
+    "quote": "meets a mysterious woman who asks him to stich a lehenga",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:33",
+      "quote": "Can't you take my measurement without it?"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:59:57",
+      "quote": "You took my measurements so well."
+     }
+    ]
+   },
+   {
+    "value": "burnt book",
+    "state": "partially burnt",
+    "when": "middle",
+    "role": "clue",
+    "quote": "They find a partially burnt book titled Chanderi Puran",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:21",
+      "quote": "We found a book in his library. But the pages were missing."
+     }
+    ]
+   },
+   {
+    "value": "fort",
+    "state": "spirit's lair",
+    "when": "middle",
+    "role": "setting",
+    "quote": "Believing her spirit to reside in a nearby fort",
+    "confidence": "sourced"
+   },
+   {
+    "value": "braid",
+    "state": "cut off",
+    "when": "late",
+    "role": "weapon",
+    "quote": "The woman advises Vicky to cut off Stree's braid",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:54:21",
+      "quote": "And cut off her braid."
+     }
+    ]
+   },
+   {
+    "value": "statue",
+    "state": "erected in her honour",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "sees a statue erected in her honour",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bat bone ink",
+    "when": "opening",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "00:07:12",
+    "quote": "These are crushed bones of a bat mixed with the pee of a white crow.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cat hair and lizard tail",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:49:11",
+    "quote": "Cat hair, lizard leg... Tail.",
+    "detail": "items the mystery girl asks Vicky to fetch in her love letter",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:13",
+      "quote": "Thornapple flower. Hair of a cat."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "feet",
+    "state": "straight or crooked?",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:02:23",
+    "quote": "Have you ever seen her feet? Are they straight or crooked?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dagger",
+    "when": "late",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "01:54:21",
+    "quote": "You must pierce her heart with this dagger.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "town legend", "when": "opening", "role": "omen", "quote": "Within the town of Chanderi, locals believe in the legend of Stree", "confidence": "sourced"},
-   {"order": 2, "value": "mysterious woman appears", "when": "early", "quote": "Vicky, a ladies' tailor, meets a mysterious woman", "confidence": "sourced"},
-   {"order": 3, "value": "friend taken", "when": "early", "role": "trigger", "quote": "When their friend Jana is abducted, Vicky grows wary of the woman", "confidence": "sourced"},
-   {"order": 4, "value": "past crime revealed", "when": "middle", "role": "clue", "quote": "which reveals that Stree was once a beautiful courtesan", "confidence": "sourced"},
-   {"order": 5, "value": "returned victim changed", "when": "middle", "role": "turn", "quote": "he erases the protective wall inscriptions, causing more abductions", "confidence": "sourced"},
-   {"order": 6, "value": "chosen one revealed", "when": "late", "quote": "Rudra suggests that Vicky fits his prophecy, revealing that his mother was a courtesan", "confidence": "sourced"},
-   {"order": 7, "value": "braid cut, spirit gone", "when": "late", "quote": "He does so, and Stree disappears", "confidence": "sourced"},
-   {"order": 8, "value": "spirit honoured, leaves", "when": "ending", "quote": "A year later, Stree returns to Chanderi but sees a statue erected in her honour", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "town legend",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Within the town of Chanderi, locals believe in the legend of Stree",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:42",
+      "quote": "O Stree come tomorrow"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "protective slogan painted",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:07:28",
+    "quote": "Vicky, any house that has this ink outside their house will always be safe from' Stree'.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "mysterious woman appears",
+    "when": "early",
+    "quote": "Vicky, a ladies' tailor, meets a mysterious woman",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:52",
+      "quote": "Is your name Vicky? Yes. I saw you last year at the festival."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "rules of the call explained",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:24:03",
+    "quote": "If you ever come across the Stree then she will first call out your name.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "friend taken",
+    "when": "early",
+    "role": "trigger",
+    "quote": "When their friend Jana is abducted, Vicky grows wary of the woman",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:53",
+      "quote": "Only his clothes. Stree took him."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "past crime revealed",
+    "when": "middle",
+    "role": "clue",
+    "quote": "which reveals that Stree was once a beautiful courtesan",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:24",
+      "quote": "And if she crosses her limit, then burn her alive at the cross."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "returned victim changed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "he erases the protective wall inscriptions, causing more abductions",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "girlfriend suspected of witchcraft",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:02:23",
+    "quote": "She asks you to get ingredients for black magic in her love letter.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "chosen one revealed",
+    "when": "late",
+    "quote": "Rudra suggests that Vicky fits his prophecy, revealing that his mother was a courtesan",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:48",
+      "quote": "I am the protector, shouldn't I prepare for a battle or something."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "braid cut, spirit gone",
+    "when": "late",
+    "quote": "He does so, and Stree disappears",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:57:57",
+      "quote": "But I snuck up behind her and cut off her braid. Then she disappeared."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "spirit honoured, leaves",
+    "when": "ending",
+    "quote": "A year later, Stree returns to Chanderi but sees a statue erected in her honour",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:03:12",
+      "quote": "O STREE PROTECT US."
+     }
+    ]
+   },
+   {
+    "order": 12,
+    "value": "a year later, a new slogan",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "02:02:35",
+    "quote": "ONE YEAR LATER. O STREE PROTECT US.",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

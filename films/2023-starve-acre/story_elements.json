@@ -1,65 +1,469 @@
 {
  "film": "2023-starve-acre",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "nature spirit", "detail": "Jack Grey, reborn as a hare", "quote": "there is an entrance in the farmyard where the spirit of nature can enter the real world", "confidence": "sourced"},
-   {"value": "parents who kill", "quote": "She willingly let him die. When Harrie bursts in and tries to intervene, Richard murders her.", "confidence": "sourced"}
+   {
+    "value": "nature spirit",
+    "detail": "Jack Grey, reborn as a hare",
+    "quote": "there is an entrance in the farmyard where the spirit of nature can enter the real world",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:13",
+      "quote": "Gordon says the oak tree's spirit was like a doorway into other worlds."
+     }
+    ]
+   },
+   {
+    "value": "parents who kill",
+    "quote": "She willingly let him die. When Harrie bursts in and tries to intervene, Richard murders her.",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "inherited land", "detail": "the father's farm and his beliefs", "quote": "live with their young son Owen on Richard's deceased father's isolated farm on the moors", "confidence": "sourced"},
-   {"value": "dug up", "quote": "During the dig, Richard uncovers the bones of a hare.", "confidence": "sourced"}
+   {
+    "value": "inherited land",
+    "detail": "the father's farm and his beliefs",
+    "quote": "live with their young son Owen on Richard's deceased father's isolated farm on the moors",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dug up",
+    "quote": "During the dig, Richard uncovers the bones of a hare.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:00",
+      "quote": "a rabbit, or a hare."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "a child sacrifice", "quote": "The journal also details Richard's father's attempts to sacrifice his young son to the spirit.", "confidence": "observed"},
-   {"value": "to be raised as a child", "quote": "Jules convinces Richard to accept the hare, Jack Grey, as their child.", "confidence": "observed"}
+   {
+    "value": "a child sacrifice",
+    "quote": "The journal also details Richard's father's attempts to sacrifice his young son to the spirit.",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:27",
+      "quote": "It's Jack who chooses. And only a son who is much beloved by his father would do."
+     }
+    ]
+   },
+   {
+    "value": "to be raised as a child",
+    "quote": "Jules convinces Richard to accept the hare, Jack Grey, as their child.",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "child abuse", "quote": "Richard, who was abused by his father", "confidence": "sourced"},
-   {"value": "attempted child sacrifice", "quote": "Richard's father's attempts to sacrifice his young son to the spirit", "confidence": "sourced"},
-   {"value": "mother lets child die", "quote": "she knew Owen was having a life-threatening asthma attack, but something told her she and Richard were better off without Owen", "confidence": "sourced"}
+   {
+    "value": "child abuse",
+    "quote": "Richard, who was abused by his father",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:07",
+      "quote": "My dad used to strip me down to my underpants..."
+     }
+    ]
+   },
+   {
+    "value": "attempted child sacrifice",
+    "quote": "Richard's father's attempts to sacrifice his young son to the spirit",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:08",
+      "quote": "He even attempted to offer up his own son as first ransom."
+     }
+    ]
+   },
+   {
+    "value": "mother lets child die",
+    "quote": "she knew Owen was having a life-threatening asthma attack, but something told her she and Richard were better off without Owen",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:55",
+      "quote": "I had a moment of clarity that we'd be better off without him."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "child hears a voice", "quote": "tells his mother he has been hearing whistling sounds from someone named Jack Grey", "confidence": "sourced"},
-   {"value": "digging up the past", "quote": "Richard begins an archaeological dig where the journal suggests the entrance can be found", "confidence": "sourced"}
+   {
+    "value": "child hears a voice",
+    "quote": "tells his mother he has been hearing whistling sounds from someone named Jack Grey",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:02",
+      "quote": "He said that someone called Jack Grey is whistling to him."
+     }
+    ]
+   },
+   {
+    "value": "digging up the past",
+    "quote": "Richard begins an archaeological dig where the journal suggests the entrance can be found",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "the dead regrow", "quote": "the organic matter on the bones begins to resolve into muscle, sinew, nerves, and organs", "confidence": "sourced"},
-   {"value": "only they see it", "quote": "The colleague, however, says he sees nothing unusual.", "confidence": "sourced"}
+   {
+    "value": "the dead regrow",
+    "quote": "the organic matter on the bones begins to resolve into muscle, sinew, nerves, and organs",
+    "confidence": "sourced"
+   },
+   {
+    "value": "only they see it",
+    "quote": "The colleague, however, says he sees nothing unusual.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "three must be sacrificed",
+    "source": "subtitles",
+    "at": "01:11:53",
+    "quote": "A child, woman and a man. They were sacrificed for the Dandelion to bud.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:21",
+      "quote": "The price we pay is one, two, three,"
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "child", "relation_to_threat": "family", "detail": "Owen", "quote": "tells him his little boy has died from a severe asthma attack", "confidence": "sourced"},
-   {"value": "grieving couple", "relation_to_threat": "family", "detail": "Richard and Jules", "quote": "Both parents are overcome with anguish.", "confidence": "sourced"},
-   {"value": "outsiders who intervene", "relation_to_threat": "community", "detail": "the colleague and Jules's sister Harrie", "quote": "When his academic colleague shows up, endangering the find and the hare, Jules stabs him to death.", "confidence": "sourced"}
+   {
+    "value": "child",
+    "relation_to_threat": "family",
+    "detail": "Owen",
+    "quote": "tells him his little boy has died from a severe asthma attack",
+    "confidence": "sourced"
+   },
+   {
+    "value": "grieving couple",
+    "relation_to_threat": "family",
+    "detail": "Richard and Jules",
+    "quote": "Both parents are overcome with anguish.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "outsiders who intervene",
+    "relation_to_threat": "community",
+    "detail": "the colleague and Jules's sister Harrie",
+    "quote": "When his academic colleague shows up, endangering the find and the hare, Jules stabs him to death.",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "victims become threat", "quote": "With Harrie's body lying at their feet, Richard and Jules bond affectionately over the hare", "confidence": "sourced"},
-   {"value": "creature replaces child", "quote": "which Jules cuddles and nurses at her breast", "confidence": "sourced"}
+   {
+    "value": "victims become threat",
+    "quote": "With Harrie's body lying at their feet, Richard and Jules bond affectionately over the hare",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:14",
+      "quote": "Into the womb of nature, Accept these tokens of affection."
+     }
+    ]
+   },
+   {
+    "value": "creature replaces child",
+    "quote": "which Jules cuddles and nurses at her breast",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:15",
+      "quote": "He wants to play with you."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "pony", "state": "attacked and blinded", "when": "early", "role": "omen", "quote": "they find a young girl's pony has been viciously attacked and blinded", "confidence": "sourced"},
-   {"value": "sharpened stick", "state": "bloody", "when": "early", "role": "weapon", "quote": "Owen sits miserably by himself, a bloody, sharpened stick in his hands", "confidence": "sourced"},
-   {"value": "mist", "state": "settling", "when": "middle", "role": "omen", "quote": "she watches an eerie mist settle over the farmyard, near the stone wall", "confidence": "sourced"},
-   {"value": "candle", "state": "goes out and flares", "when": "middle", "role": "omen", "quote": "a candle abruptly goes out, then flares to life again", "confidence": "sourced"},
-   {"value": "journal", "when": "middle", "role": "clue", "quote": "Richard, meanwhile, has found his father's journal", "confidence": "sourced"},
-   {"value": "hare", "state": "bones regrowing to life", "when": "late", "role": "threat", "quote": "The hare's heart begins to beat, and soon it is once again a normal-looking, furry, living animal.", "confidence": "sourced"},
-   {"value": "tree roots", "when": "late", "role": "setting", "quote": "Richard uncovers the roots of an enormous tree at his dig site", "confidence": "sourced"},
-   {"value": "whistling", "when": "opening", "role": "omen", "quote": "hearing whistling sounds from someone named Jack Grey", "confidence": "sourced"}
+   {
+    "value": "pony",
+    "state": "attacked and blinded",
+    "when": "early",
+    "role": "omen",
+    "quote": "they find a young girl's pony has been viciously attacked and blinded",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:35",
+      "quote": "[horse cries in pain]"
+     }
+    ]
+   },
+   {
+    "value": "sharpened stick",
+    "state": "bloody",
+    "when": "early",
+    "role": "weapon",
+    "quote": "Owen sits miserably by himself, a bloody, sharpened stick in his hands",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mist",
+    "state": "settling",
+    "when": "middle",
+    "role": "omen",
+    "quote": "she watches an eerie mist settle over the farmyard, near the stone wall",
+    "confidence": "sourced"
+   },
+   {
+    "value": "candle",
+    "state": "goes out and flares",
+    "when": "middle",
+    "role": "omen",
+    "quote": "a candle abruptly goes out, then flares to life again",
+    "confidence": "sourced"
+   },
+   {
+    "value": "journal",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Richard, meanwhile, has found his father's journal",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:16",
+      "quote": "Well, if my dad's writing is anything to go on..."
+     }
+    ]
+   },
+   {
+    "value": "hare",
+    "state": "bones regrowing to life",
+    "when": "late",
+    "role": "threat",
+    "quote": "The hare's heart begins to beat, and soon it is once again a normal-looking, furry, living animal.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:00",
+      "quote": "a rabbit, or a hare."
+     }
+    ]
+   },
+   {
+    "value": "tree roots",
+    "when": "late",
+    "role": "setting",
+    "quote": "Richard uncovers the roots of an enormous tree at his dig site",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:30",
+      "quote": "should be the roots of an old oak tree."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:20:25",
+      "quote": "the way it's mummified the oak..."
+     }
+    ]
+   },
+   {
+    "value": "whistling",
+    "when": "opening",
+    "role": "omen",
+    "quote": "hearing whistling sounds from someone named Jack Grey",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:34",
+      "quote": "The whistle whistling."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:29:20",
+      "quote": "[eerie whistling]"
+     }
+    ]
+   },
+   {
+    "value": "folk ballad",
+    "when": "ending",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:32:41",
+    "quote": "So my prithee love let me in",
+    "confidence": "sourced",
+    "detail": "closing song about who may be let into the house"
+   },
+   {
+    "value": "rhyme of the whistling tree",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:12:11",
+    "quote": "The gods are just, the gods are fair, they let Jack free and into our care.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "child hears a name", "when": "opening", "role": "omen", "quote": "tells his mother he has been hearing whistling sounds from someone named Jack Grey", "confidence": "sourced"},
-   {"order": 2, "value": "child harms an animal", "when": "early", "role": "omen", "quote": "a young girl's pony has been viciously attacked and blinded", "confidence": "sourced"},
-   {"order": 3, "value": "child dies", "when": "middle", "role": "turn", "quote": "When she comes back to herself, Owen is lying in the doorway. He is not breathing.", "confidence": "sourced"},
-   {"order": 4, "value": "father's journal found", "when": "middle", "role": "clue", "quote": "Richard, meanwhile, has found his father's journal, detailing his belief that there is an entrance in the farmyard", "confidence": "sourced"},
-   {"order": 5, "value": "bones dug up", "when": "middle", "role": "trigger", "quote": "During the dig, Richard uncovers the bones of a hare.", "confidence": "sourced"},
-   {"order": 6, "value": "creature regrows", "when": "late", "quote": "The hare's heart begins to beat", "confidence": "sourced"},
-   {"order": 7, "value": "outsider killed", "when": "late", "quote": "Jules stabs him to death", "confidence": "sourced"},
-   {"order": 8, "value": "confession and second killing", "when": "ending", "role": "turn", "quote": "She willingly let him die. When Harrie bursts in and tries to intervene, Richard murders her.", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "child hears a name",
+    "when": "opening",
+    "role": "omen",
+    "quote": "tells his mother he has been hearing whistling sounds from someone named Jack Grey",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:25",
+      "quote": "[boy] It's gone now, Mummy."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "child harms an animal",
+    "when": "early",
+    "role": "omen",
+    "quote": "a young girl's pony has been viciously attacked and blinded",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:08",
+      "quote": "[horse whinnying]"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "child dies",
+    "when": "middle",
+    "role": "turn",
+    "quote": "When she comes back to herself, Owen is lying in the doorway. He is not breathing.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:21",
+      "quote": "Owen, breathe. Come on."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "father's journal found",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Richard, meanwhile, has found his father's journal, detailing his belief that there is an entrance in the farmyard",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "bones dug up",
+    "when": "middle",
+    "role": "trigger",
+    "quote": "During the dig, Richard uncovers the bones of a hare.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:00",
+      "quote": "a rabbit, or a hare."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "creature regrows",
+    "when": "late",
+    "quote": "The hare's heart begins to beat",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "sacrificial rhyme found",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:12:11",
+    "quote": "The gods are just, the gods are fair,",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "outsider killed",
+    "when": "late",
+    "quote": "Jules stabs him to death",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "confession and second killing",
+    "when": "ending",
+    "role": "turn",
+    "quote": "She willingly let him die. When Harrie bursts in and tries to intervene, Richard murders her.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:37",
+      "quote": "When Owen had the asthma attack... I didn't freeze up."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "offering to nature",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:29:14",
+    "quote": "Into the womb of nature, Accept these tokens of affection.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "closing folk song",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:32:30",
+    "quote": "It hails, it rains, it snows, it blows",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

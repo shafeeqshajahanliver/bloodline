@@ -1,61 +1,477 @@
 {
  "film": "2018-gonjiam-haunted-asylum",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "ghosts", "detail": "the hospital director and patients", "quote": "Seung-wook awakens strapped to a wheelchair and is dragged into Room 402 as multiple ghostly patients observe him", "confidence": "sourced"},
-   {"value": "haunted place", "detail": "Gonjiam Psychiatric Hospital", "quote": "travel to an abandoned asylum for a live broadcast to garner views and publicity", "confidence": "sourced"}
+   {
+    "value": "ghosts",
+    "detail": "the hospital director and patients",
+    "quote": "Seung-wook awakens strapped to a wheelchair and is dragged into Room 402 as multiple ghostly patients observe him",
+    "confidence": "sourced"
+   },
+   {
+    "value": "haunted place",
+    "detail": "Gonjiam Psychiatric Hospital",
+    "quote": "travel to an abandoned asylum for a live broadcast to garner views and publicity",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:27",
+      "quote": "one of three most haunted houses in Korea"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "people who died wronged", "detail": "patients murdered by the director", "quote": "the hospital's ping pong-loving director murdered all the patients before disappearing", "confidence": "sourced"}
+   {
+    "value": "people who died wronged",
+    "detail": "patients murdered by the director",
+    "quote": "the hospital's ping pong-loving director murdered all the patients before disappearing",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:36",
+      "quote": "or that the mass suicide was actually murdered by the director"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "nothing stated", "quote": "Ghostly apparitions surround and possess them one by one", "confidence": "observed"}
+   {
+    "value": "nothing stated",
+    "quote": "Ghostly apparitions surround and possess them one by one",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "mass murder", "quote": "rumor states that the hospital's ping pong-loving director murdered all the patients", "confidence": "sourced"}
+   {
+    "value": "mass murder",
+    "quote": "rumor states that the hospital's ping pong-loving director murdered all the patients",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:41",
+      "quote": "but it closed in October 1979 after a mass suicide of patients and the disappearance of its director."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "exploring a forbidden place", "quote": "Two boys livestream themselves exploring the abandoned Gonjiam Psychiatric Hospital", "confidence": "sourced"},
-   {"value": "chasing views", "quote": "Ha-joon, seeing his view count nearing one million, leaves for the asylum", "confidence": "sourced"}
+   {
+    "value": "exploring a forbidden place",
+    "quote": "Two boys livestream themselves exploring the abandoned Gonjiam Psychiatric Hospital",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:18",
+      "quote": "We're opening the door!"
+     }
+    ]
+   },
+   {
+    "value": "chasing views",
+    "quote": "Ha-joon, seeing his view count nearing one million, leaves for the asylum",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:00",
+      "quote": "A million! - A million? I am aiming for that."
+     }
+    ]
+   },
+   {
+    "value": "a summoning ritual",
+    "source": "subtitles",
+    "at": "00:43:06",
+    "quote": "We will perform the dangerous ritual to call out the ghosts.",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "door that must not open", "quote": "Room 402, the intensive care unit, which no one has ever managed to open", "confidence": "sourced"},
-   {"value": "cannot leave", "quote": "Ji-hyun and Charlotte repeatedly see the marked tree, and realize they are walking in circles", "confidence": "sourced"},
-   {"value": "possesses the living", "quote": "Ji-hyun falls into a trance and her eyes turn black", "confidence": "sourced"}
+   {
+    "value": "door that must not open",
+    "quote": "Room 402, the intensive care unit, which no one has ever managed to open",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:56",
+      "quote": "They say whoever dares to open that room is cursed to death."
+     }
+    ]
+   },
+   {
+    "value": "cannot leave",
+    "quote": "Ji-hyun and Charlotte repeatedly see the marked tree, and realize they are walking in circles",
+    "confidence": "sourced"
+   },
+   {
+    "value": "possesses the living",
+    "quote": "Ji-hyun falls into a trance and her eyes turn black",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "web series crew", "relation_to_threat": "stranger", "quote": "the members of a horror web series crew who travel to an abandoned asylum", "confidence": "sourced"},
-   {"value": "boys", "relation_to_threat": "stranger", "quote": "their livestream abruptly ends, with a fleeting glimpse of a ghostly face", "confidence": "sourced"}
+   {
+    "value": "web series crew",
+    "relation_to_threat": "stranger",
+    "quote": "the members of a horror web series crew who travel to an abandoned asylum",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:00",
+      "quote": "We faked it for the views! But everything going on right now is real!"
+     }
+    ]
+   },
+   {
+    "value": "boys",
+    "relation_to_threat": "stranger",
+    "quote": "their livestream abruptly ends, with a fleeting glimpse of a ghostly face",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:05",
+      "quote": "The high schoolers who went missing at Gonjiam."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "everyone dies", "quote": "the ghost of the director screams and strangles Ha-joon to death", "confidence": "sourced"},
-   {"value": "nobody believes", "quote": "viewers mock the failed stream, which had only peaked to 503 viewers", "confidence": "sourced"}
+   {
+    "value": "everyone dies",
+    "quote": "the ghost of the director screams and strangles Ha-joon to death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "nobody believes",
+    "quote": "viewers mock the failed stream, which had only peaked to 503 viewers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:28",
+      "quote": "\" It's not a live broadcast? \" \" It's cut off after it turns out a fake show. \""
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "ping-pong ball", "state": "heard, thrown", "when": "opening", "role": "omen", "quote": "After the sound of a ping-pong ball is heard, their livestream abruptly ends", "confidence": "sourced"},
-   {"value": "room 402", "state": "sealed door", "when": "opening", "role": "threat", "quote": "The two head to Room 402, the intensive care unit", "confidence": "sourced"},
-   {"value": "livestream camera", "state": "broadcasting", "when": "early", "role": "symbol", "quote": "He enlists six people—three women (Ah-yeon, Charlotte, and Ji-hyun) and three men (Sung-hoon, Seung-wook, and Je-yoon)—for the livestreamed exploration", "confidence": "sourced"},
-   {"value": "propane burners", "state": "turn on by themselves", "when": "early", "role": "omen", "quote": "the camp's propane burners turn on by themselves", "confidence": "sourced"},
-   {"value": "closet holes", "state": "grabbing", "when": "middle", "role": "threat", "quote": "When Ji-hyun places her arm inside one, it is pulled and scratched", "confidence": "sourced"},
-   {"value": "marked tree", "state": "seen repeatedly", "when": "late", "role": "omen", "quote": "repeatedly see the marked tree", "confidence": "sourced"},
-   {"value": "black eyes", "state": "possessed", "when": "late", "role": "threat", "quote": "Ji-hyun falls into a trance and her eyes turn black", "confidence": "sourced"},
-   {"value": "wheelchair", "state": "strapped in", "when": "ending", "role": "threat", "quote": "Seung-wook awakens strapped to a wheelchair", "confidence": "sourced"}
+   {
+    "value": "ping-pong ball",
+    "state": "heard, thrown",
+    "when": "opening",
+    "role": "omen",
+    "quote": "After the sound of a ping-pong ball is heard, their livestream abruptly ends",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:40",
+      "quote": "People who saw the ghosts there heard a ping pong ball."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:17:31",
+      "quote": "The ping-pong ball again!"
+     }
+    ]
+   },
+   {
+    "value": "room 402",
+    "state": "sealed door",
+    "when": "opening",
+    "role": "threat",
+    "quote": "The two head to Room 402, the intensive care unit",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:51",
+      "quote": "The biggest rumor among all is about room 402, the only locked space of the asylum."
+     }
+    ]
+   },
+   {
+    "value": "livestream camera",
+    "state": "broadcasting",
+    "when": "early",
+    "role": "symbol",
+    "quote": "He enlists six people—three women (Ah-yeon, Charlotte, and Ji-hyun) and three men (Sung-hoon, Seung-wook, and Je-yoon)—for the livestreamed exploration",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:47",
+      "quote": "We've over 12,000 views. We'll start to air in 5 mins."
+     }
+    ]
+   },
+   {
+    "value": "propane burners",
+    "state": "turn on by themselves",
+    "when": "early",
+    "role": "omen",
+    "quote": "the camp's propane burners turn on by themselves",
+    "confidence": "sourced"
+   },
+   {
+    "value": "closet holes",
+    "state": "grabbing",
+    "when": "middle",
+    "role": "threat",
+    "quote": "When Ji-hyun places her arm inside one, it is pulled and scratched",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:08",
+      "quote": "Strangely, there's a hole on the chest level, not on the face."
+     }
+    ]
+   },
+   {
+    "value": "marked tree",
+    "state": "seen repeatedly",
+    "when": "late",
+    "role": "omen",
+    "quote": "repeatedly see the marked tree",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:26",
+      "quote": "Leave it there. We can use it as a mark."
+     }
+    ]
+   },
+   {
+    "value": "black eyes",
+    "state": "possessed",
+    "when": "late",
+    "role": "threat",
+    "quote": "Ji-hyun falls into a trance and her eyes turn black",
+    "confidence": "sourced"
+   },
+   {
+    "value": "wheelchair",
+    "state": "strapped in",
+    "when": "ending",
+    "role": "threat",
+    "quote": "Seung-wook awakens strapped to a wheelchair",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dead bird",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:35:30",
+    "quote": "There's a dead bird.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ping pong table",
+    "state": "broken in half",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:06:45",
+    "quote": "Actually there is a ping pong table. Broken in half.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:13",
+      "quote": "Her playing ping pong. Guess this lady was fond of ping pong."
+     }
+    ]
+   },
+   {
+    "value": "wall graffiti",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:23:44",
+    "quote": "What's written on it? ' Enter and you will die.'",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:47",
+      "quote": "And I can see someone wrote' Let's live' here."
+     }
+    ]
+   },
+   {
+    "value": "ritual table",
+    "state": "amulet, millet, cinnabar",
+    "when": "middle",
+    "role": "trigger",
+    "source": "subtitles",
+    "at": "00:42:58",
+    "quote": "Amulet, millet, and cinnabar are prepared on the table for the ritual.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "previous explorers vanish", "when": "opening", "role": "omen", "quote": "their livestream abruptly ends, with a fleeting glimpse of a ghostly face", "confidence": "sourced"},
-   {"order": 2, "value": "crew goes in", "when": "early", "role": "trigger", "quote": "News of their disappearance prompts Ha-joon, owner of the YouTube channel \"Horror Times\", to investigate", "confidence": "sourced"},
-   {"order": 3, "value": "fake scares staged", "when": "early", "quote": "have prepared fake scares for the explorers and viewers to react to", "confidence": "sourced"},
-   {"order": 4, "value": "real haunting begins", "when": "middle", "role": "turn", "quote": "When Ji-hyun places her arm inside one, it is pulled and scratched", "confidence": "sourced"},
-   {"order": 5, "value": "escape loops back", "when": "late", "quote": "Charlotte flees toward the camp but finds herself back inside Room 402", "confidence": "sourced"},
-   {"order": 6, "value": "forbidden door opens", "when": "late", "role": "turn", "quote": "The group's infrared cameras detect a presence as the door finally opens", "confidence": "sourced"},
-   {"order": 7, "value": "organiser killed", "when": "ending", "quote": "the ghost of the director screams and strangles Ha-joon to death", "confidence": "sourced"},
-   {"order": 8, "value": "audience mocks the footage", "when": "ending", "role": "turn", "quote": "viewers mock the failed stream, which had only peaked to 503 viewers", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "previous explorers vanish",
+    "when": "opening",
+    "role": "omen",
+    "quote": "their livestream abruptly ends, with a fleeting glimpse of a ghostly face",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:30",
+      "quote": "It's not opening. I don't know how..."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "history of the asylum told",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:03:19",
+    "quote": "There are numerous rumors around Gonjiam asylum.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "crew goes in",
+    "when": "early",
+    "role": "trigger",
+    "quote": "News of their disappearance prompts Ha-joon, owner of the YouTube channel \"Horror Times\", to investigate",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:59",
+      "quote": "So we, the Horror Times are going to the Gonjiam asylum"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "fake scares staged",
+    "when": "early",
+    "quote": "have prepared fake scares for the explorers and viewers to react to",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:00",
+      "quote": "We faked it for the views!"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "ritual to call the ghosts",
+    "when": "middle",
+    "role": "trigger",
+    "source": "subtitles",
+    "at": "00:41:54",
+    "quote": "Let's begin the ritual.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "real haunting begins",
+    "when": "middle",
+    "role": "turn",
+    "quote": "When Ji-hyun places her arm inside one, it is pulled and scratched",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:56",
+      "quote": "So I will put my arm in there again."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "organiser chases views",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:16:36",
+    "quote": "We're about to reach one million!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "escape loops back",
+    "when": "late",
+    "quote": "Charlotte flees toward the camp but finds herself back inside Room 402",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:45",
+      "quote": "in room 402. - What?"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "forbidden door opens",
+    "when": "late",
+    "role": "turn",
+    "quote": "The group's infrared cameras detect a presence as the door finally opens",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "organiser killed",
+    "when": "ending",
+    "quote": "the ghost of the director screams and strangles Ha-joon to death",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "audience mocks the footage",
+    "when": "ending",
+    "role": "turn",
+    "quote": "viewers mock the failed stream, which had only peaked to 503 viewers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:31",
+      "quote": "\" It's cut off after it turns out a fake show. \""
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }
