@@ -7,6 +7,9 @@
     "Lead",
     "Plot"
    ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
   }
  ],
  "plot_quality": "thin",
@@ -15,7 +18,14 @@
    {
     "value": "haunted island",
     "quote": "a lone wildlife volunteer who begins experiencing nightmarish scenarios while residing on an island off the Cornish coast",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:13",
+      "quote": "near the old Miners' Quay on the abandoned island of Enys Men."
+     }
+    ]
    },
    {
     "value": "standing stone",
@@ -33,7 +43,14 @@
    {
     "value": "isolation on an island",
     "quote": "In 1973 on an uninhabited island off the Cornish coast",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:51",
+      "quote": "Are you lonely?"
+     }
+    ]
    }
   ],
   "rules": [
@@ -61,6 +78,33 @@
   ],
   "images": [
    {
+    "value": "gulls",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:02:41",
+    "quote": "(Gulls caw)",
+    "detail": "gull cries and birdsong run through the soundtrack",
+    "confidence": "sourced"
+   },
+   {
+    "value": "two-way radio",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:08:55",
+    "quote": "Can you hear me?",
+    "detail": "her only link to the mainland; by the end her own calls go unanswered",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:34",
+      "quote": "Is there anybody there?"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
     "value": "rare flower",
     "state": "observed daily",
     "when": "opening",
@@ -85,6 +129,49 @@
     "confidence": "sourced"
    },
    {
+    "value": "memorial statue",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:14:49",
+    "quote": "The memorial, a carved granite figure, which stands looking out over the bay,",
+    "detail": "a radio report: a boatman lost on 1 May 1973 near the island",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:06",
+      "quote": "The statue was erected in memory of a popular local boatman who was lost on the 1st of May 1973,"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "crying baby on the radio",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:32:33",
+    "quote": "(Sound of baby crying)",
+    "confidence": "sourced"
+   },
+   {
+    "value": "children's may song",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:37:53",
+    "quote": "Children singing \" Kan Me \" by Gwenno",
+    "detail": "a song in Cornish, heard from nowhere and again at the end",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:24",
+      "quote": "Daleth an hav"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
     "value": "ghostly miners",
     "when": "middle",
     "role": "threat",
@@ -104,6 +191,16 @@
     "role": "symbol",
     "quote": "a mysterious preacher who may be her father",
     "confidence": "sourced"
+   },
+   {
+    "value": "mayday call",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:02:27",
+    "quote": "This is supply boat Govenek. Mayday! This is supply boat Govenek.",
+    "detail": "the supply boat's distress call repeats",
+    "confidence": "sourced"
    }
   ],
   "beats": [
@@ -113,17 +210,42 @@
     "when": "opening",
     "role": "setting",
     "quote": "In 1973 on an uninhabited island off the Cornish coast",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:57",
+      "quote": "Just to let you know, should be with you by the end of the week. Weather permitting."
+     }
+    ]
    },
    {
     "order": 2,
     "value": "daily routine of observation",
     "when": "opening",
     "quote": "a wildlife volunteer's daily observations of a rare flower",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:58",
+      "quote": "How's the work?"
+     }
+    ]
    },
    {
     "order": 3,
+    "value": "news of a lost boatman",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:14:39",
+    "quote": "described the immense distress felt at finding the statue surrounded by smashed glass",
+    "detail": "a radio report heard on the island",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
     "value": "body begins to change",
     "when": "middle",
     "role": "turn",
@@ -131,17 +253,62 @@
     "confidence": "sourced"
    },
    {
-    "order": 4,
+    "order": 5,
     "value": "figures from past appear",
     "when": "middle",
     "quote": "a teenage girl who may be her daughter or younger self",
     "confidence": "sourced"
    },
    {
-    "order": 5,
+    "order": 6,
+    "value": "boatman visits",
+    "when": "late",
+    "source": "subtitles",
+    "at": "01:08:51",
+    "quote": "Best be off.",
+    "confidence": "observed"
+   },
+   {
+    "order": 7,
+    "value": "mayday from the supply boat",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:09:26",
+    "quote": "Mayday. Mayday. This is Govenek.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:34",
+      "quote": "This is Govenek. Govenek. Govenek."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
     "value": "reality dissolves",
     "when": "ending",
     "quote": "question what is real and what is nightmare",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "unanswered radio call",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:18:34",
+    "quote": "Is there anybody there?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "closing song",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:26:49",
+    "quote": "Kan me kana",
+    "detail": "the children's song returns over the end",
     "confidence": "sourced"
    }
   ]
@@ -153,5 +320,6 @@
  ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

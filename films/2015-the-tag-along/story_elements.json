@@ -1,63 +1,454 @@
 {
  "film": "2015-the-tag-along",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "child ghost", "detail": "the Little Girl in Red", "quote": "a little girl in a red dress following the group", "confidence": "sourced"},
-   {"value": "mountain demons", "detail": "mosiens", "quote": "'mosiens' cause people to lose their minds", "confidence": "sourced"}
+   {
+    "value": "child ghost",
+    "detail": "the Little Girl in Red",
+    "quote": "a little girl in a red dress following the group",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mountain demons",
+    "detail": "mosiens",
+    "quote": "'mosiens' cause people to lose their minds",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:43",
+      "quote": "(\" Mosien \") (- a ghost that appears as a monkey or a child.)"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "urban legend", "quote": "adapted from a well-known Taiwanese urban legend, \"The Little Girl in Red\"", "confidence": "sourced"}
+   {
+    "value": "urban legend",
+    "quote": "adapted from a well-known Taiwanese urban legend, \"The Little Girl in Red\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:37",
+      "quote": "(Rumor has it that) (\" mosiens \" make people lose their minds...)"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to be wanted", "detail": "an unborn child's reproach", "quote": "The child asks why Yi-Chun didn't want it", "confidence": "observed"},
-   {"value": "to lure people away", "quote": "Wei notices a little girl in a red dress leading her down the street", "confidence": "sourced"}
+   {
+    "value": "to be wanted",
+    "detail": "an unborn child's reproach",
+    "quote": "The child asks why Yi-Chun didn't want it",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:41",
+      "quote": "Mommy, why did you get rid of me?"
+     }
+    ]
+   },
+   {
+    "value": "to lure people away",
+    "quote": "Wei notices a little girl in a red dress leading her down the street",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:14",
+      "quote": "(the little girl in red) (wants to take her to the mountains.)"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "rejecting a child", "quote": "He expresses his sadness over Yi-Chun not wanting to marry him or have children", "confidence": "observed"}
+   {
+    "value": "rejecting a child",
+    "quote": "He expresses his sadness over Yi-Chun not wanting to marry him or have children",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:41",
+      "quote": "Mommy, why did you get rid of me?"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "a disappearance", "detail": "grandmother abducted", "quote": "one day she suddenly disappears when she is apparently abducted by someone or something", "confidence": "sourced"},
-   {"value": "a hike in the mountains", "quote": "a video of his grandmother and some friends hiking", "confidence": "sourced"}
+   {
+    "value": "a disappearance",
+    "detail": "grandmother abducted",
+    "quote": "one day she suddenly disappears when she is apparently abducted by someone or something",
+    "confidence": "sourced"
+   },
+   {
+    "value": "a hike in the mountains",
+    "quote": "a video of his grandmother and some friends hiking",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "firecrackers drive out evil", "quote": "setting off firecrackers and other explosives, can remove the evil", "confidence": "sourced"},
-   {"value": "fire repels it", "quote": "She manages to grab a flare and burn the creature to set herself free", "confidence": "sourced"},
-   {"value": "illusions trap victims", "quote": "revealing that it was an illusion, and she is still in the woods", "confidence": "sourced"}
+   {
+    "value": "firecrackers drive out evil",
+    "quote": "setting off firecrackers and other explosives, can remove the evil",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:57",
+      "quote": "(if you let off firecrackers) (or use explosive,) (you can break the spell and return.)"
+     }
+    ]
+   },
+   {
+    "value": "fire repels it",
+    "quote": "She manages to grab a flare and burn the creature to set herself free",
+    "confidence": "sourced"
+   },
+   {
+    "value": "illusions trap victims",
+    "quote": "revealing that it was an illusion, and she is still in the woods",
+    "confidence": "sourced"
+   },
+   {
+    "value": "never call a full name",
+    "detail": "whoever turns round is taken to replace someone in the woods",
+    "source": "subtitles",
+    "at": "00:22:09",
+    "quote": "You can't call people's full names in the mountains! And don't pat people on their shoulders.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:14",
+      "quote": "If you call someone's full name, and he turns around, he'll be caught to replace someone else in the woods."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "trees hold souls",
+    "source": "subtitles",
+    "at": "01:06:26",
+    "quote": "If you cut down a tree for no good reason, the mountain will capture a person and plant the person's soul in the mountains.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "exploits guilt",
+    "source": "subtitles",
+    "at": "00:02:49",
+    "quote": "(Taking advantage of one's sense of guilt,) (it makes people lose their minds...)",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "grandmother", "relation_to_threat": "stranger", "detail": "Wei's grandmother", "quote": "she suddenly disappears when she is apparently abducted", "confidence": "sourced"},
-   {"value": "couple", "relation_to_threat": "stranger", "detail": "Wei and Yi-Chun", "quote": "Yi-Chun finds Wei barely clinging to life and tied to a tree", "confidence": "sourced"},
-   {"value": "uncle", "relation_to_threat": "stranger", "detail": "Uncle Kun", "quote": "he is attacked by the little girl", "confidence": "sourced"}
+   {
+    "value": "grandmother",
+    "relation_to_threat": "stranger",
+    "detail": "Wei's grandmother",
+    "quote": "she suddenly disappears when she is apparently abducted",
+    "confidence": "sourced"
+   },
+   {
+    "value": "couple",
+    "relation_to_threat": "stranger",
+    "detail": "Wei and Yi-Chun",
+    "quote": "Yi-Chun finds Wei barely clinging to life and tied to a tree",
+    "confidence": "sourced"
+   },
+   {
+    "value": "uncle",
+    "relation_to_threat": "stranger",
+    "detail": "Uncle Kun",
+    "quote": "he is attacked by the little girl",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "false resolution", "quote": "everything seeming to have come back to normal", "confidence": "sourced"},
-   {"value": "trapped in illusion", "quote": "hinting that Yi-Chun never escaped the forest and is still trapped there in an illusion", "confidence": "sourced"}
+   {
+    "value": "false resolution",
+    "quote": "everything seeming to have come back to normal",
+    "confidence": "sourced"
+   },
+   {
+    "value": "trapped in illusion",
+    "quote": "hinting that Yi-Chun never escaped the forest and is still trapped there in an illusion",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "camera", "state": "mailed package", "when": "early", "role": "clue", "quote": "receives a package at his workplace, which contains a camera", "confidence": "sourced"},
-   {"value": "red dress", "when": "early", "role": "threat", "quote": "a little girl in a red dress following the group", "confidence": "sourced"},
-   {"value": "blood trail", "when": "middle", "role": "omen", "quote": "he follows a trail of blood back to the kitchen", "confidence": "sourced"},
-   {"value": "bugs and worms", "state": "eaten", "when": "middle", "role": "omen", "quote": "find him eating bugs and worms, as if he is unaware", "confidence": "sourced"},
-   {"value": "moth", "state": "death's-head hawk-moth", "when": "middle", "role": "omen", "quote": "After running tests on her vomit, they discovered a living moth chrysalis", "confidence": "sourced"},
-   {"value": "fog", "when": "late", "role": "setting", "quote": "The area begins to fog immensely", "confidence": "sourced"},
-   {"value": "flare", "when": "late", "role": "weapon", "quote": "She lights a flare after being grabbed by a mysterious hand", "confidence": "sourced"},
-   {"value": "bodies in trees", "when": "late", "role": "setting", "quote": "a multitude of dead bodies in the trees", "confidence": "sourced"}
+   {
+    "value": "camera",
+    "state": "mailed package",
+    "when": "early",
+    "role": "clue",
+    "quote": "receives a package at his workplace, which contains a camera",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:10",
+      "quote": "Is this Auntie Shui's camera? Yes, it's Shui's camera."
+     }
+    ]
+   },
+   {
+    "value": "red dress",
+    "when": "early",
+    "role": "threat",
+    "quote": "a little girl in a red dress following the group",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:14",
+      "quote": "(the little girl in red) (wants to take her to the mountains.)"
+     }
+    ]
+   },
+   {
+    "value": "blood trail",
+    "when": "middle",
+    "role": "omen",
+    "quote": "he follows a trail of blood back to the kitchen",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bugs and worms",
+    "state": "eaten",
+    "when": "middle",
+    "role": "omen",
+    "quote": "find him eating bugs and worms, as if he is unaware",
+    "confidence": "sourced"
+   },
+   {
+    "value": "moth",
+    "state": "death's-head hawk-moth",
+    "when": "middle",
+    "role": "omen",
+    "quote": "After running tests on her vomit, they discovered a living moth chrysalis",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:18",
+      "quote": "It's a moth chrysalis. And it's still alive."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:49:20",
+      "quote": "My colleague at the Toxicology says it's \" death's-head hawk-moth \"."
+     }
+    ]
+   },
+   {
+    "value": "fog",
+    "when": "late",
+    "role": "setting",
+    "quote": "The area begins to fog immensely",
+    "confidence": "sourced"
+   },
+   {
+    "value": "flare",
+    "when": "late",
+    "role": "weapon",
+    "quote": "She lights a flare after being grabbed by a mysterious hand",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bodies in trees",
+    "when": "late",
+    "role": "setting",
+    "quote": "a multitude of dead bodies in the trees",
+    "confidence": "sourced"
+   },
+   {
+    "value": "red strips on trees",
+    "when": "late",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "01:02:48",
+    "quote": "Blow the whistle at once and hang the red strips on the trees.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "firecrackers",
+    "when": "early",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "00:28:18",
+    "quote": "Come on, let's let off the firecrackers.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "radio show",
+    "when": "opening",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:09:07",
+    "quote": "I'm Yi-chun, the stand-in DJ for today.",
+    "detail": "Yi-chun's call-in show bookends the film; its cheerful closing broadcast is the illusion",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:53",
+      "quote": "I think, in fact, in everyone's heart grows a forest."
+     }
+    ],
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "elder vanishes", "when": "opening", "role": "trigger", "quote": "one day she suddenly disappears", "confidence": "sourced"},
-   {"order": 2, "value": "girl seen on video", "when": "early", "role": "omen", "quote": "he notices a little girl in a red dress following the group", "confidence": "sourced"},
-   {"order": 3, "value": "boyfriend changes and vanishes", "when": "middle", "quote": "find him eating bugs and worms, as if he is unaware", "confidence": "sourced"},
-   {"order": 4, "value": "moth found in vomit", "when": "middle", "role": "clue", "quote": "After running tests on her vomit, they discovered a living moth chrysalis", "confidence": "sourced"},
-   {"order": 5, "value": "search party in the mountains", "when": "late", "quote": "Yi-Chun joins a local rescue group on a mission to find Wei", "confidence": "sourced"},
-   {"order": 6, "value": "pregnancy vision", "when": "late", "role": "turn", "quote": "The child asks why Yi-Chun didn't want it", "confidence": "sourced"},
-   {"order": 7, "value": "ghost burned with flare", "when": "late", "quote": "She manages to grab a flare and burn the creature", "confidence": "sourced"},
-   {"order": 8, "value": "happy ending is illusion", "when": "ending", "role": "turn", "quote": "still trapped there in an illusion", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "legend defined on screen",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:02:43",
+    "quote": "(\" Mosien \") (- a ghost that appears as a monkey or a child.)",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "elder vanishes",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "one day she suddenly disappears",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:42",
+      "quote": "(Missing Person) Shui. Come back soon."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "lost elder returns",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:20:47",
+    "quote": "It's truly god's blessing. I told you firecrackers worked!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "girl seen on video",
+    "when": "early",
+    "role": "omen",
+    "quote": "he notices a little girl in a red dress following the group",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:25",
+      "quote": "It's captured on the morning your grandma went missing."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "boyfriend changes and vanishes",
+    "when": "middle",
+    "quote": "find him eating bugs and worms, as if he is unaware",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:45",
+      "quote": "Mr. Ho Chih-wei left home around midnight on 20th April and has gone missing since then."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "moth found in vomit",
+    "when": "middle",
+    "role": "clue",
+    "quote": "After running tests on her vomit, they discovered a living moth chrysalis",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:18",
+      "quote": "It's a moth chrysalis. And it's still alive."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "search party in the mountains",
+    "when": "late",
+    "quote": "Yi-Chun joins a local rescue group on a mission to find Wei",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:48",
+      "quote": "Blow the whistle at once and hang the red strips on the trees."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "pregnancy vision",
+    "when": "late",
+    "role": "turn",
+    "quote": "The child asks why Yi-Chun didn't want it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:41",
+      "quote": "Mommy, why did you get rid of me?"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "ghost burned with flare",
+    "when": "late",
+    "quote": "She manages to grab a flare and burn the creature",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "happy ending is illusion",
+    "when": "ending",
+    "role": "turn",
+    "quote": "still trapped there in an illusion",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:36",
+      "quote": "I'm Yi-chun and I've been very happy these days."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

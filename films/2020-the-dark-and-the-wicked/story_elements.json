@@ -1,61 +1,465 @@
 {
  "film": "2020-the-dark-and-the-wicked",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "demonic entity", "quote": "two siblings who encounter a demonic entity at their Texas family farm", "confidence": "sourced"},
-   {"value": "shapeshifting presence", "quote": "it is in fact the entity taking the shape of Charlie's granddaughter", "confidence": "sourced"}
+   {
+    "value": "demonic entity",
+    "quote": "two siblings who encounter a demonic entity at their Texas family farm",
+    "confidence": "sourced"
+   },
+   {
+    "value": "shapeshifting presence",
+    "quote": "it is in fact the entity taking the shape of Charlie's granddaughter",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "unexplained", "quote": "an unnamed and possibly demonic presence preying on her husband", "confidence": "sourced"}
+   {
+    "value": "unexplained",
+    "quote": "an unnamed and possibly demonic presence preying on her husband",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "a dying soul", "detail": "it preys on the infirm father", "quote": "possibly demonic presence preying on her husband", "confidence": "sourced"},
-   {"value": "to drive people to suicide", "quote": "The entity drives a distraught Charlie to shoot himself in the head with his shotgun", "confidence": "sourced"}
+   {
+    "value": "a dying soul",
+    "detail": "it preys on the infirm father",
+    "quote": "possibly demonic presence preying on her husband",
+    "confidence": "sourced"
+   },
+   {
+    "value": "to drive people to suicide",
+    "quote": "The entity drives a distraught Charlie to shoot himself in the head with his shotgun",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the father's soul",
+    "source": "subtitles",
+    "at": "00:29:44",
+    "quote": "He wants ... David 's soul . \"",
+    "confidence": "sourced"
+   }
+  ],
+  "wrong": [
+   {
+    "value": "parents left alone",
+    "confidence": "observed",
+    "detail": "the children stayed away while their mother nursed their dying father by herself",
+    "source": "subtitles",
+    "at": "00:43:02",
+    "quote": "She was scared and alone.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:03",
+      "quote": "We should've done something. Hugged her? Something."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "returning home to a dying parent", "quote": "Siblings Louise and Michael return to their family farm in Texas when their father's chronic illness seems to be reaching its last stages", "confidence": "sourced"}
+   {
+    "value": "returning home to a dying parent",
+    "quote": "Siblings Louise and Michael return to their family farm in Texas when their father's chronic illness seems to be reaching its last stages",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "takes familiar shapes", "quote": "Michael is approached in the barn by an apparition of his nude mother", "confidence": "sourced"},
-   {"value": "possesses and makes victims self-harm", "quote": "the apparition tries to possess Michael and make him to cut his own throat", "confidence": "sourced"},
-   {"value": "cannot be escaped by leaving", "quote": "Michael arrives at his home and finds the dead bodies of his daughters and wife", "confidence": "observed"}
+   {
+    "value": "takes familiar shapes",
+    "quote": "Michael is approached in the barn by an apparition of his nude mother",
+    "confidence": "sourced"
+   },
+   {
+    "value": "possesses and makes victims self-harm",
+    "quote": "the apparition tries to possess Michael and make him to cut his own throat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:42",
+      "quote": "He makes me want to die ."
+     }
+    ]
+   },
+   {
+    "value": "cannot be escaped by leaving",
+    "quote": "Michael arrives at his home and finds the dead bodies of his daughters and wife",
+    "confidence": "observed"
+   },
+   {
+    "value": "preys on the lonely",
+    "detail": "the priest (or the thing wearing him) and the nurse both say a soul alone is unprotected",
+    "source": "subtitles",
+    "at": "00:44:07",
+    "quote": "Not if he finds you alone in the woods.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:56",
+      "quote": "There's nothing worse than a soul left alone in the end."
+     }
+    ]
+   },
+   {
+    "value": "belief offers no protection",
+    "source": "subtitles",
+    "at": "00:43:58",
+    "quote": "What does it matter whether you believe. You think the wolf cares if you believe he's a wolf?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "love keeps a soul safe",
+    "source": "subtitles",
+    "at": "01:01:30",
+    "quote": "But there 's love here . And a soul needs love to keep it safe .",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "adult siblings", "relation_to_threat": "family", "detail": "Louise and Michael", "quote": "Moments after he dies, the demon in turn attacks and claims her", "confidence": "sourced"},
-   {"value": "mother", "relation_to_threat": "family", "quote": "she hangs herself in the barn after (apparently involuntarily) cutting off her own fingers in the kitchen", "confidence": "sourced"},
-   {"value": "dying father", "relation_to_threat": "family", "quote": "he is on his deathbed", "confidence": "sourced"},
-   {"value": "helpers", "relation_to_threat": "stranger", "detail": "ranch hand and nurse", "quote": "the nurse, possessed by the entity, begins stabbing herself with a pair of knitting needles", "confidence": "sourced"}
+   {
+    "value": "adult siblings",
+    "relation_to_threat": "family",
+    "detail": "Louise and Michael",
+    "quote": "Moments after he dies, the demon in turn attacks and claims her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother",
+    "relation_to_threat": "family",
+    "quote": "she hangs herself in the barn after (apparently involuntarily) cutting off her own fingers in the kitchen",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dying father",
+    "relation_to_threat": "family",
+    "quote": "he is on his deathbed",
+    "confidence": "sourced"
+   },
+   {
+    "value": "helpers",
+    "relation_to_threat": "stranger",
+    "detail": "ranch hand and nurse",
+    "quote": "the nurse, possessed by the entity, begins stabbing herself with a pair of knitting needles",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "everyone dies", "quote": "A distraught Michael cuts his own throat", "confidence": "sourced"},
-   {"value": "threat wins", "quote": "Moments after he dies, the demon in turn attacks and claims her", "confidence": "sourced"}
+   {
+    "value": "everyone dies",
+    "quote": "A distraught Michael cuts his own throat",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat wins",
+    "quote": "Moments after he dies, the demon in turn attacks and claims her",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "severed fingers", "when": "opening", "role": "omen", "quote": "cutting off her own fingers in the kitchen", "confidence": "sourced"},
-   {"value": "barn", "state": "hanging", "when": "opening", "role": "setting", "quote": "she hangs herself in the barn", "confidence": "sourced"},
-   {"value": "diary", "when": "early", "role": "clue", "quote": "Michael finds their mother's diary", "confidence": "sourced"},
-   {"value": "rope", "state": "offered", "when": "early", "role": "omen", "quote": "asking them if they want some rope, before vanishing before their eyes", "confidence": "sourced"},
-   {"value": "kitchen knife", "when": "middle", "role": "weapon", "quote": "cutting herself repeatedly with a kitchen knife", "confidence": "sourced"},
-   {"value": "goats", "state": "killed", "when": "middle", "role": "omen", "quote": "their large herd of goats have all been brutally killed", "confidence": "sourced"},
-   {"value": "bonfire", "when": "middle", "role": "setting", "quote": "The two start a bonfire to dispose of the numerous animal carcasses", "confidence": "sourced"},
-   {"value": "levitating body", "when": "middle", "role": "threat", "quote": "her father levitating against the ceiling and urging her to flee", "confidence": "sourced"},
-   {"value": "knitting needles", "when": "late", "role": "weapon", "quote": "stabbing herself with a pair of knitting needles", "confidence": "sourced"}
+   {
+    "value": "severed fingers",
+    "when": "opening",
+    "role": "omen",
+    "quote": "cutting off her own fingers in the kitchen",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:32",
+      "quote": "She chopped up her own fuckin' fingers in the kitchen."
+     }
+    ]
+   },
+   {
+    "value": "barn",
+    "state": "hanging",
+    "when": "opening",
+    "role": "setting",
+    "quote": "she hangs herself in the barn",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:15",
+      "quote": "She was a couple feet in the air where we found her."
+     }
+    ]
+   },
+   {
+    "value": "diary",
+    "when": "early",
+    "role": "clue",
+    "quote": "Michael finds their mother's diary",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:53",
+      "quote": "I found Mom's diary."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:29:20",
+      "quote": "\" I know he 's there , in the darkness ."
+     }
+    ]
+   },
+   {
+    "value": "rope",
+    "state": "offered",
+    "when": "early",
+    "role": "omen",
+    "quote": "asking them if they want some rope, before vanishing before their eyes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:37",
+      "quote": "You want some rope?"
+     }
+    ]
+   },
+   {
+    "value": "kitchen knife",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "cutting herself repeatedly with a kitchen knife",
+    "confidence": "sourced"
+   },
+   {
+    "value": "goats",
+    "state": "killed",
+    "when": "middle",
+    "role": "omen",
+    "quote": "their large herd of goats have all been brutally killed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:03",
+      "quote": "Wolves wouldn't do this... not this way, not like this."
+     }
+    ]
+   },
+   {
+    "value": "bonfire",
+    "when": "middle",
+    "role": "setting",
+    "quote": "The two start a bonfire to dispose of the numerous animal carcasses",
+    "confidence": "sourced"
+   },
+   {
+    "value": "levitating body",
+    "when": "middle",
+    "role": "threat",
+    "quote": "her father levitating against the ceiling and urging her to flee",
+    "confidence": "sourced"
+   },
+   {
+    "value": "knitting needles",
+    "when": "late",
+    "role": "weapon",
+    "quote": "stabbing herself with a pair of knitting needles",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hymn",
+    "when": "opening",
+    "role": "omen",
+    "detail": "\"What a Friend We Have in Jesus\" recurs from the opening to the final shot",
+    "source": "subtitles",
+    "at": "00:01:43",
+    "quote": "♪ Every trials and temptations ♪",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:52",
+      "quote": "♪ Every trials and temptations ♪"
+     }
+    ]
+   },
+   {
+    "value": "wolf",
+    "when": "middle",
+    "role": "symbol",
+    "detail": "the priest's image for the devil",
+    "source": "subtitles",
+    "at": "00:44:01",
+    "quote": "You think the wolf cares if you believe he's a wolf?",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "return to a dying parent", "when": "opening", "role": "trigger", "quote": "Siblings Louise and Michael return to their family farm in Texas", "confidence": "sourced"},
-   {"order": 2, "value": "mother's suicide", "when": "opening", "quote": "she hangs herself in the barn", "confidence": "sourced"},
-   {"order": 3, "value": "diary reveals presence", "when": "early", "role": "clue", "quote": "describes her fears of an unnamed and possibly demonic presence preying on her husband", "confidence": "sourced"},
-   {"order": 4, "value": "false priest visits", "when": "early", "role": "omen", "quote": "Father Thorne appears at the farm, beckoning them from outside", "confidence": "sourced"},
-   {"order": 5, "value": "animals slaughtered", "when": "middle", "role": "omen", "quote": "their large herd of goats have all been brutally killed", "confidence": "sourced"},
-   {"order": 6, "value": "sibling flees", "when": "late", "quote": "Michael has fled the farm to return to his wife and daughters, leaving her behind", "confidence": "sourced"},
-   {"order": 7, "value": "tricked into suicide", "when": "late", "role": "turn", "quote": "He realizes the entity has tricked him when his wife and daughters enter the house moments later", "confidence": "sourced"},
-   {"order": 8, "value": "demon claims the last", "when": "ending", "quote": "the demon in turn attacks and claims her", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "mother warns them away",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:07:18",
+    "quote": "I told y 'all not to come . And I told you we were gonna .",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "return to a dying parent",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Siblings Louise and Michael return to their family farm in Texas",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:18",
+      "quote": "I told y 'all not to come ."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "mother's suicide",
+    "when": "opening",
+    "quote": "she hangs herself in the barn",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "diary read aloud",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:30:32",
+    "quote": "\" The voices in my head ... His voice ... He makes me want to die .",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "priest's warning about the wolf",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:43:53",
+    "quote": "My mom thought the devil was here.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "diary reveals presence",
+    "when": "early",
+    "role": "clue",
+    "quote": "describes her fears of an unnamed and possibly demonic presence preying on her husband",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:44",
+      "quote": "He wants ... David 's soul . \""
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "false priest visits",
+    "when": "early",
+    "role": "omen",
+    "quote": "Father Thorne appears at the farm, beckoning them from outside",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:12",
+      "quote": "Come outside ."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:52:37",
+      "quote": "You want some rope ?"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "animals slaughtered",
+    "when": "middle",
+    "role": "omen",
+    "quote": "their large herd of goats have all been brutally killed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:03",
+      "quote": "Wolves wouldn 't do this ..."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "sibling flees",
+    "when": "late",
+    "quote": "Michael has fled the farm to return to his wife and daughters, leaving her behind",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "tricked into suicide",
+    "when": "late",
+    "role": "turn",
+    "quote": "He realizes the entity has tricked him when his wife and daughters enter the house moments later",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:47",
+      "quote": "Girls? Oh, my God."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "demon claims the last",
+    "when": "ending",
+    "quote": "the demon in turn attacks and claims her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:46",
+      "quote": "I 'm here . I won 't leave you ."
+     }
+    ]
+   },
+   {
+    "order": 12,
+    "value": "hymn returns at the close",
+    "when": "ending",
+    "role": "omen",
+    "detail": "the opening hymn plays again as Louise, alone, calls for her mother",
+    "source": "subtitles",
+    "at": "01:30:52",
+    "quote": "♪ Every trials and temptations ♪ Mama ?",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

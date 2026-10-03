@@ -1,65 +1,516 @@
 {
  "film": "2019-impetigore",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "village", "detail": "Harjosari villagers who want to flay Rahayu", "quote": "Dini is lured away by the villagers, who slit her throat and flay her, mistaking her for Rahayu", "confidence": "sourced"},
-   {"value": "curse", "detail": "babies born without skin", "quote": "Since then, all babies in the village have been born skinless.", "confidence": "sourced"},
-   {"value": "witch", "detail": "Misni, a dukun", "quote": "Saptadi's dukun mother, Misni, jinxed Saptadi so that he would forget Shinta and cursed Maya", "confidence": "sourced"}
+   {
+    "value": "village",
+    "detail": "Harjosari villagers who want to flay Rahayu",
+    "quote": "Dini is lured away by the villagers, who slit her throat and flay her, mistaking her for Rahayu",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:58",
+      "quote": "The curse will be lifted soon!"
+     }
+    ]
+   },
+   {
+    "value": "curse",
+    "detail": "babies born without skin",
+    "quote": "Since then, all babies in the village have been born skinless.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:51",
+      "quote": "Every baby has been born without skin."
+     }
+    ]
+   },
+   {
+    "value": "witch",
+    "detail": "Misni, a dukun",
+    "quote": "Saptadi's dukun mother, Misni, jinxed Saptadi so that he would forget Shinta and cursed Maya",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:38",
+      "quote": "Your mother put a spell on you to forget."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "pact with the devil", "quote": "Donowongso, a wealthy dalang, made a pact with the devil and murdered three girls to heal his daughter Rahayu", "confidence": "sourced"},
-   {"value": "curse by a relative", "detail": "grandmother curses the child of an affair", "quote": "cursed Maya, who had been named Rahayu at birth, to be born skinless", "confidence": "sourced"}
+   {
+    "value": "pact with the devil",
+    "quote": "Donowongso, a wealthy dalang, made a pact with the devil and murdered three girls to heal his daughter Rahayu",
+    "confidence": "sourced"
+   },
+   {
+    "value": "curse by a relative",
+    "detail": "grandmother curses the child of an affair",
+    "quote": "cursed Maya, who had been named Rahayu at birth, to be born skinless",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:45",
+      "quote": "Even before I was born, you tried to kill me. You started this curse."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "her skin", "detail": "villagers believe flaying her ends the curse", "quote": "the curse could only be broken by flaying Rahayu and making puppets from her skin", "confidence": "sourced"},
-   {"value": "to be laid to rest", "detail": "the murdered girls' spirits", "quote": "bury the puppets made from the skin of the three girls, pacifying their spirits", "confidence": "sourced"}
+   {
+    "value": "her skin",
+    "detail": "villagers believe flaying her ends the curse",
+    "quote": "the curse could only be broken by flaying Rahayu and making puppets from her skin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:30",
+      "quote": "the first girl who got the disease, Rahayu, has to be skinned and her skin has to be made into leather puppets."
+     }
+    ]
+   },
+   {
+    "value": "to be laid to rest",
+    "detail": "the murdered girls' spirits",
+    "quote": "bury the puppets made from the skin of the three girls, pacifying their spirits",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:11",
+      "quote": "Bury our skin with our bones, and the curse will be gone."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "child sacrifice", "detail": "three girls killed to cure a daughter", "quote": "Donowongso then sacrificed three girls to cure Rahayu's condition and, in doing so, cursed the entire village", "confidence": "sourced"},
-   {"value": "adultery", "quote": "Maya was born from the extramarital affair between Shinta and Saptadi", "confidence": "sourced"},
-   {"value": "massacre and framing", "quote": "then framed Donowongso for the massacre", "confidence": "sourced"}
+   {
+    "value": "child sacrifice",
+    "detail": "three girls killed to cure a daughter",
+    "quote": "Donowongso then sacrificed three girls to cure Rahayu's condition and, in doing so, cursed the entire village",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:47",
+      "quote": "saying that Rahayu's father had something to do with the three missing girls."
+     }
+    ]
+   },
+   {
+    "value": "adultery",
+    "quote": "Maya was born from the extramarital affair between Shinta and Saptadi",
+    "confidence": "sourced"
+   },
+   {
+    "value": "massacre and framing",
+    "quote": "then framed Donowongso for the massacre",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "seeking an inheritance", "quote": "travels with her friend Dini (Anita) to her remote ancestral village seeking an inheritance", "confidence": "sourced"},
-   {"value": "attack by a stranger", "quote": "Maya is attacked by a man wielding a golok, who claims to be from a village called Harjosari", "confidence": "sourced"}
+   {
+    "value": "seeking an inheritance",
+    "quote": "travels with her friend Dini (Anita) to her remote ancestral village seeking an inheritance",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:53",
+      "quote": "This very big house is the key to solving our problems. My family's house."
+     }
+    ]
+   },
+   {
+    "value": "attack by a stranger",
+    "quote": "Maya is attacked by a man wielding a golok, who claims to be from a village called Harjosari",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:38",
+      "quote": "Rahayu is your name, right?"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "lift curse by burying remains", "quote": "in order to end the curse, she must bury the slain girls' skin, which Donowongso had made into wayang kulit puppets", "confidence": "sourced"}
+   {
+    "value": "lift curse by burying remains",
+    "quote": "in order to end the curse, she must bury the slain girls' skin, which Donowongso had made into wayang kulit puppets",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:51",
+      "quote": "They asked me to bury the puppets that were made from their skin in the same location where their bones were buried."
+     }
+    ]
+   },
+   {
+    "value": "a pact's curse only changes form",
+    "source": "subtitles",
+    "at": "01:13:05",
+    "quote": "and a curse is born, it can never be reversed. It'll only transform into another curse.",
+    "detail": "Ratih repeating what she was told; foreshadows the closing sting",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "returning daughter", "relation_to_threat": "family", "detail": "Maya, born Rahayu", "quote": "Misni arrives with the villagers and captures Maya", "confidence": "sourced"},
-   {"value": "friend", "relation_to_threat": "stranger", "detail": "Dini", "quote": "who slit her throat and flay her, mistaking her for Rahayu", "confidence": "sourced"},
-   {"value": "village babies", "relation_to_threat": "community", "quote": "many headstones in the cemetery belong to newborns", "confidence": "sourced"}
+   {
+    "value": "returning daughter",
+    "relation_to_threat": "family",
+    "detail": "Maya, born Rahayu",
+    "quote": "Misni arrives with the villagers and captures Maya",
+    "confidence": "sourced"
+   },
+   {
+    "value": "friend",
+    "relation_to_threat": "stranger",
+    "detail": "Dini",
+    "quote": "who slit her throat and flay her, mistaking her for Rahayu",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:09",
+      "quote": "We skinned the wrong girl!"
+     }
+    ]
+   },
+   {
+    "value": "village babies",
+    "relation_to_threat": "community",
+    "quote": "many headstones in the cemetery belong to newborns",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:52",
+      "quote": "Why are there so many children's graves?"
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "curse lifted", "quote": "Ratih announces the birth of the first healthy baby in Harjosari in 20 years", "confidence": "sourced"},
-   {"value": "father sacrifices himself", "quote": "a remorseful Saptadi takes her hand and slits his own throat instead", "confidence": "sourced"},
-   {"value": "threat survives", "detail": "Misni's ghost", "quote": "Misni's ghost has extracted and devoured the foetus.", "confidence": "sourced"}
+   {
+    "value": "curse lifted",
+    "quote": "Ratih announces the birth of the first healthy baby in Harjosari in 20 years",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:07",
+      "quote": "The baby's healthy!"
+     }
+    ]
+   },
+   {
+    "value": "father sacrifices himself",
+    "quote": "a remorseful Saptadi takes her hand and slits his own throat instead",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat survives",
+    "detail": "Misni's ghost",
+    "quote": "Misni's ghost has extracted and devoured the foetus.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:09",
+      "quote": "What happened to the baby? Where's the baby?"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "golok", "state": "attacking", "when": "opening", "role": "weapon", "quote": "attacked by a man wielding a golok", "confidence": "sourced"},
-   {"value": "old photograph", "state": "showing the family", "when": "opening", "role": "clue", "quote": "The photograph shows a young Maya, identified as Rahayu, with her deceased parents", "confidence": "sourced"},
-   {"value": "child graves", "state": "of newborns", "when": "early", "role": "omen", "quote": "They witness daily funerals for children and observe that many headstones in the cemetery belong to newborns", "confidence": "sourced"},
-   {"value": "skinless baby", "state": "drowned", "when": "middle", "role": "threat", "quote": "attending the birth of a skinless baby, whom he proceeds to drown", "confidence": "sourced"},
-   {"value": "flayed skin", "state": "removed", "when": "middle", "role": "threat", "quote": "who slit her throat and flay her", "confidence": "sourced"},
-   {"value": "shadow puppets", "state": "made of human skin", "when": "late", "role": "clue", "quote": "the slain girls' skin, which Donowongso had made into wayang kulit puppets", "confidence": "sourced"},
-   {"value": "abandoned house", "state": "inherited", "when": "early", "role": "setting", "quote": "the pair find the long-abandoned house and encounter cold, suspicious villagers", "confidence": "sourced"}
+   {
+    "value": "creepy old radio song",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:02:34",
+    "quote": "Can't you listen to other songs? It's so last century. It sounds creepy.",
+    "detail": "Maya's radio is stuck on AM in the toll booth",
+    "confidence": "sourced"
+   },
+   {
+    "value": "golok",
+    "state": "attacking",
+    "when": "opening",
+    "role": "weapon",
+    "quote": "attacked by a man wielding a golok",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:41",
+      "quote": "Dini, he's coming back with a weapon!"
+     }
+    ]
+   },
+   {
+    "value": "old photograph",
+    "state": "showing the family",
+    "when": "opening",
+    "role": "clue",
+    "quote": "The photograph shows a young Maya, identified as Rahayu, with her deceased parents",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:19",
+      "quote": "I found this photo. I think they're my parents."
+     }
+    ]
+   },
+   {
+    "value": "amulet",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:18:17",
+    "quote": "It's a spell so that the carrier won't be bothered by evil spirits.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:24",
+      "quote": "But this was made by an evil person."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "child graves",
+    "state": "of newborns",
+    "when": "early",
+    "role": "omen",
+    "quote": "They witness daily funerals for children and observe that many headstones in the cemetery belong to newborns",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:56",
+      "quote": "Maybe they're not children, just really tiny graves."
+     }
+    ]
+   },
+   {
+    "value": "skinless baby",
+    "state": "drowned",
+    "when": "middle",
+    "role": "threat",
+    "quote": "attending the birth of a skinless baby, whom he proceeds to drown",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:53",
+      "quote": "The baby was born without skin."
+     }
+    ]
+   },
+   {
+    "value": "flayed skin",
+    "state": "removed",
+    "when": "middle",
+    "role": "threat",
+    "quote": "who slit her throat and flay her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:11",
+      "quote": "They skinned her, turned her skin into leather puppets."
+     }
+    ]
+   },
+   {
+    "value": "shadow puppets",
+    "state": "made of human skin",
+    "when": "late",
+    "role": "clue",
+    "quote": "the slain girls' skin, which Donowongso had made into wayang kulit puppets",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:02",
+      "quote": "Go look. The puppets are gone from your house."
+     }
+    ]
+   },
+   {
+    "value": "abandoned house",
+    "state": "inherited",
+    "when": "early",
+    "role": "setting",
+    "quote": "the pair find the long-abandoned house and encounter cold, suspicious villagers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:53",
+      "quote": "This very big house is the key to solving our problems."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "attack by a stranger", "when": "opening", "role": "trigger", "quote": "Maya is attacked by a man wielding a golok", "confidence": "sourced"},
-   {"order": 2, "value": "journey to ancestral village", "when": "early", "quote": "Maya and Dini travel to the remote village of Harjosari to look for the house", "confidence": "sourced"},
-   {"order": 3, "value": "friend killed in her place", "when": "middle", "quote": "Dini is lured away by the villagers, who slit her throat and flay her, mistaking her for Rahayu", "confidence": "sourced"},
-   {"order": 4, "value": "curse explained", "when": "middle", "role": "turn", "quote": "made a pact with the devil and murdered three girls to heal his daughter Rahayu", "confidence": "sourced"},
-   {"order": 5, "value": "ghost reveals true parentage", "when": "late", "role": "turn", "quote": "The ghost also reveals that Maya was born from the extramarital affair between Shinta and Saptadi", "confidence": "sourced"},
-   {"order": 6, "value": "remains buried", "when": "late", "quote": "Maya and Ratih bury the puppets made from the skin of the three girls", "confidence": "sourced"},
-   {"order": 7, "value": "father dies in her place", "when": "ending", "quote": "a remorseful Saptadi takes her hand and slits his own throat instead", "confidence": "sourced"},
-   {"order": 8, "value": "closing sting", "when": "ending", "quote": "One year later, a villager suffers a violent miscarriage", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "attack by a stranger",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Maya is attacked by a man wielding a golok",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:45",
+      "quote": "We... just don't want what your family left behind."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "journey to ancestral village",
+    "when": "early",
+    "quote": "Maya and Dini travel to the remote village of Harjosari to look for the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:04",
+      "quote": "The psycho mentioned the name of the village. Harjosari Village, Mandiraja."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "true name admitted",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:45:39",
+    "quote": "Because... I am Rahayu.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "mother fears for her baby",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:01:45",
+    "quote": "Will my baby... still be cursed?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "friend killed in her place",
+    "when": "middle",
+    "quote": "Dini is lured away by the villagers, who slit her throat and flay her, mistaking her for Rahayu",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:09",
+      "quote": "We skinned the wrong girl!"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "curse explained",
+    "when": "middle",
+    "role": "turn",
+    "quote": "made a pact with the devil and murdered three girls to heal his daughter Rahayu",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:47",
+      "quote": "And ever since that day, the village has been cursed."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "ghost reveals true parentage",
+    "when": "late",
+    "role": "turn",
+    "quote": "The ghost also reveals that Maya was born from the extramarital affair between Shinta and Saptadi",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:32",
+      "quote": "I know everything. I am your daughter."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "remains buried",
+    "when": "late",
+    "quote": "Maya and Ratih bury the puppets made from the skin of the three girls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:51",
+      "quote": "They asked me to bury the puppets that were made from their skin"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "father dies in her place",
+    "when": "ending",
+    "quote": "a remorseful Saptadi takes her hand and slits his own throat instead",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "closing sting",
+    "when": "ending",
+    "quote": "One year later, a villager suffers a violent miscarriage",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:09",
+      "quote": "What happened to the baby?"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

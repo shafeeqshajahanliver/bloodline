@@ -1,63 +1,538 @@
 {
  "film": "2017-ezra",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "possessing spirit", "detail": "a dybbuk, Abraham Ezra", "quote": "Marques arrives in Kochi and learns the Dybbuk's name is Abraham Ezra", "confidence": "sourced"},
-   {"value": "cursed object", "detail": "a dybbuk box", "quote": "Among the looted item is a strange box with Jewish inscriptions", "confidence": "sourced"}
+   {
+    "value": "possessing spirit",
+    "detail": "a dybbuk, Abraham Ezra",
+    "quote": "Marques arrives in Kochi and learns the Dybbuk's name is Abraham Ezra",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:07",
+      "quote": "Ezra Abraham Ezra"
+     }
+    ]
+   },
+   {
+    "value": "cursed object",
+    "detail": "a dybbuk box",
+    "quote": "Among the looted item is a strange box with Jewish inscriptions",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:35",
+      "quote": "This box must not be opened under any circumstance"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "made by black magic", "detail": "Yakub sealed his son's soul in the box", "quote": "He euthanizes his son and puts Ezra's soul into a Dybbuk box", "confidence": "sourced"},
-   {"value": "father's revenge", "quote": "An enraged Yakub decides to take revenge on the town using black magic", "confidence": "sourced"}
+   {
+    "value": "made by black magic",
+    "detail": "Yakub sealed his son's soul in the box",
+    "quote": "He euthanizes his son and puts Ezra's soul into a Dybbuk box",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:53:38",
+      "quote": "Jew Maplai turned to black magic rituals to contain Ezra's spirit in a wine box"
+     }
+    ]
+   },
+   {
+    "value": "father's revenge",
+    "quote": "An enraged Yakub decides to take revenge on the town using black magic",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:53:14",
+      "quote": "He wanted to take revenge on the race which destroyed his only son,"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "revenge", "detail": "on the town", "quote": "decides to take revenge on the town using black magic", "confidence": "sourced"},
-   {"value": "to destroy the city", "quote": "plans to control him to destroy the city", "confidence": "sourced"}
+   {
+    "value": "revenge",
+    "detail": "on the town",
+    "quote": "decides to take revenge on the town using black magic",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:13:30",
+      "quote": "I have come to take revenge for my father"
+     }
+    ]
+   },
+   {
+    "value": "to destroy the city",
+    "quote": "plans to control him to destroy the city",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:53:59",
+      "quote": "it would possess a body which would be fit to take revenge, and cause the complete destruction of this land"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "forbidden love", "detail": "Ezra's father forbids his marriage to Rosy", "quote": "Ezra's father Yakub Ezra refuses to let him marry Rosy because of their difference in statuses and beliefs", "confidence": "sourced"},
-   {"value": "theft from the dead", "quote": "After the death of the last Malabar Jew in Cochin, an antique seller steals from his house", "confidence": "sourced"}
+   {
+    "value": "forbidden love",
+    "detail": "Ezra's father forbids his marriage to Rosy",
+    "quote": "Ezra's father Yakub Ezra refuses to let him marry Rosy because of their difference in statuses and beliefs",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:47",
+      "quote": "Swear upon the cross that you will marry me, Ezra!"
+     }
+    ]
+   },
+   {
+    "value": "theft from the dead",
+    "quote": "After the death of the last Malabar Jew in Cochin, an antique seller steals from his house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:28",
+      "quote": "There are a lot of antiques stuff at the Jew's house, man!"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "opening a cursed object", "quote": "Priya buys the strange box from the antique shop. After she opens it, paranormal experiences begin", "confidence": "sourced"},
-   {"value": "moving to a new city", "quote": "is transferred to Kochi with his wife Priya Raghuram", "confidence": "sourced"}
+   {
+    "value": "opening a cursed object",
+    "quote": "Priya buys the strange box from the antique shop. After she opens it, paranormal experiences begin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:50",
+      "quote": "Who opened that box?"
+     }
+    ]
+   },
+   {
+    "value": "moving to a new city",
+    "quote": "is transferred to Kochi with his wife Priya Raghuram",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:54",
+      "quote": "I didn't ask for this transfer"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "possesses the vulnerable", "quote": "the Dybbuk only possesses people with mental instability or children under 3 years", "confidence": "sourced"},
-   {"value": "exorcist becomes its enemy", "quote": "whoever exorcises the Dybbuk becomes its worst enemy", "confidence": "sourced"},
-   {"value": "returned to the box", "quote": "using Jewish exorcism rituals to exorcise Ranjan, sends the dybbuk back into the box", "confidence": "sourced"}
+   {
+    "value": "possesses the vulnerable",
+    "quote": "the Dybbuk only possesses people with mental instability or children under 3 years",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:49",
+      "quote": "For example, people who have mental instabilities like' Fear Psychosis' Or else, babies"
+     }
+    ]
+   },
+   {
+    "value": "exorcist becomes its enemy",
+    "quote": "whoever exorcises the Dybbuk becomes its worst enemy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:35",
+      "quote": "will be that spirit's biggest enemy"
+     }
+    ]
+   },
+   {
+    "value": "returned to the box",
+    "quote": "using Jewish exorcism rituals to exorcise Ranjan, sends the dybbuk back into the box",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:04:31",
+      "quote": "we have to dispose the Dybbuk box in the sea"
+     }
+    ]
+   },
+   {
+    "value": "box must never be opened",
+    "source": "subtitles",
+    "at": "01:02:35",
+    "quote": "This box must not be opened under any circumstance",
+    "confidence": "sourced"
+   },
+   {
+    "value": "once out, it leaves the box",
+    "source": "subtitles",
+    "at": "01:03:08",
+    "quote": "Once the spirit has possessed someone else after it's opened, it won't have any association with this box",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "couple", "relation_to_threat": "stranger", "detail": "Ranjan and pregnant Priya", "quote": "Ranjan learns that Priya is pregnant and realizes his child will be possessed by the dybbuk", "confidence": "sourced"},
-   {"value": "orphan husband", "relation_to_threat": "stranger", "detail": "Ranjan, possessed", "quote": "it is not Priya, but Ranjan who has now been possessed by the spirit", "confidence": "sourced"},
-   {"value": "helpers", "relation_to_threat": "stranger", "detail": "the shop worker and Rabbi Benyamin", "quote": "The next day, Rabbi Benyamin dies", "confidence": "sourced"}
+   {
+    "value": "couple",
+    "relation_to_threat": "stranger",
+    "detail": "Ranjan and pregnant Priya",
+    "quote": "Ranjan learns that Priya is pregnant and realizes his child will be possessed by the dybbuk",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:20",
+      "quote": "The Dybbuk has possessed your yet-to-be-born baby"
+     }
+    ]
+   },
+   {
+    "value": "orphan husband",
+    "relation_to_threat": "stranger",
+    "detail": "Ranjan, possessed",
+    "quote": "it is not Priya, but Ranjan who has now been possessed by the spirit",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:12:33",
+      "quote": "Ranjan, who is in a mental distress again after seeing Priya's condition; is the Dybbuk's target"
+     }
+    ]
+   },
+   {
+    "value": "helpers",
+    "relation_to_threat": "stranger",
+    "detail": "the shop worker and Rabbi Benyamin",
+    "quote": "The next day, Rabbi Benyamin dies",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat contained", "quote": "Marques and Shafeer throw the box into the ocean, like Ezra's body years ago", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "the box is found by two young men along the seashore. They carry it away, planning to open it", "confidence": "sourced"}
+   {
+    "value": "threat contained",
+    "quote": "Marques and Shafeer throw the box into the ocean, like Ezra's body years ago",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:04:33",
+      "quote": "At the same place where Abraham Ezra's body was disposed"
+     }
+    ]
+   },
+   {
+    "value": "threat survives",
+    "quote": "the box is found by two young men along the seashore. They carry it away, planning to open it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:23:29",
+      "quote": "Dude, it's a box!"
+     },
+     {
+      "source": "subtitles",
+      "at": "02:23:52",
+      "quote": "Shall we open it?"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "box", "state": "inscribed, opened", "when": "opening", "role": "threat", "quote": "a strange box with Jewish inscriptions", "confidence": "sourced"},
-   {"value": "mannequin", "state": "buried in a grave", "when": "late", "role": "clue", "quote": "After digging up Ezra's grave and finding the mannequin", "confidence": "sourced"},
-   {"value": "sea", "state": "body and box thrown in", "when": "ending", "role": "setting", "quote": "his real body is dumped into the Arabian Sea by Yakub", "confidence": "sourced"},
-   {"value": "letter", "state": "ending a relationship", "when": "middle", "role": "turn", "quote": "a depressed Ezra reluctantly writes to Rosy telling her to end the relationship", "confidence": "sourced"},
-   {"value": "book", "state": "telling the story", "when": "middle", "role": "clue", "quote": "He gives them a book detailing the story of Abraham Ezra in 1941", "confidence": "sourced"},
-   {"value": "nuclear waste", "state": "a means of destruction", "when": "late", "role": "threat", "quote": "understands the meaning of Ranjan's job of handling nuclear waste", "confidence": "sourced"}
+   {
+    "value": "box",
+    "state": "inscribed, opened",
+    "when": "opening",
+    "role": "threat",
+    "quote": "a strange box with Jewish inscriptions",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:24",
+      "quote": "such restless spirits used to be contained in boxes,"
+     }
+    ]
+   },
+   {
+    "value": "mannequin",
+    "state": "buried in a grave",
+    "when": "late",
+    "role": "clue",
+    "quote": "After digging up Ezra's grave and finding the mannequin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:54:28",
+      "quote": "Nobody realized that a wooden effigy was buried in the cemetery,"
+     }
+    ]
+   },
+   {
+    "value": "sea",
+    "state": "body and box thrown in",
+    "when": "ending",
+    "role": "setting",
+    "quote": "his real body is dumped into the Arabian Sea by Yakub",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:03:55",
+      "quote": "Ezra's body was disposed in the sea"
+     }
+    ]
+   },
+   {
+    "value": "letter",
+    "state": "ending a relationship",
+    "when": "middle",
+    "role": "turn",
+    "quote": "a depressed Ezra reluctantly writes to Rosy telling her to end the relationship",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:49:29",
+      "quote": "Ezra's letter which was found from her room,"
+     }
+    ]
+   },
+   {
+    "value": "book",
+    "state": "telling the story",
+    "when": "middle",
+    "role": "clue",
+    "quote": "He gives them a book detailing the story of Abraham Ezra in 1941",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:03:59",
+      "quote": "Everything in the book was true"
+     }
+    ]
+   },
+   {
+    "value": "nuclear waste",
+    "state": "a means of destruction",
+    "when": "late",
+    "role": "threat",
+    "quote": "understands the meaning of Ranjan's job of handling nuclear waste",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:19",
+      "quote": "We have received the order to transport the nuclear waste from these three plants"
+     }
+    ]
+   },
+   {
+    "value": "footsteps at night",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:54:12",
+    "quote": "I heard footsteps",
+    "confidence": "sourced"
+   },
+   {
+    "value": "golden cross",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:44:56",
+    "quote": "I swear upon the golden cross, I will marry you!",
+    "confidence": "sourced",
+    "detail": "Ezra swears on it to marry Rosy"
+   },
+   {
+    "value": "missing anklet",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:57:55",
+    "quote": "I was searching for the other pair of this anklet",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:59:37",
+      "quote": "Priya's missing anklet;"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "object stolen from the dead", "when": "opening", "role": "trigger", "quote": "After the death of the last Malabar Jew in Cochin, an antique seller steals from his house", "confidence": "sourced"},
-   {"order": 2, "value": "first death", "when": "opening", "quote": "At night, an unseen force from the box mauls and kills a worker in the shop", "confidence": "sourced"},
-   {"order": 3, "value": "object brought home", "when": "early", "quote": "Priya buys the strange box from the antique shop", "confidence": "sourced"},
-   {"order": 4, "value": "expert warns, then dies", "when": "early", "role": "omen", "quote": "whoever exorcises the Dybbuk becomes its worst enemy. The next day, Rabbi Benyamin dies", "confidence": "sourced"},
-   {"order": 5, "value": "past tragedy revealed", "when": "middle", "role": "clue", "quote": "Rosy commits suicide in heartbreak", "confidence": "sourced"},
-   {"order": 6, "value": "wrong victim suspected", "when": "late", "role": "turn", "quote": "it is revealed that it is not Priya, but Ranjan who has now been possessed", "confidence": "sourced"},
-   {"order": 7, "value": "exorcism", "when": "ending", "quote": "Marques, using Jewish exorcism rituals to exorcise Ranjan, sends the dybbuk back into the box", "confidence": "sourced"},
-   {"order": 8, "value": "object found again", "when": "ending", "quote": "In a mid-credit scene, the box is found by two young men along the seashore", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "object stolen from the dead",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "After the death of the last Malabar Jew in Cochin, an antique seller steals from his house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:39",
+      "quote": "Moshi Robonovich passed away earlier this morning"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "first death",
+    "when": "opening",
+    "quote": "At night, an unseen force from the box mauls and kills a worker in the shop",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "object brought home",
+    "when": "early",
+    "quote": "Priya buys the strange box from the antique shop",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "box's origin explained",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:02:15",
+    "quote": "is known as a Dybbuk' 'Like we refer to it as a ghost,'",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "expert warns, then dies",
+    "when": "early",
+    "role": "omen",
+    "quote": "whoever exorcises the Dybbuk becomes its worst enemy. The next day, Rabbi Benyamin dies",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:35",
+      "quote": "will be that spirit's biggest enemy"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "spirit names itself",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:31:07",
+    "quote": "Ezra Abraham Ezra What do you want?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "past tragedy revealed",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Rosy commits suicide in heartbreak",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:49:24",
+      "quote": "The villagers came to know what the real reason behind Rosy's suicide was"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "wrong victim suspected",
+    "when": "late",
+    "role": "turn",
+    "quote": "it is revealed that it is not Priya, but Ranjan who has now been possessed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:12:33",
+      "quote": "Ranjan, who is in a mental distress again after seeing Priya's condition; is the Dybbuk's target"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "threat declares its revenge",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "02:13:23",
+    "quote": "I will leave only after destroying everything! I have come to take revenge for my father",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "exorcism",
+    "when": "ending",
+    "quote": "Marques, using Jewish exorcism rituals to exorcise Ranjan, sends the dybbuk back into the box",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:15:19",
+      "quote": "Do not stop chanting prayers"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "object found again",
+    "when": "ending",
+    "quote": "In a mid-credit scene, the box is found by two young men along the seashore",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:23:29",
+      "quote": "Dude, it's a box!"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

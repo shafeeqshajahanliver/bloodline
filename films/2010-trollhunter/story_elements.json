@@ -1,59 +1,456 @@
 {
  "film": "2010-trollhunter",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "trolls", "detail": "including a three-headed troll, cave trolls and a Jötunn", "quote": "Hans reveals he is not hunting bears, but trolls", "confidence": "sourced"},
-   {"value": "government cover-up", "detail": "the Troll Security Service", "quote": "Finn's team, who actually works for the Troll Security Service (TSS), arrives to deposit a bear carcass and plant fake tracks", "confidence": "sourced"}
+   {
+    "value": "trolls",
+    "detail": "including a three-headed troll, cave trolls and a Jötunn",
+    "quote": "Hans reveals he is not hunting bears, but trolls",
+    "confidence": "sourced"
+   },
+   {
+    "value": "government cover-up",
+    "detail": "the Troll Security Service",
+    "quote": "Finn's team, who actually works for the Troll Security Service (TSS), arrives to deposit a bear carcass and plant fake tracks",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "from nature", "detail": "trolls leaving their territories", "quote": "the trolls have been acting aggressively lately and have begun to leave their territories more often", "confidence": "sourced"},
-   {"value": "disease", "quote": "the troll blood sample came back positive for rabies", "confidence": "sourced"}
+   {
+    "value": "from nature",
+    "detail": "trolls leaving their territories",
+    "quote": "the trolls have been acting aggressively lately and have begun to leave their territories more often",
+    "confidence": "sourced"
+   },
+   {
+    "value": "disease",
+    "quote": "the troll blood sample came back positive for rabies",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:48",
+      "quote": "He has spread the disease around to both Raglefantene and Dovregubben."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "christian blood", "quote": "a troll can smell a Christian man's blood", "confidence": "sourced"}
+   {
+    "value": "christian blood",
+    "quote": "a troll can smell a Christian man's blood",
+    "confidence": "sourced"
+   },
+   {
+    "value": "to eat everything",
+    "source": "subtitles",
+    "at": "00:42:35",
+    "quote": "They eat, shit, mate with and devour everything around them.",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "making a documentary", "quote": "set out to make a documentary about a suspected bear poacher, Hans", "confidence": "sourced"},
-   {"value": "following someone into the forest", "quote": "Following him into a forest at night time, they see flashing lights and hear roars", "confidence": "sourced"}
+   {
+    "value": "making a documentary",
+    "quote": "set out to make a documentary about a suspected bear poacher, Hans",
+    "confidence": "sourced"
+   },
+   {
+    "value": "following someone into the forest",
+    "quote": "Following him into a forest at night time, they see flashing lights and hear roars",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "weak to sunlight", "quote": "a weapon that emits powerful UV-rays to simulate sunlight and turns trolls to stone", "confidence": "sourced"},
-   {"value": "smells christians", "quote": "The trolls pick up the scent of Kalle, who turns out to be a Christian, and discover the group", "confidence": "sourced"},
-   {"value": "must be kept secret", "quote": "Hans reveals that his job is to kill trolls that come near populated areas, while Finn's is to keep trolls a secret", "confidence": "sourced"}
+   {
+    "value": "weak to sunlight",
+    "quote": "a weapon that emits powerful UV-rays to simulate sunlight and turns trolls to stone",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:00",
+      "quote": "Don't you know anything, Thomas? They turn to stone in sunlight."
+     }
+    ]
+   },
+   {
+    "value": "smells christians",
+    "quote": "The trolls pick up the scent of Kalle, who turns out to be a Christian, and discover the group",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:11",
+      "quote": "Seriously? Because they smell Christian blood?"
+     }
+    ]
+   },
+   {
+    "value": "must be kept secret",
+    "quote": "Hans reveals that his job is to kill trolls that come near populated areas, while Finn's is to keep trolls a secret",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:15",
+      "quote": "Because someone wants it to be kept a secret."
+     }
+    ]
+   },
+   {
+    "value": "rabies spreads among trolls",
+    "source": "subtitles",
+    "at": "01:28:23",
+    "quote": "The Raglefanten had rabies.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "student filmmakers", "relation_to_threat": "stranger", "quote": "An epilogue tells the audience that none of the students were heard from again", "confidence": "sourced"},
-   {"value": "cameraman", "relation_to_threat": "stranger", "detail": "Kalle, a Christian", "quote": "Everyone runs for the cave entrance into daylight, but Kalle is caught and killed", "confidence": "sourced"}
+   {
+    "value": "student filmmakers",
+    "relation_to_threat": "stranger",
+    "quote": "An epilogue tells the audience that none of the students were heard from again",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cameraman",
+    "relation_to_threat": "stranger",
+    "detail": "Kalle, a Christian",
+    "quote": "Everyone runs for the cave entrance into daylight, but Kalle is caught and killed",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "detail": "the Jötunn turned to stone", "quote": "Hans manages to kill the Jötunn by launching a rocket-like projectile that transforms the troll into stone", "confidence": "sourced"},
-   {"value": "witnesses vanish", "quote": "An epilogue tells the audience that none of the students were heard from again", "confidence": "sourced"},
-   {"value": "truth ignored", "quote": "appearing to admit to the existence of trolls, though the press fails to take notice", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "detail": "the Jötunn turned to stone",
+    "quote": "Hans manages to kill the Jötunn by launching a rocket-like projectile that transforms the troll into stone",
+    "confidence": "sourced"
+   },
+   {
+    "value": "witnesses vanish",
+    "quote": "An epilogue tells the audience that none of the students were heard from again",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:12",
+      "quote": "Nothing was found in the mine, and the filmmakers vanished without a trace."
+     }
+    ]
+   },
+   {
+    "value": "truth ignored",
+    "quote": "appearing to admit to the existence of trolls, though the press fails to take notice",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:40:00",
+      "quote": "Norway has trolls, so it will need more power lines."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "slain bear", "state": "planted", "when": "opening", "role": "clue", "quote": "At the site of an illegally slain bear they interview local hunters, who comment that the bear tracks look odd", "confidence": "sourced"},
-   {"value": "flashing lights in forest", "when": "early", "role": "omen", "quote": "they see flashing lights and hear roars", "confidence": "sourced"},
-   {"value": "flash-gun", "when": "early", "role": "weapon", "quote": "Hans wields a \"flash-gun\", a weapon that emits powerful UV-rays", "confidence": "sourced"},
-   {"value": "stone", "state": "petrified troll", "when": "early", "role": "symbol", "quote": "Hans flushes out a giant three-headed troll and manages to turn the troll to stone", "confidence": "sourced"},
-   {"value": "goats on a bridge", "state": "bait", "when": "middle", "role": "symbol", "quote": "Using live goats on a bridge as bait, Hans obtains a blood sample from a bridge troll", "confidence": "sourced"},
-   {"value": "abandoned mine", "when": "middle", "role": "setting", "quote": "an abandoned mine, which turns out to be the lair of cave trolls", "confidence": "sourced"},
-   {"value": "camera", "state": "footage ends", "when": "ending", "role": "symbol", "quote": "Thomas flees with the camera and ends up at the side of a road, with a truck oncoming, when the footage ends", "confidence": "sourced"}
+   {
+    "value": "slain bear",
+    "state": "planted",
+    "when": "opening",
+    "role": "clue",
+    "quote": "At the site of an illegally slain bear they interview local hunters, who comment that the bear tracks look odd",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:36",
+      "quote": "These tracks here do not match with the bear's."
+     }
+    ]
+   },
+   {
+    "value": "flashing lights in forest",
+    "when": "early",
+    "role": "omen",
+    "quote": "they see flashing lights and hear roars",
+    "confidence": "sourced"
+   },
+   {
+    "value": "flash-gun",
+    "when": "early",
+    "role": "weapon",
+    "quote": "Hans wields a \"flash-gun\", a weapon that emits powerful UV-rays",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:51",
+      "quote": "It shoots out a strong burst of ultraviolet light."
+     }
+    ]
+   },
+   {
+    "value": "stone",
+    "state": "petrified troll",
+    "when": "early",
+    "role": "symbol",
+    "quote": "Hans flushes out a giant three-headed troll and manages to turn the troll to stone",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:42",
+      "quote": "The stone is crushed and given to anyone who has a hole to fill."
+     }
+    ]
+   },
+   {
+    "value": "goats on a bridge",
+    "state": "bait",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "Using live goats on a bridge as bait, Hans obtains a blood sample from a bridge troll",
+    "confidence": "sourced"
+   },
+   {
+    "value": "abandoned mine",
+    "when": "middle",
+    "role": "setting",
+    "quote": "an abandoned mine, which turns out to be the lair of cave trolls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:46",
+      "quote": "An abandoned mine. - They have been here."
+     }
+    ]
+   },
+   {
+    "value": "camera",
+    "state": "footage ends",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "Thomas flees with the camera and ends up at the side of a road, with a truck oncoming, when the footage ends",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:12",
+      "quote": "Damn, it is Finn. Camera. Give me the camera!"
+     }
+    ]
+   },
+   {
+    "value": "troll stench",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:21:35",
+    "quote": "You must smell like a troll or else they will smell you and run away.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "power lines",
+    "state": "secretly electric fences",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:20:35",
+    "quote": "But they're energized fences that keep the trolls in place.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:47",
+      "quote": "He says power lines are fine."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "car tyre",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:08:20",
+    "quote": "He's carrying a car tire.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "smashed bridge",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:00:17",
+    "quote": "The bridge is smashed in half.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "students start a documentary", "when": "opening", "quote": "set out to make a documentary about a suspected bear poacher, Hans", "confidence": "sourced"},
-   {"order": 2, "value": "first encounter at night", "when": "early", "role": "turn", "quote": "Hans comes running back, screaming \"Troll!\" Thomas is bitten by something as they run away", "confidence": "sourced"},
-   {"order": 3, "value": "hunter reveals truth", "when": "early", "quote": "Hans reveals he is not hunting bears, but trolls", "confidence": "sourced"},
-   {"order": 4, "value": "cover-up revealed", "when": "middle", "role": "clue", "quote": "arrives to deposit a bear carcass and plant fake tracks", "confidence": "sourced"},
-   {"order": 5, "value": "trapped in the lair", "when": "middle", "quote": "The cave trolls return unexpectedly and the group is trapped inside", "confidence": "sourced"},
-   {"order": 6, "value": "companion killed", "when": "middle", "quote": "Kalle is caught and killed", "confidence": "sourced"},
-   {"order": 7, "value": "giant troll killed", "when": "late", "quote": "Hans manages to kill the Jötunn by launching a rocket-like projectile", "confidence": "sourced"},
-   {"order": 8, "value": "footage cut off, students vanish", "when": "ending", "quote": "Thomas flees with the camera and ends up at the side of a road, with a truck oncoming, when the footage ends", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "found-footage disclaimer",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:00:26",
+    "quote": "For over a year a team of investigators studied whether the material was real or not.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "students start a documentary",
+    "when": "opening",
+    "quote": "set out to make a documentary about a suspected bear poacher, Hans",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:13",
+      "quote": "an anonymous shipment with two hard drives containing 283 minutes of footage."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "first encounter at night",
+    "when": "early",
+    "role": "turn",
+    "quote": "Hans comes running back, screaming \"Troll!\" Thomas is bitten by something as they run away",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:35",
+      "quote": "Troll! Thomas!"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:15:03",
+      "quote": "Hurry! The car's right here! - What? - I was bitten!"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "hunter reveals truth",
+    "when": "early",
+    "quote": "Hans reveals he is not hunting bears, but trolls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:21",
+      "quote": "They exist!"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "cover-up revealed",
+    "when": "middle",
+    "role": "clue",
+    "quote": "arrives to deposit a bear carcass and plant fake tracks",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:41",
+      "quote": "The bear stores his food under the bridge here."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "trapped in the lair",
+    "when": "middle",
+    "quote": "The cave trolls return unexpectedly and the group is trapped inside",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:07",
+      "quote": "What's stressing you out? - I'm a Christian!"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "companion killed",
+    "when": "middle",
+    "quote": "Kalle is caught and killed",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "hunter's massacre confessed",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:25:19",
+    "quote": "Then there was my job to go into the territory and destroy all the trolls.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "giant troll killed",
+    "when": "late",
+    "quote": "Hans manages to kill the Jötunn by launching a rocket-like projectile",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "footage cut off, students vanish",
+    "when": "ending",
+    "quote": "Thomas flees with the camera and ends up at the side of a road, with a truck oncoming, when the footage ends",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:08",
+      "quote": "Here ends the recording."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "closing political sting",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:39:47",
+    "quote": "He says power lines are fine.",
+    "confidence": "sourced"
+   }
+  ],
+  "wrong": [
+   {
+    "value": "massacre of troll young",
+    "detail": "Hans was ordered to wipe out a mountain troll territory in the 1970s",
+    "source": "subtitles",
+    "at": "01:25:28",
+    "quote": "Pregnant females. Children. Absolute newborns who could not even walk yet. It was a bloody massacre.",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }
