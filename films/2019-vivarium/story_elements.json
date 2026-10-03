@@ -1,0 +1,58 @@
+{
+ "film": "2019-vivarium",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "place", "detail": "Yonder, an endless identical housing development", "quote": "trapped in a strange, vivarium-like neighbourhood", "confidence": "sourced"},
+   {"value": "inhuman child", "detail": "the boy, a mimicking humanoid creature", "quote": "a couple (Eisenberg and Poots) who are forced to care for a mysterious humanoid creature", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "unexplained", "detail": "creatures with throat sacs behind it", "quote": "a strange book filled with symbols and drawings of humanoid figures with throat sacs", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "a surrogate parent", "quote": "a message instructing them to raise the child in order to be released", "confidence": "sourced"},
+   {"value": "to replace someone", "detail": "the boy takes Martin's place", "quote": "When a couple walks in the door, the boy greets them just as Martin did", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "viewing a new home", "quote": "visit a housing development called Yonder, where all the homes appear identical", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "every road leads back", "quote": "attempt to escape on foot but repeatedly return to the same house", "confidence": "sourced"},
+   {"value": "released by raising the child", "quote": "a message instructing them to raise the child in order to be released", "confidence": "sourced"},
+   {"value": "parents die after raising", "quote": "explaining that mothers die after raising their sons", "confidence": "sourced"},
+   {"value": "damage undone overnight", "quote": "By morning, however, the fire has left no damage", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "couple", "relation_to_threat": "stranger", "detail": "Gemma and Tom", "quote": "Primary school teacher Gemma and her boyfriend Tom, a landscaper, visit a housing development called Yonder", "confidence": "sourced"},
+   {"value": "previous victims", "relation_to_threat": "stranger", "quote": "Tom continues to dig and finds a corpse in a vacuum bag", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "everyone dies", "quote": "She dies as he zips her in. The boy buries her with Tom", "confidence": "sourced"},
+   {"value": "cycle passes on", "quote": "When a couple walks in the door, the boy greets them just as Martin did", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "identical houses", "when": "opening", "role": "setting", "quote": "where all the homes appear identical", "confidence": "sourced"},
+   {"value": "box", "state": "contains a baby", "when": "early", "role": "trigger", "quote": "a new box appears, this time containing a baby boy", "confidence": "sourced"},
+   {"value": "vacuum bag", "when": "late", "role": "symbol", "quote": "Tom dies and the boy zips him into a vacuum bag and throws it into the hole", "confidence": "sourced"},
+   {"value": "hole", "state": "dug in the garden", "when": "middle", "role": "clue", "quote": "Tom begins digging a hole in the garden while growing withdrawn", "confidence": "sourced"},
+   {"value": "pickaxe", "when": "late", "role": "weapon", "quote": "At her breaking point, Gemma wounds the boy with the pickaxe", "confidence": "sourced"},
+   {"value": "throat sacs", "when": "middle", "role": "clue", "quote": "he makes rasping sounds and inflates his own throat sacs", "confidence": "sourced"},
+   {"value": "name tag", "when": "ending", "role": "turn", "quote": "Martin gives the boy his name tag and dies", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "strange estate agent", "when": "opening", "role": "omen", "quote": "an unusual real estate agent named Martin, who unsettlingly mimics Gemma's answer", "confidence": "sourced"},
+   {"order": 2, "value": "trapped in a loop", "when": "opening", "role": "trigger", "quote": "inexplicably end up going back to house 9", "confidence": "sourced"},
+   {"order": 3, "value": "child delivered", "when": "early", "quote": "a new box appears, this time containing a baby boy", "confidence": "sourced"},
+   {"order": 4, "value": "child grows unnaturally", "when": "middle", "quote": "the child has grown rapidly to the size of a ten-year-old", "confidence": "sourced"},
+   {"order": 5, "value": "previous victim found", "when": "late", "role": "clue", "quote": "Tom continues to dig and finds a corpse in a vacuum bag", "confidence": "sourced"},
+   {"order": 6, "value": "partner dies", "when": "late", "quote": "Tom dies and the boy zips him into a vacuum bag", "confidence": "sourced"},
+   {"order": 7, "value": "other victims glimpsed", "when": "late", "quote": "rooms in other houses with more boys and several strangers, one of whom is dead", "confidence": "sourced"},
+   {"order": 8, "value": "creature takes over role", "when": "ending", "role": "turn", "quote": "When a couple walks in the door, the boy greets them just as Martin did", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

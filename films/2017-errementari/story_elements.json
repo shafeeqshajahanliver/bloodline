@@ -1,0 +1,67 @@
+{
+ "film": "2017-errementari",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "captive demon", "detail": "Sartael, held in a cage", "quote": "the boy retrieves a pitchfork and is revealed to be the demon Sartael", "confidence": "sourced"},
+   {"value": "demon in disguise", "detail": "Ortiz is the demon Alastor", "quote": "Ortiz that reveals he is actually Sartael's superior from Hell, the demon Alastor", "confidence": "sourced"},
+   {"value": "cruel blacksmith", "detail": "Patxi", "quote": "a man so ruthless and cruel that even the Devil himself came to fear and respect him", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "deal with a demon", "quote": "Sartael, who reveals that he made a deal with Patxi during the late war", "confidence": "sourced"},
+   {"value": "folk tale", "quote": "The plot is based on the Basque folktale version of The Smith and the Devil", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "a soul", "quote": "He kidnaps Usue and promises to return her for Patxi's soul", "confidence": "sourced"},
+   {"value": "freedom", "quote": "who begs her to steal Patxi's ring of keys to free him", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "murder of wife's lover", "quote": "Enraged, Patxi burned Usue's face and murdered her father, while Maite, grief-stricken, hanged herself", "confidence": "sourced"},
+   {"value": "abandoned child", "quote": "Ashamed, Patxi gave Usue to the priest as an orphan", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "releasing a captive", "quote": "an orphan girl who releases the demon from its cage", "confidence": "sourced"},
+   {"value": "retrieving a lost object", "quote": "Usue attempts to retrieve her doll while Patxi disposes of the dead man", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "demons must count", "quote": "throwing chickpeas on the floor, which demons are unable to resist trying to count", "confidence": "sourced"},
+   {"value": "blessed bells hurt demons", "quote": "by ringing gold bells blessed by the church", "confidence": "sourced"},
+   {"value": "guilt leads to hell", "quote": "humans are compelled to enter Hell by their own guilt, and once inside, they can never leave", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "orphan girl", "relation_to_threat": "family", "detail": "Usue, Patxi's wife's daughter", "quote": "Usue, an orphan girl with a burn scarred face, is bullied by Benito", "confidence": "sourced"},
+   {"value": "villagers", "relation_to_threat": "community", "quote": "The villagers, driven to religious hysteria, set fire to the forge", "confidence": "sourced"},
+   {"value": "blacksmith", "relation_to_threat": "self", "quote": "Sartael kills Patxi with his pitchfork, taking them both to the gates of Hell", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "child returned from death", "quote": "Usue wakes up back on earth", "confidence": "sourced"},
+   {"value": "threat survives", "detail": "Sartael goes free to the next town", "quote": "Sartael transforms into a young man and makes his way to the next town", "confidence": "sourced"},
+   {"value": "hero stays in hell", "quote": "Patxi forces the gates of Hell open as he begins to search for his wife", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "iron cage", "when": "early", "role": "threat", "quote": "she finds a boy captive in an iron cage", "confidence": "sourced"},
+   {"value": "doll", "state": "thrown over fence", "when": "early", "role": "trigger", "quote": "Benito who throws her doll over Patxi's fence", "confidence": "sourced"},
+   {"value": "bear trap", "when": "early", "role": "weapon", "quote": "one of the men falls into a bear trap and dies", "confidence": "sourced"},
+   {"value": "ring of keys", "when": "early", "role": "trigger", "quote": "steal Patxi's ring of keys to free him", "confidence": "sourced"},
+   {"value": "chickpeas", "when": "middle", "role": "weapon", "quote": "Usue throws Patxi's jar of chickpeas at Alastor who is forced to try to count them", "confidence": "sourced"},
+   {"value": "golden bell", "when": "late", "role": "weapon", "quote": "the giant bell that he forged for the church is made from the very gold Ortiz was looking for", "confidence": "sourced"},
+   {"value": "horn", "state": "broken off", "when": "early", "role": "symbol", "quote": "Patxi breaks off one of the demons horns and locks him back in the cage", "confidence": "sourced"},
+   {"value": "burn scar", "when": "early", "role": "clue", "quote": "an orphan girl with a burn scarred face", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "survival by demonic aid", "when": "opening", "quote": "One rebel, Francisco Patxi, survives with the aid of a demon and slays the soldiers", "confidence": "sourced"},
+   {"order": 2, "value": "investigator arrives", "when": "early", "quote": "government investigator Alfredo Ortiz arrives in Araba", "confidence": "sourced"},
+   {"order": 3, "value": "child frees demon", "when": "early", "role": "trigger", "quote": "She does so successfully, but the boy retrieves a pitchfork and is revealed to be the demon Sartael", "confidence": "sourced"},
+   {"order": 4, "value": "past crime revealed", "when": "middle", "role": "turn", "quote": "Patxi burned Usue's face and murdered her father", "confidence": "sourced"},
+   {"order": 5, "value": "investigator revealed as demon", "when": "late", "role": "turn", "quote": "he is actually Sartael's superior from Hell, the demon Alastor", "confidence": "sourced"},
+   {"order": 6, "value": "child sells soul", "when": "late", "quote": "Usue makes a deal with Alastor: her soul in exchange for being taken to her mother in Hell", "confidence": "sourced"},
+   {"order": 7, "value": "descent into hell", "when": "late", "quote": "taking them both to the gates of Hell where thousands of damned souls are waiting to enter", "confidence": "sourced"},
+   {"order": 8, "value": "legend told onward", "when": "ending", "quote": "begins to tell him the tale of The Blacksmith", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

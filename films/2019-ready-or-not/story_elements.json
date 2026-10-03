@@ -1,0 +1,64 @@
+{
+ "film": "2019-ready-or-not",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "wealthy family", "detail": "the Le Domases", "quote": "a young bride who is hunted by her spouse's wealthy family as part of a wedding night ritual", "confidence": "sourced"},
+   {"value": "devil's bargain", "detail": "Le Bail", "quote": "Victor Le Domas made a deal with someone named \"Le Bail\" to build the Le Domas fortune", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "pact for wealth", "quote": "made a deal with someone named \"Le Bail\" to build the Le Domas fortune in exchange for the family observing a tradition", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "sacrifice", "quote": "the rest must find and ritually sacrifice them before dawn, or they die instead", "confidence": "sourced"},
+   {"value": "to keep wealth", "quote": "to build the Le Domas fortune in exchange for the family observing a tradition", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "deal with a dark power", "quote": "made a deal with someone named \"Le Bail\"", "confidence": "sourced"},
+   {"value": "past ritual murder", "quote": "The card was last drawn by Helene's husband, Charles, who was then found and murdered", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "marrying into a family", "quote": "at midnight on their wedding day every new member draws a game card from Le Bail's puzzle box", "confidence": "sourced"},
+   {"value": "drawing a card", "quote": "Grace draws \"Hide-and-Seek\"", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "sacrifice before dawn", "quote": "the rest must find and ritually sacrifice them before dawn, or they die instead", "confidence": "sourced"},
+   {"value": "family dies if ritual fails", "quote": "The remaining members of the family explode one by one", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "bride", "relation_to_threat": "family", "detail": "Grace, a former foster child", "quote": "is set to marry Grace MacCaullay, a former foster child", "confidence": "sourced"},
+   {"value": "servants", "relation_to_threat": "community", "quote": "Emilie accidentally kills another maid in the chaos", "confidence": "sourced"},
+   {"value": "past in-law", "relation_to_threat": "family", "detail": "Charles", "quote": "Charles is shot with a speargun and dragged away into a locked room", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "curse destroys the guilty", "quote": "she explodes into pieces, revealing the curse to actually be true", "confidence": "sourced"},
+   {"value": "final girl survives", "quote": "The sole survivor of the night, a blood-covered Grace, walks out of the burning manor", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "masks and robes", "state": "ceremonial", "when": "opening", "role": "omen", "quote": "who arrive in ceremonial masks and robes", "confidence": "sourced"},
+   {"value": "speargun", "when": "opening", "role": "weapon", "quote": "Charles is shot with a speargun", "confidence": "sourced"},
+   {"value": "puzzle box", "when": "early", "role": "trigger", "quote": "draws a game card from Le Bail's puzzle box", "confidence": "sourced"},
+   {"value": "goat", "state": "startling", "when": "middle", "role": "omen", "quote": "is startled by a goat and falls into a pit filled with the remains", "confidence": "sourced"},
+   {"value": "pit of remains", "when": "middle", "role": "clue", "quote": "a pit filled with the remains of the Le Domases' previous sacrifices", "confidence": "sourced"},
+   {"value": "ritual cup", "state": "poisoned", "when": "late", "role": "turn", "quote": "a non-lethal dose of hydrochloric acid in the ritual cup", "confidence": "sourced"},
+   {"value": "axe", "when": "ending", "role": "weapon", "quote": "as soon as Helene attempts to kill her with an axe, she explodes into pieces", "confidence": "sourced"},
+   {"value": "wedding ring", "state": "tossed back", "when": "ending", "role": "symbol", "quote": "She refuses and tosses her ring back, declaring she wants a divorce", "confidence": "sourced"},
+   {"value": "burning mansion", "when": "ending", "role": "setting", "quote": "walks out of the burning manor just as the police arrive", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "past victim hunted", "when": "opening", "role": "omen", "quote": "Charles is shot with a speargun and dragged away into a locked room", "confidence": "sourced"},
+   {"order": 2, "value": "wedding night tradition", "when": "early", "role": "trigger", "quote": "Grace draws \"Hide-and-Seek\"", "confidence": "sourced"},
+   {"order": 3, "value": "first accidental death", "when": "early", "quote": "witnesses Emilie accidentally kill a maid whom she mistakes for Grace", "confidence": "sourced"},
+   {"order": 4, "value": "curse explained", "when": "early", "role": "turn", "quote": "Alex reveals that his family is cursed", "confidence": "sourced"},
+   {"order": 5, "value": "pit of past victims", "when": "middle", "role": "clue", "quote": "falls into a pit filled with the remains of the Le Domases' previous sacrifices, including that of Charles", "confidence": "sourced"},
+   {"order": 6, "value": "husband betrays bride", "when": "late", "role": "turn", "quote": "subdues her to complete the ritual", "confidence": "sourced"},
+   {"order": 7, "value": "dawn: family explodes", "when": "ending", "quote": "The remaining members of the family explode one by one", "confidence": "sourced"},
+   {"order": 8, "value": "survivor's quip", "when": "ending", "quote": "when asked what has happened to her, she simply replies, \"In-laws.\"", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

@@ -1,0 +1,65 @@
+{
+ "film": "2021-antlers",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "wendigo", "quote": "the wendigo, a legendary Algonquin demon that appears as a ravenous deer-like monster that passes from person to person", "confidence": "sourced"},
+   {"value": "possessed father", "detail": "Frank, transformed", "quote": "Frank, now transformed into a savage antlered creature", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "found in a mine", "quote": "Frank Weaver runs a meth lab out of an inactive mine", "confidence": "observed"},
+   {"value": "folk legend", "quote": "a legendary Algonquin demon", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "hunger", "quote": "The animal carcasses Lucas collected are used to feed his ravenously feral father and younger brother", "confidence": "sourced"},
+   {"value": "to spread", "quote": "passes from person to person", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "child abuse", "quote": "shows physical signs of having been abused for some time", "confidence": "sourced"},
+   {"value": "abusive parent", "detail": "Julia's alcoholic father", "quote": "her own experience of childhood abuse at the hands of her mentally ill alcoholic father", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "attack in a mine", "quote": "Frank and an accomplice are attacked by an unseen creature", "confidence": "sourced"},
+   {"value": "opening a locked door", "quote": "After she unlocks and enters it, Frank kills her and antlers burst out of his body", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "passes from person to person", "quote": "a ravenous deer-like monster that passes from person to person", "confidence": "sourced"},
+   {"value": "killed while feeding", "quote": "It can only be killed when it is weakest: as it is feeding and to extinguish its beating heart", "confidence": "sourced"},
+   {"value": "keep it locked away", "quote": "demanded Lucas keep them locked no matter what", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "neglected child", "relation_to_threat": "family", "detail": "Lucas", "quote": "he is taken to the hospital, where Julia and Paul are told he is severely malnourished", "confidence": "sourced"},
+   {"value": "younger brother", "relation_to_threat": "family", "detail": "Aiden", "quote": "The wendigo spirit passes into Aiden and Julia stabs Aiden to death", "confidence": "sourced"},
+   {"value": "teacher", "relation_to_threat": "stranger", "detail": "Julia", "quote": "Lucas's teacher, Julia Meadows, alarmed by his behavior and frightening drawings", "confidence": "sourced"},
+   {"value": "townspeople", "relation_to_threat": "community", "detail": "principal, bully, deputy", "quote": "The transformed Frank uses Aiden to lure Paul's deputy sheriff Dan out and kill him", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "false resolution", "quote": "Julia stabs Aiden to death, seemingly ending the curse", "confidence": "sourced"},
+   {"value": "cycle passes on", "detail": "Paul shows the first sign", "quote": "Paul begins to cough up a black bile, as Frank did when he was first possessed by the demon", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "mine", "when": "opening", "role": "setting", "quote": "Frank Weaver runs a meth lab out of an inactive mine", "confidence": "sourced"},
+   {"value": "roadkill", "state": "dead animals collected", "when": "early", "role": "omen", "quote": "bringing home roadkill and small animals he kills", "confidence": "sourced"},
+   {"value": "children's drawings", "when": "early", "role": "clue", "quote": "alarmed by his behavior and frightening drawings", "confidence": "sourced"},
+   {"value": "locked attic", "when": "early", "role": "setting", "quote": "Frank locked the two of them in the attic", "confidence": "sourced"},
+   {"value": "antlers", "state": "bursting from body", "when": "middle", "role": "threat", "quote": "antlers burst out of his body", "confidence": "sourced"},
+   {"value": "bear", "state": "dead, being eaten", "when": "late", "role": "setting", "quote": "currently feasting on a dead black bear", "confidence": "sourced"},
+   {"value": "black bile", "when": "ending", "role": "omen", "quote": "Paul begins to cough up a black bile", "confidence": "sourced"},
+   {"value": "halved corpse", "when": "middle", "role": "clue", "quote": "finds half of Frank's accomplice's corpse in the woods", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "attack in the dark", "when": "opening", "role": "trigger", "quote": "Frank and an accomplice are attacked by an unseen creature", "confidence": "sourced"},
+   {"order": 2, "value": "child feeds the monster", "when": "early", "role": "turn", "quote": "The animal carcasses Lucas collected are used to feed his ravenously feral father", "confidence": "sourced"},
+   {"order": 3, "value": "door opened, monster freed", "when": "middle", "quote": "After she unlocks and enters it, Frank kills her and antlers burst out of his body", "confidence": "sourced"},
+   {"order": 4, "value": "legend explained", "when": "middle", "role": "clue", "quote": "Warren identifies the figure as the wendigo", "confidence": "sourced"},
+   {"order": 5, "value": "showdown in the mine", "when": "late", "quote": "she kills the wendigo-possessed Frank with Lucas's help", "confidence": "sourced"},
+   {"order": 6, "value": "child killed to end curse", "when": "late", "quote": "The wendigo spirit passes into Aiden and Julia stabs Aiden to death", "confidence": "sourced"},
+   {"order": 7, "value": "closing sting", "when": "ending", "quote": "Paul begins to cough up a black bile, as Frank did when he was first possessed", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

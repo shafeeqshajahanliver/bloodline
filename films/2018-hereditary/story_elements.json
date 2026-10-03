@@ -1,0 +1,67 @@
+{
+ "film": "2018-hereditary",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "possessing demon", "detail": "King Paimon", "quote": "the demon king Paimon, who, when summoned, brings wealth and knowledge, but prefers to inhabit a male host", "confidence": "sourced"},
+   {"value": "cult", "detail": "Ellen's coven", "quote": "a photo album showing Ellen as \"Queen Leigh\", the leader of a coven", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "inherited", "detail": "Ellen, Annie's mother, led the coven", "quote": "a grieving miniature artist who uncovers disturbing secrets about her recently deceased mother", "confidence": "sourced"},
+   {"value": "summoned by ritual", "quote": "who, when summoned, brings wealth and knowledge", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "a body", "detail": "a male host", "quote": "prefers to inhabit a male host", "confidence": "sourced"},
+   {"value": "wealth and knowledge", "detail": "for the coven", "quote": "when summoned, brings wealth and knowledge", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "grandmother offers family", "quote": "Ellen suddenly became a significant figure in raising Charlie after she was born", "confidence": "observed"},
+   {"value": "sibling causes death", "quote": "Peter swerves to avoid a dead deer in the road, causing Charlie to be decapitated by a telephone pole", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "death of a parent", "quote": "The family attends the funeral of Annie's estranged mother, Ellen", "confidence": "sourced"},
+   {"value": "a séance", "quote": "encourages her to communicate with Charlie's spirit via séance", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "whole family must be present", "quote": "Joan explains that all members of the family must be present during the séance", "confidence": "sourced"},
+   {"value": "linked object and life", "detail": "burning the sketchbook burns its owner", "quote": "she snatches the book from him and flings it into the fire, only for Steve to burst into flames instead", "confidence": "sourced"},
+   {"value": "spirit expelled for host", "quote": "attempts to expel his spirit from his body for Paimon", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "mother", "relation_to_threat": "family", "detail": "Annie", "quote": "Annie follows him and beheads herself with a length of piano wire", "confidence": "sourced"},
+   {"value": "daughter", "relation_to_threat": "family", "detail": "Charlie", "quote": "causing Charlie to be decapitated by a telephone pole", "confidence": "sourced"},
+   {"value": "son", "relation_to_threat": "family", "detail": "Peter, the chosen host", "quote": "The coven hails Peter as King Paimon as he silently observes", "confidence": "sourced"},
+   {"value": "father", "relation_to_threat": "family", "detail": "Steve", "quote": "Peter wakes after dark and finds his father's charred corpse", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat wins", "quote": "telling him the coven have \"corrected his female body\" and given him his preferred male host", "confidence": "sourced"},
+   {"value": "victim becomes threat", "quote": "The coven hails Peter as King Paimon", "confidence": "sourced"},
+   {"value": "family destroyed", "quote": "the headless corpses of his mother and grandmother", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "bird", "state": "dead, beheaded", "when": "opening", "role": "omen", "quote": "Charlie beheads a dead bird with scissors and pockets the head", "confidence": "sourced"},
+   {"value": "grave", "state": "vandalised", "when": "opening", "role": "clue", "quote": "unknown perpetrators have vandalized Ellen's gravesite", "confidence": "sourced"},
+   {"value": "deer", "state": "dead in the road", "when": "early", "role": "omen", "quote": "Peter swerves to avoid a dead deer in the road", "confidence": "sourced"},
+   {"value": "telephone pole", "when": "early", "role": "weapon", "quote": "causing Charlie to be decapitated by a telephone pole", "confidence": "sourced"},
+   {"value": "sketchbook", "state": "burning", "when": "middle", "role": "threat", "quote": "She sees threatening images manifest in Charlie's sketchbook", "confidence": "sourced"},
+   {"value": "headless corpse", "state": "rotting in attic", "when": "late", "role": "clue", "quote": "In the attic, Annie finds Ellen's rotting, headless corpse and occultist runes drawn in blood", "confidence": "sourced"},
+   {"value": "piano wire", "when": "ending", "role": "weapon", "quote": "beheads herself with a length of piano wire", "confidence": "sourced"},
+   {"value": "crown", "state": "on a severed head", "when": "ending", "role": "symbol", "quote": "a mannequin with Charlie's crowned, severed head placed on it", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "funeral of grandmother", "when": "opening", "quote": "The family attends the funeral of Annie's estranged mother, Ellen", "confidence": "sourced"},
+   {"order": 2, "value": "child's death", "when": "early", "role": "turn", "quote": "causing Charlie to be decapitated by a telephone pole", "confidence": "sourced"},
+   {"order": 3, "value": "séance", "when": "middle", "role": "trigger", "quote": "Objects begin to move, and Annie speaks in Charlie's voice", "confidence": "sourced"},
+   {"order": 4, "value": "cult revealed", "when": "middle", "role": "clue", "quote": "a photo album showing Ellen as \"Queen Leigh\", the leader of a coven, and Joan as one of her acolytes", "confidence": "sourced"},
+   {"order": 5, "value": "corpse in the attic", "when": "late", "quote": "In the attic, Annie finds Ellen's rotting, headless corpse", "confidence": "sourced"},
+   {"order": 6, "value": "father burns", "when": "late", "quote": "only for Steve to burst into flames instead", "confidence": "sourced"},
+   {"order": 7, "value": "possessed mother kills herself", "when": "ending", "quote": "A possessed Annie pursues him through the house", "confidence": "sourced"},
+   {"order": 8, "value": "son crowned as demon", "when": "ending", "quote": "Joan removes the crown and places it on Peter's head, addressing him as Charlie", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

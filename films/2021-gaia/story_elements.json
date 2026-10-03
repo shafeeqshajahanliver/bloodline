@@ -1,0 +1,64 @@
+{
+ "film": "2021-gaia",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "fungal organism", "detail": "the largest organism on the planet, in a tree", "quote": "the largest organism on the planet lives close to the house and is looking to spread", "confidence": "sourced"},
+   {"value": "infected humans", "quote": "The creatures break in and are revealed to be ordinary humans covered with fungus", "confidence": "sourced"},
+   {"value": "fanatical father", "detail": "Barend, who would sacrifice his son", "quote": "Barend decides to sacrifice Stefan to the organism", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "from nature", "quote": "She was here long before the apes started dreaming of gods", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to spread", "quote": "is looking to spread", "confidence": "sourced"},
+   {"value": "offerings", "quote": "offering his own blood to the organism", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "humanity's damage to the world", "quote": "he believes the world is doomed due to humanity's actions", "confidence": "observed"}
+  ],
+  "trigger": [
+   {"value": "entering the forest", "quote": "Gabi decides to enter the forest, retrieve the drone and rejoin Winston later", "confidence": "sourced"},
+   {"value": "a trap", "quote": "Gabi triggers a trap, which leads to a wooden stake piercing through her foot", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "spreads by spores", "quote": "the fungus infects humans and feeds on the eyes, mouth and lungs, and that they infect other people via spores", "confidence": "sourced"},
+   {"value": "worshipped as god", "quote": "Barend then states that he met \"God\" while in the forest", "confidence": "sourced"},
+   {"value": "eating the mushrooms protects", "quote": "Stefan secretly gives Gabi one of the mushrooms that Barend has been harvesting from the offering tree", "confidence": "observed"}
+  ],
+  "who_suffers": [
+   {"value": "forest rangers", "relation_to_threat": "stranger", "detail": "Gabi and Winston", "quote": "Gabi and Winston, two employees of South Africa's forestry service", "confidence": "sourced"},
+   {"value": "father and son", "relation_to_threat": "community", "detail": "Barend and Stefan, survivalists", "quote": "Barend and his son Stefan, two Afrikaner survivalists", "confidence": "sourced"},
+   {"value": "wife and mother", "relation_to_threat": "family", "detail": "Lily, turned into a tree", "quote": "his mother, who has been transformed into an animate tree", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "victim becomes threat", "quote": "Gabi becomes infected by the fungus and her body becomes covered with it", "confidence": "sourced"},
+   {"value": "threat spreads to the city", "quote": "the leftovers of his meal quickly become covered with fungus", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "drone", "state": "lost", "when": "opening", "role": "trigger", "quote": "Gabi loses the drone she is controlling", "confidence": "sourced"},
+   {"value": "wooden stake", "state": "through a foot", "when": "early", "role": "trigger", "quote": "a wooden stake piercing through her foot", "confidence": "sourced"},
+   {"value": "red glow", "when": "early", "role": "omen", "quote": "which is soon covered by a red glow as night falls", "confidence": "sourced"},
+   {"value": "fungus on skin", "when": "middle", "role": "threat", "quote": "finding patches of fungi growing on her arms and legs", "confidence": "sourced"},
+   {"value": "offering tree", "when": "middle", "role": "setting", "quote": "Barend provides offerings to a tree, which contains the previously mentioned organism", "confidence": "sourced"},
+   {"value": "wedding ring", "state": "on a tree's finger", "when": "late", "role": "symbol", "quote": "still has her wedding ring on one of her transformed fingers", "confidence": "sourced"},
+   {"value": "arrow", "when": "late", "role": "weapon", "quote": "Winston impales himself on one of Barend's arrows", "confidence": "sourced"},
+   {"value": "mushrooms", "state": "eaten", "when": "middle", "role": "symbol", "quote": "both he and Stefan eat some of the mushrooms growing in the tree", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "into the forest", "when": "opening", "role": "trigger", "quote": "Gabi decides to enter the forest, retrieve the drone and rejoin Winston later", "confidence": "sourced"},
+   {"order": 2, "value": "wounded, taken in", "when": "early", "quote": "find Gabi resting in the house and treat her injury", "confidence": "sourced"},
+   {"order": 3, "value": "companion infected", "when": "early", "quote": "becomes infected by a rapidly-growing fungus while hiding from the creatures", "confidence": "sourced"},
+   {"order": 4, "value": "creatures revealed human", "when": "middle", "role": "turn", "quote": "revealed to be ordinary humans covered with fungus", "confidence": "sourced"},
+   {"order": 5, "value": "mercy suicide", "when": "middle", "quote": "Winston, who is still alive, begs them to kill him", "confidence": "sourced"},
+   {"order": 6, "value": "mother as tree", "when": "late", "role": "turn", "quote": "Stefan takes Gabi to see his mother, who has been transformed into an animate tree", "confidence": "sourced"},
+   {"order": 7, "value": "sacrifice stopped", "when": "late", "quote": "returns in time to stop Barend from sacrificing Stefan", "confidence": "sourced"},
+   {"order": 8, "value": "spread to the city", "when": "ending", "role": "turn", "quote": "the leftovers of his meal quickly become covered with fungus", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

@@ -1,0 +1,59 @@
+{
+ "film": "2015-green-room",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot summary"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "neo-nazi gang", "detail": "skinheads led by Darcy", "quote": "a punk band who find themselves attacked by neo-Nazi skinheads after witnessing a murder", "confidence": "sourced"},
+   {"value": "attack dog", "quote": "A skinhead, Clark, unleashes an attack dog, which kills Tiger.", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "witnessed crime", "quote": "He sees the body of a woman, Emily, who has been stabbed to death by Werm, a member of Cowcatcher.", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to eliminate witnesses", "quote": "decides to gift Cowcatcher with poisoned drugs and kill the band to eliminate witnesses", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "murder", "detail": "Emily, killed for planning to leave the skinheads", "quote": "Werm murdered Emily after discovering Daniel and Emily planned to leave the skinheads", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "gig at a remote venue", "quote": "arranges a show through his cousin, Daniel, at a neo-Nazi skinhead bar in the woods outside Portland", "confidence": "sourced"},
+   {"value": "seeing something forbidden", "quote": "After the show, Pat returns to the green room to retrieve Sam's phone.", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "trapped in one room", "quote": "confiscate the band's phones and hold them captive in the green room with Emily's friend Amber", "confidence": "sourced"},
+   {"value": "deaths staged as accident", "quote": "planning to stage their deaths to appear as though they were killed while trespassing", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "touring band", "relation_to_threat": "stranger", "detail": "the Ain't Rights", "quote": "Pat, Sam, Reece and Tiger are members of a punk band, the Ain't Rights, traveling through the Pacific Northwest.", "confidence": "sourced"},
+   {"value": "insider wanting out", "relation_to_threat": "community", "detail": "Amber, Emily's friend", "quote": "Darcy's men wound Amber, who retreats to the green room with Pat", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat destroyed", "quote": "Fleeing, Darcy pulls a revolver from his jacket but is shot dead by Pat and Amber.", "confidence": "sourced"},
+   {"value": "two survivors", "quote": "The two sit on the side of the road and wait for the police.", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "body", "state": "stabbed", "when": "early", "role": "trigger", "quote": "He sees the body of a woman, Emily, who has been stabbed to death", "confidence": "sourced"},
+   {"value": "door", "state": "negotiated through", "when": "middle", "role": "setting", "quote": "They negotiate through the door with Darcy, who asks them to surrender the pistol.", "confidence": "sourced"},
+   {"value": "machetes", "when": "middle", "role": "weapon", "quote": "partially sever his hand with machetes until he drops the gun", "confidence": "sourced"},
+   {"value": "box cutter", "when": "middle", "role": "weapon", "quote": "taking a box cutter from his pocket and his pistol", "confidence": "sourced"},
+   {"value": "attack dog", "when": "middle", "role": "threat", "quote": "Clark, unleashes an attack dog, which kills Tiger", "confidence": "sourced"},
+   {"value": "microphone feedback", "when": "middle", "role": "weapon", "quote": "Amber and Pat drive the dog away with microphone feedback", "confidence": "sourced"},
+   {"value": "drug lab", "when": "middle", "role": "setting", "quote": "the band discovers an underground drug lab, but the only exit is locked from the outside", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "band takes a gig", "when": "opening", "quote": "arranges a show through his cousin, Daniel, at a neo-Nazi skinhead bar in the woods outside Portland", "confidence": "sourced"},
+   {"order": 2, "value": "murder witnessed", "when": "early", "role": "trigger", "quote": "He sees the body of a woman, Emily, who has been stabbed to death by Werm", "confidence": "sourced"},
+   {"order": 3, "value": "held captive", "when": "early", "quote": "hold them captive in the green room with Emily's friend Amber", "confidence": "sourced"},
+   {"order": 4, "value": "trap at the door", "when": "middle", "role": "turn", "quote": "Darcy and his men slash at Pat's arm and partially sever his hand with machetes", "confidence": "sourced"},
+   {"order": 5, "value": "friends killed one by one", "when": "middle", "quote": "Reece flees through a window, but is murdered by a skinhead.", "confidence": "sourced"},
+   {"order": 6, "value": "inside man helps, dies", "when": "late", "quote": "Daniel agrees to help them escape and leads the band into the club, where he is shot dead by the bartender", "confidence": "sourced"},
+   {"order": 7, "value": "survivors turn hunters", "when": "ending", "role": "turn", "quote": "When Pat hears Darcy and his men staging the deaths, he and Amber go after them.", "confidence": "sourced"},
+   {"order": 8, "value": "leader killed", "when": "ending", "quote": "Darcy pulls a revolver from his jacket but is shot dead by Pat and Amber", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

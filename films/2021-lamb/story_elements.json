@@ -1,0 +1,53 @@
+{
+ "film": "2021-lamb",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "unseen creature", "detail": "a ram/man hybrid, Ada's biological father", "quote": "the entity, revealed to be a ram/man hybrid and Ada's biological father, emerges and shoots Ingvar in the neck", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "from nature", "quote": "A herd of horses in Iceland is spooked by an unknown, loudly-breathing entity that makes its way to a barn", "confidence": "observed"}
+  ],
+  "wants": [
+   {"value": "its child back", "quote": "taking a tearful Ada with him and walking away into the wilderness", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "child taken from mother", "detail": "the couple take the lamb and kill its mother", "quote": "Shortly after, María kills the ewe and buries her body", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "unnatural birth", "quote": "one of their pregnant sheep births a human–sheep hybrid with a mostly human body but a lamb's head and right arm", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "couple", "relation_to_threat": "family", "detail": "María and Ingvar, Ada's adoptive parents", "quote": "María and Ingvar take the hybrid infant in as their own", "confidence": "sourced"},
+   {"value": "grieving parents", "relation_to_threat": "family", "quote": "Naming her Ada after their deceased daughter, the couple care for her as their own child", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "child reclaimed", "quote": "taking a tearful Ada with him and walking away into the wilderness", "confidence": "sourced"},
+   {"value": "loss and despair", "quote": "despairs at the loss of her husband and new child", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "horses", "state": "spooked", "when": "opening", "role": "omen", "quote": "A herd of horses in Iceland is spooked by an unknown, loudly-breathing entity", "confidence": "sourced"},
+   {"value": "barn", "when": "opening", "role": "setting", "quote": "an unknown, loudly-breathing entity that makes its way to a barn", "confidence": "sourced"},
+   {"value": "lamb-headed child", "when": "early", "role": "trigger", "quote": "a mostly human body but a lamb's head and right arm", "confidence": "sourced"},
+   {"value": "ewe", "state": "waiting, then killed", "when": "early", "role": "omen", "quote": "loitering outside the couple's home in an attempt to contact Ada", "confidence": "sourced"},
+   {"value": "dog", "state": "killed", "when": "late", "role": "omen", "quote": "The entity kills the family's dog before taking the family's gun", "confidence": "sourced"},
+   {"value": "gun", "state": "taken by the creature", "when": "late", "role": "weapon", "quote": "before taking the family's gun", "confidence": "sourced"},
+   {"value": "tractor", "state": "broken", "when": "ending", "role": "setting", "quote": "Ingvar takes Ada to fix the broken tractor left halfway to the lake", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "animals sense a presence", "when": "opening", "role": "omen", "quote": "A herd of horses in Iceland is spooked by an unknown, loudly-breathing entity", "confidence": "sourced"},
+   {"order": 2, "value": "unnatural birth", "when": "opening", "role": "trigger", "quote": "one of their pregnant sheep births a human–sheep hybrid", "confidence": "sourced"},
+   {"order": 3, "value": "replacement for a dead child", "when": "early", "quote": "Naming her Ada after their deceased daughter", "confidence": "sourced"},
+   {"order": 4, "value": "true mother killed", "when": "early", "quote": "Shortly after, María kills the ewe and buries her body", "confidence": "sourced"},
+   {"order": 5, "value": "outsider threatens exposure", "when": "middle", "quote": "Pétur reveals that he witnessed her killing Ada's sheep mother", "confidence": "sourced"},
+   {"order": 6, "value": "creature takes the gun", "when": "late", "role": "omen", "quote": "The entity kills the family's dog before taking the family's gun", "confidence": "sourced"},
+   {"order": 7, "value": "father reclaims child", "when": "ending", "role": "turn", "quote": "emerges and shoots Ingvar in the neck before taking a tearful Ada with him", "confidence": "sourced"},
+   {"order": 8, "value": "mother alone", "when": "ending", "quote": "María tearfully searches the wilderness in vain", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["rules"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

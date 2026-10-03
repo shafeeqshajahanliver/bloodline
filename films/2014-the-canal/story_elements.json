@@ -1,0 +1,63 @@
+{
+ "film": "2014-the-canal",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Synopsis"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "ghostly figure", "quote": "David sees what he believes to be a ghostly figure murder his wife", "confidence": "sourced"},
+   {"value": "the self", "detail": "David killed his wife himself", "quote": "the voice in the toilet ordered him to kill his wife and, in a rage, he drowned her in the canal", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "past murders in the house", "quote": "a reel of footage to be archived that shows that his house was the setting for a brutal murder in 1902", "confidence": "sourced"},
+   {"value": "devil worship", "quote": "the tunnel was used by devil worshippers to sacrifice local children", "confidence": "observed"}
+  ],
+  "wants": [
+   {"value": "to make him kill", "quote": "the voice in the toilet ordered him to kill his wife", "confidence": "sourced"},
+   {"value": "family together forever", "quote": "tells Billy that they can be together (including Alice) forever in the house", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "infidelity", "quote": "he suspects that his wife Alice has been cheating on him with Alex", "confidence": "sourced"},
+   {"value": "murder of a spouse", "quote": "in a rage, he drowned her in the canal", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "discovering betrayal", "quote": "David's fears are confirmed when he follows Alice after work and sees her have sex with Alex", "confidence": "sourced"},
+   {"value": "watching old footage", "quote": "Claire gives him a reel of footage to be archived", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "visible only on film", "quote": "he borrows early 20th-century cameras to shoot footage around his home and the canal", "confidence": "observed"},
+   {"value": "voice commands murder", "quote": "A creepy voice whispers unintelligibly to him", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "wife", "relation_to_threat": "lover", "detail": "Alice", "quote": "The police eventually find her body at the bottom of the canal", "confidence": "sourced"},
+   {"value": "son", "relation_to_threat": "family", "detail": "Billy", "quote": "Back in the house, the real estate salesperson smiles as she sees Billy in his upstairs room closing a door", "confidence": "sourced"},
+   {"value": "colleague", "relation_to_threat": "stranger", "detail": "Claire", "quote": "When Claire saw nothing on the footage, he strangled her himself", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "victim becomes threat", "detail": "David returns as a ghost and draws Billy back", "quote": "David's ghost appears from crack in the wall and tells Billy that they can be together", "confidence": "sourced"},
+   {"value": "cycle passes on", "quote": "Billy jumps out of his grandmother's car as they drive down the road", "confidence": "observed"}
+  ],
+  "images": [
+   {"value": "film reel", "state": "old footage", "when": "opening", "role": "clue", "quote": "a reel of footage to be archived that shows that his house was the setting for a brutal murder in 1902", "confidence": "sourced"},
+   {"value": "hammer", "state": "thrown into canal", "when": "opening", "role": "weapon", "quote": "David grabs a hammer but, coming to his senses, throws it into a nearby canal", "confidence": "sourced"},
+   {"value": "public toilet", "state": "haunted", "when": "opening", "role": "setting", "quote": "a nearby public toilet that his son Billy believes to be haunted", "confidence": "sourced"},
+   {"value": "canal", "state": "body at the bottom", "when": "early", "role": "setting", "quote": "The police eventually find her body at the bottom of the canal", "confidence": "sourced"},
+   {"value": "hole in the wall", "state": "ghost emerges", "when": "late", "role": "threat", "quote": "a ghostly figure that approaches closer and closer, until it emerges from a hole in the wall", "confidence": "sourced"},
+   {"value": "hidden tunnel", "state": "leads to canal", "when": "late", "role": "setting", "quote": "he flees with Billy into a hidden tunnel that leads to the canal", "confidence": "sourced"},
+   {"value": "closet", "state": "locked", "when": "middle", "role": "setting", "quote": "locks her in a closet with Billy as he searches the house", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "suspected affair", "when": "opening", "quote": "he suspects that his wife Alice has been cheating on him with Alex", "confidence": "sourced"},
+   {"order": 2, "value": "house's past revealed", "when": "opening", "role": "omen", "quote": "shows that his house was the setting for a brutal murder in 1902", "confidence": "sourced"},
+   {"order": 3, "value": "wife vanishes", "when": "early", "quote": "before passing out, David sees what he believes to be a ghostly figure murder his wife", "confidence": "sourced"},
+   {"order": 4, "value": "obsessive investigation", "when": "middle", "quote": "he becomes obsessed with a series of unsolved, 100-year-old murders", "confidence": "sourced"},
+   {"order": 5, "value": "police suspicion", "when": "middle", "quote": "When the police find the hammer in the canal, they become suspicious that David murdered his wife", "confidence": "sourced"},
+   {"order": 6, "value": "protagonist revealed as killer", "when": "late", "role": "turn", "quote": "he drowned her in the canal. When Claire saw nothing on the footage, he strangled her himself", "confidence": "sourced"},
+   {"order": 7, "value": "pulled under", "when": "ending", "quote": "When David reaches the canal, a ghostly figure pulls him under", "confidence": "sourced"},
+   {"order": 8, "value": "child drawn back to house", "when": "ending", "quote": "the real estate salesperson smiles as she sees Billy in his upstairs room closing a door", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

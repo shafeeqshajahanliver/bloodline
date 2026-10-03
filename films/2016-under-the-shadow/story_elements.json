@@ -1,0 +1,58 @@
+{
+ "film": "2016-under-the-shadow",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "djinn", "quote": "Mrs. Ebrahimi warns Shideh that djinns can possess humans", "confidence": "sourced"},
+   {"value": "war", "detail": "missile strikes on Tehran", "quote": "A mother and daughter are haunted by a mysterious evil in 1980s Tehran, during the War of the Cities", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "folklore", "detail": "the legend of the Djinn", "quote": "Dorsa tells her mother that the boy talked about the legend of the Djinn", "confidence": "sourced"},
+   {"value": "arrived with a missile", "quote": "A missile strikes their building and Kimia goes missing in the commotion", "confidence": "observed"}
+  ],
+  "wants": [
+   {"value": "to possess", "quote": "djinns can possess humans, and will steal a beloved personal item of their victims", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "staying behind", "quote": "she elects to stay in the city with her daughter, Dorsa, despite the protests of her husband Iraj", "confidence": "sourced"},
+   {"value": "missile strike", "quote": "A missile strikes their building and Kimia goes missing in the commotion", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "steals a beloved object", "quote": "will steal a beloved personal item of their victims", "confidence": "sourced"},
+   {"value": "imitates loved ones", "quote": "She sees Dorsa under their bed but discovers that it is an apparition", "confidence": "sourced"},
+   {"value": "warded by charm", "quote": "hands her a charm to ward off evil spirits", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "mother and daughter", "relation_to_threat": "stranger", "detail": "Shideh and Dorsa", "quote": "A mother and daughter are haunted by a mysterious evil", "confidence": "sourced"},
+   {"value": "woman denied her ambitions", "relation_to_threat": "stranger", "detail": "Shideh, barred from medical school", "quote": "medical student Shideh is barred from resuming her studies because of her involvement with leftist groups", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "escape", "quote": "The two are attacked by the chador apparition and escape to the car", "confidence": "sourced"},
+   {"value": "threat survives", "quote": "Shideh's medical textbook is still in the djinn's possession, implying they may still be harassed", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "medical textbook", "state": "from dead mother, taken", "when": "opening", "role": "symbol", "quote": "keeps a book of medical physiology given to her by her deceased mother", "confidence": "sourced"},
+   {"value": "doll", "state": "missing, mutilated", "when": "opening", "role": "symbol", "quote": "Iraj promises Dorsa that her favorite doll, Kimia, will protect her", "confidence": "sourced"},
+   {"value": "mute orphan boy", "state": "whispering", "when": "early", "role": "omen", "quote": "he whispers something into Dorsa's ear and hands her a charm to ward off evil spirits", "confidence": "sourced"},
+   {"value": "charm", "when": "early", "role": "weapon", "quote": "hands her a charm to ward off evil spirits", "confidence": "sourced"},
+   {"value": "missile", "state": "strikes building", "when": "middle", "role": "trigger", "quote": "A missile strikes their building", "confidence": "sourced"},
+   {"value": "chador", "state": "moving like a ghost", "when": "late", "role": "threat", "quote": "visions involving a chador that moves like a ghost", "confidence": "sourced"},
+   {"value": "doll's head", "state": "detached, left behind", "when": "ending", "role": "omen", "quote": "Kimia's detached head was left behind", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "ambitions denied", "when": "opening", "quote": "medical student Shideh is barred from resuming her studies", "confidence": "sourced"},
+   {"order": 2, "value": "husband leaves for war", "when": "early", "quote": "her husband Iraj, who is called into military service", "confidence": "sourced"},
+   {"order": 3, "value": "orphan warns of djinn", "when": "early", "role": "omen", "quote": "Dorsa tells her mother that the boy talked about the legend of the Djinn", "confidence": "sourced"},
+   {"order": 4, "value": "missile hits, doll vanishes", "when": "middle", "role": "trigger", "quote": "A missile strikes their building and Kimia goes missing in the commotion", "confidence": "sourced"},
+   {"order": 5, "value": "neighbours leave", "when": "middle", "quote": "Dorsa and Shideh are the only two inhabitants left in the building", "confidence": "sourced"},
+   {"order": 6, "value": "false child", "when": "late", "role": "turn", "quote": "believing that the Dorsa she left with is an apparition, and returns home to find the real one", "confidence": "sourced"},
+   {"order": 7, "value": "escape by car", "when": "ending", "quote": "escape to the car. Shideh drives them to Iraj's parents", "confidence": "sourced"},
+   {"order": 8, "value": "closing sting", "when": "ending", "quote": "Shideh's medical textbook is still in the djinn's possession", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

@@ -1,0 +1,50 @@
+{
+ "film": "2022-huesera",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "faceless spirit", "detail": "a bone-cracking woman with no eyes or mouth", "quote": "When the woman gets up, her body makes loud, bone-cracking noises, and Valeria sees that the woman has no eyes or mouth", "confidence": "sourced"},
+   {"value": "occult forces", "quote": "a pregnant woman who finds herself threatened by occult forces", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "pregnancy", "quote": "reveals to her husband Raúl that she is pregnant with their first child", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "warded off by ritual", "quote": "After performing a ritual on Valeria, Ursula tells her that she should start feeling better soon", "confidence": "sourced"},
+   {"value": "dangerous other way", "quote": "although the \"other way\" mentioned by Ursula does work, it could likely be extremely dangerous for her", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "pregnant woman", "relation_to_threat": "self", "detail": "Valeria", "quote": "Valeria has more disturbing visions involving the faceless woman, which starts impacting her ability to sleep", "confidence": "sourced"},
+   {"value": "children", "relation_to_threat": "family", "detail": "Vero's children", "quote": "The incident leaves the children injured and traumatised", "confidence": "sourced"},
+   {"value": "baby", "relation_to_threat": "family", "quote": "while seemingly possessed, puts it in the fridge before going to bed", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "protagonist escapes role", "detail": "she leaves husband and baby", "quote": "before packing her bags and leaving him to raise their daughter on his own", "confidence": "sourced"},
+   {"value": "threat confronted through ritual", "quote": "The figures swarm and contort Valeria's body, after which she has a vision of herself in a cloak walking away while on fire", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "cracking knuckles", "when": "opening", "role": "omen", "quote": "Valeria notices that she has begun to neurotically crack her knuckles, but ignores it", "confidence": "sourced"},
+   {"value": "woman jumping from balcony", "when": "opening", "role": "omen", "quote": "a woman in the building opposite hers break her legs by jumping off a balcony", "confidence": "sourced"},
+   {"value": "dog", "state": "strangled with its chain", "when": "middle", "role": "omen", "quote": "the family dog has been found dead, apparently having been strangled with its chain", "confidence": "sourced"},
+   {"value": "crib", "state": "bursts into flames", "when": "middle", "role": "symbol", "quote": "the crib that Valeria had made for the baby suddenly bursts into flames", "confidence": "sourced"},
+   {"value": "fridge", "state": "baby placed inside", "when": "late", "role": "turn", "quote": "puts it in the fridge before going to bed", "confidence": "sourced"},
+   {"value": "water", "when": "late", "role": "turn", "quote": "As part of the ritual, Valeria has her head dunked underwater", "confidence": "sourced"},
+   {"value": "faceless figures", "state": "writhing mass", "when": "late", "role": "threat", "quote": "she encounters a writhing mass of naked, faceless figures", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "pregnancy announced", "when": "opening", "role": "trigger", "quote": "reveals to her husband Raúl that she is pregnant with their first child, much to their excitement", "confidence": "sourced"},
+   {"order": 2, "value": "first apparition", "when": "opening", "role": "omen", "quote": "a woman in the building opposite hers break her legs by jumping off a balcony", "confidence": "sourced"},
+   {"order": 3, "value": "folk healer consulted", "when": "early", "quote": "Isabel takes her to meet Ursula, a curandera", "confidence": "sourced"},
+   {"order": 4, "value": "children endangered", "when": "middle", "quote": "the woman, who, though invisible, now appears to be physically present inside the house", "confidence": "sourced"},
+   {"order": 5, "value": "husband turns on her", "when": "middle", "quote": "Despite Valeria swearing her innocence, Raúl blames her for the ruined crib", "confidence": "sourced"},
+   {"order": 6, "value": "mother harms baby", "when": "late", "role": "turn", "quote": "Valeria, incensed by the baby's non-stop crying, gets out of bed", "confidence": "sourced"},
+   {"order": 7, "value": "ritual confrontation", "when": "late", "quote": "Ursula and a group of other curanderas performs a ritual on Valeria and the baby", "confidence": "sourced"},
+   {"order": 8, "value": "she leaves", "when": "ending", "quote": "packing her bags and leaving him to raise their daughter on his own", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["origin", "wants", "wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

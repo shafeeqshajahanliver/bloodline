@@ -1,0 +1,63 @@
+{
+ "film": "2020-gretel-hansel",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "witch", "detail": "Holda", "quote": "The film follows the siblings Gretel and Hansel as they become lost in the forest and then stumble upon the home of a witch.", "confidence": "sourced"},
+   {"value": "evil child", "detail": "the girl in the pink hat from the prologue", "quote": "her wicked nature is soon revealed when she begins murdering innocent people, including her own father", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "mother avenging herself", "detail": "Holda, mother of the wicked girl", "quote": "It is then revealed that Holda was the mother of the wicked girl from the prologue story", "confidence": "sourced"},
+   {"value": "power from eating children", "quote": "Holda ate children to gain magical powers, killed her daughter, and took her place at the cottage", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "hunger", "detail": "to eat Hansel", "quote": "she plans for Hansel to be eaten", "confidence": "sourced"},
+   {"value": "an heir", "detail": "to draw Gretel into witchcraft", "quote": "Sensing Gretel's abilities, Holda initiates her into witchcraft", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "child kills parent", "quote": "Holda loathed her daughter for killing her husband and other innocents", "confidence": "sourced"},
+   {"value": "children cast out", "quote": "threatens to kill both children if they do not leave the house", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "lost in the woods", "quote": "They get lost in the woods and, suffering from hunger, are attracted by the scent of baked cake", "confidence": "sourced"},
+   {"value": "driven from home", "quote": "As their father dies, their mother sends them out to find work.", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "lured by food", "quote": "are attracted by the scent of baked cake to a hut in the forest", "confidence": "sourced"},
+   {"value": "power has a price", "quote": "her fingertips begin to turn black, just as Holda's had been", "confidence": "observed"},
+   {"value": "spells end with witch's death", "quote": "she slowly burns to death over the fire, which causes the spells she has cast to cease working", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "siblings", "relation_to_threat": "stranger", "detail": "Gretel and Hansel", "quote": "teenage Gretel, who often takes care of her younger brother, Hansel", "confidence": "sourced"},
+   {"value": "children", "relation_to_threat": "stranger", "quote": "She sees the ghosts of the children murdered by Holda, now finally free to pass on.", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat destroyed", "quote": "pin Holda against the wall, where she slowly burns to death over the fire", "confidence": "sourced"},
+   {"value": "victim becomes threat", "detail": "Gretel begins to show the witch's mark", "quote": "In the closing moments, her fingertips begin to turn black, just as Holda's had been.", "confidence": "observed"}
+  ],
+  "images": [
+   {"value": "pink hat", "when": "opening", "role": "omen", "quote": "\"a beautiful child with a pretty pink hat\", a mortally wounded baby girl", "confidence": "sourced"},
+   {"value": "cake", "state": "scent luring", "when": "early", "role": "trigger", "quote": "are attracted by the scent of baked cake to a hut in the forest", "confidence": "sourced"},
+   {"value": "axe", "when": "middle", "role": "weapon", "quote": "Hansel is sent into the woods to practice woodcutting with an axe", "confidence": "sourced"},
+   {"value": "pentagram", "state": "carved into tree", "when": "middle", "role": "clue", "quote": "discovering a satanic pentagram carved into a tree", "confidence": "sourced"},
+   {"value": "wooden staff", "state": "levitated", "when": "ending", "role": "weapon", "quote": "teaches her to levitate her wooden staff with the aid of flying ointment", "confidence": "sourced"},
+   {"value": "cage over fire", "when": "late", "role": "threat", "quote": "Holda lures Hansel into a cage atop a large fire pit so she can cook him", "confidence": "sourced"},
+   {"value": "black fingertips", "when": "ending", "role": "symbol", "quote": "her fingertips begin to turn black, just as Holda's had been", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "prologue: cursed child tale", "when": "opening", "role": "omen", "quote": "Her father takes her to the woods to be cured by a witch, who performs healing spells", "confidence": "sourced"},
+   {"order": 2, "value": "children driven out", "when": "early", "quote": "threatens to kill both children if they do not leave the house", "confidence": "sourced"},
+   {"order": 3, "value": "lured to the witch's hut", "when": "early", "role": "trigger", "quote": "She invites the children in for a meal and allows them to stay", "confidence": "sourced"},
+   {"order": 4, "value": "initiation into witchcraft", "when": "middle", "quote": "Holda initiates her into witchcraft", "confidence": "sourced"},
+   {"order": 5, "value": "brother taken", "when": "middle", "quote": "Hansel leaves the hut and is then lured into a trap by Holda", "confidence": "sourced"},
+   {"order": 6, "value": "witch's past revealed", "when": "late", "role": "turn", "quote": "Holda was the mother of the wicked girl from the prologue story", "confidence": "sourced"},
+   {"order": 7, "value": "witch burned", "when": "late", "quote": "pin Holda against the wall, where she slowly burns to death over the fire", "confidence": "sourced"},
+   {"order": 8, "value": "heroine marked", "when": "ending", "role": "turn", "quote": "In the closing moments, her fingertips begin to turn black, just as Holda's had been.", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

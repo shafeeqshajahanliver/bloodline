@@ -1,0 +1,58 @@
+{
+ "film": "2023-godzilla-minus-one",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "giant monster", "detail": "Godzilla", "quote": "That night, Godzilla, a large dinosaur-like creature, attacks the garrison", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "made by human science", "detail": "mutated by nuclear tests at Bikini Atoll", "quote": "Godzilla is mutated and empowered by the United States' nuclear tests at Bikini Atoll", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "cowardice", "detail": "Kōichi failed to fire on Odo Island", "quote": "he panics, fails to shoot, and is knocked unconscious", "confidence": "sourced"},
+   {"value": "nuclear weapons testing", "quote": "mutated and empowered by the United States' nuclear tests at Bikini Atoll", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "deserting duty", "quote": "Kōichi is feigning technical issues to flee from his duty", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "regenerates", "quote": "causing significant damage, but Godzilla quickly regenerates", "confidence": "sourced"},
+   {"value": "conventional weapons fail", "quote": "The heavy cruiser Takao then engages Godzilla, but is destroyed when the monster unleashes its heat ray", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "guilty survivor", "relation_to_threat": "stranger", "detail": "Kōichi Shikishima, former kamikaze pilot", "quote": "a former kamikaze pilot suffering from post-traumatic stress disorder after encountering the giant monster Godzilla", "confidence": "sourced"},
+   {"value": "found family", "relation_to_threat": "stranger", "detail": "Noriko and orphan Akiko", "quote": "Noriko pushes Kōichi to safety, but she is caught in the blast's shockwave", "confidence": "sourced"},
+   {"value": "a whole city", "relation_to_threat": "community", "detail": "Ginza, Tokyo", "quote": "Godzilla obliterates much of the district with its heat ray, killing tens of thousands", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat destroyed", "quote": "Kōichi crashes the plane into Godzilla's mouth and destroys its head, causing the energy of the heat ray to tear its body apart", "confidence": "sourced"},
+   {"value": "survivor chooses life", "quote": "Kōichi ejects before the explosion and parachutes to safety", "confidence": "sourced"},
+   {"value": "threat survives", "quote": "a chunk of Godzilla's flesh begins to regenerate as it sinks deeper into the ocean", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "fighter plane", "state": "grounded", "when": "opening", "role": "trigger", "quote": "lands his Mitsubishi A6M Zero for repairs at the Japanese base on Odo Island", "confidence": "sourced"},
+   {"value": "naval mine", "when": "middle", "role": "weapon", "quote": "They release a mine into Godzilla's mouth and detonate it", "confidence": "sourced"},
+   {"value": "heat ray", "when": "middle", "role": "threat", "quote": "Godzilla obliterates much of the district with its heat ray", "confidence": "sourced"},
+   {"value": "orphaned baby", "when": "early", "role": "symbol", "quote": "an orphaned baby, Akiko, whom Noriko rescued", "confidence": "sourced"},
+   {"value": "telegram", "when": "late", "role": "clue", "quote": "Sumiko receives a telegram intended for Kōichi", "confidence": "sourced"},
+   {"value": "ejection seat", "when": "ending", "role": "turn", "quote": "using an ejection seat that Tachibana installed in the Shinden", "confidence": "sourced"},
+   {"value": "black bruise", "state": "creeping up the neck", "when": "ending", "role": "omen", "quote": "has a black bruise creeping up her neck", "confidence": "sourced"},
+   {"value": "regenerating flesh", "when": "ending", "role": "omen", "quote": "a chunk of Godzilla's flesh begins to regenerate", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "pilot flees duty", "when": "opening", "role": "trigger", "quote": "Kōichi is feigning technical issues to flee from his duty", "confidence": "sourced"},
+   {"order": 2, "value": "monster attack, failure to act", "when": "opening", "quote": "Tachibana tells Kōichi to fire at the monster with his plane's cannons, but he panics, fails to shoot", "confidence": "sourced"},
+   {"order": 3, "value": "return to a ruined home", "when": "early", "quote": "Kōichi returns home to find that his parents were killed in the bombing of Tokyo", "confidence": "sourced"},
+   {"order": 4, "value": "monster mutated by bomb", "when": "early", "role": "turn", "quote": "Godzilla is mutated and empowered by the United States' nuclear tests at Bikini Atoll", "confidence": "sourced"},
+   {"order": 5, "value": "city destroyed, loved one lost", "when": "middle", "quote": "Noriko pushes Kōichi to safety, but she is caught in the blast's shockwave", "confidence": "sourced"},
+   {"order": 6, "value": "civilian plan", "when": "late", "quote": "He devises a plan to destroy Godzilla by luring it out to Sagami Bay", "confidence": "sourced"},
+   {"order": 7, "value": "suicide run, survived", "when": "ending", "role": "turn", "quote": "Kōichi crashes the plane into Godzilla's mouth and destroys its head", "confidence": "sourced"},
+   {"order": 8, "value": "reunion and closing sting", "when": "ending", "quote": "a chunk of Godzilla's flesh begins to regenerate as it sinks deeper into the ocean", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wants"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

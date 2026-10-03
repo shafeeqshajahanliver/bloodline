@@ -1,0 +1,62 @@
+{
+ "film": "2019-atlantics",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "possessing spirits", "detail": "the drowned workers", "quote": "the spirits of the men lost at sea have returned and each night take possession of the bodies of other inhabitants of Dakar", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "person who died wronged", "detail": "unpaid workers lost at sea", "quote": "the tycoon whose withholding of their pay had forced them to go across the Atlantic", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to be paid", "quote": "They demand their pay, threatening to burn the tower down otherwise.", "confidence": "sourced"},
+   {"value": "burial and rest", "quote": "force him to dig their graves so that their spirits may rest", "confidence": "sourced"},
+   {"value": "to be with a lover", "quote": "but Souleiman wants only to be with Ada", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "wages withheld", "quote": "The construction workers have not been paid for months.", "confidence": "sourced"},
+   {"value": "forced marriage", "quote": "However, Ada is betrothed to another man – the wealthy Omar.", "confidence": "observed"}
+  ],
+  "trigger": [
+   {"value": "migration by sea", "quote": "One night, the workers decide to leave the country by sea, in search of a brighter future in Spain.", "confidence": "sourced"},
+   {"value": "wedding", "quote": "On her wedding day, Omar's bed mysteriously catches fire in a suspected arson attack", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "possess at night", "quote": "each night take possession of the bodies of other inhabitants of Dakar", "confidence": "sourced"},
+   {"value": "possessed fall ill", "quote": "her friend Fanta and the young detective are both suffering from a mysterious illness", "confidence": "sourced"},
+   {"value": "rest once wrong is righted", "quote": "Once they receive their pay from the tycoon, the possessed force him to dig their graves", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "young woman", "relation_to_threat": "lover", "detail": "Ada, Souleiman's lover", "quote": "Ada falls under suspicion and is subjected to interrogations and a virginity test", "confidence": "sourced"},
+   {"value": "tycoon", "relation_to_threat": "community", "detail": "the employer who withheld pay", "quote": "Most of these spirits are focused on the tycoon", "confidence": "sourced"},
+   {"value": "investigator", "relation_to_threat": "stranger", "detail": "the young detective, possessed by Souleiman", "quote": "he has possessed the young detective, which initially scares Ada", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "spirits appeased", "quote": "force him to dig their graves so that their spirits may rest", "confidence": "sourced"},
+   {"value": "lovers reunited briefly", "quote": "she comes to understand them and spends a last night with the new Souleiman", "confidence": "sourced"},
+   {"value": "investigator was the culprit", "quote": "he, under the possession of Souleiman's spirit, was the one who committed the arson. He closes the case.", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "tower", "state": "about to open", "when": "opening", "role": "symbol", "quote": "a futuristic-looking tower is about to be officially opened", "confidence": "sourced"},
+   {"value": "ocean", "when": "opening", "role": "symbol", "quote": "The Atlantic Ocean is used in many ways throughout the film, including as a symbol and as an engine for change, growth, life, and death.", "confidence": "sourced"},
+   {"value": "bed on fire", "when": "early", "role": "omen", "quote": "Omar's bed mysteriously catches fire in a suspected arson attack", "confidence": "sourced"},
+   {"value": "graves", "state": "dug by the tycoon", "when": "late", "role": "symbol", "quote": "the possessed force him to dig their graves", "confidence": "sourced"},
+   {"value": "wedding footage", "when": "ending", "role": "clue", "quote": "While reviewing footage from the wedding, the detective sees that he", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "workers unpaid", "when": "opening", "quote": "The construction workers have not been paid for months.", "confidence": "sourced"},
+   {"order": 2, "value": "lover leaves by sea", "when": "opening", "role": "trigger", "quote": "the workers decide to leave the country by sea, in search of a brighter future in Spain. Among them is Souleiman", "confidence": "sourced"},
+   {"order": 3, "value": "fire on wedding day", "when": "early", "role": "omen", "quote": "On her wedding day, Omar's bed mysteriously catches fire", "confidence": "sourced"},
+   {"order": 4, "value": "heroine suspected", "when": "early", "quote": "Ada falls under suspicion and is subjected to interrogations and a virginity test", "confidence": "sourced"},
+   {"order": 5, "value": "dead revealed as possessors", "when": "middle", "role": "turn", "quote": "It slowly emerges that the spirits of the men lost at sea have returned", "confidence": "sourced"},
+   {"order": 6, "value": "debt repaid, graves dug", "when": "late", "quote": "Once they receive their pay from the tycoon, the possessed force him to dig their graves", "confidence": "sourced"},
+   {"order": 7, "value": "last night with the dead lover", "when": "late", "quote": "spends a last night with the new Souleiman", "confidence": "sourced"},
+   {"order": 8, "value": "investigator sees himself", "when": "ending", "role": "turn", "quote": "was the one who committed the arson. He closes the case.", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

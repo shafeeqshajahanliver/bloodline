@@ -1,0 +1,38 @@
+{
+ "film": "2018-the-nightshifter",
+ "sources": [{"file": "wikipedia.pt.md", "sections": ["Lead", "Sinopse"]}],
+ "plot_quality": "thin",
+ "dimensions": {
+  "threat": [
+   {"value": "curse", "quote": "Stênio desencadeia uma maldição que coloca em risco a sua vida e a de seus familiares", "confidence": "sourced"},
+   {"value": "the dead", "quote": "ele nunca está sozinho, pois possui um dom sobrenatural de se comunicar com os mortos", "confidence": "observed"}
+  ],
+  "origin": [
+   {"value": "secrets of the dead", "detail": "confessions from corpses reveal secrets about his own life", "quote": "As confissões sobrenaturais que ele ouve acabam por revelar segredos que envolvem sua própria vida", "confidence": "observed"}
+  ],
+  "trigger": [
+   {"value": "hearing the dead's secrets", "quote": "As confissões sobrenaturais que ele ouve acabam por revelar segredos", "confidence": "observed"}
+  ],
+  "rules": [
+   {"value": "can speak with the dead", "quote": "possui um dom sobrenatural de se comunicar com os mortos", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "morgue worker", "relation_to_threat": "self", "detail": "Stênio, night-shift morgue attendant", "quote": "Stênio (Daniel de Oliveira) é funcionário plantonista de um necrotério de uma grande cidade muito violenta", "confidence": "sourced"},
+   {"value": "family", "relation_to_threat": "family", "quote": "coloca em risco a sua vida e a de seus familiares", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "morgue", "when": "opening", "role": "setting", "quote": "funcionário plantonista de um necrotério de uma grande cidade muito violenta", "confidence": "sourced"},
+   {"value": "corpses", "state": "speaking", "when": "early", "role": "clue", "quote": "As confissões sobrenaturais que ele ouve", "confidence": "observed"}
+  ],
+  "beats": [
+   {"order": 1, "value": "night shift with the dead", "when": "opening", "quote": "Durante as madrugadas de plantão, ele nunca está sozinho", "confidence": "sourced"},
+   {"order": 2, "value": "gift of speaking to dead", "when": "opening", "quote": "possui um dom sobrenatural de se comunicar com os mortos", "confidence": "sourced"},
+   {"order": 3, "value": "secrets revealed", "when": "middle", "role": "turn", "quote": "acabam por revelar segredos que envolvem sua própria vida", "confidence": "sourced"},
+   {"order": 4, "value": "curse unleashed on family", "when": "late", "role": "trigger", "quote": "Stênio desencadeia uma maldição que coloca em risco a sua vida", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wants", "wrong", "ending"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

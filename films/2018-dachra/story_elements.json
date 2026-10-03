@@ -1,0 +1,34 @@
+{
+ "film": "2018-dachra",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}, {"file": "wikipedia.ar.md", "sections": ["Lead"]}],
+ "plot_quality": "thin",
+ "dimensions": {
+  "threat": [
+   {"value": "cannibal witches", "quote": "they find themselves beset by cannibal witches", "confidence": "sourced"},
+   {"value": "village", "quote": "the trail leads them out to an isolated village", "confidence": "observed"}
+  ],
+  "trigger": [
+   {"value": "investigating a cold case", "quote": "set off to investigate a cold case for a school film project", "confidence": "sourced"},
+   {"value": "journey to remote village", "detail": "uncovering a Tunisian village's secret", "quote": "يستكشفون سر قرية تونسية", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "students", "relation_to_threat": "stranger", "detail": "Yasmine, Walid and Bilel", "quote": "Three journalism students, Yasmine, Walid and Bilel, set off to investigate a cold case", "confidence": "sourced"},
+   {"value": "earlier survivor", "relation_to_threat": "unknown", "detail": "Mongia, mutilated 20 years before", "quote": "Mongia, the mutilated survivor of an attack 20 years before", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "mental hospital", "when": "early", "role": "setting", "quote": "After visiting a mental hospital to interview Mongia", "confidence": "sourced"},
+   {"value": "mutilated survivor", "when": "early", "role": "omen", "quote": "Mongia, the mutilated survivor of an attack 20 years before", "confidence": "sourced"},
+   {"value": "isolated village", "when": "middle", "role": "setting", "quote": "the trail leads them out to an isolated village", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "students take on cold case", "when": "opening", "role": "trigger", "quote": "Three journalism students, Yasmine, Walid and Bilel, set off to investigate a cold case for a school film project.", "confidence": "sourced"},
+   {"order": 2, "value": "survivor interviewed", "when": "early", "role": "omen", "quote": "After visiting a mental hospital to interview Mongia, the mutilated survivor", "confidence": "sourced"},
+   {"order": 3, "value": "journey to the village", "when": "middle", "quote": "the trail leads them out to an isolated village", "confidence": "sourced"},
+   {"order": 4, "value": "trapped by witches", "when": "late", "role": "turn", "quote": "Before they fully understand what is happening, they find themselves beset by cannibal witches.", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["origin", "wants", "wrong", "rules", "ending"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

@@ -1,0 +1,60 @@
+{
+ "film": "2018-possum",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "haunted puppet", "detail": "'Possum', a spider-like marionette", "quote": "Philip is haunted by a spider-like marionette called \"Possum.\"", "confidence": "sourced"},
+   {"value": "abusive relative", "detail": "uncle Maurice, the masked man", "quote": "Maurice was the masked man who physically and sexually abused him throughout his childhood", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "childhood trauma", "quote": "a disgraced children's puppeteer who returns to his childhood home and is forced to confront trauma he suffered there", "confidence": "sourced"},
+   {"value": "made by the victim", "detail": "drawn in his own childhood picture book", "quote": "Philip recovers a picture book he made as a young boy. The book depicts Possum's origins", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to devour children", "quote": "it creeps upon unsuspecting, orphaned children, intent on devouring them in their beds", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "child sexual abuse", "quote": "the masked man who physically and sexually abused him throughout his childhood, but still never told anyone", "confidence": "sourced"},
+   {"value": "parents' deaths", "quote": "the deaths of his parents, which left him orphaned and in Maurice's care", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "returning to childhood home", "quote": "is forced to return to his childhood home in Norfolk", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "cannot be disposed of", "quote": "he repeatedly attempts to dispose of the puppet, but it inexplicably returns to him each time", "confidence": "sourced"},
+   {"value": "must not open the room", "quote": "Philip frequently approaches a closed room in the house. Each time, Maurice asks if he plans to go in", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "abused nephew", "relation_to_threat": "family", "detail": "Philip", "quote": "Maurice gleefully beats and molests a sobbing and mentally-regressed Philip", "confidence": "sourced"},
+   {"value": "missing boy", "relation_to_threat": "stranger", "detail": "Michael", "quote": "News reports mention a missing local boy, Michael", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "abuser killed", "quote": "He overpowers Maurice and breaks his neck", "confidence": "sourced"},
+   {"value": "child rescued", "quote": "releasing a terrified Michael who scrambles away", "confidence": "sourced"},
+   {"value": "ambiguous", "quote": "Philip stares blankly ahead, with Possum's severed head in his lap", "confidence": "observed"}
+  ],
+  "images": [
+   {"value": "marionette", "state": "spider-like, keeps returning", "when": "opening", "role": "threat", "quote": "a spider-like marionette called \"Possum.\"", "confidence": "sourced"},
+   {"value": "picture book", "when": "early", "role": "clue", "quote": "Philip recovers a picture book he made as a young boy", "confidence": "sourced"},
+   {"value": "burned house", "when": "opening", "role": "setting", "quote": "The home, in disrepair due to a past fire", "confidence": "sourced"},
+   {"value": "closed room", "state": "charred", "when": "late", "role": "clue", "quote": "Philip enters the closed room, which is revealed to be badly charred from the fire", "confidence": "sourced"},
+   {"value": "mask", "when": "late", "role": "turn", "quote": "he is attacked by a masked man, who reveals himself to be Maurice", "confidence": "sourced"},
+   {"value": "locked chest", "state": "child inside", "when": "ending", "role": "clue", "quote": "Philip hears a whimper from a locked chest in the corner", "confidence": "sourced"},
+   {"value": "severed puppet head", "when": "ending", "role": "symbol", "quote": "with Possum's severed head in his lap", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "disgraced return home", "when": "opening", "role": "trigger", "quote": "Philip Connell, a disgraced children's puppeteer, is forced to return to his childhood home", "confidence": "sourced"},
+   {"order": 2, "value": "object keeps returning", "when": "early", "role": "omen", "quote": "he repeatedly attempts to dispose of the puppet, but it inexplicably returns to him each time", "confidence": "sourced"},
+   {"order": 3, "value": "child goes missing", "when": "middle", "quote": "Authorities indicate that a man fitting Philip's description is a person of interest", "confidence": "sourced"},
+   {"order": 4, "value": "becoming the monster", "when": "late", "quote": "now has horrifying visions of becoming Possum himself", "confidence": "sourced"},
+   {"order": 5, "value": "forbidden room entered", "when": "late", "role": "turn", "quote": "Philip enters the closed room, which is revealed to be badly charred", "confidence": "sourced"},
+   {"order": 6, "value": "abuser unmasked", "when": "late", "role": "turn", "quote": "he is attacked by a masked man, who reveals himself to be Maurice", "confidence": "sourced"},
+   {"order": 7, "value": "abuser killed, child freed", "when": "ending", "quote": "He overpowers Maurice and breaks his neck. Philip unlocks the chest", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

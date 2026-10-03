@@ -1,0 +1,59 @@
+{
+ "film": "2017-it-comes-at-night",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "disease", "quote": "a family hiding in a forest as the Earth is taken over by a highly contagious disease", "confidence": "sourced"},
+   {"value": "other survivors", "detail": "mistrust between two families", "quote": "Will seemingly contradicts a story he told Paul earlier, resulting in Paul's increasing distrust of Will", "confidence": "observed"},
+   {"value": "unseen presence", "quote": "Travis's dog Stanley begins barking aggressively at an unseen presence and chases it into the woods", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "unexplained", "quote": "A contagious disease ravages the planet.", "confidence": "observed"}
+  ],
+  "wants": [
+   {"value": "to survive", "detail": "both families", "quote": "Will demands Paul give him a \"fair share\" of food and water so they can leave", "confidence": "observed"}
+  ],
+  "trigger": [
+   {"value": "stranger breaks in", "quote": "That night, they capture an intruder breaking in.", "confidence": "sourced"},
+   {"value": "taking strangers in", "quote": "Sarah suggests taking the strangers in, on the reasoning that with more people it would be easier to defend themselves.", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "door must stay locked", "quote": "keeping the only entrance locked with a key Paul or Sarah wear around their neck", "confidence": "sourced"},
+   {"value": "the sick are killed and burned", "quote": "they euthanise him and burn his body", "confidence": "sourced"},
+   {"value": "quarantine", "quote": "decides they should quarantine in their separate rooms to ensure no one is sick", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "family", "relation_to_threat": "family", "detail": "Paul, Sarah and Travis", "quote": "Paul, Sarah and their teenage son Travis live a secluded lifestyle in their home", "confidence": "sourced"},
+   {"value": "newcomer family", "relation_to_threat": "stranger", "detail": "Will, Kim and Andrew", "quote": "Paul returns with Will, his wife Kim, and son Andrew.", "confidence": "sourced"},
+   {"value": "teenage son", "relation_to_threat": "family", "quote": "Travis awakens in bed, visibly sick. His mother comforts him as he dies.", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "everyone dies", "quote": "Paul and Sarah, now visibly infected, sit at the dinner table in silence.", "confidence": "sourced"},
+   {"value": "protectors become killers", "quote": "Paul fires at them, killing Andrew, then Kim.", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "burning body", "when": "opening", "role": "omen", "quote": "they euthanise him and burn his body", "confidence": "sourced"},
+   {"value": "bag over head", "when": "early", "role": "symbol", "quote": "Paul ties him to a tree and places a bag over his head", "confidence": "sourced"},
+   {"value": "dog", "state": "barking, then sick", "when": "middle", "role": "omen", "quote": "finding a bleeding and gravely sick Stanley on the floor", "confidence": "sourced"},
+   {"value": "red door", "state": "found open", "when": "middle", "role": "clue", "quote": "He also finds the front door of the house open.", "confidence": "sourced"},
+   {"value": "key on a neck", "when": "middle", "role": "symbol", "quote": "a key Paul or Sarah wear around their neck", "confidence": "sourced"},
+   {"value": "protective masks", "when": "late", "role": "symbol", "quote": "Paul and Sarah don protective masks and gloves", "confidence": "sourced"},
+   {"value": "nightmares", "when": "middle", "role": "omen", "quote": "Travis is awakened by a nightmare about his grandfather", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "infected relative killed", "when": "opening", "quote": "After Sarah's father Bud contracts the disease, they euthanise him and burn his body.", "confidence": "sourced"},
+   {"order": 2, "value": "intruder captured", "when": "early", "role": "trigger", "quote": "That night, they capture an intruder breaking in.", "confidence": "sourced"},
+   {"order": 3, "value": "strangers taken in", "when": "early", "quote": "Paul returns with Will, his wife Kim, and son Andrew.", "confidence": "sourced"},
+   {"order": 4, "value": "dog chases unseen thing", "when": "middle", "role": "omen", "quote": "Stanley begins barking aggressively at an unseen presence and chases it into the woods", "confidence": "sourced"},
+   {"order": 5, "value": "door found open, dog sick", "when": "middle", "role": "turn", "quote": "The families investigate, finding a bleeding and gravely sick Stanley on the floor.", "confidence": "sourced"},
+   {"order": 6, "value": "standoff", "when": "late", "quote": "Will draws a gun and takes Paul captive.", "confidence": "sourced"},
+   {"order": 7, "value": "newcomers killed", "when": "late", "quote": "Paul fires at them, killing Andrew, then Kim.", "confidence": "sourced"},
+   {"order": 8, "value": "son dies, parents infected", "when": "ending", "quote": "They share a shattered, devastated look.", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}
