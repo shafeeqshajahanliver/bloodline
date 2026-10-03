@@ -1,62 +1,409 @@
 {
  "film": "1982-the-entity",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "invisible assailant", "quote": "single mother Carla Moran is violently raped in her Los Angeles bungalow by an invisible assailant", "confidence": "sourced"},
-   {"value": "incubus", "detail": "a themes reading", "quote": "describes the entity in the film as akin to an incubus, a demon that sexually assaults sleeping women", "confidence": "sourced"}
+   {
+    "value": "invisible assailant",
+    "quote": "single mother Carla Moran is violently raped in her Los Angeles bungalow by an invisible assailant",
+    "confidence": "sourced"
+   },
+   {
+    "value": "incubus",
+    "detail": "a themes reading",
+    "quote": "describes the entity in the film as akin to an incubus, a demon that sexually assaults sleeping women",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "unexplained", "quote": "they realize that the entity is far bigger than anyone imagined", "confidence": "observed"},
-   {"value": "based on a real case", "quote": "based on the 1974 case of Doris Bither, a woman who claimed to have been repeatedly sexually assaulted by an invisible assailant", "confidence": "sourced"}
+   {
+    "value": "unexplained",
+    "quote": "they realize that the entity is far bigger than anyone imagined",
+    "confidence": "observed"
+   },
+   {
+    "value": "based on a real case",
+    "quote": "based on the 1974 case of Doris Bither, a woman who claimed to have been repeatedly sexually assaulted by an invisible assailant",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to possess a woman", "quote": "stating that it may kill her, but it will never have her", "confidence": "observed"}
+   {
+    "value": "to possess a woman",
+    "quote": "stating that it may kill her, but it will never have her",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:56:41",
+      "quote": "But you can't have me. You cannot touch me."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "childhood abuse", "detail": "Carla's past traumas, used by doctors to dismiss her", "quote": "she suffered a variety of traumas in her childhood and adolescence, including sexual molestation, teenage pregnancy", "confidence": "sourced"}
+   {
+    "value": "childhood abuse",
+    "detail": "Carla's past traumas, used by doctors to dismiss her",
+    "quote": "she suffered a variety of traumas in her childhood and adolescence, including sexual molestation, teenage pregnancy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:09",
+      "quote": "it wasn't the way a father should hold a daughter."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "unexplained attack", "quote": "One night, single mother Carla Moran is violently raped in her Los Angeles bungalow", "confidence": "sourced"}
+   {
+    "value": "unexplained attack",
+    "quote": "One night, single mother Carla Moran is violently raped in her Los Angeles bungalow",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "cannot be contained", "quote": "It breaks free and vanishes almost immediately", "confidence": "sourced"},
-   {"value": "follows the victim", "quote": "Carla still experiences attacks from the entity, although they have lessened in frequency and severity", "confidence": "sourced"},
-   {"value": "victim not believed", "quote": "Dr. Sneiderman believes her apparent paranormal experiences are delusions resulting from her past psychological trauma", "confidence": "sourced"}
+   {
+    "value": "cannot be contained",
+    "quote": "It breaks free and vanishes almost immediately",
+    "confidence": "sourced"
+   },
+   {
+    "value": "follows the victim",
+    "quote": "Carla still experiences attacks from the entity, although they have lessened in frequency and severity",
+    "confidence": "sourced"
+   },
+   {
+    "value": "victim not believed",
+    "quote": "Dr. Sneiderman believes her apparent paranormal experiences are delusions resulting from her past psychological trauma",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:01",
+      "quote": "It was a suicide attempt, Carla."
+     }
+    ]
+   },
+   {
+    "value": "cold and smell signal it",
+    "source": "subtitles",
+    "at": "01:14:43",
+    "quote": "There's cold spots. There's the smell.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "single mother", "relation_to_threat": "stranger", "detail": "Carla Moran", "quote": "The film follows a single mother in Los Angeles who is raped and tormented by an invisible poltergeist-like entity in her home", "confidence": "sourced"},
-   {"value": "son", "relation_to_threat": "stranger", "quote": "he is hit by electrical discharges and his wrist is broken", "confidence": "sourced"},
-   {"value": "boyfriend", "relation_to_threat": "stranger", "detail": "Jerry Anderson", "quote": "Jerry is so troubled by the experience that he ends their relationship", "confidence": "sourced"}
+   {
+    "value": "single mother",
+    "relation_to_threat": "stranger",
+    "detail": "Carla Moran",
+    "quote": "The film follows a single mother in Los Angeles who is raped and tormented by an invisible poltergeist-like entity in her home",
+    "confidence": "sourced"
+   },
+   {
+    "value": "son",
+    "relation_to_threat": "stranger",
+    "quote": "he is hit by electrical discharges and his wrist is broken",
+    "confidence": "sourced"
+   },
+   {
+    "value": "boyfriend",
+    "relation_to_threat": "stranger",
+    "detail": "Jerry Anderson",
+    "quote": "Jerry is so troubled by the experience that he ends their relationship",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat survives", "quote": "Carla still experiences attacks from the entity", "confidence": "sourced"},
-   {"value": "victim leaves home", "quote": "She calmly opens the door, exits the house, gets in a car with her family and leaves", "confidence": "sourced"},
-   {"value": "victim believed", "quote": "Sneiderman realizes that Carla has been telling the truth", "confidence": "sourced"}
+   {
+    "value": "threat survives",
+    "quote": "Carla still experiences attacks from the entity",
+    "confidence": "sourced"
+   },
+   {
+    "value": "victim leaves home",
+    "quote": "She calmly opens the door, exits the house, gets in a car with her family and leaves",
+    "confidence": "sourced"
+   },
+   {
+    "value": "victim believed",
+    "quote": "Sneiderman realizes that Carla has been telling the truth",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "bite marks and bruises", "when": "early", "role": "clue", "quote": "A subsequent attack in her bathroom leaves bite marks and bruises", "confidence": "sourced"},
-   {"value": "car", "state": "out of control", "when": "early", "role": "threat", "quote": "Carla is nearly killed when her car mysteriously goes out of control in traffic", "confidence": "sourced"},
-   {"value": "electrical discharges", "when": "middle", "role": "weapon", "quote": "he is hit by electrical discharges and his wrist is broken", "confidence": "sourced"},
-   {"value": "invisible fingers", "when": "middle", "role": "threat", "quote": "being raped and noticeably fondled by invisible fingers", "confidence": "sourced"},
-   {"value": "replica of the house", "when": "late", "role": "setting", "quote": "A full mock-up of her home is created to lure the entity into a trap", "confidence": "sourced"},
-   {"value": "ice", "state": "huge block, breaking", "when": "late", "role": "turn", "quote": "has been trapped in a huge mass of ice", "confidence": "sourced"},
-   {"value": "door", "state": "slamming by itself", "when": "ending", "role": "threat", "quote": "The front door slams by itself and she is greeted menacingly by a disembodied demonic voice", "confidence": "sourced"}
+   {
+    "value": "bite marks and bruises",
+    "when": "early",
+    "role": "clue",
+    "quote": "A subsequent attack in her bathroom leaves bite marks and bruises",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:18",
+      "quote": "The bites are real. The bruises are real."
+     }
+    ]
+   },
+   {
+    "value": "car",
+    "state": "out of control",
+    "when": "early",
+    "role": "threat",
+    "quote": "Carla is nearly killed when her car mysteriously goes out of control in traffic",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:19",
+      "quote": "(TIRES SCREECHING)"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:05:01",
+      "quote": "What do you think you were doing when you crashed your car?"
+     }
+    ]
+   },
+   {
+    "value": "electrical discharges",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "he is hit by electrical discharges and his wrist is broken",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:31",
+      "quote": "(ELECTRICITY CRACKLING)"
+     }
+    ]
+   },
+   {
+    "value": "invisible fingers",
+    "when": "middle",
+    "role": "threat",
+    "quote": "being raped and noticeably fondled by invisible fingers",
+    "confidence": "sourced"
+   },
+   {
+    "value": "replica of the house",
+    "when": "late",
+    "role": "setting",
+    "quote": "A full mock-up of her home is created to lure the entity into a trap",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:38",
+      "quote": "Mrs. Moran, this is the protected area that we were talking about."
+     }
+    ]
+   },
+   {
+    "value": "ice",
+    "state": "huge block, breaking",
+    "when": "late",
+    "role": "turn",
+    "quote": "has been trapped in a huge mass of ice",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:41:23",
+      "quote": "This is the coldest substance known to man."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:57:56",
+      "quote": "We got him trapped."
+     }
+    ]
+   },
+   {
+    "value": "door",
+    "state": "slamming by itself",
+    "when": "ending",
+    "role": "threat",
+    "quote": "The front door slams by itself and she is greeted menacingly by a disembodied demonic voice",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:00:47",
+      "quote": "Welcome home"
+     }
+    ]
+   },
+   {
+    "value": "ticking clock",
+    "state": "heard before attacks",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:05:12",
+    "quote": "(CLOCK TICKING)",
+    "detail": "a ticking clock is heard before nearly every attack",
+    "confidence": "sourced"
+   },
+   {
+    "value": "foul smell",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:16:54",
+    "quote": "Oh, my God. Do you smell that?",
+    "detail": "Carla calls the entity foul; the investigators smell it",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "attack in the night", "when": "opening", "role": "trigger", "quote": "One night, single mother Carla Moran is violently raped in her Los Angeles bungalow by an invisible assailant", "confidence": "sourced"},
-   {"order": 2, "value": "psychiatrist doubts her", "when": "early", "quote": "who believes they are self-inflicted despite being in places impossible for her to reach", "confidence": "sourced"},
-   {"order": 3, "value": "children witness an attack", "when": "middle", "quote": "Carla is attacked again, this time in front of her children", "confidence": "sourced"},
-   {"order": 4, "value": "parapsychologists believe", "when": "middle", "role": "turn", "quote": "Initially skeptical, they witness several paranormal events and agree to study the home", "confidence": "sourced"},
-   {"order": 5, "value": "trap set for the entity", "when": "late", "quote": "A full mock-up of her home is created to lure the entity into a trap and freeze it with liquid helium", "confidence": "sourced"},
-   {"order": 6, "value": "victim defies the threat", "when": "late", "role": "turn", "quote": "She defiantly stands up to it, stating that it may kill her, but it will never have her", "confidence": "sourced"},
-   {"order": 7, "value": "threat escapes", "when": "late", "quote": "It breaks free and vanishes almost immediately", "confidence": "sourced"},
-   {"order": 8, "value": "family leaves, attacks continue", "when": "ending", "quote": "A closing intertitle verifies that Carla and her family have moved to Texas", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "attack in the night",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "One night, single mother Carla Moran is violently raped in her Los Angeles bungalow by an invisible assailant",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:42",
+      "quote": "(MUFFLED SCREAMING)"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "psychiatrist doubts her",
+    "when": "early",
+    "quote": "who believes they are self-inflicted despite being in places impossible for her to reach",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:19",
+      "quote": "I'm one of the staff psychiatrists here at the clinic."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "victim recalls abusive father",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:45:53",
+    "quote": "I was scared of my father. He was a minister, if you can believe it.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "children witness an attack",
+    "when": "middle",
+    "quote": "Carla is attacked again, this time in front of her children",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:50",
+      "quote": "Get off her!"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "parapsychologists believe",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Initially skeptical, they witness several paranormal events and agree to study the home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:54",
+      "quote": "Oh, my God. Do you smell that?"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "trap set for the entity",
+    "when": "late",
+    "quote": "A full mock-up of her home is created to lure the entity into a trap and freeze it with liquid helium",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:53:27",
+      "quote": "Mrs. Moran, move to the protected area."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "victim defies the threat",
+    "when": "late",
+    "role": "turn",
+    "quote": "She defiantly stands up to it, stating that it may kill her, but it will never have her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:56:41",
+      "quote": "But you can't have me."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "threat escapes",
+    "when": "late",
+    "quote": "It breaks free and vanishes almost immediately",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:58:53",
+      "quote": "We lost it."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "family leaves, attacks continue",
+    "when": "ending",
+    "quote": "A closing intertitle verifies that Carla and her family have moved to Texas",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:02:12",
+      "quote": "Lock your door. Lock your door."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

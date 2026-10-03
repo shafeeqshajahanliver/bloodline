@@ -7,6 +7,12 @@
     "Lead",
     "Plot"
    ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
   }
  ],
  "plot_quality": "full",
@@ -22,7 +28,14 @@
     "value": "haunted place",
     "detail": "the spaceship Event Horizon",
     "quote": "Weir finds her body and is flung into a hallucination of his wife's suicide, driving him to gouge out his own eyes and embrace the ship's evil presence",
-    "confidence": "observed"
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:11",
+      "quote": "What are you telling me? That this ship is alive?"
+     }
+    ]
    },
    {
     "value": "possessed ally",
@@ -41,14 +54,28 @@
    {
     "value": "hell",
     "quote": "Weir initiates a 10-minute countdown to activate the gravity drive and return the ship to Hell",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:26",
+      "quote": "A dimension of pure chaos, pure evil."
+     }
+    ]
    }
   ],
   "wants": [
    {
     "value": "to return to hell",
     "quote": "activate the gravity drive and return the ship to Hell",
-    "confidence": "observed"
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:35",
+      "quote": "The gateway is open and you are all coming with me."
+     }
+    ]
    },
    {
     "value": "to corrupt",
@@ -61,12 +88,26 @@
     "value": "abandoning a comrade",
     "detail": "Miller left a subordinate to die",
     "quote": "Miller sees a subordinate from a previous mission whom he left to die in order to save the other crew",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:14",
+      "quote": "Don't leave me!"
+     }
+    ]
    },
    {
     "value": "spouse's suicide",
     "quote": "flung into a hallucination of his wife's suicide",
-    "confidence": "observed"
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:34",
+      "quote": "I let my work come between us."
+     }
+    ]
    }
   ],
   "trigger": [
@@ -90,6 +131,13 @@
    {
     "value": "lures with loved ones",
     "quote": "Peters is lured to her death by a hallucination of her son",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ship will not let you leave",
+    "source": "subtitles",
+    "at": "01:25:46",
+    "quote": "She won't let anyone leave.",
     "confidence": "sourced"
    }
   ],
@@ -133,35 +181,86 @@
     "when": "opening",
     "role": "omen",
     "quote": "the distress signal, which consists of screams, howls, and a voice speaking Latin",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:22",
+      "quote": "Sounds like, \" liberate me, \""
+     },
+     {
+      "source": "subtitles",
+      "at": "01:00:22",
+      "quote": "It's \" liberate tutu me. \" \" Save yourself. \""
+     }
+    ]
    },
    {
     "value": "portal",
     "when": "early",
     "role": "threat",
     "quote": "the ship's gravity drive activates and pulls Justin into a portal",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:59",
+      "quote": "WEIR: This is the gateway."
+     }
+    ]
+   },
+   {
+    "value": "corpse with ruined eyes",
+    "state": "dead, frozen",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:28:46",
+    "quote": "What the hell happened to his eyes?",
+    "confidence": "sourced",
+    "detail": "a frozen crewman of the Event Horizon; eye mutilation recurs through the film"
    },
    {
     "value": "eyeless wife",
     "when": "early",
     "role": "threat",
     "quote": "Weir sees a vision of his dead wife, now eyeless, urging him to join her",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:49",
+      "quote": "CLAIRE: Billy. I'm so alone."
+     }
+    ]
    },
    {
     "value": "child with bloody legs",
     "when": "early",
     "role": "threat",
     "quote": "Peters sees her son with his legs covered in bloody lesions",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:00",
+      "quote": "And his legs were crawling..."
+     }
+    ]
    },
    {
     "value": "video log",
     "when": "middle",
     "role": "clue",
     "quote": "showing the ship's crew members brutalizing each other after engaging the gravity drive",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:52",
+      "quote": "It's the final entry in the ship's log."
+     }
+    ]
    },
    {
     "value": "eyeballs in hands",
@@ -175,74 +274,167 @@
     "when": "late",
     "role": "turn",
     "quote": "driving him to gouge out his own eyes",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:04",
+      "quote": "Where we're going, we won't need eyes to see."
+     }
+    ]
    }
   ],
   "beats": [
    {
-    "order": 1,
+    "value": "dream of own eyeless corpse",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "He is dead, perfectly preserved in the cold vacuum of space. His eyes are empty black pits",
+    "confidence": "sourced",
+    "detail": "Weir wakes from it and speaks to his dead wife",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:26",
+      "quote": "I miss you."
+     }
+    ],
+    "order": 1
+   },
+   {
+    "order": 2,
     "value": "distress call from the lost",
     "when": "opening",
     "role": "omen",
     "quote": "a distress signal is received from the Event Horizon, a spaceship that disappeared during its maiden voyage",
-    "confidence": "sourced"
-   },
-   {
-    "order": 2,
-    "value": "massacre found",
-    "when": "early",
-    "quote": "Upon boarding the Event Horizon, the crew finds signs of a massacre",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:22",
+      "quote": "Sounds like, \" liberate me, \""
+     }
+    ]
    },
    {
     "order": 3,
+    "value": "massacre found",
+    "when": "early",
+    "quote": "Upon boarding the Event Horizon, the crew finds signs of a massacre",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:26",
+      "quote": "Got some blood here."
+     }
+    ]
+   },
+   {
+    "order": 4,
     "value": "trapped aboard",
     "when": "early",
     "quote": "The crew is forced to relocate to the Event Horizon",
     "confidence": "sourced"
    },
    {
-    "order": 4,
+    "value": "crewman pulled into core",
+    "when": "early",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:36:21",
+    "quote": "It was liquid, and the whole core just turned solid.",
+    "confidence": "sourced",
+    "order": 5
+   },
+   {
+    "order": 6,
     "value": "hallucinations of guilt",
     "when": "early",
     "quote": "The crew experience hallucinations of their largest fears and regrets",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:51",
+      "quote": "About an hour ago, I saw my son"
+     }
+    ]
    },
    {
-    "order": 5,
+    "value": "crewman walks out airlock",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "00:53:40",
+    "quote": "It's starting. My eyes.",
+    "confidence": "sourced",
+    "order": 7
+   },
+   {
+    "order": 8,
     "value": "recording reveals past",
     "when": "middle",
     "role": "clue",
     "quote": "A video log is discovered on the Event Horizon",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:36",
+      "quote": "(PEOPLE SCREAMING)"
+     }
+    ]
    },
    {
-    "order": 6,
+    "order": 9,
     "value": "ally turns",
     "when": "late",
     "role": "turn",
     "quote": "driving him to gouge out his own eyes and embrace the ship's evil presence",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:02",
+      "quote": "What happened to your eyes?"
+     }
+    ]
    },
    {
-    "order": 7,
+    "order": 10,
     "value": "captain sacrifices himself",
     "when": "late",
     "quote": "Miller fights Weir at the gravity drive and detonates the explosives",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:27",
+      "quote": "You take me. You leave them alone."
+     }
+    ]
    },
    {
-    "order": 8,
+    "order": 11,
     "value": "rescue and nightmare sting",
     "when": "ending",
     "role": "turn",
     "quote": "Starck hallucinates Weir as one of the rescuers and screams",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:45",
+      "quote": "(SCREAMING) COOPER: STARCK. STARCK."
+     }
+    ]
    }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

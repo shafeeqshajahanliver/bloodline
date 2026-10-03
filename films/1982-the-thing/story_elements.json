@@ -1,60 +1,488 @@
 {
  "film": "1982-the-thing",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "shapeshifting alien", "detail": "the Thing", "quote": "an extraterrestrial life-form that assimilates, then imitates, other organisms", "confidence": "sourced"},
-   {"value": "paranoia", "quote": "they can no longer trust each other and that any of them could be the Thing", "confidence": "sourced"}
+   {
+    "value": "shapeshifting alien",
+    "detail": "the Thing",
+    "quote": "an extraterrestrial life-form that assimilates, then imitates, other organisms",
+    "confidence": "sourced"
+   },
+   {
+    "value": "paranoia",
+    "quote": "they can no longer trust each other and that any of them could be the Thing",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "from outer space", "detail": "buried spacecraft", "quote": "a partially buried alien spacecraft, which Norris estimates has been buried for over a hundred thousand years", "confidence": "sourced"},
-   {"value": "unearthed from ice", "detail": "dug up by the Norwegians", "quote": "a large excavation site containing a partially buried alien spacecraft", "confidence": "observed"}
+   {
+    "value": "from outer space",
+    "detail": "buried spacecraft",
+    "quote": "a partially buried alien spacecraft, which Norris estimates has been buried for over a hundred thousand years",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:56",
+      "quote": "It could have imitated a million life-forms on a million planets."
+     }
+    ]
+   },
+   {
+    "value": "unearthed from ice",
+    "detail": "dug up by the Norwegians",
+    "quote": "a large excavation site containing a partially buried alien spacecraft",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:34",
+      "quote": "is 100,000 years old at least."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to spread", "detail": "assimilate all life", "quote": "the creature could assimilate all life on Earth in a matter of years", "confidence": "sourced"},
-   {"value": "to survive", "quote": "every part of the Thing is an individual life-form with its own survival instinct", "confidence": "sourced"}
+   {
+    "value": "to spread",
+    "detail": "assimilate all life",
+    "quote": "the creature could assimilate all life on Earth in a matter of years",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:41",
+      "quote": "A cell gets out, it could imitate everything on the face of the earth!"
+     }
+    ]
+   },
+   {
+    "value": "to survive",
+    "quote": "every part of the Thing is an individual life-form with its own survival instinct",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:35",
+      "quote": "It wants to hide inside an imitation."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "taking in a stray", "detail": "the sled dog", "quote": "a Norwegian helicopter pursues a sled dog to an American research station", "confidence": "sourced"},
-   {"value": "bringing back remains", "quote": "they find the burnt corpse of a malformed humanoid, which they transfer to the American station", "confidence": "sourced"}
+   {
+    "value": "taking in a stray",
+    "detail": "the sled dog",
+    "quote": "a Norwegian helicopter pursues a sled dog to an American research station",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bringing back remains",
+    "quote": "they find the burnt corpse of a malformed humanoid, which they transfer to the American station",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "imitates its victims", "quote": "an organism that can perfectly imitate other life forms", "confidence": "sourced"},
-   {"value": "weak to fire", "detail": "blood recoils from heat", "quote": "Everyone passes the test except Palmer, whose blood recoils from the heat", "confidence": "sourced"},
-   {"value": "every part is alive", "quote": "every part of the Thing is an individual life-form with its own survival instinct", "confidence": "sourced"}
+   {
+    "value": "imitates its victims",
+    "quote": "an organism that can perfectly imitate other life forms",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:17",
+      "quote": "that imitates other life-forms, and it imitates them perfectly."
+     }
+    ]
+   },
+   {
+    "value": "weak to fire",
+    "detail": "blood recoils from heat",
+    "quote": "Everyone passes the test except Palmer, whose blood recoils from the heat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:48",
+      "quote": "We gotta burn the rest of them."
+     }
+    ]
+   },
+   {
+    "value": "every part is alive",
+    "quote": "every part of the Thing is an individual life-form with its own survival instinct",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:22",
+      "quote": "maybe every part of him was a whole."
+     }
+    ]
+   },
+   {
+    "value": "blood defends itself",
+    "source": "subtitles",
+    "at": "01:19:44",
+    "quote": "But blood from one of you things won't obey when it's attacked.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "isolated team", "relation_to_threat": "stranger", "detail": "American researchers in Antarctica", "quote": "a group of American researchers in Antarctica", "confidence": "sourced"},
-   {"value": "dogs", "relation_to_threat": "stranger", "detail": "station dogs", "quote": "absorbs several of the station dogs", "confidence": "sourced"}
+   {
+    "value": "isolated team",
+    "relation_to_threat": "stranger",
+    "detail": "American researchers in Antarctica",
+    "quote": "a group of American researchers in Antarctica",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dogs",
+    "relation_to_threat": "stranger",
+    "detail": "station dogs",
+    "quote": "absorbs several of the station dogs",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "ambiguous", "detail": "Childs's return is unexplained", "quote": "Childs returns, claiming that he got lost in the storm while pursuing Blair", "confidence": "observed"},
-   {"value": "everyone dies", "detail": "two men freezing to death", "quote": "Exhausted and slowly freezing to death, they acknowledge the futility of their distrust", "confidence": "observed"}
+   {
+    "value": "ambiguous",
+    "detail": "Childs's return is unexplained",
+    "quote": "Childs returns, claiming that he got lost in the storm while pursuing Blair",
+    "confidence": "observed"
+   },
+   {
+    "value": "everyone dies",
+    "detail": "two men freezing to death",
+    "quote": "Exhausted and slowly freezing to death, they acknowledge the futility of their distrust",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "dog", "state": "pursued by helicopter", "when": "opening", "role": "omen", "quote": "a Norwegian helicopter pursues a sled dog to an American research station", "confidence": "sourced"},
-   {"value": "malformed corpse", "state": "burnt", "when": "opening", "role": "clue", "quote": "the burnt corpse of a malformed humanoid", "confidence": "sourced"},
-   {"value": "flamethrower", "when": "early", "role": "weapon", "quote": "Childs uses a flamethrower to incinerate the creature", "confidence": "sourced"},
-   {"value": "spacecraft", "state": "buried in ice", "when": "early", "role": "clue", "quote": "a partially buried alien spacecraft", "confidence": "sourced"},
-   {"value": "blood", "state": "tested with hot wire", "when": "late", "role": "clue", "quote": "testing blood samples from each survivor with a heated piece of wire", "confidence": "sourced"},
-   {"value": "chest mouth", "when": "late", "role": "threat", "quote": "his chest transforms into a large mouth and bites off Copper's arms", "confidence": "sourced"},
-   {"value": "dynamite", "when": "ending", "role": "weapon", "quote": "MacReady triggers the explosives with a stick of dynamite", "confidence": "sourced"},
-   {"value": "whisky bottle", "state": "shared", "when": "ending", "role": "symbol", "quote": "share a bottle of J&B Scotch whisky", "confidence": "sourced"}
+   {
+    "value": "dog",
+    "state": "pursued by helicopter",
+    "when": "opening",
+    "role": "omen",
+    "quote": "a Norwegian helicopter pursues a sled dog to an American research station",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:37",
+      "quote": "shooting at a dog, at us?"
+     }
+    ]
+   },
+   {
+    "value": "malformed corpse",
+    "state": "burnt",
+    "when": "opening",
+    "role": "clue",
+    "quote": "the burnt corpse of a malformed humanoid",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:52",
+      "quote": "Is that a man in there or something?"
+     }
+    ]
+   },
+   {
+    "value": "flamethrower",
+    "when": "early",
+    "role": "weapon",
+    "quote": "Childs uses a flamethrower to incinerate the creature",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:26",
+      "quote": "Mac wants the flamethrower!"
+     }
+    ]
+   },
+   {
+    "value": "spacecraft",
+    "state": "buried in ice",
+    "when": "early",
+    "role": "clue",
+    "quote": "a partially buried alien spacecraft",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Thousands of years ago this rocket ship crashes, right?"
+     }
+    ]
+   },
+   {
+    "value": "blood",
+    "state": "tested with hot wire",
+    "when": "late",
+    "role": "clue",
+    "quote": "testing blood samples from each survivor with a heated piece of wire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:57",
+      "quote": "[Blood Screeches]"
+     }
+    ]
+   },
+   {
+    "value": "chest mouth",
+    "when": "late",
+    "role": "threat",
+    "quote": "his chest transforms into a large mouth and bites off Copper's arms",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:11",
+      "quote": "[Paddles Shocking]"
+     }
+    ]
+   },
+   {
+    "value": "dynamite",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "MacReady triggers the explosives with a stick of dynamite",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:37",
+      "quote": "[Dynamite Sizzling]"
+     }
+    ]
+   },
+   {
+    "value": "whisky bottle",
+    "state": "shared",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "share a bottle of J&B Scotch whisky",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "MacReady, carrying the bottle and glass, limps over"
+     }
+    ]
+   },
+   {
+    "value": "chess computer",
+    "when": "opening",
+    "role": "omen",
+    "state": "cheats, then destroyed",
+    "detail": "MacReady loses to the machine and pours his drink into its circuits",
+    "source": "subtitles",
+    "at": "00:05:38",
+    "quote": "Checkmate. Checkmate.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "He bends forward, opens up a flap containing the chess game's circuitry and pours in his drink."
+     }
+    ]
+   },
+   {
+    "value": "tape-recorded log",
+    "when": "middle",
+    "role": "clue",
+    "detail": "MacReady records a log in case nobody survives",
+    "source": "subtitles",
+    "at": "01:03:08",
+    "quote": "If none of us make it, at least there'll be some kind of record.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "makeshift spacecraft",
+    "when": "late",
+    "role": "clue",
+    "detail": "Blair's Thing builds a craft from helicopter parts",
+    "source": "subtitles",
+    "at": "01:29:01",
+    "quote": "It's a ship of some kind.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "dog pursued into camp", "when": "opening", "role": "omen", "quote": "a Norwegian helicopter pursues a sled dog to an American research station", "confidence": "sourced"},
-   {"order": 2, "value": "ruined base investigated", "when": "opening", "role": "clue", "quote": "Among the charred ruins and frozen corpses", "confidence": "sourced"},
-   {"order": 3, "value": "dog transforms", "when": "early", "role": "turn", "quote": "it soon metamorphoses and absorbs several of the station dogs", "confidence": "sourced"},
-   {"order": 4, "value": "expert breaks down", "when": "middle", "quote": "The team also imprisons Blair in a tool shed after he sabotages all the vehicles", "confidence": "sourced"},
-   {"order": 5, "value": "trust collapses", "when": "middle", "quote": "the men lose faith in Garry's leadership, and MacReady takes command", "confidence": "sourced"},
-   {"order": 6, "value": "blood test", "when": "late", "role": "turn", "quote": "Everyone passes the test except Palmer, whose blood recoils from the heat", "confidence": "sourced"},
-   {"order": 7, "value": "station destroyed", "when": "late", "quote": "destroying the station and the Blair-Thing", "confidence": "sourced"},
-   {"order": 8, "value": "uncertain last survivors", "when": "ending", "quote": "they acknowledge the futility of their distrust and share a bottle", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "dog pursued into camp",
+    "when": "opening",
+    "role": "omen",
+    "quote": "a Norwegian helicopter pursues a sled dog to an American research station",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:33",
+      "quote": "[Helicopter Approaching]"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "chess game lost",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:05:45",
+    "quote": "You cheating' bitch.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "ruined base investigated",
+    "when": "opening",
+    "role": "clue",
+    "quote": "Among the charred ruins and frozen corpses",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:03",
+      "quote": "Portable video unit."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "dog transforms",
+    "when": "early",
+    "role": "turn",
+    "quote": "it soon metamorphoses and absorbs several of the station dogs",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:21",
+      "quote": "[Dog Groaning, Thing Screeches]"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "expert breaks down",
+    "when": "middle",
+    "quote": "The team also imprisons Blair in a tool shed after he sabotages all the vehicles",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:15",
+      "quote": "Don't come in here! I got a gun! I got an ax!"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "test sabotaged",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:57:47",
+    "quote": "Somebody got to the blood!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "trust collapses",
+    "when": "middle",
+    "quote": "the men lose faith in Garry's leadership, and MacReady takes command",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:54",
+      "quote": "Nobody trusts anybody now."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "hidden thing revealed",
+    "when": "late",
+    "role": "turn",
+    "detail": "Norris's chest opens during defibrillation",
+    "source": "subtitles",
+    "at": "01:15:20",
+    "quote": "[Thing Roars]",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "blood test",
+    "when": "late",
+    "role": "turn",
+    "quote": "Everyone passes the test except Palmer, whose blood recoils from the heat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:09",
+      "quote": "We're gonna draw a little bit of everybody's blood."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "station destroyed",
+    "when": "late",
+    "quote": "destroying the station and the Blair-Thing",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:15",
+      "quote": "[Distant Explosion]"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "uncertain last survivors",
+    "when": "ending",
+    "quote": "they acknowledge the futility of their distrust and share a bottle",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:41:18",
+      "quote": "wait here for a little while,"
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

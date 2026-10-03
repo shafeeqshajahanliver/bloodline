@@ -1,60 +1,538 @@
 {
  "film": "1981-the-evil-dead",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "possessing demon", "detail": "the Kandarian Demon", "quote": "Scott later plays a tape of incantations that resurrect a demonic entity (The Kandarian Demon)", "confidence": "sourced"},
-   {"value": "possessed trees", "quote": "she is attacked and raped by demonically possessed trees", "confidence": "sourced"}
+   {
+    "value": "possessing demon",
+    "detail": "the Kandarian Demon",
+    "quote": "Scott later plays a tape of incantations that resurrect a demonic entity (The Kandarian Demon)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:51",
+      "quote": "I know now that my wife has become host to a Ca \" n Darian demon."
+     }
+    ]
+   },
+   {
+    "value": "possessed trees",
+    "quote": "she is attacked and raped by demonically possessed trees",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:00",
+      "quote": "They're alive, Ashley. The trees, they're alive!"
+     },
+     {
+      "source": "screenplay",
+      "quote": "Snake−like vines wrap around her ankles and slither up her legs."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "summoned by recording", "detail": "an archaeologist's tape of incantations", "quote": "they find an audio tape that, when played, releases a legion of demonic entities", "confidence": "sourced"},
-   {"value": "ancient book", "detail": "the Naturom Demonto", "quote": "They find the Naturom Demonto, a Sumerian version of the Egyptian Book of the Dead", "confidence": "sourced"}
+   {
+    "value": "summoned by recording",
+    "detail": "an archaeologist's tape of incantations",
+    "quote": "they find an audio tape that, when played, releases a legion of demonic entities",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:29",
+      "quote": "[man on tape] Tantir-ah-mis-trobeen-ha-zar-ta."
+     }
+    ]
+   },
+   {
+    "value": "ancient book",
+    "detail": "the Naturom Demonto",
+    "quote": "They find the Naturom Demonto, a Sumerian version of the Egyptian Book of the Dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:35",
+      "quote": "Roughly translated - - \" Book of the Dead. \""
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "bodies", "quote": "Most of the group suffer from demonic possession", "confidence": "observed"},
-   {"value": "to kill everyone", "quote": "In a raspy voice, she threatens to kill everyone", "confidence": "sourced"}
+   {
+    "value": "bodies",
+    "quote": "Most of the group suffer from demonic possession",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:00",
+      "quote": "[distorted voice] Soon all of you will be like me"
+     }
+    ]
+   },
+   {
+    "value": "to kill everyone",
+    "quote": "In a raspy voice, she threatens to kill everyone",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:07",
+      "quote": "[singsong voices] We're gonna get you"
+     }
+    ]
+   },
+   {
+    "value": "to make them join",
+    "detail": "the voices repeat 'Join us'",
+    "source": "subtitles",
+    "at": "01:16:10",
+    "quote": "Join us! Ashley, join us!",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "playing a recording", "quote": "Scott later plays a tape of incantations that resurrect a demonic entity", "confidence": "sourced"},
-   {"value": "isolated cabin trip", "quote": "college students vacationing in an isolated cabin in the woods", "confidence": "sourced"}
+   {
+    "value": "playing a recording",
+    "quote": "Scott later plays a tape of incantations that resurrect a demonic entity",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:55",
+      "quote": "This is the tape I found downstairs."
+     }
+    ]
+   },
+   {
+    "value": "isolated cabin trip",
+    "quote": "college students vacationing in an isolated cabin in the woods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:49",
+      "quote": "Well, the guy that's renting it says it's an old place - -"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "dismember the host", "quote": "the only way to kill the entity is to dismember the possessed host", "confidence": "sourced"},
-   {"value": "destroy the book", "quote": "While the book burns, the zombies freeze and decompose rapidly", "confidence": "sourced"},
-   {"value": "no escape", "detail": "bridge destroyed, trees block the way", "quote": "warning Ash that the trees will not allow their escape", "confidence": "sourced"}
+   {
+    "value": "dismember the host",
+    "quote": "the only way to kill the entity is to dismember the possessed host",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:00",
+      "quote": "is through the act of bodily dismemberment."
+     }
+    ]
+   },
+   {
+    "value": "destroy the book",
+    "quote": "While the book burns, the zombies freeze and decompose rapidly",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The Book Of The Dead burns in a bluish green flame."
+     }
+    ]
+   },
+   {
+    "value": "no escape",
+    "detail": "bridge destroyed, trees block the way",
+    "quote": "warning Ash that the trees will not allow their escape",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:32",
+      "quote": "But the trees, Ash... they know."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "college students", "relation_to_threat": "stranger", "quote": "A quintet of Michigan State University students", "confidence": "sourced"},
-   {"value": "sister and girlfriend", "relation_to_threat": "family", "detail": "Ash's sister Cheryl and girlfriend Linda are possessed", "quote": "Ash checks on Linda and realizes that she has become possessed", "confidence": "observed"}
+   {
+    "value": "college students",
+    "relation_to_threat": "stranger",
+    "quote": "A quintet of Michigan State University students",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Both SCOTT and SHELLY wear \"Michigan State\" T−shirts"
+     }
+    ]
+   },
+   {
+    "value": "sister and girlfriend",
+    "relation_to_threat": "family",
+    "detail": "Ash's sister Cheryl and girlfriend Linda are possessed",
+    "quote": "Ash checks on Linda and realizes that she has become possessed",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "They are couples ASHLY and LINDA‚ SCOTT and SHELLY‚ and CHERYL‚ ASHLY's sister."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "false resolution", "detail": "book burned, possessed destroyed", "quote": "While the book burns, the zombies freeze and decompose rapidly", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "the Kandarian Demon races through the forest and attacks him as he screams in terror", "confidence": "sourced"}
+   {
+    "value": "false resolution",
+    "detail": "book burned, possessed destroyed",
+    "quote": "While the book burns, the zombies freeze and decompose rapidly",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:19",
+      "quote": "[birds chirping]"
+     }
+    ]
+   },
+   {
+    "value": "threat survives",
+    "quote": "the Kandarian Demon races through the forest and attacks him as he screams in terror",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:48",
+      "quote": "[low-pitched rumble]"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "porch swing", "state": "moving on its own", "when": "opening", "role": "omen", "quote": "they notice the porch swing move on its own", "confidence": "sourced"},
-   {"value": "clock", "state": "stops", "when": "opening", "role": "omen", "quote": "While Cheryl is drawing a picture of an old clock, it stops", "confidence": "sourced"},
-   {"value": "book with a face", "when": "early", "role": "threat", "quote": "draws a picture of a book with a face on its cover", "confidence": "sourced"},
-   {"value": "cellar trapdoor", "state": "flies open", "when": "early", "role": "trigger", "quote": "When the cellar trapdoor flies open during dinner", "confidence": "sourced"},
-   {"value": "tape recorder", "when": "early", "role": "trigger", "quote": "along with an archaeologist's tape recorder", "confidence": "sourced"},
-   {"value": "trees", "state": "possessed", "when": "early", "role": "threat", "quote": "attacked and raped by demonically possessed trees", "confidence": "sourced"},
-   {"value": "dagger", "when": "middle", "role": "weapon", "quote": "stabs her in the back with a Sumerian dagger", "confidence": "sourced"},
-   {"value": "white eyes", "when": "middle", "role": "threat", "quote": "turns into a white-eyed monster, and begins levitating", "confidence": "sourced"}
+   {
+    "value": "porch swing",
+    "state": "moving on its own",
+    "when": "opening",
+    "role": "omen",
+    "quote": "they notice the porch swing move on its own",
+    "confidence": "sourced"
+   },
+   {
+    "value": "clock",
+    "state": "stops",
+    "when": "opening",
+    "role": "omen",
+    "quote": "While Cheryl is drawing a picture of an old clock, it stops",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:06",
+      "quote": "[ticking stops, clock chimes]"
+     },
+     {
+      "source": "screenplay",
+      "quote": "He looks up to see the old grandfather clock slowly winding back− wards."
+     }
+    ]
+   },
+   {
+    "value": "book with a face",
+    "when": "early",
+    "role": "threat",
+    "quote": "draws a picture of a book with a face on its cover",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The likeness of a book with some form of ancient writing on its cover has been sketched."
+     }
+    ]
+   },
+   {
+    "value": "cellar trapdoor",
+    "state": "flies open",
+    "when": "early",
+    "role": "trigger",
+    "quote": "When the cellar trapdoor flies open during dinner",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Although nailed shut‚ it opens slightly‚ pulling the nails with it."
+     }
+    ]
+   },
+   {
+    "value": "tape recorder",
+    "when": "early",
+    "role": "trigger",
+    "quote": "along with an archaeologist's tape recorder",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:59",
+      "quote": "[man on tape] It has been a number of years"
+     }
+    ]
+   },
+   {
+    "value": "trees",
+    "state": "possessed",
+    "when": "early",
+    "role": "threat",
+    "quote": "attacked and raped by demonically possessed trees",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:57",
+      "quote": "No, it was the woods themselves."
+     }
+    ]
+   },
+   {
+    "value": "dagger",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "stabs her in the back with a Sumerian dagger",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "she runs her tongue over the dagger‚ licking the blood from it."
+     }
+    ]
+   },
+   {
+    "value": "white eyes",
+    "when": "middle",
+    "role": "threat",
+    "quote": "turns into a white-eyed monster, and begins levitating",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:14",
+      "quote": "For God's sake, what happened to her eyes?!"
+     },
+     {
+      "source": "screenplay",
+      "quote": "Her eyes are bone white."
+     }
+    ]
+   },
+   {
+    "value": "necklace",
+    "state": "gift, then the hook that drags the book to the fire",
+    "when": "late",
+    "role": "weapon",
+    "source": "screenplay",
+    "quote": "The necklace drapes over the book and as ASHLY is dragged‚ the clasp hooks the cover and pulls the book with him.",
+    "confidence": "sourced",
+    "detail": "Ash's gift to Linda"
+   },
+   {
+    "value": "chainsaw",
+    "state": "raised but not used",
+    "when": "late",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "01:01:56",
+    "quote": "[chainsaw clatters]",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "He rips down a tarp hanging on the wall to reveal a chain saw."
+     }
+    ]
+   },
+   {
+    "value": "playing cards",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:35:52",
+    "quote": "eight of spades,",
+    "confidence": "observed",
+    "detail": "Cheryl names the cards before they are turned, then is possessed"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "omens on arrival", "when": "opening", "role": "omen", "quote": "they notice the porch swing move on its own, but it stops when Scott grabs the door key", "confidence": "sourced"},
-   {"order": 2, "value": "book and tape found", "when": "early", "role": "trigger", "quote": "They find the Naturom Demonto, a Sumerian version of the Egyptian Book of the Dead", "confidence": "sourced"},
-   {"order": 3, "value": "demon summoned", "when": "early", "quote": "Scott later plays a tape of incantations that resurrect a demonic entity", "confidence": "sourced"},
-   {"order": 4, "value": "escape route cut", "when": "early", "quote": "only to discover that the bridge has been destroyed", "confidence": "sourced"},
-   {"order": 5, "value": "friends possessed one by one", "when": "middle", "quote": "turns into a white-eyed monster, and begins levitating", "confidence": "sourced"},
-   {"order": 6, "value": "loved one dismembered", "when": "late", "quote": "forcing him to decapitate her with a shovel", "confidence": "sourced"},
-   {"order": 7, "value": "book burned", "when": "ending", "quote": "he grabs the book and throws it into the fireplace", "confidence": "sourced"},
-   {"order": 8, "value": "final attack sting", "when": "ending", "role": "turn", "quote": "the Kandarian Demon races through the forest and attacks him", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "unseen force in the woods",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "Something evil is lurking deep withing the wooded mou− ntains of Tennessee‚ and the camera takes its point of view.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "near crash on the road",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:02:25",
+    "quote": "The damn thing jerked right out of my hand!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "omens on arrival",
+    "when": "opening",
+    "role": "omen",
+    "quote": "they notice the porch swing move on its own, but it stops when Scott grabs the door key",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:18",
+      "quote": "- [wind howling] - [distorted I Join us."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "book and tape found",
+    "when": "early",
+    "role": "trigger",
+    "quote": "They find the Naturom Demonto, a Sumerian version of the Egyptian Book of the Dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Along with this book‚ SCOTT and ASHLY uncover a reel to reel tape recorder‚ an ancient dagger"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "demon summoned",
+    "when": "early",
+    "quote": "Scott later plays a tape of incantations that resurrect a demonic entity",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:29",
+      "quote": "[man on tape] Tantir-ah-mis-trobeen-ha-zar-ta."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "escape route cut",
+    "when": "early",
+    "quote": "only to discover that the bridge has been destroyed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The bridge over the chasm has been torn away."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "friends possessed one by one",
+    "when": "middle",
+    "quote": "turns into a white-eyed monster, and begins levitating",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:43",
+      "quote": "[Cheryl] Of spades - - queen of spades."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "loved one dismembered",
+    "when": "late",
+    "quote": "forcing him to decapitate her with a shovel",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "ASHLY swings the spade upward‚ lopping off her head."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "book burned",
+    "when": "ending",
+    "quote": "he grabs the book and throws it into the fireplace",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "With a yank‚ he seizes the book and tosses it upon the blaze."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "dawn breaks",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:22:19",
+    "quote": "[birds chirping]",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The first rays of sunlight gleam over the woods beyond the cabin. Daybreak has finally come."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "final attack sting",
+    "when": "ending",
+    "role": "turn",
+    "quote": "the Kandarian Demon races through the forest and attacks him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:48",
+      "quote": "[low-pitched rumble]"
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,57 +1,388 @@
 {
  "film": "1981-the-howling",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes and style"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes and style"
+   ]
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "werewolves", "detail": "the whole Colony", "quote": "it turns out all the people in the Colony are werewolves and they too begin to transform", "confidence": "sourced"},
-   {"value": "serial killer", "detail": "Eddie Quist, also a werewolf", "quote": "Karen White is a Los Angeles television news anchor who is being stalked by serial killer Eddie Quist", "confidence": "sourced"}
+   {
+    "value": "werewolves",
+    "detail": "the whole Colony",
+    "quote": "it turns out all the people in the Colony are werewolves and they too begin to transform",
+    "confidence": "sourced"
+   },
+   {
+    "value": "serial killer",
+    "detail": "Eddie Quist, also a werewolf",
+    "quote": "Karen White is a Los Angeles television news anchor who is being stalked by serial killer Eddie Quist",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "primal desire", "quote": "The Howling introduces themes of indulgence of primal, animalistic desires, particularly focusing on the sexual aspects of werewolves", "confidence": "sourced"}
+   {
+    "value": "primal desire",
+    "quote": "The Howling introduces themes of indulgence of primal, animalistic desires, particularly focusing on the sexual aspects of werewolves",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "retreat to an isolated community", "detail": "sent to the Colony for therapy", "quote": "a secluded resort in the countryside where he sends patients for treatment", "confidence": "sourced"},
-   {"value": "trauma from a past attack", "quote": "following a traumatic encounter with a serial killer, visits a resort secretly inhabited by werewolves", "confidence": "sourced"}
+   {
+    "value": "retreat to an isolated community",
+    "detail": "sent to the Colony for therapy",
+    "quote": "a secluded resort in the countryside where he sends patients for treatment",
+    "confidence": "sourced"
+   },
+   {
+    "value": "trauma from a past attack",
+    "quote": "following a traumatic encounter with a serial killer, visits a resort secretly inhabited by werewolves",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "spread by a bite", "quote": "he is attacked and bitten on the arm by a wolf while returning to his cabin", "confidence": "observed"},
-   {"value": "silver bullets kill", "quote": "are fatally shot with silver bullets as they attempt to transform and attack Chris", "confidence": "sourced"},
-   {"value": "destroyed by fire", "quote": "trap the remaining werewolves including  a dying Doc, in the barn and burn the Colony to the ground", "confidence": "sourced"}
+   {
+    "value": "spread by a bite",
+    "quote": "he is attacked and bitten on the arm by a wolf while returning to his cabin",
+    "confidence": "observed"
+   },
+   {
+    "value": "silver bullets kill",
+    "quote": "are fatally shot with silver bullets as they attempt to transform and attack Chris",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "What about killing it with silver bullets?"
+     }
+    ]
+   },
+   {
+    "value": "destroyed by fire",
+    "quote": "trap the remaining werewolves including  a dying Doc, in the barn and burn the Colony to the ground",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Sure. Either the bullets or fire."
+     }
+    ]
+   },
+   {
+    "value": "full moon not required",
+    "source": "screenplay",
+    "quote": "None of Eddie's killings were on a full moon. DENNY That's Hollywood baloney.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "woman in trauma", "relation_to_threat": "stranger", "detail": "Karen White, news anchor", "quote": "Karen is confronted by the resurrected Eddie Quist once again", "confidence": "sourced"},
-   {"value": "husband", "relation_to_threat": "lover", "detail": "Bill, seduced and turned", "quote": "Bill meets Marsha at a campfire in the woods and while having sex in the moonlight, they undergo a frightening transformation", "confidence": "sourced"},
-   {"value": "friend investigating", "relation_to_threat": "stranger", "detail": "Terry Fisher", "quote": "she is attacked by Eddie in werewolf form and is killed", "confidence": "sourced"}
+   {
+    "value": "woman in trauma",
+    "relation_to_threat": "stranger",
+    "detail": "Karen White, news anchor",
+    "quote": "Karen is confronted by the resurrected Eddie Quist once again",
+    "confidence": "sourced"
+   },
+   {
+    "value": "husband",
+    "relation_to_threat": "lover",
+    "detail": "Bill, seduced and turned",
+    "quote": "Bill meets Marsha at a campfire in the woods and while having sex in the moonlight, they undergo a frightening transformation",
+    "confidence": "sourced"
+   },
+   {
+    "value": "friend investigating",
+    "relation_to_threat": "stranger",
+    "detail": "Terry Fisher",
+    "quote": "she is attacked by Eddie in werewolf form and is killed",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "victim becomes threat", "quote": "to prove her story, she transforms into a werewolf", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "Marsha, who escaped the Colony herself completely unscathed, sits at a bar", "confidence": "sourced"},
-   {"value": "truth not believed", "quote": "believing it to be just a stunt done with special effects", "confidence": "sourced"}
+   {
+    "value": "victim becomes threat",
+    "quote": "to prove her story, she transforms into a werewolf",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat survives",
+    "quote": "Marsha, who escaped the Colony herself completely unscathed, sits at a bar",
+    "confidence": "sourced"
+   },
+   {
+    "value": "truth not believed",
+    "quote": "believing it to be just a stunt done with special effects",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "porn theater", "when": "opening", "role": "setting", "quote": "agreeing to meet him in a sleazy porn theater", "confidence": "sourced"},
-   {"value": "howling at night", "when": "early", "role": "omen", "quote": "after hearing strange howling at night", "confidence": "sourced"},
-   {"value": "wolf bite", "when": "early", "role": "trigger", "quote": "bitten on the arm by a wolf while returning to his cabin", "confidence": "sourced"},
-   {"value": "campfire in moonlight", "when": "middle", "role": "turn", "quote": "Bill meets Marsha at a campfire in the woods and while having sex in the moonlight", "confidence": "sourced"},
-   {"value": "axe", "state": "severs a hand", "when": "middle", "role": "weapon", "quote": "she escapes after severing the monster's hand with an ax", "confidence": "sourced"},
-   {"value": "silver bullets", "when": "late", "role": "weapon", "quote": "sets off for the Colony armed with silver bullets", "confidence": "sourced"},
-   {"value": "television broadcast", "when": "ending", "role": "symbol", "quote": "begins a special worldwide broadcast announcement", "confidence": "sourced"},
-   {"value": "rare hamburger", "when": "ending", "role": "symbol", "quote": "orders a pepper steak for himself and a rare hamburger for Marsha", "confidence": "sourced"}
+   {
+    "value": "porn theater",
+    "when": "opening",
+    "role": "setting",
+    "quote": "agreeing to meet him in a sleazy porn theater",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "stands in front of a porno theater on an L.A. street"
+     }
+    ]
+   },
+   {
+    "value": "smiley-face sticker",
+    "state": "marks the killer's places",
+    "when": "opening",
+    "role": "clue",
+    "source": "screenplay",
+    "quote": "There is a yellow smiley-face sticker above the phone.",
+    "confidence": "sourced",
+    "detail": "Eddie's calling card, found again on the refrigerator in his sister's cabin"
+   },
+   {
+    "value": "howling at night",
+    "when": "early",
+    "role": "omen",
+    "quote": "after hearing strange howling at night",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "There is a HOWL outside, long and eerie"
+     }
+    ]
+   },
+   {
+    "value": "wolf bite",
+    "when": "early",
+    "role": "trigger",
+    "quote": "bitten on the arm by a wolf while returning to his cabin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Something we can't quite make out snaps and bites Roy's shoulder"
+     }
+    ]
+   },
+   {
+    "value": "mutilated cow",
+    "state": "dead",
+    "when": "middle",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "the carcass of a bloody, mutilated cow dragged half out under the wire",
+    "confidence": "sourced"
+   },
+   {
+    "value": "skinned rabbit",
+    "state": "shot, butchered",
+    "when": "middle",
+    "role": "symbol",
+    "source": "screenplay",
+    "quote": "The dead rabbit is plopped on a thick wooden cutting board.",
+    "confidence": "sourced",
+    "detail": "Roy shoots it; Marsha skins it in front of him and tosses him the foot for luck"
+   },
+   {
+    "value": "campfire in moonlight",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Bill meets Marsha at a campfire in the woods and while having sex in the moonlight",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "They sit on the ground and begin to make love, smooth and gleaming in the moonlight"
+     }
+    ]
+   },
+   {
+    "value": "axe",
+    "state": "severs a hand",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "she escapes after severing the monster's hand with an ax",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dead cat in refrigerator",
+    "state": "dead, bloodied",
+    "when": "late",
+    "role": "clue",
+    "source": "screenplay",
+    "quote": "in with the other normal food is a dead cat, stiffened in death and flecked with dried blood",
+    "confidence": "sourced"
+   },
+   {
+    "value": "silver bullets",
+    "when": "late",
+    "role": "weapon",
+    "quote": "sets off for the Colony armed with silver bullets",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "I even got silver-slugged bullets"
+     }
+    ]
+   },
+   {
+    "value": "television broadcast",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "begins a special worldwide broadcast announcement",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The newslady is turning into a werewolf."
+     }
+    ]
+   },
+   {
+    "value": "rare hamburger",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "orders a pepper steak for himself and a rare hamburger for Marsha",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "put a pepper steak on for me, alright? And a hamburger for the lady."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "encounter with stalker", "when": "opening", "quote": "she takes part in a scheme to capture Eddie by agreeing to meet him in a sleazy porn theater", "confidence": "sourced"},
-   {"order": 2, "value": "sent away to heal", "when": "early", "role": "trigger", "quote": "recommends sending her and her husband, Bill Neill, to \"the Colony,\"", "confidence": "sourced"},
-   {"order": 3, "value": "husband bitten", "when": "early", "quote": "he is attacked and bitten on the arm by a wolf while returning to his cabin", "confidence": "sourced"},
-   {"order": 4, "value": "friend killed while investigating", "when": "middle", "quote": "When she finally finds the file in the filing cabinet, she is attacked by Eddie in werewolf form and is killed", "confidence": "sourced"},
-   {"order": 5, "value": "dead killer returns", "when": "late", "role": "turn", "quote": "Karen is confronted by the resurrected Eddie Quist once again, and Eddie transforms himself into a werewolf in front of her", "confidence": "sourced"},
-   {"order": 6, "value": "community burned", "when": "late", "quote": "burn the Colony to the ground", "confidence": "sourced"},
-   {"order": 7, "value": "heroine bitten", "when": "ending", "quote": "one werewolf breaks into their car and bites Karen", "confidence": "sourced"},
-   {"order": 8, "value": "transformation on live television", "when": "ending", "role": "turn", "quote": "She is shot at by Chris in front of a live viewing audience", "confidence": "sourced"}
+   {
+    "value": "tv lecture on inner beast",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "We've all heard people talk about 'animal magnetism,' about the 'natural man' and the 'noble savage.'",
+    "confidence": "sourced",
+    "detail": "Dr. Waggner on air while Karen walks to meet Eddie",
+    "order": 1
+   },
+   {
+    "order": 2,
+    "value": "encounter with stalker",
+    "when": "opening",
+    "quote": "she takes part in a scheme to capture Eddie by agreeing to meet him in a sleazy porn theater",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "That's why you came here. Turn around, Karen. I want to give you something."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "sent away to heal",
+    "when": "early",
+    "role": "trigger",
+    "quote": "recommends sending her and her husband, Bill Neill, to \"the Colony,\"",
+    "confidence": "sourced"
+   },
+   {
+    "value": "body missing from morgue",
+    "when": "early",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "looking down into the empty drawer, mouths gaping",
+    "confidence": "sourced",
+    "order": 4
+   },
+   {
+    "order": 5,
+    "value": "husband bitten",
+    "when": "early",
+    "quote": "he is attacked and bitten on the arm by a wolf while returning to his cabin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Roy just got bitten by a wolf."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "friend killed while investigating",
+    "when": "middle",
+    "quote": "When she finally finds the file in the filing cabinet, she is attacked by Eddie in werewolf form and is killed",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "dead killer returns",
+    "when": "late",
+    "role": "turn",
+    "quote": "Karen is confronted by the resurrected Eddie Quist once again, and Eddie transforms himself into a werewolf in front of her",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "community burned",
+    "when": "late",
+    "quote": "burn the Colony to the ground",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "heroine bitten",
+    "when": "ending",
+    "quote": "one werewolf breaks into their car and bites Karen",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Karen SCREAMS as the creature sinks its teeth into her neck and shoulder."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "transformation on live television",
+    "when": "ending",
+    "role": "turn",
+    "quote": "She is shot at by Chris in front of a live viewing audience",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "They're neither people nor wolves, but monstrous hybrids."
+     }
+    ]
+   },
+   {
+    "value": "closing howl at the moon",
+    "when": "ending",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "A ghostly moon shines through a wisp of cloud",
+    "confidence": "sourced",
+    "order": 11
+   }
   ]
  },
- "not_stated": ["origin", "wrong"],
+ "not_stated": [
+  "origin",
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

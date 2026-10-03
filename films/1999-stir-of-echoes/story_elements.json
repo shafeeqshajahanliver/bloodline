@@ -7,6 +7,12 @@
     "Lead",
     "Plot"
    ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
   }
  ],
  "plot_quality": "full",
@@ -41,7 +47,14 @@
    {
     "value": "a task done",
     "quote": "the spirit that contacted Tom has asked for something and will grow upset if it does not get done",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:19",
+      "quote": "She's asked for something, and now she's waiting,"
+     }
+    ]
    }
   ],
   "wrong": [
@@ -67,11 +80,25 @@
    {
     "value": "child sees the dead",
     "quote": "his son Jake, who possesses the ability to communicate with the dead",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:41",
+      "quote": "Does it hurt to be dead?"
+     }
+    ]
    },
    {
     "value": "ghost rests when truth found",
     "quote": "Tom notices Samantha's spirit smile and disappear",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hypnosis opens the mind",
+    "source": "subtitles",
+    "at": "00:49:45",
+    "quote": "He's a receiver now. Everything's coming in.",
     "confidence": "sourced"
    }
   ],
@@ -121,7 +148,13 @@
     "when": "early",
     "role": "clue",
     "quote": "sees strange flashes of red light that lead him to the Metra station",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Tom sees a red light mounted on a wall near one of the tunnels."
+     }
+    ]
    },
    {
     "value": "funeral",
@@ -129,14 +162,36 @@
     "when": "middle",
     "role": "omen",
     "quote": "Jake and Maggie encounter a funeral where Chicago policemen are saluting in a ceremony",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:11",
+      "quote": "(~ bagpipes)"
+     },
+     {
+      "source": "screenplay",
+      "quote": "it's coming from a BAGPIPER playing near a graveside ceremony."
+     }
+    ]
    },
    {
     "value": "holes in the yard",
     "when": "middle",
     "role": "clue",
     "quote": "digs holes in the backyard and tears up the house",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:56",
+      "quote": "I'm supposed to dig."
+     },
+     {
+      "source": "screenplay",
+      "quote": "There are now five large holes in the back yard, and Tom is running out of places to dig."
+     }
+    ]
    },
    {
     "value": "brick wall",
@@ -152,79 +207,223 @@
     "when": "late",
     "role": "clue",
     "quote": "brick wall in the basement and discovers Samantha's mummified remains.",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "It's the half-decomposed corpse of Samantha Kozak, interred upright in the wall."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:21:06",
+      "quote": "She's got somebody's hair in her hand."
+     }
+    ]
    },
    {
     "value": "gun",
     "when": "ending",
     "role": "weapon",
     "quote": "Frank pulls out a gun and demands to be alone",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:16",
+      "quote": "Out of the way, Kurt! - (gunshot)"
+     }
+    ]
+   },
+   {
+    "value": "hummed song",
+    "when": "opening",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:00:03",
+    "quote": "young boy hums Paint It Black",
+    "detail": "Jake hums 'Paint It Black', the song playing when Samantha was killed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:55",
+      "quote": "Paint It Black by Gob"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "empty movie theatre",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:10:11",
+    "quote": "When you look around, it's a huge, empty theatre.",
+    "detail": "the black theatre and white screen of Lisa's hypnosis",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pulled tooth",
+    "state": "vision",
+    "when": "early",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "The tooth pulls right out of his gum.",
+    "detail": "Samantha's corpse is missing a front tooth",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "She's missing one of her front teeth"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "orange juice",
+    "when": "middle",
+    "role": "symbol",
+    "source": "screenplay",
+    "quote": "The entire top shelf is jammed with cardboard cartons of orange juice.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "plastic over the face",
+    "when": "late",
+    "role": "clue",
+    "source": "screenplay",
+    "quote": "his fingers close around the plastic that shrouds her face.",
     "confidence": "sourced"
    }
   ],
   "beats": [
    {
     "order": 1,
-    "value": "hypnosis at a party",
+    "value": "child asks about death",
     "when": "opening",
-    "role": "trigger",
-    "quote": "Tom challenges Maggie's sister, Lisa, who is a believer in paranormal activity, to hypnotize him",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:41",
+    "quote": "Does it hurt to be dead?",
     "confidence": "sourced"
    },
    {
     "order": 2,
-    "value": "visions of a missing girl",
+    "value": "hypnosis at a party",
     "when": "opening",
-    "quote": "Tom then begins experiencing visions of a violent scuffle involving a girl",
-    "confidence": "sourced"
+    "role": "trigger",
+    "quote": "Tom challenges Maggie's sister, Lisa, who is a believer in paranormal activity, to hypnotize him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:55",
+      "quote": "Now I want you to pretend you're in a theatre."
+     }
+    ]
    },
    {
     "order": 3,
-    "value": "child speaks with ghost",
-    "when": "early",
-    "quote": "Jake is overheard by his babysitter, Debbie, as he speaks with Samantha",
-    "confidence": "sourced"
+    "value": "visions of a missing girl",
+    "when": "opening",
+    "quote": "Tom then begins experiencing visions of a violent scuffle involving a girl",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:05",
+      "quote": "Who was the woman?"
+     }
+    ]
    },
    {
     "order": 4,
-    "value": "ghost demands digging",
-    "when": "middle",
-    "quote": "Samantha tells him to dig. Tom complies and digs holes in the backyard",
-    "confidence": "sourced"
+    "value": "child speaks with ghost",
+    "when": "early",
+    "quote": "Jake is overheard by his babysitter, Debbie, as he speaks with Samantha",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:07",
+      "quote": "Samantha says it's always dark where she is."
+     }
+    ]
    },
    {
     "order": 5,
+    "value": "ghost demands digging",
+    "when": "middle",
+    "quote": "Samantha tells him to dig. Tom complies and digs holes in the backyard",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:15",
+      "quote": "I'm supposed to dig."
+     }
+    ]
+   },
+   {
+    "order": 6,
     "value": "body found in the house",
     "when": "late",
     "role": "turn",
     "quote": "brick wall in the basement and discovers Samantha's mummified remains.",
-    "confidence": "sourced"
-   },
-   {
-    "order": 6,
-    "value": "past crime revealed",
-    "when": "late",
-    "quote": "before his family moved in, a drunken Adam and Kurt lured Samantha into the house to rape her",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:06",
+      "quote": "She's got somebody's hair in her hand."
+     }
+    ]
    },
    {
     "order": 7,
-    "value": "killers killed",
-    "when": "ending",
-    "quote": "Frank emerges and fatally shoots Kurt and Harry",
-    "confidence": "sourced"
+    "value": "past crime revealed",
+    "when": "late",
+    "quote": "before his family moved in, a drunken Adam and Kurt lured Samantha into the house to rape her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:59",
+      "quote": "Use your jacket or something! Put it over her face!"
+     }
+    ]
    },
    {
     "order": 8,
+    "value": "killers killed",
+    "when": "ending",
+    "quote": "Frank emerges and fatally shoots Kurt and Harry",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:16",
+      "quote": "Out of the way, Kurt! - (gunshot)"
+     }
+    ]
+   },
+   {
+    "order": 9,
     "value": "move out, dead still present",
     "when": "ending",
     "quote": "Jake covers his ears as his family approaches their new home",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:17",
+      "quote": "(voices grow louder)"
+     }
+    ]
    }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

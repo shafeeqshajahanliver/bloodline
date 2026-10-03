@@ -1,61 +1,465 @@
 {
  "film": "2016-lights-out",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "spirit in the dark", "detail": "Diana", "quote": "a spirit from her family's past that kills its victims in the dark", "confidence": "sourced"}
+   {
+    "value": "spirit in the dark",
+    "detail": "Diana",
+    "quote": "a spirit from her family's past that kills its victims in the dark",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "person who died wronged", "detail": "Diana, burned to ashes in a light treatment", "quote": "Diana was accidentally reduced to ashes by the hospital staff when they tried to perform an experimental treatment on her under intense light", "confidence": "sourced"},
-   {"value": "tied to a mind", "detail": "exists through Sophie", "quote": "Sophie realizes she is the tether for Diana to exist in the real world", "confidence": "sourced"}
+   {
+    "value": "person who died wronged",
+    "detail": "Diana, burned to ashes in a light treatment",
+    "quote": "Diana was accidentally reduced to ashes by the hospital staff when they tried to perform an experimental treatment on her under intense light",
+    "confidence": "sourced"
+   },
+   {
+    "value": "tied to a mind",
+    "detail": "exists through Sophie",
+    "quote": "Sophie realizes she is the tether for Diana to exist in the real world",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:23",
+      "quote": "And that she could get inside people's heads, changed them."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to possess someone", "detail": "to keep Sophie to herself", "quote": "Diana will not let Sophie go", "confidence": "sourced"},
-   {"value": "to remove rivals", "quote": "she killed Rebecca's father years ago because, like Paul, he tried to help Sophie recover from her trauma", "confidence": "sourced"}
+   {
+    "value": "to possess someone",
+    "detail": "to keep Sophie to herself",
+    "quote": "Diana will not let Sophie go",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:24",
+      "quote": "Diana, I want you to stay away from Sophie."
+     }
+    ]
+   },
+   {
+    "value": "to remove rivals",
+    "quote": "she killed Rebecca's father years ago because, like Paul, he tried to help Sophie recover from her trauma",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:17",
+      "quote": "TRYING TO TAKE SOPHIE AWAY FROM ME"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:13:09",
+      "quote": "or I'll show you where I put your father."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "medical experiment", "quote": "they tried to perform an experimental treatment on her under intense light", "confidence": "sourced"}
+   {
+    "value": "medical experiment",
+    "quote": "they tried to perform an experimental treatment on her under intense light",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:02",
+      "quote": "The doctors tried an experimental treatment on her and something went wrong."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "mother stops medication", "quote": "she realizes her mother is not taking her medication", "confidence": "sourced"}
+   {
+    "value": "mother stops medication",
+    "quote": "she realizes her mother is not taking her medication",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "vanishes in light", "quote": "who disappears when the lights are turned on and reappears when the lights are turned off", "confidence": "sourced"},
-   {"value": "bound to a host", "quote": "Sophie realizes she is the tether for Diana to exist in the real world", "confidence": "sourced"},
-   {"value": "immune to bullets", "quote": "shoots at Diana, which has no effect", "confidence": "sourced"}
+   {
+    "value": "vanishes in light",
+    "quote": "who disappears when the lights are turned on and reappears when the lights are turned off",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:21",
+      "quote": "Stay in the light, Bret!"
+     }
+    ]
+   },
+   {
+    "value": "bound to a host",
+    "quote": "Sophie realizes she is the tether for Diana to exist in the real world",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:25",
+      "quote": "But I think that mom is the only connection Diana has to this world."
+     }
+    ]
+   },
+   {
+    "value": "immune to bullets",
+    "quote": "shoots at Diana, which has no effect",
+    "confidence": "sourced"
+   },
+   {
+    "value": "comes when host is weakest",
+    "source": "subtitles",
+    "at": "00:43:47",
+    "quote": "Diana only comes around when mom is at her worst.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "mother", "relation_to_threat": "family", "detail": "Sophie, whom Diana clings to", "quote": "Sophie becomes irate but secretly asks Rebecca for help, as Diana will not let Sophie go", "confidence": "sourced"},
-   {"value": "children", "relation_to_threat": "family", "detail": "Rebecca and half-brother Martin", "quote": "a woman who must protect her young half-brother", "confidence": "sourced"},
-   {"value": "husbands", "relation_to_threat": "family", "detail": "Paul and Rebecca's father", "quote": "Diana reveals that she killed Rebecca's father years ago", "confidence": "sourced"}
+   {
+    "value": "mother",
+    "relation_to_threat": "family",
+    "detail": "Sophie, whom Diana clings to",
+    "quote": "Sophie becomes irate but secretly asks Rebecca for help, as Diana will not let Sophie go",
+    "confidence": "sourced"
+   },
+   {
+    "value": "children",
+    "relation_to_threat": "family",
+    "detail": "Rebecca and half-brother Martin",
+    "quote": "a woman who must protect her young half-brother",
+    "confidence": "sourced"
+   },
+   {
+    "value": "husbands",
+    "relation_to_threat": "family",
+    "detail": "Paul and Rebecca's father",
+    "quote": "Diana reveals that she killed Rebecca's father years ago",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "host dies to end threat", "quote": "turns the gun on herself, killing herself to save Rebecca and Martin. As Sophie's body falls, Diana vanishes from existence", "confidence": "sourced"},
-   {"value": "lingering doubt", "quote": "a light flickers inside the ambulance but Bret assures them that Diana is truly gone", "confidence": "sourced"}
+   {
+    "value": "host dies to end threat",
+    "quote": "turns the gun on herself, killing herself to save Rebecca and Martin. As Sophie's body falls, Diana vanishes from existence",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lingering doubt",
+    "quote": "a light flickers inside the ambulance but Bret assures them that Diana is truly gone",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "silhouette with claws", "state": "in darkness", "when": "opening", "role": "threat", "quote": "a silhouette of a strange-looking woman with claw-like hands", "confidence": "sourced"},
-   {"value": "light switch", "state": "flicking on and off", "when": "opening", "role": "omen", "quote": "who disappears when the lights are turned on and reappears when the lights are turned off", "confidence": "sourced"},
-   {"value": "scratched name", "state": "on floor", "when": "early", "role": "clue", "quote": "the name \"Diana\" has been scratched into her floor, along with a scratch drawing of a stick figure", "confidence": "sourced"},
-   {"value": "medical records", "state": "found in a box", "when": "middle", "role": "clue", "quote": "Rebecca finds a box of medical records and research in Paul's office", "confidence": "sourced"},
-   {"value": "blacklight", "state": "too weak", "when": "late", "role": "weapon", "quote": "In the basement, Martin and Rebecca find a blacklight", "confidence": "sourced"},
-   {"value": "car headlight", "state": "shining", "when": "late", "role": "weapon", "quote": "Bret escapes by shining the headlight of his car", "confidence": "sourced"},
-   {"value": "gun", "state": "turned on self", "when": "ending", "role": "turn", "quote": "appears with a gun from one of the dead officers", "confidence": "sourced"}
+   {
+    "value": "silhouette with claws",
+    "state": "in darkness",
+    "when": "opening",
+    "role": "threat",
+    "quote": "a silhouette of a strange-looking woman with claw-like hands",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Then it goes out, and the SILHOUETTE is back."
+     }
+    ]
+   },
+   {
+    "value": "light switch",
+    "state": "flicking on and off",
+    "when": "opening",
+    "role": "omen",
+    "quote": "who disappears when the lights are turned on and reappears when the lights are turned off",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:11",
+      "quote": "You have to turn the light switch or"
+     },
+     {
+      "source": "screenplay",
+      "quote": "And turns on the hall light. Diana is gone the instant the light comes on."
+     }
+    ]
+   },
+   {
+    "value": "scratched name",
+    "state": "on floor",
+    "when": "early",
+    "role": "clue",
+    "quote": "the name \"Diana\" has been scratched into her floor, along with a scratch drawing of a stick figure",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "flooring, with a name scrawled beneath it: DIANA"
+     }
+    ]
+   },
+   {
+    "value": "medical records",
+    "state": "found in a box",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Rebecca finds a box of medical records and research in Paul's office",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:53",
+      "quote": "The patient suffers from a unique skin disorder that manifest itself"
+     }
+    ]
+   },
+   {
+    "value": "blacklight",
+    "state": "too weak",
+    "when": "late",
+    "role": "weapon",
+    "quote": "In the basement, Martin and Rebecca find a blacklight",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:58",
+      "quote": "It's a black light."
+     },
+     {
+      "source": "screenplay",
+      "quote": "The black light reveals FOOT PRINTS on the floor"
+     }
+    ]
+   },
+   {
+    "value": "car headlight",
+    "state": "shining",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Bret escapes by shining the headlight of his car",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "And his SUV's headlights suddenly SHINE on the front of the house"
+     }
+    ]
+   },
+   {
+    "value": "gun",
+    "state": "turned on self",
+    "when": "ending",
+    "role": "turn",
+    "quote": "appears with a gun from one of the dead officers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "SOPHIE stands in the room, pointing one of the Officer's handguns at Diana."
+     }
+    ]
+   },
+   {
+    "value": "one sock",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:09:29",
+    "quote": "Socks are not anchors.",
+    "detail": "Bret leaves a sock in Rebecca's drawer; commitment she resists",
+    "confidence": "sourced"
+   },
+   {
+    "value": "scratching sound",
+    "when": "early",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "SCRATCHING on the door. Like a cat.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "candles",
+    "when": "late",
+    "role": "weapon",
+    "source": "screenplay",
+    "quote": "And Martin's CANDLE SNUFFS OUT.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "burning stuffed animal",
+    "when": "late",
+    "role": "weapon",
+    "source": "screenplay",
+    "quote": "The STUFFED ANIMAL in the stove catches fire.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "writing on the wall",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:06:44",
+    "quote": "JUST LIKE THE HOSPITAL",
+    "detail": "Diana's scrawled messages in the basement",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:55",
+      "quote": "TRAPPED DOWN HERE IN THE DARK."
+     }
+    ],
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "first death in the dark", "when": "opening", "quote": "He tries to run away and locks himself in an office, but is killed after the lights go out", "confidence": "sourced"},
-   {"order": 2, "value": "child sees mother talking to dark", "when": "early", "role": "omen", "quote": "Paul's son, Martin, witnesses his mother, Sophie, talking to something in the dark", "confidence": "sourced"},
-   {"order": 3, "value": "sister attacked", "when": "early", "quote": "Rebecca is awoken by the same shadowed woman that killed Paul", "confidence": "sourced"},
-   {"order": 4, "value": "past revealed", "when": "middle", "role": "clue", "quote": "Sophie was admitted to a mental hospital as a child. While there, she befriended a young patient named Diana", "confidence": "sourced"},
-   {"order": 5, "value": "power cut siege", "when": "late", "role": "turn", "quote": "this proves useless when Diana cuts the power of the whole neighborhood", "confidence": "sourced"},
-   {"order": 6, "value": "police killed", "when": "late", "quote": "they also see the shadow of Diana and try to go after her, but she kills them", "confidence": "sourced"},
-   {"order": 7, "value": "mother's sacrifice", "when": "ending", "role": "turn", "quote": "turns the gun on herself, killing herself to save Rebecca and Martin", "confidence": "sourced"},
-   {"order": 8, "value": "flickering light sting", "when": "ending", "quote": "a light flickers inside the ambulance", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "first death in the dark",
+    "when": "opening",
+    "quote": "He tries to run away and locks himself in an office, but is killed after the lights go out",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:48",
+      "quote": "There was something in the back room."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "child sees mother talking to dark",
+    "when": "early",
+    "role": "omen",
+    "quote": "Paul's son, Martin, witnesses his mother, Sophie, talking to something in the dark",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:02",
+      "quote": "I just don't know what to do about it."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "sister attacked",
+    "when": "early",
+    "quote": "Rebecca is awoken by the same shadowed woman that killed Paul",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The SCRATCHING comes from somewhere in that direction."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "past revealed",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Sophie was admitted to a mental hospital as a child. While there, she befriended a young patient named Diana",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:02",
+      "quote": "The doctors tried an experimental treatment on her and something went wrong."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "power cut siege",
+    "when": "late",
+    "role": "turn",
+    "quote": "this proves useless when Diana cuts the power of the whole neighborhood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "And immediately after, the power goes out. Only the two candles burn in Martin's room."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "trapped in the basement",
+    "when": "late",
+    "source": "subtitles",
+    "at": "01:02:51",
+    "quote": "We need to find more light.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "police killed",
+    "when": "late",
+    "quote": "they also see the shadow of Diana and try to go after her, but she kills them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:29",
+      "quote": "Unit 99, get me backup. Officer down."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "mother's sacrifice",
+    "when": "ending",
+    "role": "turn",
+    "quote": "turns the gun on herself, killing herself to save Rebecca and Martin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:12",
+      "quote": "There's no you without me."
+     },
+     {
+      "source": "screenplay",
+      "quote": "That won't hurt me... And then Sophie puts the gun to her own head."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "flickering light sting",
+    "when": "ending",
+    "quote": "a light flickers inside the ambulance",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }
