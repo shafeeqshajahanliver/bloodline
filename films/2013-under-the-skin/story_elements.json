@@ -1,59 +1,368 @@
 {
  "film": "2013-under-the-skin",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "alien predator", "detail": "a woman who lures men into a void", "quote": "an extraterrestrial disguised as a human who preys on lone men in the evening hours in Scotland", "confidence": "sourced"},
-   {"value": "predatory man", "detail": "the logger", "quote": "He tears her skin, revealing a featureless body", "confidence": "sourced"}
+   {
+    "value": "alien predator",
+    "detail": "a woman who lures men into a void",
+    "quote": "an extraterrestrial disguised as a human who preys on lone men in the evening hours in Scotland",
+    "confidence": "sourced"
+   },
+   {
+    "value": "predatory man",
+    "detail": "the logger",
+    "quote": "He tears her skin, revealing a featureless body",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "from outer space", "quote": "an extraterrestrial disguised as a human", "confidence": "sourced"},
-   {"value": "folklore", "detail": "the Baobhan sith", "quote": "inspired by the Scottish folklore of Baobhan sith, female vampire-like creatures who prowl during the night preying on men", "confidence": "sourced"}
+   {
+    "value": "from outer space",
+    "quote": "an extraterrestrial disguised as a human",
+    "confidence": "sourced"
+   },
+   {
+    "value": "folklore",
+    "detail": "the Baobhan sith",
+    "quote": "inspired by the Scottish folklore of Baobhan sith, female vampire-like creatures who prowl during the night preying on men",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "human flesh", "detail": "victims emptied to skins", "quote": "leaving only his empty skin floating in the liquid as a red mass empties through a trough", "confidence": "sourced"},
-   {"value": "to become human", "quote": "she chooses (or cannot fail to choose) to become human, to empathise, to be weak as flesh", "confidence": "sourced"}
+   {
+    "value": "human flesh",
+    "detail": "victims emptied to skins",
+    "quote": "leaving only his empty skin floating in the liquid as a red mass empties through a trough",
+    "confidence": "sourced"
+   },
+   {
+    "value": "to become human",
+    "quote": "she chooses (or cannot fail to choose) to become human, to empathise, to be weak as flesh",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "taking a human disguise", "quote": "places her in the back of a van, where a naked woman dons her clothes", "confidence": "sourced"}
+   {
+    "value": "taking a human disguise",
+    "quote": "places her in the back of a van, where a naked woman dons her clothes",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "targets lonely men", "quote": "picking up single men with few friends", "confidence": "sourced"},
-   {"value": "lured by seduction", "quote": "As he undresses, following the woman into a void, he is submerged in a liquid abyss", "confidence": "sourced"},
-   {"value": "cannot eat human food", "quote": "attempts to eat cake, but retches and spits it out", "confidence": "sourced"}
+   {
+    "value": "targets lonely men",
+    "quote": "picking up single men with few friends",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:08",
+      "quote": "So you live alone?"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:53:15",
+      "quote": "So you don't have any friends?"
+     }
+    ]
+   },
+   {
+    "value": "lured by seduction",
+    "quote": "As he undresses, following the woman into a void, he is submerged in a liquid abyss",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:48",
+      "quote": "- You have a handsome face. - Aye?"
+     }
+    ]
+   },
+   {
+    "value": "cannot eat human food",
+    "quote": "attempts to eat cake, but retches and spits it out",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "lonely men", "relation_to_threat": "stranger", "quote": "She lures a man into a dilapidated house", "confidence": "sourced"},
-   {"value": "family", "relation_to_threat": "stranger", "detail": "drowned couple and abandoned baby", "quote": "drives away, ignoring the couple's distraught baby", "confidence": "sourced"},
-   {"value": "the predator herself", "relation_to_threat": "self", "quote": "the man douses her in fuel and burns her alive", "confidence": "sourced"}
+   {
+    "value": "lonely men",
+    "relation_to_threat": "stranger",
+    "quote": "She lures a man into a dilapidated house",
+    "confidence": "sourced"
+   },
+   {
+    "value": "family",
+    "relation_to_threat": "stranger",
+    "detail": "drowned couple and abandoned baby",
+    "quote": "drives away, ignoring the couple's distraught baby",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the predator herself",
+    "relation_to_threat": "self",
+    "quote": "the man douses her in fuel and burns her alive",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "predator becomes prey", "quote": "As the woman extricates herself from her skin, the man douses her in fuel and burns her alive", "confidence": "sourced"},
-   {"value": "ambiguous", "quote": "The motorcyclist looks out across a snowy field.", "confidence": "observed"}
+   {
+    "value": "predator becomes prey",
+    "quote": "As the woman extricates herself from her skin, the man douses her in fuel and burns her alive",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ambiguous",
+    "quote": "The motorcyclist looks out across a snowy field.",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "van", "state": "cruising", "when": "opening", "role": "setting", "quote": "the woman drives the van from town to town", "confidence": "sourced"},
-   {"value": "liquid void", "state": "black, submerging", "when": "opening", "role": "threat", "quote": "following the woman into a void, he is submerged in a liquid abyss", "confidence": "sourced"},
-   {"value": "dog", "state": "pulled out to sea", "when": "early", "role": "omen", "quote": "the cries of a drowning couple attempting to rescue their dog, as it is pulled out to sea", "confidence": "sourced"},
-   {"value": "baby", "state": "abandoned, crying", "when": "early", "role": "symbol", "quote": "ignoring the baby crying on the beach", "confidence": "sourced"},
-   {"value": "empty skin", "state": "floating", "when": "middle", "role": "threat", "quote": "leaving only his empty skin floating in the liquid", "confidence": "sourced"},
-   {"value": "rose", "state": "gifted", "when": "middle", "role": "symbol", "quote": "the woman receives a rose from a street vendor", "confidence": "sourced"},
-   {"value": "mirror", "state": "self-examination", "when": "middle", "role": "turn", "quote": "lets him leave after examining herself in a mirror", "confidence": "sourced"},
-   {"value": "fire", "state": "burning her", "when": "ending", "role": "weapon", "quote": "douses her in fuel and burns her alive", "confidence": "sourced"}
+   {
+    "value": "van",
+    "state": "cruising",
+    "when": "opening",
+    "role": "setting",
+    "quote": "the woman drives the van from town to town",
+    "confidence": "sourced"
+   },
+   {
+    "value": "liquid void",
+    "state": "black, submerging",
+    "when": "opening",
+    "role": "threat",
+    "quote": "following the woman into a void, he is submerged in a liquid abyss",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dog",
+    "state": "pulled out to sea",
+    "when": "early",
+    "role": "omen",
+    "quote": "the cries of a drowning couple attempting to rescue their dog, as it is pulled out to sea",
+    "confidence": "sourced"
+   },
+   {
+    "value": "baby",
+    "state": "abandoned, crying",
+    "when": "early",
+    "role": "symbol",
+    "quote": "ignoring the baby crying on the beach",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:40",
+      "quote": "[BABY SCREAMING, CRYING]"
+     }
+    ]
+   },
+   {
+    "value": "empty skin",
+    "state": "floating",
+    "when": "middle",
+    "role": "threat",
+    "quote": "leaving only his empty skin floating in the liquid",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rose",
+    "state": "gifted",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "the woman receives a rose from a street vendor",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:03",
+      "quote": "The man from the car, he buy the rose for you."
+     }
+    ]
+   },
+   {
+    "value": "mirror",
+    "state": "self-examination",
+    "when": "middle",
+    "role": "turn",
+    "quote": "lets him leave after examining herself in a mirror",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fire",
+    "state": "burning her",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "douses her in fuel and burns her alive",
+    "confidence": "sourced"
+   },
+   {
+    "value": "voice learning words",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:02:39",
+    "quote": "[FEMALE VOICE PRONOUNCING LETTERS] T... D...",
+    "confidence": "sourced"
+   },
+   {
+    "value": "motorcyclist",
+    "detail": "the silent handler who follows her",
+    "when": "opening",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:09:44",
+    "quote": "[MOTORCYCLE ENGINE STARTS]",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:12",
+      "quote": "[MOTORCYCLE REVVING]"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "buzzing insect",
+    "when": "middle",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:01:17",
+    "quote": "[INSECT BUZZING]",
+    "confidence": "observed"
+   },
+   {
+    "value": "spoon and jar",
+    "detail": "TV comedy routine she watches in the stranger's home",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:14:28",
+    "quote": "[LAUGHS] Spoon, Jar. Jar, spoon.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "predator takes a disguise", "when": "opening", "quote": "a naked woman dons her clothes", "confidence": "sourced"},
-   {"order": 2, "value": "first lure", "when": "opening", "quote": "She lures a man into a dilapidated house", "confidence": "sourced"},
-   {"order": 3, "value": "family drowns, baby abandoned", "when": "early", "role": "omen", "quote": "the husband rushes back into the water to save his wife and both drown", "confidence": "sourced"},
-   {"order": 4, "value": "victims' fate shown", "when": "middle", "quote": "the swimmer's body collapses, leaving only his empty skin floating in the liquid", "confidence": "sourced"},
-   {"order": 5, "value": "predator spares a victim", "when": "middle", "role": "turn", "quote": "She seduces a lonely man with facial tumours but lets him leave after examining herself in a mirror", "confidence": "sourced"},
-   {"order": 6, "value": "tries to live as a human", "when": "late", "quote": "At his house, he prepares a meal for her and they watch television", "confidence": "sourced"},
-   {"order": 7, "value": "predator attacked and burned", "when": "ending", "role": "turn", "quote": "He tears her skin, revealing a featureless body", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "voice learns to speak",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:02:39",
+    "quote": "[FEMALE VOICE PRONOUNCING LETTERS] T... D...",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "predator takes a disguise",
+    "when": "opening",
+    "quote": "a naked woman dons her clothes",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "first lure",
+    "when": "opening",
+    "quote": "She lures a man into a dilapidated house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:09",
+      "quote": "- Oh, you're going home. To your family? - No, no, just myself."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "family drowns, baby abandoned",
+    "when": "early",
+    "role": "omen",
+    "quote": "the husband rushes back into the water to save his wife and both drown",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:00",
+      "quote": "[BABY CONTINUES SCREAMING, CRYING]"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "victims' fate shown",
+    "when": "middle",
+    "quote": "the swimmer's body collapses, leaving only his empty skin floating in the liquid",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "predator spares a victim",
+    "when": "middle",
+    "role": "turn",
+    "quote": "She seduces a lonely man with facial tumours but lets him leave after examining herself in a mirror",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:03",
+      "quote": "You've beautiful hands."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "tries to live as a human",
+    "when": "late",
+    "quote": "At his house, he prepares a meal for her and they watch television",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:28",
+      "quote": "[LAUGHS] Spoon, Jar. Jar, spoon."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "alone into the forest",
+    "when": "late",
+    "source": "subtitles",
+    "at": "01:29:06",
+    "quote": "- You on your own? - Yeah. Yeah, on your own? Oh, well, it's a nice place if you want some solitude,",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "predator attacked and burned",
+    "when": "ending",
+    "role": "turn",
+    "quote": "He tears her skin, revealing a featureless body",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

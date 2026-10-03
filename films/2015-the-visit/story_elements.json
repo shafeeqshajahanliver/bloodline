@@ -1,60 +1,451 @@
 {
  "film": "2015-the-visit",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "impostors", "detail": "Nana and Pop Pop, escaped psychiatric patients", "quote": "Nana and Pop Pop are actually escaped patients who murdered the grandparents and stole their identities", "confidence": "sourced"}
+   {
+    "value": "impostors",
+    "detail": "Nana and Pop Pop, escaped psychiatric patients",
+    "quote": "Nana and Pop Pop are actually escaped patients who murdered the grandparents and stole their identities",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "escaped from an asylum", "quote": "uniforms from the psychiatric hospital at which they worked, revealing that Nana and Pop Pop are actually escaped patients", "confidence": "sourced"}
+   {
+    "value": "escaped from an asylum",
+    "quote": "uniforms from the psychiatric hospital at which they worked, revealing that Nana and Pop Pop are actually escaped patients",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to replace someone", "quote": "murdered the grandparents and stole their identities", "confidence": "sourced"}
+   {
+    "value": "to replace someone",
+    "quote": "murdered the grandparents and stole their identities",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "family estrangement", "quote": "Loretta has not spoken to her parents in fifteen years after they disapproved of her marrying her high school teacher", "confidence": "sourced"},
-   {"value": "abandonment by a parent", "quote": "She advises her children not to resent their father for abandoning them", "confidence": "sourced"}
+   {
+    "value": "family estrangement",
+    "quote": "Loretta has not spoken to her parents in fifteen years after they disapproved of her marrying her high school teacher",
+    "confidence": "sourced"
+   },
+   {
+    "value": "abandonment by a parent",
+    "quote": "She advises her children not to resent their father for abandoning them",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "visiting relatives", "quote": "prepare for a five-day visit with their grandparents while their divorced mother Loretta goes on a cruise", "confidence": "sourced"}
+   {
+    "value": "visiting relatives",
+    "quote": "prepare for a five-day visit with their grandparents while their divorced mother Loretta goes on a cruise",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "never go into the basement", "quote": "are instructed to never go into the basement and to not leave their room past 9:30 p.m.", "confidence": "sourced"},
-   {"value": "curfew", "quote": "to not leave their room past 9:30 p.m.", "confidence": "sourced"}
+   {
+    "value": "never go into the basement",
+    "quote": "are instructed to never go into the basement and to not leave their room past 9:30 p.m.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:37",
+      "quote": "By the way, there's mold in the basement. We don't want you guys to get sick."
+     }
+    ]
+   },
+   {
+    "value": "curfew",
+    "quote": "to not leave their room past 9:30 p.m.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:32",
+      "quote": "that you two shouldn't come out of your room after 9: 30 p.m."
+     }
+    ]
+   },
+   {
+    "value": "false explanation offered",
+    "detail": "\"Sundowning\" dementia is used to excuse the night behaviour",
+    "source": "subtitles",
+    "at": "00:30:19",
+    "quote": "It's called Sundowning. It's a kind of dementia. It's triggered by nightfall.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "siblings", "relation_to_threat": "stranger", "detail": "Becca and Tyler", "quote": "two young siblings, teenage girl Becca (DeJonge) and her younger brother Tyler (Oxenbould), who go to stay with their estranged grandparents", "confidence": "sourced"},
-   {"value": "grandparents", "relation_to_threat": "stranger", "detail": "the real ones, murdered", "quote": "finds the decomposed corpses of their real grandparents", "confidence": "sourced"},
-   {"value": "visitor", "relation_to_threat": "stranger", "detail": "Stacy", "quote": "discover Stacy's body hanging from a tree", "confidence": "sourced"}
+   {
+    "value": "siblings",
+    "relation_to_threat": "stranger",
+    "detail": "Becca and Tyler",
+    "quote": "two young siblings, teenage girl Becca (DeJonge) and her younger brother Tyler (Oxenbould), who go to stay with their estranged grandparents",
+    "confidence": "sourced"
+   },
+   {
+    "value": "grandparents",
+    "relation_to_threat": "stranger",
+    "detail": "the real ones, murdered",
+    "quote": "finds the decomposed corpses of their real grandparents",
+    "confidence": "sourced"
+   },
+   {
+    "value": "visitor",
+    "relation_to_threat": "stranger",
+    "detail": "Stacy",
+    "quote": "discover Stacy's body hanging from a tree",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "Tyler knocks him to the floor and kills him by repeatedly bashing his head with the refrigerator door", "confidence": "sourced"},
-   {"value": "family reconciliation", "quote": "Loretta concludes that reconciliation was always possible had she wanted it", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "Tyler knocks him to the floor and kills him by repeatedly bashing his head with the refrigerator door",
+    "confidence": "sourced"
+   },
+   {
+    "value": "family reconciliation",
+    "quote": "Loretta concludes that reconciliation was always possible had she wanted it",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "camcorder", "when": "opening", "role": "setting", "quote": "the teens plan to record a documentary about their visit using a camcorder", "confidence": "sourced"},
-   {"value": "isolated farmhouse", "when": "early", "role": "setting", "quote": "Arriving at Nana and Pop Pop's isolated farmhouse", "confidence": "sourced"},
-   {"value": "soiled diapers", "when": "early", "role": "clue", "quote": "Tyler finds a pile of soiled diapers in the shed", "confidence": "sourced"},
-   {"value": "knife", "when": "middle", "role": "threat", "quote": "tries unsuccessfully to break into the children's locked bedroom with a knife", "confidence": "sourced"},
-   {"value": "webcam", "when": "late", "role": "turn", "quote": "Tyler points the laptop's webcam out the window to show her they are in the backyard", "confidence": "sourced"},
-   {"value": "body hanging from a tree", "when": "late", "role": "clue", "quote": "discover Stacy's body hanging from a tree", "confidence": "sourced"},
-   {"value": "corpses in basement", "state": "decomposed", "when": "late", "role": "clue", "quote": "finds the decomposed corpses of their real grandparents", "confidence": "sourced"},
-   {"value": "mirror shard", "state": "broken", "when": "ending", "role": "weapon", "quote": "Becca fatally stabs Nana with a glass shard from a broken mirror", "confidence": "sourced"}
+   {
+    "value": "camcorder",
+    "when": "opening",
+    "role": "setting",
+    "quote": "the teens plan to record a documentary about their visit using a camcorder",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:28",
+      "quote": "BECCA: Are you holding my camera properly?"
+     }
+    ]
+   },
+   {
+    "value": "isolated farmhouse",
+    "when": "early",
+    "role": "setting",
+    "quote": "Arriving at Nana and Pop Pop's isolated farmhouse",
+    "confidence": "sourced"
+   },
+   {
+    "value": "soiled diapers",
+    "when": "early",
+    "role": "clue",
+    "quote": "Tyler finds a pile of soiled diapers in the shed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:25",
+      "quote": "Pop Pop wears diapers and he keeps them in an outhouse,"
+     }
+    ]
+   },
+   {
+    "value": "knife",
+    "when": "middle",
+    "role": "threat",
+    "quote": "tries unsuccessfully to break into the children's locked bedroom with a knife",
+    "confidence": "sourced"
+   },
+   {
+    "value": "webcam",
+    "when": "late",
+    "role": "turn",
+    "quote": "Tyler points the laptop's webcam out the window to show her they are in the backyard",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:40",
+      "quote": "She used oven cleaner, and now the tiny camera on the screen doesn't see anything."
+     }
+    ]
+   },
+   {
+    "value": "body hanging from a tree",
+    "when": "late",
+    "role": "clue",
+    "quote": "discover Stacy's body hanging from a tree",
+    "confidence": "sourced"
+   },
+   {
+    "value": "corpses in basement",
+    "state": "decomposed",
+    "when": "late",
+    "role": "clue",
+    "quote": "finds the decomposed corpses of their real grandparents",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:44",
+      "quote": "I'm going down into the basement. I think they have my grandparents here."
+     }
+    ]
+   },
+   {
+    "value": "mirror shard",
+    "state": "broken",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "Becca fatally stabs Nana with a glass shard from a broken mirror",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:04",
+      "quote": "You never look at yourself in the mirror. You comb your hair with your back to the mirror."
+     }
+    ]
+   },
+   {
+    "value": "oven",
+    "when": "middle",
+    "role": "threat",
+    "detail": "Nana asks Becca to climb inside to clean it, twice",
+    "source": "subtitles",
+    "at": "00:35:33",
+    "quote": "Would you mind getting inside the oven to clean it?",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:31",
+      "quote": "Could you clean the oven for me, Becca?"
+     }
+    ]
+   },
+   {
+    "value": "well",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:41:45",
+    "quote": "TYLER: Why is Nana staring into the well?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pond creatures",
+    "when": "middle",
+    "role": "omen",
+    "detail": "Nana's tale of alien creatures storing people at the bottom of a pond",
+    "source": "subtitles",
+    "at": "01:01:29",
+    "quote": "There is a pond that has little creatures in it.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:59",
+      "quote": "The creatures from another planet have many people at the bottom of the pond, storing them up."
+     }
+    ]
+   },
+   {
+    "value": "costume party",
+    "when": "middle",
+    "role": "clue",
+    "detail": "Pop Pop's recurring delusion of dressing for a party",
+    "source": "subtitles",
+    "at": "00:30:53",
+    "quote": "Yeah, I've got to catch the train to go to the costume party.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "children sent away", "when": "opening", "role": "trigger", "quote": "she simply sends her children, sight unseen, to her parents", "confidence": "sourced"},
-   {"order": 2, "value": "house rules given", "when": "early", "role": "omen", "quote": "are instructed to never go into the basement", "confidence": "sourced"},
-   {"order": 3, "value": "strange behaviour", "when": "early", "quote": "Becca catches Nana projectile vomiting, Nana chases the teens during a game of hide-and-seek", "confidence": "sourced"},
-   {"order": 4, "value": "night attack on door", "when": "middle", "quote": "tries unsuccessfully to break into the children's locked bedroom with a knife", "confidence": "sourced"},
-   {"order": 5, "value": "impostors revealed", "when": "late", "role": "turn", "quote": "the people they are staying with are not their grandparents", "confidence": "sourced"},
-   {"order": 6, "value": "real bodies found", "when": "late", "role": "clue", "quote": "Becca sneaks into the basement and finds the decomposed corpses of their real grandparents", "confidence": "sourced"},
-   {"order": 7, "value": "children kill captors", "when": "ending", "quote": "Becca fatally stabs Nana with a glass shard from a broken mirror", "confidence": "sourced"},
-   {"order": 8, "value": "family healing", "when": "ending", "quote": "Becca decides to include footage of her father in their documentary", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "children sent away",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "she simply sends her children, sight unseen, to her parents",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:20",
+      "quote": "It's one week. Your phones won't work all the way out there."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "house rules given",
+    "when": "early",
+    "role": "omen",
+    "quote": "are instructed to never go into the basement",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:29",
+      "quote": "Bedtime here is 9: 30."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "asked to climb in the oven",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:35:33",
+    "quote": "Would you mind getting inside the oven to clean it?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "strange behaviour",
+    "when": "early",
+    "quote": "Becca catches Nana projectile vomiting, Nana chases the teens during a game of hide-and-seek",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:40",
+      "quote": "(RETCHING SOUND)"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:20:25",
+      "quote": "NANA: Here I come, Tyler! Here I come!"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "bedtime story of the pond",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:01:32",
+    "quote": "These creatures are from another planet but no one realizes it.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "night attack on door",
+    "when": "middle",
+    "quote": "tries unsuccessfully to break into the children's locked bedroom with a knife",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:32",
+      "quote": "(BANGING SOUND)"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "forced game night",
+    "when": "late",
+    "source": "subtitles",
+    "at": "01:11:46",
+    "quote": "I'm a Yahtzee master.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:36",
+      "quote": "(SCREAMING) Yahtzee!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "impostors revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "the people they are staying with are not their grandparents",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:43",
+      "quote": "You've been staying with those people the whole time?"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "real bodies found",
+    "when": "late",
+    "role": "clue",
+    "quote": "Becca sneaks into the basement and finds the decomposed corpses of their real grandparents",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:44",
+      "quote": "I'm going down into the basement."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "children kill captors",
+    "when": "ending",
+    "quote": "Becca fatally stabs Nana with a glass shard from a broken mirror",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:28",
+      "quote": "BECCA: (SOBBING) Run, Tyler, run!"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "family healing",
+    "when": "ending",
+    "quote": "Becca decides to include footage of her father in their documentary",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:03",
+      "quote": "Don't hold onto anger, Becca."
+     }
+    ]
+   },
+   {
+    "order": 12,
+    "value": "comic rap sting",
+    "when": "ending",
+    "role": "turn",
+    "detail": "Tyler's closing rap over the credits about the diaper attack",
+    "source": "subtitles",
+    "at": "01:29:32",
+    "quote": "So here's a few things T-Diamond learned from visiting elders",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

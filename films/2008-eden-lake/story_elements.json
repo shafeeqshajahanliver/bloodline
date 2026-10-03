@@ -1,60 +1,437 @@
 {
  "film": "2008-eden-lake",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "gang of youths", "detail": "led by Brett", "quote": "a gang of rowdy teenagers, led by their psychopathic leader, Brett", "confidence": "sourced"},
-   {"value": "hostile community", "detail": "the gang's parents", "quote": "causing Jon and two other men to attack Jenny violently", "confidence": "sourced"}
+   {
+    "value": "gang of youths",
+    "detail": "led by Brett",
+    "quote": "a gang of rowdy teenagers, led by their psychopathic leader, Brett",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hostile community",
+    "detail": "the gang's parents",
+    "quote": "causing Jon and two other men to attack Jenny violently",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "abusive parenting", "quote": "they witness a mother aggressively slapping her son", "confidence": "observed"},
-   {"value": "social breakdown", "quote": "deal with concerns about \"Broken Britain\" and \"hoodies\"", "confidence": "sourced"}
+   {
+    "value": "abusive parenting",
+    "quote": "they witness a mother aggressively slapping her son",
+    "confidence": "observed"
+   },
+   {
+    "value": "social breakdown",
+    "quote": "deal with concerns about \"Broken Britain\" and \"hoodies\"",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "revenge", "detail": "after Brett's dog is stabbed", "quote": "Brett's dog is stabbed, sending him into a rage", "confidence": "sourced"},
-   {"value": "to cover up crimes", "quote": "Brett orders each of them to stab Steve so they will all be implicated", "confidence": "sourced"}
+   {
+    "value": "revenge",
+    "detail": "after Brett's dog is stabbed",
+    "quote": "Brett's dog is stabbed, sending him into a rage",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:04",
+      "quote": "My fucking dog died though!"
+     }
+    ]
+   },
+   {
+    "value": "to cover up crimes",
+    "quote": "Brett orders each of them to stab Steve so they will all be implicated",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:33",
+      "quote": "He's heard all of our fucking names. Either do it or he's gonna spill."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "a journey", "detail": "weekend trip to a remote lake", "quote": "set off for a weekend away at Eden Lake, a remote spot in the English countryside", "confidence": "sourced"},
-   {"value": "confronting locals", "quote": "Steve threatens them, only for the gang to start pulling out knives", "confidence": "sourced"}
+   {
+    "value": "a journey",
+    "detail": "weekend trip to a remote lake",
+    "quote": "set off for a weekend away at Eden Lake, a remote spot in the English countryside",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:46",
+      "quote": "It's a flooded quarry. It's lovely."
+     }
+    ]
+   },
+   {
+    "value": "confronting locals",
+    "quote": "Steve threatens them, only for the gang to start pulling out knives",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:43",
+      "quote": "Where's my fucking car?"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "group bound by shared guilt", "quote": "Brett orders each of them to stab Steve so they will all be implicated", "confidence": "sourced"},
-   {"value": "no help from locals", "quote": "a waitress, who defensively insists her children would never harass anyone", "confidence": "observed"}
+   {
+    "value": "group bound by shared guilt",
+    "quote": "Brett orders each of them to stab Steve so they will all be implicated",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:26",
+      "quote": "We're all in this together."
+     }
+    ]
+   },
+   {
+    "value": "no help from locals",
+    "quote": "a waitress, who defensively insists her children would never harass anyone",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:05",
+      "quote": "Not my kids."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "couple", "relation_to_threat": "stranger", "detail": "Jenny and Steve", "quote": "a young couple spending a day at a remote lake, only to be confronted and hunted by a group of hostile youths", "confidence": "sourced"},
-   {"value": "gang members", "relation_to_threat": "community", "quote": "Brett furiously beats another gang member to death", "confidence": "sourced"},
-   {"value": "young boy", "relation_to_threat": "community", "detail": "Adam", "quote": "Brett, who necklaces Adam in retaliation", "confidence": "sourced"}
+   {
+    "value": "couple",
+    "relation_to_threat": "stranger",
+    "detail": "Jenny and Steve",
+    "quote": "a young couple spending a day at a remote lake, only to be confronted and hunted by a group of hostile youths",
+    "confidence": "sourced"
+   },
+   {
+    "value": "gang members",
+    "relation_to_threat": "community",
+    "quote": "Brett furiously beats another gang member to death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "young boy",
+    "relation_to_threat": "community",
+    "detail": "Adam",
+    "quote": "Brett, who necklaces Adam in retaliation",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "everyone dies", "detail": "Jenny attacked by the parents", "quote": "Brett deletes the videos of his gang's crimes from Paige's phone and stares blankly into a mirror while wearing Steve's sunglasses", "confidence": "observed"},
-   {"value": "threat survives", "quote": "Brett lies that she and Steve murdered his friends and his dog", "confidence": "sourced"}
+   {
+    "value": "everyone dies",
+    "detail": "Jenny attacked by the parents",
+    "quote": "Brett deletes the videos of his gang's crimes from Paige's phone and stares blankly into a mirror while wearing Steve's sunglasses",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:09",
+      "quote": "They started this! - And we're gonna finish it."
+     }
+    ]
+   },
+   {
+    "value": "threat survives",
+    "quote": "Brett lies that she and Steve murdered his friends and his dog",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "insects", "state": "infesting food", "when": "early", "role": "omen", "quote": "the couple discovers their food supplies have been infested with insects", "confidence": "sourced"},
-   {"value": "dog", "state": "stabbed", "when": "middle", "role": "trigger", "quote": "Brett's dog is stabbed, sending him into a rage", "confidence": "sourced"},
-   {"value": "knives", "when": "middle", "role": "weapon", "quote": "the gang to start pulling out knives", "confidence": "sourced"},
-   {"value": "barbed wire", "state": "binding to a rock", "when": "middle", "role": "weapon", "quote": "Steve being tied to a rock with barbed wire by the gang", "confidence": "sourced"},
-   {"value": "phone camera", "state": "recording", "when": "middle", "role": "symbol", "quote": "Paige, the only female gang member, records Steve's torture on her phone", "confidence": "sourced"},
-   {"value": "pile of wood", "state": "pyre", "when": "late", "role": "threat", "quote": "They capture and tie Jenny, along with Steve's dead body, to a pile of wood", "confidence": "sourced"},
-   {"value": "mirror", "when": "ending", "role": "mirror", "quote": "stares blankly into a mirror while wearing Steve's sunglasses", "confidence": "sourced"},
-   {"value": "sunglasses", "state": "taken from victim", "when": "ending", "role": "symbol", "quote": "stares blankly into a mirror while wearing Steve's sunglasses", "confidence": "sourced"}
+   {
+    "value": "insects",
+    "state": "infesting food",
+    "when": "early",
+    "role": "omen",
+    "quote": "the couple discovers their food supplies have been infested with insects",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dog",
+    "state": "stabbed",
+    "when": "middle",
+    "role": "trigger",
+    "quote": "Brett's dog is stabbed, sending him into a rage",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:34",
+      "quote": "You stuck my dog."
+     }
+    ]
+   },
+   {
+    "value": "knives",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "the gang to start pulling out knives",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:06",
+      "quote": "He's got a fucking knife!"
+     }
+    ]
+   },
+   {
+    "value": "barbed wire",
+    "state": "binding to a rock",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "Steve being tied to a rock with barbed wire by the gang",
+    "confidence": "sourced"
+   },
+   {
+    "value": "phone camera",
+    "state": "recording",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "Paige, the only female gang member, records Steve's torture on her phone",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:43",
+      "quote": "Paige, keep that phone up."
+     }
+    ]
+   },
+   {
+    "value": "pile of wood",
+    "state": "pyre",
+    "when": "late",
+    "role": "threat",
+    "quote": "They capture and tie Jenny, along with Steve's dead body, to a pile of wood",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mirror",
+    "when": "ending",
+    "role": "mirror",
+    "quote": "stares blankly into a mirror while wearing Steve's sunglasses",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sunglasses",
+    "state": "taken from victim",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "stares blankly into a mirror while wearing Steve's sunglasses",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:17",
+      "quote": "You're wearing my shades. - They're mine, mate."
+     }
+    ]
+   },
+   {
+    "value": "rabbit in a hutch",
+    "state": "trapped, then burned",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:25:44",
+    "quote": "Can't run away, little bunny.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:15",
+      "quote": "The hutch should be destroyed. Burn it."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "caterpillar",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:10:19",
+    "quote": "What have you got there? A caterpillar?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "radio debate on unruly children",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:29",
+    "quote": "Good afternoon. You've been talking about fining parents",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "trip to remote place", "when": "opening", "role": "trigger", "quote": "set off for a weekend away at Eden Lake", "confidence": "sourced"},
-   {"order": 2, "value": "omen of violent parenting", "when": "opening", "role": "omen", "quote": "they witness a mother aggressively slapping her son", "confidence": "sourced"},
-   {"order": 3, "value": "harassment escalates", "when": "early", "quote": "the couple discovers their Jeep and belongings are missing at the lake", "confidence": "sourced"},
-   {"order": 4, "value": "confrontation turns violent", "when": "middle", "role": "turn", "quote": "in the scuffle, Brett's dog is stabbed, sending him into a rage", "confidence": "sourced"},
-   {"order": 5, "value": "torture of partner", "when": "middle", "quote": "Brett orders each of them to stab Steve so they will all be implicated", "confidence": "sourced"},
-   {"order": 6, "value": "child betrays victim", "when": "late", "quote": "Adam, a young boy she and Steve previously met, who informs the gang of her location", "confidence": "sourced"},
-   {"order": 7, "value": "escape to town", "when": "late", "quote": "Returning to town, Jenny crashes into a backyard party", "confidence": "sourced"},
-   {"order": 8, "value": "victim in the killer's home", "when": "ending", "role": "turn", "quote": "making Jenny realise that she is in Brett's home", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "teacher with small children",
+    "when": "opening",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:01:22",
+    "quote": "Can you play at peek-a-boo?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "trip to remote place",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "set off for a weekend away at Eden Lake",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:29",
+      "quote": "Eden Lake, my arse! Slapton Quarry!"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "omen of violent parenting",
+    "when": "opening",
+    "role": "omen",
+    "quote": "they witness a mother aggressively slapping her son",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:21",
+      "quote": "Call yourself a mother?"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "harassment escalates",
+    "when": "early",
+    "quote": "the couple discovers their Jeep and belongings are missing at the lake",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:09",
+      "quote": "It was right here. I don't believe it."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "confrontation turns violent",
+    "when": "middle",
+    "role": "turn",
+    "quote": "in the scuffle, Brett's dog is stabbed, sending him into a rage",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:21",
+      "quote": "Bonnie... Bonnie! Bonnie!"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "torture of partner",
+    "when": "middle",
+    "quote": "Brett orders each of them to stab Steve so they will all be implicated",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:50",
+      "quote": "Right, Coops, everyone has a dig."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "child betrays victim",
+    "when": "late",
+    "quote": "Adam, a young boy she and Steve previously met, who informs the gang of her location",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:44",
+      "quote": "Where have you brought me? Please, Adam!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "accomplice burned alive",
+    "when": "late",
+    "source": "subtitles",
+    "at": "01:05:45",
+    "quote": "Fucking burn! Burn, you little bitch! Go on!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "escape to town",
+    "when": "late",
+    "quote": "Returning to town, Jenny crashes into a backyard party",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:54",
+      "quote": "Somebody, please help me!"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "victim in the killer's home",
+    "when": "ending",
+    "role": "turn",
+    "quote": "making Jenny realise that she is in Brett's home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:05",
+      "quote": "That's Reece's van!"
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

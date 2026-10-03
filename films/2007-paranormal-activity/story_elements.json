@@ -1,59 +1,435 @@
 {
  "film": "2007-paranormal-activity",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "demon", "quote": "she is being haunted by a demon that feeds off of negative energy and is intent on tormenting her", "confidence": "sourced"},
-   {"value": "possessed woman", "detail": "Katie", "quote": "Katie, now showing signs of a possession, abruptly changes her mind and insists that they stay", "confidence": "sourced"}
+   {
+    "value": "demon",
+    "quote": "she is being haunted by a demon that feeds off of negative energy and is intent on tormenting her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "possessed woman",
+    "detail": "Katie",
+    "quote": "Katie, now showing signs of a possession, abruptly changes her mind and insists that they stay",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "follows from childhood", "quote": "Katie claims that an evil presence has been haunting her since she was a child", "confidence": "sourced"}
+   {
+    "value": "follows from childhood",
+    "quote": "Katie claims that an evil presence has been haunting her since she was a child",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:05",
+      "quote": "Unless that kid has been following me around since I was eight years old,"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to torment", "quote": "a demon that feeds off of negative energy and is intent on tormenting her", "confidence": "sourced"},
-   {"value": "a body", "quote": "Katie, now showing signs of a possession", "confidence": "observed"}
+   {
+    "value": "to torment",
+    "quote": "a demon that feeds off of negative energy and is intent on tormenting her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "a body",
+    "quote": "Katie, now showing signs of a possession",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:14",
+      "quote": "what it probably wants is Katie."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "filming the haunting", "quote": "Micah sets up the camera in their bedroom to record any paranormal activity that occurs while they sleep", "confidence": "sourced"},
-   {"value": "provoking the threat", "quote": "Micah is dismissive of this advice and continues to film and provoke the presence over the next few weeks", "confidence": "sourced"}
+   {
+    "value": "filming the haunting",
+    "quote": "Micah sets up the camera in their bedroom to record any paranormal activity that occurs while they sleep",
+    "confidence": "sourced"
+   },
+   {
+    "value": "provoking the threat",
+    "quote": "Micah is dismissive of this advice and continues to film and provoke the presence over the next few weeks",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "must not communicate", "quote": "He advises them not to communicate with the demon", "confidence": "sourced"},
-   {"value": "active at night", "quote": "The camera captures many strange occurrences at night", "confidence": "sourced"},
-   {"value": "warnings ignored", "quote": "Micah brings home a Ouija board against Katie's wishes.", "confidence": "sourced"}
+   {
+    "value": "must not communicate",
+    "quote": "He advises them not to communicate with the demon",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:23",
+      "quote": "the entity will sense that you're trying to communicate with it."
+     }
+    ]
+   },
+   {
+    "value": "active at night",
+    "quote": "The camera captures many strange occurrences at night",
+    "confidence": "sourced"
+   },
+   {
+    "value": "warnings ignored",
+    "quote": "Micah brings home a Ouija board against Katie's wishes.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:18",
+      "quote": "If you use a Ouija board and invite it, it's not gonna go away."
+     }
+    ]
+   },
+   {
+    "value": "feeds on negative energy",
+    "source": "subtitles",
+    "at": "00:16:56",
+    "quote": "These hauntings feed off of negative energy.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "follows the person, not the house",
+    "source": "subtitles",
+    "at": "00:17:51",
+    "quote": "You cannot run from this. It will follow you.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "couple", "relation_to_threat": "lover", "detail": "Katie and Micah", "quote": "It centers on a young couple (Katie Featherston and Micah Sloat) who are haunted by a supernatural presence inside their home.", "confidence": "sourced"},
-   {"value": "boyfriend", "relation_to_threat": "lover", "detail": "Micah, killed by possessed Katie", "quote": "Micah's body is hurled at the camera and Katie is revealed standing in the doorway with blood on her shirt", "confidence": "sourced"}
+   {
+    "value": "couple",
+    "relation_to_threat": "lover",
+    "detail": "Katie and Micah",
+    "quote": "It centers on a young couple (Katie Featherston and Micah Sloat) who are haunted by a supernatural presence inside their home.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "boyfriend",
+    "relation_to_threat": "lover",
+    "detail": "Micah, killed by possessed Katie",
+    "quote": "Micah's body is hurled at the camera and Katie is revealed standing in the doorway with blood on her shirt",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "victim becomes threat", "quote": "looks up at the camera with a grin, lunging at the camera with a demonic snarl on her face", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "Micah's body was discovered by the police days later, and Katie whereabouts are unknown", "confidence": "sourced"}
+   {
+    "value": "victim becomes threat",
+    "quote": "looks up at the camera with a grin, lunging at the camera with a demonic snarl on her face",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:16",
+      "quote": "I think we'll be OK now."
+     }
+    ]
+   },
+   {
+    "value": "threat survives",
+    "quote": "Micah's body was discovered by the police days later, and Katie whereabouts are unknown",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "video camera", "when": "opening", "role": "setting", "quote": "Micah records her from the driveway using his new video camera", "confidence": "sourced"},
-   {"value": "door", "state": "slamming", "when": "early", "role": "omen", "quote": "loud thuds, violent door slamming, and demonic grunts and screeches", "confidence": "sourced"},
-   {"value": "ouija board", "state": "catches fire", "when": "middle", "role": "trigger", "quote": "the camera records the board's planchette moving by itself before the board spontaneously catches fire", "confidence": "sourced"},
-   {"value": "footprints in powder", "state": "non-human", "when": "middle", "role": "clue", "quote": "non-human footsteps on baby powder Micah sprinkled in the hallway", "confidence": "sourced"},
-   {"value": "burnt photograph", "when": "middle", "role": "clue", "quote": "Micah discovers a burnt photograph in the attic which features a young Katie", "confidence": "sourced"},
-   {"value": "bite mark", "when": "late", "role": "threat", "quote": "Micah photographs a bite mark on Katie's back", "confidence": "sourced"},
-   {"value": "attic hatch", "state": "open", "when": "middle", "role": "setting", "quote": "they lead to an open attic hatch", "confidence": "sourced"},
-   {"value": "woman standing over bed", "state": "in a trance", "when": "early", "role": "omen", "quote": "stands beside the bed staring at Micah for two hours", "confidence": "sourced"}
+   {
+    "value": "video camera",
+    "when": "opening",
+    "role": "setting",
+    "quote": "Micah records her from the driveway using his new video camera",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:30",
+      "quote": "We are going to be sleeping with this camera."
+     }
+    ]
+   },
+   {
+    "value": "door",
+    "state": "slamming",
+    "when": "early",
+    "role": "omen",
+    "quote": "loud thuds, violent door slamming, and demonic grunts and screeches",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:20",
+      "quote": "(door creaks)"
+     }
+    ]
+   },
+   {
+    "value": "ouija board",
+    "state": "catches fire",
+    "when": "middle",
+    "role": "trigger",
+    "quote": "the camera records the board's planchette moving by itself before the board spontaneously catches fire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:54",
+      "quote": "I think this thing left a message on the Ouija board."
+     }
+    ]
+   },
+   {
+    "value": "footprints in powder",
+    "state": "non-human",
+    "when": "middle",
+    "role": "clue",
+    "quote": "non-human footsteps on baby powder Micah sprinkled in the hallway",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:01",
+      "quote": "it's gonna leave a pretty good footprint."
+     }
+    ]
+   },
+   {
+    "value": "burnt photograph",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Micah discovers a burnt photograph in the attic which features a young Katie",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:22",
+      "quote": "It wanted you to find my photo."
+     }
+    ]
+   },
+   {
+    "value": "bite mark",
+    "when": "late",
+    "role": "threat",
+    "quote": "Micah photographs a bite mark on Katie's back",
+    "confidence": "sourced"
+   },
+   {
+    "value": "attic hatch",
+    "state": "open",
+    "when": "middle",
+    "role": "setting",
+    "quote": "they lead to an open attic hatch",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:46",
+      "quote": "What in the hell is this doing in the attic?"
+     }
+    ]
+   },
+   {
+    "value": "woman standing over bed",
+    "state": "in a trance",
+    "when": "early",
+    "role": "omen",
+    "quote": "stands beside the bed staring at Micah for two hours",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:39",
+      "quote": "You don't remember standing there like a total weirdo?"
+     }
+    ]
+   },
+   {
+    "value": "spider",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:23:20",
+    "quote": "You screamed like that for a spider?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "moved keys",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:09:26",
+    "quote": "My keys are in the middle of the floor.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "shadow at foot of bed",
+    "when": "early",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:13:53",
+    "quote": "like, a shadowy, just, figure at the foot of my bed.",
+    "confidence": "sourced",
+    "detail": "Katie's childhood memory"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "camera set up", "when": "opening", "quote": "Micah sets up the camera in their bedroom to record any paranormal activity", "confidence": "sourced"},
-   {"order": 2, "value": "expert's warning", "when": "opening", "role": "omen", "quote": "He advises them not to communicate with the demon and recommends they contact a demonologist", "confidence": "sourced"},
-   {"order": 3, "value": "activity escalates", "when": "early", "quote": "soon escalating into loud thuds, violent door slamming, and demonic grunts and screeches", "confidence": "sourced"},
-   {"order": 4, "value": "rule broken", "when": "middle", "role": "trigger", "quote": "Micah brings home a Ouija board against Katie's wishes.", "confidence": "sourced"},
-   {"order": 5, "value": "past link discovered", "when": "middle", "role": "clue", "quote": "the photo was thought to have been destroyed in a house fire over a decade prior", "confidence": "sourced"},
-   {"order": 6, "value": "expert flees", "when": "middle", "quote": "psychic Dr. Fredrichs returns but is alarmed by the energy of the home and flees", "confidence": "sourced"},
-   {"order": 7, "value": "physical attack", "when": "late", "role": "turn", "quote": "Katie is pulled out of bed and tormented by an unseen force", "confidence": "sourced"},
-   {"order": 8, "value": "possessed kills partner", "when": "ending", "quote": "Micah's body is hurled at the camera and Katie is revealed standing in the doorway with blood on her shirt", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "camera set up",
+    "when": "opening",
+    "quote": "Micah sets up the camera in their bedroom to record any paranormal activity",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:24",
+      "quote": "We're just gonna film whatever happens to us"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "expert's warning",
+    "when": "opening",
+    "role": "omen",
+    "quote": "He advises them not to communicate with the demon and recommends they contact a demonologist",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:43",
+      "quote": "Dealing with demons is not my area. I'm very uncomfortable with it."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "activity escalates",
+    "when": "early",
+    "quote": "soon escalating into loud thuds, violent door slamming, and demonic grunts and screeches",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:26",
+      "quote": "The door is freaking moving by itself."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "sleepwalking vigil",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:43:03",
+    "quote": "I remember standing in the doorway and you pointing a camera at me.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "rule broken",
+    "when": "middle",
+    "role": "trigger",
+    "quote": "Micah brings home a Ouija board against Katie's wishes.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:32",
+      "quote": "And you buy the best Ouija board I've ever seen"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "past link discovered",
+    "when": "middle",
+    "role": "clue",
+    "quote": "the photo was thought to have been destroyed in a house fire over a decade prior",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:36",
+      "quote": "This chick, Diane. One of the possibilities from the board."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "expert flees",
+    "when": "middle",
+    "quote": "psychic Dr. Fredrichs returns but is alarmed by the energy of the home and flees",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "physical attack",
+    "when": "late",
+    "role": "turn",
+    "quote": "Katie is pulled out of bed and tormented by an unseen force",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:18",
+      "quote": "(Katie screams hysterically)"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "possessed kills partner",
+    "when": "ending",
+    "quote": "Micah's body is hurled at the camera and Katie is revealed standing in the doorway with blood on her shirt",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:24",
+      "quote": "(heavy thuds / Micah screams)"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "lunge at the camera",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:24:06",
+    "quote": "(heavy footsteps)",
+    "confidence": "observed",
+    "detail": "the closing sting; subtitles mark only footsteps and a final thud"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

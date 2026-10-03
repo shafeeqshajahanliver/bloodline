@@ -1,62 +1,429 @@
 {
  "film": "2016-personal-shopper",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "ghost", "detail": "a female spirit who vomits ectoplasm", "quote": "encounters a female spirit who vomits ectoplasm", "confidence": "sourced"},
-   {"value": "anonymous messenger", "quote": "Maureen begins receiving text messages from an unknown sender who she initially suspects is Lewis", "confidence": "sourced"},
-   {"value": "murderer", "detail": "Ingo, Kyra's lover", "quote": "Ingo confessed to Kyra's murder", "confidence": "sourced"}
+   {
+    "value": "ghost",
+    "detail": "a female spirit who vomits ectoplasm",
+    "quote": "encounters a female spirit who vomits ectoplasm",
+    "confidence": "sourced"
+   },
+   {
+    "value": "anonymous messenger",
+    "quote": "Maureen begins receiving text messages from an unknown sender who she initially suspects is Lewis",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:10",
+      "quote": "Unknown: And you know me."
+     }
+    ]
+   },
+   {
+    "value": "murderer",
+    "detail": "Ingo, Kyra's lover",
+    "quote": "Ingo confessed to Kyra's murder",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:50",
+      "quote": "They arrested Ingo, and he... and he confessed to everything."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "dead sibling", "detail": "Maureen's twin Lewis", "quote": "her twin brother, Lewis, who recently died of a genetic heart condition", "confidence": "observed"},
-   {"value": "unexplained", "quote": "Elevators and doors in the hotel are then shown opening and closing for an invisible entity", "confidence": "observed"}
+   {
+    "value": "dead sibling",
+    "detail": "Maureen's twin Lewis",
+    "quote": "her twin brother, Lewis, who recently died of a genetic heart condition",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:16",
+      "quote": "A heart attack. I actually have the same... malformation."
+     }
+    ]
+   },
+   {
+    "value": "unexplained",
+    "quote": "Elevators and doors in the hotel are then shown opening and closing for an invisible entity",
+    "confidence": "observed"
+   }
   ],
   "wants": [
-   {"value": "to make contact", "quote": "to fulfill their pact to send a signal from the afterlife", "confidence": "observed"},
-   {"value": "to tempt", "quote": "The messenger encourages her to indulge in forbidden desires, such as wearing Kyra's clothes", "confidence": "sourced"}
+   {
+    "value": "to make contact",
+    "quote": "to fulfill their pact to send a signal from the afterlife",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:44",
+      "quote": "So, we made this oath. Whoever died first would send the other a sign."
+     }
+    ]
+   },
+   {
+    "value": "to tempt",
+    "quote": "The messenger encourages her to indulge in forbidden desires, such as wearing Kyra's clothes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:44",
+      "quote": "Unknown: I want you."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "murder", "detail": "Kyra killed by her lover", "quote": "finds Kyra's corpse on the floor", "confidence": "observed"},
-   {"value": "adultery", "quote": "Kyra is planning to break up with him out of fear her husband will discover their relationship", "confidence": "sourced"}
+   {
+    "value": "murder",
+    "detail": "Kyra killed by her lover",
+    "quote": "finds Kyra's corpse on the floor",
+    "confidence": "observed"
+   },
+   {
+    "value": "adultery",
+    "quote": "Kyra is planning to break up with him out of fear her husband will discover their relationship",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "grief", "detail": "waiting for a sign from a dead twin", "quote": "Maureen talks about waiting for her twin brother, Lewis", "confidence": "sourced"},
-   {"value": "staying in the dead's house", "quote": "Maureen spends the night at the house and discovers the bathroom's faucets turning on", "confidence": "sourced"}
+   {
+    "value": "grief",
+    "detail": "waiting for a sign from a dead twin",
+    "quote": "Maureen talks about waiting for her twin brother, Lewis",
+    "confidence": "sourced"
+   },
+   {
+    "value": "staying in the dead's house",
+    "quote": "Maureen spends the night at the house and discovers the bathroom's faucets turning on",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "a promised sign", "quote": "their pact to send a signal from the afterlife", "confidence": "sourced"},
-   {"value": "knocks answer questions", "quote": "answered with one thump for \"yes\" and two for \"no\"", "confidence": "sourced"}
+   {
+    "value": "a promised sign",
+    "quote": "their pact to send a signal from the afterlife",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:03",
+      "quote": "But how will you know it's a sign? I'm a medium. He was a medium. I'll just know it."
+     }
+    ]
+   },
+   {
+    "value": "knocks answer questions",
+    "quote": "answered with one thump for \"yes\" and two for \"no\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:33",
+      "quote": "Is there someone here? If yes knock once... If no knock twice."
+     }
+    ]
+   },
+   {
+    "value": "desire needs the forbidden",
+    "source": "subtitles",
+    "at": "00:51:43",
+    "quote": "No desire if it's not forbidden. What else is forbidden?",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "grieving twin", "relation_to_threat": "family", "detail": "Maureen Cartwright", "quote": "a young American woman in Paris who works as a personal shopper for a celebrity and tries to communicate with her deceased twin brother", "confidence": "sourced"},
-   {"value": "employer", "relation_to_threat": "stranger", "detail": "Kyra, the supermodel", "quote": "finds blood all over the bed", "confidence": "observed"}
+   {
+    "value": "grieving twin",
+    "relation_to_threat": "family",
+    "detail": "Maureen Cartwright",
+    "quote": "a young American woman in Paris who works as a personal shopper for a celebrity and tries to communicate with her deceased twin brother",
+    "confidence": "sourced"
+   },
+   {
+    "value": "employer",
+    "relation_to_threat": "stranger",
+    "detail": "Kyra, the supermodel",
+    "quote": "finds blood all over the bed",
+    "confidence": "observed"
+   },
+   {
+    "value": "twin with same weak heart",
+    "relation_to_threat": "family",
+    "source": "subtitles",
+    "at": "00:27:23",
+    "quote": "malformation. Does it scare you?",
+    "confidence": "observed"
+   }
   ],
   "ending": [
-   {"value": "ambiguous", "quote": "she asks, \"Is it just me?\", and hears a single thump", "confidence": "sourced"}
+   {
+    "value": "ambiguous",
+    "quote": "she asks, \"Is it just me?\", and hears a single thump",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:40:34",
+      "quote": "Or is it just me?"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "faucets", "state": "turning on by themselves", "when": "early", "role": "omen", "quote": "discovers the bathroom's faucets turning on", "confidence": "sourced"},
-   {"value": "ectoplasm", "when": "early", "role": "threat", "quote": "a female spirit who vomits ectoplasm", "confidence": "sourced"},
-   {"value": "phone messages", "when": "middle", "role": "threat", "quote": "receiving text messages from an unknown sender", "confidence": "sourced"},
-   {"value": "clothes", "state": "worn, forbidden", "when": "middle", "role": "symbol", "quote": "Maureen goes to Kyra's place to wear her clothes", "confidence": "sourced"},
-   {"value": "blood on a bed", "when": "late", "role": "turn", "quote": "finds blood all over the bed", "confidence": "sourced"},
-   {"value": "jewelry", "state": "reappears", "when": "late", "role": "clue", "quote": "She discovers Kyra's jewelry in her apartment, despite telling the police she left it at Kyra's place", "confidence": "sourced"},
-   {"value": "glass", "state": "levitating, shattering", "when": "ending", "role": "omen", "quote": "the glass levitates briefly before shattering on the floor", "confidence": "sourced"}
+   {
+    "value": "faucets",
+    "state": "turning on by themselves",
+    "when": "early",
+    "role": "omen",
+    "quote": "discovers the bathroom's faucets turning on",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ectoplasm",
+    "when": "early",
+    "role": "threat",
+    "quote": "a female spirit who vomits ectoplasm",
+    "confidence": "sourced"
+   },
+   {
+    "value": "phone messages",
+    "when": "middle",
+    "role": "threat",
+    "quote": "receiving text messages from an unknown sender",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:46",
+      "quote": "Unknown: What difference does it make? Are you real? Are you alive or dead?"
+     }
+    ]
+   },
+   {
+    "value": "clothes",
+    "state": "worn, forbidden",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "Maureen goes to Kyra's place to wear her clothes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:56",
+      "quote": "Yesterday, I tried on the shoes of the woman I work for."
+     }
+    ]
+   },
+   {
+    "value": "blood on a bed",
+    "when": "late",
+    "role": "turn",
+    "quote": "finds blood all over the bed",
+    "confidence": "sourced"
+   },
+   {
+    "value": "jewelry",
+    "state": "reappears",
+    "when": "late",
+    "role": "clue",
+    "quote": "She discovers Kyra's jewelry in her apartment, despite telling the police she left it at Kyra's place",
+    "confidence": "sourced"
+   },
+   {
+    "value": "glass",
+    "state": "levitating, shattering",
+    "when": "ending",
+    "role": "omen",
+    "quote": "the glass levitates briefly before shattering on the floor",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:52",
+      "quote": "What happened? A glass broke."
+     }
+    ]
+   },
+   {
+    "value": "cross on the wall",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:08:11",
+    "quote": "You see the cross? Yeah. Has that always been there?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "spirit paintings",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:09:13",
+    "quote": "She says that spirits commission her paintings.",
+    "confidence": "sourced",
+    "detail": "Hilma af Klint's abstract art, painted as a medium"
+   },
+   {
+    "value": "turning table",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:05:04",
+    "quote": "With a pedestal table. The leg would tap on the floor like, once for \" yes \", twice for \" no \".",
+    "confidence": "sourced",
+    "detail": "Victor Hugo's séances in Jersey"
+   },
+   {
+    "value": "hotel room",
+    "when": "late",
+    "role": "trigger",
+    "source": "subtitles",
+    "at": "01:22:06",
+    "quote": "Unknown: Crown Plaza. Room 329. Right away.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "waiting for a sign", "when": "opening", "quote": "waiting for her twin brother, Lewis, who recently died of a genetic heart condition", "confidence": "sourced"},
-   {"order": 2, "value": "night in the dead's house", "when": "early", "role": "omen", "quote": "She then hears a loud bang and encounters a female spirit", "confidence": "sourced"},
-   {"order": 3, "value": "mysterious messages begin", "when": "middle", "quote": "Maureen begins receiving text messages from an unknown sender", "confidence": "sourced"},
-   {"order": 4, "value": "temptation obeyed", "when": "middle", "quote": "Maureen goes to Kyra's place to wear her clothes and masturbates in Kyra's bed", "confidence": "sourced"},
-   {"order": 5, "value": "body found", "when": "late", "role": "turn", "quote": "she finds Kyra's corpse on the floor", "confidence": "sourced"},
-   {"order": 6, "value": "invisible presence", "when": "late", "quote": "Elevators and doors in the hotel are then shown opening and closing for an invisible entity", "confidence": "sourced"},
-   {"order": 7, "value": "ghost seen in daylight", "when": "late", "quote": "a ghostly figure appears in the kitchen holding a glass", "confidence": "sourced"},
-   {"order": 8, "value": "question to the dead", "when": "ending", "quote": "Getting no response to \"Lewis, is it you?\"", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "alone in the dead's house",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:30",
+    "quote": "You're not staying? No, I prefer not to. Too many memories.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "waiting for a sign",
+    "when": "opening",
+    "quote": "waiting for her twin brother, Lewis, who recently died of a genetic heart condition",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:09",
+      "quote": "Lewis, is that you?"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "night in the dead's house",
+    "when": "early",
+    "role": "omen",
+    "quote": "She then hears a loud bang and encounters a female spirit",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:36",
+      "quote": "There was a presence. I felt something."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "mysterious messages begin",
+    "when": "middle",
+    "quote": "Maureen begins receiving text messages from an unknown sender",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:40",
+      "quote": "Unknown: I know you."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "temptation obeyed",
+    "when": "middle",
+    "quote": "Maureen goes to Kyra's place to wear her clothes and masturbates in Kyra's bed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:43",
+      "quote": "No desire if it's not forbidden."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "body found",
+    "when": "late",
+    "role": "turn",
+    "quote": "she finds Kyra's corpse on the floor",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "invisible presence",
+    "when": "late",
+    "quote": "Elevators and doors in the hotel are then shown opening and closing for an invisible entity",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "ghost seen in daylight",
+    "when": "late",
+    "quote": "a ghostly figure appears in the kitchen holding a glass",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "knocks answer from nowhere",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:39:36",
+    "quote": "Do you mean harm? I don't know you. Who are you?",
+    "confidence": "sourced",
+    "detail": "in Oman, a presence answers her yes/no questions"
+   },
+   {
+    "order": 10,
+    "value": "question to the dead",
+    "when": "ending",
+    "quote": "Getting no response to \"Lewis, is it you?\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:40:17",
+      "quote": "Lewis, is it you?"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

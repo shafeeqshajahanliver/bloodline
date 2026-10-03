@@ -1,60 +1,475 @@
 {
  "film": "1964-blood-and-black-lace",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "masked killer", "detail": "Morlacchi, later aided by Cristiana", "quote": "an assailant wearing a white, featureless mask, a black fedora and a trenchcoat", "confidence": "sourced"},
-   {"value": "murderous couple", "detail": "Morlacchi and Countess Cristiana", "quote": "Morlacchi and Cristina later discuss their murder spree", "confidence": "sourced"}
+   {
+    "value": "masked killer",
+    "detail": "Morlacchi, later aided by Cristiana",
+    "quote": "an assailant wearing a white, featureless mask, a black fedora and a trenchcoat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:54",
+      "quote": "He was all in black and he didn't seem to have a face. Maybe he was wearing a mask."
+     }
+    ]
+   },
+   {
+    "value": "murderous couple",
+    "detail": "Morlacchi and Countess Cristiana",
+    "quote": "Morlacchi and Cristina later discuss their murder spree",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:54",
+      "quote": "And I killed Greta to give you an alibi."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "people hiding a crime", "quote": "Isabella had found out that they had earlier murdered Christiana’s husband and tried to blackmail them", "confidence": "sourced"}
+   {
+    "value": "people hiding a crime",
+    "quote": "Isabella had found out that they had earlier murdered Christiana’s husband and tried to blackmail them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:43",
+      "quote": "that my husband's death wasn't an accident,"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to hide a secret", "detail": "to obtain the diary", "quote": "committed by a masked killer in a desperate attempt to obtain a scandal-revealing diary", "confidence": "sourced"},
-   {"value": "money", "detail": "Morlacchi wanted Cristiana's fortune", "quote": "their marriage was merely a means for him to become the heir to her fortune", "confidence": "sourced"}
+   {
+    "value": "to hide a secret",
+    "detail": "to obtain the diary",
+    "quote": "committed by a masked killer in a desperate attempt to obtain a scandal-revealing diary",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:14",
+      "quote": "if only that bloody diary hadn't cropped up."
+     }
+    ]
+   },
+   {
+    "value": "money",
+    "detail": "Morlacchi wanted Cristiana's fortune",
+    "quote": "their marriage was merely a means for him to become the heir to her fortune",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:52",
+      "quote": "You wanted to get your hands on everything I own by killing me."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "murder of a spouse", "quote": "they had earlier murdered Christiana’s husband", "confidence": "sourced"},
-   {"value": "blackmail", "quote": "Isabella had found out that they had earlier murdered Christiana’s husband and tried to blackmail them", "confidence": "sourced"}
+   {
+    "value": "murder of a spouse",
+    "quote": "they had earlier murdered Christiana’s husband",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:43",
+      "quote": "that my husband's death wasn't an accident,"
+     }
+    ]
+   },
+   {
+    "value": "blackmail",
+    "quote": "Isabella had found out that they had earlier murdered Christiana’s husband and tried to blackmail them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:12",
+      "quote": "Tomorrow I'll ask the bastard for 200,000 lire."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "secret written down", "detail": "Isabella's diary", "quote": "It is revealed that Isabella kept a diary detailing the staff's personal lives and vices", "confidence": "sourced"}
+   {
+    "value": "secret written down",
+    "detail": "Isabella's diary",
+    "quote": "It is revealed that Isabella kept a diary detailing the staff's personal lives and vices",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:42",
+      "quote": "Look what I've found. Isabella kept a diary."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "possessing the secret marks you", "quote": "The figure searches her corpse and her purse for the diary, but cannot find it", "confidence": "observed"},
-   {"value": "staged motive as decoy", "quote": "the hypersexualization of the killings was merely a red herring to disguise their motivations", "confidence": "sourced"}
+   {
+    "value": "possessing the secret marks you",
+    "quote": "The figure searches her corpse and her purse for the diary, but cannot find it",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:47",
+      "quote": "and maybe Nicole too, to make sure the police didn't get hold of the diary."
+     }
+    ]
+   },
+   {
+    "value": "staged motive as decoy",
+    "quote": "the hypersexualization of the killings was merely a red herring to disguise their motivations",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:42",
+      "quote": "The police are convinced they're dealing with a sex maniac."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "models", "relation_to_threat": "community", "detail": "employees of the fashion house", "quote": "the brutal murders of a Roman fashion house's models", "confidence": "sourced"},
-   {"value": "investigator", "relation_to_threat": "stranger", "detail": "Inspector Silvestri", "quote": "Police inspector Silvestri investigates and interviews Massimo Morlacchi", "confidence": "sourced"},
-   {"value": "accomplice lover", "relation_to_threat": "lover", "detail": "Cristiana, betrayed by Morlacchi", "quote": "realizing that Morlacchi had been responsible for her fall", "confidence": "sourced"}
+   {
+    "value": "models",
+    "relation_to_threat": "community",
+    "detail": "employees of the fashion house",
+    "quote": "the brutal murders of a Roman fashion house's models",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:13",
+      "quote": "Or a homicidal sex maniac. - Who only kills beautiful girls."
+     }
+    ]
+   },
+   {
+    "value": "investigator",
+    "relation_to_threat": "stranger",
+    "detail": "Inspector Silvestri",
+    "quote": "Police inspector Silvestri investigates and interviews Massimo Morlacchi",
+    "confidence": "sourced"
+   },
+   {
+    "value": "accomplice lover",
+    "relation_to_threat": "lover",
+    "detail": "Cristiana, betrayed by Morlacchi",
+    "quote": "realizing that Morlacchi had been responsible for her fall",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:04",
+      "quote": "Only you knew that I'd use the ledge if I was in danger."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "killers destroy each other", "quote": "She kills Morlacchi. After calling Silvestri, Cristiana collapses next to Morlacchi's body", "confidence": "sourced"}
+   {
+    "value": "killers destroy each other",
+    "quote": "She kills Morlacchi. After calling Silvestri, Cristiana collapses next to Morlacchi's body",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:55",
+      "quote": "Get me... Get me Inspector Silverstri..."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "white featureless mask", "state": "worn by killer", "when": "opening", "role": "threat", "quote": "an assailant wearing a white, featureless mask, a black fedora and a trenchcoat", "confidence": "sourced"},
-   {"value": "diary", "state": "sought, then burned", "when": "early", "role": "clue", "quote": "She says she burned it in her fireplace because it contained details of an abortion she underwent", "confidence": "sourced"},
-   {"value": "spiked glove", "state": "used to kill", "when": "early", "role": "weapon", "quote": "who murders her with a spiked glove", "confidence": "sourced"},
-   {"value": "furnace", "state": "burning", "when": "middle", "role": "weapon", "quote": "Peggy pulls off the mask and is shocked to recognize her assailant, who burns her to death using a furnace", "confidence": "sourced"},
-   {"value": "car trunk", "state": "holding a corpse", "when": "middle", "role": "clue", "quote": "finds Peggy's corpse stashed in the trunk of her car", "confidence": "sourced"},
-   {"value": "notebook", "state": "used to write demands", "when": "middle", "role": "clue", "quote": "Morlacchi retrieves the same notebook he used earlier to interrogate Peggy", "confidence": "sourced"},
-   {"value": "window", "state": "fall from it", "when": "late", "role": "turn", "quote": "While attempting to escape she falls from a second-story window", "confidence": "sourced"}
+   {
+    "value": "white featureless mask",
+    "state": "worn by killer",
+    "when": "opening",
+    "role": "threat",
+    "quote": "an assailant wearing a white, featureless mask, a black fedora and a trenchcoat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:28",
+      "quote": "They'Il find the mask by her side and think that she was the culprit."
+     }
+    ]
+   },
+   {
+    "value": "diary",
+    "state": "sought, then burned",
+    "when": "early",
+    "role": "clue",
+    "quote": "She says she burned it in her fireplace because it contained details of an abortion she underwent",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:09",
+      "quote": "WHERE IS THE DIARY?"
+     }
+    ]
+   },
+   {
+    "value": "spiked glove",
+    "state": "used to kill",
+    "when": "early",
+    "role": "weapon",
+    "quote": "who murders her with a spiked glove",
+    "confidence": "sourced"
+   },
+   {
+    "value": "furnace",
+    "state": "burning",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "Peggy pulls off the mask and is shocked to recognize her assailant, who burns her to death using a furnace",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:10",
+      "quote": "He must have used a red-hot iron."
+     }
+    ]
+   },
+   {
+    "value": "car trunk",
+    "state": "holding a corpse",
+    "when": "middle",
+    "role": "clue",
+    "quote": "finds Peggy's corpse stashed in the trunk of her car",
+    "confidence": "sourced"
+   },
+   {
+    "value": "notebook",
+    "state": "used to write demands",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Morlacchi retrieves the same notebook he used earlier to interrogate Peggy",
+    "confidence": "sourced"
+   },
+   {
+    "value": "window",
+    "state": "fall from it",
+    "when": "late",
+    "role": "turn",
+    "quote": "While attempting to escape she falls from a second-story window",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:04",
+      "quote": "Only you knew that I'd use the ledge if I was in danger."
+     }
+    ]
+   },
+   {
+    "value": "loose shop sign",
+    "state": "blown down in the storm",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:06:55",
+    "quote": "The sign's fallen off again.",
+    "confidence": "sourced",
+    "detail": "the fashion house sign swings in the wind on the night of the first murder"
+   },
+   {
+    "value": "cocaine",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:14:08",
+    "quote": "What is it? - Cocaine.",
+    "confidence": "sourced",
+    "detail": "found in Isabella's house; links her to the addicted antique dealer"
+   },
+   {
+    "value": "antique shop",
+    "when": "early",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:21:54",
+    "quote": "ANTIQUES Franco?",
+    "confidence": "sourced",
+    "detail": "where Nicole is killed with the spiked glove"
+   },
+   {
+    "value": "jewels",
+    "when": "ending",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:24:01",
+    "quote": "But I saw you with the jewels. You planned everything.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "first murder at night", "when": "opening", "quote": "is walking through the property's grounds at night when she is violently killed", "confidence": "sourced"},
-   {"order": 2, "value": "hidden diary surfaces", "when": "early", "role": "trigger", "quote": "Isabella kept a diary detailing the staff's personal lives and vices", "confidence": "sourced"},
-   {"order": 3, "value": "victims killed one by one", "when": "early", "quote": "she is stalked by the murderer, who murders her with a spiked glove", "confidence": "sourced"},
-   {"order": 4, "value": "victim unmasks killer", "when": "middle", "quote": "Peggy pulls off the mask and is shocked to recognize her assailant", "confidence": "sourced"},
-   {"order": 5, "value": "suspects arrested, killing continues", "when": "middle", "quote": "While the suspects are in custody, Greta, another model, finds Peggy's corpse", "confidence": "sourced"},
-   {"order": 6, "value": "killers revealed", "when": "late", "role": "turn", "quote": "he killed Isabella, Nicole and Peggy, and Cristiana murdered Greta to give him an alibi", "confidence": "sourced"},
-   {"order": 7, "value": "framing murder", "when": "late", "quote": "Cristiana kills a fifth model, making the death look like a suicide", "confidence": "sourced"},
-   {"order": 8, "value": "accomplice kills betrayer", "when": "ending", "quote": "She kills Morlacchi. After calling Silvestri, Cristiana collapses", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "storm and loose sign",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:06:55",
+    "quote": "The sign's fallen off again.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "first murder at night",
+    "when": "opening",
+    "quote": "is walking through the property's grounds at night when she is violently killed",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "hidden diary surfaces",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Isabella kept a diary detailing the staff's personal lives and vices",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:42",
+      "quote": "Look what I've found. Isabella kept a diary."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "victims killed one by one",
+    "when": "early",
+    "quote": "she is stalked by the murderer, who murders her with a spiked glove",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:54",
+      "quote": "ANTIQUES Franco?"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "victim unmasks killer",
+    "when": "middle",
+    "quote": "Peggy pulls off the mask and is shocked to recognize her assailant",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:09",
+      "quote": "WHERE IS THE DIARY? I burnt it... I burnt it..."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "suspects arrested, killing continues",
+    "when": "middle",
+    "quote": "While the suspects are in custody, Greta, another model, finds Peggy's corpse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:04",
+      "quote": "This is absurd. I've provided an alibi."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "killers revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "he killed Isabella, Nicole and Peggy, and Cristiana murdered Greta to give him an alibi",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:54",
+      "quote": "And I killed Greta to give you an alibi."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "framing murder",
+    "when": "late",
+    "quote": "Cristiana kills a fifth model, making the death look like a suicide",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:22",
+      "quote": "You have to make it look like suicide."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "victim survives the fall",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:23:46",
+    "quote": "on the shop awning breaking my fall.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "accomplice kills betrayer",
+    "when": "ending",
+    "quote": "She kills Morlacchi. After calling Silvestri, Cristiana collapses",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:52",
+      "quote": "You wanted to get your hands on everything I own by killing me."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "dying call to police",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:26:55",
+    "quote": "Get me... Get me Inspector Silverstri...",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

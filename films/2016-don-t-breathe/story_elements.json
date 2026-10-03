@@ -1,63 +1,382 @@
 {
  "film": "2016-don-t-breathe",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "blind veteran", "detail": "Norman Nordstrom", "quote": "three home intruders who find themselves trapped and hunted in the home of their blind target", "confidence": "sourced"},
-   {"value": "guard dog", "detail": "Norman's rottweiler", "quote": "The dog pursues Rocky through the vents before she is captured by Norman", "confidence": "sourced"}
+   {
+    "value": "blind veteran",
+    "detail": "Norman Nordstrom",
+    "quote": "three home intruders who find themselves trapped and hunted in the home of their blind target",
+    "confidence": "sourced"
+   },
+   {
+    "value": "guard dog",
+    "detail": "Norman's rottweiler",
+    "quote": "The dog pursues Rocky through the vents before she is captured by Norman",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:12",
+      "quote": "[DOG SNARLING AND ROCKY PANTING]"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "grieving parent", "detail": "daughter killed in a car accident", "quote": "a wealthy young woman, Cindy Roberts, killed Norman's daughter in a car accident", "confidence": "sourced"},
-   {"value": "war trauma", "quote": "due to both his eyes being injured by exploded grenade shrapnel during his tour of duty in Iraq", "confidence": "sourced"}
+   {
+    "value": "grieving parent",
+    "detail": "daughter killed in a car accident",
+    "quote": "a wealthy young woman, Cindy Roberts, killed Norman's daughter in a car accident",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:34",
+      "quote": "It 's a bad joke. You tell me what God would allow..."
+     }
+    ]
+   },
+   {
+    "value": "war trauma",
+    "quote": "due to both his eyes being injured by exploded grenade shrapnel during his tour of duty in Iraq",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to replace a lost child", "quote": "Norman reveals that Cindy was pregnant with a \"replacement\" for his daughter", "confidence": "sourced"},
-   {"value": "to protect his home", "quote": "is reported to have killed two intruders (Alex and Money) in self-defense", "confidence": "observed"}
+   {
+    "value": "to replace a lost child",
+    "quote": "Norman reveals that Cindy was pregnant with a \"replacement\" for his daughter",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:53",
+      "quote": "between a father and his child."
+     }
+    ]
+   },
+   {
+    "value": "to protect his home",
+    "quote": "is reported to have killed two intruders (Alex and Money) in self-defense",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "child killed in accident", "quote": "Cindy Roberts, killed Norman's daughter in a car accident", "confidence": "sourced"},
-   {"value": "captivity and forced pregnancy", "quote": "a restrained and gagged pregnant woman who reveals herself to be Cindy Roberts", "confidence": "sourced"}
+   {
+    "value": "child killed in accident",
+    "quote": "Cindy Roberts, killed Norman's daughter in a car accident",
+    "confidence": "sourced"
+   },
+   {
+    "value": "captivity and forced pregnancy",
+    "quote": "a restrained and gagged pregnant woman who reveals herself to be Cindy Roberts",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:40",
+      "quote": "You wanted her to pay. I understand that."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "break-in", "quote": "the gang approach the house, drug Norman's rottweiler, then break in", "confidence": "sourced"},
-   {"value": "desire to escape poverty", "quote": "Rocky longs to move to California with her younger sister, Diddy, and escape from their abusive mother", "confidence": "sourced"}
+   {
+    "value": "break-in",
+    "quote": "the gang approach the house, drug Norman's rottweiler, then break in",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:54",
+      "quote": "The guy 's gassed out. He 's out."
+     }
+    ]
+   },
+   {
+    "value": "desire to escape poverty",
+    "quote": "Rocky longs to move to California with her younger sister, Diddy, and escape from their abusive mother",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:34",
+      "quote": "When I reach California, I 'll color this tat"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "hunts by sound", "quote": "Norman then shuts off the lights, plunging the basement into darkness", "confidence": "observed"},
-   {"value": "trapped in house", "quote": "three home intruders who find themselves trapped and hunted in the home of their blind target", "confidence": "sourced"}
+   {
+    "value": "hunts by sound",
+    "quote": "Norman then shuts off the lights, plunging the basement into darkness",
+    "confidence": "observed"
+   },
+   {
+    "value": "trapped in house",
+    "quote": "three home intruders who find themselves trapped and hunted in the home of their blind target",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "young burglars", "relation_to_threat": "stranger", "detail": "Rocky, Alex and Money", "quote": "Rocky, Alex, and Money are three Detroit delinquents who make a living by breaking into houses", "confidence": "sourced"},
-   {"value": "captive woman", "relation_to_threat": "stranger", "detail": "Cindy, who killed his daughter", "quote": "Norman shoots at them, unintentionally killing Cindy", "confidence": "sourced"}
+   {
+    "value": "young burglars",
+    "relation_to_threat": "stranger",
+    "detail": "Rocky, Alex and Money",
+    "quote": "Rocky, Alex, and Money are three Detroit delinquents who make a living by breaking into houses",
+    "confidence": "sourced"
+   },
+   {
+    "value": "captive woman",
+    "relation_to_threat": "stranger",
+    "detail": "Cindy, who killed his daughter",
+    "quote": "Norman shoots at them, unintentionally killing Cindy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:09",
+      "quote": "We have to get her out of here."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "threat survives", "quote": "Norman, who is recovering in the hospital and in stable condition", "confidence": "sourced"},
-   {"value": "final girl escapes", "quote": "Rocky, never looking back at the ordeal again, and Diddy are on their way to their train to California", "confidence": "sourced"},
-   {"value": "truth hidden", "quote": "He does not mention Rocky, Cindy nor the stolen cash", "confidence": "sourced"}
+   {
+    "value": "threat survives",
+    "quote": "Norman, who is recovering in the hospital and in stable condition",
+    "confidence": "sourced"
+   },
+   {
+    "value": "final girl escapes",
+    "quote": "Rocky, never looking back at the ordeal again, and Diddy are on their way to their train to California",
+    "confidence": "sourced"
+   },
+   {
+    "value": "truth hidden",
+    "quote": "He does not mention Rocky, Cindy nor the stolen cash",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "rottweiler", "state": "drugged, then hunting", "when": "early", "role": "threat", "quote": "drug Norman's rottweiler, then break in", "confidence": "sourced"},
-   {"value": "basement door", "state": "locked", "when": "early", "role": "clue", "quote": "Seeing a locked basement door, he assumes the loot is hidden in there and shoots the lock", "confidence": "sourced"},
-   {"value": "safe", "state": "hidden, emptied", "when": "early", "role": "trigger", "quote": "Rocky witnesses Norman open a hidden safe to check his valuables", "confidence": "sourced"},
-   {"value": "darkness", "when": "middle", "role": "setting", "quote": "plunging the basement into darkness", "confidence": "sourced"},
-   {"value": "garden shears", "when": "middle", "role": "weapon", "quote": "stabs him with a pair of garden shears", "confidence": "sourced"},
-   {"value": "turkey baster", "when": "late", "role": "threat", "quote": "He then prepares to artificially inseminate her using a turkey baster", "confidence": "sourced"},
-   {"value": "crowbar", "when": "ending", "role": "weapon", "quote": "hits him repeatedly in the head with a crowbar", "confidence": "sourced"}
+   {
+    "value": "rottweiler",
+    "state": "drugged, then hunting",
+    "when": "early",
+    "role": "threat",
+    "quote": "drug Norman's rottweiler, then break in",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:16",
+      "quote": "[DOG BARKING]"
+     }
+    ]
+   },
+   {
+    "value": "basement door",
+    "state": "locked",
+    "when": "early",
+    "role": "clue",
+    "quote": "Seeing a locked basement door, he assumes the loot is hidden in there and shoots the lock",
+    "confidence": "sourced"
+   },
+   {
+    "value": "safe",
+    "state": "hidden, emptied",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Rocky witnesses Norman open a hidden safe to check his valuables",
+    "confidence": "sourced"
+   },
+   {
+    "value": "darkness",
+    "when": "middle",
+    "role": "setting",
+    "quote": "plunging the basement into darkness",
+    "confidence": "sourced"
+   },
+   {
+    "value": "garden shears",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "stabs him with a pair of garden shears",
+    "confidence": "sourced"
+   },
+   {
+    "value": "turkey baster",
+    "when": "late",
+    "role": "threat",
+    "quote": "He then prepares to artificially inseminate her using a turkey baster",
+    "confidence": "sourced"
+   },
+   {
+    "value": "crowbar",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "hits him repeatedly in the head with a crowbar",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ladybug tattoo",
+    "when": "early",
+    "role": "symbol",
+    "detail": "Rocky's new tattoo, to be coloured in once she reaches California",
+    "source": "subtitles",
+    "at": "00:11:36",
+    "quote": "Is that a new tattoo? Yeah. I got it last night. ALEX: Is it a...? - Ladybug.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "children's tv show",
+    "when": "early",
+    "role": "symbol",
+    "detail": "playing in the blind man's bedroom",
+    "source": "subtitles",
+    "at": "00:23:32",
+    "quote": "What does a tree need to grow? GIRL: Water, seeds...",
+    "confidence": "sourced"
+   },
+   {
+    "value": "washing machine",
+    "when": "late",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:59:41",
+    "quote": "[WASHER WHIRRING LOUDLY]",
+    "confidence": "sourced"
+   },
+   {
+    "value": "keypad code",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:44:04",
+    "quote": "2-9-7-8. 7-8, 7-8. 2-9-7-8.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "thieves hear of a score", "when": "opening", "quote": "Norman Nordstrom has $300,000 in cash in his house in an abandoned Detroit neighborhood", "confidence": "sourced"},
-   {"order": 2, "value": "break-in", "when": "early", "role": "trigger", "quote": "the gang approach the house, drug Norman's rottweiler, then break in", "confidence": "sourced"},
-   {"order": 3, "value": "first death", "when": "early", "quote": "Norman, who overpowers Money, takes the gun, and kills him", "confidence": "sourced"},
-   {"order": 4, "value": "captive found in basement", "when": "middle", "role": "turn", "quote": "they find a restrained and gagged pregnant woman who reveals herself to be Cindy Roberts", "confidence": "sourced"},
-   {"order": 5, "value": "chase in darkness", "when": "middle", "quote": "After a blind chase and struggle, Alex knocks him out and they flee upstairs", "confidence": "sourced"},
-   {"order": 6, "value": "captor's plan revealed", "when": "late", "role": "turn", "quote": "promising to let her go after she gives him a child", "confidence": "sourced"},
-   {"order": 7, "value": "final girl fights back", "when": "ending", "quote": "hits him repeatedly in the head with a crowbar and pushes him into the basement", "confidence": "sourced"},
-   {"order": 8, "value": "villain survives, escape", "when": "ending", "quote": "Norman, who is recovering in the hospital and in stable condition", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "thieves hear of a score",
+    "when": "opening",
+    "quote": "Norman Nordstrom has $300,000 in cash in his house in an abandoned Detroit neighborhood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:34",
+      "quote": "Because the money 's in there and the paranoid fuck doesn 't trust nobody."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "break-in",
+    "when": "early",
+    "role": "trigger",
+    "quote": "the gang approach the house, drug Norman's rottweiler, then break in",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "first death",
+    "when": "early",
+    "quote": "Norman, who overpowers Money, takes the gun, and kills him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:01",
+      "quote": "BLIND MAN: Who 's there?"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "captive found in basement",
+    "when": "middle",
+    "role": "turn",
+    "quote": "they find a restrained and gagged pregnant woman who reveals herself to be Cindy Roberts",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:47",
+      "quote": "[CINDY SPEAKING INDISTINCTLY]"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "chase in darkness",
+    "when": "middle",
+    "quote": "After a blind chase and struggle, Alex knocks him out and they flee upstairs",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:16",
+      "quote": "[BONE CRUNCHES THEN BLIND MAN SCREAMS]"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "captor's plan revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "promising to let her go after she gives him a child",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:29",
+      "quote": "Please, let me go!"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "final girl fights back",
+    "when": "ending",
+    "quote": "hits him repeatedly in the head with a crowbar and pushes him into the basement",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:29",
+      "quote": "[ALARM BLARING]"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "villain survives, escape",
+    "when": "ending",
+    "quote": "Norman, who is recovering in the hospital and in stable condition",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

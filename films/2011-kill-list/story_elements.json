@@ -1,64 +1,437 @@
 {
  "film": "2011-kill-list",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "cult", "quote": "the pair witness a strange ceremony in the woods that culminates in human sacrifice", "confidence": "sourced"},
-   {"value": "the self", "detail": "Jay's violence", "quote": "His disturbed past surfaces as he spins out of control during jobs", "confidence": "sourced"}
+   {
+    "value": "cult",
+    "quote": "the pair witness a strange ceremony in the woods that culminates in human sacrifice",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the self",
+    "detail": "Jay's violence",
+    "quote": "His disturbed past surfaces as he spins out of control during jobs",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "unexplained", "detail": "the cult's purpose is never stated", "quote": "ominous employers raise the stakes", "confidence": "observed"}
+   {
+    "value": "unexplained",
+    "detail": "the cult's purpose is never stated",
+    "quote": "ominous employers raise the stakes",
+    "confidence": "observed"
+   }
   ],
   "wants": [
-   {"value": "a chosen one", "detail": "Jay is crowned", "quote": "Jay is then crowned by the cultists", "confidence": "sourced"},
-   {"value": "a sacrifice", "quote": "a strange ceremony in the woods that culminates in human sacrifice", "confidence": "observed"}
+   {
+    "value": "a chosen one",
+    "detail": "Jay is crowned",
+    "quote": "Jay is then crowned by the cultists",
+    "confidence": "sourced"
+   },
+   {
+    "value": "a sacrifice",
+    "quote": "a strange ceremony in the woods that culminates in human sacrifice",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "past mission gone wrong", "quote": "Jay is still reeling from a disastrous mission in Kyiv", "confidence": "sourced"},
-   {"value": "contract killing", "quote": "Jay and Gal are two former British soldiers turned hitmen", "confidence": "sourced"}
+   {
+    "value": "past mission gone wrong",
+    "quote": "Jay is still reeling from a disastrous mission in Kyiv",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:11",
+      "quote": "Kiev was... - Yeah, yeah... I know."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:28:22",
+      "quote": "How did he know about Kiev?"
+     }
+    ]
+   },
+   {
+    "value": "contract killing",
+    "quote": "Jay and Gal are two former British soldiers turned hitmen",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "taking a job", "quote": "Gal reveals he has a new job for them, which Jay eventually accepts", "confidence": "sourced"},
-   {"value": "pact sealed in blood", "quote": "The employer unexpectedly cuts Jay's hand and his own, so that the contract is effectively signed in blood", "confidence": "sourced"}
+   {
+    "value": "taking a job",
+    "quote": "Gal reveals he has a new job for them, which Jay eventually accepts",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pact sealed in blood",
+    "quote": "The employer unexpectedly cuts Jay's hand and his own, so that the contract is effectively signed in blood",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "contract cannot be broken", "quote": "both hitmen and their families will be killed if they do not complete the contract", "confidence": "sourced"},
-   {"value": "victims thank their killer", "quote": "recognizes Jay and thanks him just before being killed", "confidence": "sourced"}
+   {
+    "value": "contract cannot be broken",
+    "quote": "both hitmen and their families will be killed if they do not complete the contract",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:47",
+      "quote": "Do you think if you get replacements they'll let you go free of the contract?"
+     }
+    ]
+   },
+   {
+    "value": "victims thank their killer",
+    "quote": "recognizes Jay and thanks him just before being killed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:38",
+      "quote": "I just want to say thank you."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "hitman", "relation_to_threat": "self", "detail": "Jay", "quote": "Jay awakens in the field surrounded by the cultists, who strip him and place a mask over his face", "confidence": "sourced"},
-   {"value": "wife and child", "relation_to_threat": "family", "detail": "Shel and Sam", "quote": "the Hunchback was his wife with Sam strapped to her back", "confidence": "sourced"},
-   {"value": "partner", "relation_to_threat": "stranger", "detail": "Gal", "quote": "They capture and disembowel Gal, forcing Jay to perform a mercy killing on him", "confidence": "sourced"}
+   {
+    "value": "hitman",
+    "relation_to_threat": "self",
+    "detail": "Jay",
+    "quote": "Jay awakens in the field surrounded by the cultists, who strip him and place a mask over his face",
+    "confidence": "sourced"
+   },
+   {
+    "value": "wife and child",
+    "relation_to_threat": "family",
+    "detail": "Shel and Sam",
+    "quote": "the Hunchback was his wife with Sam strapped to her back",
+    "confidence": "sourced"
+   },
+   {
+    "value": "partner",
+    "relation_to_threat": "stranger",
+    "detail": "Gal",
+    "quote": "They capture and disembowel Gal, forcing Jay to perform a mercy killing on him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:21",
+      "quote": "Just do it, do it."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "hero kills own family", "quote": "Jay triumphs, only to discover that the Hunchback was his wife with Sam strapped to her back", "confidence": "sourced"},
-   {"value": "victim becomes threat", "detail": "Jay crowned by the cult", "quote": "Jay is then crowned by the cultists", "confidence": "sourced"},
-   {"value": "conspiracy revealed", "quote": "revealing Fiona, the client, and the man from the doctor's office amongst their numbers", "confidence": "sourced"}
+   {
+    "value": "hero kills own family",
+    "quote": "Jay triumphs, only to discover that the Hunchback was his wife with Sam strapped to her back",
+    "confidence": "sourced"
+   },
+   {
+    "value": "victim becomes threat",
+    "detail": "Jay crowned by the cult",
+    "quote": "Jay is then crowned by the cultists",
+    "confidence": "sourced"
+   },
+   {
+    "value": "conspiracy revealed",
+    "quote": "revealing Fiona, the client, and the man from the doctor's office amongst their numbers",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "symbol on a mirror", "when": "early", "role": "omen", "quote": "carves a symbol on the back of the bathroom mirror", "confidence": "sourced"},
-   {"value": "blood", "state": "collected on tissue", "when": "early", "role": "omen", "quote": "collects a tissue with Jay's blood", "confidence": "sourced"},
-   {"value": "cut hand", "state": "infected", "when": "middle", "role": "omen", "quote": "When his cut hand becomes infected", "confidence": "sourced"},
-   {"value": "hammer", "when": "middle", "role": "weapon", "quote": "savagely beat him to death with a hammer", "confidence": "sourced"},
-   {"value": "videos", "state": "horrific", "when": "middle", "role": "clue", "quote": "keeps a collection of horrific, sickening videos of an undisclosed nature", "confidence": "sourced"},
-   {"value": "masks", "when": "late", "role": "threat", "quote": "the remaining masked members chase the hitmen into an underground complex", "confidence": "sourced"},
-   {"value": "torches", "state": "lit around a field", "when": "late", "role": "setting", "quote": "lit torches have been placed around the nearby field", "confidence": "sourced"},
-   {"value": "knife", "when": "ending", "role": "weapon", "quote": "a masked and cloaked person armed with a knife", "confidence": "sourced"}
+   {
+    "value": "symbol on a mirror",
+    "when": "early",
+    "role": "omen",
+    "quote": "carves a symbol on the back of the bathroom mirror",
+    "confidence": "sourced"
+   },
+   {
+    "value": "blood",
+    "state": "collected on tissue",
+    "when": "early",
+    "role": "omen",
+    "quote": "collects a tissue with Jay's blood",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cut hand",
+    "state": "infected",
+    "when": "middle",
+    "role": "omen",
+    "quote": "When his cut hand becomes infected",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:05",
+      "quote": "It's infected, babe. You've got to go see a doctor."
+     }
+    ]
+   },
+   {
+    "value": "hammer",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "savagely beat him to death with a hammer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:08",
+      "quote": "every time you get a fucking lump hammer in your hand."
+     }
+    ]
+   },
+   {
+    "value": "videos",
+    "state": "horrific",
+    "when": "middle",
+    "role": "clue",
+    "quote": "keeps a collection of horrific, sickening videos of an undisclosed nature",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:39",
+      "quote": "I've seen your wee film."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:47:01",
+      "quote": "Who films it?"
+     }
+    ]
+   },
+   {
+    "value": "masks",
+    "when": "late",
+    "role": "threat",
+    "quote": "the remaining masked members chase the hitmen into an underground complex",
+    "confidence": "sourced"
+   },
+   {
+    "value": "torches",
+    "state": "lit around a field",
+    "when": "late",
+    "role": "setting",
+    "quote": "lit torches have been placed around the nearby field",
+    "confidence": "sourced"
+   },
+   {
+    "value": "knife",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "a masked and cloaked person armed with a knife",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:00",
+      "quote": "(Knife is unsheathed)"
+     }
+    ]
+   },
+   {
+    "value": "cat and rabbit",
+    "state": "rabbit killed",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:24:30",
+    "quote": "I just think the cat likes killing rabbits.",
+    "confidence": "sourced",
+    "detail": "the family cat leaves a dead rabbit; a bell tolls straight after",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:41",
+      "quote": "It's a rabbit."
+     }
+    ]
+   },
+   {
+    "value": "dead cat",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:02:07",
+    "quote": "(Jay) Fucking loved that cat.",
+    "confidence": "sourced",
+    "detail": "the family cat is found killed at the house"
+   },
+   {
+    "value": "king arthur story",
+    "when": "opening",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:05:39",
+    "quote": "(Sam) I want a story about king Arthur.",
+    "confidence": "observed",
+    "detail": "Jay's bedtime story of two soldiers; he ends the film crowned",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:32",
+      "quote": "There were once these two brave and honourable soldiers,"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "troubled veteran at home", "when": "opening", "quote": "Jay is still reeling from a disastrous mission in Kyiv", "confidence": "sourced"},
-   {"order": 2, "value": "blood pact with client", "when": "early", "role": "trigger", "quote": "the contract is effectively signed in blood", "confidence": "sourced"},
-   {"order": 3, "value": "victims thank killer", "when": "early", "role": "omen", "quote": "Their first target, captioned as \"The Priest\", recognizes Jay and thanks him", "confidence": "sourced"},
-   {"order": 4, "value": "files on the killers found", "when": "middle", "role": "clue", "quote": "Gal finds a folder on himself and Jay, including details of their Kyiv mission", "confidence": "sourced"},
-   {"order": 5, "value": "attempt to quit refused", "when": "middle", "role": "turn", "quote": "The client refuses and says that both hitmen and their families will be killed", "confidence": "sourced"},
-   {"order": 6, "value": "cult ritual witnessed", "when": "late", "quote": "witness a strange ceremony in the woods that culminates in human sacrifice", "confidence": "sourced"},
-   {"order": 7, "value": "partner killed", "when": "late", "quote": "They capture and disembowel Gal", "confidence": "sourced"},
-   {"order": 8, "value": "final kill is family", "when": "ending", "role": "turn", "quote": "Shel laughs as they both die", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "troubled veteran at home",
+    "when": "opening",
+    "quote": "Jay is still reeling from a disastrous mission in Kyiv",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:54",
+      "quote": "Wake up, Jay! There's no fucking holiday money!"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "cat leaves a dead rabbit",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:24:30",
+    "quote": "I just think the cat likes killing rabbits.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "blood pact with client",
+    "when": "early",
+    "role": "trigger",
+    "quote": "the contract is effectively signed in blood",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "victims thank killer",
+    "when": "early",
+    "role": "omen",
+    "quote": "Their first target, captioned as \"The Priest\", recognizes Jay and thanks him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:22",
+      "quote": "Thank you. Why do you think he had that smile on his face?"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "family pet killed",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:02:07",
+    "quote": "(Jay) Fucking loved that cat.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "files on the killers found",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Gal finds a folder on himself and Jay, including details of their Kyiv mission",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:31",
+      "quote": "There's pictures of us outside the priest's house, Jay."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:02:34",
+      "quote": "They've got a file on fucking Kiev."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "attempt to quit refused",
+    "when": "middle",
+    "role": "turn",
+    "quote": "The client refuses and says that both hitmen and their families will be killed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:47",
+      "quote": "Do you think if you get replacements they'll let you go free of the contract?"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "cult ritual witnessed",
+    "when": "late",
+    "quote": "witness a strange ceremony in the woods that culminates in human sacrifice",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:50",
+      "quote": "(Slow, steady drumbeat)"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "partner killed",
+    "when": "late",
+    "quote": "They capture and disembowel Gal",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:17",
+      "quote": "Tell Shel I'm sorry, will you?"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "final kill is family",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Shel laughs as they both die",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

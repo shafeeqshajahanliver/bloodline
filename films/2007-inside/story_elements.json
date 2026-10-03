@@ -1,56 +1,364 @@
 {
  "film": "2007-inside",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "home intruder", "detail": "a mysterious unidentified woman", "quote": "who is attacked in her home by a mysterious intruder on Christmas Eve", "confidence": "sourced"}
+   {
+    "value": "home intruder",
+    "detail": "a mysterious unidentified woman",
+    "quote": "who is attacked in her home by a mysterious intruder on Christmas Eve",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:44",
+      "quote": "Open the door, Sarah."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "grieving mother", "detail": "the other driver, who lost her unborn baby in the crash", "quote": "reveals that she was the other driver in the car accident, which killed her unborn baby", "confidence": "sourced"}
+   {
+    "value": "grieving mother",
+    "detail": "the other driver, who lost her unborn baby in the crash",
+    "quote": "reveals that she was the other driver in the car accident, which killed her unborn baby",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:48",
+      "quote": "You can kill me again, Sarah."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "a child", "quote": "The woman makes clear that her intentions are to take Sarah's child for herself", "confidence": "sourced"},
-   {"value": "to replace a lost child", "quote": "She wants Sarah's baby as a replacement", "confidence": "sourced"}
+   {
+    "value": "a child",
+    "quote": "The woman makes clear that her intentions are to take Sarah's child for herself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:46",
+      "quote": "My child. My baby. Finally inside me."
+     }
+    ]
+   },
+   {
+    "value": "to replace a lost child",
+    "quote": "She wants Sarah's baby as a replacement",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "fatal accident", "quote": "Sarah Scarangella survives a car crash that kills her husband", "confidence": "sourced"}
+   {
+    "value": "fatal accident",
+    "quote": "Sarah Scarangella survives a car crash that kills her husband",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "knock at the door", "quote": "a mysterious, unidentified woman arrives at Sarah's door, asking to use the telephone to call for help", "confidence": "sourced"}
+   {
+    "value": "knock at the door",
+    "quote": "a mysterious, unidentified woman arrives at Sarah's door, asking to use the telephone to call for help",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:53",
+      "quote": "Could I come in to make a quick phone call, please?"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "intruder knows too much", "quote": "the woman tells her that she knows that he is dead", "confidence": "sourced"}
+   {
+    "value": "intruder knows too much",
+    "quote": "the woman tells her that she knows that he is dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:34",
+      "quote": "Your husband's not sleeping, Sarah. He's dead."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "pregnant widow", "relation_to_threat": "stranger", "detail": "Sarah", "quote": "a mourning widow on the verge of giving birth", "confidence": "sourced"},
-   {"value": "mother", "relation_to_threat": "family", "detail": "Louise, killed by Sarah by mistake", "quote": "Believing her to be the attacker, Sarah accidentally kills Louise by stabbing a needle into her neck", "confidence": "sourced"},
-   {"value": "police officers", "relation_to_threat": "stranger", "quote": "The first officer is stabbed to death with knitting needles as he attempts to arrest the attacker", "confidence": "sourced"}
+   {
+    "value": "pregnant widow",
+    "relation_to_threat": "stranger",
+    "detail": "Sarah",
+    "quote": "a mourning widow on the verge of giving birth",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother",
+    "relation_to_threat": "family",
+    "detail": "Louise, killed by Sarah by mistake",
+    "quote": "Believing her to be the attacker, Sarah accidentally kills Louise by stabbing a needle into her neck",
+    "confidence": "sourced"
+   },
+   {
+    "value": "police officers",
+    "relation_to_threat": "stranger",
+    "quote": "The first officer is stabbed to death with knitting needles as he attempts to arrest the attacker",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:38",
+      "quote": "It's the police. Don't move!"
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "threat wins", "detail": "the intruder takes the baby, Sarah dies", "quote": "The woman performs the Caesarean section on Sarah with scissors, saving the infant but killing Sarah in the process", "confidence": "sourced"}
+   {
+    "value": "threat wins",
+    "detail": "the intruder takes the baby, Sarah dies",
+    "quote": "The woman performs the Caesarean section on Sarah with scissors, saving the infant but killing Sarah in the process",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:07",
+      "quote": "My child. My baby. Finally inside me."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "photograph", "state": "stalker in background", "when": "early", "role": "clue", "quote": "Sarah recognizes the woman in the background of an earlier photo she had taken", "confidence": "sourced"},
-   {"value": "scissors", "when": "middle", "role": "weapon", "quote": "awakening Sarah with scissors puncturing her pregnant belly", "confidence": "sourced"},
-   {"value": "pregnant belly", "when": "middle", "role": "threat", "quote": "scissors puncturing her pregnant belly", "confidence": "sourced"},
-   {"value": "knitting needles", "when": "late", "role": "weapon", "quote": "The first officer is stabbed to death with knitting needles", "confidence": "sourced"},
-   {"value": "burned face", "when": "late", "role": "turn", "quote": "Sarah manages to burn off half of the woman's face with an aerosol container and cigarette", "confidence": "sourced"},
-   {"value": "rocking chair", "state": "woman rocks the baby", "when": "ending", "role": "symbol", "quote": "The woman then sits in a chair and begins rocking the baby, who briefly cries", "confidence": "sourced"}
+   {
+    "value": "christmas eve",
+    "when": "early",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:12:00",
+    "quote": "I don't give a shit about Christmas. I'd rather be alone.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "photograph",
+    "state": "stalker in background",
+    "when": "early",
+    "role": "clue",
+    "quote": "Sarah recognizes the woman in the background of an earlier photo she had taken",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:20",
+      "quote": "Always taking her pictures and leaving them around."
+     }
+    ]
+   },
+   {
+    "value": "locked door",
+    "when": "early",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:18:56",
+    "quote": "Open the door and you'll know.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:46",
+      "quote": "Open the door."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "riots on television",
+    "when": "early",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:26:32",
+    "quote": "More than 2,000 immigrants involved in the riots...",
+    "detail": "the Paris suburbs riot outside throughout the night",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:24",
+      "quote": "rather than photographing riots."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "scissors",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "awakening Sarah with scissors puncturing her pregnant belly",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:50",
+      "quote": "I'm gonna remove the scissors."
+     }
+    ]
+   },
+   {
+    "value": "pregnant belly",
+    "when": "middle",
+    "role": "threat",
+    "quote": "scissors puncturing her pregnant belly",
+    "confidence": "sourced"
+   },
+   {
+    "value": "knitting needles",
+    "when": "late",
+    "role": "weapon",
+    "quote": "The first officer is stabbed to death with knitting needles",
+    "confidence": "sourced"
+   },
+   {
+    "value": "burned face",
+    "when": "late",
+    "role": "turn",
+    "quote": "Sarah manages to burn off half of the woman's face with an aerosol container and cigarette",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rocking chair",
+    "state": "woman rocks the baby",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "The woman then sits in a chair and begins rocking the baby, who briefly cries",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "past crash and grief", "when": "opening", "quote": "Sarah Scarangella survives a car crash that kills her husband", "confidence": "sourced"},
-   {"order": 2, "value": "stranger at the door", "when": "early", "role": "trigger", "quote": "a mysterious, unidentified woman arrives at Sarah's door", "confidence": "sourced"},
-   {"order": 3, "value": "stalking revealed", "when": "early", "role": "clue", "quote": "indicating she was stalking Sarah", "confidence": "sourced"},
-   {"order": 4, "value": "night attack", "when": "middle", "quote": "the woman arrives in the bedroom, awakening Sarah with scissors puncturing her pregnant belly", "confidence": "sourced"},
-   {"order": 5, "value": "loved one killed by mistake", "when": "middle", "role": "turn", "quote": "Sarah accidentally kills Louise by stabbing a needle into her neck", "confidence": "sourced"},
-   {"order": 6, "value": "rescuers slaughtered", "when": "late", "quote": "The second is shot in the back of the head as he attempts to help Sarah", "confidence": "sourced"},
-   {"order": 7, "value": "motive revealed", "when": "late", "role": "turn", "quote": "she was the other driver in the car accident, which killed her unborn baby", "confidence": "sourced"},
-   {"order": 8, "value": "baby taken", "when": "ending", "quote": "saving the infant but killing Sarah in the process", "confidence": "sourced"}
+   {
+    "value": "voice of the killer opens",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:51",
+    "quote": "Finally inside me. No one will take him from me.",
+    "detail": "the intruder's monologue over the unborn child, repeated at the end",
+    "confidence": "sourced",
+    "order": 1
+   },
+   {
+    "order": 2,
+    "value": "past crash and grief",
+    "when": "opening",
+    "quote": "Sarah Scarangella survives a car crash that kills her husband",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:26",
+      "quote": "She went through hell after the accident."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "stranger at the door",
+    "when": "early",
+    "role": "trigger",
+    "quote": "a mysterious, unidentified woman arrives at Sarah's door",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:53",
+      "quote": "Could I come in to make a quick phone call, please?"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "stalking revealed",
+    "when": "early",
+    "role": "clue",
+    "quote": "indicating she was stalking Sarah",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "night attack",
+    "when": "middle",
+    "quote": "the woman arrives in the bedroom, awakening Sarah with scissors puncturing her pregnant belly",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "loved one killed by mistake",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Sarah accidentally kills Louise by stabbing a needle into her neck",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "rescuers slaughtered",
+    "when": "late",
+    "quote": "The second is shot in the back of the head as he attempts to help Sarah",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "motive revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "she was the other driver in the car accident, which killed her unborn baby",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:38",
+      "quote": "They told me that there were no survivors."
+     }
+    ]
+   },
+   {
+    "value": "monologue repeated at end",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:11:12",
+    "quote": "Finally inside me. No one will take him from me.",
+    "confidence": "sourced",
+    "order": 9
+   },
+   {
+    "order": 10,
+    "value": "baby taken",
+    "when": "ending",
+    "quote": "saving the infant but killing Sarah in the process",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:25",
+      "quote": "I think it's stuck."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

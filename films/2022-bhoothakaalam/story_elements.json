@@ -1,56 +1,360 @@
 {
  "film": "2022-bhoothakaalam",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes and analysis"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes and analysis"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "haunted house", "quote": "Vinu begins to witness strange occurrences in the house, as though there were another entity present", "confidence": "sourced"},
-   {"value": "ghosts", "quote": "the ghosts in the house make their presence known and terrify the two, who manage to escape", "confidence": "sourced"},
-   {"value": "depression", "quote": "the supernatural serves as a metaphor for grief, trauma and clinical depression", "confidence": "sourced"}
+   {
+    "value": "haunted house",
+    "quote": "Vinu begins to witness strange occurrences in the house, as though there were another entity present",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ghosts",
+    "quote": "the ghosts in the house make their presence known and terrify the two, who manage to escape",
+    "confidence": "sourced"
+   },
+   {
+    "value": "depression",
+    "quote": "the supernatural serves as a metaphor for grief, trauma and clinical depression",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "past family murder", "detail": "owner's son killed wife and daughter, then himself", "quote": "killed his wife and daughter and hanged himself for unknown reasons", "confidence": "sourced"}
+   {
+    "value": "past family murder",
+    "detail": "owner's son killed wife and daughter, then himself",
+    "quote": "killed his wife and daughter and hanged himself for unknown reasons",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to repeat the past", "detail": "drives troubled tenants to violence", "quote": "both tenants had been suffering from emotional setbacks for different reasons at the time, and had been behaving irrationally", "confidence": "observed"}
+   {
+    "value": "to repeat the past",
+    "detail": "drives troubled tenants to violence",
+    "quote": "both tenants had been suffering from emotional setbacks for different reasons at the time, and had been behaving irrationally",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "parent kills family", "quote": "the owner's son, who had been staying there years earlier, killed his wife and daughter and hanged himself", "confidence": "sourced"}
+   {
+    "value": "parent kills family",
+    "quote": "the owner's son, who had been staying there years earlier, killed his wife and daughter and hanged himself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:09",
+      "quote": "He poisoned his wife and kid. They too died."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "death of a grandparent", "quote": "she takes care of her ailing mother, who later dies", "confidence": "sourced"},
-   {"value": "living in a rented house", "quote": "Asha lives with her son Vinu in a rented house", "confidence": "sourced"}
+   {
+    "value": "death of a grandparent",
+    "quote": "she takes care of her ailing mother, who later dies",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:19",
+      "quote": "My grandmother passed away recently."
+     }
+    ]
+   },
+   {
+    "value": "living in a rented house",
+    "quote": "Asha lives with her son Vinu in a rented house",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "preys on the depressed", "quote": "both tenants had been suffering from emotional setbacks for different reasons at the time", "confidence": "sourced"},
-   {"value": "no one believes", "quote": "Vinu's uncle concludes that he is insane and must be admitted to a psychiatric hospital", "confidence": "sourced"}
+   {
+    "value": "preys on the depressed",
+    "quote": "both tenants had been suffering from emotional setbacks for different reasons at the time",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:47",
+      "quote": "The doctor said it was due to stress."
+     }
+    ]
+   },
+   {
+    "value": "no one believes",
+    "quote": "Vinu's uncle concludes that he is insane and must be admitted to a psychiatric hospital",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:37",
+      "quote": "Mental hospitals are the best remedy for mad people."
+     }
+    ]
+   },
+   {
+    "value": "locked in by an unseen hand",
+    "source": "subtitles",
+    "at": "00:55:04",
+    "quote": "the door shut. - Hmm. And then it got locked.",
+    "confidence": "observed"
+   }
   ],
   "who_suffers": [
-   {"value": "mother and son", "relation_to_threat": "stranger", "detail": "Asha and Vinu", "quote": "The house shared by the mother, Asha, and her son, Vinu, is presented as a reflection of their state of mind", "confidence": "sourced"},
-   {"value": "unemployed young man", "relation_to_threat": "stranger", "detail": "Vinu", "quote": "has been searching for a job for almost two years, but in vain", "confidence": "sourced"}
+   {
+    "value": "mother and son",
+    "relation_to_threat": "stranger",
+    "detail": "Asha and Vinu",
+    "quote": "The house shared by the mother, Asha, and her son, Vinu, is presented as a reflection of their state of mind",
+    "confidence": "sourced"
+   },
+   {
+    "value": "unemployed young man",
+    "relation_to_threat": "stranger",
+    "detail": "Vinu",
+    "quote": "has been searching for a job for almost two years, but in vain",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "family reconciles", "quote": "she and her son speak, understand each other, and decide to reconcile", "confidence": "sourced"},
-   {"value": "leaving the house", "quote": "Asha and Vinu, now reconciled, are shown vacating the house the very next day", "confidence": "sourced"}
+   {
+    "value": "family reconciles",
+    "quote": "she and her son speak, understand each other, and decide to reconcile",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:41:53",
+      "quote": "The mother and the son have reconciled."
+     }
+    ]
+   },
+   {
+    "value": "leaving the house",
+    "quote": "Asha and Vinu, now reconciled, are shown vacating the house the very next day",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "antidepressants", "state": "refused", "when": "early", "role": "symbol", "quote": "Asha is reluctant to take her antidepressants", "confidence": "sourced"},
-   {"value": "alcohol and cigarettes", "when": "early", "role": "symbol", "quote": "Vinu resumes his smoking and drinking habits", "confidence": "sourced"},
-   {"value": "hanging", "state": "past suicide", "when": "middle", "role": "clue", "quote": "killed his wife and daughter and hanged himself for unknown reasons", "confidence": "sourced"},
-   {"value": "poisoned food", "state": "thrown away", "when": "late", "role": "turn", "quote": "Asha tries to poison herself and Vinu at dinner, but throws away the poisoned food", "confidence": "sourced"}
+   {
+    "value": "antidepressants",
+    "state": "refused",
+    "when": "early",
+    "role": "symbol",
+    "quote": "Asha is reluctant to take her antidepressants",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:58",
+      "quote": "You need to continue your medication. Please don't stop midway."
+     }
+    ]
+   },
+   {
+    "value": "alcohol and cigarettes",
+    "when": "early",
+    "role": "symbol",
+    "quote": "Vinu resumes his smoking and drinking habits",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:40",
+      "quote": "You started smoking again?"
+     }
+    ]
+   },
+   {
+    "value": "hanging",
+    "state": "past suicide",
+    "when": "middle",
+    "role": "clue",
+    "quote": "killed his wife and daughter and hanged himself for unknown reasons",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:03",
+      "quote": "A man who was living there, hanged himself to death."
+     }
+    ]
+   },
+   {
+    "value": "poisoned food",
+    "state": "thrown away",
+    "when": "late",
+    "role": "turn",
+    "quote": "Asha tries to poison herself and Vinu at dinner, but throws away the poisoned food",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:56",
+      "quote": "Eat your food. I am not hungry."
+     }
+    ]
+   },
+   {
+    "value": "locked door",
+    "when": "middle",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:50:34",
+    "quote": "Open the door, Mom!",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:44",
+      "quote": "Vinu, give me the keys!"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "unseen figure in a photo",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:17:29",
+    "quote": "you can see someone else too there, he says.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "grandmother dies", "when": "opening", "quote": "she takes care of her ailing mother, who later dies", "confidence": "sourced"},
-   {"order": 2, "value": "strange occurrences", "when": "early", "role": "trigger", "quote": "Vinu begins to witness strange occurrences in the house", "confidence": "sourced"},
-   {"order": 3, "value": "victim thought insane", "when": "middle", "quote": "she takes him to a mental health counsellor, George", "confidence": "sourced"},
-   {"order": 4, "value": "past deaths uncovered", "when": "middle", "role": "clue", "quote": "George learns from the neighbour about the mass deaths that had occurred in the house in the past", "confidence": "sourced"},
-   {"order": 5, "value": "attempted murder-suicide", "when": "late", "role": "turn", "quote": "Asha tries to poison herself and Vinu at dinner", "confidence": "sourced"},
-   {"order": 6, "value": "ghosts appear, escape", "when": "late", "quote": "the ghosts in the house make their presence known and terrify the two, who manage to escape", "confidence": "sourced"},
-   {"order": 7, "value": "family moves out", "when": "ending", "quote": "are shown vacating the house the very next day with the help of the uncle and George", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "grandmother dies",
+    "when": "opening",
+    "quote": "she takes care of her ailing mother, who later dies",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:00",
+      "quote": "Grandma is awake."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "strange occurrences",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Vinu begins to witness strange occurrences in the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:05",
+      "quote": "Stop fooling around... Open the door!"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "victim thought insane",
+    "when": "middle",
+    "quote": "she takes him to a mental health counsellor, George",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:10",
+      "quote": "So now I am the one who needs to be counseled?!"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "past deaths uncovered",
+    "when": "middle",
+    "role": "clue",
+    "quote": "George learns from the neighbour about the mass deaths that had occurred in the house in the past",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:03",
+      "quote": "A man who was living there, hanged himself to death."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "previous tenant's breakdown",
+    "when": "late",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:16:54",
+    "quote": "When I went in... I saw him hanging...",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "attempted murder-suicide",
+    "when": "late",
+    "role": "turn",
+    "quote": "Asha tries to poison herself and Vinu at dinner",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "ghosts appear, escape",
+    "when": "late",
+    "quote": "the ghosts in the house make their presence known and terrify the two, who manage to escape",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:01",
+      "quote": "Front door... front door!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "family moves out",
+    "when": "ending",
+    "quote": "are shown vacating the house the very next day with the help of the uncle and George",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:41:30",
+      "quote": "They wanted to move out. Fine, OK!"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "closing thought on next tenants",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:42:27",
+    "quote": "I was thinking about the people who'll live here next.",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

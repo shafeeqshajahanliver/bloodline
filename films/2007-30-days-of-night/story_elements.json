@@ -1,61 +1,414 @@
 {
  "film": "2007-30-days-of-night",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vampires", "detail": "a band led by Marlow", "quote": "the story focuses on an Alaskan town beset by vampires as it enters into a 30-day-long polar night", "confidence": "sourced"},
-   {"value": "human collaborator", "detail": "the stranger who sabotages the town", "quote": "who believes the vampires will \"turn\" him as a reward for his help", "confidence": "sourced"}
+   {
+    "value": "vampires",
+    "detail": "a band led by Marlow",
+    "quote": "the story focuses on an Alaskan town beset by vampires as it enters into a 30-day-long polar night",
+    "confidence": "sourced"
+   },
+   {
+    "value": "human collaborator",
+    "detail": "the stranger who sabotages the town",
+    "quote": "who believes the vampires will \"turn\" him as a reward for his help",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:24",
+      "quote": "They're coming. This time they gonna take me with them,"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "from outside", "detail": "arrive by icebreaker ship", "quote": "a band of vampires arrives from the ship, prepared for an attack", "confidence": "sourced"}
+   {
+    "value": "from outside",
+    "detail": "arrive by icebreaker ship",
+    "quote": "a band of vampires arrives from the ship, prepared for an attack",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "hunger", "quote": "the vampires are raiding nearby houses in search of survivors", "confidence": "observed"},
-   {"value": "to stay hidden", "quote": "using fire to destroy any evidence of their existence", "confidence": "sourced"}
+   {
+    "value": "hunger",
+    "quote": "the vampires are raiding nearby houses in search of survivors",
+    "confidence": "observed"
+   },
+   {
+    "value": "to stay hidden",
+    "quote": "using fire to destroy any evidence of their existence",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:46",
+      "quote": "They're burning down the town. Nobody will know what happened."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "isolation by darkness", "quote": "As the town of Barrow, Alaska prepares for the annual month-long polar night, a stranger arrives", "confidence": "sourced"},
-   {"value": "sabotage", "quote": "he begins sabotaging means of communication and transportation", "confidence": "sourced"}
+   {
+    "value": "isolation by darkness",
+    "quote": "As the town of Barrow, Alaska prepares for the annual month-long polar night, a stranger arrives",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:38",
+      "quote": "Okay, sweetie. I know you can't handle a month with no sun."
+     }
+    ]
+   },
+   {
+    "value": "sabotage",
+    "quote": "he begins sabotaging means of communication and transportation",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:35",
+      "quote": "But burning them?"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "weak to sunlight", "quote": "uses one to burn Iris when she tries to rush in after him. Severely burned by the light", "confidence": "sourced"},
-   {"value": "bitten turn into vampires", "quote": "Eben is horrified to see that John has been turned", "confidence": "sourced"},
-   {"value": "turned must be killed", "quote": "Eben is then forced to kill Billy when he starts to turn", "confidence": "sourced"}
+   {
+    "value": "weak to sunlight",
+    "quote": "uses one to burn Iris when she tries to rush in after him. Severely burned by the light",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:42",
+      "quote": "These things can't survive the sun."
+     }
+    ]
+   },
+   {
+    "value": "bitten turn into vampires",
+    "quote": "Eben is horrified to see that John has been turned",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:50",
+      "quote": "When John Riis and Carter changed, they were only bitten."
+     }
+    ]
+   },
+   {
+    "value": "turned must be killed",
+    "quote": "Eben is then forced to kill Billy when he starts to turn",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:57",
+      "quote": "The heads must be separated from the bodies."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "isolated town", "relation_to_threat": "community", "quote": "After a large-scale massacre in the streets", "confidence": "sourced"},
-   {"value": "estranged couple", "relation_to_threat": "stranger", "detail": "Eben and Stella", "quote": "Eben and Stella, now among the town's only survivors", "confidence": "sourced"},
-   {"value": "collaborator", "relation_to_threat": "stranger", "quote": "Marlow shows disapproval at how trusting and stupid humans are, and snaps his neck instead", "confidence": "sourced"}
+   {
+    "value": "isolated town",
+    "relation_to_threat": "community",
+    "quote": "After a large-scale massacre in the streets",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:24",
+      "quote": "No way out of town."
+     }
+    ]
+   },
+   {
+    "value": "estranged couple",
+    "relation_to_threat": "stranger",
+    "detail": "Eben and Stella",
+    "quote": "Eben and Stella, now among the town's only survivors",
+    "confidence": "sourced"
+   },
+   {
+    "value": "collaborator",
+    "relation_to_threat": "stranger",
+    "quote": "Marlow shows disapproval at how trusting and stupid humans are, and snaps his neck instead",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "hero becomes threat to win", "quote": "Eben injects himself with Billy's blood. Newly turned vampire Eben emerges", "confidence": "sourced"},
-   {"value": "threat leader destroyed", "quote": "Eben manages to kill Marlow, leaving the vampires without a leader", "confidence": "sourced"},
-   {"value": "self-sacrifice", "quote": "As the light hits them, Eben's body burns to ash in Stella's arms", "confidence": "sourced"}
+   {
+    "value": "hero becomes threat to win",
+    "quote": "Eben injects himself with Billy's blood. Newly turned vampire Eben emerges",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:20",
+      "quote": "It's somebody else's blood."
+     }
+    ]
+   },
+   {
+    "value": "threat leader destroyed",
+    "quote": "Eben manages to kill Marlow, leaving the vampires without a leader",
+    "confidence": "sourced"
+   },
+   {
+    "value": "self-sacrifice",
+    "quote": "As the light hits them, Eben's body burns to ash in Stella's arms",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "sled dogs", "state": "killed", "when": "opening", "role": "omen", "quote": "destroying a helicopter, and killing all of the sled dogs", "confidence": "sourced"},
-   {"value": "ship", "state": "hidden icebreaker", "when": "opening", "role": "omen", "quote": "a stranger arrives from a large icebreaker ship that is hidden some ways off", "confidence": "sourced"},
-   {"value": "head on a spike", "when": "early", "role": "omen", "quote": "they leave his head on a spike outside the building", "confidence": "sourced"},
-   {"value": "polar night", "when": "opening", "role": "setting", "quote": "the annual month-long polar night", "confidence": "sourced"},
-   {"value": "attic", "state": "hiding place", "when": "middle", "role": "setting", "quote": "take shelter in a boarded-up house with a hidden attic", "confidence": "sourced"},
-   {"value": "survivor as bait", "when": "middle", "role": "threat", "quote": "the vampires use a survivor as bait in an attempt to lure out any others in hiding", "confidence": "sourced"},
-   {"value": "uv lights", "when": "late", "role": "weapon", "quote": "his grandmother's house, where there are ultraviolet grow lights", "confidence": "sourced"},
-   {"value": "sunrise", "when": "ending", "role": "turn", "quote": "decide to spend the last of their time together watching the sunrise", "confidence": "sourced"}
+   {
+    "value": "sled dogs",
+    "state": "killed",
+    "when": "opening",
+    "role": "omen",
+    "quote": "destroying a helicopter, and killing all of the sled dogs",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:22",
+      "quote": "Every kennel. Every dog we had."
+     }
+    ]
+   },
+   {
+    "value": "ship",
+    "state": "hidden icebreaker",
+    "when": "opening",
+    "role": "omen",
+    "quote": "a stranger arrives from a large icebreaker ship that is hidden some ways off",
+    "confidence": "sourced"
+   },
+   {
+    "value": "head on a spike",
+    "when": "early",
+    "role": "omen",
+    "quote": "they leave his head on a spike outside the building",
+    "confidence": "sourced"
+   },
+   {
+    "value": "polar night",
+    "when": "opening",
+    "role": "setting",
+    "quote": "the annual month-long polar night",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:34",
+      "quote": "Last sunset in a month..."
+     }
+    ]
+   },
+   {
+    "value": "attic",
+    "state": "hiding place",
+    "when": "middle",
+    "role": "setting",
+    "quote": "take shelter in a boarded-up house with a hidden attic",
+    "confidence": "sourced"
+   },
+   {
+    "value": "survivor as bait",
+    "when": "middle",
+    "role": "threat",
+    "quote": "the vampires use a survivor as bait in an attempt to lure out any others in hiding",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:32",
+      "quote": "They're using her as bait."
+     }
+    ]
+   },
+   {
+    "value": "uv lights",
+    "when": "late",
+    "role": "weapon",
+    "quote": "his grandmother's house, where there are ultraviolet grow lights",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:52",
+      "quote": "She used an ultraviolet light to grow the stuff."
+     }
+    ]
+   },
+   {
+    "value": "sunrise",
+    "when": "ending",
+    "role": "turn",
+    "quote": "decide to spend the last of their time together watching the sunrise",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:47",
+      "quote": "It's almost dawn."
+     }
+    ]
+   },
+   {
+    "value": "wrecked helicopter",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:16:25",
+    "quote": "Why would someone rip the hell out of my bird?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "burning town",
+    "when": "ending",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "01:36:46",
+    "quote": "They're burning down the town.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "stranger arrives, sabotage", "when": "opening", "role": "omen", "quote": "he begins sabotaging means of communication and transportation by stealing/burning all of the satellite phones", "confidence": "sourced"},
-   {"order": 2, "value": "town cut off", "when": "early", "role": "trigger", "quote": "the phone lines and internet go down", "confidence": "sourced"},
-   {"order": 3, "value": "massacre begins", "when": "early", "quote": "the slaughter of the townspeople commences, beginning with Ellie Riis", "confidence": "sourced"},
-   {"order": 4, "value": "survivors hide", "when": "middle", "quote": "they decide to take shelter in a boarded-up house with a hidden attic", "confidence": "sourced"},
-   {"order": 5, "value": "friend turned", "when": "middle", "role": "turn", "quote": "Eben is horrified to see that John has been turned, and reluctantly kills him", "confidence": "sourced"},
-   {"order": 6, "value": "weakness used", "when": "late", "quote": "uses one to burn Iris when she tries to rush in after him", "confidence": "sourced"},
-   {"order": 7, "value": "hero turns himself", "when": "ending", "role": "turn", "quote": "Eben injects himself with Billy's blood", "confidence": "sourced"},
-   {"order": 8, "value": "death at sunrise", "when": "ending", "quote": "As the light hits them, Eben's body burns to ash in Stella's arms", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "stranger arrives, sabotage",
+    "when": "opening",
+    "role": "omen",
+    "quote": "he begins sabotaging means of communication and transportation by stealing/burning all of the satellite phones",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:27",
+      "quote": "Stealing satellite phones makes sense. You can hock them."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "town cut off",
+    "when": "early",
+    "role": "trigger",
+    "quote": "the phone lines and internet go down",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:50",
+      "quote": "The phone's down too."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "stranger's prophecy",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:29:41",
+    "quote": "That cold ain't the weather, that's death approaching.",
+    "confidence": "sourced",
+    "detail": "the jailed stranger warns the sheriff"
+   },
+   {
+    "order": 4,
+    "value": "massacre begins",
+    "when": "early",
+    "quote": "the slaughter of the townspeople commences, beginning with Ellie Riis",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "survivors hide",
+    "when": "middle",
+    "quote": "they decide to take shelter in a boarded-up house with a hidden attic",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "vampire mocks a prayer",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:52:23",
+    "quote": "God? No God.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "friend turned",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Eben is horrified to see that John has been turned, and reluctantly kills him",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "weakness used",
+    "when": "late",
+    "quote": "uses one to burn Iris when she tries to rush in after him",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "hero turns himself",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Eben injects himself with Billy's blood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:20",
+      "quote": "It's somebody else's blood."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "death at sunrise",
+    "when": "ending",
+    "quote": "As the light hits them, Eben's body burns to ash in Stella's arms",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:52",
+      "quote": "The dawn."
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

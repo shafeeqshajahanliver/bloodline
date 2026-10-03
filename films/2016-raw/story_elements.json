@@ -1,59 +1,466 @@
 {
  "film": "2016-raw",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "cannibal hunger", "quote": "she tastes meat for the first time and develops a craving for human flesh", "confidence": "sourced"},
-   {"value": "the self", "quote": "Justine's craving for human meat grows and she starts lusting after Adrien", "confidence": "sourced"}
+   {
+    "value": "cannibal hunger",
+    "quote": "she tastes meat for the first time and develops a craving for human flesh",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:29",
+      "quote": "You couldn't try something other than my finger? Nothing else on the menu looked good?"
+     }
+    ]
+   },
+   {
+    "value": "the self",
+    "quote": "Justine's craving for human meat grows and she starts lusting after Adrien",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "inherited", "detail": "their mother shares the craving", "quote": "He then opens his shirt, revealing scars and missing chunks of his chest", "confidence": "observed"}
+   {
+    "value": "inherited",
+    "detail": "their mother shares the craving",
+    "quote": "He then opens his shirt, revealing scars and missing chunks of his chest",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:09",
+      "quote": "And then we had our first kiss. And I understood."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "hunger", "quote": "Justine begins having cravings for meat, which makes her feel ashamed", "confidence": "sourced"},
-   {"value": "desire", "quote": "she starts lusting after Adrien", "confidence": "sourced"}
+   {
+    "value": "hunger",
+    "quote": "Justine begins having cravings for meat, which makes her feel ashamed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:51",
+      "quote": "Stealing a burger's fucked up, even for me."
+     }
+    ]
+   },
+   {
+    "value": "desire",
+    "quote": "she starts lusting after Adrien",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "initiation ritual", "quote": "they are forced to partake in a week-long hazing ritual, welcoming the new students", "confidence": "sourced"},
-   {"value": "forced to eat meat", "quote": "the new class is splattered with blood and is forced to eat raw rabbit kidneys", "confidence": "sourced"}
+   {
+    "value": "initiation ritual",
+    "quote": "they are forced to partake in a week-long hazing ritual, welcoming the new students",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:39",
+      "quote": "Your elders will make you family. But first you must learn."
+     }
+    ]
+   },
+   {
+    "value": "forced to eat meat",
+    "quote": "the new class is splattered with blood and is forced to eat raw rabbit kidneys",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:38",
+      "quote": "Rabbit kidney. Better not to know. - I'm a vegetarian, I can't eat that."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "passed down in family", "quote": "Justine's father tells her that what happened is neither hers nor Alexia's fault", "confidence": "observed"}
+   {
+    "value": "passed down in family",
+    "quote": "Justine's father tells her that what happened is neither hers nor Alexia's fault",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:55",
+      "quote": "It's not your fault. I know, Dad. Or your sister's."
+     }
+    ]
+   },
+   {
+    "value": "once tasted, it bites again",
+    "source": "subtitles",
+    "at": "00:50:00",
+    "quote": "An animal that has tasted human flesh isn't safe. If he likes it, he'll bite again.",
+    "confidence": "sourced",
+    "detail": "said of the dog Quicky, put down for the finger Justine ate"
+   }
   ],
   "who_suffers": [
-   {"value": "young woman", "relation_to_threat": "self", "detail": "Justine", "quote": "Justine tries to bite Adrien but instead bites her own arm until it bleeds profusely", "confidence": "sourced"},
-   {"value": "roommate and lover", "relation_to_threat": "lover", "detail": "Adrien", "quote": "finding Adrien dead with most of his right leg eaten and a stab wound in his back", "confidence": "sourced"},
-   {"value": "sister", "relation_to_threat": "family", "detail": "Alexia", "quote": "Alexia accidentally cuts off her own finger", "confidence": "sourced"},
-   {"value": "father", "relation_to_threat": "family", "quote": "revealing scars and missing chunks of his chest", "confidence": "sourced"}
+   {
+    "value": "young woman",
+    "relation_to_threat": "self",
+    "detail": "Justine",
+    "quote": "Justine tries to bite Adrien but instead bites her own arm until it bleeds profusely",
+    "confidence": "sourced"
+   },
+   {
+    "value": "roommate and lover",
+    "relation_to_threat": "lover",
+    "detail": "Adrien",
+    "quote": "finding Adrien dead with most of his right leg eaten and a stab wound in his back",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:45",
+      "quote": "Adrien! Adrien!"
+     }
+    ]
+   },
+   {
+    "value": "sister",
+    "relation_to_threat": "family",
+    "detail": "Alexia",
+    "quote": "Alexia accidentally cuts off her own finger",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:13",
+      "quote": "My sister cut her finger. With scissors."
+     }
+    ]
+   },
+   {
+    "value": "father",
+    "relation_to_threat": "family",
+    "quote": "revealing scars and missing chunks of his chest",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat survives", "quote": "assures Justine that she will find a solution", "confidence": "observed"},
-   {"value": "family secret revealed", "quote": "Her father says he finally realized when they kissed the first time, indicating a scar on his lip", "confidence": "sourced"}
+   {
+    "value": "threat survives",
+    "quote": "assures Justine that she will find a solution",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:40",
+      "quote": "I'm sure you'll find a solution, honey."
+     }
+    ]
+   },
+   {
+    "value": "family secret revealed",
+    "quote": "Her father says he finally realized when they kissed the first time, indicating a scar on his lip",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:40",
+      "quote": "It's our fault. We didn't find a solution."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "blood", "state": "splattered on students", "when": "opening", "role": "symbol", "quote": "the new class is splattered with blood", "confidence": "sourced"},
-   {"value": "raw rabbit kidney", "when": "opening", "role": "trigger", "quote": "is forced to eat raw rabbit kidneys", "confidence": "sourced"},
-   {"value": "rash", "state": "itchy", "when": "early", "role": "omen", "quote": "later discovers an itchy rash all over her body", "confidence": "sourced"},
-   {"value": "hair", "state": "vomited", "when": "early", "role": "omen", "quote": "later throws up a long bundle of her own hair she had been chewing on", "confidence": "sourced"},
-   {"value": "severed finger", "state": "eaten", "when": "middle", "role": "turn", "quote": "Justine picks up the finger, tastes the blood, and starts eating it", "confidence": "sourced"},
-   {"value": "dog", "state": "blamed", "when": "middle", "role": "symbol", "quote": "later tells their parents that her dog, Quicky, ate it", "confidence": "sourced"},
-   {"value": "corpse in morgue", "when": "late", "role": "threat", "quote": "attempting to take a bite out of the arm of a corpse", "confidence": "sourced"},
-   {"value": "scars", "state": "on father's chest", "when": "ending", "role": "clue", "quote": "revealing scars and missing chunks of his chest", "confidence": "sourced"}
+   {
+    "value": "blood",
+    "state": "splattered on students",
+    "when": "opening",
+    "role": "symbol",
+    "quote": "the new class is splattered with blood",
+    "confidence": "sourced"
+   },
+   {
+    "value": "raw rabbit kidney",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "is forced to eat raw rabbit kidneys",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:14",
+      "quote": "Raw rabbit kidneys."
+     }
+    ]
+   },
+   {
+    "value": "rash",
+    "state": "itchy",
+    "when": "early",
+    "role": "omen",
+    "quote": "later discovers an itchy rash all over her body",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hair",
+    "state": "vomited",
+    "when": "early",
+    "role": "omen",
+    "quote": "later throws up a long bundle of her own hair she had been chewing on",
+    "confidence": "sourced"
+   },
+   {
+    "value": "severed finger",
+    "state": "eaten",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Justine picks up the finger, tastes the blood, and starts eating it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:13",
+      "quote": "My sister cut her finger."
+     }
+    ]
+   },
+   {
+    "value": "dog",
+    "state": "blamed",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "later tells their parents that her dog, Quicky, ate it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:20",
+      "quote": "Quicky ate my finger."
+     }
+    ]
+   },
+   {
+    "value": "corpse in morgue",
+    "when": "late",
+    "role": "threat",
+    "quote": "attempting to take a bite out of the arm of a corpse",
+    "confidence": "sourced"
+   },
+   {
+    "value": "scars",
+    "state": "on father's chest",
+    "when": "ending",
+    "role": "clue",
+    "quote": "revealing scars and missing chunks of his chest",
+    "confidence": "sourced"
+   },
+   {
+    "value": "meat hidden in food",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:43",
+    "quote": "MOTHER: My daughter had meat. It's unacceptable. We're vegetarians.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "car crash on the road",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:51:51",
+    "quote": "[TIRES SQUEALING] - [CAR CRASHES]",
+    "confidence": "sourced",
+    "detail": "Alexia causes crashes to feed on the victims; the film opens on a figure stepping into the road"
+   },
+   {
+    "value": "pigs",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:35:25",
+    "quote": "You have a pig in your truck?",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:29",
+      "quote": "Pigs are almost like humans."
+     }
+    ]
+   },
+   {
+    "value": "cows",
+    "when": "middle",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:39:05",
+    "quote": "[COW MOOS]",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "arrival at school", "when": "opening", "quote": "Lifelong vegetarian Justine begins her first semester at veterinary school", "confidence": "sourced"},
-   {"order": 2, "value": "forced to eat meat", "when": "opening", "role": "trigger", "quote": "Justine refuses because of her vegetarianism, but Alexia forces her to eat one", "confidence": "sourced"},
-   {"order": 3, "value": "body changes", "when": "early", "quote": "later discovers an itchy rash all over her body", "confidence": "sourced"},
-   {"order": 4, "value": "first taste of human flesh", "when": "middle", "role": "turn", "quote": "Justine picks up the finger, tastes the blood, and starts eating it", "confidence": "sourced"},
-   {"order": 5, "value": "sister reveals same hunger", "when": "middle", "role": "turn", "quote": "Alexia starts eating one of the passengers so that her sister will \"learn\"", "confidence": "sourced"},
-   {"order": 6, "value": "public shame", "when": "late", "quote": "The next day, everyone in school stares at Justine, some avoiding her", "confidence": "sourced"},
-   {"order": 7, "value": "lover killed", "when": "late", "quote": "finding Adrien dead with most of his right leg eaten", "confidence": "sourced"},
-   {"order": 8, "value": "family secret revealed", "when": "ending", "role": "clue", "quote": "He then opens his shirt, revealing scars and missing chunks of his chest", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "opening road crash",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:51",
+    "quote": "[TIRES SQUEALING]",
+    "confidence": "observed"
+   },
+   {
+    "order": 2,
+    "value": "arrival at school",
+    "when": "opening",
+    "quote": "Lifelong vegetarian Justine begins her first semester at veterinary school",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:55",
+      "quote": "Hospital on the left, morgue next to it."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "forced to eat meat",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Justine refuses because of her vegetarianism, but Alexia forces her to eat one",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:38",
+      "quote": "I'm a vegetarian, I can't eat that. Ask my sister, our family's veggie."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "body changes",
+    "when": "early",
+    "quote": "later discovers an itchy rash all over her body",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "vomiting hair",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:37:40",
+    "quote": "[RETCHING]",
+    "confidence": "observed"
+   },
+   {
+    "order": 6,
+    "value": "first taste of human flesh",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Justine picks up the finger, tastes the blood, and starts eating it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:29",
+      "quote": "You couldn't try something other than my finger?"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "dog put down",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:49:50",
+    "quote": "He'll be put down, if not already.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "sister reveals same hunger",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Alexia starts eating one of the passengers so that her sister will \"learn\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:40",
+      "quote": "I did this for you, idiot! You need to learn, right?"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "public shame",
+    "when": "late",
+    "quote": "The next day, everyone in school stares at Justine, some avoiding her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:57",
+      "quote": "Bite him, Justine!"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "lover killed",
+    "when": "late",
+    "quote": "finding Adrien dead with most of his right leg eaten",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:55",
+      "quote": "[SOBBING] Adrien!"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "family secret revealed",
+    "when": "ending",
+    "role": "clue",
+    "quote": "He then opens his shirt, revealing scars and missing chunks of his chest",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:09",
+      "quote": "And then we had our first kiss. And I understood."
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

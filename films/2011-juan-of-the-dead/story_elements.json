@@ -1,55 +1,356 @@
 {
  "film": "2011-juan-of-the-dead",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Analysis"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Analysis"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "zombies", "quote": "Juan and Lazaro encounter reanimated bodies", "confidence": "sourced"},
-   {"value": "authorities", "detail": "a shady military group", "quote": "A shady military group captures Juan's group and forces them into a truck", "confidence": "sourced"}
+   {
+    "value": "zombies",
+    "quote": "Juan and Lazaro encounter reanimated bodies",
+    "confidence": "sourced"
+   },
+   {
+    "value": "authorities",
+    "detail": "a shady military group",
+    "quote": "A shady military group captures Juan's group and forces them into a truck",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "from the sea", "quote": "While out fishing, they accidentally catch what they believe to be a corpse.", "confidence": "sourced"},
-   {"value": "unexplained", "quote": "Unexplained acts of violence suddenly plague the city", "confidence": "sourced"}
+   {
+    "value": "from the sea",
+    "quote": "While out fishing, they accidentally catch what they believe to be a corpse.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "unexplained",
+    "quote": "Unexplained acts of violence suddenly plague the city",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "nothing stated", "quote": "people attacking each other randomly", "confidence": "observed"}
+   {
+    "value": "nothing stated",
+    "quote": "people attacking each other randomly",
+    "confidence": "observed"
+   }
   ],
   "trigger": [
-   {"value": "catching a corpse", "quote": "To their surprise, the \"corpse\" awakens and attacks them.", "confidence": "sourced"}
+   {
+    "value": "catching a corpse",
+    "quote": "To their surprise, the \"corpse\" awakens and attacks them.",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "bites infect", "quote": "China, who was bitten, dies and turns into a zombie while handcuffed to Juan", "confidence": "sourced"},
-   {"value": "authorities deny it", "quote": "Cuban authorities denying the existence of the zombies and insisting that they are dissidents hired by the United States", "confidence": "sourced"}
+   {
+    "value": "bites infect",
+    "quote": "China, who was bitten, dies and turns into a zombie while handcuffed to Juan",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:34",
+      "quote": "She was feeling ill... She was trying to bite me."
+     }
+    ]
+   },
+   {
+    "value": "authorities deny it",
+    "quote": "Cuban authorities denying the existence of the zombies and insisting that they are dissidents hired by the United States",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:49",
+      "quote": "apparently caused by some dissident groups paid by the U.. government."
+     }
+    ]
+   },
+   {
+    "value": "destroyed by head trauma",
+    "source": "subtitles",
+    "at": "00:38:05",
+    "quote": "If you cause them a severe brain trauma, you'll destroy them.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "friends", "relation_to_threat": "community", "detail": "Juan, Lazaro and their circle", "quote": "Juan and Lazaro engage in thuggish activities and associate with their questionable friends", "confidence": "sourced"},
-   {"value": "father and daughter", "relation_to_threat": "community", "detail": "Juan and Camila", "quote": "straining Juan's relationship with his daughter, Camila", "confidence": "sourced"},
-   {"value": "city residents", "relation_to_threat": "community", "quote": "they kill and dispose of the zombified residents for a fee", "confidence": "sourced"}
+   {
+    "value": "friends",
+    "relation_to_threat": "community",
+    "detail": "Juan, Lazaro and their circle",
+    "quote": "Juan and Lazaro engage in thuggish activities and associate with their questionable friends",
+    "confidence": "sourced"
+   },
+   {
+    "value": "father and daughter",
+    "relation_to_threat": "community",
+    "detail": "Juan and Camila",
+    "quote": "straining Juan's relationship with his daughter, Camila",
+    "confidence": "sourced"
+   },
+   {
+    "value": "city residents",
+    "relation_to_threat": "community",
+    "quote": "they kill and dispose of the zombified residents for a fee",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat survives", "quote": "In an animated cartoon during the end credits, Juan is shown fighting through the zombie horde.", "confidence": "sourced"},
-   {"value": "hero chooses to stay", "quote": "He believes he belongs in his homeland and plans to continue surviving.", "confidence": "sourced"}
+   {
+    "value": "threat survives",
+    "quote": "In an animated cartoon during the end credits, Juan is shown fighting through the zombie horde.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hero chooses to stay",
+    "quote": "He believes he belongs in his homeland and plans to continue surviving.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:38",
+      "quote": "I'm fine here. I like it here."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "corpse in the sea", "state": "awakens", "when": "opening", "role": "omen", "quote": "they accidentally catch what they believe to be a corpse", "confidence": "sourced"},
-   {"value": "spear gun", "when": "opening", "role": "weapon", "quote": "Lazaro kills it with a spear gun", "confidence": "sourced"},
-   {"value": "handcuffs", "state": "chained to a zombie", "when": "middle", "role": "threat", "quote": "dies and turns into a zombie while handcuffed to Juan", "confidence": "sourced"},
-   {"value": "rooftops", "when": "middle", "role": "setting", "quote": "the group takes refuge on rooftops", "confidence": "sourced"},
-   {"value": "oil drums", "state": "floating a car", "when": "late", "role": "symbol", "quote": "construct a flotation mechanism using oil drums and attach them to a convertible", "confidence": "sourced"},
-   {"value": "ramp of bodies", "when": "late", "role": "setting", "quote": "They build a ramp of bodies for the car to jump over the wall", "confidence": "sourced"}
+   {
+    "value": "corpse in the sea",
+    "state": "awakens",
+    "when": "opening",
+    "role": "omen",
+    "quote": "they accidentally catch what they believe to be a corpse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:10",
+      "quote": "Is he dead?"
+     }
+    ]
+   },
+   {
+    "value": "spear gun",
+    "when": "opening",
+    "role": "weapon",
+    "quote": "Lazaro kills it with a spear gun",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:58",
+      "quote": "I will never let you touch that harpoon again!"
+     }
+    ]
+   },
+   {
+    "value": "handcuffs",
+    "state": "chained to a zombie",
+    "when": "middle",
+    "role": "threat",
+    "quote": "dies and turns into a zombie while handcuffed to Juan",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:53",
+      "quote": "And you, Primo, find something to cut the handcuffs."
+     }
+    ]
+   },
+   {
+    "value": "rooftops",
+    "when": "middle",
+    "role": "setting",
+    "quote": "the group takes refuge on rooftops",
+    "confidence": "sourced"
+   },
+   {
+    "value": "oil drums",
+    "state": "floating a car",
+    "when": "late",
+    "role": "symbol",
+    "quote": "construct a flotation mechanism using oil drums and attach them to a convertible",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ramp of bodies",
+    "when": "late",
+    "role": "setting",
+    "quote": "They build a ramp of bodies for the car to jump over the wall",
+    "confidence": "sourced"
+   },
+   {
+    "value": "wooden paddle",
+    "when": "late",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "01:15:48",
+    "quote": "Should I smash your head with my paddle,",
+    "detail": "Juan's raft paddle, his weapon of choice",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "corpse fished up attacks", "when": "opening", "role": "omen", "quote": "To their surprise, the \"corpse\" awakens and attacks them.", "confidence": "sourced"},
-   {"order": 2, "value": "city falls to violence", "when": "early", "quote": "Unexplained acts of violence suddenly plague the city, with people attacking each other randomly.", "confidence": "sourced"},
-   {"order": 3, "value": "profiting from the outbreak", "when": "early", "role": "turn", "quote": "leading Juan to start a business called \"Juan of the Dead\"", "confidence": "sourced"},
-   {"order": 4, "value": "friend turns", "when": "middle", "quote": "China, who was bitten, dies and turns into a zombie while handcuffed to Juan", "confidence": "sourced"},
-   {"order": 5, "value": "flight through the horde", "when": "late", "quote": "forcing them to flee on foot while being pursued by hundreds of zombies", "confidence": "sourced"},
-   {"order": 6, "value": "escape by sea planned", "when": "late", "quote": "they plan to float to Florida in hopes of finding safety", "confidence": "sourced"},
-   {"order": 7, "value": "hero turns back", "when": "ending", "role": "turn", "quote": "Juan surprises his companions by getting out of the car and heading back to shore", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "survivor's boast",
+    "when": "opening",
+    "source": "subtitles",
+    "at": "00:01:36",
+    "quote": "Besides, I'm a survivor.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:40",
+      "quote": "I survived Mariel, I survived Angola, I survived the Special Period,"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "corpse fished up attacks",
+    "when": "opening",
+    "role": "omen",
+    "quote": "To their surprise, the \"corpse\" awakens and attacks them.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:34",
+      "quote": "This stays between us, okay?"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "epidemic warning dismissed",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:12:31",
+    "quote": "to warn us about a possible epidemic.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "city falls to violence",
+    "when": "early",
+    "quote": "Unexplained acts of violence suddenly plague the city, with people attacking each other randomly.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:49",
+      "quote": "The police investigate isolated riots"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "profiting from the outbreak",
+    "when": "early",
+    "role": "turn",
+    "quote": "leading Juan to start a business called \"Juan of the Dead\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:49",
+      "quote": "Juan of the Dead, we kill your loved ones."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "friend turns",
+    "when": "middle",
+    "quote": "China, who was bitten, dies and turns into a zombie while handcuffed to Juan",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:01",
+      "quote": "On the head, with the paddle."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "flight through the horde",
+    "when": "late",
+    "quote": "forcing them to flee on foot while being pursued by hundreds of zombies",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "escape by sea planned",
+    "when": "late",
+    "quote": "they plan to float to Florida in hopes of finding safety",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:20",
+      "quote": "In the end, this is a fucking island and the only way out is by sea."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "survivor's boast repeated",
+    "when": "ending",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:28:21",
+    "quote": "I'm a survivor.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:44",
+      "quote": "I am Juan."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "hero turns back",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Juan surprises his companions by getting out of the car and heading back to shore",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:38",
+      "quote": "I'm fine here. I like it here."
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

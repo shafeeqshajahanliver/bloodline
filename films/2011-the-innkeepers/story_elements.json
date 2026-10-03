@@ -1,57 +1,446 @@
 {
  "film": "2011-the-innkeepers",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "ghost", "detail": "Madeline O'Malley, the jilted bride", "quote": "Confronted by Madeline's apparition, Claire dies of an asthma attack", "confidence": "sourced"},
-   {"value": "haunted place", "detail": "the Yankee Pedlar Inn", "quote": "fascinated by the hotel's \"haunted\" history", "confidence": "sourced"}
+   {
+    "value": "ghost",
+    "detail": "Madeline O'Malley, the jilted bride",
+    "quote": "Confronted by Madeline's apparition, Claire dies of an asthma attack",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:48",
+      "quote": "(Ghostly voice)"
+     }
+    ]
+   },
+   {
+    "value": "haunted place",
+    "detail": "the Yankee Pedlar Inn",
+    "quote": "fascinated by the hotel's \"haunted\" history",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:06",
+      "quote": "people have reported seeing the ghost of Madeline O'Malley."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "person who died wronged", "quote": "a bride who hanged herself when abandoned at the altar, and whose body was hidden in the basement by the hotel owners", "confidence": "sourced"}
+   {
+    "value": "person who died wronged",
+    "quote": "a bride who hanged herself when abandoned at the altar, and whose body was hidden in the basement by the hotel owners",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:27",
+      "quote": "She hung herself after her fiancée stood her up on their wedding day."
+     }
+    ]
+   }
+  ],
+  "wants": [
+   {
+    "value": "her lover's return",
+    "source": "subtitles",
+    "at": "00:26:06",
+    "quote": "Roaming the hallways, waiting for her lover.",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "abandoned at the altar", "quote": "a bride who hanged herself when abandoned at the altar", "confidence": "sourced"},
-   {"value": "body hidden", "quote": "whose body was hidden in the basement by the hotel owners", "confidence": "sourced"}
+   {
+    "value": "abandoned at the altar",
+    "quote": "a bride who hanged herself when abandoned at the altar",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:27",
+      "quote": "after her fiancée stood her up on their wedding day."
+     }
+    ]
+   },
+   {
+    "value": "body hidden",
+    "quote": "whose body was hidden in the basement by the hotel owners",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:17",
+      "quote": "That's where they hid her body."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "ghost hunting", "quote": "attempt to document the alleged supernatural activity in the building", "confidence": "sourced"},
-   {"value": "entering a forbidden place", "quote": "She warns Claire not to go into the basement", "confidence": "sourced"}
+   {
+    "value": "ghost hunting",
+    "quote": "attempt to document the alleged supernatural activity in the building",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:25",
+      "quote": "I'm trying to contact the spirit of Madeline O'Malley."
+     }
+    ]
+   },
+   {
+    "value": "entering a forbidden place",
+    "quote": "She warns Claire not to go into the basement",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:24",
+      "quote": "Let's go to the basement and find out what that fucking ghost's problem is."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "must not enter the basement", "quote": "She warns Claire not to go into the basement", "confidence": "sourced"},
-   {"value": "must leave immediately", "quote": "Leanne makes contact with a spirit and tells Claire they need to leave the hotel immediately", "confidence": "sourced"}
+   {
+    "value": "must not enter the basement",
+    "quote": "She warns Claire not to go into the basement",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:17",
+      "quote": "You mustn't go down into the basement."
+     }
+    ]
+   },
+   {
+    "value": "must leave immediately",
+    "quote": "Leanne makes contact with a spirit and tells Claire they need to leave the hotel immediately",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:36",
+      "quote": "We must get out of this hotel. You're in grave danger."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "ghost hunters", "relation_to_threat": "stranger", "detail": "Claire and Luke, the last employees", "quote": "Claire and Luke are the only employees working", "confidence": "sourced"},
-   {"value": "guest", "relation_to_threat": "stranger", "detail": "an elderly man on his honeymoon return", "quote": "discovers his body in the bathtub, his wrists slashed", "confidence": "sourced"}
+   {
+    "value": "ghost hunters",
+    "relation_to_threat": "stranger",
+    "detail": "Claire and Luke, the last employees",
+    "quote": "Claire and Luke are the only employees working",
+    "confidence": "sourced"
+   },
+   {
+    "value": "guest",
+    "relation_to_threat": "stranger",
+    "detail": "an elderly man on his honeymoon return",
+    "quote": "discovers his body in the bathtub, his wrists slashed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:59",
+      "quote": "He's dead! He killed himself! He's dead!"
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "protagonist dies", "quote": "Confronted by Madeline's apparition, Claire dies of an asthma attack", "confidence": "sourced"},
-   {"value": "victim becomes ghost", "quote": "her barely visible apparition looks out the window. As she turns towards the viewer, the door slams shut", "confidence": "sourced"}
+   {
+    "value": "protagonist dies",
+    "quote": "Confronted by Madeline's apparition, Claire dies of an asthma attack",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:09",
+      "quote": "I was banging on the door as hard as I could."
+     }
+    ]
+   },
+   {
+    "value": "victim becomes ghost",
+    "quote": "her barely visible apparition looks out the window. As she turns towards the viewer, the door slams shut",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "window", "state": "watcher turning away", "when": "early", "role": "omen", "quote": "Claire notices Leanne watching from her room window and waves", "confidence": "sourced"},
-   {"value": "padlocked door", "when": "early", "role": "turn", "quote": "She padlocks the door and returns inside", "confidence": "sourced"},
-   {"value": "piano", "state": "playing by itself", "when": "early", "role": "omen", "quote": "sees the grand piano in the lobby play by itself", "confidence": "sourced"},
-   {"value": "recording equipment", "when": "early", "role": "clue", "quote": "She uses Luke's ghost-hunting equipment to record EVPs", "confidence": "sourced"},
-   {"value": "bathtub", "state": "body with slashed wrists", "when": "late", "role": "threat", "quote": "discovers his body in the bathtub, his wrists slashed", "confidence": "sourced"},
-   {"value": "rope", "state": "hanging ghost", "when": "late", "role": "threat", "quote": "with Madeline's apparition hanging from a rope", "confidence": "sourced"},
-   {"value": "basement", "when": "late", "role": "setting", "quote": "Claire walks into the basement room where Madeline's body was kept", "confidence": "sourced"}
+   {
+    "value": "window",
+    "state": "watcher turning away",
+    "when": "early",
+    "role": "omen",
+    "quote": "Claire notices Leanne watching from her room window and waves",
+    "confidence": "sourced"
+   },
+   {
+    "value": "padlocked door",
+    "when": "early",
+    "role": "turn",
+    "quote": "She padlocks the door and returns inside",
+    "confidence": "sourced"
+   },
+   {
+    "value": "piano",
+    "state": "playing by itself",
+    "when": "early",
+    "role": "omen",
+    "quote": "sees the grand piano in the lobby play by itself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:45",
+      "quote": "The piano was playing by itself!"
+     }
+    ]
+   },
+   {
+    "value": "recording equipment",
+    "when": "early",
+    "role": "clue",
+    "quote": "She uses Luke's ghost-hunting equipment to record EVPs",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:25",
+      "quote": "This is the EVP recording of the banquet room."
+     }
+    ]
+   },
+   {
+    "value": "bathtub",
+    "state": "body with slashed wrists",
+    "when": "late",
+    "role": "threat",
+    "quote": "discovers his body in the bathtub, his wrists slashed",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rope",
+    "state": "hanging ghost",
+    "when": "late",
+    "role": "threat",
+    "quote": "with Madeline's apparition hanging from a rope",
+    "confidence": "sourced"
+   },
+   {
+    "value": "basement",
+    "when": "late",
+    "role": "setting",
+    "quote": "Claire walks into the basement room where Madeline's body was kept",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:24",
+      "quote": "Let's go to the basement"
+     }
+    ]
+   },
+   {
+    "value": "inhaler",
+    "when": "opening",
+    "role": "omen",
+    "detail": "Claire's asthma inhaler, heard in every scare until the fatal attack",
+    "source": "subtitles",
+    "at": "00:05:45",
+    "quote": "(Inhaler puff)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:18",
+      "quote": "(Inhaler puff)"
+     }
+    ]
+   },
+   {
+    "value": "bird",
+    "state": "trapped in the rubbish",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:32:45",
+    "quote": "How'd you get in there, bird?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pendulum",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:44:15",
+    "quote": "It's a pendulum. It's used to answer life's more... difficult questions.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "honeymoon suite",
+    "when": "middle",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:58:14",
+    "quote": "here we are room 353. The honeymoon suite.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "scare video",
+    "when": "opening",
+    "role": "omen",
+    "detail": "Luke's prank ghost clip that makes Claire scream",
+    "source": "subtitles",
+    "at": "00:05:24",
+    "quote": "(Demonic screech)",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "last weekend at a hotel", "when": "opening", "quote": "In the final operating week of the Yankee Pedlar Inn, a once-grand hotel, Claire and Luke are the only employees working", "confidence": "sourced"},
-   {"order": 2, "value": "legend of a dead bride", "when": "opening", "role": "omen", "quote": "a bride who hanged herself when abandoned at the altar", "confidence": "sourced"},
-   {"order": 3, "value": "first signs", "when": "early", "quote": "she hears faint voices and music, and sees the grand piano in the lobby play by itself", "confidence": "sourced"},
-   {"order": 4, "value": "medium's warning", "when": "middle", "role": "omen", "quote": "She warns Claire not to go into the basement", "confidence": "sourced"},
-   {"order": 5, "value": "warning ignored", "when": "middle", "role": "trigger", "quote": "Luke and Claire investigate the basement", "confidence": "sourced"},
-   {"order": 6, "value": "guest found dead", "when": "late", "quote": "only to find a suicide note and discovers his body in the bathtub", "confidence": "sourced"},
-   {"order": 7, "value": "trapped by her own lock", "when": "late", "role": "turn", "quote": "She tries in vain to open the door leading to the garage, forgetting she had locked it", "confidence": "sourced"},
-   {"order": 8, "value": "protagonist dies and haunts", "when": "ending", "quote": "her barely visible apparition looks out the window", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "prank jump scare",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:05:24",
+    "quote": "(Demonic screech)",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "last weekend at a hotel",
+    "when": "opening",
+    "quote": "In the final operating week of the Yankee Pedlar Inn, a once-grand hotel, Claire and Luke are the only employees working",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:41",
+      "quote": "this is our last weekend open so Luke and I are the only ones on staff today."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "legend of a dead bride",
+    "when": "opening",
+    "role": "omen",
+    "quote": "a bride who hanged herself when abandoned at the altar",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:20",
+      "quote": "Do you know the story of Madeline O'Malley?"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "first signs",
+    "when": "early",
+    "quote": "she hears faint voices and music, and sees the grand piano in the lobby play by itself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:06",
+      "quote": "(Piano playing)"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "medium's warning",
+    "when": "middle",
+    "role": "omen",
+    "quote": "She warns Claire not to go into the basement",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:17",
+      "quote": "You mustn't go down into the basement."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "warning ignored",
+    "when": "middle",
+    "role": "trigger",
+    "quote": "Luke and Claire investigate the basement",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:01",
+      "quote": "We wish to speak to the spirit of Madeline O'Malley."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "guest found dead",
+    "when": "late",
+    "quote": "only to find a suicide note and discovers his body in the bathtub",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:59",
+      "quote": "He's dead! He killed himself! He's dead!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "trapped by her own lock",
+    "when": "late",
+    "role": "turn",
+    "quote": "She tries in vain to open the door leading to the garage, forgetting she had locked it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:21",
+      "quote": "(Slamming against door)"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "protagonist dies and haunts",
+    "when": "ending",
+    "quote": "her barely visible apparition looks out the window",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wants"],
+ "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,62 +1,428 @@
 {
  "film": "1999-the-ninth-gate",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "cursed book", "detail": "The Nine Gates of the Kingdom of Shadows", "quote": "a 17th-century book that, if used correctly, can summon the Devil", "confidence": "sourced"},
-   {"value": "obsessed collector", "detail": "Boris Balkan", "quote": "Balkan interrupts the ceremony, takes his copy back, and strangles Liana to death", "confidence": "sourced"},
-   {"value": "cult", "quote": "a Satanic cult is conducting a rite using Balkan's book", "confidence": "sourced"}
+   {
+    "value": "cursed book",
+    "detail": "The Nine Gates of the Kingdom of Shadows",
+    "quote": "a 17th-century book that, if used correctly, can summon the Devil",
+    "confidence": "sourced"
+   },
+   {
+    "value": "obsessed collector",
+    "detail": "Boris Balkan",
+    "quote": "Balkan interrupts the ceremony, takes his copy back, and strangles Liana to death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cult",
+    "quote": "a Satanic cult is conducting a rite using Balkan's book",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "made with the devil", "quote": "Torchia is alleged to have written the book in collaboration with the Devil", "confidence": "sourced"}
+   {
+    "value": "made with the devil",
+    "quote": "Torchia is alleged to have written the book in collaboration with the Devil",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:26",
+      "quote": "The man who wrote this book did so in alliance with the devil and went to the stake for it."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to summon the devil", "quote": "Balkan is preparing to summon the Devil using the nine \"LCF\" engravings", "confidence": "sourced"},
-   {"value": "immunity from harm", "quote": "it seemingly grants Balkan immunity from harm", "confidence": "sourced"}
+   {
+    "value": "to summon the devil",
+    "quote": "Balkan is preparing to summon the Devil using the nine \"LCF\" engravings",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:07",
+      "quote": "they're reputed to conjure up the prince of darkness in person."
+     }
+    ]
+   },
+   {
+    "value": "immunity from harm",
+    "quote": "it seemingly grants Balkan immunity from harm",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:01:01",
+      "quote": "Let me fear neither noose, nor fire, nor poison."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "heresy", "quote": "only three copies survived when he and his works were burned for heresy", "confidence": "sourced"}
+   {
+    "value": "heresy",
+    "quote": "only three copies survived when he and his works were burned for heresy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:43",
+      "quote": "The author and printer, Aristide Torchia, was burned by the holy Inquisition together with all his works."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "hired to investigate", "quote": "He hires Corso to travel to Europe to inspect the other two copies", "confidence": "sourced"}
+   {
+    "value": "hired to investigate",
+    "quote": "He hires Corso to travel to Europe to inspect the other two copies",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "authentic set needed", "quote": "proposing that each copy has three that together make an authentic set of nine", "confidence": "sourced"},
-   {"value": "ritual fails if forged", "quote": "Balkan's rite failed because the ninth engraving was forged", "confidence": "sourced"}
+   {
+    "value": "authentic set needed",
+    "quote": "proposing that each copy has three that together make an authentic set of nine",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:08",
+      "quote": "Maybe Torchia hid the secret of the Ninth Gate in three books, not one."
+     }
+    ]
+   },
+   {
+    "value": "ritual fails if forged",
+    "quote": "Balkan's rite failed because the ninth engraving was forged",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:05:48",
+      "quote": "Why didn't it work for Balkan? The ninth engraving was a forgery."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "book owners", "relation_to_threat": "stranger", "quote": "they find that he has been drowned; Corso retrieves Fargas's burnt copy from the fireplace", "confidence": "sourced"},
-   {"value": "investigator", "relation_to_threat": "stranger", "detail": "rare book dealer Dean Corso", "quote": "Corso is attacked while studying it in her library", "confidence": "sourced"},
-   {"value": "cult member", "relation_to_threat": "community", "detail": "Liana Telfer", "quote": "strangles Liana to death as the rest of the members run away in fear", "confidence": "sourced"}
+   {
+    "value": "book owners",
+    "relation_to_threat": "stranger",
+    "quote": "they find that he has been drowned; Corso retrieves Fargas's burnt copy from the fireplace",
+    "confidence": "sourced"
+   },
+   {
+    "value": "investigator",
+    "relation_to_threat": "stranger",
+    "detail": "rare book dealer Dean Corso",
+    "quote": "Corso is attacked while studying it in her library",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cult member",
+    "relation_to_threat": "community",
+    "detail": "Liana Telfer",
+    "quote": "strangles Liana to death as the rest of the members run away in fear",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "summoner destroyed", "quote": "Balkan begins to scream in pain as the flames engulf his body", "confidence": "sourced"},
-   {"value": "hero passes through", "quote": "Corso walks through, taking the journey through the Ninth Gate", "confidence": "sourced"},
-   {"value": "ambiguous", "quote": "The gates open on their own and emit a powerful bright light", "confidence": "observed"}
+   {
+    "value": "summoner destroyed",
+    "quote": "Balkan begins to scream in pain as the flames engulf his body",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hero passes through",
+    "quote": "Corso walks through, taking the journey through the Ninth Gate",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ambiguous",
+    "quote": "The gates open on their own and emit a powerful bright light",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "book", "state": "rare, three copies", "when": "opening", "role": "threat", "quote": "a book by 17th-century author Aristide de Torchia said to be able to summon the Devil", "confidence": "sourced"},
-   {"value": "engravings", "state": "signed by lucifer", "when": "early", "role": "clue", "quote": "only six are signed \"AT\"; the other three are signed \"LCF\" for Lucifer", "confidence": "sourced"},
-   {"value": "hanged man", "when": "early", "role": "clue", "quote": "finds him hanged in his store, in a way depicted in one of the engravings", "confidence": "sourced"},
-   {"value": "green eyes", "state": "mysterious woman", "when": "early", "role": "omen", "quote": "Corso is shadowed by a mysterious woman, whom he nicknames \"Green Eyes\"", "confidence": "sourced"},
-   {"value": "fire", "state": "burning castle", "when": "late", "role": "setting", "quote": "backlit by the burning castle", "confidence": "sourced"},
-   {"value": "dragon-like beast", "when": "ending", "role": "symbol", "quote": "a woman who resembles Green Eyes riding atop a dragon-like beast", "confidence": "sourced"},
-   {"value": "gates", "state": "opening with light", "when": "ending", "role": "turn", "quote": "The gates open on their own and emit a powerful bright light", "confidence": "sourced"}
+   {
+    "value": "book",
+    "state": "rare, three copies",
+    "when": "opening",
+    "role": "threat",
+    "quote": "a book by 17th-century author Aristide de Torchia said to be able to summon the Devil",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:05",
+      "quote": "This book is designed to raise the devil."
+     }
+    ]
+   },
+   {
+    "value": "engravings",
+    "state": "signed by lucifer",
+    "when": "early",
+    "role": "clue",
+    "quote": "only six are signed \"AT\"; the other three are signed \"LCF\" for Lucifer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:56",
+      "quote": "by Torchia from the Delomelanicon. They form a kind of satanic riddle."
+     }
+    ]
+   },
+   {
+    "value": "hanged man",
+    "when": "early",
+    "role": "clue",
+    "quote": "finds him hanged in his store, in a way depicted in one of the engravings",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:12",
+      "quote": "Bernie. Oh, Jesus."
+     }
+    ]
+   },
+   {
+    "value": "green eyes",
+    "state": "mysterious woman",
+    "when": "early",
+    "role": "omen",
+    "quote": "Corso is shadowed by a mysterious woman, whom he nicknames \"Green Eyes\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:00",
+      "quote": "Green eyes. - That'll do."
+     }
+    ]
+   },
+   {
+    "value": "fire",
+    "state": "burning castle",
+    "when": "late",
+    "role": "setting",
+    "quote": "backlit by the burning castle",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:03",
+      "quote": "The bad news is that someone strangled her and made a bonfire of her collection."
+     }
+    ]
+   },
+   {
+    "value": "dragon-like beast",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "a woman who resembles Green Eyes riding atop a dragon-like beast",
+    "confidence": "sourced"
+   },
+   {
+    "value": "gates",
+    "state": "opening with light",
+    "when": "ending",
+    "role": "turn",
+    "quote": "The gates open on their own and emit a powerful bright light",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:01:09",
+      "quote": "Admit me to the ninth gate. Let it be so."
+     }
+    ]
+   },
+   {
+    "value": "author burned at the stake",
+    "state": "backstory",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:41:20",
+    "quote": "Torchia was burned alive because he wrote this book in collaboration with someone else.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "latin motto",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:22:59",
+    "quote": "(CORSO READING LATIN TEXT IN BOOK) Thus let the light shine.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:29",
+      "quote": "(BALKAN READS LATIN TEXT IN BOOK) - Silence is golden."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "hands in fire",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "02:01:57",
+    "quote": "I plunge my hands in fire. I feel no heat.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "hired by a collector", "when": "opening", "role": "trigger", "quote": "Dean Corso, a New York City rare book dealer, is hired by wealthy collector Boris Balkan", "confidence": "sourced"},
-   {"order": 2, "value": "first death mirrors the book", "when": "early", "quote": "finds him hanged in his store, in a way depicted in one of the engravings", "confidence": "sourced"},
-   {"order": 3, "value": "secret signature found", "when": "early", "role": "clue", "quote": "the other three are signed \"LCF\" for Lucifer", "confidence": "sourced"},
-   {"order": 4, "value": "owners killed one by one", "when": "middle", "quote": "the Baroness is strangled to death and the library set on fire", "confidence": "sourced"},
-   {"order": 5, "value": "cult ritual interrupted", "when": "late", "quote": "Balkan interrupts the ceremony, takes his copy back, and strangles Liana to death", "confidence": "sourced"},
-   {"order": 6, "value": "summoning fails", "when": "late", "role": "turn", "quote": "he immolates himself to convince a still-skeptical Corso", "confidence": "sourced"},
-   {"order": 7, "value": "true page found", "when": "ending", "role": "clue", "quote": "a dust-covered paper floats down from the top. This is the authentic engraving", "confidence": "sourced"},
-   {"order": 8, "value": "hero crosses the threshold", "when": "ending", "quote": "The gates open on their own and emit a powerful bright light as Corso walks through", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "collector's suicide",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:21:44",
+    "quote": "by the screams of the maid. He'd hanged himself.",
+    "detail": "Andrew Telfer hangs himself the day after selling his copy",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "hired by a collector",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Dean Corso, a New York City rare book dealer, is hired by wealthy collector Boris Balkan",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:51",
+      "quote": "I'm convinced only one is authentic. I wanna know which."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "first death mirrors the book",
+    "when": "early",
+    "quote": "finds him hanged in his store, in a way depicted in one of the engravings",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:12",
+      "quote": "Bernie. Oh, Jesus."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "secret signature found",
+    "when": "early",
+    "role": "clue",
+    "quote": "the other three are signed \"LCF\" for Lucifer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:01",
+      "quote": "LCF. - Who's LCF? - Think. Lucifer?"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "owners killed one by one",
+    "when": "middle",
+    "quote": "the Baroness is strangled to death and the library set on fire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:17",
+      "quote": "Fargas has been murdered."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:32:03",
+      "quote": "The bad news is that someone strangled her and made a bonfire of her collection."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "cult ritual interrupted",
+    "when": "late",
+    "quote": "Balkan interrupts the ceremony, takes his copy back, and strangles Liana to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:49:21",
+      "quote": "A bunch of buffoons, in fancy dress."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "summoning fails",
+    "when": "late",
+    "role": "turn",
+    "quote": "he immolates himself to convince a still-skeptical Corso",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:01:57",
+      "quote": "I plunge my hands in fire. I feel no heat."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "true page found",
+    "when": "ending",
+    "role": "clue",
+    "quote": "a dust-covered paper floats down from the top. This is the authentic engraving",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:05:48",
+      "quote": "Why didn't it work for Balkan? The ninth engraving was a forgery."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "hero crosses the threshold",
+    "when": "ending",
+    "quote": "The gates open on their own and emit a powerful bright light as Corso walks through",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

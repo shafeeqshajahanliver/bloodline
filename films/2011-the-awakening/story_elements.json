@@ -1,59 +1,443 @@
 {
  "film": "2011-the-awakening",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "child ghost", "detail": "Tom, Florence's murdered half-brother", "quote": "Florence realises Tom is the ghost", "confidence": "sourced"},
-   {"value": "repressed memory", "quote": "Buried memories begin to surface, and she remembers that the boarding school had been her family home", "confidence": "sourced"}
+   {
+    "value": "child ghost",
+    "detail": "Tom, Florence's murdered half-brother",
+    "quote": "Florence realises Tom is the ghost",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:08",
+      "quote": "I didn't mean to scare Walter that night."
+     }
+    ]
+   },
+   {
+    "value": "repressed memory",
+    "quote": "Buried memories begin to surface, and she remembers that the boarding school had been her family home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:16",
+      "quote": "(Tom) You started to remember! You started!"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "person who died wronged", "quote": "Her father accidentally killed Tom, who is revealed to have been his illegitimate son", "confidence": "sourced"}
+   {
+    "value": "person who died wronged",
+    "quote": "Her father accidentally killed Tom, who is revealed to have been his illegitimate son",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "companionship", "quote": "Maud had arranged for Florence to come to the school because Tom missed her", "confidence": "sourced"}
+   {
+    "value": "companionship",
+    "quote": "Maud had arranged for Florence to come to the school because Tom missed her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:33",
+      "quote": "Florence and I will be leaving now. Tom needs his family with him."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "parent kills family", "quote": "As a child, she watched as her father murdered her mother with a shotgun and attempted to kill her too", "confidence": "sourced"},
-   {"value": "cruelty to a child", "detail": "a teacher's punishment causes a pupil's death", "quote": "he had forced the deceased pupil to stand outside to toughen him up after he claimed to have seen the ghost", "confidence": "sourced"}
+   {
+    "value": "parent kills family",
+    "quote": "As a child, she watched as her father murdered her mother with a shotgun and attempted to kill her too",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:26",
+      "quote": "I really am sorry, Little Mousie. I will find you, darling."
+     }
+    ]
+   },
+   {
+    "value": "cruelty to a child",
+    "detail": "a teacher's punishment causes a pupil's death",
+    "quote": "he had forced the deceased pupil to stand outside to toughen him up after he claimed to have seen the ghost",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:18",
+      "quote": "But you can die of an asthma attack brought on by it."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "an invitation", "quote": "who is invited to a boys' boarding school in post-World War I England to examine reports of a ghost", "confidence": "sourced"}
+   {
+    "value": "an invitation",
+    "quote": "who is invited to a boys' boarding school in post-World War I England to examine reports of a ghost",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:06",
+      "quote": "Our school is called Rookford in Cumbria. Some years ago, a child was said to have been murdered there."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "ghosts appear to the lonely", "quote": "concludes that ghosts reveal themselves to the lonely", "confidence": "sourced"}
+   {
+    "value": "ghosts appear to the lonely",
+    "quote": "concludes that ghosts reveal themselves to the lonely",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:49",
+      "quote": "(Maud) The loneliest boys are starting to see Tom now,"
+     }
+    ]
+   },
+   {
+    "value": "boys predict a death a night",
+    "source": "subtitles",
+    "at": "00:29:03",
+    "quote": "That she'll kill the ghost. And that one boy a night will die until she does.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "investigator", "relation_to_threat": "family", "detail": "Florence Cathcart, Tom's half-sister", "quote": "author Florence Cathcart works with the police to expose fraudulent spiritualists", "confidence": "sourced"},
-   {"value": "schoolboy", "relation_to_threat": "stranger", "quote": "causing his fatal asthma attack", "confidence": "sourced"},
-   {"value": "war veteran", "relation_to_threat": "stranger", "detail": "Robert Mallory", "quote": "Robert sees the ghosts of his friends who died in the war", "confidence": "sourced"}
+   {
+    "value": "investigator",
+    "relation_to_threat": "family",
+    "detail": "Florence Cathcart, Tom's half-sister",
+    "quote": "author Florence Cathcart works with the police to expose fraudulent spiritualists",
+    "confidence": "sourced"
+   },
+   {
+    "value": "schoolboy",
+    "relation_to_threat": "stranger",
+    "quote": "causing his fatal asthma attack",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:13",
+      "quote": "They called him \" Wheezy Walter \". He was asthmatic."
+     }
+    ]
+   },
+   {
+    "value": "war veteran",
+    "relation_to_threat": "stranger",
+    "detail": "Robert Mallory",
+    "quote": "Robert sees the ghosts of his friends who died in the war",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "ambiguous", "detail": "Florence may be dead; only a lonely boy notices her", "quote": "She passes several adults but none notice her, though Victor, a lonely boy at the school who was bullied by the others, does", "confidence": "sourced"},
-   {"value": "past remembered", "quote": "Florence had replaced these memories with false memories of a childhood in Africa", "confidence": "sourced"}
+   {
+    "value": "ambiguous",
+    "detail": "Florence may be dead; only a lonely boy notices her",
+    "quote": "She passes several adults but none notice her, though Victor, a lonely boy at the school who was bullied by the others, does",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:41:44",
+      "quote": "Not seeing them... It's not the same as forgetting."
+     }
+    ]
+   },
+   {
+    "value": "past remembered",
+    "quote": "Florence had replaced these memories with false memories of a childhood in Africa",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "cigarette case", "when": "early", "role": "symbol", "quote": "Florence drops her cigarette case, which belonged to her late fiancé, in the lake", "confidence": "sourced"},
-   {"value": "hand from the water", "when": "early", "role": "omen", "quote": "As she reaches for it, a hand reaches for her from the water", "confidence": "sourced"},
-   {"value": "lake", "when": "early", "role": "setting", "quote": "She steadies herself then allows herself to fall into the lake", "confidence": "sourced"},
-   {"value": "shotgun", "when": "middle", "role": "clue", "quote": "an apparition of a man with a shotgun appears to shoot her", "confidence": "sourced"},
-   {"value": "lion", "when": "middle", "role": "clue", "quote": "rescued from the lion that orphaned her as a child", "confidence": "sourced"},
-   {"value": "inside the walls", "when": "late", "role": "setting", "quote": "Florence hid inside the walls of the house as her father pursued her", "confidence": "sourced"},
-   {"value": "poison", "when": "late", "role": "weapon", "quote": "Maud poisons herself and Florence", "confidence": "sourced"}
+   {
+    "value": "cigarette case",
+    "when": "early",
+    "role": "symbol",
+    "quote": "Florence drops her cigarette case, which belonged to her late fiancé, in the lake",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hand from the water",
+    "when": "early",
+    "role": "omen",
+    "quote": "As she reaches for it, a hand reaches for her from the water",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lake",
+    "when": "early",
+    "role": "setting",
+    "quote": "She steadies herself then allows herself to fall into the lake",
+    "confidence": "sourced"
+   },
+   {
+    "value": "shotgun",
+    "when": "middle",
+    "role": "clue",
+    "quote": "an apparition of a man with a shotgun appears to shoot her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:00",
+      "quote": "(gunshot) (gasps)"
+     }
+    ]
+   },
+   {
+    "value": "lion",
+    "when": "middle",
+    "role": "clue",
+    "quote": "rescued from the lion that orphaned her as a child",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:48",
+      "quote": "No, but I've seen the lions in Africa. One of them even attacked me."
+     }
+    ]
+   },
+   {
+    "value": "inside the walls",
+    "when": "late",
+    "role": "setting",
+    "quote": "Florence hid inside the walls of the house as her father pursued her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:31",
+      "quote": "(man) Think I don't know your little hiding places?"
+     }
+    ]
+   },
+   {
+    "value": "poison",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Maud poisons herself and Florence",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:43",
+      "quote": "Robert, the medicine cabinet in Maud's room. Quickly. Something to make me sick."
+     }
+    ]
+   },
+   {
+    "value": "singing toy rabbit",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:58:32",
+    "quote": "(doll whirring) (doll singing in French) I know this.",
+    "confidence": "sourced",
+    "detail": "a wind-up rabbit doll whose tune unlocks Florence's memory",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:14",
+      "quote": "When you heard the music from that rabbit doll, you said someone was going to get you."
+     }
+    ]
+   },
+   {
+    "value": "doll's house",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:24:45",
+    "quote": "Look at the doll's house. Look at it.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "footprint catchers",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:27:26",
+    "quote": "Those are footprint catchers. Ghosts have footprints? No, people pretending to be ghosts do.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:53",
+      "quote": "The prints I followed were definitely barefoot."
+     }
+    ]
+   },
+   {
+    "value": "father's voice",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:27:53",
+    "quote": "(man) Be quiet. You'll be quiet or so help me!",
+    "confidence": "sourced",
+    "detail": "a man's voice recurs through the house, later revealed as her father's",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:53",
+      "quote": "Be quiet. You will be quiet, or so help me!"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "sceptic debunks fraud", "when": "opening", "quote": "author Florence Cathcart works with the police to expose fraudulent spiritualists", "confidence": "sourced"},
-   {"order": 2, "value": "called to a haunted school", "when": "opening", "role": "trigger", "quote": "asks her to investigate sightings of a child ghost which might have caused the recent death of a pupil", "confidence": "sourced"},
-   {"order": 3, "value": "haunting explained away", "when": "early", "quote": "Florence's investigation concludes that the sightings are a prank", "confidence": "sourced"},
-   {"order": 4, "value": "hand from the lake", "when": "early", "role": "omen", "quote": "As she reaches for it, a hand reaches for her from the water", "confidence": "sourced"},
-   {"order": 5, "value": "attacker killed with ghost's help", "when": "middle", "quote": "Assisted by a supernatural apparition, she kills Judd", "confidence": "sourced"},
-   {"order": 6, "value": "companion revealed as ghost", "when": "late", "role": "turn", "quote": "Robert tells her there are no children at the school. Florence realises Tom is the ghost", "confidence": "sourced"},
-   {"order": 7, "value": "family murder remembered", "when": "late", "role": "turn", "quote": "she watched as her father murdered her mother with a shotgun and attempted to kill her too", "confidence": "sourced"},
-   {"order": 8, "value": "poisoned, ambiguous survival", "when": "ending", "quote": "Florence tells Tom that her soul will not rest if she dies now, so Tom brings her medicine", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "sceptic debunks fraud",
+    "when": "opening",
+    "quote": "author Florence Cathcart works with the police to expose fraudulent spiritualists",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:21",
+      "quote": "And this grotesque charade won't bring him back."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "called to a haunted school",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "asks her to investigate sightings of a child ghost which might have caused the recent death of a pupil",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:44",
+      "quote": "The day before he died, Walter went to see the headmaster, quaking with fear, convinced he'd seen a ghost."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "haunting explained away",
+    "when": "early",
+    "quote": "Florence's investigation concludes that the sightings are a prank",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:27",
+      "quote": "Mr Parry here frightened him, using this to blur his face."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "hand from the lake",
+    "when": "early",
+    "role": "omen",
+    "quote": "As she reaches for it, a hand reaches for her from the water",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "attacker killed with ghost's help",
+    "when": "middle",
+    "quote": "Assisted by a supernatural apparition, she kills Judd",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "companion revealed as ghost",
+    "when": "late",
+    "role": "turn",
+    "quote": "Robert tells her there are no children at the school. Florence realises Tom is the ghost",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:26",
+      "quote": "(Maud) You never said school."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "family murder remembered",
+    "when": "late",
+    "role": "turn",
+    "quote": "she watched as her father murdered her mother with a shotgun and attempted to kill her too",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:14",
+      "quote": "Please, Daddy. Mousie, Mousie, run! Run!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "ghost promises to stay",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:38:38",
+    "quote": "I'll stay with you. I promise. Even if you can't see me.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "poisoned, ambiguous survival",
+    "when": "ending",
+    "quote": "Florence tells Tom that her soul will not rest if she dies now, so Tom brings her medicine",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:32",
+      "quote": "But if I go with you now, my soul will never be happy, and I..."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "lonely boy greets her",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:42:09",
+    "quote": "(Florence) Hello. (boy) Hello.",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

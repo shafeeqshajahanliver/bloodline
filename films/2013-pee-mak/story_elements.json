@@ -1,60 +1,417 @@
 {
  "film": "2013-pee-mak",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "ghost wife", "detail": "Nak, died in childbirth", "quote": "rumors spread in the village that Nak died during childbirth and has returned as a powerful ghost haunting her home", "confidence": "sourced"}
+   {
+    "value": "ghost wife",
+    "detail": "Nak, died in childbirth",
+    "quote": "rumors spread in the village that Nak died during childbirth and has returned as a powerful ghost haunting her home",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "died in childbirth", "quote": "Nak endures a difficult labor alone. She calls for help, but is too weak to be heard.", "confidence": "sourced"},
-   {"value": "folk legend", "quote": "The story is an adaptation of the Mae Nak Phra Khanong legend of Thai folklore.", "confidence": "sourced"}
+   {
+    "value": "died in childbirth",
+    "quote": "Nak endures a difficult labor alone. She calls for help, but is too weak to be heard.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "folk legend",
+    "quote": "The story is an adaptation of the Mae Nak Phra Khanong legend of Thai folklore.",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to stay with loved one", "quote": "Nak pleads that she only wants to be with Mak", "confidence": "sourced"}
+   {
+    "value": "to stay with loved one",
+    "quote": "Nak pleads that she only wants to be with Mak",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "woman left alone", "detail": "abandoned in labour while husband at war", "quote": "Mak is drafted to serve in the war, forcing him to leave his pregnant wife, Nak", "confidence": "sourced"}
+   {
+    "value": "woman left alone",
+    "detail": "abandoned in labour while husband at war",
+    "quote": "Mak is drafted to serve in the war, forcing him to leave his pregnant wife, Nak",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "returning home", "quote": "When Mak and his friends return to Phra Khanong, they find the town eerily silent.", "confidence": "sourced"}
+   {
+    "value": "returning home",
+    "quote": "When Mak and his friends return to Phra Khanong, they find the town eerily silent.",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "seen between the legs", "quote": "When he glances between his legs, Nak’s ghostly form is revealed", "confidence": "observed"},
-   {"value": "held back by holy items", "quote": "The holy items hold her back, but in the chaos", "confidence": "sourced"},
-   {"value": "unnatural reach", "quote": "witnesses Nak unnaturally extending her arm to retrieve a lime from beneath the house", "confidence": "sourced"}
+   {
+    "value": "seen between the legs",
+    "quote": "When he glances between his legs, Nak’s ghostly form is revealed",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:48",
+      "quote": "if you look between the legs you can tell if they're ghosts."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:07:16",
+      "quote": "You have to look down between your own legs not between Nak's legs!"
+     }
+    ]
+   },
+   {
+    "value": "held back by holy items",
+    "quote": "The holy items hold her back, but in the chaos",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:03",
+      "quote": "Holy rice. I got it from a monk."
+     }
+    ]
+   },
+   {
+    "value": "unnatural reach",
+    "quote": "witnesses Nak unnaturally extending her arm to retrieve a lime from beneath the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:05",
+      "quote": "but she was able to reach to the ground to grab a lime."
+     }
+    ]
+   },
+   {
+    "value": "living and dead cannot stay together",
+    "detail": "Nak's own words",
+    "source": "subtitles",
+    "at": "01:40:59",
+    "quote": "The living and the dead can't stay together. It's not natural.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "friends", "relation_to_threat": "stranger", "detail": "Ter, Puak, Shin and Aey", "quote": "he befriends fellow soldiers Ter, Puak, Shin, and Aey", "confidence": "sourced"},
-   {"value": "husband", "relation_to_threat": "lover", "detail": "Mak", "quote": "Nak then threatens to kill Mak so they can be together", "confidence": "sourced"},
-   {"value": "villagers", "relation_to_threat": "community", "quote": "Terrified neighbors claim to hear her singing lullabies to her baby at night.", "confidence": "sourced"}
+   {
+    "value": "friends",
+    "relation_to_threat": "stranger",
+    "detail": "Ter, Puak, Shin and Aey",
+    "quote": "he befriends fellow soldiers Ter, Puak, Shin, and Aey",
+    "confidence": "sourced"
+   },
+   {
+    "value": "husband",
+    "relation_to_threat": "lover",
+    "detail": "Mak",
+    "quote": "Nak then threatens to kill Mak so they can be together",
+    "confidence": "sourced"
+   },
+   {
+    "value": "villagers",
+    "relation_to_threat": "community",
+    "quote": "Terrified neighbors claim to hear her singing lullabies to her baby at night.",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "living and dead coexist", "quote": "Despite this, he says he fears life without her more than her being dead. They tearfully reconcile", "confidence": "sourced"},
-   {"value": "he knew all along", "quote": "Mak reveals he has known the truth all along", "confidence": "sourced"}
+   {
+    "value": "living and dead coexist",
+    "quote": "Despite this, he says he fears life without her more than her being dead. They tearfully reconcile",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:59",
+      "quote": "You know I am terrified of ghosts. But I am more terrified of living without you."
+     }
+    ]
+   },
+   {
+    "value": "he knew all along",
+    "quote": "Mak reveals he has known the truth all along",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "cradle", "state": "rocking on its own", "when": "early", "role": "omen", "quote": "He sees the baby’s cradle rocking on its own", "confidence": "sourced"},
-   {"value": "long arm", "state": "extending", "when": "early", "role": "clue", "quote": "witnesses Nak unnaturally extending her arm to retrieve a lime from beneath the house", "confidence": "sourced"},
-   {"value": "corpse", "state": "decomposed", "when": "early", "role": "clue", "quote": "Ter discovers a decomposed corpse behind the house wearing the same ring as Nak", "confidence": "sourced"},
-   {"value": "ring", "when": "middle", "role": "clue", "quote": "Aey drops a ring identical to those worn by Mak, Nak, and the corpse", "confidence": "sourced"},
-   {"value": "leaves and worms", "state": "served as food", "when": "middle", "role": "omen", "quote": "Nak serves them leaves and worms", "confidence": "sourced"},
-   {"value": "holy rice", "when": "middle", "role": "weapon", "quote": "he cries out in pain after being struck with holy rice", "confidence": "sourced"},
-   {"value": "wet paddle", "when": "late", "role": "clue", "quote": "they are stranded until Nak produces a soaking wet one", "confidence": "sourced"}
+   {
+    "value": "cries for help",
+    "when": "opening",
+    "role": "mirror",
+    "detail": "the wounded soldier's opening cries return when Mak remembers the battlefield",
+    "source": "subtitles",
+    "at": "00:01:06",
+    "quote": "Help... I need help.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:41:51",
+      "quote": "Help Help Help"
+     }
+    ]
+   },
+   {
+    "value": "cradle",
+    "state": "rocking on its own",
+    "when": "early",
+    "role": "omen",
+    "quote": "He sees the baby’s cradle rocking on its own",
+    "confidence": "sourced"
+   },
+   {
+    "value": "long arm",
+    "state": "extending",
+    "when": "early",
+    "role": "clue",
+    "quote": "witnesses Nak unnaturally extending her arm to retrieve a lime from beneath the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:05",
+      "quote": "Maybe one of her arms is longer than the other?"
+     }
+    ]
+   },
+   {
+    "value": "corpse",
+    "state": "decomposed",
+    "when": "early",
+    "role": "clue",
+    "quote": "Ter discovers a decomposed corpse behind the house wearing the same ring as Nak",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ring",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Aey drops a ring identical to those worn by Mak, Nak, and the corpse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:13",
+      "quote": "has the same ring as Nak's."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:10:24",
+      "quote": "Well my hand hurts so I wear it around my neck instead."
+     }
+    ]
+   },
+   {
+    "value": "leaves and worms",
+    "state": "served as food",
+    "when": "middle",
+    "role": "omen",
+    "quote": "Nak serves them leaves and worms",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:14",
+      "quote": "What about those dried leaves?"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:14:28",
+      "quote": "But there were worms too."
+     }
+    ]
+   },
+   {
+    "value": "holy rice",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "he cries out in pain after being struck with holy rice",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:15",
+      "quote": "Why did you scream when we threw the holy rice at you?"
+     }
+    ]
+   },
+   {
+    "value": "wet paddle",
+    "when": "late",
+    "role": "clue",
+    "quote": "they are stranded until Nak produces a soaking wet one",
+    "confidence": "sourced"
+   },
+   {
+    "value": "doll",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:59:48",
+    "quote": "Please keep the doll for me.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:38",
+      "quote": "So we could bring a doll back for Dang."
+     }
+    ]
+   },
+   {
+    "value": "haunted house ride",
+    "when": "ending",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "01:46:53",
+    "quote": "Haunted house. Scarier than ever.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "husband goes to war", "when": "opening", "quote": "Mak is drafted to serve in the war, forcing him to leave his pregnant wife", "confidence": "sourced"},
-   {"order": 2, "value": "wife dies alone", "when": "opening", "quote": "Nak endures a difficult labor alone. She calls for help, but is too weak to be heard.", "confidence": "sourced"},
-   {"order": 3, "value": "return to silent village", "when": "early", "role": "omen", "quote": "When Mak and his friends return to Phra Khanong, they find the town eerily silent.", "confidence": "sourced"},
-   {"order": 4, "value": "corpse found", "when": "early", "role": "clue", "quote": "Ter discovers a decomposed corpse behind the house wearing the same ring as Nak", "confidence": "sourced"},
-   {"order": 5, "value": "wrong person suspected", "when": "middle", "role": "turn", "quote": "Shin and Ter suspect he, not Nak, is the ghost", "confidence": "sourced"},
-   {"order": 6, "value": "ghost revealed", "when": "late", "role": "turn", "quote": "Ter realizes they had drifted too far for a normal person to recover it.", "confidence": "sourced"},
-   {"order": 7, "value": "temple siege", "when": "late", "quote": "Nak appears in her terrifying form and attacks.", "confidence": "sourced"},
-   {"order": 8, "value": "lovers reconcile", "when": "ending", "quote": "They tearfully reconcile, and the friends reaffirm their bond, vowing never to part again.", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "husband goes to war",
+    "when": "opening",
+    "quote": "Mak is drafted to serve in the war, forcing him to leave his pregnant wife",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:44",
+      "quote": "Thee enemy hast surrounded us and break'th our lines."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "wife dies alone",
+    "when": "opening",
+    "quote": "Nak endures a difficult labor alone. She calls for help, but is too weak to be heard.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "return to silent village",
+    "when": "early",
+    "role": "omen",
+    "quote": "When Mak and his friends return to Phra Khanong, they find the town eerily silent.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:22",
+      "quote": "I am grateful to all of you for bringing me back here."
+     }
+    ]
+   },
+   {
+    "value": "ghost test explained",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:21:48",
+    "quote": "My mom once told me if you look between the legs",
+    "confidence": "sourced",
+    "order": 4
+   },
+   {
+    "order": 5,
+    "value": "corpse found",
+    "when": "early",
+    "role": "clue",
+    "quote": "Ter discovers a decomposed corpse behind the house wearing the same ring as Nak",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:13",
+      "quote": "But the body I saw in the backyard"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "wrong person suspected",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Shin and Ter suspect he, not Nak, is the ghost",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:58",
+      "quote": "Mak died during the war. But he doesn't know yet."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "ghost revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Ter realizes they had drifted too far for a normal person to recover it.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "temple siege",
+    "when": "late",
+    "quote": "Nak appears in her terrifying form and attacks.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:48",
+      "quote": "please give me the holy rice."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "lovers reconcile",
+    "when": "ending",
+    "quote": "They tearfully reconcile, and the friends reaffirm their bond, vowing never to part again.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:46",
+      "quote": "How is it wrong that we can love each other this much?"
+     }
+    ]
+   },
+   {
+    "value": "villagers vow to drive it out",
+    "when": "ending",
+    "role": "omen",
+    "detail": "closing scene",
+    "source": "subtitles",
+    "at": "01:47:55",
+    "quote": "We can't let this kind of unnatural go on in our village.",
+    "confidence": "sourced",
+    "order": 10
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

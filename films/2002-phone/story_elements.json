@@ -1,66 +1,494 @@
 {
  "film": "2002-phone",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vengeful ghost", "detail": "Jin-hee, a missing teenager", "quote": "Young-ju, who is possessed by Jin-hee's ghost", "confidence": "sourced"},
-   {"value": "cursed object", "detail": "a phone number whose owners die", "quote": "its two subsequent owners had died mysteriously in unusual circumstances", "confidence": "sourced"},
-   {"value": "jealous wife", "detail": "Ho-jung", "quote": "By accident, Ho-jung pushed Jin-hee down the stairs and killed her", "confidence": "sourced"}
+   {
+    "value": "vengeful ghost",
+    "detail": "Jin-hee, a missing teenager",
+    "quote": "Young-ju, who is possessed by Jin-hee's ghost",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:12",
+      "quote": "Jin-hee didn't deserve to die. She became a vengeful ghost."
+     }
+    ]
+   },
+   {
+    "value": "cursed object",
+    "detail": "a phone number whose owners die",
+    "quote": "its two subsequent owners had died mysteriously in unusual circumstances",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:33",
+      "quote": "Maybe the phone killed him."
+     }
+    ]
+   },
+   {
+    "value": "jealous wife",
+    "detail": "Ho-jung",
+    "quote": "By accident, Ho-jung pushed Jin-hee down the stairs and killed her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:34",
+      "quote": "how jealous I get when you look into Young-ju's eyes?"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "person who died wronged", "detail": "pregnant girl killed and walled up", "quote": "Ho-jung hid Jin-hee's body inside the wall and plastered cement over it", "confidence": "sourced"}
+   {
+    "value": "person who died wronged",
+    "detail": "pregnant girl killed and walled up",
+    "quote": "Ho-jung hid Jin-hee's body inside the wall and plastered cement over it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:30",
+      "quote": "Then they said she got killed and came back to haunt the school."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "revenge", "quote": "Jin-hee's spirit awakens and, in revenge, strangles Ho-jung to death", "confidence": "sourced"},
-   {"value": "her lover", "detail": "possessed child turns to her father", "quote": "Young-ju begins to show a disturbing attraction for her father and jealous rejection towards her mother", "confidence": "observed"}
+   {
+    "value": "revenge",
+    "quote": "Jin-hee's spirit awakens and, in revenge, strangles Ho-jung to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:12",
+      "quote": "Jin-hee didn't deserve to die. She became a vengeful ghost."
+     }
+    ]
+   },
+   {
+    "value": "her lover",
+    "detail": "possessed child turns to her father",
+    "quote": "Young-ju begins to show a disturbing attraction for her father and jealous rejection towards her mother",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "affair with a minor", "quote": "she learns that Jin-hee's lover was indeed Chang-hoon", "confidence": "sourced"},
-   {"value": "abandoned pregnant lover", "quote": "Jin-hee found out she was pregnant and called Chang-hoon repeatedly but he ignored her", "confidence": "sourced"},
-   {"value": "murder concealed", "quote": "hid Jin-hee's body inside the wall and plastered cement over it", "confidence": "sourced"}
+   {
+    "value": "affair with a minor",
+    "quote": "she learns that Jin-hee's lover was indeed Chang-hoon",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:32",
+      "quote": "How can you be responsible for a baby when you're in school?"
+     }
+    ]
+   },
+   {
+    "value": "abandoned pregnant lover",
+    "quote": "Jin-hee found out she was pregnant and called Chang-hoon repeatedly but he ignored her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:26",
+      "quote": "Let's get real. Abort the baby."
+     }
+    ]
+   },
+   {
+    "value": "murder concealed",
+    "quote": "hid Jin-hee's body inside the wall and plastered cement over it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:34",
+      "quote": "She's mine and I'll raise her. She'll never know if you just keep your mouth shut."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "moving into a new home", "quote": "she changes her number and moves to an empty house", "confidence": "sourced"},
-   {"value": "answering a phone call", "quote": "Young-ju answers an anonymous phone call to Ji-won's new number, then screams and passes out", "confidence": "sourced"}
+   {
+    "value": "moving into a new home",
+    "quote": "she changes her number and moves to an empty house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:52",
+      "quote": "Then, go to Bangbae. Our new house is empty."
+     }
+    ]
+   },
+   {
+    "value": "answering a phone call",
+    "quote": "Young-ju answers an anonymous phone call to Ji-won's new number, then screams and passes out",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:50",
+      "quote": "I think it's fate. Just give me that number."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "number owners die", "quote": "her number originally belonged to a missing teenager, Jin-hee, and that its two subsequent owners had died mysteriously", "confidence": "sourced"},
-   {"value": "possesses a child", "quote": "Young-ju, who is possessed by Jin-hee's ghost", "confidence": "sourced"}
+   {
+    "value": "number owners die",
+    "quote": "her number originally belonged to a missing teenager, Jin-hee, and that its two subsequent owners had died mysteriously",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:13",
+      "quote": "The next two people who got that number died strange deaths."
+     }
+    ]
+   },
+   {
+    "value": "possesses a child",
+    "quote": "Young-ju, who is possessed by Jin-hee's ghost",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:51",
+      "quote": "So, you said you love your daddy. What about your mummy?"
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "journalist", "relation_to_threat": "stranger", "detail": "Ji-won", "quote": "the journalist Ji-won often receives threatening calls on her cell phone", "confidence": "sourced"},
-   {"value": "child", "relation_to_threat": "family", "detail": "Young-ju, daughter of the lover", "quote": "jumps down the stairs and is hospitalized", "confidence": "sourced"},
-   {"value": "best friend", "relation_to_threat": "stranger", "detail": "Sang-mi, who blinded herself", "quote": "she decides to stab her own eyes and ears to make it leave her", "confidence": "sourced"},
-   {"value": "unfaithful husband", "relation_to_threat": "lover", "detail": "Chang-hoon", "quote": "Ho-jung then stages a suicide for Chang-hoon", "confidence": "sourced"}
+   {
+    "value": "journalist",
+    "relation_to_threat": "stranger",
+    "detail": "Ji-won",
+    "quote": "the journalist Ji-won often receives threatening calls on her cell phone",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:36",
+      "quote": "We've had calls threatening you if you don't stop writing them."
+     }
+    ]
+   },
+   {
+    "value": "child",
+    "relation_to_threat": "family",
+    "detail": "Young-ju, daughter of the lover",
+    "quote": "jumps down the stairs and is hospitalized",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:08",
+      "quote": "Daddy, I'm scared."
+     }
+    ]
+   },
+   {
+    "value": "best friend",
+    "relation_to_threat": "stranger",
+    "detail": "Sang-mi, who blinded herself",
+    "quote": "she decides to stab her own eyes and ears to make it leave her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "unfaithful husband",
+    "relation_to_threat": "lover",
+    "detail": "Chang-hoon",
+    "quote": "Ho-jung then stages a suicide for Chang-hoon",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "guilty punished", "quote": "Jin-hee's spirit awakens and, in revenge, strangles Ho-jung to death, thus saving Ji-won", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "Ji-won dropping the cursed cell phone into the ocean. After it enters the water, it rings", "confidence": "sourced"}
+   {
+    "value": "guilty punished",
+    "quote": "Jin-hee's spirit awakens and, in revenge, strangles Ho-jung to death, thus saving Ji-won",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat survives",
+    "quote": "Ji-won dropping the cursed cell phone into the ocean. After it enters the water, it rings",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "cell phone", "state": "cursed", "when": "opening", "role": "threat", "quote": "the journalist Ji-won often receives threatening calls on her cell phone", "confidence": "sourced"},
-   {"value": "long hair", "when": "early", "role": "threat", "quote": "sees a long-haired ghost playing Beethoven's \"Moonlight Sonata\" on the piano", "confidence": "sourced"},
-   {"value": "piano", "when": "early", "role": "clue", "quote": "playing Beethoven's \"Moonlight Sonata\" on the piano", "confidence": "sourced"},
-   {"value": "diary", "when": "middle", "role": "clue", "quote": "finds a diary and a picture of Jin-hee and Jin-hee's best friend", "confidence": "sourced"},
-   {"value": "stairs", "when": "late", "role": "mirror", "quote": "jumps down the stairs and is hospitalized", "confidence": "sourced"},
-   {"value": "body in the wall", "state": "cemented", "when": "late", "role": "clue", "quote": "finds Jin-hee's dead body hidden inside one of the walls", "confidence": "sourced"},
-   {"value": "gasoline", "when": "ending", "role": "weapon", "quote": "Ho-jung plans to burn the house down with gasoline", "confidence": "sourced"},
-   {"value": "ocean", "state": "phone ringing underwater", "when": "ending", "role": "symbol", "quote": "After it enters the water, it rings", "confidence": "sourced"}
+   {
+    "value": "cell phone",
+    "state": "cursed",
+    "when": "opening",
+    "role": "threat",
+    "quote": "the journalist Ji-won often receives threatening calls on her cell phone",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:17",
+      "quote": "But both people who had that number died. One in a car crash, the other a heart attack."
+     }
+    ]
+   },
+   {
+    "value": "long hair",
+    "when": "early",
+    "role": "threat",
+    "quote": "sees a long-haired ghost playing Beethoven's \"Moonlight Sonata\" on the piano",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:41",
+      "quote": "The long hair represents her as an adult thinking sexually of her father."
+     }
+    ]
+   },
+   {
+    "value": "piano",
+    "when": "early",
+    "role": "clue",
+    "quote": "playing Beethoven's \"Moonlight Sonata\" on the piano",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:38",
+      "quote": "You play Moonlight Sonata."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:54:16",
+      "quote": "He liked the Moonlight Sonata, so she asked me to teach her."
+     }
+    ]
+   },
+   {
+    "value": "diary",
+    "when": "middle",
+    "role": "clue",
+    "quote": "finds a diary and a picture of Jin-hee and Jin-hee's best friend",
+    "confidence": "sourced"
+   },
+   {
+    "value": "stairs",
+    "when": "late",
+    "role": "mirror",
+    "quote": "jumps down the stairs and is hospitalized",
+    "confidence": "sourced"
+   },
+   {
+    "value": "body in the wall",
+    "state": "cemented",
+    "when": "late",
+    "role": "clue",
+    "quote": "finds Jin-hee's dead body hidden inside one of the walls",
+    "confidence": "sourced"
+   },
+   {
+    "value": "gasoline",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "Ho-jung plans to burn the house down with gasoline",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ocean",
+    "state": "phone ringing underwater",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "After it enters the water, it rings",
+    "confidence": "sourced"
+   },
+   {
+    "value": "text message",
+    "state": "I'm your destiny",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:01",
+    "quote": "I'M YOUR DESTINY.",
+    "detail": "the dead girl's love message, sent at ten past the hour",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:36",
+      "quote": "I'm your destiny. At 10 minutes past the hour."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "paintings of girls",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:14:56",
+    "quote": "The girl in the picture is Modigliani's daughter. He painted it when his wife was pregnant.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:02",
+      "quote": "This is Renoir's Irene Cahen d'Anvers."
+     }
+    ],
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "threats prompt a move", "when": "opening", "role": "trigger", "quote": "Hence she changes her number and moves to an empty house", "confidence": "sourced"},
-   {"order": 2, "value": "child answers the phone", "when": "opening", "role": "omen", "quote": "answers an anonymous phone call to Ji-won's new number, then screams and passes out", "confidence": "sourced"},
-   {"order": 3, "value": "child changes", "when": "early", "quote": "Young-ju begins to show a disturbing attraction for her father", "confidence": "sourced"},
-   {"order": 4, "value": "investigation of past owner", "when": "middle", "role": "clue", "quote": "Ji-won visits Jin-hee's mother at their home and finds a diary", "confidence": "sourced"},
-   {"order": 5, "value": "affair revealed", "when": "middle", "role": "turn", "quote": "she learns that Jin-hee's lover was indeed Chang-hoon", "confidence": "sourced"},
-   {"order": 6, "value": "body found in wall", "when": "late", "quote": "finds Jin-hee's dead body hidden inside one of the walls", "confidence": "sourced"},
-   {"order": 7, "value": "true killer confesses", "when": "late", "role": "turn", "quote": "By accident, Ho-jung pushed Jin-hee down the stairs and killed her", "confidence": "sourced"},
-   {"order": 8, "value": "ghost takes revenge; closing sting", "when": "ending", "quote": "After it enters the water, it rings", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "message on a screen",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:01",
+    "quote": "I'M YOUR DESTINY.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "threats prompt a move",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Hence she changes her number and moves to an empty house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:53",
+      "quote": "I'm changing my mobile number and disappearing tomorrow."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "child answers the phone",
+    "when": "opening",
+    "role": "omen",
+    "quote": "answers an anonymous phone call to Ji-won's new number, then screams and passes out",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "child changes",
+    "when": "early",
+    "quote": "Young-ju begins to show a disturbing attraction for her father",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:51",
+      "quote": "So, you said you love your daddy. What about your mummy?"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "investigation of past owner",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Ji-won visits Jin-hee's mother at their home and finds a diary",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:08",
+      "quote": "People who have had that number."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "school ghost rumour",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:47:30",
+    "quote": "Then they said she got killed and came back to haunt the school.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "affair revealed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "she learns that Jin-hee's lover was indeed Chang-hoon",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:44",
+      "quote": "I'm having the baby. My lover and I made this baby."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "lover's pregnancy",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:21:01",
+    "quote": "I'm four weeks along. I'm pregnant.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "body found in wall",
+    "when": "late",
+    "quote": "finds Jin-hee's dead body hidden inside one of the walls",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "true killer confesses",
+    "when": "late",
+    "role": "turn",
+    "quote": "By accident, Ho-jung pushed Jin-hee down the stairs and killed her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:47",
+      "quote": "She's mine. I carried her for 10 months."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "ghost takes revenge; closing sting",
+    "when": "ending",
+    "quote": "After it enters the water, it rings",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

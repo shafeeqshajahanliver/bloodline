@@ -1,62 +1,479 @@
 {
  "film": "2002-dog-soldiers",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "werewolves", "detail": "the Uath family", "quote": "a squad of soldiers fighting to survive an attack by a pack of werewolves during a military training exercise", "confidence": "sourced"},
-   {"value": "own commanders", "detail": "Captain Ryan's government mission", "quote": "Cooper's squad was bait and considered expendable", "confidence": "sourced"}
+   {
+    "value": "werewolves",
+    "detail": "the Uath family",
+    "quote": "a squad of soldiers fighting to survive an attack by a pack of werewolves during a military training exercise",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:38",
+      "quote": "That's werewolves to you and me."
+     }
+    ]
+   },
+   {
+    "value": "own commanders",
+    "detail": "Captain Ryan's government mission",
+    "quote": "Cooper's squad was bait and considered expendable",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:04",
+      "quote": "The reality is you're expendable."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "local family", "quote": "It is revealed that the Uath family, the owners of the house, are werewolves.", "confidence": "sourced"}
+   {
+    "value": "local family",
+    "quote": "It is revealed that the Uath family, the owners of the house, are werewolves.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:36",
+      "quote": "we bust into their house, we eat all their porridge we sleep in their fucking beds."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "hunger", "quote": "the cellar, where the bodies of the werewolves' victims are stored", "confidence": "observed"},
-   {"value": "a weapon", "detail": "the government wants a live werewolf", "quote": "sent on a government mission to capture a live werewolf for study and exploitation as a weapon", "confidence": "sourced"}
+   {
+    "value": "hunger",
+    "quote": "the cellar, where the bodies of the werewolves' victims are stored",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:04",
+      "quote": "Ever month, when the moon is full they hunt as a team. Dedicated to the kill."
+     }
+    ]
+   },
+   {
+    "value": "a weapon",
+    "detail": "the government wants a live werewolf",
+    "quote": "sent on a government mission to capture a live werewolf for study and exploitation as a weapon",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "men used as bait", "quote": "Cooper's squad was bait and considered expendable", "confidence": "sourced"}
+   {
+    "value": "men used as bait",
+    "quote": "Cooper's squad was bait and considered expendable",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:22",
+      "quote": "That was your bait. You were mine."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "training exercise in the wild", "quote": "are dropped by helicopter into a remote area of the Scottish Highlands to carry out a training exercise", "confidence": "sourced"}
+   {
+    "value": "training exercise in the wild",
+    "quote": "are dropped by helicopter into a remote area of the Scottish Highlands to carry out a training exercise",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:11",
+      "quote": "I want a good, clean dispersal. I want a secure landing zone."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "transforms under full moon", "quote": "As darkness falls under a full moon, the house is surrounded by attackers who are revealed to be werewolves", "confidence": "sourced"},
-   {"value": "survive until sunrise", "quote": "believing that if they can make it to sunrise, the werewolves will revert to human form", "confidence": "sourced"},
-   {"value": "killed by silver", "quote": "Cooper stabs Ryan in the chest with the silver letter opener", "confidence": "sourced"},
-   {"value": "wounds turn the victim", "quote": "As he begins to transform into a werewolf, Wells orders Cooper to take shelter in the cellar", "confidence": "sourced"}
+   {
+    "value": "transforms under full moon",
+    "quote": "As darkness falls under a full moon, the house is surrounded by attackers who are revealed to be werewolves",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:52",
+      "quote": "The full moon, the teeth the claws, the howling."
+     }
+    ]
+   },
+   {
+    "value": "survive until sunrise",
+    "quote": "believing that if they can make it to sunrise, the werewolves will revert to human form",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:47",
+      "quote": "We can survive till sunrise. That's all that matters."
+     }
+    ]
+   },
+   {
+    "value": "killed by silver",
+    "quote": "Cooper stabs Ryan in the chest with the silver letter opener",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:32",
+      "quote": "And silver bullets no-one's ever get close enough to try."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:22:09",
+      "quote": "What self-respecting werewolf would have anything silver in the house anyway?"
+     }
+    ]
+   },
+   {
+    "value": "wounds turn the victim",
+    "quote": "As he begins to transform into a werewolf, Wells orders Cooper to take shelter in the cellar",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:58",
+      "quote": "With Ryan it only took a couple of hours, mate. It's a full moon."
+     }
+    ]
+   },
+   {
+    "value": "hunt as a pack",
+    "source": "subtitles",
+    "at": "00:52:04",
+    "quote": "Ever month, when the moon is full they hunt as a team.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "soldiers", "relation_to_threat": "stranger", "quote": "a squad of six British soldiers, including Cooper", "confidence": "sourced"},
-   {"value": "campers", "relation_to_threat": "stranger", "quote": "A couple goes camping in the Scottish Highlands", "confidence": "sourced"}
+   {
+    "value": "soldiers",
+    "relation_to_threat": "stranger",
+    "quote": "a squad of six British soldiers, including Cooper",
+    "confidence": "sourced"
+   },
+   {
+    "value": "campers",
+    "relation_to_threat": "stranger",
+    "quote": "A couple goes camping in the Scottish Highlands",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "lone survivor", "quote": "Cooper, along with Megan's Border Collie Sam, emerges from the cellar", "confidence": "sourced"},
-   {"value": "self-sacrifice", "quote": "blows up the house, seemingly sacrificing himself but killing the werewolves", "confidence": "sourced"},
-   {"value": "truth dismissed as tabloid", "quote": "Cooper's story, titled \"Werewolves ate my platoon!\" and accompanied by photographs, appears in a sensationalist tabloid newspaper", "confidence": "sourced"}
+   {
+    "value": "lone survivor",
+    "quote": "Cooper, along with Megan's Border Collie Sam, emerges from the cellar",
+    "confidence": "sourced"
+   },
+   {
+    "value": "self-sacrifice",
+    "quote": "blows up the house, seemingly sacrificing himself but killing the werewolves",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:28",
+      "quote": "Listen to me, you have got to make it out alive."
+     }
+    ]
+   },
+   {
+    "value": "truth dismissed as tabloid",
+    "quote": "Cooper's story, titled \"Werewolves ate my platoon!\" and accompanied by photographs, appears in a sensationalist tabloid newspaper",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:52",
+      "quote": "WEREWOLVES ATE MY PLATOON!"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "silver letter opener", "state": "given as a gift", "when": "opening", "role": "weapon", "quote": "The woman gives the man a silver letter opener as a present", "confidence": "sourced"},
-   {"value": "dog", "state": "spared", "when": "opening", "role": "omen", "quote": "when he refuses an order from Captain Richard Ryan to shoot a dog in cold blood", "confidence": "sourced"},
-   {"value": "savaged remains", "state": "of the SAS unit", "when": "early", "role": "omen", "quote": "they find the SAS unit's savaged remains", "confidence": "sourced"},
-   {"value": "full moon", "state": "rising", "when": "middle", "role": "trigger", "quote": "As darkness falls under a full moon", "confidence": "sourced"},
-   {"value": "isolated house", "state": "besieged", "when": "middle", "role": "setting", "quote": "drives them to an isolated house belonging to an unknown family", "confidence": "sourced"},
-   {"value": "flash camera", "state": "used to stun", "when": "late", "role": "weapon", "quote": "from a flash camera used to stun the werewolves", "confidence": "sourced"},
-   {"value": "border collie", "state": "survives", "when": "ending", "role": "symbol", "quote": "Cooper, along with Megan's Border Collie Sam, emerges from the cellar", "confidence": "sourced"}
+   {
+    "value": "silver letter opener",
+    "state": "given as a gift",
+    "when": "opening",
+    "role": "weapon",
+    "quote": "The woman gives the man a silver letter opener as a present",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:38",
+      "quote": "Yeah, and it's also solid silver so don't lose it!"
+     }
+    ]
+   },
+   {
+    "value": "dog",
+    "state": "spared",
+    "when": "opening",
+    "role": "omen",
+    "quote": "when he refuses an order from Captain Richard Ryan to shoot a dog in cold blood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:07",
+      "quote": "Here. Shoot the dog."
+     }
+    ]
+   },
+   {
+    "value": "savaged remains",
+    "state": "of the SAS unit",
+    "when": "early",
+    "role": "omen",
+    "quote": "they find the SAS unit's savaged remains",
+    "confidence": "sourced"
+   },
+   {
+    "value": "full moon",
+    "state": "rising",
+    "when": "middle",
+    "role": "trigger",
+    "quote": "As darkness falls under a full moon",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:52",
+      "quote": "The full moon, the teeth the claws, the howling."
+     }
+    ]
+   },
+   {
+    "value": "isolated house",
+    "state": "besieged",
+    "when": "middle",
+    "role": "setting",
+    "quote": "drives them to an isolated house belonging to an unknown family",
+    "confidence": "sourced"
+   },
+   {
+    "value": "flash camera",
+    "state": "used to stun",
+    "when": "late",
+    "role": "weapon",
+    "quote": "from a flash camera used to stun the werewolves",
+    "confidence": "sourced"
+   },
+   {
+    "value": "border collie",
+    "state": "survives",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "Cooper, along with Megan's Border Collie Sam, emerges from the cellar",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:24",
+      "quote": "Take care of Sam."
+     }
+    ]
+   },
+   {
+    "value": "dead cow",
+    "state": "thrown into the camp",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:18:28",
+    "quote": "It's a fucking cow!",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:08",
+      "quote": "because you lot got spooked by a dead flying fucking cow!"
+     }
+    ]
+   },
+   {
+    "value": "football match",
+    "when": "early",
+    "role": "symbol",
+    "detail": "England v Germany, missed by the squad and echoed in the closing headline",
+    "source": "subtitles",
+    "at": "00:09:04",
+    "quote": "Hey, it's England v Germany, man. Full-on footy war!",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:54",
+      "quote": "ENGLAND 5 GERMANY 1 TEAM BOUNCE BACK ABROAD!"
+     }
+    ]
+   },
+   {
+    "value": "mystery meat",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:39:21",
+    "quote": "Top grub. What is it? Don't know, (mate). Looks like pork.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "campers killed", "when": "opening", "role": "omen", "quote": "shortly afterward they are killed in their tent by unseen assailants", "confidence": "sourced"},
-   {"order": 2, "value": "hero refuses to kill a dog", "when": "opening", "quote": "he refuses an order from Captain Richard Ryan to shoot a dog in cold blood", "confidence": "sourced"},
-   {"order": 3, "value": "massacre found", "when": "early", "quote": "The following morning, they find the SAS unit's savaged remains", "confidence": "sourced"},
-   {"order": 4, "value": "siege of an isolated house", "when": "middle", "quote": "the house is surrounded by attackers who are revealed to be werewolves", "confidence": "sourced"},
-   {"order": 5, "value": "commander's betrayal revealed", "when": "late", "role": "turn", "quote": "Ryan reveals that he was sent on a government mission to capture a live werewolf", "confidence": "sourced"},
-   {"order": 6, "value": "rescuer revealed as monster", "when": "late", "role": "turn", "quote": "she is a werewolf and a member of the Uath family", "confidence": "sourced"},
-   {"order": 7, "value": "sacrifice by explosion", "when": "ending", "quote": "he cuts a gas line and blows up the house", "confidence": "sourced"},
-   {"order": 8, "value": "final duel at sunrise", "when": "ending", "quote": "Cooper stabs Ryan in the chest with the silver letter opener and shoots him in the head", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "campers killed",
+    "when": "opening",
+    "role": "omen",
+    "quote": "shortly afterward they are killed in their tent by unseen assailants",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:27",
+      "quote": "No knight should be without his sword."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "hero refuses to kill a dog",
+    "when": "opening",
+    "quote": "he refuses an order from Captain Richard Ryan to shoot a dog in cold blood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:53",
+      "quote": "What use are you to my team if you can't even kill a dog?"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "dead animal thrown into camp",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:18:28",
+    "quote": "It's a fucking cow!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "massacre found",
+    "when": "early",
+    "quote": "The following morning, they find the SAS unit's savaged remains",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:05",
+      "quote": "Jesus! Charnel House is compromised to fuck!"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "siege of an isolated house",
+    "when": "middle",
+    "quote": "the house is surrounded by attackers who are revealed to be werewolves",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:46",
+      "quote": "A hundred men of HarIech making a desperate stand against ten thousand Zulu warriors."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "commander's betrayal revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Ryan reveals that he was sent on a government mission to capture a live werewolf",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:04",
+      "quote": "The reality is you're expendable."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "rescuer revealed as monster",
+    "when": "late",
+    "role": "turn",
+    "quote": "she is a werewolf and a member of the Uath family",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "sacrifice by explosion",
+    "when": "ending",
+    "quote": "he cuts a gas line and blows up the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:31",
+      "quote": "It happened. Prove it happened!"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "final duel at sunrise",
+    "when": "ending",
+    "quote": "Cooper stabs Ryan in the chest with the silver letter opener and shoots him in the head",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:40:37",
+      "quote": "Ryan. You tried licking your own balls yet?"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "tabloid headline",
+    "when": "ending",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:42:52",
+    "quote": "WEREWOLVES ATE MY PLATOON!",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

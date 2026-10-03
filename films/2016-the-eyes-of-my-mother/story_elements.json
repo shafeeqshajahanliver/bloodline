@@ -1,62 +1,427 @@
 {
  "film": "2016-the-eyes-of-my-mother",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "lonely killer", "detail": "Francisca, grown up", "quote": "Francisca murders her before dismembering her and placing her bagged organs in the refrigerator", "confidence": "sourced"},
-   {"value": "intruder killer", "detail": "Charlie, a door-to-door salesman", "quote": "Charlie draws a gun and takes Francisca's mother into the bathroom.", "confidence": "sourced"}
+   {
+    "value": "lonely killer",
+    "detail": "Francisca, grown up",
+    "quote": "Francisca murders her before dismembering her and placing her bagged organs in the refrigerator",
+    "confidence": "sourced"
+   },
+   {
+    "value": "intruder killer",
+    "detail": "Charlie, a door-to-door salesman",
+    "quote": "Charlie draws a gun and takes Francisca's mother into the bathroom.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:59",
+      "quote": "Why do you do it? It feels amazing."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "childhood trauma", "detail": "her mother's murder", "quote": "he finds Charlie bludgeoning his wife's body in the tub", "confidence": "sourced"},
-   {"value": "taught by a parent", "quote": "Francisca's mother teaches her how to remove eyeballs from farm animals", "confidence": "sourced"}
+   {
+    "value": "childhood trauma",
+    "detail": "her mother's murder",
+    "quote": "he finds Charlie bludgeoning his wife's body in the tub",
+    "confidence": "sourced"
+   },
+   {
+    "value": "taught by a parent",
+    "quote": "Francisca's mother teaches her how to remove eyeballs from farm animals",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:12",
+      "quote": "we used to practice surgery on cows. Here, they practice on people."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "companionship", "quote": "proclaiming that Charlie is her only friend and that she will take care of him", "confidence": "sourced"},
-   {"value": "a child", "quote": "Francisca becomes enamored of Antonio, and upon reaching her house, asks Lucy if she can hold him", "confidence": "sourced"}
+   {
+    "value": "companionship",
+    "quote": "proclaiming that Charlie is her only friend and that she will take care of him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:20",
+      "quote": "Why would I kill you? You're my only friend."
+     }
+    ]
+   },
+   {
+    "value": "a child",
+    "quote": "Francisca becomes enamored of Antonio, and upon reaching her house, asks Lucy if she can hold him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:07",
+      "quote": "Yeah, we made a new friend today."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "murder of a parent", "quote": "Francisca explains that her mother was murdered", "confidence": "sourced"},
-   {"value": "stolen child", "quote": "she thanks Lucy for the \"gift\" and rushes out of the car with Antonio", "confidence": "sourced"}
+   {
+    "value": "murder of a parent",
+    "quote": "Francisca explains that her mother was murdered",
+    "confidence": "sourced"
+   },
+   {
+    "value": "stolen child",
+    "quote": "she thanks Lucy for the \"gift\" and rushes out of the car with Antonio",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "letting a stranger in", "quote": "Against her better judgment, Francisca's mother lets him into the house.", "confidence": "sourced"}
+   {
+    "value": "letting a stranger in",
+    "quote": "Against her better judgment, Francisca's mother lets him into the house.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:34",
+      "quote": "Why us? You let me in."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "victims blinded and silenced", "quote": "She then removes Charlie's eyes and vocal cords, bags them, and puts them in the refrigerator.", "confidence": "sourced"},
-   {"value": "forbidden barn", "quote": "he becomes curious about the barn, which Francisca has forbidden him to enter", "confidence": "sourced"}
+   {
+    "value": "victims blinded and silenced",
+    "quote": "She then removes Charlie's eyes and vocal cords, bags them, and puts them in the refrigerator.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "forbidden barn",
+    "quote": "he becomes curious about the barn, which Francisca has forbidden him to enter",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:08",
+      "quote": "I told you to never go in the barn."
+     }
+    ]
+   },
+   {
+    "value": "loneliness breeds madness",
+    "source": "subtitles",
+    "at": "00:03:15",
+    "quote": "But loneliness can do strange things to the mind.",
+    "detail": "the mother's story of Saint Francis",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "mother", "relation_to_threat": "family", "quote": "Francisca and her father bury her mother in the backyard.", "confidence": "sourced"},
-   {"value": "young woman", "relation_to_threat": "stranger", "detail": "Kimiko, met at a bar", "quote": "At a bar, Francisca meets a young woman named Kimiko, whom she takes home.", "confidence": "sourced"},
-   {"value": "mother and baby", "relation_to_threat": "stranger", "detail": "Lucy and Antonio", "quote": "catches a ride with a woman named Lucy and her infant son Antonio back home", "confidence": "sourced"}
+   {
+    "value": "mother",
+    "relation_to_threat": "family",
+    "quote": "Francisca and her father bury her mother in the backyard.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "young woman",
+    "relation_to_threat": "stranger",
+    "detail": "Kimiko, met at a bar",
+    "quote": "At a bar, Francisca meets a young woman named Kimiko, whom she takes home.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother and baby",
+    "relation_to_threat": "stranger",
+    "detail": "Lucy and Antonio",
+    "quote": "catches a ride with a woman named Lucy and her infant son Antonio back home",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "captive escapes", "quote": "Lucy later escapes the barn and blindly makes her way to a road where a trucker finds her.", "confidence": "sourced"},
-   {"value": "ambiguous", "quote": "begs the police not to take her baby, and a gun is fired", "confidence": "sourced"}
+   {
+    "value": "captive escapes",
+    "quote": "Lucy later escapes the barn and blindly makes her way to a road where a trucker finds her.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ambiguous",
+    "quote": "begs the police not to take her baby, and a gun is fired",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:12",
+      "quote": "ANTONIO: Mommy! (GUNSHOT)"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "eyeballs", "state": "removed from animals", "when": "opening", "role": "omen", "quote": "teaches her how to remove eyeballs from farm animals", "confidence": "sourced"},
-   {"value": "bathtub", "state": "bloody", "when": "opening", "role": "setting", "quote": "he finds Charlie bludgeoning his wife's body in the tub", "confidence": "sourced"},
-   {"value": "chains", "when": "early", "role": "symbol", "quote": "He knocks Charlie out and chains him up in the barn.", "confidence": "sourced"},
-   {"value": "refrigerator", "state": "full of bagged organs", "when": "middle", "role": "symbol", "quote": "She places his organs into bags and keeps them in her refrigerator", "confidence": "sourced"},
-   {"value": "barn", "state": "forbidden", "when": "late", "role": "setting", "quote": "the barn, which Francisca has forbidden him to enter", "confidence": "sourced"},
-   {"value": "mother's corpse", "state": "dug up and cradled", "when": "ending", "role": "symbol", "quote": "Francisca digs up her mother's remains and cradles the corpse as she speaks to it", "confidence": "sourced"},
-   {"value": "father's body", "state": "preserved", "when": "middle", "role": "symbol", "quote": "the now adult Francisca preserves his body", "confidence": "sourced"}
+   {
+    "value": "saint with burning angel",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:02:58",
+    "quote": "Saint Francis spent many years living alone in the woods. Then one night, he saw an angel burning in the sky.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "eyeballs",
+    "state": "removed from animals",
+    "when": "opening",
+    "role": "omen",
+    "quote": "teaches her how to remove eyeballs from farm animals",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:58",
+      "quote": "Cow eyes are very similar to human eyes."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:33:07",
+      "quote": "Eyes. When I was little, we used to do the sections together."
+     }
+    ]
+   },
+   {
+    "value": "cow",
+    "when": "opening",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:04:12",
+    "quote": "we used to practice surgery on cows.",
+    "detail": "the farm cow Francisca greets as she would a person",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:11",
+      "quote": "(COW MOOING)"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "bathtub",
+    "state": "bloody",
+    "when": "opening",
+    "role": "setting",
+    "quote": "he finds Charlie bludgeoning his wife's body in the tub",
+    "confidence": "sourced"
+   },
+   {
+    "value": "chains",
+    "when": "early",
+    "role": "symbol",
+    "quote": "He knocks Charlie out and chains him up in the barn.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "owl and crow",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:12:24",
+    "quote": "(OWL COOING)",
+    "detail": "night birds heard as the father buries the mother; a crow caws over the barn",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:17",
+      "quote": "(CROW CAWING)"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "refrigerator",
+    "state": "full of bagged organs",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "She places his organs into bags and keeps them in her refrigerator",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother's portuguese song",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:20:39",
+    "quote": "(WOMAN SINGING IN PORTUGUESE)",
+    "detail": "returns over the closing shot",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:44",
+      "quote": "(WOMAN SINGING IN PORTUGUESE)"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "barn",
+    "state": "forbidden",
+    "when": "late",
+    "role": "setting",
+    "quote": "the barn, which Francisca has forbidden him to enter",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother's corpse",
+    "state": "dug up and cradled",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "Francisca digs up her mother's remains and cradles the corpse as she speaks to it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:58",
+      "quote": "Is this your mother? Yes."
+     }
+    ]
+   },
+   {
+    "value": "father's body",
+    "state": "preserved",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "the now adult Francisca preserves his body",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "strange lessons on the farm", "when": "opening", "role": "omen", "quote": "teaches her how to remove eyeballs from farm animals, as well as the legend of St. Francis of Assisi", "confidence": "sourced"},
-   {"order": 2, "value": "stranger kills mother", "when": "opening", "role": "trigger", "quote": "he finds Charlie bludgeoning his wife's body in the tub", "confidence": "sourced"},
-   {"order": 3, "value": "child mutilates the killer", "when": "early", "role": "turn", "quote": "She then removes Charlie's eyes and vocal cords, bags them, and puts them in the refrigerator.", "confidence": "sourced"},
-   {"order": 4, "value": "first murder", "when": "middle", "quote": "A frightened Kimiko tries to leave, but Francisca murders her", "confidence": "sourced"},
-   {"order": 5, "value": "captive killed", "when": "middle", "quote": "She tells him that he was right; killing someone \"feels amazing\".", "confidence": "sourced"},
-   {"order": 6, "value": "baby stolen", "when": "middle", "quote": "she thanks Lucy for the \"gift\" and rushes out of the car with Antonio", "confidence": "sourced"},
-   {"order": 7, "value": "child discovers the captive", "when": "late", "role": "turn", "quote": "is terrified at the sight of a blinded, chained Lucy, groaning unintelligibly and reaching for him", "confidence": "sourced"},
-   {"order": 8, "value": "police arrive, shot fired", "when": "ending", "quote": "begs the police not to take her baby, and a gun is fired", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "strange lessons on the farm",
+    "when": "opening",
+    "role": "omen",
+    "quote": "teaches her how to remove eyeballs from farm animals, as well as the legend of St. Francis of Assisi",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:21",
+      "quote": "This is how they kill it."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "stranger kills mother",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "he finds Charlie bludgeoning his wife's body in the tub",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:53",
+      "quote": "Now, why don't you be a good host and show me where that bathroom is?"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "child mutilates the killer",
+    "when": "early",
+    "role": "turn",
+    "quote": "She then removes Charlie's eyes and vocal cords, bags them, and puts them in the refrigerator.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:22",
+      "quote": "You're my only friend. I'm gonna take care of you."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "first murder",
+    "when": "middle",
+    "quote": "A frightened Kimiko tries to leave, but Francisca murders her",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "captive killed",
+    "when": "middle",
+    "quote": "She tells him that he was right; killing someone \"feels amazing\".",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "baby stolen",
+    "when": "middle",
+    "quote": "she thanks Lucy for the \"gift\" and rushes out of the car with Antonio",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "child discovers the captive",
+    "when": "late",
+    "role": "turn",
+    "quote": "is terrified at the sight of a blinded, chained Lucy, groaning unintelligibly and reaching for him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:58",
+      "quote": "Did you go in the barn?"
+     }
+    ]
+   },
+   {
+    "value": "plea before the end",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:11:42",
+    "quote": "Whatever you learn, don't let it change how you feel about me, okay?",
+    "confidence": "sourced",
+    "order": 8
+   },
+   {
+    "order": 9,
+    "value": "police arrive, shot fired",
+    "when": "ending",
+    "quote": "begs the police not to take her baby, and a gun is fired",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:47",
+      "quote": "Open up, it's the police."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

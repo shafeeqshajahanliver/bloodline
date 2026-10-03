@@ -1,38 +1,373 @@
 {
  "film": "2018-the-nightshifter",
- "sources": [{"file": "wikipedia.pt.md", "sections": ["Lead", "Sinopse"]}],
+ "sources": [
+  {
+   "file": "wikipedia.pt.md",
+   "sections": [
+    "Lead",
+    "Sinopse"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "thin",
  "dimensions": {
   "threat": [
-   {"value": "curse", "quote": "Stênio desencadeia uma maldição que coloca em risco a sua vida e a de seus familiares", "confidence": "sourced"},
-   {"value": "the dead", "quote": "ele nunca está sozinho, pois possui um dom sobrenatural de se comunicar com os mortos", "confidence": "observed"}
+   {
+    "value": "curse",
+    "quote": "Stênio desencadeia uma maldição que coloca em risco a sua vida e a de seus familiares",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the dead",
+    "quote": "ele nunca está sozinho, pois possui um dom sobrenatural de se comunicar com os mortos",
+    "confidence": "observed"
+   }
   ],
   "origin": [
-   {"value": "secrets of the dead", "detail": "confessions from corpses reveal secrets about his own life", "quote": "As confissões sobrenaturais que ele ouve acabam por revelar segredos que envolvem sua própria vida", "confidence": "observed"}
+   {
+    "value": "secrets of the dead",
+    "detail": "confessions from corpses reveal secrets about his own life",
+    "quote": "As confissões sobrenaturais que ele ouve acabam por revelar segredos que envolvem sua própria vida",
+    "confidence": "observed"
+   }
   ],
   "trigger": [
-   {"value": "hearing the dead's secrets", "quote": "As confissões sobrenaturais que ele ouve acabam por revelar segredos", "confidence": "observed"}
+   {
+    "value": "hearing the dead's secrets",
+    "quote": "As confissões sobrenaturais que ele ouve acabam por revelar segredos",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:25",
+      "quote": "I know who ratted on Sujo."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "can speak with the dead", "quote": "possui um dom sobrenatural de se comunicar com os mortos", "confidence": "sourced"}
+   {
+    "value": "can speak with the dead",
+    "quote": "possui um dom sobrenatural de se comunicar com os mortos",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:41",
+      "quote": "Tell me. What's your name?"
+     }
+    ]
+   },
+   {
+    "value": "a dead man's secret marks you",
+    "source": "subtitles",
+    "at": "00:26:52",
+    "quote": "A dead man's secret is a death secret,",
+    "confidence": "sourced"
+   },
+   {
+    "value": "repeating the dead's words brings harm",
+    "source": "subtitles",
+    "at": "00:11:53",
+    "quote": "If I tell them what you tell me,",
+    "confidence": "sourced"
+   },
+   {
+    "value": "no forgiveness for killing family",
+    "source": "subtitles",
+    "at": "00:12:27",
+    "quote": "God doesn't forgive those who Kill their families.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:12",
+      "quote": "God won't forgive anyone who Kills their own family."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "morgue worker", "relation_to_threat": "self", "detail": "Stênio, night-shift morgue attendant", "quote": "Stênio (Daniel de Oliveira) é funcionário plantonista de um necrotério de uma grande cidade muito violenta", "confidence": "sourced"},
-   {"value": "family", "relation_to_threat": "family", "quote": "coloca em risco a sua vida e a de seus familiares", "confidence": "sourced"}
+   {
+    "value": "morgue worker",
+    "relation_to_threat": "self",
+    "detail": "Stênio, night-shift morgue attendant",
+    "quote": "Stênio (Daniel de Oliveira) é funcionário plantonista de um necrotério de uma grande cidade muito violenta",
+    "confidence": "sourced"
+   },
+   {
+    "value": "family",
+    "relation_to_threat": "family",
+    "quote": "coloca em risco a sua vida e a de seus familiares",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:11",
+      "quote": "Today they're staying with their mother."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "morgue", "when": "opening", "role": "setting", "quote": "funcionário plantonista de um necrotério de uma grande cidade muito violenta", "confidence": "sourced"},
-   {"value": "corpses", "state": "speaking", "when": "early", "role": "clue", "quote": "As confissões sobrenaturais que ele ouve", "confidence": "observed"}
+   {
+    "value": "morgue",
+    "when": "opening",
+    "role": "setting",
+    "quote": "funcionário plantonista de um necrotério de uma grande cidade muito violenta",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:20",
+      "quote": "There's a lot of blood, Capela! Take us to the morgue!"
+     }
+    ]
+   },
+   {
+    "value": "corpses",
+    "state": "speaking",
+    "when": "early",
+    "role": "clue",
+    "quote": "As confissões sobrenaturais que ele ouve",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:45",
+      "quote": "This is the end of the line."
+     }
+    ]
+   },
+   {
+    "value": "kite wire",
+    "when": "early",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "00:07:49",
+    "quote": "This is kite wire. It cuts like a knife.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:45",
+      "quote": "Kite wire! Kite wire!"
+     }
+    ]
+   },
+   {
+    "value": "wedding ring",
+    "state": "returned from the grave",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:54:29",
+    "quote": "When I buried her, she was wearing our wedding ring.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "corpse missing its spine",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:51:50",
+    "quote": "The guy's spine was removed.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "body part in a gift box",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:06:12",
+    "quote": "Like leaving a body part in a gift box.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dream house",
+    "detail": "house number 80, which Odete wanted",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:22:29",
+    "quote": "This is where I want to live. In house number 80.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "televangelist on tv",
+    "when": "middle",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:50:27",
+    "quote": "Do you see, church, what evil can do?",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "night shift with the dead", "when": "opening", "quote": "Durante as madrugadas de plantão, ele nunca está sozinho", "confidence": "sourced"},
-   {"order": 2, "value": "gift of speaking to dead", "when": "opening", "quote": "possui um dom sobrenatural de se comunicar com os mortos", "confidence": "sourced"},
-   {"order": 3, "value": "secrets revealed", "when": "middle", "role": "turn", "quote": "acabam por revelar segredos que envolvem sua própria vida", "confidence": "sourced"},
-   {"order": 4, "value": "curse unleashed on family", "when": "late", "role": "trigger", "quote": "Stênio desencadeia uma maldição que coloca em risco a sua vida", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "night shift with the dead",
+    "when": "opening",
+    "quote": "Durante as madrugadas de plantão, ele nunca está sozinho",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:14",
+      "quote": "give the man a bath and put him in the freezer."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "gift of speaking to dead",
+    "when": "opening",
+    "quote": "possui um dom sobrenatural de se comunicar com os mortos",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:51",
+      "quote": "What do you mean the other side, man?"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "secrets revealed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "acabam por revelar segredos que envolvem sua própria vida",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:34",
+      "quote": "your wife is cheating on you, boy."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "curse unleashed on family",
+    "when": "late",
+    "role": "trigger",
+    "quote": "Stênio desencadeia uma maldição que coloca em risco a sua vida",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:56",
+      "quote": "Now you're marked, brother."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "wife killed",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:32:44",
+    "quote": "Odete! Move! Move! Odete! Odete!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "buried ring returned",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:54:29",
+    "quote": "I think someone moved her body, Gideao.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "ghost possesses the new partner",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:38:06",
+    "quote": "Son, it was your mom in Lara's body.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "confession to the children",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:42:19",
+    "quote": "I killed Odete and Jaime.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "father walks away with the ghost",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:42:58",
+    "quote": "You're not coming back because I'm leaving.",
+    "confidence": "observed"
+   }
+  ],
+  "wants": [
+   {
+    "value": "revenge",
+    "detail": "Odete's ghost, against Stenio",
+    "source": "subtitles",
+    "at": "01:41:35",
+    "quote": "You erased me like dirt.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "to take the children",
+    "source": "subtitles",
+    "at": "01:39:11",
+    "quote": "Today they're staying with their mother.",
+    "confidence": "sourced"
+   }
+  ],
+  "wrong": [
+   {
+    "value": "husband has wife killed",
+    "detail": "Stenio sets the gang on Jaime, and Odete dies with him",
+    "source": "subtitles",
+    "at": "01:42:19",
+    "quote": "I killed Odete and Jaime.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:30",
+      "quote": "But no one knows who had them killed."
+     }
+    ]
+   },
+   {
+    "value": "adultery",
+    "source": "subtitles",
+    "at": "00:16:34",
+    "quote": "your wife is cheating on you, boy.",
+    "confidence": "sourced"
+   }
+  ],
+  "ending": [
+   {
+    "value": "father leaves to save children",
+    "source": "subtitles",
+    "at": "01:42:58",
+    "quote": "You're not coming back because I'm leaving.",
+    "confidence": "observed"
+   }
   ]
  },
- "not_stated": ["wants", "wrong", "ending"],
+ "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,62 +1,457 @@
 {
  "film": "1987-opera",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "masked killer", "detail": "Inspector Alan Santini", "quote": "a series of murders being committed inside an opera house by a masked assailant", "confidence": "sourced"}
+   {
+    "value": "masked killer",
+    "detail": "Inspector Alan Santini",
+    "quote": "a series of murders being committed inside an opera house by a masked assailant",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "made by someone", "detail": "Betty's mother had him torture and kill for her", "quote": "Santini reveals that he was enamored of Betty's mother, who had him torture and murder young women for her gratification", "confidence": "sourced"}
+   {
+    "value": "made by someone",
+    "detail": "Betty's mother had him torture and kill for her",
+    "quote": "Santini reveals that he was enamored of Betty's mother, who had him torture and murder young women for her gratification",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "obsession", "detail": "Betty, as a substitute for her mother", "quote": "Betty's resemblance to her mother has now revived Santini's bloodlust", "confidence": "sourced"},
-   {"value": "to make her watch", "quote": "forces her to watch as Stefano is stabbed to death", "confidence": "sourced"}
+   {
+    "value": "obsession",
+    "detail": "Betty, as a substitute for her mother",
+    "quote": "Betty's resemblance to her mother has now revived Santini's bloodlust",
+    "confidence": "sourced"
+   },
+   {
+    "value": "to make her watch",
+    "quote": "forces her to watch as Stefano is stabbed to death",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "parent's crimes", "detail": "mother's murders, witnessed as a child", "quote": "Young Betty partially witnessed one such murder, which haunted her nightmares", "confidence": "sourced"},
-   {"value": "murder", "quote": "Santini eventually killed Betty's mother due to her escalating demands and refusal to have sex with him", "confidence": "sourced"}
+   {
+    "value": "parent's crimes",
+    "detail": "mother's murders, witnessed as a child",
+    "quote": "Young Betty partially witnessed one such murder, which haunted her nightmares",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:05",
+      "quote": "I killed your mother. She wanted more blood, more cruelty"
+     }
+    ]
+   },
+   {
+    "value": "murder",
+    "quote": "Santini eventually killed Betty's mother due to her escalating demands and refusal to have sex with him",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "taking someone's place", "detail": "understudy gets the lead role", "quote": "the role of Lady Macbeth is given to her apprehensive understudy Betty", "confidence": "sourced"}
+   {
+    "value": "taking someone's place",
+    "detail": "understudy gets the lead role",
+    "quote": "the role of Lady Macbeth is given to her apprehensive understudy Betty",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "must not look away", "quote": "tapes needles under her eyes, and forces her to watch", "confidence": "sourced"},
-   {"value": "birds recognise the killer", "quote": "Recognizing their attacker, Santini, the birds gouge out one of his eyes", "confidence": "sourced"}
+   {
+    "value": "must not look away",
+    "quote": "tapes needles under her eyes, and forces her to watch",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:01",
+      "quote": "Take a good look. You can't close your eyes. You have to watch everything."
+     }
+    ]
+   },
+   {
+    "value": "birds recognise the killer",
+    "quote": "Recognizing their attacker, Santini, the birds gouge out one of his eyes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:55",
+      "quote": "Ravens are very vindictive. They don't forget."
+     }
+    ]
+   },
+   {
+    "value": "the opera is cursed",
+    "source": "subtitles",
+    "at": "00:06:51",
+    "quote": "It's the opera. Macbeth brings bad luck.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "young singer", "relation_to_threat": "family", "detail": "Betty, daughter of the woman he served", "quote": "a young soprano (Marsillach) who becomes involved in a series of murders", "confidence": "sourced"},
-   {"value": "boyfriend", "relation_to_threat": "stranger", "detail": "Stefano", "quote": "forces her to watch as Stefano is stabbed to death", "confidence": "sourced"},
-   {"value": "people around her", "relation_to_threat": "stranger", "detail": "Giulia, Mira, Soave, Marco", "quote": "Mira is fatally shot in the head while trying to verify the figure's identity through the peephole", "confidence": "sourced"}
+   {
+    "value": "young singer",
+    "relation_to_threat": "family",
+    "detail": "Betty, daughter of the woman he served",
+    "quote": "a young soprano (Marsillach) who becomes involved in a series of murders",
+    "confidence": "sourced"
+   },
+   {
+    "value": "boyfriend",
+    "relation_to_threat": "stranger",
+    "detail": "Stefano",
+    "quote": "forces her to watch as Stefano is stabbed to death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "people around her",
+    "relation_to_threat": "stranger",
+    "detail": "Giulia, Mira, Soave, Marco",
+    "quote": "Mira is fatally shot in the head while trying to verify the figure's identity through the peephole",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "killer caught", "quote": "Betty bashes Santini on the head with a rock, and the police arrest him", "confidence": "sourced"},
-   {"value": "rejecting the parent", "quote": "Betty declares that she is nothing like her mother", "confidence": "sourced"},
-   {"value": "false ending", "detail": "staged suicide", "quote": "a mannequin, not Santini, was burned in the fire", "confidence": "sourced"}
+   {
+    "value": "killer caught",
+    "quote": "Betty bashes Santini on the head with a rock, and the police arrest him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:56",
+      "quote": "I saw your dogs running through the trees."
+     }
+    ]
+   },
+   {
+    "value": "rejecting the parent",
+    "quote": "Betty declares that she is nothing like her mother",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:40:43",
+      "quote": "I am like my mother. I realise it now."
+     }
+    ]
+   },
+   {
+    "value": "false ending",
+    "detail": "staged suicide",
+    "quote": "a mannequin, not Santini, was burned in the fire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:45",
+      "quote": "died in the fire that destroyed one wing of the theater."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "ravens", "state": "live, attacking", "when": "opening", "role": "omen", "quote": "aggravated by the live ravens and by director Marco", "confidence": "sourced"},
-   {"value": "coat hook", "state": "impaling", "when": "opening", "role": "weapon", "quote": "is murdered by being impaled on a coat hook", "confidence": "sourced"},
-   {"value": "needles under the eyes", "state": "taped", "when": "early", "role": "threat", "quote": "binds her, tapes needles under her eyes", "confidence": "sourced"},
-   {"value": "gold bracelet", "state": "sewn in, swallowed", "when": "middle", "role": "clue", "quote": "stabs Giulia, who swallows the bracelet", "confidence": "sourced"},
-   {"value": "peephole", "state": "shot through", "when": "middle", "role": "threat", "quote": "verify the figure's identity through the peephole", "confidence": "sourced"},
-   {"value": "mirror", "state": "reflecting mother's face", "when": "late", "role": "clue", "quote": "her mother bound in a dilapidated room, with her face reflected in a mirror", "confidence": "sourced"},
-   {"value": "mannequin", "state": "burned", "when": "ending", "role": "turn", "quote": "a mannequin, not Santini, was burned in the fire", "confidence": "sourced"},
-   {"value": "lizard", "state": "trapped, freed", "when": "ending", "role": "symbol", "quote": "Betty finds a lizard trapped in foliage and sets it free.", "confidence": "sourced"}
+   {
+    "value": "ravens",
+    "state": "live, attacking",
+    "when": "opening",
+    "role": "omen",
+    "quote": "aggravated by the live ravens and by director Marco",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:00",
+      "quote": "with a raven on stage that hates me?"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:44:55",
+      "quote": "Ravens are very vindictive. They don't forget."
+     }
+    ]
+   },
+   {
+    "value": "coat hook",
+    "state": "impaling",
+    "when": "opening",
+    "role": "weapon",
+    "quote": "is murdered by being impaled on a coat hook",
+    "confidence": "sourced"
+   },
+   {
+    "value": "needles under the eyes",
+    "state": "taped",
+    "when": "early",
+    "role": "threat",
+    "quote": "binds her, tapes needles under her eyes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:01",
+      "quote": "Take a good look. You can't close your eyes. You have to watch everything."
+     }
+    ]
+   },
+   {
+    "value": "gold bracelet",
+    "state": "sewn in, swallowed",
+    "when": "middle",
+    "role": "clue",
+    "quote": "stabs Giulia, who swallows the bracelet",
+    "confidence": "sourced"
+   },
+   {
+    "value": "peephole",
+    "state": "shot through",
+    "when": "middle",
+    "role": "threat",
+    "quote": "verify the figure's identity through the peephole",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:28",
+      "quote": "Check who it is before opening the door."
+     }
+    ]
+   },
+   {
+    "value": "mirror",
+    "state": "reflecting mother's face",
+    "when": "late",
+    "role": "clue",
+    "quote": "her mother bound in a dilapidated room, with her face reflected in a mirror",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mannequin",
+    "state": "burned",
+    "when": "ending",
+    "role": "turn",
+    "quote": "a mannequin, not Santini, was burned in the fire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:45",
+      "quote": "died in the fire that destroyed one wing of the theater."
+     }
+    ]
+   },
+   {
+    "value": "lizard",
+    "state": "trapped, freed",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "Betty finds a lizard trapped in foliage and sets it free.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:13",
+      "quote": "You're beautiful."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:44:21",
+      "quote": "Go free."
+     }
+    ]
+   },
+   {
+    "value": "black hood",
+    "when": "early",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:37:08",
+    "quote": "I used to dream of a man wearing a black hood on his face.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dogs",
+    "state": "tracking",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:42:56",
+    "quote": "I saw your dogs running through the trees.",
+    "detail": "police dogs run down Santini in the Alps",
+    "confidence": "sourced"
+   },
+   {
+    "value": "butterflies and insects",
+    "state": "spoken",
+    "when": "ending",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:43:37",
+    "quote": "She liked the wind, she liked the butterflies flowers, leaves, ears of wheat insects",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "understudy takes the lead", "when": "opening", "role": "trigger", "quote": "Cecova is injured by a passing car, and the role of Lady Macbeth is given to her apprehensive understudy Betty", "confidence": "sourced"},
-   {"order": 2, "value": "first murder", "when": "opening", "quote": "a stagehand discovers an intruder watching the opera from a balcony box", "confidence": "sourced"},
-   {"order": 3, "value": "forced to watch a murder", "when": "early", "role": "turn", "quote": "forces her to watch as Stefano is stabbed to death", "confidence": "sourced"},
-   {"order": 4, "value": "killer as childhood nightmare", "when": "early", "role": "clue", "quote": "the masked killer resembled a figure in her childhood nightmares", "confidence": "sourced"},
-   {"order": 5, "value": "siege at the apartment", "when": "middle", "quote": "Betty hides as the killer breaks into the apartment", "confidence": "sourced"},
-   {"order": 6, "value": "animals expose the killer", "when": "late", "role": "turn", "quote": "Marco unleashes the ravens into the audience", "confidence": "sourced"},
-   {"order": 7, "value": "parent's secret revealed", "when": "late", "role": "turn", "quote": "who had him torture and murder young women for her gratification", "confidence": "sourced"},
-   {"order": 8, "value": "killer returns, then caught", "when": "ending", "quote": "Betty runs from the house, pursued by Santini. Marco tackles him, only to be stabbed to death", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "understudy takes the lead",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Cecova is injured by a passing car, and the role of Lady Macbeth is given to her apprehensive understudy Betty",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:00",
+      "quote": "Ladies and gentlemen, the great Mara Chekova Has been knocked down by a car!"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:03:54",
+      "quote": "Tonight you make your debut as Lady Macbeth."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "warned of a curse",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:06:51",
+    "quote": "It's the opera. Macbeth brings bad luck.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "first murder",
+    "when": "opening",
+    "quote": "a stagehand discovers an intruder watching the opera from a balcony box",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "forced to watch a murder",
+    "when": "early",
+    "role": "turn",
+    "quote": "forces her to watch as Stefano is stabbed to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:01",
+      "quote": "Take a good look. You can't close your eyes."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "killer as childhood nightmare",
+    "when": "early",
+    "role": "clue",
+    "quote": "the masked killer resembled a figure in her childhood nightmares",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:08",
+      "quote": "I used to dream of a man wearing a black hood on his face."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "ravens killed",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:44:46",
+    "quote": "I think I know who killed my ravens.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "siege at the apartment",
+    "when": "middle",
+    "quote": "Betty hides as the killer breaks into the apartment",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:43",
+      "quote": "You may as well open the door now. One way or another, I'm coming in!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "animals expose the killer",
+    "when": "late",
+    "role": "turn",
+    "quote": "Marco unleashes the ravens into the audience",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "parent's secret revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "who had him torture and murder young women for her gratification",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:50",
+      "quote": "It was your mother! She taught me a cruel little game..."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "killer returns, then caught",
+    "when": "ending",
+    "quote": "Betty runs from the house, pursued by Santini. Marco tackles him, only to be stabbed to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:22",
+      "quote": "Betty, he's not dead! He's alive! He's here! Run!"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "retreat into nature",
+    "when": "ending",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:43:24",
+    "quote": "Betty no longer wanted to see anybody. She wanted to escape altogether...",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,65 +1,494 @@
 {
  "film": "1989-pet-sematary",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "revenant", "detail": "the dead brought back evil: Church, Gage, Rachel", "quote": "an ancient burial ground that brings it back to life evil", "confidence": "sourced"},
-   {"value": "cursed place", "detail": "the burial ground beyond the pet cemetery", "quote": "Jud insists that the burial ground is evil and Louis must not bury Gage there", "confidence": "sourced"},
-   {"value": "killer child", "detail": "reanimated Gage", "quote": "the reanimated Gage returns home and steals a scalpel from Louis' bag. He taunts Jud before murdering him.", "confidence": "sourced"}
+   {
+    "value": "revenant",
+    "detail": "the dead brought back evil: Church, Gage, Rachel",
+    "quote": "an ancient burial ground that brings it back to life evil",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:49",
+      "quote": "He stinks of the ground you buried him in!"
+     }
+    ]
+   },
+   {
+    "value": "cursed place",
+    "detail": "the burial ground beyond the pet cemetery",
+    "quote": "Jud insists that the burial ground is evil and Louis must not bury Gage there",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:26",
+      "quote": "They stopped using that burial ground when the ground went sour."
+     }
+    ]
+   },
+   {
+    "value": "killer child",
+    "detail": "reanimated Gage",
+    "quote": "the reanimated Gage returns home and steals a scalpel from Louis' bag. He taunts Jud before murdering him.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:13",
+      "quote": "Now I want to play with you."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "sacred burial ground", "quote": "Jud takes Louis beyond the pet cemetery and deep into the woods, to an ancient", "confidence": "sourced"},
-   {"value": "malevolent forces aroused", "quote": "introducing Louis to the ritual ground aroused the malevolent forces present there, which caused Gage's death", "confidence": "sourced"}
+   {
+    "value": "sacred burial ground",
+    "quote": "Jud takes Louis beyond the pet cemetery and deep into the woods, to an ancient",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:46",
+      "quote": "Micmac Indians."
+     }
+    ]
+   },
+   {
+    "value": "malevolent forces aroused",
+    "quote": "introducing Louis to the ritual ground aroused the malevolent forces present there, which caused Gage's death",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to kill", "quote": "Receiving a phone call from Gage that he has \"played\" with Jud and Rachel", "confidence": "observed"}
+   {
+    "value": "to kill",
+    "quote": "Receiving a phone call from Gage that he has \"played\" with Jud and Rachel",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:04",
+      "quote": "First I played With Jud. Then Mommy came, and I played with Mommy."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "refusing to accept death", "quote": "Jud insists that the burial ground is evil and Louis must not bury Gage there, adding that \"sometimes, dead is better\"", "confidence": "sourced"}
+   {
+    "value": "refusing to accept death",
+    "quote": "Jud insists that the burial ground is evil and Louis must not bury Gage there, adding that \"sometimes, dead is better\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:18",
+      "quote": "Louis, sometimes dead is better. The Indians knew that."
+     }
+    ]
+   },
+   {
+    "value": "guilt over sister's death",
+    "detail": "Rachel's sister Zelda, left to die in the back bedroom",
+    "source": "subtitles",
+    "at": "00:45:44",
+    "quote": "Even now, I wake up and I think, is Zelda dead yet?",
+    "confidence": "observed"
+   }
   ],
   "trigger": [
-   {"value": "moving into a new home", "quote": "move from Chicago to rural Ludlow, Maine, after Louis accepts a job as a local physician", "confidence": "sourced"},
-   {"value": "death of a pet", "quote": "During Thanksgiving, while the family is gone, Church is hit by a truck and killed.", "confidence": "sourced"}
+   {
+    "value": "moving into a new home",
+    "quote": "move from Chicago to rural Ludlow, Maine, after Louis accepts a job as a local physician",
+    "confidence": "sourced"
+   },
+   {
+    "value": "death of a pet",
+    "quote": "During Thanksgiving, while the family is gone, Church is hit by a truck and killed.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:49",
+      "quote": "Yup. That's Church all right."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "the dead return wrong", "quote": "He now stinks, moves sluggishly, his eyes glow gold and he is vicious toward Louis.", "confidence": "sourced"},
-   {"value": "must not cross the barrier", "quote": "Pascow's ghost leads Louis to the cemetery and warns him not to cross the barrier", "confidence": "sourced"},
-   {"value": "must not tell", "quote": "warns him not to tell anyone about what they have done", "confidence": "sourced"},
-   {"value": "warnings ignored", "quote": "Despite Pascow and Jud's warnings, Louis exhumes Gage's body and buries him at the ritual site.", "confidence": "sourced"}
+   {
+    "value": "the dead return wrong",
+    "quote": "He now stinks, moves sluggishly, his eyes glow gold and he is vicious toward Louis.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:04",
+      "quote": "You stink, Church."
+     }
+    ]
+   },
+   {
+    "value": "must not cross the barrier",
+    "quote": "Pascow's ghost leads Louis to the cemetery and warns him not to cross the barrier",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:46",
+      "quote": "The barrier was not meant to be crossed."
+     }
+    ]
+   },
+   {
+    "value": "must not tell",
+    "quote": "warns him not to tell anyone about what they have done",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:47",
+      "quote": "What we did, Louis, was a... secret thing."
+     }
+    ]
+   },
+   {
+    "value": "warnings ignored",
+    "quote": "Despite Pascow and Jud's warnings, Louis exhumes Gage's body and buries him at the ritual site.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:35",
+      "quote": "The barrier was not meant to be crossed. The ground is sour."
+     }
+    ]
+   },
+   {
+    "value": "what you own comes home",
+    "source": "subtitles",
+    "at": "01:37:52",
+    "quote": "Because what you buy is what you own. And what you own... always comes home to you.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "family", "relation_to_threat": "family", "detail": "the Creeds: Louis, Rachel, Ellie and Gage", "quote": "The Creed family—Louis, Rachel, their children Ellie and Gage and their pet cat Church", "confidence": "sourced"},
-   {"value": "neighbour", "relation_to_threat": "community", "detail": "Jud Crandall", "quote": "He taunts Jud before murdering him.", "confidence": "sourced"},
-   {"value": "mother", "relation_to_threat": "family", "quote": "Rachel reaches down to hug Gage and he kills her", "confidence": "sourced"}
+   {
+    "value": "family",
+    "relation_to_threat": "family",
+    "detail": "the Creeds: Louis, Rachel, Ellie and Gage",
+    "quote": "The Creed family—Louis, Rachel, their children Ellie and Gage and their pet cat Church",
+    "confidence": "sourced"
+   },
+   {
+    "value": "neighbour",
+    "relation_to_threat": "community",
+    "detail": "Jud Crandall",
+    "quote": "He taunts Jud before murdering him.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother",
+    "relation_to_threat": "family",
+    "quote": "Rachel reaches down to hug Gage and he kills her",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "cycle repeats", "detail": "Louis buries Rachel too", "quote": "burying Rachel \"will work this time\"", "confidence": "sourced"},
-   {"value": "victim becomes threat", "quote": "Rachel takes a large knife from the counter, and the screen cuts to black before Louis screams.", "confidence": "sourced"}
+   {
+    "value": "cycle repeats",
+    "detail": "Louis buries Rachel too",
+    "quote": "burying Rachel \"will work this time\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:09",
+      "quote": "It will be all right, Rachel. I promise."
+     }
+    ]
+   },
+   {
+    "value": "victim becomes threat",
+    "quote": "Rachel takes a large knife from the counter, and the screen cuts to black before Louis screams.",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "cat", "state": "dead, then returned", "when": "early", "role": "omen", "quote": "a reanimated Church returns to the house", "confidence": "sourced"},
-   {"value": "truck", "state": "speeding on highway", "when": "early", "role": "threat", "quote": "Gage is killed by a truck along the same highway", "confidence": "sourced"},
-   {"value": "pet cemetery", "when": "opening", "role": "setting", "quote": "an isolated pet cemetery (misspelled \"sematary\") in the forest behind the Creeds' home", "confidence": "sourced"},
-   {"value": "dirty feet", "when": "early", "role": "omen", "quote": "Louis awakens from the supposed dream to find his feet covered in dirt", "confidence": "sourced"},
-   {"value": "scalpel", "when": "late", "role": "weapon", "quote": "steals a scalpel from Louis' bag", "confidence": "sourced"},
-   {"value": "muddy footprints", "when": "late", "role": "clue", "quote": "Louis notices Gage's muddy footprints in the house", "confidence": "sourced"},
-   {"value": "dog", "state": "revived", "when": "early", "role": "clue", "quote": "Jud explains that as a boy he revived his pet dog", "confidence": "sourced"},
-   {"value": "syringes", "state": "filled with morphine", "when": "late", "role": "weapon", "quote": "he fills three syringes with morphine and heads to Jud's house", "confidence": "sourced"}
+   {
+    "value": "cat",
+    "state": "dead, then returned",
+    "when": "early",
+    "role": "omen",
+    "quote": "a reanimated Church returns to the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:33",
+      "quote": "Winston Churchill. We call him Church for short."
+     }
+    ]
+   },
+   {
+    "value": "truck",
+    "state": "speeding on highway",
+    "when": "early",
+    "role": "threat",
+    "quote": "Gage is killed by a truck along the same highway",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:20",
+      "quote": "Them damn trucks go back and forth all day and night."
+     }
+    ]
+   },
+   {
+    "value": "pet cemetery",
+    "when": "opening",
+    "role": "setting",
+    "quote": "an isolated pet cemetery (misspelled \"sematary\") in the forest behind the Creeds' home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:14",
+      "quote": "Daddy, what if Church dies? What if he dies and has to go to the pet cemetery?"
+     }
+    ]
+   },
+   {
+    "value": "dirty feet",
+    "when": "early",
+    "role": "omen",
+    "quote": "Louis awakens from the supposed dream to find his feet covered in dirt",
+    "confidence": "sourced"
+   },
+   {
+    "value": "scalpel",
+    "when": "late",
+    "role": "weapon",
+    "quote": "steals a scalpel from Louis' bag",
+    "confidence": "sourced"
+   },
+   {
+    "value": "muddy footprints",
+    "when": "late",
+    "role": "clue",
+    "quote": "Louis notices Gage's muddy footprints in the house",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dog",
+    "state": "revived",
+    "when": "early",
+    "role": "clue",
+    "quote": "Jud explains that as a boy he revived his pet dog",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:18",
+      "quote": "He knew how I felt about my dog Spot."
+     }
+    ]
+   },
+   {
+    "value": "syringes",
+    "state": "filled with morphine",
+    "when": "late",
+    "role": "weapon",
+    "quote": "he fills three syringes with morphine and heads to Jud's house",
+    "confidence": "sourced"
+   },
+   {
+    "value": "kite",
+    "state": "flying, then chased",
+    "when": "middle",
+    "role": "omen",
+    "detail": "the family kite-flying just before Gage runs into the road",
+    "source": "subtitles",
+    "at": "00:48:07",
+    "quote": "Daddy's flying a kite.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dying sister in back bedroom",
+    "when": "middle",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:45:02",
+    "quote": "She was in the back bedroom like a dirty secret.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:24",
+      "quote": "[Zelda] Rachel!"
+     }
+    ]
+   },
+   {
+    "value": "stony soil",
+    "when": "early",
+    "role": "symbol",
+    "detail": "Jud's refrain, repeated over the closing burial",
+    "source": "subtitles",
+    "at": "00:32:06",
+    "quote": "The soil of a man's heart, Louis, is stonier,",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:42",
+      "quote": "The soil of a man's heart is stonier, Louis."
+     }
+    ]
+   },
+   {
+    "value": "phone call from the dead",
+    "when": "late",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "01:27:57",
+    "quote": "I'm at Jud's, Daddy.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "family moves in", "when": "opening", "quote": "move from Chicago to rural Ludlow, Maine, after Louis accepts a job as a local physician", "confidence": "sourced"},
-   {"order": 2, "value": "dying man's warning", "when": "early", "role": "omen", "quote": "He warns Louis about the pet cemetery before dying, calling Louis by name though they have never met.", "confidence": "sourced"},
-   {"order": 3, "value": "pet buried and returns", "when": "early", "role": "trigger", "quote": "The next day, a reanimated Church returns to the house.", "confidence": "sourced"},
-   {"order": 4, "value": "child killed", "when": "middle", "role": "turn", "quote": "Sometime later, Gage is killed by a truck along the same highway.", "confidence": "sourced"},
-   {"order": 5, "value": "cautionary tale told", "when": "middle", "role": "clue", "quote": "Timmy returned as a malevolent entity, terrifying the townsfolk.", "confidence": "sourced"},
-   {"order": 6, "value": "child buried in cursed ground", "when": "middle", "quote": "Louis exhumes Gage's body and buries him at the ritual site", "confidence": "sourced"},
-   {"order": 7, "value": "dead child kills", "when": "late", "quote": "In shock and disbelief, Rachel reaches down to hug Gage and he kills her.", "confidence": "sourced"},
-   {"order": 8, "value": "wife buried, returns", "when": "ending", "role": "turn", "quote": "That night, Rachel returns to Louis and they embrace.", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "family moves in",
+    "when": "opening",
+    "quote": "move from Chicago to rural Ludlow, Maine, after Louis accepts a job as a local physician",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:11",
+      "quote": "I'm Louis Creed. Jud Crandall."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "dying man's warning",
+    "when": "early",
+    "role": "omen",
+    "quote": "He warns Louis about the pet cemetery before dying, calling Louis by name though they have never met.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:54",
+      "quote": "How did you know my name?"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "pet buried and returns",
+    "when": "early",
+    "role": "trigger",
+    "quote": "The next day, a reanimated Church returns to the house.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:04",
+      "quote": "You stink, Church."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "child killed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Sometime later, Gage is killed by a truck along the same highway.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:43",
+      "quote": "Don't let him go in the road, Louis!"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "cautionary tale told",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Timmy returned as a malevolent entity, terrifying the townsfolk.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:12",
+      "quote": "His name was Timmy Baterman."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "child buried in cursed ground",
+    "when": "middle",
+    "quote": "Louis exhumes Gage's body and buries him at the ritual site",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "dead sister's ghost appears",
+    "when": "late",
+    "source": "subtitles",
+    "at": "01:22:24",
+    "quote": "[Zelda] Rachel!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "dead child kills",
+    "when": "late",
+    "quote": "In shock and disbelief, Rachel reaches down to hug Gage and he kills her.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "wife buried, returns",
+    "when": "ending",
+    "role": "turn",
+    "quote": "That night, Rachel returns to Louis and they embrace.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:42",
+      "quote": "The soil of a man's heart is stonier, Louis."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

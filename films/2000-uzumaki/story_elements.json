@@ -1,55 +1,493 @@
 {
  "film": "2000-uzumaki",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "curse on a town", "detail": "a curse involving spirals", "quote": "The film takes place in a town plagued by a mysterious curse involving spirals", "confidence": "sourced"},
-   {"value": "obsession", "quote": "His unusual obsession causes him to abandon his responsibilities at work", "confidence": "sourced"}
+   {
+    "value": "curse on a town",
+    "detail": "a curse involving spirals",
+    "quote": "The film takes place in a town plagued by a mysterious curse involving spirals",
+    "confidence": "sourced"
+   },
+   {
+    "value": "obsession",
+    "quote": "His unusual obsession causes him to abandon his responsibilities at work",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "unexplained", "quote": "the entire town is infected by the otherworldly spirals", "confidence": "observed"}
+   {
+    "value": "unexplained",
+    "quote": "the entire town is infected by the otherworldly spirals",
+    "confidence": "observed"
+   },
+   {
+    "value": "ancient serpent cult",
+    "detail": "mirrors from a serpent-worship cult found in Dragonfly Pond",
+    "confidence": "observed",
+    "source": "subtitles",
+    "at": "01:02:28",
+    "quote": "Worship the Serpent",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:48",
+      "quote": "\" Ancient Mirrors Retrieved from Dragonfly Pond \""
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to spread", "quote": "He crawls towards Kirie, asking her to \"become a spiral too\"", "confidence": "observed"}
+   {
+    "value": "to spread",
+    "quote": "He crawls towards Kirie, asking her to \"become a spiral too\"",
+    "confidence": "observed"
+   },
+   {
+    "value": "to draw people in",
+    "source": "subtitles",
+    "at": "01:23:43",
+    "quote": "Come into the spiral ...",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:05",
+      "quote": "The uzumaki drew the dead guy into it ."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "spreads through obsession", "quote": "he proclaims that a spiral is the highest form of art", "confidence": "observed"},
-   {"value": "bodies transform", "quote": "gradually begin to sprout shells, drink water in copious amounts, and crawl on the walls of the school", "confidence": "sourced"},
-   {"value": "cannot be avoided", "quote": "Eventually, the entire town succumbs to the curse of the spiral", "confidence": "sourced"}
+   {
+    "value": "spreads through obsession",
+    "quote": "he proclaims that a spiral is the highest form of art",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:05",
+      "quote": "One makes one 's own uzumaki . You listen , and listen good : One brings forth one 's own uzumaki ."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:13:13",
+      "quote": "The uzumaki is sublime . It is , in itself , the greatest work of art ."
+     }
+    ]
+   },
+   {
+    "value": "bodies transform",
+    "quote": "gradually begin to sprout shells, drink water in copious amounts, and crawl on the walls of the school",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:30",
+      "quote": "He starts chugging tons of water ... then he starts gettin ' real slow ."
+     }
+    ]
+   },
+   {
+    "value": "cannot be avoided",
+    "quote": "Eventually, the entire town succumbs to the curse of the spiral",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:27",
+      "quote": "This town 's doomed . We gotta get out of here ."
+     }
+    ]
+   },
+   {
+    "value": "spiral draws the eye",
+    "source": "subtitles",
+    "at": "00:23:56",
+    "quote": "The spiral-pattern draws the eye . Whoever drew it , wanted to draw other eyes , too .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the spiral lives inside you",
+    "detail": "whispered to the mother: fingerprints, the ear",
+    "source": "subtitles",
+    "at": "01:03:35",
+    "quote": "Fingerprints are uzumaki too , so we musn 't let her see hands .",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:57",
+      "quote": "The spiral is deep inside you ..."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "townspeople", "relation_to_threat": "community", "quote": "the entire town succumbs to the curse of the spiral", "confidence": "sourced"},
-   {"value": "boyfriend's family", "relation_to_threat": "family", "detail": "Shuichi and his parents", "quote": "Shuichi's mother, who has been in hospital since her husband's death, has developed a severe phobia of spirals", "confidence": "sourced"},
-   {"value": "schoolgirl", "relation_to_threat": "community", "detail": "Kirie Goshima", "quote": "High school student Kirie Goshima's first glimpse that something is awry", "confidence": "sourced"}
+   {
+    "value": "townspeople",
+    "relation_to_threat": "community",
+    "quote": "the entire town succumbs to the curse of the spiral",
+    "confidence": "sourced"
+   },
+   {
+    "value": "boyfriend's family",
+    "relation_to_threat": "family",
+    "detail": "Shuichi and his parents",
+    "quote": "Shuichi's mother, who has been in hospital since her husband's death, has developed a severe phobia of spirals",
+    "confidence": "sourced"
+   },
+   {
+    "value": "schoolgirl",
+    "relation_to_threat": "community",
+    "detail": "Kirie Goshima",
+    "quote": "High school student Kirie Goshima's first glimpse that something is awry",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "everyone consumed", "quote": "Shuichi's body twists into a spiral-like contortion", "confidence": "sourced"},
-   {"value": "ambiguous", "quote": "Kirie flees, and her fate is left unknown", "confidence": "sourced"}
+   {
+    "value": "everyone consumed",
+    "quote": "Shuichi's body twists into a spiral-like contortion",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ambiguous",
+    "quote": "Kirie flees, and her fate is left unknown",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "snail", "state": "filmed", "when": "opening", "role": "omen", "quote": "begins to film the corkscrew patterns on a snail", "confidence": "sourced"},
-   {"value": "spiral", "state": "everywhere", "when": "opening", "role": "symbol", "quote": "images of anything that has a spiral or vortex shape to it", "confidence": "sourced"},
-   {"value": "washing machine", "state": "death inside", "when": "opening", "role": "turn", "quote": "He then decides to film himself crawling into a washing machine, where he dies", "confidence": "sourced"},
-   {"value": "hair", "state": "cut off, then curling", "when": "middle", "role": "threat", "quote": "Sekino, begins to grow her hair in exaggerated curls, taking over her mind", "confidence": "sourced"},
-   {"value": "millipede", "state": "crawls into ear", "when": "early", "role": "omen", "quote": "after a millipede tries to crawl into her ear while she is asleep", "confidence": "sourced"},
-   {"value": "whirl clouds", "state": "with ghost faces", "when": "middle", "role": "omen", "quote": "Whirl-like clouds appear in the sky", "confidence": "sourced"},
-   {"value": "drill", "state": "into the eye", "when": "late", "role": "weapon", "quote": "Kirie's father takes a drill to his eye", "confidence": "sourced"},
-   {"value": "shells", "state": "sprouting", "when": "middle", "role": "threat", "quote": "He and other members of the student body gradually begin to sprout shells", "confidence": "sourced"}
+   {
+    "value": "snail",
+    "state": "filmed",
+    "when": "opening",
+    "role": "omen",
+    "quote": "begins to film the corkscrew patterns on a snail",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:32",
+      "quote": "He was filming this snail shell ..."
+     }
+    ]
+   },
+   {
+    "value": "spiral",
+    "state": "everywhere",
+    "when": "opening",
+    "role": "symbol",
+    "quote": "images of anything that has a spiral or vortex shape to it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:28",
+      "quote": "A spiral . One that goes round and round and round ."
+     }
+    ]
+   },
+   {
+    "value": "washing machine",
+    "state": "death inside",
+    "when": "opening",
+    "role": "turn",
+    "quote": "He then decides to film himself crawling into a washing machine, where he dies",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hair",
+    "state": "cut off, then curling",
+    "when": "middle",
+    "role": "threat",
+    "quote": "Sekino, begins to grow her hair in exaggerated curls, taking over her mind",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:23",
+      "quote": "Was her hair like that earlier ? I don 't remember ."
+     }
+    ]
+   },
+   {
+    "value": "millipede",
+    "state": "crawls into ear",
+    "when": "early",
+    "role": "omen",
+    "quote": "after a millipede tries to crawl into her ear while she is asleep",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:46",
+      "quote": "I want to go deep inside your ear ..."
+     }
+    ]
+   },
+   {
+    "value": "whirl clouds",
+    "state": "with ghost faces",
+    "when": "middle",
+    "role": "omen",
+    "quote": "Whirl-like clouds appear in the sky",
+    "confidence": "sourced"
+   },
+   {
+    "value": "drill",
+    "state": "into the eye",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Kirie's father takes a drill to his eye",
+    "confidence": "sourced"
+   },
+   {
+    "value": "shells",
+    "state": "sprouting",
+    "when": "middle",
+    "role": "threat",
+    "quote": "He and other members of the student body gradually begin to sprout shells",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:15",
+      "quote": "So he gets this uzumaki ? On his back ?"
+     }
+    ]
+   },
+   {
+    "value": "spiral staircase",
+    "when": "early",
+    "role": "omen",
+    "detail": "a classmate falls to his death from it, smiling",
+    "source": "subtitles",
+    "at": "00:23:25",
+    "quote": "It was a spiral staircase , wasn 't it .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "crematorium smoke",
+    "state": "spiralling, with a face",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:14:40",
+    "quote": "No ! There 's that smoke again ... It spirals like that when they cremate someone ...",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:59",
+      "quote": "Plus there was that smoke at the crematorium ..."
+     }
+    ]
+   },
+   {
+    "value": "tunnel out of town",
+    "when": "early",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:24:20",
+    "quote": "I 've started having a bad feeling about this place ... I get dizzy just coming home through that tunnel .",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:08",
+      "quote": "I can 't see the other end ..."
+     }
+    ]
+   },
+   {
+    "value": "mirror",
+    "when": "middle",
+    "role": "clue",
+    "detail": "the father took his wife's mirror into the washing machine; the town's mirrors link to a serpent cult",
+    "source": "subtitles",
+    "at": "00:50:51",
+    "quote": "A mirror ? My mom 's mirror .",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "father's obsession begins", "when": "opening", "role": "omen", "quote": "her boyfriend Shuichi Saito's father begins to film the corkscrew patterns on a snail", "confidence": "sourced"},
-   {"order": 2, "value": "first death", "when": "opening", "quote": "crawling into a washing machine, where he dies", "confidence": "sourced"},
-   {"order": 3, "value": "town infected", "when": "early", "quote": "It is not long before the entire town is infected by the otherworldly spirals", "confidence": "sourced"},
-   {"order": 4, "value": "mother's suicide", "when": "early", "quote": "the millipede claims to be her husband and turns into a spiral, driving her to commit suicide", "confidence": "sourced"},
-   {"order": 5, "value": "classmates transform", "when": "middle", "quote": "a student named Katayama begins to walk at a snail's pace", "confidence": "sourced"},
-   {"order": 6, "value": "town succumbs", "when": "late", "role": "turn", "quote": "Eventually, the entire town succumbs to the curse of the spiral", "confidence": "sourced"},
-   {"order": 7, "value": "lover transformed", "when": "ending", "quote": "Shuichi's body twists into a spiral-like contortion", "confidence": "sourced"},
-   {"order": 8, "value": "heroine flees, fate unknown", "when": "ending", "quote": "Refusing to let Shuichi back to his side, Kirie flees", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "narrator frames the tale",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:30",
+    "quote": "Kurozu-cho , town of my birth . Let me tell you the story ... of a strangeness that happened here .",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "classmate dies smiling",
+    "when": "early",
+    "role": "omen",
+    "detail": "fall from a spiral staircase",
+    "source": "subtitles",
+    "at": "00:21:59",
+    "quote": "But didn 't he look like he had a smile on his face ?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "father's obsession begins",
+    "when": "opening",
+    "role": "omen",
+    "quote": "her boyfriend Shuichi Saito's father begins to film the corkscrew patterns on a snail",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:28",
+      "quote": "I saw your dad on the street a while ago . He was filming this snail shell ..."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "first death",
+    "when": "opening",
+    "quote": "crawling into a washing machine, where he dies",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:45",
+      "quote": "Did you hear how he died ? Heart attack , wasn 't it ? No , suicide ... !"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "pond reveals cult relics",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:02:03",
+    "quote": "Kagami , \" mirror . \" Kagami , \" serpent . \" Same reading , different characters .",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "town infected",
+    "when": "early",
+    "quote": "It is not long before the entire town is infected by the otherworldly spirals",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:33",
+      "quote": "As a large typhoon nears Kurozu-cho ... a bizarre series of incidents has taken place ."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "mother's suicide",
+    "when": "early",
+    "quote": "the millipede claims to be her husband and turns into a spiral, driving her to commit suicide",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:51",
+      "quote": "Let me curl aground it and sleep inside you ..."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "classmates transform",
+    "when": "middle",
+    "quote": "a student named Katayama begins to walk at a snail's pace",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:16",
+      "quote": "It 's ' cause he 's so slow . A snail goes faster ."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "town succumbs",
+    "when": "late",
+    "role": "turn",
+    "quote": "Eventually, the entire town succumbs to the curse of the spiral",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:27",
+      "quote": "This town 's doomed ."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "lover transformed",
+    "when": "ending",
+    "quote": "Shuichi's body twists into a spiral-like contortion",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:44",
+      "quote": "Kirie ... It 's got me ."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "heroine flees, fate unknown",
+    "when": "ending",
+    "quote": "Refusing to let Shuichi back to his side, Kirie flees",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:58",
+      "quote": "Come into the uzumaki ."
+     }
+    ]
+   },
+   {
+    "order": 12,
+    "value": "narration loops back",
+    "when": "ending",
+    "role": "turn",
+    "detail": "the closing repeats the opening line",
+    "source": "subtitles",
+    "at": "01:27:36",
+    "quote": "Kurozu-cho , town of my birth . Let me tell you the story ...",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong", "trigger"],
+ "not_stated": [
+  "wrong",
+  "trigger"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,61 +1,452 @@
 {
  "film": "2012-here-comes-the-devil",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "possessing demon", "detail": "beings in the hill that take over bodies", "quote": "those who dwell there are in search of....people who can be possessed", "confidence": "sourced"},
-   {"value": "cursed place", "detail": "the hill and its cave", "quote": "A local gas station attendant says the hill is cursed", "confidence": "sourced"},
-   {"value": "devil", "quote": "says she was supernaturally assaulted by the devil", "confidence": "sourced"}
+   {
+    "value": "possessing demon",
+    "detail": "beings in the hill that take over bodies",
+    "quote": "those who dwell there are in search of....people who can be possessed",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cursed place",
+    "detail": "the hill and its cave",
+    "quote": "A local gas station attendant says the hill is cursed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:21",
+      "quote": "It was considered a cursed place."
+     }
+    ]
+   },
+   {
+    "value": "devil",
+    "quote": "says she was supernaturally assaulted by the devil",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:25",
+      "quote": "Because we're the devil, and we've come for you."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "place", "detail": "the cave on a rocky hill", "quote": "adolescent siblings Adolfo (Alan Martinez) and Sara (Michele Garcia) enter a cave and do not return", "confidence": "sourced"}
+   {
+    "value": "place",
+    "detail": "the cave on a rocky hill",
+    "quote": "adolescent siblings Adolfo (Alan Martinez) and Sara (Michele Garcia) enter a cave and do not return",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:06",
+      "quote": "believed that shrines and offerings would keep them away. But they've been here since the beginning of time."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "bodies to use", "quote": "To them, we're only a shell. They use us to do evil and then throw us away.", "confidence": "sourced"}
+   {
+    "value": "bodies to use",
+    "quote": "To them, we're only a shell. They use us to do evil and then throw us away.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:00",
+      "quote": "They use us to do evil and then throw us away."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "murder", "detail": "the serial killer in the opening; parents kill an innocent man", "quote": "They confront and kill him, though later discoveries will convince Sol of his innocence", "confidence": "sourced"}
+   {
+    "value": "murder",
+    "detail": "the serial killer in the opening; parents kill an innocent man",
+    "quote": "They confront and kill him, though later discoveries will convince Sol of his innocence",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "entering a cave", "quote": "on an afternoon family outing at the same hill, adolescent siblings Adolfo (Alan Martinez) and Sara (Michele Garcia) enter a cave", "confidence": "sourced"}
+   {
+    "value": "entering a cave",
+    "quote": "on an afternoon family outing at the same hill, adolescent siblings Adolfo (Alan Martinez) and Sara (Michele Garcia) enter a cave",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:07",
+      "quote": "The kids want to go to that hill for a little while."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "earthquake marks possession", "quote": "when the killer vanished on the hill there was an earthquake just like the night when Adolfo and Sara vanished", "confidence": "sourced"},
-   {"value": "real bodies left behind", "quote": "She finds their dead bodies, dressed as they were the afternoon they vanished", "confidence": "sourced"}
+   {
+    "value": "earthquake marks possession",
+    "quote": "when the killer vanished on the hill there was an earthquake just like the night when Adolfo and Sara vanished",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:35",
+      "quote": "we had an earthquake. Just like the one on the night your kids disappeared."
+     }
+    ]
+   },
+   {
+    "value": "real bodies left behind",
+    "quote": "She finds their dead bodies, dressed as they were the afternoon they vanished",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:14",
+      "quote": "The children... our children never left this place."
+     }
+    ]
+   },
+   {
+    "value": "offerings cannot keep them away",
+    "source": "subtitles",
+    "at": "01:16:06",
+    "quote": "believed that shrines and offerings would keep them away. But they've been here since the beginning of time.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "children", "relation_to_threat": "family", "detail": "Adolfo and Sara", "quote": "a couple who finds that their children may have been exposed to something completely evil", "confidence": "sourced"},
-   {"value": "parents", "relation_to_threat": "family", "detail": "Felix and Sol", "quote": "he shoots his wife then shoots himself", "confidence": "sourced"},
-   {"value": "babysitter", "relation_to_threat": "stranger", "detail": "Marcia", "quote": "Marcia describes the children as being \"lifeless,\"", "confidence": "sourced"},
-   {"value": "wrongly accused outsider", "relation_to_threat": "community", "detail": "Lucio, the local weirdo", "quote": "Felix and Sol suspect Lucio, the local weirdo, assaulted Sara that afternoon on the hill", "confidence": "sourced"}
+   {
+    "value": "children",
+    "relation_to_threat": "family",
+    "detail": "Adolfo and Sara",
+    "quote": "a couple who finds that their children may have been exposed to something completely evil",
+    "confidence": "sourced"
+   },
+   {
+    "value": "parents",
+    "relation_to_threat": "family",
+    "detail": "Felix and Sol",
+    "quote": "he shoots his wife then shoots himself",
+    "confidence": "sourced"
+   },
+   {
+    "value": "babysitter",
+    "relation_to_threat": "stranger",
+    "detail": "Marcia",
+    "quote": "Marcia describes the children as being \"lifeless,\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:11",
+      "quote": "It was the devil. The devil stood on my chest."
+     }
+    ]
+   },
+   {
+    "value": "wrongly accused outsider",
+    "relation_to_threat": "community",
+    "detail": "Lucio, the local weirdo",
+    "quote": "Felix and Sol suspect Lucio, the local weirdo, assaulted Sara that afternoon on the hill",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:26",
+      "quote": "The only reason they were afraid of Lucio was because he'd seen their bodies."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "everyone dies", "quote": "When Felix sees the bodies of his children dressed as they were the day they disappeared, he shoots his wife then shoots himself", "confidence": "sourced"},
-   {"value": "victims become threat", "detail": "possessed versions of the parents drive away", "quote": "Versions of Felix and Sol return to their car and drive away haltingly", "confidence": "sourced"}
+   {
+    "value": "everyone dies",
+    "quote": "When Felix sees the bodies of his children dressed as they were the day they disappeared, he shoots his wife then shoots himself",
+    "confidence": "sourced"
+   },
+   {
+    "value": "victims become threat",
+    "detail": "possessed versions of the parents drive away",
+    "quote": "Versions of Felix and Sol return to their car and drive away haltingly",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "rocky hill", "when": "opening", "role": "setting", "quote": "He crawls dying up a large rocky hill and his body is never found", "confidence": "sourced"},
-   {"value": "cave", "when": "early", "role": "trigger", "quote": "She follows them up to the mouth of the cave where they disappeared but does not go in", "confidence": "sourced"},
-   {"value": "earthquake", "when": "early", "role": "omen", "quote": "that night there is an unusual earthquake", "confidence": "sourced"},
-   {"value": "flickering lights and doors", "when": "middle", "role": "omen", "quote": "noises, flickering lights, slamming doors, and the children having unnatural seizures", "confidence": "sourced"},
-   {"value": "school uniforms", "when": "middle", "role": "clue", "quote": "dressed in their school uniforms, they are taking the bus back to the hill", "confidence": "sourced"},
-   {"value": "children's bodies", "state": "dead in cave", "when": "late", "role": "turn", "quote": "She finds their dead bodies, dressed as they were the afternoon they vanished", "confidence": "sourced"},
-   {"value": "gun", "when": "ending", "role": "weapon", "quote": "he shoots his wife then shoots himself", "confidence": "sourced"}
+   {
+    "value": "rocky hill",
+    "when": "opening",
+    "role": "setting",
+    "quote": "He crawls dying up a large rocky hill and his body is never found",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:21",
+      "quote": "believed the hill had power, but they never got closer. It was considered a cursed place."
+     }
+    ]
+   },
+   {
+    "value": "cave",
+    "when": "early",
+    "role": "trigger",
+    "quote": "She follows them up to the mouth of the cave where they disappeared but does not go in",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:39",
+      "quote": "We were in a cave. It was so dark."
+     }
+    ]
+   },
+   {
+    "value": "earthquake",
+    "when": "early",
+    "role": "omen",
+    "quote": "that night there is an unusual earthquake",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:57",
+      "quote": "Earthquake? No one mentioned it, but there was one that night."
+     }
+    ]
+   },
+   {
+    "value": "flickering lights and doors",
+    "when": "middle",
+    "role": "omen",
+    "quote": "noises, flickering lights, slamming doors, and the children having unnatural seizures",
+    "confidence": "sourced"
+   },
+   {
+    "value": "school uniforms",
+    "when": "middle",
+    "role": "clue",
+    "quote": "dressed in their school uniforms, they are taking the bus back to the hill",
+    "confidence": "sourced"
+   },
+   {
+    "value": "children's bodies",
+    "state": "dead in cave",
+    "when": "late",
+    "role": "turn",
+    "quote": "She finds their dead bodies, dressed as they were the afternoon they vanished",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:08",
+      "quote": "Do you see their clothes? That's what they were wearing when they disappeared."
+     }
+    ]
+   },
+   {
+    "value": "gun",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "he shoots his wife then shoots himself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:19",
+      "quote": "Where did you get that gun? I bought it. We need protection."
+     }
+    ]
+   },
+   {
+    "value": "flying lights",
+    "state": "burned onto the retina",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:02:16",
+    "quote": "I saw lights, you know? Bright spots flying around.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "first menstrual blood",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:07:56",
+    "quote": "Every woman, after a certain age, loses a little blood once a month.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "truck with red lights",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:35:09",
+    "quote": "Do you know someone with an old truck with red lights?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "candles on the hill",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:19:38",
+    "quote": "He said he went to the hill to leave some candles. He believed the place was cursed.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "killer vanishes on hill", "when": "opening", "role": "omen", "quote": "He crawls dying up a large rocky hill and his body is never found", "confidence": "sourced"},
-   {"order": 2, "value": "children vanish in cave", "when": "early", "role": "trigger", "quote": "enter a cave and do not return", "confidence": "sourced"},
-   {"order": 3, "value": "children return changed", "when": "early", "quote": "Returning home, the children start behaving strangely", "confidence": "sourced"},
-   {"order": 4, "value": "innocent man killed", "when": "middle", "quote": "They confront and kill him, though later discoveries will convince Sol of his innocence", "confidence": "sourced"},
-   {"order": 5, "value": "witness describes the devil", "when": "middle", "quote": "says she was supernaturally assaulted by the devil", "confidence": "sourced"},
-   {"order": 6, "value": "true bodies found", "when": "late", "role": "turn", "quote": "She finds their dead bodies, dressed as they were the afternoon they vanished", "confidence": "sourced"},
-   {"order": 7, "value": "murder-suicide", "when": "ending", "quote": "he shoots his wife then shoots himself. There is an earthquake", "confidence": "sourced"},
-   {"order": 8, "value": "possessed parents leave", "when": "ending", "quote": "Versions of Felix and Sol return to their car and drive away haltingly", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "killer vanishes on hill",
+    "when": "opening",
+    "role": "omen",
+    "quote": "He crawls dying up a large rocky hill and his body is never found",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:07",
+      "quote": "His face... his eyes... Did you see his eyes?"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:34:06",
+      "quote": "They found his machete, but never his body."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "daughter's first period",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:07:56",
+    "quote": "Every woman, after a certain age, loses a little blood once a month.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "legend of the cursed hill",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:17:21",
+    "quote": "believed the hill had power, but they never got closer. It was considered a cursed place.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "children vanish in cave",
+    "when": "early",
+    "role": "trigger",
+    "quote": "enter a cave and do not return",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:39",
+      "quote": "We were in a cave. It was so dark."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "children return changed",
+    "when": "early",
+    "quote": "Returning home, the children start behaving strangely",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "innocent man killed",
+    "when": "middle",
+    "quote": "They confront and kill him, though later discoveries will convince Sol of his innocence",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:25",
+      "quote": "Because we're the devil, and we've come for you."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "witness describes the devil",
+    "when": "middle",
+    "quote": "says she was supernaturally assaulted by the devil",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:11",
+      "quote": "It was the devil. The devil stood on my chest."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "true bodies found",
+    "when": "late",
+    "role": "turn",
+    "quote": "She finds their dead bodies, dressed as they were the afternoon they vanished",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:14",
+      "quote": "The children... our children never left this place."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "murder-suicide",
+    "when": "ending",
+    "quote": "he shoots his wife then shoots himself. There is an earthquake",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "possessed parents leave",
+    "when": "ending",
+    "quote": "Versions of Felix and Sol return to their car and drive away haltingly",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "title card as closing sting",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:34:27",
+    "quote": "HERE COMES THE DEVIL",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

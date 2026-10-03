@@ -1,63 +1,485 @@
 {
  "film": "2019-color-out-of-space",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "alien colour", "detail": "the \"Color\"", "quote": "the Color is draining the life out of everything around it and attempting to xenoform its environment", "confidence": "sourced"},
-   {"value": "contamination", "quote": "The family quickly becomes contaminated", "confidence": "sourced"}
+   {
+    "value": "alien colour",
+    "detail": "the \"Color\"",
+    "quote": "the Color is draining the life out of everything around it and attempting to xenoform its environment",
+    "confidence": "sourced"
+   },
+   {
+    "value": "contamination",
+    "quote": "The family quickly becomes contaminated",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "from outer space", "quote": "a brilliantly colored meteorite crash-lands in their front yard near the well", "confidence": "sourced"},
-   {"value": "beyond human understanding", "quote": "the Color was a messenger from realms beyond human understanding", "confidence": "sourced"}
+   {
+    "value": "from outer space",
+    "quote": "a brilliantly colored meteorite crash-lands in their front yard near the well",
+    "confidence": "sourced"
+   },
+   {
+    "value": "beyond human understanding",
+    "quote": "the Color was a messenger from realms beyond human understanding",
+    "confidence": "sourced"
+   },
+   {
+    "value": "from the stars",
+    "source": "subtitles",
+    "at": "01:37:32",
+    "quote": "It came from the stars...",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to transform its environment", "quote": "attempting to xenoform its environment", "confidence": "sourced"},
-   {"value": "to drain life", "quote": "the Color is draining the life out of everything around it", "confidence": "sourced"}
+   {
+    "value": "to transform its environment",
+    "quote": "attempting to xenoform its environment",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:52",
+      "quote": "Changing everything into something like the world it came from."
+     }
+    ]
+   },
+   {
+    "value": "to drain life",
+    "quote": "the Color is draining the life out of everything around it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:50",
+      "quote": "It sucks, and it burns."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "moving into a new home", "detail": "the late father's farm", "quote": "Nathan Gardner moves his family, including children Lavinia, Benny, and Jack, to his late father's farm", "confidence": "sourced"},
-   {"value": "meteorite lands", "quote": "One night, a brilliantly colored meteorite crash-lands in their front yard near the well", "confidence": "sourced"}
+   {
+    "value": "moving into a new home",
+    "detail": "the late father's farm",
+    "quote": "Nathan Gardner moves his family, including children Lavinia, Benny, and Jack, to his late father's farm",
+    "confidence": "sourced"
+   },
+   {
+    "value": "meteorite lands",
+    "quote": "One night, a brilliantly colored meteorite crash-lands in their front yard near the well",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:39",
+      "quote": "[BOOM] - NATHAN: What?!"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "spreads through water", "quote": "When his test strips begin to glow brightly with the color of the meteor, he advises the Gardners not to drink it", "confidence": "sourced"},
-   {"value": "fuses living things", "quote": "A bolt of the Color strikes and fuses Theresa and Jack together into a hideous mass", "confidence": "sourced"},
-   {"value": "distorts time", "quote": "claiming time had passed instantaneously for him", "confidence": "sourced"},
-   {"value": "harmed by sunlight", "quote": "to shield them from sunlight, which harms them", "confidence": "sourced"}
+   {
+    "value": "spreads through water",
+    "quote": "When his test strips begin to glow brightly with the color of the meteor, he advises the Gardners not to drink it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:40",
+      "quote": "Hey, try not to drink the water, okay?"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:37:18",
+      "quote": "They all drunk the water."
+     }
+    ]
+   },
+   {
+    "value": "fuses living things",
+    "quote": "A bolt of the Color strikes and fuses Theresa and Jack together into a hideous mass",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:26",
+      "quote": "Looks like she's absorbing him."
+     }
+    ]
+   },
+   {
+    "value": "distorts time",
+    "quote": "claiming time had passed instantaneously for him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:45",
+      "quote": "[TICKING SLOWS, STOPS]"
+     }
+    ]
+   },
+   {
+    "value": "harmed by sunlight",
+    "quote": "to shield them from sunlight, which harms them",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "family", "relation_to_threat": "stranger", "detail": "the Gardners", "quote": "Nathan Gardner moves his family, including children Lavinia, Benny, and Jack", "confidence": "sourced"},
-   {"value": "mother and young son", "relation_to_threat": "stranger", "detail": "Theresa and Jack, fused", "quote": "fuses Theresa and Jack together into a hideous mass", "confidence": "sourced"},
-   {"value": "outsider witness", "relation_to_threat": "stranger", "detail": "hydrologist Ward Phillips", "quote": "leaving Ward the only survivor as he climbs out of the remains of the farmland", "confidence": "sourced"}
+   {
+    "value": "family",
+    "relation_to_threat": "stranger",
+    "detail": "the Gardners",
+    "quote": "Nathan Gardner moves his family, including children Lavinia, Benny, and Jack",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother and young son",
+    "relation_to_threat": "stranger",
+    "detail": "Theresa and Jack, fused",
+    "quote": "fuses Theresa and Jack together into a hideous mass",
+    "confidence": "sourced"
+   },
+   {
+    "value": "outsider witness",
+    "relation_to_threat": "stranger",
+    "detail": "hydrologist Ward Phillips",
+    "quote": "leaving Ward the only survivor as he climbs out of the remains of the farmland",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "everyone dies but one", "quote": "leaving Ward the only survivor", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "As he leaves, an insect mutated by the Color flies by", "confidence": "sourced"},
-   {"value": "land drowned", "quote": "an older Ward stands on top of the finished dam as a reservoir covers the former property", "confidence": "sourced"}
+   {
+    "value": "everyone dies but one",
+    "quote": "leaving Ward the only survivor",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat survives",
+    "quote": "As he leaves, an insect mutated by the Color flies by",
+    "confidence": "sourced"
+   },
+   {
+    "value": "land drowned",
+    "quote": "an older Ward stands on top of the finished dam as a reservoir covers the former property",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:43",
+      "quote": "I hope the dammed water that covers this place will be very deep."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "meteorite", "state": "brilliantly coloured", "when": "opening", "role": "trigger", "quote": "a brilliantly colored meteorite crash-lands in their front yard", "confidence": "sourced"},
-   {"value": "well", "state": "voice inside", "when": "early", "role": "threat", "quote": "claiming to communicate with a 'friend' inside the well", "confidence": "sourced"},
-   {"value": "water", "state": "oily, glowing", "when": "early", "role": "omen", "quote": "the groundwater has taken on an oily sheen", "confidence": "sourced"},
-   {"value": "fingers", "state": "cut off", "when": "middle", "role": "omen", "quote": "she vacantly cuts off two of her fingers", "confidence": "sourced"},
-   {"value": "alpacas", "state": "fused, mutated", "when": "middle", "role": "omen", "quote": "the alpacas were similarly mutated and fused together by the Color", "confidence": "sourced"},
-   {"value": "dog", "state": "heard in well", "when": "late", "role": "trigger", "quote": "Benny then insists that he hears the family's dog inside the well", "confidence": "sourced"},
-   {"value": "book of spells", "when": "middle", "role": "symbol", "quote": "using a copy of the Necronomicon and offering her blood to save her family", "confidence": "sourced"},
-   {"value": "mutated insect", "when": "ending", "role": "omen", "quote": "an insect mutated by the Color flies by", "confidence": "sourced"}
+   {
+    "value": "meteorite",
+    "state": "brilliantly coloured",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "a brilliantly colored meteorite crash-lands in their front yard",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:52",
+      "quote": "and a big flash, like a pink light."
+     }
+    ]
+   },
+   {
+    "value": "well",
+    "state": "voice inside",
+    "when": "early",
+    "role": "threat",
+    "quote": "claiming to communicate with a 'friend' inside the well",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:14",
+      "quote": "It's talking to me."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:36:40",
+      "quote": "It lives in the well."
+     }
+    ]
+   },
+   {
+    "value": "water",
+    "state": "oily, glowing",
+    "when": "early",
+    "role": "omen",
+    "quote": "the groundwater has taken on an oily sheen",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:22",
+      "quote": "Yeah, the H2O has gone a little brackish."
+     }
+    ]
+   },
+   {
+    "value": "fingers",
+    "state": "cut off",
+    "when": "middle",
+    "role": "omen",
+    "quote": "she vacantly cuts off two of her fingers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:49",
+      "quote": "[KNIFE CLATTERS]"
+     }
+    ]
+   },
+   {
+    "value": "alpacas",
+    "state": "fused, mutated",
+    "when": "middle",
+    "role": "omen",
+    "quote": "the alpacas were similarly mutated and fused together by the Color",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:12",
+      "quote": "Something's happening to the alpacas."
+     }
+    ]
+   },
+   {
+    "value": "dog",
+    "state": "heard in well",
+    "when": "late",
+    "role": "trigger",
+    "quote": "Benny then insists that he hears the family's dog inside the well",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:31",
+      "quote": "Sam, is that you? - [YELP ECHOES]"
+     }
+    ]
+   },
+   {
+    "value": "book of spells",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "using a copy of the Necronomicon and offering her blood to save her family",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mutated insect",
+    "when": "ending",
+    "role": "omen",
+    "quote": "an insect mutated by the Color flies by",
+    "confidence": "sourced"
+   },
+   {
+    "value": "strange smell",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:22:19",
+    "quote": "Like somebody lit a dog on fire.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:53",
+      "quote": "ever since the night that thing hit the farm."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "garbled phone voices",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:41:19",
+    "quote": "[GARBLED VOICE]",
+    "detail": "static and distorted voices on every phone and TV after the meteor",
+    "confidence": "sourced"
+   },
+   {
+    "value": "stars in the well",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:09:42",
+    "quote": "you can see stars down there.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "family moves to the farm", "when": "opening", "quote": "moves his family, including children Lavinia, Benny, and Jack, to his late father's farm", "confidence": "sourced"},
-   {"order": 2, "value": "meteorite lands", "when": "opening", "role": "trigger", "quote": "a brilliantly colored meteorite crash-lands in their front yard near the well", "confidence": "sourced"},
-   {"order": 3, "value": "warning about the water", "when": "early", "role": "omen", "quote": "he advises the Gardners not to drink it", "confidence": "sourced"},
-   {"order": 4, "value": "family breaks down", "when": "early", "quote": "Nathan lashes out at Benny and Lavinia with uncharacteristic rage", "confidence": "sourced"},
-   {"order": 5, "value": "mother and child fused", "when": "middle", "role": "turn", "quote": "A bolt of the Color strikes and fuses Theresa and Jack together into a hideous mass", "confidence": "sourced"},
-   {"order": 6, "value": "father goes mad", "when": "late", "quote": "Nathan, now fully deranged from the Color, locks Lavinia in the attic", "confidence": "sourced"},
-   {"order": 7, "value": "colour erupts from well", "when": "late", "quote": "the Color, which explodes out of the well and forms a funnel into the sky", "confidence": "sourced"},
-   {"order": 8, "value": "lone survivor's epilogue", "when": "ending", "quote": "having witnessed the Color's effects, he will never drink the water", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "narrator's warning",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:02:20",
+    "quote": "to survey for the new reservoir, they told me the place was evil.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "protective ritual in the woods",
+    "when": "opening",
+    "role": "omen",
+    "detail": "Lavinia's spell for her mother's cancer",
+    "source": "subtitles",
+    "at": "00:04:14",
+    "quote": "I call upon the principalities of earth, air, fire, water, and ether.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "family moves to the farm",
+    "when": "opening",
+    "quote": "moves his family, including children Lavinia, Benny, and Jack, to his late father's farm",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:00",
+      "quote": "Why can't they just buy bottled water like everyone else?"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "meteorite lands",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "a brilliantly colored meteorite crash-lands in their front yard near the well",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:41",
+      "quote": "What the hell is that?!"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "warning about the water",
+    "when": "early",
+    "role": "omen",
+    "quote": "he advises the Gardners not to drink it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:37",
+      "quote": "I don't think you should be drinking that."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "family breaks down",
+    "when": "early",
+    "quote": "Nathan lashes out at Benny and Lavinia with uncharacteristic rage",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:55:46",
+      "quote": "Do you have any idea how much those animals cost us?"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "mother and child fused",
+    "when": "middle",
+    "role": "turn",
+    "quote": "A bolt of the Color strikes and fuses Theresa and Jack together into a hideous mass",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:26",
+      "quote": "Looks like she's absorbing him."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "father goes mad",
+    "when": "late",
+    "quote": "Nathan, now fully deranged from the Color, locks Lavinia in the attic",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:01",
+      "quote": "Now feed your mother."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "hermit explains the threat",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:36:40",
+    "quote": "It lives in the well. It grew down there.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "colour erupts from well",
+    "when": "late",
+    "quote": "the Color, which explodes out of the well and forms a funnel into the sky",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "lone survivor's epilogue",
+    "when": "ending",
+    "quote": "having witnessed the Color's effects, he will never drink the water",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:50",
+      "quote": "But even then I will never drink it."
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

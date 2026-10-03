@@ -1,60 +1,447 @@
 {
  "film": "2002-may",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "the self", "detail": "May, a lonely woman who becomes a killer", "quote": "a lonely young woman (Bettis) traumatized by a difficult childhood", "confidence": "sourced"}
+   {
+    "value": "the self",
+    "detail": "May, a lonely woman who becomes a killer",
+    "quote": "a lonely young woman (Bettis) traumatized by a difficult childhood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:02",
+      "quote": "You can't see me."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "childhood trauma", "detail": "bullied for her lazy eye", "quote": "As a child, she endured bullying and ostracism due to her lazy eye", "confidence": "sourced"}
+   {
+    "value": "childhood trauma",
+    "detail": "bullied for her lazy eye",
+    "quote": "As a child, she endured bullying and ostracism due to her lazy eye",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:53",
+      "quote": "What's wrong with my eye, Mama?"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "connection", "quote": "her increasingly desperate attempts to connect with the people around her", "confidence": "sourced"},
-   {"value": "to make a companion", "quote": "if you can't find a friend, make one", "confidence": "sourced"}
+   {
+    "value": "connection",
+    "quote": "her increasingly desperate attempts to connect with the people around her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:32",
+      "quote": "And you see me, you always have, but... I need a real friend."
+     }
+    ]
+   },
+   {
+    "value": "to make a companion",
+    "quote": "if you can't find a friend, make one",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:04",
+      "quote": "\" If you can't find a friend, make one. \""
+     },
+     {
+      "source": "subtitles",
+      "at": "01:11:14",
+      "quote": "If you can't find a friend, make one."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "rejection", "detail": "Adam's disgust", "quote": "May overhears Adam expressing disgust with her to his friends", "confidence": "sourced"}
+   {
+    "value": "rejection",
+    "detail": "Adam's disgust",
+    "quote": "May overhears Adam expressing disgust with her to his friends",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:54",
+      "quote": "Some weird chick Adam just dumped."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "romantic rejection", "quote": "she bites Adam's lip, drawing blood. Disturbed, Adam abruptly leaves", "confidence": "sourced"}
+   {
+    "value": "romantic rejection",
+    "quote": "she bites Adam's lip, drawing blood. Disturbed, Adam abruptly leaves",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "must not open the case", "quote": "instructing her to never remove Suzie from the case", "confidence": "sourced"}
+   {
+    "value": "must not open the case",
+    "quote": "instructing her to never remove Suzie from the case",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:38",
+      "quote": "No, no, no, you can't take her out."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "lovers", "relation_to_threat": "lover", "detail": "Adam and Polly", "quote": "she slits Polly's throat with a pair of surgical scalpels", "confidence": "sourced"},
-   {"value": "strangers", "relation_to_threat": "stranger", "detail": "the punk, Ambrosia, Hoop", "quote": "fatally stabs him in the head with scissors", "confidence": "sourced"},
-   {"value": "pet", "relation_to_threat": "stranger", "detail": "Lupe the cat", "quote": "killing the cat and shattering the ashtray", "confidence": "sourced"},
-   {"value": "the self", "relation_to_threat": "self", "detail": "May", "quote": "May gouges out her lazy eye and places it into the doll's head", "confidence": "sourced"}
+   {
+    "value": "lovers",
+    "relation_to_threat": "lover",
+    "detail": "Adam and Polly",
+    "quote": "she slits Polly's throat with a pair of surgical scalpels",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:33",
+      "quote": "Hello, Polly, this is May. Happy Halloween."
+     }
+    ]
+   },
+   {
+    "value": "strangers",
+    "relation_to_threat": "stranger",
+    "detail": "the punk, Ambrosia, Hoop",
+    "quote": "fatally stabs him in the head with scissors",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pet",
+    "relation_to_threat": "stranger",
+    "detail": "Lupe the cat",
+    "quote": "killing the cat and shattering the ashtray",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the self",
+    "relation_to_threat": "self",
+    "detail": "May",
+    "quote": "May gouges out her lazy eye and places it into the doll's head",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "creation comes to life", "quote": "Her creation comes to life and caresses her face affectionately with Adam's hands", "confidence": "sourced"},
-   {"value": "self-mutilation", "quote": "Shrieking in pain and bleeding profusely, May begs the doll to \"see\" her", "confidence": "sourced"}
+   {
+    "value": "creation comes to life",
+    "quote": "Her creation comes to life and caresses her face affectionately with Adam's hands",
+    "confidence": "sourced"
+   },
+   {
+    "value": "self-mutilation",
+    "quote": "Shrieking in pain and bleeding profusely, May begs the doll to \"see\" her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:59",
+      "quote": "See me!"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "doll", "state": "glass-encased", "when": "opening", "role": "symbol", "quote": "a glass-encased doll named Suzie", "confidence": "sourced"},
-   {"value": "lazy eye", "when": "opening", "role": "symbol", "quote": "she endured bullying and ostracism due to her lazy eye", "confidence": "sourced"},
-   {"value": "hands", "when": "early", "role": "symbol", "quote": "finding his hands especially attractive", "confidence": "sourced"},
-   {"value": "blood", "state": "bitten lip", "when": "early", "role": "omen", "quote": "she bites Adam's lip, drawing blood", "confidence": "sourced"},
-   {"value": "cat", "state": "killed", "when": "middle", "role": "omen", "quote": "killing the cat and shattering the ashtray", "confidence": "sourced"},
-   {"value": "glass case", "state": "shattered", "when": "middle", "role": "turn", "quote": "ultimately shattering the case, injuring themselves and May", "confidence": "sourced"},
-   {"value": "scalpels", "when": "late", "role": "weapon", "quote": "slits Polly's throat with a pair of surgical scalpels", "confidence": "sourced"},
-   {"value": "patchwork doll", "state": "made of body parts", "when": "ending", "role": "symbol", "quote": "she sculpts a life-sized patchwork doll out of the punk's arms", "confidence": "sourced"}
+   {
+    "value": "doll",
+    "state": "glass-encased",
+    "when": "opening",
+    "role": "symbol",
+    "quote": "a glass-encased doll named Suzie",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:29",
+      "quote": "Suzie was the first doll I ever made."
+     }
+    ]
+   },
+   {
+    "value": "lazy eye",
+    "when": "opening",
+    "role": "symbol",
+    "quote": "she endured bullying and ostracism due to her lazy eye",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:16",
+      "quote": "Your lazy eye just needs a little help."
+     }
+    ]
+   },
+   {
+    "value": "pirate eye patch",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:01:27",
+    "quote": "Are you a pirate?",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:11",
+      "quote": "Do you want make friends? Then keep it covered."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "hands",
+    "when": "early",
+    "role": "symbol",
+    "quote": "finding his hands especially attractive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:12",
+      "quote": "Especially his hands."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:18:14",
+      "quote": "These hands are mine now, honey."
+     }
+    ]
+   },
+   {
+    "value": "injured dog",
+    "state": "lost a leg",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:09:43",
+    "quote": "When I left for vacation, my dog had four legs.",
+    "detail": "at the animal hospital where May works",
+    "confidence": "sourced"
+   },
+   {
+    "value": "blood",
+    "state": "bitten lip",
+    "when": "early",
+    "role": "omen",
+    "quote": "she bites Adam's lip, drawing blood",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cat",
+    "state": "killed",
+    "when": "middle",
+    "role": "omen",
+    "quote": "killing the cat and shattering the ashtray",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:36",
+      "quote": "(cat meows)"
+     }
+    ]
+   },
+   {
+    "value": "blind children",
+    "when": "middle",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:23:15",
+    "quote": "They're blind kids.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:20",
+      "quote": "They were blind."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "glass case",
+    "state": "shattered",
+    "when": "middle",
+    "role": "turn",
+    "quote": "ultimately shattering the case, injuring themselves and May",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:28",
+      "quote": "(glass cracking)"
+     }
+    ]
+   },
+   {
+    "value": "cracking glass",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:34:15",
+    "quote": "(glass cracking)",
+    "detail": "the sound of Suzie's case cracking returns whenever May is hurt",
+    "confidence": "sourced"
+   },
+   {
+    "value": "scalpels",
+    "when": "late",
+    "role": "weapon",
+    "quote": "slits Polly's throat with a pair of surgical scalpels",
+    "confidence": "sourced"
+   },
+   {
+    "value": "patchwork doll",
+    "state": "made of body parts",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "she sculpts a life-sized patchwork doll out of the punk's arms",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "lonely childhood", "when": "opening", "quote": "As a child, she endured bullying and ostracism due to her lazy eye", "confidence": "sourced"},
-   {"order": 2, "value": "infatuation", "when": "early", "quote": "May becomes infatuated with a local mechanic named Adam", "confidence": "sourced"},
-   {"order": 3, "value": "bite drives lover away", "when": "early", "role": "turn", "quote": "she bites Adam's lip, drawing blood", "confidence": "sourced"},
-   {"order": 4, "value": "pet killed in anger", "when": "middle", "quote": "May angrily throws Petey's ashtray at her, killing the cat", "confidence": "sourced"},
-   {"order": 5, "value": "doll destroyed", "when": "middle", "role": "turn", "quote": "shattering the case, injuring themselves and May, and destroying the doll", "confidence": "sourced"},
-   {"order": 6, "value": "first murder", "when": "late", "quote": "May breaks down and fatally stabs him in the head with scissors", "confidence": "sourced"},
-   {"order": 7, "value": "halloween killings", "when": "late", "quote": "On Halloween, May, dressed in a homemade costume resembling Suzie", "confidence": "sourced"},
-   {"order": 8, "value": "eye given to creation", "when": "ending", "quote": "May gouges out her lazy eye and places it into the doll's head", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "lonely childhood",
+    "when": "opening",
+    "quote": "As a child, she endured bullying and ostracism due to her lazy eye",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:11",
+      "quote": "Do you want make friends? Then keep it covered."
+     }
+    ]
+   },
+   {
+    "value": "doll given as gift",
+    "when": "opening",
+    "role": "trigger",
+    "source": "subtitles",
+    "at": "00:02:27",
+    "quote": "Her name is Suzie. Suzie was the first doll I ever made. She was my best friend.",
+    "confidence": "sourced",
+    "order": 2
+   },
+   {
+    "order": 3,
+    "value": "infatuation",
+    "when": "early",
+    "quote": "May becomes infatuated with a local mechanic named Adam",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:39",
+      "quote": "I love your hands."
+     }
+    ]
+   },
+   {
+    "value": "told she is weird",
+    "when": "early",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:26:38",
+    "quote": "I do think you're weird.",
+    "confidence": "sourced",
+    "order": 4
+   },
+   {
+    "order": 5,
+    "value": "bite drives lover away",
+    "when": "early",
+    "role": "turn",
+    "quote": "she bites Adam's lip, drawing blood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:34",
+      "quote": "Who taught you how to kiss?"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "pet killed in anger",
+    "when": "middle",
+    "quote": "May angrily throws Petey's ashtray at her, killing the cat",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "doll destroyed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "shattering the case, injuring themselves and May, and destroying the doll",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "first murder",
+    "when": "late",
+    "quote": "May breaks down and fatally stabs him in the head with scissors",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "halloween killings",
+    "when": "late",
+    "quote": "On Halloween, May, dressed in a homemade costume resembling Suzie",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:33",
+      "quote": "Hello, Polly, this is May. Happy Halloween."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "eye given to creation",
+    "when": "ending",
+    "quote": "May gouges out her lazy eye and places it into the doll's head",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:11",
+      "quote": "is see me."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

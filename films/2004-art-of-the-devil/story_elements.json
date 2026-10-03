@@ -1,59 +1,378 @@
 {
  "film": "2004-art-of-the-devil",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "black magic", "detail": "Boom, aided by a shaman", "quote": "Boom enlists the aid of a black magic shaman to exact revenge on her ex-lover", "confidence": "sourced"},
-   {"value": "ghosts of victims", "quote": "she sees the ghosts of her victims in the back of a car", "confidence": "sourced"}
+   {
+    "value": "black magic",
+    "detail": "Boom, aided by a shaman",
+    "quote": "Boom enlists the aid of a black magic shaman to exact revenge on her ex-lover",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:18",
+      "quote": "Believe me they were killed by the same black magic as Pratan's family."
+     }
+    ]
+   },
+   {
+    "value": "ghosts of victims",
+    "quote": "she sees the ghosts of her victims in the back of a car",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "wronged woman", "detail": "Boom, betrayed and gang-raped", "quote": "his friends chase a terrified and screaming Boom out of the room and onto the beach, where they humiliate and apparently gang-rape her", "confidence": "sourced"}
+   {
+    "value": "wronged woman",
+    "detail": "Boom, betrayed and gang-raped",
+    "quote": "his friends chase a terrified and screaming Boom out of the room and onto the beach, where they humiliate and apparently gang-rape her",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "revenge", "quote": "to exact revenge on her ex-lover, his friends (for the gang rape), and his entire family", "confidence": "sourced"},
-   {"value": "inheritance", "quote": "However, her motive this time is not for revenge, but in order to claim the inheritance", "confidence": "sourced"}
+   {
+    "value": "revenge",
+    "quote": "to exact revenge on her ex-lover, his friends (for the gang rape), and his entire family",
+    "confidence": "sourced"
+   },
+   {
+    "value": "inheritance",
+    "quote": "However, her motive this time is not for revenge, but in order to claim the inheritance",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:22",
+      "quote": "My baby and I will inherit the estate."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "gang rape", "quote": "he had the right to share her with his friends", "confidence": "sourced"},
-   {"value": "abandoned pregnant lover", "quote": "It is revealed that Prathan never had any intention to continue his affair with Boom after her pregnancy", "confidence": "sourced"}
+   {
+    "value": "gang rape",
+    "quote": "he had the right to share her with his friends",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:07",
+      "quote": "For one million baht, you have to be shared."
+     }
+    ]
+   },
+   {
+    "value": "abandoned pregnant lover",
+    "quote": "It is revealed that Prathan never had any intention to continue his affair with Boom after her pregnancy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:14",
+      "quote": "How do you know it's mine?"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "public humiliation", "quote": "Prathan drags Boom outside, slaps her, and warns her not to come near his family again", "confidence": "sourced"}
+   {
+    "value": "public humiliation",
+    "quote": "Prathan drags Boom outside, slaps her, and warns her not to come near his family again",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "appease spirits with offerings", "quote": "if she donates coffins equal to the number of victims for the spirits, they will not bother her", "confidence": "sourced"}
+   {
+    "value": "appease spirits with offerings",
+    "quote": "if she donates coffins equal to the number of victims for the spirits, they will not bother her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:17",
+      "quote": "Donate some coffins to the temple, equal to the number of deaths. Then the spirits won't bother you."
+     }
+    ]
+   },
+   {
+    "value": "poison acts on second meal",
+    "source": "subtitles",
+    "at": "00:48:42",
+    "quote": "Magic potions are poisons placed in food. The poisons act the next time the same food is eaten.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "answering the email curses you",
+    "source": "subtitles",
+    "at": "00:37:14",
+    "quote": "If you answer the spell will get you.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "family", "relation_to_threat": "family", "detail": "Prathan's children", "quote": "causing the second eldest son to shoot his girlfriend and his little sister before turning the gun on himself", "confidence": "sourced"},
-   {"value": "lover", "relation_to_threat": "lover", "detail": "Prathan", "quote": "Prathan was found dead at his beach house by his latest mistress", "confidence": "sourced"},
-   {"value": "investigator", "relation_to_threat": "stranger", "detail": "a young reporter", "quote": "A young newspaper reporter becomes suspicious, so Boom arranges for his death, as well", "confidence": "sourced"},
-   {"value": "heirs", "relation_to_threat": "family", "detail": "Kamala and her children", "quote": "She and her four children move into the house. Boom again uses black magic to kill this new family off", "confidence": "sourced"}
+   {
+    "value": "family",
+    "relation_to_threat": "family",
+    "detail": "Prathan's children",
+    "quote": "causing the second eldest son to shoot his girlfriend and his little sister before turning the gun on himself",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lover",
+    "relation_to_threat": "lover",
+    "detail": "Prathan",
+    "quote": "Prathan was found dead at his beach house by his latest mistress",
+    "confidence": "sourced"
+   },
+   {
+    "value": "investigator",
+    "relation_to_threat": "stranger",
+    "detail": "a young reporter",
+    "quote": "A young newspaper reporter becomes suspicious, so Boom arranges for his death, as well",
+    "confidence": "sourced"
+   },
+   {
+    "value": "heirs",
+    "relation_to_threat": "family",
+    "detail": "Kamala and her children",
+    "quote": "She and her four children move into the house. Boom again uses black magic to kill this new family off",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "avenger dies", "quote": "Boom voluntarily falls to her death from the roof of the hospital after seeing her daughter's ghost", "confidence": "sourced"},
-   {"value": "few survivors", "quote": "The story ends with only the youngest son, Bon and eldest daughter, Nan surviving the massacre", "confidence": "sourced"}
+   {
+    "value": "avenger dies",
+    "quote": "Boom voluntarily falls to her death from the roof of the hospital after seeing her daughter's ghost",
+    "confidence": "sourced"
+   },
+   {
+    "value": "few survivors",
+    "quote": "The story ends with only the youngest son, Bon and eldest daughter, Nan surviving the massacre",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "video camera", "when": "early", "role": "symbol", "quote": "While Prathan wields a video camera, his friends chase a terrified and screaming Boom", "confidence": "sourced"},
-   {"value": "beach", "when": "early", "role": "setting", "quote": "out of the room and onto the beach, where they humiliate and apparently gang-rape her", "confidence": "sourced"},
-   {"value": "ultrasound", "state": "abnormal baby", "when": "early", "role": "omen", "quote": "After getting an ultrasound at the hospital (revealing that her child has some abnormalities)", "confidence": "sourced"},
-   {"value": "gun", "when": "middle", "role": "weapon", "quote": "shoot his girlfriend and his little sister before turning the gun on himself", "confidence": "sourced"},
-   {"value": "coffins", "state": "donated as offering", "when": "middle", "role": "symbol", "quote": "if she donates coffins equal to the number of victims for the spirits", "confidence": "sourced"},
-   {"value": "ghost child", "when": "late", "role": "threat", "quote": "Throughout this, the ghost of Boom's dead daughter is seen around the house", "confidence": "sourced"}
+   {
+    "value": "video camera",
+    "when": "early",
+    "role": "symbol",
+    "quote": "While Prathan wields a video camera, his friends chase a terrified and screaming Boom",
+    "confidence": "sourced"
+   },
+   {
+    "value": "beach",
+    "when": "early",
+    "role": "setting",
+    "quote": "out of the room and onto the beach, where they humiliate and apparently gang-rape her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:48",
+      "quote": "Later Cha-am police found the architect, Pratan, also dead in his beach house."
+     }
+    ]
+   },
+   {
+    "value": "ultrasound",
+    "state": "abnormal baby",
+    "when": "early",
+    "role": "omen",
+    "quote": "After getting an ultrasound at the hospital (revealing that her child has some abnormalities)",
+    "confidence": "sourced"
+   },
+   {
+    "value": "gun",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "shoot his girlfriend and his little sister before turning the gun on himself",
+    "confidence": "sourced"
+   },
+   {
+    "value": "coffins",
+    "state": "donated as offering",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "if she donates coffins equal to the number of victims for the spirits",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:17",
+      "quote": "Donate some coffins to the temple, equal to the number of deaths."
+     }
+    ]
+   },
+   {
+    "value": "ghost child",
+    "when": "late",
+    "role": "threat",
+    "quote": "Throughout this, the ghost of Boom's dead daughter is seen around the house",
+    "confidence": "sourced"
+   },
+   {
+    "value": "nails in the body",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:16:11",
+    "quote": "Nails were also found near his body.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:30",
+      "quote": "Have you ever heard of cowhide or nails found inside people?"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "eels",
+    "when": "middle",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:43:45",
+    "quote": "She claims he was smothered by eels.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cursed email",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:37:03",
+    "quote": "We received a black magic email.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "affair and pregnancy", "when": "opening", "quote": "The two soon begin an affair, and Boom finds herself pregnant afterwards", "confidence": "sourced"},
-   {"order": 2, "value": "betrayal and assault", "when": "early", "role": "trigger", "quote": "he had the right to share her with his friends", "confidence": "sourced"},
-   {"order": 3, "value": "public rejection", "when": "early", "quote": "Prathan drags Boom outside, slaps her, and warns her not to come near his family again", "confidence": "sourced"},
-   {"order": 4, "value": "curse unleashed", "when": "middle", "role": "turn", "quote": "Boom enlists the aid of a black magic shaman to exact revenge on her ex-lover", "confidence": "sourced"},
-   {"order": 5, "value": "haunted by victims, loses child", "when": "middle", "quote": "whereupon she is hit by a car. The resulting accident causes her to lose her baby", "confidence": "sourced"},
-   {"order": 6, "value": "greed replaces revenge", "when": "late", "role": "turn", "quote": "her motive this time is not for revenge, but in order to claim the inheritance", "confidence": "sourced"},
-   {"order": 7, "value": "avenger's death", "when": "ending", "quote": "Boom voluntarily falls to her death from the roof of the hospital after seeing her daughter's ghost", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "flash-forward to family deaths",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:10",
+    "quote": "Get out of the house now! Your sister-in-law is the one!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "affair and pregnancy",
+    "when": "opening",
+    "quote": "The two soon begin an affair, and Boom finds herself pregnant afterwards",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:02",
+      "quote": "Are you sure you are pregnant?"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "betrayal and assault",
+    "when": "early",
+    "role": "trigger",
+    "quote": "he had the right to share her with his friends",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:07",
+      "quote": "For one million baht, you have to be shared."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "public rejection",
+    "when": "early",
+    "quote": "Prathan drags Boom outside, slaps her, and warns her not to come near his family again",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "curse unleashed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Boom enlists the aid of a black magic shaman to exact revenge on her ex-lover",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:59",
+      "quote": "Murder by witchcraft"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "cursed email arrives",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:37:03",
+    "quote": "We received a black magic email.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "haunted by victims, loses child",
+    "when": "middle",
+    "quote": "whereupon she is hit by a car. The resulting accident causes her to lose her baby",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "greed replaces revenge",
+    "when": "late",
+    "role": "turn",
+    "quote": "her motive this time is not for revenge, but in order to claim the inheritance",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:56",
+      "quote": "When you are dead, everything will be mine."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "avenger's death",
+    "when": "ending",
+    "quote": "Boom voluntarily falls to her death from the roof of the hospital after seeing her daughter's ghost",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "narrator vouches it is true",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:33:27",
+    "quote": "He was accused of being superstitious but I confirm that this is a true story.",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

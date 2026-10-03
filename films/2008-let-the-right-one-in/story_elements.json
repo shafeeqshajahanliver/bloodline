@@ -1,64 +1,490 @@
 {
  "film": "2008-let-the-right-one-in",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vampire", "detail": "Eli, who appears to be a 12-year-old girl", "quote": "Eli admits to being a vampire who must drink human blood to survive", "confidence": "sourced"},
-   {"value": "familiar who kills", "detail": "Håkan harvests blood for Eli", "quote": "Håkan kills a person on a footpath to harvest blood for Eli", "confidence": "sourced"},
-   {"value": "bullies", "quote": "His classmates bully him, and he spends his evenings imagining revenge", "confidence": "sourced"}
+   {
+    "value": "vampire",
+    "detail": "Eli, who appears to be a 12-year-old girl",
+    "quote": "Eli admits to being a vampire who must drink human blood to survive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:23",
+      "quote": "Are you a vampire? I live off blood... Yes."
+     }
+    ]
+   },
+   {
+    "value": "familiar who kills",
+    "detail": "Håkan harvests blood for Eli",
+    "quote": "Håkan kills a person on a footpath to harvest blood for Eli",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:39",
+      "quote": "murderer drained victim's blood"
+     }
+    ]
+   },
+   {
+    "value": "bullies",
+    "quote": "His classmates bully him, and he spends his evenings imagining revenge",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:35",
+      "quote": "Squeal! Squeal like a pig!"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "from outside", "detail": "newcomer next door", "quote": "Eli has moved into the adjoining apartment with a man, Håkan", "confidence": "sourced"}
+   {
+    "value": "from outside",
+    "detail": "newcomer next door",
+    "quote": "Eli has moved into the adjoining apartment with a man, Håkan",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "hunger", "quote": "Eli admits to being a vampire who must drink human blood to survive", "confidence": "sourced"},
-   {"value": "companionship", "quote": "they agree to \"go steady\", though Eli states, \"I'm not a girl\"", "confidence": "observed"}
+   {
+    "value": "hunger",
+    "quote": "Eli admits to being a vampire who must drink human blood to survive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:42",
+      "quote": "Oskar, I do it because I have to."
+     }
+    ]
+   },
+   {
+    "value": "companionship",
+    "quote": "they agree to \"go steady\", though Eli states, \"I'm not a girl\"",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:20",
+      "quote": "Do you want to go steady? Oskar, I'm not a girl."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "bullying", "quote": "Eli learns Oskar is being bullied by schoolmates and encourages him to stand up for himself", "confidence": "sourced"}
+   {
+    "value": "bullying",
+    "quote": "Eli learns Oskar is being bullied by schoolmates and encourages him to stand up for himself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:23",
+      "quote": "You've never hit them back... Have you?"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "new neighbour moves in", "quote": "One evening, he meets Eli, who appears to be a girl his age", "confidence": "sourced"}
+   {
+    "value": "new neighbour moves in",
+    "quote": "One evening, he meets Eli, who appears to be a girl his age",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:00",
+      "quote": "Do you live here?"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "must be invited", "quote": "Eli comes to Oskar's apartment and asks to be invited in, but he refuses. Eli then steps inside and starts to bleed profusely", "confidence": "sourced"},
-   {"value": "burned by sunlight", "quote": "she asks an orderly to open the blinds in her room, and bursts into flames", "confidence": "sourced"},
-   {"value": "victims turn", "quote": "She survives but discovers that exposure to sunlight burns her skin", "confidence": "observed"}
+   {
+    "value": "must be invited",
+    "quote": "Eli comes to Oskar's apartment and asks to be invited in, but he refuses. Eli then steps inside and starts to bleed profusely",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:16",
+      "quote": "You have to invite me in."
+     }
+    ]
+   },
+   {
+    "value": "entering uninvited harms her",
+    "source": "subtitles",
+    "at": "01:26:24",
+    "quote": "What happens if you come in anyway?",
+    "detail": "Oskar's question; she enters and starts to bleed until he says she can come in",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:36",
+      "quote": "You can come in!"
+     }
+    ]
+   },
+   {
+    "value": "burned by sunlight",
+    "quote": "she asks an orderly to open the blinds in her room, and bursts into flames",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:55",
+      "quote": "(Blinds Whizzing) (Screaming)"
+     }
+    ]
+   },
+   {
+    "value": "victims turn",
+    "quote": "She survives but discovers that exposure to sunlight burns her skin",
+    "confidence": "observed"
+   },
+   {
+    "value": "never ages",
+    "source": "subtitles",
+    "at": "01:19:53",
+    "quote": "I'm twelve. Though I've been 12 for a long time.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hit back harder than you dare",
+    "source": "subtitles",
+    "at": "00:37:42",
+    "quote": "Hit back harder than you dare. Then they'll stop.",
+    "detail": "Eli's rule for Oskar against the bullies",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "bullied boy", "relation_to_threat": "lover", "detail": "Oskar, 12", "quote": "a bullied 12-year-old boy who develops a friendship with a strange child", "confidence": "sourced"},
-   {"value": "locals", "relation_to_threat": "community", "detail": "Jocke, Virginia, Lacke", "quote": "Eli is prompted to waylay and kill a man, Jocke", "confidence": "sourced"},
-   {"value": "caretaker", "relation_to_threat": "family", "detail": "Håkan, drained by Eli", "quote": "Eli visits Håkan in the hospital, where he offers his own neck for feeding", "confidence": "sourced"},
-   {"value": "bullies", "relation_to_threat": "stranger", "quote": "Eli arrives and rescues him by killing and dismembering the bullies", "confidence": "sourced"}
+   {
+    "value": "bullied boy",
+    "relation_to_threat": "lover",
+    "detail": "Oskar, 12",
+    "quote": "a bullied 12-year-old boy who develops a friendship with a strange child",
+    "confidence": "sourced"
+   },
+   {
+    "value": "locals",
+    "relation_to_threat": "community",
+    "detail": "Jocke, Virginia, Lacke",
+    "quote": "Eli is prompted to waylay and kill a man, Jocke",
+    "confidence": "sourced"
+   },
+   {
+    "value": "caretaker",
+    "relation_to_threat": "family",
+    "detail": "Håkan, drained by Eli",
+    "quote": "Eli visits Håkan in the hospital, where he offers his own neck for feeding",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bullies",
+    "relation_to_threat": "stranger",
+    "quote": "Eli arrives and rescues him by killing and dismembering the bullies",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat escapes with victim", "detail": "Oskar leaves with Eli as new companion", "quote": "Oskar is seen travelling on a train, with Eli in a box beside him", "confidence": "sourced"},
-   {"value": "monster as protector", "quote": "Eli arrives and rescues him by killing and dismembering the bullies", "confidence": "sourced"}
+   {
+    "value": "threat escapes with victim",
+    "detail": "Oskar leaves with Eli as new companion",
+    "quote": "Oskar is seen travelling on a train, with Eli in a box beside him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:49:14",
+      "quote": "(Tapping Code)"
+     }
+    ]
+   },
+   {
+    "value": "monster as protector",
+    "quote": "Eli arrives and rescues him by killing and dismembering the bullies",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "shared wall", "state": "coded messages", "when": "opening", "role": "symbol", "quote": "the two begin exchanging coded messages through their shared wall", "confidence": "sourced"},
-   {"value": "hole in ice", "state": "body hidden", "when": "early", "role": "setting", "quote": "Håkan hides Jocke's body in a hole in the lake", "confidence": "sourced"},
-   {"value": "acid", "state": "on face", "when": "early", "role": "turn", "quote": "Håkan pours acid onto his own face to avoid identification", "confidence": "sourced"},
-   {"value": "blood", "state": "from cut hand", "when": "middle", "role": "turn", "quote": "Oskar suggests he and Eli should form a bond and cuts his hand. Eli laps up his blood", "confidence": "sourced"},
-   {"value": "sunlight", "state": "burning", "when": "middle", "role": "weapon", "quote": "open the blinds in her room, and bursts into flames", "confidence": "sourced"},
-   {"value": "bathtub", "state": "sleeping place", "when": "late", "role": "setting", "quote": "whom he finds asleep in the apartment's bathtub", "confidence": "sourced"},
-   {"value": "swimming pool", "when": "ending", "role": "setting", "quote": "One of the bullies holds Oskar under the water", "confidence": "sourced"},
-   {"value": "box", "state": "carrying the vampire", "when": "ending", "role": "symbol", "quote": "with Eli in a box beside him", "confidence": "sourced"}
+   {
+    "value": "shared wall",
+    "state": "coded messages",
+    "when": "opening",
+    "role": "symbol",
+    "quote": "the two begin exchanging coded messages through their shared wall",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:59",
+      "quote": "(Tapping Within)"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:33:42",
+      "quote": "Samuel Morse"
+     }
+    ]
+   },
+   {
+    "value": "rubik's cube",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:20:46",
+    "quote": "This? It's a Rubik's cube. Is it some kind of puzzle?",
+    "detail": "Oskar lends it to Eli, who solves it overnight",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hole in ice",
+    "state": "body hidden",
+    "when": "early",
+    "role": "setting",
+    "quote": "Håkan hides Jocke's body in a hole in the lake",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:47",
+      "quote": "I mean, ice hole!"
+     }
+    ]
+   },
+   {
+    "value": "acid",
+    "state": "on face",
+    "when": "early",
+    "role": "turn",
+    "quote": "Håkan pours acid onto his own face to avoid identification",
+    "confidence": "sourced"
+   },
+   {
+    "value": "blood",
+    "state": "from cut hand",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Oskar suggests he and Eli should form a bond and cuts his hand. Eli laps up his blood",
+    "confidence": "sourced"
+   },
+   {
+    "value": "farewell note",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:58:36",
+    "quote": "I must be gone and live, or stay and die. Yours Eli",
+    "detail": "a line from Romeo and Juliet, left twice",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sunlight",
+    "state": "burning",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "open the blinds in her room, and bursts into flames",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:55",
+      "quote": "(Blinds Whizzing)"
+     }
+    ]
+   },
+   {
+    "value": "cats",
+    "state": "attacking",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:17:22",
+    "quote": "What's happening with the cats?",
+    "detail": "a houseful of cats turns on Virginia after she is bitten",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bathtub",
+    "state": "sleeping place",
+    "when": "late",
+    "role": "setting",
+    "quote": "whom he finds asleep in the apartment's bathtub",
+    "confidence": "sourced"
+   },
+   {
+    "value": "swimming pool",
+    "when": "ending",
+    "role": "setting",
+    "quote": "One of the bullies holds Oskar under the water",
+    "confidence": "sourced"
+   },
+   {
+    "value": "box",
+    "state": "carrying the vampire",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "with Eli in a box beside him",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "lonely bullied child", "when": "opening", "quote": "His classmates bully him, and he spends his evenings imagining revenge", "confidence": "sourced"},
-   {"order": 2, "value": "strange neighbour arrives", "when": "opening", "role": "trigger", "quote": "Eli has moved into the adjoining apartment with a man, Håkan", "confidence": "sourced"},
-   {"order": 3, "value": "caretaker kills for blood", "when": "early", "quote": "Håkan kills a person on a footpath to harvest blood for Eli", "confidence": "sourced"},
-   {"order": 4, "value": "caretaker sacrifices himself", "when": "early", "quote": "Eli drains him of his blood, and Håkan falls out the window", "confidence": "sourced"},
-   {"order": 5, "value": "boy fights back", "when": "middle", "quote": "hits their leader in the head with a pole, injuring him", "confidence": "sourced"},
-   {"order": 6, "value": "monster's nature revealed", "when": "middle", "role": "turn", "quote": "Eli admits to being a vampire who must drink human blood to survive", "confidence": "sourced"},
-   {"order": 7, "value": "massacre of bullies", "when": "ending", "quote": "Eli arrives and rescues him by killing and dismembering the bullies", "confidence": "sourced"},
-   {"order": 8, "value": "leave together", "when": "ending", "quote": "Oskar is seen travelling on a train, with Eli in a box beside him", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "lonely bullied child",
+    "when": "opening",
+    "quote": "His classmates bully him, and he spends his evenings imagining revenge",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:05",
+      "quote": "Squeal like a pig. Squeal!"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "strange neighbour arrives",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Eli has moved into the adjoining apartment with a man, Håkan",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:12",
+      "quote": "How old are you? Twelve... about."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "caretaker kills for blood",
+    "when": "early",
+    "quote": "Håkan kills a person on a footpath to harvest blood for Eli",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:59",
+      "quote": "(Blade Rings, Gurgling)"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "caretaker sacrifices himself",
+    "when": "early",
+    "quote": "Eli drains him of his blood, and Håkan falls out the window",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "asking to come in",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:54:43",
+    "quote": "May I come in? Don't look at me. But say I can come in.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "boy fights back",
+    "when": "middle",
+    "quote": "hits their leader in the head with a pole, injuring him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:32",
+      "quote": "But I had a stick, And I hit Conny in the head"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "monster's nature revealed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Eli admits to being a vampire who must drink human blood to survive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:23",
+      "quote": "Are you a vampire? I live off blood..."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "cats attack a victim",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:17:22",
+    "quote": "What's happening with the cats?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "be me for a while",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:28:42",
+    "quote": "Be me, for a little while Please, Oskar...",
+    "detail": "Eli asks Oskar to understand her killing",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "massacre of bullies",
+    "when": "ending",
+    "quote": "Eli arrives and rescues him by killing and dismembering the bullies",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "leave together",
+    "when": "ending",
+    "quote": "Oskar is seen travelling on a train, with Eli in a box beside him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:49:14",
+      "quote": "(Tapping Code)"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

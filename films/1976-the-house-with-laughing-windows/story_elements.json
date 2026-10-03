@@ -1,45 +1,403 @@
 {
  "film": "1976-the-house-with-laughing-windows",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "serial killer", "detail": "an unknown murderer in the village", "quote": "some of the villagers are brutally killed – including his employer", "confidence": "sourced"},
-   {"value": "mad artist's family", "detail": "Legnani and his two sisters", "quote": "the artist – assisted by his two equally-insane sisters – had been a killer", "confidence": "sourced"}
+   {
+    "value": "serial killer",
+    "detail": "an unknown murderer in the village",
+    "quote": "some of the villagers are brutally killed – including his employer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:57",
+      "quote": "No, he's dead!"
+     }
+    ]
+   },
+   {
+    "value": "mad artist's family",
+    "detail": "Legnani and his two sisters",
+    "quote": "the artist – assisted by his two equally-insane sisters – had been a killer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:07",
+      "quote": "his sisters provided him with victims for his art."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "village secret", "quote": "the full truth behind the artist and his ominous legacy within the sleepy community", "confidence": "sourced"}
+   {
+    "value": "village secret",
+    "quote": "the full truth behind the artist and his ominous legacy within the sleepy community",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:17",
+      "quote": "Even today the sisters murdering through art."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to hide the truth", "quote": "their murderer is trying to deter him from discovering the full truth behind the artist", "confidence": "sourced"}
+   {
+    "value": "to hide the truth",
+    "quote": "their murderer is trying to deter him from discovering the full truth behind the artist",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:34",
+      "quote": "Go away. Leave the painting alone."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "torture murder for art", "quote": "a killer who brutally tortured people to death as inspiration for his horrific paintings", "confidence": "sourced"}
+   {
+    "value": "torture murder for art",
+    "quote": "a killer who brutally tortured people to death as inspiration for his horrific paintings",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:45",
+      "quote": "His sisters were devils. By painting death he was trying to control nature,"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "restoring an old artwork", "quote": "he has been employed to restore a fresco depicting what appears to be the martyrdom of Saint Sebastian", "confidence": "sourced"},
-   {"value": "arriving in a village", "quote": "Stefano (Lino Capolicchio) arrives in a village of the Valli di Comacchio area", "confidence": "sourced"}
+   {
+    "value": "restoring an old artwork",
+    "quote": "he has been employed to restore a fresco depicting what appears to be the martyrdom of Saint Sebastian",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:41",
+      "quote": "to restore the painting of St. Sebastian."
+     }
+    ]
+   },
+   {
+    "value": "arriving in a village",
+    "quote": "Stefano (Lino Capolicchio) arrives in a village of the Valli di Comacchio area",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:33",
+      "quote": "Anyway, welcome to our village."
+     }
+    ]
+   }
+  ],
+  "rules": [
+   {
+    "value": "painting death from life",
+    "detail": "the painter sought to reach the dead through ritual painting",
+    "source": "subtitles",
+    "at": "01:03:58",
+    "quote": "There's a possibility that a man today can communicate with the dead during the ritualistic painting.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "outsider", "relation_to_threat": "stranger", "detail": "restorer Stefano", "quote": "Stefano is discouraged for his task throughout the town", "confidence": "sourced"},
-   {"value": "villagers", "relation_to_threat": "community", "quote": "some of the villagers are brutally killed – including his employer", "confidence": "sourced"}
+   {
+    "value": "outsider",
+    "relation_to_threat": "stranger",
+    "detail": "restorer Stefano",
+    "quote": "Stefano is discouraged for his task throughout the town",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:01",
+      "quote": "You're my only hope."
+     }
+    ]
+   },
+   {
+    "value": "villagers",
+    "relation_to_threat": "community",
+    "quote": "some of the villagers are brutally killed – including his employer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:00",
+      "quote": "The death of Antonio, it's all too strange!"
+     }
+    ]
+   }
+  ],
+  "ending": [
+   {
+    "value": "betrayed by last ally",
+    "detail": "the priest Stefano runs to is the second sister",
+    "source": "subtitles",
+    "at": "01:43:05",
+    "quote": "That's a nasty wound. It would make a nice portrait.",
+    "confidence": "observed"
+   },
+   {
+    "value": "threat survives",
+    "source": "subtitles",
+    "at": "01:43:07",
+    "quote": "It would make a nice portrait. Legnani would make a masterpiece out of it!",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "fresco", "state": "on a rotting wall", "when": "opening", "role": "clue", "quote": "which has been painted on a rotting wall of the local church", "confidence": "sourced"},
-   {"value": "martyred saint", "when": "opening", "role": "symbol", "quote": "a fresco depicting what appears to be the martyrdom of Saint Sebastian", "confidence": "sourced"},
-   {"value": "church", "when": "opening", "role": "setting", "quote": "painted on a rotting wall of the local church by a mysterious, long-dead artist named Legnani", "confidence": "sourced"},
-   {"value": "house", "state": "sisters' former home", "when": "early", "role": "setting", "quote": "the house that had been previously owned by the two sisters of the deceased painter", "confidence": "sourced"}
+   {
+    "value": "fresco",
+    "state": "on a rotting wall",
+    "when": "opening",
+    "role": "clue",
+    "quote": "which has been painted on a rotting wall of the local church",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:02",
+      "quote": "was painted by the great Legnani. He left it unfinished, it needs to be restored..."
+     }
+    ]
+   },
+   {
+    "value": "martyred saint",
+    "when": "opening",
+    "role": "symbol",
+    "quote": "a fresco depicting what appears to be the martyrdom of Saint Sebastian",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:56",
+      "quote": "Everybody says the artist is a sensitive genius but all he does is paint death..."
+     }
+    ]
+   },
+   {
+    "value": "church",
+    "when": "opening",
+    "role": "setting",
+    "quote": "painted on a rotting wall of the local church by a mysterious, long-dead artist named Legnani",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:46",
+      "quote": "Yes, this church used to be used by the SS."
+     }
+    ]
+   },
+   {
+    "value": "house",
+    "state": "sisters' former home",
+    "when": "early",
+    "role": "setting",
+    "quote": "the house that had been previously owned by the two sisters of the deceased painter",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:06",
+      "quote": "It's a house with laughing windows."
+     }
+    ]
+   },
+   {
+    "value": "tape recording",
+    "state": "a dying man's voice",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:00",
+    "quote": "My colors, my colors... They run hot in my veins...",
+    "confidence": "sourced",
+    "detail": "the painter's chant opens the film; Antonio's tape of it is played and later destroyed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:14",
+      "quote": "This tape was important to me, bitch."
+     }
+    ]
+   },
+   {
+    "value": "telephone threats",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:09:56",
+    "quote": "Hello. Go away.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:07",
+      "quote": "Don't touch the painting!"
+     }
+    ]
+   },
+   {
+    "value": "fire",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:09:11",
+    "quote": "He forced them to watch as he covered his body with alcohol and set himself on fire.",
+    "confidence": "sourced",
+    "detail": "how the painter supposedly died; his body was never found"
+   },
+   {
+    "value": "body in formaldehyde",
+    "when": "ending",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "01:37:43",
+    "quote": "Do you know how we keep him? Formaldehyde.",
+    "confidence": "sourced",
+    "detail": "the sisters keep the painter's corpse"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "outsider arrives for a job", "when": "opening", "quote": "Stefano (Lino Capolicchio) arrives in a village of the Valli di Comacchio area", "confidence": "sourced"},
-   {"order": 2, "value": "romance begins", "when": "early", "quote": "Stefano begins a romance with a new, beautiful schoolteacher, Francesca", "confidence": "sourced"},
-   {"order": 3, "value": "dark history learned", "when": "middle", "role": "clue", "quote": "the painter had been a madman who had derived his art from real life", "confidence": "sourced"},
-   {"order": 4, "value": "murders begin", "when": "late", "quote": "some of the villagers are brutally killed – including his employer", "confidence": "sourced"},
-   {"order": 5, "value": "suspects a cover-up", "when": "ending", "role": "turn", "quote": "he comes to suspect that their murderer is trying to deter him from discovering the full truth", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "dying chant over credits",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:00",
+    "quote": "My colors, my colors... They run hot in my veins...",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "outsider arrives for a job",
+    "when": "opening",
+    "quote": "Stefano (Lino Capolicchio) arrives in a village of the Valli di Comacchio area",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:33",
+      "quote": "Anyway, welcome to our village."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "threatening phone call",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:09:56",
+    "quote": "Hello. Go away.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "romance begins",
+    "when": "early",
+    "quote": "Stefano begins a romance with a new, beautiful schoolteacher, Francesca",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:01",
+      "quote": "Antonio says you're a teacher, is that right?"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "dark history learned",
+    "when": "middle",
+    "role": "clue",
+    "quote": "the painter had been a madman who had derived his art from real life",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:07",
+      "quote": "Blood and colors mixed together in his tortured brain."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "murders begin",
+    "when": "late",
+    "quote": "some of the villagers are brutally killed – including his employer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:57",
+      "quote": "No, he's dead!"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "suspects a cover-up",
+    "when": "ending",
+    "role": "turn",
+    "quote": "he comes to suspect that their murderer is trying to deter him from discovering the full truth",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:05",
+      "quote": "I know what's going on here, it's them."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "sisters show the preserved brother",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:37:04",
+    "quote": "See, it's my little brother. He will return to us soon.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "priest revealed as sister",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:43:05",
+    "quote": "That's a nasty wound. It would make a nice portrait.",
+    "confidence": "observed"
+   }
   ]
  },
- "not_stated": ["rules", "ending"],
+ "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

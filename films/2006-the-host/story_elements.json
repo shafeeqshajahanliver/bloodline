@@ -1,63 +1,426 @@
 {
  "film": "2006-the-host",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes and interpretations"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes and interpretations"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "river creature", "quote": "a large creature emerges from the Han River and storms through the park, attacking and killing people", "confidence": "sourced"},
-   {"value": "uncaring authorities", "quote": "The Host is also critical of the South Korean government, which is portrayed as bureaucratic, inept, and essentially uncaring", "confidence": "sourced"}
+   {
+    "value": "river creature",
+    "quote": "a large creature emerges from the Han River and storms through the park, attacking and killing people",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:07",
+      "quote": "[CREATURE ROARING]"
+     }
+    ]
+   },
+   {
+    "value": "uncaring authorities",
+    "quote": "The Host is also critical of the South Korean government, which is portrayed as bureaucratic, inept, and essentially uncaring",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:00",
+      "quote": "To save time, we'll let the news serve as explanation."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "pollution", "detail": "formaldehyde dumped by a US military pathologist", "quote": "an American pathologist orders his Korean assistant to dump hundreds of bottles containing formaldehyde down a drain which leads to the Han River", "confidence": "sourced"}
+   {
+    "value": "pollution",
+    "detail": "formaldehyde dumped by a US military pathologist",
+    "quote": "an American pathologist orders his Korean assistant to dump hundreds of bottles containing formaldehyde down a drain which leads to the Han River",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:25",
+      "quote": "Let's just dump them in the Han River."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "hunger", "quote": "two homeless boys, Se-jin and Se-joo, are attacked and swallowed by the creature", "confidence": "sourced"}
+   {
+    "value": "hunger",
+    "quote": "two homeless boys, Se-jin and Se-joo, are attacked and swallowed by the creature",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "environmental crime", "quote": "In the South, environmental crimes by the U.S. troops are very serious", "confidence": "sourced"},
-   {"value": "official cover-up", "quote": "the virus is a hoax invented to distract the public from the creature's origin", "confidence": "sourced"}
+   {
+    "value": "environmental crime",
+    "quote": "In the South, environmental crimes by the U.S. troops are very serious",
+    "confidence": "sourced"
+   },
+   {
+    "value": "official cover-up",
+    "quote": "the virus is a hoax invented to distract the public from the creature's origin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:24",
+      "quote": "Simply put, so far, there is no virus whatsoever."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "creature attack", "quote": "The monster snatches Hyun-seo and dives back into the river", "confidence": "sourced"}
+   {
+    "value": "creature attack",
+    "quote": "The monster snatches Hyun-seo and dives back into the river",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "unharmed by bullets", "quote": "Seemingly unharmed by the bullets, the creature kills Hee-bong and runs off", "confidence": "sourced"},
-   {"value": "stunned by chemical, killed by fire", "quote": "They set it ablaze, and Gang-du impales it with a pole, finally killing it", "confidence": "sourced"}
+   {
+    "value": "unharmed by bullets",
+    "quote": "Seemingly unharmed by the bullets, the creature kills Hee-bong and runs off",
+    "confidence": "sourced"
+   },
+   {
+    "value": "stunned by chemical, killed by fire",
+    "quote": "They set it ablaze, and Gang-du impales it with a pole, finally killing it",
+    "confidence": "sourced"
+   },
+   {
+    "value": "said to carry a virus",
+    "detail": "the official claim that the creature is a virus host, later shown to be false",
+    "source": "subtitles",
+    "at": "00:29:06",
+    "quote": "is the host of this deadly new virus.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "daughter", "relation_to_threat": "stranger", "detail": "Hyun-seo, taken by the creature", "quote": "food stand vendor Park Gang-du whose daughter Hyun-seo (Go Ah-sung) is kidnapped by a creature", "confidence": "sourced"},
-   {"value": "family", "relation_to_threat": "stranger", "detail": "the Parks", "quote": "the government has placed a bounty on his family", "confidence": "sourced"},
-   {"value": "homeless children", "relation_to_threat": "stranger", "quote": "two homeless boys, Se-jin and Se-joo, are attacked and swallowed by the creature", "confidence": "sourced"},
-   {"value": "grandfather", "relation_to_threat": "stranger", "detail": "Hee-bong", "quote": "the creature kills Hee-bong and runs off", "confidence": "sourced"}
+   {
+    "value": "daughter",
+    "relation_to_threat": "stranger",
+    "detail": "Hyun-seo, taken by the creature",
+    "quote": "food stand vendor Park Gang-du whose daughter Hyun-seo (Go Ah-sung) is kidnapped by a creature",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:35",
+      "quote": "Hyun-seo, I'm sorry. Daddy..."
+     }
+    ]
+   },
+   {
+    "value": "family",
+    "relation_to_threat": "stranger",
+    "detail": "the Parks",
+    "quote": "the government has placed a bounty on his family",
+    "confidence": "sourced"
+   },
+   {
+    "value": "homeless children",
+    "relation_to_threat": "stranger",
+    "quote": "two homeless boys, Se-jin and Se-joo, are attacked and swallowed by the creature",
+    "confidence": "sourced"
+   },
+   {
+    "value": "grandfather",
+    "relation_to_threat": "stranger",
+    "detail": "Hee-bong",
+    "quote": "the creature kills Hee-bong and runs off",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "Gang-du impales it with a pole, finally killing it", "confidence": "sourced"},
-   {"value": "child lost", "quote": "discovering that she has died while clutching Se-joo, who is unconscious but alive", "confidence": "sourced"},
-   {"value": "new family formed", "quote": "Gang-du has inherited his father's snack bar and adopted Se-joo", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "Gang-du impales it with a pole, finally killing it",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child lost",
+    "quote": "discovering that she has died while clutching Se-joo, who is unconscious but alive",
+    "confidence": "sourced"
+   },
+   {
+    "value": "new family formed",
+    "quote": "Gang-du has inherited his father's snack bar and adopted Se-joo",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:53:23",
+      "quote": "Let's eat."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "formaldehyde bottles", "state": "dumped down drain", "when": "opening", "role": "omen", "quote": "dump hundreds of bottles containing formaldehyde down a drain", "confidence": "sourced"},
-   {"value": "river", "when": "opening", "role": "setting", "quote": "several sightings of a strange amphibious creature in the waterway around Seoul occur", "confidence": "sourced"},
-   {"value": "letting go of a hand", "when": "early", "role": "turn", "quote": "grabs his daughter and joins the fleeing crowd, but inadvertently lets go of her hand", "confidence": "sourced"},
-   {"value": "phone", "state": "battery dying", "when": "middle", "role": "clue", "quote": "she is trapped in the sewers with the creature, but then her phone runs out of battery", "confidence": "sourced"},
-   {"value": "sewer lair", "when": "middle", "role": "setting", "quote": "It returns to its lair in the sewer and regurgitates them", "confidence": "sourced"},
-   {"value": "rope of victims' clothes", "when": "late", "role": "symbol", "quote": "using a rope she has made from the victims' clothes", "confidence": "sourced"},
-   {"value": "arm dangling from mouth", "when": "late", "role": "threat", "quote": "sees Hyun-seo's arm dangling from its mouth", "confidence": "sourced"},
-   {"value": "toxic chemical", "state": "released", "when": "late", "role": "weapon", "quote": "Agent Yellow is released, stunning the beast", "confidence": "sourced"}
+   {
+    "value": "formaldehyde bottles",
+    "state": "dumped down drain",
+    "when": "opening",
+    "role": "omen",
+    "quote": "dump hundreds of bottles containing formaldehyde down a drain",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:50",
+      "quote": "Every bottle is coated with layers of dust."
+     }
+    ]
+   },
+   {
+    "value": "river",
+    "when": "opening",
+    "role": "setting",
+    "quote": "several sightings of a strange amphibious creature in the waterway around Seoul occur",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:20",
+      "quote": "Something dark in the water."
+     }
+    ]
+   },
+   {
+    "value": "letting go of a hand",
+    "when": "early",
+    "role": "turn",
+    "quote": "grabs his daughter and joins the fleeing crowd, but inadvertently lets go of her hand",
+    "confidence": "sourced"
+   },
+   {
+    "value": "phone",
+    "state": "battery dying",
+    "when": "middle",
+    "role": "clue",
+    "quote": "she is trapped in the sewers with the creature, but then her phone runs out of battery",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:36",
+      "quote": "Can you hear me? My battery is... Hello?"
+     }
+    ]
+   },
+   {
+    "value": "sewer lair",
+    "when": "middle",
+    "role": "setting",
+    "quote": "It returns to its lair in the sewer and regurgitates them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:56",
+      "quote": "It's like a big sewer. Really big and deep."
+     }
+    ]
+   },
+   {
+    "value": "rope of victims' clothes",
+    "when": "late",
+    "role": "symbol",
+    "quote": "using a rope she has made from the victims' clothes",
+    "confidence": "sourced"
+   },
+   {
+    "value": "arm dangling from mouth",
+    "when": "late",
+    "role": "threat",
+    "quote": "sees Hyun-seo's arm dangling from its mouth",
+    "confidence": "sourced"
+   },
+   {
+    "value": "toxic chemical",
+    "state": "released",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Agent Yellow is released, stunning the beast",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:41:43",
+      "quote": "Agent Yellow will be released in five minutes."
+     }
+    ]
+   },
+   {
+    "value": "small mutant creature",
+    "state": "swimming away",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:04:42",
+    "quote": "How many tails does that thing have?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cans thrown to the creature",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:13:10",
+    "quote": "Did you see that? He ate the can!",
+    "confidence": "sourced"
+   },
+   {
+    "value": "archer's bow",
+    "when": "early",
+    "role": "weapon",
+    "detail": "Nam-joo's archery, first seen failing on TV and later used against the creature",
+    "source": "subtitles",
+    "at": "00:17:19",
+    "quote": "Ooh, now is not the time to lower her bow.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "toxic dumping", "when": "opening", "role": "omen", "quote": "an American pathologist orders his Korean assistant to dump hundreds of bottles containing formaldehyde", "confidence": "sourced"},
-   {"order": 2, "value": "creature attacks in daylight", "when": "early", "quote": "a large creature emerges from the Han River and storms through the park", "confidence": "sourced"},
-   {"order": 3, "value": "child taken", "when": "early", "role": "trigger", "quote": "The monster snatches Hyun-seo and dives back into the river", "confidence": "sourced"},
-   {"order": 4, "value": "call from the missing", "when": "middle", "role": "turn", "quote": "In the hospital, Gang-du receives a phone call from Hyun-seo", "confidence": "sourced"},
-   {"order": 5, "value": "family member killed", "when": "middle", "quote": "the creature kills Hee-bong and runs off", "confidence": "sourced"},
-   {"order": 6, "value": "cover-up exposed", "when": "middle", "role": "turn", "quote": "the virus is a hoax invented to distract the public from the creature's origin", "confidence": "sourced"},
-   {"order": 7, "value": "family kills creature", "when": "late", "quote": "They set it ablaze, and Gang-du impales it with a pole, finally killing it", "confidence": "sourced"},
-   {"order": 8, "value": "quiet aftermath", "when": "ending", "quote": "He and Se-joo share a meal, ignoring a news broadcast", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "toxic dumping",
+    "when": "opening",
+    "role": "omen",
+    "quote": "an American pathologist orders his Korean assistant to dump hundreds of bottles containing formaldehyde",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:09",
+      "quote": "Pour them right down the drain, Mr. Kim."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "man leaps into the river",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:05:20",
+    "quote": "Something dark in the water. You really didn't see it?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "creature attacks in daylight",
+    "when": "early",
+    "quote": "a large creature emerges from the Han River and storms through the park",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:10",
+      "quote": "Did you see that? He ate the can!"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "child taken",
+    "when": "early",
+    "role": "trigger",
+    "quote": "The monster snatches Hyun-seo and dives back into the river",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:30",
+      "quote": "[LOUD SPLASH]"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "public mourning",
+    "when": "early",
+    "source": "subtitles",
+    "at": "00:22:48",
+    "quote": "[WAILING, SOBBING]",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "call from the missing",
+    "when": "middle",
+    "role": "turn",
+    "quote": "In the hospital, Gang-du receives a phone call from Hyun-seo",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:36",
+      "quote": "Can you hear me? My battery is... Hello?"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "family member killed",
+    "when": "middle",
+    "quote": "the creature kills Hee-bong and runs off",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "cover-up exposed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "the virus is a hoax invented to distract the public from the creature's origin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:08",
+      "quote": "and no virus was found."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "family kills creature",
+    "when": "late",
+    "quote": "They set it ablaze, and Gang-du impales it with a pole, finally killing it",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "quiet aftermath",
+    "when": "ending",
+    "quote": "He and Se-joo share a meal, ignoring a news broadcast",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:53:47",
+      "quote": "A moment ago, at 11: 30 p.m., the U.S. Senate Investigating Committee"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

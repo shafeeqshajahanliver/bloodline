@@ -1,62 +1,409 @@
 {
  "film": "2021-you-are-not-my-mother",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "changeling", "detail": "the \"new\" Angela", "quote": "Rita tells Char that the \"new\" Angela is also a changeling", "confidence": "sourced"},
-   {"value": "returned relative changed", "quote": "Angela returns within a few days, strangely altered", "confidence": "sourced"}
+   {
+    "value": "changeling",
+    "detail": "the \"new\" Angela",
+    "quote": "Rita tells Char that the \"new\" Angela is also a changeling",
+    "confidence": "sourced"
+   },
+   {
+    "value": "returned relative changed",
+    "quote": "Angela returns within a few days, strangely altered",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "swapped by otherworldly beings", "quote": "when Char was a baby, Rita realized she had been swapped with a “changeling”", "confidence": "sourced"}
+   {
+    "value": "swapped by otherworldly beings",
+    "quote": "when Char was a baby, Rita realized she had been swapped with a “changeling”",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:06",
+      "quote": "You were swapped."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to replace someone", "quote": "this is not the \"real\" Angela. The changeling kills Rita", "confidence": "observed"}
+   {
+    "value": "to replace someone",
+    "quote": "this is not the \"real\" Angela. The changeling kills Rita",
+    "confidence": "observed"
+   },
+   {
+    "value": "to take the child away",
+    "source": "subtitles",
+    "at": "01:23:31",
+    "quote": "You can come with me. There is a place, where there is no pain.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:46",
+      "quote": "Don't you want to see your mother again?"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "family secret", "quote": "Her family told her the resultant scar was a birthmark", "confidence": "sourced"}
+   {
+    "value": "family secret",
+    "quote": "Her family told her the resultant scar was a birthmark",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "disappearance", "quote": "Her car is later found abandoned, with no sign of Angela", "confidence": "sourced"}
+   {
+    "value": "disappearance",
+    "quote": "Her car is later found abandoned, with no sign of Angela",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "weak to fire", "quote": "The only way to get the real Char back was to place her near fire", "confidence": "sourced"},
-   {"value": "fire ritual restores the real person", "quote": "the fire ritual must be repeated to get the real Angela back", "confidence": "sourced"},
-   {"value": "protective token", "quote": "Char makes her a lucky token from twigs \"to keep her safe\"", "confidence": "sourced"}
+   {
+    "value": "weak to fire",
+    "quote": "The only way to get the real Char back was to place her near fire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:29",
+      "quote": "We need to weaken her, bring her to a fire. See if she turns."
+     }
+    ]
+   },
+   {
+    "value": "fire ritual restores the real person",
+    "quote": "the fire ritual must be repeated to get the real Angela back",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:13",
+      "quote": "To send a changeling back... you must bring it to a fire."
+     }
+    ]
+   },
+   {
+    "value": "protective token",
+    "quote": "Char makes her a lucky token from twigs \"to keep her safe\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:27",
+      "quote": "What are you making? It's for protection."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "teenage daughter", "relation_to_threat": "family", "detail": "Char", "quote": "a young woman at odds with her grandmother Rita (Ingrid Craigie) after her mother Angela (Carolyn Bracken) briefly goes missing", "confidence": "sourced"},
-   {"value": "grandmother", "relation_to_threat": "family", "detail": "Rita", "quote": "this is not the \"real\" Angela. The changeling kills Rita", "confidence": "sourced"},
-   {"value": "uncle", "relation_to_threat": "family", "detail": "Aaron", "quote": "Her uncle Aaron is poisoned by Angela, which leads to him being hospitalized", "confidence": "sourced"},
-   {"value": "depressed mother", "relation_to_threat": "family", "quote": "Angela is depressed and spends much of her time in bed", "confidence": "sourced"}
+   {
+    "value": "teenage daughter",
+    "relation_to_threat": "family",
+    "detail": "Char",
+    "quote": "a young woman at odds with her grandmother Rita (Ingrid Craigie) after her mother Angela (Carolyn Bracken) briefly goes missing",
+    "confidence": "sourced"
+   },
+   {
+    "value": "grandmother",
+    "relation_to_threat": "family",
+    "detail": "Rita",
+    "quote": "this is not the \"real\" Angela. The changeling kills Rita",
+    "confidence": "sourced"
+   },
+   {
+    "value": "uncle",
+    "relation_to_threat": "family",
+    "detail": "Aaron",
+    "quote": "Her uncle Aaron is poisoned by Angela, which leads to him being hospitalized",
+    "confidence": "sourced"
+   },
+   {
+    "value": "depressed mother",
+    "relation_to_threat": "family",
+    "quote": "Angela is depressed and spends much of her time in bed",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed by fire", "quote": "Angela burns while Char is rescued from the flames by Suzanne", "confidence": "sourced"},
-   {"value": "loved one restored", "quote": "Angela is restored to her true self", "confidence": "sourced"}
+   {
+    "value": "threat destroyed by fire",
+    "quote": "Angela burns while Char is rescued from the flames by Suzanne",
+    "confidence": "sourced"
+   },
+   {
+    "value": "loved one restored",
+    "quote": "Angela is restored to her true self",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "ring of fire", "state": "around a baby", "when": "opening", "role": "omen", "quote": "Rita sits the baby on the ground and lights a ring of fire around her", "confidence": "sourced"},
-   {"value": "woods", "when": "opening", "role": "setting", "quote": "In the woods, Rita sits the baby on the ground", "confidence": "sourced"},
-   {"value": "abandoned car", "when": "early", "role": "trigger", "quote": "Her car is later found abandoned, with no sign of Angela", "confidence": "sourced"},
-   {"value": "pan of soup", "state": "upset", "when": "early", "role": "clue", "quote": "deliberately upsets the pan of soup that Angela had prepared", "confidence": "sourced"},
-   {"value": "scar", "state": "called a birthmark", "when": "middle", "role": "clue", "quote": "Char sustained a small burn to her cheek. Her family told her the resultant scar was a birthmark", "confidence": "sourced"},
-   {"value": "bound mother", "state": "tied to a bed", "when": "late", "role": "turn", "quote": "when she sees Angela bound and gagged and tied to a bed she is appalled", "confidence": "sourced"},
-   {"value": "halloween bonfire", "state": "set alight", "when": "ending", "role": "weapon", "quote": "Angela pushes her way into the bonfire to get to Char, but Char sets the structure alight", "confidence": "sourced"},
-   {"value": "twig token", "when": "ending", "role": "symbol", "quote": "Char makes her a lucky token from twigs", "confidence": "sourced"}
+   {
+    "value": "ring of fire",
+    "state": "around a baby",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Rita sits the baby on the ground and lights a ring of fire around her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "woods",
+    "when": "opening",
+    "role": "setting",
+    "quote": "In the woods, Rita sits the baby on the ground",
+    "confidence": "sourced"
+   },
+   {
+    "value": "horse in the road",
+    "when": "early",
+    "role": "omen",
+    "detail": "the mother stops the car and stares before she vanishes",
+    "source": "subtitles",
+    "at": "00:06:49",
+    "quote": "(horse snorts)",
+    "confidence": "sourced"
+   },
+   {
+    "value": "abandoned car",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Her car is later found abandoned, with no sign of Angela",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pan of soup",
+    "state": "upset",
+    "when": "early",
+    "role": "clue",
+    "quote": "deliberately upsets the pan of soup that Angela had prepared",
+    "confidence": "sourced"
+   },
+   {
+    "value": "carved pumpkin",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:30:41",
+    "quote": "You used the pumpkin.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:41",
+      "quote": "Aaron got us that to carve for Halloween."
+     }
+    ]
+   },
+   {
+    "value": "scar",
+    "state": "called a birthmark",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Char sustained a small burn to her cheek. Her family told her the resultant scar was a birthmark",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:35",
+      "quote": "Is this about my scar, Granny? It's not a birthmark."
+     }
+    ]
+   },
+   {
+    "value": "cat thrown in bonfire",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:52:41",
+    "quote": "A fellow threw a cat into our bonfire last year.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bound mother",
+    "state": "tied to a bed",
+    "when": "late",
+    "role": "turn",
+    "quote": "when she sees Angela bound and gagged and tied to a bed she is appalled",
+    "confidence": "sourced"
+   },
+   {
+    "value": "halloween bonfire",
+    "state": "set alight",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "Angela pushes her way into the bonfire to get to Char, but Char sets the structure alight",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:33",
+      "quote": "Uh, we still share some traditions with our ancestors, like bonfires,"
+     }
+    ]
+   },
+   {
+    "value": "twig token",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "Char makes her a lucky token from twigs",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:47",
+      "quote": "Thank you. It'll keep you safe."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "baby placed in fire ring", "when": "opening", "role": "omen", "quote": "lights a ring of fire around her. She watches as the baby screams", "confidence": "sourced"},
-   {"order": 2, "value": "mother vanishes", "when": "early", "role": "trigger", "quote": "Her car is later found abandoned, with no sign of Angela", "confidence": "sourced"},
-   {"order": 3, "value": "mother returns changed", "when": "early", "quote": "Her depression is gone, and she is cheerful, dressing up and cooking dinner for the family", "confidence": "sourced"},
-   {"order": 4, "value": "family member poisoned", "when": "middle", "quote": "Her uncle Aaron is poisoned by Angela", "confidence": "sourced"},
-   {"order": 5, "value": "family secret told", "when": "middle", "role": "turn", "quote": "One evening, Rita tells Char the story of her past", "confidence": "sourced"},
-   {"order": 6, "value": "warning ignored, elder killed", "when": "late", "role": "turn", "quote": "Char frees Angela, only to realize too late that Rita spoke the truth", "confidence": "sourced"},
-   {"order": 7, "value": "creature burned", "when": "ending", "quote": "Angela burns while Char is rescued from the flames by Suzanne", "confidence": "sourced"},
-   {"order": 8, "value": "family restored", "when": "ending", "quote": "Mother and daughter are happy to be together again", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "baby placed in fire ring",
+    "when": "opening",
+    "role": "omen",
+    "quote": "lights a ring of fire around her. She watches as the baby screams",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:55",
+      "quote": "Mam? Mam!"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "mother vanishes",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Her car is later found abandoned, with no sign of Angela",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:24",
+      "quote": "I don't think I can do this anymore."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "mother returns changed",
+    "when": "early",
+    "quote": "Her depression is gone, and she is cheerful, dressing up and cooking dinner for the family",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "family member poisoned",
+    "when": "middle",
+    "quote": "Her uncle Aaron is poisoned by Angela",
+    "confidence": "sourced"
+   },
+   {
+    "value": "samhain lesson at school",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:51:57",
+    "quote": "Samhain is just around the corner. Or Halloween as we know it now.",
+    "confidence": "sourced",
+    "order": 5
+   },
+   {
+    "order": 6,
+    "value": "family secret told",
+    "when": "middle",
+    "role": "turn",
+    "quote": "One evening, Rita tells Char the story of her past",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:06",
+      "quote": "You were swapped."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "warning ignored, elder killed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Char frees Angela, only to realize too late that Rita spoke the truth",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bullies try to burn her",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:21:25",
+    "quote": "I think it's time we finished what your mam started.",
+    "confidence": "sourced",
+    "order": 8
+   },
+   {
+    "value": "changeling's offer",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:23:31",
+    "quote": "You can come with me.",
+    "confidence": "sourced",
+    "order": 9
+   },
+   {
+    "order": 10,
+    "value": "creature burned",
+    "when": "ending",
+    "quote": "Angela burns while Char is rescued from the flames by Suzanne",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:52",
+      "quote": "You... are not my mother."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "family restored",
+    "when": "ending",
+    "quote": "Mother and daughter are happy to be together again",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:33",
+      "quote": "It's for protection."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

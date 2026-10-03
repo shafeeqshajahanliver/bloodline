@@ -1,63 +1,536 @@
 {
  "film": "2011-the-cabin-in-the-woods",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "secret organisation", "detail": "technicians in an underground facility", "quote": "technicians manipulate events from an underground facility for a global purpose", "confidence": "sourced"},
-   {"value": "zombies", "detail": "the Buckner family", "quote": "inadvertently awakens the whole Buckner family as zombies", "confidence": "sourced"},
-   {"value": "ancient gods", "detail": "the Ancient Ones", "quote": "the Ancient Ones, a group of cruel subterranean deities", "confidence": "sourced"}
+   {
+    "value": "secret organisation",
+    "detail": "technicians in an underground facility",
+    "quote": "technicians manipulate events from an underground facility for a global purpose",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:19",
+      "quote": "Japan has a perfect record. - We're # 2. We try harder."
+     }
+    ]
+   },
+   {
+    "value": "zombies",
+    "detail": "the Buckner family",
+    "quote": "inadvertently awakens the whole Buckner family as zombies",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:40",
+      "quote": "But this is \" zombie redneck torture family \". See?"
+     }
+    ]
+   },
+   {
+    "value": "ancient gods",
+    "detail": "the Ancient Ones",
+    "quote": "the Ancient Ones, a group of cruel subterranean deities",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:27",
+      "quote": "The ancient ones... The gods that used to rule the earth."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "summoned by ritual", "detail": "reading from a diary picks the monster", "quote": "the objects determine which monsters are released", "confidence": "sourced"},
-   {"value": "ancient beings", "quote": "annual human sacrifice rituals are held worldwide to appease the Ancient Ones", "confidence": "sourced"}
+   {
+    "value": "summoned by ritual",
+    "detail": "reading from a diary picks the monster",
+    "quote": "the objects determine which monsters are released",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ancient beings",
+    "quote": "annual human sacrifice rituals are held worldwide to appease the Ancient Ones",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:31",
+      "quote": "But they are nothing compared to what came before, What lies below."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "human sacrifice", "quote": "annual human sacrifice rituals are held worldwide to appease the Ancient Ones", "confidence": "sourced"}
+   {
+    "value": "human sacrifice",
+    "quote": "annual human sacrifice rituals are held worldwide to appease the Ancient Ones",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:35",
+      "quote": "It's our task to placate the ancient ones, As it's yours to be offered up to them."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "family abuse", "quote": "Patience Buckner, a cabin resident abused by her sadistic family", "confidence": "sourced"}
+   {
+    "value": "family abuse",
+    "quote": "Patience Buckner, a cabin resident abused by her sadistic family",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "trip to a remote cabin", "quote": "are spending their weekend at Curt's cousin's cabin in the woods", "confidence": "sourced"},
-   {"value": "reading an incantation", "quote": "Dana recites incantations from the diary and inadvertently awakens the whole Buckner family", "confidence": "sourced"}
+   {
+    "value": "trip to a remote cabin",
+    "quote": "are spending their weekend at Curt's cousin's cabin in the woods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:38",
+      "quote": "' Cause we'd all like to check out my cousin's country home."
+     }
+    ]
+   },
+   {
+    "value": "reading an incantation",
+    "quote": "Dana recites incantations from the diary and inadvertently awakens the whole Buckner family",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:20",
+      "quote": "Do not read the Latin. Read it."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "five archetypes sacrificed", "quote": "the American ritual involves the sacrifice of five archetypes", "confidence": "sourced"},
-   {"value": "virgin dies last or survives", "quote": "The order is arbitrary as long as the whore dies first and the virgin dies last or survives", "confidence": "sourced"},
-   {"value": "victims choose their monster", "quote": "Dana correlates them with the objects in the cellar and realizes that the objects determine which monsters are released", "confidence": "sourced"}
+   {
+    "value": "five archetypes sacrificed",
+    "quote": "the American ritual involves the sacrifice of five archetypes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:42",
+      "quote": "There must be at least five. The whore... She's corrupted. She dies first."
+     }
+    ]
+   },
+   {
+    "value": "virgin dies last or survives",
+    "quote": "The order is arbitrary as long as the whore dies first and the virgin dies last or survives",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:38",
+      "quote": "The virgin's death is optional as long as it's last."
+     }
+    ]
+   },
+   {
+    "value": "victims choose their monster",
+    "quote": "Dana correlates them with the objects in the cellar and realizes that the objects determine which monsters are released",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:39",
+      "quote": "They made us choose. They made us choose how we die."
+     }
+    ]
+   },
+   {
+    "value": "victims must choose freely",
+    "source": "subtitles",
+    "at": "00:23:54",
+    "quote": "No, they have to make the choice of their own free will. Otherwise the system doesn't work.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "no transgression, no punishment",
+    "source": "subtitles",
+    "at": "00:24:14",
+    "quote": "But in the end, they don't transgress... They can't be punished.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "college friends", "relation_to_threat": "stranger", "quote": "a group of college students who retreat to a remote cabin in the woods", "confidence": "sourced"},
-   {"value": "facility staff", "relation_to_threat": "community", "quote": "the pair release all the monsters, which wreak havoc and slaughter the staff", "confidence": "sourced"},
-   {"value": "humanity", "relation_to_threat": "community", "quote": "the American site is \"humanity's last hope\"", "confidence": "sourced"}
+   {
+    "value": "college friends",
+    "relation_to_threat": "stranger",
+    "quote": "a group of college students who retreat to a remote cabin in the woods",
+    "confidence": "sourced"
+   },
+   {
+    "value": "facility staff",
+    "relation_to_threat": "community",
+    "quote": "the pair release all the monsters, which wreak havoc and slaughter the staff",
+    "confidence": "sourced"
+   },
+   {
+    "value": "humanity",
+    "relation_to_threat": "community",
+    "quote": "the American site is \"humanity's last hope\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:20",
+      "quote": "You guys are humanity's last hope."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "end of the world", "quote": "A giant hand bursts out of the ground, destroying the facility and the cabin in the process, bringing about the end of the world.", "confidence": "sourced"},
-   {"value": "survivors refuse the sacrifice", "quote": "Deciding that humanity is not worth saving, Dana and Marty apologize to each other", "confidence": "sourced"}
+   {
+    "value": "end of the world",
+    "quote": "A giant hand bursts out of the ground, destroying the facility and the cabin in the process, bringing about the end of the world.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:04",
+      "quote": "It's time to give someone else a chance. Giant evil gods."
+     }
+    ]
+   },
+   {
+    "value": "survivors refuse the sacrifice",
+    "quote": "Deciding that humanity is not worth saving, Dana and Marty apologize to each other",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:55",
+      "quote": "Humanity... It's time to give someone else a chance."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "cabin", "state": "remote, controlled", "when": "opening", "role": "setting", "quote": "spending their weekend at Curt's cousin's cabin in the woods", "confidence": "sourced"},
-   {"value": "cellar objects", "state": "bizarre", "when": "early", "role": "trigger", "quote": "the cabin's cellar which contains an assortment of bizarre objects", "confidence": "sourced"},
-   {"value": "diary", "state": "read aloud", "when": "early", "role": "trigger", "quote": "Dana finds the diary of Patience Buckner", "confidence": "sourced"},
-   {"value": "hidden cameras", "state": "discovered", "when": "middle", "role": "clue", "quote": "Marty discovers concealed surveillance equipment in his room", "confidence": "sourced"},
-   {"value": "force field", "state": "invisible", "when": "middle", "role": "threat", "quote": "crashes into a force field and falls to his death", "confidence": "sourced"},
-   {"value": "caged monsters", "state": "released", "when": "late", "role": "threat", "quote": "discover an extensive collection of monsters in cages", "confidence": "sourced"},
-   {"value": "giant hand", "state": "bursting from the ground", "when": "ending", "role": "threat", "quote": "A giant hand bursts out of the ground", "confidence": "sourced"}
+   {
+    "value": "cabin",
+    "state": "remote, controlled",
+    "when": "opening",
+    "role": "setting",
+    "quote": "spending their weekend at Curt's cousin's cabin in the woods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:11",
+      "quote": "Dead ends at the old Buckner place."
+     }
+    ]
+   },
+   {
+    "value": "cellar objects",
+    "state": "bizarre",
+    "when": "early",
+    "role": "trigger",
+    "quote": "the cabin's cellar which contains an assortment of bizarre objects",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:27",
+      "quote": "Your cousin is into some weird shit."
+     }
+    ]
+   },
+   {
+    "value": "diary",
+    "state": "read aloud",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Dana finds the diary of Patience Buckner",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:12",
+      "quote": "Diary of Anna Patience Buckner, 1903."
+     }
+    ]
+   },
+   {
+    "value": "hidden cameras",
+    "state": "discovered",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Marty discovers concealed surveillance equipment in his room",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:37",
+      "quote": "I had kind of an internal debate about showing you the mirror..."
+     }
+    ]
+   },
+   {
+    "value": "force field",
+    "state": "invisible",
+    "when": "middle",
+    "role": "threat",
+    "quote": "crashes into a force field and falls to his death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:28",
+      "quote": "We can't go back. There's no way across?"
+     }
+    ]
+   },
+   {
+    "value": "caged monsters",
+    "state": "released",
+    "when": "late",
+    "role": "threat",
+    "quote": "discover an extensive collection of monsters in cages",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:25",
+      "quote": "It's an elevator."
+     }
+    ]
+   },
+   {
+    "value": "giant hand",
+    "state": "bursting from the ground",
+    "when": "ending",
+    "role": "threat",
+    "quote": "A giant hand bursts out of the ground",
+    "confidence": "sourced"
+   },
+   {
+    "value": "betting board",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:24:30",
+    "quote": "The board is locked!",
+    "confidence": "sourced",
+    "detail": "the staff bet on which monster the victims will pick",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:30",
+      "quote": "does this mean you're not in the betting pool this year?"
+     }
+    ]
+   },
+   {
+    "value": "mounted wolf",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:25:17",
+    "quote": "That's a wolf. - That's clearly a wolf.",
+    "confidence": "sourced",
+    "detail": "Jules kisses the wolf head on a dare"
+   },
+   {
+    "value": "merman",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:34:31",
+    "quote": "I am never gonna see a merman, ever.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:31",
+      "quote": "I just think it would've been cooler with a merman."
+     }
+    ]
+   },
+   {
+    "value": "tunnel",
+    "when": "middle",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:56:26",
+    "quote": "The fucking tunnel's open!",
+    "confidence": "sourced"
+   },
+   {
+    "value": "gas station",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:10:54",
+    "quote": "We were looking to buy some gas.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "technicians prepare a ritual", "when": "opening", "quote": "engineers Gary Sitterson and Steve Hadley discuss preparations for a mysterious ritual", "confidence": "sourced"},
-   {"order": 2, "value": "friends arrive at the cabin", "when": "opening", "quote": "are spending their weekend at Curt's cousin's cabin in the woods", "confidence": "sourced"},
-   {"order": 3, "value": "incantation wakes the dead", "when": "early", "role": "trigger", "quote": "Dana recites incantations from the diary and inadvertently awakens the whole Buckner family as zombies", "confidence": "sourced"},
-   {"order": 4, "value": "first death", "when": "early", "quote": "The Buckners attack them, killing Jules while Curt flees", "confidence": "sourced"},
-   {"order": 5, "value": "escape blocked", "when": "middle", "quote": "Curt attempts to jump a ravine on his motorcycle to seek help on the other side, but crashes into a force field", "confidence": "sourced"},
-   {"order": 6, "value": "survivors invade the controllers", "when": "late", "role": "turn", "quote": "the pair release all the monsters, which wreak havoc and slaughter the staff", "confidence": "sourced"},
-   {"order": 7, "value": "purpose of the ritual explained", "when": "late", "role": "turn", "quote": "She explains that annual human sacrifice rituals are held worldwide to appease the Ancient Ones", "confidence": "sourced"},
-   {"order": 8, "value": "world ends", "when": "ending", "quote": "A giant hand bursts out of the ground, destroying the facility and the cabin", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "technicians prepare a ritual",
+    "when": "opening",
+    "quote": "engineers Gary Sitterson and Steve Hadley discuss preparations for a mysterious ritual",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:15",
+      "quote": "That means there's just japan... Japan and us."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "friends arrive at the cabin",
+    "when": "opening",
+    "quote": "are spending their weekend at Curt's cousin's cabin in the woods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:18",
+      "quote": "My cousin bought a house up there."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "warning from the harbinger",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:12:00",
+    "quote": "Getting back... That's your concern.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "staff place bets",
+    "when": "early",
+    "source": "subtitles",
+    "at": "00:22:32",
+    "quote": "Dig deep, people. Betting windows are closing.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "incantation wakes the dead",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Dana recites incantations from the diary and inadvertently awakens the whole Buckner family as zombies",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:14",
+      "quote": "And then... Then there's something in Latin."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "first death",
+    "when": "early",
+    "quote": "The Buckners attack them, killing Jules while Curt flees",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "other rituals fail",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:55:42",
+    "quote": "The japan crew should have had this in the bag.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "escape blocked",
+    "when": "middle",
+    "quote": "Curt attempts to jump a ravine on his motorcycle to seek help on the other side, but crashes into a force field",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:42",
+      "quote": "I've done bigger jumps than this."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "survivors invade the controllers",
+    "when": "late",
+    "role": "turn",
+    "quote": "the pair release all the monsters, which wreak havoc and slaughter the staff",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:12",
+      "quote": "Out of the elevator! Step out of the elevator!"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "purpose of the ritual explained",
+    "when": "late",
+    "role": "turn",
+    "quote": "She explains that annual human sacrifice rituals are held worldwide to appease the Ancient Ones",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:42",
+      "quote": "There must be at least five."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "world ends",
+    "when": "ending",
+    "quote": "A giant hand bursts out of the ground, destroying the facility and the cabin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:43",
+      "quote": "I'm sorry I let you get attacked by a werewolf and then ended the world."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,63 +1,431 @@
 {
  "film": "2012-the-woman-in-black",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vengeful ghost", "detail": "Jennet Humfrye, the Woman in Black", "quote": "the vengeful ghost of a scorned woman is terrorising the locals", "confidence": "sourced"}
+   {
+    "value": "vengeful ghost",
+    "detail": "Jennet Humfrye, the Woman in Black",
+    "quote": "the vengeful ghost of a scorned woman is terrorising the locals",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "person who died wronged", "detail": "Jennet, whose son was taken and drowned", "quote": "Jennet hanged herself in the nursery, vowing never to forgive Alice", "confidence": "sourced"}
+   {
+    "value": "person who died wronged",
+    "detail": "Jennet, whose son was taken and drowned",
+    "quote": "Jennet hanged herself in the nursery, vowing never to forgive Alice",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "revenge", "detail": "village children as penance for her son", "quote": "claims the village children by having them take their own lives in penance for her own son being taken from her", "confidence": "sourced"},
-   {"value": "never to forgive", "quote": "her voice echoes that she will never forget or forgive the wrongs she suffered", "confidence": "sourced"}
+   {
+    "value": "revenge",
+    "detail": "village children as penance for her son",
+    "quote": "claims the village children by having them take their own lives in penance for her own son being taken from her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "never to forgive",
+    "quote": "her voice echoes that she will never forget or forgive the wrongs she suffered",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:38",
+      "quote": "I will never forgive you for letting my boy die."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "child taken from mother", "quote": "adopted from Alice's sister Jennet Humfrye after she was deemed mentally unfit to raise a child", "confidence": "sourced"},
-   {"value": "child left to die", "quote": "Jennet blamed Alice for saving only herself and leaving the boy", "confidence": "sourced"}
+   {
+    "value": "child taken from mother",
+    "quote": "adopted from Alice's sister Jennet Humfrye after she was deemed mentally unfit to raise a child",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child left to die",
+    "quote": "Jennet blamed Alice for saving only herself and leaving the boy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:31",
+      "quote": "I will never forgive you. Rot in hell."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "a journey", "detail": "sent to settle a dead woman's estate", "quote": "Arthur's firm sends him to Crythin Gifford to retrieve any documents left by Alice Drablow", "confidence": "sourced"},
-   {"value": "seeing the ghost", "quote": "Victoria's father later tearfully accuses him of seeing \"that woman\" at Eel Marsh", "confidence": "observed"}
+   {
+    "value": "a journey",
+    "detail": "sent to settle a dead woman's estate",
+    "quote": "Arthur's firm sends him to Crythin Gifford to retrieve any documents left by Alice Drablow",
+    "confidence": "sourced"
+   },
+   {
+    "value": "seeing the ghost",
+    "quote": "Victoria's father later tearfully accuses him of seeing \"that woman\" at Eel Marsh",
+    "confidence": "observed"
+   }
   ],
   "rules": [
-   {"value": "sighting means a child dies", "quote": "Victoria's father later tearfully accuses him of seeing \"that woman\" at Eel Marsh", "confidence": "observed"},
-   {"value": "victims kill themselves", "quote": "hypnotised and entranced, they jump to their deaths from the window", "confidence": "sourced"},
-   {"value": "cannot be appeased", "quote": "they bury Nathaniel with Jennet, though her voice echoes that she will never forget or forgive", "confidence": "sourced"}
+   {
+    "value": "sighting means a child dies",
+    "quote": "Victoria's father later tearfully accuses him of seeing \"that woman\" at Eel Marsh",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:46",
+      "quote": "on the causeway, on the marsh, in the grounds of the house, however briefly and whoever by,"
+     }
+    ]
+   },
+   {
+    "value": "victims kill themselves",
+    "quote": "hypnotised and entranced, they jump to their deaths from the window",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:33",
+      "quote": "She makes us do it."
+     }
+    ]
+   },
+   {
+    "value": "cannot be appeased",
+    "quote": "they bury Nathaniel with Jennet, though her voice echoes that she will never forget or forgive",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "village children", "relation_to_threat": "community", "quote": "he sees numerous dead children in the marshes, Victoria among them", "confidence": "sourced"},
-   {"value": "widowed father and son", "relation_to_threat": "stranger", "detail": "Arthur and Joseph Kipps", "quote": "Arthur realizes that his son, who is coming to Crythin Gifford that night, is next", "confidence": "sourced"},
-   {"value": "grieving parents", "relation_to_threat": "community", "detail": "Sam and Elisabeth Daily", "quote": "he and his wife, Elisabeth, lost their young son and his friend to drowning", "confidence": "sourced"}
+   {
+    "value": "village children",
+    "relation_to_threat": "community",
+    "quote": "he sees numerous dead children in the marshes, Victoria among them",
+    "confidence": "sourced"
+   },
+   {
+    "value": "widowed father and son",
+    "relation_to_threat": "stranger",
+    "detail": "Arthur and Joseph Kipps",
+    "quote": "Arthur realizes that his son, who is coming to Crythin Gifford that night, is next",
+    "confidence": "sourced"
+   },
+   {
+    "value": "grieving parents",
+    "relation_to_threat": "community",
+    "detail": "Sam and Elisabeth Daily",
+    "quote": "he and his wife, Elisabeth, lost their young son and his friend to drowning",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat survives", "quote": "A horrified Sam sees the ghosts of all the village children who were killed standing with the Woman in Black", "confidence": "sourced"},
-   {"value": "family reunited in death", "quote": "The family is happily reunited and safe from Jennet, thus disappearing together into the light", "confidence": "sourced"}
+   {
+    "value": "threat survives",
+    "quote": "A horrified Sam sees the ghosts of all the village children who were killed standing with the Woman in Black",
+    "confidence": "sourced"
+   },
+   {
+    "value": "family reunited in death",
+    "quote": "The family is happily reunited and safe from Jennet, thus disappearing together into the light",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "window", "state": "girls jump from it", "when": "opening", "role": "omen", "quote": "hypnotised and entranced, they jump to their deaths from the window", "confidence": "sourced"},
-   {"value": "nursery", "state": "bolted, then unlocked", "when": "middle", "role": "setting", "quote": "Arthur is distracted by odd noises, a bolted nursery, and a spectral entity in black funerary garb", "confidence": "sourced"},
-   {"value": "marsh", "state": "isolated and desolate", "when": "early", "role": "setting", "quote": "Eel Marsh House, an isolated and desolate marshland estate", "confidence": "sourced"},
-   {"value": "black funerary garb", "state": "worn by ghost", "when": "middle", "role": "threat", "quote": "a spectral entity in black funerary garb", "confidence": "sourced"},
-   {"value": "lye", "state": "ingested", "when": "middle", "role": "turn", "quote": "their sister Victoria, who has ingested lye, but she dies in Arthur's arms", "confidence": "sourced"},
-   {"value": "mud", "state": "boy crawls out", "when": "late", "role": "omen", "quote": "he watches in horror as a boy crawls out of the mud in the rain", "confidence": "sourced"},
-   {"value": "letters", "state": "uncovered", "when": "late", "role": "clue", "quote": "Arthur uncovers documents and letters, revealing the Drablows' son Nathaniel was their bastard nephew", "confidence": "sourced"},
-   {"value": "train tracks", "state": "child lured onto them", "when": "ending", "role": "threat", "quote": "He sees the Woman in Black lure Joseph onto the tracks", "confidence": "sourced"}
+   {
+    "value": "window",
+    "state": "girls jump from it",
+    "when": "opening",
+    "role": "omen",
+    "quote": "hypnotised and entranced, they jump to their deaths from the window",
+    "confidence": "sourced"
+   },
+   {
+    "value": "nursery",
+    "state": "bolted, then unlocked",
+    "when": "middle",
+    "role": "setting",
+    "quote": "Arthur is distracted by odd noises, a bolted nursery, and a spectral entity in black funerary garb",
+    "confidence": "sourced"
+   },
+   {
+    "value": "marsh",
+    "state": "isolated and desolate",
+    "when": "early",
+    "role": "setting",
+    "quote": "Eel Marsh House, an isolated and desolate marshland estate",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:40",
+      "quote": "was drowned in the marshes."
+     }
+    ]
+   },
+   {
+    "value": "black funerary garb",
+    "state": "worn by ghost",
+    "when": "middle",
+    "role": "threat",
+    "quote": "a spectral entity in black funerary garb",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lye",
+    "state": "ingested",
+    "when": "middle",
+    "role": "turn",
+    "quote": "their sister Victoria, who has ingested lye, but she dies in Arthur's arms",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:16",
+      "quote": "She drank some lye."
+     }
+    ]
+   },
+   {
+    "value": "mud",
+    "state": "boy crawls out",
+    "when": "late",
+    "role": "omen",
+    "quote": "he watches in horror as a boy crawls out of the mud in the rain",
+    "confidence": "sourced"
+   },
+   {
+    "value": "letters",
+    "state": "uncovered",
+    "when": "late",
+    "role": "clue",
+    "quote": "Arthur uncovers documents and letters, revealing the Drablows' son Nathaniel was their bastard nephew",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:54",
+      "quote": "JENNET: Dear Alice, you leave me no option but to give up my son."
+     }
+    ]
+   },
+   {
+    "value": "train tracks",
+    "state": "child lured onto them",
+    "when": "ending",
+    "role": "threat",
+    "quote": "He sees the Woman in Black lure Joseph onto the tracks",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:47",
+      "quote": "{ WHISTLE BLOWING }"
+     }
+    ]
+   },
+   {
+    "value": "dog",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:36:33",
+    "quote": "Stay, Spider.",
+    "confidence": "sourced",
+    "detail": "Daily's dog, which keeps Arthur company in the house and barks at the haunting",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:02",
+      "quote": "{ SPIDER BARKING }"
+     }
+    ]
+   },
+   {
+    "value": "rocking chair",
+    "state": "rocking by itself",
+    "when": "middle",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:51:49",
+    "quote": "{ ROCKING CHAIR CREAKING }",
+    "confidence": "sourced"
+   },
+   {
+    "value": "music box and toys",
+    "state": "moving by themselves",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:00:07",
+    "quote": "{ MUSIC BOX TINKLING }",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:56",
+      "quote": "{ MECHANICAL LAUGHTER }"
+     }
+    ]
+   },
+   {
+    "value": "horse and carriage",
+    "state": "sinking in the marsh",
+    "when": "early",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:25:06",
+    "quote": "{ HORSE NEIGHS }",
+    "confidence": "sourced",
+    "detail": "the boy's drowning replayed as sound",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:21",
+      "quote": "{ CARRIAGE RUMBLING }"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "children's mass suicide", "when": "opening", "role": "omen", "quote": "three young girls playing in their nursery notice a presence in the room", "confidence": "sourced"},
-   {"order": 2, "value": "widower sent to old house", "when": "early", "role": "trigger", "quote": "Arthur's firm sends him to Crythin Gifford to retrieve any documents left by Alice Drablow", "confidence": "sourced"},
-   {"order": 3, "value": "first sighting", "when": "early", "quote": "a bolted nursery, and a spectral entity in black funerary garb", "confidence": "sourced"},
-   {"order": 4, "value": "child dies, outsider blamed", "when": "middle", "quote": "she dies in Arthur's arms. The townspeople blame Arthur", "confidence": "sourced"},
-   {"order": 5, "value": "past crime revealed", "when": "late", "role": "turn", "quote": "Nathaniel later drowned in a carriage accident on the marsh and Jennet blamed Alice", "confidence": "sourced"},
-   {"order": 6, "value": "body recovered and reunited", "when": "late", "quote": "Arthur and Sam recover Nathaniel's body in the marsh using Sam's car and place it in his nursery", "confidence": "sourced"},
-   {"order": 7, "value": "false relief, then death", "when": "ending", "role": "turn", "quote": "both he and Joseph are killed by an oncoming train", "confidence": "sourced"},
-   {"order": 8, "value": "reunion in afterlife", "when": "ending", "quote": "Arthur and Joseph, now in the afterlife, see Stella in a peaceful and bright railway station", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "children's mass suicide",
+    "when": "opening",
+    "role": "omen",
+    "quote": "three young girls playing in their nursery notice a presence in the room",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:06",
+      "quote": "{ MRS. FISHER SCREAMS } MRS. FISHER: My babies!"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "widower sent to old house",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Arthur's firm sends him to Crythin Gifford to retrieve any documents left by Alice Drablow",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:41",
+      "quote": "to pursuing a future with this firm. This is your final warning."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "first sighting",
+    "when": "early",
+    "quote": "a bolted nursery, and a spectral entity in black funerary garb",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "phantom drowning heard",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:26:34",
+    "quote": "No one has used Nine Lives Causeway for years, sir.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "child dies, outsider blamed",
+    "when": "middle",
+    "quote": "she dies in Arthur's arms. The townspeople blame Arthur",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:19",
+      "quote": "Lye. Oh, God. Constable!"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "past crime revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Nathaniel later drowned in a carriage accident on the marsh and Jennet blamed Alice",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:35",
+      "quote": "They took her boy away."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "body recovered and reunited",
+    "when": "late",
+    "quote": "Arthur and Sam recover Nathaniel's body in the marsh using Sam's car and place it in his nursery",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "false relief, then death",
+    "when": "ending",
+    "role": "turn",
+    "quote": "both he and Joseph are killed by an oncoming train",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:48",
+      "quote": "I think she's gone."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "reunion in afterlife",
+    "when": "ending",
+    "quote": "Arthur and Joseph, now in the afterlife, see Stella in a peaceful and bright railway station",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:55",
+      "quote": "Who's that lady?"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:29:08",
+      "quote": "That's your Mummy."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

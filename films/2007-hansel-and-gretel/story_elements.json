@@ -1,64 +1,417 @@
 {
  "film": "2007-hansel-and-gretel",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "children with powers", "detail": "Man-bok, Young-hee and Jung-soon", "quote": "Man-bok has the power of telekinesis and can make people do things by imagining the actions", "confidence": "sourced"}
+   {
+    "value": "children with powers",
+    "detail": "Man-bok, Young-hee and Jung-soon",
+    "quote": "Man-bok has the power of telekinesis and can make people do things by imagining the actions",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "abused children", "detail": "orphans at the 'House of Happy Children'", "quote": "where the abusive caretaker raped the girls and beat the boys", "confidence": "sourced"}
+   {
+    "value": "abused children",
+    "detail": "orphans at the 'House of Happy Children'",
+    "quote": "where the abusive caretaker raped the girls and beat the boys",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "good parents", "quote": "They have given up and realized they don't need parents to be a family", "confidence": "observed"},
-   {"value": "to keep adults with them", "quote": "The children ask Eun-soo to stay with them", "confidence": "sourced"}
+   {
+    "value": "good parents",
+    "quote": "They have given up and realized they don't need parents to be a family",
+    "confidence": "observed"
+   },
+   {
+    "value": "to keep adults with them",
+    "quote": "The children ask Eun-soo to stay with them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:30",
+      "quote": "Why do you keep trying to leave us?"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "child abuse", "quote": "the abusive caretaker raped the girls and beat the boys", "confidence": "sourced"},
-   {"value": "child murder", "quote": "After they witnessed their friend Seung-ho being beaten to death", "confidence": "sourced"}
+   {
+    "value": "child abuse",
+    "quote": "the abusive caretaker raped the girls and beat the boys",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child murder",
+    "quote": "After they witnessed their friend Seung-ho being beaten to death",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "car crash", "quote": "The argument leads to a car crash. He wakes up in a dark forest", "confidence": "sourced"},
-   {"value": "lost in a forest", "quote": "He wakes up in a dark forest and meets a young girl, Young-hee", "confidence": "sourced"}
+   {
+    "value": "car crash",
+    "quote": "The argument leads to a car crash. He wakes up in a dark forest",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lost in a forest",
+    "quote": "He wakes up in a dark forest and meets a young girl, Young-hee",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "cannot leave the house", "quote": "He tries to leave, but the children follow his every move", "confidence": "sourced"},
-   {"value": "adults punished when bad", "quote": "They refuse, convinced that adults will always be bad", "confidence": "observed"},
-   {"value": "burning the notebook frees", "quote": "Young-hee tells him to burn the notebook so he can leave", "confidence": "sourced"}
+   {
+    "value": "cannot leave the house",
+    "quote": "He tries to leave, but the children follow his every move",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:13",
+      "quote": "You can't get out of here no matter how hard you try."
+     }
+    ]
+   },
+   {
+    "value": "adults punished when bad",
+    "quote": "They refuse, convinced that adults will always be bad",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:37",
+      "quote": "Bad grown-ups always need to be punished."
+     }
+    ]
+   },
+   {
+    "value": "burning the notebook frees",
+    "quote": "Young-hee tells him to burn the notebook so he can leave",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:46:29",
+      "quote": "Burn the notebook."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "lost traveller", "relation_to_threat": "stranger", "detail": "Eun-soo", "quote": "Eun-soo sees his drawing in the notebook, he becomes determined to stop the children before they murder him", "confidence": "sourced"},
-   {"value": "adopted parents", "relation_to_threat": "family", "quote": "the meat they've eaten is actually from the flesh of the missing father, whose wife has been turned into a china doll", "confidence": "sourced"},
-   {"value": "orphans", "relation_to_threat": "self", "quote": "The kids used to live in an orphanage called the 'House of Happy Children,'", "confidence": "sourced"}
+   {
+    "value": "lost traveller",
+    "relation_to_threat": "stranger",
+    "detail": "Eun-soo",
+    "quote": "Eun-soo sees his drawing in the notebook, he becomes determined to stop the children before they murder him",
+    "confidence": "sourced"
+   },
+   {
+    "value": "adopted parents",
+    "relation_to_threat": "family",
+    "quote": "the meat they've eaten is actually from the flesh of the missing father, whose wife has been turned into a china doll",
+    "confidence": "sourced"
+   },
+   {
+    "value": "orphans",
+    "relation_to_threat": "self",
+    "quote": "The kids used to live in an orphanage called the 'House of Happy Children,'",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "protagonist escapes", "quote": "Eun-soo then wakes up where he first met Young-hee. He walks to the road and meets the police", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "Man-bok, Young-hee, and Jung-soon go back into the woods", "confidence": "sourced"},
-   {"value": "ambiguous", "quote": "he wonders if that encounter was only a dream", "confidence": "sourced"}
+   {
+    "value": "protagonist escapes",
+    "quote": "Eun-soo then wakes up where he first met Young-hee. He walks to the road and meets the police",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat survives",
+    "quote": "Man-bok, Young-hee, and Jung-soon go back into the woods",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ambiguous",
+    "quote": "he wonders if that encounter was only a dream",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:50:27",
+      "quote": "If what happened was just a dream,"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "dark forest", "when": "opening", "role": "setting", "quote": "He wakes up in a dark forest", "confidence": "sourced"},
-   {"value": "human meat", "when": "early", "role": "clue", "quote": "the meat they've eaten is actually from the flesh of the missing father", "confidence": "sourced"},
-   {"value": "china doll", "state": "transformed woman", "when": "early", "role": "threat", "quote": "whose wife has been turned into a china doll", "confidence": "sourced"},
-   {"value": "breadcrumbs", "when": "middle", "role": "symbol", "quote": "keeping a trail of breadcrumbs to avoid getting lost", "confidence": "sourced"},
-   {"value": "oak tree", "state": "transformed woman", "when": "middle", "role": "threat", "quote": "He discovers Byun's wife has been turned into an oak tree", "confidence": "sourced"},
-   {"value": "notebook", "when": "middle", "role": "clue", "quote": "looks over the notebook the siblings have worked on for a long time", "confidence": "sourced"},
-   {"value": "storybook", "when": "late", "role": "symbol", "quote": "gave them a Hansel and Gretel storybook", "confidence": "sourced"},
-   {"value": "fireplace", "when": "late", "role": "threat", "quote": "the caretaker about to burn them in the fireplace", "confidence": "sourced"}
+   {
+    "value": "dark forest",
+    "when": "opening",
+    "role": "setting",
+    "quote": "He wakes up in a dark forest",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:23",
+      "quote": "a deep forest that we could suddenly fall into"
+     }
+    ]
+   },
+   {
+    "value": "human meat",
+    "when": "early",
+    "role": "clue",
+    "quote": "the meat they've eaten is actually from the flesh of the missing father",
+    "confidence": "sourced"
+   },
+   {
+    "value": "china doll",
+    "state": "transformed woman",
+    "when": "early",
+    "role": "threat",
+    "quote": "whose wife has been turned into a china doll",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:06",
+      "quote": "The biggest, prettiest doll in the world."
+     }
+    ]
+   },
+   {
+    "value": "breadcrumbs",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "keeping a trail of breadcrumbs to avoid getting lost",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:07",
+      "quote": "You should have marked your way with breadcrumbs."
+     }
+    ]
+   },
+   {
+    "value": "oak tree",
+    "state": "transformed woman",
+    "when": "middle",
+    "role": "threat",
+    "quote": "He discovers Byun's wife has been turned into an oak tree",
+    "confidence": "sourced"
+   },
+   {
+    "value": "notebook",
+    "when": "middle",
+    "role": "clue",
+    "quote": "looks over the notebook the siblings have worked on for a long time",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:46:32",
+      "quote": "Burn your story in the notebook."
+     }
+    ]
+   },
+   {
+    "value": "storybook",
+    "when": "late",
+    "role": "symbol",
+    "quote": "gave them a Hansel and Gretel storybook",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:42",
+      "quote": "Hansel and Gretel"
+     }
+    ]
+   },
+   {
+    "value": "fireplace",
+    "when": "late",
+    "role": "threat",
+    "quote": "the caretaker about to burn them in the fireplace",
+    "confidence": "sourced"
+   },
+   {
+    "value": "santa claus",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:40:00",
+    "quote": "Santa Claus grants all the children's wishes.",
+    "confidence": "sourced",
+    "detail": "the abusive caretaker came dressed as Santa"
+   },
+   {
+    "value": "sweets and cakes",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:40:17",
+    "quote": "Sweet cakes, candy, chocolate, robots, pens.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "prince without limbs",
+    "when": "middle",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:58:24",
+    "quote": "So they chopped off his arms and legs so that he couldn't leave.",
+    "confidence": "sourced",
+    "detail": "a bedtime story the children tell about a prince who tried to leave"
+   },
+   {
+    "value": "newspaper headlines",
+    "when": "ending",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:50:43",
+    "quote": "Child Murderer Not Found",
+    "confidence": "sourced",
+    "detail": "headlines name the cult deacon Byun Ji-wan as a serial killer"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "crash on the road", "when": "opening", "role": "trigger", "quote": "The argument leads to a car crash", "confidence": "sourced"},
-   {"order": 2, "value": "child leads stranger home", "when": "opening", "quote": "meets a young girl, Young-hee, who takes him to her house, called the 'House of Happy Children.'", "confidence": "sourced"},
-   {"order": 3, "value": "warning from the attic", "when": "early", "role": "omen", "quote": "he finds the real mother hiding in the attic", "confidence": "sourced"},
-   {"order": 4, "value": "cannibalism revealed", "when": "early", "role": "turn", "quote": "Eun-soo discovers that the meat they've eaten is actually from the flesh of the missing father", "confidence": "sourced"},
-   {"order": 5, "value": "children's true age revealed", "when": "middle", "role": "clue", "quote": "He realizes that the children are over thirty years old", "confidence": "sourced"},
-   {"order": 6, "value": "past abuse told", "when": "late", "role": "turn", "quote": "where the abusive caretaker raped the girls and beat the boys", "confidence": "sourced"},
-   {"order": 7, "value": "notebook burned", "when": "late", "quote": "Young-hee tells him to burn the notebook so he can leave", "confidence": "sourced"},
-   {"order": 8, "value": "family life, children remain", "when": "ending", "quote": "Man-bok, Young-hee, and Jung-soon go back into the woods", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "narrated forest prologue",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:16",
+    "quote": "In this world, in an unimaginably strange place,",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "crash on the road",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "The argument leads to a car crash",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:38",
+      "quote": "I've been pregnant for four weeks."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "child leads stranger home",
+    "when": "opening",
+    "quote": "meets a young girl, Young-hee, who takes him to her house, called the 'House of Happy Children.'",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:38",
+      "quote": "House of Happy Children"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "warning from the attic",
+    "when": "early",
+    "role": "omen",
+    "quote": "he finds the real mother hiding in the attic",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "cannibalism revealed",
+    "when": "early",
+    "role": "turn",
+    "quote": "Eun-soo discovers that the meat they've eaten is actually from the flesh of the missing father",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "children's true age revealed",
+    "when": "middle",
+    "role": "clue",
+    "quote": "He realizes that the children are over thirty years old",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "past abuse told",
+    "when": "late",
+    "role": "turn",
+    "quote": "where the abusive caretaker raped the girls and beat the boys",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:48",
+      "quote": "Kids, it's Santa Claus."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "notebook burned",
+    "when": "late",
+    "quote": "Young-hee tells him to burn the notebook so he can leave",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:46:39",
+      "quote": "Hurry and burn it."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "family life, children remain",
+    "when": "ending",
+    "quote": "Man-bok, Young-hee, and Jung-soon go back into the woods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:51:48",
+      "quote": "Are all the children there happy?"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "headlines expose a killer",
+    "when": "ending",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:50:43",
+    "quote": "Child Murderer Not Found",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

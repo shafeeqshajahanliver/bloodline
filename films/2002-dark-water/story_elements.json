@@ -1,59 +1,462 @@
 {
  "film": "2002-dark-water",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "child ghost", "detail": "Mitsuko Kawai, drowned in the water tank", "quote": "Mitsuko's ghost attempts to drown Ikuko in the bathtub", "confidence": "sourced"}
+   {
+    "value": "child ghost",
+    "detail": "Mitsuko Kawai, drowned in the water tank",
+    "quote": "Mitsuko's ghost attempts to drown Ikuko in the bathtub",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:05",
+      "quote": "Mitsuko has returned to the apartment upstairs, and she's trying to take Ikuko away!"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "person who died alone", "detail": "a neglected girl drowned in the tank", "quote": "Mitsuko fell into the tank while trying to retrieve her red schoolbag and drowned", "confidence": "sourced"}
+   {
+    "value": "person who died alone",
+    "detail": "a neglected girl drowned in the tank",
+    "quote": "Mitsuko fell into the tank while trying to retrieve her red schoolbag and drowned",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "a mother", "quote": "Yoshimi sacrifices herself to appease Mitsuko's spirit", "confidence": "observed"}
+   {
+    "value": "a mother",
+    "quote": "Yoshimi sacrifices herself to appease Mitsuko's spirit",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:41",
+      "quote": "I'll never leave you alone again. I'll always be with you."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "neglected child", "detail": "Mitsuko went missing and was not found; Yoshimi was abandoned as a child", "quote": "Several incidents remind her of the time she was abandoned at kindergarten as a child", "confidence": "observed"}
+   {
+    "value": "neglected child",
+    "detail": "Mitsuko went missing and was not found; Yoshimi was abandoned as a child",
+    "quote": "Several incidents remind her of the time she was abandoned at kindergarten as a child",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:05",
+      "quote": "her mother suddenly just left their house, and left her behind."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:32:16",
+      "quote": "Waiting there all alone... Do you know how that feels?!"
+     }
+    ]
+   },
+   {
+    "value": "mother's own abandonment",
+    "source": "subtitles",
+    "at": "00:48:53",
+    "quote": "A far cry from the mother you had. My sister just couldn't think of anyone but herself.",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "moving into a new home", "quote": "moves into a rundown apartment with her six-year-old daughter", "confidence": "sourced"}
+   {
+    "value": "moving into a new home",
+    "quote": "moves into a rundown apartment with her six-year-old daughter",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:11",
+      "quote": "So, what do you think? A real bargain, I'd say."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "object returns", "quote": "A child's red schoolbag reappears no matter how often she tries to dispose of it", "confidence": "sourced"},
-   {"value": "appeased by sacrifice", "quote": "Yoshimi sacrifices herself to appease Mitsuko's spirit", "confidence": "sourced"},
-   {"value": "manifests through water", "quote": "supernatural occurrences linked to a constant leak of water from the apartment above", "confidence": "sourced"}
+   {
+    "value": "object returns",
+    "quote": "A child's red schoolbag reappears no matter how often she tries to dispose of it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:33",
+      "quote": "Did you throw the red bag away again?"
+     }
+    ]
+   },
+   {
+    "value": "appeased by sacrifice",
+    "quote": "Yoshimi sacrifices herself to appease Mitsuko's spirit",
+    "confidence": "sourced"
+   },
+   {
+    "value": "manifests through water",
+    "quote": "supernatural occurrences linked to a constant leak of water from the apartment above",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:36",
+      "quote": "There's water leaking from our ceiling."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "single mother", "relation_to_threat": "stranger", "detail": "Yoshimi Matsubara, mid-divorce", "quote": "Yoshimi Matsubara struggles to rebuild her life amidst a messy divorce", "confidence": "sourced"},
-   {"value": "daughter", "relation_to_threat": "stranger", "detail": "Ikuko, six", "quote": "Mitsuko's ghost attempts to drown Ikuko in the bathtub", "confidence": "sourced"}
+   {
+    "value": "single mother",
+    "relation_to_threat": "stranger",
+    "detail": "Yoshimi Matsubara, mid-divorce",
+    "quote": "Yoshimi Matsubara struggles to rebuild her life amidst a messy divorce",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:15",
+      "quote": "He's absolutely insistent that he won't give up custody."
+     }
+    ]
+   },
+   {
+    "value": "daughter",
+    "relation_to_threat": "stranger",
+    "detail": "Ikuko, six",
+    "quote": "Mitsuko's ghost attempts to drown Ikuko in the bathtub",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "parent sacrifices self", "quote": "Yoshimi sacrifices herself to appease Mitsuko's spirit", "confidence": "sourced"},
-   {"value": "protective ghost", "detail": "Yoshimi's spirit watches over Ikuko", "quote": "Both spirits disappear and Ikuko realizes her mother always looked out for her", "confidence": "sourced"}
+   {
+    "value": "parent sacrifices self",
+    "quote": "Yoshimi sacrifices herself to appease Mitsuko's spirit",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:48",
+      "quote": "We can't be together."
+     }
+    ]
+   },
+   {
+    "value": "protective ghost",
+    "detail": "Yoshimi's spirit watches over Ikuko",
+    "quote": "Both spirits disappear and Ikuko realizes her mother always looked out for her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:42",
+      "quote": "My mother was here all that time, protecting me."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "water leak", "state": "worsening", "when": "opening", "role": "omen", "quote": "The ceiling of their apartment has a water leak that slowly worsens", "confidence": "sourced"},
-   {"value": "red schoolbag", "state": "reappearing", "when": "early", "role": "omen", "quote": "A child's red schoolbag reappears no matter how often she tries to dispose of it", "confidence": "sourced"},
-   {"value": "yellow raincoat", "when": "early", "role": "clue", "quote": "a missing person photo of her with a yellow raincoat and red schoolbag", "confidence": "sourced"},
-   {"value": "flooded apartment", "when": "middle", "role": "setting", "quote": "the faucets have been left running and flooded the entire unit", "confidence": "sourced"},
-   {"value": "water tank", "when": "late", "role": "clue", "quote": "the water tank was last opened and inspected over a year ago", "confidence": "sourced"},
-   {"value": "bathtub", "when": "late", "role": "threat", "quote": "Mitsuko's ghost attempts to drown Ikuko in the bathtub", "confidence": "sourced"},
-   {"value": "elevator", "state": "flooding", "when": "ending", "role": "setting", "quote": "The two ascend in the elevator, which then explodes in a heavy torrent of water", "confidence": "sourced"},
-   {"value": "decayed child", "when": "ending", "role": "threat", "quote": "A decayed Mitsuko clings to Yoshimi, who realizes she won't let go", "confidence": "sourced"}
+   {
+    "value": "water leak",
+    "state": "worsening",
+    "when": "opening",
+    "role": "omen",
+    "quote": "The ceiling of their apartment has a water leak that slowly worsens",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:46",
+      "quote": "There's a wet spot on my ceiling, and water is dripping down from it."
+     }
+    ]
+   },
+   {
+    "value": "red schoolbag",
+    "state": "reappearing",
+    "when": "early",
+    "role": "omen",
+    "quote": "A child's red schoolbag reappears no matter how often she tries to dispose of it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:15",
+      "quote": "The red bag on the roof!"
+     }
+    ]
+   },
+   {
+    "value": "yellow raincoat",
+    "when": "early",
+    "role": "clue",
+    "quote": "a missing person photo of her with a yellow raincoat and red schoolbag",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:34",
+      "quote": "WEARING A YELLOW RAINCOAT (WITH HOOD) LAST SEEN ON JULY 14, 1999"
+     }
+    ]
+   },
+   {
+    "value": "flooded apartment",
+    "when": "middle",
+    "role": "setting",
+    "quote": "the faucets have been left running and flooded the entire unit",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:25",
+      "quote": "Which means, the water in here may have been running for over half a year."
+     }
+    ]
+   },
+   {
+    "value": "water tank",
+    "when": "late",
+    "role": "clue",
+    "quote": "the water tank was last opened and inspected over a year ago",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:46",
+      "quote": "This water tank is exposed to light from all around."
+     }
+    ]
+   },
+   {
+    "value": "bathtub",
+    "when": "late",
+    "role": "threat",
+    "quote": "Mitsuko's ghost attempts to drown Ikuko in the bathtub",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:51",
+      "quote": "Iku-chan, turn off the water and come on out."
+     }
+    ]
+   },
+   {
+    "value": "elevator",
+    "state": "flooding",
+    "when": "ending",
+    "role": "setting",
+    "quote": "The two ascend in the elevator, which then explodes in a heavy torrent of water",
+    "confidence": "sourced"
+   },
+   {
+    "value": "decayed child",
+    "when": "ending",
+    "role": "threat",
+    "quote": "A decayed Mitsuko clings to Yoshimi, who realizes she won't let go",
+    "confidence": "sourced"
+   },
+   {
+    "value": "missing child poster",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:31:27",
+    "quote": "CHILD MISSING MITSUKO KAWAI",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:46",
+      "quote": "MITSUKO, COME HOME SOON"
+     }
+    ]
+   },
+   {
+    "value": "rain",
+    "when": "early",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:11:22",
+    "quote": "The humidity in here is unreal. Well, with the rain that we've been having",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bad tap water",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:08:04",
+    "quote": "She brought her own water to make dinner.",
+    "confidence": "sourced",
+    "detail": "a woman visiting the building says the water here is no good",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:07",
+      "quote": "Yeah, she said the water here is no good."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "mother moves into new flat", "when": "opening", "role": "trigger", "quote": "She rents a rundown apartment, enrolls Ikuko in a nearby kindergarten", "confidence": "sourced"},
-   {"order": 2, "value": "leak and returning object", "when": "early", "role": "omen", "quote": "A child's red schoolbag reappears no matter how often she tries to dispose of it", "confidence": "sourced"},
-   {"order": 3, "value": "missing child identified", "when": "early", "role": "clue", "quote": "She discovers that Mitsuko used to live in the abandoned unit directly above her apartment", "confidence": "sourced"},
-   {"order": 4, "value": "daughter found in flooded flat", "when": "middle", "quote": "Yoshimi finds Ikuko in the apartment upstairs, where the faucets have been left running", "confidence": "sourced"},
-   {"order": 5, "value": "death revealed in a vision", "when": "late", "role": "turn", "quote": "She has a vision which reveals to her that Mitsuko fell into the tank", "confidence": "sourced"},
-   {"order": 6, "value": "ghost attacks child", "when": "late", "quote": "Mitsuko's ghost attempts to drown Ikuko in the bathtub", "confidence": "sourced"},
-   {"order": 7, "value": "mother gives herself up", "when": "ending", "quote": "As Ikuko cries and begs her to come back, Yoshimi sacrifices herself", "confidence": "sourced"},
-   {"order": 8, "value": "years later, ghostly reunion", "when": "ending", "quote": "She sees Yoshimi, who looks the same as she did a decade ago", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "child left waiting at school",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:02:03",
+    "quote": "Yoshimi, who's coming to get you?",
+    "confidence": "sourced",
+    "detail": "the film opens on Yoshimi as a child, uncollected at kindergarten"
+   },
+   {
+    "order": 2,
+    "value": "custody fight begins",
+    "when": "opening",
+    "role": "trigger",
+    "source": "subtitles",
+    "at": "00:03:05",
+    "quote": "Well, your husband has no objections on the division of property.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "mother moves into new flat",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "She rents a rundown apartment, enrolls Ikuko in a nearby kindergarten",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:29",
+      "quote": "This next one is going to be the last, okay?"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "leak and returning object",
+    "when": "early",
+    "role": "omen",
+    "quote": "A child's red schoolbag reappears no matter how often she tries to dispose of it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:36",
+      "quote": "There's water leaking from our ceiling."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "missing child identified",
+    "when": "early",
+    "role": "clue",
+    "quote": "She discovers that Mitsuko used to live in the abandoned unit directly above her apartment",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:18",
+      "quote": "Mitsuko Kawai? She was one of our children here."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "daughter found in flooded flat",
+    "when": "middle",
+    "quote": "Yoshimi finds Ikuko in the apartment upstairs, where the faucets have been left running",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "death revealed in a vision",
+    "when": "late",
+    "role": "turn",
+    "quote": "She has a vision which reveals to her that Mitsuko fell into the tank",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:27",
+      "quote": "WATER TANK CLEANING LOG JULY 14, 1999"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "ghost attacks child",
+    "when": "late",
+    "quote": "Mitsuko's ghost attempts to drown Ikuko in the bathtub",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "mother gives herself up",
+    "when": "ending",
+    "quote": "As Ikuko cries and begs her to come back, Yoshimi sacrifices herself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:41",
+      "quote": "I'll never leave you alone again."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "daughter's lost memory",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:28:24",
+    "quote": "I don't remember much from when I was in kindergarten.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "years later, ghostly reunion",
+    "when": "ending",
+    "quote": "She sees Yoshimi, who looks the same as she did a decade ago",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:47",
+      "quote": "Mama... Welcome home."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

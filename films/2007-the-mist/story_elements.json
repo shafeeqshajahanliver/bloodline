@@ -1,62 +1,462 @@
 {
  "film": "2007-the-mist",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "creatures", "detail": "Lovecraftian monsters hidden in the mist", "quote": "a mysterious mist envelops the town, concealing deadly, Lovecraftian creatures", "confidence": "sourced"},
-   {"value": "religious fanatic", "detail": "Mrs. Carmody and her followers", "quote": "Carmody calls for sacrifices to appease the monsters", "confidence": "sourced"},
-   {"value": "fear and paranoia", "quote": "As fear and paranoia spread, tensions rise among the survivors", "confidence": "sourced"}
+   {
+    "value": "creatures",
+    "detail": "Lovecraftian monsters hidden in the mist",
+    "quote": "a mysterious mist envelops the town, concealing deadly, Lovecraftian creatures",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:08",
+      "quote": "Something in the mist took John Lee."
+     }
+    ]
+   },
+   {
+    "value": "religious fanatic",
+    "detail": "Mrs. Carmody and her followers",
+    "quote": "Carmody calls for sacrifices to appease the monsters",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:39",
+      "quote": "And he is a stern and vengeful God,"
+     }
+    ]
+   },
+   {
+    "value": "fear and paranoia",
+    "quote": "As fear and paranoia spread, tensions rise among the survivors",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "military experiment", "quote": "the mist was the result of a military experiment to find other dimensions gone wrong", "confidence": "sourced"}
+   {
+    "value": "military experiment",
+    "quote": "the mist was the result of a military experiment to find other dimensions gone wrong",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:12",
+      "quote": "how they thought that there were other dimensions,"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:31:26",
+      "quote": "Well, maybe your window turned out to be a door. Didn't it?"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "hunger", "detail": "creatures prey on humans and each other", "quote": "enormous flying insects, attracted to the lights, swarm to the store windows and are preyed on by pterodactyl-like creatures", "confidence": "observed"}
+   {
+    "value": "hunger",
+    "detail": "creatures prey on humans and each other",
+    "quote": "enormous flying insects, attracted to the lights, swarm to the store windows and are preyed on by pterodactyl-like creatures",
+    "confidence": "observed"
+   },
+   {
+    "value": "blood sacrifice",
+    "detail": "what Mrs. Carmody says God demands",
+    "source": "subtitles",
+    "at": "00:44:55",
+    "quote": "Read the Good Book. It calls for expiation.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:19",
+      "quote": "the blood of human sacrifice must come."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "scientific hubris", "quote": "a military experiment to find other dimensions gone wrong", "confidence": "sourced"}
+   {
+    "value": "scientific hubris",
+    "quote": "a military experiment to find other dimensions gone wrong",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "storm", "quote": "A severe thunderstorm strikes Bridgton, Maine, causing a tree to crash through the lakeside home", "confidence": "sourced"},
-   {"value": "mist arrives", "quote": "they notice a thick mist advancing over the lake", "confidence": "sourced"}
+   {
+    "value": "storm",
+    "quote": "A severe thunderstorm strikes Bridgton, Maine, causing a tree to crash through the lakeside home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:22",
+      "quote": "that a tree was gonna come flying through the window."
+     }
+    ]
+   },
+   {
+    "value": "mist arrives",
+    "quote": "they notice a thick mist advancing over the lake",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:02",
+      "quote": "Something in the mist!"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "do not go outside", "quote": "he is grabbed by a tentacled creature and dragged into the mist", "confidence": "observed"},
-   {"value": "drawn to light", "quote": "enormous flying insects, attracted to the lights, swarm to the store windows", "confidence": "sourced"}
+   {
+    "value": "do not go outside",
+    "quote": "he is grabbed by a tentacled creature and dragged into the mist",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:39",
+      "quote": "It's death out there. It's the end of days."
+     }
+    ]
+   },
+   {
+    "value": "drawn to light",
+    "quote": "enormous flying insects, attracted to the lights, swarm to the store windows",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:31",
+      "quote": "God, I think they're attracted to the light."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "father and son", "relation_to_threat": "stranger", "detail": "David and Billy Drayton", "quote": "David and Billy leave with their neighbor Brent Norton to buy supplies in town", "confidence": "sourced"},
-   {"value": "trapped townspeople", "relation_to_threat": "community", "quote": "a group of people in the small town of Bridgton, Maine, who become trapped inside a supermarket", "confidence": "sourced"},
-   {"value": "scapegoat", "relation_to_threat": "community", "detail": "soldier Jessup", "quote": "He is stabbed, thrown outside and immediately killed by a monstrous creature", "confidence": "sourced"}
+   {
+    "value": "father and son",
+    "relation_to_threat": "stranger",
+    "detail": "David and Billy Drayton",
+    "quote": "David and Billy leave with their neighbor Brent Norton to buy supplies in town",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:05",
+      "quote": "Promise you won't let the monsters get me."
+     }
+    ]
+   },
+   {
+    "value": "trapped townspeople",
+    "relation_to_threat": "community",
+    "quote": "a group of people in the small town of Bridgton, Maine, who become trapped inside a supermarket",
+    "confidence": "sourced"
+   },
+   {
+    "value": "scapegoat",
+    "relation_to_threat": "community",
+    "detail": "soldier Jessup",
+    "quote": "He is stabbed, thrown outside and immediately killed by a monstrous creature",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:48",
+      "quote": "Let the abominations smell his blood!"
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "parent kills child", "detail": "mercy killing, then rescue arrives", "quote": "With no hope left, David mercy-kills the group with the last four bullets, including Billy", "confidence": "sourced"},
-   {"value": "rescue too late", "quote": "Realizing that his actions were unnecessary, a distraught David collapses, screaming in anguish", "confidence": "sourced"}
+   {
+    "value": "parent kills child",
+    "detail": "mercy killing, then rescue arrives",
+    "quote": "With no hope left, David mercy-kills the group with the last four bullets, including Billy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:51:59",
+      "quote": "Four bullets."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:52:05",
+      "quote": "But there's five of us."
+     }
+    ]
+   },
+   {
+    "value": "rescue too late",
+    "quote": "Realizing that his actions were unnecessary, a distraught David collapses, screaming in anguish",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "fallen tree", "when": "opening", "role": "omen", "quote": "causing a tree to crash through the lakeside home", "confidence": "sourced"},
-   {"value": "mist", "state": "advancing", "when": "opening", "role": "threat", "quote": "they notice a thick mist advancing over the lake", "confidence": "sourced"},
-   {"value": "military convoys", "when": "opening", "role": "omen", "quote": "Along the way, they pass several military convoys", "confidence": "sourced"},
-   {"value": "tentacle", "when": "early", "role": "threat", "quote": "he is grabbed by a tentacled creature and dragged into the mist", "confidence": "sourced"},
-   {"value": "flying insects", "when": "middle", "role": "threat", "quote": "enormous flying insects, attracted to the lights, swarm to the store windows", "confidence": "sourced"},
-   {"value": "spider webs", "when": "middle", "role": "threat", "quote": "an MP trapped in a web-like structure who is alive", "confidence": "sourced"},
-   {"value": "revolver", "when": "middle", "role": "weapon", "quote": "Amanda carries a revolver in her purse and gives it to Ollie", "confidence": "sourced"},
-   {"value": "colossal creature", "when": "late", "role": "threat", "quote": "a colossal creature crosses their path", "confidence": "sourced"}
+   {
+    "value": "fallen tree",
+    "when": "opening",
+    "role": "omen",
+    "quote": "causing a tree to crash through the lakeside home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:57",
+      "quote": "We had a tree come through the picture window last night,"
+     }
+    ]
+   },
+   {
+    "value": "mist",
+    "state": "advancing",
+    "when": "opening",
+    "role": "threat",
+    "quote": "they notice a thick mist advancing over the lake",
+    "confidence": "sourced"
+   },
+   {
+    "value": "military convoys",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Along the way, they pass several military convoys",
+    "confidence": "sourced"
+   },
+   {
+    "value": "tentacle",
+    "when": "early",
+    "role": "threat",
+    "quote": "he is grabbed by a tentacled creature and dragged into the mist",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:39",
+      "quote": "Ollie, what the hell were those tentacles even attached to?"
+     }
+    ]
+   },
+   {
+    "value": "flying insects",
+    "when": "middle",
+    "role": "threat",
+    "quote": "enormous flying insects, attracted to the lights, swarm to the store windows",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:04",
+      "quote": "Are those bugs?"
+     }
+    ]
+   },
+   {
+    "value": "spider webs",
+    "when": "middle",
+    "role": "threat",
+    "quote": "an MP trapped in a web-like structure who is alive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:03",
+      "quote": "(web sizzles)"
+     }
+    ]
+   },
+   {
+    "value": "revolver",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "Amanda carries a revolver in her purse and gives it to Ollie",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:51:59",
+      "quote": "Four bullets."
+     }
+    ]
+   },
+   {
+    "value": "colossal creature",
+    "when": "late",
+    "role": "threat",
+    "quote": "a colossal creature crosses their path",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:47:50",
+      "quote": "(giant, heavy footsteps)"
+     }
+    ]
+   },
+   {
+    "value": "movie posters",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:17:59",
+    "quote": "He does movie posters and such.",
+    "confidence": "sourced",
+    "detail": "David is a poster painter; the film opens in his studio"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "storm and mist", "when": "opening", "role": "omen", "quote": "A severe thunderstorm strikes Bridgton, Maine", "confidence": "sourced"},
-   {"order": 2, "value": "trapped in a shop", "when": "early", "role": "trigger", "quote": "store managers Ollie Weeks and Bud Brown close off the supermarket, and the mist envelops the store", "confidence": "sourced"},
-   {"order": 3, "value": "first death", "when": "early", "quote": "he is grabbed by a tentacled creature and dragged into the mist", "confidence": "sourced"},
-   {"order": 4, "value": "night attack", "when": "middle", "quote": "One of the predators smashes a window, allowing both species inside", "confidence": "sourced"},
-   {"order": 5, "value": "cause revealed", "when": "middle", "role": "turn", "quote": "the mist was the result of a military experiment to find other dimensions gone wrong", "confidence": "sourced"},
-   {"order": 6, "value": "human sacrifice", "when": "late", "quote": "He is stabbed, thrown outside and immediately killed by a monstrous creature", "confidence": "sourced"},
-   {"order": 7, "value": "escape into the mist", "when": "late", "quote": "Ollie shoots and kills her, returning her followers to their senses and allowing David and his group to escape the store", "confidence": "sourced"},
-   {"order": 8, "value": "mercy killing, then rescue", "when": "ending", "role": "turn", "quote": "Suddenly, the mist begins to clear, as the U.S. Army arrives soon after to exterminate the creatures", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "storm and mist",
+    "when": "opening",
+    "role": "omen",
+    "quote": "A severe thunderstorm strikes Bridgton, Maine",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:22",
+      "quote": "that a tree was gonna come flying through the window."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "bleeding man warns of mist",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:12:08",
+    "quote": "Something in the mist took John Lee.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "mother leaves for her children",
+    "when": "early",
+    "source": "subtitles",
+    "at": "00:14:50",
+    "quote": "I'm sorry, I... I can't just stay here. I have to get home to my kids.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "trapped in a shop",
+    "when": "early",
+    "role": "trigger",
+    "quote": "store managers Ollie Weeks and Bud Brown close off the supermarket, and the mist envelops the store",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "first death",
+    "when": "early",
+    "quote": "he is grabbed by a tentacled creature and dragged into the mist",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:55",
+      "quote": "(Norm screams)"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "night attack",
+    "when": "middle",
+    "quote": "One of the predators smashes a window, allowing both species inside",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:35",
+      "quote": "The light! Douse the light!"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "cause revealed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "the mist was the result of a military experiment to find other dimensions gone wrong",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:55",
+      "quote": "It's the Arrowhead Project, isn't it?"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "human sacrifice",
+    "when": "late",
+    "quote": "He is stabbed, thrown outside and immediately killed by a monstrous creature",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:48",
+      "quote": "Let the abominations smell his blood!"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "father's promise to son",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:36:05",
+    "quote": "Promise you won't let the monsters get me.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "escape into the mist",
+    "when": "late",
+    "quote": "Ollie shoots and kills her, returning her followers to their senses and allowing David and his group to escape the store",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "mercy killing, then rescue",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Suddenly, the mist begins to clear, as the U.S. Army arrives soon after to exterminate the creatures",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:52:05",
+      "quote": "But there's five of us."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

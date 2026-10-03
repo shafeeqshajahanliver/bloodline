@@ -1,61 +1,413 @@
 {
  "film": "2016-the-wailing",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "demon in disguise", "detail": "the Japanese stranger", "quote": "He then assumes his true appearance—that of a red-eyed demon, bearing stigmata", "confidence": "sourced"},
-   {"value": "possessing spirit", "quote": "Moo-myeong claims his daughter is possessed by the stranger, who is consuming her life force", "confidence": "sourced"},
-   {"value": "infection", "quote": "a bizarre infection breaks out, causing villagers to become deranged and violently kill their families", "confidence": "sourced"}
+   {
+    "value": "demon in disguise",
+    "detail": "the Japanese stranger",
+    "quote": "He then assumes his true appearance—that of a red-eyed demon, bearing stigmata",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:22",
+      "quote": "Even among other demons, he's a master of evil."
+     },
+     {
+      "source": "subtitles",
+      "at": "02:15:17",
+      "quote": "I'm the devil."
+     }
+    ]
+   },
+   {
+    "value": "possessing spirit",
+    "quote": "Moo-myeong claims his daughter is possessed by the stranger, who is consuming her life force",
+    "confidence": "sourced"
+   },
+   {
+    "value": "infection",
+    "quote": "a bizarre infection breaks out, causing villagers to become deranged and violently kill their families",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "from outside", "detail": "a stranger arrives in the village", "quote": "A mysterious Japanese man arrives in Gokseong, a small village in the mountains of South Korea", "confidence": "sourced"}
+   {
+    "value": "from outside",
+    "detail": "a stranger arrives in the village",
+    "quote": "A mysterious Japanese man arrives in Gokseong, a small village in the mountains of South Korea",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "life force", "quote": "the stranger, who is consuming her life force", "confidence": "sourced"},
-   {"value": "to collect victims", "quote": "revealing photos of other families and victims of the demon", "confidence": "observed"}
+   {
+    "value": "life force",
+    "quote": "the stranger, who is consuming her life force",
+    "confidence": "sourced"
+   },
+   {
+    "value": "to collect victims",
+    "quote": "revealing photos of other families and victims of the demon",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:46",
+      "quote": "If you go fishing, do you know what you'll catch?"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:27:04",
+      "quote": "He just threw out the bait, and your daughter took it."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "arrival of a stranger", "quote": "A mysterious Japanese man arrives in Gokseong", "confidence": "sourced"}
+   {
+    "value": "arrival of a stranger",
+    "quote": "A mysterious Japanese man arrives in Gokseong",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "wait until third crow", "quote": "Moo-myeong instructs him to simply wait until the third crow of the rooster", "confidence": "sourced"},
-   {"value": "must not be tempted", "quote": "he must not let Moo-myeong tempt him", "confidence": "sourced"},
-   {"value": "death-hex ritual", "quote": "claims the stranger is a demon and performs a death-hex ritual", "confidence": "sourced"}
+   {
+    "value": "wait until third crow",
+    "quote": "Moo-myeong instructs him to simply wait until the third crow of the rooster",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:17:15",
+      "quote": "When the demon is snared, the rooster will cry three times. Wait until the third cry."
+     }
+    ]
+   },
+   {
+    "value": "must not be tempted",
+    "quote": "he must not let Moo-myeong tempt him",
+    "confidence": "sourced"
+   },
+   {
+    "value": "death-hex ritual",
+    "quote": "claims the stranger is a demon and performs a death-hex ritual",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "policeman father", "relation_to_threat": "stranger", "detail": "Jong-goo", "quote": "a policeman who investigates a series of mysterious killings and illnesses in a remote Korean village in order to save his daughter", "confidence": "sourced"},
-   {"value": "daughter", "relation_to_threat": "stranger", "detail": "Hyo-jin", "quote": "Officer Jong-goo's daughter, Hyo-jin, becomes one of the infected", "confidence": "sourced"},
-   {"value": "village families", "relation_to_threat": "community", "quote": "causing villagers to become deranged and violently kill their families", "confidence": "sourced"}
+   {
+    "value": "policeman father",
+    "relation_to_threat": "stranger",
+    "detail": "Jong-goo",
+    "quote": "a policeman who investigates a series of mysterious killings and illnesses in a remote Korean village in order to save his daughter",
+    "confidence": "sourced"
+   },
+   {
+    "value": "daughter",
+    "relation_to_threat": "stranger",
+    "detail": "Hyo-jin",
+    "quote": "Officer Jong-goo's daughter, Hyo-jin, becomes one of the infected",
+    "confidence": "sourced"
+   },
+   {
+    "value": "village families",
+    "relation_to_threat": "community",
+    "quote": "causing villagers to become deranged and violently kill their families",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "everyone dies", "detail": "family slaughtered", "quote": "Hyo-jin has slaughtered his wife and mother-in-law; she then attacks him", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "Yang I-sam returns to the stranger's house armed with a sickle and finds him alive inside a cave", "confidence": "sourced"},
-   {"value": "ambiguous", "detail": "unclear who the true demon is", "quote": "warning that Moo-myeong is the real demon, and the stranger was a shaman who was trying to kill her", "confidence": "observed"}
+   {
+    "value": "everyone dies",
+    "detail": "family slaughtered",
+    "quote": "Hyo-jin has slaughtered his wife and mother-in-law; she then attacks him",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat survives",
+    "quote": "Yang I-sam returns to the stranger's house armed with a sickle and finds him alive inside a cave",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ambiguous",
+    "detail": "unclear who the true demon is",
+    "quote": "warning that Moo-myeong is the real demon, and the stranger was a shaman who was trying to kill her",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "deer carcass", "state": "eaten", "when": "early", "role": "omen", "quote": "A local hunter reports seeing the stranger with glowing red eyes eating a deer carcass", "confidence": "sourced"},
-   {"value": "red eyes", "state": "glowing", "when": "early", "role": "threat", "quote": "seeing the stranger with glowing red eyes", "confidence": "sourced"},
-   {"value": "shrine of photos", "state": "victims' belongings", "when": "early", "role": "clue", "quote": "discovering a shrine with photos and belongings of the murdered villagers, including Hyo-jin's shoe", "confidence": "sourced"},
-   {"value": "dead goat", "state": "hanging at gate", "when": "middle", "role": "omen", "quote": "Jong-goo's family discovers a dead goat hanging at their gate", "confidence": "sourced"},
-   {"value": "flying insects", "state": "swarming", "when": "middle", "role": "threat", "quote": "a swarm of flying insects stops him", "confidence": "sourced"},
-   {"value": "rooster", "state": "third crow", "when": "late", "role": "turn", "quote": "wait until the third crow of the rooster", "confidence": "sourced"},
-   {"value": "hairpin", "when": "late", "role": "clue", "quote": "sees his daughter's hairpin on the ground", "confidence": "sourced"},
-   {"value": "camera", "state": "photographing the dead", "when": "ending", "role": "symbol", "quote": "Il-gwang photographs the dead family members", "confidence": "sourced"}
+   {
+    "value": "pouring rain",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:03:05",
+    "quote": "It's pouring out there...",
+    "confidence": "sourced"
+   },
+   {
+    "value": "wild mushrooms",
+    "when": "early",
+    "role": "clue",
+    "detail": "the official explanation, which the police doubt",
+    "source": "subtitles",
+    "at": "00:13:22",
+    "quote": "Apparently, he ate some fucked-up mushrooms.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:59:31",
+      "quote": "Suspect arrested in the mushroom-tonic case..."
+     }
+    ]
+   },
+   {
+    "value": "deer carcass",
+    "state": "eaten",
+    "when": "early",
+    "role": "omen",
+    "quote": "A local hunter reports seeing the stranger with glowing red eyes eating a deer carcass",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:11",
+      "quote": "The one about the naked man eating the deer carcass."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:40:48",
+      "quote": "Whoa, isn't that a deer?"
+     }
+    ]
+   },
+   {
+    "value": "red eyes",
+    "state": "glowing",
+    "when": "early",
+    "role": "threat",
+    "quote": "seeing the stranger with glowing red eyes",
+    "confidence": "sourced"
+   },
+   {
+    "value": "shrine of photos",
+    "state": "victims' belongings",
+    "when": "early",
+    "role": "clue",
+    "quote": "discovering a shrine with photos and belongings of the murdered villagers, including Hyo-jin's shoe",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:32",
+      "quote": "The photographs? You mean the pictures?"
+     }
+    ]
+   },
+   {
+    "value": "dead goat",
+    "state": "hanging at gate",
+    "when": "middle",
+    "role": "omen",
+    "quote": "Jong-goo's family discovers a dead goat hanging at their gate",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fishing bait",
+    "when": "middle",
+    "role": "symbol",
+    "detail": "the shaman's image for how the stranger chooses victims",
+    "source": "subtitles",
+    "at": "01:26:56",
+    "quote": "He's just fishing. Not even he knows what he'll catch.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "flying insects",
+    "state": "swarming",
+    "when": "middle",
+    "role": "threat",
+    "quote": "a swarm of flying insects stops him",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rooster",
+    "state": "third crow",
+    "when": "late",
+    "role": "turn",
+    "quote": "wait until the third crow of the rooster",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:17:18",
+      "quote": "the rooster will cry three times."
+     }
+    ]
+   },
+   {
+    "value": "hairpin",
+    "when": "late",
+    "role": "clue",
+    "quote": "sees his daughter's hairpin on the ground",
+    "confidence": "sourced"
+   },
+   {
+    "value": "camera",
+    "state": "photographing the dead",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "Il-gwang photographs the dead family members",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "stranger arrives", "when": "opening", "role": "trigger", "quote": "A mysterious Japanese man arrives in Gokseong", "confidence": "sourced"},
-   {"order": 2, "value": "outbreak of family killings", "when": "opening", "quote": "a bizarre infection breaks out, causing villagers to become deranged and violently kill their families", "confidence": "sourced"},
-   {"order": 3, "value": "child infected", "when": "early", "quote": "Officer Jong-goo's daughter, Hyo-jin, becomes one of the infected", "confidence": "sourced"},
-   {"order": 4, "value": "shaman ritual interrupted", "when": "middle", "role": "turn", "quote": "Jong-goo stops the ritual midway, instead taking Hyo-jin to the hospital", "confidence": "sourced"},
-   {"order": 5, "value": "suspect killed, false relief", "when": "middle", "quote": "They eventually kill him, and Hyo-jin's health improves", "confidence": "sourced"},
-   {"order": 6, "value": "conflicting warnings", "when": "late", "role": "turn", "quote": "warning that Moo-myeong is the real demon", "confidence": "sourced"},
-   {"order": 7, "value": "rule broken", "when": "late", "quote": "he returns home before the rooster's third crow", "confidence": "sourced"},
-   {"order": 8, "value": "family massacred", "when": "ending", "quote": "Hyo-jin has slaughtered his wife and mother-in-law; she then attacks him", "confidence": "sourced"}
+   {
+    "value": "scripture about a ghost",
+    "when": "opening",
+    "role": "omen",
+    "detail": "Luke 24:37-39 as epigraph",
+    "source": "subtitles",
+    "at": "00:00:59",
+    "quote": "They were startled and frightened, thinking they saw a ghost.",
+    "confidence": "sourced",
+    "order": 1
+   },
+   {
+    "order": 2,
+    "value": "stranger arrives",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "A mysterious Japanese man arrives in Gokseong",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "outbreak of family killings",
+    "when": "opening",
+    "quote": "a bizarre infection breaks out, causing villagers to become deranged and violently kill their families",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:49",
+      "quote": "We've got two corpses here."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "child infected",
+    "when": "early",
+    "quote": "Officer Jong-goo's daughter, Hyo-jin, becomes one of the infected",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:25",
+      "quote": "But she never eats fish... Something's wrong with her."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "shaman ritual interrupted",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Jong-goo stops the ritual midway, instead taking Hyo-jin to the hospital",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "suspect killed, false relief",
+    "when": "middle",
+    "quote": "They eventually kill him, and Hyo-jin's health improves",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "conflicting warnings",
+    "when": "late",
+    "role": "turn",
+    "quote": "warning that Moo-myeong is the real demon",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:10:11",
+      "quote": "If you go now, your whole family will perish."
+     }
+    ]
+   },
+   {
+    "value": "demon shows true form",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "02:14:13",
+    "quote": "What is your true form? What do you think is my true form?",
+    "confidence": "sourced",
+    "order": 8
+   },
+   {
+    "order": 9,
+    "value": "rule broken",
+    "when": "late",
+    "quote": "he returns home before the rooster's third crow",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "family massacred",
+    "when": "ending",
+    "quote": "Hyo-jin has slaughtered his wife and mother-in-law; she then attacks him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:30:12",
+      "quote": "You know Daddy's a policeman. I'll take care of everything."
+     }
+    ]
+   },
+   {
+    "value": "demon echoes the scripture",
+    "when": "ending",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "02:26:00",
+    "quote": "Why is there doubt in your heart?",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:26:18",
+      "quote": "See my hands, and my feet."
+     }
+    ],
+    "order": 11
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

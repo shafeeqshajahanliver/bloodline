@@ -1,63 +1,336 @@
 {
  "film": "2021-the-innocents",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "child with powers", "detail": "Ben, telekinetic and telepathic", "quote": "a young boy named Ben, who possesses telekinetic and telepathic abilities", "confidence": "sourced"},
-   {"value": "mind control", "quote": "using his powers to manipulate a neighbor into murdering a bully", "confidence": "sourced"}
+   {
+    "value": "child with powers",
+    "detail": "Ben, telekinetic and telepathic",
+    "quote": "a young boy named Ben, who possesses telekinetic and telepathic abilities",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mind control",
+    "quote": "using his powers to manipulate a neighbor into murdering a bully",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "unexplained", "quote": "Ida later meets another girl, Aisha, who has similar abilities to Ben", "confidence": "observed"},
-   {"value": "abusive home", "quote": "Ben assaults his abusive mother and eventually kills her", "confidence": "observed"}
+   {
+    "value": "unexplained",
+    "quote": "Ida later meets another girl, Aisha, who has similar abilities to Ben",
+    "confidence": "observed"
+   },
+   {
+    "value": "abusive home",
+    "quote": "Ben assaults his abusive mother and eventually kills her",
+    "confidence": "observed"
+   }
   ],
   "wants": [
-   {"value": "revenge", "detail": "on those who hurt or insult him", "quote": "Ben becomes angry at an insulting telepathic message and injures Anna", "confidence": "observed"}
+   {
+    "value": "revenge",
+    "detail": "on those who hurt or insult him",
+    "quote": "Ben becomes angry at an insulting telepathic message and injures Anna",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "child abuse", "quote": "Ben assaults his abusive mother and eventually kills her", "confidence": "sourced"}
+   {
+    "value": "child abuse",
+    "quote": "Ben assaults his abusive mother and eventually kills her",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "moving into a new home", "quote": "have moved into an apartment with their parents", "confidence": "sourced"},
-   {"value": "new friendship", "quote": "Ida meets a young boy named Ben, who possesses telekinetic and telepathic abilities, and the two strike up a friendship", "confidence": "sourced"}
+   {
+    "value": "moving into a new home",
+    "quote": "have moved into an apartment with their parents",
+    "confidence": "sourced"
+   },
+   {
+    "value": "new friendship",
+    "quote": "Ida meets a young boy named Ben, who possesses telekinetic and telepathic abilities, and the two strike up a friendship",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "stronger together", "quote": "Anna, Aisha, and Ben's powers are strongest when the three are together", "confidence": "sourced"},
-   {"value": "kills through others", "quote": "Aisha is murdered by her mother, who is being manipulated by Ben", "confidence": "sourced"},
-   {"value": "pain mirrored", "quote": "Ida runs into the road and is hit by a car; simultaneously, Ben wakes up screaming", "confidence": "observed"}
+   {
+    "value": "stronger together",
+    "quote": "Anna, Aisha, and Ben's powers are strongest when the three are together",
+    "confidence": "sourced"
+   },
+   {
+    "value": "kills through others",
+    "quote": "Aisha is murdered by her mother, who is being manipulated by Ben",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:07",
+      "quote": "He will hurt us. He makes others do it."
+     }
+    ]
+   },
+   {
+    "value": "pain mirrored",
+    "quote": "Ida runs into the road and is hit by a car; simultaneously, Ben wakes up screaming",
+    "confidence": "observed"
+   },
+   {
+    "value": "children hear each other's thoughts",
+    "source": "subtitles",
+    "at": "00:32:51",
+    "quote": "And she can hear me too.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "sisters", "relation_to_threat": "stranger", "detail": "Ida and Anna", "quote": "A young girl named Ida and her older sister Anna, who has nonverbal autism", "confidence": "sourced"},
-   {"value": "mother", "relation_to_threat": "family", "detail": "Ben's mother", "quote": "eventually kills her, leaving her body in the kitchen", "confidence": "sourced"},
-   {"value": "child friend", "relation_to_threat": "community", "detail": "Aisha", "quote": "Aisha is murdered by her mother", "confidence": "sourced"}
+   {
+    "value": "sisters",
+    "relation_to_threat": "stranger",
+    "detail": "Ida and Anna",
+    "quote": "A young girl named Ida and her older sister Anna, who has nonverbal autism",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother",
+    "relation_to_threat": "family",
+    "detail": "Ben's mother",
+    "quote": "eventually kills her, leaving her body in the kitchen",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child friend",
+    "relation_to_threat": "community",
+    "detail": "Aisha",
+    "quote": "Aisha is murdered by her mother",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "he is eventually killed by a big burst of energy", "confidence": "sourced"},
-   {"value": "hopeful", "quote": "suggests she may regain the ability to communicate with Ida", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "he is eventually killed by a big burst of energy",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hopeful",
+    "quote": "suggests she may regain the ability to communicate with Ida",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:50:56",
+      "quote": "Oh dear. Mommy..."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "stray cat", "state": "killed", "when": "opening", "role": "omen", "quote": "he kills a stray cat by crushing its skull after dropping it from the top of the apartment complex's stairs", "confidence": "sourced"},
-   {"value": "mother's body in kitchen", "when": "middle", "role": "threat", "quote": "leaving her body in the kitchen", "confidence": "sourced"},
-   {"value": "snake", "state": "hallucinated", "when": "middle", "role": "omen", "quote": "she hallucinates a snake that Ben claims he did not create mentally", "confidence": "sourced"},
-   {"value": "toy glider", "when": "late", "role": "trigger", "quote": "Ida invites him to play with a toy glider", "confidence": "sourced"},
-   {"value": "highway overpass", "when": "late", "role": "setting", "quote": "brings him to the highway overpass where the bully was killed", "confidence": "sourced"},
-   {"value": "cast", "state": "cracking open", "when": "ending", "role": "turn", "quote": "her cast cracks open, showing that her leg has healed", "confidence": "sourced"},
-   {"value": "pond", "when": "ending", "role": "setting", "quote": "finds Anna and Ben battling on the shores of a large pond", "confidence": "sourced"},
-   {"value": "scribble-board", "when": "ending", "role": "symbol", "quote": "While playing with her scribble-board, Anna pauses briefly", "confidence": "sourced"}
+   {
+    "value": "stray cat",
+    "state": "killed",
+    "when": "opening",
+    "role": "omen",
+    "quote": "he kills a stray cat by crushing its skull after dropping it from the top of the apartment complex's stairs",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother's body in kitchen",
+    "when": "middle",
+    "role": "threat",
+    "quote": "leaving her body in the kitchen",
+    "confidence": "sourced"
+   },
+   {
+    "value": "snake",
+    "state": "hallucinated",
+    "when": "middle",
+    "role": "omen",
+    "quote": "she hallucinates a snake that Ben claims he did not create mentally",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:02",
+      "quote": "This was a snake."
+     }
+    ]
+   },
+   {
+    "value": "toy glider",
+    "when": "late",
+    "role": "trigger",
+    "quote": "Ida invites him to play with a toy glider",
+    "confidence": "sourced"
+   },
+   {
+    "value": "highway overpass",
+    "when": "late",
+    "role": "setting",
+    "quote": "brings him to the highway overpass where the bully was killed",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cast",
+    "state": "cracking open",
+    "when": "ending",
+    "role": "turn",
+    "quote": "her cast cracks open, showing that her leg has healed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:50:48",
+      "quote": "What happened to your cast?"
+     }
+    ]
+   },
+   {
+    "value": "pond",
+    "when": "ending",
+    "role": "setting",
+    "quote": "finds Anna and Ben battling on the shores of a large pond",
+    "confidence": "sourced"
+   },
+   {
+    "value": "scribble-board",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "While playing with her scribble-board, Anna pauses briefly",
+    "confidence": "sourced"
+   },
+   {
+    "value": "slingshot",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:08:04",
+    "quote": "I had a slingshot there. I fired it at people I didn't like.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "new home, new friend", "when": "opening", "role": "trigger", "quote": "Ida meets a young boy named Ben, who possesses telekinetic and telepathic abilities", "confidence": "sourced"},
-   {"order": 2, "value": "animal killed", "when": "opening", "role": "omen", "quote": "he kills a stray cat by crushing its skull", "confidence": "sourced"},
-   {"order": 3, "value": "children's powers grow", "when": "early", "quote": "The children become close friends and practice their powers to strengthen them", "confidence": "sourced"},
-   {"order": 4, "value": "child kills parent", "when": "middle", "role": "turn", "quote": "Ben assaults his abusive mother and eventually kills her", "confidence": "sourced"},
-   {"order": 5, "value": "murder by proxy", "when": "middle", "quote": "Aisha is murdered by her mother, who is being manipulated by Ben", "confidence": "sourced"},
-   {"order": 6, "value": "failed attempt to kill him", "when": "late", "quote": "before pushing him off the ledge when he is about to throw the glider. Ben survives the fall", "confidence": "sourced"},
-   {"order": 7, "value": "hidden power awakens", "when": "ending", "role": "turn", "quote": "revealing that she too has telekinetic powers", "confidence": "sourced"},
-   {"order": 8, "value": "sisters defeat him", "when": "ending", "quote": "his powers weaken as the sisters work together to defeat him", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "new home, new friend",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Ida meets a young boy named Ben, who possesses telekinetic and telepathic abilities",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:36",
+      "quote": "Are you new here?"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "animal killed",
+    "when": "opening",
+    "role": "omen",
+    "quote": "he kills a stray cat by crushing its skull",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "children's powers grow",
+    "when": "early",
+    "quote": "The children become close friends and practice their powers to strengthen them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:04",
+      "quote": "How did you do that?"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "silent sister speaks",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:50:15",
+    "quote": "Who's that? Can you tell me who that is?",
+    "confidence": "sourced",
+    "detail": "Aisha coaxes Anna into saying 'Mommy'"
+   },
+   {
+    "order": 5,
+    "value": "child kills parent",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Ben assaults his abusive mother and eventually kills her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:27",
+      "quote": "You're bleeding."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "murder by proxy",
+    "when": "middle",
+    "quote": "Aisha is murdered by her mother, who is being manipulated by Ben",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "children name the threat",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:18:07",
+    "quote": "He will hurt us.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "failed attempt to kill him",
+    "when": "late",
+    "quote": "before pushing him off the ledge when he is about to throw the glider. Ben survives the fall",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "hidden power awakens",
+    "when": "ending",
+    "role": "turn",
+    "quote": "revealing that she too has telekinetic powers",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "sisters defeat him",
+    "when": "ending",
+    "quote": "his powers weaken as the sisters work together to defeat him",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

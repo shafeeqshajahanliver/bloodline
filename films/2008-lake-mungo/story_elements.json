@@ -1,63 +1,399 @@
 {
  "film": "2008-lake-mungo",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "ghost of family member", "detail": "Alice", "quote": "unsettling encounters involving what they believe to be Alice's ghost", "confidence": "sourced"},
-   {"value": "doppelgänger", "detail": "a drowned version of Alice", "quote": "encountering a bloated, disfigured version of herself – identical to the body recovered at the dam", "confidence": "sourced"}
+   {
+    "value": "ghost of family member",
+    "detail": "Alice",
+    "quote": "unsettling encounters involving what they believe to be Alice's ghost",
+    "confidence": "sourced"
+   },
+   {
+    "value": "doppelgänger",
+    "detail": "a drowned version of Alice",
+    "quote": "encountering a bloated, disfigured version of herself – identical to the body recovered at the dam",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "drowning", "quote": "the loss of their daughter Alice (Talia Zucker) after she drowns", "confidence": "sourced"},
-   {"value": "premonition of own death", "quote": "reporting recurring dreams about drowning, death, and her mother being unable to see or help her", "confidence": "sourced"}
+   {
+    "value": "drowning",
+    "quote": "the loss of their daughter Alice (Talia Zucker) after she drowns",
+    "confidence": "sourced"
+   },
+   {
+    "value": "premonition of own death",
+    "quote": "reporting recurring dreams about drowning, death, and her mother being unable to see or help her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:07",
+      "quote": "ALICE: I feel like something bad is gonna happen to me."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to be understood", "quote": "The Palmers come to believe that Alice wanted them to understand what she had experienced", "confidence": "sourced"},
-   {"value": "to be seen by mother", "quote": "her fear that her mother could not see her", "confidence": "sourced"}
+   {
+    "value": "to be understood",
+    "quote": "The Palmers come to believe that Alice wanted them to understand what she had experienced",
+    "confidence": "sourced"
+   },
+   {
+    "value": "to be seen by mother",
+    "quote": "her fear that her mother could not see her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:36",
+      "quote": "(VOICE TREMBLING) \" I needed to see Mum to talk to her."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "secret sexual exploitation", "detail": "the neighbours", "quote": "a hidden videotape depicting Alice in a threesome with Brett and his wife, Marissa", "confidence": "sourced"},
-   {"value": "family secrets", "quote": "Mathew admits that he fabricated the \"ghostly\" photos and videos", "confidence": "sourced"}
+   {
+    "value": "secret sexual exploitation",
+    "detail": "the neighbours",
+    "quote": "a hidden videotape depicting Alice in a threesome with Brett and his wife, Marissa",
+    "confidence": "sourced"
+   },
+   {
+    "value": "family secrets",
+    "quote": "Mathew admits that he fabricated the \"ghostly\" photos and videos",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "death of a child", "quote": "While swimming with her family at a dam in Ararat, Australia, 16-year-old Alice Palmer disappears", "confidence": "sourced"}
+   {
+    "value": "death of a child",
+    "quote": "While swimming with her family at a dam in Ararat, Australia, 16-year-old Alice Palmer disappears",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "seen only in recordings", "quote": "A photograph taken during the family's departure reveals the faint figure of Alice in a window", "confidence": "sourced"},
-   {"value": "death foreseen", "quote": "encountering a bloated, disfigured version of herself", "confidence": "observed"}
+   {
+    "value": "seen only in recordings",
+    "quote": "A photograph taken during the family's departure reveals the faint figure of Alice in a window",
+    "confidence": "sourced"
+   },
+   {
+    "value": "death foreseen",
+    "quote": "encountering a bloated, disfigured version of herself",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:44",
+      "quote": "JUNE: I am convinced that Alice knew she was going to die."
+     }
+    ]
+   },
+   {
+    "value": "ghosts are everywhere",
+    "source": "subtitles",
+    "at": "00:52:34",
+    "quote": "There are ghosts everywhere.",
+    "confidence": "observed"
+   }
   ],
   "who_suffers": [
-   {"value": "grieving family", "relation_to_threat": "family", "quote": "It follows a family trying to come to terms with the loss of their daughter Alice", "confidence": "sourced"},
-   {"value": "mother", "relation_to_threat": "family", "detail": "June", "quote": "June through recurring nightmares of Alice's drenched corpse", "confidence": "sourced"},
-   {"value": "teenage girl", "relation_to_threat": "self", "detail": "Alice", "quote": "Alice visited him months before her death, reporting recurring dreams about drowning", "confidence": "sourced"}
+   {
+    "value": "grieving family",
+    "relation_to_threat": "family",
+    "quote": "It follows a family trying to come to terms with the loss of their daughter Alice",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother",
+    "relation_to_threat": "family",
+    "detail": "June",
+    "quote": "June through recurring nightmares of Alice's drenched corpse",
+    "confidence": "sourced"
+   },
+   {
+    "value": "teenage girl",
+    "relation_to_threat": "self",
+    "detail": "Alice",
+    "quote": "Alice visited him months before her death, reporting recurring dreams about drowning",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "family moves on", "quote": "Feeling that the haunting has ended, they move out of their home", "confidence": "sourced"},
-   {"value": "ghost lingers", "quote": "A post-credits scene shows Alice's ghost lingering during a thunderstorm back at Lake Mungo", "confidence": "sourced"}
+   {
+    "value": "family moves on",
+    "quote": "Feeling that the haunting has ended, they move out of their home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:08",
+      "quote": "In the weeks and months after Lake Mungo, we started to feel like a family again."
+     }
+    ]
+   },
+   {
+    "value": "ghost lingers",
+    "quote": "A post-credits scene shows Alice's ghost lingering during a thunderstorm back at Lake Mungo",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "dam", "state": "drowning site", "when": "opening", "role": "setting", "quote": "While swimming with her family at a dam in Ararat, Australia", "confidence": "sourced"},
-   {"value": "drenched corpse", "when": "early", "role": "omen", "quote": "June through recurring nightmares of Alice's drenched corpse", "confidence": "sourced"},
-   {"value": "bruises", "state": "unexplained", "when": "early", "role": "omen", "quote": "Mathew develops mysterious bruises on his torso", "confidence": "sourced"},
-   {"value": "photographs", "state": "faked", "when": "middle", "role": "clue", "quote": "seemingly capturing Alice's figure in the backyard", "confidence": "sourced"},
-   {"value": "hidden videotape", "when": "middle", "role": "clue", "quote": "June subsequently finds a hidden videotape", "confidence": "sourced"},
-   {"value": "buried phone", "when": "late", "role": "clue", "quote": "Alice is seen burying something beneath a tree", "confidence": "sourced"},
-   {"value": "drowned double", "state": "floating towards her", "when": "late", "role": "turn", "quote": "identical to the body recovered at the dam – floating slowly towards her", "confidence": "sourced"},
-   {"value": "figure in window", "when": "ending", "role": "omen", "quote": "the faint figure of Alice in a window", "confidence": "sourced"}
+   {
+    "value": "dam",
+    "state": "drowning site",
+    "when": "opening",
+    "role": "setting",
+    "quote": "While swimming with her family at a dam in Ararat, Australia",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:47",
+      "quote": "RUSSELL: Matt and Ali had swum out to the middle of the dam."
+     }
+    ]
+   },
+   {
+    "value": "drenched corpse",
+    "when": "early",
+    "role": "omen",
+    "quote": "June through recurring nightmares of Alice's drenched corpse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:19",
+      "quote": "It was the same face of the body that I had identified at the dam."
+     }
+    ]
+   },
+   {
+    "value": "bruises",
+    "state": "unexplained",
+    "when": "early",
+    "role": "omen",
+    "quote": "Mathew develops mysterious bruises on his torso",
+    "confidence": "sourced"
+   },
+   {
+    "value": "photographs",
+    "state": "faked",
+    "when": "middle",
+    "role": "clue",
+    "quote": "seemingly capturing Alice's figure in the backyard",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:52",
+      "quote": "INTERVIEWER: And what was in the April 28th photograph that was different?"
+     }
+    ]
+   },
+   {
+    "value": "hidden videotape",
+    "when": "middle",
+    "role": "clue",
+    "quote": "June subsequently finds a hidden videotape",
+    "confidence": "sourced"
+   },
+   {
+    "value": "buried phone",
+    "when": "late",
+    "role": "clue",
+    "quote": "Alice is seen burying something beneath a tree",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:06",
+      "quote": "She was burying something."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:08:23",
+      "quote": "And inside the plastic bag there was Ali's favorite necklace, her ring, her watch, her mobile phone."
+     }
+    ]
+   },
+   {
+    "value": "drowned double",
+    "state": "floating towards her",
+    "when": "late",
+    "role": "turn",
+    "quote": "identical to the body recovered at the dam – floating slowly towards her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:15",
+      "quote": "RUSSELL: I recognized the face as soon as I saw it on the phone video."
+     }
+    ]
+   },
+   {
+    "value": "figure in window",
+    "when": "ending",
+    "role": "omen",
+    "quote": "the faint figure of Alice in a window",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hallway to her room",
+    "detail": "in Alice's trance vision, where her mother cannot see her",
+    "when": "ending",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "01:17:16",
+    "quote": "Walking down the hall towards Alice's room.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "child drowns", "when": "opening", "quote": "Days later, her body is found in a stormwater drainage basin", "confidence": "sourced"},
-   {"order": 2, "value": "haunting signs", "when": "early", "role": "omen", "quote": "the family begins hearing unexplained noises around the house", "confidence": "sourced"},
-   {"order": 3, "value": "body exhumed", "when": "middle", "quote": "the Palmers request an exhumation and DNA test", "confidence": "sourced"},
-   {"order": 4, "value": "evidence revealed as fake", "when": "middle", "role": "turn", "quote": "Mathew admits that he fabricated the \"ghostly\" photos and videos", "confidence": "sourced"},
-   {"order": 5, "value": "victim's secret life", "when": "middle", "role": "turn", "quote": "a hidden videotape depicting Alice in a threesome", "confidence": "sourced"},
-   {"order": 6, "value": "victim met own corpse", "when": "late", "role": "turn", "quote": "its footage shows Alice walking along the shoreline at night", "confidence": "sourced"},
-   {"order": 7, "value": "family leaves house", "when": "ending", "quote": "they move out of their home", "confidence": "sourced"},
-   {"order": 8, "value": "closing sting", "when": "ending", "quote": "A post-credits scene shows Alice's ghost lingering", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "premonition on tape",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:07",
+    "quote": "ALICE: I feel like something bad is gonna happen to me.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "child drowns",
+    "when": "opening",
+    "quote": "Days later, her body is found in a stormwater drainage basin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:50",
+      "quote": "JUNE ON PHONE: My daughter, Alice, has gone missing."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "haunting signs",
+    "when": "early",
+    "role": "omen",
+    "quote": "the family begins hearing unexplained noises around the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:39",
+      "quote": "Alice would come down the hall still dripping from the dam"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "body exhumed",
+    "when": "middle",
+    "quote": "the Palmers request an exhumation and DNA test",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:51",
+      "quote": "June and Russell Palmer were adamant that DNA testing be carried out."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "evidence revealed as fake",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Mathew admits that he fabricated the \"ghostly\" photos and videos",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:04",
+      "quote": "and the bedroom, and that I created the April 28th backyard photo"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "victim's secret life",
+    "when": "middle",
+    "role": "turn",
+    "quote": "a hidden videotape depicting Alice in a threesome",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "victim met own corpse",
+    "when": "late",
+    "role": "turn",
+    "quote": "its footage shows Alice walking along the shoreline at night",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:47",
+      "quote": "Look, I think Ali saw a ghost. But she wasn't to know that it was her own."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "family leaves house",
+    "when": "ending",
+    "quote": "they move out of their home",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "unseen by her own mother",
+    "detail": "Alice's hypnosis tape, played at the end",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:18:08",
+    "quote": "ALICE: It's my mum.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:24",
+      "quote": "I don't think she knows I'm there."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "closing sting",
+    "when": "ending",
+    "quote": "A post-credits scene shows Alice's ghost lingering",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

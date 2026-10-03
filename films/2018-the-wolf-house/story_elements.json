@@ -1,56 +1,486 @@
 {
  "film": "2018-the-wolf-house",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "wolf", "detail": "the Wolf, voice of the Colony", "quote": "She narrowly escapes a Wolf by taking refuge in an abandoned house", "confidence": "sourced"},
-   {"value": "cult", "detail": "the Colony, inspired by Colonia Dignidad", "quote": "a fairy-tale themed animated propaganda film produced by the leader of the sect in order to indoctrinate its followers", "confidence": "sourced"},
-   {"value": "hungry companions", "detail": "Ana and Pedro, the pigs turned human", "quote": "As they stand over her discussing their hunger, María realizes they intend to eat her", "confidence": "sourced"}
+   {
+    "value": "wolf",
+    "detail": "the Wolf, voice of the Colony",
+    "quote": "She narrowly escapes a Wolf by taking refuge in an abandoned house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:56",
+      "quote": "The wolf is coming."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:06:44",
+      "quote": "Inside of you. I was always inside of you."
+     }
+    ]
+   },
+   {
+    "value": "cult",
+    "detail": "the Colony, inspired by Colonia Dignidad",
+    "quote": "a fairy-tale themed animated propaganda film produced by the leader of the sect in order to indoctrinate its followers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:41",
+      "quote": "The dark legend that has been created around us is mainly due to ignorance."
+     }
+    ]
+   },
+   {
+    "value": "hungry companions",
+    "detail": "Ana and Pedro, the pigs turned human",
+    "quote": "As they stand over her discussing their hunger, María realizes they intend to eat her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:34",
+      "quote": "We're going to eat, Ana said."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "real cult", "quote": "Inspired by the actual case of Colonia Dignidad", "confidence": "sourced"}
+   {
+    "value": "real cult",
+    "quote": "Inspired by the actual case of Colonia Dignidad",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:02",
+      "quote": "we live, we work, we serve the community and we sing... a group of German people."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to bring followers home", "quote": "María ignores the Wolf's repeated attempts to tempt her back to the Colony", "confidence": "sourced"},
-   {"value": "hunger", "quote": "As they stand over her discussing their hunger", "confidence": "sourced"}
+   {
+    "value": "to bring followers home",
+    "quote": "María ignores the Wolf's repeated attempts to tempt her back to the Colony",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:28",
+      "quote": "little bird... It's time to go home."
+     }
+    ]
+   },
+   {
+    "value": "hunger",
+    "quote": "As they stand over her discussing their hunger",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:48",
+      "quote": "I'm very hungry..."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "fleeing punishment", "quote": "When punished for her lack of contribution, she flees into the woods", "confidence": "sourced"}
+   {
+    "value": "fleeing punishment",
+    "quote": "When punished for her lack of contribution, she flees into the woods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:44",
+      "quote": "So one night, when everyone was asleep, Maria escaped from the Colony."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "house shapes to her feelings", "quote": "the universe of the house reacts to Maria's feelings and shapes itself into her ideal home", "confidence": "sourced"},
-   {"value": "cannot leave the house", "quote": "Although the Wolf's presence outside prevents them from leaving", "confidence": "sourced"}
+   {
+    "value": "house shapes to her feelings",
+    "quote": "the universe of the house reacts to Maria's feelings and shapes itself into her ideal home",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cannot leave the house",
+    "quote": "Although the Wolf's presence outside prevents them from leaving",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:31",
+      "quote": "Nobody can leave. There is food here in the house."
+     }
+    ]
+   },
+   {
+    "value": "strangers must not enter",
+    "source": "subtitles",
+    "at": "00:13:32",
+    "quote": "Remember... that a stranger should not enter into a real home.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "safety through obedience",
+    "source": "subtitles",
+    "at": "00:24:42",
+    "quote": "The only way to be safe is to listen to me.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "runaway girl", "relation_to_threat": "community", "detail": "María, from the Colony", "quote": "María Wehrle is an idle and irresponsible girl living in the isolated Colony", "confidence": "sourced"},
-   {"value": "audience as followers", "relation_to_threat": "community", "quote": "He offers to take the \"little pigs\" in the audience home to the Colony", "confidence": "sourced"}
+   {
+    "value": "runaway girl",
+    "relation_to_threat": "community",
+    "detail": "María, from the Colony",
+    "quote": "María Wehrle is an idle and irresponsible girl living in the isolated Colony",
+    "confidence": "sourced"
+   },
+   {
+    "value": "audience as followers",
+    "relation_to_threat": "community",
+    "quote": "He offers to take the \"little pigs\" in the audience home to the Colony",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:30",
+      "quote": "And you, little pig..."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "victim returns to captor", "quote": "María then transforms into a bird and flies home to the Colony", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "where he promises he will care for them", "confidence": "observed"}
+   {
+    "value": "victim returns to captor",
+    "quote": "María then transforms into a bird and flies home to the Colony",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:55",
+      "quote": "Maria Wehrle was rescued thanks to our incessant search."
+     }
+    ]
+   },
+   {
+    "value": "threat survives",
+    "quote": "where he promises he will care for them",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "wolf", "state": "waiting outside", "when": "opening", "role": "threat", "quote": "She narrowly escapes a Wolf by taking refuge in an abandoned house", "confidence": "sourced"},
-   {"value": "pigs", "state": "transform into humans", "when": "early", "role": "mirror", "quote": "The pigs transform into humans whom she names Ana and Pedro", "confidence": "sourced"},
-   {"value": "abandoned house", "when": "opening", "role": "setting", "quote": "taking refuge in an abandoned house", "confidence": "sourced"},
-   {"value": "apples", "when": "middle", "role": "symbol", "quote": "tries to leave the house and pick apples in the woods", "confidence": "sourced"},
-   {"value": "bed", "state": "girl tied to it", "when": "late", "role": "turn", "quote": "Ana and Pedro tie María to a bed to prevent her from leaving", "confidence": "sourced"},
-   {"value": "bird", "when": "ending", "role": "symbol", "quote": "María then transforms into a bird and flies home to the Colony", "confidence": "sourced"}
+   {
+    "value": "wolf",
+    "state": "waiting outside",
+    "when": "opening",
+    "role": "threat",
+    "quote": "She narrowly escapes a Wolf by taking refuge in an abandoned house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:56",
+      "quote": "The wolf is coming."
+     }
+    ]
+   },
+   {
+    "value": "pigs",
+    "state": "transform into humans",
+    "when": "early",
+    "role": "mirror",
+    "quote": "The pigs transform into humans whom she names Ana and Pedro",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:56",
+      "quote": "Change your hooves to hands."
+     }
+    ]
+   },
+   {
+    "value": "abandoned house",
+    "when": "opening",
+    "role": "setting",
+    "quote": "taking refuge in an abandoned house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:00",
+      "quote": "I need a shelter."
+     }
+    ]
+   },
+   {
+    "value": "apples",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "tries to leave the house and pick apples in the woods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:11",
+      "quote": "I woke up suddenly and I saw a red apple."
+     }
+    ]
+   },
+   {
+    "value": "bed",
+    "state": "girl tied to it",
+    "when": "late",
+    "role": "turn",
+    "quote": "Ana and Pedro tie María to a bed to prevent her from leaving",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:44",
+      "quote": "I try to look at my chest but I'm tied up."
+     }
+    ]
+   },
+   {
+    "value": "bird",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "María then transforms into a bird and flies home to the Colony",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:46",
+      "quote": "My beautiful little bird."
+     }
+    ]
+   },
+   {
+    "value": "honey",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:38:11",
+    "quote": "This magic is called honey.",
+    "confidence": "sourced",
+    "detail": "the Colony's product, advertised in the prologue; Maria uses it to change the pigs",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:40",
+      "quote": "the unparalleled flavor and texture of \" The Colony \" honey."
+     }
+    ]
+   },
+   {
+    "value": "mirror",
+    "when": "middle",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:52:46",
+    "quote": "Mirror, mirror, on the wall. Who has the fairest house of all?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fire",
+    "state": "pigs burned",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:32:15",
+    "quote": "The house is burning.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "flight from the community", "when": "opening", "role": "trigger", "quote": "When punished for her lack of contribution, she flees into the woods", "confidence": "sourced"},
-   {"order": 2, "value": "refuge found", "when": "opening", "quote": "She is welcomed by two pigs, the only inhabitants of the place", "confidence": "sourced"},
-   {"order": 3, "value": "false paradise", "when": "early", "quote": "the group lives happily for a short time", "confidence": "sourced"},
-   {"order": 4, "value": "food runs out", "when": "middle", "role": "turn", "quote": "As time passes, the secluded house begins to run out of food", "confidence": "sourced"},
-   {"order": 5, "value": "companions turn predator", "when": "late", "quote": "María realizes they intend to eat her", "confidence": "sourced"},
-   {"order": 6, "value": "prays to the threat", "when": "late", "role": "turn", "quote": "Despairing, María prays to the Wolf, begging it to save her", "confidence": "sourced"},
-   {"order": 7, "value": "return to the fold", "when": "ending", "quote": "María then transforms into a bird and flies home to the Colony", "confidence": "sourced"},
-   {"order": 8, "value": "invitation to the audience", "when": "ending", "quote": "He offers to take the \"little pigs\" in the audience home to the Colony", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "propaganda prologue",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:02:35",
+    "quote": "As shepherd of this community I hope to dispel the horrible rumours",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "flight from the community",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "When punished for her lack of contribution, she flees into the woods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:44",
+      "quote": "So one night, when everyone was asleep, Maria escaped from the Colony."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "refuge found",
+    "when": "opening",
+    "quote": "She is welcomed by two pigs, the only inhabitants of the place",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:58",
+      "quote": "How did you escape the wolf?"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "pigs burned",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:32:53",
+    "quote": "You burned the pigs!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "false paradise",
+    "when": "early",
+    "quote": "the group lives happily for a short time",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:35",
+      "quote": "Maria, Ana and Pedro were a happy family."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "food runs out",
+    "when": "middle",
+    "role": "turn",
+    "quote": "As time passes, the secluded house begins to run out of food",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:55",
+      "quote": "We'd eaten so little for weeks."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "companions turn predator",
+    "when": "late",
+    "quote": "María realizes they intend to eat her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:34",
+      "quote": "We're going to eat, Ana said."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "prays to the threat",
+    "when": "late",
+    "role": "turn",
+    "quote": "Despairing, María prays to the Wolf, begging it to save her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:13",
+      "quote": "Dear wolf I need you."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "threat revealed within",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:06:44",
+    "quote": "Inside of you. I was always inside of you.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "return to the fold",
+    "when": "ending",
+    "quote": "María then transforms into a bird and flies home to the Colony",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:55",
+      "quote": "Maria Wehrle was rescued thanks to our incessant search."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "invitation to the audience",
+    "when": "ending",
+    "quote": "He offers to take the \"little pigs\" in the audience home to the Colony",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:30",
+      "quote": "And you, little pig... now that you have seen our dreams..."
+     }
+    ]
+   }
+  ],
+  "wrong": [
+   {
+    "value": "disobedience",
+    "detail": "Maria lets three pigs escape",
+    "source": "subtitles",
+    "at": "00:03:27",
+    "quote": "One day Maria was disobedient and let three pigs scape from their pen.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child abuse in the colony",
+    "source": "subtitles",
+    "at": "00:38:36",
+    "quote": "They punished me in a dark room. There were many secret doors. I wasn't allowed to cry.",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,64 +1,439 @@
 {
  "film": "1993-manichitrathazhu",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vengeful ghost", "detail": "Nagavalli, a murdered court dancer (believed)", "quote": "Legend holds that Nagavalli's vengeful spirit has remained trapped within the locked room ever since.", "confidence": "sourced"},
-   {"value": "the self", "detail": "Ganga's alter ego as Nagavalli", "quote": "Ganga is suffering from severe Dissociative Identity Disorder", "confidence": "sourced"}
+   {
+    "value": "vengeful ghost",
+    "detail": "Nagavalli, a murdered court dancer (believed)",
+    "quote": "Legend holds that Nagavalli's vengeful spirit has remained trapped within the locked room ever since.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the self",
+    "detail": "Ganga's alter ego as Nagavalli",
+    "quote": "Ganga is suffering from severe Dissociative Identity Disorder",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:59:47",
+      "quote": "Her personality took the form of Nagavalli."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "person who died wronged", "detail": "Nagavalli and her lover, murdered by the Karanavar", "quote": "Upon discovering the betrayal, the enraged Karanavar brutally murdered them both.", "confidence": "sourced"},
-   {"value": "internalised folklore", "quote": "her childhood fixation on folklore, combined with the stress of the haunted mansion, caused her to internalize the persona of Nagavalli", "confidence": "sourced"}
+   {
+    "value": "person who died wronged",
+    "detail": "Nagavalli and her lover, murdered by the Karanavar",
+    "quote": "Upon discovering the betrayal, the enraged Karanavar brutally murdered them both.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "internalised folklore",
+    "quote": "her childhood fixation on folklore, combined with the stress of the haunted mansion, caused her to internalize the persona of Nagavalli",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "revenge", "detail": "to behead the Karanavar on Durgashtami", "quote": "vows to decapitate the Karanavar on the impending night of Durgashtami", "confidence": "sourced"}
+   {
+    "value": "revenge",
+    "detail": "to behead the Karanavar on Durgashtami",
+    "quote": "vows to decapitate the Karanavar on the impending night of Durgashtami",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:27:35",
+      "quote": "Today is Durgashtami, I am going to kill you, and drink your blood."
+     }
+    ]
+   },
+   {
+    "value": "to drink the killer's blood",
+    "source": "subtitles",
+    "at": "02:25:50",
+    "quote": "Today is Durgashtami. I want to kill him and drink his blood.",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "murder of lovers", "quote": "the enraged Karanavar brutally murdered them both", "confidence": "sourced"},
-   {"value": "woman taken as possession", "detail": "a court dancer brought back by the patriarch", "quote": "became infatuated with a court dancer named Nagavalli during a trip to Thanjavur and brought her back to the mansion", "confidence": "sourced"}
+   {
+    "value": "murder of lovers",
+    "quote": "the enraged Karanavar brutally murdered them both",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:07",
+      "quote": "That night he killed Nagavalli in that room upstairs."
+     }
+    ]
+   },
+   {
+    "value": "woman taken as possession",
+    "detail": "a court dancer brought back by the patriarch",
+    "quote": "became infatuated with a court dancer named Nagavalli during a trip to Thanjavur and brought her back to the mansion",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "returning to ancestral home", "quote": "decide to take a vacation to Nakulan's ancestral village in Kerala", "confidence": "sourced"},
-   {"value": "opening a forbidden room", "quote": "help her illicitly acquire the keys and unlock the forbidden wing", "confidence": "sourced"}
+   {
+    "value": "returning to ancestral home",
+    "quote": "decide to take a vacation to Nakulan's ancestral village in Kerala",
+    "confidence": "sourced"
+   },
+   {
+    "value": "opening a forbidden room",
+    "quote": "help her illicitly acquire the keys and unlock the forbidden wing",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "locked room must stay shut", "quote": "they are explicitly cautioned to avoid the \"Thekkini\", a heavily secured and locked southern wing of the house", "confidence": "sourced"},
-   {"value": "rituals fail", "quote": "Traditional purification rituals and pujas fail to quell the disturbances.", "confidence": "sourced"},
-   {"value": "appeased by symbolic revenge", "quote": "promising to facilitate her revenge by allowing her to behead the Karanavar, but in turn, she has to leave Ganga's body", "confidence": "sourced"}
+   {
+    "value": "locked room must stay shut",
+    "quote": "they are explicitly cautioned to avoid the \"Thekkini\", a heavily secured and locked southern wing of the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:44",
+      "quote": "He managed to snare her soul into that room and secured it with a powerful talisman."
+     }
+    ]
+   },
+   {
+    "value": "rituals fail",
+    "quote": "Traditional purification rituals and pujas fail to quell the disturbances.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "appeased by symbolic revenge",
+    "quote": "promising to facilitate her revenge by allowing her to behead the Karanavar, but in turn, she has to leave Ganga's body",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:26:01",
+      "quote": "After you kill him and you are avenged will you leave this body."
+     }
+    ]
+   },
+   {
+    "value": "revenge on a holy night",
+    "source": "subtitles",
+    "at": "00:30:14",
+    "quote": "It is said that on the night of Durgashtami her soul took the form of a witch and entered that room to kill him.",
+    "confidence": "sourced",
+    "detail": "Durgashtami"
+   },
+   {
+    "value": "openers fall sick",
+    "source": "subtitles",
+    "at": "00:35:45",
+    "quote": "The locksmith who made this key is bedridden with sores on him.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "wife", "relation_to_threat": "self", "detail": "Ganga", "quote": "On Durgashtami night, Ganga fully submerges into her homicidal Nagavalli alter-ego.", "confidence": "sourced"},
-   {"value": "husband", "relation_to_threat": "lover", "detail": "Nakulan, seen as the Karanavar", "quote": "her husband Nakulan as the hated Karanavar whom she must execute on Durgashtami", "confidence": "sourced"},
-   {"value": "extended family", "relation_to_threat": "family", "quote": "Unwilling to leave the couple unescorted, the extended family joins them at the estate.", "confidence": "sourced"}
+   {
+    "value": "wife",
+    "relation_to_threat": "self",
+    "detail": "Ganga",
+    "quote": "On Durgashtami night, Ganga fully submerges into her homicidal Nagavalli alter-ego.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "husband",
+    "relation_to_threat": "lover",
+    "detail": "Nakulan, seen as the Karanavar",
+    "quote": "her husband Nakulan as the hated Karanavar whom she must execute on Durgashtami",
+    "confidence": "sourced"
+   },
+   {
+    "value": "extended family",
+    "relation_to_threat": "family",
+    "quote": "Unwilling to leave the couple unescorted, the extended family joins them at the estate.",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat appeased", "detail": "the persona leaves after killing a dummy", "quote": "Fully convinced that she has finally avenged her murder, the vengeful alter-ego permanently leaves her body.", "confidence": "sourced"},
-   {"value": "victim healed", "quote": "Sunny utilizes targeted psychiatric therapy to rehabilitate Ganga", "confidence": "sourced"}
+   {
+    "value": "threat appeased",
+    "detail": "the persona leaves after killing a dummy",
+    "quote": "Fully convinced that she has finally avenged her murder, the vengeful alter-ego permanently leaves her body.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "victim healed",
+    "quote": "Sunny utilizes targeted psychiatric therapy to rehabilitate Ganga",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:29:51",
+      "quote": "You have to realize that now you are free of your illness."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "locked room", "when": "opening", "role": "setting", "quote": "a heavily secured and locked southern wing of the house", "confidence": "sourced"},
-   {"value": "keys", "when": "early", "role": "trigger", "quote": "help her illicitly acquire the keys and unlock the forbidden wing", "confidence": "sourced"},
-   {"value": "saree on fire", "when": "early", "role": "omen", "quote": "Ganga's saree mysteriously catches fire", "confidence": "sourced"},
-   {"value": "singing and dancing at midnight", "when": "middle", "role": "clue", "quote": "the haunting sound of a woman singing and dancing in Tamil coming from the re-locked Thekkini at midnight", "confidence": "sourced"},
-   {"value": "poisoned tea", "when": "middle", "role": "threat", "quote": "an unknown individual attempts to poison Nakulan's tea", "confidence": "sourced"},
-   {"value": "sword", "when": "ending", "role": "weapon", "quote": "Just as Ganga raises the sword to strike", "confidence": "sourced"},
-   {"value": "straw dummy", "state": "hacked to pieces", "when": "ending", "role": "turn", "quote": "replaces Nakulan with a lifelike straw dummy", "confidence": "sourced"},
-   {"value": "sacred ash", "when": "ending", "role": "weapon", "quote": "the Namboodiri dispenses dense smoke and sacred ash directly into her face", "confidence": "sourced"}
+   {
+    "value": "locked room",
+    "when": "opening",
+    "role": "setting",
+    "quote": "a heavily secured and locked southern wing of the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:20",
+      "quote": "That room has been barred and protected for a long time now."
+     }
+    ]
+   },
+   {
+    "value": "keys",
+    "when": "early",
+    "role": "trigger",
+    "quote": "help her illicitly acquire the keys and unlock the forbidden wing",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:23",
+      "quote": "Father too warned you, yet you got a key made to open it."
+     }
+    ]
+   },
+   {
+    "value": "saree on fire",
+    "when": "early",
+    "role": "omen",
+    "quote": "Ganga's saree mysteriously catches fire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:39",
+      "quote": "Her sari caught fire."
+     }
+    ]
+   },
+   {
+    "value": "singing and dancing at midnight",
+    "when": "middle",
+    "role": "clue",
+    "quote": "the haunting sound of a woman singing and dancing in Tamil coming from the re-locked Thekkini at midnight",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:30",
+      "quote": "Yesterday night I heard someone upstairs dancing with anklets on."
+     }
+    ]
+   },
+   {
+    "value": "poisoned tea",
+    "when": "middle",
+    "role": "threat",
+    "quote": "an unknown individual attempts to poison Nakulan's tea",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:40:14",
+      "quote": "There's poison in it."
+     }
+    ]
+   },
+   {
+    "value": "sword",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "Just as Ganga raises the sword to strike",
+    "confidence": "sourced"
+   },
+   {
+    "value": "straw dummy",
+    "state": "hacked to pieces",
+    "when": "ending",
+    "role": "turn",
+    "quote": "replaces Nakulan with a lifelike straw dummy",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sacred ash",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "the Namboodiri dispenses dense smoke and sacred ash directly into her face",
+    "confidence": "sourced"
+   },
+   {
+    "value": "anklets",
+    "detail": "Nagavalli's 150-year-old anklets heard at night",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:46:35",
+    "quote": "I heard the sound of anklets and woke up.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:35",
+      "quote": "The anklet of Nagavalli has gone from the Southern room."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "talisman",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:30:44",
+    "quote": "He managed to snare her soul into that room and secured it with a powerful talisman.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "couple moves into haunted house", "when": "opening", "quote": "Nakulan insists on residing at their sprawling ancestral mansion, the Madampalli Tharavad, which is widely rumored to be haunted", "confidence": "sourced"},
-   {"order": 2, "value": "legend told", "when": "opening", "role": "clue", "quote": "Local lore dictates that 150 years prior, the family's powerful patriarch, Karanavar Sankaran Thambi, became infatuated with a court dancer", "confidence": "sourced"},
-   {"order": 3, "value": "forbidden room opened", "when": "early", "role": "trigger", "quote": "Shortly after the room is opened, a series of disturbing and seemingly paranormal occurrences plague the household", "confidence": "sourced"},
-   {"order": 4, "value": "wrong person suspected", "when": "early", "quote": "the terrified family begins to suspect that another cousin, Sridevi, has been possessed", "confidence": "sourced"},
-   {"order": 5, "value": "expert arrives", "when": "middle", "quote": "Nakulan summons his close friend, Dr. Sunny Joseph, a brilliant and eccentric United States-based Malayali psychiatrist", "confidence": "sourced"},
-   {"order": 6, "value": "true possessed revealed", "when": "late", "role": "turn", "quote": "Sunny diagnoses the true root of the haunting: Ganga is suffering from severe Dissociative Identity Disorder", "confidence": "sourced"},
-   {"order": 7, "value": "staged exorcism", "when": "ending", "quote": "The blind fury of the Nagavalli persona drives her to hack the dummy to pieces.", "confidence": "sourced"},
-   {"order": 8, "value": "family reunited", "when": "ending", "quote": "The narrative concludes as the unified family bids a warm farewell to the couple.", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "house called haunted",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:04:02",
+    "quote": "But the people here believe that Maadampally house, is haunted ... with witches and dare not to step in here.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "couple moves into haunted house",
+    "when": "opening",
+    "quote": "Nakulan insists on residing at their sprawling ancestral mansion, the Madampalli Tharavad, which is widely rumored to be haunted",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "legend told",
+    "when": "opening",
+    "role": "clue",
+    "quote": "Local lore dictates that 150 years prior, the family's powerful patriarch, Karanavar Sankaran Thambi, became infatuated with a court dancer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:37",
+      "quote": "Some 150 years ago there was a powerful Nobleman. He brought a dancer from Tanjavur, and she stayed here."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "forbidden room opened",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Shortly after the room is opened, a series of disturbing and seemingly paranormal occurrences plague the household",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:25",
+      "quote": "I came to stop you, but you seem to have opened it already."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "openers fall sick",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:35:45",
+    "quote": "The locksmith who made this key is bedridden with sores on him.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "wrong person suspected",
+    "when": "early",
+    "quote": "the terrified family begins to suspect that another cousin, Sridevi, has been possessed",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "expert arrives",
+    "when": "middle",
+    "quote": "Nakulan summons his close friend, Dr. Sunny Joseph, a brilliant and eccentric United States-based Malayali psychiatrist",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "true possessed revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Sunny diagnoses the true root of the haunting: Ganga is suffering from severe Dissociative Identity Disorder",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:53:47",
+      "quote": "The psychic patient who is trying to kill Alli, set Ganga's sari on fire is not Sreedevi... That patient is your wife Ganga."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "staged exorcism",
+    "when": "ending",
+    "quote": "The blind fury of the Nagavalli persona drives her to hack the dummy to pieces.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "family reunited",
+    "when": "ending",
+    "quote": "The narrative concludes as the unified family bids a warm farewell to the couple.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:31:19",
+      "quote": "Did you hear this Ganga you loved and who loves you a lot"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "comic healing sting",
+    "detail": "the servant's 'illness' is cured too",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "02:34:00",
+    "quote": "I felt as if a bird flew from here.",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,56 +1,384 @@
 {
  "film": "2018-climax",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "drug-induced madness", "quote": "the communal bowl of sangria is spiked with LSD, sending each of the dancers into agitated, confused and psychotic states", "confidence": "sourced"},
-   {"value": "the group itself", "quote": "the remaining dancers have descended into drug-induced psychosis, dancing wildly, having sex, or physically assaulting one another", "confidence": "sourced"}
+   {
+    "value": "drug-induced madness",
+    "quote": "the communal bowl of sangria is spiked with LSD, sending each of the dancers into agitated, confused and psychotic states",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:53",
+      "quote": "You spiked it with LSD?"
+     }
+    ]
+   },
+   {
+    "value": "the group itself",
+    "quote": "the remaining dancers have descended into drug-induced psychosis, dancing wildly, having sex, or physically assaulting one another",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "spiked drink", "detail": "culprit hinted to be Psyché", "quote": "Psyché, who has several books related to hallucinogens in her bag, goes to her room and drops liquid LSD into her eye", "confidence": "observed"}
+   {
+    "value": "spiked drink",
+    "detail": "culprit hinted to be Psyché",
+    "quote": "Psyché, who has several books related to hallucinogens in her bag, goes to her room and drops liquid LSD into her eye",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:23",
+      "quote": "That bitch spiked our drinks!"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "incest", "quote": "David then catches Taylor having incestuous sex with Gazelle in a bathroom", "confidence": "sourced"}
+   {
+    "value": "incest",
+    "quote": "David then catches Taylor having incestuous sex with Gazelle in a bathroom",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:23",
+      "quote": "Don't tell dad. Don't tell dad."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "a party", "quote": "the group commence a celebratory after-party, dancing and drinking sangria made by Emmanuelle", "confidence": "sourced"}
+   {
+    "value": "a party",
+    "quote": "the group commence a celebratory after-party, dancing and drinking sangria made by Emmanuelle",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:35",
+      "quote": "Wicked sangria! Wicked!"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "isolated by snowstorm", "quote": "causing the rest of the group to throw Omar out into the snowstorm", "confidence": "sourced"},
-   {"value": "paranoia turns on scapegoats", "quote": "the others also accuse Lou of having spiked the drink", "confidence": "sourced"}
+   {
+    "value": "isolated by snowstorm",
+    "quote": "causing the rest of the group to throw Omar out into the snowstorm",
+    "confidence": "sourced"
+   },
+   {
+    "value": "paranoia turns on scapegoats",
+    "quote": "the others also accuse Lou of having spiked the drink",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:07",
+      "quote": "The sangria's been spiked by Emmanuelle."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "dance troupe", "relation_to_threat": "community", "quote": "a French dance troupe holding a days-long rehearsal in an abandoned school", "confidence": "sourced"},
-   {"value": "child", "relation_to_threat": "family", "detail": "Tito, Emmanuelle's son", "quote": "Tito's corpse lies beside the open door of the electrical junction cabinet", "confidence": "sourced"},
-   {"value": "pregnant woman", "relation_to_threat": "community", "detail": "Lou", "quote": "kicks her repeatedly in the stomach, not believing she is pregnant", "confidence": "sourced"}
+   {
+    "value": "dance troupe",
+    "relation_to_threat": "community",
+    "quote": "a French dance troupe holding a days-long rehearsal in an abandoned school",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child",
+    "relation_to_threat": "family",
+    "detail": "Tito, Emmanuelle's son",
+    "quote": "Tito's corpse lies beside the open door of the electrical junction cabinet",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:09",
+      "quote": "Shit! Tito's fried! Oh God, I've killed him!"
+     }
+    ]
+   },
+   {
+    "value": "pregnant woman",
+    "relation_to_threat": "community",
+    "detail": "Lou",
+    "quote": "kicks her repeatedly in the stomach, not believing she is pregnant",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:25",
+      "quote": "You're pregnant? Pregnant, you lying bitch?"
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "mass casualties", "quote": "they find almost all of the dancers either unconscious or dead", "confidence": "sourced"},
-   {"value": "cycle continues", "quote": "goes to her room and drops liquid LSD into her eye", "confidence": "observed"}
+   {
+    "value": "mass casualties",
+    "quote": "they find almost all of the dancers either unconscious or dead",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cycle continues",
+    "quote": "goes to her room and drops liquid LSD into her eye",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "sangria bowl", "state": "spiked", "when": "opening", "role": "trigger", "quote": "the communal bowl of sangria is spiked with LSD", "confidence": "sourced"},
-   {"value": "snowstorm", "when": "early", "role": "setting", "quote": "throw Omar out into the snowstorm", "confidence": "sourced"},
-   {"value": "locked electrical room", "when": "middle", "role": "setting", "quote": "locks him inside an electrical room to protect him from the dancers", "confidence": "sourced"},
-   {"value": "lost key", "when": "middle", "quote": "who has lost the key to the electrical room in which Tito is locked", "confidence": "sourced"},
-   {"value": "hair on fire", "when": "middle", "quote": "push Jennifer into a portable stove, setting her hair on fire", "confidence": "sourced"},
-   {"value": "knife", "when": "middle", "role": "weapon", "quote": "slashes herself with the knife on her face and arm", "confidence": "sourced"},
-   {"value": "red emergency lighting", "when": "late", "role": "omen", "quote": "switches to red emergency lighting", "confidence": "sourced"}
+   {
+    "value": "sangria bowl",
+    "state": "spiked",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "the communal bowl of sangria is spiked with LSD",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:37",
+      "quote": "Go ahead. I made some sangria."
+     }
+    ]
+   },
+   {
+    "value": "snowstorm",
+    "when": "early",
+    "role": "setting",
+    "quote": "throw Omar out into the snowstorm",
+    "confidence": "sourced"
+   },
+   {
+    "value": "locked electrical room",
+    "when": "middle",
+    "role": "setting",
+    "quote": "locks him inside an electrical room to protect him from the dancers",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lost key",
+    "when": "middle",
+    "quote": "who has lost the key to the electrical room in which Tito is locked",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:57",
+      "quote": "I lost the key. Go find it."
+     }
+    ]
+   },
+   {
+    "value": "hair on fire",
+    "when": "middle",
+    "quote": "push Jennifer into a portable stove, setting her hair on fire",
+    "confidence": "sourced"
+   },
+   {
+    "value": "knife",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "slashes herself with the knife on her face and arm",
+    "confidence": "sourced"
+   },
+   {
+    "value": "red emergency lighting",
+    "when": "late",
+    "role": "omen",
+    "quote": "switches to red emergency lighting",
+    "confidence": "sourced"
+   },
+   {
+    "value": "audition interviews",
+    "when": "opening",
+    "role": "setting",
+    "detail": "the dancers' taped interviews, watched on a television",
+    "source": "subtitles",
+    "at": "00:02:56",
+    "quote": "What does dance mean to you? Everything.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:46",
+      "quote": "My worst nightmare? To find myself alone."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "acid eye drops",
+    "when": "opening",
+    "role": "omen",
+    "detail": "a dancer's story foreshadows the final image",
+    "source": "subtitles",
+    "at": "00:05:49",
+    "quote": "Before I moved out, he started to take acid in his eyes. Like actual drops.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "philosophical intertitles",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:02:55",
+    "quote": "Existence is a fleeting illusion",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:17",
+      "quote": "Life is a collective impossibility"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:33:37",
+      "quote": "Death is an extraordinary experience"
+     }
+    ],
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "triumphant rehearsal", "when": "opening", "quote": "After completing the elaborate closing piece of the dance, the group commence a celebratory after-party", "confidence": "sourced"},
-   {"order": 2, "value": "realisation of spiking", "when": "early", "role": "trigger", "quote": "eventually concluding that the sangria has been spiked with a hallucinogen, presumably LSD", "confidence": "sourced"},
-   {"order": 3, "value": "scapegoat expelled", "when": "early", "quote": "causing the rest of the group to throw Omar out into the snowstorm", "confidence": "sourced"},
-   {"order": 4, "value": "child locked away", "when": "middle", "quote": "locks him inside an electrical room to protect him from the dancers", "confidence": "sourced"},
-   {"order": 5, "value": "self-harm egged on", "when": "middle", "quote": "as the group encourages her to kill herself", "confidence": "sourced"},
-   {"order": 6, "value": "child dies", "when": "late", "role": "turn", "quote": "someone laughingly shouts that Tito has electrocuted himself", "confidence": "sourced"},
-   {"order": 7, "value": "morning aftermath", "when": "ending", "quote": "When police arrive the next morning, they find almost all of the dancers either unconscious or dead", "confidence": "sourced"},
-   {"order": 8, "value": "culprit takes more", "when": "ending", "role": "turn", "quote": "drops liquid LSD into her eye", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "end credits roll first",
+    "when": "opening",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:02:01",
+    "quote": "You have seen a film based on real events that happened in France in winter 1996",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "dancers interviewed",
+    "when": "opening",
+    "source": "subtitles",
+    "at": "00:03:07",
+    "quote": "If you couldn't dance, what would you do? Suicide.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "triumphant rehearsal",
+    "when": "opening",
+    "quote": "After completing the elaborate closing piece of the dance, the group commence a celebratory after-party",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "realisation of spiking",
+    "when": "early",
+    "role": "trigger",
+    "quote": "eventually concluding that the sangria has been spiked with a hallucinogen, presumably LSD",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:13",
+      "quote": "What did you put in the sangria? I don't feel good."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "scapegoat expelled",
+    "when": "early",
+    "quote": "causing the rest of the group to throw Omar out into the snowstorm",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "child locked away",
+    "when": "middle",
+    "quote": "locks him inside an electrical room to protect him from the dancers",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "self-harm egged on",
+    "when": "middle",
+    "quote": "as the group encourages her to kill herself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:06",
+      "quote": "Do it! Do it!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "child dies",
+    "when": "late",
+    "role": "turn",
+    "quote": "someone laughingly shouts that Tito has electrocuted himself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:09",
+      "quote": "Shit! Tito's fried! Oh God, I've killed him!"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "morning aftermath",
+    "when": "ending",
+    "quote": "When police arrive the next morning, they find almost all of the dancers either unconscious or dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:47",
+      "quote": "Lady? Lady? She's gone."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "culprit takes more",
+    "when": "ending",
+    "role": "turn",
+    "quote": "drops liquid LSD into her eye",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "siblings' secret kept",
+    "when": "ending",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:34:14",
+    "quote": "Nothing happened... What? Nothing happened.",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wants"],
+ "not_stated": [
+  "wants"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

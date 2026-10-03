@@ -1,60 +1,403 @@
 {
  "film": "2004-calvaire",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "deranged host", "detail": "Mr. Bartel, the innkeeper", "quote": "Mr. Bartel, now babbling, addresses Marc as if he were his wife", "confidence": "sourced"},
-   {"value": "village", "detail": "the villagers who share Bartel's delusion", "quote": "The villagers lay siege to the inn", "confidence": "sourced"}
+   {
+    "value": "deranged host",
+    "detail": "Mr. Bartel, the innkeeper",
+    "quote": "Mr. Bartel, now babbling, addresses Marc as if he were his wife",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:36",
+      "quote": "Why did you come back, Gloria? I loved you!"
+     }
+    ]
+   },
+   {
+    "value": "village",
+    "detail": "the villagers who share Bartel's delusion",
+    "quote": "The villagers lay siege to the inn",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:19",
+      "quote": "Go, Lars! Find the slut!"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "abandonment grief", "quote": "an innkeeper who is psychologically fragile due to his wife Gloria leaving him", "confidence": "sourced"},
-   {"value": "isolated backwoods community", "quote": "he is stranded deep in the woods", "confidence": "observed"}
+   {
+    "value": "abandonment grief",
+    "quote": "an innkeeper who is psychologically fragile due to his wife Gloria leaving him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:47",
+      "quote": "That woman was everything for me. By losing her, I lost everything."
+     }
+    ]
+   },
+   {
+    "value": "isolated backwoods community",
+    "quote": "he is stranded deep in the woods",
+    "confidence": "observed"
+   }
   ],
   "wants": [
-   {"value": "to replace someone", "detail": "Marc made into Bartel's wife Gloria", "quote": "asking why \"she\" has come back after leaving him", "confidence": "sourced"},
-   {"value": "possession of the victim", "quote": "now \"she\" has \"returned\", none of them can \"have her\"", "confidence": "sourced"}
+   {
+    "value": "to replace someone",
+    "detail": "Marc made into Bartel's wife Gloria",
+    "quote": "asking why \"she\" has come back after leaving him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:07",
+      "quote": "Bella came back home, Gloria came back home... We're all together for Christmas."
+     }
+    ]
+   },
+   {
+    "value": "possession of the victim",
+    "quote": "now \"she\" has \"returned\", none of them can \"have her\"",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "adultery and abandonment", "quote": "recalling his adulterous wife Gloria who abandoned him years before", "confidence": "sourced"}
+   {
+    "value": "adultery and abandonment",
+    "quote": "recalling his adulterous wife Gloria who abandoned him years before",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:56",
+      "quote": "She left me. She was a singer like you."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "vehicle breaks down", "quote": "his van — which doubles as his home — breaks down during a storm", "confidence": "sourced"}
+   {
+    "value": "vehicle breaks down",
+    "quote": "his van — which doubles as his home — breaks down during a storm",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:02",
+      "quote": "My van broke down and I saw a sign saying there was an inn."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "do not go to the village", "quote": "warning Marc not to go into the nearby village", "confidence": "sourced"},
-   {"value": "no way to call out", "quote": "the telephone Bartel has been regularly using isn't even wired into the wall", "confidence": "sourced"}
+   {
+    "value": "do not go to the village",
+    "quote": "warning Marc not to go into the nearby village",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:57",
+      "quote": "don't go down to the village."
+     }
+    ]
+   },
+   {
+    "value": "no way to call out",
+    "quote": "the telephone Bartel has been regularly using isn't even wired into the wall",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:03",
+      "quote": "Of course, I have a telephone! I'm not a savage!"
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "traveling stranger", "relation_to_threat": "stranger", "detail": "Marc Stevens, a singer", "quote": "Marc Stevens is a struggling low-level performer", "confidence": "sourced"}
+   {
+    "value": "traveling stranger",
+    "relation_to_threat": "stranger",
+    "detail": "Marc Stevens, a singer",
+    "quote": "Marc Stevens is a struggling low-level performer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:16",
+      "quote": "Did the singer sleep well?"
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "lone survivor in wilderness", "quote": "the villager is dead, and Marc is left alone in the wilderness", "confidence": "sourced"},
-   {"value": "victim accepts imposed identity", "quote": "Marc, as Gloria, responds to his impassioned question by telling him that \"she\" does, in fact, love him", "confidence": "sourced"}
+   {
+    "value": "lone survivor in wilderness",
+    "quote": "the villager is dead, and Marc is left alone in the wilderness",
+    "confidence": "sourced"
+   },
+   {
+    "value": "victim accepts imposed identity",
+    "quote": "Marc, as Gloria, responds to his impassioned question by telling him that \"she\" does, in fact, love him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:56",
+      "quote": "Louder! Louder! I loved you."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "calf", "state": "abused", "when": "early", "role": "omen", "quote": "a family voyeuristically watching a teenage boy have intercourse with a calf", "confidence": "sourced"},
-   {"value": "van", "state": "blown up", "when": "early", "role": "trigger", "quote": "Bartel knocks Marc unconscious and blows the van up", "confidence": "sourced"},
-   {"value": "dress", "when": "middle", "role": "symbol", "quote": "tied to a chair, clad only in an old dress", "confidence": "sourced"},
-   {"value": "shaved head", "when": "middle", "quote": "shaving one half of Marc's scalp", "confidence": "sourced"},
-   {"value": "rabbit snare", "when": "middle", "quote": "ends up getting caught in a rabbit snare", "confidence": "sourced"},
-   {"value": "crucifixion", "when": "late", "role": "symbol", "quote": "crucifies Marc behind the inn", "confidence": "sourced"},
-   {"value": "pig on a leash", "when": "late", "quote": "rushing the inn with a pig on a leash as one would employ a dog", "confidence": "sourced"},
-   {"value": "bog", "when": "ending", "role": "setting", "quote": "he falls into a bog and starts being swallowed up by the mire", "confidence": "sourced"}
+   {
+    "value": "calf",
+    "state": "abused",
+    "when": "early",
+    "role": "omen",
+    "quote": "a family voyeuristically watching a teenage boy have intercourse with a calf",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lost dog",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:11:04",
+    "quote": "Have you seen a dog? A dog with short hair.",
+    "detail": "Boris searches the woods for his dog Bella and later claims to have found her",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:58",
+      "quote": "I found Bella, my girlie!"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "van",
+    "state": "blown up",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Bartel knocks Marc unconscious and blows the van up",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:21",
+      "quote": "I took the liberty of towing your van."
+     }
+    ]
+   },
+   {
+    "value": "dress",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "tied to a chair, clad only in an old dress",
+    "confidence": "sourced"
+   },
+   {
+    "value": "shaved head",
+    "when": "middle",
+    "quote": "shaving one half of Marc's scalp",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rabbit snare",
+    "when": "middle",
+    "quote": "ends up getting caught in a rabbit snare",
+    "confidence": "sourced"
+   },
+   {
+    "value": "crucifixion",
+    "when": "late",
+    "role": "symbol",
+    "quote": "crucifies Marc behind the inn",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pig on a leash",
+    "when": "late",
+    "quote": "rushing the inn with a pig on a leash as one would employ a dog",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bog",
+    "when": "ending",
+    "role": "setting",
+    "quote": "he falls into a bog and starts being swallowed up by the mire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:51",
+      "quote": "Well? It's the marsh!"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "stranded in a storm", "when": "opening", "role": "trigger", "quote": "breaks down during a storm and he is stranded deep in the woods", "confidence": "sourced"},
-   {"order": 2, "value": "taken in by a host", "when": "early", "quote": "Bartel welcomes Marc to stay and offers to repair his van", "confidence": "sourced"},
-   {"order": 3, "value": "warning about the village", "when": "early", "role": "omen", "quote": "warning Marc not to go into the nearby village", "confidence": "sourced"},
-   {"order": 4, "value": "host turns captor", "when": "middle", "role": "turn", "quote": "Marc wakes to find himself tied to a chair, clad only in an old dress", "confidence": "sourced"},
-   {"order": 5, "value": "failed escape", "when": "middle", "quote": "Marc escapes, but ends up getting caught in a rabbit snare", "confidence": "sourced"},
-   {"order": 6, "value": "villagers' siege", "when": "late", "quote": "The villagers lay siege to the inn", "confidence": "sourced"},
-   {"order": 7, "value": "escape through the woods", "when": "ending", "quote": "Marc manages to escape from the mob and into the forest", "confidence": "sourced"},
-   {"order": 8, "value": "pursuer drowns in a bog", "when": "ending", "quote": "Marc watches as he sinks below the surface", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "singing for the elderly",
+    "when": "opening",
+    "source": "subtitles",
+    "at": "00:03:25",
+    "quote": "Merry Christmas to all! I'm so happy to see you again!",
+    "detail": "Marc's Christmas show at a retirement home",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "unwanted advances",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:06:18",
+    "quote": "Can I hug you before you leave? I'm going to miss you.",
+    "detail": "an old woman and a nurse both cling to him",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "stranded in a storm",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "breaks down during a storm and he is stranded deep in the woods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:25",
+      "quote": "Sorry to wake you, but my van broke down..."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "taken in by a host",
+    "when": "early",
+    "quote": "Bartel welcomes Marc to stay and offers to repair his van",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:56",
+      "quote": "I'm gonna make your breakfast and take care of the van afterwards."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "warning about the village",
+    "when": "early",
+    "role": "omen",
+    "quote": "warning Marc not to go into the nearby village",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:57",
+      "quote": "don't go down to the village. Why not?"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "host demands a song",
+    "when": "early",
+    "source": "subtitles",
+    "at": "00:34:10",
+    "quote": "So you're going to leave without singing me something!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "host turns captor",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Marc wakes to find himself tied to a chair, clad only in an old dress",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "failed escape",
+    "when": "middle",
+    "quote": "Marc escapes, but ends up getting caught in a rabbit snare",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "christmas reunion toast",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:10:10",
+    "quote": "Let's make a toast! To miracles that unite us at Christmas!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "villagers' siege",
+    "when": "late",
+    "quote": "The villagers lay siege to the inn",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:15",
+      "quote": "Don't touch my doggy, or I'll kill you all!"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "escape through the woods",
+    "when": "ending",
+    "quote": "Marc manages to escape from the mob and into the forest",
+    "confidence": "sourced"
+   },
+   {
+    "order": 12,
+    "value": "pursuer drowns in a bog",
+    "when": "ending",
+    "quote": "Marc watches as he sinks below the surface",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:36",
+      "quote": "Why'd you come back, Gloria? If you loved me just a little?"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

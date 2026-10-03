@@ -1,38 +1,325 @@
 {
  "film": "2013-djinn",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}, {"file": "wikipedia.ar.md", "sections": ["Lead", "القصة"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "wikipedia.ar.md",
+   "sections": [
+    "Lead",
+    "القصة"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "thin",
  "dimensions": {
   "threat": [
-   {"value": "djinn", "detail": "the couple's neighbours", "quote": "يكتشفان أن جيرانهما ليسوا بشرًا بل هم من الجان", "confidence": "sourced"}
+   {
+    "value": "djinn",
+    "detail": "the couple's neighbours",
+    "quote": "يكتشفان أن جيرانهما ليسوا بشرًا بل هم من الجان",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:44",
+      "quote": "But he created another being from fire. Djinn"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "haunted land", "detail": "an abandoned fishing village where the apartment was built", "quote": "an abandoned fishing village, where the apartment was eventually built", "confidence": "observed"}
+   {
+    "value": "haunted land",
+    "detail": "an abandoned fishing village where the apartment was built",
+    "quote": "an abandoned fishing village, where the apartment was eventually built",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:08",
+      "quote": "They built it right on the djinn village."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to harm the couple", "quote": "حقيقة «الجان» الذي يحاول النيل منهما", "confidence": "sourced"}
+   {
+    "value": "to harm the couple",
+    "quote": "حقيقة «الجان» الذي يحاول النيل منهما",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:42",
+      "quote": "Blood for blood. A life for a life."
+     }
+    ]
+   },
+   {
+    "value": "to reclaim her son",
+    "detail": "the djinn mother calls Khalid back",
+    "source": "subtitles",
+    "at": "01:17:09",
+    "quote": "You were taken away from me once. But I never gave up on you.",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "moving into a new home", "quote": "a young Emirati couple returns to their home country and moves into a high-rise apartment in Ras al-Khaimah", "confidence": "sourced"},
-   {"value": "returning home", "quote": "a young Emirati couple returns to their home country", "confidence": "sourced"}
+   {
+    "value": "moving into a new home",
+    "quote": "a young Emirati couple returns to their home country and moves into a high-rise apartment in Ras al-Khaimah",
+    "confidence": "sourced"
+   },
+   {
+    "value": "returning home",
+    "quote": "a young Emirati couple returns to their home country",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:54",
+      "quote": "Welcome home Khalid."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "young couple", "relation_to_threat": "stranger", "quote": "a young Emirati couple returns to their home country", "confidence": "sourced"},
-   {"value": "backpacker", "relation_to_threat": "stranger", "quote": "an American backpacker learns about djinn from local Emiratis", "confidence": "sourced"}
+   {
+    "value": "young couple",
+    "relation_to_threat": "stranger",
+    "quote": "a young Emirati couple returns to their home country",
+    "confidence": "sourced"
+   },
+   {
+    "value": "backpacker",
+    "relation_to_threat": "stranger",
+    "quote": "an American backpacker learns about djinn from local Emiratis",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "high-rise apartment", "when": "opening", "role": "setting", "quote": "moves into a high-rise apartment in Ras al-Khaimah", "confidence": "sourced"},
-   {"value": "abandoned fishing village", "when": "middle", "role": "setting", "quote": "The film also flashes back to an abandoned fishing village", "confidence": "sourced"}
+   {
+    "value": "high-rise apartment",
+    "when": "opening",
+    "role": "setting",
+    "quote": "moves into a high-rise apartment in Ras al-Khaimah",
+    "confidence": "sourced"
+   },
+   {
+    "value": "abandoned fishing village",
+    "when": "middle",
+    "role": "setting",
+    "quote": "The film also flashes back to an abandoned fishing village",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fog",
+    "when": "early",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:21:26",
+    "quote": "You'll have a nice view of the sea if the fog ever clears.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "figure in the road",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:17:34",
+    "quote": "Someone was standing in the middle of the road!",
+    "confidence": "sourced"
+   },
+   {
+    "value": "evil eye charm",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:21:49",
+    "quote": "What? It wards off envy.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bird at the window",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:24:53",
+    "quote": "There was a bird. But I thought it was something else.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "return home and move in", "when": "opening", "role": "trigger", "quote": "returns to their home country and moves into a high-rise apartment", "confidence": "sourced"},
-   {"order": 2, "value": "neighbours not human", "when": "early", "role": "turn", "quote": "They discover that their neighbors may not be human", "confidence": "sourced"},
-   {"order": 3, "value": "flashback to the site's past", "when": "middle", "role": "clue", "quote": "The film also flashes back to an abandoned fishing village, where the apartment was eventually built", "confidence": "sourced"},
-   {"order": 4, "value": "outsider learns the legend", "when": "late", "role": "clue", "quote": "an American backpacker learns about djinn from local Emiratis", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "legend of the djinn told",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:36",
+    "quote": "When Allah created the heavens and the earth, he created Humans from clay and Angels from light",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "return home and move in",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "returns to their home country and moves into a high-rise apartment",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:21",
+      "quote": "Oh my... What a beautiful place."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "figure on the road",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:17:34",
+    "quote": "Someone was standing in the middle of the road!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "neighbours not human",
+    "when": "early",
+    "role": "turn",
+    "quote": "They discover that their neighbors may not be human",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:02",
+      "quote": "We used to live here. But my parents moved when the village was torn down."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "flashback to the site's past",
+    "when": "middle",
+    "role": "clue",
+    "quote": "The film also flashes back to an abandoned fishing village, where the apartment was eventually built",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "infant's murder exposed",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:48:08",
+    "quote": "Murder is a sin, Salama.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "family killed in accident",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "00:49:57",
+    "quote": "This is the police. I am sorry to report... there has been a terrible accident.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "outsider learns the legend",
+    "when": "late",
+    "role": "clue",
+    "quote": "an American backpacker learns about djinn from local Emiratis",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "husband claimed by djinn",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:17:09",
+    "quote": "You were taken away from me once. But I never gave up on you.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "djinn son comes home",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:19:03",
+    "quote": "This is my home, I'm back.",
+    "confidence": "observed"
+   }
+  ],
+  "wrong": [
+   {
+    "value": "mother killed her baby",
+    "detail": "Salama's secret",
+    "source": "subtitles",
+    "at": "00:48:08",
+    "quote": "Murder is a sin, Salama.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:41",
+      "quote": "I didn't mean to hurt him."
+     }
+    ]
+   }
+  ],
+  "rules": [
+   {
+    "value": "blood for blood",
+    "source": "subtitles",
+    "at": "01:18:42",
+    "quote": "Blood for blood. A life for a life.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "charms ward off evil",
+    "detail": "the mother-in-law's gifts for the doorway",
+    "source": "subtitles",
+    "at": "00:21:58",
+    "quote": "will help ward off evil. Hang it over the entrance.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "prayer for protection",
+    "source": "subtitles",
+    "at": "00:46:20",
+    "quote": "I seek refuge in the Lord of Mankind",
+    "confidence": "observed"
+   }
+  ],
+  "ending": [
+   {
+    "value": "husband joins the djinn",
+    "source": "subtitles",
+    "at": "01:19:03",
+    "quote": "This is my home, I'm back.",
+    "confidence": "observed",
+    "detail": "Khalid, the djinn's lost son, turns on Salama"
+   }
   ]
  },
- "not_stated": ["wrong", "rules", "ending"],
+ "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

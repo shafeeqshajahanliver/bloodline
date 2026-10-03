@@ -1,37 +1,269 @@
 {
  "film": "2016-the-housemaid",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "thin",
  "dimensions": {
   "threat": [
-   {"value": "vengeful ghost", "detail": "Camille, the landowner's dead wife", "quote": "awakens the vengeful ghost of his dead wife, Camille... who is out for blood", "confidence": "sourced"},
-   {"value": "haunted house", "detail": "a French rubber plantation", "quote": "gets hired to be a housemaid at a haunted French rubber plantation", "confidence": "sourced"}
+   {
+    "value": "vengeful ghost",
+    "detail": "Camille, the landowner's dead wife",
+    "quote": "awakens the vengeful ghost of his dead wife, Camille... who is out for blood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:14",
+      "quote": "But why would the ghost of his dead wife want to kill him?"
+     }
+    ]
+   },
+   {
+    "value": "haunted house",
+    "detail": "a French rubber plantation",
+    "quote": "gets hired to be a housemaid at a haunted French rubber plantation",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:36",
+      "quote": "Sa-Cat is a place of death."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "dead spouse", "quote": "the vengeful ghost of his dead wife, Camille", "confidence": "sourced"}
+   {
+    "value": "dead spouse",
+    "quote": "the vengeful ghost of his dead wife, Camille",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "blood", "quote": "who is out for blood", "confidence": "sourced"}
+   {
+    "value": "blood",
+    "quote": "who is out for blood",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "new job in a house", "quote": "an orphaned country girl named Linh, who gets hired to be a housemaid", "confidence": "sourced"},
-   {"value": "forbidden romance", "quote": "She unexpectedly falls in love with the French landowner Captain Sebastien Laurent, and awakens the vengeful ghost", "confidence": "sourced"}
+   {
+    "value": "new job in a house",
+    "quote": "an orphaned country girl named Linh, who gets hired to be a housemaid",
+    "confidence": "sourced"
+   },
+   {
+    "value": "forbidden romance",
+    "quote": "She unexpectedly falls in love with the French landowner Captain Sebastien Laurent, and awakens the vengeful ghost",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "orphaned servant", "relation_to_threat": "stranger", "detail": "Linh", "quote": "an orphaned country girl named Linh, who gets hired to be a housemaid", "confidence": "sourced"}
+   {
+    "value": "orphaned servant",
+    "relation_to_threat": "stranger",
+    "detail": "Linh",
+    "quote": "an orphaned country girl named Linh, who gets hired to be a housemaid",
+    "confidence": "sourced"
+   },
+   {
+    "value": "master of the house",
+    "relation_to_threat": "lover",
+    "detail": "Captain Sebastien Laurent",
+    "source": "subtitles",
+    "at": "00:06:17",
+    "quote": "Captain Sebastien Laurent was murdered last night in his bedroom.",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "rubber plantation", "when": "opening", "role": "setting", "quote": "a haunted French rubber plantation", "confidence": "sourced"}
+   {
+    "value": "rubber plantation",
+    "when": "opening",
+    "role": "setting",
+    "quote": "a haunted French rubber plantation",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:22",
+      "quote": "Hundreds of bodies lay buried beneath those rubber trees without gravestones."
+     }
+    ]
+   },
+   {
+    "value": "bathtub",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:14:46",
+    "quote": "she drowned him in the tub.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lake",
+    "when": "early",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:15:15",
+    "quote": "she took their dead son to the lake... and drowned herself.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:13",
+      "quote": "The police dredged through the whole lake for a week."
+     }
+    ]
+   },
+   {
+    "value": "photos of dead wife",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:36:23",
+    "quote": "Madame Camille. She never smiled. These are the very last photos of her.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "wartime setting", "when": "opening", "role": "setting", "quote": "Set in 1953 Vietnam during the First Indochinese War", "confidence": "sourced"},
-   {"order": 2, "value": "orphan hired as maid", "when": "opening", "role": "trigger", "quote": "who gets hired to be a housemaid at a haunted French rubber plantation", "confidence": "sourced"},
-   {"order": 3, "value": "falls for the master", "when": "middle", "quote": "She unexpectedly falls in love with the French landowner Captain Sebastien Laurent", "confidence": "sourced"},
-   {"order": 4, "value": "dead wife awakens", "when": "middle", "role": "turn", "quote": "awakens the vengeful ghost of his dead wife, Camille", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "murder interrogation frames story",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:06:17",
+    "quote": "Captain Sebastien Laurent was murdered last night in his bedroom.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "wartime setting",
+    "when": "opening",
+    "role": "setting",
+    "quote": "Set in 1953 Vietnam during the First Indochinese War",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "orphan hired as maid",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "who gets hired to be a housemaid at a haunted French rubber plantation",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:15",
+      "quote": "I heard that there's a need for a housemaid at the estate."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "legend of dead wife told",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:14:03",
+    "quote": "Captain Laurent once had a wife, Madame Camille,",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "falls for the master",
+    "when": "middle",
+    "quote": "She unexpectedly falls in love with the French landowner Captain Sebastien Laurent",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "dead wife awakens",
+    "when": "middle",
+    "role": "turn",
+    "quote": "awakens the vengeful ghost of his dead wife, Camille",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "servant's revenge revealed",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:32:54",
+    "quote": "He ordered the deaths of our parents.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "unanswered killing",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:39:01",
+    "quote": "I didn't kill her.",
+    "confidence": "sourced"
+   }
+  ],
+  "wrong": [
+   {
+    "value": "colonial abuse of workers",
+    "source": "subtitles",
+    "at": "00:13:10",
+    "quote": "Workers were whipped to death.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother drowns her child",
+    "detail": "Madame Camille",
+    "source": "subtitles",
+    "at": "00:14:46",
+    "quote": "she drowned him in the tub.",
+    "confidence": "sourced"
+   }
+  ],
+  "rules": [
+   {
+    "value": "ghost guards the master",
+    "source": "subtitles",
+    "at": "00:22:33",
+    "quote": "If he dies, you will have Madame Camille to answer to.",
+    "confidence": "sourced"
+   }
+  ],
+  "ending": [
+   {
+    "value": "servant revealed as avenger",
+    "detail": "Linh and her brother kill the captain for their parents' deaths",
+    "source": "subtitles",
+    "at": "01:32:54",
+    "quote": "He ordered the deaths of our parents. He has to die.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ambiguous",
+    "detail": "who killed Madeleine is left open",
+    "source": "subtitles",
+    "at": "01:38:54",
+    "quote": "Why did you kill Madeleine? She was already leaving. I didn't kill her. Then who did?",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong", "rules", "ending"],
+ "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

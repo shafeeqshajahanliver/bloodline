@@ -1,56 +1,480 @@
 {
  "film": "2006-slither",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes and influences"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes and influences"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "alien parasite", "quote": "a small town in South Carolina that becomes invaded by a malevolent alien parasite", "confidence": "sourced"},
-   {"value": "infected townspeople", "detail": "hive mind controlled by Grant", "quote": "Those infected by the larvae become part of a hive mind controlled by Grant", "confidence": "sourced"}
+   {
+    "value": "alien parasite",
+    "quote": "a small town in South Carolina that becomes invaded by a malevolent alien parasite",
+    "confidence": "sourced"
+   },
+   {
+    "value": "infected townspeople",
+    "detail": "hive mind controlled by Grant",
+    "quote": "Those infected by the larvae become part of a hive mind controlled by Grant",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "from outer space", "quote": "A meteorite brings a malevolent, sentient extraterrestrial parasite to Earth", "confidence": "sourced"}
+   {
+    "value": "from outer space",
+    "quote": "A meteorite brings a malevolent, sentient extraterrestrial parasite to Earth",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to consume everything", "quote": "intends to consume all lifeforms until only his consciousness remains", "confidence": "sourced"},
-   {"value": "lost love", "quote": "Grant also retains his love for his wife and seeks to be reunited with her", "confidence": "sourced"}
+   {
+    "value": "to consume everything",
+    "quote": "intends to consume all lifeforms until only his consciousness remains",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lost love",
+    "quote": "Grant also retains his love for his wife and seeks to be reunited with her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "to consume worlds",
+    "detail": "the infected Kylie recalls its history: it moves from planet to planet",
+    "source": "subtitles",
+    "at": "01:06:52",
+    "quote": "He goes from place to place, worlds, planets, killing them.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:58",
+      "quote": "Some he gets pregnant, others he just takes over with his worms."
+     }
+    ]
+   },
+   {
+    "value": "meat",
+    "source": "subtitles",
+    "at": "00:15:58",
+    "quote": "Meat. Meat. Meat.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:51",
+      "quote": "WOMAN: Meat."
+     }
+    ]
+   },
+   {
+    "value": "his wife's love",
+    "detail": "Grant keeps a human longing for Starla",
+    "source": "subtitles",
+    "at": "01:18:20",
+    "quote": "You said for better or worse! You lied!",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "object falls from the sky", "quote": "A meteorite brings a malevolent, sentient extraterrestrial parasite to Earth", "confidence": "sourced"}
+   {
+    "value": "object falls from the sky",
+    "quote": "A meteorite brings a malevolent, sentient extraterrestrial parasite to Earth",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "enters through the mouth", "quote": "they could escape infection by covering their mouths", "confidence": "sourced"},
-   {"value": "kill the host, kill all", "quote": "killing Grant will eliminate the rest of the aliens", "confidence": "sourced"}
+   {
+    "value": "enters through the mouth",
+    "quote": "they could escape infection by covering their mouths",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:27",
+      "quote": "Margaret, cover your mouth! Don't let them in your mouth!"
+     }
+    ]
+   },
+   {
+    "value": "kill the host, kill all",
+    "quote": "killing Grant will eliminate the rest of the aliens",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:00",
+      "quote": "Now, if I use that to destroy Grant... He's the center of the whole system, right?"
+     }
+    ]
+   },
+   {
+    "value": "one hive mind",
+    "source": "subtitles",
+    "at": "01:07:13",
+    "quote": "These worms in their brains, you saying they're all connected?",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:27",
+      "quote": "It's a conscious disease."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "wife", "relation_to_threat": "family", "detail": "Starla", "quote": "His wife Starla learns that he hasn't been to the doctor's in over a year", "confidence": "sourced"},
-   {"value": "small town", "relation_to_threat": "community", "detail": "Wheelsy", "quote": "infect everyone in town except Starla, Bill, Mayor Jack MacReady, and teenager Kylie", "confidence": "sourced"}
+   {
+    "value": "wife",
+    "relation_to_threat": "family",
+    "detail": "Starla",
+    "quote": "His wife Starla learns that he hasn't been to the doctor's in over a year",
+    "confidence": "sourced"
+   },
+   {
+    "value": "small town",
+    "relation_to_threat": "community",
+    "detail": "Wheelsy",
+    "quote": "infect everyone in town except Starla, Bill, Mayor Jack MacReady, and teenager Kylie",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "explodes, killing the rest of the aliens and saving Bill", "confidence": "sourced"},
-   {"value": "threat survives", "detail": "a cat is infected", "quote": "a cat approaches Grant's remains and becomes infected by the alien parasite", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "explodes, killing the rest of the aliens and saving Bill",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat survives",
+    "detail": "a cat is infected",
+    "quote": "a cat approaches Grant's remains and becomes infected by the alien parasite",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "meteorite", "when": "opening", "role": "trigger", "quote": "A meteorite brings a malevolent, sentient extraterrestrial parasite to Earth", "confidence": "sourced"},
-   {"value": "tentacles", "when": "early", "role": "threat", "quote": "Grant begins to transform into a grotesque, tentacled monstrosity", "confidence": "sourced"},
-   {"value": "bloated body", "state": "full of larvae", "when": "middle", "role": "threat", "quote": "whose body has become inhumanly bloated from the larvae growing inside her", "confidence": "sourced"},
-   {"value": "slugs", "when": "middle", "role": "threat", "quote": "The slug-like larvae burst from her body", "confidence": "sourced"},
-   {"value": "grenade", "state": "knocked into pool", "when": "late", "role": "weapon", "quote": "Grant knocks it into the pool", "confidence": "sourced"},
-   {"value": "propane tank", "when": "ending", "role": "weapon", "quote": "Bill attaches the other tentacle to a propane tank", "confidence": "sourced"},
-   {"value": "cat", "state": "infected", "when": "ending", "role": "omen", "quote": "a cat approaches Grant's remains", "confidence": "sourced"}
+   {
+    "value": "meteorite",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "A meteorite brings a malevolent, sentient extraterrestrial parasite to Earth",
+    "confidence": "sourced"
+   },
+   {
+    "value": "tentacles",
+    "when": "early",
+    "role": "threat",
+    "quote": "Grant begins to transform into a grotesque, tentacled monstrosity",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:05",
+      "quote": "Oh, my God, baby, what happened to your face?"
+     }
+    ]
+   },
+   {
+    "value": "bloated body",
+    "state": "full of larvae",
+    "when": "middle",
+    "role": "threat",
+    "quote": "whose body has become inhumanly bloated from the larvae growing inside her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:49",
+      "quote": "Oh, I didn't want no one seeing me like this."
+     }
+    ]
+   },
+   {
+    "value": "slugs",
+    "when": "middle",
+    "role": "threat",
+    "quote": "The slug-like larvae burst from her body",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:42",
+      "quote": "Goddamn Brenda exploding like a water balloon"
+     }
+    ]
+   },
+   {
+    "value": "grenade",
+    "state": "knocked into pool",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Grant knocks it into the pool",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:28",
+      "quote": "Hey, Bill, we got this grenade we confiscated from them jokers"
+     }
+    ]
+   },
+   {
+    "value": "propane tank",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "Bill attaches the other tentacle to a propane tank",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cat",
+    "state": "infected",
+    "when": "ending",
+    "role": "omen",
+    "quote": "a cat approaches Grant's remains",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:09",
+      "quote": "(CAT MEOWING)"
+     }
+    ]
+   },
+   {
+    "value": "slaughtered dogs",
+    "state": "dead",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:35:26",
+    "quote": "How can one man do that? Slay all them dogs by hisself?",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:28",
+      "quote": "(DOG BARKING)"
+     }
+    ]
+   },
+   {
+    "value": "cow",
+    "state": "captive, being fed on",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:41:19",
+    "quote": "(COW MOOING)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:31",
+      "quote": "(COW MOANING)"
+     }
+    ]
+   },
+   {
+    "value": "deer",
+    "state": "hunted, then infected",
+    "when": "early",
+    "role": "mirror",
+    "detail": "the town's Deer Cheer hunting festival; later an infected deer attacks Bill",
+    "source": "subtitles",
+    "at": "00:23:15",
+    "quote": "he was thinking of deer season in Wheelsy and how much damn fun it is to shoot a buck or two!",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:05",
+      "quote": "(DEER SNARLS)"
+     }
+    ]
+   },
+   {
+    "value": "love song",
+    "when": "early",
+    "role": "symbol",
+    "detail": "\"Every Woman in the World\", the Grants' song, returns when the monster courts Starla",
+    "source": "subtitles",
+    "at": "00:13:09",
+    "quote": "(RADIO PLAYING EVERY WOMAN IN THE WORLD)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:37",
+      "quote": "(EVERY WOMAN IN THE WORLD PLAYING)"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "arrival from space", "when": "opening", "role": "trigger", "quote": "A meteorite brings a malevolent, sentient extraterrestrial parasite to Earth", "confidence": "sourced"},
-   {"order": 2, "value": "husband taken over", "when": "opening", "quote": "it infects wealthy resident Grant by taking over his body and absorbing his mind", "confidence": "sourced"},
-   {"order": 3, "value": "wife attacked", "when": "early", "quote": "leading to Grant attacking her", "confidence": "sourced"},
-   {"order": 4, "value": "breeder bursts", "when": "middle", "role": "turn", "quote": "The slug-like larvae burst from her body and infect everyone in town", "confidence": "sourced"},
-   {"order": 5, "value": "weakness discovered", "when": "middle", "role": "clue", "quote": "killing Grant will eliminate the rest of the aliens", "confidence": "sourced"},
-   {"order": 6, "value": "monster destroyed", "when": "late", "quote": "Starla shoots Grant who, filled with flammable gas, explodes", "confidence": "sourced"},
-   {"order": 7, "value": "town dead, survivors leave", "when": "ending", "quote": "With everyone else in Wheelsy dead, the three survivors head off to seek help", "confidence": "sourced"},
-   {"order": 8, "value": "closing sting", "when": "ending", "role": "omen", "quote": "a cat approaches Grant's remains and becomes infected", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "arrival from space",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "A meteorite brings a malevolent, sentient extraterrestrial parasite to Earth",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "town hunting festival",
+    "when": "early",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:23:15",
+    "quote": "Now, I believe when God said that, he was thinking of deer season in Wheelsy",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "husband taken over",
+    "when": "opening",
+    "quote": "it infects wealthy resident Grant by taking over his body and absorbing his mind",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:01",
+      "quote": "Give me a couple of your rib eyes."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "slain animals found",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:35:21",
+    "quote": "He drug the cow through here.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "wife attacked",
+    "when": "early",
+    "quote": "leading to Grant attacking her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:53",
+      "quote": "BILL: Starla? Starla, you in there?"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "survivor recalls hive memory",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:06:01",
+    "quote": "It was me. I became it... Him.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "breeder bursts",
+    "when": "middle",
+    "role": "turn",
+    "quote": "The slug-like larvae burst from her body and infect everyone in town",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:10",
+      "quote": "(CREATURE SQUEALING)"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "monster pleads for love",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:16:37",
+    "quote": "(EVERY WOMAN IN THE WORLD PLAYING)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:20",
+      "quote": "You said for better or worse!"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "weakness discovered",
+    "when": "middle",
+    "role": "clue",
+    "quote": "killing Grant will eliminate the rest of the aliens",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:00",
+      "quote": "There's a grenade in that station."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "monster destroyed",
+    "when": "late",
+    "quote": "Starla shoots Grant who, filled with flammable gas, explodes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:30",
+      "quote": "Shoot him. BILL: Shoot him!"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "town dead, survivors leave",
+    "when": "ending",
+    "quote": "With everyone else in Wheelsy dead, the three survivors head off to seek help",
+    "confidence": "sourced"
+   },
+   {
+    "order": 12,
+    "value": "closing sting",
+    "when": "ending",
+    "role": "omen",
+    "quote": "a cat approaches Grant's remains and becomes infected",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:26",
+      "quote": "(CAT SCREECHES)"
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

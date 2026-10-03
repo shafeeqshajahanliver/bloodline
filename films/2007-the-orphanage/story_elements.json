@@ -1,64 +1,470 @@
 {
  "film": "2007-the-orphanage",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "child ghosts", "detail": "Tomás and the murdered orphans", "quote": "she claims to see the ghosts of the orphans crying for help", "confidence": "sourced"},
-   {"value": "vengeful mother", "detail": "Benigna, who poisoned the orphans", "quote": "Benigna poisoned their meals and killed them for having caused Tomás's death", "confidence": "sourced"}
+   {
+    "value": "child ghosts",
+    "detail": "Tomás and the murdered orphans",
+    "quote": "she claims to see the ghosts of the orphans crying for help",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:45",
+      "quote": "Their game killed Tom s... And now they're playing with sim n and me"
+     }
+    ]
+   },
+   {
+    "value": "vengeful mother",
+    "detail": "Benigna, who poisoned the orphans",
+    "quote": "Benigna poisoned their meals and killed them for having caused Tomás's death",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "child who died wronged", "detail": "Tomás, drowned after his mask was stolen", "quote": "Tomás refused to leave his hiding place in a nearby sea cave, and the rising tide drowned him", "confidence": "sourced"},
-   {"value": "murdered children", "quote": "Laura discovers the remains of the orphans she grew up with in the orphanage", "confidence": "sourced"}
+   {
+    "value": "child who died wronged",
+    "detail": "Tomás, drowned after his mask was stolen",
+    "quote": "Tomás refused to leave his hiding place in a nearby sea cave, and the rising tide drowned him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:11",
+      "quote": "And took his mask off to see if he'd come out. But he never emerged. He drowned."
+     }
+    ]
+   },
+   {
+    "value": "murdered children",
+    "quote": "Laura discovers the remains of the orphans she grew up with in the orphanage",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to be cared for", "quote": "his wish was for her to stay and take care of the orphans", "confidence": "sourced"},
-   {"value": "to play", "quote": "attempts to contact the children's spirits by playing one of their old games", "confidence": "observed"}
+   {
+    "value": "to be cared for",
+    "quote": "his wish was for her to stay and take care of the orphans",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:27",
+      "quote": "I wish you'd stay and look after all of us."
+     }
+    ]
+   },
+   {
+    "value": "to play",
+    "quote": "attempts to contact the children's spirits by playing one of their old games",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:45",
+      "quote": "If you find it, they Grant you a wish."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "cruelty to a deformed child", "quote": "the orphans stole the mask that Tomás wore to conceal his deformed face and damaged eye", "confidence": "sourced"},
-   {"value": "mass poisoning", "quote": "Benigna poisoned their meals and killed them", "confidence": "sourced"},
-   {"value": "parent's accidental harm", "detail": "Laura unknowingly sealed Simón in", "quote": "Laura moved pieces of construction scaffolding, blocking the entrance to the secret room", "confidence": "sourced"}
+   {
+    "value": "cruelty to a deformed child",
+    "quote": "the orphans stole the mask that Tomás wore to conceal his deformed face and damaged eye",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:08",
+      "quote": "They went into the caves with Tom s... And took his mask off to see if he'd come out."
+     }
+    ]
+   },
+   {
+    "value": "mass poisoning",
+    "quote": "Benigna poisoned their meals and killed them",
+    "confidence": "sourced"
+   },
+   {
+    "value": "parent's accidental harm",
+    "detail": "Laura unknowingly sealed Simón in",
+    "quote": "Laura moved pieces of construction scaffolding, blocking the entrance to the secret room",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "returning to childhood home", "quote": "adult Laura returns to the closed orphanage, accompanied by her husband", "confidence": "sourced"},
-   {"value": "child goes missing", "quote": "after an argument with Simón, he goes missing", "confidence": "sourced"}
+   {
+    "value": "returning to childhood home",
+    "quote": "adult Laura returns to the closed orphanage, accompanied by her husband",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child goes missing",
+    "quote": "after an argument with Simón, he goes missing",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "game grants a wish", "quote": "Simón teaches Laura a game which grants its winner a wish", "confidence": "sourced"}
+   {
+    "value": "game grants a wish",
+    "quote": "Simón teaches Laura a game which grants its winner a wish",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:35",
+      "quote": "They steal your treasure... Something you love, and you have to find it."
+     }
+    ]
+   },
+   {
+    "value": "the lost children never grow up",
+    "source": "subtitles",
+    "at": "00:21:48",
+    "quote": "They won't grow up either? They can't.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "believe and you will see",
+    "detail": "the medium Aurora's advice",
+    "source": "subtitles",
+    "at": "01:05:04",
+    "quote": "Seeing is not believing. It's the other way around. Believe... And you will see.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "mother", "relation_to_threat": "family", "detail": "Laura, once an orphan there", "quote": "a young girl named Laura García Rodríguez is adopted from an orphanage", "confidence": "sourced"},
-   {"value": "adopted son", "relation_to_threat": "family", "detail": "Simón, HIV-positive", "quote": "Laura and Carlos adopted Simón and that he is HIV-positive", "confidence": "sourced"},
-   {"value": "orphans", "relation_to_threat": "community", "quote": "the remains of the orphans she grew up with in the orphanage", "confidence": "sourced"}
+   {
+    "value": "mother",
+    "relation_to_threat": "family",
+    "detail": "Laura, once an orphan there",
+    "quote": "a young girl named Laura García Rodríguez is adopted from an orphanage",
+    "confidence": "sourced"
+   },
+   {
+    "value": "adopted son",
+    "relation_to_threat": "family",
+    "detail": "Simón, HIV-positive",
+    "quote": "Laura and Carlos adopted Simón and that he is HIV-positive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:58",
+      "quote": "I have no mother or father! And I'm going to die!"
+     }
+    ]
+   },
+   {
+    "value": "orphans",
+    "relation_to_threat": "community",
+    "quote": "the remains of the orphans she grew up with in the orphanage",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "child found dead", "quote": "Inside is Simón's corpse, wearing Tomás' mask", "confidence": "sourced"},
-   {"value": "reunion in death", "quote": "she begs to be with Simón again and the children's spirits appear", "confidence": "sourced"},
-   {"value": "ambiguous", "quote": "He turns to look as the door opens, and he smiles.", "confidence": "observed"}
+   {
+    "value": "child found dead",
+    "quote": "Inside is Simón's corpse, wearing Tomás' mask",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:08",
+      "quote": "I found you. This isn't fair."
+     }
+    ]
+   },
+   {
+    "value": "reunion in death",
+    "quote": "she begs to be with Simón again and the children's spirits appear",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:42",
+      "quote": "She's grown old, like Wendy in the story."
+     }
+    ]
+   },
+   {
+    "value": "ambiguous",
+    "quote": "He turns to look as the door opens, and he smiles.",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "sack mask", "state": "worn by a child", "when": "early", "role": "threat", "quote": "draws pictures of him as a child wearing a sack mask", "confidence": "sourced"},
-   {"value": "coal shed", "state": "hiding remains", "when": "early", "role": "clue", "quote": "hid their remains in the orphanage's coal shed", "confidence": "sourced"},
-   {"value": "doll in a pram", "state": "pushed", "when": "middle", "role": "omen", "quote": "Laura spots Benigna (pushing a doll in a pram), who is then struck and killed by an ambulance", "confidence": "sourced"},
-   {"value": "sea cave", "state": "flooding", "when": "middle", "role": "setting", "quote": "his hiding place in a nearby sea cave, and the rising tide drowned him", "confidence": "sourced"},
-   {"value": "crashes in the walls", "state": "unexplained", "when": "middle", "role": "clue", "quote": "Laura hears several loud crashes within the walls of the orphanage", "confidence": "sourced"},
-   {"value": "hidden door", "state": "blocked", "when": "late", "role": "turn", "quote": "The spirits lead her to the door of a hidden underground room", "confidence": "sourced"},
-   {"value": "medallion", "state": "returned", "when": "ending", "role": "symbol", "quote": "finds a medallion that he had instructed Laura to return when she found Simón", "confidence": "sourced"}
+   {
+    "value": "sack mask",
+    "state": "worn by a child",
+    "when": "early",
+    "role": "threat",
+    "quote": "draws pictures of him as a child wearing a sack mask",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:01",
+      "quote": "Where is the mask?"
+     }
+    ]
+   },
+   {
+    "value": "coal shed",
+    "state": "hiding remains",
+    "when": "early",
+    "role": "clue",
+    "quote": "hid their remains in the orphanage's coal shed",
+    "confidence": "sourced"
+   },
+   {
+    "value": "doll in a pram",
+    "state": "pushed",
+    "when": "middle",
+    "role": "omen",
+    "quote": "Laura spots Benigna (pushing a doll in a pram), who is then struck and killed by an ambulance",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sea cave",
+    "state": "flooding",
+    "when": "middle",
+    "role": "setting",
+    "quote": "his hiding place in a nearby sea cave, and the rising tide drowned him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:01",
+      "quote": "Who hid his treasures in a cave, near a lighthouse."
+     }
+    ]
+   },
+   {
+    "value": "crashes in the walls",
+    "state": "unexplained",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Laura hears several loud crashes within the walls of the orphanage",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:17",
+      "quote": "(Faint clinking, banging)"
+     }
+    ]
+   },
+   {
+    "value": "hidden door",
+    "state": "blocked",
+    "when": "late",
+    "role": "turn",
+    "quote": "The spirits lead her to the door of a hidden underground room",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:03",
+      "quote": "What is it? Tom s' little house."
+     }
+    ]
+   },
+   {
+    "value": "medallion",
+    "state": "returned",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "finds a medallion that he had instructed Laura to return when she found Simón",
+    "confidence": "sourced"
+   },
+   {
+    "value": "trail of shells",
+    "detail": "Simón leaves shells for his invisible friend",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:12:25",
+    "quote": "it's a path for my friend to follow...",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lighthouse",
+    "state": "no longer working",
+    "when": "early",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:05:28",
+    "quote": "And the lighthouse was on all night.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "special coins",
+    "detail": "Simón's treasure in the ghosts' game",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:22:49",
+    "quote": "Special coins.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:21",
+      "quote": "I found the special coins."
+     }
+    ]
+   },
+   {
+    "value": "peter pan story",
+    "detail": "Wendy grows old while the lost boys never do",
+    "when": "early",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:20:58",
+    "quote": "Wendy grows old, but Peter Pan takes her daughter to neverland every year.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "return to the childhood home", "when": "opening", "role": "trigger", "quote": "Thirty years later, adult Laura returns to the closed orphanage", "confidence": "sourced"},
-   {"order": 2, "value": "child's invisible friend", "when": "early", "role": "omen", "quote": "Simón claims to have befriended a boy named Tomás", "confidence": "sourced"},
-   {"order": 3, "value": "child disappears", "when": "early", "role": "turn", "quote": "When Laura escapes, she realizes that Simón is missing and is unable to find him", "confidence": "sourced"},
-   {"order": 4, "value": "old crime revealed", "when": "middle", "role": "turn", "quote": "she had a son named Tomás, who also lived there but was kept hidden due to his facial deformity", "confidence": "sourced"},
-   {"order": 5, "value": "séance", "when": "middle", "quote": "Aurora conducts a séance during which she claims to see the ghosts of the orphans crying for help", "confidence": "sourced"},
-   {"order": 6, "value": "game played with ghosts", "when": "late", "quote": "attempts to contact the children's spirits by playing one of their old games", "confidence": "sourced"},
-   {"order": 7, "value": "child's body found", "when": "late", "role": "turn", "quote": "Inside is Simón's corpse, wearing Tomás' mask", "confidence": "sourced"},
-   {"order": 8, "value": "mother joins the dead", "when": "ending", "quote": "Laura appears to take an overdose of sleeping pills", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "children's wall-knocking game",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:59",
+    "quote": "One, two, three, knock on the wall!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "return to the childhood home",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Thirty years later, adult Laura returns to the closed orphanage",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "child's invisible friend",
+    "when": "early",
+    "role": "omen",
+    "quote": "Simón claims to have befriended a boy named Tomás",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:57",
+      "quote": "What friend? Tom s."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "bedtime story of not growing up",
+    "when": "early",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:21:31",
+    "quote": "I won't grow old. I'm not going to grow up.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "child disappears",
+    "when": "early",
+    "role": "turn",
+    "quote": "When Laura escapes, she realizes that Simón is missing and is unable to find him",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "old crime revealed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "she had a son named Tomás, who also lived there but was kept hidden due to his facial deformity",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "séance",
+    "when": "middle",
+    "quote": "Aurora conducts a séance during which she claims to see the ghosts of the orphans crying for help",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "game played with ghosts",
+    "when": "late",
+    "quote": "attempts to contact the children's spirits by playing one of their old games",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:45",
+      "quote": "One, two, three, knock on the wall!"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "child's body found",
+    "when": "late",
+    "role": "turn",
+    "quote": "Inside is Simón's corpse, wearing Tomás' mask",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:08",
+      "quote": "I found you. This isn't fair."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "mother joins the dead",
+    "when": "ending",
+    "quote": "Laura appears to take an overdose of sleeping pills",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:06",
+      "quote": "Mommy, mommy, can I wake up?"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "story told to the lost children",
+    "when": "ending",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:39:12",
+    "quote": "Once upon a time... There was a house near the beach... Where the lost children lived...",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

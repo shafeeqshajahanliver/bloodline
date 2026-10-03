@@ -1,54 +1,443 @@
 {
  "film": "1989-sweet-home",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vengeful ghost", "detail": "Lady Mamiya, the artist's wife", "quote": "Asuka is possessed by the infuriated ghost of Lady Mamiya, Ichirō's wife", "confidence": "sourced"},
-   {"value": "poltergeist", "quote": "paranormal events indicate the presence of a poltergeist", "confidence": "sourced"}
+   {
+    "value": "vengeful ghost",
+    "detail": "Lady Mamiya, the artist's wife",
+    "quote": "Asuka is possessed by the infuriated ghost of Lady Mamiya, Ichirō's wife",
+    "confidence": "sourced"
+   },
+   {
+    "value": "poltergeist",
+    "quote": "paranormal events indicate the presence of a poltergeist",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "grieving mother", "detail": "her toddler burned alive in the incinerator", "quote": "The boy is Ichirō and Lady Mamiya's son, who fell into the house's incinerator and burned alive", "confidence": "sourced"}
+   {
+    "value": "grieving mother",
+    "detail": "her toddler burned alive in the incinerator",
+    "quote": "The boy is Ichirō and Lady Mamiya's son, who fell into the house's incinerator and burned alive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:29",
+      "quote": "She kidnapped babies and threw them in the furnace."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "reunion with her child", "quote": "by reuniting Mamiya with her beloved son, and so giving them peace", "confidence": "sourced"},
-   {"value": "to keep out trespassers", "quote": "Lady Mamiya's ghost haunts the mansion, killing any trespassers", "confidence": "sourced"}
+   {
+    "value": "reunion with her child",
+    "quote": "by reuniting Mamiya with her beloved son, and so giving them peace",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:17",
+      "quote": "Give me back my baby."
+     }
+    ]
+   },
+   {
+    "value": "to keep out trespassers",
+    "quote": "Lady Mamiya's ghost haunts the mansion, killing any trespassers",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "death of a child", "quote": "fell into the house's incinerator and burned alive", "confidence": "sourced"}
+   {
+    "value": "death of a child",
+    "quote": "fell into the house's incinerator and burned alive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:03",
+      "quote": "was playing inside the furnace When she took her child out... it was too late"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "entering an abandoned house", "quote": "A small film crew visits the old, abandoned mansion of famous artist Ichirō Mamiya", "confidence": "sourced"}
+   {
+    "value": "entering an abandoned house",
+    "quote": "A small film crew visits the old, abandoned mansion of famous artist Ichirō Mamiya",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:47",
+      "quote": "I've just entered the Mamiya Mansion"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "laid to rest by reunion", "quote": "only Kazuo, Emi, and Akiko survive, by reuniting Mamiya with her beloved son", "confidence": "sourced"},
-   {"value": "possesses the living", "quote": "Asuka is possessed by the infuriated ghost of Lady Mamiya", "confidence": "sourced"}
+   {
+    "value": "laid to rest by reunion",
+    "quote": "only Kazuo, Emi, and Akiko survive, by reuniting Mamiya with her beloved son",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:46",
+      "quote": "And the soul of a child who lost a mother... They attract each other."
+     }
+    ]
+   },
+   {
+    "value": "possesses the living",
+    "quote": "Asuka is possessed by the infuriated ghost of Lady Mamiya",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:36",
+      "quote": "Then what about Asuka going crazy like she did?"
+     }
+    ]
+   },
+   {
+    "value": "shadows are alive",
+    "source": "subtitles",
+    "at": "01:00:44",
+    "quote": "In this mansion... all the shadows and darkness are alive.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:05",
+      "quote": "The shadow is coming... stay in the light. Don't move."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "light makes new shadows",
+    "source": "subtitles",
+    "at": "01:01:27",
+    "quote": "When you use light... then you make new shadows, too",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "film crew", "relation_to_threat": "stranger", "quote": "The team wants to restore and publish the paintings and film a documentary about Mamiya", "confidence": "sourced"},
-   {"value": "father and daughter", "relation_to_threat": "stranger", "detail": "Kazuo and Emi", "quote": "The team includes Kazuo, his daughter Emi, producer Akiko", "confidence": "sourced"}
+   {
+    "value": "film crew",
+    "relation_to_threat": "stranger",
+    "quote": "The team wants to restore and publish the paintings and film a documentary about Mamiya",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:03",
+      "quote": "They are a TV crew... he claims there's a Mamiya fresco inside."
+     }
+    ]
+   },
+   {
+    "value": "father and daughter",
+    "relation_to_threat": "stranger",
+    "detail": "Kazuo and Emi",
+    "quote": "The team includes Kazuo, his daughter Emi, producer Akiko",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:03",
+      "quote": "Since my mother died... he's been getting worse"
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "ghost laid to rest", "quote": "reuniting Mamiya with her beloved son, and so giving them peace", "confidence": "sourced"},
-   {"value": "house destroyed", "quote": "When Kazuo, Emi, and Akiko leave the mansion, it begins to collapse.", "confidence": "sourced"}
+   {
+    "value": "ghost laid to rest",
+    "quote": "reuniting Mamiya with her beloved son, and so giving them peace",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:51",
+      "quote": "Go back."
+     }
+    ]
+   },
+   {
+    "value": "house destroyed",
+    "quote": "When Kazuo, Emi, and Akiko leave the mansion, it begins to collapse.",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "frescos", "state": "hidden, precious", "when": "opening", "role": "trigger", "quote": "who left several precious frescos inside his house", "confidence": "sourced"},
-   {"value": "abandoned mansion", "state": "collapsing at the end", "when": "opening", "role": "setting", "quote": "the old, abandoned mansion of famous artist Ichirō Mamiya", "confidence": "sourced"},
-   {"value": "child's grave", "state": "makeshift", "when": "middle", "role": "clue", "quote": "The team discovers a makeshift grave where a toddler is buried", "confidence": "sourced"},
-   {"value": "incinerator", "state": "fatal", "when": "middle", "role": "clue", "quote": "fell into the house's incinerator and burned alive", "confidence": "sourced"}
+   {
+    "value": "frescos",
+    "state": "hidden, precious",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "who left several precious frescos inside his house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:32",
+      "quote": "The last fresco by Ichirou Mamiya is in that house."
+     }
+    ]
+   },
+   {
+    "value": "abandoned mansion",
+    "state": "collapsing at the end",
+    "when": "opening",
+    "role": "setting",
+    "quote": "the old, abandoned mansion of famous artist Ichirō Mamiya",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:58",
+      "quote": "That mansion has been closed for 30 years"
+     }
+    ]
+   },
+   {
+    "value": "child's grave",
+    "state": "makeshift",
+    "when": "middle",
+    "role": "clue",
+    "quote": "The team discovers a makeshift grave where a toddler is buried",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:00",
+      "quote": "Maybe a casket for a baby."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:37:30",
+      "quote": "like that baby buried over there."
+     }
+    ]
+   },
+   {
+    "value": "incinerator",
+    "state": "fatal",
+    "when": "middle",
+    "role": "clue",
+    "quote": "fell into the house's incinerator and burned alive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:44",
+      "quote": "One day, Lady Mamiya went to the cellar to turn on the furnace."
+     }
+    ]
+   },
+   {
+    "value": "key",
+    "when": "opening",
+    "role": "trigger",
+    "source": "subtitles",
+    "at": "00:06:38",
+    "quote": "Here is the key to Mamiya's Mansion.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dead mother's keepsake",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:24:34",
+    "quote": "It was my mother's When I was a little kid... she always wore this",
+    "confidence": "sourced"
+   },
+   {
+    "value": "amulet",
+    "state": "destroyed",
+    "when": "middle",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "00:33:03",
+    "quote": "It's just an amulet Not the kind you can buy anywhere.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:08",
+      "quote": "It protects from the curse."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "living shadows",
+    "when": "middle",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:42:06",
+    "quote": "The shadows are alive.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lamps and flashlights",
+    "when": "late",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "01:00:56",
+    "quote": "We must gather all the light... including flashlights.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "crew enters the house", "when": "opening", "role": "trigger", "quote": "A small film crew visits the old, abandoned mansion", "confidence": "sourced"},
-   {"order": 2, "value": "haunting begins", "when": "early", "role": "omen", "quote": "After they enter the mansion, paranormal events indicate the presence of a poltergeist", "confidence": "sourced"},
-   {"order": 3, "value": "possession", "when": "early", "quote": "Asuka is possessed by the infuriated ghost of Lady Mamiya", "confidence": "sourced"},
-   {"order": 4, "value": "child's grave found", "when": "middle", "role": "turn", "quote": "The team discovers a makeshift grave where a toddler is buried", "confidence": "sourced"},
-   {"order": 5, "value": "mother reunited with child", "when": "ending", "role": "turn", "quote": "by reuniting Mamiya with her beloved son, and so giving them peace", "confidence": "sourced"},
-   {"order": 6, "value": "house collapses", "when": "ending", "quote": "When Kazuo, Emi, and Akiko leave the mansion, it begins to collapse.", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "town hands over the key",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:06:29",
+    "quote": "If something bad happens to them... by supernatural causes... Think of the publicity for our community.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "crew enters the house",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "A small film crew visits the old, abandoned mansion",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:47",
+      "quote": "I've just entered the Mamiya Mansion"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "haunting begins",
+    "when": "early",
+    "role": "omen",
+    "quote": "After they enter the mansion, paranormal events indicate the presence of a poltergeist",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:00",
+      "quote": "That's a weird sound."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "possession",
+    "when": "early",
+    "quote": "Asuka is possessed by the infuriated ghost of Lady Mamiya",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:17",
+      "quote": "Give me back my baby."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "child's grave found",
+    "when": "middle",
+    "role": "turn",
+    "quote": "The team discovers a makeshift grave where a toddler is buried",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:00",
+      "quote": "Too small to be a casket. Maybe a casket for a baby."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "curse history told",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:58:26",
+    "quote": "30 years ago The Mamiya family had a long awaited baby",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "child taken by the ghost",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "01:07:35",
+    "quote": "Probably in the furnace... she's trapped by Mamiya's soul",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "helper sacrifices himself",
+    "when": "late",
+    "source": "subtitles",
+    "at": "01:11:18",
+    "quote": "Don't worry about me. Get out quickly.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "mother reunited with child",
+    "when": "ending",
+    "role": "turn",
+    "quote": "by reuniting Mamiya with her beloved son, and so giving them peace",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:08",
+      "quote": "Why don't you understand the mind of a mother who lost a child?"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "house collapses",
+    "when": "ending",
+    "quote": "When Kazuo, Emi, and Akiko leave the mansion, it begins to collapse.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "question left unanswered",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:38:26",
+    "quote": "Where is daddy? I'll tell you later.",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

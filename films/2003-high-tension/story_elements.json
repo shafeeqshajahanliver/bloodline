@@ -1,55 +1,379 @@
 {
  "film": "2003-high-tension",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "home invader", "detail": "an unnamed killer, apparently", "quote": "a murderer breaks in on the night of their arrival", "confidence": "sourced"},
-   {"value": "the self", "detail": "Marie, the protagonist, is the real killer", "quote": "It is revealed that Marie is murderous, delusional, and obsessed with Alex, being responsible for all the murders", "confidence": "sourced"}
+   {
+    "value": "home invader",
+    "detail": "an unnamed killer, apparently",
+    "quote": "a murderer breaks in on the night of their arrival",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the self",
+    "detail": "Marie, the protagonist, is the real killer",
+    "quote": "It is revealed that Marie is murderous, delusional, and obsessed with Alex, being responsible for all the murders",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:06",
+      "quote": "It wasn't a guy. It was me. That's the weirdest part."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "delusional obsession", "quote": "Marie is murderous, delusional, and obsessed with Alex", "confidence": "sourced"}
+   {
+    "value": "delusional obsession",
+    "quote": "Marie is murderous, delusional, and obsessed with Alex",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "possession of a loved one", "quote": "Marie proclaims she'll never let anyone come between them", "confidence": "sourced"}
+   {
+    "value": "possession of a loved one",
+    "quote": "Marie proclaims she'll never let anyone come between them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:47",
+      "quote": "I won't let anyone come between us anymore."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:26:44",
+      "quote": "Nobody will come between us, ever, ever again."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "visiting a remote house", "quote": "a young student who travels with her classmate to visit her family at their secluded farmhouse", "confidence": "sourced"}
+   {
+    "value": "visiting a remote house",
+    "quote": "a young student who travels with her classmate to visit her family at their secluded farmhouse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:00",
+      "quote": "You turn right at the cornfield."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "killer cannot be seen", "detail": "Marie hides from the 'killer' who is herself", "quote": "The killer inspects Marie's room but does not find her", "confidence": "observed"}
+   {
+    "value": "killer cannot be seen",
+    "detail": "Marie hides from the 'killer' who is herself",
+    "quote": "The killer inspects Marie's room but does not find her",
+    "confidence": "observed"
+   }
   ],
   "who_suffers": [
-   {"value": "best friend's family", "relation_to_threat": "family", "detail": "Alex's father, mother and brother", "quote": "accuses her of butchering her family", "confidence": "sourced"},
-   {"value": "object of obsession", "relation_to_threat": "lover", "detail": "Alex", "quote": "Marie forces Alex to tell her that she loves her, and she kisses her", "confidence": "sourced"},
-   {"value": "bystanders", "relation_to_threat": "stranger", "quote": "Inside, Marie witnesses the store clerk being murdered with an axe", "confidence": "sourced"}
+   {
+    "value": "best friend's family",
+    "relation_to_threat": "family",
+    "detail": "Alex's father, mother and brother",
+    "quote": "accuses her of butchering her family",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:19",
+      "quote": "You murderer, you murdered my family."
+     }
+    ]
+   },
+   {
+    "value": "object of obsession",
+    "relation_to_threat": "lover",
+    "detail": "Alex",
+    "quote": "Marie forces Alex to tell her that she loves her, and she kisses her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:45",
+      "quote": "Yes, I love you!"
+     }
+    ]
+   },
+   {
+    "value": "bystanders",
+    "relation_to_threat": "stranger",
+    "quote": "Inside, Marie witnesses the store clerk being murdered with an axe",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat confined", "quote": "Marie is in a psychiatric hospital room chained to her bed", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "Marie grins and reaches for Alex, seemingly aware that she is behind it", "confidence": "observed"}
+   {
+    "value": "threat confined",
+    "quote": "Marie is in a psychiatric hospital room chained to her bed",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat survives",
+    "quote": "Marie grins and reaches for Alex, seemingly aware that she is behind it",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:37",
+      "quote": "She can't see me, right?"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "doorbell", "when": "opening", "role": "omen", "quote": "Marie hears a doorbell ring and Alex's father Daniel answers it", "confidence": "sourced"},
-   {"value": "straight razor", "when": "opening", "role": "weapon", "quote": "A man slashes Daniel's face with a straight razor", "confidence": "sourced"},
-   {"value": "cornfield", "when": "early", "role": "setting", "quote": "Alex's younger brother Tom runs from the house to the cornfield", "confidence": "sourced"},
-   {"value": "truck", "when": "early", "role": "setting", "quote": "Alex is dragged into the killer's truck", "confidence": "sourced"},
-   {"value": "security footage", "when": "late", "role": "turn", "quote": "police at the gas station watch security camera footage", "confidence": "sourced"},
-   {"value": "barbed wire post", "when": "late", "role": "weapon", "quote": "Marie bludgeons the killer with a fence post covered in barbed wire", "confidence": "sourced"},
-   {"value": "concrete saw", "when": "late", "role": "weapon", "quote": "Marie chases Alex with a concrete saw", "confidence": "sourced"},
-   {"value": "one-way mirror", "when": "ending", "role": "mirror", "quote": "with Alex watching her through a one-way mirror", "confidence": "sourced"}
+   {
+    "value": "doorbell",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Marie hears a doorbell ring and Alex's father Daniel answers it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:56",
+      "quote": "(DOORBELL RINGING)"
+     }
+    ]
+   },
+   {
+    "value": "straight razor",
+    "when": "opening",
+    "role": "weapon",
+    "quote": "A man slashes Daniel's face with a straight razor",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cornfield",
+    "when": "early",
+    "role": "setting",
+    "quote": "Alex's younger brother Tom runs from the house to the cornfield",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:00",
+      "quote": "You turn right at the cornfield."
+     }
+    ]
+   },
+   {
+    "value": "truck",
+    "when": "early",
+    "role": "setting",
+    "quote": "Alex is dragged into the killer's truck",
+    "confidence": "sourced"
+   },
+   {
+    "value": "security footage",
+    "when": "late",
+    "role": "turn",
+    "quote": "police at the gas station watch security camera footage",
+    "confidence": "sourced"
+   },
+   {
+    "value": "barbed wire post",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Marie bludgeons the killer with a fence post covered in barbed wire",
+    "confidence": "sourced"
+   },
+   {
+    "value": "concrete saw",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Marie chases Alex with a concrete saw",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:17",
+      "quote": "(CHAINSAW REVVING)"
+     }
+    ]
+   },
+   {
+    "value": "one-way mirror",
+    "when": "ending",
+    "role": "mirror",
+    "quote": "with Alex watching her through a one-way mirror",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:37",
+      "quote": "She can't see me, right?"
+     }
+    ]
+   },
+   {
+    "value": "dog",
+    "detail": "Hendrix, the family dog, barks just before the doorbell",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:11:13",
+    "quote": "Don't worry, he doesn't bite.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:33",
+      "quote": "(HENDRIX BARKING)"
+     }
+    ]
+   },
+   {
+    "value": "recorded confession",
+    "state": "whispered on tape in a hospital",
+    "when": "opening",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:01:08",
+    "quote": "Are they recording?",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "friends arrive at remote house", "when": "opening", "quote": "Best friends Marie and Alex are on their way to stay at Alex's parents' house for the weekend", "confidence": "sourced"},
-   {"order": 2, "value": "family slaughtered", "when": "opening", "quote": "witnesses the killer murdering Alex's mother by slashing her throat with a razor", "confidence": "sourced"},
-   {"order": 3, "value": "friend abducted", "when": "early", "quote": "Alex is dragged into the killer's truck while Marie sneaks into it and hides there with Alex", "confidence": "sourced"},
-   {"order": 4, "value": "pursuit and apparent victory", "when": "middle", "quote": "Marie suffocates him with a plastic sheet", "confidence": "sourced"},
-   {"order": 5, "value": "protagonist revealed as killer", "when": "late", "role": "turn", "quote": "It is revealed that Marie is murderous, delusional, and obsessed with Alex", "confidence": "sourced"},
-   {"order": 6, "value": "victim fights back", "when": "late", "quote": "Alex plunges the crowbar into Marie's upper-chest", "confidence": "sourced"},
-   {"order": 7, "value": "killer institutionalised", "when": "ending", "quote": "Marie grins and reaches for Alex, seemingly aware that she is behind it", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "patient repeats a vow on tape",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:47",
+    "quote": "I won't let anyone come between us anymore.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "dream of chasing herself",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:04:06",
+    "quote": "It wasn't a guy. It was me. That's the weirdest part.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "friends arrive at remote house",
+    "when": "opening",
+    "quote": "Best friends Marie and Alex are on their way to stay at Alex's parents' house for the weekend",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:00",
+      "quote": "You turn right at the cornfield."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "family slaughtered",
+    "when": "opening",
+    "quote": "witnesses the killer murdering Alex's mother by slashing her throat with a razor",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:13",
+      "quote": "(MOTHER SCREAMING)"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "friend abducted",
+    "when": "early",
+    "quote": "Alex is dragged into the killer's truck while Marie sneaks into it and hides there with Alex",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:00",
+      "quote": "(ALEX SCREAMING)"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "pursuit and apparent victory",
+    "when": "middle",
+    "quote": "Marie suffocates him with a plastic sheet",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "protagonist revealed as killer",
+    "when": "late",
+    "role": "turn",
+    "quote": "It is revealed that Marie is murderous, delusional, and obsessed with Alex",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:19",
+      "quote": "You murderer, you murdered my family."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "victim fights back",
+    "when": "late",
+    "quote": "Alex plunges the crowbar into Marie's upper-chest",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "vow repeated after the killings",
+    "when": "ending",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:26:52",
+    "quote": "I won't let anyone come between us anymore.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "killer institutionalised",
+    "when": "ending",
+    "quote": "Marie grins and reaches for Alex, seemingly aware that she is behind it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:37",
+      "quote": "She can't see me, right?"
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

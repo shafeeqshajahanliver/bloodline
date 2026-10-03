@@ -1,56 +1,450 @@
 {
  "film": "1994-cemetery-man",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "zombies", "detail": "the \"Returners\"", "quote": "some people rise from their graves as aggressive zombies within seven nights following their deaths", "confidence": "sourced"},
-   {"value": "the self", "detail": "Dellamorte turns killer of the living", "quote": "Dellamorte heads into town at night and kills the punks who have made fun of him for years", "confidence": "sourced"}
+   {
+    "value": "zombies",
+    "detail": "the \"Returners\"",
+    "quote": "some people rise from their graves as aggressive zombies within seven nights following their deaths",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:27",
+      "quote": "I call them Returners, but, frankly, I can't understand why they're so anxious to return."
+     }
+    ]
+   },
+   {
+    "value": "the self",
+    "detail": "Dellamorte turns killer of the living",
+    "quote": "Dellamorte heads into town at night and kills the punks who have made fun of him for years",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:06",
+      "quote": "Straniero! It was me! You and I are both the same."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "unexplained", "quote": "The Latin inscription over the Buffalora Cemetery gate reads RESURRECTURIS (\"For those who will rise again\")", "confidence": "observed"}
+   {
+    "value": "unexplained",
+    "quote": "The Latin inscription over the Buffalora Cemetery gate reads RESURRECTURIS (\"For those who will rise again\")",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:18",
+      "quote": "I don't know how the epidemic started."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "nothing stated", "detail": "the dead simply rise", "quote": "Dellamorte destroys these creatures, which he calls \"Returners\", before they overrun the town", "confidence": "observed"}
+   {
+    "value": "nothing stated",
+    "detail": "the dead simply rise",
+    "quote": "Dellamorte destroys these creatures, which he calls \"Returners\", before they overrun the town",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:27",
+      "quote": "I can't understand why they're so anxious to return."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "falling in love", "quote": "At a funeral, Dellamorte falls in love with the young widow of a rich, elderly man", "confidence": "sourced"}
+   {
+    "value": "falling in love",
+    "quote": "At a funeral, Dellamorte falls in love with the young widow of a rich, elderly man",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:24",
+      "quote": "The most beautiful living woman I have ever seen!"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "dead rise within seven nights", "quote": "rise from their graves as aggressive zombies within seven nights following their deaths", "confidence": "sourced"},
-   {"value": "stopped by shooting", "quote": "He explains, \"It's easier just to shoot them.\"", "confidence": "sourced"}
+   {
+    "value": "dead rise within seven nights",
+    "quote": "rise from their graves as aggressive zombies within seven nights following their deaths",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:21",
+      "quote": "All I know is that some people, on the seventh night after their death, come back to life."
+     }
+    ]
+   },
+   {
+    "value": "stopped by shooting",
+    "quote": "He explains, \"It's easier just to shoot them.\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:33",
+      "quote": "The only way to get rid of them once and for all is to split their heads open. A spade will do it, but a Dum-Dum bullet is best."
+     }
+    ]
+   },
+   {
+    "value": "a bite does not kill",
+    "source": "subtitles",
+    "at": "00:56:40",
+    "quote": "I'm not dead, you idiot! A bite can't kill you!",
+    "detail": "the widow's return is ambiguous: bitten, but alive",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "caretaker", "relation_to_threat": "self", "detail": "Francesco Dellamorte", "quote": "Everett plays a beleaguered caretaker of a small Italian cemetery", "confidence": "sourced"},
-   {"value": "lover", "relation_to_threat": "lover", "detail": "the young widow, in three forms", "quote": "the undead partner arises and bites her", "confidence": "sourced"},
-   {"value": "townspeople", "relation_to_threat": "community", "quote": "he casually murders a nun, a nurse, and a doctor", "confidence": "sourced"}
+   {
+    "value": "caretaker",
+    "relation_to_threat": "self",
+    "detail": "Francesco Dellamorte",
+    "quote": "Everett plays a beleaguered caretaker of a small Italian cemetery",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:15",
+      "quote": "I'm the watchman of the Buffalora cemetery."
+     }
+    ]
+   },
+   {
+    "value": "lover",
+    "relation_to_threat": "lover",
+    "detail": "the young widow, in three forms",
+    "quote": "the undead partner arises and bites her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:10",
+      "quote": "I killed the only woman I ever loved."
+     }
+    ]
+   },
+   {
+    "value": "townspeople",
+    "relation_to_threat": "community",
+    "quote": "he casually murders a nun, a nurse, and a doctor",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "world revealed as unreal", "quote": "Dellamorte realizes that the rest of the world does not exist", "confidence": "sourced"},
-   {"value": "roles reversed", "detail": "Gnaghi speaks, Dellamorte says \"Gna\"", "quote": "speaking clearly for the first time. Dellamorte replies: \"Gna.\"", "confidence": "sourced"}
+   {
+    "value": "world revealed as unreal",
+    "quote": "Dellamorte realizes that the rest of the world does not exist",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:08",
+      "quote": "I should have known it. The rest of the world doesn't exist!"
+     }
+    ]
+   },
+   {
+    "value": "roles reversed",
+    "detail": "Gnaghi speaks, Dellamorte says \"Gna\"",
+    "quote": "speaking clearly for the first time. Dellamorte replies: \"Gna.\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:54",
+      "quote": "Could you take me home, please?"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "skull puzzle", "when": "opening", "role": "symbol", "quote": "trying to assemble a puzzle shaped like a human skull", "confidence": "sourced"},
-   {"value": "cemetery gate inscription", "when": "opening", "role": "omen", "quote": "The Latin inscription over the Buffalora Cemetery gate reads RESURRECTURIS", "confidence": "sourced"},
-   {"value": "ossuary", "when": "early", "role": "setting", "quote": "Dellamorte tells her about the ossuary, which she adores", "confidence": "sourced"},
-   {"value": "severed head", "state": "reanimated", "when": "middle", "role": "threat", "quote": "Gnaghi digs up her reanimated head and begins an innocent romance", "confidence": "sourced"},
-   {"value": "figure of death", "state": "leering", "when": "middle", "role": "turn", "quote": "is visited by the leering figure of Death, who tells him to \"Stop killing the dead\"", "confidence": "sourced"},
-   {"value": "gun", "when": "ending", "role": "weapon", "quote": "he loads a gun with two dumdum bullets to finish them both off", "confidence": "sourced"},
-   {"value": "chasm", "when": "ending", "role": "setting", "quote": "walk to the edge of the road, where it drops into a chasm", "confidence": "sourced"},
-   {"value": "snowglobe", "when": "ending", "role": "symbol", "quote": "the camera zooms out to reveal the two men standing in a snowglobe", "confidence": "sourced"}
+   {
+    "value": "skull puzzle",
+    "when": "opening",
+    "role": "symbol",
+    "quote": "trying to assemble a puzzle shaped like a human skull",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:42",
+      "quote": "Putting this skull together is one of the most difficult things in the world."
+     }
+    ]
+   },
+   {
+    "value": "cemetery gate inscription",
+    "when": "opening",
+    "role": "omen",
+    "quote": "The Latin inscription over the Buffalora Cemetery gate reads RESURRECTURIS",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dead leaves",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:06:57",
+    "quote": "He has a real passion for dead leaves. He can't stand it when the wind blows them away.",
+    "detail": "Gnaghi's obsession",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ossuary",
+    "when": "early",
+    "role": "setting",
+    "quote": "Dellamorte tells her about the ossuary, which she adores",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:52",
+      "quote": "The cemetery's small but it has got a marvelous ossuary."
+     }
+    ]
+   },
+   {
+    "value": "severed head",
+    "state": "reanimated",
+    "when": "middle",
+    "role": "threat",
+    "quote": "Gnaghi digs up her reanimated head and begins an innocent romance",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:38",
+      "quote": "Her head was sliced right off had to sew it back on the body."
+     }
+    ]
+   },
+   {
+    "value": "dead boy scouts",
+    "when": "middle",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:34:42",
+    "quote": "The bikes crashed into a bus loaded with scouts on their way back from a church sponsored outing.",
+    "detail": "the busload of scouts later rises together",
+    "confidence": "sourced"
+   },
+   {
+    "value": "figure of death",
+    "state": "leering",
+    "when": "middle",
+    "role": "turn",
+    "quote": "is visited by the leering figure of Death, who tells him to \"Stop killing the dead\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:37",
+      "quote": "Stop killing the dead. They're mine."
+     }
+    ]
+   },
+   {
+    "value": "gun",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "he loads a gun with two dumdum bullets to finish them both off",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:31",
+      "quote": "The gun! I forgot the fucking gun!"
+     }
+    ]
+   },
+   {
+    "value": "chasm",
+    "when": "ending",
+    "role": "setting",
+    "quote": "walk to the edge of the road, where it drops into a chasm",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:49",
+      "quote": "Past this tunnel is the rest of the world!"
+     }
+    ]
+   },
+   {
+    "value": "snowglobe",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "the camera zooms out to reveal the two men standing in a snowglobe",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "lonely caretaker among the dead", "when": "opening", "quote": "He lives in a ramshackle house on the premises, constantly surrounded by death", "confidence": "sourced"},
-   {"order": 2, "value": "authorities ignore the danger", "when": "early", "quote": "Buffalora's mayor is so fixated on his reelection campaign that he does not register Dellamorte's pleas", "confidence": "sourced"},
-   {"order": 3, "value": "lover bitten and shot", "when": "early", "quote": "Dellamorte stays near her corpse, and shoots her when she rises", "confidence": "sourced"},
-   {"order": 4, "value": "death figure gives an order", "when": "middle", "role": "turn", "quote": "suggests shooting the living instead", "confidence": "sourced"},
-   {"order": 5, "value": "protector becomes killer", "when": "late", "role": "turn", "quote": "he kills her and two other women by setting their house on fire", "confidence": "sourced"},
-   {"order": 6, "value": "confession ignored", "when": "late", "quote": "Dellamorte screams out a confession, but is ignored", "confidence": "sourced"},
-   {"order": 7, "value": "edge of the world", "when": "ending", "role": "turn", "quote": "Dellamorte realizes that the rest of the world does not exist", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "lonely caretaker among the dead",
+    "when": "opening",
+    "quote": "He lives in a ramshackle house on the premises, constantly surrounded by death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:38",
+      "quote": "Franco is the only living person who even calls me."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "dead rise at a grave",
+    "when": "opening",
+    "source": "subtitles",
+    "at": "00:04:31",
+    "quote": "The gun! I forgot the fucking gun!",
+    "detail": "a corpse rises while he seals a grave; he finishes it with a spade",
+    "confidence": "observed"
+   },
+   {
+    "order": 3,
+    "value": "authorities ignore the danger",
+    "when": "early",
+    "quote": "Buffalora's mayor is so fixated on his reelection campaign that he does not register Dellamorte's pleas",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:29",
+      "quote": "I don't care if you don't believe me, Franco. You're not the one who pays me."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "lover bitten and shot",
+    "when": "early",
+    "quote": "Dellamorte stays near her corpse, and shoots her when she rises",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "mass rising of the dead",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "00:38:39",
+    "quote": "Gnaghi, they came back sooner than we thought!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "death figure gives an order",
+    "when": "middle",
+    "role": "turn",
+    "quote": "suggests shooting the living instead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:46",
+      "quote": "why don't you just kill the living, shoot them in the head?"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "protector becomes killer",
+    "when": "late",
+    "role": "turn",
+    "quote": "he kills her and two other women by setting their house on fire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:20",
+      "quote": "But it was me who knocked off the three girls!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "confession ignored",
+    "when": "late",
+    "quote": "Dellamorte screams out a confession, but is ignored",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:06",
+      "quote": "Straniero! It was me!"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "edge of the world",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Dellamorte realizes that the rest of the world does not exist",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:12",
+      "quote": "The rest of the world doesn't exist!"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "elegy for a friend",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:37:59",
+    "quote": "Death, Death, Death comes sweeping down. Filthy Death, the leering clown,",
+    "detail": "recited over the wounded Gnaghi",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "mute friend speaks",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:39:54",
+    "quote": "Could you take me home, please?",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }
