@@ -1,0 +1,37 @@
+# Ring (Suzuki novel)
+
+Source: https://en.wikipedia.org/wiki/Ring_(Suzuki_novel) (revision 1369410489). CC BY-SA 4.0, retrieved 2026-10-03.
+
+Ring (リング, Ringu) is a Japanese mystery horror novel by Koji Suzuki first published in 1991, and set in modern-day Japan. The novel was the first in the Ring novel series, and the first of a trilogy, followed by two sequels: Spiral (1995) and Loop (1998). The original Ring novel sold 500,000 copies by January 1998, and 1.5 million copies by July 2000. Ring was the basis for the Ring franchise, including a 1995 TV film (Ring: Kanzenban), a 1998 theatrical film of the same name (Ring), a TV series (Ring: The Final Chapter), and two international film remakes of the 1998 film: a South Korean version (The Ring Virus) and an English-language version (The Ring).
+
+
+== Plot ==
+After finding out three other teenagers died at the same time and in the same bizarre manner as his niece, Kazuyuki Asakawa, a reporter for Daily News, starts a personal investigation. His search leads him to Hakone Pacific Land, a holiday resort where the youths were together one week before their deaths. There, he happens upon a mysterious unmarked videotape. The tape shows a 20-minute sequence of abstract and real scenes, ending with a text warning that the viewer has 1 week to live. The next part, which supposedly explains a means of avoiding death and is later referred to as the charm, is overwritten by an advertisement.
+The tape terrifies Asakawa, who is convinced its warning is true. Desperate to avert his fate, he takes the tape and enlists the help of his old high-school friend Ryūji Takayama, now a university Philosophy Professor. Intrigued, Ryūji watches the tape and asks for a copy to study at home, to which Asakawa obliges.
+The men begin dissecting the footage to figure out where it was shot and broadcast. After a fruitless day chasing leads, Asakawa goes home only to learn his wife watched the tape, with their infant daughter on her lap, out of curiosity.
+The next day, Ryūji figures that the moments of near blackness appearing during real scenes are likely caused by the recording device blinking. The two travel to Kamakura, where Ryūji knows someone with a personal archive of paranormal cases from Japan. Searching for individuals with psychic photography abilities, aided by several other clues from the footage, they find the record of Sadako Yamamura, a young woman born on Izu Oshima Island.
+Ryūji theorizes that the woman is already dead, and that the last part of the tape contains the will she wanted the viewer to fulfill. To figure it out, they travel to Izu Oshima the next morning to learn more about her past. Stuck on the island because of a heavy storm, the two aren't able to unearth any clues leading them to solve the mystery. Thanks to Oshima and Yoshino, colleagues of Asakawa, they pieced together Sadako's timeline up to 30 years ago. They have hit a dead end.
+With their deadline approaching, Ryūji has the idea of retracing the resort lodge's history to find out how and why the tape was there. Yoshino finds out that the resort used to be a tuberculosis sanatorium, where Sadako's father lived in his last days, and the only surviving staff member working there during the period near Sadako's disappearance is GP Nagao Jotaro.
+When the storm clears, the two travel to Dr. Jotaro's office and recognize him as the aggressive man in the tape. Ryūji presses Dr. Jotaro for answers. The doctor admitted to being infatuated with Sadako and, as if guided by something beyond himself, raped her in an abandoned cabin deep in the woods, in the process infecting her with smallpox and learning she was intersex. Driven by the same unexplainable compulsion (which the duo later deduces as Sadako's mind control), he throws her into a nearby well, which is beneath the lodge at Hakone Pacific Land. Believing Sadako died in the well, her rage and psychic powers having projected images onto the tape, the two race back to the lodge. Guessing her will is for her bones to be unearthed, they locate the well, and Asakawa finds Sadako's remains. Asakawa's 7-day deadline passes, convincing them that the curse is broken.
+The next day, the two part ways, and Asakawa returns Sadako's remains to her family. Alone in his house, Ryūji senses his death is approaching. In his final moments, he deduces the actual charm. He calls his assistant and confidante, Mai Takano, but only manages to scream without being able to say anything before dying. Asakawa calls Ryūji, but Mai picks up and tells him Ryūji is dead.
+Panicked as his wife and child's deadline approaches, Asakawa tries to figure out why he was spared. Ryūji appears in a vision and guides him to the answer. Sadako's psychic powers, combined with the smallpox virus, created a paranormal virus that demands to be reproduced to propagate through tape copies. The charm is in copying the tape and showing it to someone else. With 5 hours left, Asakawa races to his wife's parents' home with the tape and the VCR, choosing to unleash "an apocalyptic evil" for the safety of his wife and child.
+
+
+== Characters ==
+Kazuyuki Asakawa: The book's protagonist, he is a Tokyo newspaper reporter whose reputation was somewhat tarnished in the past in connection with a fad for UFOs and ghosts. He has a wife, Shizuka (the Vertical, Inc. English translation of the novel incorrectly renders her name as Shizu), an infant daughter, Yoko.
+Ryuji Takayama: Asakawa's friend whom he enlists to help him solve the riddle of the tape. He was a doctor, but later became a philosophy professor at a famous university. Being of an odd mental disposition and also being something of a genius, Ryūji usually stated that the purpose of his life is to gaze at the end of humanity. Ryūji also claims to be a rapist, although whether these claims are true or not is unclear, as it may be a hoax used to befriend the quiet Asakawa. He was actually a lonely person who struggled to live peacefully within society. Ryūji has even more significant roles in the sequels Spiral and Loop.
+Shizuka and Yoko Asakawa: Asakawa's wife and daughter, respectively. When Shizuka unknowingly watches the cursed video with Yoko on her lap, Yoko becomes Asakawa's primary motivation to solve the riddle of the tape.
+Sadako Yamamura: The book's unseen antagonist, who vanished 30 years ago and is also the person behind the incident of the cursed tape. She was, in fact, intersex with special powers similar to ESP. She was said to be extremely beautiful.
+Shizuko Yamamura: Sadako's mother, who possessed powers similar to her daughter's. She threw herself into the crater of Mt. Mihara after a telepathy demonstration, which she failed due to the reporters' ill will, and was branded a fraud.
+
+
+== Adaptations ==
+After the publication of the book, several adaptations were made , including a manga adaptation of the novel, released in 1996 by Kouhirou Nagai. In 1999, a second manga was made by Misao Inagaki, which took elements from the novel, film, and TV versions of the Ring.
+
+
+== References ==
+
+
+== External links ==
+Vertical Inc. - publisher of English translations of the Ring novels.
+SaruDama - contains reviews of Ring and other Suzuki novels.
