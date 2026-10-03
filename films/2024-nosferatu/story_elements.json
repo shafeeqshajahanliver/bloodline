@@ -1,0 +1,65 @@
+{
+ "film": "2024-nosferatu",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "vampire", "detail": "Count Orlok, the Nosferatu", "quote": "a powerful being known as the Nosferatu", "confidence": "sourced"},
+   {"value": "plague", "quote": "Thomas returns to Wisburg as Orlok's plague ravages the populace", "confidence": "sourced"},
+   {"value": "human servant", "detail": "Herr Knock", "quote": "Knock is actually in league with Orlok", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "pact with the devil", "quote": "Orlok became a vampire after making a pact with the Devil", "confidence": "sourced"},
+   {"value": "summoned by prayer", "quote": "She inadvertently contacts a powerful being known as the Nosferatu, forging a psychic link between them", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "a woman", "detail": "Ellen", "quote": "He demands that she submit to him in three days or he will kill  Thomas", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "wife sold unknowingly", "quote": "tells her that Thomas \"sold\" her to him for his commission of the home sale", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "a prayer for company", "quote": "A young girl named Ellen prays for a companion to ease her loneliness", "confidence": "sourced"},
+   {"value": "journey for a property sale", "quote": "Thomas is sent to Transylvania by his employer, Herr Knock, to sell the decrepit Grünewald Manor", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "killed by sunlight", "quote": "Von Franz reveals that sunlight will kill Nosferatu", "confidence": "sourced"},
+   {"value": "maiden's willing sacrifice", "quote": "a fair maiden's willing sacrifice can destroy Nosferatu", "confidence": "sourced"},
+   {"value": "psychic link", "quote": "Ellen, under Orlok's influence, begins suffering from seizures and sleepwalking", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "young wife", "relation_to_threat": "lover", "detail": "Ellen, psychically bound to Orlok", "quote": "Thomas returns and holds Ellen's hand as she dies", "confidence": "sourced"},
+   {"value": "husband", "relation_to_threat": "stranger", "detail": "Thomas", "quote": "Thomas discovers bite marks on his chest and becomes increasingly ill and fearful", "confidence": "sourced"},
+   {"value": "friends' family", "relation_to_threat": "community", "detail": "Anna, her children, Friedrich", "quote": "Orlok retaliates by killing Anna and her children", "confidence": "sourced"},
+   {"value": "townspeople", "relation_to_threat": "community", "quote": "Orlok's plague ravages the populace", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat destroyed", "quote": "Distracted by her, Orlok is killed by the sunrise", "confidence": "sourced"},
+   {"value": "self-sacrifice", "quote": "von Franz confirms that her sacrifice has freed them from Nosferatu", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "staked corpse", "state": "gushing blood", "when": "early", "role": "omen", "quote": "a group of Roma exhuming and staking an alleged vampire's corpse, which gushes blood", "confidence": "sourced"},
+   {"value": "horse", "state": "gone", "when": "early", "role": "omen", "quote": "He wakes up to the hamlet deserted and his horse gone", "confidence": "sourced"},
+   {"value": "carriage", "state": "mysterious", "when": "early", "role": "setting", "quote": "a mysterious carriage takes him to Orlok's castle", "confidence": "sourced"},
+   {"value": "cut hand", "state": "bleeding", "when": "early", "role": "trigger", "quote": "Thomas cuts his hand, which agitates the Count", "confidence": "sourced"},
+   {"value": "locket", "detail": "with a lock of Ellen's hair", "when": "early", "role": "symbol", "quote": "takes Thomas' locket, containing a lock of Ellen's hair", "confidence": "sourced"},
+   {"value": "coffin", "when": "middle", "role": "setting", "quote": "he finds the Count asleep in a coffin, naked and decayed", "confidence": "sourced"},
+   {"value": "rats", "state": "plague-carrying", "when": "middle", "role": "threat", "quote": "on a ship with plague-carrying rats", "confidence": "sourced"},
+   {"value": "sheep", "state": "eaten raw", "when": "middle", "role": "omen", "quote": "Knock is institutionalized after killing and eating sheep raw", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "lonely girl's prayer", "when": "opening", "role": "trigger", "quote": "A young girl named Ellen prays for a companion to ease her loneliness", "confidence": "sourced"},
+   {"order": 2, "value": "journey to the castle", "when": "early", "quote": "Thomas is shunned by the locals when he mentions Castle Orlok", "confidence": "sourced"},
+   {"order": 3, "value": "bitten guest", "when": "early", "role": "turn", "quote": "Thomas discovers bite marks on his chest", "confidence": "sourced"},
+   {"order": 4, "value": "monster sails to town", "when": "middle", "quote": "Orlok sets sail for Wisburg inside his coffin on a ship with plague-carrying rats", "confidence": "sourced"},
+   {"order": 5, "value": "plague arrives", "when": "middle", "quote": "Thomas returns to Wisburg as Orlok's plague ravages the populace", "confidence": "sourced"},
+   {"order": 6, "value": "friend's family killed", "when": "late", "quote": "Orlok retaliates by killing Anna and her children", "confidence": "sourced"},
+   {"order": 7, "value": "willing sacrifice", "when": "ending", "role": "turn", "quote": "Ellen summons Orlok and allows him to feed on her until sunrise", "confidence": "sourced"},
+   {"order": 8, "value": "monster and heroine die", "when": "ending", "quote": "Distracted by her, Orlok is killed by the sunrise", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}
