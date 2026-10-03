@@ -1,0 +1,62 @@
+{
+ "film": "2024-in-a-violent-nature",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "undead killer", "detail": "Johnny", "quote": "the corpse of a serial killer, identified as Johnny, rises from the ground", "confidence": "sourced"},
+   {"value": "vengeful spirit", "quote": "Subsequent murders were attributed to his vengeful spirit", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "person who died wronged", "detail": "killed in a prank", "quote": "fell to his death from the firetower in a prank gone wrong", "confidence": "sourced"},
+   {"value": "accidentally resurrected", "quote": "a mute killer who is accidentally resurrected from his grave in the Ontario wilderness by a group of teenagers", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "lost object returned", "detail": "the locket", "quote": "Enraged, he roams the woods in search of the locket", "confidence": "sourced"},
+   {"value": "revenge", "quote": "Subsequent murders were attributed to his vengeful spirit", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "cruel prank", "quote": "the developmentally delayed son of a local merchant, fell to his death from the firetower in a prank gone wrong", "confidence": "sourced"},
+   {"value": "cover-up", "quote": "Despite attempts to cover it up, his father discovers the truth and is killed", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "taking an object", "quote": "discover a locket hanging on the remains of a fire tower, which Troy pockets", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "locket keeps him at rest", "quote": "the locket is what keeps Johnny's soul at rest", "confidence": "sourced"},
+   {"value": "provoked by insults to fathers", "quote": "Johnny hears Troy make disparaging remarks toward Colt's deceased father. Enraged", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "friends", "relation_to_threat": "stranger", "quote": "A group of friends—Kris, Colt, Troy, Evan, Ehren, Brodie, and Aurora", "confidence": "sourced"},
+   {"value": "locals", "relation_to_threat": "community", "detail": "hunter and park ranger", "quote": "kills the park ranger with a gas-powered log splitter", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "lone survivor escapes", "quote": "Kris injures her leg and limps to a nearby road where a woman picks her up", "confidence": "sourced"},
+   {"value": "threat survives", "quote": "Back at the fire tower, the gas canister is shown, missing Johnny's locket", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "locket", "state": "taken", "when": "opening", "role": "trigger", "quote": "discover a locket hanging on the remains of a fire tower", "confidence": "sourced"},
+   {"value": "fire tower", "when": "opening", "role": "setting", "quote": "the remains of a fire tower", "confidence": "sourced"},
+   {"value": "corpse rising", "when": "opening", "role": "threat", "quote": "the corpse of a serial killer, identified as Johnny, rises from the ground", "confidence": "sourced"},
+   {"value": "campfire", "when": "early", "role": "setting", "quote": "Johnny approaches the group sitting around a campfire", "confidence": "sourced"},
+   {"value": "firefighter mask", "state": "antique", "when": "early", "role": "symbol", "quote": "ransack a nearby park ranger office for weapons and an antique firefighter mask", "confidence": "sourced"},
+   {"value": "axe", "when": "middle", "role": "weapon", "quote": "Colt walks into the woods to try to retrieve them, but instead finds Johnny's dropped axe", "confidence": "sourced"},
+   {"value": "log splitter", "when": "late", "role": "weapon", "quote": "kills the park ranger with a gas-powered log splitter", "confidence": "sourced"},
+   {"value": "gas canister", "state": "locket gone", "when": "ending", "role": "omen", "quote": "the gas canister is shown, missing Johnny's locket", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "object taken, dead rises", "when": "opening", "role": "trigger", "quote": "Moments later, the corpse of a serial killer, identified as Johnny, rises from the ground", "confidence": "sourced"},
+   {"order": 2, "value": "first kill", "when": "opening", "quote": "The homeowner returns and runs away at the sight of Johnny, but is caught and killed", "confidence": "sourced"},
+   {"order": 3, "value": "legend told by campfire", "when": "early", "role": "clue", "quote": "Ehren recounts the legend of Johnny", "confidence": "sourced"},
+   {"order": 4, "value": "friends picked off", "when": "middle", "quote": "Johnny kills Brodie in the water near a lake dock, and Aurora at an overlook", "confidence": "sourced"},
+   {"order": 5, "value": "rule revealed", "when": "late", "role": "turn", "quote": "explains that the locket is what keeps Johnny's soul at rest", "confidence": "sourced"},
+   {"order": 6, "value": "failed trap", "when": "late", "quote": "The two return to the fire tower and plan to trap Johnny, but Colt is killed in the process", "confidence": "sourced"},
+   {"order": 7, "value": "survivor rescued by stranger", "when": "ending", "quote": "A panicked Kris pleads with her to keep driving, waiting for Johnny to appear", "confidence": "sourced"},
+   {"order": 8, "value": "closing sting", "when": "ending", "quote": "the gas canister is shown, missing Johnny's locket", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

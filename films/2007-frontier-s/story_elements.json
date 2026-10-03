@@ -1,57 +1,229 @@
 {
  "film": "2007-frontier-s",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "neo-nazi family", "detail": "the Von Geisler family who run the inn", "quote": "lodge at a countryside inn run by neo-Nazis", "confidence": "sourced"}
+   {
+    "value": "neo-nazi family",
+    "detail": "the Von Geisler family who run the inn",
+    "quote": "lodge at a countryside inn run by neo-Nazis",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "political history", "detail": "a Nazi who has lived at the inn since WWII", "quote": "Von Geisler is revealed to be a former (and still practicing) Nazi who's lived at the inn since the end of WWII", "confidence": "sourced"}
+   {
+    "value": "political history",
+    "detail": "a Nazi who has lived at the inn since WWII",
+    "quote": "Von Geisler is revealed to be a former (and still practicing) Nazi who's lived at the inn since the end of WWII",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to continue a bloodline", "quote": "Von Geisler wishes for Karl to \"wed\" Yasmine to carry on the family lineage", "confidence": "sourced"},
-   {"value": "new blood", "quote": "Von Geisler offers up a toast to the new blood", "confidence": "sourced"}
+   {
+    "value": "to continue a bloodline",
+    "quote": "Von Geisler wishes for Karl to \"wed\" Yasmine to carry on the family lineage",
+    "confidence": "sourced"
+   },
+   {
+    "value": "new blood",
+    "quote": "Von Geisler offers up a toast to the new blood",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "robbery", "quote": "take advantage of the chaos to pull off a robbery", "confidence": "sourced"},
-   {"value": "racism", "detail": "far-right victory frames the story", "quote": "A far-right candidate reaches the second round of the election for the French presidency, sparking riots in Paris", "confidence": "observed"}
+   {
+    "value": "robbery",
+    "quote": "take advantage of the chaos to pull off a robbery",
+    "confidence": "sourced"
+   },
+   {
+    "value": "racism",
+    "detail": "far-right victory frames the story",
+    "quote": "A far-right candidate reaches the second round of the election for the French presidency, sparking riots in Paris",
+    "confidence": "observed"
+   }
   ],
   "trigger": [
-   {"value": "fleeing the city", "quote": "Hoping to escape Paris but needing cash", "confidence": "sourced"},
-   {"value": "staying at an inn", "quote": "take the money to a family-run inn near the border", "confidence": "sourced"}
+   {
+    "value": "fleeing the city",
+    "quote": "Hoping to escape Paris but needing cash",
+    "confidence": "sourced"
+   },
+   {
+    "value": "staying at an inn",
+    "quote": "take the money to a family-run inn near the border",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "outsiders absorbed into family", "detail": "Eva came to the family the same way", "quote": "she came to the family in a very similar manner", "confidence": "sourced"}
+   {
+    "value": "outsiders absorbed into family",
+    "detail": "Eva came to the family the same way",
+    "quote": "she came to the family in a very similar manner",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "young criminals", "relation_to_threat": "stranger", "detail": "Muslim Arab youths from Paris", "quote": "a street gang made up of Muslim Arab youths", "confidence": "sourced"},
-   {"value": "pregnant woman", "relation_to_threat": "stranger", "detail": "Yasmine", "quote": "when Von Geisler learns she is already pregnant", "confidence": "sourced"},
-   {"value": "abducted children", "relation_to_threat": "family", "quote": "the rejected homeless children she and Hans care for in the mine", "confidence": "sourced"}
+   {
+    "value": "young criminals",
+    "relation_to_threat": "stranger",
+    "detail": "Muslim Arab youths from Paris",
+    "quote": "a street gang made up of Muslim Arab youths",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pregnant woman",
+    "relation_to_threat": "stranger",
+    "detail": "Yasmine",
+    "quote": "when Von Geisler learns she is already pregnant",
+    "confidence": "sourced"
+   },
+   {
+    "value": "abducted children",
+    "relation_to_threat": "family",
+    "quote": "the rejected homeless children she and Hans care for in the mine",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "With everyone else in the neo-Nazi family dead", "confidence": "sourced"},
-   {"value": "wider threat wins", "detail": "far-right candidate becomes president", "quote": "the far-right candidate in the election has won the second round, thus becoming the new French President", "confidence": "sourced"},
-   {"value": "survivor surrenders", "quote": "Yasmine runs into a police blockade near the border, where she surrenders to the authorities", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "With everyone else in the neo-Nazi family dead",
+    "confidence": "sourced"
+   },
+   {
+    "value": "wider threat wins",
+    "detail": "far-right candidate becomes president",
+    "quote": "the far-right candidate in the election has won the second round, thus becoming the new French President",
+    "confidence": "sourced"
+   },
+   {
+    "value": "survivor surrenders",
+    "quote": "Yasmine runs into a police blockade near the border, where she surrenders to the authorities",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "riots", "when": "opening", "role": "setting", "quote": "sparking riots in Paris", "confidence": "sourced"},
-   {"value": "mine shaft", "when": "middle", "role": "setting", "quote": "The injured men wander into a mine shaft", "confidence": "sourced"},
-   {"value": "pigpen", "state": "chained captives", "when": "middle", "role": "setting", "quote": "Alex and Yasmine are chained in a pigpen", "confidence": "sourced"},
-   {"value": "boiler", "when": "middle", "role": "threat", "quote": "Hans chases Farid into a boiler, where Farid is cooked alive", "confidence": "sourced"},
-   {"value": "family dinner", "when": "late", "role": "turn", "quote": "Eva leads Yasmine down to dinner, where the family awaits her", "confidence": "sourced"},
-   {"value": "axe and table saw", "when": "late", "role": "weapon", "quote": "she repeatedly hits him with an axe before impaling him on a table saw", "confidence": "sourced"},
-   {"value": "radio", "when": "ending", "role": "symbol", "quote": "On the radio, one hears that the far-right candidate", "confidence": "sourced"}
+   {
+    "value": "riots",
+    "when": "opening",
+    "role": "setting",
+    "quote": "the election for the French presidency, sparking riots in Paris",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mine shaft",
+    "when": "middle",
+    "role": "setting",
+    "quote": "The injured men wander into a mine shaft",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pigpen",
+    "state": "chained captives",
+    "when": "middle",
+    "role": "setting",
+    "quote": "Alex and Yasmine are chained in a pigpen",
+    "confidence": "sourced"
+   },
+   {
+    "value": "boiler",
+    "when": "middle",
+    "role": "threat",
+    "quote": "Hans chases Farid into a boiler, where Farid is cooked alive",
+    "confidence": "sourced"
+   },
+   {
+    "value": "family dinner",
+    "when": "late",
+    "role": "turn",
+    "quote": "Eva leads Yasmine down to dinner, where the family awaits her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "axe and table saw",
+    "when": "late",
+    "role": "weapon",
+    "quote": "she repeatedly hits him with an axe before impaling him on a table saw",
+    "confidence": "sourced"
+   },
+   {
+    "value": "radio",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "On the radio, one hears that the far-right candidate",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "riots and robbery", "when": "opening", "quote": "take advantage of the chaos to pull off a robbery", "confidence": "sourced"},
-   {"order": 2, "value": "group splits up", "when": "early", "quote": "Sami is shot, and the group splits up", "confidence": "sourced"},
-   {"order": 3, "value": "seductive hosts", "when": "early", "role": "omen", "quote": "Innkeepers Gilberte and Klaudia claim their rooms are free and seduce the two men", "confidence": "sourced"},
-   {"order": 4, "value": "hosts attack", "when": "early", "role": "turn", "quote": "are brutally attacked by Gilberte, Klaudia, and Goetz", "confidence": "sourced"},
-   {"order": 5, "value": "captives chained", "when": "middle", "quote": "Alex and Yasmine are chained in a pigpen", "confidence": "sourced"},
-   {"order": 6, "value": "chosen for breeding", "when": "middle", "role": "turn", "quote": "to carry on the family lineage", "confidence": "sourced"},
-   {"order": 7, "value": "dinner turns bloody", "when": "late", "quote": "Yasmine quickly grabs a knife and takes Von Geisler hostage", "confidence": "sourced"},
-   {"order": 8, "value": "final girl surrenders", "when": "ending", "quote": "where she surrenders to the authorities", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "riots and robbery",
+    "when": "opening",
+    "quote": "take advantage of the chaos to pull off a robbery",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "group splits up",
+    "when": "early",
+    "quote": "Sami is shot, and the group splits up",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "seductive hosts",
+    "when": "early",
+    "role": "omen",
+    "quote": "Innkeepers Gilberte and Klaudia claim their rooms are free and seduce the two men",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "hosts attack",
+    "when": "early",
+    "role": "turn",
+    "quote": "are brutally attacked by Gilberte, Klaudia, and Goetz",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "captives chained",
+    "when": "middle",
+    "quote": "Alex and Yasmine are chained in a pigpen",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "chosen for breeding",
+    "when": "middle",
+    "role": "turn",
+    "quote": "to carry on the family lineage",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "dinner turns bloody",
+    "when": "late",
+    "quote": "Yasmine quickly grabs a knife and takes Von Geisler hostage",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "final girl surrenders",
+    "when": "ending",
+    "quote": "where she surrenders to the authorities",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],

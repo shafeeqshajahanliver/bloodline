@@ -1,0 +1,61 @@
+{
+ "film": "2025-weapons",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "witch", "detail": "Aunt Gladys", "quote": "Alex's mother had invited Gladys, a witch who is a distant and homeless relative, into their home", "confidence": "sourced"},
+   {"value": "bewitched people", "quote": "They are immediately attacked by the bewitched Paul and James", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "invited relative", "quote": "Alex's mother had invited Gladys, a witch who is a distant and homeless relative", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "life energy", "quote": "she keeps them locked in the basement in order to feed off their energy", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "an invitation", "quote": "invited Gladys, a witch who is a distant and homeless relative, into their home", "confidence": "sourced"},
+   {"value": "mass disappearance", "quote": "seventeen children in Maybrook, Pennsylvania, ran out of their homes at 2:17 a.m. and vanished into the night", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "control through hair or belongings", "quote": "cutting a lock of hair from Marcus's husband Terry and using it to perform a bewitchment ritual", "confidence": "sourced"},
+   {"value": "child forced to obey", "quote": "compelling them into self-harm in order to force Alex to do her bidding", "confidence": "sourced"},
+   {"value": "broken totem turns spell back", "quote": "Alex, meanwhile, breaks a totem to target Gladys with her own spell", "confidence": "sourced"},
+   {"value": "spell ends with her death", "quote": "Gladys's death breaks the spell over her victims", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "schoolchildren", "relation_to_threat": "stranger", "quote": "The missing were all students of Justine Gandy's third-grade class", "confidence": "sourced"},
+   {"value": "boy and his parents", "relation_to_threat": "family", "detail": "Alex Lilly", "quote": "she immediately bewitched his parents", "confidence": "sourced"},
+   {"value": "blamed teacher", "relation_to_threat": "stranger", "detail": "Justine Gandy", "quote": "Justine is accused by the students' parents of being involved in their disappearance", "confidence": "sourced"},
+   {"value": "grieving father", "relation_to_threat": "stranger", "detail": "Archer Graff", "quote": "One father, Archer Graff, is particularly suspicious of her", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat destroyed", "quote": "ultimately catching her and, with the spell giving them inhuman strength, tear her head in half", "confidence": "sourced"},
+   {"value": "victims left damaged", "quote": "although all but Archer are left catatonic", "confidence": "sourced"},
+   {"value": "children return home", "quote": "The children returned home, with some beginning to talk again some time later", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "2:17 a.m.", "when": "opening", "role": "omen", "quote": "ran out of their homes at 2:17 a.m. and vanished into the night", "confidence": "sourced"},
+   {"value": "newspaper-covered windows", "when": "early", "role": "omen", "quote": "his house's windows covered with newspaper and his parents sitting motionless inside", "confidence": "sourced"},
+   {"value": "lock of hair", "when": "early", "role": "trigger", "quote": "cuts a lock of Justine's hair while she sleeps", "confidence": "sourced"},
+   {"value": "doorbell footage", "when": "early", "role": "clue", "quote": "After comparing his and another couple's video doorbell footage", "confidence": "sourced"},
+   {"value": "basement", "when": "middle", "role": "setting", "quote": "discovering the missing children in the basement, seemingly catatonic", "confidence": "sourced"},
+   {"value": "totem", "state": "broken", "when": "ending", "role": "weapon", "quote": "breaks a totem to target Gladys with her own spell", "confidence": "sourced"},
+   {"value": "personal belongings", "when": "late", "role": "clue", "quote": "gather personal belongings from his classmates, which she used to summon them to the house", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "children vanish at night", "when": "opening", "quote": "seventeen children in Maybrook, Pennsylvania, ran out of their homes at 2:17 a.m. and vanished into the night", "confidence": "sourced"},
+   {"order": 2, "value": "teacher scapegoated", "when": "opening", "quote": "Justine is accused by the students' parents of being involved in their disappearance", "confidence": "sourced"},
+   {"order": 3, "value": "strange house observed", "when": "early", "role": "clue", "quote": "his house's windows covered with newspaper and his parents sitting motionless inside", "confidence": "sourced"},
+   {"order": 4, "value": "children found in basement", "when": "middle", "quote": "discovering the missing children in the basement, seemingly catatonic", "confidence": "sourced"},
+   {"order": 5, "value": "witch kills through others", "when": "middle", "quote": "Marcus is compelled to murder Terry at Gladys's command", "confidence": "sourced"},
+   {"order": 6, "value": "backstory revealed", "when": "late", "role": "turn", "quote": "It is revealed that Alex's mother had invited Gladys", "confidence": "sourced"},
+   {"order": 7, "value": "spell reversed", "when": "ending", "role": "turn", "quote": "breaks a totem to target Gladys with her own spell", "confidence": "sourced"},
+   {"order": 8, "value": "children kill the witch", "when": "ending", "quote": "The children storm out of the basement and pursue Gladys through the neighborhood", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}
