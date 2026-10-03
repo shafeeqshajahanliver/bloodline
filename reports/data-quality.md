@@ -20,6 +20,7 @@ Generated 2026-10-03 from `films/*/corrections.json`. Source files are never edi
 | commentary track | The Mummy (1932) | `dialogue/subtitles.en.srt` | not used | Film historian commentary. |
 | empty file | Alien (1979) | `script/screenplay.txt` | not used | The screenplay file contains no text. |
 | empty file | The Entity (1982) | `script/screenplay.txt` | not used | The screenplay file contains no text. |
+| extra material | The Conjuring (2013) | `dialogue/subtitles.en.srt` | a few clean lines quoted; measures invalid | A behind-the-scenes featurette follows the film after 01:41; film lines before that are quoted, but measures for the whole file are invalid. |
 | garbled scan | Bram Stoker's Dracula (1992) | `script/screenplay.txt` | a few clean lines quoted; measures invalid | Poor scan with garbled words; only clean lines are quoted, and its measures are unreliable. |
 | garbled scan | Don't Look Now (1973) | `script/screenplay.txt` | not used | Unreadable scan output. |
 | garbled scan | Picnic at Hanging Rock (1975) | `script/screenplay.txt` | not used | Badly garbled scan text. |

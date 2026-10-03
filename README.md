@@ -37,7 +37,7 @@ From [`reports/findings-500.md`](reports/findings-500.md), [`reports/story-eleme
 - **Horror got quieter.** Counting English-language films only, dialogue fell from about 113 words a minute before 1960 to about 88 from the 1960s, and 81 since 2015. The share of runtime with dialogue has fallen from 50% to 39%. (Subtitles of non-English films run far lower, around 56 words a minute, because translation compresses speech, so they are compared separately. Twelve subtitle files turned out to be commentary tracks and one belonged to the wrong film; they are excluded, see [`reports/data-quality.md`](reports/data-quality.md).)
 - **The first scare moved forward ten minutes,** from around minute 28 in the 1960s and 70s to around minute 18 from 1980, and it has stayed there.
 - **Jump scares peaked and retreated:** a median of 9 per film in 2000–14, down to 5 since 2015, in line with the rise of slower "elevated" horror.
-- **An animal is the commonest omen.** Dogs are a warning sign in 28 films, cats in 14, and goats, deer, crows and snakes recur.
+- **An animal is the commonest omen.** 221 of the 497 films (44%) use an animal as a warning sign, 148 of them in the opening or first act. Dogs lead by far, then cats, birds, crows and snakes; Get Out's deer, Talk to Me's kangaroo and The Invitation's coyote all come back at the end. Most of these are invisible in plot summaries and were found in the subtitles and screenplays.
 - **Every South Asian film in the list has a past wrong driving it** (16 of 16), against 74% in North America, and endings where the dead are laid to rest or appeased are more common in South, Southeast and East Asia than in the US.
 
 Jump-scare and screenplay data comes from fan and English-language sources, so trends built on them describe US and UK horror more than horror in general. Plot summaries and story elements cover every region.
@@ -86,7 +86,8 @@ How it works:
 - **Gaps are explicit.** A dimension the article doesn't cover is marked `not_stated`, which is different from absent.
 - **Confidence.** `sourced` when the quote states it directly, `observed` when it is a reasonable reading of the quoted passage (553 of 15,086 entries).
 - **Who did the reading.** The plots were read by Claude, split across parallel helpers working from one schema (`docs/story-elements.md`) and one worked example (Ringu). Every entry is a first pass until reviewed.
-- **Known limit.** Plot summaries keep plot and drop texture, so images and omens are undercounted. Get Out's deer, for instance, is not in its Wikipedia plot.
+- **Refined from subtitles and screenplays.** A second pass read every film's subtitles (including sound captions such as "(DEER GROANING)") and, for 116 films, its screenplay. It pinned 11,558 entries to a timestamp and added 3,109 entries that plot summaries miss, especially animal omens, spoken rules and closing stings. Each carries its source and a verbatim quote, checked against the file (and, for subtitles, against the time). Get Out's deer, absent from its Wikipedia plot, is now in the data four times. Screenplays are drafts and can differ from the finished film; entries from them say so.
+- **Known limit.** Twelve subtitle files turned out to be commentary tracks and two belonged to other films; they are excluded (`reports/data-quality.md`). Films with no subtitles and no screenplay (about 50) rest on their plot summary alone.
 
 **Archetypes.** The 27 archetypes are a separate, top-down lens: first-pass tags on every film, to be tested against the bottom-up story elements rather than treated as findings.
 
