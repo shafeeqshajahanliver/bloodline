@@ -4,6 +4,7 @@
 # Usage: python3 tools/film_sources.py <film id>
 import glob, json, os, re, sys
 from subs import cues, hms
+from sources import unusable
 fid = sys.argv[1]; d = f"films/{fid}"
 print(f"=================== {fid}")
 p = f"{d}/story_elements.json"
@@ -15,6 +16,7 @@ if os.path.exists(p):
             extra = ", ".join(x for x in (e.get("when"), e.get("role")) if x)
             print(f"{k}[{i}]: {e['value']}" + (f" [{extra}]" if extra else "") + (f"  ({len(e['moments'])} moments)" if e.get("moments") else ""))
 for srt in sorted(glob.glob(f"{d}/dialogue/subtitles.*.srt")):
+    if unusable(fid).get(srt.split("/", 2)[2]) == "none": print(f"----- {os.path.basename(srt)}: UNUSABLE (see corrections.json), skipped"); continue
     C = cues(srt); lang = srt.rsplit(".", 2)[1]
     if not C: continue
     end = C[-1][0]

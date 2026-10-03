@@ -3,6 +3,7 @@
 # Usage: python3 tools/validate_story.py [film ids]   (no ids: every film that has the file)
 import glob, json, os, re, sys
 from subs import cues, key, secs
+from sources import unusable
 DIMS = ["threat", "origin", "wants", "wrong", "trigger", "rules", "who_suffers", "ending", "images", "beats"]
 WHEN = {"opening", "early", "middle", "late", "ending"}
 ROLE = {"omen", "trigger", "mirror", "threat", "weapon", "clue", "symbol", "setting", "turn"}
@@ -17,10 +18,11 @@ def check(fid):
     try: d = json.load(open(p))
     except Exception as e: return [f"bad JSON: {e}"]
     text = " ".join(norm(open(f).read()) for f in glob.glob(f"films/{fid}/wikipedia.*.md"))
-    subs = {f: cues(f) for f in glob.glob(f"films/{fid}/dialogue/subtitles.*.srt")}
+    bad = {f"films/{fid}/" + k for k, u in unusable(fid).items() if u == "none"}
+    subs = {f: cues(f) for f in glob.glob(f"films/{fid}/dialogue/subtitles.*.srt") if f not in bad}
     subkey = key(" ".join(x for C in subs.values() for _, x in C))
     sp = f"films/{fid}/script/screenplay.txt"
-    spkey = key(open(sp, errors="ignore").read()) if os.path.exists(sp) else ""
+    spkey = key(open(sp, errors="ignore").read()) if os.path.exists(sp) and sp not in bad else ""
     def other(tag, m):
         """Check a quote taken from subtitles or the screenplay (and its time, for subtitles)."""
         e2 = []; q = m.get("quote", ""); src = m.get("source")

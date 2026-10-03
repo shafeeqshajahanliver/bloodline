@@ -1,5 +1,6 @@
 # Coverage report across all 500 films, by source and by region.
 import csv, json, os, collections, datetime
+from sources import unusable
 rows=list(csv.DictReader(open("films.csv"))); ids=json.load(open("tools/ids.json"))
 def plot(fid):
     p=f"films/{fid}/wikipedia.json"
@@ -9,9 +10,9 @@ def has(fid):
     subs={}
     if ex("dialogue/measures.json"):
         for l,s in json.load(open(f"{d}/dialogue/measures.json"))["by_language"].items():
-            if s.get("found"): subs[l]=s.get("quality","?")
+            if s.get("found") and f"dialogue/subtitles.{l}.srt" not in unusable(fid): subs[l]=s.get("quality","?")
     return {"ids":bool(ids.get(fid,{}).get("match")),"facts":ex("wikidata.json"),"subs_en":"en" in subs,"subs_native":any(l!="en" for l in subs),
-            "screenplay":ex("script/screenplay.txt"),"scares":ex("scares.json"),"stills":ex("visuals/stills.json"),"full_film":ex("visuals/measures.json"),"plot":plot(fid),"story":ex("story_elements.json")}
+            "screenplay":ex("script/screenplay.txt") and unusable(fid).get("script/screenplay.txt")!="none","scares":ex("scares.json"),"stills":ex("visuals/stills.json"),"full_film":ex("visuals/measures.json"),"plot":plot(fid),"story":ex("story_elements.json")}
 H=["ids","facts","plot","subs_en","subs_native","screenplay","scares","stills","full_film","story"]
 N={"ids":"Matched IDs","facts":"Facts (Wikidata)","plot":"Plot summary (Wikipedia)","subs_en":"English subtitles","subs_native":"Original-language subtitles","screenplay":"Screenplay","scares":"Jump scares","stills":"Stills","full_film":"Full-film visuals","story":"Story elements (bottom-up, quoted)"}
 tot=collections.Counter(); reg=collections.defaultdict(collections.Counter); regn=collections.Counter()

@@ -3,11 +3,13 @@
 # Usage: python3 tools/find_moment.py <film id> <term> [<term> ...]   (terms are case-insensitive regular expressions)
 import glob, os, re, sys
 from subs import cues, hms
+from sources import unusable
 fid, terms = sys.argv[1], sys.argv[2:]
 d = f"films/{fid}"
 for term in terms:
     rx = re.compile(term, re.I); print(f"===== {term}")
     for srt in sorted(glob.glob(f"{d}/dialogue/subtitles.*.srt")):
+        if unusable(fid).get(srt.split("/", 2)[2]) == "none": print(f"----- {os.path.basename(srt)}: UNUSABLE (see corrections.json), skipped"); continue
         C = cues(srt); hits = [i for i, (t, x) in enumerate(C) if rx.search(x)]
         for i in hits[:15]:
             ctx = " / ".join(C[j][1] for j in range(max(0, i - 1), min(len(C), i + 2)))

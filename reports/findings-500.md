@@ -16,13 +16,13 @@ Medians by era. Dialogue figures use only English subtitle files whose length ma
 
    | Era | Words per minute | Share of runtime with dialogue |
    |---|---|---|
-   | Before 1960 | 122 | 51% |
-   | 1960–79 | 88 | 45% |
+   | Before 1960 | 113 | 50% |
+   | 1960–79 | 88 | 44% |
    | 1980–99 | 88 | 45% |
-   | 2000–14 | 89 | 42% |
+   | 2000–14 | 88 | 42% |
    | 2015–25 | 81 | 39% |
 
-   The trend holds and is sharper: a drop around 1960, then a slow squeeze, with the share of the film spent in silence rising every era.
+   The trend holds and is sharper. (Updated the same day: twelve subtitle files were commentary tracks and one was the wrong film; four of them were pre-1960 films, which had inflated that era. They are now excluded; see `reports/data-quality.md`.) a drop around 1960, then a slow squeeze, with the share of the film spent in silence rising every era.
 2. **The first scare moved forward by ten minutes,** from about 28 minutes in the 1960s and 70s to about 18 minutes from 1980 on, and it has held there for 40 years.
 3. **Jump scares peaked and retreated.** Scares per film climb to a median of 9 in 2000–14, then fall to 5 since 2015. That fits the rise of slower "elevated" horror (Hereditary, The Witch, It Follows), and it's the most testable claim here.
 4. **Horror films got longer:** a median of 82 minutes before 1960, about 100 now.

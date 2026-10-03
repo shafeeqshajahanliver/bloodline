@@ -1,5 +1,6 @@
 # Medians by era across the corpus: dialogue density, silence, scare timing, runtime.
 import csv,json,os,statistics as st,collections
+from sources import unusable
 rows=list(csv.DictReader(open("films.csv")))
 def era(y): y=int(y); return "pre-1960" if y<1960 else "1960-79" if y<1980 else "1980-99" if y<2000 else "2000-14" if y<2015 else "2015-25"
 def num(v):
@@ -10,7 +11,7 @@ def num(v):
 E=collections.defaultdict(lambda:collections.defaultdict(list))
 for r in rows:
     d=f"films/{r['id']}"; e=era(r["year"])
-    if os.path.exists(d+"/dialogue/measures.json"):
+    if os.path.exists(d+"/dialogue/measures.json") and "dialogue/subtitles.en.srt" not in unusable(r["id"]):
         s=json.load(open(d+"/dialogue/measures.json"))["by_language"].get("en",{})
         if s.get("found") and s.get("quality")=="good":
             E[e]["wpm"].append(s["words_per_minute"]); E[e]["dshare"].append(s["share_of_runtime_with_dialogue"]); E[e]["silence"].append(s["longest_silences"][0]["seconds"])
