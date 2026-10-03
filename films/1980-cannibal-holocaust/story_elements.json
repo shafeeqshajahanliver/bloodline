@@ -1,63 +1,518 @@
 {
  "film": "1980-cannibal-holocaust",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "cannibal tribe", "detail": "the Yąnomamö", "quote": "Shortly afterward, they are vengefully attacked by the Ya̧nomamö tribe", "confidence": "sourced"},
-   {"value": "exploitative filmmakers", "detail": "Alan Yates's documentary crew", "quote": "herding the natives into a hut, which they burn down to stage a massacre for their film", "confidence": "sourced"}
+   {
+    "value": "cannibal tribe",
+    "detail": "the Yąnomamö",
+    "quote": "Shortly afterward, they are vengefully attacked by the Ya̧nomamö tribe",
+    "confidence": "sourced"
+   },
+   {
+    "value": "exploitative filmmakers",
+    "detail": "Alan Yates's documentary crew",
+    "quote": "herding the natives into a hut, which they burn down to stage a massacre for their film",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:41",
+      "quote": "Okay, the massacre of the Yacumos by the Yamamomos! Right!"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "provoked by outsiders", "quote": "learns that the filmmakers caused great unrest among the people", "confidence": "sourced"}
+   {
+    "value": "provoked by outsiders",
+    "quote": "learns that the filmmakers caused great unrest among the people",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:38",
+      "quote": "The Yacumo blame Alan Yate's group"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "revenge", "quote": "Shortly afterward, they are vengefully attacked by the Ya̧nomamö tribe", "confidence": "sourced"},
-   {"value": "sensational footage", "quote": "Alan staged dramatic scenes to make his films more exciting", "confidence": "sourced"}
+   {
+    "value": "revenge",
+    "quote": "Shortly afterward, they are vengefully attacked by the Ya̧nomamö tribe",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sensational footage",
+    "quote": "Alan staged dramatic scenes to make his films more exciting",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:47",
+      "quote": "A set up! All a set up!"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "colonial atrocity", "detail": "the crew burns villagers in a hut for the camera", "quote": "herding the natives into a hut, which they burn down to stage a massacre for their film", "confidence": "sourced"},
-   {"value": "rape", "quote": "The final two reels begin with the filmmakers gang-raping a Ya̧nomamö girl against Faye's protests", "confidence": "sourced"}
+   {
+    "value": "colonial atrocity",
+    "detail": "the crew burns villagers in a hut for the camera",
+    "quote": "herding the natives into a hut, which they burn down to stage a massacre for their film",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:19",
+      "quote": "Get them inside! Get them inside!"
+     }
+    ]
+   },
+   {
+    "value": "rape",
+    "quote": "The final two reels begin with the filmmakers gang-raping a Ya̧nomamö girl against Faye's protests",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "a journey into the wild", "quote": "disappear into the Amazon rainforest while filming The Green Inferno, a documentary about indigenous cannibal tribes", "confidence": "sourced"},
-   {"value": "watching recovered footage", "quote": "Monroe begins to view the recovered footage, which follows the group's journey through the rainforest", "confidence": "sourced"}
+   {
+    "value": "a journey into the wild",
+    "quote": "disappear into the Amazon rainforest while filming The Green Inferno, a documentary about indigenous cannibal tribes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:49",
+      "quote": "into the area known as the Green Inferno."
+     }
+    ]
+   },
+   {
+    "value": "watching recovered footage",
+    "quote": "Monroe begins to view the recovered footage, which follows the group's journey through the rainforest",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:49",
+      "quote": "I'd like to review all the film materials."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "violence returns on the violent", "quote": "Monroe leaves the station, pondering \"who the real cannibals are\"", "confidence": "observed"}
+   {
+    "value": "violence returns on the violent",
+    "quote": "Monroe leaves the station, pondering \"who the real cannibals are\"",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:29",
+      "quote": "I wonder who the real cannibals are?"
+     }
+    ]
+   },
+   {
+    "value": "a prisoner buys safe passage",
+    "source": "subtitles",
+    "at": "00:09:25",
+    "quote": "A Yacumo prisoner is like a passport into the Green Inferno.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "law of the strong",
+    "source": "subtitles",
+    "at": "01:05:48",
+    "quote": "It's survival of the fittest.",
+    "confidence": "sourced",
+    "detail": "Alan's narration over the staged killings"
+   }
   ],
   "who_suffers": [
-   {"value": "film crew", "relation_to_threat": "stranger", "quote": "The Ya̧nomamö then locate and kill the last two team members as the camera falls to the ground", "confidence": "sourced"},
-   {"value": "indigenous people", "relation_to_threat": "stranger", "quote": "the crew proceeds to intimidate the tribe and kill a child's pet pig", "confidence": "sourced"},
-   {"value": "investigator", "relation_to_threat": "stranger", "detail": "Harold Monroe, anthropologist", "quote": "an anthropologist who leads a rescue team into the Amazon rainforest to locate a crew of filmmakers", "confidence": "sourced"}
+   {
+    "value": "film crew",
+    "relation_to_threat": "stranger",
+    "quote": "The Ya̧nomamö then locate and kill the last two team members as the camera falls to the ground",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:45",
+      "quote": "Think of the film."
+     }
+    ]
+   },
+   {
+    "value": "indigenous people",
+    "relation_to_threat": "stranger",
+    "quote": "the crew proceeds to intimidate the tribe and kill a child's pet pig",
+    "confidence": "sourced"
+   },
+   {
+    "value": "investigator",
+    "relation_to_threat": "stranger",
+    "detail": "Harold Monroe, anthropologist",
+    "quote": "an anthropologist who leads a rescue team into the Amazon rainforest to locate a crew of filmmakers",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "everyone dies", "detail": "the whole crew dies on film", "quote": "The Ya̧nomamö then locate and kill the last two team members as the camera falls to the ground", "confidence": "sourced"},
-   {"value": "evidence destroyed", "quote": "Disturbed, the executives order all the footage to be burned", "confidence": "sourced"},
-   {"value": "moral question", "quote": "Monroe leaves the station, pondering \"who the real cannibals are\"", "confidence": "sourced"}
+   {
+    "value": "everyone dies",
+    "detail": "the whole crew dies on film",
+    "quote": "The Ya̧nomamö then locate and kill the last two team members as the camera falls to the ground",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:46",
+      "quote": "Think of the film!"
+     }
+    ]
+   },
+   {
+    "value": "evidence destroyed",
+    "quote": "Disturbed, the executives order all the footage to be burned",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:06",
+      "quote": "John, I want this material burned."
+     }
+    ]
+   },
+   {
+    "value": "moral question",
+    "quote": "Monroe leaves the station, pondering \"who the real cannibals are\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:29",
+      "quote": "I wonder who the real cannibals are?"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "skeleton", "state": "of the guide", "when": "early", "role": "omen", "quote": "they find Felipe's skeleton and Chaco force-feeds the hostage cocaine", "confidence": "sourced"},
-   {"value": "film reels", "state": "recovered from a shrine", "when": "middle", "role": "clue", "quote": "he discovers the filmmakers' skeletal remains and their film reels", "confidence": "sourced"},
-   {"value": "venomous snake", "when": "middle", "role": "omen", "quote": "Felipe is bitten by a venomous snake", "confidence": "sourced"},
-   {"value": "machete", "when": "middle", "role": "weapon", "quote": "They amputate his leg with a machete to save him", "confidence": "sourced"},
-   {"value": "pig", "state": "killed", "when": "middle", "role": "symbol", "quote": "kill a child's pet pig before herding the natives into a hut", "confidence": "sourced"},
-   {"value": "burning hut", "when": "middle", "role": "symbol", "quote": "herding the natives into a hut, which they burn down", "confidence": "sourced"},
-   {"value": "impaled girl", "state": "on a wooden pole", "when": "late", "role": "clue", "quote": "they later encounter the same girl impaled on a wooden pole by a riverbank", "confidence": "sourced"},
-   {"value": "camera", "state": "falls to the ground", "when": "ending", "role": "symbol", "quote": "kill the last two team members as the camera falls to the ground", "confidence": "sourced"}
+   {
+    "value": "skeleton",
+    "state": "of the guide",
+    "when": "early",
+    "role": "omen",
+    "quote": "they find Felipe's skeleton and Chaco force-feeds the hostage cocaine",
+    "confidence": "sourced"
+   },
+   {
+    "value": "film reels",
+    "state": "recovered from a shrine",
+    "when": "middle",
+    "role": "clue",
+    "quote": "he discovers the filmmakers' skeletal remains and their film reels",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:27",
+      "quote": "And so in exchange for the tape recorder, the cannibal chief let you take away the cans of film."
+     }
+    ]
+   },
+   {
+    "value": "venomous snake",
+    "when": "middle",
+    "role": "omen",
+    "quote": "Felipe is bitten by a venomous snake",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:25",
+      "quote": "Ah, a snake!"
+     }
+    ]
+   },
+   {
+    "value": "machete",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "They amputate his leg with a machete to save him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:38",
+      "quote": "Machete. - Cut it off!"
+     }
+    ]
+   },
+   {
+    "value": "pig",
+    "state": "killed",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "kill a child's pet pig before herding the natives into a hut",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:27",
+      "quote": "pig squeals"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:12:44",
+      "quote": "You know that pig that was killed,"
+     }
+    ]
+   },
+   {
+    "value": "burning hut",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "herding the natives into a hut, which they burn down",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:15",
+      "quote": "[fire crackling] [Yacumos moaning]"
+     }
+    ]
+   },
+   {
+    "value": "impaled girl",
+    "state": "on a wooden pole",
+    "when": "late",
+    "role": "clue",
+    "quote": "they later encounter the same girl impaled on a wooden pole by a riverbank",
+    "confidence": "sourced"
+   },
+   {
+    "value": "camera",
+    "state": "falls to the ground",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "kill the last two team members as the camera falls to the ground",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:09",
+      "quote": "Keep filming, Mark. I'll cover you."
+     }
+    ]
+   },
+   {
+    "value": "muskrat",
+    "state": "killed and gutted",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:18:49",
+    "quote": "muskrat screeches",
+    "confidence": "sourced",
+    "detail": "the rescue team's guides kill a muskrat on the march",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:39",
+      "quote": "Hey, amiga. A muskrat."
+     }
+    ]
+   },
+   {
+    "value": "monkey",
+    "state": "killed by the crew",
+    "when": "middle",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:02:32",
+    "quote": "monkey screams",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:09",
+      "quote": "Ah, I got this little monkey."
+     }
+    ]
+   },
+   {
+    "value": "tape recorder",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:41:27",
+    "quote": "And so in exchange for the tape recorder,",
+    "confidence": "sourced",
+    "detail": "traded to the chief for the crew's film cans",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:32",
+      "quote": "tape recorder whirs"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "crew disappears", "when": "opening", "quote": "disappear into the Amazon rainforest while filming The Green Inferno", "confidence": "sourced"},
-   {"order": 2, "value": "rescue expedition", "when": "early", "quote": "Harold Monroe, an anthropologist at NYU, agrees to lead a rescue mission for the missing filmmakers", "confidence": "sourced"},
-   {"order": 3, "value": "remains and footage found", "when": "middle", "role": "clue", "quote": "he discovers the filmmakers' skeletal remains and their film reels", "confidence": "sourced"},
-   {"order": 4, "value": "footage viewed", "when": "middle", "role": "turn", "quote": "Monroe begins to view the recovered footage, which follows the group's journey through the rainforest", "confidence": "sourced"},
-   {"order": 5, "value": "staged massacre", "when": "middle", "quote": "herding the natives into a hut, which they burn down to stage a massacre for their film", "confidence": "sourced"},
-   {"order": 6, "value": "crew commits rape", "when": "late", "quote": "The final two reels begin with the filmmakers gang-raping a Ya̧nomamö girl", "confidence": "sourced"},
-   {"order": 7, "value": "revenge attack kills all", "when": "ending", "quote": "they are vengefully attacked by the Ya̧nomamö tribe", "confidence": "sourced"},
-   {"order": 8, "value": "footage burned", "when": "ending", "quote": "the executives order all the footage to be burned", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "crew disappears",
+    "when": "opening",
+    "quote": "disappear into the Amazon rainforest while filming The Green Inferno",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:01",
+      "quote": "Those are the last pictures we have of them."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "rescue expedition",
+    "when": "early",
+    "quote": "Harold Monroe, an anthropologist at NYU, agrees to lead a rescue mission for the missing filmmakers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:23",
+      "quote": "Professor Harold Monroe,"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "tribal punishment witnessed",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:20:59",
+    "quote": "adulteress screaming",
+    "confidence": "observed"
+   },
+   {
+    "order": 4,
+    "value": "remains and footage found",
+    "when": "middle",
+    "role": "clue",
+    "quote": "he discovers the filmmakers' skeletal remains and their film reels",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:29",
+      "quote": "the cannibal chief let you take away the cans of film."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "broadcast planned",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "00:42:25",
+    "quote": "we'll be presenting Part One of \"The Green Inferno\",",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "footage viewed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Monroe begins to view the recovered footage, which follows the group's journey through the rainforest",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:46",
+      "quote": "film clicks"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "guide's leg amputated on film",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "00:58:40",
+    "quote": "Cut it off! Put it on the fire!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "staged massacre",
+    "when": "middle",
+    "quote": "herding the natives into a hut, which they burn down to stage a massacre for their film",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:41",
+      "quote": "Okay, the massacre of the Yacumos by the Yamamomos! Right!"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "crew commits rape",
+    "when": "late",
+    "quote": "The final two reels begin with the filmmakers gang-raping a Ya̧nomamö girl",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "revenge attack kills all",
+    "when": "ending",
+    "quote": "they are vengefully attacked by the Ya̧nomamö tribe",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:19",
+      "quote": "Keep rolling!"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "footage burned",
+    "when": "ending",
+    "quote": "the executives order all the footage to be burned",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:06",
+      "quote": "John, I want this material burned."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

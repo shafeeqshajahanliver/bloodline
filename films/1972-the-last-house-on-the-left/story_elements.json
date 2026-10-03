@@ -1,58 +1,375 @@
 {
  "film": "1972-the-last-house-on-the-left",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "gang of escaped criminals", "detail": "Krug Stillo, Junior, Sadie and Weasel", "quote": "a recent prison escape involving criminals Krug Stillo, a sadistic rapist and serial killer", "confidence": "sourced"},
-   {"value": "vengeful parents", "quote": "When her parents discover what happened to her, they seek vengeance against the killers", "confidence": "sourced"}
+   {
+    "value": "gang of escaped criminals",
+    "detail": "Krug Stillo, Junior, Sadie and Weasel",
+    "quote": "a recent prison escape involving criminals Krug Stillo, a sadistic rapist and serial killer",
+    "confidence": "sourced"
+   },
+   {
+    "value": "vengeful parents",
+    "quote": "When her parents discover what happened to her, they seek vengeance against the killers",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "escaped from prison", "quote": "they hear a news report of a recent prison escape", "confidence": "sourced"}
+   {
+    "value": "escaped from prison",
+    "quote": "they hear a news report of a recent prison escape",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:40",
+      "quote": "The daring daylight escape of the two convicted murderers,"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "sadistic pleasure", "quote": "Mari and Phyllis are forced to perform sexual acts on each other", "confidence": "observed"},
-   {"value": "revenge", "detail": "the parents' motive", "quote": "where they find Mari's body and decide to take revenge", "confidence": "sourced"}
+   {
+    "value": "sadistic pleasure",
+    "quote": "Mari and Phyllis are forced to perform sexual acts on each other",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:58",
+      "quote": "This is really a riot, man! I dig it!"
+     }
+    ]
+   },
+   {
+    "value": "revenge",
+    "detail": "the parents' motive",
+    "quote": "where they find Mari's body and decide to take revenge",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "rape and murder", "quote": "a teenager who is abducted, raped, and brutally murdered by a group of violent fugitives", "confidence": "sourced"}
+   {
+    "value": "rape and murder",
+    "quote": "a teenager who is abducted, raped, and brutally murdered by a group of violent fugitives",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "trip to the city", "detail": "a birthday concert", "quote": "Mari Collingwood plans to attend a concert with her friend Phyllis Stone for her 17th birthday", "confidence": "sourced"},
-   {"value": "buying drugs", "quote": "Mari and Phyllis encounter Junior while trying to buy marijuana", "confidence": "sourced"}
+   {
+    "value": "trip to the city",
+    "detail": "a birthday concert",
+    "quote": "Mari Collingwood plans to attend a concert with her friend Phyllis Stone for her 17th birthday",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:33",
+      "quote": "Your mother tells me the place you're going is in a bad neighborhood."
+     }
+    ]
+   },
+   {
+    "value": "buying drugs",
+    "quote": "Mari and Phyllis encounter Junior while trying to buy marijuana",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:07",
+      "quote": "I wish we had some decent grass."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "killers shelter with victim's family", "quote": "the killers, who have taken shelter at their home", "confidence": "sourced"}
+   {
+    "value": "killers shelter with victim's family",
+    "quote": "the killers, who have taken shelter at their home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:11",
+      "quote": "Why, we have a perfectly good guest room. And, well, there's Mari's room, I suppose."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "teenage girls", "relation_to_threat": "stranger", "detail": "Mari and Phyllis", "quote": "Mari and Phyllis are bound, gagged, and put in the trunk of Krug's car", "confidence": "sourced"},
-   {"value": "parents", "relation_to_threat": "family", "detail": "Estelle and John Collingwood", "quote": "Mari's unsuspecting parents prepare a surprise party for her", "confidence": "sourced"}
+   {
+    "value": "teenage girls",
+    "relation_to_threat": "stranger",
+    "detail": "Mari and Phyllis",
+    "quote": "Mari and Phyllis are bound, gagged, and put in the trunk of Krug's car",
+    "confidence": "sourced"
+   },
+   {
+    "value": "parents",
+    "relation_to_threat": "family",
+    "detail": "Estelle and John Collingwood",
+    "quote": "Mari's unsuspecting parents prepare a surprise party for her",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "revenge completed", "quote": "The sheriff arrives just as John kills Krug with the chainsaw", "confidence": "sourced"},
-   {"value": "victims become killers", "quote": "Covered in blood, the cops and parents somberly overlook the chaos", "confidence": "observed"}
+   {
+    "value": "revenge completed",
+    "quote": "The sheriff arrives just as John kills Krug with the chainsaw",
+    "confidence": "sourced"
+   },
+   {
+    "value": "victims become killers",
+    "quote": "Covered in blood, the cops and parents somberly overlook the chaos",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "peace symbol necklace", "state": "given away, later recognised", "when": "opening", "role": "clue", "quote": "sees Mari's peace symbol necklace around his neck", "confidence": "sourced"},
-   {"value": "car trunk", "when": "early", "quote": "put in the trunk of Krug's car and transported to the woods", "confidence": "sourced"},
-   {"value": "lake", "when": "middle", "role": "setting", "quote": "walks into a nearby lake, where Krug fatally shoots her", "confidence": "sourced"},
-   {"value": "blood-soaked clothing", "when": "middle", "role": "clue", "quote": "She finds blood-soaked clothing in their luggage", "confidence": "sourced"},
-   {"value": "chainsaw", "when": "ending", "role": "weapon", "quote": "John picks up a chainsaw from the basement and approaches Krug", "confidence": "sourced"},
-   {"value": "swimming pool", "when": "ending", "role": "setting", "quote": "she falls into the backyard swimming pool, where Estelle slits her throat", "confidence": "sourced"},
-   {"value": "name carved in flesh", "when": "middle", "role": "symbol", "quote": "Krug carves his name into her chest", "confidence": "sourced"}
+   {
+    "value": "peace symbol necklace",
+    "state": "given away, later recognised",
+    "when": "opening",
+    "role": "clue",
+    "quote": "sees Mari's peace symbol necklace around his neck",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:57",
+      "quote": "Here's a little something for you."
+     }
+    ]
+   },
+   {
+    "value": "car trunk",
+    "when": "early",
+    "quote": "put in the trunk of Krug's car and transported to the woods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:04",
+      "quote": "Okay, sweetheart, I'll put you right on top of your friend here."
+     }
+    ]
+   },
+   {
+    "value": "lake",
+    "when": "middle",
+    "role": "setting",
+    "quote": "walks into a nearby lake, where Krug fatally shoots her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:22",
+      "quote": "You shut up, or you'll wind up in the lake with her!"
+     }
+    ]
+   },
+   {
+    "value": "blood-soaked clothing",
+    "when": "middle",
+    "role": "clue",
+    "quote": "She finds blood-soaked clothing in their luggage",
+    "confidence": "sourced"
+   },
+   {
+    "value": "chainsaw",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "John picks up a chainsaw from the basement and approaches Krug",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:13",
+      "quote": "(Chainsaw whirrs)"
+     }
+    ]
+   },
+   {
+    "value": "swimming pool",
+    "when": "ending",
+    "role": "setting",
+    "quote": "she falls into the backyard swimming pool, where Estelle slits her throat",
+    "confidence": "sourced"
+   },
+   {
+    "value": "name carved in flesh",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "Krug carves his name into her chest",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dog",
+    "state": "kicked to death",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:07:40",
+    "quote": "and surprisingly, the life of a German shepherd.",
+    "confidence": "sourced",
+    "detail": "radio report: a police dog killed by Sadie during the escape"
+   },
+   {
+    "value": "live chickens",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:33",
+    "quote": "Aren't they the guys that dismember live chickens during their act?",
+    "confidence": "sourced",
+    "detail": "the band Bloodlust; chickens return on the sheriff's borrowed truck"
+   },
+   {
+    "value": "dead telephone",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:02:11",
+    "quote": "Did you call the repair service?",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:02",
+      "quote": "The phone is still dead."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "parents warn daughter", "when": "opening", "quote": "Mari's parents, Estelle and John, express concern about her friendship with Phyllis", "confidence": "sourced"},
-   {"order": 2, "value": "news of escaped killers", "when": "opening", "role": "omen", "quote": "they hear a news report of a recent prison escape", "confidence": "sourced"},
-   {"order": 3, "value": "girls abducted", "when": "early", "role": "trigger", "quote": "He leads them to an apartment where the criminals trap them", "confidence": "sourced"},
-   {"order": 4, "value": "victims murdered near home", "when": "middle", "quote": "Mari recognizes that the road is near her home", "confidence": "sourced"},
-   {"order": 5, "value": "killers arrive at family house", "when": "middle", "quote": "the gang goes to the Collingwoods' home, masquerading as traveling salesmen", "confidence": "sourced"},
-   {"order": 6, "value": "parents discover the truth", "when": "late", "role": "turn", "quote": "Estelle and her husband rush into the woods, where they find Mari's body and decide to take revenge", "confidence": "sourced"},
-   {"order": 7, "value": "bloody revenge", "when": "ending", "quote": "The sheriff arrives just as John kills Krug with the chainsaw", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "parents warn daughter",
+    "when": "opening",
+    "quote": "Mari's parents, Estelle and John, express concern about her friendship with Phyllis",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:33",
+      "quote": "Mari, I want you to be careful tonight."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "news of escaped killers",
+    "when": "opening",
+    "role": "omen",
+    "quote": "they hear a news report of a recent prison escape",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:40",
+      "quote": "The daring daylight escape of the two convicted murderers,"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "girls abducted",
+    "when": "early",
+    "role": "trigger",
+    "quote": "He leads them to an apartment where the criminals trap them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:04",
+      "quote": "Okay, sweetheart, I'll put you right on top of your friend here."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "victims murdered near home",
+    "when": "middle",
+    "quote": "Mari recognizes that the road is near her home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:50",
+      "quote": "Now I lay me down to sleep"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "killers arrive at family house",
+    "when": "middle",
+    "quote": "the gang goes to the Collingwoods' home, masquerading as traveling salesmen",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:55:53",
+      "quote": "Yeah, I'm afraid we blew a rod."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "parents discover the truth",
+    "when": "late",
+    "role": "turn",
+    "quote": "Estelle and her husband rush into the woods, where they find Mari's body and decide to take revenge",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:33",
+      "quote": "She's dead. 0h, my baby!"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "son forced to suicide",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:17:48",
+    "quote": "I want you to take the gun, and I want you to put it in your mouth",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "bloody revenge",
+    "when": "ending",
+    "quote": "The sheriff arrives just as John kills Krug with the chainsaw",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:13",
+      "quote": "(Chainsaw whirrs)"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,64 +1,513 @@
 {
  "film": "2004-feng-shui",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "cursed object", "detail": "a bagua mirror", "quote": "it centers on a cursed bagua mirror that brings death to those who stare at it", "confidence": "sourced"},
-   {"value": "vengeful ghost", "detail": "\"Lotus Feet\"", "quote": "As she perished, she took the mirror and cursed it, taking the soul of anyone who sees their reflection in it", "confidence": "sourced"}
+   {
+    "value": "cursed object",
+    "detail": "a bagua mirror",
+    "quote": "it centers on a cursed bagua mirror that brings death to those who stare at it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:08",
+      "quote": "Whoever sees himself in the mirror dies."
+     }
+    ]
+   },
+   {
+    "value": "vengeful ghost",
+    "detail": "\"Lotus Feet\"",
+    "quote": "As she perished, she took the mirror and cursed it, taking the soul of anyone who sees their reflection in it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:02",
+      "quote": "She swore in the mirror before she died."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "person who died wronged", "detail": "a bound-foot woman left behind and burned by her servants", "quote": "Her servants then joined the Chinese Communist Party and burned her at the stake", "confidence": "sourced"},
-   {"value": "found object", "quote": "On a bus, Joy Ramirez finds a bagua mirror left behind by a passenger", "confidence": "sourced"}
+   {
+    "value": "person who died wronged",
+    "detail": "a bound-foot woman left behind and burned by her servants",
+    "quote": "Her servants then joined the Chinese Communist Party and burned her at the stake",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:49",
+      "quote": "She was burned by the fire."
+     }
+    ]
+   },
+   {
+    "value": "found object",
+    "quote": "On a bus, Joy Ramirez finds a bagua mirror left behind by a passenger",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:53",
+      "quote": "Someone left it in the bus."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "souls", "quote": "taking the soul of anyone who sees their reflection in it", "confidence": "sourced"}
+   {
+    "value": "souls",
+    "quote": "taking the soul of anyone who sees their reflection in it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:08",
+      "quote": "The curse was to get the soul ... of anyone who sees himself in the mirror."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "abandonment", "detail": "family fled without her", "quote": "the family evacuated, leaving behind a family member, nicknamed \"Lotus Feet\", who could not flee due to her foot binding", "confidence": "sourced"},
-   {"value": "greed", "quote": "to become rich, one must surrender his/her morals and prepare to have others bear the brunt of the person's self-interest", "confidence": "sourced"}
+   {
+    "value": "abandonment",
+    "detail": "family fled without her",
+    "quote": "the family evacuated, leaving behind a family member, nicknamed \"Lotus Feet\", who could not flee due to her foot binding",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:42",
+      "quote": "Lotus Feet could not run or walk."
+     }
+    ]
+   },
+   {
+    "value": "greed",
+    "quote": "to become rich, one must surrender his/her morals and prepare to have others bear the brunt of the person's self-interest",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "taking an object", "quote": "the latter tells her to keep the mirror and display it for good luck", "confidence": "sourced"}
+   {
+    "value": "taking an object",
+    "quote": "the latter tells her to keep the mirror and display it for good luck",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:30",
+      "quote": "That's supposed to give you more luck, because you didn't buy it."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "looking means death", "quote": "brings death to those who stare at it", "confidence": "sourced"},
-   {"value": "death matches zodiac sign", "quote": "with the circumstances of their death relating to their Chinese zodiac", "confidence": "sourced"},
-   {"value": "luck paid for with death", "quote": "for each stroke of luck, a death followed afterward", "confidence": "sourced"},
-   {"value": "refuse luck, then destroy", "quote": "to end the curse, she must refuse offers of good luck and then destroy the mirror", "confidence": "sourced"}
+   {
+    "value": "looking means death",
+    "quote": "brings death to those who stare at it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:08",
+      "quote": "Whoever sees himself in the mirror dies."
+     }
+    ]
+   },
+   {
+    "value": "death matches zodiac sign",
+    "quote": "with the circumstances of their death relating to their Chinese zodiac",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:39",
+      "quote": "That means born in 1963, Year of the Rabbit."
+     }
+    ]
+   },
+   {
+    "value": "luck paid for with death",
+    "quote": "for each stroke of luck, a death followed afterward",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:47",
+      "quote": "The luck will also end. They're connected."
+     }
+    ]
+   },
+   {
+    "value": "refuse luck, then destroy",
+    "quote": "to end the curse, she must refuse offers of good luck and then destroy the mirror",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:14",
+      "quote": "The curse will end only if you say no to good luck. Then, destroy the mirror."
+     }
+    ]
+   },
+   {
+    "value": "breaking it takes the owner",
+    "source": "subtitles",
+    "at": "00:57:34",
+    "quote": "And if you do that, the soul of the owner will be taken too.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "mother", "relation_to_threat": "stranger", "detail": "Joy Ramirez", "quote": "Joy returns home and places the mirror at their front door", "confidence": "sourced"},
-   {"value": "family", "relation_to_threat": "stranger", "detail": "husband and children killed", "quote": "she sees her husband's ghost reuniting with their children as she screams in horror", "confidence": "sourced"},
-   {"value": "friends and neighbours", "relation_to_threat": "community", "quote": "Alice, who was born in the year of the Horse, is defenestrated", "confidence": "sourced"}
+   {
+    "value": "mother",
+    "relation_to_threat": "stranger",
+    "detail": "Joy Ramirez",
+    "quote": "Joy returns home and places the mirror at their front door",
+    "confidence": "sourced"
+   },
+   {
+    "value": "family",
+    "relation_to_threat": "stranger",
+    "detail": "husband and children killed",
+    "quote": "she sees her husband's ghost reuniting with their children as she screams in horror",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:54",
+      "quote": "We were in the accident, Joy."
+     }
+    ]
+   },
+   {
+    "value": "friends and neighbours",
+    "relation_to_threat": "community",
+    "quote": "Alice, who was born in the year of the Horse, is defenestrated",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "survivor loses everyone", "quote": "realizing that they were all killed in the road accident", "confidence": "sourced"},
-   {"value": "cycle passes on", "quote": "finding the restored mirror and bringing it home, with Lotus Feet watching", "confidence": "sourced"}
+   {
+    "value": "survivor loses everyone",
+    "quote": "realizing that they were all killed in the road accident",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:43:01",
+      "quote": "We're among those who died."
+     }
+    ]
+   },
+   {
+    "value": "cycle passes on",
+    "quote": "finding the restored mirror and bringing it home, with Lotus Feet watching",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:04",
+      "quote": "What's that? It's a toy."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "mirror", "state": "cursed", "when": "opening", "role": "threat", "quote": "Joy Ramirez finds a bagua mirror left behind by a passenger", "confidence": "sourced"},
-   {"value": "front door", "when": "early", "role": "setting", "quote": "places the mirror at their front door", "confidence": "sourced"},
-   {"value": "zodiac animals", "when": "early", "role": "clue", "quote": "was hit by a Rabbit Liner bus and discovers that he was born in the year of the Rabbit", "confidence": "sourced"},
-   {"value": "snake", "when": "middle", "role": "weapon", "quote": "He died from a snakebite; Joy realizes that he was born in the year of the Snake", "confidence": "sourced"},
-   {"value": "bound feet", "when": "middle", "role": "symbol", "quote": "who could not flee due to her foot binding", "confidence": "sourced"},
-   {"value": "stake", "state": "burning", "when": "middle", "role": "clue", "quote": "burned her at the stake", "confidence": "sourced"},
-   {"value": "beer crates", "when": "late", "role": "weapon", "quote": "falling atop crates of Red Horse Beer bottles", "confidence": "sourced"},
-   {"value": "livestock truck", "when": "late", "role": "omen", "quote": "she sees a truck of livestock in front of her car", "confidence": "sourced"}
+   {
+    "value": "mirror",
+    "state": "cursed",
+    "when": "opening",
+    "role": "threat",
+    "quote": "Joy Ramirez finds a bagua mirror left behind by a passenger",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:01",
+      "quote": "The Chinese call this \"Bagua\"."
+     }
+    ]
+   },
+   {
+    "value": "front door",
+    "when": "early",
+    "role": "setting",
+    "quote": "places the mirror at their front door",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:20",
+      "quote": "But this one, you shouldn't hang indoors."
+     }
+    ]
+   },
+   {
+    "value": "zodiac animals",
+    "when": "early",
+    "role": "clue",
+    "quote": "was hit by a Rabbit Liner bus and discovers that he was born in the year of the Rabbit",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:46",
+      "quote": "He was ran over by a Rabbit Bus Liner."
+     }
+    ]
+   },
+   {
+    "value": "snake",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "He died from a snakebite; Joy realizes that he was born in the year of the Snake",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:18",
+      "quote": "Bitten by a snake."
+     }
+    ]
+   },
+   {
+    "value": "bound feet",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "who could not flee due to her foot binding",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:08",
+      "quote": "where the feet of young girls are bound ..."
+     }
+    ]
+   },
+   {
+    "value": "stake",
+    "state": "burning",
+    "when": "middle",
+    "role": "clue",
+    "quote": "burned her at the stake",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:58",
+      "quote": "while she was burning."
+     }
+    ]
+   },
+   {
+    "value": "beer crates",
+    "when": "late",
+    "role": "weapon",
+    "quote": "falling atop crates of Red Horse Beer bottles",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:53",
+      "quote": "You are a horse, right?"
+     }
+    ]
+   },
+   {
+    "value": "livestock truck",
+    "when": "late",
+    "role": "omen",
+    "quote": "she sees a truck of livestock in front of her car",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:40:24",
+      "quote": "So many died, even animals!"
+     }
+    ]
+   },
+   {
+    "value": "pet skink",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:05:35",
+    "quote": "There's a gecko, Daddy! - It's a slink, not a gecko.",
+    "confidence": "sourced",
+    "detail": "the children's new house is full of strange animals"
+   },
+   {
+    "value": "road accident",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:04:38",
+    "quote": "What's that? - There's an accident!",
+    "confidence": "sourced",
+    "detail": "an accident on the road the moment the mirror is found, echoed by the final highway crash",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:40:15",
+      "quote": "Mommy, there was a big accident in the highway."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "object found and kept", "when": "opening", "role": "trigger", "quote": "On a bus, Joy Ramirez finds a bagua mirror left behind by a passenger", "confidence": "sourced"},
-   {"order": 2, "value": "good luck arrives", "when": "early", "quote": "her friend Alice grants her a promotion, and she wins a prize at a supermarket", "confidence": "sourced"},
-   {"order": 3, "value": "deaths match zodiac", "when": "early", "role": "clue", "quote": "Joy learns that Biring died of leptospirosis—she was born in the year of the Rat", "confidence": "sourced"},
-   {"order": 4, "value": "previous owner warns", "when": "middle", "quote": "She urges Joy to return the mirror to her, but the latter refuses and leaves", "confidence": "sourced"},
-   {"order": 5, "value": "origin of the curse told", "when": "middle", "role": "turn", "quote": "As she perished, she took the mirror and cursed it", "confidence": "sourced"},
-   {"order": 6, "value": "friend killed", "when": "late", "quote": "Alice, who was born in the year of the Horse, is defenestrated", "confidence": "sourced"},
-   {"order": 7, "value": "mirror destroyed too late", "when": "ending", "role": "turn", "quote": "Joy is relieved at ending the curse before realizing that they were all killed in the road accident", "confidence": "sourced"},
-   {"order": 8, "value": "object finds new owners", "when": "ending", "quote": "their twin daughters wander into Joy's former home, finding the restored mirror and bringing it home", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "object found and kept",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "On a bus, Joy Ramirez finds a bagua mirror left behind by a passenger",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:53",
+      "quote": "Someone left it in the bus."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "accident on the way home",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:04:38",
+    "quote": "What's that? - There's an accident!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "good luck arrives",
+    "when": "early",
+    "quote": "her friend Alice grants her a promotion, and she wins a prize at a supermarket",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:37",
+      "quote": "Wow, congratulations! You're the lucky shopper!"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "deaths match zodiac",
+    "when": "early",
+    "role": "clue",
+    "quote": "Joy learns that Biring died of leptospirosis—she was born in the year of the Rat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:04",
+      "quote": "Year of the ... Rat."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "previous owner warns",
+    "when": "middle",
+    "quote": "She urges Joy to return the mirror to her, but the latter refuses and leaves",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:17",
+      "quote": "Bring me back the mirror!"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "origin of the curse told",
+    "when": "middle",
+    "role": "turn",
+    "quote": "As she perished, she took the mirror and cursed it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:55:55",
+      "quote": "Now, this sister is what we call Lotus Feet."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "friend killed",
+    "when": "late",
+    "quote": "Alice, who was born in the year of the Horse, is defenestrated",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "offer for the mirror refused",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:38:22",
+    "quote": "I refuse your offer, Attorney.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "mirror destroyed too late",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Joy is relieved at ending the curse before realizing that they were all killed in the road accident",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:00",
+      "quote": "I broke it."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "object finds new owners",
+    "when": "ending",
+    "quote": "their twin daughters wander into Joy's former home, finding the restored mirror and bringing it home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:04",
+      "quote": "What's that? It's a toy."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,59 +1,538 @@
 {
  "film": "1957-night-of-the-demon",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "summoned demon", "quote": "he sees a cloud of smoke appear out of nowhere and a gigantic demon materialise from it", "confidence": "sourced"},
-   {"value": "curse", "detail": "a runic parchment passed to the victim", "quote": "he was \"chosen\" to die by having a runic parchment passed to him", "confidence": "sourced"},
-   {"value": "cult leader", "detail": "Dr. Julian Karswell", "quote": "investigate a satanic cult suspected in more than one death", "confidence": "sourced"}
+   {
+    "value": "summoned demon",
+    "quote": "he sees a cloud of smoke appear out of nowhere and a gigantic demon materialise from it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:56",
+      "quote": "about seeing visions of a monstrous , smoky shape ..."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:22:15",
+      "quote": "It is the night of the demon ."
+     }
+    ]
+   },
+   {
+    "value": "curse",
+    "detail": "a runic parchment passed to the victim",
+    "quote": "he was \"chosen\" to die by having a runic parchment passed to him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:00",
+      "quote": "a parchment has to be passed ..."
+     }
+    ]
+   },
+   {
+    "value": "cult leader",
+    "detail": "Dr. Julian Karswell",
+    "quote": "investigate a satanic cult suspected in more than one death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:27",
+      "quote": "Hobart , what is the order of the true believer ?"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "sent by a sorcerer", "detail": "Karswell inflicts the curse", "quote": "Professor Harrington begs his rival, Dr. Julian Karswell, to rescind a curse he inflicted on him", "confidence": "sourced"}
+   {
+    "value": "sent by a sorcerer",
+    "detail": "Karswell inflicts the curse",
+    "quote": "Professor Harrington begs his rival, Dr. Julian Karswell, to rescind a curse he inflicted on him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:47",
+      "quote": "Call it off , Karswell . Stop this thing you 've started ..."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to silence investigators", "quote": "in return, Harrington will cease his investigation into Karswell's Satanic cult", "confidence": "observed"}
+   {
+    "value": "to silence investigators",
+    "quote": "in return, Harrington will cease his investigation into Karswell's Satanic cult",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:41",
+      "quote": "I asked you to drop this ridiculous investigation ."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "receiving a cursed object", "quote": "Holden finds a similar parchment that Karswell secretly passed to him at the library", "confidence": "sourced"},
-   {"value": "investigating a cult", "quote": "attend a convention at which Harrington had intended to expose Karswell's cult", "confidence": "sourced"}
+   {
+    "value": "receiving a cursed object",
+    "quote": "Holden finds a similar parchment that Karswell secretly passed to him at the library",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:25",
+      "quote": "Today I found the parchment ..."
+     }
+    ]
+   },
+   {
+    "value": "investigating a cult",
+    "quote": "attend a convention at which Harrington had intended to expose Karswell's cult",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "death at a set time", "quote": "Karswell claims that Holden will die in three days", "confidence": "sourced"},
-   {"value": "survive by passing it back", "quote": "avoided death by passing it back to the person who had given it to him", "confidence": "sourced"},
-   {"value": "cursed object resists destruction", "quote": "blowing the parchment from his fingers towards the fireplace, only to be stopped by a fire screen", "confidence": "observed"}
+   {
+    "value": "death at a set time",
+    "quote": "Karswell claims that Holden will die in three days",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:09",
+      "quote": "at 10 : 00 on the 28th of this month ."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:34:13",
+      "quote": "Your time allowed is just three days from now ."
+     }
+    ]
+   },
+   {
+    "value": "survive by passing it back",
+    "quote": "avoided death by passing it back to the person who had given it to him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:18",
+      "quote": "It were he that were chosen , and he passed it to a brother ."
+     }
+    ]
+   },
+   {
+    "value": "cursed object resists destruction",
+    "quote": "blowing the parchment from his fingers towards the fireplace, only to be stopped by a fire screen",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:46",
+      "quote": "The parchment acted as if it were alive ."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:46:55",
+      "quote": "It 's trying to escape !"
+     }
+    ]
+   },
+   {
+    "value": "victim must take it unknowingly",
+    "source": "subtitles",
+    "at": "00:45:00",
+    "quote": "a parchment has to be passed ... and the person has to take it without knowing .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dread grows as deadline nears",
+    "source": "subtitles",
+    "at": "00:34:25",
+    "quote": "But as the time gets closer , mental disintegration will set in .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the chosen must not be defended",
+    "source": "subtitles",
+    "at": "00:50:51",
+    "quote": "Let no arm be raised to defend him .",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "sceptical investigator", "relation_to_threat": "stranger", "detail": "Dr. John Holden", "quote": "Holden remains sceptical, but goes with Joanna to Karswell's mansion", "confidence": "sourced"},
-   {"value": "rival academic", "relation_to_threat": "stranger", "detail": "Professor Harrington", "quote": "Harrington tries to escape in his car but crashes into power lines", "confidence": "sourced"},
-   {"value": "cult member", "relation_to_threat": "community", "detail": "Rand Hobart, who jumps to his death", "quote": "He becomes hysterical and jumps through a window to his death", "confidence": "sourced"}
+   {
+    "value": "sceptical investigator",
+    "relation_to_threat": "stranger",
+    "detail": "Dr. John Holden",
+    "quote": "Holden remains sceptical, but goes with Joanna to Karswell's mansion",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:22",
+      "quote": "I 'm sorry you remain so skeptical ."
+     }
+    ]
+   },
+   {
+    "value": "rival academic",
+    "relation_to_threat": "stranger",
+    "detail": "Professor Harrington",
+    "quote": "Harrington tries to escape in his car but crashes into power lines",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cult member",
+    "relation_to_threat": "community",
+    "detail": "Rand Hobart, who jumps to his death",
+    "quote": "He becomes hysterical and jumps through a window to his death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:18",
+      "quote": "It were he that were chosen , and he passed it to a brother ."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "curse returned to sender", "quote": "As an oncoming train approaches, the demon manifests and attacks Karswell", "confidence": "sourced"},
-   {"value": "death explained away", "quote": "the police believe that he was struck and dragged by the train", "confidence": "sourced"}
+   {
+    "value": "curse returned to sender",
+    "quote": "As an oncoming train approaches, the demon manifests and attacks Karswell",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:55",
+      "quote": "There 's a man on the track !"
+     }
+    ]
+   },
+   {
+    "value": "death explained away",
+    "quote": "the police believe that he was struck and dragged by the train",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:23",
+      "quote": "The train must have hit him and dragged him ."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "runic parchment", "state": "passed secretly, flies away", "when": "early", "role": "threat", "quote": "Harrington's diary mentions a parchment with runic writing on it that was passed to him by Karswell", "confidence": "sourced"},
-   {"value": "cloud of smoke", "state": "materialising", "when": "opening", "role": "omen", "quote": "he sees a cloud of smoke appear out of nowhere", "confidence": "sourced"},
-   {"value": "windstorm", "state": "sudden", "when": "early", "role": "omen", "quote": "When a strong windstorm abruptly starts, Karswell claims to have created it with a spell", "confidence": "sourced"},
-   {"value": "cat", "state": "morphing into a panther", "when": "middle", "role": "threat", "quote": "he is attacked by a cat that seems to morph into a panther", "confidence": "sourced"},
-   {"value": "stone circle", "when": "middle", "role": "clue", "quote": "compares the parchment's runes to ones inscribed on the nearby stone circle at Stonehenge", "confidence": "sourced"},
-   {"value": "train", "state": "oncoming", "when": "ending", "role": "setting", "quote": "As an oncoming train approaches, the demon manifests", "confidence": "sourced"},
-   {"value": "fire", "state": "parchment combusts", "when": "ending", "role": "turn", "quote": "as he reaches it the parchment combusts", "confidence": "sourced"}
+   {
+    "value": "runic parchment",
+    "state": "passed secretly, flies away",
+    "when": "early",
+    "role": "threat",
+    "quote": "Harrington's diary mentions a parchment with runic writing on it that was passed to him by Karswell",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:34",
+      "quote": "The runic symbols ? No , they burned . I couldn 't stop it ."
+     }
+    ]
+   },
+   {
+    "value": "cloud of smoke",
+    "state": "materialising",
+    "when": "opening",
+    "role": "omen",
+    "quote": "he sees a cloud of smoke appear out of nowhere",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:41",
+      "quote": "and I saw this smoke ."
+     }
+    ]
+   },
+   {
+    "value": "windstorm",
+    "state": "sudden",
+    "when": "early",
+    "role": "omen",
+    "quote": "When a strong windstorm abruptly starts, Karswell claims to have created it with a spell",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:49",
+      "quote": "A medieval witch 's specialty ... a wind storm ."
+     }
+    ]
+   },
+   {
+    "value": "cat",
+    "state": "morphing into a panther",
+    "when": "middle",
+    "role": "threat",
+    "quote": "he is attacked by a cat that seems to morph into a panther",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:41",
+      "quote": "I don 't keep you as a watch cat ."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:05:46",
+      "quote": "His name is Greymalkin ."
+     }
+    ]
+   },
+   {
+    "value": "stone circle",
+    "when": "middle",
+    "role": "clue",
+    "quote": "compares the parchment's runes to ones inscribed on the nearby stone circle at Stonehenge",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:28",
+      "quote": "even onto these ancient stones ..."
+     }
+    ]
+   },
+   {
+    "value": "train",
+    "state": "oncoming",
+    "when": "ending",
+    "role": "setting",
+    "quote": "As an oncoming train approaches, the demon manifests",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:44",
+      "quote": "This is idiotic . I can leave this train when I want ."
+     }
+    ]
+   },
+   {
+    "value": "fire",
+    "state": "parchment combusts",
+    "when": "ending",
+    "role": "turn",
+    "quote": "as he reaches it the parchment combusts",
+    "confidence": "sourced"
+   },
+   {
+    "value": "torn calendar pages",
+    "state": "torn out after the death date",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:44:30",
+    "quote": "The same thing happened to my desk calendar , after the 28th .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "trees",
+    "when": "middle",
+    "role": "omen",
+    "detail": "the demon comes through the trees, in smoke and fire",
+    "source": "subtitles",
+    "at": "01:22:30",
+    "quote": "I see it in the trees ... the smoke and the fire .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "concert program",
+    "when": "early",
+    "role": "clue",
+    "detail": "how the parchment was passed to Harrington",
+    "source": "subtitles",
+    "at": "00:24:25",
+    "quote": "Today I found the parchment ... in the concert program Karswell gave me .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "children's halloween party",
+    "when": "middle",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:28:31",
+    "quote": "Just my annual Halloween party for the village children .",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "victim begs for curse lifted", "when": "opening", "quote": "Professor Harrington begs his rival, Dr. Julian Karswell, to rescind a curse he inflicted on him", "confidence": "sourced"},
-   {"order": 2, "value": "first death", "when": "opening", "quote": "The authorities declare accidental electrocution as the cause of death", "confidence": "sourced"},
-   {"order": 3, "value": "sceptic arrives", "when": "early", "quote": "While Harrington's collaborators consider the possibility of supernatural forces, Holden rejects such an option", "confidence": "sourced"},
-   {"order": 4, "value": "deadline set", "when": "early", "role": "trigger", "quote": "When Holden mocks him, Karswell claims that Holden will die in three days", "confidence": "sourced"},
-   {"order": 5, "value": "seance", "when": "middle", "quote": "A medium claims to channel Harrington", "confidence": "sourced"},
-   {"order": 6, "value": "rule revealed under hypnosis", "when": "late", "role": "turn", "quote": "Under hypnosis, the suspect Hobart reveals to Holden that he was \"chosen\" to die", "confidence": "sourced"},
-   {"order": 7, "value": "curse passed back", "when": "ending", "role": "turn", "quote": "Holden manages to sneak the parchment into Karswell's coat pocket", "confidence": "sourced"},
-   {"order": 8, "value": "sender killed by demon", "when": "ending", "quote": "the demon manifests and attacks Karswell", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "prologue on runes and demons",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:44",
+    "quote": "man , using the magic power ... of the ancient runic symbols ... can call forth these powers of darkness ...",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "victim begs for curse lifted",
+    "when": "opening",
+    "quote": "Professor Harrington begs his rival, Dr. Julian Karswell, to rescind a curse he inflicted on him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:47",
+      "quote": "Call it off , Karswell . Stop this thing you 've started ..."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "first death",
+    "when": "opening",
+    "quote": "The authorities declare accidental electrocution as the cause of death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:12",
+      "quote": "An accident with a falling power line killed him ."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "sceptic arrives",
+    "when": "early",
+    "quote": "While Harrington's collaborators consider the possibility of supernatural forces, Holden rejects such an option",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:57",
+      "quote": "And forget this demon / monster theory of yours . It doesn 't make sense ."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "deadline set",
+    "when": "early",
+    "role": "trigger",
+    "quote": "When Holden mocks him, Karswell claims that Holden will die in three days",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:13",
+      "quote": "Your time allowed is just three days from now ."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "cult says he is chosen",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:50:32",
+    "quote": "He has been chosen .",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "seance",
+    "when": "middle",
+    "quote": "A medium claims to channel Harrington",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:44",
+      "quote": "It 's in the trees ! It 's coming !"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "rule revealed under hypnosis",
+    "when": "late",
+    "role": "turn",
+    "quote": "Under hypnosis, the suspect Hobart reveals to Holden that he was \"chosen\" to die",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:06",
+      "quote": "I 've been chosen ."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "curse passed back",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Holden manages to sneak the parchment into Karswell's coat pocket",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:10",
+      "quote": "You slipped them in my pocket ."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "sender killed by demon",
+    "when": "ending",
+    "quote": "the demon manifests and attacks Karswell",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:55",
+      "quote": "There 's a man on the track !"
+     }
+    ]
+   }
+  ],
+  "wrong": [
+   {
+    "value": "public scandal",
+    "detail": "Harrington's public attack on Karswell, which Karswell answered with the curse",
+    "source": "subtitles",
+    "at": "00:05:00",
+    "quote": "You involved me in a public scandal .",
+    "confidence": "observed"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

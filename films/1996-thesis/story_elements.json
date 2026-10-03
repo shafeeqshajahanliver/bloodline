@@ -1,61 +1,440 @@
 {
  "film": "1996-thesis",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "snuff film ring", "quote": "they find shelves of video tapes like the one of Vanessa, indicating that many other women may have been murdered in other snuff films", "confidence": "sourced"},
-   {"value": "charming killer", "detail": "Bosco", "quote": "an announcer states that the bodies of six women were found at Bosco's home", "confidence": "sourced"},
-   {"value": "complicit professor", "detail": "Castro, who edited the films", "quote": "Castro tells her that he only edited the snuff videos and did not murder anyone", "confidence": "sourced"}
+   {
+    "value": "snuff film ring",
+    "quote": "they find shelves of video tapes like the one of Vanessa, indicating that many other women may have been murdered in other snuff films",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:00",
+      "quote": "Vanessa's not the only one. There were other victims. It's not an isolated incident. It's a business:"
+     }
+    ]
+   },
+   {
+    "value": "charming killer",
+    "detail": "Bosco",
+    "quote": "an announcer states that the bodies of six women were found at Bosco's home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:53:44",
+      "quote": "First, I'm going to beat you for a while... until you lose consciousness."
+     }
+    ]
+   },
+   {
+    "value": "complicit professor",
+    "detail": "Castro, who edited the films",
+    "quote": "Castro tells her that he only edited the snuff videos and did not murder anyone",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:57:28",
+      "quote": "and papers which incriminate Jorge Castro Professor of Cinema,"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "film workshop", "quote": "had gone to a series of director's workshops with Castro two years previously", "confidence": "sourced"}
+   {
+    "value": "film workshop",
+    "quote": "had gone to a series of director's workshops with Castro two years previously",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:54",
+      "quote": "So Vanessa and I went to a director's workshop. Bosco too."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to film killings", "quote": "Bosco ties up Ángela and explains how he intends to torture and kill her", "confidence": "observed"}
+   {
+    "value": "to film killings",
+    "quote": "Bosco ties up Ángela and explains how he intends to torture and kill her",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:07",
+      "quote": "Vanessa and I started to get scared because he said it was very easy to make films like that."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "murder on camera", "detail": "Vanessa, a missing student", "quote": "a snuff film in which a woman is tortured, killed, and disemboweled", "confidence": "sourced"}
+   {
+    "value": "murder on camera",
+    "detail": "Vanessa, a missing student",
+    "quote": "a snuff film in which a woman is tortured, killed, and disemboweled",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "taking a forbidden tape", "quote": "Ángela finds Figueroa dead of an apparent asthma attack in the screening room and retrieves the tape", "confidence": "sourced"},
-   {"value": "curiosity about violence", "quote": "planning to write a thesis on audiovisual violence and the family", "confidence": "sourced"}
+   {
+    "value": "taking a forbidden tape",
+    "quote": "Ángela finds Figueroa dead of an apparent asthma attack in the screening room and retrieves the tape",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:22",
+      "quote": "He knew you'd taken the tape."
+     }
+    ]
+   },
+   {
+    "value": "curiosity about violence",
+    "quote": "planning to write a thesis on audiovisual violence and the family",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:20",
+      "quote": "Images. Images never seen on TV, because they're too violent."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "anyone could be the killer", "quote": "Convinced that Chema has been stalking her, Ángela flees", "confidence": "observed"}
+   {
+    "value": "anyone could be the killer",
+    "quote": "Convinced that Chema has been stalking her, Ángela flees",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:09",
+      "quote": "This guy might be one of them."
+     }
+    ]
+   },
+   {
+    "value": "forbidden to look",
+    "detail": "the opening announcement returns in Angela's nightmare",
+    "source": "subtitles",
+    "at": "00:00:46",
+    "quote": "Don't look at the track. The man's been cut in two.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:24",
+      "quote": "Don't look at the track. What's the color of my eyes?"
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "student", "relation_to_threat": "stranger", "detail": "Ángela", "quote": "She awakens tied to a chair facing Castro, who is videotaping her", "confidence": "sourced"},
-   {"value": "young women", "relation_to_threat": "stranger", "quote": "many other women may have been murdered in other snuff films", "confidence": "sourced"},
-   {"value": "sister", "relation_to_threat": "family", "detail": "Sena, dating Bosco", "quote": "her sister, Sena, is at a party with Bosco", "confidence": "sourced"},
-   {"value": "professor", "relation_to_threat": "community", "detail": "Figueroa", "quote": "Ángela finds Figueroa dead of an apparent asthma attack", "confidence": "sourced"}
+   {
+    "value": "student",
+    "relation_to_threat": "stranger",
+    "detail": "Ángela",
+    "quote": "She awakens tied to a chair facing Castro, who is videotaping her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "young women",
+    "relation_to_threat": "stranger",
+    "quote": "many other women may have been murdered in other snuff films",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sister",
+    "relation_to_threat": "family",
+    "detail": "Sena, dating Bosco",
+    "quote": "her sister, Sena, is at a party with Bosco",
+    "confidence": "sourced"
+   },
+   {
+    "value": "professor",
+    "relation_to_threat": "community",
+    "detail": "Figueroa",
+    "quote": "Ángela finds Figueroa dead of an apparent asthma attack",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "she cuts her bonds with a knife, slashes Bosco, grabs his gun, and shoots him dead", "confidence": "sourced"},
-   {"value": "violence goes on air", "quote": "the announcer states that footage from a snuff film will be shown on air", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "she cuts her bonds with a knife, slashes Bosco, grabs his gun, and shoots him dead",
+    "confidence": "sourced"
+   },
+   {
+    "value": "violence goes on air",
+    "quote": "the announcer states that footage from a snuff film will be shown on air",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:00:59",
+      "quote": "The images you're about to see are of Vanessa being savagely tortured,"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "train suicide", "when": "opening", "role": "omen", "quote": "Ángela moves toward the tracks in an attempt to see the man's remains", "confidence": "sourced"},
-   {"value": "videotape", "state": "snuff film", "when": "early", "role": "threat", "quote": "Ángela discovers the stolen tape is a snuff film", "confidence": "sourced"},
-   {"value": "camera", "state": "sony with digital zoom", "when": "early", "role": "clue", "quote": "the killer used a specific model of Sony camera with a digital zoom feature", "confidence": "sourced"},
-   {"value": "hidden tunnel", "when": "late", "role": "setting", "quote": "Chema shows Ángela a hidden tunnel he has discovered in the school's video library", "confidence": "sourced"},
-   {"value": "matches", "when": "late", "role": "setting", "quote": "walk further into the tunnel with only matches to light their way", "confidence": "sourced"},
-   {"value": "garage", "when": "ending", "role": "clue", "quote": "recognizes the room from the snuff film of Vanessa", "confidence": "sourced"},
-   {"value": "television", "when": "ending", "role": "symbol", "quote": "On the television in his room, an announcer states", "confidence": "sourced"}
+   {
+    "value": "train suicide",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Ángela moves toward the tracks in an attempt to see the man's remains",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:40",
+      "quote": "A man's thrown himself in front of the train."
+     }
+    ]
+   },
+   {
+    "value": "videotape",
+    "state": "snuff film",
+    "when": "early",
+    "role": "threat",
+    "quote": "Ángela discovers the stolen tape is a snuff film",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:22",
+      "quote": "He knew you'd taken the tape."
+     }
+    ]
+   },
+   {
+    "value": "camera",
+    "state": "sony with digital zoom",
+    "when": "early",
+    "role": "clue",
+    "quote": "the killer used a specific model of Sony camera with a digital zoom feature",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:57",
+      "quote": "The idiot's used a digital zoom."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:54:15",
+      "quote": "An XT-500 camera."
+     }
+    ]
+   },
+   {
+    "value": "hidden tunnel",
+    "when": "late",
+    "role": "setting",
+    "quote": "Chema shows Ángela a hidden tunnel he has discovered in the school's video library",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:49",
+      "quote": "These tunnels lead to the old heaters. No one's been down here in years."
+     }
+    ]
+   },
+   {
+    "value": "matches",
+    "when": "late",
+    "role": "setting",
+    "quote": "walk further into the tunnel with only matches to light their way",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:57",
+      "quote": "The match has gone out."
+     }
+    ]
+   },
+   {
+    "value": "garage",
+    "when": "ending",
+    "role": "clue",
+    "quote": "recognizes the room from the snuff film of Vanessa",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:04",
+      "quote": "That looks like a garage, doesn't it?"
+     }
+    ]
+   },
+   {
+    "value": "television",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "On the television in his room, an announcer states",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:00:48",
+      "quote": "As announced, we have managed to get our hands on one of those macabre tapes."
+     }
+    ]
+   },
+   {
+    "value": "eye colour question",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:47:38",
+    "quote": "What's the color of my eyes? I don't know.",
+    "confidence": "sourced",
+    "detail": "Bosco's recurring test of Angela, repeated in her dream and at the end",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:56:04",
+      "quote": "The color of my eyes?"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "drawn to death", "when": "opening", "role": "omen", "quote": "Her commuter train is evacuated after a man commits suicide by jumping in front of the train", "confidence": "sourced"},
-   {"order": 2, "value": "mentor dies, tape taken", "when": "early", "role": "trigger", "quote": "Ángela finds Figueroa dead of an apparent asthma attack in the screening room and retrieves the tape", "confidence": "sourced"},
-   {"order": 3, "value": "snuff film watched", "when": "early", "quote": "a snuff film in which a woman is tortured, killed, and disemboweled", "confidence": "sourced"},
-   {"order": 4, "value": "suspect enters the home", "when": "middle", "quote": "Ángela realizes that Bosco is inside the house waiting for her", "confidence": "sourced"},
-   {"order": 5, "value": "trapped in a hidden archive", "when": "late", "role": "turn", "quote": "Suddenly the door to the tunnel closes and they are locked inside", "confidence": "sourced"},
-   {"order": 6, "value": "captive on camera", "when": "late", "quote": "She awakens tied to a chair facing Castro, who is videotaping her", "confidence": "sourced"},
-   {"order": 7, "value": "killer revealed and killed", "when": "ending", "role": "turn", "quote": "grabs his gun, and shoots him dead", "confidence": "sourced"},
-   {"order": 8, "value": "media sting", "when": "ending", "quote": "footage from a snuff film will be shown on air", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "drawn to death",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Her commuter train is evacuated after a man commits suicide by jumping in front of the train",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:54",
+      "quote": "Move on. Don't be so morbid."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "mentor dies, tape taken",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Ángela finds Figueroa dead of an apparent asthma attack in the screening room and retrieves the tape",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:43",
+      "quote": "Apparently he had an asthma attack while watching a film."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "snuff film watched",
+    "when": "early",
+    "quote": "a snuff film in which a woman is tortured, killed, and disemboweled",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:18",
+      "quote": "Don't look! I know that girl."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "lecture on cinema as industry",
+    "when": "early",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:30:04",
+    "quote": "Don't fool yourselves. The cinema is an industry. It's about money.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "suspect enters the home",
+    "when": "middle",
+    "quote": "Ángela realizes that Bosco is inside the house waiting for her",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "trapped in a hidden archive",
+    "when": "late",
+    "role": "turn",
+    "quote": "Suddenly the door to the tunnel closes and they are locked inside",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:57",
+      "quote": "The match has gone out."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "captive on camera",
+    "when": "late",
+    "quote": "She awakens tied to a chair facing Castro, who is videotaping her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:53:38",
+      "quote": "Look at the camera."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "killer revealed and killed",
+    "when": "ending",
+    "role": "turn",
+    "quote": "grabs his gun, and shoots him dead",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "media sting",
+    "when": "ending",
+    "quote": "footage from a snuff film will be shown on air",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:01:32",
+      "quote": "THE IMAGES YOU ARE ABOUT TO SEE ARE EXTREMELY CRUDE AND VIOLENT."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

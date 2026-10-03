@@ -1,57 +1,427 @@
 {
  "film": "1978-long-weekend",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "nature", "quote": "As tensions rise between the self-absorbed and environmentally toxic couple, nature starts to strike back", "confidence": "sourced"},
-   {"value": "the couple themselves", "detail": "Peter kills Marcia by accident", "quote": "Peter sees Marcia's dead body impaled by the spear", "confidence": "observed"}
+   {
+    "value": "nature",
+    "quote": "As tensions rise between the self-absorbed and environmentally toxic couple, nature starts to strike back",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the couple themselves",
+    "detail": "Peter kills Marcia by accident",
+    "quote": "Peter sees Marcia's dead body impaled by the spear",
+    "confidence": "observed"
+   }
   ],
   "origin": [
-   {"value": "from nature", "quote": "first by an eagle and possum attacking Peter, and then through more insidious means", "confidence": "sourced"}
+   {
+    "value": "from nature",
+    "quote": "first by an eagle and possum attacking Peter, and then through more insidious means",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "revenge", "detail": "for environmental damage", "quote": "nature starts to strike back", "confidence": "observed"}
+   {
+    "value": "revenge",
+    "detail": "for environmental damage",
+    "quote": "nature starts to strike back",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:20",
+      "quote": "It was a she . She wanted her egg ."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "harming nature", "quote": "the theft and destruction of an eagle's egg, the killing of a dugong", "confidence": "sourced"},
-   {"value": "infidelity and abortion", "quote": "a crucial source of mutual resentment is an abortion she had following an affair with another man", "confidence": "sourced"}
+   {
+    "value": "harming nature",
+    "quote": "the theft and destruction of an eagle's egg, the killing of a dugong",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:40",
+      "quote": "It 's a living thing ."
+     }
+    ]
+   },
+   {
+    "value": "infidelity and abortion",
+    "quote": "a crucial source of mutual resentment is an abortion she had following an affair with another man",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:46",
+      "quote": "I didn 't have to have an abortion , Peter !"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "a journey", "detail": "camping trip to a secluded beach", "quote": "go for a weekend camping trip to a secluded beach", "confidence": "sourced"},
-   {"value": "killing an animal", "quote": "he accidentally runs over and kills a kangaroo", "confidence": "observed"}
+   {
+    "value": "a journey",
+    "detail": "camping trip to a secluded beach",
+    "quote": "go for a weekend camping trip to a secluded beach",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:39",
+      "quote": "Some beach up north ."
+     }
+    ]
+   },
+   {
+    "value": "killing an animal",
+    "quote": "he accidentally runs over and kills a kangaroo",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:20",
+      "quote": "I ran over a kangaroo tonight ."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "escape fails", "quote": "eventually has to ditch the car when it gets stuck in mud", "confidence": "observed"}
+   {
+    "value": "escape fails",
+    "quote": "eventually has to ditch the car when it gets stuck in mud",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:56",
+      "quote": "We 're going round in circles , Peter ."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "couple", "relation_to_threat": "stranger", "detail": "Peter and Marcia", "quote": "Peter and Marcia, along with their dog Cricket, go for a weekend camping trip", "confidence": "sourced"}
+   {
+    "value": "couple",
+    "relation_to_threat": "stranger",
+    "detail": "Peter and Marcia",
+    "quote": "Peter and Marcia, along with their dog Cricket, go for a weekend camping trip",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "everyone dies", "quote": "a sulphur-crested cockatoo attacks its driver, causing him to lose control, and the truck hits and kills Peter", "confidence": "sourced"}
+   {
+    "value": "everyone dies",
+    "quote": "a sulphur-crested cockatoo attacks its driver, causing him to lose control, and the truck hits and kills Peter",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "kangaroo", "state": "run over", "when": "opening", "role": "omen", "quote": "he accidentally runs over and kills a kangaroo", "confidence": "sourced"},
-   {"value": "cigarette butt", "state": "starting a fire", "when": "opening", "role": "omen", "quote": "Peter's discarded cigarette butt ignites a small fire", "confidence": "sourced"},
-   {"value": "eagle's egg", "state": "destroyed", "when": "early", "role": "trigger", "quote": "the theft and destruction of an eagle's egg", "confidence": "sourced"},
-   {"value": "dugong", "state": "dead", "when": "early", "role": "trigger", "quote": "the killing of a dugong", "confidence": "sourced"},
-   {"value": "eagle and possum", "state": "attacking", "when": "middle", "role": "threat", "quote": "an eagle and possum attacking Peter", "confidence": "sourced"},
-   {"value": "spear-gun", "when": "late", "role": "weapon", "quote": "Peter arms himself with a spear-gun which he fires blindly at a noise", "confidence": "sourced"},
-   {"value": "spider webs", "when": "late", "role": "threat", "quote": "finds his car abandoned in what appears to be a mesh of spider webs", "confidence": "sourced"},
-   {"value": "cockatoo", "state": "attacking", "when": "ending", "role": "threat", "quote": "a sulphur-crested cockatoo attacks its driver", "confidence": "sourced"}
+   {
+    "value": "kangaroo",
+    "state": "run over",
+    "when": "opening",
+    "role": "omen",
+    "quote": "he accidentally runs over and kills a kangaroo",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:20",
+      "quote": "I ran over a kangaroo tonight ."
+     }
+    ]
+   },
+   {
+    "value": "cigarette butt",
+    "state": "starting a fire",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Peter's discarded cigarette butt ignites a small fire",
+    "confidence": "sourced"
+   },
+   {
+    "value": "eagle's egg",
+    "state": "destroyed",
+    "when": "early",
+    "role": "trigger",
+    "quote": "the theft and destruction of an eagle's egg",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:44",
+      "quote": "I think it 's an eagle egg ."
+     }
+    ]
+   },
+   {
+    "value": "dugong",
+    "state": "dead",
+    "when": "early",
+    "role": "trigger",
+    "quote": "the killing of a dugong",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:55:23",
+      "quote": "It 's a dugong ."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:29:01",
+      "quote": "Sounded like a baby crying ."
+     }
+    ]
+   },
+   {
+    "value": "eagle and possum",
+    "state": "attacking",
+    "when": "middle",
+    "role": "threat",
+    "quote": "an eagle and possum attacking Peter",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:05",
+      "quote": "An eagle attacked me !"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:53:46",
+      "quote": "Bloody possum ."
+     }
+    ]
+   },
+   {
+    "value": "spear-gun",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Peter arms himself with a spear-gun which he fires blindly at a noise",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:12",
+      "quote": "Spear guns don 't go off with the safety on ."
+     }
+    ]
+   },
+   {
+    "value": "spider webs",
+    "when": "late",
+    "role": "threat",
+    "quote": "finds his car abandoned in what appears to be a mesh of spider webs",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cockatoo",
+    "state": "attacking",
+    "when": "ending",
+    "role": "threat",
+    "quote": "a sulphur-crested cockatoo attacks its driver",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:54",
+      "quote": "( report flocks of white cockatoos ) ( attacking their houses . )"
+     }
+    ]
+   },
+   {
+    "value": "the same tree",
+    "when": "early",
+    "role": "omen",
+    "detail": "the couple drive in circles on the way in",
+    "source": "subtitles",
+    "at": "00:18:52",
+    "quote": "That 's the same tree .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dark shape in the surf",
+    "when": "early",
+    "role": "omen",
+    "detail": "later found to be the dying dugong",
+    "source": "subtitles",
+    "at": "00:27:17",
+    "quote": "There 's a thing in the water !",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rotting meat",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:42:38",
+    "quote": "This chuck 's gone off .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dog",
+    "state": "lost, then dead",
+    "when": "late",
+    "role": "omen",
+    "detail": "Cricket",
+    "source": "subtitles",
+    "at": "01:09:05",
+    "quote": "Cricket 's dead .",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "animal killed on the road", "when": "opening", "role": "omen", "quote": "Peter's discarded cigarette butt ignites a small fire, and he accidentally runs over and kills a kangaroo", "confidence": "sourced"},
-   {"order": 2, "value": "careless destruction of nature", "when": "early", "role": "trigger", "quote": "the couple cause more environmental damage", "confidence": "sourced"},
-   {"order": 3, "value": "old wound revealed", "when": "middle", "quote": "it is revealed that a crucial source of mutual resentment is an abortion", "confidence": "sourced"},
-   {"order": 4, "value": "animals attack", "when": "middle", "role": "turn", "quote": "nature starts to strike back: first by an eagle and possum attacking Peter", "confidence": "sourced"},
-   {"order": 5, "value": "couple separates", "when": "middle", "quote": "Marcia, desperate to get away, steals Peter's car and leaves him alone with night drawing in", "confidence": "sourced"},
-   {"order": 6, "value": "partner killed by mistake", "when": "late", "quote": "Peter sees Marcia's dead body impaled by the spear", "confidence": "sourced"},
-   {"order": 7, "value": "death at the road", "when": "ending", "quote": "the truck hits and kills Peter", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "news of animal attacks",
+    "when": "opening",
+    "role": "omen",
+    "detail": "radio and TV reports of cockatoos attacking houses",
+    "source": "subtitles",
+    "at": "00:03:54",
+    "quote": "( report flocks of white cockatoos )",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "animal killed on the road",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Peter's discarded cigarette butt ignites a small fire, and he accidentally runs over and kills a kangaroo",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:20",
+      "quote": "I ran over a kangaroo tonight ."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "lost on the way",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:18:52",
+    "quote": "That 's the same tree .",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "careless destruction of nature",
+    "when": "early",
+    "role": "trigger",
+    "quote": "the couple cause more environmental damage",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:33",
+      "quote": "What have you been doing to the tree ?"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "food rots overnight",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:42:42",
+    "quote": "Fuck , it 's bloody rotten . You musta left it out too long .",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "old wound revealed",
+    "when": "middle",
+    "quote": "it is revealed that a crucial source of mutual resentment is an abortion",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:46",
+      "quote": "I didn 't have to have an abortion , Peter !"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "animals attack",
+    "when": "middle",
+    "role": "turn",
+    "quote": "nature starts to strike back: first by an eagle and possum attacking Peter",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:05",
+      "quote": "An eagle attacked me !"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "dog lost",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:09:05",
+    "quote": "Cricket 's dead .",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "couple separates",
+    "when": "middle",
+    "quote": "Marcia, desperate to get away, steals Peter's car and leaves him alone with night drawing in",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:43",
+      "quote": "Marcia ! Come back !"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "partner killed by mistake",
+    "when": "late",
+    "quote": "Peter sees Marcia's dead body impaled by the spear",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "death at the road",
+    "when": "ending",
+    "quote": "the truck hits and kills Peter",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

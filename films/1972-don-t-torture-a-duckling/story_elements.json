@@ -1,54 +1,379 @@
 {
  "film": "1972-don-t-torture-a-duckling",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "serial killer", "detail": "Don Alberto, the local priest", "quote": "It is revealed that Alberto killed the boys, not for their sins but to prevent them from sinning when they grow up", "confidence": "sourced"},
-   {"value": "mob violence", "detail": "villagers beat the accused witch to death", "quote": "Nonetheless, Maciara is beaten to death by a group of men", "confidence": "sourced"}
+   {
+    "value": "serial killer",
+    "detail": "Don Alberto, the local priest",
+    "quote": "It is revealed that Alberto killed the boys, not for their sins but to prevent them from sinning when they grow up",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mob violence",
+    "detail": "villagers beat the accused witch to death",
+    "quote": "Nonetheless, Maciara is beaten to death by a group of men",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to prevent sin", "quote": "not for their sins but to prevent them from sinning when they grow up", "confidence": "sourced"}
+   {
+    "value": "to prevent sin",
+    "quote": "not for their sins but to prevent them from sinning when they grow up",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:49",
+      "quote": "They fall into the arms of sin. We must stop them."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:43:07",
+      "quote": "Then they will really be dead. Dead forever."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "incest and infanticide", "detail": "rumour about Francesco and Maciara", "quote": "He is also rumored to have had (and then disposed of) a baby from an incestuous tryst with Maciara", "confidence": "sourced"}
+   {
+    "value": "incest and infanticide",
+    "detail": "rumour about Francesco and Maciara",
+    "quote": "He is also rumored to have had (and then disposed of) a baby from an incestuous tryst with Maciara",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:38",
+      "quote": "I couldn't, he was the Devil's child."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "child goes missing", "quote": "When Bruno goes missing, reporters from all over the country converge on the village", "confidence": "sourced"}
+   {
+    "value": "child goes missing",
+    "quote": "When Bruno goes missing, reporters from all over the country converge on the village",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:11",
+      "quote": "The fourth day since his disappearance."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "superstition blames the outsider", "quote": "However, it appears that she believes her Voodoo dolls and incantations alone caused the deaths", "confidence": "observed"}
+   {
+    "value": "superstition blames the outsider",
+    "quote": "However, it appears that she believes her Voodoo dolls and incantations alone caused the deaths",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:00",
+      "quote": "A lot of strange things have happened since she arrived."
+     }
+    ]
+   },
+   {
+    "value": "pins in wax figures",
+    "source": "subtitles",
+    "at": "01:01:28",
+    "quote": "And I put pins through them. You have to do it thirteen times, while you say the words out loud...",
+    "confidence": "sourced",
+    "detail": "the witch's death spell: three wax figures painted black, pierced thirteen times"
+   }
   ],
   "who_suffers": [
-   {"value": "boys", "relation_to_threat": "community", "detail": "members of the priest's boys' group", "quote": "Alberto runs a boys' group at the church, which the victims belonged to", "confidence": "sourced"},
-   {"value": "accused outsider", "relation_to_threat": "community", "detail": "Maciara, the witch", "quote": "Maciara, a reclusive Gypsy witch, conducts black magic ceremonies", "confidence": "sourced"},
-   {"value": "sister", "relation_to_threat": "family", "detail": "Malvina, the deaf-mute witness", "quote": "Alberto attempts to throw his sister off a cliff, but Andrea arrives just in time", "confidence": "sourced"},
-   {"value": "investigator", "relation_to_threat": "stranger", "detail": "Andrea Martelli, journalist from Rome", "quote": "a journalist investigating a series of child murders in an insular Italian village", "confidence": "sourced"}
+   {
+    "value": "boys",
+    "relation_to_threat": "community",
+    "detail": "members of the priest's boys' group",
+    "quote": "Alberto runs a boys' group at the church, which the victims belonged to",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:44",
+      "quote": "someone who kills two young boys must have something wrong with him."
+     }
+    ]
+   },
+   {
+    "value": "accused outsider",
+    "relation_to_threat": "community",
+    "detail": "Maciara, the witch",
+    "quote": "Maciara, a reclusive Gypsy witch, conducts black magic ceremonies",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sister",
+    "relation_to_threat": "family",
+    "detail": "Malvina, the deaf-mute witness",
+    "quote": "Alberto attempts to throw his sister off a cliff, but Andrea arrives just in time",
+    "confidence": "sourced"
+   },
+   {
+    "value": "investigator",
+    "relation_to_threat": "stranger",
+    "detail": "Andrea Martelli, journalist from Rome",
+    "quote": "a journalist investigating a series of child murders in an insular Italian village",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "killer dies", "quote": "Alberto is thrown off the cliff by Andrea and falls to his death", "confidence": "sourced"}
+   {
+    "value": "killer dies",
+    "quote": "Alberto is thrown off the cliff by Andrea and falls to his death",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "infant skeleton", "state": "dug up", "when": "opening", "role": "omen", "quote": "first by digging up the skeletal remains of an infant", "confidence": "sourced"},
-   {"value": "clay dolls", "state": "pierced with pins", "when": "opening", "role": "omen", "quote": "plunging pins through the heads of three clay dolls", "confidence": "sourced"},
-   {"value": "thunderstorm", "when": "early", "role": "setting", "quote": "during a raging thunderstorm, Michele sneaks out of his house", "confidence": "sourced"},
-   {"value": "beheaded dolls", "when": "late", "role": "clue", "quote": "she compulsively pulls the heads off her dolls as if imitating the murders", "confidence": "sourced"},
-   {"value": "donald duck doll head", "when": "late", "role": "clue", "quote": "One doll's head, that of Donald Duck, is found near the latest crime scene", "confidence": "sourced"},
-   {"value": "cliff", "when": "ending", "role": "setting", "quote": "Alberto is thrown off the cliff by Andrea and falls to his death", "confidence": "sourced"}
+   {
+    "value": "radio romance serial",
+    "when": "opening",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:03:52",
+    "quote": "I love you, Margherita, passionately, desperately...",
+    "confidence": "sourced",
+    "detail": "village women listen to a melodrama on the radio as the boys head off to spy on prostitutes"
+   },
+   {
+    "value": "infant skeleton",
+    "state": "dug up",
+    "when": "opening",
+    "role": "omen",
+    "quote": "first by digging up the skeletal remains of an infant",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:44",
+      "quote": "Many times, I had seen Michele playing near my son's grave."
+     }
+    ]
+   },
+   {
+    "value": "clay dolls",
+    "state": "pierced with pins",
+    "when": "opening",
+    "role": "omen",
+    "quote": "plunging pins through the heads of three clay dolls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:10",
+      "quote": "I made three wax figures..."
+     }
+    ]
+   },
+   {
+    "value": "thunderstorm",
+    "when": "early",
+    "role": "setting",
+    "quote": "during a raging thunderstorm, Michele sneaks out of his house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:27",
+      "quote": "It's pointless, the dogs won't pick up a scent in this rain."
+     }
+    ]
+   },
+   {
+    "value": "beheaded dolls",
+    "when": "late",
+    "role": "clue",
+    "quote": "she compulsively pulls the heads off her dolls as if imitating the murders",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:23",
+      "quote": "Who broke your doll? What rascal did that?"
+     }
+    ]
+   },
+   {
+    "value": "donald duck doll head",
+    "when": "late",
+    "role": "clue",
+    "quote": "One doll's head, that of Donald Duck, is found near the latest crime scene",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:07",
+      "quote": "This looks like the head of the duck I gave the little girl."
+     }
+    ]
+   },
+   {
+    "value": "cliff",
+    "when": "ending",
+    "role": "setting",
+    "quote": "Alberto is thrown off the cliff by Andrea and falls to his death",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "witch's ritual", "when": "opening", "role": "omen", "quote": "conducts black magic ceremonies, first by digging up the skeletal remains of an infant", "confidence": "sourced"},
-   {"order": 2, "value": "child disappears", "when": "early", "role": "trigger", "quote": "When Bruno goes missing, reporters from all over the country converge on the village", "confidence": "sourced"},
-   {"order": 3, "value": "wrong suspect arrested", "when": "early", "quote": "When Tonino's body is found, the police realize that Giuseppe is innocent", "confidence": "sourced"},
-   {"order": 4, "value": "false confession", "when": "middle", "quote": "Under questioning, she confesses to the murders", "confidence": "sourced"},
-   {"order": 5, "value": "scapegoat lynched", "when": "middle", "role": "turn", "quote": "Nonetheless, Maciara is beaten to death by a group of men", "confidence": "sourced"},
-   {"order": 6, "value": "child witness clue", "when": "late", "role": "clue", "quote": "Andrea becomes convinced that the girl witnessed the killings", "confidence": "sourced"},
-   {"order": 7, "value": "killer revealed", "when": "late", "role": "turn", "quote": "Aurelia is found barely conscious, begging them to stop her son", "confidence": "sourced"},
-   {"order": 8, "value": "killer falls to death", "when": "ending", "quote": "Alberto is thrown off the cliff by Andrea and falls to his death", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "witch's ritual",
+    "when": "opening",
+    "role": "omen",
+    "quote": "conducts black magic ceremonies, first by digging up the skeletal remains of an infant",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:21",
+      "quote": "Because that's the death spell."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "boys mock the village fool",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:08:00",
+    "quote": "Barra's a peeping tom.",
+    "confidence": "sourced",
+    "detail": "the boys who will be killed spy on prostitutes and taunt Giuseppe Barra, who threatens them; he becomes the first suspect",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:23",
+      "quote": "If I catch you I'll kill you."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "child disappears",
+    "when": "early",
+    "role": "trigger",
+    "quote": "When Bruno goes missing, reporters from all over the country converge on the village",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:42",
+      "quote": "Received an anonymous phone call... With a request for a large sum, as ransom."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "wrong suspect arrested",
+    "when": "early",
+    "quote": "When Tonino's body is found, the police realize that Giuseppe is innocent",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:27",
+      "quote": "You killed him, Barra."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "false confession",
+    "when": "middle",
+    "quote": "Under questioning, she confesses to the murders",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:49",
+      "quote": "You killed all three of them, to punish them, right?"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:56:38",
+      "quote": "I gave them death."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "scapegoat lynched",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Nonetheless, Maciara is beaten to death by a group of men",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "child witness clue",
+    "when": "late",
+    "role": "clue",
+    "quote": "Andrea becomes convinced that the girl witnessed the killings",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:59",
+      "quote": "That's why she tore off the head on the doll and the duck..."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "killer revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Aurelia is found barely conscious, begging them to stop her son",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:16",
+      "quote": "Malvina's going to heaven now, mother..."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "killer falls to death",
+    "when": "ending",
+    "quote": "Alberto is thrown off the cliff by Andrea and falls to his death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:43:45",
+      "quote": "I absolve you in the name of the Father, the Son, and the Holy Ghost."
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["origin"],
+ "not_stated": [
+  "origin"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

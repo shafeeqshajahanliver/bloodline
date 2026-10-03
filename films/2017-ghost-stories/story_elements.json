@@ -1,66 +1,462 @@
 {
  "film": "2017-ghost-stories",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "guilt", "detail": "Goodman's childhood failure to save a boy", "quote": "Goodman has felt guilty all his life about his failure to rescue the victim", "confidence": "sourced"},
-   {"value": "ghosts", "detail": "spirit of a girl, a creature, a poltergeist", "quote": "investigate three incidents of supposedly real supernatural ghost sightings", "confidence": "sourced"},
-   {"value": "dead child", "detail": "the decaying corpse of the bullied boy", "quote": "The decaying corpse of the bullied boy appears, tormenting Goodman", "confidence": "sourced"}
+   {
+    "value": "guilt",
+    "detail": "Goodman's childhood failure to save a boy",
+    "quote": "Goodman has felt guilty all his life about his failure to rescue the victim",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:59",
+      "quote": "and that every action you've ever taken or didn't take has had an effect. It's left a little trace. A ghost of itself."
+     }
+    ]
+   },
+   {
+    "value": "ghosts",
+    "detail": "spirit of a girl, a creature, a poltergeist",
+    "quote": "investigate three incidents of supposedly real supernatural ghost sightings",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dead child",
+    "detail": "the decaying corpse of the bullied boy",
+    "quote": "The decaying corpse of the bullied boy appears, tormenting Goodman",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "the mind", "detail": "a coma dream built from the hospital room", "quote": "All the characters and events Goodman has experienced were inspired by the staff and objects in his hospital room", "confidence": "sourced"},
-   {"value": "child who died wronged", "quote": "two bullies entice a mentally disabled boy into a drain, where he died of an asthma attack", "confidence": "sourced"}
+   {
+    "value": "the mind",
+    "detail": "a coma dream built from the hospital room",
+    "quote": "All the characters and events Goodman has experienced were inspired by the staff and objects in his hospital room",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child who died wronged",
+    "quote": "two bullies entice a mentally disabled boy into a drain, where he died of an asthma attack",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to torment", "quote": "The ghoul lies on top of him and forces his finger into Goodman's mouth", "confidence": "sourced"}
+   {
+    "value": "to torment",
+    "quote": "The ghoul lies on top of him and forces his finger into Goodman's mouth",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "failing to save a child", "quote": "two bullies entice a mentally disabled boy into a drain, where he died", "confidence": "sourced"},
-   {"value": "family rejection", "quote": "Philip Goodman's strict Jewish father threw his sister out of the family for dating an Asian man", "confidence": "sourced"},
-   {"value": "abandoning a sick child", "detail": "Tony stopped visiting his daughter", "quote": "feels guilty that he stopped visiting his daughter, who suffers from locked-in syndrome", "confidence": "sourced"}
+   {
+    "value": "failing to save a child",
+    "quote": "two bullies entice a mentally disabled boy into a drain, where he died",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:59",
+      "quote": "Callahan, I'm so sorry!"
+     }
+    ]
+   },
+   {
+    "value": "family rejection",
+    "quote": "Philip Goodman's strict Jewish father threw his sister out of the family for dating an Asian man",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:05",
+      "quote": "It was my father's religious beliefs that destroyed our family."
+     }
+    ]
+   },
+   {
+    "value": "abandoning a sick child",
+    "detail": "Tony stopped visiting his daughter",
+    "quote": "feels guilty that he stopped visiting his daughter, who suffers from locked-in syndrome",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "an invitation", "quote": "He receives an invitation to visit a famed 1970s paranormal investigator, Charles Cameron", "confidence": "sourced"},
-   {"value": "investigating cases", "quote": "Cameron asks him to investigate three incidents", "confidence": "sourced"}
+   {
+    "value": "an invitation",
+    "quote": "He receives an invitation to visit a famed 1970s paranormal investigator, Charles Cameron",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:00",
+      "quote": "Hello, Professor Goodman. This is Charles Cameron."
+     }
+    ]
+   },
+   {
+    "value": "investigating cases",
+    "quote": "Cameron asks him to investigate three incidents",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "sceptic forced to believe", "quote": "Goodman at first believes that he is the victim of an elaborate hoax, but reality soon breaks down altogether", "confidence": "sourced"},
-   {"value": "endless repetition", "quote": "Goodman cries \"No, not again!\" implying this is a recurring event", "confidence": "sourced"}
+   {
+    "value": "sceptic forced to believe",
+    "quote": "Goodman at first believes that he is the victim of an elaborate hoax, but reality soon breaks down altogether",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:11",
+      "quote": "If He wants you to believe He will send you a sign."
+     }
+    ]
+   },
+   {
+    "value": "endless repetition",
+    "quote": "Goodman cries \"No, not again!\" implying this is a recurring event",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:12",
+      "quote": "Oh, no. Not, not again."
+     }
+    ]
+   },
+   {
+    "value": "the brain sees what it wants",
+    "source": "subtitles",
+    "at": "00:06:52",
+    "quote": "The brain sees what it wants to see.",
+    "confidence": "sourced",
+    "detail": "Goodman's creed, turned against him",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:24",
+      "quote": "... the brain sees.. ... what it wants to see."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "sceptic", "relation_to_threat": "self", "detail": "Professor Philip Goodman", "quote": "a man devoted to debunking fraudulent psychics, who is tasked with solving three unexplained paranormal events", "confidence": "sourced"},
-   {"value": "night watchman", "relation_to_threat": "stranger", "quote": "The first case is a night watchman, Tony Matthews", "confidence": "sourced"},
-   {"value": "teenager", "relation_to_threat": "stranger", "quote": "The second is a teenager, Simon Rifkind, who is obsessed with the occult", "confidence": "sourced"},
-   {"value": "expectant father", "relation_to_threat": "stranger", "quote": "Mike Priddle, who was plagued by a poltergeist, while awaiting the birth of his child", "confidence": "sourced"}
+   {
+    "value": "sceptic",
+    "relation_to_threat": "self",
+    "detail": "Professor Philip Goodman",
+    "quote": "a man devoted to debunking fraudulent psychics, who is tasked with solving three unexplained paranormal events",
+    "confidence": "sourced"
+   },
+   {
+    "value": "night watchman",
+    "relation_to_threat": "stranger",
+    "quote": "The first case is a night watchman, Tony Matthews",
+    "confidence": "sourced"
+   },
+   {
+    "value": "teenager",
+    "relation_to_threat": "stranger",
+    "quote": "The second is a teenager, Simon Rifkind, who is obsessed with the occult",
+    "confidence": "sourced"
+   },
+   {
+    "value": "expectant father",
+    "relation_to_threat": "stranger",
+    "quote": "Mike Priddle, who was plagued by a poltergeist, while awaiting the birth of his child",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "it was all in the mind", "quote": "He suffers from locked-in syndrome after a suicide attempt in his car", "confidence": "sourced"},
-   {"value": "trapped forever", "quote": "The junior doctor predicts that Goodman is \"here for keeps\", without a chance of recovery", "confidence": "sourced"}
+   {
+    "value": "it was all in the mind",
+    "quote": "He suffers from locked-in syndrome after a suicide attempt in his car",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:18",
+      "quote": "It, uh, coma. Uh, probable lock-in."
+     }
+    ]
+   },
+   {
+    "value": "trapped forever",
+    "quote": "The junior doctor predicts that Goodman is \"here for keeps\", without a chance of recovery",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:21",
+      "quote": "He is here for keeps."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "caravan", "when": "opening", "role": "setting", "quote": "is now living in a caravan, sick and impoverished", "confidence": "sourced"},
-   {"value": "asylum", "state": "disused", "when": "early", "role": "setting", "quote": "haunted by the spirit of a young girl while working in a disused asylum for women", "confidence": "sourced"},
-   {"value": "creature in the woods", "state": "run over", "when": "middle", "role": "threat", "quote": "His car breaks down after running over a creature in the woods", "confidence": "sourced"},
-   {"value": "shotgun", "when": "middle", "role": "weapon", "quote": "the financier commits suicide with a shotgun", "confidence": "sourced"},
-   {"value": "latex mask", "when": "late", "role": "turn", "quote": "who tears a latex mask off his face, revealing himself to be Priddle", "confidence": "sourced"},
-   {"value": "drain", "when": "late", "role": "clue", "quote": "entice a mentally disabled boy into a drain", "confidence": "sourced"},
-   {"value": "hospital bed", "when": "ending", "role": "setting", "quote": "leading him to a hospital bed, where he is made to lie down", "confidence": "sourced"},
-   {"value": "mirror", "state": "moved", "when": "ending", "role": "mirror", "quote": "moves a mirror to give him a different view", "confidence": "sourced"}
+   {
+    "value": "caravan",
+    "when": "opening",
+    "role": "setting",
+    "quote": "is now living in a caravan, sick and impoverished",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:18",
+      "quote": "Please come to 79 East Shore Caravan Park.."
+     }
+    ]
+   },
+   {
+    "value": "asylum",
+    "state": "disused",
+    "when": "early",
+    "role": "setting",
+    "quote": "haunted by the spirit of a young girl while working in a disused asylum for women",
+    "confidence": "sourced"
+   },
+   {
+    "value": "creature in the woods",
+    "state": "run over",
+    "when": "middle",
+    "role": "threat",
+    "quote": "His car breaks down after running over a creature in the woods",
+    "confidence": "sourced"
+   },
+   {
+    "value": "shotgun",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "the financier commits suicide with a shotgun",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:30",
+      "quote": "[GUN COCKS] [GUNSHOT]"
+     }
+    ]
+   },
+   {
+    "value": "latex mask",
+    "when": "late",
+    "role": "turn",
+    "quote": "who tears a latex mask off his face, revealing himself to be Priddle",
+    "confidence": "sourced"
+   },
+   {
+    "value": "drain",
+    "when": "late",
+    "role": "clue",
+    "quote": "entice a mentally disabled boy into a drain",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hospital bed",
+    "when": "ending",
+    "role": "setting",
+    "quote": "leading him to a hospital bed, where he is made to lie down",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:05",
+      "quote": "Neurological examination reveals fixed and dilated pupils."
+     }
+    ]
+   },
+   {
+    "value": "mirror",
+    "state": "moved",
+    "when": "ending",
+    "role": "mirror",
+    "quote": "moves a mirror to give him a different view",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fluttering wings",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:09",
+    "quote": "[WINGS FLUTTERING]",
+    "confidence": "sourced",
+    "detail": "recurs in each haunting",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:53",
+      "quote": "[WINGS FLUTTERING] Oh, Jesus!"
+     }
+    ]
+   },
+   {
+    "value": "crying baby",
+    "when": "late",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "01:24:50",
+    "quote": "[BABY CRYING] Hello, here I come.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "childhood family rupture", "when": "opening", "quote": "threw his sister out of the family for dating an Asian man", "confidence": "sourced"},
-   {"order": 2, "value": "sceptic receives a challenge", "when": "opening", "role": "trigger", "quote": "Cameron asks him to investigate three incidents of supposedly real supernatural ghost sightings", "confidence": "sourced"},
-   {"order": 3, "value": "first haunting", "when": "early", "quote": "He was haunted by the spirit of a young girl while working in a disused asylum", "confidence": "sourced"},
-   {"order": 4, "value": "second haunting", "when": "middle", "quote": "His car breaks down after running over a creature in the woods", "confidence": "sourced"},
-   {"order": 5, "value": "third haunting ends in suicide", "when": "middle", "quote": "Suddenly, the financier commits suicide with a shotgun", "confidence": "sourced"},
-   {"order": 6, "value": "unmasking, reality breaks", "when": "late", "role": "turn", "quote": "who tears a latex mask off his face, revealing himself to be Priddle", "confidence": "sourced"},
-   {"order": 7, "value": "buried guilt revealed", "when": "late", "role": "turn", "quote": "Priddle leads Goodman back in time to the scene of a childhood incident", "confidence": "sourced"},
-   {"order": 8, "value": "waking in a coma", "when": "ending", "role": "turn", "quote": "In the real world, Goodman is in a hospital with tubes in his mouth", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "childhood family rupture",
+    "when": "opening",
+    "quote": "threw his sister out of the family for dating an Asian man",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:05",
+      "quote": "It was my father's religious beliefs that destroyed our family."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "psychic exposed as fraud",
+    "when": "opening",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:05:05",
+    "quote": "My name is Professor Philip Goodman from the TV program \" Psychic Cheats. \"",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "sceptic receives a challenge",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Cameron asks him to investigate three incidents of supposedly real supernatural ghost sightings",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:00",
+      "quote": "Hello, Professor Goodman. This is Charles Cameron."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "first haunting",
+    "when": "early",
+    "quote": "He was haunted by the spirit of a young girl while working in a disused asylum",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:44",
+      "quote": "[POWER SHUTS DOWN]"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "second haunting",
+    "when": "middle",
+    "quote": "His car breaks down after running over a creature in the woods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:52",
+      "quote": "[ETHEREAL VOICE] Demon."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "third haunting ends in suicide",
+    "when": "middle",
+    "quote": "Suddenly, the financier commits suicide with a shotgun",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:30",
+      "quote": "[GUN COCKS] [GUNSHOT]"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "unmasking, reality breaks",
+    "when": "late",
+    "role": "turn",
+    "quote": "who tears a latex mask off his face, revealing himself to be Priddle",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:24",
+      "quote": "... the brain sees.. ... what it wants to see."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "buried guilt revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Priddle leads Goodman back in time to the scene of a childhood incident",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:59",
+      "quote": "Callahan, I'm so sorry!"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "waking in a coma",
+    "when": "ending",
+    "role": "turn",
+    "quote": "In the real world, Goodman is in a hospital with tubes in his mouth",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:18",
+      "quote": "It, uh, coma. Uh, probable lock-in."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "closing song",
+    "when": "ending",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:32:43",
+    "quote": "I was working in the lab late one night",
+    "confidence": "sourced",
+    "detail": "Monster Mash plays over the credits"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

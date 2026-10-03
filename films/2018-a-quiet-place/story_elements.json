@@ -7,6 +7,12 @@
     "Lead",
     "Plot"
    ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
   }
  ],
  "plot_quality": "full",
@@ -38,26 +44,68 @@
     "value": "child's guilt",
     "detail": "Regan gave Beau the toy",
     "quote": "Regan suffers terrible guilt after Beau's death",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:40",
+      "quote": "It was no one's fault."
+     }
+    ]
    }
   ],
   "trigger": [
    {
     "value": "making a noise",
     "quote": "While walking back home, Beau activates the toy, which starts making noise",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:33",
+      "quote": "TOY BEEPING"
+     }
+    ]
    }
   ],
   "rules": [
    {
     "value": "must stay silent",
     "quote": "laying sand paths to avoid stepping on crunching leaves and using American Sign Language when communicating",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:55",
+      "quote": "Big sounds ... not safe."
+     }
+    ]
    },
    {
     "value": "weak to high-pitched sound",
     "quote": "involuntarily exposes the vulnerable tissue beneath the armor plating on its head",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:52",
+      "quote": "FEEDBACK WHINING"
+     }
+    ]
+   },
+   {
+    "value": "louder sound covers you",
+    "source": "subtitles",
+    "at": "00:36:07",
+    "quote": "there's another sound nearby ... that's louder.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:45",
+      "quote": "The river ... is loud."
+     }
+    ]
    }
   ],
   "who_suffers": [
@@ -66,7 +114,14 @@
     "relation_to_threat": "stranger",
     "detail": "the Abbotts",
     "quote": "a mother (Emily Blunt) and father (Krasinski) who struggle to survive and raise their children",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:06",
+      "quote": "Who are we if we can't protect them?"
+     }
+    ]
    },
    {
     "value": "youngest child",
@@ -93,12 +148,26 @@
    {
     "value": "weakness discovered",
     "quote": "Armed with high-pitched sound as new weapon",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:11",
+      "quote": "CREATURE SQUEALING"
+     }
+    ]
    },
    {
     "value": "parent sacrifices self",
     "quote": "Lee signs to Regan that he has always loved her and proceeds to yell to draw the alien's attention",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:00",
+      "quote": "I have always loved you."
+     }
+    ]
    }
   ],
   "images": [
@@ -115,7 +184,19 @@
     "when": "opening",
     "role": "trigger",
     "quote": "Beau finds a toy Space Shuttle, but Lee takes out the batteries",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:34",
+      "quote": "Too loud."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:09:33",
+      "quote": "TOY BEEPING"
+     }
+    ]
    },
    {
     "value": "hearing aid",
@@ -123,7 +204,14 @@
     "when": "middle",
     "role": "weapon",
     "quote": "Lee is trying to build a working hearing aid for Regan",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:13",
+      "quote": "This time, I took small amplifiers from the stereo."
+     }
+    ]
    },
    {
     "value": "nail",
@@ -131,28 +219,53 @@
     "when": "middle",
     "role": "omen",
     "quote": "she accidentally steps on an upright nail and drops a photo frame",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "There is a NAIL sticking up about ten steps down, and if someone were to step on it..."
+     }
+    ]
    },
    {
     "value": "red lights",
     "when": "middle",
     "role": "symbol",
     "quote": "turning the surrounding lights around the house red",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "She sees the RED FLOOD LIGHTS ARE ON."
+     }
+    ]
    },
    {
     "value": "fireworks",
     "when": "middle",
     "role": "weapon",
     "quote": "lure the alien out of the house by lighting off fireworks",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:59",
+      "quote": "LOUD WHISTLING AND EXPLOSION"
+     }
+    ]
    },
    {
     "value": "corn silo",
     "when": "late",
     "role": "setting",
     "quote": "gets sucked into the corn, disappearing from sight",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "THE GRAIN IS LIKE QUICK SAND. THE MORE SHE MOVES, THE DEEPER SHE DROWNS."
+     }
+    ]
    },
    {
     "value": "shotgun",
@@ -161,6 +274,61 @@
     "role": "weapon",
     "quote": "Evelyn is seen defiantly racking the shotgun",
     "confidence": "sourced"
+   },
+   {
+    "value": "birds",
+    "state": "cawing, then fleeing",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:08:03",
+    "quote": "BIRDS CAWING",
+    "confidence": "sourced",
+    "detail": "birds caw just before Beau's toy goes off, and scatter when the creature lands on the roof",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:12",
+      "quote": "BIRDS SCREECHING AND FLYING AWAY"
+     }
+    ]
+   },
+   {
+    "value": "raccoons",
+    "state": "killed by the creature",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:21:42",
+    "quote": "RACCOONS CHITTERING",
+    "confidence": "observed",
+    "detail": "the creature drawn to the house takes the raccoons instead of the family"
+   },
+   {
+    "value": "board game by lantern",
+    "when": "early",
+    "role": "setting",
+    "source": "screenplay",
+    "quote": "Mia clears the table. John unfolds a MONOPOLY game board",
+    "confidence": "sourced",
+    "detail": "the lantern knocked over during the game draws the creature",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:22",
+      "quote": "GLASS SHATTERING"
+     }
+    ]
+   },
+   {
+    "value": "waterfall",
+    "when": "middle",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:37:31",
+    "quote": "WATERFALL ROARING",
+    "confidence": "sourced",
+    "detail": "the one place father and son can speak aloud"
    }
   ],
   "beats": [
@@ -170,7 +338,14 @@
     "when": "opening",
     "role": "setting",
     "quote": "have survived by taking precautions such as laying sand paths",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:34",
+      "quote": "Too loud."
+     }
+    ]
    },
    {
     "order": 2,
@@ -178,56 +353,128 @@
     "when": "opening",
     "role": "trigger",
     "quote": "Beau is killed by a nearby alien before Lee can reach him",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:33",
+      "quote": "TOY BEEPING"
+     }
+    ]
    },
    {
     "order": 3,
-    "value": "birth in silence",
-    "when": "middle",
-    "quote": "rest of the family is away, Evelyn goes into labor.",
-    "confidence": "sourced"
+    "value": "noise draws creature to roof",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:19:22",
+    "quote": "GLASS SHATTERING",
+    "confidence": "observed"
    },
    {
     "order": 4,
-    "value": "creature enters the house",
+    "value": "father teaches the sound rule",
     "when": "middle",
-    "quote": "alerting a nearby alien which enters the house",
+    "source": "subtitles",
+    "at": "00:35:55",
+    "quote": "Big sounds ... not safe.",
     "confidence": "sourced"
    },
    {
     "order": 5,
+    "value": "birth in silence",
+    "when": "middle",
+    "quote": "rest of the family is away, Evelyn goes into labor.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:35",
+      "quote": "BABY COOING"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "fireworks as decoy",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:49:48",
+    "quote": "I need you ... to make a sound ... that's louder.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "creature enters the house",
+    "when": "middle",
+    "quote": "alerting a nearby alien which enters the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:43",
+      "quote": "CREATURE SCREECHING"
+     }
+    ]
+   },
+   {
+    "order": 8,
     "value": "children trapped in silo",
     "when": "late",
     "quote": "Marcus falls into the silo",
     "confidence": "sourced"
    },
    {
-    "order": 6,
+    "order": 9,
     "value": "father sacrifices himself",
     "when": "late",
     "role": "turn",
     "quote": "proceeds to yell to draw the alien's attention",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:00",
+      "quote": "I have always loved you."
+     }
+    ]
    },
    {
-    "order": 7,
+    "order": 10,
     "value": "weakness found and creature killed",
     "when": "ending",
     "role": "turn",
     "quote": "allowing Evelyn to kill it with Lee's pump shotgun",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:54",
+      "quote": "FEEDBACK WHINING"
+     }
+    ]
    },
    {
-    "order": 8,
+    "order": 11,
     "value": "family readies for more",
     "when": "ending",
     "quote": "putting a live shell in the chamber",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:23",
+      "quote": "ROARING AND SNARLING"
+     }
+    ]
    }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

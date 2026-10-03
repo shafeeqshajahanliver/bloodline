@@ -1,60 +1,545 @@
 {
  "film": "1960-house-of-usher",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "family curse", "detail": "the Usher bloodline", "quote": "the Usher family is afflicted by a cursed bloodline which has driven all their ancestors to madness", "confidence": "sourced"},
-   {"value": "house", "detail": "the mansion itself affected by the curse", "quote": "even affected the mansion itself, causing the surrounding countryside to become desolate", "confidence": "sourced"},
-   {"value": "woman buried alive", "detail": "Madeline, driven insane in her coffin", "quote": "goes insane from being buried alive, and breaks free", "confidence": "sourced"}
+   {
+    "value": "family curse",
+    "detail": "the Usher bloodline",
+    "quote": "the Usher family is afflicted by a cursed bloodline which has driven all their ancestors to madness",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:58",
+      "quote": "Because the Usher line is tainted, Mr. Winthrop."
+     }
+    ]
+   },
+   {
+    "value": "house",
+    "detail": "the mansion itself affected by the curse",
+    "quote": "even affected the mansion itself, causing the surrounding countryside to become desolate",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:06",
+      "quote": "The house itself is evil now."
+     }
+    ]
+   },
+   {
+    "value": "woman buried alive",
+    "detail": "Madeline, driven insane in her coffin",
+    "quote": "goes insane from being buried alive, and breaks free",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:08",
+      "quote": "scratching at the lid with bloody fingernails."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "inherited", "quote": "afflicted by a cursed bloodline which has driven all their ancestors to madness", "confidence": "sourced"}
+   {
+    "value": "inherited",
+    "quote": "afflicted by a cursed bloodline which has driven all their ancestors to madness",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:15",
+      "quote": "This house is centuries old. It was brought here from England. And with it every evil rooted in its stones."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to end the bloodline", "detail": "Roderick opposes the marriage to stop it spreading", "quote": "Roderick foresees the family evils being propagated into future generations with a marriage to Madeline", "confidence": "sourced"},
-   {"value": "revenge", "detail": "Madeline on Roderick, who buried her", "quote": "Madeline confronts Roderick and attacks him, throttling him to death", "confidence": "observed"}
+   {
+    "value": "to end the bloodline",
+    "detail": "Roderick opposes the marriage to stop it spreading",
+    "quote": "Roderick foresees the family evils being propagated into future generations with a marriage to Madeline",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:14",
+      "quote": "Our blight must be removed from this earth."
+     }
+    ]
+   },
+   {
+    "value": "revenge",
+    "detail": "Madeline on Roderick, who buried her",
+    "quote": "Madeline confronts Roderick and attacks him, throttling him to death",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "premature burial", "detail": "Roderick entombs his living sister", "quote": "Roderick knows that she is still alive, but convinces Philip that she is dead", "confidence": "sourced"}
+   {
+    "value": "premature burial",
+    "detail": "Roderick entombs his living sister",
+    "quote": "Roderick knows that she is still alive, but convinces Philip that she is dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:34",
+      "quote": "You lie! You buried her alive!"
+     }
+    ]
+   },
+   {
+    "value": "ancestral crimes",
+    "source": "subtitles",
+    "at": "00:44:39",
+    "quote": "smuggler, slave trader ... mass murderer.",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "visiting a fiancée", "quote": "Philip Winthrop (Mark Damon) travels to the House of Usher", "confidence": "sourced"},
-   {"value": "planned marriage", "quote": "desperate to get away from her brother, she agrees to leave with him", "confidence": "observed"}
+   {
+    "value": "visiting a fiancée",
+    "quote": "Philip Winthrop (Mark Damon) travels to the House of Usher",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:18",
+      "quote": "I have ridden all the way from Boston to see Madeline"
+     }
+    ]
+   },
+   {
+    "value": "planned marriage",
+    "quote": "desperate to get away from her brother, she agrees to leave with him",
+    "confidence": "observed"
+   }
   ],
   "rules": [
-   {"value": "curse passes through marriage", "quote": "Roderick foresees the family evils being propagated into future generations with a marriage to Madeline", "confidence": "sourced"}
+   {
+    "value": "curse passes through marriage",
+    "quote": "Roderick foresees the family evils being propagated into future generations with a marriage to Madeline",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:02",
+      "quote": "If she were to wed and bear children the Usher evil would spread"
+     }
+    ]
+   },
+   {
+    "value": "senses unbearably acute",
+    "source": "subtitles",
+    "at": "00:13:50",
+    "quote": "Both of us suffer from a morbid acuteness of the senses.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:32",
+      "quote": "Sound of any exaggerated degree cut into my brain like knives."
+     }
+    ]
+   },
+   {
+    "value": "house attacks the outsider",
+    "source": "subtitles",
+    "at": "00:46:32",
+    "quote": "Do you think that chandelier falling was an accident?",
+    "confidence": "observed"
+   }
   ],
   "who_suffers": [
-   {"value": "fiancé", "relation_to_threat": "lover", "detail": "Philip Winthrop", "quote": "to see his fiancée Madeline Usher (Myrna Fahey)", "confidence": "sourced"},
-   {"value": "siblings", "relation_to_threat": "family", "detail": "Madeline and Roderick Usher", "quote": "the two Ushers and Bristol are consumed by the falling house", "confidence": "sourced"},
-   {"value": "servant", "relation_to_threat": "community", "detail": "the butler Bristol", "quote": "the two Ushers and Bristol are consumed by the falling house", "confidence": "sourced"}
+   {
+    "value": "fiancé",
+    "relation_to_threat": "lover",
+    "detail": "Philip Winthrop",
+    "quote": "to see his fiancée Madeline Usher (Myrna Fahey)",
+    "confidence": "sourced"
+   },
+   {
+    "value": "siblings",
+    "relation_to_threat": "family",
+    "detail": "Madeline and Roderick Usher",
+    "quote": "the two Ushers and Bristol are consumed by the falling house",
+    "confidence": "sourced"
+   },
+   {
+    "value": "servant",
+    "relation_to_threat": "community",
+    "detail": "the butler Bristol",
+    "quote": "the two Ushers and Bristol are consumed by the falling house",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "house destroyed", "quote": "watches the burning house sink into the swampy land surrounding it", "confidence": "sourced"},
-   {"value": "bloodline ends", "quote": "consumed by the falling house, ending the Usher bloodline", "confidence": "sourced"},
-   {"value": "outsider sole survivor", "quote": "Philip alone escapes and watches the burning house sink", "confidence": "sourced"}
+   {
+    "value": "house destroyed",
+    "quote": "watches the burning house sink into the swampy land surrounding it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:52",
+      "quote": "Outside walls began to crack."
+     }
+    ]
+   },
+   {
+    "value": "bloodline ends",
+    "quote": "consumed by the falling house, ending the Usher bloodline",
+    "confidence": "sourced"
+   },
+   {
+    "value": "outsider sole survivor",
+    "quote": "Philip alone escapes and watches the burning house sink",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "swamp", "state": "murky", "when": "opening", "role": "setting", "quote": "a desolate mansion surrounded by a murky swamp", "confidence": "sourced"},
-   {"value": "coffin", "state": "sealed, then empty", "when": "middle", "role": "turn", "quote": "Philip rips open Madeline's coffin and finds it empty", "confidence": "sourced"},
-   {"value": "crypt", "state": "beneath the house", "when": "middle", "role": "setting", "quote": "have her entombed in the family crypt beneath the house", "confidence": "sourced"},
-   {"value": "secret passages", "state": "winding", "when": "late", "role": "setting", "quote": "He desperately searches for her in the winding secret passages of the house", "confidence": "sourced"},
-   {"value": "fire", "state": "from fallen coals", "when": "ending", "role": "threat", "quote": "the house, already aflame due to fallen coals from the fire, begins to collapse", "confidence": "sourced"}
+   {
+    "value": "swamp",
+    "state": "murky",
+    "when": "opening",
+    "role": "setting",
+    "quote": "a desolate mansion surrounded by a murky swamp",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:12",
+      "quote": "And then something crept across the land and blacked it."
+     }
+    ]
+   },
+   {
+    "value": "coffin",
+    "state": "sealed, then empty",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Philip rips open Madeline's coffin and finds it empty",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:08",
+      "quote": "scratching at the lid with bloody fingernails."
+     }
+    ]
+   },
+   {
+    "value": "crypt",
+    "state": "beneath the house",
+    "when": "middle",
+    "role": "setting",
+    "quote": "have her entombed in the family crypt beneath the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:34",
+      "quote": "See to the crypt, will you?"
+     }
+    ]
+   },
+   {
+    "value": "secret passages",
+    "state": "winding",
+    "when": "late",
+    "role": "setting",
+    "quote": "He desperately searches for her in the winding secret passages of the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:41",
+      "quote": "The house is honeycombed with secret passages."
+     }
+    ]
+   },
+   {
+    "value": "fire",
+    "state": "from fallen coals",
+    "when": "ending",
+    "role": "threat",
+    "quote": "the house, already aflame due to fallen coals from the fire, begins to collapse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:28",
+      "quote": "Do you think those coals jumping from the fire out to you"
+     }
+    ]
+   },
+   {
+    "value": "crack in the wall",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:20:09",
+    "quote": "that crack in the wall should be repaired?",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:52",
+      "quote": "Outside walls began to crack."
+     }
+    ]
+   },
+   {
+    "value": "falling chandelier",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:20:25",
+    "quote": "that chandelier to fall.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:32",
+      "quote": "Do you think that chandelier falling was an accident?"
+     }
+    ]
+   },
+   {
+    "value": "family portraits",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:43:52",
+    "quote": "Anthony Usher, thief, usurer",
+    "confidence": "sourced",
+    "detail": "Roderick names each ancestor's crime from their portraits",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:16",
+      "quote": "Francis Usher ... professional assassin."
+     }
+    ]
+   },
+   {
+    "value": "lute",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:15:40",
+    "quote": "STRUMS LUTE",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:13",
+      "quote": "LUTE PLAYING"
+     }
+    ]
+   },
+   {
+    "value": "boots removed",
+    "when": "opening",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:06:51",
+    "quote": "Your boots, sir.",
+    "confidence": "sourced",
+    "detail": "visitors must go softly because Roderick cannot bear sound",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:29",
+      "quote": "That's why your servant asked me to remove my boots."
+     }
+    ]
+   },
+   {
+    "value": "weeping voices",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:04:41",
+    "quote": "VOICES FAINTLY WEEPING",
+    "confidence": "observed",
+    "detail": "Philip's nightmare of the Usher dead",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:03",
+      "quote": "VOICES CRYING"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "arrival at the house", "when": "opening", "quote": "travels to the House of Usher, a desolate mansion surrounded by a murky swamp", "confidence": "sourced"},
-   {"order": 2, "value": "curse warning", "when": "early", "role": "omen", "quote": "telling the young man that the Usher family is afflicted by a cursed bloodline", "confidence": "sourced"},
-   {"order": 3, "value": "false death", "when": "middle", "role": "turn", "quote": "Madeline suddenly falls into catalepsy, a condition in which its sufferers appear dead", "confidence": "sourced"},
-   {"order": 4, "value": "buried alive", "when": "middle", "quote": "rushes to have her entombed in the family crypt beneath the house", "confidence": "sourced"},
-   {"order": 5, "value": "secret slips out", "when": "middle", "role": "clue", "quote": "the butler, Bristol (Harry Ellerbe), lets slip that Madeline suffered from catalepsy", "confidence": "sourced"},
-   {"order": 6, "value": "buried woman returns", "when": "late", "quote": "Madeline revives inside her sealed coffin, goes insane from being buried alive, and breaks free", "confidence": "sourced"},
-   {"order": 7, "value": "sibling kills sibling", "when": "ending", "quote": "Madeline confronts Roderick and attacks him, throttling him to death", "confidence": "sourced"},
-   {"order": 8, "value": "house collapses into swamp", "when": "ending", "quote": "Philip alone escapes and watches the burning house sink into the swampy land", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "arrival at the house",
+    "when": "opening",
+    "quote": "travels to the House of Usher, a desolate mansion surrounded by a murky swamp",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:48",
+      "quote": "I should like to see Miss Usher."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "visitor told to go softly",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:09:24",
+    "quote": "Mr. Winthrop... softly.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "curse warning",
+    "when": "early",
+    "role": "omen",
+    "quote": "telling the young man that the Usher family is afflicted by a cursed bloodline",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:58",
+      "quote": "Because the Usher line is tainted, Mr. Winthrop."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "ancestors' crimes recited",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:43:52",
+    "quote": "Anthony Usher, thief, usurer",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "false death",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Madeline suddenly falls into catalepsy, a condition in which its sufferers appear dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:46",
+      "quote": "Yes, she is dead."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "buried alive",
+    "when": "middle",
+    "quote": "rushes to have her entombed in the family crypt beneath the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:50",
+      "quote": "Mere passage from the flesh cannot undo centuries of evil."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "secret slips out",
+    "when": "middle",
+    "role": "clue",
+    "quote": "the butler, Bristol (Harry Ellerbe), lets slip that Madeline suffered from catalepsy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:32",
+      "quote": "You said catalepsies? - Did I, sir?"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "nightmare of the dead",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:04:41",
+    "quote": "VOICES FAINTLY WEEPING",
+    "confidence": "observed"
+   },
+   {
+    "order": 9,
+    "value": "buried woman returns",
+    "when": "late",
+    "quote": "Madeline revives inside her sealed coffin, goes insane from being buried alive, and breaks free",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:08",
+      "quote": "scratching at the lid with bloody fingernails."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "sibling kills sibling",
+    "when": "ending",
+    "quote": "Madeline confronts Roderick and attacks him, throttling him to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:01",
+      "quote": "MADELINE SCREAMS"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "house collapses into swamp",
+    "when": "ending",
+    "quote": "Philip alone escapes and watches the burning house sink into the swampy land",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:52",
+      "quote": "Outside walls began to crack."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

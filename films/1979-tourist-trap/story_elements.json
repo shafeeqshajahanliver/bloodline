@@ -1,56 +1,396 @@
 {
  "film": "1979-tourist-trap",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "psychokinetic killer", "detail": "Mr. Slausen, posing as his brother Davey", "quote": "an unknown killer with psychokinetic powers begins to murder them", "confidence": "sourced"},
-   {"value": "animated mannequins", "quote": "She is attacked by the masked killer and multiple mannequins", "confidence": "sourced"}
+   {
+    "value": "psychokinetic killer",
+    "detail": "Mr. Slausen, posing as his brother Davey",
+    "quote": "an unknown killer with psychokinetic powers begins to murder them",
+    "confidence": "sourced"
+   },
+   {
+    "value": "animated mannequins",
+    "quote": "She is attacked by the masked killer and multiple mannequins",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "lonely embittered man", "quote": "He seems embittered by the decline of his business since the construction of a new freeway", "confidence": "sourced"}
+   {
+    "value": "lonely embittered man",
+    "quote": "He seems embittered by the decline of his business since the construction of a new freeway",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:26",
+      "quote": "He's lonely."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "company", "detail": "turns victims into mannequins", "quote": "finds Eileen has been turned into a mannequin", "confidence": "observed"}
+   {
+    "value": "company",
+    "detail": "turns victims into mannequins",
+    "quote": "finds Eileen has been turned into a mannequin",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:28",
+      "quote": "Tell me you love me."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "car breaks down", "quote": "The others find Slausen's Lost Oasis, a tourist trap, but their vehicle mysteriously breaks down", "confidence": "sourced"},
-   {"value": "trespassing", "quote": "The girls apologize for trespassing", "confidence": "sourced"}
+   {
+    "value": "car breaks down",
+    "quote": "The others find Slausen's Lost Oasis, a tourist trap, but their vehicle mysteriously breaks down",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:14",
+      "quote": "I never had any trouble with this thing before."
+     }
+    ]
+   },
+   {
+    "value": "trespassing",
+    "quote": "The girls apologize for trespassing",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "objects move by themselves", "quote": "Various items in the room move of their own accord", "confidence": "sourced"},
-   {"value": "victims become mannequins", "quote": "Jerry arrives to rescue Molly, but he has unknowingly turned into a mannequin", "confidence": "sourced"}
+   {
+    "value": "objects move by themselves",
+    "quote": "Various items in the room move of their own accord",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:46",
+      "quote": "He pretends he doesn't even know about my power."
+     }
+    ]
+   },
+   {
+    "value": "victims become mannequins",
+    "quote": "Jerry arrives to rescue Molly, but he has unknowingly turned into a mannequin",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the dead kept as figures",
+    "source": "subtitles",
+    "at": "01:21:39",
+    "quote": "That's when I decided to make that figure of her, the woman in the museum.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "young friends", "relation_to_threat": "stranger", "quote": "The film follows a group of young people who stumble upon a roadside museum", "confidence": "sourced"}
+   {
+    "value": "young friends",
+    "relation_to_threat": "stranger",
+    "quote": "The film follows a group of young people who stumble upon a roadside museum",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat killed", "quote": "Traumatized, she kills Slausen with an axe", "confidence": "sourced"},
-   {"value": "survivor driven mad", "quote": "a now-insane Molly drives away with the mannequin versions of her friends", "confidence": "sourced"}
+   {
+    "value": "threat killed",
+    "quote": "Traumatized, she kills Slausen with an axe",
+    "confidence": "sourced"
+   },
+   {
+    "value": "survivor driven mad",
+    "quote": "a now-insane Molly drives away with the mannequin versions of her friends",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:25",
+      "quote": "This is not happening."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "flat tire", "when": "opening", "role": "trigger", "quote": "When their car gets a flat tire, Woody goes to find a gas station", "confidence": "sourced"},
-   {"value": "mannequins", "state": "cackling", "when": "opening", "role": "threat", "quote": "Various mannequins appear and cackle as objects fly off the shelves at him", "confidence": "sourced"},
-   {"value": "metal pipe", "when": "opening", "role": "weapon", "quote": "a metal pipe impales and kills him", "confidence": "sourced"},
-   {"value": "waxwork figures", "state": "animated", "when": "early", "role": "setting", "quote": "There, they see the tourist trap: animated waxwork figures", "confidence": "sourced"},
-   {"value": "grotesque mask", "when": "middle", "role": "threat", "quote": "a stranger wearing a grotesque mask appears behind her", "confidence": "sourced"},
-   {"value": "scarf", "state": "strangling", "when": "middle", "role": "weapon", "quote": "the scarf Eileen is wearing strangles her to death", "confidence": "sourced"},
-   {"value": "gun with blanks", "when": "late", "role": "turn", "quote": "the gun is loaded with blanks", "confidence": "sourced"},
-   {"value": "axe", "when": "ending", "role": "weapon", "quote": "she kills Slausen with an axe", "confidence": "sourced"}
+   {
+    "value": "flat tire",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "When their car gets a flat tire, Woody goes to find a gas station",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:58",
+      "quote": "It's Woody's tyre."
+     }
+    ]
+   },
+   {
+    "value": "mannequins",
+    "state": "cackling",
+    "when": "opening",
+    "role": "threat",
+    "quote": "Various mannequins appear and cackle as objects fly off the shelves at him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:37",
+      "quote": "Molly, it's only a mannequin."
+     }
+    ]
+   },
+   {
+    "value": "metal pipe",
+    "when": "opening",
+    "role": "weapon",
+    "quote": "a metal pipe impales and kills him",
+    "confidence": "sourced"
+   },
+   {
+    "value": "waxwork figures",
+    "state": "animated",
+    "when": "early",
+    "role": "setting",
+    "quote": "There, they see the tourist trap: animated waxwork figures",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:01",
+      "quote": "Yeah, my brother got pretty good at making those figures."
+     }
+    ]
+   },
+   {
+    "value": "grotesque mask",
+    "when": "middle",
+    "role": "threat",
+    "quote": "a stranger wearing a grotesque mask appears behind her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:38",
+      "quote": "He makes me wear these stupid masks."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:56:07",
+      "quote": "Looks like a doll's face."
+     }
+    ]
+   },
+   {
+    "value": "scarf",
+    "state": "strangling",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "the scarf Eileen is wearing strangles her to death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "gun with blanks",
+    "when": "late",
+    "role": "turn",
+    "quote": "the gun is loaded with blanks",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:46",
+      "quote": "with blanks. Bang, bang, you're dead."
+     }
+    ]
+   },
+   {
+    "value": "axe",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "she kills Slausen with an axe",
+    "confidence": "sourced"
+   },
+   {
+    "value": "photo album",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:30:20",
+    "quote": "Mr. Slausen's photo album. This must be his brother.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mannequin of dead wife",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:31:08",
+    "quote": "It seems this is the mannequin of his wife.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:37",
+      "quote": "Isn't my wife pretty? You remind me of her."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "car trouble on a remote road", "when": "opening", "quote": "Eileen and her boyfriend Woody are driving through a secluded rural area", "confidence": "sourced"},
-   {"order": 2, "value": "first death", "when": "opening", "quote": "He enters the back room but becomes trapped by an unseen force", "confidence": "sourced"},
-   {"order": 3, "value": "stranded at roadside attraction", "when": "early", "role": "setting", "quote": "The others find Slausen's Lost Oasis, a tourist trap", "confidence": "sourced"},
-   {"order": 4, "value": "victim turned into mannequin", "when": "middle", "role": "turn", "quote": "he goes to the house and finds Eileen has been turned into a mannequin", "confidence": "sourced"},
-   {"order": 5, "value": "captives in the basement", "when": "middle", "quote": "She later wakes up tied in the basement with Jerry", "confidence": "sourced"},
-   {"order": 6, "value": "helper revealed as killer", "when": "late", "role": "turn", "quote": "brushes off the rest of his mask with his hands, revealing himself to be Slausen", "confidence": "sourced"},
-   {"order": 7, "value": "final girl kills threat", "when": "ending", "quote": "Traumatized, she kills Slausen with an axe", "confidence": "sourced"},
-   {"order": 8, "value": "survivor leaves insane", "when": "ending", "quote": "a now-insane Molly drives away with the mannequin versions of her friends", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "car trouble on a remote road",
+    "when": "opening",
+    "quote": "Eileen and her boyfriend Woody are driving through a secluded rural area",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:02",
+      "quote": "Look at the size of that hole!"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "first death",
+    "when": "opening",
+    "quote": "He enters the back room but becomes trapped by an unseen force",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:16",
+      "quote": "Open the door!"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "stranded at roadside attraction",
+    "when": "early",
+    "role": "setting",
+    "quote": "The others find Slausen's Lost Oasis, a tourist trap",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:31",
+      "quote": "Welcome to Slausen Museum. Now gone out of business."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "warning to keep away from house",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:21:34",
+    "quote": "I don't think Mr. Slausen wants you fooling around out there.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "victim turned into mannequin",
+    "when": "middle",
+    "role": "turn",
+    "quote": "he goes to the house and finds Eileen has been turned into a mannequin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:12",
+      "quote": "Oh, your face is burning now. The plastic is getting tight."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "captives in the basement",
+    "when": "middle",
+    "quote": "She later wakes up tied in the basement with Jerry",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "helper revealed as killer",
+    "when": "late",
+    "role": "turn",
+    "quote": "brushes off the rest of his mask with his hands, revealing himself to be Slausen",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:46",
+      "quote": "with blanks. Bang, bang, you're dead."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "confession of old murders",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:20:29",
+    "quote": "I killed her.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "final girl kills threat",
+    "when": "ending",
+    "quote": "Traumatized, she kills Slausen with an axe",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "survivor leaves insane",
+    "when": "ending",
+    "quote": "a now-insane Molly drives away with the mannequin versions of her friends",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:46",
+      "quote": "Join us, join us..."
+     }
+    ]
+   }
+  ],
+  "wrong": [
+   {
+    "value": "murder of wife and brother",
+    "detail": "Slausen killed his wife and brother for an affair",
+    "source": "subtitles",
+    "at": "01:20:35",
+    "quote": "I killed the both of them. Her and my brother.",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

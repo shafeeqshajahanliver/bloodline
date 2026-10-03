@@ -1,64 +1,492 @@
 {
  "film": "1996-from-dusk-till-dawn",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "criminals", "detail": "the Gecko brothers", "quote": "fugitive bank robber Seth Gecko and his deranged brother Richie kill the clerk and a Texas Ranger", "confidence": "sourced"},
-   {"value": "vampires", "detail": "the strippers and staff of the Titty Twister", "quote": "The other strippers reveal themselves as vampires and begin feeding on the patrons", "confidence": "sourced"}
+   {
+    "value": "criminals",
+    "detail": "the Gecko brothers",
+    "quote": "fugitive bank robber Seth Gecko and his deranged brother Richie kill the clerk and a Texas Ranger",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:49",
+      "quote": "This bloody crime spree started just a week ago today."
+     }
+    ]
+   },
+   {
+    "value": "vampires",
+    "detail": "the strippers and staff of the Titty Twister",
+    "quote": "The other strippers reveal themselves as vampires and begin feeding on the patrons",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:36",
+      "quote": "I know what's goin' on. We've got a bunch of vampires out there..."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "ancient place", "detail": "a buried Aztec temple", "quote": "the Titty Twister is shown to be the top of a buried Aztec temple surrounded by abandoned trucks", "confidence": "sourced"}
+   {
+    "value": "ancient place",
+    "detail": "a buried Aztec temple",
+    "quote": "the Titty Twister is shown to be the top of a buried Aztec temple surrounded by abandoned trucks",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "hunger", "quote": "Santánico transforms into a monstrous vampire and leaps onto Richie to suck his blood", "confidence": "sourced"}
+   {
+    "value": "hunger",
+    "quote": "Santánico transforms into a monstrous vampire and leaps onto Richie to suck his blood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:34",
+      "quote": "Dinner... [Voice Distorting] is served."
+     }
+    ]
+   },
+   {
+    "value": "to enslave",
+    "detail": "the vampire tells Seth he will be her slave and dog",
+    "source": "subtitles",
+    "at": "01:02:30",
+    "quote": "You'll be my slave.",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "murder", "quote": "he finds that Richie has raped and murdered the hostage", "confidence": "sourced"}
+   {
+    "value": "murder",
+    "quote": "he finds that Richie has raped and murdered the hostage",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "obvious Richard raped her and killed her."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "a journey", "detail": "flight across the border", "quote": "kidnaps them and forces them to drive to Mexico", "confidence": "sourced"},
-   {"value": "spilled blood", "quote": "At the sight of Richie's bloody hand, Santánico transforms into a monstrous vampire", "confidence": "sourced"}
+   {
+    "value": "a journey",
+    "detail": "flight across the border",
+    "quote": "kidnaps them and forces them to drive to Mexico",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:43",
+      "quote": "I gotta figure out a way to get us across this goddamn border."
+     }
+    ]
+   },
+   {
+    "value": "spilled blood",
+    "quote": "At the sight of Richie's bloody hand, Santánico transforms into a monstrous vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "SLOW MOTION: Blood drips from Richard's shoulder. It falls to the floor, splattering."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "killed by wood through heart", "quote": "Seth reluctantly drives a stake into his heart", "confidence": "sourced"},
-   {"value": "bitten turn into vampires", "quote": "Sex Machine, unknown to the others, has been bitten and begins turning into a vampire", "confidence": "sourced"},
-   {"value": "destroyed by sunlight", "quote": "flood the room with sunlight, killing the vampires", "confidence": "sourced"},
-   {"value": "weak to the cross", "quote": "Kate kills the doorman by shoving her cross pendant down his throat", "confidence": "sourced"}
+   {
+    "value": "killed by wood through heart",
+    "quote": "Seth reluctantly drives a stake into his heart",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:27",
+      "quote": "Wooden stakes in the heart have been working pretty good so far."
+     }
+    ]
+   },
+   {
+    "value": "bitten turn into vampires",
+    "quote": "Sex Machine, unknown to the others, has been bitten and begins turning into a vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:39",
+      "quote": "He fuckin'bit me. He fuckin'bit me!"
+     }
+    ]
+   },
+   {
+    "value": "destroyed by sunlight",
+    "quote": "flood the room with sunlight, killing the vampires",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:30",
+      "quote": "Psychos do not explode when sunlight hits' em."
+     }
+    ]
+   },
+   {
+    "value": "weak to the cross",
+    "quote": "Kate kills the doorman by shoving her cross pendant down his throat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:10",
+      "quote": "Crosses hurt vampires. Do we have a cross?"
+     }
+    ]
+   },
+   {
+    "value": "blessed water as weapon",
+    "detail": "Jacob blesses tap water for squirt guns and balloons",
+    "source": "subtitles",
+    "at": "01:14:57",
+    "quote": "A servant of God can bless the tap water and make it a weapon.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "family", "relation_to_threat": "stranger", "detail": "pastor Jacob Fuller and his children", "quote": "Jacob Fuller, a widowed pastor doubting his faith, arrives at the motel with his teenaged children Scott and Kate", "confidence": "sourced"},
-   {"value": "hostages", "relation_to_threat": "stranger", "quote": "take a family as hostages to cross into Mexico", "confidence": "sourced"},
-   {"value": "bar patrons", "relation_to_threat": "stranger", "quote": "begin feeding on the patrons as the three dead employees arise", "confidence": "sourced"}
+   {
+    "value": "family",
+    "relation_to_threat": "stranger",
+    "detail": "pastor Jacob Fuller and his children",
+    "quote": "Jacob Fuller, a widowed pastor doubting his faith, arrives at the motel with his teenaged children Scott and Kate",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:34",
+      "quote": "Well... my faith is gone."
+     }
+    ]
+   },
+   {
+    "value": "hostages",
+    "relation_to_threat": "stranger",
+    "quote": "take a family as hostages to cross into Mexico",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bar patrons",
+    "relation_to_threat": "stranger",
+    "quote": "begin feeding on the patrons as the three dead employees arise",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "Carlos arrives and his bodyguards blast open the door and flood the room with sunlight, killing the vampires", "confidence": "sourced"},
-   {"value": "few survivors", "detail": "only Seth and Kate", "quote": "As vampires surround Kate and Seth, rays of morning light enter through holes in the walls", "confidence": "sourced"},
-   {"value": "threat's lair remains", "quote": "the top of a buried Aztec temple surrounded by abandoned trucks from various decades", "confidence": "observed"}
+   {
+    "value": "threat destroyed",
+    "quote": "Carlos arrives and his bodyguards blast open the door and flood the room with sunlight, killing the vampires",
+    "confidence": "sourced"
+   },
+   {
+    "value": "few survivors",
+    "detail": "only Seth and Kate",
+    "quote": "As vampires surround Kate and Seth, rays of morning light enter through holes in the walls",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat's lair remains",
+    "quote": "the top of a buried Aztec temple surrounded by abandoned trucks from various decades",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "blood", "state": "bloody hand", "when": "middle", "role": "trigger", "quote": "At the sight of Richie's bloody hand", "confidence": "sourced"},
-   {"value": "cross pendant", "when": "middle", "role": "weapon", "quote": "shoving her cross pendant down his throat", "confidence": "sourced"},
-   {"value": "wooden chandelier", "when": "middle", "role": "weapon", "quote": "shooting a wooden chandelier that impales her", "confidence": "sourced"},
-   {"value": "bats", "state": "swarming", "when": "middle", "role": "threat", "quote": "the survivors find the door barred and hear a swarm of bats outside", "confidence": "sourced"},
-   {"value": "cruciform shotgun", "when": "late", "role": "weapon", "quote": "Jacob covers their retreat with a cruciform shotgun", "confidence": "sourced"},
-   {"value": "sunlight", "state": "rays through holes", "when": "ending", "role": "weapon", "quote": "rays of morning light enter through holes in the walls, making the vampires back away", "confidence": "sourced"},
-   {"value": "aztec temple", "state": "buried", "when": "ending", "role": "setting", "quote": "the top of a buried Aztec temple", "confidence": "sourced"},
-   {"value": "abandoned trucks", "when": "ending", "role": "clue", "quote": "surrounded by abandoned trucks from various decades", "confidence": "sourced"}
+   {
+    "value": "blood",
+    "state": "bloody hand",
+    "when": "middle",
+    "role": "trigger",
+    "quote": "At the sight of Richie's bloody hand",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:12",
+      "quote": "He shot me in the fucking hand!"
+     },
+     {
+      "source": "screenplay",
+      "quote": "SLOW MOTION: Blood drips from Richard's shoulder. It falls to the floor, splattering."
+     }
+    ]
+   },
+   {
+    "value": "cross pendant",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "shoving her cross pendant down his throat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Chet goes to bite Kate, grabbing at her t-shirt, and sees her crucifix."
+     },
+     {
+      "source": "screenplay",
+      "quote": "Chet has swallowed the crucifix."
+     }
+    ]
+   },
+   {
+    "value": "wooden chandelier",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "shooting a wooden chandelier that impales her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bats",
+    "state": "swarming",
+    "when": "middle",
+    "role": "threat",
+    "quote": "the survivors find the door barred and hear a swarm of bats outside",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:18",
+      "quote": "[Bats Hovering]"
+     },
+     {
+      "source": "screenplay",
+      "quote": "Everybody listens to the bats SCRATCHING and clawing all along the walls, the roof and at the front door."
+     }
+    ]
+   },
+   {
+    "value": "cruciform shotgun",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Jacob covers their retreat with a cruciform shotgun",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Jacob is holding a cross made of sharp wooden stakes and the .45 with the cross bullets."
+     }
+    ]
+   },
+   {
+    "value": "sunlight",
+    "state": "rays through holes",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "rays of morning light enter through holes in the walls, making the vampires back away",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Sunlight hits a mirrored ball attached to the ceiling, sending hundreds of beams of sunlight scattering through the room."
+     }
+    ]
+   },
+   {
+    "value": "aztec temple",
+    "state": "buried",
+    "when": "ending",
+    "role": "setting",
+    "quote": "the top of a buried Aztec temple",
+    "confidence": "sourced"
+   },
+   {
+    "value": "abandoned trucks",
+    "when": "ending",
+    "role": "clue",
+    "quote": "surrounded by abandoned trucks from various decades",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hole in hand",
+    "state": "wounded, taped",
+    "when": "opening",
+    "role": "omen",
+    "detail": "Richie's shot hand, whose blood later sets the vampires off",
+    "source": "screenplay",
+    "quote": "Richard looks at Seth through the hole in his hand.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "holy water balloons",
+    "when": "late",
+    "role": "weapon",
+    "source": "screenplay",
+    "quote": "Scott and Kate holding Uzi squirt guns and water balloons draped down their chests on a belt like grenades.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "crime spree", "when": "opening", "quote": "kill the clerk and a Texas Ranger and destroy the building", "confidence": "sourced"},
-   {"order": 2, "value": "family taken hostage", "when": "early", "role": "trigger", "quote": "Seth scouts their motor home, kidnaps them and forces them to drive to Mexico", "confidence": "sourced"},
-   {"order": 3, "value": "arrival at isolated bar", "when": "early", "quote": "an all-night strip club in the desert called Titty Twister", "confidence": "sourced"},
-   {"order": 4, "value": "monsters revealed", "when": "middle", "role": "turn", "quote": "Santánico transforms into a monstrous vampire and leaps onto Richie to suck his blood", "confidence": "sourced"},
-   {"order": 5, "value": "loved one turned and killed", "when": "middle", "quote": "Richie rises from the dead", "confidence": "sourced"},
-   {"order": 6, "value": "promise to kill if turned", "when": "late", "quote": "makes Scott and Kate promise to kill him when he changes", "confidence": "sourced"},
-   {"order": 7, "value": "dawn saves survivors", "when": "ending", "quote": "flood the room with sunlight, killing the vampires", "confidence": "sourced"},
-   {"order": 8, "value": "lair revealed as ancient temple", "when": "ending", "role": "turn", "quote": "Kate drives away in the motor home as the Titty Twister is shown to be the top of a buried Aztec temple", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "crime spree",
+    "when": "opening",
+    "quote": "kill the clerk and a Texas Ranger and destroy the building",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:57",
+      "quote": "Be advised, suspects are armed and considered extremely dangerous. Use caution."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "family taken hostage",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Seth scouts their motor home, kidnaps them and forces them to drive to Mexico",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:46",
+      "quote": "So you help us get across the border without incident,"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "arrival at isolated bar",
+    "when": "early",
+    "quote": "an all-night strip club in the desert called Titty Twister",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:53",
+      "quote": "This place closes at dawn. Carlos is gonna meet us here sometime before dawn."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "seductive dance",
+    "when": "middle",
+    "role": "omen",
+    "detail": "Santanico Pandemonium dances before the monsters are revealed",
+    "source": "subtitles",
+    "at": "00:52:21",
+    "quote": "at the feet of Santanico Pandemonium!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "monsters revealed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Santánico transforms into a monstrous vampire and leaps onto Richie to suck his blood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:34",
+      "quote": "Dinner... [Voice Distorting] is served."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "loved one turned and killed",
+    "when": "middle",
+    "quote": "Richie rises from the dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:31",
+      "quote": "I just rammed a wooden stake into my brother's chest..."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "lost faith restored",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:15:57",
+    "quote": "Are you a faithless preacher, or are you a mean motherfuckin' servant of God?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "promise to kill if turned",
+    "when": "late",
+    "quote": "makes Scott and Kate promise to kill him when he changes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:47",
+      "quote": "I want you three to promise you'll take me down, no different from the rest."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "dawn saves survivors",
+    "when": "ending",
+    "quote": "flood the room with sunlight, killing the vampires",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:30",
+      "quote": "Psychos do not explode when sunlight hits' em."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "survivors part ways",
+    "when": "ending",
+    "detail": "Seth refuses to take Kate to El Rey",
+    "source": "subtitles",
+    "at": "01:37:12",
+    "quote": "I may be a bastard, but I'm not a fuckin' bastard.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "lair revealed as ancient temple",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Kate drives away in the motor home as the Titty Twister is shown to be the top of a buried Aztec temple",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

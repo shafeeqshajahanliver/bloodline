@@ -1,58 +1,406 @@
 {
  "film": "2014-it-follows",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Analysis"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Analysis"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "shape-shifting entity", "quote": "an entity that only she (and the previously afflicted) can see, which can take the appearance of any person", "confidence": "sourced"}
+   {
+    "value": "shape-shifting entity",
+    "quote": "an entity that only she (and the previously afflicted) can see, which can take the appearance of any person",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:27",
+      "quote": "It could look like someone you know or it could be a stranger in a crowd."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "unexplained", "quote": "I'm not personally that interested in where 'it' comes from", "confidence": "sourced"},
-   {"value": "passed on by sex", "quote": "he has passed something to her through intercourse", "confidence": "sourced"}
+   {
+    "value": "unexplained",
+    "quote": "I'm not personally that interested in where 'it' comes from",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:13",
+      "quote": "[Jeff] I met a girl at a bar."
+     }
+    ]
+   },
+   {
+    "value": "passed on by sex",
+    "quote": "he has passed something to her through intercourse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:27",
+      "quote": "and I passed it to you, back in the car."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to kill", "quote": "If it catches Jay, it will kill her and pursue the previous person to have passed it on", "confidence": "sourced"}
+   {
+    "value": "to kill",
+    "quote": "If it catches Jay, it will kill her and pursue the previous person to have passed it on",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "sexual encounter", "quote": "Hugh and Jay have sex for the first time in his car, after which he incapacitates her with chloroform", "confidence": "sourced"}
+   {
+    "value": "sexual encounter",
+    "quote": "Hugh and Jay have sex for the first time in his car, after which he incapacitates her with chloroform",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:59",
+      "quote": "Just sleep with someone as soon as you can. Just pass it along."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "walks, never stops", "quote": "It moves at a walking pace, but it always knows where she is and will be approaching at all times", "confidence": "sourced"},
-   {"value": "survive by passing it on", "quote": "the only option is to sleep with someone else", "confidence": "sourced"},
-   {"value": "moves back down the chain", "quote": "it will kill her and pursue the previous person to have passed it on", "confidence": "sourced"},
-   {"value": "visible only to cursed", "quote": "an entity that only she (and the previously afflicted) can see", "confidence": "sourced"}
+   {
+    "value": "walks, never stops",
+    "quote": "It moves at a walking pace, but it always knows where she is and will be approaching at all times",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:44",
+      "quote": "Jay, listen, wherever you are, it's somewhere walking straight for you."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:21:54",
+      "quote": "It's very slow, but it's not dumb."
+     }
+    ]
+   },
+   {
+    "value": "survive by passing it on",
+    "quote": "the only option is to sleep with someone else",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:59",
+      "quote": "Just sleep with someone as soon as you can. Just pass it along."
+     }
+    ]
+   },
+   {
+    "value": "moves back down the chain",
+    "quote": "it will kill her and pursue the previous person to have passed it on",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:03",
+      "quote": "If it kills you, it'll come after me."
+     }
+    ]
+   },
+   {
+    "value": "visible only to cursed",
+    "quote": "an entity that only she (and the previously afflicted) can see",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:17",
+      "quote": "Look, even though it's following you, I can still see it."
+     }
+    ]
+   },
+   {
+    "value": "avoid rooms with one exit",
+    "source": "subtitles",
+    "at": "00:21:54",
+    "quote": "Never go into a place that doesn't have more than one exit.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "distance buys time",
+    "source": "subtitles",
+    "at": "00:53:51",
+    "quote": "If you drive far enough, you can buy yourself some time to think,",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "young woman", "relation_to_threat": "lover", "detail": "Jay, cursed by her boyfriend", "quote": "It stars Maika Monroe as a young woman who is pursued by a supernatural entity", "confidence": "sourced"},
-   {"value": "friends", "relation_to_threat": "community", "quote": "Her sister Kelly and longtime friends Paul and Yara spend the night at Jay's house", "confidence": "sourced"},
-   {"value": "sexual partner", "relation_to_threat": "lover", "detail": "Greg", "quote": "the entity, in the form of Greg's half-naked mother, attacking and killing him", "confidence": "sourced"}
+   {
+    "value": "young woman",
+    "relation_to_threat": "lover",
+    "detail": "Jay, cursed by her boyfriend",
+    "quote": "It stars Maika Monroe as a young woman who is pursued by a supernatural entity",
+    "confidence": "sourced"
+   },
+   {
+    "value": "friends",
+    "relation_to_threat": "community",
+    "quote": "Her sister Kelly and longtime friends Paul and Yara spend the night at Jay's house",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sexual partner",
+    "relation_to_threat": "lover",
+    "detail": "Greg",
+    "quote": "the entity, in the form of Greg's half-naked mother, attacking and killing him",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat survives", "quote": "Jay and Paul walk down the street holding hands, while a figure in the distance walks behind them", "confidence": "sourced"},
-   {"value": "false resolution", "quote": "Jay approaches the pool and silently watches as it fills with blood", "confidence": "sourced"},
-   {"value": "cycle passes on", "quote": "Back at Jay's house, Jay and Paul have sex", "confidence": "observed"}
+   {
+    "value": "threat survives",
+    "quote": "Jay and Paul walk down the street holding hands, while a figure in the distance walks behind them",
+    "confidence": "sourced"
+   },
+   {
+    "value": "false resolution",
+    "quote": "Jay approaches the pool and silently watches as it fills with blood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:46",
+      "quote": "Do you feel any different?"
+     }
+    ]
+   },
+   {
+    "value": "cycle passes on",
+    "quote": "Back at Jay's house, Jay and Paul have sex",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "mutilated corpse on beach", "when": "opening", "role": "omen", "quote": "In the morning, her mutilated corpse remains on the beach", "confidence": "sourced"},
-   {"value": "girl in yellow dress", "state": "seen only by one", "when": "early", "role": "omen", "quote": "Hugh points out a girl in a yellow dress, whom Jay says she cannot see", "confidence": "sourced"},
-   {"value": "wheelchair", "state": "tied to", "when": "early", "role": "setting", "quote": "Jay wakes up tied to a wheelchair", "confidence": "sourced"},
-   {"value": "naked woman", "state": "slowly approaching", "when": "early", "role": "threat", "quote": "Hugh waits until a naked woman slowly approaches them", "confidence": "sourced"},
-   {"value": "hair", "state": "grabbed by invisible force", "when": "middle", "role": "threat", "quote": "witness Jay's hair being grabbed by an invisible force", "confidence": "sourced"},
-   {"value": "swimming pool", "state": "filling with blood", "when": "late", "role": "setting", "quote": "luring it into a swimming pool and dropping electrical devices into the water", "confidence": "sourced"},
-   {"value": "figure in distance", "state": "walking behind", "when": "ending", "role": "threat", "quote": "while a figure in the distance walks behind them", "confidence": "sourced"}
+   {
+    "value": "mutilated corpse on beach",
+    "when": "opening",
+    "role": "omen",
+    "quote": "In the morning, her mutilated corpse remains on the beach",
+    "confidence": "sourced"
+   },
+   {
+    "value": "girl in yellow dress",
+    "state": "seen only by one",
+    "when": "early",
+    "role": "omen",
+    "quote": "Hugh points out a girl in a yellow dress, whom Jay says she cannot see",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:56",
+      "quote": "How about the girl in the yellow dress?"
+     }
+    ]
+   },
+   {
+    "value": "wheelchair",
+    "state": "tied to",
+    "when": "early",
+    "role": "setting",
+    "quote": "Jay wakes up tied to a wheelchair",
+    "confidence": "sourced"
+   },
+   {
+    "value": "naked woman",
+    "state": "slowly approaching",
+    "when": "early",
+    "role": "threat",
+    "quote": "Hugh waits until a naked woman slowly approaches them",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hair",
+    "state": "grabbed by invisible force",
+    "when": "middle",
+    "role": "threat",
+    "quote": "witness Jay's hair being grabbed by an invisible force",
+    "confidence": "sourced"
+   },
+   {
+    "value": "swimming pool",
+    "state": "filling with blood",
+    "when": "late",
+    "role": "setting",
+    "quote": "luring it into a swimming pool and dropping electrical devices into the water",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:54",
+      "quote": "I haven't been to the pool since I was 14."
+     }
+    ]
+   },
+   {
+    "value": "figure in distance",
+    "state": "walking behind",
+    "when": "ending",
+    "role": "threat",
+    "quote": "while a figure in the distance walks behind them",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dostoevsky novel",
+    "when": "opening",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:06:53",
+    "quote": "What are you reading? The Idiot.",
+    "confidence": "sourced",
+    "detail": "Yara reads The Idiot throughout; its passage on certain death closes the film",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:23",
+      "quote": "but in knowing for certain that within an hour, then within ten minutes,"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "opening flight and death", "when": "opening", "quote": "Annie Marshall runs out of her house but denies to onlookers that she needs help", "confidence": "sourced"},
-   {"order": 2, "value": "curse passed by sex", "when": "early", "role": "trigger", "quote": "Hugh explains that he has passed something to her through intercourse", "confidence": "sourced"},
-   {"order": 3, "value": "rules explained", "when": "early", "quote": "It moves at a walking pace, but it always knows where she is", "confidence": "sourced"},
-   {"order": 4, "value": "flight to lake house", "when": "middle", "quote": "Greg drives Jay, Kelly, Yara, and Paul to his family's lake house", "confidence": "sourced"},
-   {"order": 5, "value": "curse passed on, new victim dies", "when": "late", "role": "turn", "quote": "To buy herself time, Jay has sex with Greg in the hospital", "confidence": "sourced"},
-   {"order": 6, "value": "trap in pool", "when": "late", "quote": "The group plans a last-ditch effort to kill the entity by luring it into a swimming pool", "confidence": "sourced"},
-   {"order": 7, "value": "threat still following", "when": "ending", "quote": "while a figure in the distance walks behind them", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "opening flight and death",
+    "when": "opening",
+    "quote": "Annie Marshall runs out of her house but denies to onlookers that she needs help",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:19",
+      "quote": "I just wanted you and Mum to know how much I love you."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "unseen girl in the crowd",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:10:56",
+    "quote": "How about the girl in the yellow dress?",
+    "confidence": "sourced",
+    "detail": "Hugh sees a figure Jay cannot during their trade game"
+   },
+   {
+    "order": 3,
+    "value": "curse passed by sex",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Hugh explains that he has passed something to her through intercourse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:27",
+      "quote": "and I passed it to you, back in the car."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "rules explained",
+    "when": "early",
+    "quote": "It moves at a walking pace, but it always knows where she is",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:38",
+      "quote": "It can look like anyone. But there's only one of it."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "flight to lake house",
+    "when": "middle",
+    "quote": "Greg drives Jay, Kelly, Yara, and Paul to his family's lake house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:28",
+      "quote": "[Greg] I love coming up here."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "curse passed on, new victim dies",
+    "when": "late",
+    "role": "turn",
+    "quote": "To buy herself time, Jay has sex with Greg in the hospital",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:27",
+      "quote": "[Greg] Hi. You've reached Greg. Leave a message."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "trap in pool",
+    "when": "late",
+    "quote": "The group plans a last-ditch effort to kill the entity by luring it into a swimming pool",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:03",
+      "quote": "[Jay] It's walking. It's just walking."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "reading on certain death",
+    "when": "ending",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:34:23",
+    "quote": "And the most terrible agony may not be in the wounds themselves",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "threat still following",
+    "when": "ending",
+    "quote": "while a figure in the distance walks behind them",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,66 +1,495 @@
 {
  "film": "1960-jigoku",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "hell", "detail": "Lord Enma's realm of torment", "quote": "Shirō enters Hell and is sentenced to punishment by Lord Enma (the king of Hell) for his sins", "confidence": "sourced"},
-   {"value": "amoral companion", "detail": "Tamura, who feels no guilt", "quote": "Tamura keeps driving, feels no guilt and says that it is Shirō's fault", "confidence": "sourced"},
-   {"value": "vengeful mother", "detail": "Kyōichi's mother", "quote": "Kyōichi's mother, who witnessed the incident, resolves to find and kill them", "confidence": "sourced"}
+   {
+    "value": "hell",
+    "detail": "Lord Enma's realm of torment",
+    "quote": "Shirō enters Hell and is sentenced to punishment by Lord Enma (the king of Hell) for his sins",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:42",
+      "quote": "I am Enma, King of Hell."
+     }
+    ]
+   },
+   {
+    "value": "amoral companion",
+    "detail": "Tamura, who feels no guilt",
+    "quote": "Tamura keeps driving, feels no guilt and says that it is Shirō's fault",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:01",
+      "quote": "That's right. I'm a demon. I'm the god of death."
+     }
+    ]
+   },
+   {
+    "value": "vengeful mother",
+    "detail": "Kyōichi's mother",
+    "quote": "Kyōichi's mother, who witnessed the incident, resolves to find and kill them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:10",
+      "quote": "You killed my son Kyoichi!"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "consequence of sin", "quote": "Shirō witnesses those from his life suffering for their wrongdoings", "confidence": "sourced"}
+   {
+    "value": "consequence of sin",
+    "quote": "Shirō witnesses those from his life suffering for their wrongdoings",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:31",
+      "quote": "Religion dreams of a world where sinners are punished after death for sins unpunished during life."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "revenge", "quote": "with Kyōichi's mother, plots revenge", "confidence": "sourced"},
-   {"value": "punishment", "quote": "those from his life suffering for their wrongdoings", "confidence": "observed"}
+   {
+    "value": "revenge",
+    "quote": "with Kyōichi's mother, plots revenge",
+    "confidence": "sourced"
+   },
+   {
+    "value": "punishment",
+    "quote": "those from his life suffering for their wrongdoings",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:50",
+      "quote": "Your sins outnumber the stones along the River Sanzu. You will suffer each and every torment of Hell."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "hit-and-run killing", "quote": "Tamura hits and kills yakuza gang leader, Kyōichi", "confidence": "sourced"},
-   {"value": "hidden complicity in murder", "detail": "each resident caused a death", "quote": "Tamura appears and reveals that each resident has some complicity in a murder", "confidence": "sourced"},
-   {"value": "adultery", "quote": "While Ito lies dying, Gōzō carries on an open affair with a mistress", "confidence": "sourced"}
+   {
+    "value": "hit-and-run killing",
+    "quote": "Tamura hits and kills yakuza gang leader, Kyōichi",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:08",
+      "quote": "There were no witnesses. The driver remains unknown."
+     }
+    ]
+   },
+   {
+    "value": "hidden complicity in murder",
+    "detail": "each resident caused a death",
+    "quote": "Tamura appears and reveals that each resident has some complicity in a murder",
+    "confidence": "sourced"
+   },
+   {
+    "value": "adultery",
+    "quote": "While Ito lies dying, Gōzō carries on an open affair with a mistress",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "a car accident", "quote": "Taking a side street at Shirō's request, Tamura hits and kills yakuza gang leader", "confidence": "sourced"}
+   {
+    "value": "a car accident",
+    "quote": "Taking a side street at Shirō's request, Tamura hits and kills yakuza gang leader",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "eternal repeated torment", "quote": "only to be revived to suffer anew", "confidence": "sourced"},
-   {"value": "no escape", "quote": "Tamura taunts Shirō, saying there is no escape from Hell", "confidence": "sourced"},
-   {"value": "one chance at redemption", "quote": "Lord Enma gives Shirō one chance to save his daughter", "confidence": "sourced"}
+   {
+    "value": "eternal repeated torment",
+    "quote": "only to be revived to suffer anew",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:22",
+      "quote": "This vortex of torment will whirl for all eternity."
+     }
+    ]
+   },
+   {
+    "value": "no escape",
+    "quote": "Tamura taunts Shirō, saying there is no escape from Hell",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:09",
+      "quote": "You who in life piled sin upon sin will be trapped in Hell forever."
+     }
+    ]
+   },
+   {
+    "value": "one chance at redemption",
+    "quote": "Lord Enma gives Shirō one chance to save his daughter",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:08",
+      "quote": "Save your child now, or she will suffer endless torment in Hell. You will be given this one final chance."
+     }
+    ]
+   },
+   {
+    "value": "selling one's conscience damns",
+    "source": "subtitles",
+    "at": "01:32:08",
+    "quote": "Those who sign away their conscience suffer all the torments of bottomless Hell.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "punishment fits the sin",
+    "source": "subtitles",
+    "at": "01:20:26",
+    "quote": "You implicated a man in a crime he didn't commit. Your hands will be cut off.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "guilty young man", "relation_to_threat": "self", "detail": "Shirō", "quote": "Though Tamura feels no guilt for the killing, Shirō does", "confidence": "sourced"},
-   {"value": "fiancée", "relation_to_threat": "lover", "detail": "Yukiko, killed in a crash while pregnant", "quote": "Yukiko, who reveals that she was pregnant with their child when she died", "confidence": "sourced"},
-   {"value": "whole community", "relation_to_threat": "community", "detail": "residents of the retirement community", "quote": "The residents die from consuming the tainted fish", "confidence": "sourced"},
-   {"value": "unborn child", "relation_to_threat": "family", "quote": "Shirō finds his baby daughter helplessly being tortured on a large wheel", "confidence": "sourced"}
+   {
+    "value": "guilty young man",
+    "relation_to_threat": "self",
+    "detail": "Shirō",
+    "quote": "Though Tamura feels no guilt for the killing, Shirō does",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fiancée",
+    "relation_to_threat": "lover",
+    "detail": "Yukiko, killed in a crash while pregnant",
+    "quote": "Yukiko, who reveals that she was pregnant with their child when she died",
+    "confidence": "sourced"
+   },
+   {
+    "value": "whole community",
+    "relation_to_threat": "community",
+    "detail": "residents of the retirement community",
+    "quote": "The residents die from consuming the tainted fish",
+    "confidence": "sourced"
+   },
+   {
+    "value": "unborn child",
+    "relation_to_threat": "family",
+    "quote": "Shirō finds his baby daughter helplessly being tortured on a large wheel",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "everyone dies", "quote": "In the realm of the living, everyone at the party is dead", "confidence": "sourced"},
-   {"value": "redemption implied", "quote": "implying that Shirō has success in saving his daughter", "confidence": "sourced"}
+   {
+    "value": "everyone dies",
+    "quote": "In the realm of the living, everyone at the party is dead",
+    "confidence": "sourced"
+   },
+   {
+    "value": "redemption implied",
+    "quote": "implying that Shirō has success in saving his daughter",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "car", "state": "hits a man", "when": "opening", "role": "trigger", "quote": "Tamura hits and kills yakuza gang leader, Kyōichi", "confidence": "sourced"},
-   {"value": "portrait of hell", "state": "painted, then burned", "when": "middle", "role": "omen", "quote": "a painter, Ensai, who is wanted for a crime in another city and is painting a portrait of Hell", "confidence": "sourced"},
-   {"value": "rope bridge", "when": "middle", "role": "setting", "quote": "meets with him on a rope bridge", "confidence": "sourced"},
-   {"value": "rancid fish", "state": "poisonous", "when": "late", "role": "weapon", "quote": "Gōzō has allowed cheap, rancid fish to be served to the residents", "confidence": "sourced"},
-   {"value": "train", "when": "late", "role": "weapon", "quote": "They soon kill themselves by leaping in front of a train", "confidence": "sourced"},
-   {"value": "river of the dead", "when": "late", "role": "setting", "quote": "floating away on the Sanzu River", "confidence": "sourced"},
-   {"value": "torture wheel", "when": "ending", "role": "threat", "quote": "being tortured on a large wheel", "confidence": "sourced"},
-   {"value": "lotus petals", "state": "falling", "when": "ending", "role": "symbol", "quote": "with lotus petals falling around them", "confidence": "sourced"}
+   {
+    "value": "car",
+    "state": "hits a man",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Tamura hits and kills yakuza gang leader, Kyōichi",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:44",
+      "quote": "Look out! Bastard! You hit me!"
+     }
+    ]
+   },
+   {
+    "value": "portrait of hell",
+    "state": "painted, then burned",
+    "when": "middle",
+    "role": "omen",
+    "quote": "a painter, Ensai, who is wanted for a crime in another city and is painting a portrait of Hell",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:10",
+      "quote": "I'm having a painting of Hell made for Jiganji Temple."
+     }
+    ]
+   },
+   {
+    "value": "rope bridge",
+    "when": "middle",
+    "role": "setting",
+    "quote": "meets with him on a rope bridge",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:19",
+      "quote": "Shiro, please meet me on the rope bridge."
+     }
+    ]
+   },
+   {
+    "value": "rancid fish",
+    "state": "poisonous",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Gōzō has allowed cheap, rancid fish to be served to the residents",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:33",
+      "quote": "Those fish were rancid!"
+     }
+    ]
+   },
+   {
+    "value": "train",
+    "when": "late",
+    "role": "weapon",
+    "quote": "They soon kill themselves by leaping in front of a train",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:43",
+      "quote": "The Yajimas threw themselves in front of the train!"
+     }
+    ]
+   },
+   {
+    "value": "river of the dead",
+    "when": "late",
+    "role": "setting",
+    "quote": "floating away on the Sanzu River",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:49",
+      "quote": "This is the bank of the River Sanzu, where children are held in limbo for having died before their parents."
+     }
+    ]
+   },
+   {
+    "value": "torture wheel",
+    "when": "ending",
+    "role": "threat",
+    "quote": "being tortured on a large wheel",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lotus petals",
+    "state": "falling",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "with lotus petals falling around them",
+    "confidence": "sourced"
+   },
+   {
+    "value": "stopped clock",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:08:31",
+    "quote": "Mrs. Yajima, your clock's stopped. They say that's a bad omen.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "piles of stones",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:05:40",
+    "quote": "The first pile of stones Is for their fathers",
+    "confidence": "sourced",
+    "detail": "the dead children's stone-stacking song on the bank of the Sanzu"
+   },
+   {
+    "value": "baby on a lotus leaf",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:11:11",
+    "quote": "so I set her on a lotus leaf on the river.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "engagement announced", "when": "opening", "quote": "A student, Shirō, is set to marry his girlfriend, Yukiko", "confidence": "sourced"},
-   {"order": 2, "value": "hit-and-run", "when": "opening", "role": "trigger", "quote": "Tamura hits and kills yakuza gang leader, Kyōichi", "confidence": "sourced"},
-   {"order": 3, "value": "loved one killed", "when": "early", "quote": "The vehicle crashes, killing Yukiko", "confidence": "sourced"},
-   {"order": 4, "value": "hidden sins revealed", "when": "middle", "role": "turn", "quote": "reveals that each resident has some complicity in a murder", "confidence": "sourced"},
-   {"order": 5, "value": "mass death", "when": "late", "quote": "Kyōichi's mother poisons the remaining residents' wine, killing them", "confidence": "sourced"},
-   {"order": 6, "value": "descent into hell", "when": "late", "role": "turn", "quote": "Shirō enters Hell and is sentenced to punishment by Lord Enma", "confidence": "sourced"},
-   {"order": 7, "value": "family secret revealed", "when": "late", "role": "turn", "quote": "Shirō is actually Ensai's son, and Sachiko is actually Ito's daughter", "confidence": "sourced"},
-   {"order": 8, "value": "attempt to save child", "when": "ending", "quote": "Shirō leaps onto the wheel, but cannot reach his daughter", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "opening sermon on death",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:02:02",
+    "quote": "A handsome youth in the morning, once lured by that merciless wind, is by dusk a heap of bones. In the end, all must die.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "engagement announced",
+    "when": "opening",
+    "quote": "A student, Shirō, is set to marry his girlfriend, Yukiko",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:50",
+      "quote": "By the way, congratulations. You and Yukiko are finally engaged."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "stopped clock omen",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:08:31",
+    "quote": "Mrs. Yajima, your clock's stopped. They say that's a bad omen.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "hit-and-run",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Tamura hits and kills yakuza gang leader, Kyōichi",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:44",
+      "quote": "Look out!"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "loved one killed",
+    "when": "early",
+    "quote": "The vehicle crashes, killing Yukiko",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "hidden sins revealed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "reveals that each resident has some complicity in a murder",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:47",
+      "quote": "Everyone here is complicit in murder."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "mass death",
+    "when": "late",
+    "quote": "Kyōichi's mother poisons the remaining residents' wine, killing them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:33",
+      "quote": "Those fish were rancid!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "descent into hell",
+    "when": "late",
+    "role": "turn",
+    "quote": "Shirō enters Hell and is sentenced to punishment by Lord Enma",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:42",
+      "quote": "Where am I? I am Enma, King of Hell."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "family secret revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Shirō is actually Ensai's son, and Sachiko is actually Ito's daughter",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:46",
+      "quote": "So Shiro is my son?"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "attempt to save child",
+    "when": "ending",
+    "quote": "Shirō leaps onto the wheel, but cannot reach his daughter",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:08",
+      "quote": "Save your child now, or she will suffer endless torment in Hell."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "epigraph returns",
+    "when": "ending",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:37:22",
+    "quote": "A human life Is naught But two score and ten years",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

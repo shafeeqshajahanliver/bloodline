@@ -1,60 +1,539 @@
 {
  "film": "1956-invasion-of-the-body-snatchers",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "alien duplicates", "detail": "pod people who replace humans", "quote": "each one capable of producing a visually identical copy of a human", "confidence": "sourced"},
-   {"value": "the community", "detail": "the whole town of Santa Mira already replaced", "quote": "Miles and Becky realize that all of Santa Mira's inhabitants have been replaced.", "confidence": "sourced"}
+   {
+    "value": "alien duplicates",
+    "detail": "pod people who replace humans",
+    "quote": "each one capable of producing a visually identical copy of a human",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the community",
+    "detail": "the whole town of Santa Mira already replaced",
+    "quote": "Miles and Becky realize that all of Santa Mira's inhabitants have been replaced.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:23",
+      "quote": "Jack, the whole town's been taken over by the pods."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "from outer space", "quote": "Alien plant spores have fallen from space and grown into large seed pods", "confidence": "sourced"}
+   {
+    "value": "from outer space",
+    "quote": "Alien plant spores have fallen from space and grown into large seed pods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:25",
+      "quote": "Seeds drifting through space for years took root in a farmer's field."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to replace people", "quote": "it assimilates the physical traits, memories, and personalities of each sleeping person placed near it until only the replacement is left", "confidence": "sourced"},
-   {"value": "to spread", "quote": "Chief Nick Grivett directs the others to take them to towns to be planted and used to replace their populations.", "confidence": "sourced"}
+   {
+    "value": "to replace people",
+    "quote": "it assimilates the physical traits, memories, and personalities of each sleeping person placed near it until only the replacement is left",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:59",
+      "quote": "and you're reborn into an untroubled world."
+     }
+    ]
+   },
+   {
+    "value": "to spread",
+    "quote": "Chief Nick Grivett directs the others to take them to towns to be planted and used to replace their populations.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:41",
+      "quote": "- First our town then all the towns around us."
+     }
+    ]
+   },
+   {
+    "value": "survival",
+    "detail": "the pod people say they have only the instinct to survive",
+    "source": "subtitles",
+    "at": "01:00:32",
+    "quote": "Then you have no feelings only the instinct to survive.",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "loved ones seem wrong", "quote": "patients suffering from the belief that their relatives have been replaced with identical-looking impostors", "confidence": "sourced"},
-   {"value": "discovering a body", "quote": "who has found a body in his basement. It has no features or fingerprints", "confidence": "sourced"}
+   {
+    "value": "loved ones seem wrong",
+    "quote": "patients suffering from the belief that their relatives have been replaced with identical-looking impostors",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:53",
+      "quote": "Memories or not he isn't my Uncle Ira."
+     }
+    ]
+   },
+   {
+    "value": "discovering a body",
+    "quote": "who has found a body in his basement. It has no features or fingerprints",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:47",
+      "quote": "- Its face, Miles, it's vague."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "must not sleep", "quote": "conclude that the townspeople are being replaced while asleep with copies", "confidence": "sourced"},
-   {"value": "copies lack emotion", "quote": "these duplicates, however, are devoid of all human emotion", "confidence": "sourced"},
-   {"value": "emotion betrays the human", "quote": "Becky screams at a near-traffic accident, exposing their humanity to the aliens", "confidence": "sourced"},
-   {"value": "authorities dismiss it", "quote": "Dan tells Miles that he is falling for the same hysteria", "confidence": "sourced"}
+   {
+    "value": "must not sleep",
+    "quote": "conclude that the townspeople are being replaced while asleep with copies",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:54",
+      "quote": "Suddenly, while you're asleep they'll absorb your minds, your memories"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:41:51",
+      "quote": "- Not until you fell asleep."
+     }
+    ]
+   },
+   {
+    "value": "copies lack emotion",
+    "quote": "these duplicates, however, are devoid of all human emotion",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:27",
+      "quote": "- There's no need for love."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:11:39",
+      "quote": "But, Miles, there's no emotion. None just the pretense of it."
+     }
+    ]
+   },
+   {
+    "value": "emotion betrays the human",
+    "quote": "Becky screams at a near-traffic accident, exposing their humanity to the aliens",
+    "confidence": "sourced"
+   },
+   {
+    "value": "authorities dismiss it",
+    "quote": "Dan tells Miles that he is falling for the same hysteria",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:51",
+      "quote": "- What do you think will psychiatry help?"
+     }
+    ]
+   },
+   {
+    "value": "the change is painless",
+    "source": "subtitles",
+    "at": "00:59:51",
+    "quote": "There's no pain.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "blank body takes a mind",
+    "source": "subtitles",
+    "at": "00:43:40",
+    "quote": "All that body in your cellar needed was a mind,",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "doctor", "relation_to_threat": "community", "detail": "Dr. Miles Bennell, the town doctor", "quote": "Little by little, a local doctor uncovers this \"quiet\" invasion and attempts to stop it.", "confidence": "sourced"},
-   {"value": "couple", "relation_to_threat": "community", "detail": "Miles and Becky", "quote": "Upon kissing her, he realizes that she has been replaced by a pod person.", "confidence": "sourced"},
-   {"value": "townspeople", "relation_to_threat": "community", "quote": "all of Santa Mira's inhabitants have been replaced", "confidence": "sourced"}
+   {
+    "value": "doctor",
+    "relation_to_threat": "community",
+    "detail": "Dr. Miles Bennell, the town doctor",
+    "quote": "Little by little, a local doctor uncovers this \"quiet\" invasion and attempts to stop it.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "couple",
+    "relation_to_threat": "community",
+    "detail": "Miles and Becky",
+    "quote": "Upon kissing her, he realizes that she has been replaced by a pod person.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "townspeople",
+    "relation_to_threat": "community",
+    "quote": "all of Santa Mira's inhabitants have been replaced",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "lover becomes threat", "quote": "he realizes that she has been replaced by a pod person. Becky sounds the alarm as Miles runs away.", "confidence": "sourced"},
-   {"value": "warning finally believed", "quote": "Dr. Hill now believes Miles's story. He alerts the police to block the roads in and out of Santa Mira", "confidence": "sourced"}
+   {
+    "value": "lover becomes threat",
+    "quote": "he realizes that she has been replaced by a pod person. Becky sounds the alarm as Miles runs away.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:36",
+      "quote": "- Stop acting like a fool, Miles, and accept us."
+     }
+    ]
+   },
+   {
+    "value": "warning finally believed",
+    "quote": "Dr. Hill now believes Miles's story. He alerts the police to block the roads in and out of Santa Mira",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:46",
+      "quote": "- Get on your radio and sound an all-points alarm."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "seed pods", "state": "growing copies", "when": "early", "role": "threat", "quote": "They find duplicates of themselves emerging from pods in Miles's greenhouse", "confidence": "sourced"},
-   {"value": "featureless body", "state": "taking on features", "when": "early", "role": "omen", "quote": "It has no features or fingerprints, but under their observation it takes on the features of Jack.", "confidence": "sourced"},
-   {"value": "basement", "when": "early", "role": "setting", "quote": "Becky's father was uncharacteristically emerging from his basement", "confidence": "sourced"},
-   {"value": "trucks", "state": "loaded with pods", "when": "late", "role": "threat", "quote": "He sees a farm with hundreds of pods being loaded onto trucks.", "confidence": "sourced"},
-   {"value": "mine", "state": "hiding place", "when": "late", "role": "setting", "quote": "The couple hide in a mine outside town.", "confidence": "sourced"},
-   {"value": "kiss", "state": "revealing", "when": "late", "role": "turn", "quote": "Upon kissing her, he realizes that she has been replaced by a pod person.", "confidence": "sourced"},
-   {"value": "telephone", "state": "lines busy", "when": "middle", "role": "omen", "quote": "the operator claims that all lines are busy and he cannot be put through", "confidence": "sourced"}
+   {
+    "value": "seed pods",
+    "state": "growing copies",
+    "when": "early",
+    "role": "threat",
+    "quote": "They find duplicates of themselves emerging from pods in Miles's greenhouse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:16",
+      "quote": "- They're like huge seedpods."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:19:31",
+      "quote": "They looked like, uh, great big seedpods."
+     }
+    ]
+   },
+   {
+    "value": "featureless body",
+    "state": "taking on features",
+    "when": "early",
+    "role": "omen",
+    "quote": "It has no features or fingerprints, but under their observation it takes on the features of Jack.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:56",
+      "quote": "It has all the features but no details no character, no lines."
+     }
+    ]
+   },
+   {
+    "value": "basement",
+    "when": "early",
+    "role": "setting",
+    "quote": "Becky's father was uncharacteristically emerging from his basement",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:40",
+      "quote": "I found another one in the cellar at Becky's house coming to life"
+     }
+    ]
+   },
+   {
+    "value": "trucks",
+    "state": "loaded with pods",
+    "when": "late",
+    "role": "threat",
+    "quote": "He sees a farm with hundreds of pods being loaded onto trucks.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:07",
+      "quote": "step over to truck one."
+     }
+    ]
+   },
+   {
+    "value": "mine",
+    "state": "hiding place",
+    "when": "late",
+    "role": "setting",
+    "quote": "The couple hide in a mine outside town.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:27",
+      "quote": "- Here's her sweater they must be in the tunnel."
+     }
+    ]
+   },
+   {
+    "value": "song on the radio",
+    "when": "late",
+    "role": "turn",
+    "detail": "music in the hills gives false hope of other humans",
+    "source": "subtitles",
+    "at": "01:12:30",
+    "quote": "- Miles, I've never heard anything so beautiful.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:36",
+      "quote": "- This is station KCAA,"
+     }
+    ]
+   },
+   {
+    "value": "greenhouses of pods",
+    "when": "late",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "01:14:37",
+    "quote": "They're growing thousands of pods in greenhouses.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "kiss",
+    "state": "revealing",
+    "when": "late",
+    "role": "turn",
+    "quote": "Upon kissing her, he realizes that she has been replaced by a pod person.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:03",
+      "quote": "until I had kissed Becky."
+     }
+    ]
+   },
+   {
+    "value": "missing fingerprints",
+    "state": "blank",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:21:37",
+    "quote": "These are blank.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:52",
+      "quote": "Now look we took his fingerprints."
+     }
+    ]
+   },
+   {
+    "value": "telephone",
+    "state": "lines busy",
+    "when": "middle",
+    "role": "omen",
+    "quote": "the operator claims that all lines are busy and he cannot be put through",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:25",
+      "quote": "Jack, they've got the phone."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "frame: man in custody tells story", "when": "opening", "quote": "a man named Dr. Miles Bennell is being held in custody. Miles recounts the events leading up to his arrest", "confidence": "sourced"},
-   {"order": 2, "value": "warning dismissed as hysteria", "when": "early", "quote": "Dr. Dan Kauffman assures Miles that these cases are merely a mass hysteria", "confidence": "sourced"},
-   {"order": 3, "value": "duplicate discovered", "when": "early", "role": "clue", "quote": "It has no features or fingerprints, but under their observation it takes on the features of Jack.", "confidence": "sourced"},
-   {"order": 4, "value": "whole town found taken", "when": "middle", "role": "turn", "quote": "Miles and Becky realize that all of Santa Mira's inhabitants have been replaced.", "confidence": "sourced"},
-   {"order": 5, "value": "friends turned, threat explained", "when": "middle", "quote": "say they and Teddy are now members of an extraterrestrial race", "confidence": "sourced"},
-   {"order": 6, "value": "chase", "when": "late", "quote": "An alarm is sounded and the couple flees.", "confidence": "sourced"},
-   {"order": 7, "value": "lover replaced", "when": "late", "role": "turn", "quote": "Upon kissing her, he realizes that she has been replaced by a pod person.", "confidence": "sourced"},
-   {"order": 8, "value": "proof arrives, alarm raised", "when": "ending", "quote": "the man had to be dug out from under a load of mysterious pods coming from Santa Mira", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "frame: man in custody tells story",
+    "when": "opening",
+    "quote": "a man named Dr. Miles Bennell is being held in custody. Miles recounts the events leading up to his arrest",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:21",
+      "quote": "I'm a doctor, too. I am not insane."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:02:51",
+      "quote": "Something evil had taken possession of the town."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "frightened child runs away",
+    "when": "opening",
+    "role": "omen",
+    "detail": "Jimmy Grimaldi runs from his mother, saying she is not his mother",
+    "source": "subtitles",
+    "at": "00:04:19",
+    "quote": "- Jimmy, come back here.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:10",
+      "quote": "- She's not my mother."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "warning dismissed as hysteria",
+    "when": "early",
+    "quote": "Dr. Dan Kauffman assures Miles that these cases are merely a mass hysteria",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:39",
+      "quote": "- The boy says his father isn't his father"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "duplicate discovered",
+    "when": "early",
+    "role": "clue",
+    "quote": "It has no features or fingerprints, but under their observation it takes on the features of Jack.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:40",
+      "quote": "- Waiting for the final finished face to be stamped onto it."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "whole town found taken",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Miles and Becky realize that all of Santa Mira's inhabitants have been replaced.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:23",
+      "quote": "Jack, the whole town's been taken over by the pods."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "friends turned, threat explained",
+    "when": "middle",
+    "quote": "say they and Teddy are now members of an extraterrestrial race",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:05",
+      "quote": "Sooner or later you'll have to go to sleep."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "chase",
+    "when": "late",
+    "quote": "An alarm is sounded and the couple flees.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:49",
+      "quote": "- Give up. You can't get away from us."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "lover replaced",
+    "when": "late",
+    "role": "turn",
+    "quote": "Upon kissing her, he realizes that she has been replaced by a pod person.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:25",
+      "quote": "- I went to sleep, Miles, and it happened."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "warning shouted at traffic",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:18:06",
+    "quote": "You're next.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "proof arrives, alarm raised",
+    "when": "ending",
+    "quote": "the man had to be dug out from under a load of mysterious pods coming from Santa Mira",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:31",
+      "quote": "They looked like, uh, great big seedpods."
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

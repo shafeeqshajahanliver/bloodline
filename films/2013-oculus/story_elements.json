@@ -1,62 +1,505 @@
 {
  "film": "2013-oculus",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "cursed object", "detail": "an antique mirror", "quote": "two young adult siblings who are convinced that an antique mirror is responsible for the death and misfortune", "confidence": "sourced"},
-   {"value": "possessed parents", "quote": "The fully possessed Alan eventually loads up a gun previously purchased by him and unchains Marie, with both parents attacking the children", "confidence": "sourced"}
+   {
+    "value": "cursed object",
+    "detail": "an antique mirror",
+    "quote": "two young adult siblings who are convinced that an antique mirror is responsible for the death and misfortune",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:29",
+      "quote": "Victims of the supernatural force that resides in that mirror."
+     }
+    ]
+   },
+   {
+    "value": "possessed parents",
+    "quote": "The fully possessed Alan eventually loads up a gun previously purchased by him and unchains Marie, with both parents attacking the children",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:35",
+      "quote": "I've met my demons, and they are many."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "unexplained", "quote": "Unbeknownst to them, the mirror supernaturally induces hallucinations", "confidence": "observed"}
+   {
+    "value": "unexplained",
+    "quote": "Unbeknownst to them, the mirror supernaturally induces hallucinations",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:54",
+      "quote": "The origin of the Lasser Glass is unknown,"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to collect victims", "quote": "Marisol and other victims of the mirror appear as ghosts", "confidence": "observed"}
+   {
+    "value": "to collect victims",
+    "quote": "Marisol and other victims of the mirror appear as ghosts",
+    "confidence": "observed"
+   }
   ],
   "trigger": [
-   {"value": "moving into a new home", "quote": "Alan Russell moves into a new house with his wife Marie", "confidence": "sourced"},
-   {"value": "taking an object", "quote": "Alan purchases an antique mirror to decorate his office", "confidence": "sourced"},
-   {"value": "deliberately confronting it", "quote": "she obtains access to the mirror and has it transported to the family home", "confidence": "sourced"}
+   {
+    "value": "moving into a new home",
+    "quote": "Alan Russell moves into a new house with his wife Marie",
+    "confidence": "sourced"
+   },
+   {
+    "value": "taking an object",
+    "quote": "Alan purchases an antique mirror to decorate his office",
+    "confidence": "sourced"
+   },
+   {
+    "value": "deliberately confronting it",
+    "quote": "she obtains access to the mirror and has it transported to the family home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:19",
+      "quote": "To keep our promise. And kill it."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "induces hallucinations", "quote": "the mirror supernaturally induces hallucinations", "confidence": "sourced"},
-   {"value": "plants wilt as warning", "quote": "When they notice the houseplants begin to wilt", "confidence": "sourced"},
-   {"value": "protects itself", "quote": "it tricks them, making them believe they are hitting the mirror when they are actually hitting the wall", "confidence": "sourced"},
-   {"value": "cannot leave its pull", "quote": "only for the pair to be drawn back by the mirror's influence", "confidence": "sourced"}
+   {
+    "value": "induces hallucinations",
+    "quote": "the mirror supernaturally induces hallucinations",
+    "confidence": "sourced"
+   },
+   {
+    "value": "plants wilt as warning",
+    "quote": "When they notice the houseplants begin to wilt",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:53",
+      "quote": "It wasn't just the plants it fed on, though."
+     }
+    ]
+   },
+   {
+    "value": "protects itself",
+    "quote": "it tricks them, making them believe they are hitting the mirror when they are actually hitting the wall",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:12",
+      "quote": "And I expect it'll be eager to defend itself."
+     }
+    ]
+   },
+   {
+    "value": "cannot leave its pull",
+    "quote": "only for the pair to be drawn back by the mirror's influence",
+    "confidence": "sourced"
+   },
+   {
+    "value": "timer must be reset",
+    "detail": "the anchor drops on the mirror unless someone resets the kitchen timer every 30 minutes",
+    "source": "subtitles",
+    "at": "00:35:50",
+    "quote": "If the timer is not manually reset every 30 minutes,",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "family", "relation_to_threat": "family", "quote": "Marie briefly comes to her senses, only to be shot dead by Alan", "confidence": "sourced"},
-   {"value": "siblings", "relation_to_threat": "family", "detail": "Kaylie and Tim", "quote": "Tim releases the anchor, unable to see that Kaylie is standing before the mirror", "confidence": "sourced"},
-   {"value": "fiancé", "relation_to_threat": "lover", "detail": "Michael", "quote": "she has stabbed Michael Dumont, her fiancé and one of her fail-safes", "confidence": "sourced"}
+   {
+    "value": "family",
+    "relation_to_threat": "family",
+    "quote": "Marie briefly comes to her senses, only to be shot dead by Alan",
+    "confidence": "sourced"
+   },
+   {
+    "value": "siblings",
+    "relation_to_threat": "family",
+    "detail": "Kaylie and Tim",
+    "quote": "Tim releases the anchor, unable to see that Kaylie is standing before the mirror",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fiancé",
+    "relation_to_threat": "lover",
+    "detail": "Michael",
+    "quote": "she has stabbed Michael Dumont, her fiancé and one of her fail-safes",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "cycle repeats", "quote": "The police arrive and arrest Tim, who is hysterical, just as they did when he was younger", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "inadvertently kills her instead of destroying it", "confidence": "sourced"},
-   {"value": "victim becomes ghost", "quote": "Tim's adult incarnation sees Kaylie's ghost standing in the house with his parents", "confidence": "sourced"}
+   {
+    "value": "cycle repeats",
+    "quote": "The police arrive and arrest Tim, who is hysterical, just as they did when he was younger",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:14",
+      "quote": "Don't forget our promise!"
+     }
+    ]
+   },
+   {
+    "value": "threat survives",
+    "quote": "inadvertently kills her instead of destroying it",
+    "confidence": "sourced"
+   },
+   {
+    "value": "victim becomes ghost",
+    "quote": "Tim's adult incarnation sees Kaylie's ghost standing in the house with his parents",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "mirror", "state": "antique, cracked", "when": "opening", "role": "threat", "quote": "causing a small crack in the corner of the mirror in the process", "confidence": "sourced"},
-   {"value": "mirrors for eyes", "when": "early", "role": "threat", "quote": "a mysterious and ghostly woman named Marisol Chavez who has mirrors in place of eyes", "confidence": "sourced"},
-   {"value": "decaying body", "state": "hallucinated", "when": "early", "role": "omen", "quote": "Marie is haunted by visions of her own body decaying", "confidence": "sourced"},
-   {"value": "dying plants", "when": "middle", "role": "omen", "quote": "All of the plants in the house die", "confidence": "sourced"},
-   {"value": "dog", "state": "disappeared", "when": "middle", "role": "omen", "quote": "their family dog Mason disappears after being shut in the office with the mirror", "confidence": "sourced"},
-   {"value": "anchor", "state": "kill switch", "when": "early", "role": "weapon", "quote": "an anchor attached to the ceiling on a pivot, positioned to swing down and smash the mirror", "confidence": "sourced"},
-   {"value": "surveillance cameras", "when": "early", "role": "clue", "quote": "places it in a room filled with surveillance cameras", "confidence": "sourced"},
-   {"value": "chains", "when": "middle", "quote": "finds her chained to the wall, acting like an animal", "confidence": "sourced"}
+   {
+    "value": "mirror",
+    "state": "antique, cracked",
+    "when": "opening",
+    "role": "threat",
+    "quote": "causing a small crack in the corner of the mirror in the process",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:28",
+      "quote": "is a gorgeous antique mirror, recovered from the Levesque Estate."
+     }
+    ]
+   },
+   {
+    "value": "mirrors for eyes",
+    "when": "early",
+    "role": "threat",
+    "quote": "a mysterious and ghostly woman named Marisol Chavez who has mirrors in place of eyes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:57",
+      "quote": "Who was that lady in your office today?"
+     },
+     {
+      "source": "screenplay",
+      "quote": "Over Tim's shoulder, he sees the watching silver eyes of the spectral audience of the mirror's previous victims."
+     }
+    ]
+   },
+   {
+    "value": "bitten fingernails",
+    "state": "chewed raw",
+    "when": "early",
+    "role": "omen",
+    "detail": "Alan chews his nails to the quick as the mirror takes hold",
+    "source": "subtitles",
+    "at": "00:21:49",
+    "quote": "don't ever chew your nails like your father.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Each finger is CHEWED RAW, no nail whatsoever, with fresh and scabbed blood encrusted."
+     }
+    ]
+   },
+   {
+    "value": "decaying body",
+    "state": "hallucinated",
+    "when": "early",
+    "role": "omen",
+    "quote": "Marie is haunted by visions of her own body decaying",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Her face looks sunken, pale. Her stomach seems to protrude too much."
+     }
+    ]
+   },
+   {
+    "value": "dying plants",
+    "when": "middle",
+    "role": "omen",
+    "quote": "All of the plants in the house die",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:59",
+      "quote": "We've lost the ficus and the blooming plants."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:15:06",
+      "quote": "A dead plant."
+     }
+    ]
+   },
+   {
+    "value": "dog",
+    "state": "disappeared",
+    "when": "middle",
+    "role": "omen",
+    "quote": "their family dog Mason disappears after being shut in the office with the mirror",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:22",
+      "quote": "There's something wrong with the dog, Alan. He bit me."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:43:52",
+      "quote": "Mom says Mason's grounded."
+     }
+    ]
+   },
+   {
+    "value": "anchor",
+    "state": "kill switch",
+    "when": "early",
+    "role": "weapon",
+    "quote": "an anchor attached to the ceiling on a pivot, positioned to swing down and smash the mirror",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:30",
+      "quote": "Yacht anchor. Kill switch."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:35:38",
+      "quote": "You're looking at a 20-pound Danforth anchor."
+     }
+    ]
+   },
+   {
+    "value": "kitchen timer",
+    "state": "ticking",
+    "when": "early",
+    "role": "weapon",
+    "detail": "the mechanical timer that releases the anchor",
+    "source": "subtitles",
+    "at": "00:35:44",
+    "quote": "a spring pin lock connected to a mechanical kitchen timer.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:09",
+      "quote": "(TIMER BUZZING LOUDLY)"
+     }
+    ]
+   },
+   {
+    "value": "surveillance cameras",
+    "when": "early",
+    "role": "clue",
+    "quote": "places it in a room filled with surveillance cameras",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:27",
+      "quote": "There are three cameras, each on its own independent power circuit,"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:27:42",
+      "quote": "Don't ever turn off a camera."
+     }
+    ]
+   },
+   {
+    "value": "light bulb bitten like an apple",
+    "state": "hallucination",
+    "when": "middle",
+    "role": "threat",
+    "detail": "Kaylie bites into a light bulb believing it is her apple",
+    "source": "screenplay",
+    "quote": "SEEING HER HALF EATEN APPLE IS STILL ON THE FLOOR. IT IS THE LIGHT BULB THAT IS MISSING.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "chains",
+    "when": "middle",
+    "quote": "finds her chained to the wall, acting like an animal",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "family moves in", "when": "opening", "quote": "Alan Russell moves into a new house with his wife Marie, 10-year-old son Tim, and 12-year-old daughter Kaylie", "confidence": "sourced"},
-   {"order": 2, "value": "survivor sets a trap", "when": "early", "role": "trigger", "quote": "Kaylie intends to destroy the mirror, but first wants to document its power", "confidence": "sourced"},
-   {"order": 3, "value": "parents go mad", "when": "middle", "quote": "Over time back in 2002, the parents become psychotic", "confidence": "sourced"},
-   {"order": 4, "value": "parents attack children", "when": "middle", "quote": "both parents attacking the children", "confidence": "sourced"},
-   {"order": 5, "value": "son forced to kill father", "when": "middle", "role": "turn", "quote": "kills himself by forcing Tim to pull the trigger of the gun and shoot him", "confidence": "sourced"},
-   {"order": 6, "value": "past and present merge", "when": "late", "quote": "the past and the present merging into each other", "confidence": "sourced"},
-   {"order": 7, "value": "brother kills sister", "when": "ending", "role": "turn", "quote": "Tim releases the anchor, unable to see that Kaylie is standing before the mirror, and inadvertently kills her", "confidence": "sourced"},
-   {"order": 8, "value": "arrest repeats", "when": "ending", "quote": "The police arrive and arrest Tim, who is hysterical, just as they did when he was younger", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "survivor's dream of the shooting",
+    "when": "opening",
+    "role": "omen",
+    "detail": "Tim describes his recurring dream to his psychiatrist before release",
+    "source": "subtitles",
+    "at": "00:02:25",
+    "quote": "And I fired. As many times as I've had this dream...",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "cursed object auctioned",
+    "when": "opening",
+    "role": "trigger",
+    "source": "subtitles",
+    "at": "00:03:33",
+    "quote": "The Lasser Glass is a well-traveled gem.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "family moves in",
+    "when": "opening",
+    "quote": "Alan Russell moves into a new house with his wife Marie, 10-year-old son Tim, and 12-year-old daughter Kaylie",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Tim turns a corner and sees MOVERS loading in boxes and furniture to the family's new home."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "survivor sets a trap",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Kaylie intends to destroy the mirror, but first wants to document its power",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:26",
+      "quote": "is to prove that the object behind me, the Lasser Glass, is home to an observable, predictable supernatural force."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "object's history recited",
+    "when": "early",
+    "role": "clue",
+    "detail": "Kaylie lists the mirror's victims back to 1754",
+    "source": "subtitles",
+    "at": "00:27:59",
+    "quote": "but the trail starts in London in 1754.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "parents go mad",
+    "when": "middle",
+    "quote": "Over time back in 2002, the parents become psychotic",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "parents attack children",
+    "when": "middle",
+    "quote": "both parents attacking the children",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "son forced to kill father",
+    "when": "middle",
+    "role": "turn",
+    "quote": "kills himself by forcing Tim to pull the trigger of the gun and shoot him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:25",
+      "quote": "(LOUD GUNSHOT)"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "past and present merge",
+    "when": "late",
+    "quote": "the past and the present merging into each other",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "brother kills sister",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Tim releases the anchor, unable to see that Kaylie is standing before the mirror, and inadvertently kills her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:36",
+      "quote": "(WET THUDDING)"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "children's vow of revenge",
+    "when": "ending",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:36:08",
+    "quote": "I want you to promise me, that when we're big and we're strong, we will make this right.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 12,
+    "value": "arrest repeats",
+    "when": "ending",
+    "quote": "The police arrive and arrest Tim, who is hysterical, just as they did when he was younger",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:57",
+      "quote": "It wasn't me. It was the mirror!"
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

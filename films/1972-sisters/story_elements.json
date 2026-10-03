@@ -1,58 +1,458 @@
 {
  "film": "1972-sisters",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Analysis"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Analysis"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "split personality", "detail": "Danielle's violent \"Dominique\" personality", "quote": "This causes Danielle to snap and create a split personality representing her sister", "confidence": "sourced"},
-   {"value": "the self", "quote": "Whenever Danielle has a sexual experience, the violent \"Dominique\" personality takes over", "confidence": "observed"}
+   {
+    "value": "split personality",
+    "detail": "Danielle's violent \"Dominique\" personality",
+    "quote": "This causes Danielle to snap and create a split personality representing her sister",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:24",
+      "quote": "Dominique. What have you done?"
+     }
+    ]
+   },
+   {
+    "value": "the self",
+    "quote": "Whenever Danielle has a sexual experience, the violent \"Dominique\" personality takes over",
+    "confidence": "observed"
+   }
   ],
   "origin": [
-   {"value": "grief over a dead twin", "quote": "However, Dominique dies during the procedure, much to Danielle's horror", "confidence": "sourced"}
+   {
+    "value": "grief over a dead twin",
+    "quote": "However, Dominique dies during the procedure, much to Danielle's horror",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:31",
+      "quote": "Because we are twins and today is our birthday ..."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to punish sexuality", "quote": "Whenever Danielle has a sexual experience, the violent \"Dominique\" personality takes over", "confidence": "observed"}
+   {
+    "value": "to punish sexuality",
+    "quote": "Whenever Danielle has a sexual experience, the violent \"Dominique\" personality takes over",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "abuse of a sibling", "detail": "Dominique drugged so the couple could have sex", "quote": "Dominique is drugged unconscious against her will by Emil at Danielle's request so that the couple are uninterrupted", "confidence": "sourced"},
-   {"value": "violent separation of twins", "quote": "Emil arranges for a surgeon to separate Dominique from Danielle", "confidence": "sourced"}
+   {
+    "value": "abuse of a sibling",
+    "detail": "Dominique drugged so the couple could have sex",
+    "quote": "Dominique is drugged unconscious against her will by Emil at Danielle's request so that the couple are uninterrupted",
+    "confidence": "sourced"
+   },
+   {
+    "value": "violent separation of twins",
+    "quote": "Emil arranges for a surgeon to separate Dominique from Danielle",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:57",
+      "quote": "Dominique Blanchion had died on the operating table."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "witnessing a murder", "quote": "he tries to alert a neighbor in the apartment across the way by writing \"help\" in his own blood on a window", "confidence": "sourced"},
-   {"value": "sexual encounter", "quote": "After dinner, they retire to her Staten Island apartment to have sex", "confidence": "sourced"}
+   {
+    "value": "witnessing a murder",
+    "quote": "he tries to alert a neighbor in the apartment across the way by writing \"help\" in his own blood on a window",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:54",
+      "quote": "He wrote \"help\" on this window in his own blood."
+     }
+    ]
+   },
+   {
+    "value": "sexual encounter",
+    "quote": "After dinner, they retire to her Staten Island apartment to have sex",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "triggered by sex", "quote": "Whenever Danielle has a sexual experience, the violent \"Dominique\" personality takes over", "confidence": "sourced"},
-   {"value": "held back by pills", "quote": "The pills she took kept Dominique at bay", "confidence": "sourced"}
+   {
+    "value": "triggered by sex",
+    "quote": "Whenever Danielle has a sexual experience, the violent \"Dominique\" personality takes over",
+    "confidence": "sourced"
+   },
+   {
+    "value": "held back by pills",
+    "quote": "The pills she took kept Dominique at bay",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:47",
+      "quote": "I have only two pills left. Please hurry."
+     }
+    ]
+   },
+   {
+    "value": "hypnotic suggestion",
+    "source": "subtitles",
+    "at": "00:21:40",
+    "quote": "You must do as I tell you.",
+    "confidence": "observed"
+   }
   ],
   "who_suffers": [
-   {"value": "lover", "relation_to_threat": "lover", "detail": "Philip", "quote": "When he returns, he is stabbed to death by the crazed Dominique", "confidence": "sourced"},
-   {"value": "investigator", "relation_to_threat": "stranger", "detail": "Grace, a reporter", "quote": "Certain that Danielle is hiding the murderer, Grace persuades her editor to let her investigate the story", "confidence": "sourced"},
-   {"value": "husband", "relation_to_threat": "family", "detail": "Emil", "quote": "she slashes him in the groin with a scalpel and he bleeds to death", "confidence": "sourced"}
+   {
+    "value": "lover",
+    "relation_to_threat": "lover",
+    "detail": "Philip",
+    "quote": "When he returns, he is stabbed to death by the crazed Dominique",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:24",
+      "quote": "[Philip Screaming] No!"
+     }
+    ]
+   },
+   {
+    "value": "investigator",
+    "relation_to_threat": "stranger",
+    "detail": "Grace, a reporter",
+    "quote": "Certain that Danielle is hiding the murderer, Grace persuades her editor to let her investigate the story",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:01",
+      "quote": "Get her in the room."
+     }
+    ]
+   },
+   {
+    "value": "husband",
+    "relation_to_threat": "family",
+    "detail": "Emil",
+    "quote": "she slashes him in the groin with a scalpel and he bleeds to death",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "killer caught", "quote": "Detective Kelly arrests Danielle, who denies knowledge of the murders and says that her sister is dead", "confidence": "sourced"},
-   {"value": "witness silenced", "quote": "Grace, who is still under Emil's hypnotic spell, repeating lines that he fed her to deny there was a murder", "confidence": "sourced"}
+   {
+    "value": "killer caught",
+    "quote": "Detective Kelly arrests Danielle, who denies knowledge of the murders and says that her sister is dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:03",
+      "quote": "Are you prepared to confess to the murder of your husband Emil Breton?"
+     }
+    ]
+   },
+   {
+    "value": "witness silenced",
+    "quote": "Grace, who is still under Emil's hypnotic spell, repeating lines that he fed her to deny there was a murder",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:53",
+      "quote": "All I know is there was no body because there was no murder!"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "birthday cake", "when": "opening", "role": "omen", "quote": "picks up a birthday cake at a bakery on his way back", "confidence": "sourced"},
-   {"value": "blood on a window", "state": "written \"help\"", "when": "opening", "role": "clue", "quote": "writing \"help\" in his own blood on a window", "confidence": "sourced"},
-   {"value": "sofa bed", "state": "hiding a body", "when": "early", "role": "clue", "quote": "hide Philip's body by folding it inside a sofa bed", "confidence": "sourced"},
-   {"value": "scalpel", "when": "ending", "role": "weapon", "quote": "she slashes him in the groin with a scalpel and he bleeds to death", "confidence": "sourced"},
-   {"value": "conjoined twins", "when": "middle", "role": "clue", "quote": "a thick file from the Loisel Institute on the Blanchion Twins, Canada's first conjoined twins", "confidence": "sourced"}
+   {
+    "value": "birthday cake",
+    "when": "opening",
+    "role": "omen",
+    "quote": "picks up a birthday cake at a bakery on his way back",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:40",
+      "quote": "Happy birthday to Dominique and Danielle."
+     }
+    ]
+   },
+   {
+    "value": "blood on a window",
+    "state": "written \"help\"",
+    "when": "opening",
+    "role": "clue",
+    "quote": "writing \"help\" in his own blood on a window",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:54",
+      "quote": "He wrote \"help\" on this window in his own blood."
+     }
+    ]
+   },
+   {
+    "value": "sofa bed",
+    "state": "hiding a body",
+    "when": "early",
+    "role": "clue",
+    "quote": "hide Philip's body by folding it inside a sofa bed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:43",
+      "quote": "The body is in the couch!"
+     }
+    ]
+   },
+   {
+    "value": "scalpel",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "she slashes him in the groin with a scalpel and he bleeds to death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "conjoined twins",
+    "when": "middle",
+    "role": "clue",
+    "quote": "a thick file from the Loisel Institute on the Blanchion Twins, Canada's first conjoined twins",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:52",
+      "quote": "A complete file on the Blanchion Twins."
+     }
+    ]
+   },
+   {
+    "value": "voyeur game show",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:02:54",
+    "quote": "It's Peeping Toms!",
+    "confidence": "sourced",
+    "detail": "the film opens on a TV prank show in which Danielle plays a blind girl undressing",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:41",
+      "quote": "A blind girl, that is."
+     }
+    ]
+   },
+   {
+    "value": "prize cutlery",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:05:45",
+    "quote": "this complete set of Reynolds stainless steel cutlery.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:28",
+      "quote": "I-I have brought my own cutlery."
+     }
+    ]
+   },
+   {
+    "value": "pills",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:21:07",
+    "quote": "I have no more of these pills.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "documentary film",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:00:05",
+    "quote": "Conjoined twins, called Siamese,",
+    "confidence": "sourced",
+    "detail": "a newsreel about the Blanchion twins"
+   },
+   {
+    "value": "sideshow taunts",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:17:33",
+    "quote": "the freak. the freak",
+    "confidence": "sourced",
+    "detail": "echoing voices in Grace's hypnotic vision of the twins' past"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "seduction", "when": "opening", "quote": "Danielle Breton, a young French-Canadian model and aspiring actress who was part of the prank, flirts with Philip", "confidence": "sourced"},
-   {"order": 2, "value": "murder witnessed", "when": "opening", "role": "trigger", "quote": "When he returns, he is stabbed to death by the crazed Dominique", "confidence": "sourced"},
-   {"order": 3, "value": "police disbelieve witness", "when": "early", "quote": "Danielle insists that she has been alone since the previous night", "confidence": "sourced"},
-   {"order": 4, "value": "investigator captured", "when": "middle", "quote": "When she is caught, Emil convinces the staff that she is a new patient", "confidence": "sourced"},
-   {"order": 5, "value": "past crime revealed", "when": "late", "role": "turn", "quote": "Dominique snaps after finding out that her sister is pregnant and stabs her in the stomach to kill her fetus", "confidence": "sourced"},
-   {"order": 6, "value": "killer strikes again", "when": "late", "quote": "she slashes him in the groin with a scalpel and he bleeds to death", "confidence": "sourced"},
-   {"order": 7, "value": "evidence still out there", "when": "ending", "role": "turn", "quote": "Larch tracks the sofa to a remote railway station in Canada", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "prank show with fake blind girl",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:41",
+    "quote": "A blind girl, that is.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "seduction",
+    "when": "opening",
+    "quote": "Danielle Breton, a young French-Canadian model and aspiring actress who was part of the prank, flirts with Philip",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:23",
+      "quote": "I don't bite, you know."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "cake with two names",
+    "when": "opening",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:22:40",
+    "quote": "Happy birthday to Dominique and Danielle.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "murder witnessed",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "When he returns, he is stabbed to death by the crazed Dominique",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:24",
+      "quote": "[Philip Screaming] No!"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "police disbelieve witness",
+    "when": "early",
+    "quote": "Danielle insists that she has been alone since the previous night",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:22",
+      "quote": "Good God! I saw the knife! I saw her stab him!"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "twins' story on film",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:00:05",
+    "quote": "Conjoined twins, called Siamese,",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "investigator captured",
+    "when": "middle",
+    "quote": "When she is caught, Emil convinces the staff that she is a new patient",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:01",
+      "quote": "Get her in the room."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "past crime revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Dominique snaps after finding out that her sister is pregnant and stabs her in the stomach to kill her fetus",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "killer strikes again",
+    "when": "late",
+    "quote": "she slashes him in the groin with a scalpel and he bleeds to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:51",
+      "quote": "Relax, fellas. He's dead."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "witness repeats implanted denial",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:30:53",
+    "quote": "All I know is there was no body because there was no murder!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "evidence still out there",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Larch tracks the sofa to a remote railway station in Canada",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:36",
+      "quote": "Vehicle Approaching"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

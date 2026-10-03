@@ -1,63 +1,479 @@
 {
  "film": "1920-the-golem",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "artificial creature", "detail": "the Golem, a clay giant", "quote": "a huge being made of clay which he will bring to life to defend his people", "confidence": "sourced"},
-   {"value": "possessing demon", "detail": "Astaroth takes over the Golem", "quote": "upcoming astrological movements will cause Astaroth to possess the Golem and attack its creators", "confidence": "sourced"}
+   {
+    "value": "artificial creature",
+    "detail": "the Golem, a clay giant",
+    "quote": "a huge being made of clay which he will bring to life to defend his people",
+    "confidence": "sourced"
+   },
+   {
+    "value": "possessing demon",
+    "detail": "Astaroth takes over the Golem",
+    "quote": "upcoming astrological movements will cause Astaroth to possess the Golem and attack its creators",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:34",
+      "quote": "Astaroth , Astaroth , appear !"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "made by someone", "detail": "Rabbi Loew builds the Golem", "quote": "Loew begins to create the Golem, a huge being made of clay", "confidence": "sourced"},
-   {"value": "summoned by ritual", "detail": "Astaroth is summoned to give the word of life", "quote": "Loew and the assistant summon the spirit Astaroth and compel him, as per the ancient texts, to say the magic word that will bring life", "confidence": "sourced"}
+   {
+    "value": "made by someone",
+    "detail": "Rabbi Loew builds the Golem",
+    "quote": "Loew begins to create the Golem, a huge being made of clay",
+    "confidence": "sourced"
+   },
+   {
+    "value": "summoned by ritual",
+    "detail": "Astaroth is summoned to give the word of life",
+    "quote": "Loew and the assistant summon the spirit Astaroth and compel him, as per the ancient texts, to say the magic word that will bring life",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:34",
+      "quote": "He who possesses the key of Solomon can force Astaroth to reveal the word ."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to attack its creators", "quote": "cause Astaroth to possess the Golem and attack its creators", "confidence": "sourced"}
+   {
+    "value": "to attack its creators",
+    "quote": "cause Astaroth to possess the Golem and attack its creators",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:37",
+      "quote": "Then the lifeless clay will scorn its master turn to destroy him and all it meets ."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "persecution of a community", "detail": "the Emperor's decree expelling the Jews", "quote": "the Holy Roman Emperor signs a decree declaring that the Jews must leave the city before the new moon", "confidence": "sourced"},
-   {"value": "jealousy", "detail": "the assistant sets the Golem on Florian", "quote": "Devastated, he reanimates the Golem and orders it to remove Florian from the building", "confidence": "sourced"}
+   {
+    "value": "persecution of a community",
+    "detail": "the Emperor's decree expelling the Jews",
+    "quote": "the Holy Roman Emperor signs a decree declaring that the Jews must leave the city before the new moon",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:41",
+      "quote": "We decree that all Jews shall leave the city"
+     }
+    ]
+   },
+   {
+    "value": "jealousy",
+    "detail": "the assistant sets the Golem on Florian",
+    "quote": "Devastated, he reanimates the Golem and orders it to remove Florian from the building",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "threat to a community", "quote": "Loew predicts disaster for his people and informs the elders of the community", "confidence": "observed"},
-   {"value": "creating life", "quote": "Loew begins to create the Golem, a huge being made of clay which he will bring to life", "confidence": "sourced"}
+   {
+    "value": "threat to a community",
+    "quote": "Loew predicts disaster for his people and informs the elders of the community",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:19",
+      "quote": "The stars predict disaster ."
+     }
+    ]
+   },
+   {
+    "value": "creating life",
+    "quote": "Loew begins to create the Golem, a huge being made of clay which he will bring to life",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:56",
+      "quote": "Then we can bring the Golem to life to save our people ."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "animated by a written word", "quote": "This word is written on paper by Loew which is then enclosed in an amulet and inserted onto the Golem's chest", "confidence": "sourced"},
-   {"value": "stopped by removing amulet", "quote": "she removes the amulet from the Golem; it drops her and collapses, unconscious", "confidence": "sourced"},
-   {"value": "governed by the stars", "quote": "upcoming astrological movements will cause Astaroth to possess the Golem", "confidence": "sourced"}
+   {
+    "value": "animated by a written word",
+    "quote": "This word is written on paper by Loew which is then enclosed in an amulet and inserted onto the Golem's chest",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:09",
+      "quote": "If we can compel the powers of darkness to reveal the magic word ,"
+     }
+    ]
+   },
+   {
+    "value": "stopped by removing amulet",
+    "quote": "she removes the amulet from the Golem; it drops her and collapses, unconscious",
+    "confidence": "sourced"
+   },
+   {
+    "value": "governed by the stars",
+    "quote": "upcoming astrological movements will cause Astaroth to possess the Golem",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:27",
+      "quote": "When Uranus enters the house of the planets , Astaroth will demand his creature ."
+     }
+    ]
+   },
+   {
+    "value": "no one may speak or laugh",
+    "detail": "Loew's warning before his vision of the patriarchs; the court's laughter brings the ceiling down",
+    "source": "subtitles",
+    "at": "00:51:42",
+    "quote": "And if you value your lives , let no one speak or laugh .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "magic life turns on its maker",
+    "source": "subtitles",
+    "at": "01:02:17",
+    "quote": "If you have brought the dead to life through magic , beware of that life .",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "community", "relation_to_threat": "community", "detail": "the Jews of the Prague ghetto", "quote": "the community begs Loew to save them from the rampaging Golem", "confidence": "sourced"},
-   {"value": "daughter", "relation_to_threat": "family", "detail": "Miriam, Loew's daughter", "quote": "leaves Miriam (whom he has been dragging by the hair through the streets) lying on a stone surface", "confidence": "sourced"},
-   {"value": "lover", "relation_to_threat": "stranger", "detail": "Florian, killed by the Golem", "quote": "outright throws Florian from the house's roof, killing him", "confidence": "sourced"}
+   {
+    "value": "community",
+    "relation_to_threat": "community",
+    "detail": "the Jews of the Prague ghetto",
+    "quote": "the community begs Loew to save them from the rampaging Golem",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:07",
+      "quote": "Rabbi , save us , or we shall all perish !"
+     }
+    ]
+   },
+   {
+    "value": "daughter",
+    "relation_to_threat": "family",
+    "detail": "Miriam, Loew's daughter",
+    "quote": "leaves Miriam (whom he has been dragging by the hair through the streets) lying on a stone surface",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:35",
+      "quote": "The demon has carried Miriam away - destroying everything in his path !"
+     }
+    ]
+   },
+   {
+    "value": "lover",
+    "relation_to_threat": "stranger",
+    "detail": "Florian, killed by the Golem",
+    "quote": "outright throws Florian from the house's roof, killing him",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "detail": "a child removes the amulet", "quote": "The Jews meanwhile gather at the gate to find the dead Golem", "confidence": "sourced"},
-   {"value": "community saved", "quote": "Rejoicing and praying, they carry it back into the ghetto, the Star of David appearing on the screen as the film ends", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "detail": "a child removes the amulet",
+    "quote": "The Jews meanwhile gather at the gate to find the dead Golem",
+    "confidence": "sourced"
+   },
+   {
+    "value": "community saved",
+    "quote": "Rejoicing and praying, they carry it back into the ghetto, the Star of David appearing on the screen as the film ends",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:35",
+      "quote": "Give thanks to Jehovah , for today He has thrice shown His love for His people ."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "stars", "state": "read for omens", "when": "opening", "role": "omen", "quote": "the film begins with Rabbi Loew, the head of the city's Jewish community, reading the stars", "confidence": "sourced"},
-   {"value": "clay figure", "state": "brought to life", "when": "early", "role": "threat", "quote": "a huge being made of clay which he will bring to life", "confidence": "sourced"},
-   {"value": "amulet", "state": "inserted, then removed", "when": "early", "role": "weapon", "quote": "enclosed in an amulet and inserted onto the Golem's chest", "confidence": "sourced"},
-   {"value": "crumbling ceiling", "state": "falling", "when": "middle", "role": "turn", "quote": "the Golem intervenes and props up the falling ceiling, saving the court", "confidence": "sourced"},
-   {"value": "fire", "state": "burning house", "when": "late", "role": "threat", "quote": "the Golem sets fire to the building, and Miriam falls unconscious", "confidence": "sourced"},
-   {"value": "hair", "state": "dragged", "when": "late", "role": "threat", "quote": "whom he has been dragging by the hair through the streets", "confidence": "sourced"},
-   {"value": "little girl", "state": "unafraid", "when": "ending", "role": "turn", "quote": "He breaks the gate open and sees a group of little girls playing", "confidence": "sourced"},
-   {"value": "gate", "state": "broken open", "when": "ending", "role": "setting", "quote": "He breaks the gate open and sees a group of little girls playing", "confidence": "sourced"}
+   {
+    "value": "stars",
+    "state": "read for omens",
+    "when": "opening",
+    "role": "omen",
+    "quote": "the film begins with Rabbi Loew, the head of the city's Jewish community, reading the stars",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:43",
+      "quote": "The learned Rabbi Loew reads in the stars that misfortune threatens the Jews ."
+     }
+    ]
+   },
+   {
+    "value": "clay figure",
+    "state": "brought to life",
+    "when": "early",
+    "role": "threat",
+    "quote": "a huge being made of clay which he will bring to life",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:51",
+      "quote": "Now I give back the Golem to the life"
+     }
+    ]
+   },
+   {
+    "value": "amulet",
+    "state": "inserted, then removed",
+    "when": "early",
+    "role": "weapon",
+    "quote": "enclosed in an amulet and inserted onto the Golem's chest",
+    "confidence": "sourced"
+   },
+   {
+    "value": "crumbling ceiling",
+    "state": "falling",
+    "when": "middle",
+    "role": "turn",
+    "quote": "the Golem intervenes and props up the falling ceiling, saving the court",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fire",
+    "state": "burning house",
+    "when": "late",
+    "role": "threat",
+    "quote": "the Golem sets fire to the building, and Miriam falls unconscious",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:05",
+      "quote": "Your house is in flames - the Golem is raging ."
+     }
+    ]
+   },
+   {
+    "value": "hair",
+    "state": "dragged",
+    "when": "late",
+    "role": "threat",
+    "quote": "whom he has been dragging by the hair through the streets",
+    "confidence": "sourced"
+   },
+   {
+    "value": "little girl",
+    "state": "unafraid",
+    "when": "ending",
+    "role": "turn",
+    "quote": "He breaks the gate open and sees a group of little girls playing",
+    "confidence": "sourced"
+   },
+   {
+    "value": "gate",
+    "state": "broken open",
+    "when": "ending",
+    "role": "setting",
+    "quote": "He breaks the gate open and sees a group of little girls playing",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:54",
+      "quote": "The gate has been forced ! The Golem must be there"
+     }
+    ]
+   },
+   {
+    "value": "magic word",
+    "when": "early",
+    "role": "trigger",
+    "detail": "the word of life revealed by Astaroth",
+    "source": "subtitles",
+    "at": "00:34:41",
+    "quote": "The word , that so terrible word , I have snatched it .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "light in a window",
+    "when": "middle",
+    "role": "clue",
+    "detail": "Florian's signal to Miriam",
+    "source": "subtitles",
+    "at": "00:47:26",
+    "quote": "Place a light in your window as a sign that you are waiting for me .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "procession of patriarchs",
+    "when": "middle",
+    "role": "omen",
+    "detail": "Loew's vision shown at court",
+    "source": "subtitles",
+    "at": "00:53:50",
+    "quote": "Moses , the eternal Jew .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "shofar",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:57:39",
+    "quote": "Awake the sleeping brethren with the joyful sound of the Schofa-horn !",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "omen read in the stars", "when": "opening", "role": "omen", "quote": "Loew predicts disaster for his people and informs the elders of the community", "confidence": "sourced"},
-   {"order": 2, "value": "decree threatens community", "when": "opening", "role": "trigger", "quote": "the Holy Roman Emperor signs a decree declaring that the Jews must leave the city", "confidence": "sourced"},
-   {"order": 3, "value": "creature brought to life", "when": "early", "quote": "The Golem awakes, and the Rabbi initially uses it as a household servant", "confidence": "sourced"},
-   {"order": 4, "value": "creature saves the court", "when": "middle", "role": "turn", "quote": "In gratitude, the Emperor pardons the Jews and allows them to stay", "confidence": "sourced"},
-   {"order": 5, "value": "creature turns on creators", "when": "late", "role": "turn", "quote": "the Golem, now under Astaroth's influence, outright throws Florian from the house's roof, killing him", "confidence": "sourced"},
-   {"order": 6, "value": "rampage and fire", "when": "late", "quote": "they find that it is burning, and both the Golem and Miriam are missing", "confidence": "sourced"},
-   {"order": 7, "value": "child disables creature", "when": "ending", "quote": "Out of curiosity, she removes the amulet from the Golem; it drops her and collapses, unconscious", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "omen read in the stars",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Loew predicts disaster for his people and informs the elders of the community",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:43",
+      "quote": "The learned Rabbi Loew reads in the stars that misfortune threatens the Jews ."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "decree threatens community",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "the Holy Roman Emperor signs a decree declaring that the Jews must leave the city",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:41",
+      "quote": "We decree that all Jews shall leave the city"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "demon summoned for the word",
+    "when": "early",
+    "role": "trigger",
+    "source": "subtitles",
+    "at": "00:32:34",
+    "quote": "Astaroth , Astaroth , appear !",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "creature brought to life",
+    "when": "early",
+    "quote": "The Golem awakes, and the Rabbi initially uses it as a household servant",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:28",
+      "quote": "This is my new servant , Golem ."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "creature saves the court",
+    "when": "middle",
+    "role": "turn",
+    "quote": "In gratitude, the Emperor pardons the Jews and allows them to stay",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:55:32",
+      "quote": "Save me , and I will pardon your people ."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "creature told to sleep",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:02:53",
+    "quote": "Your task , Golem , is fulfilled . Be lifeless clay once again ,",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "creature turns on creators",
+    "when": "late",
+    "role": "turn",
+    "quote": "the Golem, now under Astaroth's influence, outright throws Florian from the house's roof, killing him",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "rampage and fire",
+    "when": "late",
+    "quote": "they find that it is burning, and both the Golem and Miriam are missing",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:05",
+      "quote": "Your house is in flames - the Golem is raging ."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "child disables creature",
+    "when": "ending",
+    "quote": "Out of curiosity, she removes the amulet from the Golem; it drops her and collapses, unconscious",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:15",
+      "quote": "But where is the Golem ?"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

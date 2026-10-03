@@ -1,59 +1,460 @@
 {
  "film": "1979-zombi-2",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "zombies", "quote": "a Caribbean island cursed by voodoo whose dead residents rise as zombies to attack the living", "confidence": "sourced"},
-   {"value": "infection", "quote": "has died of the zombie infection and tells his remaining staff to shoot all the dead bodies in the head", "confidence": "sourced"}
+   {
+    "value": "zombies",
+    "quote": "a Caribbean island cursed by voodoo whose dead residents rise as zombies to attack the living",
+    "confidence": "sourced"
+   },
+   {
+    "value": "infection",
+    "quote": "has died of the zombie infection and tells his remaining staff to shoot all the dead bodies in the head",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:12",
+      "quote": "Due to my morbid curiosity, I have managed to contract a strange disease"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "voodoo curse", "quote": "the dead are rising as a result of a voodoo curse that he has been trying to stop", "confidence": "sourced"}
+   {
+    "value": "voodoo curse",
+    "quote": "the dead are rising as a result of a voodoo curse that he has been trying to stop",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:42",
+      "quote": "The natives say it's... something to do with voodoo. Some evil witch doctor who creates these zombies."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "hunger", "quote": "they discover Paola's corpse being eaten by zombies", "confidence": "observed"},
-   {"value": "to spread", "quote": "the city is under attack from zombies—the result of the initial attack in the harbor", "confidence": "observed"}
+   {
+    "value": "hunger",
+    "quote": "they discover Paola's corpse being eaten by zombies",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:23",
+      "quote": "they will come back to suck the blood from the living."
+     }
+    ]
+   },
+   {
+    "value": "to spread",
+    "quote": "the city is under attack from zombies—the result of the initial attack in the harbor",
+    "confidence": "observed"
+   }
   ],
   "trigger": [
-   {"value": "abandoned boat arrives", "quote": "an abandoned boat drifts into New York Harbor, and is boarded by two harbor patrolmen", "confidence": "sourced"},
-   {"value": "searching for a missing father", "quote": "A scientist's daughter journeys to the island after her father's boat turns up abandoned in NYC", "confidence": "sourced"}
+   {
+    "value": "abandoned boat arrives",
+    "quote": "an abandoned boat drifts into New York Harbor, and is boarded by two harbor patrolmen",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:11",
+      "quote": "Chopper 1 to Headquarters. We got a sailboat on a collision course..."
+     }
+    ]
+   },
+   {
+    "value": "searching for a missing father",
+    "quote": "A scientist's daughter journeys to the island after her father's boat turns up abandoned in NYC",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:06",
+      "quote": "We're trying to locate Anne's father."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "shoot in the head", "quote": "tells his remaining staff to shoot all the dead bodies in the head", "confidence": "sourced"},
-   {"value": "bite infects", "quote": "the undead Barrett bites Hull in the arm but is shot by West", "confidence": "observed"},
-   {"value": "the dead rise", "quote": "one of the corpses rises from the earth and bites out her throat", "confidence": "sourced"}
+   {
+    "value": "shoot in the head",
+    "quote": "tells his remaining staff to shoot all the dead bodies in the head",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bite infects",
+    "quote": "the undead Barrett bites Hull in the arm but is shot by West",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:58",
+      "quote": "There appear to be clear indications of one or more bites."
+     }
+    ]
+   },
+   {
+    "value": "the dead rise",
+    "quote": "one of the corpses rises from the earth and bites out her throat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:28",
+      "quote": "Well, whatever it is, it makes the dead stand up and walk."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:06:21",
+      "quote": "when the earth spit out the dead, they will come back to suck the blood from the living."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "daughter", "relation_to_threat": "stranger", "detail": "Anne Bowles, looking for her father", "quote": "Anne Bowles (Tisa Farrow) is questioned by the police, as the boat belonged to her father", "confidence": "sourced"},
-   {"value": "investigator", "relation_to_threat": "stranger", "detail": "journalist Peter West", "quote": "British journalist Peter West (Ian McCulloch) is investigating the story", "confidence": "sourced"},
-   {"value": "doctor and wife", "relation_to_threat": "community", "detail": "David and Paola Menard", "quote": "British doctor David Menard and his wife Paola have been researching the phenomenon of zombie reanimation", "confidence": "sourced"}
+   {
+    "value": "daughter",
+    "relation_to_threat": "stranger",
+    "detail": "Anne Bowles, looking for her father",
+    "quote": "Anne Bowles (Tisa Farrow) is questioned by the police, as the boat belonged to her father",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:23",
+      "quote": "I haven't been a good father, but I have always loved you."
+     }
+    ]
+   },
+   {
+    "value": "investigator",
+    "relation_to_threat": "stranger",
+    "detail": "journalist Peter West",
+    "quote": "British journalist Peter West (Ian McCulloch) is investigating the story",
+    "confidence": "sourced"
+   },
+   {
+    "value": "doctor and wife",
+    "relation_to_threat": "community",
+    "detail": "David and Paola Menard",
+    "quote": "British doctor David Menard and his wife Paola have been researching the phenomenon of zombie reanimation",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat spreads to the city", "quote": "a radio broadcast reports that the city is under attack from zombies", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "At the Brooklyn Bridge, a horde of zombies walk slowly towards the city", "confidence": "sourced"}
+   {
+    "value": "threat spreads to the city",
+    "quote": "a radio broadcast reports that the city is under attack from zombies",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:30",
+      "quote": "from Brooklyn to Manhattan, from Harlem to Queens, the zombies are taking over."
+     }
+    ]
+   },
+   {
+    "value": "threat survives",
+    "quote": "At the Brooklyn Bridge, a horde of zombies walk slowly towards the city",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:42",
+      "quote": "The zombies are everywhere. There seems to be no way to stop them."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "shrouded corpse", "state": "reanimating", "when": "opening", "role": "omen", "quote": "a shrouded corpse reanimates, and is shot in the head by a silhouetted man", "confidence": "sourced"},
-   {"value": "abandoned boat", "state": "drifting", "when": "opening", "role": "trigger", "quote": "an abandoned boat drifts into New York Harbor", "confidence": "sourced"},
-   {"value": "splintered wood", "state": "piercing an eye", "when": "early", "role": "weapon", "quote": "her eye being gouged out by splintered wood", "confidence": "sourced"},
-   {"value": "shark", "state": "fighting a zombie", "when": "middle", "role": "threat", "quote": "she reaches the boat while the shark and zombie attack each other", "confidence": "sourced"},
-   {"value": "graveyard", "state": "corpses rising", "when": "middle", "role": "setting", "quote": "the group realizes they have stumbled upon a graveyard", "confidence": "sourced"},
-   {"value": "door", "state": "broken through", "when": "early", "role": "threat", "quote": "she pushes the door shut, but it breaks through with one arm", "confidence": "sourced"},
-   {"value": "fire", "when": "late", "role": "weapon", "quote": "Bowles, West, and Hull set the building on fire and start to shoot the zombies", "confidence": "sourced"}
+   {
+    "value": "shrouded corpse",
+    "state": "reanimating",
+    "when": "opening",
+    "role": "omen",
+    "quote": "a shrouded corpse reanimates, and is shot in the head by a silhouetted man",
+    "confidence": "sourced"
+   },
+   {
+    "value": "abandoned boat",
+    "state": "drifting",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "an abandoned boat drifts into New York Harbor",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:16",
+      "quote": "Hey, Sarge, that boat's abandoned."
+     }
+    ]
+   },
+   {
+    "value": "buzzing insects",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:05:15",
+    "quote": "[insects buzzing]",
+    "confidence": "sourced",
+    "detail": "flies over the derelict boat, and again over the sick in Menard's hospital",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:00",
+      "quote": "[patients groaning]"
+     }
+    ]
+   },
+   {
+    "value": "father's letter",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:18:10",
+    "quote": "To my daughter Anne, in case anything should happen to me.",
+    "confidence": "sourced",
+    "detail": "found on the boat; it names the island of Matool"
+   },
+   {
+    "value": "voodoo drums",
+    "when": "early",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:23:21",
+    "quote": "[drumming in distance]",
+    "confidence": "sourced",
+    "detail": "drumming heard on the island throughout, growing louder before the dead attack",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:11",
+      "quote": "Drums. Getting closer."
+     }
+    ]
+   },
+   {
+    "value": "splintered wood",
+    "state": "piercing an eye",
+    "when": "early",
+    "role": "weapon",
+    "quote": "her eye being gouged out by splintered wood",
+    "confidence": "sourced"
+   },
+   {
+    "value": "shark",
+    "state": "fighting a zombie",
+    "when": "middle",
+    "role": "threat",
+    "quote": "she reaches the boat while the shark and zombie attack each other",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:36",
+      "quote": "There's a shark! Help!"
+     }
+    ]
+   },
+   {
+    "value": "graveyard",
+    "state": "corpses rising",
+    "when": "middle",
+    "role": "setting",
+    "quote": "the group realizes they have stumbled upon a graveyard",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:03",
+      "quote": "This must have been a cemetery for the Spanish conquistadores."
+     }
+    ]
+   },
+   {
+    "value": "door",
+    "state": "broken through",
+    "when": "early",
+    "role": "threat",
+    "quote": "she pushes the door shut, but it breaks through with one arm",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:44",
+      "quote": "[door thudding]"
+     }
+    ]
+   },
+   {
+    "value": "fire",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Bowles, West, and Hull set the building on fire and start to shoot the zombies",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:23",
+      "quote": "We've got to get some empty bottles. All you can find."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "corpse rises, shot", "when": "opening", "role": "omen", "quote": "In a cold open, a shrouded corpse reanimates, and is shot in the head", "confidence": "sourced"},
-   {"order": 2, "value": "ghost ship attack", "when": "opening", "quote": "A hidden zombie kills one of the patrolmen", "confidence": "sourced"},
-   {"order": 3, "value": "journey to the island", "when": "early", "role": "trigger", "quote": "They hire a boat and two guides—Brian Hull and his girlfriend, Susan Barrett—to reach Matool", "confidence": "sourced"},
-   {"order": 4, "value": "wife killed at home", "when": "early", "quote": "Paola is dragged through the hole and killed", "confidence": "sourced"},
-   {"order": 5, "value": "graveyard rises", "when": "middle", "quote": "Barrett is killed when one of the corpses rises from the earth and bites out her throat", "confidence": "sourced"},
-   {"order": 6, "value": "cause explained", "when": "late", "role": "clue", "quote": "Menard explains that the dead are rising as a result of a voodoo curse", "confidence": "sourced"},
-   {"order": 7, "value": "siege and fire", "when": "late", "quote": "The hospital is besieged by zombies, and Menard is killed by a reanimated Fritz", "confidence": "sourced"},
-   {"order": 8, "value": "city overrun", "when": "ending", "role": "turn", "quote": "At the Brooklyn Bridge, a horde of zombies walk slowly towards the city", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "corpse rises, shot",
+    "when": "opening",
+    "role": "omen",
+    "quote": "In a cold open, a shrouded corpse reanimates, and is shot in the head",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:24",
+      "quote": "The boat can leave now. Tell the crew."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "ghost ship attack",
+    "when": "opening",
+    "quote": "A hidden zombie kills one of the patrolmen",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:09",
+      "quote": "[Marty screaming]"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "journey to the island",
+    "when": "early",
+    "role": "trigger",
+    "quote": "They hire a boat and two guides—Brian Hull and his girlfriend, Susan Barrett—to reach Matool",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:19",
+      "quote": "Natives claim it's cursed. They avoid it like the plague."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "wife killed at home",
+    "when": "early",
+    "quote": "Paola is dragged through the hole and killed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:02",
+      "quote": "[screaming intensifies]"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "graveyard rises",
+    "when": "middle",
+    "quote": "Barrett is killed when one of the corpses rises from the earth and bites out her throat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:56",
+      "quote": "[low growl]"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "cause explained",
+    "when": "late",
+    "role": "clue",
+    "quote": "Menard explains that the dead are rising as a result of a voodoo curse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:23",
+      "quote": "One of the fishermen said he'd seen his wife walking in the village at night. Only she'd been dead for two days."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "siege and fire",
+    "when": "late",
+    "quote": "The hospital is besieged by zombies, and Menard is killed by a reanimated Fritz",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:14",
+      "quote": "Go get some more bottles."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "infected friend kept as proof",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:28:31",
+    "quote": "He's the only proof we've got that this all happened.",
+    "confidence": "sourced",
+    "detail": "the bitten Brian is locked below deck for the voyage back to New York"
+   },
+   {
+    "order": 9,
+    "value": "city overrun",
+    "when": "ending",
+    "role": "turn",
+    "quote": "At the Brooklyn Bridge, a horde of zombies walk slowly towards the city",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:03",
+      "quote": "I've just been informed that zombies have entered the building."
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

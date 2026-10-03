@@ -1,59 +1,487 @@
 {
  "film": "1994-wes-craven-s-new-nightmare",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "dream killer", "detail": "Freddy Krueger", "quote": "portraying Freddy Krueger as a fictional movie villain who invades the real world", "confidence": "sourced"},
-   {"value": "ancient entity", "quote": "In the guise of Freddy, the entity is focusing on Heather, its primary foe", "confidence": "sourced"}
+   {
+    "value": "dream killer",
+    "detail": "Freddy Krueger",
+    "quote": "portraying Freddy Krueger as a fictional movie villain who invades the real world",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ancient entity",
+    "quote": "In the guise of Freddy, the entity is focusing on Heather, its primary foe",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:27",
+      "quote": "IT'S ABOUT THIS ENTITY- - WHATEVER YOU WANT TO CALL IT."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "freed when stories stopped", "quote": "the films had kept  an ancient supernatural entity trapped, which has been freed after the series ended", "confidence": "sourced"}
+   {
+    "value": "freed when stories stopped",
+    "quote": "the films had kept  an ancient supernatural entity trapped, which has been freed after the series ended",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:53",
+      "quote": "THE GENIE'S OUT OF THE BOTTLE."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to enter the real world", "quote": "killing her will allow it into the real world", "confidence": "sourced"}
+   {
+    "value": "to enter the real world",
+    "quote": "killing her will allow it into the real world",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:37",
+      "quote": "BEFORE HE CAN COME THROUGH INTO OUR WORLD."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:41:07",
+      "quote": "TRYING TO GET UP INTO OUR WORLD."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "end of a story", "quote": "which has been freed after the series ended with the release of Freddy's Dead: The Final Nightmare", "confidence": "sourced"},
-   {"value": "nightmare", "quote": "she has a nightmare in which her family is attacked by a set of animated Freddy Krueger claws", "confidence": "sourced"}
+   {
+    "value": "end of a story",
+    "quote": "which has been freed after the series ended with the release of Freddy's Dead: The Final Nightmare",
+    "confidence": "sourced"
+   },
+   {
+    "value": "nightmare",
+    "quote": "she has a nightmare in which her family is attacked by a set of animated Freddy Krueger claws",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "kills through sleep", "quote": "he falls asleep at the wheel and is slashed to death by Freddy's claws", "confidence": "sourced"},
-   {"value": "stopped by playing a role", "quote": "Heather must agree to play Nancy again to stop it", "confidence": "sourced"},
-   {"value": "fiction contains evil", "quote": "the films had kept  an ancient supernatural entity trapped", "confidence": "sourced"}
+   {
+    "value": "kills through sleep",
+    "quote": "he falls asleep at the wheel and is slashed to death by Freddy's claws",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:49",
+      "quote": "HE WANTS TO COME UP WHILE WE SLEEP."
+     }
+    ]
+   },
+   {
+    "value": "stopped by playing a role",
+    "quote": "Heather must agree to play Nancy again to stop it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:48",
+      "quote": "WHETHER OR NOT YOU'RE WILLING TO PLAY NANCY ONE LAST TIME."
+     }
+    ]
+   },
+   {
+    "value": "fiction contains evil",
+    "quote": "the films had kept  an ancient supernatural entity trapped",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:59",
+      "quote": "YEAH, WELL, IT CAN BE CAPTURED SOMETIMES."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:02:01",
+      "quote": "CAPTURED? HOW? BY STORYTELLERS, OF ALL THINGS."
+     }
+    ]
+   },
+   {
+    "value": "must get past a gatekeeper",
+    "detail": "Heather, as the actress who played Nancy, stands between Freddy and the real world",
+    "source": "subtitles",
+    "at": "01:03:32",
+    "quote": "SORT OF A GATEKEEPER, SO TO SPEAK.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "actress", "relation_to_threat": "stranger", "detail": "Heather Langenkamp", "quote": "the entity is focusing on Heather, its primary foe", "confidence": "sourced"},
-   {"value": "child", "relation_to_threat": "stranger", "detail": "Dylan", "quote": "Dylan's health deteriorates as he becomes increasingly scared of Freddy", "confidence": "sourced"},
-   {"value": "husband", "relation_to_threat": "stranger", "detail": "Chase", "quote": "he falls asleep at the wheel and is slashed to death by Freddy's claws", "confidence": "sourced"},
-   {"value": "film crew", "relation_to_threat": "stranger", "quote": "haunts the cast and crew involved in the making of the films about him", "confidence": "sourced"}
+   {
+    "value": "actress",
+    "relation_to_threat": "stranger",
+    "detail": "Heather Langenkamp",
+    "quote": "the entity is focusing on Heather, its primary foe",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child",
+    "relation_to_threat": "stranger",
+    "detail": "Dylan",
+    "quote": "Dylan's health deteriorates as he becomes increasingly scared of Freddy",
+    "confidence": "sourced"
+   },
+   {
+    "value": "husband",
+    "relation_to_threat": "stranger",
+    "detail": "Chase",
+    "quote": "he falls asleep at the wheel and is slashed to death by Freddy's claws",
+    "confidence": "sourced"
+   },
+   {
+    "value": "film crew",
+    "relation_to_threat": "stranger",
+    "quote": "haunts the cast and crew involved in the making of the films about him",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "she and Dylan push Freddy into the furnace, destroying both the monster and its reality", "confidence": "sourced"},
-   {"value": "threat imprisoned again", "quote": "Her victory helps imprison the entity once more", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "she and Dylan push Freddy into the furnace, destroying both the monster and its reality",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:21",
+      "quote": "WE'RE SAVED. THE WITCH IS DEAD."
+     }
+    ]
+   },
+   {
+    "value": "threat imprisoned again",
+    "quote": "Her victory helps imprison the entity once more",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "claws", "state": "animated", "when": "opening", "role": "threat", "quote": "attacked by a set of animated Freddy Krueger claws", "confidence": "sourced"},
-   {"value": "earthquake", "when": "opening", "role": "omen", "quote": "Waking up to an earthquake, she notices a cut on Chase's finger", "confidence": "sourced"},
-   {"value": "cut on a finger", "when": "opening", "role": "omen", "quote": "she notices a cut on Chase's finger similar to the one he had in her dream", "confidence": "sourced"},
-   {"value": "phone call", "state": "nursery rhyme", "when": "early", "role": "omen", "quote": "frequent creepy phone calls from an obsessed fan who quotes Freddy Krueger's nursery rhyme", "confidence": "sourced"},
-   {"value": "script", "state": "predicting events", "when": "middle", "role": "clue", "quote": "a written play-by-play of every dialogue and action she and everyone around her are taking", "confidence": "sourced"},
-   {"value": "stuffed dinosaur", "when": "late", "role": "symbol", "quote": "returns home for his stuffed dinosaur", "confidence": "sourced"},
-   {"value": "furnace", "when": "ending", "role": "weapon", "quote": "push Freddy into the furnace", "confidence": "sourced"}
+   {
+    "value": "claws",
+    "state": "animated",
+    "when": "opening",
+    "role": "threat",
+    "quote": "attacked by a set of animated Freddy Krueger claws",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:23",
+      "quote": "OK, CHASE, KEEP THAT CLAW REALLY MOVING."
+     },
+     {
+      "source": "screenplay",
+      "quote": "THE HAND -- fitted with the final claw -- now a super-modern, almost futuristic version of Freddy's glove -- flexing and trembling."
+     }
+    ]
+   },
+   {
+    "value": "earthquake",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Waking up to an earthquake, she notices a cut on Chase's finger",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:20",
+      "quote": "EARTHQUAKE. COME ON."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:06:38",
+      "quote": "I THINK 5 EARTHQUAKES IN 3 WEEKS IS ENOUGH, SWEETIE."
+     }
+    ]
+   },
+   {
+    "value": "cut on a finger",
+    "when": "opening",
+    "role": "omen",
+    "quote": "she notices a cut on Chase's finger similar to the one he had in her dream",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:21",
+      "quote": "DADDY. BLOOD."
+     }
+    ]
+   },
+   {
+    "value": "hansel and gretel story",
+    "state": "read at bedtime",
+    "when": "early",
+    "role": "mirror",
+    "detail": "Heather reads Dylan the witch-in-the-oven scene, which the ending repeats with Freddy and the furnace",
+    "source": "subtitles",
+    "at": "00:25:57",
+    "quote": "AND SHE PUSHED GRETEL TOWARD THE OVEN.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:32",
+      "quote": "PLUNGING THE WICKED OLD WOMAN HEADLONG INTO THE FLAMES,"
+     }
+    ]
+   },
+   {
+    "value": "phone call",
+    "state": "nursery rhyme",
+    "when": "early",
+    "role": "omen",
+    "quote": "frequent creepy phone calls from an obsessed fan who quotes Freddy Krueger's nursery rhyme",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:14",
+      "quote": "LOOK, YOU HAD A NUT CASE MAKING HARASSING PHONE CALLS."
+     }
+    ]
+   },
+   {
+    "value": "script",
+    "state": "predicting events",
+    "when": "middle",
+    "role": "clue",
+    "quote": "a written play-by-play of every dialogue and action she and everyone around her are taking",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:59",
+      "quote": "WELL, IF FREDDY IS LOOSE IN YOUR SCRIPT, WHERE'S HE GONNA GO?"
+     },
+     {
+      "source": "screenplay",
+      "quote": "Snatching away the script and flinging it into the fire."
+     }
+    ]
+   },
+   {
+    "value": "children's rhyme",
+    "state": "sung by the child",
+    "when": "middle",
+    "role": "omen",
+    "detail": "Dylan sings Freddy's skipping rhyme; it returns over the end credits",
+    "source": "subtitles",
+    "at": "00:40:29",
+    "quote": "♪ 1, 2, FREDDY'S COMING FOR YOU ♪",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:31",
+      "quote": "NEVER SLEEP... AGAIN!"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:51:50",
+      "quote": "NEVER SLEEP AGAIN"
+     }
+    ]
+   },
+   {
+    "value": "old film on tv",
+    "when": "middle",
+    "role": "mirror",
+    "detail": "the original Nightmare on Elm Street plays on television while Dylan watches",
+    "source": "subtitles",
+    "at": "00:39:00",
+    "quote": "[NIGHTMARE ON ELM STREET PLAYING ON TV]",
+    "confidence": "sourced"
+   },
+   {
+    "value": "stuffed dinosaur",
+    "when": "late",
+    "role": "symbol",
+    "quote": "returns home for his stuffed dinosaur",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:54",
+      "quote": "REX KEEPS HIM DOWN THERE. HE'S MY GUARD."
+     },
+     {
+      "source": "screenplay",
+      "quote": "Dylan pulls a stuffed dinosaur out from beneath the covers"
+     }
+    ]
+   },
+   {
+    "value": "furnace",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "push Freddy into the furnace",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Freddy, lit like a demon in hell by the flame of the pilot, reeling the kid in inch by inch."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "nightmare bleeds into waking", "when": "opening", "role": "omen", "quote": "Waking up to an earthquake, she notices a cut on Chase's finger similar to the one he had in her dream", "confidence": "sourced"},
-   {"order": 2, "value": "first death", "when": "early", "quote": "As Chase drives home from work, he falls asleep at the wheel and is slashed to death", "confidence": "sourced"},
-   {"order": 3, "value": "child endangered", "when": "middle", "quote": "Dylan's health deteriorates as he becomes increasingly scared of Freddy and paranoid about going to sleep", "confidence": "sourced"},
-   {"order": 4, "value": "creator explains the entity", "when": "middle", "role": "clue", "quote": "He explains that the films had kept  an ancient supernatural entity trapped", "confidence": "sourced"},
-   {"order": 5, "value": "babysitter killed", "when": "late", "quote": "After Dylan falls asleep from the nurse's sedative, Freddy brutally kills Julie", "confidence": "sourced"},
-   {"order": 6, "value": "fiction overtakes reality", "when": "late", "role": "turn", "quote": "She realizes that reality is overlapping with the films", "confidence": "sourced"},
-   {"order": 7, "value": "child taken to monster's world", "when": "late", "quote": "Freddy emerges into reality and abducts Dylan to his world", "confidence": "sourced"},
-   {"order": 8, "value": "monster burned", "when": "ending", "quote": "she and Dylan push Freddy into the furnace", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "opens on a film set",
+    "when": "opening",
+    "role": "omen",
+    "detail": "a new Freddy claw is filmed, then kills the effects crew; it is Heather's dream",
+    "source": "subtitles",
+    "at": "00:01:13",
+    "quote": "MORE BLOOD!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "nightmare bleeds into waking",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Waking up to an earthquake, she notices a cut on Chase's finger similar to the one he had in her dream",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:54",
+      "quote": "WELL, YOUR FINGERS WERE CUT."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "first death",
+    "when": "early",
+    "quote": "As Chase drives home from work, he falls asleep at the wheel and is slashed to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:04",
+      "quote": "IT APPEARS HE FELL ASLEEP WHILE DRIVING, MA'AM."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "child endangered",
+    "when": "middle",
+    "quote": "Dylan's health deteriorates as he becomes increasingly scared of Freddy and paranoid about going to sleep",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:23",
+      "quote": "NO, MOMMY, I CAN'T SLEEP THERE."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "creator explains the entity",
+    "when": "middle",
+    "role": "clue",
+    "quote": "He explains that the films had kept  an ancient supernatural entity trapped",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:17",
+      "quote": "SO HE'S DECIDED TO CROSS OVER OUT OF FILMS INTO OUR REALITY."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "babysitter killed",
+    "when": "late",
+    "quote": "After Dylan falls asleep from the nurse's sedative, Freddy brutally kills Julie",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:41",
+      "quote": "[JULIE SCREAMS]"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "fiction overtakes reality",
+    "when": "late",
+    "role": "turn",
+    "quote": "She realizes that reality is overlapping with the films",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:54",
+      "quote": "WHY ARE YOU CALLING ME NANCY, JOHN?"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "child taken to monster's world",
+    "when": "late",
+    "quote": "Freddy emerges into reality and abducts Dylan to his world",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "monster burned",
+    "when": "ending",
+    "quote": "she and Dylan push Freddy into the furnace",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "the story read aloud",
+    "when": "ending",
+    "role": "mirror",
+    "detail": "Heather reads Dylan the finished script, which opens the way the film did",
+    "source": "subtitles",
+    "at": "01:43:15",
+    "quote": "WE OPEN ON AN OLD WOODEN BENCH.",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

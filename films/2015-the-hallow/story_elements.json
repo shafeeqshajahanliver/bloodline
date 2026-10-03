@@ -1,65 +1,474 @@
 {
  "film": "2015-the-hallow",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "fairies", "detail": "The Hallow, forest-dwelling baby stealers", "quote": "inhabited by \"The Hallow\", a breed of \"fairies, banshees and baby stealers\"", "confidence": "sourced"},
-   {"value": "infectious fungus", "quote": "Adam starting to mutate via the fungus injected into him through the stinger", "confidence": "sourced"}
+   {
+    "value": "fairies",
+    "detail": "The Hallow, forest-dwelling baby stealers",
+    "quote": "inhabited by \"The Hallow\", a breed of \"fairies, banshees and baby stealers\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:03",
+      "quote": "Fairies, banshees, baby stealers."
+     }
+    ]
+   },
+   {
+    "value": "infectious fungus",
+    "quote": "Adam starting to mutate via the fungus injected into him through the stinger",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:46",
+      "quote": "fungus... controlled automatons."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "from nature", "detail": "the forest", "quote": "Local legend suggests that the forest is inhabited by hostile fairies", "confidence": "sourced"}
+   {
+    "value": "from nature",
+    "detail": "the forest",
+    "quote": "Local legend suggests that the forest is inhabited by hostile fairies",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to steal a child", "quote": "One of The Hallow manages to abduct Finn before his parents can stop it", "confidence": "sourced"},
-   {"value": "to replace someone", "detail": "a changeling left in Finn's place", "quote": "begins to suspect that the Finn that Claire rescued is actually a changeling", "confidence": "sourced"}
+   {
+    "value": "to steal a child",
+    "quote": "One of The Hallow manages to abduct Finn before his parents can stop it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:36",
+      "quote": "They want... Finn."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:23:41",
+      "quote": "They want him for their family."
+     }
+    ]
+   },
+   {
+    "value": "to replace someone",
+    "detail": "a changeling left in Finn's place",
+    "quote": "begins to suspect that the Finn that Claire rescued is actually a changeling",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "intruding on nature", "detail": "removing protective iron; later logging", "quote": "Claire (in the midst of removing iron bars from the upper exterior of their home)", "confidence": "observed"}
+   {
+    "value": "intruding on nature",
+    "detail": "removing protective iron; later logging",
+    "quote": "Claire (in the midst of removing iron bars from the upper exterior of their home)",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:16",
+      "quote": "driven from their sacred lands by man with iron and fire."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "moving into a new home", "quote": "travel to a remote Irish village surrounded by a large forest", "confidence": "sourced"},
-   {"value": "taking a sample", "quote": "Adam takes a sample and returns home with Finn", "confidence": "sourced"}
+   {
+    "value": "moving into a new home",
+    "quote": "travel to a remote Irish village surrounded by a large forest",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:40",
+      "quote": "That's the third time since we moved here."
+     }
+    ]
+   },
+   {
+    "value": "taking a sample",
+    "quote": "Adam takes a sample and returns home with Finn",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "repelled by light", "quote": "realizes that light repels them", "confidence": "sourced"},
-   {"value": "iron protects", "quote": "tell them to put back the iron bars", "confidence": "observed"},
-   {"value": "changeling destroyed by sunrise", "quote": "The sun rises,  forcing the creatures to retreat and destroying the changeling", "confidence": "sourced"},
-   {"value": "victims transform", "quote": "retrieves the real Finn from a fully transformed Cora", "confidence": "sourced"}
+   {
+    "value": "repelled by light",
+    "quote": "realizes that light repels them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:03",
+      "quote": "- Why? - If the light hurt it, I gotta go back out."
+     }
+    ]
+   },
+   {
+    "value": "iron protects",
+    "quote": "tell them to put back the iron bars",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:55:48",
+      "quote": "Light and iron."
+     }
+    ]
+   },
+   {
+    "value": "changeling destroyed by sunrise",
+    "quote": "The sun rises,  forcing the creatures to retreat and destroying the changeling",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:38",
+      "quote": "It's just till dawn."
+     }
+    ]
+   },
+   {
+    "value": "victims transform",
+    "quote": "retrieves the real Finn from a fully transformed Cora",
+    "confidence": "sourced"
+   },
+   {
+    "value": "trespassers become one of them",
+    "source": "subtitles",
+    "at": "00:59:00",
+    "quote": "\" If you who trespass put down roots... \" then Hallow be your name. \"",
+    "confidence": "sourced",
+    "detail": "a rhyme in Colm's book"
+   }
   ],
   "who_suffers": [
-   {"value": "newcomer family", "relation_to_threat": "stranger", "detail": "Adam, Claire and baby Finn", "quote": "a conservationist and his family visit an isolated village in Ireland", "confidence": "sourced"},
-   {"value": "baby", "relation_to_threat": "stranger", "quote": "One of The Hallow manages to abduct Finn", "confidence": "sourced"},
-   {"value": "local father", "relation_to_threat": "community", "detail": "Colm, whose daughter was taken", "quote": "claiming that The Hallow took his daughter Cora as well", "confidence": "sourced"}
+   {
+    "value": "newcomer family",
+    "relation_to_threat": "stranger",
+    "detail": "Adam, Claire and baby Finn",
+    "quote": "a conservationist and his family visit an isolated village in Ireland",
+    "confidence": "sourced"
+   },
+   {
+    "value": "baby",
+    "relation_to_threat": "stranger",
+    "quote": "One of The Hallow manages to abduct Finn",
+    "confidence": "sourced"
+   },
+   {
+    "value": "local father",
+    "relation_to_threat": "community",
+    "detail": "Colm, whose daughter was taken",
+    "quote": "claiming that The Hallow took his daughter Cora as well",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:50",
+      "quote": "They took my Cora. They took my little girl."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "child recovered", "quote": "Claire escapes to the house and cries with the real Finn over Adam's death", "confidence": "sourced"},
-   {"value": "protagonist dies", "quote": "Adam dies from his wounds", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "the fungus substance is revealed to be on several logs being driven away", "confidence": "sourced"}
+   {
+    "value": "child recovered",
+    "quote": "Claire escapes to the house and cries with the real Finn over Adam's death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "protagonist dies",
+    "quote": "Adam dies from his wounds",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat survives",
+    "quote": "the fungus substance is revealed to be on several logs being driven away",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:17",
+      "quote": "You're so beautiful."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "animal carcass", "state": "burst by fungus", "when": "opening", "role": "omen", "quote": "Adam stumbles upon an animal carcass with a strange fungal substance that has burst open the body", "confidence": "sourced"},
-   {"value": "iron bars", "state": "removed", "when": "opening", "role": "clue", "quote": "removing iron bars from the upper exterior of their home", "confidence": "sourced"},
-   {"value": "broken window", "when": "early", "role": "omen", "quote": "the window in Finn's room is broken while he is sleeping", "confidence": "sourced"},
-   {"value": "old book", "when": "early", "role": "clue", "quote": "the book that Colm gave Claire is filled with information about The Hallow", "confidence": "sourced"},
-   {"value": "scratch marks", "when": "middle", "role": "threat", "quote": "He finds Finn unharmed but the car covered in scratch marks", "confidence": "sourced"},
-   {"value": "stinger in the eye", "when": "middle", "role": "weapon", "quote": "Adam is stabbed in the eye by a stinger from one of the creatures", "confidence": "sourced"},
-   {"value": "camera flash", "when": "late", "role": "weapon", "quote": "Claire fends off a group of The Hallow with a camera flash", "confidence": "sourced"},
-   {"value": "logs", "state": "carrying fungus", "when": "ending", "role": "omen", "quote": "the fungus substance is revealed to be on several logs being driven away", "confidence": "sourced"}
+   {
+    "value": "animal carcass",
+    "state": "burst by fungus",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Adam stumbles upon an animal carcass with a strange fungal substance that has burst open the body",
+    "confidence": "sourced"
+   },
+   {
+    "value": "iron bars",
+    "state": "removed",
+    "when": "opening",
+    "role": "clue",
+    "quote": "removing iron bars from the upper exterior of their home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:05",
+      "quote": "but if your wife doesn't put the iron back up there's really no point."
+     }
+    ]
+   },
+   {
+    "value": "broken window",
+    "when": "early",
+    "role": "omen",
+    "quote": "the window in Finn's room is broken while he is sleeping",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:02",
+      "quote": "Well, your window's definitely broke"
+     }
+    ]
+   },
+   {
+    "value": "old book",
+    "when": "early",
+    "role": "clue",
+    "quote": "the book that Colm gave Claire is filled with information about The Hallow",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:48",
+      "quote": "It's a book of fucking fairy tales."
+     }
+    ]
+   },
+   {
+    "value": "scratch marks",
+    "when": "middle",
+    "role": "threat",
+    "quote": "He finds Finn unharmed but the car covered in scratch marks",
+    "confidence": "sourced"
+   },
+   {
+    "value": "stinger in the eye",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "Adam is stabbed in the eye by a stinger from one of the creatures",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:57",
+      "quote": "- Show me, show me, show me. - Something in my eye."
+     }
+    ]
+   },
+   {
+    "value": "camera flash",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Claire fends off a group of The Hallow with a camera flash",
+    "confidence": "sourced"
+   },
+   {
+    "value": "logs",
+    "state": "carrying fungus",
+    "when": "ending",
+    "role": "omen",
+    "quote": "the fungus substance is revealed to be on several logs being driven away",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dog",
+    "state": "missing, then mauled",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:05:11",
+    "quote": "Let's go and find Iggy.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:56",
+      "quote": "Jesus, Iggs. What did they do to you?"
+     }
+    ]
+   },
+   {
+    "value": "black sludge from ceiling",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:12:08",
+    "quote": "Yes, Adam. Five hundred years of ancient Irish sludge are dripping all over Finn's bed.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "dead animal found", "when": "opening", "role": "omen", "quote": "Adam stumbles upon an animal carcass with a strange fungal substance", "confidence": "sourced"},
-   {"order": 2, "value": "locals warn newcomers", "when": "early", "quote": "treated coldly by the villagers who repeat the legend of The Hallow and tell them to put back the iron bars", "confidence": "sourced"},
-   {"order": 3, "value": "siege of the house", "when": "middle", "quote": "they are attacked by the creatures the villagers have warned them about", "confidence": "sourced"},
-   {"order": 4, "value": "father infected", "when": "middle", "role": "turn", "quote": "Adam is stabbed in the eye by a stinger from one of the creatures", "confidence": "sourced"},
-   {"order": 5, "value": "baby stolen", "when": "late", "quote": "One of The Hallow manages to abduct Finn before his parents can stop it", "confidence": "sourced"},
-   {"order": 6, "value": "changeling suspected", "when": "late", "role": "turn", "quote": "begins to suspect that the Finn that Claire rescued is actually a changeling", "confidence": "sourced"},
-   {"order": 7, "value": "real child retrieved, father dies", "when": "ending", "quote": "Adam enters The Hallow's nest and retrieves the real Finn from a fully transformed Cora", "confidence": "sourced"},
-   {"order": 8, "value": "closing sting", "when": "ending", "quote": "a logging company start to cut down the forest, and the fungus substance is revealed to be on several logs", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "news of the forest sale",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:25",
+    "quote": "over our dead bodies will they take our trees from us!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "dead animal found",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Adam stumbles upon an animal carcass with a strange fungal substance",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "locals warn newcomers",
+    "when": "early",
+    "quote": "treated coldly by the villagers who repeat the legend of The Hallow and tell them to put back the iron bars",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:39",
+      "quote": "It's dangerous for him... and the little one."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:18:55",
+      "quote": "They believe that the forest that you're trampling on belongs to the Hallow."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "dog mauled",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:41:56",
+    "quote": "Jesus, Iggs. What did they do to you?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "siege of the house",
+    "when": "middle",
+    "quote": "they are attacked by the creatures the villagers have warned them about",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:24",
+      "quote": "We saw the same thing. The Hallow."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "father infected",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Adam is stabbed in the eye by a stinger from one of the creatures",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "rhyme read from the book",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:58:48",
+    "quote": "\" Hallow be thy name. \" Blessed be thy claim.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "baby stolen",
+    "when": "late",
+    "quote": "One of The Hallow manages to abduct Finn before his parents can stop it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:05",
+      "quote": "Take my baby, please. Just until morning."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "changeling suspected",
+    "when": "late",
+    "role": "turn",
+    "quote": "begins to suspect that the Finn that Claire rescued is actually a changeling",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:44",
+      "quote": "It's a changeling."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "real child retrieved, father dies",
+    "when": "ending",
+    "quote": "Adam enters The Hallow's nest and retrieves the real Finn from a fully transformed Cora",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:16",
+      "quote": "I got him back."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "closing sting",
+    "when": "ending",
+    "quote": "a logging company start to cut down the forest, and the fungus substance is revealed to be on several logs",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:17",
+      "quote": "You're so beautiful."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

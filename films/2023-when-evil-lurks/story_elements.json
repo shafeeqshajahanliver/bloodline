@@ -1,63 +1,488 @@
 {
  "film": "2023-when-evil-lurks",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "possessing demon", "detail": "an unborn demon inside Uriel, the \"Rotten\"", "quote": "Uriel has become a \"Rotten\", a being possessed by an unborn demon awaiting physical birth", "confidence": "sourced"},
-   {"value": "contagious possession", "quote": "The film follows two brothers facing a spreading demonic possession in a rural town", "confidence": "sourced"}
+   {
+    "value": "possessing demon",
+    "detail": "an unborn demon inside Uriel, the \"Rotten\"",
+    "quote": "Uriel has become a \"Rotten\", a being possessed by an unborn demon awaiting physical birth",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:43",
+      "quote": "he's been rotten for a long time."
+     }
+    ]
+   },
+   {
+    "value": "contagious possession",
+    "quote": "The film follows two brothers facing a spreading demonic possession in a rural town",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "unexplained", "quote": "a being possessed by an unborn demon awaiting physical birth", "confidence": "observed"}
+   {
+    "value": "unexplained",
+    "quote": "a being possessed by an unborn demon awaiting physical birth",
+    "confidence": "observed"
+   }
   ],
   "wants": [
-   {"value": "to be born", "quote": "kill Uriel using the appropriate ritual to prevent the demon from being fully born", "confidence": "sourced"},
-   {"value": "to spread", "quote": "they will only spread the infectious possession", "confidence": "sourced"}
+   {
+    "value": "to be born",
+    "quote": "kill Uriel using the appropriate ritual to prevent the demon from being fully born",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:11",
+      "quote": "and uses it's body to be born."
+     }
+    ]
+   },
+   {
+    "value": "to spread",
+    "quote": "they will only spread the infectious possession",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:35",
+      "quote": "The rotten must be removed before it rots the rest."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "state abandonment", "quote": "drawing parallels to real-world toxic exposure and state abandonment in rural agricultural communities", "confidence": "sourced"},
-   {"value": "dumping the problem", "quote": "suggests removing Uriel from the shack and dumping him away from his land", "confidence": "sourced"}
+   {
+    "value": "state abandonment",
+    "quote": "drawing parallels to real-world toxic exposure and state abandonment in rural agricultural communities",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:10",
+      "quote": "A whole year passed and you only sent the cleaner yesterday."
+     }
+    ]
+   },
+   {
+    "value": "dumping the problem",
+    "quote": "suggests removing Uriel from the shack and dumping him away from his land",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:58",
+      "quote": "You moved a rotten? Knowing he was possessed?"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "finding a corpse", "quote": "brothers Pedro and Jaime discover a disemboweled corpse", "confidence": "sourced"}
+   {
+    "value": "finding a corpse",
+    "quote": "brothers Pedro and Jaime discover a disemboweled corpse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:03",
+      "quote": "We have to report it."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "guns spread it", "quote": "Ruiz's pregnant wife Jimena warns against using guns because they will only spread the infectious possession", "confidence": "sourced"},
-   {"value": "spreads through animals", "quote": "The family dog, who previously licked Pedro's demon-mucked clothes, mauls Vicky", "confidence": "sourced"},
-   {"value": "must be killed by ritual", "quote": "they must find and kill Uriel using the appropriate ritual to prevent the demon from being fully born", "confidence": "sourced"}
+   {
+    "value": "guns spread it",
+    "quote": "Ruiz's pregnant wife Jimena warns against using guns because they will only spread the infectious possession",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:31",
+      "quote": "There's a very important rule, too. Don't shoot them with fire arms."
+     }
+    ]
+   },
+   {
+    "value": "spreads through animals",
+    "quote": "The family dog, who previously licked Pedro's demon-mucked clothes, mauls Vicky",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:32",
+      "quote": "First they make the animals go crazy, they say."
+     }
+    ]
+   },
+   {
+    "value": "must be killed by ritual",
+    "quote": "they must find and kill Uriel using the appropriate ritual to prevent the demon from being fully born",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:47",
+      "quote": "This goes into his nape, I need to see it."
+     }
+    ]
+   },
+   {
+    "value": "no electric light",
+    "source": "subtitles",
+    "at": "00:29:46",
+    "quote": "Don't use electric lights. Its shadows call in the evil.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "never name it",
+    "source": "subtitles",
+    "at": "00:47:11",
+    "quote": "never, ever name the evil by its name.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "children shield it",
+    "source": "subtitles",
+    "at": "01:17:44",
+    "quote": "Kids protect the rotten.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "brothers", "relation_to_threat": "stranger", "detail": "Pedro and Jaime", "quote": "brothers Pedro and Jaime discover a disemboweled corpse", "confidence": "sourced"},
-   {"value": "children", "relation_to_threat": "family", "detail": "Santino killed by his possessed mother", "quote": "she has killed Santino and is eating his brains", "confidence": "sourced"},
-   {"value": "rural community", "relation_to_threat": "community", "quote": "a schoolhouse filled with possessed children who killed all the nearby adults", "confidence": "sourced"},
-   {"value": "mother", "relation_to_threat": "family", "detail": "Sara, eaten", "quote": "Jair chokes, and proceeds to cough up Sara's hair and necklace", "confidence": "sourced"}
+   {
+    "value": "brothers",
+    "relation_to_threat": "stranger",
+    "detail": "Pedro and Jaime",
+    "quote": "brothers Pedro and Jaime discover a disemboweled corpse",
+    "confidence": "sourced"
+   },
+   {
+    "value": "children",
+    "relation_to_threat": "family",
+    "detail": "Santino killed by his possessed mother",
+    "quote": "she has killed Santino and is eating his brains",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:24",
+      "quote": "Evil likes children, and children like evil."
+     }
+    ]
+   },
+   {
+    "value": "rural community",
+    "relation_to_threat": "community",
+    "quote": "a schoolhouse filled with possessed children who killed all the nearby adults",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother",
+    "relation_to_threat": "family",
+    "detail": "Sara, eaten",
+    "quote": "Jair chokes, and proceeds to cough up Sara's hair and necklace",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat born and survives", "quote": "The demon is then born out of Uriel's corpse, appearing as a nude, blood-covered child", "confidence": "sourced"},
-   {"value": "family destroyed", "quote": "Pedro walks outside, collapses, and wails", "confidence": "sourced"}
+   {
+    "value": "threat born and survives",
+    "quote": "The demon is then born out of Uriel's corpse, appearing as a nude, blood-covered child",
+    "confidence": "sourced"
+   },
+   {
+    "value": "family destroyed",
+    "quote": "Pedro walks outside, collapses, and wails",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "disemboweled corpse", "when": "opening", "role": "trigger", "quote": "discover a disemboweled corpse, which leads them to a nearby shack", "confidence": "sourced"},
-   {"value": "goat", "state": "possessed, shot", "when": "early", "role": "omen", "quote": "one of Ruiz's goats has become possessed", "confidence": "sourced"},
-   {"value": "shotgun", "when": "early", "role": "weapon", "quote": "Ruiz shoots the animal with his shotgun", "confidence": "sourced"},
-   {"value": "dog", "state": "attacking", "when": "middle", "role": "threat", "quote": "The family dog, who previously licked Pedro's demon-mucked clothes, mauls Vicky", "confidence": "sourced"},
-   {"value": "fire axe", "when": "late", "role": "weapon", "quote": "believing that a nearby fire axe might help dismember and move Uriel", "confidence": "sourced"},
-   {"value": "blood-covered child", "when": "late", "role": "threat", "quote": "appearing as a nude, blood-covered child", "confidence": "sourced"},
-   {"value": "hair and necklace", "when": "ending", "role": "clue", "quote": "cough up Sara's hair and necklace", "confidence": "sourced"}
+   {
+    "value": "disemboweled corpse",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "discover a disemboweled corpse, which leads them to a nearby shack",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:51",
+      "quote": "This guy was cut with something sharp."
+     }
+    ]
+   },
+   {
+    "value": "goat",
+    "state": "possessed, shot",
+    "when": "early",
+    "role": "omen",
+    "quote": "one of Ruiz's goats has become possessed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:34",
+      "quote": "That goat."
+     }
+    ]
+   },
+   {
+    "value": "shotgun",
+    "when": "early",
+    "role": "weapon",
+    "quote": "Ruiz shoots the animal with his shotgun",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:08",
+      "quote": "Mr. Ruiz, don't shoot, please."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:26:33",
+      "quote": "Don't shoot the beast with a firearm."
+     }
+    ]
+   },
+   {
+    "value": "dog",
+    "state": "attacking",
+    "when": "middle",
+    "role": "threat",
+    "quote": "The family dog, who previously licked Pedro's demon-mucked clothes, mauls Vicky",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:06",
+      "quote": "You won't find a dog, you'll find a demon."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:39:43",
+      "quote": "A big, brown dog."
+     }
+    ]
+   },
+   {
+    "value": "fire axe",
+    "when": "late",
+    "role": "weapon",
+    "quote": "believing that a nearby fire axe might help dismember and move Uriel",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:11",
+      "quote": "There's an axe in the director's office, the axe for the fires."
+     }
+    ]
+   },
+   {
+    "value": "blood-covered child",
+    "when": "late",
+    "role": "threat",
+    "quote": "appearing as a nude, blood-covered child",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hair and necklace",
+    "when": "ending",
+    "role": "clue",
+    "quote": "cough up Sara's hair and necklace",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dogs that fled",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:13:23",
+    "quote": "My dogs left a month ago.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cleaner's strange tools",
+    "when": "opening",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:05:19",
+    "quote": "These are pieces of something.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:41",
+      "quote": "What's this language?"
+     }
+    ]
+   },
+   {
+    "value": "rural school",
+    "when": "late",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "01:11:22",
+    "quote": "RURAL SCHOOL",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "corpse in the woods", "when": "opening", "role": "trigger", "quote": "The morning after hearing gunshots in the woods near the land where they work", "confidence": "sourced"},
-   {"order": 2, "value": "infected man dumped", "when": "early", "quote": "the men realize that Uriel has fallen off the truck somewhere along the way", "confidence": "sourced"},
-   {"order": 3, "value": "possessed animal, warning ignored", "when": "early", "role": "omen", "quote": "Ruiz shoots the animal with his shotgun. A possessed Jimena then kills Ruiz and commits suicide", "confidence": "sourced"},
-   {"order": 4, "value": "spread into the family", "when": "middle", "quote": "a possessed Leonardo rams his truck into Sabrina and Vicky", "confidence": "sourced"},
-   {"order": 5, "value": "expert explains the rules", "when": "middle", "role": "clue", "quote": "Mirtha explains that they must find and kill Uriel using the appropriate ritual", "confidence": "sourced"},
-   {"order": 6, "value": "child killed by mother", "when": "late", "quote": "she has killed Santino and is eating his brains", "confidence": "sourced"},
-   {"order": 7, "value": "ritual fails, demon born", "when": "late", "role": "turn", "quote": "an angry Pedro beats Uriel to death. The demon is then born out of Uriel's corpse", "confidence": "sourced"},
-   {"order": 8, "value": "possessed child at home", "when": "ending", "quote": "Jair chokes, and proceeds to cough up Sara's hair and necklace", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "corpse in the woods",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "The morning after hearing gunshots in the woods near the land where they work",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:11",
+      "quote": "Did you hear?"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "mother asks for son's killing",
+    "when": "early",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:08:04",
+    "quote": "He has to kill my son.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "infected man dumped",
+    "when": "early",
+    "quote": "the men realize that Uriel has fallen off the truck somewhere along the way",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:58",
+      "quote": "You moved a rotten? Knowing he was possessed?"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "possessed animal, warning ignored",
+    "when": "early",
+    "role": "omen",
+    "quote": "Ruiz shoots the animal with his shotgun. A possessed Jimena then kills Ruiz and commits suicide",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:33",
+      "quote": "Don't shoot the beast with a firearm. You'll condemn us, love."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "spread into the family",
+    "when": "middle",
+    "quote": "a possessed Leonardo rams his truck into Sabrina and Vicky",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:07",
+      "quote": "There's a rotten in the town."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "expert explains the rules",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Mirtha explains that they must find and kill Uriel using the appropriate ritual",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:41",
+      "quote": "Look, there are seven rules to follow"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "child killed by mother",
+    "when": "late",
+    "quote": "she has killed Santino and is eating his brains",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "ritual fails, demon born",
+    "when": "late",
+    "role": "turn",
+    "quote": "an angry Pedro beats Uriel to death. The demon is then born out of Uriel's corpse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:32",
+      "quote": "The only way to kill him is using this."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "killer's confession",
+    "when": "ending",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:31:35",
+    "quote": "There was... a voice in my head,",
+    "confidence": "sourced",
+    "detail": "a voice made the speaker kill the cleaner, feed him to the pigs and eat from the body"
+   },
+   {
+    "order": 10,
+    "value": "possessed child at home",
+    "when": "ending",
+    "quote": "Jair chokes, and proceeds to cough up Sara's hair and necklace",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:09",
+      "quote": "Don't bite."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,60 +1,449 @@
 {
  "film": "1999-the-blair-witch-project",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "witch", "detail": "the Blair Witch", "quote": "a local myth known as the Blair Witch", "confidence": "sourced"},
-   {"value": "unseen force", "quote": "an unseen force strikes Mike; he drops his camera and falls silent", "confidence": "sourced"},
-   {"value": "cursed forest", "quote": "one of whom warns them that the forest is cursed", "confidence": "sourced"}
+   {
+    "value": "witch",
+    "detail": "the Blair Witch",
+    "quote": "a local myth known as the Blair Witch",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:22",
+      "quote": "only on her arms and on her hands and everything it was like hair."
+     }
+    ]
+   },
+   {
+    "value": "unseen force",
+    "quote": "an unseen force strikes Mike; he drops his camera and falls silent",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cursed forest",
+    "quote": "one of whom warns them that the forest is cursed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:22",
+      "quote": "There's a fucking witch and she keeps leaving shit"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "local legend", "quote": "interview residents about the myth", "confidence": "sourced"}
+   {
+    "value": "local legend",
+    "quote": "interview residents about the myth",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:55",
+      "quote": "Yet, legend tells a different story."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "nothing stated", "quote": "She admits that something evil is haunting them and will ultimately take them", "confidence": "observed"}
+   {
+    "value": "nothing stated",
+    "quote": "She admits that something evil is haunting them and will ultimately take them",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "child murder", "detail": "Rustin Parr's killings", "quote": "abducted seven children in 1941; he murdered them all in his basement", "confidence": "sourced"}
+   {
+    "value": "child murder",
+    "detail": "Rustin Parr's killings",
+    "quote": "abducted seven children in 1941; he murdered them all in his basement",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:41",
+      "quote": "There are an unusually high number of children laid to rest here, most of whom passed in the 1940s."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "investigating a legend", "quote": "set out to produce a documentary about the mythical Blair Witch", "confidence": "sourced"},
-   {"value": "disturbing a grave", "quote": "one of which Josh accidentally knocks over", "confidence": "sourced"}
+   {
+    "value": "investigating a legend",
+    "quote": "set out to produce a documentary about the mythical Blair Witch",
+    "confidence": "sourced"
+   },
+   {
+    "value": "disturbing a grave",
+    "quote": "one of which Josh accidentally knocks over",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:03",
+      "quote": "I just knocked it over."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "victims face the wall", "quote": "killing them in pairs while having one stand in a corner, facing the wall", "confidence": "sourced"},
-   {"value": "lures with a voice", "quote": "his yells are a fabrication by the Blair Witch to draw them out of their camp", "confidence": "sourced"},
-   {"value": "cannot leave the woods", "quote": "realize they have been walking in circles", "confidence": "sourced"}
+   {
+    "value": "victims face the wall",
+    "quote": "killing them in pairs while having one stand in a corner, facing the wall",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lures with a voice",
+    "quote": "his yells are a fabrication by the Blair Witch to draw them out of their camp",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:21",
+      "quote": "I hear him downstairs."
+     }
+    ]
+   },
+   {
+    "value": "cannot leave the woods",
+    "quote": "realize they have been walking in circles",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:10",
+      "quote": "It's the same log."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "students", "relation_to_threat": "stranger", "detail": "Heather, Mike and Josh", "quote": "film students Heather, Mike, and Josh", "confidence": "sourced"}
+   {
+    "value": "students",
+    "relation_to_threat": "stranger",
+    "detail": "Heather, Mike and Josh",
+    "quote": "film students Heather, Mike, and Josh",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "everyone dies", "quote": "causing her to drop her camera and fall silent as well; the camera then cuts to black", "confidence": "observed"}
+   {
+    "value": "everyone dies",
+    "quote": "causing her to drop her camera and fall silent as well; the camera then cuts to black",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "cairns", "state": "knocked over, then built", "when": "early", "role": "omen", "quote": "an old graveyard with seven small cairns", "confidence": "sourced"},
-   {"value": "snapping sticks", "when": "middle", "role": "omen", "quote": "they hear the sound of sticks snapping", "confidence": "sourced"},
-   {"value": "map", "state": "kicked into creek", "when": "middle", "role": "turn", "quote": "he kicked it into a creek out of frustration", "confidence": "sourced"},
-   {"value": "stick figures", "state": "hanging from trees", "when": "middle", "role": "omen", "quote": "discover stick figures hanging from trees", "confidence": "sourced"},
-   {"value": "slime", "state": "on equipment", "when": "middle", "role": "omen", "quote": "Josh's equipment is covered with slime", "confidence": "sourced"},
-   {"value": "teeth and hair", "state": "bloodied in a bundle", "when": "late", "role": "clue", "quote": "a blood-soaked scrap of his shirt containing bloodied teeth and hair", "confidence": "sourced"},
-   {"value": "handprints", "state": "children's, bloody", "when": "ending", "role": "setting", "quote": "children's bloody handprints on some of the walls", "confidence": "sourced"},
-   {"value": "camera", "state": "dropped", "when": "ending", "role": "turn", "quote": "he drops his camera and falls silent", "confidence": "sourced"}
+   {
+    "value": "gutted deer",
+    "state": "half-gutted, hunters vanished",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:07:08",
+    "quote": "The deer they had hunted was in the process of being gutted",
+    "confidence": "sourced",
+    "detail": "in a local's story of two hunters who disappeared near the woods"
+   },
+   {
+    "value": "cairns",
+    "state": "knocked over, then built",
+    "when": "early",
+    "role": "omen",
+    "quote": "an old graveyard with seven small cairns",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:38",
+      "quote": "and there are piles of rocks outside of our tent."
+     }
+    ]
+   },
+   {
+    "value": "snapping sticks",
+    "when": "middle",
+    "role": "omen",
+    "quote": "they hear the sound of sticks snapping",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:16",
+      "quote": "I totally heard noise."
+     }
+    ]
+   },
+   {
+    "value": "dead mouse",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:20:08",
+    "quote": "What killed this dead mouse?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "map",
+    "state": "kicked into creek",
+    "when": "middle",
+    "role": "turn",
+    "quote": "he kicked it into a creek out of frustration",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:57",
+      "quote": "But I kicked that fucking map into the creek yesterday."
+     }
+    ]
+   },
+   {
+    "value": "stick figures",
+    "state": "hanging from trees",
+    "when": "middle",
+    "role": "omen",
+    "quote": "discover stick figures hanging from trees",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:23",
+      "quote": "It's hanging all over. Look around you."
+     }
+    ]
+   },
+   {
+    "value": "slime",
+    "state": "on equipment",
+    "when": "middle",
+    "role": "omen",
+    "quote": "Josh's equipment is covered with slime",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:54",
+      "quote": "That looks like slime, man."
+     }
+    ]
+   },
+   {
+    "value": "same fallen log",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:55:36",
+    "quote": "No. No, Mike, it's not the same log.",
+    "confidence": "sourced",
+    "detail": "after a day walking south they arrive back at a log they crossed before"
+   },
+   {
+    "value": "teeth and hair",
+    "state": "bloodied in a bundle",
+    "when": "late",
+    "role": "clue",
+    "quote": "a blood-soaked scrap of his shirt containing bloodied teeth and hair",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:40",
+      "quote": "It's all full of blood."
+     }
+    ]
+   },
+   {
+    "value": "handprints",
+    "state": "children's, bloody",
+    "when": "ending",
+    "role": "setting",
+    "quote": "children's bloody handprints on some of the walls",
+    "confidence": "sourced"
+   },
+   {
+    "value": "abandoned house",
+    "when": "ending",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "01:17:35",
+    "quote": "Holy shit. It's a house.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "camera",
+    "state": "dropped",
+    "when": "ending",
+    "role": "turn",
+    "quote": "he drops his camera and falls silent",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:21",
+      "quote": "We're making a documentary about a witch. I have a camera."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "legend told by locals", "when": "opening", "role": "omen", "quote": "Locals tell them of Rustin Parr", "confidence": "sourced"},
-   {"order": 2, "value": "warning ignored", "when": "opening", "role": "omen", "quote": "warns them that the forest is cursed", "confidence": "sourced"},
-   {"order": 3, "value": "grave disturbed", "when": "early", "role": "trigger", "quote": "one of which Josh accidentally knocks over", "confidence": "sourced"},
-   {"order": 4, "value": "lost in the woods", "when": "middle", "quote": "they realize they are lost", "confidence": "sourced"},
-   {"order": 5, "value": "friend vanishes", "when": "middle", "quote": "Josh vanishes the next morning", "confidence": "sourced"},
-   {"order": 6, "value": "remains found", "when": "late", "role": "clue", "quote": "a blood-soaked scrap of his shirt containing bloodied teeth and hair", "confidence": "sourced"},
-   {"order": 7, "value": "confession to camera", "when": "late", "quote": "she records herself tearfully apologizing to her, Mike's, and Josh's mothers", "confidence": "sourced"},
-   {"order": 8, "value": "facing the wall, cut to black", "when": "ending", "quote": "to see Mike standing in a corner facing the wall", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "legend told by locals",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Locals tell them of Rustin Parr",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:51",
+      "quote": "and they found the bodies of seven kids from the area."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "warning ignored",
+    "when": "opening",
+    "role": "omen",
+    "quote": "warns them that the forest is cursed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:52",
+      "quote": "I said, You damn fool kids'll never learn."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "grave disturbed",
+    "when": "early",
+    "role": "trigger",
+    "quote": "one of which Josh accidentally knocks over",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:01",
+      "quote": "Please, tell me you didn't just knock that over."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "lost in the woods",
+    "when": "middle",
+    "quote": "they realize they are lost",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:52",
+      "quote": "We've walked south all day, okay? We walked south all fucking day."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "map thrown away",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:40:57",
+    "quote": "But I kicked that fucking map into the creek yesterday.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "friend vanishes",
+    "when": "middle",
+    "quote": "Josh vanishes the next morning",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:32",
+      "quote": "He's probably at the river or something."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "remains found",
+    "when": "late",
+    "role": "clue",
+    "quote": "a blood-soaked scrap of his shirt containing bloodied teeth and hair",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:40",
+      "quote": "It's all full of blood."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "confession to camera",
+    "when": "late",
+    "quote": "she records herself tearfully apologizing to her, Mike's, and Josh's mothers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:28",
+      "quote": "I just want to apologise to Mike's mum and Josh's mum and my mum..."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "following a friend's voice",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:20:21",
+    "quote": "I hear him downstairs.",
+    "confidence": "sourced",
+    "detail": "Mike and Heather chase Josh's cries into the house at night"
+   },
+   {
+    "order": 10,
+    "value": "facing the wall, cut to black",
+    "when": "ending",
+    "quote": "to see Mike standing in a corner facing the wall",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:22",
+      "quote": "Mike! Mike!"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

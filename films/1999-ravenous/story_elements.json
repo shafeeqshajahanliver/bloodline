@@ -1,63 +1,408 @@
 {
  "film": "1999-ravenous",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "cannibal", "detail": "Colqhoun, posing as Colonel Ives", "quote": "where he and his colleagues encounter a sadistic cannibal", "confidence": "sourced"},
-   {"value": "wendigo curse", "quote": "becomes a demon cursed by an insatiable hunger for more human flesh", "confidence": "sourced"}
+   {
+    "value": "cannibal",
+    "detail": "Colqhoun, posing as Colonel Ives",
+    "quote": "where he and his colleagues encounter a sadistic cannibal",
+    "confidence": "sourced"
+   },
+   {
+    "value": "wendigo curse",
+    "quote": "becomes a demon cursed by an insatiable hunger for more human flesh",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "survival cannibalism", "quote": "After eating their horses and pack-animals, the men resorted to cannibalism to avoid starvation", "confidence": "sourced"},
-   {"value": "folk legend", "detail": "the Wendigo myth told by an Indian scout", "quote": "After an Indian scout informed him of the Wendigo myth, he killed and ate the scout", "confidence": "sourced"}
+   {
+    "value": "survival cannibalism",
+    "quote": "After eating their horses and pack-animals, the men resorted to cannibalism to avoid starvation",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:23",
+      "quote": "The meat did not last us a week... and we were soon hungry again."
+     }
+    ]
+   },
+   {
+    "value": "folk legend",
+    "detail": "the Wendigo myth told by an Indian scout",
+    "quote": "After an Indian scout informed him of the Wendigo myth, he killed and ate the scout",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:05",
+      "quote": "GEORGE: Weendigo."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "hunger", "quote": "He now plans to use the fort as a base to cannibalize other passing travelers headed westward", "confidence": "sourced"},
-   {"value": "to convert others", "quote": "wants Boyd, who is fighting his cannibalistic cravings, to join him", "confidence": "sourced"}
+   {
+    "value": "hunger",
+    "quote": "He now plans to use the fort as a base to cannibalize other passing travelers headed westward",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:55:25",
+      "quote": "Weendigo eats. Must eat more, more... never enough."
+     }
+    ]
+   },
+   {
+    "value": "to convert others",
+    "quote": "wants Boyd, who is fighting his cannibalistic cravings, to join him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:22",
+      "quote": "Thousands of gold-hungry Americans... will travel over those mountains..."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "colonial crime", "quote": "to critique manifest destiny, colonialism and capitalism", "confidence": "sourced"},
-   {"value": "murder of companions", "quote": "it is in fact Colqhoun who murdered and consumed his five companions", "confidence": "sourced"}
+   {
+    "value": "colonial crime",
+    "quote": "to critique manifest destiny, colonialism and capitalism",
+    "confidence": "sourced"
+   },
+   {
+    "value": "murder of companions",
+    "quote": "it is in fact Colqhoun who murdered and consumed his five companions",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "exile to a remote outpost", "quote": "sends Boyd to Fort Spencer, a remote military outpost in the Sierra Nevada", "confidence": "sourced"},
-   {"value": "stranger arrives", "quote": "A stranger named Colqhoun arrives after his wagon train became lost in the mountains", "confidence": "sourced"}
+   {
+    "value": "exile to a remote outpost",
+    "quote": "sends Boyd to Fort Spencer, a remote military outpost in the Sierra Nevada",
+    "confidence": "sourced"
+   },
+   {
+    "value": "stranger arrives",
+    "quote": "A stranger named Colqhoun arrives after his wagon train became lost in the mountains",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "eating flesh gives strength", "quote": "anyone who consumes the flesh of a human absorbs their strength", "confidence": "sourced"},
-   {"value": "flesh heals wounds", "quote": "Boyd gives in and eats a stew made out of human flesh, healing his injuries", "confidence": "sourced"},
-   {"value": "addictive hunger", "quote": "now Hart too is addicted to human flesh", "confidence": "sourced"}
+   {
+    "value": "eating flesh gives strength",
+    "quote": "anyone who consumes the flesh of a human absorbs their strength",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:33",
+      "quote": "he steals his strength. He absorbs the other man's spirit."
+     }
+    ]
+   },
+   {
+    "value": "flesh heals wounds",
+    "quote": "Boyd gives in and eats a stew made out of human flesh, healing his injuries",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:26",
+      "quote": "And healthy. And virile."
+     }
+    ]
+   },
+   {
+    "value": "addictive hunger",
+    "quote": "now Hart too is addicted to human flesh",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:43",
+      "quote": "And his hunger becomes craven... insatiable."
+     }
+    ]
+   },
+   {
+    "value": "stopped by self-sacrifice",
+    "source": "subtitles",
+    "at": "00:55:36",
+    "quote": "You stop weendigo... you give yourself.",
+    "confidence": "sourced",
+    "detail": "Martha's explanation"
+   }
   ],
   "who_suffers": [
-   {"value": "soldiers", "relation_to_threat": "stranger", "quote": "Colqhoun now kills the rescue party one by one, leaving Boyd the sole survivor", "confidence": "sourced"},
-   {"value": "reluctant convert", "relation_to_threat": "self", "detail": "Boyd, who eats flesh to survive", "quote": "Boyd limps back to Fort Spencer delirious and plagued by cravings for human flesh", "confidence": "sourced"}
+   {
+    "value": "soldiers",
+    "relation_to_threat": "stranger",
+    "quote": "Colqhoun now kills the rescue party one by one, leaving Boyd the sole survivor",
+    "confidence": "sourced"
+   },
+   {
+    "value": "reluctant convert",
+    "relation_to_threat": "self",
+    "detail": "Boyd, who eats flesh to survive",
+    "quote": "Boyd limps back to Fort Spencer delirious and plagued by cravings for human flesh",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "mutual destruction", "quote": "Boyd refuses to save himself by eating Ives' body and dies on top of his adversary", "confidence": "sourced"},
-   {"value": "cycle passes on", "detail": "General Slauson tastes the stew", "quote": "Slauson tastes the stew that was left simmering on the fire", "confidence": "sourced"}
+   {
+    "value": "mutual destruction",
+    "quote": "Boyd refuses to save himself by eating Ives' body and dies on top of his adversary",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cycle passes on",
+    "detail": "General Slauson tastes the stew",
+    "quote": "Slauson tastes the stew that was left simmering on the fire",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "blood", "state": "dripping into mouth", "when": "opening", "role": "omen", "quote": "blood drips into Boyd's mouth, giving him the strength to capture the headquarters", "confidence": "sourced"},
-   {"value": "cart of dead", "when": "opening", "role": "setting", "quote": "send him on a cart of American dead to the Mexican headquarters", "confidence": "sourced"},
-   {"value": "cave", "when": "middle", "role": "setting", "quote": "Finding the cave that had sheltered Colqhoun's party", "confidence": "sourced"},
-   {"value": "uniform under a skeleton", "when": "middle", "role": "clue", "quote": "They discover a Colonel's uniform below one of the skeletons", "confidence": "sourced"},
-   {"value": "pit with a body", "when": "middle", "role": "trigger", "quote": "hides in a pit next to the body of Reich, eating some of Reich's flesh to survive", "confidence": "sourced"},
-   {"value": "stew", "state": "simmering", "when": "ending", "role": "symbol", "quote": "Boyd gives in and eats a stew made out of human flesh", "confidence": "sourced"},
-   {"value": "bear trap", "when": "ending", "role": "weapon", "quote": "Boyd forces Ives into a bear trap and springs it, pinning them both together", "confidence": "sourced"}
+   {
+    "value": "blood",
+    "state": "dripping into mouth",
+    "when": "opening",
+    "role": "omen",
+    "quote": "blood drips into Boyd's mouth, giving him the strength to capture the headquarters",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:25",
+      "quote": "his blood running down my throat."
+     }
+    ]
+   },
+   {
+    "value": "cart of dead",
+    "when": "opening",
+    "role": "setting",
+    "quote": "send him on a cart of American dead to the Mexican headquarters",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cave",
+    "when": "middle",
+    "role": "setting",
+    "quote": "Finding the cave that had sheltered Colqhoun's party",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:19",
+      "quote": "We took shelter in a cave."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:32:08",
+      "quote": "HART: I take it that's the cave."
+     }
+    ]
+   },
+   {
+    "value": "uniform under a skeleton",
+    "when": "middle",
+    "role": "clue",
+    "quote": "They discover a Colonel's uniform below one of the skeletons",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pit with a body",
+    "when": "middle",
+    "role": "trigger",
+    "quote": "hides in a pit next to the body of Reich, eating some of Reich's flesh to survive",
+    "confidence": "sourced"
+   },
+   {
+    "value": "stew",
+    "state": "simmering",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "Boyd gives in and eats a stew made out of human flesh",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:10",
+      "quote": "It's, uh... stew."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:19:59",
+      "quote": "HART: Stew a la Major Knox."
+     }
+    ]
+   },
+   {
+    "value": "bear trap",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "Boyd forces Ives into a bear trap and springs it, pinning them both together",
+    "confidence": "sourced"
+   },
+   {
+    "value": "wolf howls",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:50:00",
+    "quote": "(WOLF HOWLS)",
+    "confidence": "sourced",
+    "detail": "as Boyd first eats human flesh"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "plays dead, tastes blood", "when": "opening", "role": "omen", "quote": "Throughout this journey, blood drips into Boyd's mouth", "confidence": "sourced"},
-   {"order": 2, "value": "exiled to the outpost", "when": "opening", "quote": "sends Boyd to Fort Spencer, a remote military outpost in the Sierra Nevada", "confidence": "sourced"},
-   {"order": 3, "value": "stranger's tale and legend told", "when": "early", "role": "trigger", "quote": "George, warns them of the Wendigo myth", "confidence": "sourced"},
-   {"order": 4, "value": "survivor revealed as killer", "when": "middle", "role": "turn", "quote": "revealing that it is in fact Colqhoun who murdered and consumed his five companions", "confidence": "sourced"},
-   {"order": 5, "value": "hero eats flesh to survive", "when": "middle", "quote": "eating some of Reich's flesh to survive", "confidence": "sourced"},
-   {"order": 6, "value": "killer returns as commander", "when": "middle", "role": "turn", "quote": "A temporary commander is assigned to the fort and turns out to be Colqhoun", "confidence": "sourced"},
-   {"order": 7, "value": "hero gives in", "when": "late", "quote": "Eventually Boyd gives in and eats a stew made out of human flesh", "confidence": "sourced"},
-   {"order": 8, "value": "both die, sting", "when": "ending", "quote": "Slauson tastes the stew that was left simmering on the fire", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "cowardice decorated as heroism",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:47",
+    "quote": "LINDUS: For heroism above and beyond the call of duty...",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "plays dead, tastes blood",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Throughout this journey, blood drips into Boyd's mouth",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:06",
+      "quote": "BOYD: I played dead."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "exiled to the outpost",
+    "when": "opening",
+    "quote": "sends Boyd to Fort Spencer, a remote military outpost in the Sierra Nevada",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:13",
+      "quote": "I'm sending you to California... Fort Spencer."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "stranger's tale and legend told",
+    "when": "early",
+    "role": "trigger",
+    "quote": "George, warns them of the Wendigo myth",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:46",
+      "quote": "when I stepped inside that cave... the smell of meat cooking..."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:23:05",
+      "quote": "GEORGE: Weendigo."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "survivor revealed as killer",
+    "when": "middle",
+    "role": "turn",
+    "quote": "revealing that it is in fact Colqhoun who murdered and consumed his five companions",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:00",
+      "quote": "It's a trap!"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "hero eats flesh to survive",
+    "when": "middle",
+    "quote": "eating some of Reich's flesh to survive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:49",
+      "quote": "(CHEWING) (SPITS)"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "killer returns as commander",
+    "when": "middle",
+    "role": "turn",
+    "quote": "A temporary commander is assigned to the fort and turns out to be Colqhoun",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "hero gives in",
+    "when": "late",
+    "quote": "Eventually Boyd gives in and eats a stew made out of human flesh",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:07",
+      "quote": "You hunger for it. You just won't resign yourself to it."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "both die, sting",
+    "when": "ending",
+    "quote": "Slauson tastes the stew that was left simmering on the fire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:29",
+      "quote": "Eat... or die."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }
