@@ -7,6 +7,9 @@
     "Lead",
     "Plot"
    ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
   }
  ],
  "plot_quality": "full",
@@ -16,7 +19,14 @@
     "value": "werewolf",
     "detail": "Joel, Ana's son",
     "quote": "Clara sees that the surviving baby is a werewolf pup",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:52:22",
+      "quote": "He is a werewolf."
+     }
+    ]
    },
    {
     "value": "mob",
@@ -29,54 +39,149 @@
     "value": "born from a pregnancy",
     "detail": "conceived in an affair; father unknown",
     "quote": "she cheated on him and conceived a child from her affair",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:15",
+      "quote": "She told me that during full moons The baby is always restless."
+     }
+    ]
+   },
+   {
+    "value": "fathered by a beast",
+    "detail": "Ana's account of the night with the stranger who became an animal",
+    "source": "subtitles",
+    "at": "00:53:26",
+    "quote": "The animal, it looked at me and then escaped into the forest.",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:30",
+      "quote": "It's eyes... they shone in the dark..."
+     }
+    ]
    }
   ],
   "wants": [
    {
     "value": "hunger",
     "quote": "She finally decides that she cannot keep him locked up and hungry",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:55:32",
+      "quote": "I'm always hungry at night."
+     }
+    ]
    },
    {
     "value": "to find his father",
     "quote": "Joel decides to search for his father",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:31",
+      "quote": "My father? I know nothing about him."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:37:23",
+      "quote": "- Where will we find your father? - Look at this..."
+     }
+    ]
    }
   ],
   "wrong": [
    {
     "value": "infidelity",
     "quote": "Originally engaged to a man, she cheated on him and conceived a child from her affair",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:30",
+      "quote": "Aécio, my fiance, is not the father. There was another man."
+     }
+    ]
    }
   ],
   "trigger": [
    {
     "value": "taking a job in a household",
     "quote": "a woman named Clara who takes a job as a housekeeper and nanny for a wealthy woman",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:32",
+      "quote": "Listen, Clara. I need someone to live here with me."
+     }
+    ]
    },
    {
     "value": "eating meat",
     "quote": "After Clara's landlady Dona Amélia gives Joel meat one day",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:51",
+      "quote": "Can I give her meat again?"
+     }
+    ]
    }
   ],
   "rules": [
    {
     "value": "transforms at full moon",
     "quote": "Clara realizes that the incident might be connected to the full moon",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:04",
+      "quote": "But on Friday there is still a full moon. You need to be in the small room."
+     }
+    ]
    },
    {
     "value": "kept chained and meatless",
     "quote": "raising him as a vegetarian and chaining him up in what is known as the “Little Bedroom\" during full moons",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:06",
+      "quote": "NO MEAT"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:21:08",
+      "quote": "Do you remember biting the chain?"
+     }
+    ]
    },
    {
     "value": "calmed by a lullaby",
     "quote": "With a lullaby Ana sang earlier in the film, Clara manages to tame Joel so that he does not attack her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:45",
+      "quote": "Sleep my boy. That way you will not feel hungry"
+     }
+    ]
+   },
+   {
+    "value": "hungry only at night",
+    "source": "subtitles",
+    "at": "01:55:16",
+    "quote": "I'm not hungry in the morning. Only at night.",
     "confidence": "sourced"
    }
   ],
@@ -107,7 +212,14 @@
    {
     "value": "threat embraced",
     "quote": "Clara and Joel prepare to face them together as Joel lets out one final howl",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:08:44",
+      "quote": "I do not want you to be hungry."
+     }
+    ]
    },
    {
     "value": "ambiguous",
@@ -118,11 +230,45 @@
   ],
   "images": [
    {
+    "value": "music box",
+    "when": "opening",
+    "role": "symbol",
+    "detail": "an heirloom melody in the unfinished nursery",
+    "source": "subtitles",
+    "at": "00:09:15",
+    "quote": "It was my grandfather's music box, passed to my father",
+    "confidence": "sourced"
+   },
+   {
     "value": "full moon",
     "when": "early",
     "role": "trigger",
     "quote": "connected to the full moon",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:04",
+      "quote": "The full moon shone, and reflected in the water."
+     }
+    ]
+   },
+   {
+    "value": "teeth falling out",
+    "state": "dream",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:36:42",
+    "quote": "that my teeth fell out.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:54",
+      "quote": "I was digging to bury my teeth."
+     }
+    ]
    },
    {
     "value": "cat",
@@ -137,6 +283,23 @@
     "when": "early",
     "role": "symbol",
     "quote": "She also puts some of her blood into Ana's meal to relieve her thirst for blood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:28",
+      "quote": "I made a meat stew."
+     }
+    ]
+   },
+   {
+    "value": "flour on the floor",
+    "when": "middle",
+    "role": "clue",
+    "detail": "spread to track Ana's night walking",
+    "source": "subtitles",
+    "at": "00:47:32",
+    "quote": "There's no full moon tonight. We will do a test.",
     "confidence": "sourced"
    },
    {
@@ -151,28 +314,66 @@
     "when": "middle",
     "role": "setting",
     "quote": "chaining him up in what is known as the “Little Bedroom\" during full moons",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:55:23",
+      "quote": "In the small room, I feel hunger in there."
+     }
+    ]
    },
    {
     "value": "photo of mother",
     "when": "middle",
     "role": "clue",
     "quote": "he uncovers a photo of Ana",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:57",
+      "quote": "I saw you hide the picture."
+     }
+    ]
    },
    {
     "value": "hair and claws",
     "when": "late",
     "role": "clue",
     "quote": "he retains excess hair and claws",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:00",
+      "quote": "How do you trim your nails? - I eat them."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:17:14",
+      "quote": "That's why your tooth hurts."
+     }
+    ]
    },
    {
     "value": "lullaby",
     "when": "ending",
     "role": "symbol",
     "quote": "With a lullaby Ana sang earlier in the film",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:06:54",
+      "quote": "Sleep on Earth"
+     },
+     {
+      "source": "subtitles",
+      "at": "02:08:24",
+      "quote": "And you will not feel hungry"
+     }
+    ]
    }
   ],
   "beats": [
@@ -181,7 +382,14 @@
     "value": "hired as nanny",
     "when": "opening",
     "quote": "Ana decides to hire her as a live-in housekeeper and future nanny",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:23",
+      "quote": "Can you cook?"
+     }
+    ]
    },
    {
     "order": 2,
@@ -189,10 +397,27 @@
     "when": "early",
     "role": "omen",
     "quote": "Clara witnesses her murdering and eating a cat",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:21",
+      "quote": "You suffer from some form of sleepwalking."
+     }
+    ]
    },
    {
     "order": 3,
+    "value": "mother tells of the stranger",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:53:26",
+    "quote": "The animal, it looked at me and then escaped into the forest.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
     "value": "monstrous birth",
     "when": "middle",
     "role": "turn",
@@ -200,45 +425,84 @@
     "confidence": "sourced"
    },
    {
-    "order": 4,
+    "order": 5,
     "value": "child adopted",
     "when": "middle",
     "quote": "decides to adopt him, naming him Joel as Ana wished",
     "confidence": "sourced"
    },
    {
-    "order": 5,
+    "order": 6,
     "value": "secret origin discovered",
     "when": "middle",
     "role": "clue",
     "quote": "Clara reluctantly admits that Ana is his birth mother",
-    "confidence": "sourced"
-   },
-   {
-    "order": 6,
-    "value": "child kills friend",
-    "when": "late",
-    "quote": "Joel transforms under a full moon and soon after pursues Maurício to eat him whole",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:00",
+      "quote": "I look like her, just like Mauricio resembles his father."
+     }
+    ]
    },
    {
     "order": 7,
-    "value": "community hunts the child",
-    "when": "ending",
-    "quote": "a petrified Amanda tells the locals what happened, leading them to hunt Joel down",
+    "value": "search for the father",
+    "when": "late",
+    "detail": "Joel and Maurício look for his father at a shopping centre",
+    "source": "subtitles",
+    "at": "01:37:23",
+    "quote": "- Where will we find your father? - Look at this...",
     "confidence": "sourced"
    },
    {
     "order": 8,
+    "value": "child kills friend",
+    "when": "late",
+    "quote": "Joel transforms under a full moon and soon after pursues Maurício to eat him whole",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:57:18",
+      "quote": "There was blood everywhere. In the elevator and on the roof."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "community hunts the child",
+    "when": "ending",
+    "quote": "a petrified Amanda tells the locals what happened, leading them to hunt Joel down",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:52:24",
+      "quote": "We have to do an exorcism, Clara."
+     }
+    ]
+   },
+   {
+    "order": 10,
     "value": "mother and child stand together",
     "when": "ending",
     "quote": "Clara and Joel prepare to face them together as Joel lets out one final howl",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:08:44",
+      "quote": "I do not want you to be hungry."
+     }
+    ]
    }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

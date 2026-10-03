@@ -1,62 +1,494 @@
 {
  "film": "2020-his-house",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "night witch", "detail": "an apeth", "quote": "Rial figures out that the evil in the house is an apeth or \"night witch.\"", "confidence": "sourced"},
-   {"value": "ghost of a child", "detail": "Nyagak", "quote": "see visions of Nyagak and a mysterious man, who both escape into the walls", "confidence": "sourced"}
+   {
+    "value": "night witch",
+    "detail": "an apeth",
+    "quote": "Rial figures out that the evil in the house is an apeth or \"night witch.\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:38",
+      "quote": "A night witch."
+     }
+    ]
+   },
+   {
+    "value": "ghost of a child",
+    "detail": "Nyagak",
+    "quote": "see visions of Nyagak and a mysterious man, who both escape into the walls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:09",
+      "quote": "I can't swim."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "followed from homeland", "quote": "Rial believes that an apeth has followed them", "confidence": "sourced"},
-   {"value": "folk legend", "quote": "a poor man in her village who accidentally stole from an apeth by the river", "confidence": "sourced"}
+   {
+    "value": "followed from homeland",
+    "quote": "Rial believes that an apeth has followed them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:24",
+      "quote": "An apeth has arisen from the ocean."
+     }
+    ]
+   },
+   {
+    "value": "folk legend",
+    "quote": "a poor man in her village who accidentally stole from an apeth by the river",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:24",
+      "quote": "he stole from an old man who lived by the river."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "a debt repaid", "quote": "if they repay their debt, the apeth will bring Nyagak back to them", "confidence": "sourced"},
-   {"value": "a life for a life", "quote": "The apeth then offers Bol a deal: his life for Nyagak's", "confidence": "sourced"}
+   {
+    "value": "a debt repaid",
+    "quote": "if they repay their debt, the apeth will bring Nyagak back to them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:58",
+      "quote": "and repay our debt ..."
+     }
+    ]
+   },
+   {
+    "value": "a life for a life",
+    "quote": "The apeth then offers Bol a deal: his life for Nyagak's",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:30",
+      "quote": "Your life for Nyagak."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "stolen child", "quote": "Bol sees Nyagak in the crowd and abducts her, falsely claiming that she is their daughter", "confidence": "sourced"},
-   {"value": "theft", "quote": "The apeth accuses Bol of being a thief and claims that he has wrongfully claimed a life that didn't belong to him", "confidence": "sourced"}
+   {
+    "value": "stolen child",
+    "quote": "Bol sees Nyagak in the crowd and abducts her, falsely claiming that she is their daughter",
+    "confidence": "sourced"
+   },
+   {
+    "value": "theft",
+    "quote": "The apeth accuses Bol of being a thief and claims that he has wrongfully claimed a life that didn't belong to him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:55",
+      "quote": "Your life is not yours."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:01:59",
+      "quote": "You stole it."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "moving into a new home", "quote": "the government assigns them a shabby house with peeling walls and dismal furnishings on the outskirts of London", "confidence": "sourced"},
-   {"value": "fleeing war", "quote": "refugees fleeing with their daughter, Nyagak, from war-torn South Sudan", "confidence": "sourced"}
+   {
+    "value": "moving into a new home",
+    "quote": "the government assigns them a shabby house with peeling walls and dismal furnishings on the outskirts of London",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:06",
+      "quote": "This entire house is just for us?"
+     }
+    ]
+   },
+   {
+    "value": "fleeing war",
+    "quote": "refugees fleeing with their daughter, Nyagak, from war-torn South Sudan",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:12",
+      "quote": "When we crossed the sea."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "haunts the thief's house", "quote": "When the thief built his home, the apeth moved in with him and haunted him", "confidence": "sourced"},
-   {"value": "must repay debt", "quote": "Bol decides to repay the debt to the apeth and tells Rial", "confidence": "sourced"}
+   {
+    "value": "haunts the thief's house",
+    "quote": "When the thief built his home, the apeth moved in with him and haunted him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:42",
+      "quote": "And so the thief could not know that when he built his home ..."
+     }
+    ]
+   },
+   {
+    "value": "must repay debt",
+    "quote": "Bol decides to repay the debt to the apeth and tells Rial",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:58",
+      "quote": "and repay our debt ..."
+     }
+    ]
+   },
+   {
+    "value": "be one of the good ones",
+    "source": "subtitles",
+    "at": "00:09:30",
+    "quote": "Be one of the good ones.",
+    "confidence": "sourced",
+    "detail": "the caseworker's condition for asylum",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:02",
+      "quote": "We are one of the good ones. Remember?"
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "refugee couple", "relation_to_threat": "self", "detail": "Bol and Rial", "quote": "a refugee couple from South Sudan, struggling to adjust to their new life in an English town", "confidence": "sourced"},
-   {"value": "stolen child", "relation_to_threat": "family", "detail": "Nyagak", "quote": "Nyagak and others fall overboard. Neither Bol nor Rial reaches her in time", "confidence": "sourced"}
+   {
+    "value": "refugee couple",
+    "relation_to_threat": "self",
+    "detail": "Bol and Rial",
+    "quote": "a refugee couple from South Sudan, struggling to adjust to their new life in an English town",
+    "confidence": "sourced"
+   },
+   {
+    "value": "stolen child",
+    "relation_to_threat": "family",
+    "detail": "Nyagak",
+    "quote": "Nyagak and others fall overboard. Neither Bol nor Rial reaches her in time",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:09",
+      "quote": "I can't swim."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "Rial chooses to save Bol instead of accepting this alternative reality, by slitting the apeth's throat", "confidence": "sourced"},
-   {"value": "living with the ghosts", "quote": "Bol says they decided to live with the ghosts of their past from South Sudan, including Nyagak", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "Rial chooses to save Bol instead of accepting this alternative reality, by slitting the apeth's throat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:40",
+      "quote": "Rial killed it."
+     }
+    ]
+   },
+   {
+    "value": "living with the ghosts",
+    "quote": "Bol says they decided to live with the ghosts of their past from South Sudan, including Nyagak",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:23",
+      "quote": "Your ghosts follow you. They never leave. They live with you."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "overcrowded boat", "state": "stormy sea", "when": "opening", "role": "trigger", "quote": "They brave stormy waters on an overcrowded motorboat", "confidence": "sourced"},
-   {"value": "peeling walls", "when": "opening", "role": "setting", "quote": "a shabby house with peeling walls and dismal furnishings", "confidence": "sourced"},
-   {"value": "necklace", "state": "dead daughter's", "when": "early", "role": "symbol", "quote": "She retains their daughter's necklace", "confidence": "sourced"},
-   {"value": "walls", "state": "figures vanish into", "when": "early", "role": "threat", "quote": "who both escape into the walls", "confidence": "sourced"},
-   {"value": "fire", "state": "belongings burned", "when": "middle", "role": "turn", "quote": "Bol burns everything they brought with them", "confidence": "sourced"},
-   {"value": "rats", "when": "middle", "role": "symbol", "quote": "under the guise that their unit is infested with rats", "confidence": "sourced"},
-   {"value": "bus", "state": "only for families", "when": "late", "role": "clue", "quote": "a bus they need to board would only let people with children on", "confidence": "sourced"}
+   {
+    "value": "overcrowded boat",
+    "state": "stormy sea",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "They brave stormy waters on an overcrowded motorboat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:33",
+      "quote": "From the boat, from home."
+     }
+    ]
+   },
+   {
+    "value": "peeling walls",
+    "when": "opening",
+    "role": "setting",
+    "quote": "a shabby house with peeling walls and dismal furnishings",
+    "confidence": "sourced"
+   },
+   {
+    "value": "necklace",
+    "state": "dead daughter's",
+    "when": "early",
+    "role": "symbol",
+    "quote": "She retains their daughter's necklace",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:48",
+      "quote": "I love your necklace. It was Nyagak's."
+     }
+    ]
+   },
+   {
+    "value": "walls",
+    "state": "figures vanish into",
+    "when": "early",
+    "role": "threat",
+    "quote": "who both escape into the walls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:57",
+      "quote": "the walls would whisper the spells of the apeth."
+     }
+    ]
+   },
+   {
+    "value": "fire",
+    "state": "belongings burned",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Bol burns everything they brought with them",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rats",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "under the guise that their unit is infested with rats",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:11",
+      "quote": "There's rats everywhere."
+     }
+    ]
+   },
+   {
+    "value": "bus",
+    "state": "only for families",
+    "when": "late",
+    "role": "clue",
+    "quote": "a bus they need to board would only let people with children on",
+    "confidence": "sourced"
+   },
+   {
+    "value": "crows",
+    "state": "cawing at the window",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:15:51",
+    "quote": "crows cawing",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:05",
+      "quote": "crow caws"
+     }
+    ]
+   },
+   {
+    "value": "flies",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:08:23",
+    "quote": "flies buzzing",
+    "confidence": "sourced",
+    "detail": "in the new house, and again in the flashback to the bus station in Sudan",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:09",
+      "quote": "flies buzzing"
+     }
+    ]
+   },
+   {
+    "value": "self-made scars",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:28:25",
+    "quote": "These I gave to myself with a knife.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:37",
+      "quote": "Take this knife and open your flesh."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "child lost at sea", "when": "opening", "quote": "Although they survive the treacherous crossing, their daughter and many others do not", "confidence": "sourced"},
-   {"order": 2, "value": "given a haunted home", "when": "opening", "role": "trigger", "quote": "the government assigns them a shabby house", "confidence": "sourced"},
-   {"order": 3, "value": "visions in the walls", "when": "early", "role": "omen", "quote": "Bol and Rial soon experience strange phenomena in their new home", "confidence": "sourced"},
-   {"order": 4, "value": "legend told", "when": "middle", "role": "clue", "quote": "She tells Bol the story of a poor man in her village", "confidence": "sourced"},
-   {"order": 5, "value": "deal offered", "when": "middle", "quote": "The apeth then offers Bol a deal: his life for Nyagak's", "confidence": "sourced"},
-   {"order": 6, "value": "past crime revealed", "when": "late", "role": "turn", "quote": "Bol sees Nyagak in the crowd and abducts her", "confidence": "sourced"},
-   {"order": 7, "value": "wife kills the witch", "when": "late", "quote": "by slitting the apeth's throat", "confidence": "sourced"},
-   {"order": 8, "value": "choosing to stay", "when": "ending", "quote": "Bol and Rial tell him they have chosen to stay and make it their new home", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "child lost at sea",
+    "when": "opening",
+    "quote": "Although they survive the treacherous crossing, their daughter and many others do not",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:50",
+      "quote": "They lost her, last year."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "given a haunted home",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "the government assigns them a shabby house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:21",
+      "quote": "You're being released on bail as asylum seekers."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "caseworker's ground rules",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:07:49",
+    "quote": "All right, a few ground rules.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "visions in the walls",
+    "when": "early",
+    "role": "omen",
+    "quote": "Bol and Rial soon experience strange phenomena in their new home",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "legend told",
+    "when": "middle",
+    "role": "clue",
+    "quote": "She tells Bol the story of a poor man in her village",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:24",
+      "quote": "he stole from an old man who lived by the river."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "drowned daughter calls for help",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:48:09",
+    "quote": "I can't swim.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "deal offered",
+    "when": "middle",
+    "quote": "The apeth then offers Bol a deal: his life for Nyagak's",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:30",
+      "quote": "Your life for Nyagak."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "past crime revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Bol sees Nyagak in the crowd and abducts her",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "wife kills the witch",
+    "when": "late",
+    "quote": "by slitting the apeth's throat",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "choosing to stay",
+    "when": "ending",
+    "quote": "Bol and Rial tell him they have chosen to stay and make it their new home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:42",
+      "quote": "This is our home."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }
