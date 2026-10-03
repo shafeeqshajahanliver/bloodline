@@ -4,6 +4,8 @@ import csv, glob, json, os, re, sys
 from PIL import Image
 sys.path.insert(0, "tools")
 from sources import unusable
+from subs import cues
+import colorsys
 OUT = "record/site"
 os.makedirs(OUT + "/data", exist_ok=True); os.makedirs(OUT + "/stills", exist_ok=True)
 ids = json.load(open("record/films.json"))
@@ -33,11 +35,27 @@ def plot(fid):
                 if len(body.split()) > 40: return {"lang": f.rsplit(".", 2)[1], "heading": m.group(1).strip(), "text": body}
     return None
 
+def tone(im):
+    # the frame's prevailing colour: the average of its more saturated pixels, falling back to the plain average
+    sm = im.resize((48, 27)); px = list(sm.get_flattened_data() if hasattr(sm, "get_flattened_data") else sm.getdata())
+    sat = [p for p in px if colorsys.rgb_to_hsv(*[c / 255 for c in p])[1] > 0.25 and 20 < sum(p) / 3 < 235]
+    use = sat if len(sat) > len(px) * 0.15 else px
+    return "#%02x%02x%02x" % tuple(round(sum(p[i] for p in use) / len(use)) for i in range(3))
+
+def per_minute(fid, bad):
+    f = f"films/{fid}/dialogue/subtitles.en.srt"
+    if not os.path.exists(f) or bad.get("dialogue/subtitles.en.srt") == "none": return None
+    C = cues(f)
+    if not C: return None
+    n = int(C[-1][0] // 60) + 1; out = [0] * n
+    for t, x in C: out[int(t // 60)] += len(x.split())
+    return out
+
 def sheet(fid):
     fs = sorted(glob.glob(f"films/{fid}/visuals/stills/*.jpg"))
-    if not fs: return 0, None
+    if not fs: return 0, None, []
     if len(fs) > MAXS: fs = [fs[round(i * (len(fs) - 1) / (MAXS - 1))] for i in range(MAXS)]
-    H = round(W * 9 / 16); ims = []
+    H = round(W * 9 / 16); ims = []; cols = []
     for f in fs:
         try:
             im = Image.open(f).convert("RGB")
@@ -47,12 +65,13 @@ def sheet(fid):
         if r > 16 / 9: nw = round(im.height * 16 / 9); im = im.crop(((im.width - nw) // 2, 0, (im.width - nw) // 2 + nw, im.height))
         else: nh = round(im.width * 9 / 16); im = im.crop((0, (im.height - nh) // 2, im.width, (im.height - nh) // 2 + nh))
         ims.append(im.resize((W, H), Image.LANCZOS))
-    if not ims: return 0, None
+        cols.append(tone(im))
+    if not ims: return 0, None, []
     S = Image.new("RGB", (W, H * len(ims)))
     for i, im in enumerate(ims): S.paste(im, (0, i * H))
     S.save(f"{OUT}/stills/{fid}.jpg", quality=74, optimize=True, progressive=True)
     src = json.load(open(f"films/{fid}/visuals/stills.json")) if os.path.exists(f"films/{fid}/visuals/stills.json") else {}
-    return len(ims), src.get("source")
+    return len(ims), src.get("source"), cols
 
 index = []
 for fid in ids:
@@ -81,7 +100,7 @@ for fid in ids:
         sp.update(site=src.get("site"), source=src.get("source"))
         if bad.get("script/screenplay.txt"): sp["note"] = "Scan is partly garbled; quotes only."
     pilot = json.load(open(f"{d}/story.json")) if os.path.exists(f"{d}/story.json") else None
-    nst, stsrc = sheet(fid)
+    nst, stsrc, cols = sheet(fid)
     dims = {k: se["dimensions"].get(k, []) for k in DIMS}
     filled = [k for k in DIMS if dims[k]]
     wurl = w.get("wikipedia_url") or ""
@@ -97,7 +116,7 @@ for fid in ids:
                   "letterboxd": f"https://letterboxd.com/film/{w['letterboxd_id']}/" if w.get("letterboxd_id") else None},
         "plot_quality": se.get("plot_quality"), "status": se.get("status"), "not_stated": se.get("not_stated", []),
         "dims": dims, "plot": plot(fid), "dialogue": dia, "scares": sc, "script": sp, "pilot": pilot,
-        "stills": nst, "stills_source": stsrc,
+        "stills": nst, "stills_source": stsrc, "tones": cols, "wpm_series": per_minute(fid, bad),
         "unusable": corr.get("unusable_sources", []), "removed": corr.get("remove", []),
     }
     json.dump(rec, open(f"{OUT}/data/{fid}.json", "w"), ensure_ascii=False, separators=(",", ":"))
@@ -107,7 +126,7 @@ for fid in ids:
                   "dir": rec["directors"][:2], "cast": rec["cast"][:6], "f": filled, "ns": rec["not_stated"],
                   "n": sum(len(dims[k]) for k in DIMS), "st": nst, "sub": "en" in dia, "osub": any(l != "en" for l in dia),
                   "sp": bool(sp), "sc": bool(sc), "pl": bool(pilot), "pq": rec["plot_quality"],
-                  "v": vals, "lede": (dims["threat"][0]["value"] if dims["threat"] else "")})
+                  "rt": rec["runtime"], "wpm": (dia.get("en") or {}).get("words_per_minute"), "ds": (dia.get("en") or {}).get("share_of_runtime_with_dialogue"), "nsc": len(sc["scares"]) if sc else None, "fsc": (sc["scares"][0]["t"] if sc and sc["scares"] else None), "tone": cols[len(cols)//2] if cols else None, "rel": sorted({e.get("relation_to_threat") for e in dims["who_suffers"] if e.get("relation_to_threat")}), "v": vals, "lede": (dims["threat"][0]["value"] if dims["threat"] else "")})
 json.dump({"films": index, "arch": {k: {"name": v["name"], "beat": v["beat"], "roots": v["roots"], "status": v["status"]} for k, v in arch.items()}},
           open(f"{OUT}/index.json", "w"), ensure_ascii=False, separators=(",", ":"))
 print(len(index), "films;", sum(1 for x in index if x["st"]), "with stills")

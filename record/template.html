@@ -4,7 +4,7 @@
 <style>
 /* Layout: a ledger of 100 films (one row each, still, year, title, completeness bar, source marks) that opens into a full record page per film. Bloodline design system: paper, ink, one red; one theme by decision; radius 0. */
 :root{
-  --paper:#f7f3ea; --soft:#ece6d9; --hair:#d3cbb8; --rule:#e2dbcb; --ink:#17110e; --mute:#6b6052; --red:#9e2b22; --on-ink:#faf7f0;
+  --paper:#f7f3ea; --soft:#ece6d9; --hair:#d3cbb8; --rule:#e2dbcb; --ink:#17110e; --mute:#6b6052; --red:#9e2b22; --on-ink:#faf7f0; --teal:#00836d; --ochre:#a97400; --plum:#8c2d63;
   --display:"Libre Caslon Text", Georgia, serif;
   --text:"Source Serif 4", Georgia, "Times New Roman", serif;
   --mono:"Courier Prime", "Courier New", monospace;
@@ -97,6 +97,7 @@ ol.ledger{list-style:none;margin:0;padding:0}
 .srcs{margin-top:20px;display:grid;gap:6px}
 .srcs div{display:grid;grid-template-columns:22px minmax(0,1fr);gap:8px;align-items:start;font-size:14px}
 .srcs .marks b{width:20px}
+.body > *,.hero > *{min-width:0}
 .body{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:48px;margin-top:40px}
 section.dim{margin-top:34px}
 section.dim:first-child{margin-top:0}
@@ -136,6 +137,70 @@ ul.plain li:first-child{border-top:0}
 .small{font-size:13px;color:var(--mute)}
 .arch .nm{font-family:var(--display);font-size:17px}
 .foot{font-size:12.5px;color:var(--mute);margin-top:48px;line-height:1.5;border-top:1px solid var(--hair);padding-top:12px;max-width:80ch}
+
+/* film page visuals */
+.blockhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;border-top:3px solid var(--ink);padding-top:10px;margin-top:44px}
+.blockhead h3{font-family:var(--display);font-weight:400;font-size:26px;margin:0;line-height:1.2}
+.blockhead p{margin:0;font-size:14px;color:var(--mute);max-width:60ch}
+.glance{margin:12px 0 0;min-width:0}
+.glance svg{display:block;width:100%;overflow:visible}
+.glance svg text{font-family:var(--mono);font-size:11px;fill:var(--mute)}
+.glance svg text.rowlab{font-family:var(--text);font-size:12.5px;fill:var(--ink)}
+.glance svg .mk{cursor:pointer}
+.glance svg .mk:hover circle,.glance svg .mk:hover rect,.glance svg .mk.on circle,.glance svg .mk.on rect{stroke:var(--red);stroke-width:2}
+.readout{min-height:48px;margin:10px 0 0;padding:8px 0 0;border-top:1px solid var(--rule);font-size:15px}
+.readout .tag{margin-right:8px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:8px;font-size:13px;color:var(--mute)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{display:inline-block;width:10px;height:10px}
+.spec{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-left:1px solid var(--hair);border-top:1px solid var(--hair);margin-top:12px}
+.cell{all:unset;box-sizing:border-box;display:flex;flex-direction:column;gap:6px;padding:12px 14px 14px;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);cursor:pointer;min-height:132px;min-width:0}
+.cell:hover{background:var(--soft)}
+.cell:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
+.cell .cl{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.cell .cv{font-family:var(--display);font-size:19px;line-height:1.25;overflow-wrap:anywhere}
+.cell .cn{font-family:var(--mono);font-size:11.5px;color:var(--mute);margin-top:auto}
+.cell.empty{background:repeating-linear-gradient(135deg,var(--paper) 0 7px,var(--soft) 7px 9px)}
+.cell.empty .cv{font-style:italic;color:var(--mute);font-size:16px}
+.cell .mini{display:flex;flex-wrap:wrap;gap:3px;margin-top:2px}
+.cell .mini i{width:8px;height:8px;display:block}
+.cell .zones{display:grid;grid-template-columns:repeat(5,1fr);gap:3px;align-items:end;height:34px}
+.cell .zones i{display:block;background:var(--ink)}
+.tones{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px;margin-top:4px;height:14px}
+.tones button{all:unset;cursor:pointer;display:block}
+.tones button:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
+.among{display:grid;gap:16px;margin-top:6px}
+.am .lab{display:flex;justify-content:space-between;gap:8px;font-size:13.5px}
+.am .lab b{font-family:var(--mono);font-weight:700;font-size:15px}
+.am .track{position:relative;height:22px;margin-top:2px;border-bottom:1px solid var(--hair)}
+.am .track i{position:absolute;bottom:0;width:1px;height:9px;background:var(--hair)}
+.am .track i.med{height:14px;background:var(--mute)}
+.am .track b{position:absolute;bottom:-5px;width:11px;height:11px;margin-left:-5px;border-radius:50%;background:var(--red)}
+.am .ends{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--mute);margin-top:6px}
+.am.none .lab b{color:var(--mute);font-weight:400;font-size:13px}
+.ringwrap{display:grid;grid-template-columns:minmax(0,480px) minmax(0,1fr);gap:20px;align-items:center;margin-bottom:8px}
+.ringwrap svg{width:100%;height:auto;display:block}
+.ringwrap svg text{font-family:var(--text);font-size:14px;fill:var(--ink);paint-order:stroke;stroke:var(--paper);stroke-width:4px;stroke-linejoin:round}
+.ringwrap svg text.rl{font-family:var(--mono);font-size:11px;fill:var(--mute);letter-spacing:.06em}
+.ringwrap .small{max-width:36ch}
+.matrix{overflow-x:auto;margin-bottom:10px}
+.matrix table{border-collapse:collapse;width:100%;min-width:420px}
+.matrix th{font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);text-align:left;padding:4px 6px;border-bottom:1px solid var(--ink)}
+.matrix td{border-bottom:1px solid var(--rule);padding:0;vertical-align:middle}
+.matrix td.rn{font-size:14px;padding:6px 8px 6px 0;white-space:nowrap}
+.matrix td.rn .sw{margin-right:6px}
+.matrix td button{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-wrap:wrap;gap:3px;width:100%;min-height:30px;padding:6px;align-content:center}
+.matrix td button:hover{background:var(--soft)}
+.matrix td button[aria-pressed="true"]{background:var(--soft);outline:1px solid var(--ink);outline-offset:-1px}
+.matrix td button:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
+.matrix td button i{width:10px;height:10px;display:block}
+.entry{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:4px 28px;scroll-margin-top:24px}
+.entry .quotes blockquote:first-child{margin-top:2px}
+.entry.flash{background:var(--soft)}
+ol.beats li{scroll-margin-top:24px}
+ol.beats li.flash{background:var(--soft)}
+@media (max-width:980px){ .spec{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:620px){ .entry{grid-template-columns:1fr} .ringwrap{grid-template-columns:1fr} .cell{min-height:110px} }
 @media (max-width:980px){
   .row{grid-template-columns:96px 46px minmax(0,1fr);gap:12px}
   .thumb{width:96px}
@@ -303,23 +368,150 @@ function tags(e, k) {
   if (primed(e.value)) t.push(`<span class="tag red" title="This wording was one of the examples given to the readers, so it may be over-used.">example wording</span>`);
   return t.join(" ");
 }
-function entry(e, k) {
-  return `<div class="entry"><div class="v"><strong>${esc(e.value)}</strong>${tags(e, k)}</div>${e.detail ? `<div class="det">${esc(e.detail)}</div>` : ""}${quotes(e)}</div>`;
+
+const ROLE_C = {omen:"var(--red)",threat:"var(--plum)",clue:"var(--teal)",symbol:"var(--ochre)",weapon:"var(--ink)",trigger:"var(--ink)",turn:"var(--ochre)",mirror:"var(--teal)",setting:"var(--mute)"};
+const HOLLOW = new Set(["trigger","turn","mirror"]);
+const ZONE = {opening:[0,.08],early:[.08,.3],middle:[.3,.7],late:[.7,.9],ending:[.9,1]};
+const RELS = ["self","family","lover","community","stranger","unknown"];
+const RELN = {self:"the self",family:"family",lover:"lovers",community:"community",stranger:"strangers",unknown:"unknown"};
+const swatch = r => { const c = ROLE_C[r] || "var(--hair)"; return HOLLOW.has(r) ? `background:var(--paper);box-shadow:inset 0 0 0 2px ${c}` : `background:${c}`; };
+function tsec(s) { const m = /^(\d\d):(\d\d):(\d\d)/.exec(s || ""); return m ? +m[1] * 3600 + +m[2] * 60 + +m[3] : null; }
+function timeOf(e) { if (e.source === "subtitles") return tsec(e.at); const m = (e.moments || []).find(m => m.source === "subtitles" && m.at); return m ? tsec(m.at) : null; }
+function sortedBeats(d) { return (d.dims.beats || []).map((e, i) => ({ ...e, _i: i })).sort((a, b) => (a.order ?? 999) - (b.order ?? 999)); }
+
+function specimen(d) {
+  return `<div class="spec">${DIMS.map(k => {
+    const es = d.dims[k] || [], ns = d.not_stated.includes(k);
+    if (!es.length) return `<button type="button" class="cell empty" data-jump="d-${k}"><span class="cl">${DN[k]}</span><span class="cv">${ns ? "Not stated in the plot" : "Nothing recorded"}</span></button>`;
+    let extra = "", head = esc(es[0].value);
+    if (k === "images") { head = `${es.length} images`; extra = `<span class="mini">${[...es].sort((a, b) => (a.role || "").localeCompare(b.role || "")).map(e => `<i style="${swatch(e.role)}" title="${esc(e.value)}"></i>`).join("")}</span>`; }
+    if (k === "beats") { const z = WHEN.map(w => es.filter(e => e.when === w).length), mx = Math.max(...z, 1); head = `${es.length} beats`;
+      extra = `<span class="zones" title="Beats per part of the film: ${WHEN.map((w, i) => w + " " + z[i]).join(", ")}">${z.map(n => `<i style="height:${n ? 4 + n / mx * 30 : 1}px;${n ? "" : "background:var(--hair)"}"></i>`).join("")}</span>`; }
+    if (k === "who_suffers") extra = `<span class="cn" style="margin-top:0">${[...new Set(es.map(e => e.relation_to_threat).filter(Boolean))].map(r => RELN[r]).join(" · ")}</span>`;
+    return `<button type="button" class="cell" data-jump="d-${k}"><span class="cl">${DN[k]}</span><span class="cv">${head}</span>${extra}<span class="cn">${k === "images" || k === "beats" ? "" : es.length > 1 ? `+${es.length - 1} more` : "1 entry"}</span></button>`;
+  }).join("")}</div>`;
+}
+
+function among(f) {
+  const M = [["rt", "Runtime", v => Math.round(v) + " min"], ["wpm", "Words a minute", v => Math.round(v)], ["ds", "Runtime with dialogue", v => Math.round(v * 100) + "%"], ["nsc", "Jump scares logged", v => v], ["n", "Story entries", v => v]];
+  return `<div class="among">${M.map(([k, name, fm]) => {
+    const vals = F.map(x => x[k]).filter(v => v != null).sort((a, b) => a - b);
+    if (f[k] == null) return `<div class="am none"><div class="lab"><span>${name}</span><b>no data</b></div></div>`;
+    const lo = vals[0], hi = vals[vals.length - 1], pos = v => hi === lo ? 50 : (v - lo) / (hi - lo) * 100, med = vals[Math.floor(vals.length / 2)];
+    return `<div class="am"><div class="lab"><span>${name}</span><b>${fm(f[k])}</b></div>
+      <div class="track" role="img" aria-label="${name}: ${fm(f[k])}, against a range of ${fm(lo)} to ${fm(hi)} across ${vals.length} films">${vals.map(v => `<i style="left:${pos(v)}%"></i>`).join("")}<i class="med" style="left:${pos(med)}%" title="median ${fm(med)}"></i><b style="left:${pos(f[k])}%"></b></div>
+      <div class="ends"><span>${fm(lo)}</span><span>median ${fm(med)}</span><span>${fm(hi)}</span></div></div>`;
+  }).join("")}</div>`;
+}
+
+function glanceBlock(d) {
+  return `<div class="blockhead"><h3>The film at a glance</h3><p>Dialogue, jump scares, story beats and images laid along the running time. Point at or tap a mark to read it.</p></div>
+    <figure class="glance" id="glance" aria-label="Timeline of ${esc(d.title)}"></figure>
+    <p class="readout" id="readout"><span class="fp">Point at a mark to read it here. Click it to jump to its entry.</span></p>
+    <div class="legend"><span><span class="sw" style="background:var(--mute)"></span>words spoken each minute</span><span><span class="sw" style="background:var(--soft);outline:1px solid var(--hair)"></span>longest silences</span><span><span class="sw" style="background:var(--red);width:2px;height:12px"></span>jump scare</span>
+      <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="6" fill="var(--ink)"/></svg>timed from subtitles</span><span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5.5" fill="var(--paper)" stroke="var(--ink)"/></svg>placed by part of the film</span>
+      ${["omen","clue","threat","symbol","weapon","setting"].map(r => `<span><span class="sw" style="${swatch(r)}"></span>${r}</span>`).join("")}</div>`;
+}
+function drawGlance(d) {
+  const el = document.getElementById("glance"); if (!el) return;
+  const W = el.clientWidth, narrow = W < 640, L = narrow ? 10 : 96, iw = W - L - 12;
+  const series = d.wpm_series || [], sc = d.scares ? d.scares.scares.map(s => tsec(s.t)).filter(v => v != null) : [];
+  const beats = sortedBeats(d), imgs = (d.dims.images || []).map((e, i) => ({ ...e, _i: i }));
+  const timed = [...beats, ...imgs].map(timeOf).filter(v => v != null);
+  const T = Math.max(d.runtime || 0, series.length, ...sc.map(v => v / 60 + 1), ...timed.map(v => v / 60 + 1), 10);
+  const x = m => L + m / T * iw;
+  const place = (items) => { // exact time when known, otherwise spread inside its part of the film
+    const out = []; const byZone = {};
+    items.forEach(e => { const t = timeOf(e); if (t != null) out.push([e, t / 60, true]); else if (ZONE[e.when]) (byZone[e.when] = byZone[e.when] || []).push(e); });
+    for (const [w, es] of Object.entries(byZone)) { const [a, b] = ZONE[w]; es.forEach((e, j) => out.push([e, T * (a + (b - a) * (j + .5) / es.length), false])); }
+    return out.sort((p, q) => p[1] - q[1]);
+  };
+  const lanes = (pl, gap, n) => { const last = Array(n).fill(-1e9); return pl.map(p => { const px = x(p[1]); let l = last.findIndex(v => px - v >= gap); if (l < 0) l = last.indexOf(Math.min(...last)); last[l] = px; return [...p, l]; }); };
+  const rowH = { dia: 52, sc: 22, beats: 46, img: 40 }, lab = narrow ? 18 : 0;
+  let y = 0, h = "";
+  const row = (name, H) => { const top = y + lab; h += narrow ? `<text class="rowlab" x="0" y="${y + 12}">${name}</text>` : `<text class="rowlab" x="0" y="${top + H / 2 + 4}">${name}</text>`; y = top + H + 10; return top; };
+  // zones background
+  const zoneTop = 0;
+  // dialogue
+  let top = row("Dialogue", rowH.dia);
+  const en = d.dialogue.en;
+  if (en) for (const s of en.longest_silences || []) { const a = tsec(s.starts_at) / 60; h += `<rect x="${x(a)}" y="${top}" width="${Math.max(2, s.seconds / 60 / T * iw)}" height="${rowH.dia}" fill="var(--soft)" stroke="var(--hair)"/>`; }
+  if (series.length) { const bw = Math.max(1, iw / T - 1); series.forEach((n, m) => { const bh = Math.min(n, 240) / 240 * rowH.dia; if (bh > 0) h += `<rect x="${x(m)}" y="${top + rowH.dia - bh}" width="${bw}" height="${bh}" fill="var(--mute)"/>`; }); }
+  else h += `<text x="${L}" y="${top + rowH.dia / 2 + 4}">no usable English subtitles</text>`;
+  h += `<line x1="${L}" x2="${L + iw}" y1="${top + rowH.dia}" y2="${top + rowH.dia}" stroke="var(--hair)"/>`;
+  // scares
+  top = row("Jump scares", rowH.sc);
+  if (sc.length) d.scares.scares.forEach(s => { const t = tsec(s.t); if (t == null) return; h += `<g class="mk" data-tip="${esc(`<span class="tag">jump scare · ${s.t}</span>${s.d}`)}"><rect x="${x(t / 60) - 4}" y="${top - 2}" width="8" height="${rowH.sc + 4}" fill="transparent"/><line x1="${x(t / 60)}" x2="${x(t / 60)}" y1="${top}" y2="${top + rowH.sc}" stroke="var(--red)" stroke-width="2"/></g>`; });
+  else h += `<text x="${L}" y="${top + 15}">${d.scares ? "none logged" : "no jump-scare log for this film"}</text>`;
+  // beats
+  top = row("Beats", rowH.beats);
+  lanes(place(beats), 20, 2).forEach(([e, m, ex, l]) => { const n = beats.indexOf(e) + 1, cx = x(m), cy = top + 11 + l * 22;
+    h += `<g class="mk" data-jump="b-${e._i}" data-tip="${esc(`<span class="tag">beat ${n} · ${e.when || ""}${ex ? " · " + (e.at || (e.moments || []).find(q => q.source === "subtitles").at) : ""}</span><strong>${e.value}</strong>${e.detail ? " · " + e.detail : ""}`)}"><circle cx="${cx}" cy="${cy}" r="9.5" fill="${ex ? "var(--ink)" : "var(--paper)"}" stroke="var(--ink)"/><text x="${cx}" y="${cy + 3.5}" text-anchor="middle" style="fill:${ex ? "var(--on-ink)" : "var(--ink)"};font-size:10px">${n}</text></g>`; });
+  // images
+  top = row("Images", rowH.img);
+  lanes(place(imgs), 11, 3).forEach(([e, m, ex, l]) => { const cx = x(m), cy = top + 6 + l * 12, c = ROLE_C[e.role] || "var(--hair)", hol = HOLLOW.has(e.role);
+    h += `<g class="mk" data-jump="i-${e._i}" data-tip="${esc(`<span class="tag">image · ${e.role || "no role"} · ${e.when || ""}${ex ? " · timed" : ""}</span><strong>${e.value}</strong>${e.state ? " · " + e.state : ""}${e.detail ? " · " + e.detail : ""}`)}"><rect x="${cx - 4.5}" y="${cy - 4.5}" width="9" height="9" fill="${hol ? "var(--paper)" : c}" stroke="${c}" stroke-width="${hol ? 2 : 1}" ${ex ? "" : `stroke-dasharray="${hol ? "" : ""}"`}/></g>`; });
+  // axis and parts of the film
+  const ax = y;
+  const step = T > 150 ? 30 : T > 70 ? 15 : 10;
+  h += `<line x1="${L}" x2="${L + iw}" y1="${ax}" y2="${ax}" stroke="var(--ink)"/>`;
+  for (let m = 0; m <= T; m += step) h += `<line x1="${x(m)}" x2="${x(m)}" y1="${ax}" y2="${ax + 5}" stroke="var(--ink)"/><text x="${x(m)}" y="${ax + 17}" text-anchor="${m === 0 ? "start" : "middle"}">${m === 0 ? "0 min" : m}</text>`;
+  for (const w of WHEN) { const [a, b] = ZONE[w]; h += `<line x1="${x(T * a)}" x2="${x(T * a)}" y1="0" y2="${ax}" stroke="var(--rule)" stroke-dasharray="2 3"/>`;
+    if (!narrow || (b - a) > .15) h += `<text x="${x(T * (a + b) / 2)}" y="${ax + 34}" text-anchor="middle" style="letter-spacing:.08em">${w.toUpperCase()}</text>`; }
+  const H = ax + 42;
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" height="${H}" role="img" aria-label="Timeline of dialogue, jump scares, beats and images">${h}</svg>`;
+  const ro = document.getElementById("readout");
+  el.querySelectorAll(".mk").forEach(g => {
+    const show = () => { el.querySelectorAll(".mk.on").forEach(o => o.classList.remove("on")); g.classList.add("on"); ro.innerHTML = g.dataset.tip; };
+    g.addEventListener("mouseenter", show);
+    g.addEventListener("click", () => { show(); if (g.dataset.jump) flash(g.dataset.jump); });
+  });
+}
+function flash(id) {
+  const t = document.getElementById(id); if (!t) return;
+  if (t.parentElement && t.parentElement.hidden) t.parentElement.hidden = false;
+  t.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center" });
+  t.classList.add("flash"); setTimeout(() => t.classList.remove("flash"), 1600);
+}
+
+function rings(d) {
+  const es = d.dims.who_suffers || []; if (!es.length) return "";
+  const present = RELS.filter(r => es.some(e => e.relation_to_threat === r));
+  const S = 320, c = S / 2, R = i => 34 + i * 24;
+  let h = `<circle cx="${c}" cy="${c}" r="9" fill="var(--red)"/><text x="${c}" y="${c + 24}" text-anchor="middle" class="rl">THREAT</text>`;
+  RELS.forEach((r, i) => { const on = present.includes(r); if (r === "unknown" && !on) return;
+    h += `<circle cx="${c}" cy="${c}" r="${R(i)}" fill="none" stroke="${on ? "var(--ink)" : "var(--rule)"}" stroke-width="${on ? 1 : 1}" ${on ? "" : `stroke-dasharray="2 3"`}/>`;
+    h += `<text x="${c}" y="${c - R(i) + 3.5}" text-anchor="middle" class="rl" style="${on ? "fill:var(--ink)" : ""}">${r.toUpperCase()}</text>`; });
+  const placed = es.filter(e => RELS.includes(e.relation_to_threat));
+  placed.forEach((e, j) => { const i = RELS.indexOf(e.relation_to_threat), a = (-60 + (j + .5) * 300 / placed.length) * Math.PI / 180 + Math.PI / 2 * 0,
+      ang = a, px = c + R(i) * Math.sin(ang + Math.PI * 0.18), py = c - R(i) * Math.cos(ang + Math.PI * 0.18);
+    const right = px >= c, lx = px + (right ? 10 : -10);
+    h += `<circle cx="${px}" cy="${py}" r="5" fill="var(--ink)"/><text x="${lx}" y="${py + 4}" text-anchor="${right ? "start" : "end"}">${esc(e.value)}</text>`; });
+  return `<div class="ringwrap"><svg viewBox="-90 0 ${S + 180} ${S}" role="img" aria-label="Who suffers, by closeness to the threat: ${placed.map(e => e.value + " (" + e.relation_to_threat + ")").join(", ")}">${h}</svg>
+    <p class="small">Rings run from the threat outward: the self, family, lovers, community, strangers. Solid rings are the ones this film uses. ${present.length ? `Here the danger falls on ${present.map(r => RELN[r]).join(", ")}.` : ""}</p></div>`;
+}
+function matrix(es) {
+  const roles = [...new Set(es.map(e => e.role || "none"))].sort((a, b) => es.filter(e => (e.role || "none") === b).length - es.filter(e => (e.role || "none") === a).length);
+  return `<div class="matrix"><table><thead><tr><th>Role</th>${WHEN.map(w => `<th>${w}</th>`).join("")}</tr></thead><tbody>${roles.map(r => `<tr><td class="rn"><span class="sw" style="${swatch(r)}"></span>${esc(r)}</td>${WHEN.map(w => { const n = es.filter(e => (e.role || "none") === r && e.when === w);
+      return `<td>${n.length ? `<button type="button" data-cell="${esc(r)}|${w}" aria-pressed="false" aria-label="${n.length} ${esc(r)} images, ${w}">${n.map(e => `<i style="${swatch(r)}" title="${esc(e.value)}"></i>`).join("")}</button>` : ""}</td>`; }).join("")}</tr>`).join("")}</tbody></table></div>
+    <div class="imgfilter"><button class="chip" type="button" id="imgall" aria-pressed="true">Show all ${es.length} images</button><span class="small" id="imgnote">Click a square group to show only those images.</span></div>`;
+}
+
+function entry(e, k, id) {
+  return `<div class="entry"${id ? ` id="${id}"` : ""}><div><div class="v"><strong>${esc(e.value)}</strong>${tags(e, k)}</div>${e.detail ? `<div class="det">${esc(e.detail)}</div>` : ""}</div><div class="quotes">${quotes(e)}</div></div>`;
 }
 function dimSection(d, k) {
   const es = d.dims[k] || [];
   let body;
   if (!es.length) body = `<div class="ns">${d.not_stated.includes(k) ? "Not stated in the plot summary." : "Nothing recorded."}</div>`;
   else if (k === "beats") {
-    const sorted = [...es].sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
-    body = `<ol class="beats">${sorted.map((e, i) => `<li><span class="no">${i + 1}</span><div><div class="v" style="display:flex;gap:6px 12px;flex-wrap:wrap;align-items:baseline"><strong style="font-weight:600">${esc(e.value)}</strong>${e.when ? `<span class="tag">${esc(e.when)}</span>` : ""}${e.role ? `<span class="tag">${esc(e.role)}</span>` : ""}${e.source && e.source !== "wikipedia" ? `<span class="tag">added from ${esc(e.source)}</span>` : ""}${primed(e.value) ? `<span class="tag red">example wording</span>` : ""}</div>
+    const sorted = sortedBeats(d);
+    body = `<ol class="beats">${sorted.map((e, i) => `<li id="b-${e._i}"><span class="no">${i + 1}</span><div><div class="v" style="display:flex;gap:6px 12px;flex-wrap:wrap;align-items:baseline"><strong style="font-weight:600">${esc(e.value)}</strong>${e.when ? `<span class="tag">${esc(e.when)}</span>` : ""}${e.role ? `<span class="tag">${esc(e.role)}</span>` : ""}${e.source && e.source !== "wikipedia" ? `<span class="tag">added from ${esc(e.source)}</span>` : ""}${primed(e.value) ? `<span class="tag red">example wording</span>` : ""}</div>
       ${e.when && WHEN.includes(e.when) ? `<div class="pos" aria-hidden="true"><i style="left:${WHEN.indexOf(e.when) * 20}%"></i></div>` : ""}
       ${e.detail ? `<div class="det" style="font-size:15px;margin-top:4px">${esc(e.detail)}</div>` : ""}${quotes(e)}</div></li>`).join("")}</ol>`;
   } else if (k === "images") {
-    const roles = [...new Set(es.map(e => e.role).filter(Boolean))].sort();
-    body = `<div class="imgfilter" role="group" aria-label="Filter images by role"><button class="chip" type="button" data-role="" aria-pressed="true">All<span class="k">${es.length}</span></button>${roles.map(r => `<button class="chip" type="button" data-role="${esc(r)}" aria-pressed="false">${esc(r)}<span class="k">${es.filter(e => e.role === r).length}</span></button>`).join("")}</div>
-      <div id="imglist">${[...es].sort((a, b) => WHEN.indexOf(a.when) - WHEN.indexOf(b.when)).map(e => `<div data-r="${esc(e.role || "")}">${entry(e, k)}</div>`).join("")}</div>`;
-  } else body = es.map(e => entry(e, k)).join("");
+    body = matrix(es) + `<div id="imglist">${es.map((e, i) => ({ ...e, _i: i })).sort((a, b) => WHEN.indexOf(a.when) - WHEN.indexOf(b.when)).map(e => `<div data-r="${esc(e.role || "none")}" data-w="${esc(e.when || "")}">${entry(e, k, "i-" + e._i)}</div>`).join("")}</div>`;
+  } else body = (k === "who_suffers" ? rings(d) : "") + es.map(e => entry(e, k)).join("");
   return `<section class="dim" id="d-${k}"><h2>${DN[k]}</h2><p class="q2">${DQ[k]}</p>${body}</section>`;
 }
 function stillsBlock(d) {
@@ -327,6 +519,7 @@ function stillsBlock(d) {
   const n = d.stills, pos = i => n === 1 ? "0 0" : `0 ${(i / (n - 1)) * 100}%`;
   return `<div class="frame" id="frame" role="img" aria-label="Still from ${esc(d.title)}" style="background-image:url('stills/${d.id}.jpg');background-size:100% ${n * 100}%;background-position:${pos(0)}"></div>
     ${n > 1 ? `<div class="strip">${Array.from({ length: n }, (_, i) => `<button type="button" aria-label="Show still ${i + 1} of ${n}" aria-current="${i === 0}" data-i="${i}" style="background-image:url('stills/${d.id}.jpg');background-size:100% ${n * 100}%;background-position:${pos(i)}"></button>`).join("")}</div>` : ""}
+    ${(d.tones || []).length > 1 ? `<div class="tones" aria-label="Prevailing colour of each still">${d.tones.map((c, i) => `<button type="button" data-i="${i}" style="background:${c}" aria-label="Show still ${i + 1}" title="${c}"></button>`).join("")}</div>` : ""}
     <div class="caption">${n} stills from <a href="${esc(d.stills_source)}" target="_blank" rel="noopener">FILMGRAB</a>, in the order they appear on the page, not necessarily the film's order.</div>`;
 }
 function sources(d, f) {
@@ -353,8 +546,7 @@ function side(d) {
   if (en || other.length) {
     const m = en || d.dialogue[other[0]];
     h += `<section><h4>Dialogue${en ? "" : ` (${esc(other[0])} subtitles)`}</h4><div class="stats">
-      <div class="stat"><div class="n">${Math.round(m.words_per_minute)}</div><div class="l">words a minute</div></div>
-      <div class="stat"><div class="n">${Math.round(m.share_of_runtime_with_dialogue * 100)}%</div><div class="l">of runtime has dialogue</div></div>
+      ${en ? "" : `<div class="stat"><div class="n">${Math.round(m.words_per_minute)}</div><div class="l">words a minute</div></div>`}
       ${m.first_line_at_s != null ? `<div class="stat"><div class="n">${Math.floor(m.first_line_at_s / 60)}:${String(m.first_line_at_s % 60).padStart(2, "0")}</div><div class="l">first line spoken</div></div>` : ""}
       ${m.longest_silences?.[0] ? `<div class="stat"><div class="n">${m.longest_silences[0].seconds}s</div><div class="l">longest silence, at ${esc(m.longest_silences[0].starts_at.slice(0, 8))}</div></div>` : ""}
     </div>${!en ? `<p class="small" style="margin:8px 0 0">Translated subtitles run sparser than speech; compare with care.</p>` : ""}${other.length && en ? `<p class="small" style="margin:8px 0 0">Also has ${other.map(esc).join(", ")} subtitles.</p>` : ""}</section>`;
@@ -402,14 +594,15 @@ async function renderFilm(id) {
   <div class="hero">
     <div>${stillsBlock(d)}</div>
     <div class="complete">
-      <h4>Story completeness</h4>
-      ${bar(f)}
-      <div class="labels" aria-hidden="true">${DIMS.map(k => `<span>${SHORT[k]}</span>`).join("")}</div>
-      <p class="note">${f.f.length} of 10 dimensions filled · ${f.n} entries${d.plot_quality === "thin" ? " · from a thin plot" : ""}. Hatched means the plot summary doesn't say.</p>
-      <h4 style="margin-top:22px">Sources</h4>
+      <h4>Among the 100</h4>
+      ${among(f)}
+      <h4 style="margin-top:26px">Sources</h4>
       ${sources(d, f)}
     </div>
   </div>
+  ${glanceBlock(d)}
+  <div class="blockhead"><h3>The story in ten parts</h3><p>${f.f.length} of 10 filled, ${f.n} entries${d.plot_quality === "thin" ? ", read from a thin plot" : ""}. Hatched cells are parts the plot summary doesn't state. Click a cell to read it.</p></div>
+  ${specimen(d)}
   <div class="body">
     <div>
       ${DIMS.map(k => dimSection(d, k)).join("")}
@@ -422,19 +615,27 @@ async function renderFilm(id) {
   document.getElementById("back").onclick = () => go("");
   app.querySelectorAll("[data-go]").forEach(b => b.onclick = () => go(b.dataset.go));
   const frame = document.getElementById("frame");
-  app.querySelectorAll(".strip button").forEach(b => b.onclick = () => {
-    frame.style.backgroundPosition = b.style.backgroundPosition;
-    app.querySelectorAll(".strip button").forEach(x => x.setAttribute("aria-current", x === b));
-  });
-  app.querySelectorAll("[data-role]").forEach(b => b.onclick = () => {
-    app.querySelectorAll("[data-role]").forEach(x => x.setAttribute("aria-pressed", x === b));
-    document.querySelectorAll("#imglist > div").forEach(el => el.hidden = !!b.dataset.role && el.dataset.r !== b.dataset.role);
-  });
+  const strip = [...app.querySelectorAll(".strip button")];
+  const pick = i => { if (!strip[i]) return; frame.style.backgroundPosition = strip[i].style.backgroundPosition; strip.forEach((x, j) => x.setAttribute("aria-current", j === i)); };
+  strip.forEach((b, i) => b.onclick = () => pick(i));
+  app.querySelectorAll(".tones button").forEach(b => b.onclick = () => pick(+b.dataset.i));
+  app.querySelectorAll(".cell[data-jump]").forEach(b => b.onclick = () => document.getElementById(b.dataset.jump).scrollIntoView({ block: "start" }));
+  const cells = [...app.querySelectorAll("[data-cell]")], all = document.getElementById("imgall");
+  const filt = c => { cells.forEach(x => x.setAttribute("aria-pressed", x === c)); if (all) all.setAttribute("aria-pressed", !c);
+    const [r, w] = c ? c.dataset.cell.split("|") : [];
+    document.querySelectorAll("#imglist > div").forEach(el => el.hidden = !!c && !(el.dataset.r === r && el.dataset.w === w));
+    const note = document.getElementById("imgnote"); if (note) note.textContent = c ? `Showing ${r} images, ${w}.` : "Click a square group to show only those images."; };
+  cells.forEach(c => c.onclick = () => filt(c.getAttribute("aria-pressed") === "true" ? null : c));
+  if (all) all.onclick = () => filt(null);
+  drawGlance(d);
+  let rt; window.onresize = () => { clearTimeout(rt); rt = setTimeout(() => drawGlance(d), 150); };
   window.scrollTo(0, 0);
   load(next.id).catch(() => {});
 }
 function cap(s) { s = esc(s); return s.charAt(0).toUpperCase() + s.slice(1); }
-function route() { const id = location.hash.slice(1); if (id && F.some(f => f.id === id)) renderFilm(id); else renderIndex(); }
+function route() { window.onresize = null;
+  routeInner(); }
+function routeInner() { const id = location.hash.slice(1); if (id && F.some(f => f.id === id)) renderFilm(id); else renderIndex(); }
 document.getElementById("home").onclick = () => go("");
 window.addEventListener("hashchange", route);
 route();
