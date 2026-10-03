@@ -1,62 +1,534 @@
 {
  "film": "1996-scream",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "masked serial killer", "detail": "Ghostface", "quote": "they become the targets of a costumed serial killer on the anniversary of her mother's murder", "confidence": "sourced"},
-   {"value": "boyfriend as killer", "detail": "Billy and Stu", "quote": "revealing himself as the killer alongside Stu", "confidence": "sourced"}
+   {
+    "value": "masked serial killer",
+    "detail": "Ghostface",
+    "quote": "they become the targets of a costumed serial killer on the anniversary of her mother's murder",
+    "confidence": "sourced"
+   },
+   {
+    "value": "boyfriend as killer",
+    "detail": "Billy and Stu",
+    "quote": "revealing himself as the killer alongside Stu",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "family wound", "detail": "Billy's mother left after his father's affair", "quote": "they murdered Maureen after discovering her affair with his father, which caused Billy's mother to abandon the family", "confidence": "sourced"}
+   {
+    "value": "family wound",
+    "detail": "Billy's mother left after his father's affair",
+    "quote": "they murdered Maureen after discovering her affair with his father, which caused Billy's mother to abandon the family",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:55",
+      "quote": "Your slut mother was fucking my father, and she's the reason my mom moved out and abandoned me."
+     }
+    ]
+   },
+   {
+    "value": "horror movies",
+    "detail": "Billy denies the films made them killers but credits them with their methods",
+    "source": "subtitles",
+    "at": "01:35:55",
+    "quote": "Movies don't create psychos. Movies make psychos more creative!",
+    "confidence": "observed"
+   }
   ],
   "wants": [
-   {"value": "revenge", "quote": "they murdered Maureen after discovering her affair with his father", "confidence": "observed"},
-   {"value": "to frame someone", "quote": "The pair kidnapped Neil to frame him for the murders", "confidence": "sourced"}
+   {
+    "value": "revenge",
+    "quote": "they murdered Maureen after discovering her affair with his father",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:55",
+      "quote": "Your slut mother was fucking my father"
+     }
+    ]
+   },
+   {
+    "value": "to frame someone",
+    "quote": "The pair kidnapped Neil to frame him for the murders",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:16",
+      "quote": "Your daddy's the chief suspect. We cloned his cellular."
+     }
+    ]
+   },
+   {
+    "value": "to play a game",
+    "source": "subtitles",
+    "at": "00:05:54",
+    "quote": "I wanna play a game.",
+    "confidence": "sourced",
+    "detail": "the caller's quiz on horror films; wrong answers mean death"
+   }
   ],
   "wrong": [
-   {"value": "mother's murder", "quote": "the approaching first anniversary of the rape and murder of her mother, Maureen", "confidence": "sourced"},
-   {"value": "wrongful conviction", "quote": "Cotton, whom Gale believes was misidentified as the killer by Sidney", "confidence": "sourced"},
-   {"value": "adultery", "quote": "Maureen had several extramarital affairs", "confidence": "sourced"}
+   {
+    "value": "mother's murder",
+    "quote": "the approaching first anniversary of the rape and murder of her mother, Maureen",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:50",
+      "quote": "It's your mom's anniversary. Congratulations. We killed her exactly one year ago today."
+     }
+    ]
+   },
+   {
+    "value": "wrongful conviction",
+    "quote": "Cotton, whom Gale believes was misidentified as the killer by Sidney",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:53",
+      "quote": "You wouldn't believe how easy he was to frame."
+     }
+    ]
+   },
+   {
+    "value": "adultery",
+    "quote": "Maureen had several extramarital affairs",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "anniversary of a death", "quote": "on the anniversary of her mother's murder", "confidence": "sourced"},
-   {"value": "phone call", "quote": "Casey Becker is home alone when she receives a phone call from an unknown person", "confidence": "sourced"}
+   {
+    "value": "anniversary of a death",
+    "quote": "on the anniversary of her mother's murder",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:59",
+      "quote": "The anniversary of his wife's death."
+     }
+    ]
+   },
+   {
+    "value": "phone call",
+    "quote": "Casey Becker is home alone when she receives a phone call from an unknown person",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:12",
+      "quote": "[Telephone Ringing] [Heartbeat]"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "horror film rules", "quote": "Randy Meeks explains the \"rules\" of surviving a horror film", "confidence": "sourced"},
-   {"value": "killer returns once more", "quote": "Randy warns that horror film killers always return for one last scare", "confidence": "sourced"}
+   {
+    "value": "horror film rules",
+    "quote": "Randy Meeks explains the \"rules\" of surviving a horror film",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:11",
+      "quote": "There are certain rules that one must abide by... in order to successfully survive a horror movie."
+     }
+    ]
+   },
+   {
+    "value": "killer returns once more",
+    "quote": "Randy warns that horror film killers always return for one last scare",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:25",
+      "quote": "This is the moment when the supposedly dead killer comes back to life... for one last scare."
+     }
+    ]
+   },
+   {
+    "value": "never ask who's there",
+    "source": "subtitles",
+    "at": "00:04:35",
+    "quote": "You should never say, \" Who's there? \" Don't you watch scary movies? It's a death wish.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sex equals death",
+    "source": "subtitles",
+    "at": "01:13:17",
+    "quote": "For instance, number one: You can never have sex.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:22",
+      "quote": "Now you gotta die. Those are the rules."
+     }
+    ]
+   },
+   {
+    "value": "never say you'll be back",
+    "source": "subtitles",
+    "at": "01:13:43",
+    "quote": "say \" I'll be right back, \"' cause you won't be back.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "everybody's a suspect",
+    "source": "subtitles",
+    "at": "00:56:45",
+    "quote": "There's a formula to it. A very simple formula! Everybody's a suspect!",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "teenagers", "relation_to_threat": "community", "quote": "high school student Sidney Prescott (Campbell) and her friends", "confidence": "sourced"},
-   {"value": "daughter of victim", "relation_to_threat": "lover", "detail": "Sidney, targeted by her boyfriend", "quote": "The trauma has also prevented Sidney from consummating her relationship with her boyfriend, Billy Loomis", "confidence": "sourced"},
-   {"value": "journalist", "relation_to_threat": "stranger", "detail": "Gale Weathers", "quote": "Sidney confronts investigative journalist Gale Weathers", "confidence": "sourced"}
+   {
+    "value": "teenagers",
+    "relation_to_threat": "community",
+    "quote": "high school student Sidney Prescott (Campbell) and her friends",
+    "confidence": "sourced"
+   },
+   {
+    "value": "daughter of victim",
+    "relation_to_threat": "lover",
+    "detail": "Sidney, targeted by her boyfriend",
+    "quote": "The trauma has also prevented Sidney from consummating her relationship with her boyfriend, Billy Loomis",
+    "confidence": "sourced"
+   },
+   {
+    "value": "journalist",
+    "relation_to_threat": "stranger",
+    "detail": "Gale Weathers",
+    "quote": "Sidney confronts investigative journalist Gale Weathers",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "killers destroyed", "quote": "Sidney shoots him in the head, killing him", "confidence": "sourced"},
-   {"value": "final scare", "quote": "Billy lunges at them, and Sidney shoots him in the head", "confidence": "sourced"}
+   {
+    "value": "killers destroyed",
+    "quote": "Sidney shoots him in the head, killing him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:36",
+      "quote": "Not in my movie."
+     }
+    ]
+   },
+   {
+    "value": "final scare",
+    "quote": "Billy lunges at them, and Sidney shoots him in the head",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:25",
+      "quote": "This is the moment when the supposedly dead killer comes back to life"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "telephone", "state": "taunting calls", "when": "opening", "role": "threat", "quote": "Sidney receives a taunting phone call referencing Maureen's death", "confidence": "sourced"},
-   {"value": "ghostface costume", "when": "opening", "role": "threat", "quote": "fatally stabbed by someone wearing a \"Ghostface\" costume", "confidence": "sourced"},
-   {"value": "body hanging from tree", "state": "disemboweled", "when": "opening", "role": "omen", "quote": "her disemboweled corpse is then discovered hanging from a tree by her parents", "confidence": "sourced"},
-   {"value": "cellular phone", "state": "dropped", "when": "early", "role": "clue", "quote": "Sidney becomes suspicious after he drops a cellular phone", "confidence": "sourced"},
-   {"value": "garage door", "when": "middle", "role": "weapon", "quote": "crushes her neck in the automatic garage door", "confidence": "sourced"},
-   {"value": "television set", "when": "ending", "role": "weapon", "quote": "kill Stu by dropping a television set on his head", "confidence": "sourced"}
+   {
+    "value": "telephone",
+    "state": "taunting calls",
+    "when": "opening",
+    "role": "threat",
+    "quote": "Sidney receives a taunting phone call referencing Maureen's death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:52",
+      "quote": "[Telephone Rings]"
+     }
+    ]
+   },
+   {
+    "value": "ghostface costume",
+    "when": "opening",
+    "role": "threat",
+    "quote": "fatally stabbed by someone wearing a \"Ghostface\" costume",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:17",
+      "quote": "but this is known to be the same costume worn by the killer."
+     }
+    ]
+   },
+   {
+    "value": "body hanging from tree",
+    "state": "disemboweled",
+    "when": "opening",
+    "role": "omen",
+    "quote": "her disemboweled corpse is then discovered hanging from a tree by her parents",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:18",
+      "quote": "Her mom and dad, they found her hanging from a tree"
+     }
+    ]
+   },
+   {
+    "value": "cellular phone",
+    "state": "dropped",
+    "when": "early",
+    "role": "clue",
+    "quote": "Sidney becomes suspicious after he drops a cellular phone",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:12",
+      "quote": "What are you doing with a cellular telephone, son?"
+     }
+    ]
+   },
+   {
+    "value": "garage door",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "crushes her neck in the automatic garage door",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "garage door is activated. It begins to rise upward, taking Tatum with it."
+     }
+    ]
+   },
+   {
+    "value": "television set",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "kill Stu by dropping a television set on his head",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "he grabs hold of the television set and tries to pull himself off the floor"
+     }
+    ]
+   },
+   {
+    "value": "popcorn on the stove",
+    "state": "burning",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:33",
+    "quote": "What's that noise? Popcorn.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:47",
+      "quote": "[Smoke Alarm Beeping]"
+     }
+    ]
+   },
+   {
+    "value": "owl",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:25:27",
+    "quote": "[Owl Hoots]",
+    "confidence": "sourced",
+    "detail": "heard as Sidney waits alone for Tatum, just before the attack"
+   },
+   {
+    "value": "cat",
+    "state": "startling",
+    "when": "middle",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "just in time to see a cat escape through a large pet door that's built into the garage door",
+    "confidence": "sourced",
+    "detail": "the false scare before Tatum's death"
+   },
+   {
+    "value": "horror film on tv",
+    "when": "middle",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:04:17",
+    "quote": "That's the one I want — Halloween.",
+    "confidence": "sourced",
+    "detail": "Halloween plays at the party while Randy lists the rules",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:04",
+      "quote": "[TV: Breathing Heavily]"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "opening murder", "when": "opening", "quote": "Casey attempts to escape, but is fatally stabbed by someone wearing a \"Ghostface\" costume", "confidence": "sourced"},
-   {"order": 2, "value": "heroine attacked", "when": "early", "quote": "Sidney receives a taunting phone call referencing Maureen's death before Ghostface attacks her", "confidence": "sourced"},
-   {"order": 3, "value": "suspect arrested", "when": "early", "quote": "Billy is arrested by Deputy Sheriff Dewey", "confidence": "sourced"},
-   {"order": 4, "value": "party in isolated house", "when": "middle", "role": "setting", "quote": "invites her and Sidney to a party at his secluded home", "confidence": "sourced"},
-   {"order": 5, "value": "killers revealed", "when": "late", "role": "turn", "quote": "lets Randy inside before shooting him, revealing himself as the killer alongside Stu", "confidence": "sourced"},
-   {"order": 6, "value": "motive revealed", "when": "late", "role": "turn", "quote": "Billy explains that they murdered Maureen after discovering her affair with his father", "confidence": "sourced"},
-   {"order": 7, "value": "final girl kills", "when": "ending", "quote": "Sidney shoots him in the head, killing him", "confidence": "sourced"},
-   {"order": 8, "value": "dawn and news report", "when": "ending", "quote": "As dawn breaks, Neil is rescued, Dewey is taken away by ambulance, and Gale reports on the night's events", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "horror trivia quiz",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:06:38",
+    "quote": "Name the killer in Halloween.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "opening murder",
+    "when": "opening",
+    "quote": "Casey attempts to escape, but is fatally stabbed by someone wearing a \"Ghostface\" costume",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:52",
+      "quote": "[Muffled Screaming]"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "heroine attacked",
+    "when": "early",
+    "quote": "Sidney receives a taunting phone call referencing Maureen's death before Ghostface attacks her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:37",
+      "quote": "[Screams, Grunts]"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "suspect arrested",
+    "when": "early",
+    "quote": "Billy is arrested by Deputy Sheriff Dewey",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:51",
+      "quote": "I caught him, Sheriff."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "party in isolated house",
+    "when": "middle",
+    "role": "setting",
+    "quote": "invites her and Sidney to a party at his secluded home",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "rules of survival recited",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:13:11",
+    "quote": "There are certain rules that one must abide by",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "killers revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "lets Randy inside before shooting him, revealing himself as the killer alongside Stu",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:01",
+      "quote": "Surprise, Sidney."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "motive revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Billy explains that they murdered Maureen after discovering her affair with his father",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:55",
+      "quote": "Your slut mother was fucking my father"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "final girl kills",
+    "when": "ending",
+    "quote": "Sidney shoots him in the head, killing him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:36",
+      "quote": "Not in my movie."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "dawn and news report",
+    "when": "ending",
+    "quote": "As dawn breaks, Neil is rescued, Dewey is taken away by ambulance, and Gale reports on the night's events",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:43:28",
+      "quote": "It all began with a scream over 9-1-1"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

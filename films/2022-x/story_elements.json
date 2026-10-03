@@ -1,60 +1,401 @@
 {
  "film": "2022-x",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes and influences"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes and influences"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "elderly killer", "detail": "Pearl", "quote": "the film presents its antagonist—the murderous Pearl—in a manner that is sympathetic", "confidence": "sourced"},
-   {"value": "elderly couple", "detail": "Howard and Pearl", "quote": "make a pornographic film on an elderly couple's rural Texas property", "confidence": "sourced"}
+   {
+    "value": "elderly killer",
+    "detail": "Pearl",
+    "quote": "the film presents its antagonist—the murderous Pearl—in a manner that is sympathetic",
+    "confidence": "sourced"
+   },
+   {
+    "value": "elderly couple",
+    "detail": "Howard and Pearl",
+    "quote": "make a pornographic film on an elderly couple's rural Texas property",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "aging and envy", "quote": "the film's primary theme revolves around aging, youth, and longing over the past", "confidence": "sourced"}
+   {
+    "value": "aging and envy",
+    "quote": "the film's primary theme revolves around aging, youth, and longing over the past",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:33",
+      "quote": "You don't deserve to be able to just flaunt it in my face like you do."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "lost youth", "detail": "Pearl sees herself in Maxine", "quote": "Pearl secretly watches and imagines herself in Maxine's spot", "confidence": "sourced"},
-   {"value": "desire", "quote": "After he rebuffs her advances, Pearl stabs him repeatedly in the neck", "confidence": "sourced"}
+   {
+    "value": "lost youth",
+    "detail": "Pearl sees herself in Maxine",
+    "quote": "Pearl secretly watches and imagines herself in Maxine's spot",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:52",
+      "quote": "Make me feel young again."
+     }
+    ]
+   },
+   {
+    "value": "desire",
+    "quote": "After he rebuffs her advances, Pearl stabs him repeatedly in the neck",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:32",
+      "quote": "Sick and tired of never gettin' what I want."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "past murders", "detail": "a corpse in the basement, a car in the lake", "quote": "she discovers a naked male corpse hanging from the ceiling", "confidence": "observed"}
+   {
+    "value": "past murders",
+    "detail": "a corpse in the basement, a car in the lake",
+    "quote": "she discovers a naked male corpse hanging from the ceiling",
+    "confidence": "observed"
+   }
   ],
   "trigger": [
-   {"value": "staying on a stranger's property", "quote": "The group arrives at a farm owned by World War veteran Howard and his wife Pearl", "confidence": "sourced"},
-   {"value": "rejection", "quote": "After he rebuffs her advances, Pearl stabs him repeatedly in the neck, decapitating him", "confidence": "sourced"}
+   {
+    "value": "staying on a stranger's property",
+    "quote": "The group arrives at a farm owned by World War veteran Howard and his wife Pearl",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rejection",
+    "quote": "After he rebuffs her advances, Pearl stabs him repeatedly in the neck, decapitating him",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "rejection provokes violence", "quote": "After he rebuffs her advances, Pearl stabs him repeatedly in the neck", "confidence": "observed"}
+   {
+    "value": "rejection provokes violence",
+    "quote": "After he rebuffs her advances, Pearl stabs him repeatedly in the neck",
+    "confidence": "observed"
+   },
+   {
+    "value": "refuse an undeserved life",
+    "detail": "Maxine's mantra, echoed by the evangelist",
+    "source": "subtitles",
+    "at": "00:38:06",
+    "quote": "| will not accept a life I do not deserve.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:12",
+      "quote": "I will not accept a life I do not deserve."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "film crew", "relation_to_threat": "stranger", "quote": "the film follows a cast and crew who gather to make a pornographic film", "confidence": "sourced"},
-   {"value": "young woman", "relation_to_threat": "stranger", "detail": "Maxine, Pearl's mirror", "quote": "Maxine looks similar to Pearl in her youth", "confidence": "sourced"}
+   {
+    "value": "film crew",
+    "relation_to_threat": "stranger",
+    "quote": "the film follows a cast and crew who gather to make a pornographic film",
+    "confidence": "sourced"
+   },
+   {
+    "value": "young woman",
+    "relation_to_threat": "stranger",
+    "detail": "Maxine, Pearl's mirror",
+    "quote": "Maxine looks similar to Pearl in her youth",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "final girl survives", "quote": "Maxine reverses the truck, crushing Pearl's head before driving away", "confidence": "sourced"},
-   {"value": "threat destroyed", "quote": "causing him to have a fatal heart attack", "confidence": "sourced"}
+   {
+    "value": "final girl survives",
+    "quote": "Maxine reverses the truck, crushing Pearl's head before driving away",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:31",
+      "quote": "Divine intervention."
+     }
+    ]
+   },
+   {
+    "value": "threat destroyed",
+    "quote": "causing him to have a fatal heart attack",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "bodies in bags", "state": "dead", "when": "opening", "role": "omen", "quote": "find numerous dead bodies wrapped in bags", "confidence": "sourced"},
-   {"value": "lake", "state": "nude swimming", "when": "early", "role": "setting", "quote": "Pearl discreetly observes Maxine nude swimming in a nearby lake", "confidence": "sourced"},
-   {"value": "pitchfork", "state": "stabbing eyes", "when": "middle", "role": "weapon", "quote": "is stabbed in the eyes by Pearl with a pitchfork", "confidence": "sourced"},
-   {"value": "nail", "state": "stepped on", "when": "middle", "role": "threat", "quote": "Wayne steps on a large nail", "confidence": "sourced"},
-   {"value": "hanging corpse", "state": "in basement", "when": "middle", "role": "clue", "quote": "she discovers a naked male corpse hanging from the ceiling", "confidence": "sourced"},
-   {"value": "submerged car", "state": "in water", "when": "middle", "role": "clue", "quote": "Jackson finds a car submerged in the water", "confidence": "sourced"},
-   {"value": "alligator", "state": "killing", "when": "late", "role": "weapon", "quote": "pushes her into the water where an alligator kills her", "confidence": "sourced"},
-   {"value": "camera", "state": "holding footage", "when": "ending", "role": "mirror", "quote": "The police discover RJ's camera", "confidence": "sourced"}
+   {
+    "value": "bodies in bags",
+    "state": "dead",
+    "when": "opening",
+    "role": "omen",
+    "quote": "find numerous dead bodies wrapped in bags",
+    "confidence": "sourced"
+   },
+   {
+    "value": "television evangelist",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:11:17",
+    "quote": "[evangelist on TV] Kidnappers, murderers, sex fiends, all the result of our increasingly secular society.",
+    "confidence": "sourced",
+    "detail": "preaches through the film; at the end he is revealed as Maxine's father",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:36",
+      "quote": "My beautiful little daughter Maxine."
+     }
+    ]
+   },
+   {
+    "value": "lake",
+    "state": "nude swimming",
+    "when": "early",
+    "role": "setting",
+    "quote": "Pearl discreetly observes Maxine nude swimming in a nearby lake",
+    "confidence": "sourced"
+   },
+   {
+    "value": "carcass on the road",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:13:34",
+    "quote": "[retching and gagging] - What is it? - [Wayne] Oh, don't look.",
+    "confidence": "observed"
+   },
+   {
+    "value": "pitchfork",
+    "state": "stabbing eyes",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "is stabbed in the eyes by Pearl with a pitchfork",
+    "confidence": "sourced"
+   },
+   {
+    "value": "nail",
+    "state": "stepped on",
+    "when": "middle",
+    "role": "threat",
+    "quote": "Wayne steps on a large nail",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:43",
+      "quote": "| stepped on a nail."
+     }
+    ]
+   },
+   {
+    "value": "hanging corpse",
+    "state": "in basement",
+    "when": "middle",
+    "role": "clue",
+    "quote": "she discovers a naked male corpse hanging from the ceiling",
+    "confidence": "sourced"
+   },
+   {
+    "value": "submerged car",
+    "state": "in water",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Jackson finds a car submerged in the water",
+    "confidence": "sourced"
+   },
+   {
+    "value": "old photograph",
+    "when": "middle",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:34:54",
+    "quote": "| was young once too. It was taken right before the first war.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "alligator",
+    "state": "killing",
+    "when": "late",
+    "role": "weapon",
+    "quote": "pushes her into the water where an alligator kills her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:25",
+      "quote": "It's for gators."
+     }
+    ]
+   },
+   {
+    "value": "camera",
+    "state": "holding footage",
+    "when": "ending",
+    "role": "mirror",
+    "quote": "The police discover RJ's camera",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:40:27",
+      "quote": "One of the boys found this inside."
+     }
+    ]
+   },
+   {
+    "value": "crow",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:40:03",
+    "quote": "[crow cawing] [deputy 1] What do you reckon happened, Sheriff?",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "aftermath shown first", "when": "opening", "role": "omen", "quote": "police officers arrive on a lonely farm in rural Texas and find numerous dead bodies", "confidence": "sourced"},
-   {"order": 2, "value": "arrival at remote farm", "when": "early", "quote": "The group arrives at a farm owned by World War veteran Howard and his wife Pearl", "confidence": "sourced"},
-   {"order": 3, "value": "killer's fixation", "when": "early", "quote": "Pearl expresses an unusual fixation on her", "confidence": "sourced"},
-   {"order": 4, "value": "first kill", "when": "middle", "role": "turn", "quote": "Pearl stabs him repeatedly in the neck, decapitating him", "confidence": "sourced"},
-   {"order": 5, "value": "killed one by one", "when": "middle", "quote": "Howard confronts him and shoots him in the chest", "confidence": "sourced"},
-   {"order": 6, "value": "killer in the bed", "when": "late", "quote": "awakens in horror to find Pearl lying next to her", "confidence": "sourced"},
-   {"order": 7, "value": "husband dies", "when": "late", "quote": "Lorraine's corpse twitches, startling Howard and causing him to have a fatal heart attack", "confidence": "sourced"},
-   {"order": 8, "value": "final girl kills killer", "when": "ending", "quote": "Maxine reverses the truck, crushing Pearl's head before driving away", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "aftermath shown first",
+    "when": "opening",
+    "role": "omen",
+    "quote": "police officers arrive on a lonely farm in rural Texas and find numerous dead bodies",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "arrival at remote farm",
+    "when": "early",
+    "quote": "The group arrives at a farm owned by World War veteran Howard and his wife Pearl",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:11",
+      "quote": "[Wayne] Well, this is it! - Our own studio backlot."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "killer's fixation",
+    "when": "early",
+    "quote": "Pearl expresses an unusual fixation on her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:54",
+      "quote": "| was young once too."
+     }
+    ]
+   },
+   {
+    "value": "mantra in the mirror",
+    "when": "middle",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:37:58",
+    "quote": "- You're a fucking sex symbol. - [sniffles]",
+    "confidence": "sourced",
+    "order": 4
+   },
+   {
+    "order": 5,
+    "value": "first kill",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Pearl stabs him repeatedly in the neck, decapitating him",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "killed one by one",
+    "when": "middle",
+    "quote": "Howard confronts him and shoots him in the chest",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "killer in the bed",
+    "when": "late",
+    "quote": "awakens in horror to find Pearl lying next to her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:33",
+      "quote": "You don't deserve to be able to just flaunt it in my face like you do."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "husband dies",
+    "when": "late",
+    "quote": "Lorraine's corpse twitches, startling Howard and causing him to have a fatal heart attack",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:12",
+      "quote": "Where are the keys to the truck? - He's having a heart attack."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "final girl kills killer",
+    "when": "ending",
+    "quote": "Maxine reverses the truck, crushing Pearl's head before driving away",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:05",
+      "quote": "[screams] It'll be our secret."
+     }
+    ]
+   },
+   {
+    "value": "police find the film",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:40:43",
+    "quote": "I'd say one goddamn fucked up horror picture.",
+    "confidence": "sourced",
+    "order": 10
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,61 +1,482 @@
 {
  "film": "1959-house-on-haunted-hill",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "murder plot", "detail": "Annabelle and David plan Frederick's death", "quote": "Secretly lovers, the two of them have orchestrated the various mishaps to manipulate Nora into killing Frederick", "confidence": "sourced"},
-   {"value": "haunted house", "quote": "the house is genuinely haunted by the ghosts of those murdered there", "confidence": "sourced"},
-   {"value": "staged haunting", "quote": "the puppeteer control unit that he used to manipulate the skeleton", "confidence": "sourced"}
+   {
+    "value": "murder plot",
+    "detail": "Annabelle and David plan Frederick's death",
+    "quote": "Secretly lovers, the two of them have orchestrated the various mishaps to manipulate Nora into killing Frederick",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:47",
+      "quote": "WE'VE DONE IT. THE PERFECT CRIME."
+     }
+    ]
+   },
+   {
+    "value": "haunted house",
+    "quote": "the house is genuinely haunted by the ghosts of those murdered there",
+    "confidence": "sourced"
+   },
+   {
+    "value": "staged haunting",
+    "quote": "the puppeteer control unit that he used to manipulate the skeleton",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "made by someone", "detail": "faked by the plotters, then by Frederick", "quote": "Annabelle, who faked her death using a hanging harness and sedatives", "confidence": "sourced"}
+   {
+    "value": "made by someone",
+    "detail": "faked by the plotters, then by Frederick",
+    "quote": "Annabelle, who faked her death using a hanging harness and sedatives",
+    "confidence": "sourced"
+   },
+   {
+    "value": "house of past murders",
+    "source": "subtitles",
+    "at": "00:01:06",
+    "quote": "SEVEN PEOPLE, INCLUDING MY BROTHER, HAVE BEEN MURDERED IN IT.",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "money", "detail": "Annabelle wants Frederick's wealth", "quote": "Frederick is convinced that Annabelle tried to poison him to acquire his wealth", "confidence": "sourced"},
-   {"value": "revenge", "detail": "Frederick turns the plot back on them", "quote": "revealing that he had known their plot all along", "confidence": "observed"}
+   {
+    "value": "money",
+    "detail": "Annabelle wants Frederick's wealth",
+    "quote": "Frederick is convinced that Annabelle tried to poison him to acquire his wealth",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:25",
+      "quote": "ALL YOU WANNA BE IS A LOVELY WIDOW."
+     }
+    ]
+   },
+   {
+    "value": "revenge",
+    "detail": "Frederick turns the plot back on them",
+    "quote": "revealing that he had known their plot all along",
+    "confidence": "observed"
+   },
+   {
+    "value": "hunger",
+    "detail": "Pritchard's restless ghosts",
+    "source": "subtitles",
+    "at": "00:00:48",
+    "quote": "THE GHOSTS ARE MOVING TONIGHT, RESTLESS, HUNGRY.",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "murder", "detail": "past killings in the house", "quote": "a vat of acid in the basement, which a previous resident used to kill his wife", "confidence": "sourced"},
-   {"value": "betrayal by spouse", "quote": "his wife and David plotted to kill him", "confidence": "sourced"}
+   {
+    "value": "murder",
+    "detail": "past killings in the house",
+    "quote": "a vat of acid in the basement, which a previous resident used to kill his wife",
+    "confidence": "sourced"
+   },
+   {
+    "value": "betrayal by spouse",
+    "quote": "his wife and David plotted to kill him",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "an invitation", "detail": "a paid haunted-house party", "quote": "invites five people to a party he is throwing for his fourth wife, Annabelle, in an allegedly haunted house", "confidence": "sourced"}
+   {
+    "value": "an invitation",
+    "detail": "a paid haunted-house party",
+    "quote": "invites five people to a party he is throwing for his fourth wife, Annabelle, in an allegedly haunted house",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "survive the night for money", "quote": "Whoever stays in the house for one night will earn $10,000", "confidence": "sourced"},
-   {"value": "locked in until morning", "quote": "the caretakers lock the doors five minutes early", "confidence": "sourced"}
+   {
+    "value": "survive the night for money",
+    "quote": "Whoever stays in the house for one night will earn $10,000",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:52",
+      "quote": "IF ANY OF YOU WILL SPEND THE NEXT 12 HOURS IN THIS HOUSE,"
+     }
+    ]
+   },
+   {
+    "value": "locked in until morning",
+    "quote": "the caretakers lock the doors five minutes early",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:26",
+      "quote": "ONCE THE DOOR IS LOCKED, THERE IS NO WAY OUT."
+     }
+    ]
+   },
+   {
+    "value": "acid leaves only bones",
+    "source": "subtitles",
+    "at": "00:17:00",
+    "quote": "DESTROYS EVERYTHING WITH HAIR AND FLESH. JUST LEAVES THE BONES.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "invited strangers", "relation_to_threat": "stranger", "quote": "All are strangers to both the Lorens and each other", "confidence": "sourced"},
-   {"value": "young woman", "relation_to_threat": "stranger", "detail": "Nora, manipulated into shooting", "quote": "Nora is chased from her room into the basement by Annabelle's ghost", "confidence": "sourced"},
-   {"value": "husband", "relation_to_threat": "lover", "detail": "Frederick, target of his wife", "quote": "his wife and David plotted to kill him", "confidence": "sourced"}
+   {
+    "value": "invited strangers",
+    "relation_to_threat": "stranger",
+    "quote": "All are strangers to both the Lorens and each other",
+    "confidence": "sourced"
+   },
+   {
+    "value": "young woman",
+    "relation_to_threat": "stranger",
+    "detail": "Nora, manipulated into shooting",
+    "quote": "Nora is chased from her room into the basement by Annabelle's ghost",
+    "confidence": "sourced"
+   },
+   {
+    "value": "husband",
+    "relation_to_threat": "lover",
+    "detail": "Frederick, target of his wife",
+    "quote": "his wife and David plotted to kill him",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "plotters killed", "quote": "his wife and David plotted to kill him, and that they both died in the vat of acid", "confidence": "sourced"},
-   {"value": "haunting may continue", "quote": "Watson remains convinced that the house is haunted, with David and Annabelle now added to its ranks of ghosts", "confidence": "sourced"}
+   {
+    "value": "plotters killed",
+    "quote": "his wife and David plotted to kill him, and that they both died in the vat of acid",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:25",
+      "quote": "ONLY THE VICTIM IS ALIVE AND THE MURDERERS ARE NOT."
+     }
+    ]
+   },
+   {
+    "value": "haunting may continue",
+    "quote": "Watson remains convinced that the house is haunted, with David and Annabelle now added to its ranks of ghosts",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:09",
+      "quote": "THEY'RE COMING FOR ME NOW. AND THEN THEY'LL COME FOR YOU."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "vat of acid", "when": "early", "role": "weapon", "quote": "a vat of acid in the basement, which a previous resident used to kill his wife", "confidence": "sourced"},
-   {"value": "barred windows", "when": "opening", "role": "setting", "quote": "All the windows are barred, there is no electricity and no phones or radios to use", "confidence": "sourced"},
-   {"value": "guns", "state": "loaded with blanks", "when": "middle", "role": "weapon", "quote": "each is given a gun for protection", "confidence": "sourced"},
-   {"value": "hanging body", "state": "faked", "when": "middle", "role": "turn", "quote": "Lance and David find Annabelle's corpse, suspended to suggest that she had hanged herself", "confidence": "sourced"},
-   {"value": "skeleton", "state": "rising from acid", "when": "ending", "role": "weapon", "quote": "A skeleton rises from the acid, accuses her in Frederick's voice, and shoves her into the vat", "confidence": "sourced"},
-   {"value": "secret room", "state": "door shuts", "when": "late", "role": "setting", "quote": "Lance uncovers a secret room at the end of the second-floor hall, but the door shuts behind him", "confidence": "sourced"}
+   {
+    "value": "vat of acid",
+    "when": "early",
+    "role": "weapon",
+    "quote": "a vat of acid in the basement, which a previous resident used to kill his wife",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:28",
+      "quote": "SO, HE FILLED A VAT WITH ACID AND THREW HER IN."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:08:29",
+      "quote": "[ACID SPLASHING, BUBBLING]"
+     }
+    ]
+   },
+   {
+    "value": "barred windows",
+    "when": "opening",
+    "role": "setting",
+    "quote": "All the windows are barred, there is no electricity and no phones or radios to use",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:30",
+      "quote": "THE WINDOWS HAVE BARS THAT A JAIL WOULD BE PROUD OF"
+     }
+    ]
+   },
+   {
+    "value": "guns",
+    "state": "loaded with blanks",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "each is given a gun for protection",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:59",
+      "quote": "THROW THESE GUNS AWAY. THEY WON'T DO YOU ANY GOOD."
+     }
+    ]
+   },
+   {
+    "value": "hanging body",
+    "state": "faked",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Lance and David find Annabelle's corpse, suspended to suggest that she had hanged herself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:07",
+      "quote": "YOUR WIFE HANGED HERSELF."
+     }
+    ]
+   },
+   {
+    "value": "skeleton",
+    "state": "rising from acid",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "A skeleton rises from the acid, accuses her in Frederick's voice, and shoves her into the vat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:47",
+      "quote": "COME WITH ME, MURDERESS. COME WITH ME."
+     }
+    ]
+   },
+   {
+    "value": "secret room",
+    "state": "door shuts",
+    "when": "late",
+    "role": "setting",
+    "quote": "Lance uncovers a secret room at the end of the second-floor hall, but the door shuts behind him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:42",
+      "quote": "THERE MUST BE SOME WAY TO GET IN HERE."
+     }
+    ]
+   },
+   {
+    "value": "funeral cars",
+    "when": "opening",
+    "role": "omen",
+    "detail": "guests arrive in hearses",
+    "source": "subtitles",
+    "at": "00:02:09",
+    "quote": "TO HAVE OUR GUESTS COME IN FUNERAL CARS.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "severed heads",
+    "when": "early",
+    "role": "threat",
+    "detail": "the never-found heads of past victims",
+    "source": "subtitles",
+    "at": "00:12:08",
+    "quote": "A FUNNY THING IS, THE HEADS HAVE NEVER BEEN FOUND.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:48",
+      "quote": "WOULD YOU LIKE TO SEE ONE OF THOSE HEADS?"
+     }
+    ]
+   },
+   {
+    "value": "bloodstain",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:15:06",
+    "quote": "SEE THAT STAIN? BLOOD.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "guns in little coffins",
+    "when": "middle",
+    "role": "weapon",
+    "detail": "party favours",
+    "source": "subtitles",
+    "at": "00:37:51",
+    "quote": "IN THESE LITTLE COFFINS.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "falling chandelier",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:31:32",
+    "quote": "NORA MANNING WAS ALMOST KILLED BY A FALLING CHANDELIER,",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "guests invited for money", "when": "opening", "role": "trigger", "quote": "He promises to give each guest $10,000 with the stipulation that they stay the entire night", "confidence": "sourced"},
-   {"order": 2, "value": "tour of past murders", "when": "early", "role": "omen", "quote": "He gives a tour of the house, including a vat of acid in the basement", "confidence": "sourced"},
-   {"order": 3, "value": "trapped inside", "when": "middle", "quote": "the caretakers lock the doors five minutes early", "confidence": "sourced"},
-   {"order": 4, "value": "apparent death", "when": "middle", "quote": "Lance and David find Annabelle's corpse", "confidence": "sourced"},
-   {"order": 5, "value": "plot revealed", "when": "late", "role": "turn", "quote": "David instead meets with Annabelle, who faked her death using a hanging harness and sedatives", "confidence": "sourced"},
-   {"order": 6, "value": "manipulated shooting", "when": "late", "quote": "Nora, seeing Frederick enter the basement with a gun in his hand, shoots him", "confidence": "sourced"},
-   {"order": 7, "value": "trickster turns tables", "when": "ending", "role": "turn", "quote": "Frederick emerges from the shadows, holding the puppeteer control unit", "confidence": "sourced"},
-   {"order": 8, "value": "lingering belief in ghosts", "when": "ending", "quote": "Watson remains convinced that the house is haunted", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "screams in the dark",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:17",
+    "quote": "[WOMAN SCREAMING]",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "guests invited for money",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "He promises to give each guest $10,000 with the stipulation that they stay the entire night",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:55",
+      "quote": "I'LL GIVE YOU EACH $ 10,000"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "tour of past murders",
+    "when": "early",
+    "role": "omen",
+    "quote": "He gives a tour of the house, including a vat of acid in the basement",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:06",
+      "quote": "SEE THAT STAIN? BLOOD. A YOUNG GIRL WAS KILLED HERE."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "trapped inside",
+    "when": "middle",
+    "quote": "the caretakers lock the doors five minutes early",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:47",
+      "quote": "[DOOR SLAMMING SHUT]"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "apparent death",
+    "when": "middle",
+    "quote": "Lance and David find Annabelle's corpse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:07",
+      "quote": "YOUR WIFE HANGED HERSELF. A SUICIDE."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "plot revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "David instead meets with Annabelle, who faked her death using a hanging harness and sedatives",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:47",
+      "quote": "WE'VE DONE IT. THE PERFECT CRIME."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "manipulated shooting",
+    "when": "late",
+    "quote": "Nora, seeing Frederick enter the basement with a gun in his hand, shoots him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:25",
+      "quote": "SO SCARED, SHE'LL SHOOT THE FIRST THING THAT MOVES."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "trickster turns tables",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Frederick emerges from the shadows, holding the puppeteer control unit",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:34",
+      "quote": "THAT I WAS PLAYING TOO."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "lingering belief in ghosts",
+    "when": "ending",
+    "quote": "Watson remains convinced that the house is haunted",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:00",
+      "quote": "NOW THERE ARE NINE. THERE'LL BE MORE, MANY MORE."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "laughter and creaking door",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:14:16",
+    "quote": "[OMINOUS LAUGHTER]",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,58 +1,413 @@
 {
  "film": "2017-terrified",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "dark entities", "detail": "beings from another dimension", "quote": "allowing dark entities to emerge from it and travel through tap water", "confidence": "sourced"},
-   {"value": "unseen force", "quote": "repeatedly slamming against the wall as if thrown by an invisible force", "confidence": "sourced"},
-   {"value": "returning dead", "detail": "Alicia's son back from the cemetery", "quote": "Alicia's deceased son is sitting at the kitchen table having apparently returned from the cemetery", "confidence": "sourced"}
+   {
+    "value": "dark entities",
+    "detail": "beings from another dimension",
+    "quote": "allowing dark entities to emerge from it and travel through tap water",
+    "confidence": "sourced"
+   },
+   {
+    "value": "unseen force",
+    "quote": "repeatedly slamming against the wall as if thrown by an invisible force",
+    "confidence": "sourced"
+   },
+   {
+    "value": "returning dead",
+    "detail": "Alicia's son back from the cemetery",
+    "quote": "Alicia's deceased son is sitting at the kitchen table having apparently returned from the cemetery",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "from another dimension", "quote": "the neighborhood serves as a gateway to another dimension of existence", "confidence": "sourced"}
+   {
+    "value": "from another dimension",
+    "quote": "the neighborhood serves as a gateway to another dimension of existence",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:13",
+      "quote": "There is life in both dimensions."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to kill", "detail": "voices plan murder", "quote": "The voices seem to be discussing a plan to kill her", "confidence": "sourced"}
+   {
+    "value": "to kill",
+    "detail": "voices plan murder",
+    "quote": "The voices seem to be discussing a plan to kill her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:45",
+      "quote": "That they were gonna kill me."
+     }
+    ]
+   },
+   {
+    "value": "blood",
+    "source": "subtitles",
+    "at": "01:05:19",
+    "quote": "These beings like blood.",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "unexplained", "quote": "Clara hears strange voices coming from the plughole in her kitchen sink", "confidence": "sourced"}
+   {
+    "value": "unexplained",
+    "quote": "Clara hears strange voices coming from the plughole in her kitchen sink",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "travels through water", "quote": "travel through tap water, haunting the houses along the street", "confidence": "sourced"},
-   {"value": "hides under the bed", "quote": "a tall, naked figure emerging from beneath the bed", "confidence": "sourced"}
+   {
+    "value": "travels through water",
+    "quote": "travel through tap water, haunting the houses along the street",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:16",
+      "quote": "Water is the channel used to transport microscopic beings,"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:05:23",
+      "quote": "Have you used any tap water tonight?"
+     }
+    ]
+   },
+   {
+    "value": "hides under the bed",
+    "quote": "a tall, naked figure emerging from beneath the bed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:38",
+      "quote": "[Bed creaks and scrapes]"
+     }
+    ]
+   },
+   {
+    "value": "the dead wake and speak",
+    "source": "subtitles",
+    "at": "00:39:52",
+    "quote": "He had been dead for two days. He woke up.",
+    "confidence": "observed"
+   }
   ],
   "who_suffers": [
-   {"value": "neighbours", "relation_to_threat": "community", "detail": "residents of one street", "quote": "haunting the houses along the street", "confidence": "sourced"},
-   {"value": "investigators", "relation_to_threat": "stranger", "detail": "Jano, Mora and Rosentock", "quote": "Dr. Albreck being dragged into the other dimension by a being that appears to be Walter", "confidence": "sourced"},
-   {"value": "mother and son", "relation_to_threat": "community", "detail": "Alicia and her son", "quote": "a bus strikes and kills him", "confidence": "sourced"}
+   {
+    "value": "neighbours",
+    "relation_to_threat": "community",
+    "detail": "residents of one street",
+    "quote": "haunting the houses along the street",
+    "confidence": "sourced"
+   },
+   {
+    "value": "investigators",
+    "relation_to_threat": "stranger",
+    "detail": "Jano, Mora and Rosentock",
+    "quote": "Dr. Albreck being dragged into the other dimension by a being that appears to be Walter",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother and son",
+    "relation_to_threat": "community",
+    "detail": "Alicia and her son",
+    "quote": "a bus strikes and kills him",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat survives", "quote": "they turn around and see an empty chair move on its own", "confidence": "observed"},
-   {"value": "everyone dies", "detail": "investigators taken or killed", "quote": "Funes witnesses Jano supernaturally trapped in a chest of drawers", "confidence": "observed"}
+   {
+    "value": "threat survives",
+    "quote": "they turn around and see an empty chair move on its own",
+    "confidence": "observed"
+   },
+   {
+    "value": "everyone dies",
+    "detail": "investigators taken or killed",
+    "quote": "Funes witnesses Jano supernaturally trapped in a chest of drawers",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "sink plughole", "state": "voices", "when": "opening", "role": "threat", "quote": "strange voices coming from the plughole in her kitchen sink", "confidence": "sourced"},
-   {"value": "body", "state": "hovering, slammed", "when": "opening", "role": "threat", "quote": "Clara's dead body hovering in midair in their bathroom", "confidence": "sourced"},
-   {"value": "bed", "state": "figure beneath", "when": "early", "role": "threat", "quote": "a tall, naked figure emerging from beneath the bed", "confidence": "sourced"},
-   {"value": "video camera", "when": "early", "role": "clue", "quote": "he uses a video camera to film the events", "confidence": "sourced"},
-   {"value": "tap", "state": "dangerous water", "when": "early", "role": "omen", "quote": "tries to drink from a tap outside Walter's shut-up house", "confidence": "sourced"},
-   {"value": "corpse at table", "state": "child", "when": "middle", "role": "threat", "quote": "sitting at the kitchen table", "confidence": "sourced"},
-   {"value": "freezer", "state": "corpse hidden", "when": "middle", "role": "setting", "quote": "They move the body to an outside freezer", "confidence": "sourced"},
-   {"value": "chair", "state": "moving on its own", "when": "ending", "role": "omen", "quote": "see an empty chair move on its own", "confidence": "sourced"}
+   {
+    "value": "sink plughole",
+    "state": "voices",
+    "when": "opening",
+    "role": "threat",
+    "quote": "strange voices coming from the plughole in her kitchen sink",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:40",
+      "quote": "[Gurgling]  [Pipes clattering softly]"
+     }
+    ]
+   },
+   {
+    "value": "body",
+    "state": "hovering, slammed",
+    "when": "opening",
+    "role": "threat",
+    "quote": "Clara's dead body hovering in midair in their bathroom",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bed",
+    "state": "figure beneath",
+    "when": "early",
+    "role": "threat",
+    "quote": "a tall, naked figure emerging from beneath the bed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:23",
+      "quote": "I saw it yesterday. I think it's under the bed."
+     }
+    ]
+   },
+   {
+    "value": "video camera",
+    "when": "early",
+    "role": "clue",
+    "quote": "he uses a video camera to film the events",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:54",
+      "quote": "He recorded in your backyard."
+     }
+    ]
+   },
+   {
+    "value": "tap",
+    "state": "dangerous water",
+    "when": "early",
+    "role": "omen",
+    "quote": "tries to drink from a tap outside Walter's shut-up house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:01",
+      "quote": "Go away. Don't drink from that water."
+     }
+    ]
+   },
+   {
+    "value": "corpse at table",
+    "state": "child",
+    "when": "middle",
+    "role": "threat",
+    "quote": "sitting at the kitchen table",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:54",
+      "quote": "and I prepared his cereal with milk."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:30:29",
+      "quote": "He moved."
+     }
+    ]
+   },
+   {
+    "value": "freezer",
+    "state": "corpse hidden",
+    "when": "middle",
+    "role": "setting",
+    "quote": "They move the body to an outside freezer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:35",
+      "quote": "Where is he now? - In the freezer."
+     }
+    ]
+   },
+   {
+    "value": "chair",
+    "state": "moving on its own",
+    "when": "ending",
+    "role": "omen",
+    "quote": "see an empty chair move on its own",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dog run over, alive",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:02:18",
+    "quote": "He's alive! He's alive! The dog is alive, get it?",
+    "detail": "a dog they thought they had killed turns out alive, foreshadowing the dead boy's return",
+    "confidence": "sourced"
+   },
+   {
+    "value": "segments of an orange",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:06:06",
+    "quote": "that are organized as if they were the segments of an orange.",
+    "detail": "the investigators' picture of coexisting dimensions",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "voices in the sink", "when": "opening", "role": "omen", "quote": "Clara hears strange voices coming from the plughole", "confidence": "sourced"},
-   {"order": 2, "value": "wife killed by invisible force", "when": "opening", "quote": "Juan finds Clara's dead body hovering in midair", "confidence": "sourced"},
-   {"order": 3, "value": "neighbour films the haunting", "when": "early", "quote": "he sees a tall, naked figure emerging from beneath the bed", "confidence": "sourced"},
-   {"order": 4, "value": "child killed, returns", "when": "early", "role": "turn", "quote": "Alicia's deceased son is sitting at the kitchen table", "confidence": "sourced"},
-   {"order": 5, "value": "investigators arrive", "when": "middle", "quote": "calls in Jano, a paranormal investigator and former coroner", "confidence": "sourced"},
-   {"order": 6, "value": "gateway theory", "when": "middle", "role": "clue", "quote": "the neighborhood serves as a gateway to another dimension", "confidence": "sourced"},
-   {"order": 7, "value": "investigators taken", "when": "late", "quote": "Dr. Albreck being dragged into the other dimension", "confidence": "sourced"},
-   {"order": 8, "value": "closing sting", "when": "ending", "quote": "Suddenly, the chair flies towards the camera", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "dead dog comes back",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:02:18",
+    "quote": "He's alive! He's alive! The dog is alive, get it?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "voices in the sink",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Clara hears strange voices coming from the plughole",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:37",
+      "quote": "I couldn't cook because I heard voices in the kitchen."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "wife killed by invisible force",
+    "when": "opening",
+    "quote": "Juan finds Clara's dead body hovering in midair",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:30",
+      "quote": "Stop! Stop, Clara!"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "neighbour films the haunting",
+    "when": "early",
+    "quote": "he sees a tall, naked figure emerging from beneath the bed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:23",
+      "quote": "I saw it yesterday. I think it's under the bed."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "child killed, returns",
+    "when": "early",
+    "role": "turn",
+    "quote": "Alicia's deceased son is sitting at the kitchen table",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:29",
+      "quote": "He moved."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "investigators arrive",
+    "when": "middle",
+    "quote": "calls in Jano, a paranormal investigator and former coroner",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:11",
+      "quote": "about paranormal activity, metasymbiosis."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "gateway theory",
+    "when": "middle",
+    "role": "clue",
+    "quote": "the neighborhood serves as a gateway to another dimension",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:06",
+      "quote": "We three study possible balanced coexisting dimensions"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "investigators taken",
+    "when": "late",
+    "quote": "Dr. Albreck being dragged into the other dimension",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "closing sting",
+    "when": "ending",
+    "quote": "Suddenly, the chair flies towards the camera",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:49",
+      "quote": "[Scrapes] - [Gasps]"
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

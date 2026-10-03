@@ -1,54 +1,444 @@
 {
  "film": "1958-the-blob",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "alien creature", "detail": "a carnivorous amoeboid blob", "quote": "a carnivorous amoeboid alien that crashes to Earth from outer space inside a meteorite", "confidence": "sourced"}
+   {
+    "value": "alien creature",
+    "detail": "a carnivorous amoeboid blob",
+    "quote": "a carnivorous amoeboid alien that crashes to Earth from outer space inside a meteorite",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:03",
+      "quote": "It's kind of like a mass that keeps getting bigger and bigger."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "from outer space", "detail": "inside a meteorite", "quote": "crashes to Earth from outer space inside a meteorite", "confidence": "sourced"}
+   {
+    "value": "from outer space",
+    "detail": "inside a meteorite",
+    "quote": "crashes to Earth from outer space inside a meteorite",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:52",
+      "quote": "Would you believe me if I told you there was something inside of that rock we found,"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "hunger", "quote": "It envelops living beings, growing larger, becoming redder in color and more aggressive", "confidence": "sourced"}
+   {
+    "value": "hunger",
+    "quote": "It envelops living beings, growing larger, becoming redder in color and more aggressive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:03",
+      "quote": "It must have absorbed the old man completely."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "touching a strange object", "detail": "Barney pokes the meteorite", "quote": "When he pokes the meteorite with a stick, it breaks open", "confidence": "sourced"}
+   {
+    "value": "touching a strange object",
+    "detail": "Barney pokes the meteorite",
+    "quote": "When he pokes the meteorite with a stick, it breaks open",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:30",
+      "quote": "Come on. I want to see if I can find it."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "grows with each victim", "quote": "growing redder and larger with each victim", "confidence": "sourced"},
-   {"value": "weak to cold", "quote": "realizes it cannot tolerate cold temperatures", "confidence": "sourced"},
-   {"value": "cannot be killed", "quote": "the cold will stop the Blob \"as long as the Arctic stays cold\", but it won't kill it", "confidence": "sourced"}
+   {
+    "value": "grows with each victim",
+    "quote": "growing redder and larger with each victim",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:24",
+      "quote": "Doc! It's gotten bigger. It was just on his hand before."
+     }
+    ]
+   },
+   {
+    "value": "weak to cold",
+    "quote": "realizes it cannot tolerate cold temperatures",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:32",
+      "quote": "That's why it didn't come in the ice box after us. It can't stand cold."
+     }
+    ]
+   },
+   {
+    "value": "cannot be killed",
+    "quote": "the cold will stop the Blob \"as long as the Arctic stays cold\", but it won't kill it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:07",
+      "quote": "I don't think it can be killed."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "teenagers", "relation_to_threat": "stranger", "detail": "Steve and Jane", "quote": "teenager Steve Andrews and his girlfriend Jane Martin kiss at a lovers' lane", "confidence": "sourced"},
-   {"value": "small town", "relation_to_threat": "community", "quote": "The Blob enters the Colonial Theater and envelops the projectionist", "confidence": "sourced"}
+   {
+    "value": "teenagers",
+    "relation_to_threat": "stranger",
+    "detail": "Steve and Jane",
+    "quote": "teenager Steve Andrews and his girlfriend Jane Martin kiss at a lovers' lane",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:56",
+      "quote": "And nobody'll believe us."
+     }
+    ]
+   },
+   {
+    "value": "small town",
+    "relation_to_threat": "community",
+    "quote": "The Blob enters the Colonial Theater and envelops the projectionist",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:00",
+      "quote": "Dave, it's at the theater!"
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "threat contained", "detail": "frozen and dropped in the Arctic", "quote": "Parachutes bearing the Blob on a pallet lower it onto an Arctic ice field", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "The End morphing into a question mark", "confidence": "sourced"}
+   {
+    "value": "threat contained",
+    "detail": "frozen and dropped in the Arctic",
+    "quote": "Parachutes bearing the Blob on a pallet lower it onto an Arctic ice field",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:09",
+      "quote": "and take this thing up to the Arctic or somewhere where it'll never thaw out."
+     }
+    ]
+   },
+   {
+    "value": "threat survives",
+    "quote": "The End morphing into a question mark",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:13",
+      "quote": "Yeah, as long as the Arctic stays cold."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "meteorite", "state": "crashing", "when": "opening", "role": "trigger", "quote": "they see a meteorite crash beyond the next hill", "confidence": "sourced"},
-   {"value": "jelly", "state": "clinging to a hand", "when": "opening", "role": "threat", "quote": "a small jelly-like globule blob inside attaches itself to his hand", "confidence": "sourced"},
-   {"value": "freezer", "state": "refuge", "when": "middle", "role": "clue", "quote": "they seek refuge in the walk-in freezer", "confidence": "sourced"},
-   {"value": "cinema", "state": "invaded", "when": "middle", "role": "setting", "quote": "The Blob enters the Colonial Theater and envelops the projectionist", "confidence": "sourced"},
-   {"value": "power line", "state": "felled", "when": "late", "role": "weapon", "quote": "felling an overhead high-voltage power line", "confidence": "sourced"},
-   {"value": "fire extinguisher", "when": "late", "role": "weapon", "quote": "uses a carbon dioxide fire extinguisher on the approaching fire inside, Steve notices that the Blob recoils", "confidence": "sourced"},
-   {"value": "ice field", "when": "ending", "role": "setting", "quote": "lower it onto an Arctic ice field", "confidence": "sourced"}
+   {
+    "value": "warning song",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:23",
+    "quote": "Beware of the Blob It creeps and leaps",
+    "confidence": "sourced",
+    "detail": "the title song over the credits"
+   },
+   {
+    "value": "meteorite",
+    "state": "crashing",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "they see a meteorite crash beyond the next hill",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:18",
+      "quote": "Well, it's a shooting star."
+     }
+    ]
+   },
+   {
+    "value": "jelly",
+    "state": "clinging to a hand",
+    "when": "opening",
+    "role": "threat",
+    "quote": "a small jelly-like globule blob inside attaches itself to his hand",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:33",
+      "quote": "I can't get it off!"
+     }
+    ]
+   },
+   {
+    "value": "little dog",
+    "state": "orphaned, then fleeing",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:22:22",
+    "quote": "I guess it's the old man's dog.",
+    "confidence": "sourced",
+    "detail": "the first victim's dog, rescued by the teens and later seen running from the Blob",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:49",
+      "quote": "Steve, it's the little dog!"
+     }
+    ]
+   },
+   {
+    "value": "freezer",
+    "state": "refuge",
+    "when": "middle",
+    "role": "clue",
+    "quote": "they seek refuge in the walk-in freezer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:32",
+      "quote": "That's why it didn't come in the ice box after us."
+     }
+    ]
+   },
+   {
+    "value": "cinema",
+    "state": "invaded",
+    "when": "middle",
+    "role": "setting",
+    "quote": "The Blob enters the Colonial Theater and envelops the projectionist",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:00",
+      "quote": "Dave, it's at the theater!"
+     }
+    ]
+   },
+   {
+    "value": "power line",
+    "state": "felled",
+    "when": "late",
+    "role": "weapon",
+    "quote": "felling an overhead high-voltage power line",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:23",
+      "quote": "We can drop a power line on it."
+     }
+    ]
+   },
+   {
+    "value": "fire extinguisher",
+    "when": "late",
+    "role": "weapon",
+    "quote": "uses a carbon dioxide fire extinguisher on the approaching fire inside, Steve notices that the Blob recoils",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:28",
+      "quote": "CO2! Hey, that's it! It's cold!"
+     }
+    ]
+   },
+   {
+    "value": "ice field",
+    "when": "ending",
+    "role": "setting",
+    "quote": "lower it onto an Arctic ice field",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:59",
+      "quote": "They're flying it to the Arctic."
+     }
+    ]
+   },
+   {
+    "value": "honking car horns",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:06:26",
+    "quote": "Kill the horns!",
+    "confidence": "observed",
+    "detail": "the teenagers sound their horns to wake the town"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "object falls from sky", "when": "opening", "role": "omen", "quote": "they see a meteorite crash beyond the next hill", "confidence": "sourced"},
-   {"order": 2, "value": "first victim", "when": "opening", "role": "trigger", "quote": "a small jelly-like globule blob inside attaches itself to his hand", "confidence": "sourced"},
-   {"order": 3, "value": "warning not believed", "when": "early", "quote": "The skeptical Bert dismisses Steve's story as a prank", "confidence": "sourced"},
-   {"order": 4, "value": "attack on crowd", "when": "middle", "role": "turn", "quote": "Steve is finally vindicated when screaming people flee the theater in panic", "confidence": "sourced"},
-   {"order": 5, "value": "weakness discovered", "when": "late", "role": "clue", "quote": "realizes it cannot tolerate cold temperatures", "confidence": "sourced"},
-   {"order": 6, "value": "town fights back", "when": "late", "quote": "They surround and freeze the Blob", "confidence": "sourced"},
-   {"order": 7, "value": "threat exiled, not dead", "when": "ending", "quote": "the cold will stop the Blob \"as long as the Arctic stays cold\", but it won't kill it", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "object falls from sky",
+    "when": "opening",
+    "role": "omen",
+    "quote": "they see a meteorite crash beyond the next hill",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:18",
+      "quote": "Well, it's a shooting star."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "first victim",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "a small jelly-like globule blob inside attaches itself to his hand",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:29",
+      "quote": "Oh! Take me to a doctor!"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "doctor devoured",
+    "when": "early",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:27:32",
+    "quote": "Just like the thing on the old man's hand, only it was bigger.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "warning not believed",
+    "when": "early",
+    "quote": "The skeptical Bert dismisses Steve's story as a prank",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:26",
+      "quote": "Your story's gotten bigger now, kid."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "teens raise the alarm",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "00:53:23",
+    "quote": "we're gonna make people believe us.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "attack on crowd",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Steve is finally vindicated when screaming people flee the theater in panic",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:00",
+      "quote": "Dave, it's at the theater!"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "weakness discovered",
+    "when": "late",
+    "role": "clue",
+    "quote": "realizes it cannot tolerate cold temperatures",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:28",
+      "quote": "CO2! Hey, that's it! It's cold!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "town fights back",
+    "when": "late",
+    "quote": "They surround and freeze the Blob",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:23",
+      "quote": "And check these buildings for fire extinguishers."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "threat exiled, not dead",
+    "when": "ending",
+    "quote": "the cold will stop the Blob \"as long as the Arctic stays cold\", but it won't kill it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:03",
+      "quote": "It's not dead, is it?"
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

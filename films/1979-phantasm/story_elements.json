@@ -1,62 +1,492 @@
 {
  "film": "1979-phantasm",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "supernatural mortician", "detail": "the Tall Man", "quote": "the local funeral home, which is operated by a mysterious mortician known as \"the Tall Man\"", "confidence": "sourced"},
-   {"value": "death personified", "quote": "the Tall Man himself represents death", "confidence": "sourced"},
-   {"value": "reanimated dead", "detail": "shrunken hooded dwarves", "quote": "a re-animated and shrunken Tommy", "confidence": "sourced"}
+   {
+    "value": "supernatural mortician",
+    "detail": "the Tall Man",
+    "quote": "the local funeral home, which is operated by a mysterious mortician known as \"the Tall Man\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:06",
+      "quote": "that Tall Man picked up Tommy's coffin all by himself"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:20:41",
+      "quote": "Boy! You play a good game, boy."
+     }
+    ]
+   },
+   {
+    "value": "death personified",
+    "quote": "the Tall Man himself represents death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:57",
+      "quote": "First he took Mom and Dad... then he took Jody."
+     }
+    ]
+   },
+   {
+    "value": "reanimated dead",
+    "detail": "shrunken hooded dwarves",
+    "quote": "a re-animated and shrunken Tommy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:55",
+      "quote": "Holy Jesus! You didn't tell me the dwarf was Tommy."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "from another world", "quote": "an interplanetary portal or wormhole, seeing a red, hot world where the dwarves are toiling as slaves", "confidence": "sourced"},
-   {"value": "grief-induced nightmare", "quote": "everything Mike experienced thus far was a grief-induced nightmare", "confidence": "sourced"}
+   {
+    "value": "from another world",
+    "quote": "an interplanetary portal or wormhole, seeing a red, hot world where the dwarves are toiling as slaves",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:51",
+      "quote": "And this is the door to their planet."
+     }
+    ]
+   },
+   {
+    "value": "grief-induced nightmare",
+    "quote": "everything Mike experienced thus far was a grief-induced nightmare",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:44",
+      "quote": "Hey, you had a dream."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "the dead as slaves", "quote": "a red, hot world where the dwarves are toiling as slaves", "confidence": "observed"}
+   {
+    "value": "the dead as slaves",
+    "quote": "a red, hot world where the dwarves are toiling as slaves",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:35",
+      "quote": "They're using them for slaves."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:12:41",
+      "quote": "And they gotta crush' em'cause of the gravity..."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "loss of family", "detail": "dead parents and brother", "quote": "The protagonist, Mike, is grieving the death of his parents", "confidence": "sourced"}
+   {
+    "value": "loss of family",
+    "detail": "dead parents and brother",
+    "quote": "The protagonist, Mike, is grieving the death of his parents",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:04",
+      "quote": "after Mom and Dad's funeral, he had nightmares for weeks."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "witnessing something forbidden", "quote": "sees the mortician—dubbed \"The Tall Man\"—placing Tommy's heavy coffin, with seemingly little effort, back into the hearse", "confidence": "sourced"}
+   {
+    "value": "witnessing something forbidden",
+    "quote": "sees the mortician—dubbed \"The Tall Man\"—placing Tommy's heavy coffin, with seemingly little effort, back into the hearse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:14",
+      "quote": "I was messing around up at Morningside Cemetery, and I saw something."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "fear must be overcome", "quote": "he removes it unharmed after being told not to be afraid", "confidence": "observed"},
-   {"value": "cannot be truly defeated", "quote": "the Tall Man wins in the end because dreams are the only place in which death can be defeated", "confidence": "sourced"}
+   {
+    "value": "fear must be overcome",
+    "quote": "he removes it unharmed after being told not to be afraid",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:54",
+      "quote": "It was simply reflection. Fear is the killer."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:21:43",
+      "quote": "Don't fear."
+     }
+    ]
+   },
+   {
+    "value": "cannot be truly defeated",
+    "quote": "the Tall Man wins in the end because dreams are the only place in which death can be defeated",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:38",
+      "quote": "I know those rocks aren't gonna hold him."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "grieving boy", "relation_to_threat": "self", "detail": "Mike, 13", "quote": "takes place in the imagination of a disturbed boy", "confidence": "sourced"},
-   {"value": "brothers", "relation_to_threat": "stranger", "quote": "a teenager in a small Oregon town who, along with his older brother Jody and family friend Reggie", "confidence": "sourced"},
-   {"value": "townspeople", "relation_to_threat": "community", "detail": "the dead of the town", "quote": "a young man named Tommy is stabbed to death by the woman", "confidence": "sourced"}
+   {
+    "value": "grieving boy",
+    "relation_to_threat": "self",
+    "detail": "Mike, 13",
+    "quote": "takes place in the imagination of a disturbed boy",
+    "confidence": "sourced"
+   },
+   {
+    "value": "brothers",
+    "relation_to_threat": "stranger",
+    "quote": "a teenager in a small Oregon town who, along with his older brother Jody and family friend Reggie",
+    "confidence": "sourced"
+   },
+   {
+    "value": "townspeople",
+    "relation_to_threat": "community",
+    "detail": "the dead of the town",
+    "quote": "a young man named Tommy is stabbed to death by the woman",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "it was a dream", "quote": "everything Mike experienced thus far was a grief-induced nightmare", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "the Tall Man appears, and hands crash through the bedroom mirror, pulling Mike inside", "confidence": "sourced"}
+   {
+    "value": "it was a dream",
+    "quote": "everything Mike experienced thus far was a grief-induced nightmare",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:46",
+      "quote": "Just a nightmare."
+     }
+    ]
+   },
+   {
+    "value": "threat survives",
+    "quote": "the Tall Man appears, and hands crash through the bedroom mirror, pulling Mike inside",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:22",
+      "quote": "Boy! [SCREAMING]"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "cemetery", "when": "opening", "role": "setting", "quote": "While having sex with a woman in Morningside Cemetery", "confidence": "sourced"},
-   {"value": "coffin", "state": "lifted with ease", "when": "opening", "role": "clue", "quote": "placing Tommy's heavy coffin, with seemingly little effort, back into the hearse", "confidence": "sourced"},
-   {"value": "silver sphere", "state": "flying, lethal", "when": "early", "role": "weapon", "quote": "Mike is chased by a flying silver sphere", "confidence": "sourced"},
-   {"value": "severed fingers", "state": "still moving", "when": "early", "role": "clue", "quote": "the Tall Man's fingers get caught and cut off, but continue to move, dripping yellow ichor", "confidence": "sourced"},
-   {"value": "flying insect", "state": "transformed finger", "when": "middle", "role": "threat", "quote": "it transforms into a flying insect", "confidence": "sourced"},
-   {"value": "hearse", "state": "driverless", "when": "middle", "role": "threat", "quote": "chased away by dwarves and a seemingly driverless hearse", "confidence": "sourced"},
-   {"value": "hooded dwarves", "when": "middle", "role": "threat", "quote": "They are attacked by a mob of hooded dwarves", "confidence": "sourced"},
-   {"value": "mirror", "state": "broken through", "when": "ending", "role": "threat", "quote": "hands crash through the bedroom mirror, pulling Mike inside", "confidence": "sourced"}
+   {
+    "value": "cemetery",
+    "when": "opening",
+    "role": "setting",
+    "quote": "While having sex with a woman in Morningside Cemetery",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:14",
+      "quote": "I was messing around up at Morningside Cemetery, and I saw something."
+     }
+    ]
+   },
+   {
+    "value": "coffin",
+    "state": "lifted with ease",
+    "when": "opening",
+    "role": "clue",
+    "quote": "placing Tommy's heavy coffin, with seemingly little effort, back into the hearse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:06",
+      "quote": "that Tall Man picked up Tommy's coffin all by himself"
+     }
+    ]
+   },
+   {
+    "value": "black box",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:14:24",
+    "quote": "Just put your hand in the black box.",
+    "confidence": "sourced",
+    "detail": "the fortune teller's granddaughter tests Mike's fear",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:54",
+      "quote": "It was simply reflection. Fear is the killer."
+     }
+    ]
+   },
+   {
+    "value": "tuning fork",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:17:21",
+    "quote": "[TUNING FORK TONE]",
+    "confidence": "sourced"
+   },
+   {
+    "value": "silver sphere",
+    "state": "flying, lethal",
+    "when": "early",
+    "role": "weapon",
+    "quote": "Mike is chased by a flying silver sphere",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:34",
+      "quote": "[WHIRRING NOISE]"
+     }
+    ]
+   },
+   {
+    "value": "severed fingers",
+    "state": "still moving",
+    "when": "early",
+    "role": "clue",
+    "quote": "the Tall Man's fingers get caught and cut off, but continue to move, dripping yellow ichor",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:22",
+      "quote": "And it's in that box?"
+     }
+    ]
+   },
+   {
+    "value": "flying insect",
+    "state": "transformed finger",
+    "when": "middle",
+    "role": "threat",
+    "quote": "it transforms into a flying insect",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:09",
+      "quote": "[BUZZING NOISE]"
+     }
+    ]
+   },
+   {
+    "value": "hearse",
+    "state": "driverless",
+    "when": "middle",
+    "role": "threat",
+    "quote": "chased away by dwarves and a seemingly driverless hearse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:10",
+      "quote": "and put it in the hearse and drove off."
+     }
+    ]
+   },
+   {
+    "value": "music box",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:56:32",
+    "quote": "[PLAYING \" THREE BLIND MICE \"]",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hooded dwarves",
+    "when": "middle",
+    "role": "threat",
+    "quote": "They are attacked by a mob of hooded dwarves",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:09",
+      "quote": "What's all this yellow shit coming out of his head?"
+     }
+    ]
+   },
+   {
+    "value": "mirror",
+    "state": "broken through",
+    "when": "ending",
+    "role": "threat",
+    "quote": "hands crash through the bedroom mirror, pulling Mike inside",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "seduction and murder", "when": "opening", "quote": "a young man named Tommy is stabbed to death by the woman", "confidence": "sourced"},
-   {"order": 2, "value": "child witnesses secret", "when": "opening", "role": "trigger", "quote": "Jody's 13-year-old brother Mike secretly observes the funeral", "confidence": "sourced"},
-   {"order": 3, "value": "proof brought back", "when": "early", "role": "clue", "quote": "The still-moving finger is enough to convince Jody about Mike's stories", "confidence": "sourced"},
-   {"order": 4, "value": "dead revealed as servants", "when": "middle", "role": "turn", "quote": "it was driven by one of the hooded figures, a re-animated and shrunken Tommy", "confidence": "sourced"},
-   {"order": 5, "value": "portal to another world", "when": "late", "role": "turn", "quote": "Mike catches a brief glimpse through an interplanetary portal or wormhole", "confidence": "sourced"},
-   {"order": 6, "value": "monster trapped", "when": "late", "quote": "falling into the mine shaft where he is buried under an avalanche of rocks triggered by Jody", "confidence": "sourced"},
-   {"order": 7, "value": "waking from dream", "when": "ending", "role": "turn", "quote": "Reggie, still alive, says that Jody died in a car wreck the week before", "confidence": "sourced"},
-   {"order": 8, "value": "closing sting", "when": "ending", "quote": "When Mike enters his bedroom to pack, the Tall Man appears", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "seduction and murder",
+    "when": "opening",
+    "quote": "a young man named Tommy is stabbed to death by the woman",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "child witnesses secret",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Jody's 13-year-old brother Mike secretly observes the funeral",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:06",
+      "quote": "that Tall Man picked up Tommy's coffin all by himself"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "test of fear",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:14:24",
+    "quote": "Just put your hand in the black box.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "proof brought back",
+    "when": "early",
+    "role": "clue",
+    "quote": "The still-moving finger is enough to convince Jody about Mike's stories",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:22",
+      "quote": "And it's in that box?"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "dead revealed as servants",
+    "when": "middle",
+    "role": "turn",
+    "quote": "it was driven by one of the hooded figures, a re-animated and shrunken Tommy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:55",
+      "quote": "Holy Jesus! You didn't tell me the dwarf was Tommy."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "portal to another world",
+    "when": "late",
+    "role": "turn",
+    "quote": "Mike catches a brief glimpse through an interplanetary portal or wormhole",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:51",
+      "quote": "And this is the door to their planet."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "monster trapped",
+    "when": "late",
+    "quote": "falling into the mine shaft where he is buried under an avalanche of rocks triggered by Jody",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:49",
+      "quote": "I'm gonna haul ass over there and get rid of that warning barrier"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "waking from dream",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Reggie, still alive, says that Jody died in a car wreck the week before",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:09",
+      "quote": "Jody died in a car wreck."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "closing sting",
+    "when": "ending",
+    "quote": "When Mike enters his bedroom to pack, the Tall Man appears",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:22",
+      "quote": "Boy! [SCREAMING]"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

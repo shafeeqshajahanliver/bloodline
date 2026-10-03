@@ -7,6 +7,9 @@
     "Lead",
     "Plot"
    ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
   }
  ],
  "plot_quality": "full",
@@ -22,7 +25,14 @@
     "value": "witch",
     "detail": "Mother",
     "quote": "\"Mother\" is revealed to be a grotesque, witch-like figure",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:00",
+      "quote": "Are you here for Mother?"
+     }
+    ]
    }
   ],
   "origin": [
@@ -36,7 +46,14 @@
    {
     "value": "a vessel for the devil",
     "quote": "telling her that she has been chosen and destined to accept \"him\"",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:50",
+      "quote": "He's given the sign. He's chosen you. It's your destiny to accept him."
+     }
+    ]
    }
   ],
   "wrong": [
@@ -52,14 +69,28 @@
     "value": "taking a job",
     "detail": "babysitting at a remote house",
     "quote": "responds to an ad for a babysitting job for a Mr.",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:52",
+      "quote": "It's $ 400 for four hours."
+     }
+    ]
    }
   ],
   "rules": [
    {
     "value": "ritual during lunar eclipse",
     "quote": "Samantha comes to during a lunar eclipse and finds herself bound in the center of a pentagram",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:11",
+      "quote": "Only moments away now."
+     }
+    ]
    },
    {
     "value": "cannot be escaped",
@@ -87,7 +118,14 @@
    {
     "value": "victim impregnated",
     "quote": "A nurse states that \"both of them\" will be fine, implying that she has been impregnated",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:44",
+      "quote": "Don't worry. You're gonna be just fine. Both of you."
+     }
+    ]
    },
    {
     "value": "threat survives",
@@ -105,6 +143,16 @@
     "confidence": "sourced"
    },
    {
+    "value": "babysitter flyer",
+    "when": "opening",
+    "role": "trigger",
+    "source": "subtitles",
+    "at": "00:08:33",
+    "quote": "I'm calling in regards to the babysitter flyer posted outside my dorm.",
+    "confidence": "sourced",
+    "detail": "the job is not for a child: 'This job tonight is not for a child but for my wife's mother.'"
+   },
+   {
     "value": "photographs",
     "state": "of another family",
     "when": "early",
@@ -118,7 +166,14 @@
     "when": "middle",
     "role": "trigger",
     "quote": "Drugs in the pizza cause her to pass out",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:48",
+      "quote": "There's a number on the refrigerator for a pizza place."
+     }
+    ]
    },
    {
     "value": "knife",
@@ -128,11 +183,28 @@
     "confidence": "sourced"
    },
    {
+    "value": "television news",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:54:10",
+    "quote": "Tonight's big eclipse is now well under way.",
+    "confidence": "sourced",
+    "detail": "the news returns at the end to report the moon leaving Earth's shadow impossibly fast"
+   },
+   {
     "value": "lunar eclipse",
     "when": "late",
     "role": "omen",
     "quote": "Samantha comes to during a lunar eclipse",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:13",
+      "quote": "It is a total lunar eclipse,"
+     }
+    ]
    },
    {
     "value": "pentagram",
@@ -160,22 +232,38 @@
   ],
   "beats": [
    {
-    "order": 1,
+    "value": "new apartment she cannot afford",
+    "when": "opening",
+    "source": "subtitles",
+    "at": "00:02:29",
+    "quote": "Welcome to your new home.",
+    "confidence": "sourced",
+    "order": 1
+   },
+   {
+    "order": 2,
     "value": "strange job taken",
     "when": "opening",
     "role": "trigger",
     "quote": "responds to an ad for a babysitting job for a Mr.",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:08",
+      "quote": "You see, we actually don't have a child."
+     }
+    ]
    },
    {
-    "order": 2,
+    "order": 3,
     "value": "friend murdered",
     "when": "early",
     "quote": "Megan is shot in the head by a stranger",
     "confidence": "sourced"
    },
    {
-    "order": 3,
+    "order": 4,
     "value": "photos reveal impostors",
     "when": "middle",
     "role": "clue",
@@ -183,7 +271,7 @@
     "confidence": "sourced"
    },
    {
-    "order": 4,
+    "order": 5,
     "value": "drugged",
     "when": "middle",
     "role": "turn",
@@ -191,38 +279,56 @@
     "confidence": "sourced"
    },
    {
-    "order": 5,
+    "order": 6,
     "value": "ritual on the bound victim",
     "when": "late",
     "quote": "finds herself bound in the center of a pentagram on the floor",
     "confidence": "sourced"
    },
    {
-    "order": 6,
+    "order": 7,
     "value": "escape and killings",
     "when": "late",
     "quote": "she kills Victor and Mrs.",
     "confidence": "sourced"
    },
    {
-    "order": 7,
+    "order": 8,
     "value": "suicide attempt",
     "when": "late",
     "quote": "Samantha shoots herself in the head",
     "confidence": "sourced"
    },
    {
-    "order": 8,
+    "value": "eclipse ends unnaturally",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:26:43",
+    "quote": "It seems that the speed at which the moon exited the Earth's shadow was faster than believed theoretically possible.",
+    "confidence": "sourced",
+    "order": 9
+   },
+   {
+    "order": 10,
     "value": "survives, pregnant",
     "when": "ending",
     "role": "turn",
     "quote": "implying that she has been impregnated",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:44",
+      "quote": "Don't worry. You're gonna be just fine. Both of you."
+     }
+    ]
    }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

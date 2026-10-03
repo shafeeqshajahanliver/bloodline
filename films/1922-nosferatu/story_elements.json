@@ -1,61 +1,550 @@
 {
  "film": "1922-nosferatu",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vampire", "detail": "Count Orlok", "quote": "It stars Max Schreck as Count Orlok, a vampire who preys on the wife (Greta Schröder) of his estate agent", "confidence": "sourced"},
-   {"value": "plague", "detail": "spread by rats from his ship", "quote": "the local doctors attribute to an unspecified plague caused by the rats from the ship", "confidence": "sourced"}
+   {
+    "value": "vampire",
+    "detail": "Count Orlok",
+    "quote": "It stars Max Schreck as Count Orlok, a vampire who preys on the wife (Greta Schröder) of his estate agent",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:45",
+      "quote": "At night this same Nosferatu doth clutch his victim"
+     }
+    ]
+   },
+   {
+    "value": "plague",
+    "detail": "spread by rats from his ship",
+    "quote": "the local doctors attribute to an unspecified plague caused by the rats from the ship",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:48",
+      "quote": "PLAGUE. A plague epidemic has broken out"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "from outside", "detail": "a foreign count from the Carpathians who arrives by ship", "quote": "When the foreign Orlok arrives in Wisborg by ship, he brings with him a swarm of rats", "confidence": "sourced"},
-   {"value": "made by a demon", "detail": "the makers gave Orlok a lineage from Belial", "quote": "Orlok is the creation of Belial, one of the Satanic archdemons", "confidence": "sourced"}
+   {
+    "value": "from outside",
+    "detail": "a foreign count from the Carpathians who arrives by ship",
+    "quote": "When the foreign Orlok arrives in Wisborg by ship, he brings with him a swarm of rats",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:51",
+      "quote": "rats in ship's hold danger of plague"
+     }
+    ]
+   },
+   {
+    "value": "made by a demon",
+    "detail": "the makers gave Orlok a lineage from Belial",
+    "quote": "Orlok is the creation of Belial, one of the Satanic archdemons",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:16",
+      "quote": "From Belial's seed sprang the vampyre NOSFERATU,"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "blood", "quote": "Orlok tries to suck the blood out, but his repulsed guest pulls his hand away", "confidence": "sourced"},
-   {"value": "a woman", "detail": "Ellen, whose portrait he admires", "quote": "Admiring the portrait, the count remarks that she has a \"lovely neck\"", "confidence": "observed"}
+   {
+    "value": "blood",
+    "quote": "Orlok tries to suck the blood out, but his repulsed guest pulls his hand away",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:42",
+      "quote": "You have hurt yourself... Precious blood!"
+     }
+    ]
+   },
+   {
+    "value": "a woman",
+    "detail": "Ellen, whose portrait he admires",
+    "quote": "Admiring the portrait, the count remarks that she has a \"lovely neck\"",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:49",
+      "quote": "Your wife has a lovely neck..."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "a journey", "detail": "Hutter sent to Transylvania to sell a house", "quote": "Thomas Hutter is sent to Transylvania by his employer, the eccentric estate agent Herr Knock, to visit a new client, Count Orlok", "confidence": "sourced"},
-   {"value": "selling a house", "quote": "Orlok signs the documents to purchase the house", "confidence": "sourced"}
+   {
+    "value": "a journey",
+    "detail": "Hutter sent to Transylvania to sell a house",
+    "quote": "Thomas Hutter is sent to Transylvania by his employer, the eccentric estate agent Herr Knock, to visit a new client, Count Orlok",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:29",
+      "quote": "Travel quickly, travel well, my young friend,"
+     }
+    ]
+   },
+   {
+    "value": "selling a house",
+    "quote": "Orlok signs the documents to purchase the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:05",
+      "quote": "I shall buy the house..."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "pure woman's willing sacrifice", "quote": "a vampire can be destroyed if a pure-hearted woman distracts the vampire from the approaching dawn with her beauty and by offering him her blood of her own free will", "confidence": "sourced"},
-   {"value": "destroyed by sunlight", "quote": "the sun rises and its rays cause Orlok to vanish in a puff of smoke", "confidence": "sourced"},
-   {"value": "must be invited", "quote": "Ellen opens her window to invite Orlok in", "confidence": "observed"}
+   {
+    "value": "pure woman's willing sacrifice",
+    "quote": "a vampire can be destroyed if a pure-hearted woman distracts the vampire from the approaching dawn with her beauty and by offering him her blood of her own free will",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:08",
+      "quote": "but that a maiden wholly without sin"
+     }
+    ]
+   },
+   {
+    "value": "destroyed by sunlight",
+    "quote": "the sun rises and its rays cause Orlok to vanish in a puff of smoke",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:15",
+      "quote": "maketh the Vampyre forget the first crow of the cock."
+     }
+    ]
+   },
+   {
+    "value": "must be invited",
+    "quote": "Ellen opens her window to invite Orlok in",
+    "confidence": "observed"
+   },
+   {
+    "value": "needs its cursed earth",
+    "source": "subtitles",
+    "at": "01:06:34",
+    "quote": "I found it recorded that vampyres can only draw their shadowy strength from the accursed earth",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sleeps by day",
+    "source": "subtitles",
+    "at": "00:27:22",
+    "quote": "It is a while still till Sunrise - and in the daytime I sleep,",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "husband", "relation_to_threat": "stranger", "detail": "Thomas Hutter, the estate agent's clerk", "quote": "Hutter wakes up the next morning to find fresh punctures on his neck", "confidence": "sourced"},
-   {"value": "wife", "relation_to_threat": "stranger", "detail": "Ellen, who sacrifices herself", "quote": "Ellen decides to sacrifice herself to stop Orlok", "confidence": "sourced"},
-   {"value": "townspeople", "relation_to_threat": "community", "quote": "Many deaths in the town follow Orlok's arrival", "confidence": "sourced"}
+   {
+    "value": "husband",
+    "relation_to_threat": "stranger",
+    "detail": "Thomas Hutter, the estate agent's clerk",
+    "quote": "Hutter wakes up the next morning to find fresh punctures on his neck",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:48",
+      "quote": "I already have two bites on my throat,"
+     }
+    ]
+   },
+   {
+    "value": "wife",
+    "relation_to_threat": "stranger",
+    "detail": "Ellen, who sacrifices herself",
+    "quote": "Ellen decides to sacrifice herself to stop Orlok",
+    "confidence": "sourced"
+   },
+   {
+    "value": "townspeople",
+    "relation_to_threat": "community",
+    "quote": "Many deaths in the town follow Orlok's arrival",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:14",
+      "quote": "Fear lurked in every corner of the town."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "the sun rises and its rays cause Orlok to vanish in a puff of smoke", "confidence": "sourced"},
-   {"value": "self-sacrifice", "detail": "Ellen dies after giving her blood", "quote": "Ellen lives just long enough to be embraced by her grief-stricken husband", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "the sun rises and its rays cause Orlok to vanish in a puff of smoke",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:44",
+      "quote": "The master... is... dead."
+     }
+    ]
+   },
+   {
+    "value": "self-sacrifice",
+    "detail": "Ellen dies after giving her blood",
+    "quote": "Ellen lives just long enough to be embraced by her grief-stricken husband",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "book about vampires", "state": "scoffed at", "when": "opening", "role": "clue", "quote": "he finds a book about vampires, which he initially scoffs at but puts in his baggage", "confidence": "sourced"},
-   {"value": "blood", "state": "from a cut thumb", "when": "early", "role": "omen", "quote": "he accidentally cuts his thumb; Orlok tries to suck the blood out", "confidence": "sourced"},
-   {"value": "portrait", "state": "admired", "when": "early", "role": "trigger", "quote": "notices on the table a miniature portrait of Hutter's wife, Ellen", "confidence": "sourced"},
-   {"value": "door", "state": "opens by itself", "when": "middle", "role": "threat", "quote": "the door begins to slowly open by itself and, as Orlok enters", "confidence": "sourced"},
-   {"value": "coffin", "state": "occupied", "when": "middle", "role": "clue", "quote": "he finds the coffin in which Orlok is resting dormant in the crypt", "confidence": "sourced"},
-   {"value": "rats", "state": "swarming", "when": "middle", "role": "threat", "quote": "Orlok's coffins are taken aboard a schooner, which the sailors open only to discover rats", "confidence": "sourced"},
-   {"value": "ship", "state": "crew dead", "when": "middle", "role": "setting", "quote": "All of the crewmen later die, and Orlok takes control of the vessel", "confidence": "sourced"},
-   {"value": "sunlight", "state": "rising", "when": "ending", "role": "weapon", "quote": "the sun rises and its rays cause Orlok to vanish in a puff of smoke", "confidence": "sourced"}
+   {
+    "value": "deathbird",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:20",
+    "quote": "Does this word not sound to you like the midnight cry of the Deathbird.",
+    "confidence": "sourced",
+    "detail": "the chronicler's image for Nosferatu; it returns when Ellen sleepwalks and in the last intertitle",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:18",
+      "quote": "caught the cry of the Deathbird -"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:33:15",
+      "quote": "the shadow of the Deathbird was dispersed."
+     }
+    ]
+   },
+   {
+    "value": "book about vampires",
+    "state": "scoffed at",
+    "when": "opening",
+    "role": "clue",
+    "quote": "he finds a book about vampires, which he initially scoffs at but puts in his baggage",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:06",
+      "quote": "Of Vampyres Gastlie Spirits, Bewitchments"
+     }
+    ]
+   },
+   {
+    "value": "werewolf",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:15:13",
+    "quote": "You shouldn't go any further now: The Werewolf roams the woods.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "blood",
+    "state": "from a cut thumb",
+    "when": "early",
+    "role": "omen",
+    "quote": "he accidentally cuts his thumb; Orlok tries to suck the blood out",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:42",
+      "quote": "You have hurt yourself... Precious blood!"
+     }
+    ]
+   },
+   {
+    "value": "mosquito bites",
+    "state": "the bite explained away",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:30:43",
+    "quote": "I am plagued by mosquitoes.",
+    "confidence": "sourced",
+    "detail": "Hutter's letter to Ellen blames the marks on his neck on insects"
+   },
+   {
+    "value": "portrait",
+    "state": "admired",
+    "when": "early",
+    "role": "trigger",
+    "quote": "notices on the table a miniature portrait of Hutter's wife, Ellen",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:49",
+      "quote": "Your wife has a lovely neck..."
+     }
+    ]
+   },
+   {
+    "value": "door",
+    "state": "opens by itself",
+    "when": "middle",
+    "role": "threat",
+    "quote": "the door begins to slowly open by itself and, as Orlok enters",
+    "confidence": "sourced"
+   },
+   {
+    "value": "coffin",
+    "state": "occupied",
+    "when": "middle",
+    "role": "clue",
+    "quote": "he finds the coffin in which Orlok is resting dormant in the crypt",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:45",
+      "quote": "Earth - filled coffins were to be loaded"
+     }
+    ]
+   },
+   {
+    "value": "carnivorous plant",
+    "when": "middle",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:45:39",
+    "quote": "In those days, I should note, Prof. Bulwer was explaining to his students the cruel habits of carnivorous plants.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:48",
+      "quote": "Like a vampire - isn't it?"
+     }
+    ]
+   },
+   {
+    "value": "rats",
+    "state": "swarming",
+    "when": "middle",
+    "role": "threat",
+    "quote": "Orlok's coffins are taken aboard a schooner, which the sailors open only to discover rats",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:51",
+      "quote": "rats in ship's hold danger of plague"
+     }
+    ]
+   },
+   {
+    "value": "ship",
+    "state": "crew dead",
+    "when": "middle",
+    "role": "setting",
+    "quote": "All of the crewmen later die, and Orlok takes control of the vessel",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:14",
+      "quote": "The ship of death had acquired its new captain."
+     }
+    ]
+   },
+   {
+    "value": "sunlight",
+    "state": "rising",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "the sun rises and its rays cause Orlok to vanish in a puff of smoke",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:12",
+      "quote": "by the victorious radiance of the living sun,"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "sent on a journey", "when": "opening", "role": "trigger", "quote": "Thomas Hutter is sent to Transylvania by his employer, the eccentric estate agent Herr Knock", "confidence": "sourced"},
-   {"order": 2, "value": "locals warn of the host", "when": "opening", "role": "omen", "quote": "the locals are terrified by the mere mention of Orlok's name", "confidence": "sourced"},
-   {"order": 3, "value": "first bite", "when": "early", "quote": "Hutter wakes up the next morning to find fresh punctures on his neck", "confidence": "sourced"},
-   {"order": 4, "value": "monster's resting place found", "when": "middle", "role": "turn", "quote": "In a vault, he finds the coffin in which Orlok is resting dormant in the crypt", "confidence": "sourced"},
-   {"order": 5, "value": "voyage of death", "when": "middle", "quote": "All of the crewmen later die, and Orlok takes control of the vessel", "confidence": "sourced"},
-   {"order": 6, "value": "plague hits the town", "when": "late", "quote": "Many deaths in the town follow Orlok's arrival", "confidence": "sourced"},
-   {"order": 7, "value": "woman sacrifices herself", "when": "ending", "role": "turn", "quote": "After he leaves, Orlok enters and drinks her blood, but the sun rises", "confidence": "sourced"},
-   {"order": 8, "value": "lair shown destroyed", "when": "ending", "quote": "The film's final image is that of Orlok's castle, destroyed.", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "chronicle of the great death",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:00",
+    "quote": "Chronicle of the Great Death in Wisborg",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "sent on a journey",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Thomas Hutter is sent to Transylvania by his employer, the eccentric estate agent Herr Knock",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:29",
+      "quote": "Travel quickly, travel well, my young friend,"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "locals warn of the host",
+    "when": "opening",
+    "role": "omen",
+    "quote": "the locals are terrified by the mere mention of Orlok's name",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:13",
+      "quote": "You shouldn't go any further now: The Werewolf roams the woods."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "first bite",
+    "when": "early",
+    "quote": "Hutter wakes up the next morning to find fresh punctures on his neck",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:48",
+      "quote": "I already have two bites on my throat,"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "monster's resting place found",
+    "when": "middle",
+    "role": "turn",
+    "quote": "In a vault, he finds the coffin in which Orlok is resting dormant in the crypt",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:16",
+      "quote": "Coffins -"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "voyage of death",
+    "when": "middle",
+    "quote": "All of the crewmen later die, and Orlok takes control of the vessel",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:07",
+      "quote": "It spread through the ship like an epidemic."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "plague hits the town",
+    "when": "late",
+    "quote": "Many deaths in the town follow Orlok's arrival",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:05",
+      "quote": "Danger of plague! Go home!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "town hunts a scapegoat",
+    "when": "late",
+    "source": "subtitles",
+    "at": "01:22:26",
+    "quote": "The panic-stricken town was looking for a victim:",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "woman sacrifices herself",
+    "when": "ending",
+    "role": "turn",
+    "quote": "After he leaves, Orlok enters and drinks her blood, but the sun rises",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:11",
+      "quote": "Would that she give freely of her blood"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "lair shown destroyed",
+    "when": "ending",
+    "quote": "The film's final image is that of Orlok's castle, destroyed.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "chronicler declares the death ended",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:33:08",
+    "quote": "the Great Death came to an end, and as if confronted",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

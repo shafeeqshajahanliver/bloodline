@@ -1,61 +1,510 @@
 {
  "film": "1922-h-xan",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes and interpretations"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes and interpretations"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "the devil", "detail": "Satan tempting, terrorizing and killing in medieval vignettes", "quote": "Satan tempting a sleeping woman away from her husband's bed, terrorizing a group of monks, then murdering another woman in her bed by choking her", "confidence": "sourced"},
-   {"value": "witch-hunting authorities", "detail": "the Inquisition torturing and burning accused women", "quote": "demonstrate the treatment of suspected witches by the religious authorities of the time", "confidence": "sourced"},
-   {"value": "mass hysteria", "quote": "witch-hunts may have stemmed from misunderstandings of mental or neurological disorders, triggering mass hysteria", "confidence": "sourced"}
+   {
+    "value": "the devil",
+    "detail": "Satan tempting, terrorizing and killing in medieval vignettes",
+    "quote": "Satan tempting a sleeping woman away from her husband's bed, terrorizing a group of monks, then murdering another woman in her bed by choking her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:35",
+      "quote": "The devil forced us into it!"
+     }
+    ]
+   },
+   {
+    "value": "witch-hunting authorities",
+    "detail": "the Inquisition torturing and burning accused women",
+    "quote": "demonstrate the treatment of suspected witches by the religious authorities of the time",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:46",
+      "quote": "The suspect's nights are now dictated by the inquisition judges."
+     }
+    ]
+   },
+   {
+    "value": "mass hysteria",
+    "quote": "witch-hunts may have stemmed from misunderstandings of mental or neurological disorders, triggering mass hysteria",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:20",
+      "quote": "are consistent with the nervous diseases we call hysteria."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "superstition", "quote": "the film purports to chart the historical roots and superstitions surrounding witchcraft", "confidence": "sourced"},
-   {"value": "misunderstood mental illness", "quote": "those accused of witchcraft may have been suffering from what are recognized in modern times as mental or neurological disorders", "confidence": "sourced"}
+   {
+    "value": "superstition",
+    "quote": "the film purports to chart the historical roots and superstitions surrounding witchcraft",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:19",
+      "quote": "When primitive man is confronted with something incomprehensible, the explanation is always sorcery and evil spirits."
+     }
+    ]
+   },
+   {
+    "value": "misunderstood mental illness",
+    "quote": "those accused of witchcraft may have been suffering from what are recognized in modern times as mental or neurological disorders",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:43",
+      "quote": "Today, this strange insensitivity is considered a symptom of hysteria."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to tempt", "detail": "Satan coerces Sister Cecilia into desecration", "quote": "A nun named Sister Cecilia is depicted as being coerced by Satan into desecrating a consecrated host", "confidence": "sourced"}
+   {
+    "value": "to tempt",
+    "detail": "Satan coerces Sister Cecilia into desecration",
+    "quote": "A nun named Sister Cecilia is depicted as being coerced by Satan into desecrating a consecrated host",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:47",
+      "quote": "The evil spirits of ancient times changed in the medieval folklore to devils, sneaking around and tempting children."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "false accusation", "detail": "Maria the weaver blamed for Jesper's death", "quote": "his family consequently accuses an old woman, Maria the weaver, of causing his death through witchcraft", "confidence": "sourced"},
-   {"value": "oppression of women", "quote": "the oppression of women takes on different guises in different historical periods", "confidence": "sourced"}
+   {
+    "value": "false accusation",
+    "detail": "Maria the weaver blamed for Jesper's death",
+    "quote": "his family consequently accuses an old woman, Maria the weaver, of causing his death through witchcraft",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:23",
+      "quote": "Watch out, little sister, watch out. That woman has evil eyes."
+     }
+    ]
+   },
+   {
+    "value": "oppression of women",
+    "quote": "the oppression of women takes on different guises in different historical periods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:38",
+      "quote": "Poor little hysterical witch! In the middle Ages you were in conflict with the church."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "an unexplained death", "detail": "printer Jesper dies in bed", "quote": "A printer named Jesper dies in bed, and his family consequently accuses an old woman", "confidence": "sourced"}
+   {
+    "value": "an unexplained death",
+    "detail": "printer Jesper dies in bed",
+    "quote": "A printer named Jesper dies in bed, and his family consequently accuses an old woman",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "torture produces confession", "quote": "the threat of medieval torture methods as an explanation for why many supposed heretics confessed", "confidence": "sourced"},
-   {"value": "accused names others", "quote": "She \"names\" other supposed witches, including two of the women in Jesper's household", "confidence": "sourced"}
+   {
+    "value": "torture produces confession",
+    "quote": "the threat of medieval torture methods as an explanation for why many supposed heretics confessed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:00",
+      "quote": "You and I would also be driven to confess mysterious talents with the help of such tools."
+     }
+    ]
+   },
+   {
+    "value": "accused names others",
+    "quote": "She \"names\" other supposed witches, including two of the women in Jesper's household",
+    "confidence": "sourced"
+   },
+   {
+    "value": "water ordeal",
+    "source": "subtitles",
+    "at": "00:35:13",
+    "quote": "If she floats, she will be pulled up and burned.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "tears prove innocence",
+    "source": "subtitles",
+    "at": "01:05:36",
+    "quote": "In the name of the holy Trinity, if you are not a witch, you will now shed tears!",
+    "confidence": "sourced"
+   },
+   {
+    "value": "devil's mark feels nothing",
+    "source": "subtitles",
+    "at": "01:35:43",
+    "quote": "In the middle Ages it was believed that during the Sabbath the devil put some invisible marks on the witch's body",
+    "confidence": "sourced"
+   },
+   {
+    "value": "enter backwards to avoid bewitching",
+    "source": "subtitles",
+    "at": "00:47:38",
+    "quote": "The accused is taken backwards into the torture chamber, so as not to bewitch the judge when entering.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "poor old woman", "relation_to_threat": "community", "detail": "Maria the weaver", "quote": "Maria is arrested, and after being tortured by inquisitors, admits to involvement in witchcraft", "confidence": "sourced"},
-   {"value": "accuser turned accused", "relation_to_threat": "community", "detail": "Anna, Jesper's wife", "quote": "Anna is arrested as a witch when the inquisitor whose arm she grabbed accuses her of bewitching him", "confidence": "sourced"},
-   {"value": "nun", "relation_to_threat": "stranger", "detail": "Sister Cecilia", "quote": "A nun named Sister Cecilia is depicted as being coerced by Satan", "confidence": "sourced"}
+   {
+    "value": "poor old woman",
+    "relation_to_threat": "community",
+    "detail": "Maria the weaver",
+    "quote": "Maria is arrested, and after being tortured by inquisitors, admits to involvement in witchcraft",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:07",
+      "quote": "How do you expect me to confess to that which is not true?"
+     }
+    ]
+   },
+   {
+    "value": "accuser turned accused",
+    "relation_to_threat": "community",
+    "detail": "Anna, Jesper's wife",
+    "quote": "Anna is arrested as a witch when the inquisitor whose arm she grabbed accuses her of bewitching him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:02",
+      "quote": "It felt like fire when the young maiden took my arm."
+     }
+    ]
+   },
+   {
+    "value": "nun",
+    "relation_to_threat": "stranger",
+    "detail": "Sister Cecilia",
+    "quote": "A nun named Sister Cecilia is depicted as being coerced by Satan",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "past and present compared", "quote": "The film ends with a contrast between a woman being sent away to a mental institution and a scene where supposed witches burn on the stake", "confidence": "sourced"},
-   {"value": "victim executed", "detail": "Anna sentenced to burn", "quote": "She is tricked into what is perceived as a confession, and is sentenced to be burned at the stake", "confidence": "sourced"}
+   {
+    "value": "past and present compared",
+    "quote": "The film ends with a contrast between a woman being sent away to a mental institution and a scene where supposed witches burn on the stake",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:19",
+      "quote": "Nowadays we detain the unhappy in a mental institution"
+     }
+    ]
+   },
+   {
+    "value": "victim executed",
+    "detail": "Anna sentenced to burn",
+    "quote": "She is tricked into what is perceived as a confession, and is sentenced to be burned at the stake",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:28",
+      "quote": "And then they will burn you too, maiden"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "woodcuts and paintings", "when": "opening", "role": "setting", "quote": "uses a number of photographs of statuary, paintings, and woodcuts as demonstrative pieces", "confidence": "sourced"},
-   {"value": "model of hell", "when": "opening", "role": "symbol", "quote": "the commonly accepted depiction of Hell", "confidence": "sourced"},
-   {"value": "love potion", "when": "early", "role": "trigger", "quote": "a woman purchasing a love potion from a supposed witch named Karna in order to seduce a monk", "confidence": "sourced"},
-   {"value": "coins", "state": "cannot be held", "when": "early", "role": "symbol", "quote": "Satan presents her with coins that she is unable to hold on to", "confidence": "sourced"},
-   {"value": "desecrated cross", "when": "middle", "role": "symbol", "quote": "witches and sorcerers desecrated a cross, feasted with demons, and kissed Satan's buttocks", "confidence": "sourced"},
-   {"value": "stake", "state": "burning", "when": "ending", "role": "symbol", "quote": "a scene where supposed witches burn on the stake", "confidence": "sourced"},
-   {"value": "consecrated host", "state": "desecrated", "when": "late", "role": "symbol", "quote": "desecrating a consecrated host and stealing a statue of the baby Jesus", "confidence": "sourced"}
+   {
+    "value": "woodcuts and paintings",
+    "when": "opening",
+    "role": "setting",
+    "quote": "uses a number of photographs of statuary, paintings, and woodcuts as demonstrative pieces",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:37",
+      "quote": "This picture of a pyre as well as the following one"
+     }
+    ]
+   },
+   {
+    "value": "model of hell",
+    "when": "opening",
+    "role": "symbol",
+    "quote": "the commonly accepted depiction of Hell",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:19",
+      "quote": "I have found a strange old mechanical presentation of hell"
+     }
+    ]
+   },
+   {
+    "value": "love potion",
+    "when": "early",
+    "role": "trigger",
+    "quote": "a woman purchasing a love potion from a supposed witch named Karna in order to seduce a monk",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:31",
+      "quote": "Karna, can you perchance get me a love potion"
+     }
+    ]
+   },
+   {
+    "value": "coins",
+    "state": "cannot be held",
+    "when": "early",
+    "role": "symbol",
+    "quote": "Satan presents her with coins that she is unable to hold on to",
+    "confidence": "sourced"
+   },
+   {
+    "value": "desecrated cross",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "witches and sorcerers desecrated a cross, feasted with demons, and kissed Satan's buttocks",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:28",
+      "quote": "first desecrate the Church's holy cross."
+     }
+    ]
+   },
+   {
+    "value": "stake",
+    "state": "burning",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "a scene where supposed witches burn on the stake",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:33",
+      "quote": "And one pyre after another burns in the town square"
+     }
+    ]
+   },
+   {
+    "value": "consecrated host",
+    "state": "desecrated",
+    "when": "late",
+    "role": "symbol",
+    "quote": "desecrating a consecrated host and stealing a statue of the baby Jesus",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cat feces and dove hearts",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:17:50",
+    "quote": "take a potion of cat feces and dove hearts, boiled in the moonlight.",
+    "confidence": "sourced",
+    "detail": "Karna's love potion; a stronger one is boiled from a male sparrow"
+   },
+   {
+    "value": "rooster's crow",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:12:26",
+    "quote": "the witches fly home at the first crow of the cock.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "meal of toads and children",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:54:47",
+    "quote": "And a meal of toads and unchristened children was cooked by Karna.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "thumbscrew",
+    "when": "middle",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "01:20:38",
+    "quote": "the thumbscrew, for example.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:06",
+      "quote": "the screw a little at a time, as she confesses her sins."
+     }
+    ]
+   },
+   {
+    "value": "witches turned to cats",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:15:29",
+    "quote": "Many women, for instance, confess that - transformed into cats -",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "scholarly lecture on demons", "when": "opening", "role": "setting", "quote": "A scholarly dissertation on the appearances of demons and witches in primitive and medieval culture", "confidence": "sourced"},
-   {"order": 2, "value": "devil vignettes", "when": "early", "quote": "a series of vignettes that theatrically demonstrate medieval superstition and beliefs concerning witchcraft", "confidence": "sourced"},
-   {"order": 3, "value": "death blamed on witchcraft", "when": "middle", "role": "trigger", "quote": "A printer named Jesper dies in bed, and his family consequently accuses an old woman", "confidence": "sourced"},
-   {"order": 4, "value": "confession under torture", "when": "middle", "role": "turn", "quote": "after being tortured by inquisitors, admits to involvement in witchcraft", "confidence": "sourced"},
-   {"order": 5, "value": "accuser accused", "when": "middle", "role": "turn", "quote": "Anna is arrested as a witch when the inquisitor whose arm she grabbed accuses her of bewitching him", "confidence": "sourced"},
-   {"order": 6, "value": "possessed nun", "when": "late", "quote": "A nun named Sister Cecilia is depicted as being coerced by Satan into desecrating a consecrated host", "confidence": "sourced"},
-   {"order": 7, "value": "asylum mirrors the stake", "when": "ending", "role": "mirror", "quote": "a woman being sent away to a mental institution and a scene where supposed witches burn on the stake", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "scholarly lecture on demons",
+    "when": "opening",
+    "role": "setting",
+    "quote": "A scholarly dissertation on the appearances of demons and witches in primitive and medieval culture",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:10",
+      "quote": "The belief in sorcery and witchcraft is probably as old as mankind."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "devil vignettes",
+    "when": "early",
+    "quote": "a series of vignettes that theatrically demonstrate medieval superstition and beliefs concerning witchcraft",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:31",
+      "quote": "Karna, can you perchance get me a love potion"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "death blamed on witchcraft",
+    "when": "middle",
+    "role": "trigger",
+    "quote": "A printer named Jesper dies in bed, and his family consequently accuses an old woman",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "confession under torture",
+    "when": "middle",
+    "role": "turn",
+    "quote": "after being tortured by inquisitors, admits to involvement in witchcraft",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:23",
+      "quote": "Oh, learned men! I confess that"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "accuser accused",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Anna is arrested as a witch when the inquisitor whose arm she grabbed accuses her of bewitching him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:02",
+      "quote": "It felt like fire when the young maiden took my arm."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "possessed nun",
+    "when": "late",
+    "quote": "A nun named Sister Cecilia is depicted as being coerced by Satan into desecrating a consecrated host",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:21",
+      "quote": "how the devil penetrated the convent."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "modern shoplifter compelled",
+    "when": "ending",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:41:38",
+    "quote": "It is as if an unknown power compels me to commit this terrible theft.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "asylum mirrors the stake",
+    "when": "ending",
+    "role": "mirror",
+    "quote": "a woman being sent away to a mental institution and a scene where supposed witches burn on the stake",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:19",
+      "quote": "Nowadays we detain the unhappy in a mental institution"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "closing question to audience",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:43:30",
+    "quote": "But isn't superstition still rampant among us?",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,55 +1,442 @@
 {
  "film": "1997-perfect-blue",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Analysis"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Analysis"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "stalker", "detail": "Me-Mania, an obsessive fan", "quote": "an obsessive fan, Me-Mania, who begins stalking her", "confidence": "sourced"},
-   {"value": "doppelganger", "detail": "\"the real Mima\", Rumi's alternate personality", "quote": "is repeatedly visited by an apparition of her former idol self, who claims to be \"the real Mima.\"", "confidence": "sourced"},
-   {"value": "serial killer", "detail": "Rumi, the manager", "quote": "realizes that Rumi is the one behind \"Mima's Room,\" the serial murders, and the doppelgänger who manipulated Me-Mania", "confidence": "sourced"}
+   {
+    "value": "stalker",
+    "detail": "Me-Mania, an obsessive fan",
+    "quote": "an obsessive fan, Me-Mania, who begins stalking her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:36",
+      "quote": "You didn't know I was Me-mania!"
+     }
+    ]
+   },
+   {
+    "value": "doppelganger",
+    "detail": "\"the real Mima\", Rumi's alternate personality",
+    "quote": "is repeatedly visited by an apparition of her former idol self, who claims to be \"the real Mima.\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:17",
+      "quote": "Stop all this nonsense! Who are you!?"
+     }
+    ]
+   },
+   {
+    "value": "serial killer",
+    "detail": "Rumi, the manager",
+    "quote": "realizes that Rumi is the one behind \"Mima's Room,\" the serial murders, and the doppelgänger who manipulated Me-Mania",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:16",
+      "quote": "We don't need two Mimas!"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "mental illness", "quote": "Rumi's underlying schizophrenia developed an alternate personality of the \"real Mima,\"", "confidence": "sourced"}
+   {
+    "value": "mental illness",
+    "quote": "Rumi's underlying schizophrenia developed an alternate personality of the \"real Mima,\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:05",
+      "quote": "Once in a while, she returns to her Rumi persona, but..."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to replace someone", "quote": "now seeking to destroy and replace her in order to redeem her image", "confidence": "sourced"}
+   {
+    "value": "to replace someone",
+    "quote": "now seeking to destroy and replace her in order to redeem her image",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:25",
+      "quote": "You're just a dirty old impostor!"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "abandoning an identity", "detail": "Mima leaves her idol group", "quote": "Displeased by Mima's retirement from the idol industry", "confidence": "sourced"}
+   {
+    "value": "abandoning an identity",
+    "detail": "Mima leaves her idol group",
+    "quote": "Displeased by Mima's retirement from the idol industry",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:58",
+      "quote": "Traitor traitor traltor TRAiTor TrAltoR TralTor"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "career change", "quote": "Mima Kirigoe decides to leave the J-pop idol group CHAM! to become a full-time actress", "confidence": "sourced"}
+   {
+    "value": "career change",
+    "quote": "Mima Kirigoe decides to leave the J-pop idol group CHAM! to become a full-time actress",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:26",
+      "quote": "As of today, Mima will graduate from CHAM!"
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "performer", "relation_to_threat": "stranger", "detail": "Mima, a former idol", "quote": "As she becomes a victim of stalking by her obsessive fan, gruesome murders take place", "confidence": "sourced"},
-   {"value": "her collaborators", "relation_to_threat": "stranger", "quote": "A string of murders is committed, all against people who have been involved in Mima's acting career", "confidence": "sourced"}
+   {
+    "value": "performer",
+    "relation_to_threat": "stranger",
+    "detail": "Mima, a former idol",
+    "quote": "As she becomes a victim of stalking by her obsessive fan, gruesome murders take place",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:41",
+      "quote": "I think that letter just exploded!?"
+     }
+    ]
+   },
+   {
+    "value": "her collaborators",
+    "relation_to_threat": "stranger",
+    "quote": "A string of murders is committed, all against people who have been involved in Mima's acting career",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:29",
+      "quote": "Popular Script Writer SLAUGHTERED! The victim: Takao Shibuya (34)"
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "killer caught", "quote": "Mima tackles her, allowing Rumi to be apprehended", "confidence": "sourced"},
-   {"value": "identity reclaimed", "quote": "she smiles at herself in the rear-view mirror before declaring, \"No, I'm the real thing.\"", "confidence": "sourced"}
+   {
+    "value": "killer caught",
+    "quote": "Mima tackles her, allowing Rumi to be apprehended",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:41",
+      "quote": "Get the police! No, call an ambulance!"
+     }
+    ]
+   },
+   {
+    "value": "identity reclaimed",
+    "quote": "she smiles at herself in the rear-view mirror before declaring, \"No, I'm the real thing.\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:43",
+      "quote": "No, I'm real!"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "website diary", "when": "opening", "role": "omen", "quote": "a website called \"Mima's Room\" comprising public diary entries written from her perspective", "confidence": "sourced"},
-   {"value": "fish", "state": "dead, then alive", "when": "middle", "role": "omen", "quote": "learns that her fish have suddenly passed away after irregular feedings", "confidence": "sourced"},
-   {"value": "hammer", "when": "late", "role": "weapon", "quote": "Mima bludgeons him with a hammer and escapes", "confidence": "sourced"},
-   {"value": "replica bedroom", "when": "late", "role": "clue", "quote": "Mima discovers that Rumi's bedroom is a replica of her own", "confidence": "sourced"},
-   {"value": "wig", "when": "late", "role": "turn", "quote": "Mima pulls Rumi's wig off resulting in Rumi unintentionally impaling herself on a glass shard", "confidence": "sourced"},
-   {"value": "mirror", "state": "rear-view", "when": "ending", "role": "mirror", "quote": "she smiles at herself in the rear-view mirror", "confidence": "sourced"},
-   {"value": "headlights", "state": "seen as stage lights", "when": "late", "role": "symbol", "quote": "hallucinating the headlights as stage lights, she smiles and poses", "confidence": "sourced"}
+   {
+    "value": "website diary",
+    "when": "opening",
+    "role": "omen",
+    "quote": "a website called \"Mima's Room\" comprising public diary entries written from her perspective",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:08",
+      "quote": "I always like looking into Mima's Room. I've put up a link to Mima's Room."
+     }
+    ]
+   },
+   {
+    "value": "traitor fax",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:12:58",
+    "quote": "Traitor traitor traltor TRAiTor TrAltoR TralTor",
+    "confidence": "sourced"
+   },
+   {
+    "value": "who are you message",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:13:21",
+    "quote": "\" Who are you? \"",
+    "confidence": "sourced",
+    "detail": "the line Mima must say in her drama, repeated on screen and online",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:12",
+      "quote": "How do they know this much?"
+     }
+    ]
+   },
+   {
+    "value": "letter bomb",
+    "when": "early",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:18:41",
+    "quote": "I think that letter just exploded!?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fish",
+    "state": "dead, then alive",
+    "when": "middle",
+    "role": "omen",
+    "quote": "learns that her fish have suddenly passed away after irregular feedings",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:58",
+      "quote": "I'm sorry... I forgot to feed you yesterday."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:36:14",
+      "quote": "I'm home, fishies!"
+     }
+    ]
+   },
+   {
+    "value": "hammer",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Mima bludgeons him with a hammer and escapes",
+    "confidence": "sourced"
+   },
+   {
+    "value": "replica bedroom",
+    "when": "late",
+    "role": "clue",
+    "quote": "Mima discovers that Rumi's bedroom is a replica of her own",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:56",
+      "quote": "Of course not! This is Mima's room!"
+     }
+    ]
+   },
+   {
+    "value": "wig",
+    "when": "late",
+    "role": "turn",
+    "quote": "Mima pulls Rumi's wig off resulting in Rumi unintentionally impaling herself on a glass shard",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mirror",
+    "state": "rear-view",
+    "when": "ending",
+    "role": "mirror",
+    "quote": "she smiles at herself in the rear-view mirror",
+    "confidence": "sourced"
+   },
+   {
+    "value": "headlights",
+    "state": "seen as stage lights",
+    "when": "late",
+    "role": "symbol",
+    "quote": "hallucinating the headlights as stage lights, she smiles and poses",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "leaving an old identity", "when": "opening", "role": "trigger", "quote": "Mima Kirigoe decides to leave the J-pop idol group CHAM! to become a full-time actress", "confidence": "sourced"},
-   {"order": 2, "value": "stalker's diary found", "when": "opening", "role": "omen", "quote": "Mima discovers a website called \"Mima's Room\"", "confidence": "sourced"},
-   {"order": 3, "value": "degrading ordeal", "when": "early", "quote": "her new role requires her to film a rape scene at a strip club", "confidence": "sourced"},
-   {"order": 4, "value": "double appears", "when": "middle", "quote": "is repeatedly visited by an apparition of her former idol self", "confidence": "sourced"},
-   {"order": 5, "value": "murders begin", "when": "middle", "quote": "A string of murders is committed, all against people who have been involved in Mima's acting career", "confidence": "sourced"},
-   {"order": 6, "value": "heroine fights off attacker", "when": "late", "quote": "Mima bludgeons him with a hammer and escapes", "confidence": "sourced"},
-   {"order": 7, "value": "true killer revealed", "when": "late", "role": "turn", "quote": "realizes that Rumi is the one behind \"Mima's Room,\" the serial murders", "confidence": "sourced"},
-   {"order": 8, "value": "heroine reclaims self", "when": "ending", "quote": "\"No, I'm the real thing.\"", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "staged superhero show",
+    "when": "opening",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:00:18",
+    "quote": "Powertron! Special Attack!",
+    "confidence": "sourced",
+    "detail": "the film opens on a cheap costumed stage show before the idol concert"
+   },
+   {
+    "order": 2,
+    "value": "leaving an old identity",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Mima Kirigoe decides to leave the J-pop idol group CHAM! to become a full-time actress",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:26",
+      "quote": "As of today, Mima will graduate from CHAM!"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "stalker's diary found",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Mima discovers a website called \"Mima's Room\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:09",
+      "quote": "this \" Mima's Room \" thing is the title of a web site."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "letter bomb sent",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:18:41",
+    "quote": "I think that letter just exploded!?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "degrading ordeal",
+    "when": "early",
+    "quote": "her new role requires her to film a rape scene at a strip club",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:04",
+      "quote": "It's not as if I'm really getting raped!"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "double appears",
+    "when": "middle",
+    "quote": "is repeatedly visited by an apparition of her former idol self",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:17",
+      "quote": "Me? I'm a pop idol."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "murders begin",
+    "when": "middle",
+    "quote": "A string of murders is committed, all against people who have been involved in Mima's acting career",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:29",
+      "quote": "Popular Script Writer SLAUGHTERED! The victim: Takao Shibuya (34)"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "heroine fights off attacker",
+    "when": "late",
+    "quote": "Mima bludgeons him with a hammer and escapes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:36",
+      "quote": "You didn't know I was Me-mania!"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "true killer revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "realizes that Rumi is the one behind \"Mima's Room,\" the serial murders",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:04",
+      "quote": "Me-mania? How do you know him!?"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "fans doubt she is real",
+    "when": "ending",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:17:28",
+    "quote": "You're lying! There's no way Mima Kirigoe would be HERE of all places!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "heroine reclaims self",
+    "when": "ending",
+    "quote": "\"No, I'm the real thing.\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:43",
+      "quote": "No, I'm real!"
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["rules"],
+ "not_stated": [
+  "rules"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

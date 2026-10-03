@@ -1,59 +1,433 @@
 {
  "film": "1999-nang-nak",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "ghost wife", "detail": "Nak, who died in childbirth", "quote": "It depicts the life of a devoted ghost wife and her unsuspecting husband", "confidence": "sourced"}
+   {
+    "value": "ghost wife",
+    "detail": "Nak, who died in childbirth",
+    "quote": "It depicts the life of a devoted ghost wife and her unsuspecting husband",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:54",
+      "quote": "Nak broke his neck last night."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "died in childbirth", "quote": "Nak had a difficult childbirth and both mother and child died from complications", "confidence": "sourced"},
-   {"value": "folk legend", "quote": "based on the Thai legend of Mae Nak Phra Khanong", "confidence": "sourced"}
+   {
+    "value": "died in childbirth",
+    "quote": "Nak had a difficult childbirth and both mother and child died from complications",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:30",
+      "quote": "Nak died during childbirth many months ago."
+     }
+    ]
+   },
+   {
+    "value": "folk legend",
+    "quote": "based on the Thai legend of Mae Nak Phra Khanong",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:21",
+      "quote": "The story of Nak's ghostly spirit is long believed to be true."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to stay with her husband", "quote": "Nak's ghost, who is desperate to stay with her husband", "confidence": "sourced"},
-   {"value": "to keep the secret", "quote": "those who attempt to tell him are killed in the night by Nak's ghost", "confidence": "sourced"}
+   {
+    "value": "to stay with her husband",
+    "quote": "Nak's ghost, who is desperate to stay with her husband",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:42",
+      "quote": "I will never leave you."
+     }
+    ]
+   },
+   {
+    "value": "to keep the secret",
+    "quote": "those who attempt to tell him are killed in the night by Nak's ghost",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:18",
+      "quote": "died by their own karma because they tried to ruin our family."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "husband taken by war", "quote": "Mak (Winai Kraibutr) is conscripted and sent to fight in the Siamese-Vietnamese War", "confidence": "observed"}
+   {
+    "value": "husband taken by war",
+    "quote": "Mak (Winai Kraibutr) is conscripted and sent to fight in the Siamese-Vietnamese War",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:04",
+      "quote": "I have to go, Nak."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "return home", "quote": "He eventually returns home to his beloved wife and their child", "confidence": "sourced"}
+   {
+    "value": "return home",
+    "quote": "He eventually returns home to his beloved wife and their child",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "kills those who reveal truth", "quote": "those who attempt to tell him are killed in the night by Nak's ghost", "confidence": "sourced"},
-   {"value": "released by a holy man", "quote": "The monk has the centre of her corpse's forehead cut out, thus releasing her spirit", "confidence": "sourced"},
-   {"value": "will not leave without him", "quote": "Nak refuses to leave unless Mak returns to her", "confidence": "sourced"}
+   {
+    "value": "kills those who reveal truth",
+    "quote": "those who attempt to tell him are killed in the night by Nak's ghost",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:57",
+      "quote": "Because he told you about her."
+     }
+    ]
+   },
+   {
+    "value": "released by a holy man",
+    "quote": "The monk has the centre of her corpse's forehead cut out, thus releasing her spirit",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:31",
+      "quote": "I confined Nak's spirit in the bone of her forehead."
+     }
+    ]
+   },
+   {
+    "value": "will not leave without him",
+    "quote": "Nak refuses to leave unless Mak returns to her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:35",
+      "quote": "Let my husband go!"
+     }
+    ]
+   },
+   {
+    "value": "amulet wards off spirits",
+    "source": "subtitles",
+    "at": "00:12:09",
+    "quote": "It protects you from evil spirits.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "husband", "relation_to_threat": "lover", "detail": "Mak, spellbound", "quote": "realize Mak is spellbound by her ghost", "confidence": "sourced"},
-   {"value": "villagers", "relation_to_threat": "community", "quote": "The villagers attempt to drive out Nak, burning down her house", "confidence": "sourced"}
+   {
+    "value": "husband",
+    "relation_to_threat": "lover",
+    "detail": "Mak, spellbound",
+    "quote": "realize Mak is spellbound by her ghost",
+    "confidence": "sourced"
+   },
+   {
+    "value": "villagers",
+    "relation_to_threat": "community",
+    "quote": "The villagers attempt to drive out Nak, burning down her house",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "spirit released", "quote": "Nak repents, leaving her husband for this life", "confidence": "sourced"},
-   {"value": "relic passes on", "detail": "the forehead bone becomes a brooch of unknown owner", "quote": "It was thereafter handed down for generations, with its current owner unknown", "confidence": "sourced"}
+   {
+    "value": "spirit released",
+    "quote": "Nak repents, leaving her husband for this life",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:54",
+      "quote": "Let her go. It's time."
+     }
+    ]
+   },
+   {
+    "value": "relic passes on",
+    "detail": "the forehead bone becomes a brooch of unknown owner",
+    "quote": "It was thereafter handed down for generations, with its current owner unknown",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:11",
+      "quote": "the relic from her forehead"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "corpse under the house", "state": "buried", "when": "middle", "role": "clue", "quote": "he digs it up and finds a corpse", "confidence": "sourced"},
-   {"value": "hair", "state": "being brushed", "when": "middle", "role": "omen", "quote": "he sees Nak sitting and brushing her hair", "confidence": "sourced"},
-   {"value": "comb", "state": "dropped", "when": "middle", "role": "clue", "quote": "Dropping the comb through a crack, her arm eerily extends all the way to the ground to retrieve it", "confidence": "sourced"},
-   {"value": "extending arm", "when": "middle", "role": "turn", "quote": "her arm eerily extends all the way to the ground to retrieve it", "confidence": "sourced"},
-   {"value": "dead baby", "when": "middle", "role": "clue", "quote": "Nak picks up her crying baby, who Mak realises is a corpse as well", "confidence": "sourced"},
-   {"value": "temple", "when": "late", "role": "setting", "quote": "Mak flees in terror to the local temple to hide", "confidence": "sourced"},
-   {"value": "forehead bone brooch", "when": "ending", "role": "symbol", "quote": "makes a girdle brooch of it", "confidence": "sourced"}
+   {
+    "value": "corpse under the house",
+    "state": "buried",
+    "when": "middle",
+    "role": "clue",
+    "quote": "he digs it up and finds a corpse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:49",
+      "quote": "What are you doing down there?"
+     }
+    ]
+   },
+   {
+    "value": "hair",
+    "state": "being brushed",
+    "when": "middle",
+    "role": "omen",
+    "quote": "he sees Nak sitting and brushing her hair",
+    "confidence": "sourced"
+   },
+   {
+    "value": "comb",
+    "state": "dropped",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Dropping the comb through a crack, her arm eerily extends all the way to the ground to retrieve it",
+    "confidence": "sourced"
+   },
+   {
+    "value": "extending arm",
+    "when": "middle",
+    "role": "turn",
+    "quote": "her arm eerily extends all the way to the ground to retrieve it",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dead baby",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Nak picks up her crying baby, who Mak realises is a corpse as well",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:29",
+      "quote": "Yes, that baby's a ghost."
+     }
+    ]
+   },
+   {
+    "value": "temple",
+    "when": "late",
+    "role": "setting",
+    "quote": "Mak flees in terror to the local temple to hide",
+    "confidence": "sourced"
+   },
+   {
+    "value": "forehead bone brooch",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "makes a girdle brooch of it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:57",
+      "quote": "made a girdle brooch out of her forehead bone"
+     }
+    ]
+   },
+   {
+    "value": "solar eclipse",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:07",
+    "quote": "SOLAR ECLIPSE AT WAKOR AUGUST 18, 2411 B.E.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "amulet",
+    "when": "early",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "00:12:04",
+    "quote": "Always carry this amulet with you.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rats",
+    "when": "middle",
+    "role": "omen",
+    "detail": "rats swarm beneath the house where Nak's body lies",
+    "source": "subtitles",
+    "at": "00:49:44",
+    "quote": "Why are there rats all over the place?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "burning house",
+    "when": "late",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "01:03:52",
+    "quote": "We're going to burn her house to the ground.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "husband goes to war", "when": "opening", "quote": "He has to leave behind his pregnant teenage wife, Nak", "confidence": "sourced"},
-   {"order": 2, "value": "return to a dead wife", "when": "opening", "quote": "He eventually returns home to his beloved wife and their child", "confidence": "sourced"},
-   {"order": 3, "value": "warners killed", "when": "early", "quote": "those who attempt to tell him are killed in the night by Nak's ghost", "confidence": "sourced"},
-   {"order": 4, "value": "truth discovered", "when": "middle", "role": "turn", "quote": "Mak eventually discovers the truth", "confidence": "sourced"},
-   {"order": 5, "value": "flight to the temple", "when": "late", "quote": "Mak flees in terror to the local temple to hide", "confidence": "sourced"},
-   {"order": 6, "value": "village tries exorcism", "when": "late", "quote": "burning down her house and at last summoning an exorcist", "confidence": "sourced"},
-   {"order": 7, "value": "tearful release by monk", "when": "ending", "quote": "in a tearful farewell, Nak repents, leaving her husband for this life", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "eclipse omen",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:07",
+    "quote": "SOLAR ECLIPSE AT WAKOR AUGUST 18, 2411 B.E.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "husband goes to war",
+    "when": "opening",
+    "quote": "He has to leave behind his pregnant teenage wife, Nak",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:04",
+      "quote": "I have to go, Nak."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "return to a dead wife",
+    "when": "opening",
+    "quote": "He eventually returns home to his beloved wife and their child",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:02",
+      "quote": "I've been waiting for you at home."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "warners killed",
+    "when": "early",
+    "quote": "those who attempt to tell him are killed in the night by Nak's ghost",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:38",
+      "quote": "You messed with the ghost. Tonight, she'll come to get you."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "truth discovered",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Mak eventually discovers the truth",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:30",
+      "quote": "Nak died during childbirth many months ago."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "flight to the temple",
+    "when": "late",
+    "quote": "Mak flees in terror to the local temple to hide",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "villagers burn the house",
+    "when": "late",
+    "source": "subtitles",
+    "at": "01:11:02",
+    "quote": "I'm going to take all of you to burn that house down to the ground!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "village tries exorcism",
+    "when": "late",
+    "quote": "burning down her house and at last summoning an exorcist",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:22",
+      "quote": "They dug up Nak's grave."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "tearful release by monk",
+    "when": "ending",
+    "quote": "in a tearful farewell, Nak repents, leaving her husband for this life",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:54",
+      "quote": "Let her go. It's time."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "relic lost",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:38:26",
+    "quote": "Nowadays, the relic in which her spirit confined is long lost.",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

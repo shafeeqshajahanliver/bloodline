@@ -1,57 +1,492 @@
 {
  "film": "1925-the-phantom-of-the-opera",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "deformed man", "detail": "Erik, the Phantom, living beneath the Paris Opera", "quote": "the deformed Phantom who haunts the Paris Opera House, causing murder and mayhem", "confidence": "sourced"},
-   {"value": "escaped criminal", "detail": "Erik escaped from Devil's Island", "quote": "tracking Erik since he escaped as a prisoner from Devil's Island", "confidence": "sourced"}
+   {
+    "value": "deformed man",
+    "detail": "Erik, the Phantom, living beneath the Paris Opera",
+    "quote": "the deformed Phantom who haunts the Paris Opera House, causing murder and mayhem",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:51",
+      "quote": "His face is like leprous parchment,"
+     }
+    ]
+   },
+   {
+    "value": "escaped criminal",
+    "detail": "Erik escaped from Devil's Island",
+    "quote": "tracking Erik since he escaped as a prisoner from Devil's Island",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:41",
+      "quote": "ESCAPED NOW AT LARGE"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "escaped prisoner", "quote": "a secret policeman who has been tracking Erik since he escaped as a prisoner from Devil's Island", "confidence": "sourced"}
+   {
+    "value": "escaped prisoner",
+    "quote": "a secret policeman who has been tracking Erik since he escaped as a prisoner from Devil's Island",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:35",
+      "quote": "Exited to Devil's Island for criminal insane"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "possessive love", "detail": "to make Christine a star and his own", "quote": "causing murder and mayhem in an attempt to make the woman he loves a star", "confidence": "sourced"},
-   {"value": "a bride", "quote": "promising him anything in return, even becoming his wife", "confidence": "observed"}
+   {
+    "value": "possessive love",
+    "detail": "to make Christine a star and his own",
+    "quote": "causing murder and mayhem in an attempt to make the woman he loves a star",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:37",
+      "quote": "You will triumph - all Paris will worship you!"
+     }
+    ]
+   },
+   {
+    "value": "a bride",
+    "quote": "promising him anything in return, even becoming his wife",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:37",
+      "quote": "But, remember, you are mine-mine-and you shall not see your lover again!"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "threatening letters", "detail": "the Phantom demands Christine replace Carlotta", "quote": "receives a letter from \"The Phantom,\" demanding that Christine replace her the following night", "confidence": "sourced"}
+   {
+    "value": "threatening letters",
+    "detail": "the Phantom demands Christine replace Carlotta",
+    "quote": "receives a letter from \"The Phantom,\" demanding that Christine replace her the following night",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:26",
+      "quote": "My dear Managers - The role of \" Marguerite \" shall be sung again"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "must not look", "detail": "she must never look behind his mask", "quote": "she must never look behind his mask", "confidence": "sourced"},
-   {"value": "punishes disobedience", "detail": "chandelier dropped when Carlotta sings", "quote": "a defiant Carlotta sings. During the performance, the Phantom drops the chandelier", "confidence": "observed"}
+   {
+    "value": "must not look",
+    "detail": "she must never look behind his mask",
+    "quote": "she must never look behind his mask",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:27",
+      "quote": "\" Look not upon my mask -"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:47:11",
+      "quote": "You are in no peril as long as you do not touch my mask."
+     }
+    ]
+   },
+   {
+    "value": "punishes disobedience",
+    "detail": "chandelier dropped when Carlotta sings",
+    "quote": "a defiant Carlotta sings. During the performance, the Phantom drops the chandelier",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:14",
+      "quote": "If you appear tomorrow night you must be prepared for a great misfortune,"
+     }
+    ]
+   },
+   {
+    "value": "lovers must not meet",
+    "source": "subtitles",
+    "at": "00:52:37",
+    "quote": "But, remember, you are mine-mine-and you shall not see your lover again!",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:44",
+      "quote": "If you do, it is death to you both!"
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "young woman", "relation_to_threat": "stranger", "detail": "Christine Daaé, the singer he loves", "quote": "The next night, during her performance, Christine is kidnapped", "confidence": "sourced"},
-   {"value": "lover", "relation_to_threat": "stranger", "detail": "Raoul, Christine's sweetheart", "quote": "The Phantom subjects Raoul and Ledoux to intense heat", "confidence": "sourced"},
-   {"value": "audience", "relation_to_threat": "stranger", "quote": "drops the chandelier hanging from the ceiling onto the audience, killing people", "confidence": "sourced"}
+   {
+    "value": "young woman",
+    "relation_to_threat": "stranger",
+    "detail": "Christine Daaé, the singer he loves",
+    "quote": "The next night, during her performance, Christine is kidnapped",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:40",
+      "quote": "Christine Daae Disappears"
+     }
+    ]
+   },
+   {
+    "value": "lover",
+    "relation_to_threat": "stranger",
+    "detail": "Raoul, Christine's sweetheart",
+    "quote": "The Phantom subjects Raoul and Ledoux to intense heat",
+    "confidence": "sourced"
+   },
+   {
+    "value": "audience",
+    "relation_to_threat": "stranger",
+    "quote": "drops the chandelier hanging from the ceiling onto the audience, killing people",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "killed by a mob", "quote": "he is swarmed and killed by the mob and thrown into the Seine", "confidence": "sourced"},
-   {"value": "couple united", "quote": "Raoul and Christine later go on their honeymoon in Viroflay", "confidence": "sourced"}
+   {
+    "value": "killed by a mob",
+    "quote": "he is swarmed and killed by the mob and thrown into the Seine",
+    "confidence": "sourced"
+   },
+   {
+    "value": "couple united",
+    "quote": "Raoul and Christine later go on their honeymoon in Viroflay",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "opera box", "state": "occupied by a vanishing figure", "when": "early", "role": "omen", "quote": "seated in Box 5, a figure who later disappears", "confidence": "sourced"},
-   {"value": "noose", "state": "body hanging", "when": "middle", "role": "threat", "quote": "hanging by a noose and vows vengeance", "confidence": "sourced"},
-   {"value": "chandelier", "state": "falling", "when": "middle", "role": "weapon", "quote": "the Phantom drops the chandelier hanging from the ceiling onto the audience", "confidence": "sourced"},
-   {"value": "mirror", "state": "secret door", "when": "middle", "role": "setting", "quote": "a secret door behind the mirror in her dressing room", "confidence": "sourced"},
-   {"value": "mask", "state": "torn off", "when": "middle", "role": "symbol", "quote": "Christine playfully tears off his mask, revealing his deformed face", "confidence": "sourced"},
-   {"value": "organ", "state": "being played", "when": "middle", "role": "setting", "quote": "As he is preoccupied playing his organ", "confidence": "sourced"},
-   {"value": "gunpowder", "state": "barrels", "when": "late", "role": "weapon", "quote": "locks them in with barrels of gunpowder and causes the room to flood", "confidence": "sourced"},
-   {"value": "empty fist", "when": "ending", "role": "turn", "quote": "pretending to hold some kind of lethal weapon in his clenched fist, only to reveal an empty palm", "confidence": "sourced"}
+   {
+    "value": "opera box",
+    "state": "occupied by a vanishing figure",
+    "when": "early",
+    "role": "omen",
+    "quote": "seated in Box 5, a figure who later disappears",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:25",
+      "quote": "I have seen only the cloaked figure of a man"
+     }
+    ]
+   },
+   {
+    "value": "noose",
+    "state": "body hanging",
+    "when": "middle",
+    "role": "threat",
+    "quote": "hanging by a noose and vows vengeance",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:39",
+      "quote": "The Punjab lasso - the strangler's cord!"
+     }
+    ]
+   },
+   {
+    "value": "chandelier",
+    "state": "falling",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "the Phantom drops the chandelier hanging from the ceiling onto the audience",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:10",
+      "quote": "Beware! She is singing to bring down the chandelier!"
+     }
+    ]
+   },
+   {
+    "value": "mirror",
+    "state": "secret door",
+    "when": "middle",
+    "role": "setting",
+    "quote": "a secret door behind the mirror in her dressing room",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:29",
+      "quote": "Walk to your mirror, my dear - - have no fear!"
+     }
+    ]
+   },
+   {
+    "value": "black lake",
+    "when": "middle",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:36:46",
+    "quote": "A black lake, hidden from man and the sun,",
+    "confidence": "sourced"
+   },
+   {
+    "value": "coffin bed",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:41:38",
+    "quote": "\" That is where I sleep. \"",
+    "confidence": "observed",
+    "detail": "Erik sleeps in a coffin to remind him of death",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:02",
+      "quote": "It keeps me reminded of that other dreamless sleep that cures all ills - forever!"
+     }
+    ]
+   },
+   {
+    "value": "mask",
+    "state": "torn off",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "Christine playfully tears off his mask, revealing his deformed face",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:19",
+      "quote": "Feast, your eyes - glut your soul, on my accursed ugliness!"
+     }
+    ]
+   },
+   {
+    "value": "organ",
+    "state": "being played",
+    "when": "middle",
+    "role": "setting",
+    "quote": "As he is preoccupied playing his organ",
+    "confidence": "sourced"
+   },
+   {
+    "value": "red death costume",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:56:17",
+    "quote": "Into the midst of revelry, strode a spectral figure,",
+    "confidence": "sourced",
+    "detail": "the Phantom at the masked ball, robed in red"
+   },
+   {
+    "value": "gunpowder",
+    "state": "barrels",
+    "when": "late",
+    "role": "weapon",
+    "quote": "locks them in with barrels of gunpowder and causes the room to flood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:38",
+      "quote": "Turn the grasshopper - - and the Opera House is blown to a thousand bits!"
+     }
+    ]
+   },
+   {
+    "value": "scorpion and grasshopper",
+    "when": "late",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "01:36:22",
+    "quote": "If you turn the Scorpion - you have said' Yes' and spared de Chagny.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "empty fist",
+    "when": "ending",
+    "role": "turn",
+    "quote": "pretending to hold some kind of lethal weapon in his clenched fist, only to reveal an empty palm",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "legend of opera ghost told", "when": "opening", "role": "omen", "quote": "they tell the new managers about the Opera Ghost", "confidence": "sourced"},
-   {"order": 2, "value": "first death", "when": "early", "quote": "finds the body of his brother, stagehand Joseph Buquet, hanging by a noose", "confidence": "sourced"},
-   {"order": 3, "value": "chandelier falls", "when": "middle", "role": "turn", "quote": "the Phantom drops the chandelier hanging from the ceiling onto the audience, killing people", "confidence": "sourced"},
-   {"order": 4, "value": "unmasking", "when": "middle", "role": "turn", "quote": "Christine playfully tears off his mask, revealing his deformed face", "confidence": "sourced"},
-   {"order": 5, "value": "abduction", "when": "late", "quote": "The next night, during her performance, Christine is kidnapped", "confidence": "sourced"},
-   {"order": 6, "value": "rescuers trapped in lair", "when": "late", "quote": "They end up in a torture chamber of his design", "confidence": "sourced"},
-   {"order": 7, "value": "mob kills the monster", "when": "ending", "quote": "he is swarmed and killed by the mob and thrown into the Seine", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "legend of opera ghost told",
+    "when": "opening",
+    "role": "omen",
+    "quote": "they tell the new managers about the Opera Ghost",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:04",
+      "quote": "It is barely possible you may hear of a ghost,"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "first death",
+    "when": "early",
+    "quote": "finds the body of his brother, stagehand Joseph Buquet, hanging by a noose",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:19",
+      "quote": "My brother - - poor Joseph, he knew too much about the Phantom!"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "chandelier falls",
+    "when": "middle",
+    "role": "turn",
+    "quote": "the Phantom drops the chandelier hanging from the ceiling onto the audience, killing people",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:10",
+      "quote": "Beware! She is singing to bring down the chandelier!"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "unmasking",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Christine playfully tears off his mask, revealing his deformed face",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:19",
+      "quote": "Feast, your eyes - glut your soul, on my accursed ugliness!"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "masked ball apparition",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:57:19",
+    "quote": "\" Beneath your dancing feet are the tombs of tortured men -",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "lovers overheard",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:01:48",
+    "quote": "She has betrayed me!",
+    "confidence": "sourced",
+    "detail": "the Phantom overhears Christine and Raoul plan to flee to England"
+   },
+   {
+    "order": 7,
+    "value": "abduction",
+    "when": "late",
+    "quote": "The next night, during her performance, Christine is kidnapped",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:42",
+      "quote": "You lied to me!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "rescuers trapped in lair",
+    "when": "late",
+    "quote": "They end up in a torture chamber of his design",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:37",
+      "quote": "We have fallen into the room of many mirrors"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "choice of two levers",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:36:22",
+    "quote": "If you turn the Scorpion - you have said' Yes' and spared de Chagny.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "mob kills the monster",
+    "when": "ending",
+    "quote": "he is swarmed and killed by the mob and thrown into the Seine",
+    "confidence": "sourced"
+   }
+  ],
+  "wrong": [
+   {
+    "value": "hatred and rejection",
+    "source": "subtitles",
+    "at": "00:42:32",
+    "quote": "\" If I am the Phantom, it is because man's hatred has made me so. \"",
+    "confidence": "sourced",
+    "detail": "Erik blames mankind's hatred for what he became"
+   },
+   {
+    "value": "imprisonment and torture",
+    "source": "subtitles",
+    "at": "01:16:29",
+    "quote": "I found his hiding place deep within the torture chambers where he himself",
+    "confidence": "observed",
+    "detail": "he hides in the torture chambers where he was once confined"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

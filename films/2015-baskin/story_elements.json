@@ -1,51 +1,340 @@
 {
  "film": "2015-baskin",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "cult", "detail": "led by The Father", "quote": "A hooded figure known as The Father reveals himself to them; he and the cultists kill Apo, Yavuz and Remzi", "confidence": "sourced"},
-   {"value": "hell", "quote": "five police officers who have inadvertently wandered into Hell", "confidence": "sourced"}
+   {
+    "value": "cult",
+    "detail": "led by The Father",
+    "quote": "A hooded figure known as The Father reveals himself to them; he and the cultists kill Apo, Yavuz and Remzi",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hell",
+    "quote": "five police officers who have inadvertently wandered into Hell",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "answering a call for help", "quote": "the men receive a call for back up from colleagues who have gone to Inceagac, a town known for strange rumors", "confidence": "sourced"},
-   {"value": "crash into water", "quote": "accidentally drives their van into a lake", "confidence": "sourced"}
+   {
+    "value": "answering a call for help",
+    "quote": "the men receive a call for back up from colleagues who have gone to Inceagac, a town known for strange rumors",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:53",
+      "quote": "They're calling for backup in Inceagac."
+     }
+    ]
+   },
+   {
+    "value": "crash into water",
+    "quote": "accidentally drives their van into a lake",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "hell carried within", "quote": "hell is not somewhere you go, it's something you carry with you at all times", "confidence": "sourced"},
-   {"value": "time loops", "quote": "The five men crash once more into the lake", "confidence": "sourced"}
+   {
+    "value": "hell carried within",
+    "quote": "hell is not somewhere you go, it's something you carry with you at all times",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:11",
+      "quote": "Hell is not a place you go. You carry Hell with you at all times."
+     }
+    ]
+   },
+   {
+    "value": "time loops",
+    "quote": "The five men crash once more into the lake",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:33",
+      "quote": "Everything ends, but... everything starts anew."
+     }
+    ]
+   },
+   {
+    "value": "the dead appear to the living",
+    "detail": "a childhood pact that returns at the end",
+    "source": "subtitles",
+    "at": "00:29:20",
+    "quote": "Whoever dies first, shall appear to the other without scaring him.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:07",
+      "quote": "\" Whoever dies first, shall appear to the other without scaring him. \""
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "police officers", "relation_to_threat": "stranger", "quote": "Five police officers dining there, Remzi, Arda, Yavuz, Apo, and Seyfi, discuss sex", "confidence": "sourced"},
-   {"value": "boy grown up", "relation_to_threat": "unknown", "detail": "Arda, the boy from the opening", "quote": "Arda was the young boy in the opening scene", "confidence": "sourced"}
+   {
+    "value": "police officers",
+    "relation_to_threat": "stranger",
+    "quote": "Five police officers dining there, Remzi, Arda, Yavuz, Apo, and Seyfi, discuss sex",
+    "confidence": "sourced"
+   },
+   {
+    "value": "boy grown up",
+    "relation_to_threat": "unknown",
+    "detail": "Arda, the boy from the opening",
+    "quote": "Arda was the young boy in the opening scene",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "cycle repeats", "quote": "It is revealed that the vehicle is the same police van the men travelled in earlier", "confidence": "sourced"},
-   {"value": "survivor dies anyway", "quote": "He flags down an oncoming vehicle, but the driver doesn't spot him and he is run over", "confidence": "sourced"}
+   {
+    "value": "cycle repeats",
+    "quote": "It is revealed that the vehicle is the same police van the men travelled in earlier",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:33",
+      "quote": "Everything ends, but... everything starts anew."
+     }
+    ]
+   },
+   {
+    "value": "survivor dies anyway",
+    "quote": "He flags down an oncoming vehicle, but the driver doesn't spot him and he is run over",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "television static", "when": "opening", "role": "omen", "quote": "He sees his TV showing static", "confidence": "sourced"},
-   {"value": "hand from darkness", "when": "opening", "role": "threat", "quote": "a hand reaches toward him from the darkness", "confidence": "sourced"},
-   {"value": "raw meat", "state": "delivered in a bucket", "when": "early", "role": "omen", "quote": "a hooded figure delivering a bucket of raw meat to a small restaurant", "confidence": "sourced"},
-   {"value": "frog", "when": "early", "role": "omen", "quote": "notices a frog on the soap stand", "confidence": "sourced"},
-   {"value": "lake", "when": "early", "role": "setting", "quote": "accidentally drives their van into a lake", "confidence": "sourced"},
-   {"value": "blood and viscera", "when": "middle", "role": "threat", "quote": "a group of cultists covered in blood and viscera", "confidence": "sourced"},
-   {"value": "key", "when": "late", "role": "turn", "quote": "A dying Remzi gives Arda a key", "confidence": "sourced"},
-   {"value": "police van", "when": "ending", "role": "mirror", "quote": "the vehicle is the same police van the men travelled in earlier", "confidence": "sourced"}
+   {
+    "value": "television static",
+    "when": "opening",
+    "role": "omen",
+    "quote": "He sees his TV showing static",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:56",
+      "quote": "I look at the living room. The TV is on, but there's only static."
+     }
+    ]
+   },
+   {
+    "value": "hand from darkness",
+    "when": "opening",
+    "role": "threat",
+    "quote": "a hand reaches toward him from the darkness",
+    "confidence": "sourced"
+   },
+   {
+    "value": "raw meat",
+    "state": "delivered in a bucket",
+    "when": "early",
+    "role": "omen",
+    "quote": "a hooded figure delivering a bucket of raw meat to a small restaurant",
+    "confidence": "sourced"
+   },
+   {
+    "value": "frog",
+    "when": "early",
+    "role": "omen",
+    "quote": "notices a frog on the soap stand",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:36",
+      "quote": "It was a fucking frog! Alright? A frog!"
+     }
+    ]
+   },
+   {
+    "value": "recurring dream",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:32:02",
+    "quote": "I've kept having that same dream. I had it this morning as well.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lake",
+    "when": "early",
+    "role": "setting",
+    "quote": "accidentally drives their van into a lake",
+    "confidence": "sourced"
+   },
+   {
+    "value": "blood and viscera",
+    "when": "middle",
+    "role": "threat",
+    "quote": "a group of cultists covered in blood and viscera",
+    "confidence": "sourced"
+   },
+   {
+    "value": "key",
+    "when": "late",
+    "role": "turn",
+    "quote": "A dying Remzi gives Arda a key",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:49",
+      "quote": "I have only one key in this life. And it's yours now."
+     }
+    ]
+   },
+   {
+    "value": "police van",
+    "when": "ending",
+    "role": "mirror",
+    "quote": "the vehicle is the same police van the men travelled in earlier",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "child's night terror", "when": "opening", "role": "omen", "quote": "A young boy wakes in the night after hearing strange sexual noises from his mother's bedroom", "confidence": "sourced"},
-   {"order": 2, "value": "omens at a restaurant", "when": "early", "role": "omen", "quote": "Seyfi, who has been feeling unwell, runs to the toilet and notices a frog on the soap stand", "confidence": "sourced"},
-   {"order": 3, "value": "van crashes into lake", "when": "early", "role": "trigger", "quote": "Seyfi has a terrifying vision of a bloody figure and accidentally drives their van into a lake", "confidence": "sourced"},
-   {"order": 4, "value": "locals warn", "when": "early", "role": "omen", "quote": "The locals warn them of the dangers in the village", "confidence": "sourced"},
-   {"order": 5, "value": "first taken by cult", "when": "middle", "quote": "the cultists swarm over him, dragging him into their midst", "confidence": "sourced"},
-   {"order": 6, "value": "massacre by the father", "when": "late", "quote": "he and the cultists kill Apo, Yavuz and Remzi", "confidence": "sourced"},
-   {"order": 7, "value": "escape", "when": "late", "quote": "he uses to overpower The Father and escape the building", "confidence": "sourced"},
-   {"order": 8, "value": "loop closes", "when": "ending", "role": "turn", "quote": "this was the same vision Seyfi had seen. The five men crash once more into the lake", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "child's night terror",
+    "when": "opening",
+    "role": "omen",
+    "quote": "A young boy wakes in the night after hearing strange sexual noises from his mother's bedroom",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:15",
+      "quote": "Mom! Mom!"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "omens at a restaurant",
+    "when": "early",
+    "role": "omen",
+    "quote": "Seyfi, who has been feeling unwell, runs to the toilet and notices a frog on the soap stand",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "van crashes into lake",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Seyfi has a terrifying vision of a bloody figure and accidentally drives their van into a lake",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dream confessed in the van",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:30:07",
+    "quote": "I had this dream. There are lots of people around me.",
+    "confidence": "sourced",
+    "order": 4
+   },
+   {
+    "order": 5,
+    "value": "locals warn",
+    "when": "early",
+    "role": "omen",
+    "quote": "The locals warn them of the dangers in the village",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:15",
+      "quote": "This is Inceagac. It's the way to the woods. You should go through the grove."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "first taken by cult",
+    "when": "middle",
+    "quote": "the cultists swarm over him, dragging him into their midst",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "massacre by the father",
+    "when": "late",
+    "quote": "he and the cultists kill Apo, Yavuz and Remzi",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:53",
+      "quote": "On a night like this, when doors open and realms unite..."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "escape",
+    "when": "late",
+    "quote": "he uses to overpower The Father and escape the building",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "loop closes",
+    "when": "ending",
+    "role": "turn",
+    "quote": "this was the same vision Seyfi had seen. The five men crash once more into the lake",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:49",
+      "quote": "I have only one key in this life. And it's yours now."
+     }
+    ]
+   }
+  ],
+  "wants": [
+   {
+    "value": "to open hearts to beyond",
+    "detail": "the cult leader seeks the 'right passenger'",
+    "source": "subtitles",
+    "at": "01:11:13",
+    "quote": "Are you ready to give up your worldly eyes and open your eyes to what's beyond?",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:47",
+      "quote": "Come on, Yavuz. Show us that you are the right passenger."
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["origin", "wants", "wrong"],
+ "not_stated": [
+  "origin",
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

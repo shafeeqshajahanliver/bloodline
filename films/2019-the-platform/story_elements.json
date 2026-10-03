@@ -7,6 +7,9 @@
     "Lead",
     "Plot"
    ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
   }
  ],
  "plot_quality": "full",
@@ -53,7 +56,14 @@
    {
     "value": "cannibalism",
     "quote": "when assigned to level 132, he and his former cellmate cannibalized someone",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:07",
+      "quote": "We ate human flesh. But we didn't kill anybody."
+     }
+    ]
    }
   ],
   "trigger": [
@@ -65,7 +75,14 @@
    {
     "value": "volunteering",
     "quote": "he volunteered to spend six months in the facility in exchange for a diploma",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:42",
+      "quote": "Six months in exchange for an accredited diploma."
+     }
+    ]
    }
   ],
   "rules": [
@@ -77,11 +94,39 @@
    {
     "value": "keeping food kills",
     "quote": "are subjected to fatal temperatures if they keep any food",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:06",
+      "quote": "Unless you get rid of that apple."
+     }
+    ]
    },
    {
     "value": "levels change monthly",
     "quote": "Prisoners are randomly reassigned to a new level each month",
+    "confidence": "sourced"
+   },
+   {
+    "value": "no children allowed",
+    "source": "subtitles",
+    "at": "00:44:41",
+    "quote": "Under-16s aren't allowed in the hole.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "each brings one item",
+    "source": "subtitles",
+    "at": "00:09:59",
+    "quote": "Can my item be a book? It can be whatever you want.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "top, bottom and those who fall",
+    "source": "subtitles",
+    "at": "00:01:35",
+    "quote": "There are three types of person: Those at the top, those at the bottom, and those who fall.",
     "confidence": "sourced"
    }
   ],
@@ -104,7 +149,14 @@
     "relation_to_threat": "community",
     "detail": "Miharu and her daughter",
     "quote": "Miharu rides down the platform, whom Trimagasi explains regularly descends the pit to search for her child",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:58",
+      "quote": "She's looking for her little boy."
+     }
+    ]
    }
   ],
   "ending": [
@@ -116,7 +168,14 @@
    {
     "value": "ambiguous",
     "quote": "Trimagasi replies, \"The message requires no bearer.\"",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:22",
+      "quote": "The message requires no bearer."
+     }
+    ]
    }
   ],
   "images": [
@@ -126,14 +185,28 @@
     "when": "opening",
     "role": "setting",
     "quote": "fed by a vertically moving platform with food on it",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:11",
+      "quote": "This food has already been eaten."
+     }
+    ]
    },
    {
     "value": "cell number",
     "when": "opening",
     "role": "setting",
     "quote": "A man named Goreng awakens in a cell numbered 48",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:26",
+      "quote": "Level 48."
+     }
+    ]
    },
    {
     "value": "dog",
@@ -141,7 +214,14 @@
     "when": "middle",
     "role": "turn",
     "quote": "Miharu has killed Ramesses II",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:47",
+      "quote": "In here, he's more sausage than dog."
+     }
+    ]
    },
    {
     "value": "flesh",
@@ -149,14 +229,28 @@
     "when": "middle",
     "role": "threat",
     "quote": "Goreng eats Trimagasi's flesh and subsequently becomes haunted by hallucinations of Trimagasi",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:13",
+      "quote": "Eat... or be eaten?"
+     }
+    ]
    },
    {
     "value": "hanged woman",
     "when": "middle",
     "role": "turn",
     "quote": "they have been reassigned to level 202 and that Imoguiri has hanged herself",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:55",
+      "quote": "Of course you are, Goreng. Why do you think I hung myself?"
+     }
+    ]
    },
    {
     "value": "panna cotta",
@@ -164,7 +258,19 @@
     "when": "late",
     "role": "symbol",
     "quote": "leaving a single panna cotta untouched",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:07",
+      "quote": "You must preserve the panna cotta, as if your life depended on it."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:12:13",
+      "quote": "The panna cotta is the message."
+     }
+    ]
    },
    {
     "value": "child",
@@ -172,72 +278,216 @@
     "when": "late",
     "role": "symbol",
     "quote": "Goreng notices a child whom he deduces is Miharu's daughter",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:37",
+      "quote": "It's not hot. Or cold. It's a girl."
+     }
+    ]
+   },
+   {
+    "value": "don quixote",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:10:30",
+    "quote": "I wanted to quit smoking and read Don Quixote.",
+    "detail": "the book Goreng chose as his one item",
+    "confidence": "sourced"
+   },
+   {
+    "value": "self-sharpening knife",
+    "when": "early",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "00:14:19",
+    "quote": "The knife sharpened itself, as it cut.",
+    "detail": "Trimagasi's Samurai-Plus, his one item",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:50",
+      "quote": "You have a book. I have my Samurai-Plus."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "snail",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:28:15",
+    "quote": "I'm sorry. It's easier for me to think of you as a snail purging its impurities.",
+    "detail": "Trimagasi's name for his victim",
+    "confidence": "sourced"
+   },
+   {
+    "value": "apple",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:09:06",
+    "quote": "Unless you get rid of that apple.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rope",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:03:04",
+    "quote": "Pray for a rope to your God!",
     "confidence": "sourced"
    }
   ],
   "beats": [
    {
     "order": 1,
-    "value": "waking in the system",
+    "value": "three types of person",
     "when": "opening",
-    "quote": "A man named Goreng awakens in a cell numbered 48",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:35",
+    "quote": "There are three types of person: Those at the top, those at the bottom, and those who fall.",
     "confidence": "sourced"
    },
    {
     "order": 2,
+    "value": "waking in the system",
+    "when": "opening",
+    "quote": "A man named Goreng awakens in a cell numbered 48",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:35",
+      "quote": "The hole. - Yes."
+     }
+    ]
+   },
+   {
+    "order": 3,
     "value": "cellmate turns cannibal",
     "when": "early",
     "role": "turn",
     "quote": "When he begins cutting into Goreng's leg, Miharu arrives",
-    "confidence": "sourced"
-   },
-   {
-    "order": 3,
-    "value": "hero eats the dead",
-    "when": "early",
-    "quote": "Encouraged by Miharu, Goreng eats Trimagasi's flesh",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:12",
+      "quote": "After eight days, I'll start cutting off little strips of flesh."
+     }
+    ]
    },
    {
     "order": 4,
-    "value": "attempt at rationing fails",
-    "when": "middle",
-    "quote": "tries unsuccessfully to convince the pair below them to ration their food",
-    "confidence": "sourced"
+    "value": "hero eats the dead",
+    "when": "early",
+    "quote": "Encouraged by Miharu, Goreng eats Trimagasi's flesh",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:08",
+      "quote": "I belong to you now. I am in your body."
+     }
+    ]
    },
    {
     "order": 5,
-    "value": "cellmate's suicide",
+    "value": "attempt at rationing fails",
     "when": "middle",
-    "quote": "Imoguiri has hanged herself. He consumes her flesh",
-    "confidence": "sourced"
+    "quote": "tries unsuccessfully to convince the pair below them to ration their food",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:09",
+      "quote": "Please prepare two similar rations for the people on the next level."
+     }
+    ]
    },
    {
     "order": 6,
-    "value": "descent to share food",
-    "when": "late",
-    "quote": "Goreng convinces Baharat to ride the platform down with him and ration the food",
-    "confidence": "sourced"
+    "value": "cellmate's suicide",
+    "when": "middle",
+    "quote": "Imoguiri has hanged herself. He consumes her flesh",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:06",
+      "quote": "I want you to feed off my body, Goreng."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:59:30",
+      "quote": "With a Samurai-Plus, it was like cutting butter."
+     }
+    ]
    },
    {
     "order": 7,
-    "value": "child found at the bottom",
+    "value": "messiah plan",
     "when": "late",
     "role": "turn",
-    "quote": "Goreng notices a child whom he deduces is Miharu's daughter",
+    "source": "subtitles",
+    "at": "01:09:06",
+    "quote": "What are you? Some sort of Messiah?",
     "confidence": "sourced"
    },
    {
     "order": 8,
+    "value": "descent to share food",
+    "when": "late",
+    "quote": "Goreng convinces Baharat to ride the platform down with him and ration the food",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:34",
+      "quote": "We want you to go hungry for a day."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "child found at the bottom",
+    "when": "late",
+    "role": "turn",
+    "quote": "Goreng notices a child whom he deduces is Miharu's daughter",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:37",
+      "quote": "It's not hot. Or cold. It's a girl."
+     }
+    ]
+   },
+   {
+    "order": 10,
     "value": "child sent upward",
     "when": "ending",
     "quote": "watching as the child ascends",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:21",
+      "quote": "I've got to go back up with the girl. - But you are not the message."
+     }
+    ]
    }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

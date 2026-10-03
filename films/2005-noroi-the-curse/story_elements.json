@@ -1,64 +1,446 @@
 {
  "film": "2005-noroi-the-curse",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "possessing demon", "detail": "Kagutaba", "quote": "Kobayashi visits a local historian who tells him that Kagutaba is the name of a demon", "confidence": "sourced"},
-   {"value": "possessed woman", "detail": "Junko Ishii, the last ritual's priestess", "quote": "the daughter became hysterical in what the villagers believed to be demonic possession by Kagutaba", "confidence": "sourced"}
+   {
+    "value": "possessing demon",
+    "detail": "Kagutaba",
+    "quote": "Kobayashi visits a local historian who tells him that Kagutaba is the name of a demon",
+    "confidence": "sourced"
+   },
+   {
+    "value": "possessed woman",
+    "detail": "Junko Ishii, the last ritual's priestess",
+    "quote": "the daughter became hysterical in what the villagers believed to be demonic possession by Kagutaba",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "summoned by ritual", "quote": "The residents of a village called Shimokage in Nagano Prefecture once summoned Kagutaba", "confidence": "sourced"},
-   {"value": "released when ritual lapsed", "detail": "village abandoned for a dam", "quote": "An annual ritual was performed to appease Kagutaba until the village was abandoned in 1978 to make way for a dam", "confidence": "sourced"}
+   {
+    "value": "summoned by ritual",
+    "quote": "The residents of a village called Shimokage in Nagano Prefecture once summoned Kagutaba",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:09",
+      "quote": "They developed a type of sorcery called \" Shimokage's Way. \""
+     }
+    ]
+   },
+   {
+    "value": "released when ritual lapsed",
+    "detail": "village abandoned for a dam",
+    "quote": "An annual ritual was performed to appease Kagutaba until the village was abandoned in 1978 to make way for a dam",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:36",
+      "quote": "the ritual wouldn't be performed again, which angered Kagutaba."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "a host body", "quote": "saying the boy is possessed by Kagutaba", "confidence": "observed"}
+   {
+    "value": "a host body",
+    "quote": "saying the boy is possessed by Kagutaba",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "imprisoning a summoned spirit", "quote": "but imprisoned it for disobeying their commands", "confidence": "sourced"},
-   {"value": "stolen fetuses", "quote": "she helped perform illegal late-term abortions and stole the fetuses", "confidence": "sourced"}
+   {
+    "value": "imprisoning a summoned spirit",
+    "quote": "but imprisoned it for disobeying their commands",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:51",
+      "quote": "In the legend, Kagutaba was confined underneath Shimokage village."
+     }
+    ]
+   },
+   {
+    "value": "stolen fetuses",
+    "quote": "she helped perform illegal late-term abortions and stole the fetuses",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "investigating a complaint", "quote": "after a neighbor heard the sound of crying babies coming from her house", "confidence": "sourced"},
-   {"value": "visiting a shrine", "quote": "After filming at a shrine, actress Marika Matsumoto collapses screaming after hearing a mysterious voice", "confidence": "sourced"}
+   {
+    "value": "investigating a complaint",
+    "quote": "after a neighbor heard the sound of crying babies coming from her house",
+    "confidence": "sourced"
+   },
+   {
+    "value": "visiting a shrine",
+    "quote": "After filming at a shrine, actress Marika Matsumoto collapses screaming after hearing a mysterious voice",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "appeased by annual ritual", "quote": "An annual ritual was performed to appease Kagutaba", "confidence": "sourced"},
-   {"value": "summoned by feeding the dead", "quote": "dead baby monkeys were fed to a priestess medium", "confidence": "sourced"}
+   {
+    "value": "appeased by annual ritual",
+    "quote": "An annual ritual was performed to appease Kagutaba",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:42",
+      "quote": "This ritual is to pacify the demon."
+     }
+    ]
+   },
+   {
+    "value": "summoned by feeding the dead",
+    "quote": "dead baby monkeys were fed to a priestess medium",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:46:28",
+      "quote": "She fed Kana the aborted babies..."
+     }
+    ]
+   },
+   {
+    "value": "pigeons foretell death",
+    "source": "subtitles",
+    "at": "01:20:22",
+    "quote": "Did he mean that pigeons were a sign of imminent death?",
+    "confidence": "observed"
+   },
+   {
+    "value": "sickle keeps spirits away",
+    "source": "subtitles",
+    "at": "00:58:54",
+    "quote": "but they still place a sickle at the door to keep away evil spirits.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "investigator", "relation_to_threat": "stranger", "detail": "Kobayashi, the documentary maker", "quote": "Kobayashi disappeared after his house burnt down, and his wife Keiko was found dead in the ruins", "confidence": "sourced"},
-   {"value": "psychic child", "relation_to_threat": "stranger", "detail": "Kana Yano", "quote": "Kana Yano, a girl who exhibits strong psychic abilities on a variety television program, disappears", "confidence": "sourced"},
-   {"value": "actress", "relation_to_threat": "stranger", "detail": "Marika Matsumoto", "quote": "Marika exhibits signs of possession, fleeing into the forest", "confidence": "sourced"},
-   {"value": "neighbours", "relation_to_threat": "community", "quote": "Ishii's neighbor and her daughter died five days later in a mysterious car crash", "confidence": "sourced"}
+   {
+    "value": "investigator",
+    "relation_to_threat": "stranger",
+    "detail": "Kobayashi, the documentary maker",
+    "quote": "Kobayashi disappeared after his house burnt down, and his wife Keiko was found dead in the ruins",
+    "confidence": "sourced"
+   },
+   {
+    "value": "psychic child",
+    "relation_to_threat": "stranger",
+    "detail": "Kana Yano",
+    "quote": "Kana Yano, a girl who exhibits strong psychic abilities on a variety television program, disappears",
+    "confidence": "sourced"
+   },
+   {
+    "value": "actress",
+    "relation_to_threat": "stranger",
+    "detail": "Marika Matsumoto",
+    "quote": "Marika exhibits signs of possession, fleeing into the forest",
+    "confidence": "sourced"
+   },
+   {
+    "value": "neighbours",
+    "relation_to_threat": "community",
+    "quote": "Ishii's neighbor and her daughter died five days later in a mysterious car crash",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "everyone lost", "quote": "Keiko becomes possessed, pouring gasoline on herself and setting herself alight", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "A postscript reveals that Kobayashi is still missing", "confidence": "observed"}
+   {
+    "value": "everyone lost",
+    "quote": "Keiko becomes possessed, pouring gasoline on herself and setting herself alight",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat survives",
+    "quote": "A postscript reveals that Kobayashi is still missing",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:50:19",
+      "quote": "Kagutaba lives!"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "crying babies", "state": "heard through a wall", "when": "early", "role": "omen", "quote": "the sound of crying babies coming from her house", "confidence": "sourced"},
-   {"value": "pigeons", "state": "dead", "when": "early", "role": "omen", "quote": "find dead pigeons in the yard", "confidence": "sourced"},
-   {"value": "looped yarn and wire", "when": "middle", "role": "omen", "quote": "fashioning yarn and wires into interconnected loops in her sleep", "confidence": "sourced"},
-   {"value": "nooses", "when": "middle", "role": "threat", "quote": "hanged themselves in a park using nooses similar in fashion to Marika's loops", "confidence": "sourced"},
-   {"value": "dogs", "state": "slaughtered", "when": "late", "role": "omen", "quote": "find the villagers' dogs slaughtered near a secluded shrine in the woods", "confidence": "sourced"},
-   {"value": "fetuses", "state": "writhing", "when": "late", "role": "threat", "quote": "an apparition of Kana under a torii, surrounded by writhing fetuses", "confidence": "sourced"},
-   {"value": "scroll", "when": "late", "role": "clue", "quote": "a scroll depicting how Kagutaba was first summoned", "confidence": "sourced"},
-   {"value": "video camera", "state": "sent in a package", "when": "ending", "role": "clue", "quote": "a package arrives at his publisher containing his video camera", "confidence": "sourced"}
+   {
+    "value": "crying babies",
+    "state": "heard through a wall",
+    "when": "early",
+    "role": "omen",
+    "quote": "the sound of crying babies coming from her house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:05",
+      "quote": "It sounded like babies' voices."
+     }
+    ]
+   },
+   {
+    "value": "pigeons",
+    "state": "dead",
+    "when": "early",
+    "role": "omen",
+    "quote": "find dead pigeons in the yard",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:03",
+      "quote": "Watch out for the pigeons!"
+     }
+    ]
+   },
+   {
+    "value": "looped yarn and wire",
+    "when": "middle",
+    "role": "omen",
+    "quote": "fashioning yarn and wires into interconnected loops in her sleep",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:30",
+      "quote": "When I woke up yesterday morning, I found the yarn."
+     }
+    ]
+   },
+   {
+    "value": "ectoplasmic worms",
+    "when": "middle",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:32:48",
+    "quote": "The worms are all over, crawling, squirming...",
+    "confidence": "sourced",
+    "detail": "the psychic Hori's name for what he senses; later 'Maybe these worms are actually Kagutaba.'",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:10",
+      "quote": "Maybe these worms are actually Kagutaba."
+     }
+    ]
+   },
+   {
+    "value": "aluminum foil",
+    "when": "middle",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "00:31:48",
+    "quote": "The room's covered entirely with aluminum foil!",
+    "confidence": "sourced"
+   },
+   {
+    "value": "nooses",
+    "when": "middle",
+    "role": "threat",
+    "quote": "hanged themselves in a park using nooses similar in fashion to Marika's loops",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:29",
+      "quote": "They were hanging from the iron bar of the swing."
+     }
+    ]
+   },
+   {
+    "value": "sickle above the door",
+    "when": "middle",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "00:58:54",
+    "quote": "Those who left the village have a sickle above their front doors.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "drowned village",
+    "when": "middle",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:54:48",
+    "quote": "there used to be a village called Shimokage village. It's now at the bottom of a dam.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dogs",
+    "state": "slaughtered",
+    "when": "late",
+    "role": "omen",
+    "quote": "find the villagers' dogs slaughtered near a secluded shrine in the woods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:15",
+      "quote": "More dead dogs..."
+     }
+    ]
+   },
+   {
+    "value": "fetuses",
+    "state": "writhing",
+    "when": "late",
+    "role": "threat",
+    "quote": "an apparition of Kana under a torii, surrounded by writhing fetuses",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:46:28",
+      "quote": "She fed Kana the aborted babies... in an attempt to resurrect Kagutaba."
+     }
+    ]
+   },
+   {
+    "value": "scroll",
+    "when": "late",
+    "role": "clue",
+    "quote": "a scroll depicting how Kagutaba was first summoned",
+    "confidence": "sourced"
+   },
+   {
+    "value": "video camera",
+    "state": "sent in a package",
+    "when": "ending",
+    "role": "clue",
+    "quote": "a package arrives at his publisher containing his video camera",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "investigator vanishes, house burns", "when": "opening", "quote": "Kobayashi disappeared after his house burnt down", "confidence": "sourced"},
-   {"order": 2, "value": "strange neighbour investigated", "when": "early", "role": "trigger", "quote": "Kobayashi investigated a woman named Junko Ishii and her son", "confidence": "sourced"},
-   {"order": 3, "value": "demon's name heard", "when": "middle", "role": "clue", "quote": "captures a deep voice saying the word \"kagutaba.\"", "confidence": "sourced"},
-   {"order": 4, "value": "abandoned ritual uncovered", "when": "middle", "role": "turn", "quote": "The final ritual, which was filmed, was performed by a priest and his daughter", "confidence": "sourced"},
-   {"order": 5, "value": "mass suicide", "when": "middle", "quote": "Midori, along with six other people, including Osawa, hanged themselves in a park", "confidence": "sourced"},
-   {"order": 6, "value": "ritual performed again", "when": "late", "quote": "to perform the ritual to appease Kagutaba, hoping that doing so will free her", "confidence": "sourced"},
-   {"order": 7, "value": "child adopted", "when": "late", "role": "turn", "quote": "Kobayashi and his wife adopt the boy", "confidence": "sourced"},
-   {"order": 8, "value": "final tape shows destruction", "when": "ending", "quote": "As the house burns and Kobayashi struggles to get to his feet, the film abruptly ends", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "investigator vanishes, house burns",
+    "when": "opening",
+    "quote": "Kobayashi disappeared after his house burnt down",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:00",
+      "quote": "At night on April 12, Kobayashi's house burned down."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "strange neighbour investigated",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Kobayashi investigated a woman named Junko Ishii and her son",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:30",
+      "quote": "Who lives next door?"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "demon's name heard",
+    "when": "middle",
+    "role": "clue",
+    "quote": "captures a deep voice saying the word \"kagutaba.\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:45",
+      "quote": "The voice on the tape seems to be saying, Kagutaba."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "abandoned ritual uncovered",
+    "when": "middle",
+    "role": "turn",
+    "quote": "The final ritual, which was filmed, was performed by a priest and his daughter",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:07",
+      "quote": "\" The demon ritual was discontinued. \""
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "mass suicide",
+    "when": "middle",
+    "quote": "Midori, along with six other people, including Osawa, hanged themselves in a park",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:42",
+      "quote": "\" 7 bodies hanging from the swing. \""
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "ritual performed again",
+    "when": "late",
+    "quote": "to perform the ritual to appease Kagutaba, hoping that doing so will free her",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "child adopted",
+    "when": "late",
+    "role": "turn",
+    "quote": "Kobayashi and his wife adopt the boy",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "final tape shows destruction",
+    "when": "ending",
+    "quote": "As the house burns and Kobayashi struggles to get to his feet, the film abruptly ends",
+    "confidence": "sourced"
+   },
+   {
+    "value": "investigator still missing",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:54:31",
+    "quote": "\" Masafumi Kobayashi is still missing today. \"",
+    "confidence": "sourced",
+    "order": 9
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

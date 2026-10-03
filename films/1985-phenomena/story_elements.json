@@ -1,63 +1,433 @@
 {
  "film": "1985-phenomena",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "serial killer", "detail": "targeting young girls around the school", "quote": "a serial killer who is targeting young girls at and around the school", "confidence": "sourced"},
-   {"value": "deformed son", "detail": "Patau, Brückner's son", "quote": "Jennifer finds Brückner's son Patau, the result of the rape by the inmate, who has a hideously deformed face", "confidence": "sourced"},
-   {"value": "protective mother", "detail": "Frau Brückner", "quote": "confesses that she murdered McGregor and Geiger to protect her son", "confidence": "sourced"}
+   {
+    "value": "serial killer",
+    "detail": "targeting young girls around the school",
+    "quote": "a serial killer who is targeting young girls at and around the school",
+    "confidence": "sourced"
+   },
+   {
+    "value": "deformed son",
+    "detail": "Patau, Brückner's son",
+    "quote": "Jennifer finds Brückner's son Patau, the result of the rape by the inmate, who has a hideously deformed face",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:51:16",
+      "quote": "He was diseased... but he was my son."
+     }
+    ]
+   },
+   {
+    "value": "protective mother",
+    "detail": "Frau Brückner",
+    "quote": "confesses that she murdered McGregor and Geiger to protect her son",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:51:26",
+      "quote": "I killed that... that inspector and your professor friend,"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "child born of rape", "quote": "Brückner's son Patau, the result of the rape by the inmate", "confidence": "sourced"}
+   {
+    "value": "child born of rape",
+    "quote": "Brückner's son Patau, the result of the rape by the inmate",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to keep the dead", "detail": "killer keeps victims' bodies", "quote": "the killer is a necrophile who has been keeping his victims close to him post-mortem", "confidence": "sourced"},
-   {"value": "to protect a child", "quote": "she murdered McGregor and Geiger to protect her son", "confidence": "sourced"}
+   {
+    "value": "to keep the dead",
+    "detail": "killer keeps victims' bodies",
+    "quote": "the killer is a necrophile who has been keeping his victims close to him post-mortem",
+    "confidence": "sourced"
+   },
+   {
+    "value": "to protect a child",
+    "quote": "she murdered McGregor and Geiger to protect her son",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:51:32",
+      "quote": "to protect him,"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "rape", "quote": "a former staff member had been attacked 15 years before by one of the male inmates", "confidence": "sourced"}
+   {
+    "value": "rape",
+    "quote": "a former staff member had been attacked 15 years before by one of the male inmates",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "arriving at boarding school", "quote": "arrives at the Swiss Richard Wagner Academy for Girls, chaperoned by Frau Brückner", "confidence": "sourced"},
-   {"value": "witnessing a murder", "detail": "while sleepwalking", "quote": "At night, Jennifer sleepwalks through the academy and witnesses a student being murdered", "confidence": "sourced"}
+   {
+    "value": "arriving at boarding school",
+    "quote": "arrives at the Swiss Richard Wagner Academy for Girls, chaperoned by Frau Brückner",
+    "confidence": "sourced"
+   },
+   {
+    "value": "witnessing a murder",
+    "detail": "while sleepwalking",
+    "quote": "At night, Jennifer sleepwalks through the academy and witnesses a student being murdered",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:03",
+      "quote": "I'm sleepwalking."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "psychic link with insects", "quote": "she has psychic powers that allow her to communicate with insects", "confidence": "sourced"},
-   {"value": "cannot see own reflection", "quote": "Brückner explains that her son cannot stand to see his own reflection", "confidence": "sourced"}
+   {
+    "value": "psychic link with insects",
+    "quote": "she has psychic powers that allow her to communicate with insects",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:47",
+      "quote": "\" Do you know how? I communicate with insects. \""
+     }
+    ]
+   },
+   {
+    "value": "cannot see own reflection",
+    "quote": "Brückner explains that her son cannot stand to see his own reflection",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:46",
+      "quote": "He doesn't want to see his reflection."
+     }
+    ]
+   },
+   {
+    "value": "sleepwalker must say she is asleep",
+    "source": "subtitles",
+    "at": "00:32:45",
+    "quote": "If it happens to you again, you must say, \" I am sleepwalking.",
+    "confidence": "sourced",
+    "detail": "the doctor's instruction to wake herself"
+   }
   ],
   "who_suffers": [
-   {"value": "schoolgirls", "relation_to_threat": "stranger", "quote": "Vera is the first in a series of murders of young girls", "confidence": "sourced"},
-   {"value": "newcomer teenager", "relation_to_threat": "stranger", "detail": "Jennifer Corvino", "quote": "an American teenage girl (Connelly) at a remote Swiss boarding school", "confidence": "sourced"},
-   {"value": "investigators", "relation_to_threat": "stranger", "detail": "McGregor and Geiger", "quote": "That night, McGregor is murdered in his home in front of Inga", "confidence": "sourced"}
+   {
+    "value": "schoolgirls",
+    "relation_to_threat": "stranger",
+    "quote": "Vera is the first in a series of murders of young girls",
+    "confidence": "sourced"
+   },
+   {
+    "value": "newcomer teenager",
+    "relation_to_threat": "stranger",
+    "detail": "Jennifer Corvino",
+    "quote": "an American teenage girl (Connelly) at a remote Swiss boarding school",
+    "confidence": "sourced"
+   },
+   {
+    "value": "investigators",
+    "relation_to_threat": "stranger",
+    "detail": "McGregor and Geiger",
+    "quote": "That night, McGregor is murdered in his home in front of Inga",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:51:26",
+      "quote": "I killed that... that inspector and your professor friend,"
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "detail": "Patau burned, Brückner killed by the chimpanzee", "quote": "Inga appears and kills Brückner with a straight razor in retribution for McGregor's murder", "confidence": "sourced"},
-   {"value": "survivor", "quote": "With the ordeal over, Jennifer and Inga embrace", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "detail": "Patau burned, Brückner killed by the chimpanzee",
+    "quote": "Inga appears and kills Brückner with a straight razor in retribution for McGregor's murder",
+    "confidence": "sourced"
+   },
+   {
+    "value": "survivor",
+    "quote": "With the ordeal over, Jennifer and Inga embrace",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "cottage", "state": "isolated", "when": "opening", "role": "setting", "quote": "comes across a cottage and is beheaded by an unseen assailant, who retains her body", "confidence": "sourced"},
-   {"value": "chimpanzee", "state": "helper, avenger", "when": "early", "role": "weapon", "quote": "McGregor's chimpanzee, Inga, finds her and leads her to him", "confidence": "sourced"},
-   {"value": "firefly", "state": "guiding", "when": "early", "role": "clue", "quote": "is led by a firefly to the scene of Sophie's murder", "confidence": "sourced"},
-   {"value": "maggots", "state": "infesting", "when": "early", "role": "clue", "quote": "where she finds a maggot-infested glove", "confidence": "sourced"},
-   {"value": "swarm of flies", "state": "summoned", "when": "middle", "role": "weapon", "quote": "she summons a swarm of flies that covers the entire building", "confidence": "sourced"},
-   {"value": "covered mirrors", "when": "late", "role": "clue", "quote": "Jennifer notices that all the mirrors are covered", "confidence": "sourced"},
-   {"value": "pool of corpses", "state": "maggot-infested", "when": "late", "role": "setting", "quote": "falls into a pool filled with maggot-infested corpses", "confidence": "sourced"},
-   {"value": "straight razor", "when": "ending", "role": "weapon", "quote": "kills Brückner with a straight razor", "confidence": "sourced"}
+   {
+    "value": "cottage",
+    "state": "isolated",
+    "when": "opening",
+    "role": "setting",
+    "quote": "comes across a cottage and is beheaded by an unseen assailant, who retains her body",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:36",
+      "quote": "Is anyone home?"
+     }
+    ]
+   },
+   {
+    "value": "chimpanzee",
+    "state": "helper, avenger",
+    "when": "early",
+    "role": "weapon",
+    "quote": "McGregor's chimpanzee, Inga, finds her and leads her to him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:40",
+      "quote": "Oh, I forgot to introduce you. This is Inga."
+     }
+    ]
+   },
+   {
+    "value": "bee",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:13:09",
+    "quote": "It won't hurt me. Insects never hurt me.",
+    "confidence": "sourced",
+    "detail": "a bee lands on Jennifer on her first day; she lets it walk on her"
+   },
+   {
+    "value": "warm mountain wind",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:33:26",
+    "quote": "The FÃ ¶ hn. A very particular wind.",
+    "confidence": "sourced",
+    "detail": "the Föhn wind, blamed for madness and sleepwalking"
+   },
+   {
+    "value": "firefly",
+    "state": "guiding",
+    "when": "early",
+    "role": "clue",
+    "quote": "is led by a firefly to the scene of Sophie's murder",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:35",
+      "quote": "An insect, a firefly, led me to it."
+     }
+    ]
+   },
+   {
+    "value": "maggots",
+    "state": "infesting",
+    "when": "early",
+    "role": "clue",
+    "quote": "where she finds a maggot-infested glove",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:00",
+      "quote": "But why the maggot?"
+     }
+    ]
+   },
+   {
+    "value": "swarm of flies",
+    "state": "summoned",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "she summons a swarm of flies that covers the entire building",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:22",
+      "quote": "Look at her, the Lady of the flies."
+     }
+    ]
+   },
+   {
+    "value": "great sarcophagus fly",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:02:24",
+    "quote": "Larvae of the Great Sarcophagus.",
+    "confidence": "sourced",
+    "detail": "a carrion fly that leads Jennifer to the killer's lair",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:01",
+      "quote": "because the Sarcophagus will go crazy"
+     }
+    ]
+   },
+   {
+    "value": "covered mirrors",
+    "when": "late",
+    "role": "clue",
+    "quote": "Jennifer notices that all the mirrors are covered",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:44",
+      "quote": "I cover the mirrors for his sake."
+     }
+    ]
+   },
+   {
+    "value": "pool of corpses",
+    "state": "maggot-infested",
+    "when": "late",
+    "role": "setting",
+    "quote": "falls into a pool filled with maggot-infested corpses",
+    "confidence": "sourced"
+   },
+   {
+    "value": "straight razor",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "kills Brückner with a straight razor",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "girl beheaded", "when": "opening", "quote": "comes across a cottage and is beheaded by an unseen assailant, who retains her body", "confidence": "sourced"},
-   {"order": 2, "value": "newcomer arrives at school", "when": "early", "role": "trigger", "quote": "arrives at the Swiss Richard Wagner Academy for Girls", "confidence": "sourced"},
-   {"order": 3, "value": "roommate killed", "when": "early", "quote": "The following night, the murderer kills Sophie", "confidence": "sourced"},
-   {"order": 4, "value": "outcast summons insects", "when": "middle", "role": "turn", "quote": "she summons a swarm of flies that covers the entire building", "confidence": "sourced"},
-   {"order": 5, "value": "mentor murdered", "when": "middle", "quote": "That night, McGregor is murdered in his home in front of Inga", "confidence": "sourced"},
-   {"order": 6, "value": "trusted adult revealed as threat", "when": "late", "role": "turn", "quote": "She attempts to call Morris, but is knocked unconscious by Brückner", "confidence": "sourced"},
-   {"order": 7, "value": "monster burned in lake", "when": "ending", "quote": "Patau grabs her, but he is immolated by the flames", "confidence": "sourced"},
-   {"order": 8, "value": "animal avenges master", "when": "ending", "quote": "Inga appears and kills Brückner with a straight razor in retribution for McGregor's murder", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "girl beheaded",
+    "when": "opening",
+    "quote": "comes across a cottage and is beheaded by an unseen assailant, who retains her body",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:29",
+      "quote": "So, we could say that she lost her head"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "newcomer arrives at school",
+    "when": "early",
+    "role": "trigger",
+    "quote": "arrives at the Swiss Richard Wagner Academy for Girls",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "sleepwalker sees a killing",
+    "when": "early",
+    "role": "trigger",
+    "source": "subtitles",
+    "at": "00:26:03",
+    "quote": "I'm sleepwalking.",
+    "confidence": "sourced",
+    "detail": "Jennifer wakes on a roof after witnessing a murder"
+   },
+   {
+    "order": 4,
+    "value": "roommate killed",
+    "when": "early",
+    "quote": "The following night, the murderer kills Sophie",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "insects give a clue",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:51:35",
+    "quote": "An insect, a firefly, led me to it.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "outcast summons insects",
+    "when": "middle",
+    "role": "turn",
+    "quote": "she summons a swarm of flies that covers the entire building",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:22",
+      "quote": "Look at her, the Lady of the flies."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "mentor murdered",
+    "when": "middle",
+    "quote": "That night, McGregor is murdered in his home in front of Inga",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "trusted adult revealed as threat",
+    "when": "late",
+    "role": "turn",
+    "quote": "She attempts to call Morris, but is knocked unconscious by Brückner",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:51:39",
+      "quote": "Why don't you call your insects?"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "monster burned in lake",
+    "when": "ending",
+    "quote": "Patau grabs her, but he is immolated by the flames",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "animal avenges master",
+    "when": "ending",
+    "quote": "Inga appears and kills Brückner with a straight razor in retribution for McGregor's murder",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

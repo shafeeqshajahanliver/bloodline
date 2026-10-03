@@ -1,57 +1,412 @@
 {
  "film": "2005-wolf-creek",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "serial killer", "detail": "Mick Taylor", "quote": "three backpackers who find themselves taken captive and subsequently hunted by Mick Taylor, a serial killer", "confidence": "sourced"}
+   {
+    "value": "serial killer",
+    "detail": "Mick Taylor",
+    "quote": "three backpackers who find themselves taken captive and subsequently hunted by Mick Taylor, a serial killer",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "based on real crimes", "quote": "reminiscent of the real-life murders of backpackers by Ivan Milat in the 1990s and Bradley Murdoch in 2001", "confidence": "sourced"}
+   {
+    "value": "based on real crimes",
+    "quote": "reminiscent of the real-life murders of backpackers by Ivan Milat in the 1990s and Bradley Murdoch in 2001",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "hunting people", "quote": "taken captive and subsequently hunted", "confidence": "sourced"},
-   {"value": "sadistic pleasure", "quote": "he brags about having done the same for months to another woman", "confidence": "observed"}
+   {
+    "value": "hunting people",
+    "quote": "taken captive and subsequently hunted",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:33",
+      "quote": "You like to play, don't ya?"
+     }
+    ]
+   },
+   {
+    "value": "sadistic pleasure",
+    "quote": "he brags about having done the same for months to another woman",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:45",
+      "quote": "Off with your little pinkies."
+     }
+    ]
+   },
+   {
+    "value": "culling vermin",
+    "source": "subtitles",
+    "at": "00:49:30",
+    "quote": "I'm doing people a service by taking out a few roos.",
+    "confidence": "observed"
+   }
   ],
   "trigger": [
-   {"value": "a journey", "detail": "backpacking across the outback", "quote": "two British tourists, Liz Hunter and Kristy Earl, are backpacking across Australia", "confidence": "sourced"},
-   {"value": "accepting help from a stranger", "quote": "Mick Taylor comes across them and offers to tow them to his camp to repair the car", "confidence": "sourced"}
+   {
+    "value": "a journey",
+    "detail": "backpacking across the outback",
+    "quote": "two British tourists, Liz Hunter and Kristy Earl, are backpacking across Australia",
+    "confidence": "sourced"
+   },
+   {
+    "value": "accepting help from a stranger",
+    "quote": "Mick Taylor comes across them and offers to tow them to his camp to repair the car",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "isolation, no escape", "quote": "an abandoned mining site several hours south of Wolf Creek", "confidence": "observed"},
-   {"value": "stalked in advance", "quote": "realising he was following them long before they got to Wolf Creek Crater", "confidence": "sourced"}
+   {
+    "value": "isolation, no escape",
+    "quote": "an abandoned mining site several hours south of Wolf Creek",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:51",
+      "quote": "There's just nothing out here."
+     }
+    ]
+   },
+   {
+    "value": "stalked in advance",
+    "quote": "realising he was following them long before they got to Wolf Creek Crater",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "backpackers", "relation_to_threat": "stranger", "quote": "Liz Hunter and Kristy Earl, are backpacking across Australia with Ben Mitchell", "confidence": "sourced"},
-   {"value": "good samaritan", "relation_to_threat": "stranger", "quote": "He attempts to help her but is shot dead by Mick with a hunting rifle", "confidence": "sourced"}
+   {
+    "value": "backpackers",
+    "relation_to_threat": "stranger",
+    "quote": "Liz Hunter and Kristy Earl, are backpacking across Australia with Ben Mitchell",
+    "confidence": "sourced"
+   },
+   {
+    "value": "good samaritan",
+    "relation_to_threat": "stranger",
+    "quote": "He attempts to help her but is shot dead by Mick with a hunting rifle",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat survives", "quote": "The film ends with Mick walking into the sunset with his rifle", "confidence": "sourced"},
-   {"value": "lone survivor disbelieved", "quote": "the alleged unreliability of the only witness", "confidence": "sourced"}
+   {
+    "value": "threat survives",
+    "quote": "The film ends with Mick walking into the sunset with his rifle",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lone survivor disbelieved",
+    "quote": "the alleged unreliability of the only witness",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "crater", "when": "early", "role": "setting", "quote": "camp at the Wolf Creek Crater", "confidence": "sourced"},
-   {"value": "stopped watches", "when": "early", "role": "omen", "quote": "their watches have stopped and the car will not start", "confidence": "sourced"},
-   {"value": "drugged water", "when": "early", "role": "trigger", "quote": "He then gives the group water which causes them to fall unconscious", "confidence": "sourced"},
-   {"value": "hanging cadaver", "state": "mutilated", "when": "middle", "role": "omen", "quote": "another woman whose mutilated cadaver is hanging in the shed", "confidence": "sourced"},
-   {"value": "video camera", "when": "middle", "role": "clue", "quote": "including video cameras. She watches the playback on one of them", "confidence": "sourced"},
-   {"value": "bowie knife", "when": "middle", "role": "weapon", "quote": "Mick appears in the backseat and stabs her with a bowie knife", "confidence": "sourced"},
-   {"value": "mock crucifix", "when": "late", "quote": "awakens nailed to a mock crucifix in a mine shaft", "confidence": "sourced"},
-   {"value": "caged dogs", "state": "aggressive", "when": "late", "quote": "aggressive dogs in a cage", "confidence": "sourced"}
+   {
+    "value": "crater",
+    "when": "early",
+    "role": "setting",
+    "quote": "camp at the Wolf Creek Crater",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:29",
+      "quote": "You're looking at one of the biggest meteorite craters on the planet."
+     }
+    ]
+   },
+   {
+    "value": "stopped watches",
+    "when": "early",
+    "role": "omen",
+    "quote": "their watches have stopped and the car will not start",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:20",
+      "quote": "Uh, don't know. Watch has stopped."
+     }
+    ]
+   },
+   {
+    "value": "drugged water",
+    "when": "early",
+    "role": "trigger",
+    "quote": "He then gives the group water which causes them to fall unconscious",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:28",
+      "quote": "Nothing like rainwater from the top end."
+     }
+    ]
+   },
+   {
+    "value": "hanging cadaver",
+    "state": "mutilated",
+    "when": "middle",
+    "role": "omen",
+    "quote": "another woman whose mutilated cadaver is hanging in the shed",
+    "confidence": "sourced"
+   },
+   {
+    "value": "video camera",
+    "when": "middle",
+    "role": "clue",
+    "quote": "including video cameras. She watches the playback on one of them",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bowie knife",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "Mick appears in the backseat and stabs her with a bowie knife",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:45",
+      "quote": "Saying cool stuff like, \"that's not a knife, this is a knife.\""
+     },
+     {
+      "source": "subtitles",
+      "at": "01:23:49",
+      "quote": "That's not a knife. This is a knife."
+     }
+    ]
+   },
+   {
+    "value": "mock crucifix",
+    "when": "late",
+    "quote": "awakens nailed to a mock crucifix in a mine shaft",
+    "confidence": "sourced"
+   },
+   {
+    "value": "caged dogs",
+    "state": "aggressive",
+    "when": "late",
+    "quote": "aggressive dogs in a cage",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:15",
+      "quote": "[loud barking]"
+     }
+    ]
+   },
+   {
+    "value": "ufo stories",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:14:47",
+    "quote": "You're near the world's fifth biggest UFO sighting area.",
+    "detail": "campfire tales of cars stopping near UFOs, echoed when the car dies",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:47",
+      "quote": "his carjust stopped in the middle of the road,"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:36:57",
+      "quote": "We thought it was aliens."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "skull on the trail",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:26:28",
+    "quote": "There's another skull. Look.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pig hunting with dogs",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:47:38",
+    "quote": "Get the dogs onto' em, and then you go in with a knife.",
+    "detail": "Mick's culling stories foreshadow how he hunts people",
+    "confidence": "sourced"
+   },
+   {
+    "value": "head on a stick",
+    "state": "spine severed",
+    "when": "late",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "01:24:55",
+    "quote": "is called \"making a head on a stick.\"",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:59",
+      "quote": "Because once your spine's severed, right..."
+     }
+    ],
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "road trip begins", "when": "opening", "quote": "Ben buys a dilapidated car for their journey from Broome", "confidence": "sourced"},
-   {"order": 2, "value": "stranded in the wild", "when": "early", "role": "omen", "quote": "they discover that their watches have stopped and the car will not start", "confidence": "sourced"},
-   {"order": 3, "value": "friendly stranger drugs them", "when": "early", "role": "trigger", "quote": "He then gives the group water which causes them to fall unconscious", "confidence": "sourced"},
-   {"order": 4, "value": "wake as captives", "when": "middle", "quote": "Liz awakens gagged and tied in a shed", "confidence": "sourced"},
-   {"order": 5, "value": "evidence of earlier victims", "when": "middle", "role": "clue", "quote": "is horrified to see Mick \"helping\" other travellers stranded at Wolf Creek", "confidence": "sourced"},
-   {"order": 6, "value": "women killed", "when": "late", "quote": "She attempts to crawl away, but is shot dead", "confidence": "sourced"},
-   {"order": 7, "value": "one escapes", "when": "late", "quote": "He is discovered by a Swedish couple who take him to Kalbarri", "confidence": "sourced"},
-   {"order": 8, "value": "killer walks free", "when": "ending", "quote": "The film ends with Mick walking into the sunset with his rifle", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "road trip begins",
+    "when": "opening",
+    "quote": "Ben buys a dilapidated car for their journey from Broome",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:14",
+      "quote": "The three of us are going to be stuck in a car together for three weeks,"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "stranded in the wild",
+    "when": "early",
+    "role": "omen",
+    "quote": "they discover that their watches have stopped and the car will not start",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:59",
+      "quote": "I mean, the watches and the car not working."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "stories of hunting animals",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:47:10",
+    "quote": "Roos, horses, pigs, buffalo. You name it.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "friendly stranger drugs them",
+    "when": "early",
+    "role": "trigger",
+    "quote": "He then gives the group water which causes them to fall unconscious",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:21",
+      "quote": "I have plenty of water there."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "wake as captives",
+    "when": "middle",
+    "quote": "Liz awakens gagged and tied in a shed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:16",
+      "quote": "Why are you doing this?"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "evidence of earlier victims",
+    "when": "middle",
+    "role": "clue",
+    "quote": "is horrified to see Mick \"helping\" other travellers stranded at Wolf Creek",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:49",
+      "quote": "Nothing like rainwater from the top end."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "women killed",
+    "when": "late",
+    "quote": "She attempts to crawl away, but is shot dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:55",
+      "quote": "is called \"making a head on a stick.\""
+     },
+     {
+      "source": "subtitles",
+      "at": "01:31:58",
+      "quote": "The winner!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "one escapes",
+    "when": "late",
+    "quote": "He is discovered by a Swedish couple who take him to Kalbarri",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:03",
+      "quote": "[Ben] Help!"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "killer walks free",
+    "when": "ending",
+    "quote": "The film ends with Mick walking into the sunset with his rifle",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

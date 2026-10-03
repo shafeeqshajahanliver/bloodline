@@ -1,54 +1,399 @@
 {
  "film": "2017-one-cut-of-the-dead",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "zombies", "detail": "staged within a film-within-the-film", "quote": "a zombie horror film for live television that must be shot in a single take", "confidence": "sourced"},
-   {"value": "obsessed director", "detail": "Higurashi, in the film-within-the-film", "quote": "Higurashi facilitates an attack by zombified Kasahara while he films", "confidence": "sourced"}
+   {
+    "value": "zombies",
+    "detail": "staged within a film-within-the-film",
+    "quote": "a zombie horror film for live television that must be shot in a single take",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:50",
+      "quote": "He's dead! He's really dead!"
+     }
+    ]
+   },
+   {
+    "value": "obsessed director",
+    "detail": "Higurashi, in the film-within-the-film",
+    "quote": "Higurashi facilitates an attack by zombified Kasahara while he films",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:17",
+      "quote": "We keep rolling!"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "summoned by ritual", "detail": "within the fiction", "quote": "arranges for a blood pentagram to be painted to revive real zombies per the plant's haunted past", "confidence": "sourced"},
-   {"value": "made by someone", "detail": "the whole horror is a staged production", "quote": "then goes back in time to show the origins and production of the project from the perspective of the cast and crew", "confidence": "sourced"}
+   {
+    "value": "summoned by ritual",
+    "detail": "within the fiction",
+    "quote": "arranges for a blood pentagram to be painted to revive real zombies per the plant's haunted past",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:41",
+      "quote": "To revive the thing, chant a spell of blood."
+     }
+    ]
+   },
+   {
+    "value": "made by someone",
+    "detail": "the whole horror is a staged production",
+    "quote": "then goes back in time to show the origins and production of the project from the perspective of the cast and crew",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:22",
+      "quote": "The spell revived the zombies. It's on the script!"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "success", "detail": "the in-film director's ambition", "quote": "desperate for film success due to mounting debts and frustrated at the actors' work", "confidence": "sourced"}
+   {
+    "value": "success",
+    "detail": "the in-film director's ambition",
+    "quote": "desperate for film success due to mounting debts and frustrated at the actors' work",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:05",
+      "quote": "And got into debt as well."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "making a film", "quote": "is approached by network executives to direct a low-budget zombie film in one take to launch the new Zombie Channel", "confidence": "sourced"}
+   {
+    "value": "making a film",
+    "quote": "is approached by network executives to direct a low-budget zombie film in one take to launch the new Zombie Channel",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:42",
+      "quote": "Whilst shooting of an indie zombie film, real zombies attack the crew."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "bite spreads infection", "quote": "The cameraman turns into a zombie and bites assistant director Kasahara, turning him into one as well", "confidence": "sourced"},
-   {"value": "single unbroken take", "quote": "a live show, so no reshoots or delays are possible", "confidence": "sourced"}
+   {
+    "value": "bite spreads infection",
+    "quote": "The cameraman turns into a zombie and bites assistant director Kasahara, turning him into one as well",
+    "confidence": "sourced"
+   },
+   {
+    "value": "single unbroken take",
+    "quote": "a live show, so no reshoots or delays are possible",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:55",
+      "quote": "Once the camera starts rolling we can't turn back."
+     }
+    ]
+   },
+   {
+    "value": "shout pom to escape",
+    "source": "subtitles",
+    "at": "00:41:19",
+    "quote": "Pom! - Out loud. This is the key.",
+    "confidence": "sourced",
+    "detail": "a self-defence move that works in both halves of the film"
+   }
   ],
   "who_suffers": [
-   {"value": "film crew", "relation_to_threat": "stranger", "quote": "the cast and crew of a low-budget zombie film called True Fear are shooting at an abandoned water filtration plant", "confidence": "sourced"},
-   {"value": "father and daughter", "relation_to_threat": "family", "detail": "Takayuki and Mao, reconnecting through the shoot", "quote": "accepts in hopes of reconnecting with his daughter Mao, a horror movie fanatic", "confidence": "sourced"}
+   {
+    "value": "film crew",
+    "relation_to_threat": "stranger",
+    "quote": "the cast and crew of a low-budget zombie film called True Fear are shooting at an abandoned water filtration plant",
+    "confidence": "sourced"
+   },
+   {
+    "value": "father and daughter",
+    "relation_to_threat": "family",
+    "detail": "Takayuki and Mao, reconnecting through the shoot",
+    "quote": "accepts in hopes of reconnecting with his daughter Mao, a horror movie fanatic",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:38",
+      "quote": "is causing me to lose my daughter."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "final girl survives", "detail": "within the fiction", "quote": "she ends the first section by standing on the blood pentagram in a trance-like state", "confidence": "sourced"},
-   {"value": "horror revealed as staged", "quote": "The faux-crane shot is successful, and the real cast and crew are elated at the successful filming", "confidence": "sourced"}
+   {
+    "value": "final girl survives",
+    "detail": "within the fiction",
+    "quote": "she ends the first section by standing on the blood pentagram in a trance-like state",
+    "confidence": "sourced"
+   },
+   {
+    "value": "horror revealed as staged",
+    "quote": "The faux-crane shot is successful, and the real cast and crew are elated at the successful filming",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:37",
+      "quote": "Okay, cut!"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "blood pentagram", "when": "opening", "role": "trigger", "quote": "arranges for a blood pentagram to be painted to revive real zombies", "confidence": "sourced"},
-   {"value": "abandoned plant", "when": "opening", "role": "setting", "quote": "shooting at an abandoned water filtration plant", "confidence": "sourced"},
-   {"value": "axe", "when": "middle", "role": "weapon", "quote": "Offscreen, Ko kills Nao with an axe to save Chinatsu", "confidence": "sourced"},
-   {"value": "zombie blood", "when": "early", "role": "symbol", "quote": "Nao decapitates the zombified sound engineer and is splattered with zombie blood", "confidence": "sourced"},
-   {"value": "camera", "when": "late", "role": "turn", "quote": "with Mao having to hold the camera standing atop Takayuki's shoulders", "confidence": "sourced"},
-   {"value": "human pyramid", "when": "ending", "role": "symbol", "quote": "forcing the real cast and crew to form a human pyramid in order to mimic a crane shot", "confidence": "sourced"}
+   {
+    "value": "blood pentagram",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "arranges for a blood pentagram to be painted to revive real zombies",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:33",
+      "quote": "I threw the blood already."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:04:41",
+      "quote": "The Director wants all the fake blood on the rooftop."
+     }
+    ]
+   },
+   {
+    "value": "abandoned plant",
+    "when": "opening",
+    "role": "setting",
+    "quote": "shooting at an abandoned water filtration plant",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:23",
+      "quote": "this place was built for water filtration."
+     }
+    ]
+   },
+   {
+    "value": "axe",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "Offscreen, Ko kills Nao with an axe to save Chinatsu",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:34",
+      "quote": "You know this is a real axe? So damn dangerous."
+     }
+    ]
+   },
+   {
+    "value": "zombie blood",
+    "when": "early",
+    "role": "symbol",
+    "quote": "Nao decapitates the zombified sound engineer and is splattered with zombie blood",
+    "confidence": "sourced"
+   },
+   {
+    "value": "camera",
+    "when": "late",
+    "role": "turn",
+    "quote": "with Mao having to hold the camera standing atop Takayuki's shoulders",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:03",
+      "quote": "I'm serious! Stop her! Stop the camera!"
+     }
+    ]
+   },
+   {
+    "value": "keepsake photo",
+    "when": "middle",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:56:27",
+    "quote": "Who's this? - My daughter.",
+    "confidence": "observed",
+    "detail": "the director carries a picture of his daughter as a charm"
+   },
+   {
+    "value": "human pyramid",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "forcing the real cast and crew to form a human pyramid in order to mimic a crane shot",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:13",
+      "quote": "No crane. - What? It's broken."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "ritual raises zombies", "when": "opening", "role": "trigger", "quote": "arranges for a blood pentagram to be painted to revive real zombies per the plant's haunted past", "confidence": "sourced"},
-   {"order": 2, "value": "crew turned one by one", "when": "early", "quote": "The cameraman turns into a zombie and bites assistant director Kasahara", "confidence": "sourced"},
-   {"order": 3, "value": "survivors turn on each other", "when": "early", "quote": "Nao attempts to kill Chinatsu and chases her, dispatching the zombies in the process", "confidence": "sourced"},
-   {"order": 4, "value": "final girl kills the director", "when": "middle", "quote": "Chinatsu kills Higurashi, and she ends the first section by standing on the blood pentagram", "confidence": "sourced"},
-   {"order": 5, "value": "flashback to the commission", "when": "middle", "role": "turn", "quote": "The second section of the film is a flashback involving the personal lives of the fictional cast and crew", "confidence": "sourced"},
-   {"order": 6, "value": "chaos behind the scenes", "when": "late", "role": "turn", "quote": "The third section of the film depicts the chaotic shooting of One Cut of the Dead from behind the scenes", "confidence": "sourced"},
-   {"order": 7, "value": "family completes the shot", "when": "ending", "quote": "The faux-crane shot is successful, and the real cast and crew are elated at the successful filming", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "forty-second take",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:20",
+    "quote": "That was the 42nd.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "legend of the dead revived",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:06:39",
+    "quote": "Like... bringing the dead back to life.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "ritual raises zombies",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "arranges for a blood pentagram to be painted to revive real zombies per the plant's haunted past",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:33",
+      "quote": "I threw the blood already."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "crew turned one by one",
+    "when": "early",
+    "quote": "The cameraman turns into a zombie and bites assistant director Kasahara",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:04",
+      "quote": "Wow, who made you a zombie? The director?"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "survivors turn on each other",
+    "when": "early",
+    "quote": "Nao attempts to kill Chinatsu and chases her, dispatching the zombies in the process",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:03",
+      "quote": "I'm serious! Stop her! Stop the camera!"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "final girl kills the director",
+    "when": "middle",
+    "quote": "Chinatsu kills Higurashi, and she ends the first section by standing on the blood pentagram",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "flashback to the commission",
+    "when": "middle",
+    "role": "turn",
+    "quote": "The second section of the film is a flashback involving the personal lives of the fictional cast and crew",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:57",
+      "quote": "Okay, cut! One month ago.."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "chaos behind the scenes",
+    "when": "late",
+    "role": "turn",
+    "quote": "The third section of the film depicts the chaotic shooting of One Cut of the Dead from behind the scenes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:29",
+      "quote": "She's ignoring the script!"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "family completes the shot",
+    "when": "ending",
+    "quote": "The faux-crane shot is successful, and the real cast and crew are elated at the successful filming",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:56",
+      "quote": "Crane. - Huh?"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "final cut called",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:30:37",
+    "quote": "Okay, cut!",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

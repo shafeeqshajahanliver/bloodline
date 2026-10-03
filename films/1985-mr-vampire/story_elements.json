@@ -1,60 +1,445 @@
 {
  "film": "1985-mr-vampire",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "hopping corpse", "detail": "jiangshi, Yam's dead father", "quote": "The vampire of the film is based on the jiangshi, the hopping corpses of Chinese folklore", "confidence": "sourced"},
-   {"value": "seductive ghost", "detail": "a female spirit who seduces Sang", "quote": "He soon deduces she is a spirit, but she uses her supernatural power to seduce him", "confidence": "sourced"}
+   {
+    "value": "hopping corpse",
+    "detail": "jiangshi, Yam's dead father",
+    "quote": "The vampire of the film is based on the jiangshi, the hopping corpses of Chinese folklore",
+    "confidence": "sourced"
+   },
+   {
+    "value": "seductive ghost",
+    "detail": "a female spirit who seduces Sang",
+    "quote": "He soon deduces she is a spirit, but she uses her supernatural power to seduce him",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "undecayed corpse", "quote": "Kau notices the body, instead of in a decomposed state, is still intact", "confidence": "sourced"}
+   {
+    "value": "undecayed corpse",
+    "quote": "Kau notices the body, instead of in a decomposed state, is still intact",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:40",
+      "quote": "Corpses turn into vampires because they have one last breath."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to kill its family", "quote": "It heads straight for Yam's home and savagely kills his son", "confidence": "sourced"},
-   {"value": "a lover", "detail": "the spirit wants Sang", "quote": "Saddened she can no longer be with Sang, the spirit flies away", "confidence": "sourced"}
+   {
+    "value": "to kill its family",
+    "quote": "It heads straight for Yam's home and savagely kills his son",
+    "confidence": "sourced"
+   },
+   {
+    "value": "a lover",
+    "detail": "the spirit wants Sang",
+    "quote": "Saddened she can no longer be with Sang, the spirit flies away",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:44",
+      "quote": "If I let her go, then she won't let you go!"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "disturbing a grave", "detail": "reburial for family prosperity", "quote": "to remove Yam's deceased father from his grave and rebury him, with the hopes that doing so will bring more prosperity", "confidence": "sourced"},
-   {"value": "ritual done carelessly", "quote": "forget to line the bottom of the coffin, causing the vampire to break out", "confidence": "sourced"}
+   {
+    "value": "disturbing a grave",
+    "detail": "reburial for family prosperity",
+    "quote": "to remove Yam's deceased father from his grave and rebury him, with the hopes that doing so will bring more prosperity",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:33",
+      "quote": "' Twenty years from now, the coffin must be reburied'."
+     }
+    ]
+   },
+   {
+    "value": "ritual done carelessly",
+    "quote": "forget to line the bottom of the coffin, causing the vampire to break out",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "contained by enchanted ink", "quote": "Choi and Sang line the coffin with enchanted ink to safeguard the body", "confidence": "sourced"},
-   {"value": "hides by day", "quote": "before going into hiding by dawn", "confidence": "sourced"},
-   {"value": "bite spreads vampirism", "quote": "after examining Choi's wounds, Kau claims he too may become a vampire", "confidence": "sourced"},
-   {"value": "cured by glutinous rice", "quote": "feed Choi glutinous rice, claiming it may decrease the vampire's venom", "confidence": "sourced"},
-   {"value": "destroyed by fire", "quote": "they manage to destroy the vampire by burning it alive", "confidence": "sourced"}
+   {
+    "value": "contained by enchanted ink",
+    "quote": "Choi and Sang line the coffin with enchanted ink to safeguard the body",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:59",
+      "quote": "Pluck the ink lines over the coffin. Pluck over the entire coffin."
+     }
+    ]
+   },
+   {
+    "value": "hides by day",
+    "quote": "before going into hiding by dawn",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bite spreads vampirism",
+    "quote": "after examining Choi's wounds, Kau claims he too may become a vampire",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cured by glutinous rice",
+    "quote": "feed Choi glutinous rice, claiming it may decrease the vampire's venom",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:19",
+      "quote": "Glutinous rice can eliminate the corpse's poison, and prevent vampirification."
+     }
+    ]
+   },
+   {
+    "value": "destroyed by fire",
+    "quote": "they manage to destroy the vampire by burning it alive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:05",
+      "quote": "If you have no objection, burn him on a lychee wood pyre."
+     }
+    ]
+   },
+   {
+    "value": "hold your breath to hide",
+    "source": "subtitles",
+    "at": "00:37:34",
+    "quote": "If you meet a vampire, don't breathe. Then you'll be alright.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "vertical burial",
+    "detail": "the grave was meant to bring the family luck",
+    "source": "subtitles",
+    "at": "00:17:14",
+    "quote": "\" If an ancestor is buried vertically, the next generation will be fine. \"",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "family", "relation_to_threat": "family", "detail": "the Yam family", "quote": "It heads straight for Yam's home and savagely kills his son", "confidence": "sourced"},
-   {"value": "apprentices", "relation_to_threat": "stranger", "detail": "Choi and Sang", "quote": "As Sang tries to free himself, Choi turns into a vampire and attacks him", "confidence": "sourced"},
-   {"value": "priest", "relation_to_threat": "stranger", "detail": "Master Kau", "quote": "Master Kau makes a living as a Taoist priest who performs magic that maintains control over spirits", "confidence": "sourced"}
+   {
+    "value": "family",
+    "relation_to_threat": "family",
+    "detail": "the Yam family",
+    "quote": "It heads straight for Yam's home and savagely kills his son",
+    "confidence": "sourced"
+   },
+   {
+    "value": "apprentices",
+    "relation_to_threat": "stranger",
+    "detail": "Choi and Sang",
+    "quote": "As Sang tries to free himself, Choi turns into a vampire and attacks him",
+    "confidence": "sourced"
+   },
+   {
+    "value": "priest",
+    "relation_to_threat": "stranger",
+    "detail": "Master Kau",
+    "quote": "Master Kau makes a living as a Taoist priest who performs magic that maintains control over spirits",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "they manage to destroy the vampire by burning it alive", "confidence": "sourced"},
-   {"value": "victim restored", "quote": "Kau restores Choi's health and turns him back to human", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "they manage to destroy the vampire by burning it alive",
+    "confidence": "sourced"
+   },
+   {
+    "value": "victim restored",
+    "quote": "Kau restores Choi's health and turns him back to human",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "talismans and amulets", "when": "opening", "role": "weapon", "quote": "a large house protected from the spiritual world with talismans and amulets", "confidence": "sourced"},
-   {"value": "coffin", "state": "raised", "when": "early", "role": "trigger", "quote": "during the raising of the coffin, Kau notices the body", "confidence": "sourced"},
-   {"value": "intact corpse", "when": "early", "role": "omen", "quote": "the body, instead of in a decomposed state, is still intact", "confidence": "sourced"},
-   {"value": "enchanted ink", "state": "incomplete", "when": "early", "role": "weapon", "quote": "line the coffin with enchanted ink to safeguard the body", "confidence": "sourced"},
-   {"value": "glutinous rice", "state": "adulterated", "when": "middle", "role": "weapon", "quote": "the shady merchant deliberately mixes different kinds of rice in the bag", "confidence": "sourced"},
-   {"value": "ghoul", "state": "transformed", "when": "middle", "role": "threat", "quote": "The spirit transforms into a hideous ghoul and attempts to kill Kau", "confidence": "sourced"}
+   {
+    "value": "corpses walking in line",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:06:56",
+    "quote": "going home, lined up in a row. Step-by-step, out of the mortuary.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "talismans and amulets",
+    "when": "opening",
+    "role": "weapon",
+    "quote": "a large house protected from the spiritual world with talismans and amulets",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:24",
+      "quote": "Here, stick this talisman on his forehead."
+     }
+    ]
+   },
+   {
+    "value": "coffin",
+    "state": "raised",
+    "when": "early",
+    "role": "trigger",
+    "quote": "during the raising of the coffin, Kau notices the body",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:11",
+      "quote": "Open the coffin. Dad!"
+     }
+    ]
+   },
+   {
+    "value": "intact corpse",
+    "when": "early",
+    "role": "omen",
+    "quote": "the body, instead of in a decomposed state, is still intact",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:35",
+      "quote": "Yeah, it hasn't rotted in twenty years!"
+     }
+    ]
+   },
+   {
+    "value": "badly burnt joss sticks",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:21:44",
+    "quote": "It's unfortunate they burnt like this. The family that produces these sticks, will surely have someone die.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "enchanted ink",
+    "state": "incomplete",
+    "when": "early",
+    "role": "weapon",
+    "quote": "line the coffin with enchanted ink to safeguard the body",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:59",
+      "quote": "Pluck the ink lines over the coffin."
+     }
+    ]
+   },
+   {
+    "value": "glutinous rice",
+    "state": "adulterated",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "the shady merchant deliberately mixes different kinds of rice in the bag",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:10",
+      "quote": "Glutinous rice is used to detoxify corpses."
+     }
+    ]
+   },
+   {
+    "value": "long fingernails",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:35:58",
+    "quote": "My theory is that he was stabbed to death by fingernails.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "chicken blood",
+    "when": "middle",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "00:37:41",
+    "quote": "Chicken blood, ink line marker, string, paper talismans... bring them all.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ghoul",
+    "state": "transformed",
+    "when": "middle",
+    "role": "threat",
+    "quote": "The spirit transforms into a hideous ghoul and attempts to kill Kau",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "priest and apprentices", "when": "opening", "role": "setting", "quote": "Together with his inept students, Man-choi and Chau-sang", "confidence": "sourced"},
-   {"order": 2, "value": "grave opened", "when": "early", "role": "trigger", "quote": "Knowing it has become a vampire, he has it moved to his house for further study", "confidence": "sourced"},
-   {"order": 3, "value": "monster escapes", "when": "early", "quote": "causing the vampire to break out", "confidence": "sourced"},
-   {"order": 4, "value": "victim rises", "when": "middle", "quote": "only to witness Yam reawakening as a vampire", "confidence": "sourced"},
-   {"order": 5, "value": "ally infected", "when": "middle", "role": "turn", "quote": "Kau claims he too may become a vampire", "confidence": "sourced"},
-   {"order": 6, "value": "ghost seduction", "when": "middle", "quote": "he is lured by a mysterious woman into her house", "confidence": "sourced"},
-   {"order": 7, "value": "ghost let go", "when": "late", "quote": "stops when Sang begs him to let her go", "confidence": "sourced"},
-   {"order": 8, "value": "monster burned", "when": "ending", "quote": "they manage to destroy the vampire by burning it alive", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "priest and apprentices",
+    "when": "opening",
+    "role": "setting",
+    "quote": "Together with his inept students, Man-choi and Chau-sang",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:38",
+      "quote": "Play all you want, but don't play with my brothers!"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "grave opened",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Knowing it has become a vampire, he has it moved to his house for further study",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:11",
+      "quote": "Open the coffin."
+     }
+    ]
+   },
+   {
+    "value": "omen of the joss sticks",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:21:44",
+    "quote": "It's unfortunate they burnt like this.",
+    "confidence": "sourced",
+    "order": 3
+   },
+   {
+    "order": 4,
+    "value": "monster escapes",
+    "when": "early",
+    "quote": "causing the vampire to break out",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:49",
+      "quote": "- Master, the coffin... - Split open! - The corpse... - Gone!"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "victim rises",
+    "when": "middle",
+    "quote": "only to witness Yam reawakening as a vampire",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "ally infected",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Kau claims he too may become a vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:19",
+      "quote": "I'm done for. I'm turning today for sure!"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "ghost seduction",
+    "when": "middle",
+    "quote": "he is lured by a mysterious woman into her house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:41",
+      "quote": "You were enchanted by a ghost, stupid boy!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "ghost let go",
+    "when": "late",
+    "quote": "stops when Sang begs him to let her go",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:41",
+      "quote": "Master, let her go."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "monster burned",
+    "when": "ending",
+    "quote": "they manage to destroy the vampire by burning it alive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:07",
+      "quote": "Fine. Men, carry him out and burn him!"
+     }
+    ]
+   }
+  ],
+  "wrong": [
+   {
+    "value": "grudge of a geomancer",
+    "detail": "the feng shui master spoiled the grave out of spite",
+    "source": "subtitles",
+    "at": "00:17:49",
+    "quote": "As payback, he had this dragonfly grave covered with cement.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dying with grievances",
+    "source": "subtitles",
+    "at": "00:24:44",
+    "quote": "When a person dies with grievances, or stress, they suffocate to death.",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

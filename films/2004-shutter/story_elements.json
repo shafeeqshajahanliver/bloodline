@@ -1,63 +1,476 @@
 {
  "film": "2004-shutter",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vengeful ghost", "detail": "Natre, Tun's secret ex-girlfriend", "quote": "Believing that they have been coerced into doing so by Natre's ghost, Tun becomes convinced he will be next", "confidence": "sourced"}
+   {
+    "value": "vengeful ghost",
+    "detail": "Natre, Tun's secret ex-girlfriend",
+    "quote": "Believing that they have been coerced into doing so by Natre's ghost, Tun becomes convinced he will be next",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:47",
+      "quote": "show that a spirit is haunting you."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "person who died wronged", "detail": "Natre killed herself after rape and abandonment", "quote": "Natre loved Tun and threatened to kill herself when he broke off the relationship", "confidence": "sourced"},
-   {"value": "body not laid to rest", "quote": "Natre had killed herself, but her mother could not bear to have her cremated", "confidence": "sourced"}
+   {
+    "value": "person who died wronged",
+    "detail": "Natre killed herself after rape and abandonment",
+    "quote": "Natre loved Tun and threatened to kill herself when he broke off the relationship",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:58",
+      "quote": "and jumped off the edge."
+     }
+    ]
+   },
+   {
+    "value": "body not laid to rest",
+    "quote": "Natre had killed herself, but her mother could not bear to have her cremated",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:07",
+      "quote": "She's been distraught ever since Natre's death. No matter what she refused to cremate her."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "revenge", "detail": "on the rapists and the man who photographed it", "quote": "Tun witnesses his friend, Tonn, commit suicide, and discovers that his two other close friends from college have also committed suicide", "confidence": "observed"},
-   {"value": "to stay with lover", "quote": "showing Natre sitting on his shoulders", "confidence": "observed"}
+   {
+    "value": "revenge",
+    "detail": "on the rapists and the man who photographed it",
+    "quote": "Tun witnesses his friend, Tonn, commit suicide, and discovers that his two other close friends from college have also committed suicide",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:13",
+      "quote": "You've all committed suicide."
+     }
+    ]
+   },
+   {
+    "value": "to stay with lover",
+    "quote": "showing Natre sitting on his shoulders",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:14",
+      "quote": "Sometimes... spirits long for their loved ones."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "rape", "quote": "Tun's friends – the ones who committed suicide – are sexually assaulting Natre", "confidence": "sourced"},
-   {"value": "bystander complicity", "quote": "He admits to have witnessed the rape but did nothing to stop his friends, and that he was the one who had taken those photos", "confidence": "sourced"},
-   {"value": "hit and run", "quote": "they drive away, leaving the girl on the road", "confidence": "sourced"}
+   {
+    "value": "rape",
+    "quote": "Tun's friends – the ones who committed suicide – are sexually assaulting Natre",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:15",
+      "quote": "Take her picture so she doesn't blab."
+     }
+    ]
+   },
+   {
+    "value": "bystander complicity",
+    "quote": "He admits to have witnessed the rape but did nothing to stop his friends, and that he was the one who had taken those photos",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:59",
+      "quote": "I never forgave myself."
+     }
+    ]
+   },
+   {
+    "value": "hit and run",
+    "quote": "they drive away, leaving the girl on the road",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:46",
+      "quote": "I said drive away!"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "car accident", "quote": "a photographer and his girlfriend who accidentally hit a woman with their car", "confidence": "sourced"}
+   {
+    "value": "car accident",
+    "quote": "a photographer and his girlfriend who accidentally hit a woman with their car",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:22",
+      "quote": "Is she dead?"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "visible only in photographs", "quote": "Tun begins to discover mysterious white shadows and faces in his photographs", "confidence": "sourced"},
-   {"value": "drives victims to suicide", "quote": "Believing that they have been coerced into doing so by Natre's ghost", "confidence": "sourced"},
-   {"value": "funeral does not end it", "quote": "They convince her mother to have a proper funeral for her, after which Jane hopes that everything will return to normal", "confidence": "observed"}
+   {
+    "value": "visible only in photographs",
+    "quote": "Tun begins to discover mysterious white shadows and faces in his photographs",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:28",
+      "quote": "Something is in those pictures."
+     }
+    ]
+   },
+   {
+    "value": "drives victims to suicide",
+    "quote": "Believing that they have been coerced into doing so by Natre's ghost",
+    "confidence": "sourced"
+   },
+   {
+    "value": "funeral does not end it",
+    "quote": "They convince her mother to have a proper funeral for her, after which Jane hopes that everything will return to normal",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:34",
+      "quote": "Natre will be cremated today. It's over."
+     }
+    ]
+   },
+   {
+    "value": "spirits cling to loved ones",
+    "source": "subtitles",
+    "at": "00:28:14",
+    "quote": "Sometimes... spirits long for their loved ones.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:28",
+      "quote": "spirits long for their loved ones."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "photographer", "relation_to_threat": "lover", "detail": "Tun, her former lover", "quote": "Tun admits that he and Natre were in a relationship, which Tun had kept secret from his friends", "confidence": "sourced"},
-   {"value": "rapists", "relation_to_threat": "stranger", "detail": "Tun's college friends", "quote": "his two other close friends from college have also committed suicide", "confidence": "sourced"},
-   {"value": "girlfriend", "relation_to_threat": "stranger", "detail": "Jane, who is warned rather than attacked", "quote": "now convinced that Natre tried to warn her", "confidence": "sourced"}
+   {
+    "value": "photographer",
+    "relation_to_threat": "lover",
+    "detail": "Tun, her former lover",
+    "quote": "Tun admits that he and Natre were in a relationship, which Tun had kept secret from his friends",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rapists",
+    "relation_to_threat": "stranger",
+    "detail": "Tun's college friends",
+    "quote": "his two other close friends from college have also committed suicide",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:13",
+      "quote": "You've all committed suicide."
+     }
+    ]
+   },
+   {
+    "value": "girlfriend",
+    "relation_to_threat": "stranger",
+    "detail": "Jane, who is warned rather than attacked",
+    "quote": "now convinced that Natre tried to warn her",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat survives", "quote": "The reflection on glass shows Natre still sitting on his shoulders", "confidence": "sourced"},
-   {"value": "guilty man broken", "quote": "He sits slumped over, seemingly unaware of her", "confidence": "sourced"}
+   {
+    "value": "threat survives",
+    "quote": "The reflection on glass shows Natre still sitting on his shoulders",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:28",
+      "quote": "Sometimes... spirits long for their loved ones."
+     }
+    ]
+   },
+   {
+    "value": "guilty man broken",
+    "quote": "He sits slumped over, seemingly unaware of her",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "white shadows in photos", "when": "early", "role": "omen", "quote": "mysterious white shadows and faces in his photographs", "confidence": "sourced"},
-   {"value": "neck pain", "state": "unexplained weight", "when": "early", "role": "clue", "quote": "experiencing severe neck pains since the accident, visits a specialist and is dismayed to find that his weight is double", "confidence": "sourced"},
-   {"value": "decaying body", "state": "in bedroom", "when": "middle", "role": "clue", "quote": "discover Natre's decaying body in the bedroom", "confidence": "sourced"},
-   {"value": "negatives", "state": "hidden behind bookcase", "when": "late", "role": "clue", "quote": "Behind the bookcase, Jane finds a set of negatives", "confidence": "sourced"},
-   {"value": "camera", "state": "thrown, goes off", "when": "ending", "role": "turn", "quote": "He throws the camera in a rage, only for it to go off and take a photograph of Tun", "confidence": "sourced"},
-   {"value": "ghost on shoulders", "when": "ending", "role": "threat", "quote": "showing Natre sitting on his shoulders and revealing the true cause for his neck pain", "confidence": "sourced"},
-   {"value": "reflection in glass", "when": "ending", "role": "mirror", "quote": "The reflection on glass shows Natre still sitting on his shoulders", "confidence": "sourced"}
+   {
+    "value": "white shadows in photos",
+    "when": "early",
+    "role": "omen",
+    "quote": "mysterious white shadows and faces in his photographs",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:51",
+      "quote": "My camera must be broken."
+     }
+    ]
+   },
+   {
+    "value": "neck pain",
+    "state": "unexplained weight",
+    "when": "early",
+    "role": "clue",
+    "quote": "experiencing severe neck pains since the accident, visits a specialist and is dismayed to find that his weight is double",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:16",
+      "quote": "My neck's hurt since the accident."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:34:15",
+      "quote": "Your x-rays are normal."
+     }
+    ]
+   },
+   {
+    "value": "decaying body",
+    "state": "in bedroom",
+    "when": "middle",
+    "role": "clue",
+    "quote": "discover Natre's decaying body in the bedroom",
+    "confidence": "sourced"
+   },
+   {
+    "value": "negatives",
+    "state": "hidden behind bookcase",
+    "when": "late",
+    "role": "clue",
+    "quote": "Behind the bookcase, Jane finds a set of negatives",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:22",
+      "quote": "Where did you find these?"
+     }
+    ]
+   },
+   {
+    "value": "camera",
+    "state": "thrown, goes off",
+    "when": "ending",
+    "role": "turn",
+    "quote": "He throws the camera in a rage, only for it to go off and take a photograph of Tun",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ghost on shoulders",
+    "when": "ending",
+    "role": "threat",
+    "quote": "showing Natre sitting on his shoulders and revealing the true cause for his neck pain",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:34",
+      "quote": "Please step off the scale. Step on it again."
+     }
+    ]
+   },
+   {
+    "value": "reflection in glass",
+    "when": "ending",
+    "role": "mirror",
+    "quote": "The reflection on glass shows Natre still sitting on his shoulders",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bathroom scale",
+    "state": "weight doubled",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:33:34",
+    "quote": "Please step off the scale. Step on it again.",
+    "confidence": "observed",
+    "detail": "an early hint of the weight on Tun's shoulders"
+   },
+   {
+    "value": "spirit photo magazine",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:24:01",
+    "quote": "Special Scoop: Spirit Pictures",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "hit and run", "when": "opening", "role": "trigger", "quote": "Tun prevents her from getting out of the car; they drive away, leaving the girl on the road", "confidence": "sourced"},
-   {"order": 2, "value": "ghost appears in photos", "when": "early", "role": "omen", "quote": "Tun begins to discover mysterious white shadows and faces in his photographs", "confidence": "sourced"},
-   {"order": 3, "value": "friends die by suicide", "when": "middle", "quote": "Tun witnesses his friend, Tonn, commit suicide", "confidence": "sourced"},
-   {"order": 4, "value": "body found, funeral held", "when": "middle", "quote": "Tun and Jane visit Natre's mother and discover Natre's decaying body in the bedroom", "confidence": "sourced"},
-   {"order": 5, "value": "past crime revealed", "when": "late", "role": "turn", "quote": "She develops them to find photographs in which Tun's friends – the ones who committed suicide – are sexually assaulting Natre", "confidence": "sourced"},
-   {"order": 6, "value": "partner leaves", "when": "late", "quote": "has never forgiven himself but Jane leaves him", "confidence": "sourced"},
-   {"order": 7, "value": "ghost revealed on body", "when": "ending", "role": "turn", "quote": "Natre covers his eyes, making him lose balance and fall out of the window", "confidence": "sourced"},
-   {"order": 8, "value": "closing sting", "when": "ending", "quote": "The reflection on glass shows Natre still sitting on his shoulders", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "drinking with old friends",
+    "when": "opening",
+    "source": "subtitles",
+    "at": "00:04:10",
+    "quote": "Let's drink until we drop.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "hit and run",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Tun prevents her from getting out of the car; they drive away, leaving the girl on the road",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:46",
+      "quote": "I said drive away!"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "ghost appears in photos",
+    "when": "early",
+    "role": "omen",
+    "quote": "Tun begins to discover mysterious white shadows and faces in his photographs",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:51",
+      "quote": "My camera must be broken."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "spirit photographs explained",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:21:47",
+    "quote": "show that a spirit is haunting you.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "friends die by suicide",
+    "when": "middle",
+    "quote": "Tun witnesses his friend, Tonn, commit suicide",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:13",
+      "quote": "You've all committed suicide."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "body found, funeral held",
+    "when": "middle",
+    "quote": "Tun and Jane visit Natre's mother and discover Natre's decaying body in the bedroom",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:35",
+      "quote": "Is this Natre's house?"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "past crime revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "She develops them to find photographs in which Tun's friends – the ones who committed suicide – are sexually assaulting Natre",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:22",
+      "quote": "Where did you find these?"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "partner leaves",
+    "when": "late",
+    "quote": "has never forgiven himself but Jane leaves him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:08",
+      "quote": "I'm going home."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "ghost revealed on body",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Natre covers his eyes, making him lose balance and fall out of the window",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "closing sting",
+    "when": "ending",
+    "quote": "The reflection on glass shows Natre still sitting on his shoulders",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:28",
+      "quote": "Sometimes... spirits long for their loved ones."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

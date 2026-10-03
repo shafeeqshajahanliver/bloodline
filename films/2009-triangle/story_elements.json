@@ -1,63 +1,485 @@
 {
  "film": "2009-triangle",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "time loop", "quote": "the old Jess realizes the loop restarts once everyone is killed", "confidence": "sourced"},
-   {"value": "the self", "detail": "masked copies of Jess kill the group", "quote": "a third Jess shoots the new Greg and stabs the new Downey and Sally", "confidence": "sourced"},
-   {"value": "ghost ship", "detail": "the deserted liner Aeolus", "quote": "they board a derelict ocean liner, where they become convinced that someone is stalking them", "confidence": "sourced"}
+   {
+    "value": "time loop",
+    "quote": "the old Jess realizes the loop restarts once everyone is killed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:04",
+      "quote": "It's starting over again!"
+     }
+    ]
+   },
+   {
+    "value": "the self",
+    "detail": "masked copies of Jess kill the group",
+    "quote": "a third Jess shoots the new Greg and stabs the new Downey and Sally",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:03",
+      "quote": "Because this is not me."
+     }
+    ]
+   },
+   {
+    "value": "ghost ship",
+    "detail": "the deserted liner Aeolus",
+    "quote": "they board a derelict ocean liner, where they become convinced that someone is stalking them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:56",
+      "quote": "Hello? (echoes)"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "mythic curse", "detail": "Sisyphus", "quote": "The screenplay is partly based on the story of Sisyphus, the Greek mythological figure cursed to repeatedly push a boulder up a hill", "confidence": "sourced"}
+   {
+    "value": "mythic curse",
+    "detail": "Sisyphus",
+    "quote": "The screenplay is partly based on the story of Sisyphus, the Greek mythological figure cursed to repeatedly push a boulder up a hill",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:41",
+      "quote": "Aeolus was the Greek God of the winds and the father of Sisyphus,"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to get home", "detail": "Jess wants to return to her son", "quote": "\"You have to kill them; it's the only way to get home\"", "confidence": "sourced"}
+   {
+    "value": "to get home",
+    "detail": "Jess wants to return to her son",
+    "quote": "\"You have to kill them; it's the only way to get home\"",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "abusing a child", "quote": "her earlier self yells abusively and strikes Tommy out of frustration with his autism", "confidence": "sourced"},
-   {"value": "broken promise", "detail": "she promises the taxi driver she will return", "quote": "The driver tells her he will wait for her, and she promises him that she will return", "confidence": "observed"}
+   {
+    "value": "abusing a child",
+    "quote": "her earlier self yells abusively and strikes Tommy out of frustration with his autism",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:05",
+      "quote": "Because that woman that did those things to you is not Mommy."
+     }
+    ]
+   },
+   {
+    "value": "broken promise",
+    "detail": "she promises the taxi driver she will return",
+    "quote": "The driver tells her he will wait for her, and she promises him that she will return",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:54",
+      "quote": "No, he made a promise to death that he didn't keep."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "a journey", "detail": "a boating trip", "quote": "a single mother who goes on a boating trip with several friends", "confidence": "sourced"},
-   {"value": "boarding an empty ship", "quote": "The five survivors board a passing ocean liner, the Aeolus", "confidence": "sourced"}
+   {
+    "value": "a journey",
+    "detail": "a boating trip",
+    "quote": "a single mother who goes on a boating trip with several friends",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:34",
+      "quote": "So let's go sailing!"
+     }
+    ]
+   },
+   {
+    "value": "boarding an empty ship",
+    "quote": "The five survivors board a passing ocean liner, the Aeolus",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "loop restarts when all die", "quote": "the old Jess realizes the loop restarts once everyone is killed", "confidence": "sourced"},
-   {"value": "cannot change the pattern", "quote": "intending to \"change the pattern\", but a third Jess shoots the new Greg", "confidence": "sourced"}
+   {
+    "value": "loop restarts when all die",
+    "quote": "the old Jess realizes the loop restarts once everyone is killed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:26",
+      "quote": "It returns when everyone's dead."
+     }
+    ]
+   },
+   {
+    "value": "cannot change the pattern",
+    "quote": "intending to \"change the pattern\", but a third Jess shoots the new Greg",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:47",
+      "quote": "No point trying to save the boy."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "single mother", "relation_to_threat": "self", "detail": "Jess", "quote": "George portrays a single mother who goes on a boating trip with several friends", "confidence": "sourced"},
-   {"value": "friends", "relation_to_threat": "stranger", "quote": "Someone in a burlap mask shoots Sally and Downey", "confidence": "sourced"},
-   {"value": "child", "relation_to_threat": "family", "detail": "Tommy, her autistic son", "quote": "crashes into a truck, killing Tommy", "confidence": "sourced"}
+   {
+    "value": "single mother",
+    "relation_to_threat": "self",
+    "detail": "Jess",
+    "quote": "George portrays a single mother who goes on a boating trip with several friends",
+    "confidence": "sourced"
+   },
+   {
+    "value": "friends",
+    "relation_to_threat": "stranger",
+    "quote": "Someone in a burlap mask shoots Sally and Downey",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child",
+    "relation_to_threat": "family",
+    "detail": "Tommy, her autistic son",
+    "quote": "crashes into a truck, killing Tommy",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "endless loop", "quote": "she joins the others on Greg's boat, starting the loop again", "confidence": "sourced"},
-   {"value": "protagonist kills herself", "detail": "kills her earlier self", "quote": "She distracts her counterpart with the doorbell, then kills her", "confidence": "sourced"}
+   {
+    "value": "endless loop",
+    "quote": "she joins the others on Greg's boat, starting the loop again",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:46",
+      "quote": "You will come back, won't you? Yes. I... I promise."
+     }
+    ]
+   },
+   {
+    "value": "protagonist kills herself",
+    "detail": "kills her earlier self",
+    "quote": "She distracts her counterpart with the doorbell, then kills her",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "crabs on a beach", "state": "dreamt", "when": "opening", "role": "omen", "quote": "On the boat she has a dream about crabs on a beach", "confidence": "sourced"},
-   {"value": "storm", "state": "sudden", "when": "opening", "role": "trigger", "quote": "The sudden storm capsizes the boat", "confidence": "sourced"},
-   {"value": "keys", "state": "dropped, found", "when": "early", "role": "clue", "quote": "They find Jess's keys and fresh food in the dining room", "confidence": "sourced"},
-   {"value": "food", "state": "fresh, then rotting", "when": "early", "role": "clue", "quote": "Jess returns to the dining room, where the food is now rotting", "confidence": "sourced"},
-   {"value": "mirror", "state": "written on in blood", "when": "early", "role": "clue", "quote": "the words \"go to theater\" written in blood on a mirror", "confidence": "sourced"},
-   {"value": "burlap mask", "when": "middle", "role": "threat", "quote": "Someone in a burlap mask shoots Sally and Downey", "confidence": "sourced"},
-   {"value": "lockets", "state": "dozens of copies", "when": "middle", "role": "clue", "quote": "She finds dozens of her own lockets and notes in her own handwriting", "confidence": "sourced"},
-   {"value": "dead seagulls", "state": "piled", "when": "ending", "role": "omen", "quote": "A seagull hits their windshield and dies, but after she tosses it off the road, she sees there's a pile of many dead seagulls", "confidence": "sourced"}
+   {
+    "value": "crabs on a beach",
+    "state": "dreamt",
+    "when": "opening",
+    "role": "omen",
+    "quote": "On the boat she has a dream about crabs on a beach",
+    "confidence": "sourced"
+   },
+   {
+    "value": "storm",
+    "state": "sudden",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "The sudden storm capsizes the boat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:01",
+      "quote": "(wind gusts)"
+     }
+    ]
+   },
+   {
+    "value": "keys",
+    "state": "dropped, found",
+    "when": "early",
+    "role": "clue",
+    "quote": "They find Jess's keys and fresh food in the dining room",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:40",
+      "quote": "These are my keys."
+     }
+    ]
+   },
+   {
+    "value": "food",
+    "state": "fresh, then rotting",
+    "when": "early",
+    "role": "clue",
+    "quote": "Jess returns to the dining room, where the food is now rotting",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mirror",
+    "state": "written on in blood",
+    "when": "early",
+    "role": "clue",
+    "quote": "the words \"go to theater\" written in blood on a mirror",
+    "confidence": "sourced"
+   },
+   {
+    "value": "burlap mask",
+    "when": "middle",
+    "role": "threat",
+    "quote": "Someone in a burlap mask shoots Sally and Downey",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:01",
+      "quote": "I don't want you to see my face."
+     }
+    ]
+   },
+   {
+    "value": "lockets",
+    "state": "dozens of copies",
+    "when": "middle",
+    "role": "clue",
+    "quote": "She finds dozens of her own lockets and notes in her own handwriting",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dead seagulls",
+    "state": "piled",
+    "when": "ending",
+    "role": "omen",
+    "quote": "A seagull hits their windshield and dies, but after she tosses it off the road, she sees there's a pile of many dead seagulls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:26",
+      "quote": "(birds screech)"
+     }
+    ]
+   },
+   {
+    "value": "looping record",
+    "when": "middle",
+    "role": "omen",
+    "detail": "jazz playing on a loop in the empty ship",
+    "source": "subtitles",
+    "at": "00:43:15",
+    "quote": "(record plays on loop)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:07",
+      "quote": "(Jazz music on a loop plays in the distance)"
+     }
+    ]
+   },
+   {
+    "value": "dead bird on the road",
+    "when": "late",
+    "role": "omen",
+    "detail": "Jess hits a seagull and stops to bury it",
+    "source": "subtitles",
+    "at": "01:27:32",
+    "quote": "Bird, Mommy!",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:36",
+      "quote": "Mommy will bury it, OK?"
+     }
+    ]
+   },
+   {
+    "value": "taxi driver",
+    "when": "ending",
+    "role": "symbol",
+    "detail": "a ferryman figure who waits with the meter running",
+    "source": "subtitles",
+    "at": "01:31:37",
+    "quote": "I'll leave the meter running.",
+    "confidence": "observed"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "child told it was a dream", "when": "opening", "role": "omen", "quote": "When Tommy becomes upset, she tells him that he just had a bad dream", "confidence": "sourced"},
-   {"order": 2, "value": "storm and distress call", "when": "opening", "quote": "he listens to a distress signal from a woman pleading for help", "confidence": "sourced"},
-   {"order": 3, "value": "board empty ship", "when": "early", "role": "trigger", "quote": "The five survivors board a passing ocean liner, the Aeolus", "confidence": "sourced"},
-   {"order": 4, "value": "masked killer attacks", "when": "middle", "quote": "Someone in a burlap mask shoots Sally and Downey", "confidence": "sourced"},
-   {"order": 5, "value": "copies of the group arrive", "when": "middle", "role": "turn", "quote": "sees another copy of her group on Greg's boat", "confidence": "sourced"},
-   {"order": 6, "value": "she becomes the killer", "when": "late", "role": "turn", "quote": "dresses in the shooter's outfit, and puts on a burlap mask", "confidence": "sourced"},
-   {"order": 7, "value": "kills her earlier self", "when": "ending", "quote": "She distracts her counterpart with the doorbell, then kills her", "confidence": "sourced"},
-   {"order": 8, "value": "child dies, loop restarts", "when": "ending", "quote": "she joins the others on Greg's boat, starting the loop again", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "child told it was a dream",
+    "when": "opening",
+    "role": "omen",
+    "quote": "When Tommy becomes upset, she tells him that he just had a bad dream",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:53",
+      "quote": "You were just having a bad dream, that's all, baby."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "storm and distress call",
+    "when": "opening",
+    "quote": "he listens to a distress signal from a woman pleading for help",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:33",
+      "quote": "Triangle to coastguard. Over."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "board empty ship",
+    "when": "early",
+    "role": "trigger",
+    "quote": "The five survivors board a passing ocean liner, the Aeolus",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:56",
+      "quote": "Hello? (echoes)"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "masked killer attacks",
+    "when": "middle",
+    "quote": "Someone in a burlap mask shoots Sally and Downey",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:21",
+      "quote": "(Jess tries to scream)"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "copies of the group arrive",
+    "when": "middle",
+    "role": "turn",
+    "quote": "sees another copy of her group on Greg's boat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:14",
+      "quote": "How did you get here so fast?"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "she becomes the killer",
+    "when": "late",
+    "role": "turn",
+    "quote": "dresses in the shooter's outfit, and puts on a burlap mask",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:44",
+      "quote": "If they board, kill them all."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "kills her earlier self",
+    "when": "ending",
+    "quote": "She distracts her counterpart with the doorbell, then kills her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:51",
+      "quote": "She had blood on her face, and then I killed her on the front of the ship."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "bird killed on the road",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:27:32",
+    "quote": "Bird, Mommy!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "child dies, loop restarts",
+    "when": "ending",
+    "quote": "she joins the others on Greg's boat, starting the loop again",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:49",
+      "quote": "Please, Tommy. It's just blood."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "driver offers a ride",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:30:57",
+    "quote": "Can I give you a ride?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "sets sail again",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:33:54",
+    "quote": "So let's go sailing!",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

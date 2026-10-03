@@ -1,59 +1,471 @@
 {
  "film": "2017-it",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "shapeshifting creature", "detail": "It, appearing as Pennywise the Dancing Clown", "quote": "the eponymous being which emerges from the sewer in the form of Pennywise the Dancing Clown", "confidence": "sourced"},
-   {"value": "abusive adults and bullies", "quote": "after Beverly confronts and incapacitates her sexually abusive father", "confidence": "sourced"}
+   {
+    "value": "shapeshifting creature",
+    "detail": "It, appearing as Pennywise the Dancing Clown",
+    "quote": "the eponymous being which emerges from the sewer in the form of Pennywise the Dancing Clown",
+    "confidence": "sourced"
+   },
+   {
+    "value": "abusive adults and bullies",
+    "quote": "after Beverly confronts and incapacitates her sexually abusive father",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "unexplained", "detail": "an ancient presence in Derry", "quote": "unexplained tragedies and child disappearances have plagued Derry for centuries", "confidence": "sourced"}
+   {
+    "value": "unexplained",
+    "detail": "an ancient presence in Derry",
+    "quote": "unexplained tragedies and child disappearances have plagued Derry for centuries",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "hunger", "quote": "awakening from hibernation every 27 years to feed on the children of Derry", "confidence": "sourced"},
-   {"value": "to survive through fear", "quote": "In order to be alive in the imagination of children, he has to keep killing", "confidence": "sourced"}
+   {
+    "value": "hunger",
+    "quote": "awakening from hibernation every 27 years to feed on the children of Derry",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:58:21",
+      "quote": "And I'll feast on your flesh as I feed on your fear."
+     }
+    ]
+   },
+   {
+    "value": "to survive through fear",
+    "quote": "In order to be alive in the imagination of children, he has to keep killing",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:50",
+      "quote": "Tasty, tasty, beautiful fear."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "child lured by a toy", "quote": "Georgie sails the boat along rainy streets, only to have it fall down a storm drain", "confidence": "sourced"},
-   {"value": "searching for a lost sibling", "quote": "He investigates with his friends, believing Georgie may still be alive", "confidence": "sourced"}
+   {
+    "value": "child lured by a toy",
+    "quote": "Georgie sails the boat along rainy streets, only to have it fall down a storm drain",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:16",
+      "quote": "Do you want it back?"
+     }
+    ]
+   },
+   {
+    "value": "searching for a lost sibling",
+    "quote": "He investigates with his friends, believing Georgie may still be alive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:31",
+      "quote": "That's where Georgie is."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "takes form of worst fear", "quote": "They deduce that It appears as their individual worst fears", "confidence": "sourced"},
-   {"value": "returns every 27 years", "quote": "awakening from hibernation every 27 years", "confidence": "sourced"},
-   {"value": "adults cannot see it", "quote": "No adults see what they witness", "confidence": "sourced"},
-   {"value": "defeated by facing fear together", "quote": "The Losers reject this, battling Pennywise while overcoming their various fears", "confidence": "sourced"}
+   {
+    "value": "takes form of worst fear",
+    "quote": "They deduce that It appears as their individual worst fears",
+    "confidence": "sourced"
+   },
+   {
+    "value": "returns every 27 years",
+    "quote": "awakening from hibernation every 27 years",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:47",
+      "quote": "Every 27 years."
+     }
+    ]
+   },
+   {
+    "value": "adults cannot see it",
+    "quote": "No adults see what they witness",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:55",
+      "quote": "My dad couldn't see it."
+     }
+    ]
+   },
+   {
+    "value": "defeated by facing fear together",
+    "quote": "The Losers reject this, battling Pennywise while overcoming their various fears",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:59:48",
+      "quote": "Welcome to the Losers' Club, asshole!"
+     }
+    ]
+   },
+   {
+    "value": "sewers link the killings",
+    "source": "subtitles",
+    "at": "01:11:46",
+    "quote": "Everywhere it happens, it's all connected by the sewers.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "outcast children", "relation_to_threat": "community", "quote": "a group of seven outcast children who are terrorized by the eponymous being", "confidence": "sourced"},
-   {"value": "younger brother", "relation_to_threat": "family", "detail": "Georgie Denbrough", "quote": "Pennywise bites off Georgie's arm and drags him into the sewer", "confidence": "sourced"}
+   {
+    "value": "outcast children",
+    "relation_to_threat": "community",
+    "quote": "a group of seven outcast children who are terrorized by the eponymous being",
+    "confidence": "sourced"
+   },
+   {
+    "value": "younger brother",
+    "relation_to_threat": "family",
+    "detail": "Georgie Denbrough",
+    "quote": "Pennywise bites off Georgie's arm and drags him into the sewer",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat driven off", "quote": "It retreats, falling down a well", "confidence": "sourced"},
-   {"value": "vow to return", "quote": "The Losers swear a blood oath that they will return if Pennywise ever returns", "confidence": "sourced"}
+   {
+    "value": "threat driven off",
+    "quote": "It retreats, falling down a well",
+    "confidence": "sourced"
+   },
+   {
+    "value": "vow to return",
+    "quote": "The Losers swear a blood oath that they will return if Pennywise ever returns",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:05:00",
+      "quote": "if It ever comes back, we'll come back, too."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "paper sailboat", "when": "opening", "role": "trigger", "quote": "Bill Denbrough makes a paper sailboat for his seven-year-old brother Georgie", "confidence": "sourced"},
-   {"value": "storm drain", "when": "opening", "role": "threat", "quote": "Georgie sees a clown in the drain", "confidence": "sourced"},
-   {"value": "clown", "when": "opening", "role": "threat", "quote": "introduces himself as \"Pennywise the Dancing Clown\"", "confidence": "sourced"},
-   {"value": "sink spewing blood", "when": "middle", "role": "threat", "quote": "Beverly is attacked by a sink spewing blood", "confidence": "sourced"},
-   {"value": "well", "when": "middle", "role": "setting", "quote": "an old well under an abandoned house on Neibolt Street", "confidence": "sourced"},
-   {"value": "floating bodies", "when": "late", "role": "setting", "quote": "the bodies of It's child victims float in mid-air", "confidence": "sourced"},
-   {"value": "bloodstained raincoat", "when": "ending", "role": "clue", "quote": "Bill finds Georgie's bloodstained raincoat", "confidence": "sourced"},
-   {"value": "missing child's sneaker", "when": "early", "role": "clue", "quote": "They find the sneaker of missing girl Betty Ripsom", "confidence": "sourced"}
+   {
+    "value": "paper sailboat",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Bill Denbrough makes a paper sailboat for his seven-year-old brother Georgie",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:14",
+      "quote": "What a nice boat."
+     }
+    ]
+   },
+   {
+    "value": "storm drain",
+    "when": "opening",
+    "role": "threat",
+    "quote": "Georgie sees a clown in the drain",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:21",
+      "quote": "What are you doing in the sewer?"
+     }
+    ]
+   },
+   {
+    "value": "clown",
+    "when": "opening",
+    "role": "threat",
+    "quote": "introduces himself as \"Pennywise the Dancing Clown\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:44",
+      "quote": "I'm Pennywise the Dancing Clown."
+     }
+    ]
+   },
+   {
+    "value": "sink spewing blood",
+    "when": "middle",
+    "role": "threat",
+    "quote": "Beverly is attacked by a sink spewing blood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:45",
+      "quote": "The sink. You don't see it?"
+     }
+    ]
+   },
+   {
+    "value": "well",
+    "when": "middle",
+    "role": "setting",
+    "quote": "an old well under an abandoned house on Neibolt Street",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:50",
+      "quote": "I saw the well."
+     }
+    ]
+   },
+   {
+    "value": "floating bodies",
+    "when": "late",
+    "role": "setting",
+    "quote": "the bodies of It's child victims float in mid-air",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:02:56",
+      "quote": "The kids are floating down."
+     }
+    ]
+   },
+   {
+    "value": "bloodstained raincoat",
+    "when": "ending",
+    "role": "clue",
+    "quote": "Bill finds Georgie's bloodstained raincoat",
+    "confidence": "sourced"
+   },
+   {
+    "value": "missing child's sneaker",
+    "when": "early",
+    "role": "clue",
+    "quote": "They find the sneaker of missing girl Betty Ripsom",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:27",
+      "quote": "Whose sneaker is it? It's Betty Ripsom's."
+     }
+    ]
+   },
+   {
+    "value": "red balloon",
+    "when": "opening",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:06:31",
+    "quote": "I'll give him a balloon.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:44",
+      "quote": "(BALLOONS POPPING)"
+     }
+    ]
+   },
+   {
+    "value": "sheep and bolt gun",
+    "when": "early",
+    "role": "omen",
+    "state": "led to slaughter",
+    "detail": "Mike is pushed to kill sheep with a captive bolt gun",
+    "source": "subtitles",
+    "at": "00:10:58",
+    "quote": "Except you won't know it until you feel that bolt between your eyes.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:57",
+      "quote": "(SHEEP BLEATING)"
+     }
+    ]
+   },
+   {
+    "value": "turtle",
+    "when": "middle",
+    "role": "symbol",
+    "detail": "seen at the quarry",
+    "source": "subtitles",
+    "at": "00:44:20",
+    "quote": "It's a turtle.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "slide projector",
+    "when": "middle",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "01:12:35",
+    "quote": "(PROJECTOR CLICKING)",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "child taken into sewer", "when": "opening", "quote": "Pennywise bites off Georgie's arm and drags him into the sewer", "confidence": "sourced"},
-   {"order": 2, "value": "town's dark history learned", "when": "early", "role": "clue", "quote": "unexplained tragedies and child disappearances have plagued Derry for centuries", "confidence": "sourced"},
-   {"order": 3, "value": "each child haunted", "when": "middle", "quote": "Each member of the group has encountered terrifying manifestations of Pennywise", "confidence": "sourced"},
-   {"order": 4, "value": "first confrontation fails", "when": "middle", "quote": "the group attempts to confront It in the Neibolt house, only to be separated and terrorized by their fears", "confidence": "sourced"},
-   {"order": 5, "value": "girl abducted", "when": "late", "role": "turn", "quote": "Pennywise abducts her. The Losers return to the abandoned house to rescue her", "confidence": "sourced"},
-   {"order": 6, "value": "battle in the lair", "when": "late", "quote": "The Losers beat Pennywise before Beverly stabs It in the face with a broken pipe", "confidence": "sourced"},
-   {"order": 7, "value": "blood oath", "when": "ending", "quote": "The Losers swear a blood oath that they will return if Pennywise ever returns", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "child sent to cellar",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:38",
+    "quote": "Go get the wax. In the cellar?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "child taken into sewer",
+    "when": "opening",
+    "quote": "Pennywise bites off Georgie's arm and drags him into the sewer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:52",
+      "quote": "(GEORGIE SCREAMING)"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "town's dark history learned",
+    "when": "early",
+    "role": "clue",
+    "quote": "unexplained tragedies and child disappearances have plagued Derry for centuries",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:47",
+      "quote": "The only clue was a trail of bloody clothes leading to the well house."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "each child haunted",
+    "when": "middle",
+    "quote": "Each member of the group has encountered terrifying manifestations of Pennywise",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:14",
+      "quote": "We all want to meet you, Beverly."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "slideshow attack",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:13:53",
+    "quote": "Run, Stanley!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "first confrontation fails",
+    "when": "middle",
+    "quote": "the group attempts to confront It in the Neibolt house, only to be separated and terrorized by their fears",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:31",
+      "quote": "That's where Georgie is."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "girl abducted",
+    "when": "late",
+    "role": "turn",
+    "quote": "Pennywise abducts her. The Losers return to the abandoned house to rescue her",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "battle in the lair",
+    "when": "late",
+    "quote": "The Losers beat Pennywise before Beverly stabs It in the face with a broken pipe",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:59:48",
+      "quote": "Welcome to the Losers' Club, asshole!"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "blood oath",
+    "when": "ending",
+    "quote": "The Losers swear a blood oath that they will return if Pennywise ever returns",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:04:53",
+      "quote": "Swear it."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "clown's laugh after credits",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "02:14:23",
+    "quote": "(PENNYWISE LAUGHING)",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

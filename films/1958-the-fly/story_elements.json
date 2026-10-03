@@ -1,57 +1,446 @@
 {
  "film": "1958-the-fly",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "transformed person", "detail": "André, a human-fly hybrid", "quote": "a scientist who is transformed into a grotesque human–fly hybrid", "confidence": "sourced"},
-   {"value": "loss of self", "detail": "the fly's instincts take over his mind", "quote": "André's will begins to fade as the fly's instincts take over his brain", "confidence": "sourced"}
+   {
+    "value": "transformed person",
+    "detail": "André, a human-fly hybrid",
+    "quote": "a scientist who is transformed into a grotesque human–fly hybrid",
+    "confidence": "sourced"
+   },
+   {
+    "value": "loss of self",
+    "detail": "the fly's instincts take over his mind",
+    "quote": "André's will begins to fade as the fly's instincts take over his brain",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "scientific accident", "detail": "a fly enters the matter transporter with him", "quote": "a common house fly enters unseen into a molecular transporter with which he is experimenting", "confidence": "sourced"}
+   {
+    "value": "scientific accident",
+    "detail": "a fly enters the matter transporter with him",
+    "quote": "a common house fly enters unseen into a molecular transporter with which he is experimenting",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:07",
+      "quote": "When we integrated again, our atoms were mixed."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "scientific hubris", "quote": "He almost found a great truth, but for one instant, he was careless", "confidence": "observed"}
+   {
+    "value": "scientific hubris",
+    "quote": "He almost found a great truth, but for one instant, he was careless",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:46",
+      "quote": "There are things man should never experiment with."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "scientific experiment", "detail": "André transports himself", "quote": "André tells Hélène that he tried to transport himself, but that a fly was caught in the chamber with him", "confidence": "sourced"}
+   {
+    "value": "scientific experiment",
+    "detail": "André transports himself",
+    "quote": "André tells Hélène that he tried to transport himself, but that a fly was caught in the chamber with him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:59",
+      "quote": "I transmitted myself successfully yesterday morning."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "reversible only with the fly", "quote": "André needs Hélène to capture the fly so that he can reverse the process", "confidence": "sourced"},
-   {"value": "time running out", "quote": "Time is running out, and while André can still think like a human", "confidence": "sourced"}
+   {
+    "value": "reversible only with the fly",
+    "quote": "André needs Hélène to capture the fly so that he can reverse the process",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:13",
+      "quote": "Now my only hope is to find the fly."
+     }
+    ]
+   },
+   {
+    "value": "time running out",
+    "quote": "Time is running out, and while André can still think like a human",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:15",
+      "quote": "You can still reason, Andre."
+     }
+    ]
+   },
+   {
+    "value": "fly hybrid is no murder",
+    "source": "subtitles",
+    "at": "01:31:28",
+    "quote": "You killed a fly with a human head. She killed a human with a fly head.",
+    "confidence": "observed"
+   }
   ],
   "who_suffers": [
-   {"value": "scientist", "relation_to_threat": "self", "detail": "André Delambre", "quote": "scientist André Delambre is found dead with his head and arm crushed in a hydraulic press", "confidence": "sourced"},
-   {"value": "wife", "relation_to_threat": "family", "detail": "Hélène, accused of murder", "quote": "Inspector Charas deems Hélène insane and guilty of murder", "confidence": "sourced"},
-   {"value": "family", "relation_to_threat": "family", "detail": "André, Hélène and their son Philippe", "quote": "André, Hélène, and their son Philippe are a happy family", "confidence": "sourced"}
+   {
+    "value": "scientist",
+    "relation_to_threat": "self",
+    "detail": "André Delambre",
+    "quote": "scientist André Delambre is found dead with his head and arm crushed in a hydraulic press",
+    "confidence": "sourced"
+   },
+   {
+    "value": "wife",
+    "relation_to_threat": "family",
+    "detail": "Hélène, accused of murder",
+    "quote": "Inspector Charas deems Hélène insane and guilty of murder",
+    "confidence": "sourced"
+   },
+   {
+    "value": "family",
+    "relation_to_threat": "family",
+    "detail": "André, Hélène and their son Philippe",
+    "quote": "André, Hélène, and their son Philippe are a happy family",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "detail": "the fly with André's head is crushed", "quote": "Just as the spider is about to devour the creature, Charas crushes them both with a rock", "confidence": "sourced"},
-   {"value": "truth covered up", "quote": "François and Charas decide to declare André's death a suicide so that Hélène is not convicted of murder", "confidence": "sourced"},
-   {"value": "family resumes life", "quote": "Hélène, François, and Philippe resume their daily lives", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "detail": "the fly with André's head is crushed",
+    "quote": "Just as the spider is about to devour the creature, Charas crushes them both with a rock",
+    "confidence": "sourced"
+   },
+   {
+    "value": "truth covered up",
+    "quote": "François and Charas decide to declare André's death a suicide so that Hélène is not convicted of murder",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:00",
+      "quote": "Yes. Yes. It could have been suicide."
+     }
+    ]
+   },
+   {
+    "value": "family resumes life",
+    "quote": "Hélène, François, and Philippe resume their daily lives",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "hydraulic press", "state": "crushing", "when": "opening", "role": "weapon", "quote": "found dead with his head and arm crushed in a hydraulic press", "confidence": "sourced"},
-   {"value": "white-headed fly", "state": "loose", "when": "opening", "role": "clue", "quote": "she is obsessed with flies, including a supposedly white-headed fly", "confidence": "sourced"},
-   {"value": "cat", "state": "vanished, still meowing", "when": "early", "role": "omen", "quote": "the family's pet cat, Dandelo, (which fails to reintegrate, but can be heard meowing somewhere)", "confidence": "sourced"},
-   {"value": "black cloth over head", "state": "hiding deformity", "when": "middle", "role": "threat", "quote": "find André with a black cloth draped over his head and a strange deformity on his left hand", "confidence": "sourced"},
-   {"value": "transporter chambers", "when": "early", "role": "trigger", "quote": "he builds a man-sized pair of chambers", "confidence": "sourced"},
-   {"value": "spider web", "state": "trapping the fly", "when": "ending", "role": "threat", "quote": "the fly, with both André's head and arm, trapped on the web as Philippe told them", "confidence": "sourced"},
-   {"value": "rock", "when": "ending", "role": "weapon", "quote": "Charas crushes them both with a rock", "confidence": "sourced"}
+   {
+    "value": "hydraulic press",
+    "state": "crushing",
+    "when": "opening",
+    "role": "weapon",
+    "quote": "found dead with his head and arm crushed in a hydraulic press",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:31",
+      "quote": "A man is dead. His head is under the press."
+     }
+    ]
+   },
+   {
+    "value": "white-headed fly",
+    "state": "loose",
+    "when": "opening",
+    "role": "clue",
+    "quote": "she is obsessed with flies, including a supposedly white-headed fly",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:44",
+      "quote": "It has a funny white head and sort of white leg."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:55:26",
+      "quote": "You will easily recognize it. Its head is white."
+     }
+    ]
+   },
+   {
+    "value": "cat",
+    "state": "vanished, still meowing",
+    "when": "early",
+    "role": "omen",
+    "quote": "the family's pet cat, Dandelo, (which fails to reintegrate, but can be heard meowing somewhere)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:27",
+      "quote": "And tomorrow you'll be the most famous cat in all the world."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:46:22",
+      "quote": "in a stream of cat atoms."
+     }
+    ]
+   },
+   {
+    "value": "black cloth over head",
+    "state": "hiding deformity",
+    "when": "middle",
+    "role": "threat",
+    "quote": "find André with a black cloth draped over his head and a strange deformity on his left hand",
+    "confidence": "sourced"
+   },
+   {
+    "value": "transporter chambers",
+    "when": "early",
+    "role": "trigger",
+    "quote": "he builds a man-sized pair of chambers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:01",
+      "quote": "The disintegrator-integrator will completely change life as we know it."
+     }
+    ]
+   },
+   {
+    "value": "spider web",
+    "state": "trapping the fly",
+    "when": "ending",
+    "role": "threat",
+    "quote": "the fly, with both André's head and arm, trapped on the web as Philippe told them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:46",
+      "quote": "It's in a web. A spider's going to get it."
+     }
+    ]
+   },
+   {
+    "value": "rock",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "Charas crushes them both with a rock",
+    "confidence": "sourced"
+   },
+   {
+    "value": "watchman's cat",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:02:06",
+    "quote": "Mademoiselle Dandelo has found another. You will never see her again.",
+    "detail": "the night watchman teases his tomcat Satan about the vanished Dandelo",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ashtray",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:32:39",
+    "quote": "Then here, a moment later, integrated again into the shape of an ashtray.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:55",
+      "quote": "Remember the ashtray experiment?"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "typed notes and knocks",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:53:50",
+    "quote": "Knock three times to show you understand and agree,",
+    "detail": "André, unable to speak, communicates by typed notes",
+    "confidence": "sourced"
+   },
+   {
+    "value": "milk laced with rum",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:53:53",
+    "quote": "then fetch me a bowl of milk laced with rum.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sugar as bait",
+    "when": "middle",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "01:05:41",
+    "quote": "Go and get some sugar, quick.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "body found, wife confesses", "when": "opening", "quote": "His wife Hélène confesses to the crime but refuses to provide a motive", "confidence": "sourced"},
-   {"order": 2, "value": "flashback to happy family", "when": "early", "quote": "In flashback, André, Hélène, and their son Philippe are a happy family", "confidence": "sourced"},
-   {"order": 3, "value": "animal test goes wrong", "when": "early", "role": "omen", "quote": "the family's pet cat, Dandelo, (which fails to reintegrate, but can be heard meowing somewhere)", "confidence": "sourced"},
-   {"order": 4, "value": "transformation revealed", "when": "middle", "role": "turn", "quote": "Now, he has the head and left arm of a fly, though he retains his human mind", "confidence": "sourced"},
-   {"order": 5, "value": "failed search for cure", "when": "middle", "quote": "she finds it, but it slips out of a crack in the window", "confidence": "sourced"},
-   {"order": 6, "value": "mercy killing", "when": "late", "quote": "puts his head and arm under, and motions for Hélène to push the button", "confidence": "sourced"},
-   {"order": 7, "value": "creature found and crushed", "when": "ending", "role": "turn", "quote": "It screams, \"Help me! Help me!\" as a large spider advances on it", "confidence": "sourced"},
-   {"order": 8, "value": "moral about dangerous truth", "when": "ending", "quote": "The search for the truth is the most important work in the whole world and the most dangerous", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "body found, wife confesses",
+    "when": "opening",
+    "quote": "His wife Hélène confesses to the crime but refuses to provide a motive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:40",
+      "quote": "François, I've killed Andre."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "flashback to happy family",
+    "when": "early",
+    "quote": "In flashback, André, Hélène, and their son Philippe are a happy family",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:32",
+      "quote": "I'm a very fortunate woman."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "animal test goes wrong",
+    "when": "early",
+    "role": "omen",
+    "quote": "the family's pet cat, Dandelo, (which fails to reintegrate, but can be heard meowing somewhere)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:57",
+      "quote": "The first live experiment was disastrous... Dandelo."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "plea through a locked door",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:53:14",
+    "quote": "Helene, I've had some trouble.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "transformation revealed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Now, he has the head and left arm of a fly, though he retains his human mind",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:50",
+      "quote": "No! No! No!"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "failed search for cure",
+    "when": "middle",
+    "quote": "she finds it, but it slips out of a crack in the window",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:46",
+      "quote": "We caught the fly today, but it escaped out into the garden."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "mercy killing",
+    "when": "late",
+    "quote": "puts his head and arm under, and motions for Hélène to push the button",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:49",
+      "quote": "Now I must destroy everything, all evidence, even myself."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "creature found and crushed",
+    "when": "ending",
+    "role": "turn",
+    "quote": "It screams, \"Help me! Help me!\" as a large spider advances on it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:30",
+      "quote": "Help me! Please help me!"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "moral about dangerous truth",
+    "when": "ending",
+    "quote": "The search for the truth is the most important work in the whole world and the most dangerous",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:02",
+      "quote": "is the most important work in the whole world and the most dangerous."
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wants"],
+ "not_stated": [
+  "wants"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

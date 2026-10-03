@@ -1,61 +1,407 @@
 {
  "film": "2017-pyewacket",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "summoned demon", "detail": "Pyewacket, a shape-shifter", "quote": "Pyewacket is a devious shape-shifter and Leah must not trust anyone until the curse is lifted", "confidence": "sourced"},
-   {"value": "the self", "detail": "Leah kills her own mother", "quote": "she douses her mother with gasoline and sets her on fire, believing that she is killing the demon", "confidence": "sourced"}
+   {
+    "value": "summoned demon",
+    "detail": "Pyewacket, a shape-shifter",
+    "quote": "Pyewacket is a devious shape-shifter and Leah must not trust anyone until the curse is lifted",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the self",
+    "detail": "Leah kills her own mother",
+    "quote": "she douses her mother with gasoline and sets her on fire, believing that she is killing the demon",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "summoned by ritual", "quote": "performs an occult ritual in the forest from one of her books, to summon the demon Pyewacket to kill her mother", "confidence": "sourced"}
+   {
+    "value": "summoned by ritual",
+    "quote": "performs an occult ritual in the forest from one of her books, to summon the demon Pyewacket to kill her mother",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:53",
+      "quote": "Darkness, I charge you with this sign.. Pyewacket."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to fulfil the wish", "detail": "the mother's death", "quote": "Leah wishes death on her", "confidence": "observed"}
+   {
+    "value": "to fulfil the wish",
+    "detail": "the mother's death",
+    "quote": "Leah wishes death on her",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "wishing death on a parent", "quote": "After a fierce argument with her mother, Leah wishes death on her", "confidence": "sourced"}
+   {
+    "value": "wishing death on a parent",
+    "quote": "After a fierce argument with her mother, Leah wishes death on her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:44",
+      "quote": "I wish you were dead!"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "moving into a new home", "quote": "her grieving mother decides to move to a remote woodland house for a fresh start", "confidence": "sourced"},
-   {"value": "summoning ritual", "quote": "performs an occult ritual in the forest from one of her books", "confidence": "sourced"}
+   {
+    "value": "moving into a new home",
+    "quote": "her grieving mother decides to move to a remote woodland house for a fresh start",
+    "confidence": "sourced"
+   },
+   {
+    "value": "summoning ritual",
+    "quote": "performs an occult ritual in the forest from one of her books",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "reverse the ritual", "quote": "the only way to stop the demon is to perform the same summoning ritual in the same place, but in reverse", "confidence": "sourced"},
-   {"value": "trust no one", "quote": "Leah must not trust anyone until the curse is lifted", "confidence": "sourced"},
-   {"value": "takes familiar forms", "quote": "who first takes the form of Leah's mother, then of a monstrous hag", "confidence": "sourced"}
+   {
+    "value": "reverse the ritual",
+    "quote": "the only way to stop the demon is to perform the same summoning ritual in the same place, but in reverse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:07",
+      "quote": "To undo this, you need to perform the exact, the exact same ritual in the same place, but in reverse."
+     }
+    ]
+   },
+   {
+    "value": "trust no one",
+    "quote": "Leah must not trust anyone until the curse is lifted",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:23",
+      "quote": "A dark spirit like Pyewacket is very manipulative."
+     }
+    ]
+   },
+   {
+    "value": "takes familiar forms",
+    "quote": "who first takes the form of Leah's mother, then of a monstrous hag",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:24",
+      "quote": "Pyewacket can take many forms so don't trust your lying eyes."
+     }
+    ]
+   },
+   {
+    "value": "ask forgiveness at every step",
+    "source": "subtitles",
+    "at": "01:04:15",
+    "quote": "At every step, you ask for forgiveness.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "mother", "relation_to_threat": "family", "quote": "the only body the police found was a burned one in the ruins of the house", "confidence": "sourced"},
-   {"value": "teenage daughter", "relation_to_threat": "self", "detail": "Leah, who summoned it", "quote": "Leah Reyes is a teenager fascinated with black magic and occult practices", "confidence": "sourced"},
-   {"value": "best friend", "relation_to_threat": "stranger", "detail": "Janice", "quote": "find Janice cowering in the car, too terrified to say what happened to her", "confidence": "sourced"}
+   {
+    "value": "mother",
+    "relation_to_threat": "family",
+    "quote": "the only body the police found was a burned one in the ruins of the house",
+    "confidence": "sourced"
+   },
+   {
+    "value": "teenage daughter",
+    "relation_to_threat": "self",
+    "detail": "Leah, who summoned it",
+    "quote": "Leah Reyes is a teenager fascinated with black magic and occult practices",
+    "confidence": "sourced"
+   },
+   {
+    "value": "best friend",
+    "relation_to_threat": "stranger",
+    "detail": "Janice",
+    "quote": "find Janice cowering in the car, too terrified to say what happened to her",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "child kills parent", "quote": "she douses her mother with gasoline and sets her on fire", "confidence": "sourced"},
-   {"value": "deception revealed", "quote": "the only body the police found was a burned one in the ruins of the house", "confidence": "sourced"}
+   {
+    "value": "child kills parent",
+    "quote": "she douses her mother with gasoline and sets her on fire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:06",
+      "quote": "The only one we found was in your house burned to ash. Was that your mother?"
+     }
+    ]
+   },
+   {
+    "value": "deception revealed",
+    "quote": "the only body the police found was a burned one in the ruins of the house",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "occult book", "state": "used for ritual", "when": "opening", "role": "trigger", "quote": "an occult ritual in the forest from one of her books", "confidence": "sourced"},
-   {"value": "woodland house", "state": "remote", "when": "opening", "role": "setting", "quote": "move to a remote woodland house for a fresh start", "confidence": "sourced"},
-   {"value": "dirt", "state": "piled on floors", "when": "early", "role": "omen", "quote": "noises coming from the attic and piles of dirt on the floors", "confidence": "sourced"},
-   {"value": "shadow", "state": "in the bedroom", "when": "early", "role": "threat", "quote": "Pyewacket appears as a shadowy entity in Leah's bedroom while she sleeps", "confidence": "sourced"},
-   {"value": "blood", "state": "covering her", "when": "early", "role": "omen", "quote": "Waking up the next day covered in blood", "confidence": "sourced"},
-   {"value": "hag", "state": "monstrous", "when": "late", "role": "threat", "quote": "then of a monstrous hag", "confidence": "sourced"},
-   {"value": "fire", "state": "burning the house", "when": "ending", "role": "weapon", "quote": "he finds Leah unconscious outside as the house burns down", "confidence": "sourced"}
+   {
+    "value": "occult book",
+    "state": "used for ritual",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "an occult ritual in the forest from one of her books",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:41",
+      "quote": "It's an amazing book."
+     }
+    ]
+   },
+   {
+    "value": "woodland house",
+    "state": "remote",
+    "when": "opening",
+    "role": "setting",
+    "quote": "move to a remote woodland house for a fresh start",
+    "confidence": "sourced"
+   },
+   {
+    "value": "crow",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:29:39",
+    "quote": "[crow cawing] [breathing heavily]",
+    "confidence": "sourced",
+    "detail": "caws right after the summoning and again when Leah returns to the ritual site",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:05",
+      "quote": "[crow cawing] [footsteps approaching]"
+     }
+    ]
+   },
+   {
+    "value": "dirt",
+    "state": "piled on floors",
+    "when": "early",
+    "role": "omen",
+    "quote": "noises coming from the attic and piles of dirt on the floors",
+    "confidence": "sourced"
+   },
+   {
+    "value": "shadow",
+    "state": "in the bedroom",
+    "when": "early",
+    "role": "threat",
+    "quote": "Pyewacket appears as a shadowy entity in Leah's bedroom while she sleeps",
+    "confidence": "sourced"
+   },
+   {
+    "value": "thudding in the house",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:40:04",
+    "quote": "[thudding] [gasps]",
+    "confidence": "sourced"
+   },
+   {
+    "value": "creaking trees",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:53:26",
+    "quote": "[trees creaking]",
+    "confidence": "sourced"
+   },
+   {
+    "value": "blood",
+    "state": "covering her",
+    "when": "early",
+    "role": "omen",
+    "quote": "Waking up the next day covered in blood",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hag",
+    "state": "monstrous",
+    "when": "late",
+    "role": "threat",
+    "quote": "then of a monstrous hag",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:54",
+      "quote": "[witch growling] [clattering]"
+     }
+    ]
+   },
+   {
+    "value": "fire",
+    "state": "burning the house",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "he finds Leah unconscious outside as the house burns down",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:56",
+      "quote": "[fire crackling] Leah!"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "moving after a death", "when": "opening", "quote": "Following the death of Leah's father, her grieving mother decides to move to a remote woodland house", "confidence": "sourced"},
-   {"order": 2, "value": "demon summoned in anger", "when": "opening", "role": "trigger", "quote": "to summon the demon Pyewacket to kill her mother", "confidence": "sourced"},
-   {"order": 3, "value": "regret", "when": "early", "quote": "Leah bonds with her mother shortly afterwards, and she soon regrets her actions", "confidence": "sourced"},
-   {"order": 4, "value": "dragged into the forest", "when": "early", "quote": "Pyewacket appears as a shadowy entity in Leah's bedroom while she sleeps, and drags her into the forest", "confidence": "sourced"},
-   {"order": 5, "value": "expert warns", "when": "middle", "quote": "Leah contacts paranormalist Rowan Dove", "confidence": "sourced"},
-   {"order": 6, "value": "reversal ritual fails", "when": "late", "quote": "stops when she sees her mother lying dead nearby, but also hears her mother calling out for her", "confidence": "sourced"},
-   {"order": 7, "value": "kills the real mother", "when": "late", "role": "turn", "quote": "she douses her mother with gasoline and sets her on fire", "confidence": "sourced"},
-   {"order": 8, "value": "truth revealed by police", "when": "ending", "role": "turn", "quote": "the only body the police found was a burned one in the ruins of the house", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "moving after a death",
+    "when": "opening",
+    "quote": "Following the death of Leah's father, her grieving mother decides to move to a remote woodland house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:16",
+      "quote": "This place feels like your father's funeral every fucking day."
+     }
+    ]
+   },
+   {
+    "value": "mother's cruel words",
+    "when": "opening",
+    "role": "trigger",
+    "source": "subtitles",
+    "at": "00:22:03",
+    "quote": "Every time I look at you, I see your father's face. God, I wish I could just wipe it off.",
+    "confidence": "sourced",
+    "order": 2
+   },
+   {
+    "order": 3,
+    "value": "demon summoned in anger",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "to summon the demon Pyewacket to kill her mother",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:07",
+      "quote": "I invite you to come. Pyewacket."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "regret",
+    "when": "early",
+    "quote": "Leah bonds with her mother shortly afterwards, and she soon regrets her actions",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:45",
+      "quote": "Leah, I am so sorry. I should have never said that."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "dragged into the forest",
+    "when": "early",
+    "quote": "Pyewacket appears as a shadowy entity in Leah's bedroom while she sleeps, and drags her into the forest",
+    "confidence": "sourced"
+   },
+   {
+    "value": "friend vanishes in the night",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "00:57:05",
+    "quote": "Honey? Where's Janice?",
+    "confidence": "sourced",
+    "order": 6
+   },
+   {
+    "order": 7,
+    "value": "expert warns",
+    "when": "middle",
+    "quote": "Leah contacts paranormalist Rowan Dove",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:04",
+      "quote": "It starts with you and it will end in you."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "reversal ritual fails",
+    "when": "late",
+    "quote": "stops when she sees her mother lying dead nearby, but also hears her mother calling out for her",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "kills the real mother",
+    "when": "late",
+    "role": "turn",
+    "quote": "she douses her mother with gasoline and sets her on fire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:13",
+      "quote": "[Mrs. Reyes screaming]"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "truth revealed by police",
+    "when": "ending",
+    "role": "turn",
+    "quote": "the only body the police found was a burned one in the ruins of the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:06",
+      "quote": "The only one we found was in your house burned to ash."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

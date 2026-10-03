@@ -1,62 +1,487 @@
 {
  "film": "1958-dracula-horror-of-dracula",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vampire", "detail": "Count Dracula, centuries old", "quote": "intends to destroy the Count, who is in truth a centuries-old vampire", "confidence": "sourced"}
+   {
+    "value": "vampire",
+    "detail": "Count Dracula, centuries old",
+    "quote": "intends to destroy the Count, who is in truth a centuries-old vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:37",
+      "quote": "I am Dracula. And I welcome you to my house."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "unexplained", "detail": "an ancient vampire in his castle", "quote": "who is in truth a centuries-old vampire", "confidence": "observed"}
+   {
+    "value": "unexplained",
+    "detail": "an ancient vampire in his castle",
+    "quote": "who is in truth a centuries-old vampire",
+    "confidence": "observed"
+   }
   ],
   "wants": [
-   {"value": "to replace someone", "detail": "a new bride for the woman Harker killed", "quote": "He explains to Arthur that Lucy was targeted to replace the woman Harker killed", "confidence": "sourced"},
-   {"value": "to spread", "detail": "turning victims into vampires", "quote": "A chase ensues as Dracula attempts to finish Mina's transformation before the sunrise", "confidence": "observed"}
+   {
+    "value": "to replace someone",
+    "detail": "a new bride for the woman Harker killed",
+    "quote": "He explains to Arthur that Lucy was targeted to replace the woman Harker killed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:26",
+      "quote": "This is Dracula's revenge."
+     }
+    ]
+   },
+   {
+    "value": "to spread",
+    "detail": "turning victims into vampires",
+    "quote": "A chase ensues as Dracula attempts to finish Mina's transformation before the sunrise",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:28",
+      "quote": "of this vile contagion when in advanced stages."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "killing the monster's companion", "detail": "Harker stakes the vampire woman", "quote": "Harker quickly stakes the woman, watching as she withers away and dies", "confidence": "observed"}
+   {
+    "value": "killing the monster's companion",
+    "detail": "Harker stakes the vampire woman",
+    "quote": "Harker quickly stakes the woman, watching as she withers away and dies",
+    "confidence": "observed"
+   }
   ],
   "trigger": [
-   {"value": "hunter enters the lair", "detail": "Harker poses as a librarian", "quote": "revealing that he is actually a vampire hunter and intends to destroy the Count", "confidence": "sourced"}
+   {
+    "value": "hunter enters the lair",
+    "detail": "Harker poses as a librarian",
+    "quote": "revealing that he is actually a vampire hunter and intends to destroy the Count",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:21",
+      "quote": "The Diary of Jonathan Harker."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "destroyed by stake", "quote": "Without hesitation, Van Helsing stakes him", "confidence": "sourced"},
-   {"value": "repelled by cross", "quote": "Van Helsing appears and wards Lucy off with a cross", "confidence": "sourced"},
-   {"value": "destroyed by sunlight", "quote": "causing him to crumble and die upon the touch of morning light", "confidence": "sourced"},
-   {"value": "must be invited", "quote": "Dracula (having received Mina's permission to do so) slips inside discreetly and bites her again", "confidence": "sourced"},
-   {"value": "victims turn into vampires", "quote": "Knowing that he will soon turn, Harker writes a final entry in his journal and hides it", "confidence": "sourced"}
+   {
+    "value": "destroyed by stake",
+    "quote": "Without hesitation, Van Helsing stakes him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:47",
+      "quote": "(STAKE CLATTERS)"
+     }
+    ]
+   },
+   {
+    "value": "repelled by cross",
+    "quote": "Van Helsing appears and wards Lucy off with a cross",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:18",
+      "quote": "The power of the crucifix in these cases is two-fold."
+     }
+    ]
+   },
+   {
+    "value": "destroyed by sunlight",
+    "quote": "causing him to crumble and die upon the touch of morning light",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:52",
+      "quote": "Sunlight, fatal. Repeat, fatal."
+     }
+    ]
+   },
+   {
+    "value": "must be invited",
+    "quote": "Dracula (having received Mina's permission to do so) slips inside discreetly and bites her again",
+    "confidence": "sourced"
+   },
+   {
+    "value": "victims turn into vampires",
+    "quote": "Knowing that he will soon turn, Harker writes a final entry in his journal and hides it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:42",
+      "quote": "I have become a victim of Dracula and the woman in his power."
+     }
+    ]
+   },
+   {
+    "value": "repelled by garlic",
+    "source": "subtitles",
+    "at": "00:35:03",
+    "quote": "Vampires repelled by odor of garlic.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rests in native soil",
+    "source": "subtitles",
+    "at": "00:58:20",
+    "quote": "And we also know that during the day the vampire must rest in his native soil.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cannot become bat or wolf",
+    "source": "subtitles",
+    "at": "00:57:22",
+    "quote": "they could change themselves into bats or wolves. That's a common fallacy.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "vampire hunter", "relation_to_threat": "stranger", "detail": "Jonathan Harker", "quote": "he finds Harker but is horrified to see that his friend is now a vampire", "confidence": "sourced"},
-   {"value": "fiancée", "relation_to_threat": "stranger", "detail": "Lucy Holmwood", "quote": "Lucy opens the doors to her terrace and lays bare her neck", "confidence": "sourced"},
-   {"value": "wife", "relation_to_threat": "stranger", "detail": "Mina Holmwood", "quote": "Mina can no longer hold a crucifix without burning her hand - proof that she is becoming a vampire", "confidence": "sourced"}
+   {
+    "value": "vampire hunter",
+    "relation_to_threat": "stranger",
+    "detail": "Jonathan Harker",
+    "quote": "he finds Harker but is horrified to see that his friend is now a vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:42",
+      "quote": "I have become a victim of Dracula and the woman in his power."
+     }
+    ]
+   },
+   {
+    "value": "fiancée",
+    "relation_to_threat": "stranger",
+    "detail": "Lucy Holmwood",
+    "quote": "Lucy opens the doors to her terrace and lays bare her neck",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:17",
+      "quote": "Those marks on her neck, when did they first appear?"
+     }
+    ]
+   },
+   {
+    "value": "wife",
+    "relation_to_threat": "stranger",
+    "detail": "Mina Holmwood",
+    "quote": "Mina can no longer hold a crucifix without burning her hand - proof that she is becoming a vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:06",
+      "quote": "He came in here and he picked Madam up like she was a baby!"
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "Dracula's ashes blow away in the morning breeze, leaving only his clothes and ring behind", "confidence": "sourced"},
-   {"value": "victim saved", "quote": "Mina recovers and the cross-shaped scar fades from her hand", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "Dracula's ashes blow away in the morning breeze, leaving only his clothes and ring behind",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:59",
+      "quote": "It's getting light."
+     }
+    ]
+   },
+   {
+    "value": "victim saved",
+    "quote": "Mina recovers and the cross-shaped scar fades from her hand",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "diary", "state": "hidden", "when": "opening", "role": "clue", "quote": "Harker writes a final entry in his journal and hides it", "confidence": "sourced"},
-   {"value": "bite marks", "state": "on the neck", "when": "early", "role": "omen", "quote": "finds bite marks on his neck", "confidence": "sourced"},
-   {"value": "coffin", "state": "empty", "when": "early", "role": "clue", "quote": "He then turns to Dracula's coffin and finds it empty", "confidence": "sourced"},
-   {"value": "portrait", "state": "photos gone", "when": "middle", "role": "clue", "quote": "comes across the miniature portrait that Harker had of his fiancée Lucy Holmwood, with the photos now gone", "confidence": "sourced"},
-   {"value": "garlic", "state": "removed", "when": "middle", "role": "weapon", "quote": "begs the maid Gerda to remove his prescribed garlic bouquets and is found dead the next day", "confidence": "sourced"},
-   {"value": "cross", "state": "burning", "when": "late", "role": "clue", "quote": "Mina can no longer hold a crucifix without burning her hand", "confidence": "sourced"},
-   {"value": "candlesticks", "state": "held as a cross", "when": "ending", "role": "weapon", "quote": "force Dracula back with two candlesticks in the shape of a cross", "confidence": "sourced"},
-   {"value": "curtain", "state": "torn down", "when": "ending", "role": "weapon", "quote": "is able to tear down a heavy curtain", "confidence": "sourced"}
+   {
+    "value": "silent birds",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:04",
+    "quote": "There were no birds singing.",
+    "confidence": "sourced",
+    "detail": "Harker's diary notes the castle grounds have no birdsong"
+   },
+   {
+    "value": "diary",
+    "state": "hidden",
+    "when": "opening",
+    "role": "clue",
+    "quote": "Harker writes a final entry in his journal and hides it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:14",
+      "quote": "Here are his last words. His diary."
+     }
+    ]
+   },
+   {
+    "value": "bite marks",
+    "state": "on the neck",
+    "when": "early",
+    "role": "omen",
+    "quote": "finds bite marks on his neck",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:17",
+      "quote": "Those marks on her neck, when did they first appear?"
+     }
+    ]
+   },
+   {
+    "value": "coffin",
+    "state": "empty",
+    "when": "early",
+    "role": "clue",
+    "quote": "He then turns to Dracula's coffin and finds it empty",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:24",
+      "quote": "It's nearly dawn, she won't leave the coffin again."
+     }
+    ]
+   },
+   {
+    "value": "portrait",
+    "state": "photos gone",
+    "when": "middle",
+    "role": "clue",
+    "quote": "comes across the miniature portrait that Harker had of his fiancée Lucy Holmwood, with the photos now gone",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:09",
+      "quote": "Your wife? JONATHAN: No, my fiancée."
+     }
+    ]
+   },
+   {
+    "value": "gramophone recording",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:34:38",
+    "quote": "HELSING: (ON GRAMOPHONE) Research on vampires.",
+    "confidence": "sourced",
+    "detail": "Van Helsing dictates the vampire's rules into a phonograph"
+   },
+   {
+    "value": "garlic",
+    "state": "removed",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "begs the maid Gerda to remove his prescribed garlic bouquets and is found dead the next day",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:01",
+      "quote": "Now, you must get some garlic flowers, as many as you can."
+     }
+    ]
+   },
+   {
+    "value": "hearse",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:58:28",
+    "quote": "When I went to Castle Dracula, a hearse came tearing through the gates.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cross",
+    "state": "burning",
+    "when": "late",
+    "role": "clue",
+    "quote": "Mina can no longer hold a crucifix without burning her hand",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:23",
+      "quote": "but I'd feel much happier, if during my absence, you would wear this for me."
+     }
+    ]
+   },
+   {
+    "value": "wolf howling",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:07:14",
+    "quote": "(WOLF HOWLING)",
+    "confidence": "sourced"
+   },
+   {
+    "value": "candlesticks",
+    "state": "held as a cross",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "force Dracula back with two candlesticks in the shape of a cross",
+    "confidence": "sourced"
+   },
+   {
+    "value": "curtain",
+    "state": "torn down",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "is able to tear down a heavy curtain",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "guest arrives at castle", "when": "opening", "quote": "librarian Jonathan Harker arrives at Count Dracula's castle near Klausenburg", "confidence": "sourced"},
-   {"order": 2, "value": "hunter bitten", "when": "early", "quote": "realizes too late that she is also a vampire and gets bitten", "confidence": "sourced"},
-   {"order": 3, "value": "friend found turned", "when": "early", "role": "turn", "quote": "horrified to see that his friend is now a vampire and sleeping in Dracula's coffin", "confidence": "sourced"},
-   {"order": 4, "value": "loved one dies and rises", "when": "middle", "quote": "Three days after her burial, an undead Lucy lures Gerda's daughter Tania to a graveyard", "confidence": "sourced"},
-   {"order": 5, "value": "brother consents to staking", "when": "middle", "quote": "Van Helsing stakes his sister in her coffin", "confidence": "sourced"},
-   {"order": 6, "value": "monster abducts a victim", "when": "late", "quote": "the two men find Dracula escaping with both his coffin and Mina", "confidence": "sourced"},
-   {"order": 7, "value": "monster destroyed by daylight", "when": "ending", "role": "turn", "quote": "causing him to crumble and die upon the touch of morning light", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "guest arrives at castle",
+    "when": "opening",
+    "quote": "librarian Jonathan Harker arrives at Count Dracula's castle near Klausenburg",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:58",
+      "quote": "before arriving at Castle Dracula."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "hunter bitten",
+    "when": "early",
+    "quote": "realizes too late that she is also a vampire and gets bitten",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:37",
+      "quote": "(JONATHAN CHOKING)"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "friend found turned",
+    "when": "early",
+    "role": "turn",
+    "quote": "horrified to see that his friend is now a vampire and sleeping in Dracula's coffin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:02",
+      "quote": "Soon it will be sundown and they will walk again."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "rules recorded by the hunter",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:34:38",
+    "quote": "HELSING: (ON GRAMOPHONE) Research on vampires.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "loved one dies and rises",
+    "when": "middle",
+    "quote": "Three days after her burial, an undead Lucy lures Gerda's daughter Tania to a graveyard",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "brother consents to staking",
+    "when": "middle",
+    "quote": "Van Helsing stakes his sister in her coffin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:56",
+      "quote": "To liberate her soul and give it eternal peace, we must destroy that shell for all time!"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "monster abducts a victim",
+    "when": "late",
+    "quote": "the two men find Dracula escaping with both his coffin and Mina",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:06",
+      "quote": "He came in here and he picked Madam up like she was a baby!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "monster destroyed by daylight",
+    "when": "ending",
+    "role": "turn",
+    "quote": "causing him to crumble and die upon the touch of morning light",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:59",
+      "quote": "It's getting light."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

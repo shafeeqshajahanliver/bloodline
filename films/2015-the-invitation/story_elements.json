@@ -1,60 +1,421 @@
 {
  "film": "2015-the-invitation",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "cult", "detail": "\"The Invitation\", led by Dr. Joseph", "quote": "David and Eden tell their guests about a cult-like group they joined", "confidence": "sourced"},
-   {"value": "hosts", "detail": "David, Eden, Pruitt and Sadie", "quote": "David, Pruitt, and a recovered Sadie attack the guests, killing Miguel, Choi, and Ben", "confidence": "sourced"}
+   {
+    "value": "cult",
+    "detail": "\"The Invitation\", led by Dr. Joseph",
+    "quote": "David and Eden tell their guests about a cult-like group they joined",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hosts",
+    "detail": "David, Eden, Pruitt and Sadie",
+    "quote": "David, Pruitt, and a recovered Sadie attack the guests, killing Miguel, Choi, and Ben",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "grief", "detail": "met at a grief support group", "quote": "Eden met David at a grief support group in Mexico", "confidence": "sourced"}
+   {
+    "value": "grief",
+    "detail": "met at a grief support group",
+    "quote": "Eden met David at a grief support group in Mexico",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "release from pain", "quote": "the only way they can leave the Earth and be free of their pain", "confidence": "sourced"},
-   {"value": "mass death", "quote": "other cult members have carried out similar plans", "confidence": "observed"}
+   {
+    "value": "release from pain",
+    "quote": "the only way they can leave the Earth and be free of their pain",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:14",
+      "quote": "that pain is optional."
+     }
+    ]
+   },
+   {
+    "value": "mass death",
+    "quote": "other cult members have carried out similar plans",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "death of a child", "quote": "After the accidental death of their young son Ty, Will and Eden divorced", "confidence": "sourced"},
-   {"value": "murder", "detail": "Pruitt killed his wife", "quote": "Pruitt confesses to killing his wife and doing time in prison", "confidence": "sourced"}
+   {
+    "value": "death of a child",
+    "quote": "After the accidental death of their young son Ty, Will and Eden divorced",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:18",
+      "quote": "Our son died, Edie, and you're trying to ignore it."
+     }
+    ]
+   },
+   {
+    "value": "murder",
+    "detail": "Pruitt killed his wife",
+    "quote": "Pruitt confesses to killing his wife and doing time in prison",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "an invitation", "detail": "dinner party at an ex-wife's home", "quote": "the Hollywood Hills home of his ex-wife Eden, who is hosting a dinner party with her new husband David", "confidence": "sourced"}
+   {
+    "value": "an invitation",
+    "detail": "dinner party at an ex-wife's home",
+    "quote": "the Hollywood Hills home of his ex-wife Eden, who is hosting a dinner party with her new husband David",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:19",
+      "quote": "the invitation... and looking only ahead,"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "poisoned toast", "quote": "Will smashes the glasses, fearing they are poisoned", "confidence": "sourced"},
-   {"value": "red lantern signals", "quote": "They see more than a dozen nearby homes with red lanterns", "confidence": "sourced"}
+   {
+    "value": "poisoned toast",
+    "quote": "Will smashes the glasses, fearing they are poisoned",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:09",
+      "quote": "Don't drink it! Don't fucking touch it!"
+     }
+    ]
+   },
+   {
+    "value": "red lantern signals",
+    "quote": "They see more than a dozen nearby homes with red lanterns",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pain is optional",
+    "detail": "the Invitation's teaching",
+    "source": "subtitles",
+    "at": "00:13:35",
+    "quote": "All that useless pain, it's gone.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "grieving father", "relation_to_threat": "family", "detail": "Will, Eden's ex-husband", "quote": "Eden shoots Will, wounding him, then remorsefully shoots herself in the stomach", "confidence": "sourced"},
-   {"value": "friends", "relation_to_threat": "stranger", "quote": "Gina, who had sipped her drink before Will's intervention, collapses and dies", "confidence": "sourced"},
-   {"value": "neighbourhood", "relation_to_threat": "community", "quote": "they hear sirens and screams and helicopters overhead", "confidence": "sourced"}
+   {
+    "value": "grieving father",
+    "relation_to_threat": "family",
+    "detail": "Will, Eden's ex-husband",
+    "quote": "Eden shoots Will, wounding him, then remorsefully shoots herself in the stomach",
+    "confidence": "sourced"
+   },
+   {
+    "value": "friends",
+    "relation_to_threat": "stranger",
+    "quote": "Gina, who had sipped her drink before Will's intervention, collapses and dies",
+    "confidence": "sourced"
+   },
+   {
+    "value": "neighbourhood",
+    "relation_to_threat": "community",
+    "quote": "they hear sirens and screams and helicopters overhead",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat spreads", "quote": "realize other cult members have carried out similar plans", "confidence": "sourced"},
-   {"value": "few survivors", "quote": "Will, Kira, and Tommy carry the dying Eden into the garden", "confidence": "sourced"}
+   {
+    "value": "threat spreads",
+    "quote": "realize other cult members have carried out similar plans",
+    "confidence": "sourced"
+   },
+   {
+    "value": "few survivors",
+    "quote": "Will, Kira, and Tommy carry the dying Eden into the garden",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "locked door", "state": "locked by the host", "when": "early", "role": "omen", "quote": "David locks the front door, explaining that there was a home invasion in the neighborhood", "confidence": "sourced"},
-   {"value": "pill bottle", "state": "hidden", "when": "early", "role": "clue", "quote": "sees Eden hiding a pill bottle that he later learns contains the barbiturate phenobarbital", "confidence": "sourced"},
-   {"value": "video", "state": "of a dying woman", "when": "middle", "role": "omen", "quote": "comforts a dying woman as she takes her last breaths", "confidence": "sourced"},
-   {"value": "mirror", "state": "odd faces", "when": "middle", "role": "omen", "quote": "sees Sadie make odd faces into a mirror", "confidence": "sourced"},
-   {"value": "red lantern", "state": "lit", "when": "late", "role": "symbol", "quote": "David lights a red lantern in the garden", "confidence": "sourced"},
-   {"value": "glasses", "state": "smashed", "when": "late", "role": "turn", "quote": "Will smashes the glasses, fearing they are poisoned", "confidence": "sourced"},
-   {"value": "wine bottle", "state": "used to kill", "when": "ending", "role": "weapon", "quote": "Kira, who beats him to death with a wine bottle", "confidence": "sourced"}
+   {
+    "value": "coyote",
+    "state": "hit by the car, dying",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:40",
+    "quote": "A coyote, I think.",
+    "confidence": "sourced",
+    "detail": "Will finishes it off with a tire iron; its blood stays on his face at the party, and coyotes yip outside later",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "A mangled coyote. It's in its death throes, its cries a raspy gurgle."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:56:22",
+      "quote": "[coyotes howling]"
+     }
+    ]
+   },
+   {
+    "value": "tire iron",
+    "when": "opening",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "00:03:04",
+    "quote": "[tire iron clangs]",
+    "confidence": "sourced"
+   },
+   {
+    "value": "locked door",
+    "state": "locked by the host",
+    "when": "early",
+    "role": "omen",
+    "quote": "David locks the front door, explaining that there was a home invasion in the neighborhood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:35",
+      "quote": "[lock clicks]"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:50:09",
+      "quote": "I lock the door, and you have a fit about it."
+     }
+    ]
+   },
+   {
+    "value": "pill bottle",
+    "state": "hidden",
+    "when": "early",
+    "role": "clue",
+    "quote": "sees Eden hiding a pill bottle that he later learns contains the barbiturate phenobarbital",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:54",
+      "quote": "a big fucking bottle of phenobarbitol"
+     }
+    ]
+   },
+   {
+    "value": "matching leather bracelets",
+    "when": "early",
+    "role": "clue",
+    "source": "screenplay",
+    "quote": "Will notices a leather bracelet on her wrist. The same one David and Sadie wear.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "video",
+    "state": "of a dying woman",
+    "when": "middle",
+    "role": "omen",
+    "quote": "comforts a dying woman as she takes her last breaths",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:21",
+      "quote": "Is this some kind of a recruitment video?"
+     }
+    ]
+   },
+   {
+    "value": "mirror",
+    "state": "odd faces",
+    "when": "middle",
+    "role": "omen",
+    "quote": "sees Sadie make odd faces into a mirror",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Sadie is making faces at herself in the mirror. Horrible, twisted expressions"
+     }
+    ]
+   },
+   {
+    "value": "red lantern",
+    "state": "lit",
+    "when": "late",
+    "role": "symbol",
+    "quote": "David lights a red lantern in the garden",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "It's a decorative RED LANTERN."
+     }
+    ]
+   },
+   {
+    "value": "glasses",
+    "state": "smashed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Will smashes the glasses, fearing they are poisoned",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:09",
+      "quote": "Don't drink it! Don't fucking touch it!"
+     }
+    ]
+   },
+   {
+    "value": "wine bottle",
+    "state": "used to kill",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "Kira, who beats him to death with a wine bottle",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "return to the old home", "when": "opening", "role": "trigger", "quote": "Will drives with his girlfriend Kira to the Hollywood Hills home of his ex-wife Eden", "confidence": "sourced"},
-   {"order": 2, "value": "guests locked in", "when": "early", "role": "omen", "quote": "David locks the front door", "confidence": "sourced"},
-   {"order": 3, "value": "cult revealed", "when": "middle", "quote": "called \"The Invitation\", which helps people work through their grief", "confidence": "sourced"},
-   {"order": 4, "value": "suspicion proved wrong", "when": "middle", "quote": "Choi arrives unexpectedly, explaining that he was called away by work", "confidence": "sourced"},
-   {"order": 5, "value": "poisoned toast stopped", "when": "late", "role": "turn", "quote": "Will smashes the glasses, fearing they are poisoned", "confidence": "sourced"},
-   {"order": 6, "value": "massacre", "when": "late", "quote": "David, Pruitt, and a recovered Sadie attack the guests", "confidence": "sourced"},
-   {"order": 7, "value": "plot is everywhere", "when": "ending", "role": "turn", "quote": "They see more than a dozen nearby homes with red lanterns", "confidence": "sourced"}
+   {
+    "value": "animal killed on the road",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "Kira watches as Will lifts the tire iron and brings it down on the coyote",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:39",
+      "quote": "[coyote yelps] [whimpering continues]"
+     }
+    ],
+    "order": 1
+   },
+   {
+    "order": 2,
+    "value": "return to the old home",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Will drives with his girlfriend Kira to the Hollywood Hills home of his ex-wife Eden",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:54",
+      "quote": "Come on, Ty. Dinner's ready."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "guests locked in",
+    "when": "early",
+    "role": "omen",
+    "quote": "David locks the front door",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:35",
+      "quote": "[lock clicks]"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "cult revealed",
+    "when": "middle",
+    "quote": "called \"The Invitation\", which helps people work through their grief",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:42",
+      "quote": "[man] This is our home in Sonora, Mexico,"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "suspicion proved wrong",
+    "when": "middle",
+    "quote": "Choi arrives unexpectedly, explaining that he was called away by work",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "poisoned toast stopped",
+    "when": "late",
+    "role": "turn",
+    "quote": "Will smashes the glasses, fearing they are poisoned",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:12",
+      "quote": "No, don't drink!"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "massacre",
+    "when": "late",
+    "quote": "David, Pruitt, and a recovered Sadie attack the guests",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:42",
+      "quote": "[gunshot] [whimpers]"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "plot is everywhere",
+    "when": "ending",
+    "role": "turn",
+    "quote": "They see more than a dozen nearby homes with red lanterns",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "At least a dozen of the same red lanterns. They are everywhere."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:34:55",
+      "quote": "[helicopter flies overhead] Oh, my God."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

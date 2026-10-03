@@ -1,59 +1,426 @@
 {
  "film": "1971-blood-on-satan-s-claw",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "demon", "detail": "Behemoth, appearing as a furred beast", "quote": "they perform a Black Mass to the demon Behemoth, who appears as a furred beast", "confidence": "sourced"},
-   {"value": "child cult", "detail": "village children led by Angel Blake", "quote": "so they can play ritualistic games in a ruined church under their ringleader, Angel Blake", "confidence": "sourced"}
+   {
+    "value": "demon",
+    "detail": "Behemoth, appearing as a furred beast",
+    "quote": "they perform a Black Mass to the demon Behemoth, who appears as a furred beast",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:06",
+      "quote": "Holy behemoth, father of my life, speak now, come now,"
+     }
+    ]
+   },
+   {
+    "value": "child cult",
+    "detail": "village children led by Angel Blake",
+    "quote": "so they can play ritualistic games in a ruined church under their ringleader, Angel Blake",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "unearthed from the ground", "detail": "a deformed skull ploughed up in a field", "quote": "after a local farmer unearths a mysterious deformed skull buried in a field", "confidence": "sourced"}
+   {
+    "value": "unearthed from the ground",
+    "detail": "a deformed skull ploughed up in a field",
+    "quote": "after a local farmer unearths a mysterious deformed skull buried in a field",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "a body", "detail": "to rebuild the demon's physical form from flayed fur", "quote": "which have been flayed from their bodies to restore the demon's physical form", "confidence": "sourced"}
+   {
+    "value": "a body",
+    "detail": "to rebuild the demon's physical form from flayed fur",
+    "quote": "which have been flayed from their bodies to restore the demon's physical form",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:20",
+      "quote": "My master will take his form and the last one will give a limb..."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "unearthing remains", "quote": "farmer Ralph Gower uncovers a deformed skull with one intact eye and strange fur", "confidence": "sourced"}
+   {
+    "value": "unearthing remains",
+    "quote": "farmer Ralph Gower uncovers a deformed skull with one intact eye and strange fur",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "mark grows on the body", "detail": "patches of fur on the possessed", "quote": "All the children have been growing these patches of fur", "confidence": "sourced"},
-   {"value": "removing the mark breaks hold", "detail": "Margaret abandoned once her fur is removed", "quote": "Angel abandons her when she realises she no longer bears a piece of the demon's skin", "confidence": "sourced"},
-   {"value": "killing the demon ends curse", "quote": "the judge kills the demon with a sword, ending the curse on Ralph and returning him to normal", "confidence": "sourced"}
+   {
+    "value": "mark grows on the body",
+    "detail": "patches of fur on the possessed",
+    "quote": "All the children have been growing these patches of fur",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:24",
+      "quote": "To what purpose? The skin would only grow again."
+     }
+    ]
+   },
+   {
+    "value": "removing the mark breaks hold",
+    "detail": "Margaret abandoned once her fur is removed",
+    "quote": "Angel abandons her when she realises she no longer bears a piece of the demon's skin",
+    "confidence": "sourced"
+   },
+   {
+    "value": "killing the demon ends curse",
+    "quote": "the judge kills the demon with a sword, ending the curse on Ralph and returning him to normal",
+    "confidence": "sourced"
+   },
+   {
+    "value": "let the evil grow first",
+    "source": "subtitles",
+    "at": "00:31:58",
+    "quote": "You must let it grow.",
+    "detail": "the judge leaves, waiting for the evil to show itself fully",
+    "confidence": "sourced"
+   },
+   {
+    "value": "incantation from the furrows",
+    "source": "subtitles",
+    "at": "00:54:10",
+    "quote": "rise now from the forest, from the furrows, from the fields and live.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "village youth", "relation_to_threat": "community", "quote": "it follows the residents of a rural village whose youth fall under the influence of a demonic presence", "confidence": "sourced"},
-   {"value": "young woman", "relation_to_threat": "community", "detail": "Cathy, raped and murdered by the cult", "quote": "The cult ritualistically rape and murder Cathy and flay the fur from her back", "confidence": "sourced"},
-   {"value": "child", "relation_to_threat": "community", "detail": "Mark, killed in a game", "quote": "Mark is tricked into playing a lethal game of blind man's buff", "confidence": "sourced"},
-   {"value": "fiancée", "relation_to_threat": "stranger", "detail": "Rosalind, committed after growing a claw", "quote": "Peter glimpses a monstrous claw in place of her hand", "confidence": "sourced"}
+   {
+    "value": "village youth",
+    "relation_to_threat": "community",
+    "quote": "it follows the residents of a rural village whose youth fall under the influence of a demonic presence",
+    "confidence": "sourced"
+   },
+   {
+    "value": "young woman",
+    "relation_to_threat": "community",
+    "detail": "Cathy, raped and murdered by the cult",
+    "quote": "The cult ritualistically rape and murder Cathy and flay the fur from her back",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child",
+    "relation_to_threat": "community",
+    "detail": "Mark, killed in a game",
+    "quote": "Mark is tricked into playing a lethal game of blind man's buff",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:51",
+      "quote": "Mark. Mark."
+     }
+    ]
+   },
+   {
+    "value": "fiancée",
+    "relation_to_threat": "stranger",
+    "detail": "Rosalind, committed after growing a claw",
+    "quote": "Peter glimpses a monstrous claw in place of her hand",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "the judge kills the demon with a sword", "confidence": "sourced"},
-   {"value": "victim restored", "quote": "ending the curse on Ralph and returning him to normal", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "the judge kills the demon with a sword",
+    "confidence": "sourced"
+   },
+   {
+    "value": "victim restored",
+    "quote": "ending the curse on Ralph and returning him to normal",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "deformed skull", "state": "unearthed, then vanishes", "when": "opening", "role": "trigger", "quote": "uncovers a deformed skull with one intact eye and strange fur", "confidence": "sourced"},
-   {"value": "claw", "state": "furred, in place of a hand", "when": "early", "role": "threat", "quote": "is attacked by a creature with a furred claw", "confidence": "sourced"},
-   {"value": "severed hand", "state": "self-inflicted", "when": "early", "role": "turn", "quote": "he finds that Peter has severed his own hand", "confidence": "sourced"},
-   {"value": "attic", "state": "disused", "when": "early", "role": "setting", "quote": "arrange for Rosalind to sleep in a disused attic room", "confidence": "sourced"},
-   {"value": "fur", "state": "growing on skin, flayed", "when": "middle", "role": "symbol", "quote": "The children tear Cathy's dress to reveal fur on her back", "confidence": "sourced"},
-   {"value": "ruined church", "state": "used for rituals", "when": "middle", "role": "setting", "quote": "the ruined church, where they perform a Black Mass", "confidence": "sourced"},
-   {"value": "dogs", "state": "tracking", "when": "late", "role": "weapon", "quote": "The judge returns and sets dogs to track her", "confidence": "sourced"},
-   {"value": "sword", "state": "used to kill demon", "when": "ending", "role": "weapon", "quote": "the judge kills the demon with a sword", "confidence": "sourced"}
+   {
+    "value": "deformed skull",
+    "state": "unearthed, then vanishes",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "uncovers a deformed skull with one intact eye and strange fur",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:18",
+      "quote": "Human remains. - No, sir. A sort of head, a face."
+     }
+    ]
+   },
+   {
+    "value": "claw",
+    "state": "furred, in place of a hand",
+    "when": "early",
+    "role": "threat",
+    "quote": "is attacked by a creature with a furred claw",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:21",
+      "quote": "Well, I were holding the claw and Angel were laughing."
+     }
+    ]
+   },
+   {
+    "value": "severed hand",
+    "state": "self-inflicted",
+    "when": "early",
+    "role": "turn",
+    "quote": "he finds that Peter has severed his own hand",
+    "confidence": "sourced"
+   },
+   {
+    "value": "attic",
+    "state": "disused",
+    "when": "early",
+    "role": "setting",
+    "quote": "arrange for Rosalind to sleep in a disused attic room",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:31",
+      "quote": "No, she can have the attic."
+     }
+    ]
+   },
+   {
+    "value": "fur",
+    "state": "growing on skin, flayed",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "The children tear Cathy's dress to reveal fur on her back",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:18",
+      "quote": "There were a fur."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:06:55",
+      "quote": "That's what they call the devil's skin."
+     }
+    ]
+   },
+   {
+    "value": "ruined church",
+    "state": "used for rituals",
+    "when": "middle",
+    "role": "setting",
+    "quote": "the ruined church, where they perform a Black Mass",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:08",
+      "quote": "I found her in the ruined church."
+     }
+    ]
+   },
+   {
+    "value": "dogs",
+    "state": "tracking",
+    "when": "late",
+    "role": "weapon",
+    "quote": "The judge returns and sets dogs to track her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:04",
+      "quote": "These dogs know how to tear the devil's heels."
+     }
+    ]
+   },
+   {
+    "value": "sword",
+    "state": "used to kill demon",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "the judge kills the demon with a sword",
+    "confidence": "sourced"
+   },
+   {
+    "value": "apple offered",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:35:37",
+    "quote": "Wilt thou come and play with us, Mark?",
+    "detail": "the children lure Mark to their game with an apple",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lake",
+    "state": "girl drowned in a witch test",
+    "when": "late",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "01:05:31",
+    "quote": "They chased her and throwed her in the lake, to see if she'd float like a witch.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "remains unearthed", "when": "opening", "role": "trigger", "quote": "farmer Ralph Gower uncovers a deformed skull with one intact eye and strange fur", "confidence": "sourced"},
-   {"order": 2, "value": "authority dismisses warning", "when": "opening", "quote": "The judge disregards the incident, crediting it to Ralph's superstitious fears", "confidence": "sourced"},
-   {"order": 3, "value": "first transformation", "when": "early", "quote": "as she is led out, Peter glimpses a monstrous claw in place of her hand", "confidence": "sourced"},
-   {"order": 4, "value": "children form cult", "when": "middle", "quote": "playing truant from their scripture classes so they can play ritualistic games in a ruined church", "confidence": "sourced"},
-   {"order": 5, "value": "child murdered", "when": "middle", "quote": "Mark is dead and \"had the devil in him, so we cut it out\"", "confidence": "sourced"},
-   {"order": 6, "value": "ritual sacrifice", "when": "late", "role": "turn", "quote": "The cult ritualistically rape and murder Cathy and flay the fur from her back", "confidence": "sourced"},
-   {"order": 7, "value": "captive reveals ritual", "when": "late", "role": "clue", "quote": "the cult will meet at the ruined church to complete the ritual to rebuild the demon's body", "confidence": "sourced"},
-   {"order": 8, "value": "mob destroys cult and demon", "when": "ending", "quote": "In the ensuing violence, Angel is killed, and the judge kills the demon with a sword", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "remains unearthed",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "farmer Ralph Gower uncovers a deformed skull with one intact eye and strange fur",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:29",
+      "quote": "It were more like some fiend."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "authority dismisses warning",
+    "when": "opening",
+    "quote": "The judge disregards the incident, crediting it to Ralph's superstitious fears",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:28",
+      "quote": "I must surmise, Ralph, that you're wasting my time."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "first transformation",
+    "when": "early",
+    "quote": "as she is led out, Peter glimpses a monstrous claw in place of her hand",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "judge withdraws to wait",
+    "when": "early",
+    "source": "subtitles",
+    "at": "00:31:38",
+    "quote": "Have a pleasant journey, Your Lordship.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "children form cult",
+    "when": "middle",
+    "quote": "playing truant from their scripture classes so they can play ritualistic games in a ruined church",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:45",
+      "quote": "Angel has taught us some new games."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "child murdered",
+    "when": "middle",
+    "quote": "Mark is dead and \"had the devil in him, so we cut it out\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:22",
+      "quote": "Little Mark had the devil in him. So we cut it out."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "ritual sacrifice",
+    "when": "late",
+    "role": "turn",
+    "quote": "The cult ritualistically rape and murder Cathy and flay the fur from her back",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:03",
+      "quote": "take thou my blood, my flesh, my skin and walk."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "witch test drowning",
+    "when": "late",
+    "source": "subtitles",
+    "at": "01:04:29",
+    "quote": "See if she floats.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "captive reveals ritual",
+    "when": "late",
+    "role": "clue",
+    "quote": "the cult will meet at the ruined church to complete the ritual to rebuild the demon's body",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:16",
+      "quote": "In the old church, like before."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "mob destroys cult and demon",
+    "when": "ending",
+    "quote": "In the ensuing violence, Angel is killed, and the judge kills the demon with a sword",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:02",
+      "quote": "My good friends, we go about the most fearful business."
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

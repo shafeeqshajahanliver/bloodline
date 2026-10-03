@@ -1,60 +1,418 @@
 {
  "film": "2009-dead-snow",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "zombies", "detail": "Nazi SS zombies led by Herzog", "quote": "eaten by zombies wearing World War II Nazi SS uniforms", "confidence": "sourced"}
+   {
+    "value": "zombies",
+    "detail": "Nazi SS zombies led by Herzog",
+    "quote": "eaten by zombies wearing World War II Nazi SS uniforms",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:58",
+      "quote": "We're being attacked by what looks like, looks like uhh... Nazis from the Second World War."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "historical atrocity", "detail": "Einsatzgruppe soldiers who froze in the mountains", "quote": "The survivors, including Herzog, were chased into the mountains, and it was assumed that they all froze to death", "confidence": "sourced"}
+   {
+    "value": "historical atrocity",
+    "detail": "Einsatzgruppe soldiers who froze in the mountains",
+    "quote": "The survivors, including Herzog, were chased into the mountains, and it was assumed that they all froze to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:39",
+      "quote": "Colonel Herzog and many of his soldiers managed to escape."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "stolen treasure back", "quote": "Martin realises the zombies' intent, and retrieves the box from the ruined cabin", "confidence": "sourced"}
+   {
+    "value": "stolen treasure back",
+    "quote": "Martin realises the zombies' intent, and retrieves the box from the ruined cabin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:46",
+      "quote": "They brought along a lot of the stolen goods. Damn greedy bastards."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "war crimes and looting", "quote": "the Nazis abused and tortured the local people", "confidence": "sourced"},
-   {"value": "theft", "quote": "the soldiers looted all the town's valuables", "confidence": "sourced"}
+   {
+    "value": "war crimes and looting",
+    "quote": "the Nazis abused and tortured the local people",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:38",
+      "quote": "They were commanded by Colonel Herzog, they made life hell for the local people."
+     }
+    ]
+   },
+   {
+    "value": "theft",
+    "quote": "the soldiers looted all the town's valuables",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:18",
+      "quote": "They entered every house in Oksfjord, and stole any valuables they found."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "taking an object", "detail": "a box of valuables found under the cabin", "quote": "Erlend finds an old wooden box filled with valuables and golden trinkets", "confidence": "sourced"},
-   {"value": "remote holiday", "quote": "Seven students on Easter vacation arrive at a small cabin near Øksfjord", "confidence": "sourced"}
+   {
+    "value": "taking an object",
+    "detail": "a box of valuables found under the cabin",
+    "quote": "Erlend finds an old wooden box filled with valuables and golden trinkets",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:48",
+      "quote": "That box has been here for 50 years."
+     }
+    ]
+   },
+   {
+    "value": "remote holiday",
+    "quote": "Seven students on Easter vacation arrive at a small cabin near Øksfjord",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:44",
+      "quote": "How many movies start with people on a..., a trip to a cabin"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "bite infects", "quote": "Martin is bitten on the arm. To avoid becoming infected, he cuts off his arm with a chainsaw", "confidence": "sourced"},
-   {"value": "returning treasure not enough", "quote": "he finds a gold coin in his pocket, just as Herzog smashes the window of the car", "confidence": "sourced"}
+   {
+    "value": "bite infects",
+    "quote": "Martin is bitten on the arm. To avoid becoming infected, he cuts off his arm with a chainsaw",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:43",
+      "quote": "Don't get bitten! Don't get bitten, OK?"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:18:26",
+      "quote": "You'll be infected if.... You'll become like them."
+     }
+    ]
+   },
+   {
+    "value": "returning treasure not enough",
+    "quote": "he finds a gold coin in his pocket, just as Herzog smashes the window of the car",
+    "confidence": "sourced"
+   },
+   {
+    "value": "spit to find which way up",
+    "detail": "avalanche survival tip told in the car",
+    "source": "subtitles",
+    "at": "00:03:55",
+    "quote": "If an avalanche gets you, spit to find which direction is up.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "students on holiday", "relation_to_threat": "stranger", "quote": "a group of students surviving a zombie Nazi attack in the mountains of Norway", "confidence": "sourced"},
-   {"value": "local hiker", "relation_to_threat": "stranger", "quote": "is attacked and killed by a zombie", "confidence": "sourced"}
+   {
+    "value": "students on holiday",
+    "relation_to_threat": "stranger",
+    "quote": "a group of students surviving a zombie Nazi attack in the mountains of Norway",
+    "confidence": "sourced"
+   },
+   {
+    "value": "local hiker",
+    "relation_to_threat": "stranger",
+    "quote": "is attacked and killed by a zombie",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "everyone dies", "detail": "implied for the last survivor", "quote": "he finds a gold coin in his pocket, just as Herzog smashes the window of the car", "confidence": "observed"},
-   {"value": "threat survives", "quote": "Herzog, who calls upon hundreds of zombies, that rise from under the snow", "confidence": "observed"}
+   {
+    "value": "everyone dies",
+    "detail": "implied for the last survivor",
+    "quote": "he finds a gold coin in his pocket, just as Herzog smashes the window of the car",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:03",
+      "quote": "Oh fuck!"
+     }
+    ]
+   },
+   {
+    "value": "threat survives",
+    "quote": "Herzog, who calls upon hundreds of zombies, that rise from under the snow",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "snow", "when": "opening", "role": "setting", "quote": "A woman, Sara, is being chased through the snows of Norway", "confidence": "sourced"},
-   {"value": "woman covered in blood", "state": "dream", "when": "early", "role": "omen", "quote": "finds her outside covered in blood", "confidence": "sourced"},
-   {"value": "box of gold", "when": "middle", "role": "trigger", "quote": "an old wooden box filled with valuables and golden trinkets", "confidence": "sourced"},
-   {"value": "gold coin", "state": "pocketed", "when": "middle", "role": "clue", "quote": "one of them pockets a gold coin", "confidence": "sourced"},
-   {"value": "severed head", "when": "middle", "quote": "German firearms and helmets, as well as Sara's severed head", "confidence": "sourced"},
-   {"value": "intestine as rope", "when": "middle", "quote": "the two hang from the cliff using an intestine as rope", "confidence": "sourced"},
-   {"value": "chainsaw", "when": "late", "role": "weapon", "quote": "he cuts off his arm with a chainsaw", "confidence": "sourced"},
-   {"value": "pocket watch", "when": "late", "role": "symbol", "quote": "killed by Herzog, who retrieves a watch from his pocket", "confidence": "sourced"}
+   {
+    "value": "snow",
+    "when": "opening",
+    "role": "setting",
+    "quote": "A woman, Sara, is being chased through the snows of Norway",
+    "confidence": "sourced"
+   },
+   {
+    "value": "woman covered in blood",
+    "state": "dream",
+    "when": "early",
+    "role": "omen",
+    "quote": "finds her outside covered in blood",
+    "confidence": "sourced"
+   },
+   {
+    "value": "box of gold",
+    "when": "middle",
+    "role": "trigger",
+    "quote": "an old wooden box filled with valuables and golden trinkets",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:48",
+      "quote": "That box has been here for 50 years."
+     }
+    ]
+   },
+   {
+    "value": "gold coin",
+    "state": "pocketed",
+    "when": "middle",
+    "role": "clue",
+    "quote": "one of them pockets a gold coin",
+    "confidence": "sourced"
+   },
+   {
+    "value": "severed head",
+    "when": "middle",
+    "quote": "German firearms and helmets, as well as Sara's severed head",
+    "confidence": "sourced"
+   },
+   {
+    "value": "intestine as rope",
+    "when": "middle",
+    "quote": "the two hang from the cliff using an intestine as rope",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:11",
+      "quote": "If you stand with your own intestines in your hands, then what will you do?"
+     }
+    ]
+   },
+   {
+    "value": "chainsaw",
+    "when": "late",
+    "role": "weapon",
+    "quote": "he cuts off his arm with a chainsaw",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:47",
+      "quote": "They uh... taught us uh... amputation, do you remember?"
+     }
+    ]
+   },
+   {
+    "value": "pocket watch",
+    "when": "late",
+    "role": "symbol",
+    "quote": "killed by Herzog, who retrieves a watch from his pocket",
+    "confidence": "sourced"
+   },
+   {
+    "value": "moose",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:16:19",
+    "quote": "Sure it wasn't a moose?",
+    "confidence": "sourced",
+    "detail": "the friends dismiss a figure seen outside the cabin"
+   },
+   {
+    "value": "bag in the snow",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:43:44",
+    "quote": "It's Sara's. Huh? Sara's bag?",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "prologue victim eaten", "when": "opening", "quote": "She is ultimately cornered and eaten by zombies", "confidence": "sourced"},
-   {"order": 2, "value": "stranger tells local legend", "when": "early", "role": "omen", "quote": "He tells them the dark history of the region", "confidence": "sourced"},
-   {"order": 3, "value": "messenger killed", "when": "early", "quote": "He investigates, and is attacked and killed by a zombie", "confidence": "sourced"},
-   {"order": 4, "value": "treasure found", "when": "middle", "role": "trigger", "quote": "Erlend finds an old wooden box filled with valuables and golden trinkets", "confidence": "sourced"},
-   {"order": 5, "value": "siege of the cabin", "when": "middle", "quote": "Upon returning to the cabin, they are attacked", "confidence": "sourced"},
-   {"order": 6, "value": "army rises", "when": "late", "role": "turn", "quote": "calls upon hundreds of zombies, that rise from under the snow", "confidence": "sourced"},
-   {"order": 7, "value": "treasure returned", "when": "ending", "quote": "He returns the box to Herzog, and escapes to the car", "confidence": "sourced"},
-   {"order": 8, "value": "one coin remains", "when": "ending", "role": "turn", "quote": "he finds a gold coin in his pocket, just as Herzog smashes the window of the car", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "prologue victim eaten",
+    "when": "opening",
+    "quote": "She is ultimately cornered and eaten by zombies",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "avalanche joke on the drive",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:15",
+    "quote": "There was this guy who went up into the mountains to go skiing.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "cabin-movie banter",
+    "when": "opening",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:07:44",
+    "quote": "How many movies start with people on a..., a trip to a cabin",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "figure seen outside",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:16:14",
+    "quote": "I saw someone!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "stranger tells local legend",
+    "when": "early",
+    "role": "omen",
+    "quote": "He tells them the dark history of the region",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:50",
+      "quote": "a little of the local history about this area"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:22:19",
+      "quote": "There is an evil... An evil you do not want to awake."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "messenger killed",
+    "when": "early",
+    "quote": "He investigates, and is attacked and killed by a zombie",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "treasure found",
+    "when": "middle",
+    "role": "trigger",
+    "quote": "Erlend finds an old wooden box filled with valuables and golden trinkets",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:48",
+      "quote": "That box has been here for 50 years."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "siege of the cabin",
+    "when": "middle",
+    "quote": "Upon returning to the cabin, they are attacked",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:43",
+      "quote": "Don't get bitten! Don't get bitten, OK?"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "radio call for help",
+    "when": "late",
+    "source": "subtitles",
+    "at": "01:05:58",
+    "quote": "We're trapped... we're trapped up here, we're being attacked. Please help us.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "army rises",
+    "when": "late",
+    "role": "turn",
+    "quote": "calls upon hundreds of zombies, that rise from under the snow",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "treasure returned",
+    "when": "ending",
+    "quote": "He returns the box to Herzog, and escapes to the car",
+    "confidence": "sourced"
+   },
+   {
+    "order": 12,
+    "value": "one coin remains",
+    "when": "ending",
+    "role": "turn",
+    "quote": "he finds a gold coin in his pocket, just as Herzog smashes the window of the car",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:03",
+      "quote": "Oh fuck!"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

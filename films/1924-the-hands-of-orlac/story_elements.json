@@ -1,61 +1,420 @@
 {
  "film": "1924-the-hands-of-orlac",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "transplanted body part", "detail": "the hands of executed murderer Vasseur grafted onto Orlac", "quote": "The surgeon transplants the hands of a recently executed murderer named Vasseur", "confidence": "sourced"},
-   {"value": "the self", "detail": "Orlac fears his own urge to kill", "quote": "He believes that along with the hands he has acquired the murderer's predisposition to violence", "confidence": "sourced"},
-   {"value": "con man", "detail": "Nera, posing as the resurrected Vasseur", "quote": "the man is actually a con man named Nera who is well known to police", "confidence": "sourced"}
+   {
+    "value": "transplanted body part",
+    "detail": "the hands of executed murderer Vasseur grafted onto Orlac",
+    "quote": "The surgeon transplants the hands of a recently executed murderer named Vasseur",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the self",
+    "detail": "Orlac fears his own urge to kill",
+    "quote": "He believes that along with the hands he has acquired the murderer's predisposition to violence",
+    "confidence": "sourced"
+   },
+   {
+    "value": "con man",
+    "detail": "Nera, posing as the resurrected Vasseur",
+    "quote": "the man is actually a con man named Nera who is well known to police",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:30",
+      "quote": "I am Vasseur, who was executed on July 13th."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "made by surgery", "quote": "The surgeon transplants the hands of a recently executed murderer named Vasseur", "confidence": "sourced"},
-   {"value": "accident", "quote": "Concert pianist Paul Orlac loses his hands in a horrible railway accident", "confidence": "sourced"}
+   {
+    "value": "made by surgery",
+    "quote": "The surgeon transplants the hands of a recently executed murderer named Vasseur",
+    "confidence": "sourced"
+   },
+   {
+    "value": "accident",
+    "quote": "Concert pianist Paul Orlac loses his hands in a horrible railway accident",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "money", "detail": "Nera blackmails Orlac", "quote": "The man then tells Orlac he wants money to keep quiet about the murder", "confidence": "sourced"}
+   {
+    "value": "money",
+    "detail": "Nera blackmails Orlac",
+    "quote": "The man then tells Orlac he wants money to keep quiet about the murder",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:44",
+      "quote": "You will bring me a million tomorrow. At this time!"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "wrongful execution", "detail": "Vasseur was framed by Nera's rubber gloves", "quote": "They all conclude that Vasseur was innocent of the murder he was convicted of", "confidence": "sourced"},
-   {"value": "murder of a parent", "detail": "Orlac's father stabbed", "quote": "finds he has been stabbed to death with the same knife like Vasseur's", "confidence": "sourced"}
+   {
+    "value": "wrongful execution",
+    "detail": "Vasseur was framed by Nera's rubber gloves",
+    "quote": "They all conclude that Vasseur was innocent of the murder he was convicted of",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:32",
+      "quote": "Vasseur died an innocent man."
+     }
+    ]
+   },
+   {
+    "value": "murder of a parent",
+    "detail": "Orlac's father stabbed",
+    "quote": "finds he has been stabbed to death with the same knife like Vasseur's",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "accident", "quote": "Concert pianist Paul Orlac loses his hands in a horrible railway accident", "confidence": "sourced"},
-   {"value": "receiving a body part", "quote": "The surgeon transplants the hands of a recently executed murderer named Vasseur", "confidence": "sourced"}
+   {
+    "value": "accident",
+    "quote": "Concert pianist Paul Orlac loses his hands in a horrible railway accident",
+    "confidence": "sourced"
+   },
+   {
+    "value": "receiving a body part",
+    "quote": "The surgeon transplants the hands of a recently executed murderer named Vasseur",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "body part carries owner's evil", "detail": "Orlac's belief, later disproved", "quote": "he has acquired the murderer's predisposition to violence", "confidence": "sourced"},
-   {"value": "acts governed by head and heart", "quote": "a person's acts are not governed by hands but by the head and heart", "confidence": "sourced"}
+   {
+    "value": "body part carries owner's evil",
+    "detail": "Orlac's belief, later disproved",
+    "quote": "he has acquired the murderer's predisposition to violence",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:00",
+      "quote": "I have the feeling, that these hands are drawing me... To crime..."
+     }
+    ]
+   },
+   {
+    "value": "acts governed by head and heart",
+    "quote": "a person's acts are not governed by hands but by the head and heart",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:20",
+      "quote": "The head, the heart control the body... Also the hands."
+     }
+    ]
+   },
+   {
+    "value": "the spirit rules the hands",
+    "source": "subtitles",
+    "at": "00:22:57",
+    "quote": "The spirit rules the hands... Nature and a strong will can do anything.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "artist", "relation_to_threat": "self", "detail": "pianist Paul Orlac", "quote": "Orlac's new hands are unable to play the piano, and in time he and his wife run out of money", "confidence": "sourced"},
-   {"value": "father", "relation_to_threat": "family", "quote": "finds he has been stabbed to death with the same knife like Vasseur's", "confidence": "sourced"},
-   {"value": "wife", "relation_to_threat": "family", "detail": "Yvonne", "quote": "His wife Yvonne pleads with a surgeon to try and save Orlac's hands", "confidence": "sourced"}
+   {
+    "value": "artist",
+    "relation_to_threat": "self",
+    "detail": "pianist Paul Orlac",
+    "quote": "Orlac's new hands are unable to play the piano, and in time he and his wife run out of money",
+    "confidence": "sourced"
+   },
+   {
+    "value": "father",
+    "relation_to_threat": "family",
+    "quote": "finds he has been stabbed to death with the same knife like Vasseur's",
+    "confidence": "sourced"
+   },
+   {
+    "value": "wife",
+    "relation_to_threat": "family",
+    "detail": "Yvonne",
+    "quote": "His wife Yvonne pleads with a surgeon to try and save Orlac's hands",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "rational explanation", "detail": "Nera's fingerprint gloves exposed", "quote": "he made a set of rubber gloves with Vasseur's fingerprints. The gloves were used during the murders", "confidence": "sourced"},
-   {"value": "protagonist exonerated", "quote": "Orlac's new hands are the hands of an innocent rather than a murderer", "confidence": "sourced"}
+   {
+    "value": "rational explanation",
+    "detail": "Nera's fingerprint gloves exposed",
+    "quote": "he made a set of rubber gloves with Vasseur's fingerprints. The gloves were used during the murders",
+    "confidence": "sourced"
+   },
+   {
+    "value": "protagonist exonerated",
+    "quote": "Orlac's new hands are the hands of an innocent rather than a murderer",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "hands", "state": "transplanted", "when": "opening", "role": "threat", "quote": "The surgeon transplants the hands of a recently executed murderer named Vasseur", "confidence": "sourced"},
-   {"value": "knife", "state": "found at home", "when": "early", "role": "omen", "quote": "He is tortured by the presence of a knife he finds at his house, just like that used by Vasseur", "confidence": "sourced"},
-   {"value": "piano", "state": "unplayable", "when": "middle", "role": "symbol", "quote": "Orlac's new hands are unable to play the piano", "confidence": "sourced"},
-   {"value": "scar on neck", "state": "faked", "when": "middle", "role": "clue", "quote": "he shows Orlac what looks to be a scar on his neck from the surgery", "confidence": "sourced"},
-   {"value": "fingerprints", "when": "late", "role": "clue", "quote": "police find Vasseur's fingerprints at the scene of the crime, causing confusion", "confidence": "sourced"},
-   {"value": "rubber gloves", "state": "printed with fingerprints", "when": "ending", "role": "weapon", "quote": "he made a set of rubber gloves with Vasseur's fingerprints", "confidence": "sourced"}
+   {
+    "value": "love letter",
+    "state": "written by his old hands",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:01:29",
+    "quote": "Beloved, in one day and one night I will again be with you.",
+    "confidence": "sourced",
+    "detail": "Yvonne reads Paul's letter at the start and rereads it later: 'That was... Once... My handwriting.'",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:35",
+      "quote": "That was... Once... My handwriting."
+     }
+    ]
+   },
+   {
+    "value": "hands",
+    "state": "transplanted",
+    "when": "opening",
+    "role": "threat",
+    "quote": "The surgeon transplants the hands of a recently executed murderer named Vasseur",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:16",
+      "quote": "Save his hands! His hands are more important than his life."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:41:39",
+      "quote": "Twisted, twisted hands!"
+     }
+    ]
+   },
+   {
+    "value": "bandages",
+    "state": "hiding the new hands",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:21:21",
+    "quote": "Tell me, what is under these bandages? What secret do they hide?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "knife",
+    "state": "found at home",
+    "when": "early",
+    "role": "omen",
+    "quote": "He is tortured by the presence of a knife he finds at his house, just like that used by Vasseur",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:57",
+      "quote": "bore the same x mark on the handle."
+     }
+    ]
+   },
+   {
+    "value": "piano",
+    "state": "unplayable",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "Orlac's new hands are unable to play the piano",
+    "confidence": "sourced"
+   },
+   {
+    "value": "scar on neck",
+    "state": "faked",
+    "when": "middle",
+    "role": "clue",
+    "quote": "he shows Orlac what looks to be a scar on his neck from the surgery",
+    "confidence": "sourced"
+   },
+   {
+    "value": "forged handwriting",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:10:41",
+    "quote": "Vasseur's handwriting!",
+    "confidence": "sourced"
+   },
+   {
+    "value": "guillotine",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:27:44",
+    "quote": "I have seen with my own eyes the work of the guillotine on a neck.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fingerprints",
+    "when": "late",
+    "role": "clue",
+    "quote": "police find Vasseur's fingerprints at the scene of the crime, causing confusion",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:42",
+      "quote": "The murderer Vasseur's dagger! The fingerprints of the criminal Vasseur!"
+     }
+    ]
+   },
+   {
+    "value": "rubber gloves",
+    "state": "printed with fingerprints",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "he made a set of rubber gloves with Vasseur's fingerprints",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:28",
+      "quote": "And then he had rubber gloves made... With Vasseur's fingerprints."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "accident maims protagonist", "when": "opening", "quote": "Concert pianist Paul Orlac loses his hands in a horrible railway accident", "confidence": "sourced"},
-   {"order": 2, "value": "killer's hands transplanted", "when": "opening", "role": "trigger", "quote": "The surgeon transplants the hands of a recently executed murderer named Vasseur", "confidence": "sourced"},
-   {"order": 3, "value": "obsession with urge to kill", "when": "early", "quote": "He is tortured by the presence of a knife he finds at his house", "confidence": "sourced"},
-   {"order": 4, "value": "father found murdered", "when": "middle", "role": "turn", "quote": "Orlac himself then goes to see his father, but finds he has been stabbed to death", "confidence": "sourced"},
-   {"order": 5, "value": "blackmail by false revenant", "when": "middle", "quote": "There he meets a man who claims he is Vasseur", "confidence": "sourced"},
-   {"order": 6, "value": "hoax exposed", "when": "late", "role": "turn", "quote": "It turns out that the man is actually a con man named Nera", "confidence": "sourced"},
-   {"order": 7, "value": "donor proved innocent", "when": "ending", "quote": "Orlac's new hands are the hands of an innocent rather than a murderer", "confidence": "sourced"}
+   {
+    "value": "love letter before the journey",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:35",
+    "quote": "I will hold you in my arms... My hands will run over your hair...",
+    "confidence": "sourced",
+    "order": 1
+   },
+   {
+    "order": 2,
+    "value": "accident maims protagonist",
+    "when": "opening",
+    "quote": "Concert pianist Paul Orlac loses his hands in a horrible railway accident",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:52",
+      "quote": "A train accident... Mr. Orlac is severely injured."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "killer's hands transplanted",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "The surgeon transplants the hands of a recently executed murderer named Vasseur",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:41",
+      "quote": "Your hands were not saved - Dr. Serral gave you different ones -"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "obsession with urge to kill",
+    "when": "early",
+    "quote": "He is tortured by the presence of a knife he finds at his house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:42",
+      "quote": "I know it... You demand blood... Crimes... Murder..."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "father found murdered",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Orlac himself then goes to see his father, but finds he has been stabbed to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:51",
+      "quote": "Murder! The murderer Vasseur's dagger!"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "blackmail by false revenant",
+    "when": "middle",
+    "quote": "There he meets a man who claims he is Vasseur",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:06",
+      "quote": "Vasseur has been dead for years, but his hands still live!"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "hoax exposed",
+    "when": "late",
+    "role": "turn",
+    "quote": "It turns out that the man is actually a con man named Nera",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:21",
+      "quote": "Mr. Orlac is innocent. Nera is the murderer!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "donor proved innocent",
+    "when": "ending",
+    "quote": "Orlac's new hands are the hands of an innocent rather than a murderer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:53",
+      "quote": "If Vasseur was not guilty, then my hands are pure..."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

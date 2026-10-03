@@ -7,6 +7,9 @@
     "Lead",
     "Plot"
    ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
   }
  ],
  "plot_quality": "full",
@@ -16,7 +19,14 @@
     "value": "cannibal family",
     "detail": "Dara and her children Maya, Adam and Arman",
     "quote": "Dara's family are cannibals, who belong to a secret society attempting to gain immortality from it",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:51",
+      "quote": "You've tasted it... TASTY, RIGHT?!"
+     }
+    ]
    }
   ],
   "origin": [
@@ -30,24 +40,52 @@
    {
     "value": "immortality",
     "quote": "attempting to gain immortality from it",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:37",
+      "quote": "They want you... because they want to live longer."
+     }
+    ]
    },
    {
     "value": "a newborn",
     "quote": "Dara tells her that the drug she was given will cause her to go into labor",
-    "confidence": "observed"
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:17",
+      "quote": "The child is no longer yours."
+     }
+    ]
    }
   ],
   "trigger": [
    {
     "value": "helping a stranger",
     "quote": "On the way they picked up beautiful woman named Maya who claims to have been robbed, and decide to give her a ride home",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:46",
+      "quote": "She says she's been robbed."
+     }
+    ]
    },
    {
     "value": "an invitation",
     "quote": "At the Dara's insistence, the group agrees to stay for dinner",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:37",
+      "quote": "I want to prepare a simple meal, as token of our gratitude."
+     }
+    ]
    }
   ],
   "rules": [
@@ -59,7 +97,28 @@
    {
     "value": "unnaturally old",
     "quote": "One of them find photographs of the three siblings dated 1912, and a photo of Dara dated 1889",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:51",
+      "quote": "This place must be very old: look at those photos."
+     }
+    ]
+   },
+   {
+    "value": "the child for your lives",
+    "source": "subtitles",
+    "at": "00:56:36",
+    "quote": "I'm giving you one chance.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:02",
+      "quote": "Should you choose the child, I promise you, all of you will be finished tonight."
+     }
+    ]
    }
   ],
   "who_suffers": [
@@ -74,20 +133,41 @@
     "relation_to_threat": "stranger",
     "detail": "Astrid",
     "quote": "Adjie takes Astrid, who is pregnant, upstairs to rest",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:13",
+      "quote": "How old is the baby? About 8 months now."
+     }
+    ]
    },
    {
     "value": "police",
     "relation_to_threat": "stranger",
     "quote": "the family of cannibals attack and kill most of the officers",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:06",
+      "quote": "Unit 04... Where are you guys patrolling? Please respond."
+     }
+    ]
    }
   ],
   "ending": [
    {
     "value": "final girl survives with baby",
     "quote": "As Ladya and the baby leave in the officers' car, Dara reappears",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:18",
+      "quote": "Let's go home..."
+     }
+    ]
    },
    {
     "value": "threat survives",
@@ -97,11 +177,37 @@
   ],
   "images": [
    {
+    "value": "sudden storm",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:08:03",
+    "quote": "A storm out of nowhere.",
+    "confidence": "sourced"
+   },
+   {
     "value": "drugged food",
     "when": "early",
     "role": "trigger",
     "quote": "During dinner, the group fall unconscious because of the drugged food",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:19",
+      "quote": "This wine must be really vintage. My head's spinning."
+     }
+    ]
+   },
+   {
+    "value": "heirloom necklace",
+    "when": "early",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "00:22:31",
+    "quote": "This family heirloom has been passed on for many generations.",
+    "confidence": "sourced",
+    "detail": "Dara's necklace; Ladya later strangles her with it"
    },
    {
     "value": "cellar",
@@ -115,7 +221,14 @@
     "when": "middle",
     "role": "clue",
     "quote": "Dara's customer, who receives several coolers containing meat",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:09",
+      "quote": "Damn, this is some gourmet meat! Definitely 5-star quality."
+     }
+    ]
    },
    {
     "value": "chainsaw",
@@ -143,7 +256,14 @@
     "when": "late",
     "role": "clue",
     "quote": "photographs of the three siblings dated 1912, and a photo of Dara dated 1889",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:51",
+      "quote": "This place must be very old: look at those photos."
+     }
+    ]
    },
    {
     "value": "bloody hand",
@@ -157,68 +277,134 @@
   "beats": [
    {
     "order": 1,
-    "value": "picking up a stranger",
+    "value": "farewell to estranged sister",
     "when": "opening",
-    "role": "trigger",
-    "quote": "On the way they picked up beautiful woman named Maya who claims to have been robbed",
+    "source": "subtitles",
+    "at": "00:03:44",
+    "quote": "I wanted to say goodbye.",
     "confidence": "sourced"
    },
    {
     "order": 2,
-    "value": "drugged at dinner",
-    "when": "early",
-    "quote": "During dinner, the group fall unconscious because of the drugged food",
+    "value": "storm on the road",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:08:03",
+    "quote": "A storm out of nowhere.",
     "confidence": "sourced"
    },
    {
     "order": 3,
-    "value": "forced birth, baby taken",
-    "when": "middle",
-    "quote": "Astrid's water breaks, and she gives birth on her own",
-    "confidence": "sourced"
+    "value": "picking up a stranger",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "On the way they picked up beautiful woman named Maya who claims to have been robbed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:46",
+      "quote": "She says she's been robbed."
+     }
+    ]
    },
    {
     "order": 4,
+    "value": "drugged at dinner",
+    "when": "early",
+    "quote": "During dinner, the group fall unconscious because of the drugged food",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:19",
+      "quote": "This wine must be really vintage. My head's spinning."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "mother offered a choice",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:56:36",
+    "quote": "I'm giving you one chance.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "forced birth, baby taken",
+    "when": "middle",
+    "quote": "Astrid's water breaks, and she gives birth on her own",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:11",
+      "quote": "Our baby... It's a boy..."
+     }
+    ]
+   },
+   {
+    "order": 7,
     "value": "friend butchered",
     "when": "middle",
     "quote": "Arman kills and dismembers Alam with a chainsaw",
     "confidence": "sourced"
    },
    {
-    "order": 5,
+    "order": 8,
     "value": "police arrive, ages revealed",
     "when": "late",
     "role": "clue",
     "quote": "One of them find photographs of the three siblings dated 1912",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:15",
+      "quote": "My dog went missing in the forest."
+     }
+    ]
    },
    {
-    "order": 6,
+    "order": 9,
     "value": "massacre of rescuers",
     "when": "late",
     "quote": "the family of cannibals attack and kill most of the officers",
     "confidence": "sourced"
    },
    {
-    "order": 7,
+    "order": 10,
     "value": "family destroyed one by one",
     "when": "ending",
     "quote": "Ladya shoots her with one of the officers' guns and strangles her with her necklace",
     "confidence": "sourced"
    },
    {
-    "order": 8,
+    "order": 11,
     "value": "closing sting",
     "when": "ending",
     "quote": "After she drives off, Dara's bloody hand twitches",
     "confidence": "sourced"
    }
+  ],
+  "wrong": [
+   {
+    "value": "blame for parents' death",
+    "detail": "Ladya blames Adjie for the taxi accident that killed their parents",
+    "source": "subtitles",
+    "at": "00:04:25",
+    "quote": "They wouldn't have caught that taxi, had it not been for you!",
+    "confidence": "observed"
+   }
   ]
  },
- "not_stated": [
-  "wrong"
- ],
+ "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

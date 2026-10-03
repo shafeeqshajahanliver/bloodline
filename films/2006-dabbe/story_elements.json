@@ -1,46 +1,401 @@
 {
  "film": "2006-dabbe",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}, {"file": "wikipedia.tr.md", "sections": ["Lead", "Hikâye"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "wikipedia.tr.md",
+   "sections": [
+    "Lead",
+    "Hikâye"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "thin",
  "dimensions": {
   "threat": [
-   {"value": "apocalyptic beast", "detail": "the Dabbe of the Quran, read as the internet", "quote": "Dâbbetü'l-arz'ı konu ediniyor ve onu internet ağı olarak yorumluyor", "confidence": "sourced"},
-   {"value": "strange creatures", "quote": "They also start seeing strange creatures around themselves.", "confidence": "sourced"},
-   {"value": "suicide epidemic", "quote": "People start to commit suicide using brutal techniques.", "confidence": "sourced"}
+   {
+    "value": "apocalyptic beast",
+    "detail": "the Dabbe of the Quran, read as the internet",
+    "quote": "Dâbbetü'l-arz'ı konu ediniyor ve onu internet ağı olarak yorumluyor",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:45",
+      "quote": "Dabbe will appear close to Judgment Day."
+     }
+    ]
+   },
+   {
+    "value": "strange creatures",
+    "quote": "They also start seeing strange creatures around themselves.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:26",
+      "quote": "Dabbe is using djinns."
+     }
+    ]
+   },
+   {
+    "value": "suicide epidemic",
+    "quote": "People start to commit suicide using brutal techniques.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:01",
+      "quote": "The suicide spree is taking over America right after Japan."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "religious prophecy", "detail": "the Dabbe from Surah an-Naml", "quote": "Film, Kur'an'da Neml Suresi'nde geçen, din alimlerinin ne olduğu hakkında ortak bir zeminde buluşamadığı", "confidence": "sourced"},
-   {"value": "through technology", "quote": "a man kills himself after spending a lot of time on the computer", "confidence": "observed"}
+   {
+    "value": "religious prophecy",
+    "detail": "the Dabbe from Surah an-Naml",
+    "quote": "Film, Kur'an'da Neml Suresi'nde geçen, din alimlerinin ne olduğu hakkında ortak bir zeminde buluşamadığı",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:09",
+      "quote": "The Ant, Verse 82. Here is the Koran. Here is the verse."
+     }
+    ]
+   },
+   {
+    "value": "through technology",
+    "quote": "a man kills himself after spending a lot of time on the computer",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:39",
+      "quote": "Is it ridiculous to find \" Dabbe \" in all the suicide mails?"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to spread", "quote": "this suicide wave spreads all over the earth", "confidence": "sourced"}
+   {
+    "value": "to spread",
+    "quote": "this suicide wave spreads all over the earth",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:22",
+      "quote": "It is among us. It spreads like a spiderweb."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "friend's suicide", "quote": "In a small town, a man kills himself after spending a lot of time on the computer.", "confidence": "sourced"},
-   {"value": "messages from the dead", "quote": "Following this man's death, his  friends start to get e-mails from him.", "confidence": "sourced"}
+   {
+    "value": "friend's suicide",
+    "quote": "In a small town, a man kills himself after spending a lot of time on the computer.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:44",
+      "quote": "Your friend has committed suicide."
+     }
+    ]
+   },
+   {
+    "value": "messages from the dead",
+    "quote": "Following this man's death, his  friends start to get e-mails from him.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:36",
+      "quote": "How does a man who died three days ago send an e-mail ten minutes ago?"
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "friends", "relation_to_threat": "stranger", "detail": "Tarık's friends in İzmir", "quote": "İlerleyen günlerde Tarık'ın arkadaşına Tarık'tan bir elektronik posta gelir.", "confidence": "sourced"},
-   {"value": "humanity", "relation_to_threat": "stranger", "quote": "Starting from the United States of America, this suicide wave spreads all over the earth.", "confidence": "sourced"}
+   {
+    "value": "friends",
+    "relation_to_threat": "stranger",
+    "detail": "Tarık's friends in İzmir",
+    "quote": "İlerleyen günlerde Tarık'ın arkadaşına Tarık'tan bir elektronik posta gelir.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "humanity",
+    "relation_to_threat": "stranger",
+    "quote": "Starting from the United States of America, this suicide wave spreads all over the earth.",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "apocalypse", "quote": "This is just the beginning of the doomsday.", "confidence": "observed"}
+   {
+    "value": "apocalypse",
+    "quote": "This is just the beginning of the doomsday.",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "computer", "when": "opening", "role": "trigger", "quote": "a man kills himself after spending a lot of time on the computer", "confidence": "sourced"},
-   {"value": "e-mail", "state": "from a dead man", "when": "early", "role": "omen", "quote": "his  friends start to get e-mails from him", "confidence": "sourced"},
-   {"value": "creatures", "when": "early", "role": "threat", "quote": "They also start seeing strange creatures around themselves.", "confidence": "sourced"}
+   {
+    "value": "computer",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "a man kills himself after spending a lot of time on the computer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:05",
+      "quote": "Tarik recently bought a new computer."
+     }
+    ]
+   },
+   {
+    "value": "e-mail",
+    "state": "from a dead man",
+    "when": "early",
+    "role": "omen",
+    "quote": "his  friends start to get e-mails from him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:31",
+      "quote": "LET ME OUT!"
+     }
+    ]
+   },
+   {
+    "value": "creatures",
+    "when": "early",
+    "role": "threat",
+    "quote": "They also start seeing strange creatures around themselves.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:29",
+      "quote": "From now on, djinns will become visible to humans."
+     }
+    ]
+   },
+   {
+    "value": "black tape over gaps",
+    "when": "early",
+    "role": "clue",
+    "detail": "Tarik seals his house with tape and newspaper",
+    "source": "subtitles",
+    "at": "00:44:43",
+    "quote": "And he was covering each and every gap with black tape and newspapers.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:06",
+      "quote": "What is it with all these tapes?"
+     }
+    ]
+   },
+   {
+    "value": "camera tape",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:44:20",
+    "quote": "There was a tape.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "spiderweb",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:15:28",
+    "quote": "Dabbe refers to a thing that spans like a web",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mirror",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:16:00",
+    "quote": "According to us, djinns are the ones that are in the mirror.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cave",
+    "when": "ending",
+    "role": "setting",
+    "detail": "the Seven Sleepers Cave",
+    "source": "subtitles",
+    "at": "01:38:38",
+    "quote": "Chief, there is a path behind the Seven Sleepers Cave.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "suicide wave begins abroad", "when": "opening", "role": "omen", "quote": "Amerika Birleşik Devletleri'nde sıra dışı intihar olayları baş göstermektedir", "confidence": "sourced"},
-   {"order": 2, "value": "friend kills himself", "when": "opening", "quote": "İnternet ile arası diğer insanlara oranla daha iyi olan Tarık, beklenmedik şekilde intihar etmiştir.", "confidence": "sourced"},
-   {"order": 3, "value": "message from the dead", "when": "early", "role": "trigger", "quote": "Following this man's death, his  friends start to get e-mails from him.", "confidence": "sourced"},
-   {"order": 4, "value": "creatures appear", "when": "middle", "quote": "They also start seeing strange creatures around themselves.", "confidence": "sourced"},
-   {"order": 5, "value": "doomsday begins", "when": "ending", "quote": "This is just the beginning of the doomsday.", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "dream warning",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:12",
+    "quote": "You're in a dream, Tarik. Wake up!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "suicide wave begins abroad",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Amerika Birleşik Devletleri'nde sıra dışı intihar olayları baş göstermektedir",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:01",
+      "quote": "The suicide spree is taking over America right after Japan."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "friend kills himself",
+    "when": "opening",
+    "quote": "İnternet ile arası diğer insanlara oranla daha iyi olan Tarık, beklenmedik şekilde intihar etmiştir.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:35",
+      "quote": "A weird suicide happened yesterday."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "message from the dead",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Following this man's death, his  friends start to get e-mails from him.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:36",
+      "quote": "How does a man who died three days ago send an e-mail ten minutes ago?"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "suicides reach the city",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "00:47:12",
+    "quote": "Thirty-four people committed suicide in Istanbul.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "prophecy decoded",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:15:38",
+    "quote": "Dabbe is one of the keenest verses in the Koran.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "creatures appear",
+    "when": "middle",
+    "quote": "They also start seeing strange creatures around themselves.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:29",
+      "quote": "From now on, djinns will become visible to humans."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "lured to a cave",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:40:26",
+    "quote": "There is a path behind the Seven Sleepers Cave. Come to the end of that path.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "doomsday begins",
+    "when": "ending",
+    "quote": "This is just the beginning of the doomsday.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:47:09",
+      "quote": "WORSHIPING THE SHADOWS? Dajjal!"
+     }
+    ]
+   }
+  ],
+  "wrong": [
+   {
+    "value": "humanity lost faith",
+    "source": "subtitles",
+    "at": "01:12:05",
+    "quote": "a Beast to speak unto them because mankind had no faith in our signs.",
+    "confidence": "sourced"
+   }
+  ],
+  "rules": [
+   {
+    "value": "watches unseen",
+    "source": "subtitles",
+    "at": "00:00:07",
+    "quote": "\" THEY SEE YOU FROM WHERE YOU CANNOT SEE THEM \"",
+    "confidence": "sourced"
+   },
+   {
+    "value": "djinns live in mirrors",
+    "source": "subtitles",
+    "at": "01:16:00",
+    "quote": "According to us, djinns are the ones that are in the mirror.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "imitates the dead and living",
+    "source": "subtitles",
+    "at": "01:28:16",
+    "quote": "Djinns can imitate both dead and alive.",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong", "rules"],
+ "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

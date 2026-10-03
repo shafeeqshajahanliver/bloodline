@@ -1,63 +1,555 @@
 {
  "film": "2014-what-we-do-in-the-shadows",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vampires", "quote": "The film's plot concerns several vampires who live together in a flat in Wellington", "confidence": "sourced"},
-   {"value": "werewolves", "quote": "a rival pack of werewolves who transform under the full moon", "confidence": "sourced"},
-   {"value": "vampire hunter", "quote": "a vampire hunter, breaks into the flat basement during the day and kills Petyr", "confidence": "sourced"}
+   {
+    "value": "vampires",
+    "quote": "The film's plot concerns several vampires who live together in a flat in Wellington",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:34",
+      "quote": "I like to hang out with other vampires."
+     }
+    ]
+   },
+   {
+    "value": "werewolves",
+    "quote": "a rival pack of werewolves who transform under the full moon",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:32",
+      "quote": "Yeah? We're werewolves, not swear-wolves."
+     }
+    ]
+   },
+   {
+    "value": "vampire hunter",
+    "quote": "a vampire hunter, breaks into the flat basement during the day and kills Petyr",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:29",
+      "quote": "pushed the tomb lid onto the Vampire Hunter,"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "turned by another", "quote": "Deacon is a 19th-century former peddler and the \"young rebel\" of the group who was turned into a vampire by Petyr", "confidence": "sourced"}
+   {
+    "value": "turned by another",
+    "quote": "Deacon is a 19th-century former peddler and the \"young rebel\" of the group who was turned into a vampire by Petyr",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:43",
+      "quote": "\" Now you are vampire. \""
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "blood", "quote": "prowl the streets of Wellington to feed", "confidence": "sourced"},
-   {"value": "lost love", "detail": "Viago seeks Katherine", "quote": "in search of Katherine, the love of his life", "confidence": "sourced"},
-   {"value": "immortality", "detail": "Jackie, the human familiar", "quote": "Jackie hopes to attain immortality", "confidence": "sourced"}
+   {
+    "value": "blood",
+    "quote": "prowl the streets of Wellington to feed",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lost love",
+    "detail": "Viago seeks Katherine",
+    "quote": "in search of Katherine, the love of his life",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:14",
+      "quote": "I decided to bite her, and we're gonna be together forever."
+     }
+    ]
+   },
+   {
+    "value": "immortality",
+    "detail": "Jackie, the human familiar",
+    "quote": "Jackie hopes to attain immortality",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:01",
+      "quote": "I feel like I'm who I'm really meant to be now."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "a documentary crew", "quote": "A documentary crew follows four vampire housemates", "confidence": "sourced"},
-   {"value": "a new member joins", "quote": "only to be caught by Petyr, who turns him into a vampire", "confidence": "sourced"}
+   {
+    "value": "a documentary crew",
+    "quote": "A documentary crew follows four vampire housemates",
+    "confidence": "sourced"
+   },
+   {
+    "value": "a new member joins",
+    "quote": "only to be caught by Petyr, who turns him into a vampire",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "killed by sunlight", "quote": "kills Petyr by exposing him to sunlight", "confidence": "sourced"},
-   {"value": "must be invited in", "quote": "Deacon invites the werewolf pack inside", "confidence": "observed"},
-   {"value": "hypnosis erases memory", "quote": "Viago hypnotises them into not noticing anything out of the ordinary", "confidence": "sourced"},
-   {"value": "feed on virgins", "quote": "Deacon requests that Jackie bring virgins to the flat so that the vampires can feed on them", "confidence": "sourced"}
+   {
+    "value": "killed by sunlight",
+    "quote": "kills Petyr by exposing him to sunlight",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:42",
+      "quote": "in a fatal sunlight accident."
+     }
+    ]
+   },
+   {
+    "value": "must be invited in",
+    "quote": "Deacon invites the werewolf pack inside",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:24",
+      "quote": "is you have to be invited in to go in."
+     }
+    ]
+   },
+   {
+    "value": "hypnosis erases memory",
+    "quote": "Viago hypnotises them into not noticing anything out of the ordinary",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:44",
+      "quote": "I'm not a great hypnotizer, so it could wear off any second."
+     }
+    ]
+   },
+   {
+    "value": "feed on virgins",
+    "quote": "Deacon requests that Jackie bring virgins to the flat so that the vampires can feed on them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:18",
+      "quote": "I think we drink virgin blood because it sounds cool."
+     }
+    ]
+   },
+   {
+    "value": "swearing triggers the change",
+    "source": "subtitles",
+    "at": "00:34:52",
+    "quote": "Hey! Don't swear. We're gonna lose it.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "no reflection",
+    "source": "subtitles",
+    "at": "00:14:37",
+    "quote": "One of the unfortunate things about not having a reflection",
+    "confidence": "sourced"
+   },
+   {
+    "value": "repelled by crucifix",
+    "source": "subtitles",
+    "at": "00:49:16",
+    "quote": "Crucifix! Cover the crucifix!",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "lured humans", "relation_to_threat": "stranger", "detail": "the woman and Nick", "quote": "She lures a woman who insulted her in primary school and her ex-boyfriend Nick to the flat", "confidence": "sourced"},
-   {"value": "human friend", "relation_to_threat": "community", "detail": "Stu", "quote": "Stu is mauled and torn apart", "confidence": "sourced"},
-   {"value": "film crew", "relation_to_threat": "stranger", "quote": "One of the cameramen is violently murdered", "confidence": "sourced"}
+   {
+    "value": "lured humans",
+    "relation_to_threat": "stranger",
+    "detail": "the woman and Nick",
+    "quote": "She lures a woman who insulted her in primary school and her ex-boyfriend Nick to the flat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:33",
+      "quote": "Are you a virgin?"
+     }
+    ]
+   },
+   {
+    "value": "human friend",
+    "relation_to_threat": "community",
+    "detail": "Stu",
+    "quote": "Stu is mauled and torn apart",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:26",
+      "quote": "having seen his best friend disemboweled by werewolves."
+     }
+    ]
+   },
+   {
+    "value": "film crew",
+    "relation_to_threat": "stranger",
+    "quote": "One of the cameramen is violently murdered",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "monsters reconcile", "quote": "Nick's banishment is rescinded as well", "confidence": "sourced"},
-   {"value": "victim becomes threat", "detail": "Stu becomes a werewolf, Katherine and Jackie become vampires", "quote": "Stu, who reveals he has survived the attack and was transformed into a werewolf", "confidence": "sourced"},
-   {"value": "cycle repeats", "quote": "repeating his cycle of self-inflicted torture over his relationship with her", "confidence": "sourced"}
+   {
+    "value": "monsters reconcile",
+    "quote": "Nick's banishment is rescinded as well",
+    "confidence": "sourced"
+   },
+   {
+    "value": "victim becomes threat",
+    "detail": "Stu becomes a werewolf, Katherine and Jackie become vampires",
+    "quote": "Stu, who reveals he has survived the attack and was transformed into a werewolf",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:42",
+      "quote": "I was laughing with the group."
+     }
+    ]
+   },
+   {
+    "value": "cycle repeats",
+    "quote": "repeating his cycle of self-inflicted torture over his relationship with her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:35",
+      "quote": "Pauline and I are tentatively back together."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "flat", "state": "shared", "when": "opening", "role": "setting", "quote": "who share a flat in the Wellington suburb of Te Aro", "confidence": "sourced"},
-   {"value": "gore", "state": "cleaned up", "when": "early", "role": "symbol", "quote": "cleans up the gore left behind by their feeding", "confidence": "sourced"},
-   {"value": "sunlight", "when": "middle", "role": "weapon", "quote": "kills Petyr by exposing him to sunlight", "confidence": "sourced"},
-   {"value": "masquerade ball", "when": "late", "role": "setting", "quote": "the annual Unholy Masquerade, hosted for the local undead population", "confidence": "sourced"},
-   {"value": "flagpole", "when": "late", "role": "weapon", "quote": "Stu impales Julian on a flagpole", "confidence": "sourced"},
-   {"value": "full moon", "when": "late", "role": "threat", "quote": "werewolves who transform under the full moon", "confidence": "sourced"},
-   {"value": "camera", "when": "opening", "role": "mirror", "quote": "A post-credits scene shows Deacon attempting to hypnotise the audience", "confidence": "observed"}
+   {
+    "value": "flat",
+    "state": "shared",
+    "when": "opening",
+    "role": "setting",
+    "quote": "who share a flat in the Wellington suburb of Te Aro",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:28",
+      "quote": "I really love living in a flatting situation."
+     }
+    ]
+   },
+   {
+    "value": "gore",
+    "state": "cleaned up",
+    "when": "early",
+    "role": "symbol",
+    "quote": "cleans up the gore left behind by their feeding",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:39",
+      "quote": "It's unacceptable to have so many bloody dishes"
+     }
+    ]
+   },
+   {
+    "value": "live chicken",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:04:53",
+    "quote": "I got you this chicken.",
+    "confidence": "sourced",
+    "detail": "brought to the ancient Petyr in his tomb"
+   },
+   {
+    "value": "no reflection",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:14:37",
+    "quote": "One of the unfortunate things about not having a reflection",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bats",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:43:16",
+    "quote": "Ooh! Bat fight! - Bat fight!",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sunlight",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "kills Petyr by exposing him to sunlight",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:05",
+      "quote": "Get in the shadows. Petyr, get out of the sunlight."
+     }
+    ]
+   },
+   {
+    "value": "crucifix",
+    "when": "middle",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "00:49:16",
+    "quote": "Crucifix! Cover the crucifix!",
+    "confidence": "sourced"
+   },
+   {
+    "value": "masquerade ball",
+    "when": "late",
+    "role": "setting",
+    "quote": "the annual Unholy Masquerade, hosted for the local undead population",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:12",
+      "quote": "invites you to attend The Unholy Masquerade"
+     }
+    ]
+   },
+   {
+    "value": "flagpole",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Stu impales Julian on a flagpole",
+    "confidence": "sourced"
+   },
+   {
+    "value": "full moon",
+    "when": "late",
+    "role": "threat",
+    "quote": "werewolves who transform under the full moon",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:11",
+      "quote": "It's all right. It's not a full moon."
+     }
+    ]
+   },
+   {
+    "value": "camera",
+    "when": "opening",
+    "role": "mirror",
+    "quote": "A post-credits scene shows Deacon attempting to hypnotise the audience",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:33",
+      "quote": "You will forget the contents of this movie."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "monsters introduced as housemates", "when": "opening", "quote": "A documentary crew follows four vampire housemates", "confidence": "sourced"},
-   {"order": 2, "value": "victims lured for feeding", "when": "early", "quote": "the woman is killed, and Nick is chased throughout the flat", "confidence": "sourced"},
-   {"order": 3, "value": "new vampire made", "when": "early", "role": "turn", "quote": "caught by Petyr, who turns him into a vampire", "confidence": "sourced"},
-   {"order": 4, "value": "elder killed by hunter", "when": "middle", "role": "turn", "quote": "kills Petyr by exposing him to sunlight", "confidence": "sourced"},
-   {"order": 5, "value": "outsider banished", "when": "middle", "quote": "Nick is banished from the flat by the remaining vampires", "confidence": "sourced"},
-   {"order": 6, "value": "nemesis revealed at ball", "when": "late", "quote": "\"The Beast\" is revealed to be Vladislav's ex-girlfriend Pauline", "confidence": "sourced"},
-   {"order": 7, "value": "werewolf attack", "when": "late", "quote": "One of the cameramen is violently murdered, and Stu is mauled and torn apart", "confidence": "sourced"},
-   {"order": 8, "value": "reunion and turnings", "when": "ending", "quote": "Viago also reconnects and rekindles his romance with Katherine, whom he turns into a vampire", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "waking at nightfall",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:23",
+    "quote": "(ALARM BUZZING)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:07",
+      "quote": "So it's 6: 00 p.m. in the nighttime, which is when I wake up."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "monsters introduced as housemates",
+    "when": "opening",
+    "quote": "A documentary crew follows four vampire housemates",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:30",
+      "quote": "Wake up! Wake up, everyone!"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "victims lured for feeding",
+    "when": "early",
+    "quote": "the woman is killed, and Nick is chased throughout the flat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:33",
+      "quote": "Are you a virgin?"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "rival pack met in the street",
+    "when": "early",
+    "source": "subtitles",
+    "at": "00:33:52",
+    "quote": "I can smell werewolves.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "new vampire made",
+    "when": "early",
+    "role": "turn",
+    "quote": "caught by Petyr, who turns him into a vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:52",
+      "quote": "What, I can't sunbathe. I can't watch daytime TV."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "elder killed by hunter",
+    "when": "middle",
+    "role": "turn",
+    "quote": "kills Petyr by exposing him to sunlight",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:42",
+      "quote": "in a fatal sunlight accident."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "outsider banished",
+    "when": "middle",
+    "quote": "Nick is banished from the flat by the remaining vampires",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:49",
+      "quote": "You kill Petyr with your big mouth!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "nemesis revealed at ball",
+    "when": "late",
+    "quote": "\"The Beast\" is revealed to be Vladislav's ex-girlfriend Pauline",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:05",
+      "quote": "The darkest part of my mind is reserved for The Beast."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "werewolf attack",
+    "when": "late",
+    "quote": "One of the cameramen is violently murdered, and Stu is mauled and torn apart",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:14",
+      "quote": "(WEREWOLVES GROWLING AND SNARLING)"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "deaths blamed on dogs",
+    "when": "late",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:16:40",
+    "quote": "it looks like there's been a bit of a dog attack.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "reunion and turnings",
+    "when": "ending",
+    "quote": "Viago also reconnects and rekindles his romance with Katherine, whom he turns into a vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:14",
+      "quote": "I decided to bite her, and we're gonna be together forever."
+     }
+    ]
+   },
+   {
+    "order": 12,
+    "value": "audience hypnotised",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:25:28",
+    "quote": "You will not remember the last hour and a half",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

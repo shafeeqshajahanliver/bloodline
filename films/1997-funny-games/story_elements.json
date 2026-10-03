@@ -1,58 +1,518 @@
 {
  "film": "1997-funny-games",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "home invaders", "detail": "Peter and Paul", "quote": "two young men who hold a family hostage in their vacation home and torture them with sadistic games", "confidence": "sourced"}
+   {
+    "value": "home invaders",
+    "detail": "Peter and Paul",
+    "quote": "two young men who hold a family hostage in their vacation home and torture them with sadistic games",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:50",
+      "quote": "Okay, Tom. Okay, Jerry."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "unexplained", "quote": "accompanied by two young Viennese men whom they do not recognize", "confidence": "observed"}
+   {
+    "value": "unexplained",
+    "quote": "accompanied by two young Viennese men whom they do not recognize",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:04",
+      "quote": "Do you really think he comes from a deprived background?"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "sadistic games", "quote": "Over the following hours, Peter and Paul subject the family to sadistic games", "confidence": "sourced"},
-   {"value": "to win a bet", "quote": "Paul places a bet that the family will not survive past 9:00 in the morning", "confidence": "sourced"}
+   {
+    "value": "sadistic games",
+    "quote": "Over the following hours, Peter and Paul subject the family to sadistic games",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:55",
+      "quote": "What do you think, Anna? Have you had enough? Or do you want to play some more?"
+     }
+    ]
+   },
+   {
+    "value": "to win a bet",
+    "quote": "Paul places a bet that the family will not survive past 9:00 in the morning",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:17",
+      "quote": "You bet us, that tomorrow at 9: 00, you'll be alive, and we bet you, you'll be dead, okay?"
+     }
+    ]
+   },
+   {
+    "value": "to entertain an audience",
+    "source": "subtitles",
+    "at": "00:40:45",
+    "quote": "You are on their side, aren't you? So, who will you bet with?",
+    "confidence": "observed",
+    "detail": "Paul turns to the camera and asks the viewer to bet"
+   }
   ],
   "trigger": [
-   {"value": "arriving at a holiday home", "quote": "arrive at their lakefront holiday home in Austria", "confidence": "sourced"},
-   {"value": "polite request at the door", "detail": "borrowing eggs", "quote": "comes to Anna's kitchen to borrow eggs on Eva's behalf", "confidence": "sourced"}
+   {
+    "value": "arriving at a holiday home",
+    "quote": "arrive at their lakefront holiday home in Austria",
+    "confidence": "sourced"
+   },
+   {
+    "value": "polite request at the door",
+    "detail": "borrowing eggs",
+    "quote": "comes to Anna's kitchen to borrow eggs on Eva's behalf",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:19",
+      "quote": "and she's run out of eggs. She wonders if you can help her out."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "killers control the story", "quote": "Paul finds and uses a remote control to rewind the movie, \"reversing\" the events that just happened", "confidence": "sourced"},
-   {"value": "no escape allowed", "quote": "the murderers prevent Anna from using a knife in the boat to cut her bonds", "confidence": "sourced"}
+   {
+    "value": "killers control the story",
+    "quote": "Paul finds and uses a remote control to rewind the movie, \"reversing\" the events that just happened",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:09",
+      "quote": "We're not up to feature film length yet."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:31:15",
+      "quote": "But you want a real ending, with plausible plot development, don't you?"
+     }
+    ]
+   },
+   {
+    "value": "no escape allowed",
+    "quote": "the murderers prevent Anna from using a knife in the boat to cut her bonds",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:18",
+      "quote": "And don't think of picking up a knife or something."
+     }
+    ]
+   },
+   {
+    "value": "breaking the rules is punished",
+    "source": "subtitles",
+    "at": "01:36:44",
+    "quote": "You shouldn't have done that, Anna. One doesn't break the rules.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "victims must take the bet",
+    "source": "subtitles",
+    "at": "00:40:39",
+    "quote": "That's no good. You have to bet.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "family on holiday", "relation_to_threat": "stranger", "detail": "the Schobers", "quote": "Georg Schober, his wife Anna, their son Georgie, and their dog Rolfi", "confidence": "sourced"},
-   {"value": "child", "relation_to_threat": "stranger", "detail": "Georgie", "quote": "Georgie panics and runs, which results in Peter shooting him dead", "confidence": "sourced"},
-   {"value": "neighbours", "relation_to_threat": "stranger", "quote": "Georgie escapes and flees to Fred's house, where he finds Sissi's corpse", "confidence": "sourced"}
+   {
+    "value": "family on holiday",
+    "relation_to_threat": "stranger",
+    "detail": "the Schobers",
+    "quote": "Georg Schober, his wife Anna, their son Georgie, and their dog Rolfi",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child",
+    "relation_to_threat": "stranger",
+    "detail": "Georgie",
+    "quote": "Georgie panics and runs, which results in Peter shooting him dead",
+    "confidence": "sourced"
+   },
+   {
+    "value": "neighbours",
+    "relation_to_threat": "stranger",
+    "quote": "Georgie escapes and flees to Fred's house, where he finds Sissi's corpse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:14",
+      "quote": "They've killed Sissi!"
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "everyone dies", "quote": "here all three family members die", "confidence": "sourced"},
-   {"value": "cycle passes on", "detail": "Paul asks the next family for eggs", "quote": "Paul arrives at Gerda's house and knocks on the door, asking for some eggs on Anna’s behalf", "confidence": "sourced"}
+   {
+    "value": "everyone dies",
+    "quote": "here all three family members die",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:54",
+      "quote": "Say good-bye to Georgie."
+     }
+    ]
+   },
+   {
+    "value": "cycle passes on",
+    "detail": "Paul asks the next family for eggs",
+    "quote": "Paul arrives at Gerda's house and knocks on the door, asking for some eggs on Anna’s behalf",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:41:33",
+      "quote": "Anna sent me. We had guests arrive unexpectedly this morning... and she wonders if you could spare her a few eggs?"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "dog", "state": "killed", "when": "early", "role": "omen", "quote": "reveals to Anna that they killed Rolfi before taking the family hostage", "confidence": "sourced"},
-   {"value": "eggs", "state": "dropped", "when": "early", "role": "trigger", "quote": "to borrow eggs on Eva's behalf, only to drop them", "confidence": "sourced"},
-   {"value": "phone", "state": "in the sink", "when": "early", "role": "omen", "quote": "knock the family's phone into the sink, seemingly done by accident", "confidence": "sourced"},
-   {"value": "golf club", "when": "early", "role": "weapon", "quote": "Peter breaks Georg's leg with a golf club", "confidence": "sourced"},
-   {"value": "pillowcase", "state": "over a child's head", "when": "middle", "role": "threat", "quote": "puts a pillowcase over Georgie's head", "confidence": "sourced"},
-   {"value": "shotgun", "when": "middle", "role": "weapon", "quote": "Georgie attempts to shoot him, but the shotgun is unloaded", "confidence": "sourced"},
-   {"value": "remote control", "when": "late", "role": "turn", "quote": "uses a remote control to rewind the movie", "confidence": "sourced"},
-   {"value": "lake", "when": "ending", "role": "setting", "quote": "Paul nonchalantly pushes Anna into the water to drown", "confidence": "sourced"}
+   {
+    "value": "dog",
+    "state": "killed",
+    "when": "early",
+    "role": "omen",
+    "quote": "reveals to Anna that they killed Rolfi before taking the family hostage",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:33",
+      "quote": "Warmer, hotter, boiling!"
+     }
+    ]
+   },
+   {
+    "value": "eggs",
+    "state": "dropped",
+    "when": "early",
+    "role": "trigger",
+    "quote": "to borrow eggs on Eva's behalf, only to drop them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:10",
+      "quote": "Your wife gave the eggs to Peter, but he smashed them."
+     }
+    ]
+   },
+   {
+    "value": "phone",
+    "state": "in the sink",
+    "when": "early",
+    "role": "omen",
+    "quote": "knock the family's phone into the sink, seemingly done by accident",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:57",
+      "quote": "He dropped the mobile in the water."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:15:43",
+      "quote": "The mobile! It's working again!"
+     }
+    ]
+   },
+   {
+    "value": "golf club",
+    "when": "early",
+    "role": "weapon",
+    "quote": "Peter breaks Georg's leg with a golf club",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:19",
+      "quote": "Good clubs don't make good golfers."
+     }
+    ]
+   },
+   {
+    "value": "pillowcase",
+    "state": "over a child's head",
+    "when": "middle",
+    "role": "threat",
+    "quote": "puts a pillowcase over Georgie's head",
+    "confidence": "sourced"
+   },
+   {
+    "value": "shotgun",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "Georgie attempts to shoot him, but the shotgun is unloaded",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:34",
+      "quote": "Do we prefer the little knife? Or the rifle?"
+     }
+    ]
+   },
+   {
+    "value": "remote control",
+    "when": "late",
+    "role": "turn",
+    "quote": "uses a remote control to rewind the movie",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:51",
+      "quote": "Where's the fucking remote control?"
+     }
+    ]
+   },
+   {
+    "value": "lake",
+    "when": "ending",
+    "role": "setting",
+    "quote": "Paul nonchalantly pushes Anna into the water to drown",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:47",
+      "quote": "I thought you were a non-swimmer."
+     }
+    ]
+   },
+   {
+    "value": "opera guessing game",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:00:29",
+    "quote": "Almost. Bjorling is easy.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "golf ball",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:26:38",
+    "quote": "Exactly, sir, a golf ball. And why do I have it here in my pocket?",
+    "confidence": "sourced",
+    "detail": "the first sign the dog has been killed"
+   },
+   {
+    "value": "forced prayer",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:34:12",
+    "quote": "You're asking the Lord God for something. So pray properly.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "white gloves",
+    "when": "ending",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:38:14",
+    "quote": "Can you give me your gloves?",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "family arrives at holiday home", "when": "opening", "quote": "arrive at their lakefront holiday home in Austria", "confidence": "sourced"},
-   {"order": 2, "value": "polite intrusion", "when": "early", "role": "trigger", "quote": "the other young man Peter comes to Anna's kitchen to borrow eggs on Eva's behalf", "confidence": "sourced"},
-   {"order": 3, "value": "family taken hostage", "when": "early", "quote": "Peter breaks Georg's leg with a golf club and reveals to Anna that they killed Rolfi", "confidence": "sourced"},
-   {"order": 4, "value": "bet on survival", "when": "middle", "quote": "Paul places a bet that the family will not survive past 9:00 in the morning", "confidence": "sourced"},
-   {"order": 5, "value": "child killed", "when": "middle", "role": "turn", "quote": "Georgie panics and runs, which results in Peter shooting him dead", "confidence": "sourced"},
-   {"order": 6, "value": "victory rewound", "when": "late", "role": "turn", "quote": "Anna grabs the shotgun and kills Peter; however, Paul finds and uses a remote control to rewind the movie", "confidence": "sourced"},
-   {"order": 7, "value": "last victim drowned", "when": "ending", "quote": "Around 8:00, Paul nonchalantly pushes Anna into the water to drown, thus winning their bet", "confidence": "sourced"},
-   {"order": 8, "value": "next family targeted", "when": "ending", "quote": "She heads to the kitchen as Paul stares at the camera and smirks", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "family arrives at holiday home",
+    "when": "opening",
+    "quote": "arrive at their lakefront holiday home in Austria",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:29",
+      "quote": "Almost. Bjorling is easy."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "polite intrusion",
+    "when": "early",
+    "role": "trigger",
+    "quote": "the other young man Peter comes to Anna's kitchen to borrow eggs on Eva's behalf",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:19",
+      "quote": "and she's run out of eggs."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "family taken hostage",
+    "when": "early",
+    "quote": "Peter breaks Georg's leg with a golf club and reveals to Anna that they killed Rolfi",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:38",
+      "quote": "Exactly, sir, a golf ball. And why do I have it here in my pocket?"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "game to find dead dog",
+    "when": "early",
+    "source": "subtitles",
+    "at": "00:28:33",
+    "quote": "Warmer, hotter, boiling!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "bet on survival",
+    "when": "middle",
+    "quote": "Paul places a bet that the family will not survive past 9:00 in the morning",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:17",
+      "quote": "You bet us, that tomorrow at 9: 00, you'll be alive"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "killer addresses the viewer",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:40:45",
+    "quote": "You are on their side, aren't you?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "child killed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Georgie panics and runs, which results in Peter shooting him dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:12",
+      "quote": "You're an idiot, Fatty. You don't shoot the person you've"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "forced prayer game",
+    "when": "late",
+    "source": "subtitles",
+    "at": "01:33:17",
+    "quote": "You recite a prayer of your choice.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "victory rewound",
+    "when": "late",
+    "role": "turn",
+    "quote": "Anna grabs the shotgun and kills Peter; however, Paul finds and uses a remote control to rewind the movie",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:51",
+      "quote": "Where's the fucking remote control?"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "last victim drowned",
+    "when": "ending",
+    "quote": "Around 8:00, Paul nonchalantly pushes Anna into the water to drown, thus winning their bet",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:39",
+      "quote": "The deadline was at 9: 00. She had almost an hour left!"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "killers debate fiction and reality",
+    "when": "ending",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:40:20",
+    "quote": "But the fiction is real, isn't it?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 12,
+    "value": "next family targeted",
+    "when": "ending",
+    "quote": "She heads to the kitchen as Paul stares at the camera and smirks",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:41:33",
+      "quote": "and she wonders if you could spare her a few eggs?"
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

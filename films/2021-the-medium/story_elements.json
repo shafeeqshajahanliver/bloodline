@@ -1,68 +1,468 @@
 {
  "film": "2021-the-medium",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "possessing spirits", "detail": "numerous evil spirits in Mink", "quote": "Santi, a more powerful medium, who says that Mink has been possessed by numerous evil spirits", "confidence": "sourced"},
-   {"value": "ghost of a relative", "detail": "Mac, her brother (Nim's belief)", "quote": "believes that Mac's ghost is haunting Mink", "confidence": "sourced"}
+   {
+    "value": "possessing spirits",
+    "detail": "numerous evil spirits in Mink",
+    "quote": "Santi, a more powerful medium, who says that Mink has been possessed by numerous evil spirits",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:45",
+      "quote": "that attracted all the wandering ghosts as well as the lost spirits of beasts..."
+     }
+    ]
+   },
+   {
+    "value": "ghost of a relative",
+    "detail": "Mac, her brother (Nim's belief)",
+    "quote": "believes that Mac's ghost is haunting Mink",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "inherited curse", "quote": "Mink's paternal ancestors had been cursed for committing many wicked deeds", "confidence": "sourced"},
-   {"value": "failed ritual", "quote": "The failed transference ceremony worsened Mink's condition by making her more vulnerable to possession by any spirit", "confidence": "sourced"}
+   {
+    "value": "inherited curse",
+    "quote": "Mink's paternal ancestors had been cursed for committing many wicked deeds",
+    "confidence": "sourced"
+   },
+   {
+    "value": "failed ritual",
+    "quote": "The failed transference ceremony worsened Mink's condition by making her more vulnerable to possession by any spirit",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "a body", "quote": "Mink becomes possessed by multiple spirits and attacks her mother", "confidence": "observed"},
-   {"value": "revenge", "detail": "on the family line", "quote": "hence the misfortunes that have befallen her family over the generations", "confidence": "observed"}
+   {
+    "value": "a body",
+    "quote": "Mink becomes possessed by multiple spirits and attacks her mother",
+    "confidence": "observed"
+   },
+   {
+    "value": "revenge",
+    "detail": "on the family line",
+    "quote": "hence the misfortunes that have befallen her family over the generations",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:54",
+      "quote": "The last wishes of those dying people were to curse the family,"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "ancestral sins", "quote": "cursed for committing many wicked deeds", "confidence": "sourced"},
-   {"value": "incest", "quote": "Mink had committed incest with Mac, who had actually hanged himself", "confidence": "sourced"},
-   {"value": "refusing a calling", "detail": "Noi refused to be the deity's host", "quote": "her sister, Noi, refused to accept the role and converted to Christianity", "confidence": "sourced"}
+   {
+    "value": "ancestral sins",
+    "quote": "cursed for committing many wicked deeds",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:48",
+      "quote": "Wiroj's ancestors beheaded thousands of people."
+     }
+    ]
+   },
+   {
+    "value": "incest",
+    "quote": "Mink had committed incest with Mac, who had actually hanged himself",
+    "confidence": "sourced"
+   },
+   {
+    "value": "refusing a calling",
+    "detail": "Noi refused to be the deity's host",
+    "quote": "her sister, Noi, refused to accept the role and converted to Christianity",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:22",
+      "quote": "After my aunt, the next shaman was supposed to be Noi, my elder sister,"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "a funeral", "quote": "Nim attends the funeral of Noi's husband, Wiroj, who died of cancer", "confidence": "sourced"},
-   {"value": "documentary filming", "quote": "A documentary crew travels to the Isan region of Thailand to interview Nim", "confidence": "sourced"}
+   {
+    "value": "a funeral",
+    "quote": "Nim attends the funeral of Noi's husband, Wiroj, who died of cancer",
+    "confidence": "sourced"
+   },
+   {
+    "value": "documentary filming",
+    "quote": "A documentary crew travels to the Isan region of Thailand to interview Nim",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "spirit passes down the female line", "quote": "a ceremony to transfer Ba Yan's spirit from Nim to Mink", "confidence": "sourced"},
-   {"value": "trap spirits in a vessel", "quote": "trap all the spirits in a container, and bury it deep underground", "confidence": "sourced"},
-   {"value": "door sealed with charms", "quote": "the door is sealed with paper charms", "confidence": "sourced"}
+   {
+    "value": "spirit passes down the female line",
+    "quote": "a ceremony to transfer Ba Yan's spirit from Nim to Mink",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:56",
+      "quote": "Ba Yan only chooses women to be Her medium."
+     }
+    ]
+   },
+   {
+    "value": "trap spirits in a vessel",
+    "quote": "trap all the spirits in a container, and bury it deep underground",
+    "confidence": "sourced"
+   },
+   {
+    "value": "door sealed with charms",
+    "quote": "the door is sealed with paper charms",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:41:20",
+      "quote": "The Master told us not to open the door if the ceremony isn't over."
+     }
+    ]
+   },
+   {
+    "value": "karma from eating spirits",
+    "source": "subtitles",
+    "at": "00:06:22",
+    "quote": "This is the cause of your misery, paying for your bad karma. Because you're drinking the soul that resided in this animal.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "daughter", "relation_to_threat": "family", "detail": "Mink", "quote": "Mink starts behaving strangely and exhibiting multiple personalities", "confidence": "sourced"},
-   {"value": "mother", "relation_to_threat": "family", "detail": "Noi, burned alive", "quote": "Mink takes the opportunity to burn her mother alive", "confidence": "sourced"},
-   {"value": "men of the family", "relation_to_threat": "family", "quote": "misfortune has befallen the men in his family", "confidence": "sourced"},
-   {"value": "shamans", "relation_to_threat": "stranger", "quote": "the evil spirits possess everyone involved in the ritual, causing them to fight and kill themselves or each other", "confidence": "sourced"}
+   {
+    "value": "daughter",
+    "relation_to_threat": "family",
+    "detail": "Mink",
+    "quote": "Mink starts behaving strangely and exhibiting multiple personalities",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother",
+    "relation_to_threat": "family",
+    "detail": "Noi, burned alive",
+    "quote": "Mink takes the opportunity to burn her mother alive",
+    "confidence": "sourced"
+   },
+   {
+    "value": "men of the family",
+    "relation_to_threat": "family",
+    "quote": "misfortune has befallen the men in his family",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:45",
+      "quote": "I don't know why all the men in the Yasantia family."
+     }
+    ]
+   },
+   {
+    "value": "shamans",
+    "relation_to_threat": "stranger",
+    "quote": "the evil spirits possess everyone involved in the ritual, causing them to fight and kill themselves or each other",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "everyone dies", "quote": "the survivors are eventually overwhelmed by the possessed", "confidence": "sourced"},
-   {"value": "failed exorcism", "quote": "All hell breaks loose when the evil spirits possess everyone involved in the ritual", "confidence": "sourced"},
-   {"value": "faith in doubt", "quote": "she wonders whether she has truly been possessed by Ba Yan or if she has been imagining it all along", "confidence": "sourced"}
+   {
+    "value": "everyone dies",
+    "quote": "the survivors are eventually overwhelmed by the possessed",
+    "confidence": "sourced"
+   },
+   {
+    "value": "failed exorcism",
+    "quote": "All hell breaks loose when the evil spirits possess everyone involved in the ritual",
+    "confidence": "sourced"
+   },
+   {
+    "value": "faith in doubt",
+    "quote": "she wonders whether she has truly been possessed by Ba Yan or if she has been imagining it all along",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:02:05",
+      "quote": "I was never really sure... if Ba Yan actually possessed me or not."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "documentary camera", "state": "filming", "when": "opening", "role": "setting", "quote": "A documentary crew travels to the Isan region of Thailand", "confidence": "sourced"},
-   {"value": "blood", "state": "vaginal bleeding", "when": "early", "role": "omen", "quote": "experiences abdominal pain and vaginal bleeding", "confidence": "sourced"},
-   {"value": "ruined factory", "state": "abandoned", "when": "middle", "role": "setting", "quote": "Mink is found in a delirious state in the ruins of her grandfather's factory", "confidence": "sourced"},
-   {"value": "decapitated statue", "state": "headless", "when": "middle", "role": "omen", "quote": "the deity's statue has been decapitated", "confidence": "sourced"},
-   {"value": "talismans", "state": "hidden in shoes", "when": "middle", "role": "clue", "quote": "including putting talismans in her shoes and making her wear her clothes", "confidence": "sourced"},
-   {"value": "dog", "state": "boiled and eaten", "when": "late", "role": "omen", "quote": "boiling the family's dog alive and eating it", "confidence": "sourced"},
-   {"value": "paper charms", "state": "sealing a door", "when": "late", "role": "weapon", "quote": "the door is sealed with paper charms", "confidence": "sourced"},
-   {"value": "fire", "state": "burning the mother", "when": "ending", "role": "weapon", "quote": "Mink takes the opportunity to burn her mother alive", "confidence": "sourced"}
+   {
+    "value": "documentary camera",
+    "state": "filming",
+    "when": "opening",
+    "role": "setting",
+    "quote": "A documentary crew travels to the Isan region of Thailand",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:23",
+      "quote": "In 2018, a documentary team traveled all over Thailand to study the lives of shamans."
+     }
+    ]
+   },
+   {
+    "value": "cobra liquor",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:06:09",
+    "quote": "My husband found this cobra and made liquor out of it.",
+    "confidence": "sourced",
+    "detail": "a villager's case in the opening: 'This is the cause of your misery, paying for your bad karma.'"
+   },
+   {
+    "value": "blood",
+    "state": "vaginal bleeding",
+    "when": "early",
+    "role": "omen",
+    "quote": "experiences abdominal pain and vaginal bleeding",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ruined factory",
+    "state": "abandoned",
+    "when": "middle",
+    "role": "setting",
+    "quote": "Mink is found in a delirious state in the ruins of her grandfather's factory",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:42",
+      "quote": "YASANTIA THREAD FACTORY"
+     }
+    ]
+   },
+   {
+    "value": "severed head in dreams",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:38:05",
+    "quote": "There's a decapitated head and blood all over the floor.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "decapitated statue",
+    "state": "headless",
+    "when": "middle",
+    "role": "omen",
+    "quote": "the deity's statue has been decapitated",
+    "confidence": "sourced"
+   },
+   {
+    "value": "talismans",
+    "state": "hidden in shoes",
+    "when": "middle",
+    "role": "clue",
+    "quote": "including putting talismans in her shoes and making her wear her clothes",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dog",
+    "state": "boiled and eaten",
+    "when": "late",
+    "role": "omen",
+    "quote": "boiling the family's dog alive and eating it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:51",
+      "quote": "Oh, but you sell dog meat and also have a pet dog."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:21:22",
+      "quote": "What's wrong, Lucky?"
+     }
+    ]
+   },
+   {
+    "value": "night surveillance cameras",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:23:32",
+    "quote": "If you set up cameras everywhere like this, then no more filming.",
+    "confidence": "sourced",
+    "detail": "night footage counted down day by day to the ceremony"
+   },
+   {
+    "value": "paper charms",
+    "state": "sealing a door",
+    "when": "late",
+    "role": "weapon",
+    "quote": "the door is sealed with paper charms",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fire",
+    "state": "burning the mother",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "Mink takes the opportunity to burn her mother alive",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "documentary on a medium", "when": "opening", "quote": "A documentary crew travels to the Isan region of Thailand to interview Nim", "confidence": "sourced"},
-   {"order": 2, "value": "funeral and family misfortune", "when": "early", "role": "omen", "quote": "reveals that misfortune has befallen the men in his family", "confidence": "sourced"},
-   {"order": 3, "value": "daughter changes", "when": "early", "quote": "Mink starts behaving strangely and exhibiting multiple personalities", "confidence": "sourced"},
-   {"order": 4, "value": "secret ritual fails", "when": "middle", "role": "turn", "quote": "The ceremony fails; Mink becomes possessed by multiple spirits and attacks her mother", "confidence": "sourced"},
-   {"order": 5, "value": "family curse revealed", "when": "middle", "role": "turn", "quote": "Mink's paternal ancestors had been cursed for committing many wicked deeds", "confidence": "sourced"},
-   {"order": 6, "value": "protector dies", "when": "late", "quote": "Nim dies in her sleep the day before the ritual.", "confidence": "sourced"},
-   {"order": 7, "value": "exorcism collapses", "when": "ending", "quote": "All hell breaks loose when the evil spirits possess everyone involved in the ritual", "confidence": "sourced"},
-   {"order": 8, "value": "daughter kills mother", "when": "ending", "quote": "Mink takes the opportunity to burn her mother alive", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "documentary on a medium",
+    "when": "opening",
+    "quote": "A documentary crew travels to the Isan region of Thailand to interview Nim",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:33",
+      "quote": "After interviewing many shamans, the team decided to study the life of Nim."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "funeral and family misfortune",
+    "when": "early",
+    "role": "omen",
+    "quote": "reveals that misfortune has befallen the men in his family",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:49",
+      "quote": "Wiroj Yasantia die under bad circumstances."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "daughter changes",
+    "when": "early",
+    "quote": "Mink starts behaving strangely and exhibiting multiple personalities",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:57",
+      "quote": "- He cursed at me. - Ihaven't done anything... You called me a whore!"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "secret ritual fails",
+    "when": "middle",
+    "role": "turn",
+    "quote": "The ceremony fails; Mink becomes possessed by multiple spirits and attacks her mother",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:34",
+      "quote": "Because what's taken hold of Mink isn't Ba Yan."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "family curse revealed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Mink's paternal ancestors had been cursed for committing many wicked deeds",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:48",
+      "quote": "Wiroj's ancestors beheaded thousands of people."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "protector dies",
+    "when": "late",
+    "quote": "Nim dies in her sleep the day before the ritual.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "countdown to the ceremony",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:20:32",
+    "quote": "6 days before the ceremony. Lucky.",
+    "confidence": "sourced",
+    "order": 7
+   },
+   {
+    "order": 8,
+    "value": "exorcism collapses",
+    "when": "ending",
+    "quote": "All hell breaks loose when the evil spirits possess everyone involved in the ritual",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:12",
+      "quote": "Master, why do you stop here?"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "daughter kills mother",
+    "when": "ending",
+    "quote": "Mink takes the opportunity to burn her mother alive",
+    "confidence": "sourced"
+   },
+   {
+    "value": "shaman admits doubt",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "02:00:51",
+    "quote": "Nim's last interview.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:02:05",
+      "quote": "I was never really sure... if Ba Yan actually possessed me or not."
+     }
+    ],
+    "order": 10
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

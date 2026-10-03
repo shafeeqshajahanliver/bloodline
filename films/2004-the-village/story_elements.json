@@ -1,64 +1,525 @@
 {
  "film": "2004-the-village",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "creatures in the woods", "detail": "'Those We Do Not Speak Of'", "quote": "a small, remote village lives in fear of nameless humanoid creatures, known only as \"Those We Do Not Speak Of\"", "confidence": "sourced"},
-   {"value": "invented monster", "detail": "the elders in disguise", "quote": "the creatures are actually the elders disguised as monsters to perpetuate the legend", "confidence": "sourced"}
+   {
+    "value": "creatures in the woods",
+    "detail": "'Those We Do Not Speak Of'",
+    "quote": "a small, remote village lives in fear of nameless humanoid creatures, known only as \"Those We Do Not Speak Of\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:24",
+      "quote": "Those We Don't Speak Of have not breached our borders for many years."
+     }
+    ]
+   },
+   {
+    "value": "invented monster",
+    "detail": "the elders in disguise",
+    "quote": "the creatures are actually the elders disguised as monsters to perpetuate the legend",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:39",
+      "quote": "The screams from the woods? We created those sounds."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "made by someone", "detail": "the elders, to keep the young from leaving", "quote": "to perpetuate the legend and deter younger members from leaving", "confidence": "sourced"},
-   {"value": "grief and trauma", "quote": "He had recruited people he met at a grief counseling clinic, hoping to isolate themselves from societal violence", "confidence": "sourced"}
+   {
+    "value": "made by someone",
+    "detail": "the elders, to keep the young from leaving",
+    "quote": "to perpetuate the legend and deter younger members from leaving",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:58",
+      "quote": "We did not want anyone to go to the towns, Ivy."
+     }
+    ]
+   },
+   {
+    "value": "grief and trauma",
+    "quote": "He had recruited people he met at a grief counseling clinic, hoping to isolate themselves from societal violence",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:15",
+      "quote": "You know, my brother was slain in the towns."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to keep people inside", "quote": "It is believed that as long as villagers avoid the woods, the creatures stay away", "confidence": "observed"}
+   {
+    "value": "to keep people inside",
+    "quote": "It is believed that as long as villagers avoid the woods, the creatures stay away",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:31",
+      "quote": "We do not go into their woods, they do not come into our valley."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "murder", "detail": "Edward's father", "quote": "Edward tells her about his wealthy father's murder", "confidence": "sourced"},
-   {"value": "deception by elders", "quote": "The elders appear to have secrets, and each keeps a locked black box", "confidence": "sourced"}
+   {
+    "value": "murder",
+    "detail": "Edward's father",
+    "quote": "Edward tells her about his wealthy father's murder",
+    "confidence": "sourced"
+   },
+   {
+    "value": "deception by elders",
+    "quote": "The elders appear to have secrets, and each keeps a locked black box",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:03",
+      "quote": "It is only farce."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "crossing a boundary", "quote": "Lucius secretly ventures into the woods", "confidence": "sourced"},
-   {"value": "need for medicine", "quote": "sending Ivy, accompanied by two young men, through the forest to retrieve medicine for Lucius", "confidence": "sourced"}
+   {
+    "value": "crossing a boundary",
+    "quote": "Lucius secretly ventures into the woods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:02",
+      "quote": "On the day before last, I crossed the forbidden line"
+     }
+    ]
+   },
+   {
+    "value": "need for medicine",
+    "quote": "sending Ivy, accompanied by two young men, through the forest to retrieve medicine for Lucius",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:02",
+      "quote": "and go to the towns to retrieve medicines"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "color red forbidden", "quote": "The color red is banned, as it attracts the creatures", "confidence": "sourced"},
-   {"value": "must not enter the woods", "quote": "as long as villagers avoid the woods, the creatures stay away", "confidence": "sourced"},
-   {"value": "must not be named", "quote": "known only as \"Those We Do Not Speak Of\"", "confidence": "observed"}
+   {
+    "value": "color red forbidden",
+    "quote": "The color red is banned, as it attracts the creatures",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:43",
+      "quote": "This color attracts Those We Don't Speak Of. You must bury it."
+     }
+    ]
+   },
+   {
+    "value": "must not enter the woods",
+    "quote": "as long as villagers avoid the woods, the creatures stay away",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:53",
+      "quote": "l ask permission to cross into the forbidden woods"
+     }
+    ]
+   },
+   {
+    "value": "must not be named",
+    "quote": "known only as \"Those We Do Not Speak Of\"",
+    "confidence": "observed"
+   },
+   {
+    "value": "yellow is the safe color",
+    "source": "subtitles",
+    "at": "01:07:50",
+    "quote": "Then why do you wear the cloak of the safe color?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the innocent may pass",
+    "source": "subtitles",
+    "at": "00:22:42",
+    "quote": "those creatures who reside in the woods did not harm him.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "village youth", "relation_to_threat": "community", "quote": "deter younger members from leaving", "confidence": "sourced"},
-   {"value": "blind young woman", "relation_to_threat": "community", "detail": "Ivy", "quote": "She continues on alone and is stalked by a creature", "confidence": "sourced"},
-   {"value": "wounded lover", "relation_to_threat": "community", "detail": "Lucius", "quote": "stabs Lucius out of jealousy, seriously wounding him", "confidence": "sourced"}
+   {
+    "value": "village youth",
+    "relation_to_threat": "community",
+    "quote": "deter younger members from leaving",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:20",
+      "quote": "They put their backs to the woods,"
+     }
+    ]
+   },
+   {
+    "value": "blind young woman",
+    "relation_to_threat": "community",
+    "detail": "Ivy",
+    "quote": "She continues on alone and is stalked by a creature",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:28",
+      "quote": "Papa... I cannot see his color."
+     }
+    ]
+   },
+   {
+    "value": "wounded lover",
+    "relation_to_threat": "community",
+    "detail": "Lucius",
+    "quote": "stabs Lucius out of jealousy, seriously wounding him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:53",
+      "quote": "He has suffered a great deal."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "lie preserved", "quote": "his death will enable them to continue the farce that creatures inhabit the woods", "confidence": "sourced"},
-   {"value": "twist reveal", "quote": "revealing that it is actually the late 20th or early 21st century", "confidence": "sourced"}
+   {
+    "value": "lie preserved",
+    "quote": "his death will enable them to continue the farce that creatures inhabit the woods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:52",
+      "quote": "Your son has made our stories real."
+     }
+    ]
+   },
+   {
+    "value": "twist reveal",
+    "quote": "revealing that it is actually the late 20th or early 21st century",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:50",
+      "quote": "(man on radio) There's an overturned tractor-trailer"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "woods", "when": "opening", "role": "setting", "quote": "creatures inhabiting the woods beyond it", "confidence": "sourced"},
-   {"value": "red", "state": "banned color, paint on doors", "when": "early", "role": "omen", "quote": "leaving red paint splashes on people's doors as a warning", "confidence": "sourced"},
-   {"value": "skinned animals", "when": "early", "role": "omen", "quote": "Soon after, skinned animal carcasses appear in the village", "confidence": "sourced"},
-   {"value": "watchtowers and lamps", "when": "opening", "role": "setting", "quote": "Staffed watchtowers and tall poles with oil lamps line the village perimeter", "confidence": "sourced"},
-   {"value": "black box", "state": "locked", "when": "early", "role": "clue", "quote": "each keeps a locked black box containing unknown items", "confidence": "sourced"},
-   {"value": "costume", "state": "hidden under floorboards", "when": "late", "role": "clue", "quote": "wearing a costume that he had found hidden under the floorboards", "confidence": "sourced"},
-   {"value": "deep hole", "when": "late", "role": "weapon", "quote": "she tricks into fatally falling into a deep hole", "confidence": "sourced"},
-   {"value": "wall", "when": "late", "role": "setting", "quote": "Ivy climbs over a high wall", "confidence": "sourced"}
+   {
+    "value": "woods",
+    "when": "opening",
+    "role": "setting",
+    "quote": "creatures inhabiting the woods beyond it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:53",
+      "quote": "there's something in these woods."
+     }
+    ]
+   },
+   {
+    "value": "red",
+    "state": "banned color, paint on doors",
+    "when": "early",
+    "role": "omen",
+    "quote": "leaving red paint splashes on people's doors as a warning",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:17",
+      "quote": "Noah Percy handed Ivy Walker berries of the bad color."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:53:33",
+      "quote": "The bad... The bad color."
+     }
+    ]
+   },
+   {
+    "value": "skinned animals",
+    "when": "early",
+    "role": "omen",
+    "quote": "Soon after, skinned animal carcasses appear in the village",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:28",
+      "quote": "(flies buzzing)"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:44:09",
+      "quote": "Livestock has been taken and skinned."
+     }
+    ]
+   },
+   {
+    "value": "warning bell",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:31:38",
+    "quote": "(shouting and bell ringing)",
+    "confidence": "sourced"
+   },
+   {
+    "value": "watchtowers and lamps",
+    "when": "opening",
+    "role": "setting",
+    "quote": "Staffed watchtowers and tall poles with oil lamps line the village perimeter",
+    "confidence": "sourced"
+   },
+   {
+    "value": "black box",
+    "state": "locked",
+    "when": "early",
+    "role": "clue",
+    "quote": "each keeps a locked black box containing unknown items",
+    "confidence": "sourced"
+   },
+   {
+    "value": "costume",
+    "state": "hidden under floorboards",
+    "when": "late",
+    "role": "clue",
+    "quote": "wearing a costume that he had found hidden under the floorboards",
+    "confidence": "sourced"
+   },
+   {
+    "value": "deep hole",
+    "when": "late",
+    "role": "weapon",
+    "quote": "she tricks into fatally falling into a deep hole",
+    "confidence": "sourced"
+   },
+   {
+    "value": "wall",
+    "when": "late",
+    "role": "setting",
+    "quote": "Ivy climbs over a high wall",
+    "confidence": "sourced"
+   },
+   {
+    "value": "yellow cloak",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:07:50",
+    "quote": "Then why do you wear the cloak of the safe color?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "magic rocks",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:07:32",
+    "quote": "We have the magic rocks. They will keep us safe.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "village under siege", "when": "opening", "role": "setting", "quote": "a small, remote village lives in fear of nameless humanoid creatures", "confidence": "sourced"},
-   {"order": 2, "value": "boundary crossed", "when": "early", "role": "trigger", "quote": "Lucius secretly ventures into the woods", "confidence": "sourced"},
-   {"order": 3, "value": "warning signs", "when": "early", "role": "omen", "quote": "the creatures enter the village, leaving red paint splashes on people's doors as a warning", "confidence": "sourced"},
-   {"order": 4, "value": "jealous stabbing", "when": "middle", "quote": "Noah Percy, a young man with an apparent developmental disability, stabs Lucius out of jealousy", "confidence": "sourced"},
-   {"order": 5, "value": "elders confess the hoax", "when": "middle", "role": "turn", "quote": "the creatures are actually the elders disguised as monsters", "confidence": "sourced"},
-   {"order": 6, "value": "journey through the woods", "when": "late", "quote": "She continues on alone and is stalked by a creature, which she tricks into fatally falling into a deep hole", "confidence": "sourced"},
-   {"order": 7, "value": "modern world revealed", "when": "late", "role": "turn", "quote": "she encounters Kevin, a Walker Wildlife Reserve park ranger", "confidence": "sourced"},
-   {"order": 8, "value": "lie kept alive", "when": "ending", "quote": "his death will enable them to continue the farce", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "child's funeral",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:14",
+    "quote": "Did we make the right decision to settle here?",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:18",
+      "quote": "Who'll pinch me to wake me up?"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "village under siege",
+    "when": "opening",
+    "role": "setting",
+    "quote": "a small, remote village lives in fear of nameless humanoid creatures",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:07",
+      "quote": "Those We Don't Speak Of killed it."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "boundary crossed",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Lucius secretly ventures into the woods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:02",
+      "quote": "On the day before last, I crossed the forbidden line"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "warning signs",
+    "when": "early",
+    "role": "omen",
+    "quote": "the creatures enter the village, leaving red paint splashes on people's doors as a warning",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:03",
+      "quote": "By the markings we find this morning on our homes"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "jealous stabbing",
+    "when": "middle",
+    "quote": "Noah Percy, a young man with an apparent developmental disability, stabs Lucius out of jealousy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:21",
+      "quote": "Noah Percy was found with quarts of blood upon his clothes and hands."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "elders confess the hoax",
+    "when": "middle",
+    "role": "turn",
+    "quote": "the creatures are actually the elders disguised as monsters",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:39",
+      "quote": "The screams from the woods? We created those sounds."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "journey through the woods",
+    "when": "late",
+    "quote": "She continues on alone and is stalked by a creature, which she tricks into fatally falling into a deep hole",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:53",
+      "quote": "there's something in these woods."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "modern world revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "she encounters Kevin, a Walker Wildlife Reserve park ranger",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:41",
+      "quote": "What is your name? - Kevin."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "medicine brought home",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:39:04",
+    "quote": "Ivy has returned with medicines from the towns.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "lie kept alive",
+    "when": "ending",
+    "quote": "his death will enable them to continue the farce",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:40",
+      "quote": "We will tell the others he was killed by the creatures."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "return to the wounded lover",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:41:27",
+    "quote": "I'm back, Lucius.",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

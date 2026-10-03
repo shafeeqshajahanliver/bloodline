@@ -1,64 +1,478 @@
 {
  "film": "1999-sleepy-hollow",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "headless horseman", "detail": "the undead Hessian mercenary", "quote": "the undead apparition of a headless Hessian mercenary, who is trying to find his missing head", "confidence": "sourced"},
-   {"value": "witch", "detail": "Mary Van Tassel, who controls him", "quote": "Mary pledged herself to Satan to resurrect him from the grave", "confidence": "sourced"}
+   {
+    "value": "headless horseman",
+    "detail": "the undead Hessian mercenary",
+    "quote": "the undead apparition of a headless Hessian mercenary, who is trying to find his missing head",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:05",
+      "quote": "The Horseman was a Hessian mercenary..."
+     }
+    ]
+   },
+   {
+    "value": "witch",
+    "detail": "Mary Van Tassel, who controls him",
+    "quote": "Mary pledged herself to Satan to resurrect him from the grave",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:22",
+      "quote": "At that moment, I offered my soul to Satan..."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "summoned by a pact", "quote": "Mary pledged herself to Satan to resurrect him from the grave and take over the Van Garrett and Van Tassel estates in revenge", "confidence": "sourced"},
-   {"value": "controlled through a stolen relic", "detail": "his skull", "quote": "discovers the Hessian's remains without a skull, deducing that it has been taken in order to control him", "confidence": "sourced"}
+   {
+    "value": "summoned by a pact",
+    "quote": "Mary pledged herself to Satan to resurrect him from the grave and take over the Van Garrett and Van Tassel estates in revenge",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:26",
+      "quote": "if he would raise the Hessian from the grave to avenge me."
+     }
+    ]
+   },
+   {
+    "value": "controlled through a stolen relic",
+    "detail": "his skull",
+    "quote": "discovers the Hessian's remains without a skull, deducing that it has been taken in order to control him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:14",
+      "quote": "Someone who dug in the earth in the Western Woods and stole the skull."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "his missing head", "quote": "who is trying to find his missing head", "confidence": "sourced"},
-   {"value": "revenge", "detail": "Mary's, for her family's eviction", "quote": "take over the Van Garrett and Van Tassel estates in revenge", "confidence": "sourced"},
-   {"value": "inheritance", "quote": "all the victims are either beneficiaries or witnesses to the new will", "confidence": "sourced"}
+   {
+    "value": "his missing head",
+    "quote": "who is trying to find his missing head",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:18",
+      "quote": "The missing head which must be restored to the Horseman..."
+     }
+    ]
+   },
+   {
+    "value": "revenge",
+    "detail": "Mary's, for her family's eviction",
+    "quote": "take over the Van Garrett and Van Tassel estates in revenge",
+    "confidence": "sourced"
+   },
+   {
+    "value": "inheritance",
+    "quote": "all the victims are either beneficiaries or witnesses to the new will",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "eviction of a poor family", "quote": "an impoverished family evicted by Van Garrett years ago in favor of the Van Tassels", "confidence": "sourced"},
-   {"value": "conspiracy", "quote": "Ichabod hypothesizes that the Hessian is attacking selected targets linked by a conspiracy", "confidence": "sourced"}
+   {
+    "value": "eviction of a poor family",
+    "quote": "an impoverished family evicted by Van Garrett years ago in favor of the Van Tassels",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:38",
+      "quote": "The landlord who showed us no mercy and left us to starve"
+     }
+    ]
+   },
+   {
+    "value": "conspiracy",
+    "quote": "Ichabod hypothesizes that the Hessian is attacking selected targets linked by a conspiracy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:57",
+      "quote": "There is conspiracy here."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "investigator sent in", "quote": "Ichabod Crane is sent to the upstate Dutch village of Sleepy Hollow to investigate a series of brutal decapitations", "confidence": "sourced"}
+   {
+    "value": "investigator sent in",
+    "quote": "Ichabod Crane is sent to the upstate Dutch village of Sleepy Hollow to investigate a series of brutal decapitations",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "cannot enter a church", "quote": "Unable to enter the church, the Hessian harpoons Baltus through a window", "confidence": "sourced"},
-   {"value": "freed by returning the head", "quote": "returns it to him, freeing the Hessian from her control", "confidence": "sourced"},
-   {"value": "grave is a portal", "quote": "the Hessian's grave at the \"tree of the dead\", his portal into the living world", "confidence": "sourced"}
+   {
+    "value": "cannot enter a church",
+    "quote": "Unable to enter the church, the Hessian harpoons Baltus through a window",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:04",
+      "quote": "The Horseman cannot enter. He cannot cross the gate."
+     }
+    ]
+   },
+   {
+    "value": "freed by returning the head",
+    "quote": "returns it to him, freeing the Hessian from her control",
+    "confidence": "sourced"
+   },
+   {
+    "value": "grave is a portal",
+    "quote": "the Hessian's grave at the \"tree of the dead\", his portal into the living world",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:40",
+      "quote": "Follow it to the Tree of the Dead."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "heirs and witnesses", "relation_to_threat": "community", "quote": "Having eliminated all the other heirs and witnesses", "confidence": "sourced"},
-   {"value": "investigator", "relation_to_threat": "stranger", "detail": "Ichabod Crane", "quote": "pragmatic New York City constable Ichabod Crane", "confidence": "sourced"},
-   {"value": "stepdaughter", "relation_to_threat": "family", "detail": "Katrina, targeted by her stepmother", "quote": "Mary summons the Hessian to finish off Katrina", "confidence": "sourced"}
+   {
+    "value": "heirs and witnesses",
+    "relation_to_threat": "community",
+    "quote": "Having eliminated all the other heirs and witnesses",
+    "confidence": "sourced"
+   },
+   {
+    "value": "investigator",
+    "relation_to_threat": "stranger",
+    "detail": "Ichabod Crane",
+    "quote": "pragmatic New York City constable Ichabod Crane",
+    "confidence": "sourced"
+   },
+   {
+    "value": "stepdaughter",
+    "relation_to_threat": "family",
+    "detail": "Katrina, targeted by her stepmother",
+    "quote": "Mary summons the Hessian to finish off Katrina",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat returns to hell", "quote": "the Hessian spares Katrina and returns to Hell, taking Mary with him", "confidence": "sourced"},
-   {"value": "survivors leave", "quote": "Ichabod takes Katrina and Masbath from Sleepy Hollow to start a new life with them in New York", "confidence": "sourced"}
+   {
+    "value": "threat returns to hell",
+    "quote": "the Hessian spares Katrina and returns to Hell, taking Mary with him",
+    "confidence": "sourced"
+   },
+   {
+    "value": "survivors leave",
+    "quote": "Ichabod takes Katrina and Masbath from Sleepy Hollow to start a new life with them in New York",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:07",
+      "quote": "Just in time for a new century."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "severed heads", "state": "missing", "when": "opening", "role": "threat", "quote": "a series of brutal decapitations of its residents", "confidence": "sourced"},
-   {"value": "exhumed bodies", "state": "dug up", "when": "early", "role": "clue", "quote": "exhume the bodies of the victims and learn that the widow died pregnant", "confidence": "sourced"},
-   {"value": "tree of the dead", "state": "a portal", "when": "middle", "role": "setting", "quote": "the Hessian's grave at the \"tree of the dead\"", "confidence": "sourced"},
-   {"value": "skull", "state": "stolen", "when": "middle", "role": "clue", "quote": "discovers the Hessian's remains without a skull", "confidence": "sourced"},
-   {"value": "pentagram", "state": "chalked", "when": "middle", "role": "clue", "quote": "Ichabod finds a chalked pentagram under his bed, which he believes symbolizes the evil eye", "confidence": "sourced"},
-   {"value": "harpoon", "state": "through a window", "when": "late", "role": "weapon", "quote": "the Hessian harpoons Baltus through a window", "confidence": "sourced"},
-   {"value": "windmill", "state": "destroyed", "when": "ending", "role": "setting", "quote": "After escaping from the windmill, which led to its destruction", "confidence": "sourced"}
+   {
+    "value": "severed heads",
+    "state": "missing",
+    "when": "opening",
+    "role": "threat",
+    "quote": "a series of brutal decapitations of its residents",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:26",
+      "quote": "Each one found with the head....."
+     }
+    ]
+   },
+   {
+    "value": "exhumed bodies",
+    "state": "dug up",
+    "when": "early",
+    "role": "clue",
+    "quote": "exhume the bodies of the victims and learn that the widow died pregnant",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:22",
+      "quote": "He knew the widow was pregnant."
+     }
+    ]
+   },
+   {
+    "value": "cardinal and empty cage",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:36:24",
+    "quote": "Cardinal on one side. An empty cage.",
+    "confidence": "sourced",
+    "detail": "Ichabod's spinning toy for Katrina; the crone later shows him a dead cardinal",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "a DEAD BIRD, a bright red cardinal"
+     }
+    ]
+   },
+   {
+    "value": "frogs calling a name",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:30:16",
+    "quote": "[Frogs Croaking \" Ichabod \"]",
+    "confidence": "sourced",
+    "detail": "the frogs croak Ichabod's name as he rides home at night"
+   },
+   {
+    "value": "tree of the dead",
+    "state": "a portal",
+    "when": "middle",
+    "role": "setting",
+    "quote": "the Hessian's grave at the \"tree of the dead\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The monstrously huge TREE OF THE DEAD, at the clearing's center."
+     }
+    ]
+   },
+   {
+    "value": "skull",
+    "state": "stolen",
+    "when": "middle",
+    "role": "clue",
+    "quote": "discovers the Hessian's remains without a skull",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:15",
+      "quote": "The skull is gone. Taken."
+     }
+    ]
+   },
+   {
+    "value": "pentagram",
+    "state": "chalked",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Ichabod finds a chalked pentagram under his bed, which he believes symbolizes the evil eye",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:07",
+      "quote": "The evil eye. It is someone casting spells against you."
+     }
+    ]
+   },
+   {
+    "value": "spider",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:09:46",
+    "quote": "It's just a spider.",
+    "confidence": "sourced",
+    "detail": "a spider sits on the chalked evil eye under Ichabod's bed",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The spider is sitting on the Pentagram."
+     }
+    ]
+   },
+   {
+    "value": "harpoon",
+    "state": "through a window",
+    "when": "late",
+    "role": "weapon",
+    "quote": "the Hessian harpoons Baltus through a window",
+    "confidence": "sourced"
+   },
+   {
+    "value": "windmill",
+    "state": "destroyed",
+    "when": "ending",
+    "role": "setting",
+    "quote": "After escaping from the windmill, which led to its destruction",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The interior of the windmill is large and shadowy"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "investigator arrives in a village", "when": "opening", "role": "trigger", "quote": "Ichabod Crane is sent to the upstate Dutch village of Sleepy Hollow", "confidence": "sourced"},
-   {"order": 2, "value": "legend told by elders", "when": "opening", "quote": "Ichabod learns that the locals believe the killer is the undead apparition of a headless Hessian mercenary", "confidence": "sourced"},
-   {"order": 3, "value": "skeptic sees the monster", "when": "early", "role": "turn", "quote": "Ichabod witnesses the Hessian killing Philipse", "confidence": "sourced"},
-   {"order": 4, "value": "grave opened", "when": "middle", "role": "clue", "quote": "Ichabod digs up the grave and discovers the Hessian's remains without a skull", "confidence": "sourced"},
-   {"order": 5, "value": "attack on the church", "when": "late", "quote": "the Hessian harpoons Baltus through a window, dragging him out and acquiring his head", "confidence": "sourced"},
-   {"order": 6, "value": "true villain revealed", "when": "late", "role": "turn", "quote": "Mary confronts Katrina and takes her to a windmill, where she reveals her true parentage", "confidence": "sourced"},
-   {"order": 7, "value": "relic returned", "when": "ending", "role": "turn", "quote": "Ichabod retrieves the Hessian's skull from Mary and returns it to him", "confidence": "sourced"},
-   {"order": 8, "value": "monster takes the villain", "when": "ending", "quote": "returns to Hell, taking Mary with him", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "investigator arrives in a village",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Ichabod Crane is sent to the upstate Dutch village of Sleepy Hollow",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:10",
+      "quote": "It is a place called Sleepy Hollow."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "legend told by elders",
+    "when": "opening",
+    "quote": "Ichabod learns that the locals believe the killer is the undead apparition of a headless Hessian mercenary",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:00",
+      "quote": "They chopped off his head with his own sword."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "skeptic sees the monster",
+    "when": "early",
+    "role": "turn",
+    "quote": "Ichabod witnesses the Hessian killing Philipse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:49",
+      "quote": "But it was a Headless Horseman."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "grave opened",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Ichabod digs up the grave and discovers the Hessian's remains without a skull",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:15",
+      "quote": "The skull is gone. Taken."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "attack on the church",
+    "when": "late",
+    "quote": "the Hessian harpoons Baltus through a window, dragging him out and acquiring his head",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:50",
+      "quote": "He cannot enter."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "monster summoned by spell",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:24:10",
+    "quote": "A head... for a head. My unholy Horseman, rise.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "true villain revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Mary confronts Katrina and takes her to a windmill, where she reveals her true parentage",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:47",
+      "quote": "but it is I who govern the Horseman, my dear."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "relic returned",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Ichabod retrieves the Hessian's skull from Mary and returns it to him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Ichabod rises, THROWS the skull with all his might"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "monster takes the villain",
+    "when": "ending",
+    "quote": "returns to Hell, taking Mary with him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The Horseman enters the clearing, holding on to Lady Van Tassel."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

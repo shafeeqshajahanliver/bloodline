@@ -1,59 +1,455 @@
 {
  "film": "2015-green-room",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot summary"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot summary"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "neo-nazi gang", "detail": "skinheads led by Darcy", "quote": "a punk band who find themselves attacked by neo-Nazi skinheads after witnessing a murder", "confidence": "sourced"},
-   {"value": "attack dog", "quote": "A skinhead, Clark, unleashes an attack dog, which kills Tiger.", "confidence": "sourced"}
+   {
+    "value": "neo-nazi gang",
+    "detail": "skinheads led by Darcy",
+    "quote": "a punk band who find themselves attacked by neo-Nazi skinheads after witnessing a murder",
+    "confidence": "sourced"
+   },
+   {
+    "value": "attack dog",
+    "quote": "A skinhead, Clark, unleashes an attack dog, which kills Tiger.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "He CLINKS a collar chain free and the PIT BULL (BROWNIE) bullets towards the crew."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "witnessed crime", "quote": "He sees the body of a woman, Emily, who has been stabbed to death by Werm, a member of Cowcatcher.", "confidence": "sourced"}
+   {
+    "value": "witnessed crime",
+    "quote": "He sees the body of a woman, Emily, who has been stabbed to death by Werm, a member of Cowcatcher.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:38",
+      "quote": "There's been a... there's been a stabbing!"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to eliminate witnesses", "quote": "decides to gift Cowcatcher with poisoned drugs and kill the band to eliminate witnesses", "confidence": "sourced"}
+   {
+    "value": "to eliminate witnesses",
+    "quote": "decides to gift Cowcatcher with poisoned drugs and kill the band to eliminate witnesses",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The dog slows you down, just shoot who’s left- they don’t need to be accounted for."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "murder", "detail": "Emily, killed for planning to leave the skinheads", "quote": "Werm murdered Emily after discovering Daniel and Emily planned to leave the skinheads", "confidence": "sourced"}
+   {
+    "value": "murder",
+    "detail": "Emily, killed for planning to leave the skinheads",
+    "quote": "Werm murdered Emily after discovering Daniel and Emily planned to leave the skinheads",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "gig at a remote venue", "quote": "arranges a show through his cousin, Daniel, at a neo-Nazi skinhead bar in the woods outside Portland", "confidence": "sourced"},
-   {"value": "seeing something forbidden", "quote": "After the show, Pat returns to the green room to retrieve Sam's phone.", "confidence": "sourced"}
+   {
+    "value": "gig at a remote venue",
+    "quote": "arranges a show through his cousin, Daniel, at a neo-Nazi skinhead bar in the woods outside Portland",
+    "confidence": "sourced"
+   },
+   {
+    "value": "seeing something forbidden",
+    "quote": "After the show, Pat returns to the green room to retrieve Sam's phone.",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "trapped in one room", "quote": "confiscate the band's phones and hold them captive in the green room with Emily's friend Amber", "confidence": "sourced"},
-   {"value": "deaths staged as accident", "quote": "planning to stage their deaths to appear as though they were killed while trespassing", "confidence": "sourced"}
+   {
+    "value": "trapped in one room",
+    "quote": "confiscate the band's phones and hold them captive in the green room with Emily's friend Amber",
+    "confidence": "sourced"
+   },
+   {
+    "value": "deaths staged as accident",
+    "quote": "planning to stage their deaths to appear as though they were killed while trespassing",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:44",
+      "quote": "You were trespassing."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:25:50",
+      "quote": "You have a \" No trespassing \" sign posted at the residence?"
+     }
+    ]
+   },
+   {
+    "value": "feedback drives off dogs",
+    "source": "subtitles",
+    "at": "00:56:07",
+    "quote": "And if I send in two fight dogs, what do you think they'll do?",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Kill that feedback first."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "touring band", "relation_to_threat": "stranger", "detail": "the Ain't Rights", "quote": "Pat, Sam, Reece and Tiger are members of a punk band, the Ain't Rights, traveling through the Pacific Northwest.", "confidence": "sourced"},
-   {"value": "insider wanting out", "relation_to_threat": "community", "detail": "Amber, Emily's friend", "quote": "Darcy's men wound Amber, who retreats to the green room with Pat", "confidence": "sourced"}
+   {
+    "value": "touring band",
+    "relation_to_threat": "stranger",
+    "detail": "the Ain't Rights",
+    "quote": "Pat, Sam, Reece and Tiger are members of a punk band, the Ain't Rights, traveling through the Pacific Northwest.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:57",
+      "quote": "Okay, I'm the Ain't Rights from Washington, D.C."
+     }
+    ]
+   },
+   {
+    "value": "insider wanting out",
+    "relation_to_threat": "community",
+    "detail": "Amber, Emily's friend",
+    "quote": "Darcy's men wound Amber, who retreats to the green room with Pat",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "Fleeing, Darcy pulls a revolver from his jacket but is shot dead by Pat and Amber.", "confidence": "sourced"},
-   {"value": "two survivors", "quote": "The two sit on the side of the road and wait for the police.", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "Fleeing, Darcy pulls a revolver from his jacket but is shot dead by Pat and Amber.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:03",
+      "quote": "Tell me those stupid fucking words are his last."
+     }
+    ]
+   },
+   {
+    "value": "two survivors",
+    "quote": "The two sit on the side of the road and wait for the police.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:34",
+      "quote": "We need the police."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "body", "state": "stabbed", "when": "early", "role": "trigger", "quote": "He sees the body of a woman, Emily, who has been stabbed to death", "confidence": "sourced"},
-   {"value": "door", "state": "negotiated through", "when": "middle", "role": "setting", "quote": "They negotiate through the door with Darcy, who asks them to surrender the pistol.", "confidence": "sourced"},
-   {"value": "machetes", "when": "middle", "role": "weapon", "quote": "partially sever his hand with machetes until he drops the gun", "confidence": "sourced"},
-   {"value": "box cutter", "when": "middle", "role": "weapon", "quote": "taking a box cutter from his pocket and his pistol", "confidence": "sourced"},
-   {"value": "attack dog", "when": "middle", "role": "threat", "quote": "Clark, unleashes an attack dog, which kills Tiger", "confidence": "sourced"},
-   {"value": "microphone feedback", "when": "middle", "role": "weapon", "quote": "Amber and Pat drive the dog away with microphone feedback", "confidence": "sourced"},
-   {"value": "drug lab", "when": "middle", "role": "setting", "quote": "the band discovers an underground drug lab, but the only exit is locked from the outside", "confidence": "sourced"}
+   {
+    "value": "siphoned gas can",
+    "when": "opening",
+    "role": "clue",
+    "source": "screenplay",
+    "quote": "Pat removes a SIPHON KIT from the duffel",
+    "confidence": "sourced",
+    "detail": "the band steals fuel; the skinheads later reuse the kit to stage Tiger's death",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:49",
+      "quote": "We'd have to siphon the rest of the way."
+     },
+     {
+      "source": "screenplay",
+      "quote": "CRAMMED WITHIN, THE RUBBER HOSE AND RAG FROM THE SIPHON KIT."
+     }
+    ]
+   },
+   {
+    "value": "body",
+    "state": "stabbed",
+    "when": "early",
+    "role": "trigger",
+    "quote": "He sees the body of a woman, Emily, who has been stabbed to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:38",
+      "quote": "There's been a... there's been a stabbing!"
+     }
+    ]
+   },
+   {
+    "value": "door",
+    "state": "negotiated through",
+    "when": "middle",
+    "role": "setting",
+    "quote": "They negotiate through the door with Darcy, who asks them to surrender the pistol.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "REECE SLAPS THE DEAD-BOLT UNLOCKED."
+     }
+    ]
+   },
+   {
+    "value": "machetes",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "partially sever his hand with machetes until he drops the gun",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Daniel sees the BLOODY MACHETE."
+     }
+    ]
+   },
+   {
+    "value": "box cutter",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "taking a box cutter from his pocket and his pistol",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:21",
+      "quote": "Reece: Get the box cutter!"
+     }
+    ]
+   },
+   {
+    "value": "attack dog",
+    "when": "middle",
+    "role": "threat",
+    "quote": "Clark, unleashes an attack dog, which kills Tiger",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:03",
+      "quote": "(dog snarling, barking)"
+     }
+    ]
+   },
+   {
+    "value": "microphone feedback",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "Amber and Pat drive the dog away with microphone feedback",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:35",
+      "quote": "(microphone feedback)"
+     }
+    ]
+   },
+   {
+    "value": "drug lab",
+    "when": "middle",
+    "role": "setting",
+    "quote": "the band discovers an underground drug lab, but the only exit is locked from the outside",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "BELOW: TARPED LAB EQUIPMENT, INDUSTIRAL TUBS and MIXERS."
+     }
+    ]
+   },
+   {
+    "value": "red laces",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:31:34",
+    "quote": "Red laces only.",
+    "confidence": "sourced",
+    "detail": "the gang's trusted inner circle; Darcy hands Gabe a pack as a reward"
+   },
+   {
+    "value": "war paint",
+    "when": "late",
+    "role": "symbol",
+    "source": "screenplay",
+    "quote": "PAT CREEPING BEHIND HIM IN WAR PAINT, MACHETE RAISED...",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "band takes a gig", "when": "opening", "quote": "arranges a show through his cousin, Daniel, at a neo-Nazi skinhead bar in the woods outside Portland", "confidence": "sourced"},
-   {"order": 2, "value": "murder witnessed", "when": "early", "role": "trigger", "quote": "He sees the body of a woman, Emily, who has been stabbed to death by Werm", "confidence": "sourced"},
-   {"order": 3, "value": "held captive", "when": "early", "quote": "hold them captive in the green room with Emily's friend Amber", "confidence": "sourced"},
-   {"order": 4, "value": "trap at the door", "when": "middle", "role": "turn", "quote": "Darcy and his men slash at Pat's arm and partially sever his hand with machetes", "confidence": "sourced"},
-   {"order": 5, "value": "friends killed one by one", "when": "middle", "quote": "Reece flees through a window, but is murdered by a skinhead.", "confidence": "sourced"},
-   {"order": 6, "value": "inside man helps, dies", "when": "late", "quote": "Daniel agrees to help them escape and leads the band into the club, where he is shot dead by the bartender", "confidence": "sourced"},
-   {"order": 7, "value": "survivors turn hunters", "when": "ending", "role": "turn", "quote": "When Pat hears Darcy and his men staging the deaths, he and Amber go after them.", "confidence": "sourced"},
-   {"order": 8, "value": "leader killed", "when": "ending", "quote": "Darcy pulls a revolver from his jacket but is shot dead by Pat and Amber", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "waking in a crashed van",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:07",
+    "quote": "When did we crash?",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Pat blows two hard breaths into the hose. Gas TRICKLES then POURS into the canister."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "band takes a gig",
+    "when": "opening",
+    "quote": "arranges a show through his cousin, Daniel, at a neo-Nazi skinhead bar in the woods outside Portland",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "provoking song for the crowd",
+    "when": "early",
+    "role": "trigger",
+    "source": "subtitles",
+    "at": "00:14:27",
+    "quote": "♪ Nazi punks, Nazi punks, Nazi punks, fuck off! ♪",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "murder witnessed",
+    "when": "early",
+    "role": "trigger",
+    "quote": "He sees the body of a woman, Emily, who has been stabbed to death by Werm",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:38",
+      "quote": "There's been a... there's been a stabbing!"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "held captive",
+    "when": "early",
+    "quote": "hold them captive in the green room with Emily's friend Amber",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "trap at the door",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Darcy and his men slash at Pat's arm and partially sever his hand with machetes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:36",
+      "quote": "Tiger: Pat! Pat!"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "friends killed one by one",
+    "when": "middle",
+    "quote": "Reece flees through a window, but is murdered by a skinhead.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:14",
+      "quote": "(dog chewing)"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "inside man helps, dies",
+    "when": "late",
+    "quote": "Daniel agrees to help them escape and leads the band into the club, where he is shot dead by the bartender",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "survivors turn hunters",
+    "when": "ending",
+    "role": "turn",
+    "quote": "When Pat hears Darcy and his men staging the deaths, he and Amber go after them.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:35",
+      "quote": "I thought we'd leave a new one."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "leader killed",
+    "when": "ending",
+    "quote": "Darcy pulls a revolver from his jacket but is shot dead by Pat and Amber",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:03",
+      "quote": "Tell me those stupid fucking words are his last."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "desert island band answer",
+    "when": "ending",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:27:22",
+    "quote": "My desert island band.",
+    "confidence": "sourced",
+    "detail": "the interview question from the opening is answered in the last line",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:31",
+      "quote": "Uh, for each of you, name your desert island band."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

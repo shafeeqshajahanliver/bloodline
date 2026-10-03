@@ -1,57 +1,462 @@
 {
  "film": "1978-magic",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "the self", "detail": "Corky's id, voiced through his dummy", "quote": "he suffers from severe mental issues and cannot control Fats (who is a manifestation of Corky's id)", "confidence": "sourced"},
-   {"value": "ventriloquist's dummy", "detail": "Fats", "quote": "a foul-mouthed dummy named Fats", "confidence": "sourced"}
+   {
+    "value": "the self",
+    "detail": "Corky's id, voiced through his dummy",
+    "quote": "he suffers from severe mental issues and cannot control Fats (who is a manifestation of Corky's id)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:43:06",
+      "quote": "Us was you."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:43:11",
+      "quote": "It was you all the time."
+     }
+    ]
+   },
+   {
+    "value": "ventriloquist's dummy",
+    "detail": "Fats",
+    "quote": "a foul-mouthed dummy named Fats",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:56",
+      "quote": "A nice gimmick, the dummy."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "mental illness", "quote": "the doctors might find out that he suffers from severe mental issues", "confidence": "sourced"},
-   {"value": "made by someone", "detail": "a gimmick for his act", "quote": "his mentor Merlin says that he needs a better gimmick", "confidence": "observed"}
+   {
+    "value": "mental illness",
+    "quote": "the doctors might find out that he suffers from severe mental issues",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:23",
+      "quote": "Because they're saying something wrong with me."
+     }
+    ]
+   },
+   {
+    "value": "made by someone",
+    "detail": "a gimmick for his act",
+    "quote": "his mentor Merlin says that he needs a better gimmick",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:56",
+      "quote": "A nice gimmick, the dummy."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "jealousy", "quote": "This sparks jealousy in both Duke and Fats.", "confidence": "sourced"},
-   {"value": "control", "quote": "Fats orders Corky to kill Peggy.", "confidence": "observed"}
+   {
+    "value": "jealousy",
+    "quote": "This sparks jealousy in both Duke and Fats.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:17",
+      "quote": "I dump Duke, and you'd leave Fats"
+     }
+    ]
+   },
+   {
+    "value": "control",
+    "quote": "Fats orders Corky to kill Peggy.",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:54",
+      "quote": "Fats says get a knife."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "returning home", "quote": "Corky bails for the Catskills, where he grew up", "confidence": "sourced"},
-   {"value": "secret discovered", "quote": "Greene confronts Corky, discovering the truth about his state of mind", "confidence": "sourced"}
+   {
+    "value": "returning home",
+    "quote": "Corky bails for the Catskills, where he grew up",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:02",
+      "quote": "Something above the lake is what I'm after."
+     }
+    ]
+   },
+   {
+    "value": "secret discovered",
+    "quote": "Greene confronts Corky, discovering the truth about his state of mind",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:18",
+      "quote": "Is this why you wouldn't take the medical exam? You figured somebody'd find out?"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "stopped only by self-destruction", "quote": "Corky fatally stabbed himself to prevent further murders by Fats", "confidence": "sourced"}
+   {
+    "value": "stopped only by self-destruction",
+    "quote": "Corky fatally stabbed himself to prevent further murders by Fats",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:41:59",
+      "quote": "I put the knife deep in me."
+     }
+    ]
+   },
+   {
+    "value": "dummy cannot stay silent",
+    "detail": "Greene's test: make Fats shut up for five minutes",
+    "source": "subtitles",
+    "at": "00:51:45",
+    "quote": "Make Fats shut up for five minutes.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:04",
+      "quote": "I can make him shut up for five years."
+     }
+    ]
+   },
+   {
+    "value": "lovers can read minds",
+    "source": "subtitles",
+    "at": "00:36:46",
+    "quote": "Those last days in the hospital with her he claimed he could read her mind.",
+    "confidence": "observed",
+    "detail": "Merlin's story, which Corky re-enacts with Peggy's card trick"
+   }
   ],
   "who_suffers": [
-   {"value": "agent", "relation_to_threat": "stranger", "detail": "Ben Greene", "quote": "Corky bludgeons Greene with Fats' wooden head and then drowns him", "confidence": "sourced"},
-   {"value": "jealous husband", "relation_to_threat": "stranger", "detail": "Duke", "quote": "is stabbed to death by Fats with \"help\" from Corky", "confidence": "sourced"},
-   {"value": "old crush", "relation_to_threat": "lover", "detail": "Peggy Ann Snow", "quote": "Corky reunites with his high-school crush, Peggy Ann Snow", "confidence": "sourced"},
-   {"value": "the man himself", "relation_to_threat": "self", "quote": "Corky and Fats each feel faint, wondering which of them will die first", "confidence": "sourced"}
+   {
+    "value": "agent",
+    "relation_to_threat": "stranger",
+    "detail": "Ben Greene",
+    "quote": "Corky bludgeons Greene with Fats' wooden head and then drowns him",
+    "confidence": "sourced"
+   },
+   {
+    "value": "jealous husband",
+    "relation_to_threat": "stranger",
+    "detail": "Duke",
+    "quote": "is stabbed to death by Fats with \"help\" from Corky",
+    "confidence": "sourced"
+   },
+   {
+    "value": "old crush",
+    "relation_to_threat": "lover",
+    "detail": "Peggy Ann Snow",
+    "quote": "Corky reunites with his high-school crush, Peggy Ann Snow",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:30",
+      "quote": "When I moved away I whittled you a present, a wooden heart."
+     }
+    ]
+   },
+   {
+    "value": "the man himself",
+    "relation_to_threat": "self",
+    "quote": "Corky and Fats each feel faint, wondering which of them will die first",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:41:53",
+      "quote": "We're dying I think is what it is?"
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "self-sacrifice", "quote": "Corky fatally stabbed himself to prevent further murders by Fats", "confidence": "sourced"},
-   {"value": "ambiguous", "detail": "Peggy mimics Fats' voice", "quote": "she playfully changes her voice to impersonate Fats, tossing the wooden heart in the air", "confidence": "observed"}
+   {
+    "value": "self-sacrifice",
+    "quote": "Corky fatally stabbed himself to prevent further murders by Fats",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:41:59",
+      "quote": "I put the knife deep in me."
+     }
+    ]
+   },
+   {
+    "value": "ambiguous",
+    "detail": "Peggy mimics Fats' voice",
+    "quote": "she playfully changes her voice to impersonate Fats, tossing the wooden heart in the air",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:34",
+      "quote": "I'm warning you Cork, don't play hard to get with me."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "dummy", "state": "foul-mouthed", "when": "opening", "role": "threat", "quote": "a combination magician and ventriloquist with a foul-mouthed dummy named Fats", "confidence": "sourced"},
-   {"value": "deck of cards", "state": "used to seduce", "when": "early", "role": "symbol", "quote": "A magic trick with a deck of cards charms Peggy into thinking they are soulmates", "confidence": "sourced"},
-   {"value": "wooden head", "state": "used as a club", "when": "middle", "role": "weapon", "quote": "Corky bludgeons Greene with Fats' wooden head", "confidence": "sourced"},
-   {"value": "lake", "state": "body on its edge", "when": "middle", "role": "clue", "quote": "spots the unconscious body of a man on the edge of the lake", "confidence": "sourced"},
-   {"value": "wooden heart", "state": "carved, tossed", "when": "ending", "role": "symbol", "quote": "leaves her a wooden heart that he carved", "confidence": "sourced"},
-   {"value": "knife", "state": "bloodstained", "when": "ending", "role": "weapon", "quote": "he returns with a bloodstained knife", "confidence": "sourced"}
+   {
+    "value": "dummy",
+    "state": "foul-mouthed",
+    "when": "opening",
+    "role": "threat",
+    "quote": "a combination magician and ventriloquist with a foul-mouthed dummy named Fats",
+    "confidence": "sourced"
+   },
+   {
+    "value": "deck of cards",
+    "state": "used to seduce",
+    "when": "early",
+    "role": "symbol",
+    "quote": "A magic trick with a deck of cards charms Peggy into thinking they are soulmates",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:54",
+      "quote": "Now take one card, any card."
+     }
+    ]
+   },
+   {
+    "value": "wooden head",
+    "state": "used as a club",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "Corky bludgeons Greene with Fats' wooden head",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lake",
+    "state": "body on its edge",
+    "when": "middle",
+    "role": "clue",
+    "quote": "spots the unconscious body of a man on the edge of the lake",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:58",
+      "quote": "I know this lake."
+     }
+    ]
+   },
+   {
+    "value": "wooden heart",
+    "state": "carved, tossed",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "leaves her a wooden heart that he carved",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:43",
+      "quote": "A wooden heart."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:32:30",
+      "quote": "When I moved away I whittled you a present"
+     }
+    ]
+   },
+   {
+    "value": "knife",
+    "state": "bloodstained",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "he returns with a bloodstained knife",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:29",
+      "quote": "Then take the knife on up the hill lover."
+     }
+    ]
+   },
+   {
+    "value": "hourglass egg timer",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:04:07",
+    "quote": "He had one of those hourglass egg timers",
+    "confidence": "sourced"
+   },
+   {
+    "value": "diamond turned to heart",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:12:02",
+    "quote": "I will now change a diamond into a heart.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "snapping turtles",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:00:59",
+    "quote": "There's snapping turtles out there.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "failure, then a gimmick", "when": "opening", "quote": "fails in his first attempt at professional magic, his mentor Merlin says that he needs a better gimmick", "confidence": "sourced"},
-   {"order": 2, "value": "flight from scrutiny", "when": "early", "quote": "he does not want to take the TV network's medical examination", "confidence": "sourced"},
-   {"order": 3, "value": "romance with old flame", "when": "early", "quote": "A magic trick with a deck of cards charms Peggy into thinking they are soulmates, and the pair have sex", "confidence": "sourced"},
-   {"order": 4, "value": "first murder", "when": "middle", "role": "turn", "quote": "Fats convinces Corky to kill him", "confidence": "sourced"},
-   {"order": 5, "value": "witness killed", "when": "middle", "quote": "He discovers that the drowned man was Corky's agent, Greene, and is stabbed to death by Fats", "confidence": "sourced"},
-   {"order": 6, "value": "monster orders a lover's death", "when": "late", "quote": "Fats orders Corky to kill Peggy.", "confidence": "sourced"},
-   {"order": 7, "value": "self-sacrifice", "when": "ending", "role": "turn", "quote": "Corky fatally stabbed himself to prevent further murders by Fats", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "failure, then a gimmick",
+    "when": "opening",
+    "quote": "fails in his first attempt at professional magic, his mentor Merlin says that he needs a better gimmick",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:56",
+      "quote": "A nice gimmick, the dummy."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "flight from scrutiny",
+    "when": "early",
+    "quote": "he does not want to take the TV network's medical examination",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:46",
+      "quote": "I don't think I'm going to take the medical exam."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "romance with old flame",
+    "when": "early",
+    "quote": "A magic trick with a deck of cards charms Peggy into thinking they are soulmates, and the pair have sex",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:39",
+      "quote": "There must be nothing in your mind but your card."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "five-minute silence test",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:51:45",
+    "quote": "Make Fats shut up for five minutes.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "first murder",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Fats convinces Corky to kill him",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "witness killed",
+    "when": "middle",
+    "quote": "He discovers that the drowned man was Corky's agent, Greene, and is stabbed to death by Fats",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "monster orders a lover's death",
+    "when": "late",
+    "quote": "Fats orders Corky to kill Peggy.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:22",
+      "quote": "Oh please, don't kill her."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "self-sacrifice",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Corky fatally stabbed himself to prevent further murders by Fats",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:41:59",
+      "quote": "I put the knife deep in me."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "lover speaks in dummy's voice",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:44:34",
+    "quote": "I'm warning you Cork, don't play hard to get with me.",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

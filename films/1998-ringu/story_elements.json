@@ -1,61 +1,421 @@
 {
  "film": "1998-ringu",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes and interpretations"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes and interpretations"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vengeful ghost", "detail": "Sadako, a psychic girl who died in a well", "quote": "Sadako's vengeful spirit staggers from the well and out of the TV", "confidence": "sourced"},
-   {"value": "cursed object", "detail": "a videotape that kills its viewers", "quote": "a videotape that curses its viewers to die in seven days", "confidence": "sourced"}
+   {
+    "value": "vengeful ghost",
+    "detail": "Sadako, a psychic girl who died in a well",
+    "quote": "Sadako's vengeful spirit staggers from the well and out of the TV",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cursed object",
+    "detail": "a videotape that kills its viewers",
+    "quote": "a videotape that curses its viewers to die in seven days",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "person who died wronged", "detail": "Sadako, trapped in a well by Dr. Ikuma", "quote": "they learn that Dr. Ikuma trapped Sadako inside the well", "confidence": "sourced"},
-   {"value": "emotion recorded onto technology", "detail": "her rage imprinted on a videotape", "quote": "the curse was born when a videotape \"recorded\" the rage she had projected", "confidence": "sourced"}
+   {
+    "value": "person who died wronged",
+    "detail": "Sadako, trapped in a well by Dr. Ikuma",
+    "quote": "they learn that Dr. Ikuma trapped Sadako inside the well",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:19",
+      "quote": "Sadako probably died there, before that cabin was built."
+     }
+    ]
+   },
+   {
+    "value": "emotion recorded onto technology",
+    "detail": "her rage imprinted on a videotape",
+    "quote": "the curse was born when a videotape \"recorded\" the rage she had projected",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "revenge", "quote": "Sadako's vengeful spirit staggers from the well", "confidence": "observed"},
-   {"value": "to spread", "detail": "the curse continues only if copied", "quote": "copy the tape and show it to someone else within seven days", "confidence": "observed"}
+   {
+    "value": "revenge",
+    "quote": "Sadako's vengeful spirit staggers from the well",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:53",
+      "quote": "it's Sadako's wrath. She's put a curse on us."
+     }
+    ]
+   },
+   {
+    "value": "to spread",
+    "detail": "the curse continues only if copied",
+    "quote": "copy the tape and show it to someone else within seven days",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "child killed by a parent figure", "detail": "Dr. Ikuma, Shizuko's lover, traps Sadako in a well", "quote": "Dr. Ikuma trapped Sadako inside the well", "confidence": "sourced"}
+   {
+    "value": "child killed by a parent figure",
+    "detail": "Dr. Ikuma, Shizuko's lover, traps Sadako in a well",
+    "quote": "Dr. Ikuma trapped Sadako inside the well",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:01",
+      "quote": "Sadako was still alive! She tried to climb up."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "watching a cursed object", "quote": "she and her friends watched a strange videotape and received an inexplicable phone call", "confidence": "sourced"}
+   {
+    "value": "watching a cursed object",
+    "quote": "she and her friends watched a strange videotape and received an inexplicable phone call",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "death after seven days", "quote": "whoever watches the tape dies seven days after doing so", "confidence": "sourced"},
-   {"value": "survive by passing it on", "quote": "copy the tape and show it to someone else within seven days", "confidence": "sourced"},
-   {"value": "warning phone call", "quote": "curses its viewers to die in seven days after a foreboding phone call", "confidence": "sourced"}
+   {
+    "value": "death after seven days",
+    "quote": "whoever watches the tape dies seven days after doing so",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:04",
+      "quote": "\" You will die in one week. \""
+     }
+    ]
+   },
+   {
+    "value": "survive by passing it on",
+    "quote": "copy the tape and show it to someone else within seven days",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:00",
+      "quote": "You have to copy it and show it to someone else within a week."
+     }
+    ]
+   },
+   {
+    "value": "warning phone call",
+    "quote": "curses its viewers to die in seven days after a foreboding phone call",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:07",
+      "quote": "The kid stopped the tape, and then the phone rang. \" You saw it. \""
+     }
+    ]
+   },
+   {
+    "value": "sea goblins take swimmers",
+    "detail": "the dialect phrase spoken on the tape",
+    "source": "subtitles",
+    "at": "00:58:16",
+    "quote": "If you play in the sea, the goblins come to get you.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "teenagers", "relation_to_threat": "stranger", "quote": "During a sleepover, high schoolers Tomoko and Masami discuss an urban legend", "confidence": "sourced"},
-   {"value": "mother and son", "relation_to_threat": "stranger", "detail": "Reiko and Yōichi", "quote": "Reiko catches Yōichi, her son with Ryūji, watching the tape", "confidence": "sourced"},
-   {"value": "investigator", "relation_to_threat": "stranger", "quote": "Reiko Asakawa, Tomoko's aunt and a journalist investigating this urban legend", "confidence": "sourced"}
+   {
+    "value": "teenagers",
+    "relation_to_threat": "stranger",
+    "quote": "During a sleepover, high schoolers Tomoko and Masami discuss an urban legend",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother and son",
+    "relation_to_threat": "stranger",
+    "detail": "Reiko and Yōichi",
+    "quote": "Reiko catches Yōichi, her son with Ryūji, watching the tape",
+    "confidence": "sourced"
+   },
+   {
+    "value": "investigator",
+    "relation_to_threat": "stranger",
+    "quote": "Reiko Asakawa, Tomoko's aunt and a journalist investigating this urban legend",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "cycle passes on", "detail": "Reiko takes the tape to her father to save her son", "quote": "Desperate to save Yōichi, Reiko drives to her father's home to show him the tape", "confidence": "sourced"},
-   {"value": "false resolution", "detail": "the curse seems broken, then strikes Ryūji", "quote": "leading them to believe the curse is broken", "confidence": "sourced"}
+   {
+    "value": "cycle passes on",
+    "detail": "Reiko takes the tape to her father to save her son",
+    "quote": "Desperate to save Yōichi, Reiko drives to her father's home to show him the tape",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:08",
+      "quote": "Then it never ends? That's right. It goes on forever."
+     }
+    ]
+   },
+   {
+    "value": "false resolution",
+    "detail": "the curse seems broken, then strikes Ryūji",
+    "quote": "leading them to believe the curse is broken",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "videotape", "state": "cursed", "when": "opening", "role": "threat", "quote": "she and her friends watched a strange videotape", "confidence": "sourced"},
-   {"value": "well", "state": "sealed", "when": "early", "role": "clue", "quote": "ends with a shot of a well", "confidence": "sourced"},
-   {"value": "television", "state": "turns on by itself", "when": "opening", "role": "omen", "quote": "Tomoko witnesses the TV turn on by itself", "confidence": "sourced"},
-   {"value": "phone call", "state": "screeching", "when": "early", "role": "omen", "quote": "receives a phone call emitting the screeching sounds from the tape", "confidence": "sourced"},
-   {"value": "water", "state": "drained", "when": "late", "role": "setting", "quote": "They drain the water and find Sadako's remains", "confidence": "sourced"},
-   {"value": "remains in a well", "when": "late", "role": "clue", "quote": "They drain the water and find Sadako's remains", "confidence": "sourced"}
+   {
+    "value": "videotape",
+    "state": "cursed",
+    "when": "opening",
+    "role": "threat",
+    "quote": "she and her friends watched a strange videotape",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:16",
+      "quote": "Iwata found this weird video, and we all watched it."
+     }
+    ]
+   },
+   {
+    "value": "well",
+    "state": "sealed",
+    "when": "early",
+    "role": "clue",
+    "quote": "ends with a shot of a well",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:30",
+      "quote": "- A well, just as I thought! - A well?"
+     }
+    ]
+   },
+   {
+    "value": "television",
+    "state": "turns on by itself",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Tomoko witnesses the TV turn on by itself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:23",
+      "quote": "They say she appears when you watch late-night shows on TV."
+     }
+    ]
+   },
+   {
+    "value": "phone call",
+    "state": "screeching",
+    "when": "early",
+    "role": "omen",
+    "quote": "receives a phone call emitting the screeching sounds from the tape",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:34",
+      "quote": "As soon as it ended, the phone rang. But nobody was there."
+     }
+    ]
+   },
+   {
+    "value": "mirror in the tape",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:37:48",
+    "quote": "This shot is strange. From that angle, the cameraman should be in the mirror.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "volcano",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:46:49",
+    "quote": "She threw herself into the volcano 40 years ago.",
+    "confidence": "sourced",
+    "detail": "Shizuko, Sadako's mother, predicted the Mt. Mihara eruption"
+   },
+   {
+    "value": "water",
+    "state": "drained",
+    "when": "late",
+    "role": "setting",
+    "quote": "They drain the water and find Sadako's remains",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:57",
+      "quote": "The sea is ominous for us. Every year some of us die in the sea."
+     }
+    ]
+   },
+   {
+    "value": "remains in a well",
+    "when": "late",
+    "role": "clue",
+    "quote": "They drain the water and find Sadako's remains",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:26",
+      "quote": "Dr. lkuma put this lid on. Sadako's under here."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "legend told at a sleepover", "when": "opening", "role": "omen", "quote": "During a sleepover, high schoolers Tomoko and Masami discuss an urban legend", "confidence": "sourced"},
-   {"order": 2, "value": "first death", "when": "opening", "quote": "Tomoko witnesses the TV turn on by itself and is killed by an unseen figure", "confidence": "sourced"},
-   {"order": 3, "value": "protagonist becomes cursed", "when": "early", "role": "trigger", "quote": "Convinced she has been cursed, Reiko takes the tape and leaves the cabin", "confidence": "sourced"},
-   {"order": 4, "value": "child endangered", "when": "early", "role": "turn", "quote": "Reiko catches Yōichi, her son with Ryūji, watching the tape", "confidence": "sourced"},
-   {"order": 5, "value": "past crime revealed", "when": "late", "role": "turn", "quote": "Through another vision, they learn that Dr. Ikuma trapped Sadako inside the well", "confidence": "sourced"},
-   {"order": 6, "value": "body recovered", "when": "late", "quote": "They drain the water and find Sadako's remains", "confidence": "sourced"},
-   {"order": 7, "value": "false relief, then death", "when": "ending", "role": "turn", "quote": "Sadako's vengeful spirit staggers from the well and out of the TV, advancing toward Ryūji and killing him", "confidence": "sourced"},
-   {"order": 8, "value": "curse passed to family", "when": "ending", "quote": "Reiko drives to her father's home to show him the tape", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "legend told at a sleepover",
+    "when": "opening",
+    "role": "omen",
+    "quote": "During a sleepover, high schoolers Tomoko and Masami discuss an urban legend",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:37",
+      "quote": "A grade-school boy took a trip to Izu with his family, and they stayed in a cabin."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "first death",
+    "when": "opening",
+    "quote": "Tomoko witnesses the TV turn on by itself and is killed by an unseen figure",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:59",
+      "quote": "Today will be one week."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "protagonist becomes cursed",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Convinced she has been cursed, Reiko takes the tape and leaves the cabin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:27",
+      "quote": "One week! Tuesday, September 1 4"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "child endangered",
+    "when": "early",
+    "role": "turn",
+    "quote": "Reiko catches Yōichi, her son with Ryūji, watching the tape",
+    "confidence": "sourced"
+   },
+   {
+    "value": "riddle on the tape decoded",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:42:16",
+    "quote": "\" Frolic in brine, goblins be thine. \" it sounded like that.",
+    "confidence": "sourced",
+    "order": 5
+   },
+   {
+    "order": 6,
+    "value": "past crime revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Through another vision, they learn that Dr. Ikuma trapped Sadako inside the well",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:29",
+      "quote": "I doubt Sadako is alive, either. She killed a man just by wishing his death."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "body recovered",
+    "when": "late",
+    "quote": "They drain the water and find Sadako's remains",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:26",
+      "quote": "Dr. lkuma put this lid on. Sadako's under here."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "false relief, then death",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Sadako's vengeful spirit staggers from the well and out of the TV, advancing toward Ryūji and killing him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:01",
+      "quote": "Will Yoichi die, too? Didn't we lift the curse?"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "curse passed to family",
+    "when": "ending",
+    "quote": "Reiko drives to her father's home to show him the tape",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:47",
+      "quote": "I have a favor to ask you. it's for Yoichi."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

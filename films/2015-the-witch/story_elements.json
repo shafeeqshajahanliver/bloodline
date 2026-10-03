@@ -1,65 +1,510 @@
 {
  "film": "2015-the-witch",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "witch", "quote": "It is revealed that a witch has stolen and killed Samuel to use his body to make a flying ointment", "confidence": "sourced"},
-   {"value": "devil in animal form", "detail": "Black Phillip, the goat", "quote": "When she accepts, he materializes into a handsome, black-clad man", "confidence": "sourced"},
-   {"value": "family turning on itself", "quote": "In fear and desperation, they turn upon one another even when the oldest daughter is suspected of being a witch", "confidence": "sourced"}
+   {
+    "value": "witch",
+    "quote": "It is revealed that a witch has stolen and killed Samuel to use his body to make a flying ointment",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:56",
+      "quote": "I've seen her in her riding cloak, about the wood."
+     }
+    ]
+   },
+   {
+    "value": "devil in animal form",
+    "detail": "Black Phillip, the goat",
+    "quote": "When she accepts, he materializes into a handsome, black-clad man",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:02",
+      "quote": "They make covenant with the Devil in the shape of Black Phillip."
+     }
+    ]
+   },
+   {
+    "value": "family turning on itself",
+    "quote": "In fear and desperation, they turn upon one another even when the oldest daughter is suspected of being a witch",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:49",
+      "quote": "You bewitched thy brother, proud slut!"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "from the wilderness", "quote": "a Puritan family who are preyed upon by an evil force in the woods beyond their farm", "confidence": "sourced"}
+   {
+    "value": "from the wilderness",
+    "quote": "a Puritan family who are preyed upon by an evil force in the woods beyond their farm",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "children's bodies", "quote": "to use his body to make a flying ointment in order to induce transvection", "confidence": "sourced"},
-   {"value": "a soul", "quote": "guides her hand to sign her name in a book", "confidence": "observed"}
+   {
+    "value": "children's bodies",
+    "quote": "to use his body to make a flying ointment in order to induce transvection",
+    "confidence": "sourced"
+   },
+   {
+    "value": "a soul",
+    "quote": "guides her hand to sign her name in a book",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:28",
+      "quote": "Dost thou see a book before thee?"
+     }
+    ]
+   },
+   {
+    "value": "an unbaptized baby",
+    "source": "subtitles",
+    "at": "00:25:31",
+    "quote": "He bade me bring him an unbaptized babe,",
+    "confidence": "observed",
+    "detail": "said in jest by Thomasin, but it is what happened to Samuel"
+   },
+   {
+    "value": "blood",
+    "source": "subtitles",
+    "at": "00:57:31",
+    "quote": "She desires of my blood.",
+    "confidence": "observed",
+    "detail": "the bewitched Caleb, of the witch"
+   }
   ],
   "wrong": [
-   {"value": "pride and banishment", "quote": "are banished from a Puritan settlement over a religious dispute", "confidence": "sourced"},
-   {"value": "father's lie", "quote": "William discloses that he secretly traded Katherine's prized silver cup for hunting supplies", "confidence": "sourced"}
+   {
+    "value": "pride and banishment",
+    "quote": "are banished from a Puritan settlement over a religious dispute",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:08",
+      "quote": "Then shall you be banished from this plantations liberties!"
+     }
+    ]
+   },
+   {
+    "value": "father's lie",
+    "quote": "William discloses that he secretly traded Katherine's prized silver cup for hunting supplies",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:26",
+      "quote": "I took thy father's cup."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "isolation in the wilderness", "quote": "They build a farm near a large, secluded forest", "confidence": "sourced"},
-   {"value": "child vanishes", "quote": "While under Thomasin's care, Samuel abruptly disappears", "confidence": "sourced"}
+   {
+    "value": "isolation in the wilderness",
+    "quote": "They build a farm near a large, secluded forest",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child vanishes",
+    "quote": "While under Thomasin's care, Samuel abruptly disappears",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:29",
+      "quote": "There you are, there you are."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "forest is forbidden", "quote": "The family lives next to a dark forest, a place tied to witchcraft in their culture", "confidence": "sourced"},
-   {"value": "pact by signing a book", "quote": "guides her hand to sign her name in a book", "confidence": "sourced"}
+   {
+    "value": "forest is forbidden",
+    "quote": "The family lives next to a dark forest, a place tied to witchcraft in their culture",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pact by signing a book",
+    "quote": "guides her hand to sign her name in a book",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:11",
+      "quote": "I will guide thy hand."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "isolated family", "relation_to_threat": "stranger", "quote": "the narrative follows a Puritan family who are preyed upon by an evil force", "confidence": "sourced"},
-   {"value": "infant", "relation_to_threat": "stranger", "detail": "Samuel", "quote": "a witch has stolen and killed Samuel", "confidence": "sourced"},
-   {"value": "teenage daughter", "relation_to_threat": "family", "detail": "Thomasin, blamed by her family", "quote": "An unhinged Katherine blames Thomasin for everything that has happened and tries to strangle her", "confidence": "sourced"},
-   {"value": "son", "relation_to_threat": "stranger", "detail": "Caleb, seduced by the witch", "quote": "the witch, disguised as a seductive young woman, emerges and kisses him", "confidence": "sourced"}
+   {
+    "value": "isolated family",
+    "relation_to_threat": "stranger",
+    "quote": "the narrative follows a Puritan family who are preyed upon by an evil force",
+    "confidence": "sourced"
+   },
+   {
+    "value": "infant",
+    "relation_to_threat": "stranger",
+    "detail": "Samuel",
+    "quote": "a witch has stolen and killed Samuel",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:31",
+      "quote": "He bade me bring him an unbaptized babe,"
+     }
+    ]
+   },
+   {
+    "value": "teenage daughter",
+    "relation_to_threat": "family",
+    "detail": "Thomasin, blamed by her family",
+    "quote": "An unhinged Katherine blames Thomasin for everything that has happened and tries to strangle her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "son",
+    "relation_to_threat": "stranger",
+    "detail": "Caleb, seduced by the witch",
+    "quote": "the witch, disguised as a seductive young woman, emerges and kisses him",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "victim becomes threat", "quote": "Thomasin joins them, laughing hysterically as she ascends above the trees", "confidence": "sourced"},
-   {"value": "family destroyed", "quote": "forcing Thomasin to tearfully kill her mother in self-defense with a billhook", "confidence": "sourced"}
+   {
+    "value": "victim becomes threat",
+    "quote": "Thomasin joins them, laughing hysterically as she ascends above the trees",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "THEN, THOMASIN AND BLACK PHILLIP RISE TOO"
+     }
+    ]
+   },
+   {
+    "value": "family destroyed",
+    "quote": "forcing Thomasin to tearfully kill her mother in self-defense with a billhook",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "forest", "when": "opening", "role": "setting", "quote": "They build a farm near a large, secluded forest", "confidence": "sourced"},
-   {"value": "goat", "state": "talking", "when": "early", "role": "omen", "quote": "the twins play with the family's billy goat Black Phillip, who they both say talks to them", "confidence": "sourced"},
-   {"value": "hare", "when": "middle", "role": "omen", "quote": "Their dog Fowler chases a hare, with Caleb in pursuit", "confidence": "sourced"},
-   {"value": "dog", "state": "disemboweled", "when": "middle", "role": "omen", "quote": "Caleb becomes lost and discovers Fowler's disemboweled body", "confidence": "sourced"},
-   {"value": "apple", "state": "vomited whole", "when": "middle", "role": "symbol", "quote": "goes into violent convulsions and vomits a whole apple", "confidence": "sourced"},
-   {"value": "raven", "state": "pecking", "when": "late", "role": "threat", "quote": "she has exposed her breasts to a raven, which proceeds to peck away at her body", "confidence": "sourced"},
-   {"value": "book", "state": "signed", "when": "ending", "role": "symbol", "quote": "guides her hand to sign her name in a book", "confidence": "sourced"},
-   {"value": "bonfire", "when": "ending", "role": "setting", "quote": "a coven of naked witches holding a Witches' Sabbath around a bonfire", "confidence": "sourced"}
+   {
+    "value": "forest",
+    "when": "opening",
+    "role": "setting",
+    "quote": "They build a farm near a large, secluded forest",
+    "confidence": "sourced"
+   },
+   {
+    "value": "red cloak",
+    "when": "opening",
+    "role": "threat",
+    "source": "screenplay",
+    "quote": "A SMALL HUNCHED FIGURE in a tattered RED CLOAK hobbles",
+    "confidence": "sourced",
+    "detail": "the witch is an old woman in a red cloak, then a beautiful young woman in the same cloak",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Out steps a BEAUTIFUL WOMAN (20s) IN A RED CLOAK."
+     }
+    ]
+   },
+   {
+    "value": "goat",
+    "state": "talking",
+    "when": "early",
+    "role": "omen",
+    "quote": "the twins play with the family's billy goat Black Phillip, who they both say talks to them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:51",
+      "quote": "Black Phillip, Black Phillip, a crown grows on his head"
+     }
+    ]
+   },
+   {
+    "value": "silver cup",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:17:08",
+    "quote": "Thy Mother's silver cup.",
+    "confidence": "sourced",
+    "detail": "William secretly trades it; its loss is blamed on Thomasin",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "In front of her is THE SILVER CUP! How can this be?"
+     }
+    ]
+   },
+   {
+    "value": "hare",
+    "when": "middle",
+    "role": "omen",
+    "quote": "Their dog Fowler chases a hare, with Caleb in pursuit",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "THE HARE TURNS TOWARD WILLIAM AND CALEB... AND STARES."
+     }
+    ]
+   },
+   {
+    "value": "dog",
+    "state": "disemboweled",
+    "when": "middle",
+    "role": "omen",
+    "quote": "Caleb becomes lost and discovers Fowler's disemboweled body",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:20",
+      "quote": "[dog screaming]"
+     }
+    ]
+   },
+   {
+    "value": "apple",
+    "state": "vomited whole",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "goes into violent convulsions and vomits a whole apple",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "HE VOMITS UP A SMALL ROTTING APPLE!!"
+     }
+    ]
+   },
+   {
+    "value": "raven",
+    "state": "pecking",
+    "when": "late",
+    "role": "threat",
+    "quote": "she has exposed her breasts to a raven, which proceeds to peck away at her body",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "KATHERINE SITS IN THE DARK FARMHOUSE BREAST FEEDING A LARGE BLACK RAVEN."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:57:26",
+      "quote": "A raven. A three-legged dog. A wolf!"
+     }
+    ]
+   },
+   {
+    "value": "book",
+    "state": "signed",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "guides her hand to sign her name in a book",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:28",
+      "quote": "Dost thou see a book before thee?"
+     }
+    ]
+   },
+   {
+    "value": "bonfire",
+    "when": "ending",
+    "role": "setting",
+    "quote": "a coven of naked witches holding a Witches' Sabbath around a bonfire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "THE WITCHES BEGIN TO LEVITATE AROUND THE FIRE, rising on their brooms and poles"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "family banished", "when": "opening", "quote": "are banished from a Puritan settlement over a religious dispute", "confidence": "sourced"},
-   {"order": 2, "value": "baby stolen", "when": "opening", "role": "trigger", "quote": "While under Thomasin's care, Samuel abruptly disappears", "confidence": "sourced"},
-   {"order": 3, "value": "son seduced in woods", "when": "middle", "quote": "the witch, disguised as a seductive young woman, emerges and kisses him", "confidence": "sourced"},
-   {"order": 4, "value": "son dies bewitched", "when": "middle", "quote": "before passionately proclaiming his love for Christ and dying peacefully", "confidence": "sourced"},
-   {"order": 5, "value": "accusations of witchcraft", "when": "middle", "role": "turn", "quote": "The twins accuse Thomasin of practicing witchcraft", "confidence": "sourced"},
-   {"order": 6, "value": "family slaughtered", "when": "late", "quote": "As she stirs, Black Phillip gores and kills him", "confidence": "sourced"},
-   {"order": 7, "value": "daughter kills mother", "when": "late", "quote": "forcing Thomasin to tearfully kill her mother in self-defense with a billhook", "confidence": "sourced"},
-   {"order": 8, "value": "pact and joining the coven", "when": "ending", "quote": "The goat responds in a human voice and offers her the life she desires", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "family banished",
+    "when": "opening",
+    "quote": "are banished from a Puritan settlement over a religious dispute",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:08",
+      "quote": "Then shall you be banished from this plantations liberties!"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "baby stolen",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "While under Thomasin's care, Samuel abruptly disappears",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:29",
+      "quote": "There you are, there you are."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "baby ground in a mortar",
+    "when": "opening",
+    "role": "threat",
+    "source": "screenplay",
+    "quote": "She grinds at her MORTAR AND PESTLE. One can easily assume its contents.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "jest of being the witch",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:24:18",
+    "quote": "[Mercy] I be the Witch of the Wood!",
+    "confidence": "sourced",
+    "detail": "Thomasin frightens Mercy by claiming to be the witch who stole Sam",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:31",
+      "quote": "He bade me bring him an unbaptized babe,"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "son seduced in woods",
+    "when": "middle",
+    "quote": "the witch, disguised as a seductive young woman, emerges and kisses him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "SHE KISSES CALEB SENSUALLY ON THE MOUTH!"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "son dies bewitched",
+    "when": "middle",
+    "quote": "before passionately proclaiming his love for Christ and dying peacefully",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "O my Lord, my love! Kiss me with the kisses of thy mouth"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "accusations of witchcraft",
+    "when": "middle",
+    "role": "turn",
+    "quote": "The twins accuse Thomasin of practicing witchcraft",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:55:39",
+      "quote": "She made bargain with Satan!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "family slaughtered",
+    "when": "late",
+    "quote": "As she stirs, Black Phillip gores and kills him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "BLACK PHILLIP’S HORNS RUN THROUGH WILLIAM’S STOMACH, ONE GOES OUT HIS BACK."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "daughter kills mother",
+    "when": "late",
+    "quote": "forcing Thomasin to tearfully kill her mother in self-defense with a billhook",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:47",
+      "quote": "You've made a covenant with death!"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "pact and joining the coven",
+    "when": "ending",
+    "quote": "The goat responds in a human voice and offers her the life she desires",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:09",
+      "quote": "Wouldst thou like to live deliciously?"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

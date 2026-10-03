@@ -1,64 +1,568 @@
 {
  "film": "2014-the-babadook",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes and symbolism"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes and symbolism"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "monster from a book", "detail": "the Babadook", "quote": "It describes a monster with a top hat wearing a suit, which grows more sinister and menacing with each page turned", "confidence": "sourced"},
-   {"value": "possessed mother", "quote": "the Babadook finally possesses her. Under its influence, she kills Bugsy and attempts to kill Sam", "confidence": "sourced"},
-   {"value": "grief", "quote": "grief is the \"real monster\" in The Babadook", "confidence": "sourced"}
+   {
+    "value": "monster from a book",
+    "detail": "the Babadook",
+    "quote": "It describes a monster with a top hat wearing a suit, which grows more sinister and menacing with each page turned",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:32",
+      "quote": "His name is Mister Babadook and this is his book."
+     }
+    ]
+   },
+   {
+    "value": "possessed mother",
+    "quote": "the Babadook finally possesses her. Under its influence, she kills Bugsy and attempts to kill Sam",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:26",
+      "quote": "Let me in, you little shit!"
+     }
+    ]
+   },
+   {
+    "value": "grief",
+    "quote": "grief is the \"real monster\" in The Babadook",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "unexplained", "detail": "the book appears mysteriously", "quote": "Amelia is disturbed by the book and its mysterious appearance", "confidence": "sourced"},
-   {"value": "suppressed trauma", "quote": "Amelia's efforts to suppress this led to it becoming stronger", "confidence": "sourced"}
+   {
+    "value": "unexplained",
+    "detail": "the book appears mysteriously",
+    "quote": "Amelia is disturbed by the book and its mysterious appearance",
+    "confidence": "sourced"
+   },
+   {
+    "value": "suppressed trauma",
+    "quote": "Amelia's efforts to suppress this led to it becoming stronger",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "the child", "quote": "offering to return if she \"brings the boy\" to him", "confidence": "sourced"}
+   {
+    "value": "the child",
+    "quote": "offering to return if she \"brings the boy\" to him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:13",
+      "quote": "You just need to bring me the boy."
+     }
+    ]
+   },
+   {
+    "value": "to be let in",
+    "source": "screenplay",
+    "quote": "The speech bubble reads ‘LET ME IN!’ The boy screams.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:26",
+      "quote": "Let me in, you little shit!"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "death of a spouse", "quote": "Her husband, Oskar, was killed in a car accident while driving her to the hospital during labour", "confidence": "sourced"},
-   {"value": "resenting one's child", "quote": "even Amelia resents her son for his behavior", "confidence": "sourced"}
+   {
+    "value": "death of a spouse",
+    "quote": "Her husband, Oskar, was killed in a car accident while driving her to the hospital during labour",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:55",
+      "quote": "My husband died the day that Sam was born."
+     }
+    ]
+   },
+   {
+    "value": "resenting one's child",
+    "quote": "even Amelia resents her son for his behavior",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "reading a book", "quote": "he asks his mother to read a pop-up fairy tale book, titled Mister Babadook", "confidence": "sourced"}
+   {
+    "value": "reading a book",
+    "quote": "he asks his mother to read a pop-up fairy tale book, titled Mister Babadook",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The spine reads MISTER BABADOOK in bold, black letters. He pulls it out, runs to mum."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "cannot be destroyed", "quote": "Sam reminds her that \"you can't get rid of the Babadook\"", "confidence": "sourced"},
-   {"value": "returns when discarded", "quote": "Amelia finds the Mister Babadook book reassembled at their front door", "confidence": "sourced"},
-   {"value": "can be contained and fed", "quote": "she soothes it and it retreats to the corner, taking the bowl of worms with it", "confidence": "sourced"}
+   {
+    "value": "cannot be destroyed",
+    "quote": "Sam reminds her that \"you can't get rid of the Babadook\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:13",
+      "quote": "you can't get rid of the Babadook."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:19:00",
+      "quote": "You can't get rid of the Babadook."
+     }
+    ]
+   },
+   {
+    "value": "returns when discarded",
+    "quote": "Amelia finds the Mister Babadook book reassembled at their front door",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "She can see the spine of it. 'MISTER BABADOOK.' Her blood runs cold."
+     }
+    ]
+   },
+   {
+    "value": "can be contained and fed",
+    "quote": "she soothes it and it retreats to the corner, taking the bowl of worms with it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "In one quick move the bowl is sucked into the darkness."
+     }
+    ]
+   },
+   {
+    "value": "must not let it in",
+    "source": "subtitles",
+    "at": "00:27:12",
+    "quote": "Don't let it in! Don't let it in!",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:04",
+      "quote": "You let it in. You have to get it out!"
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "widowed mother", "relation_to_threat": "self", "detail": "Amelia", "quote": "Amelia Vanek is a troubled, exhausted widow and single mother", "confidence": "sourced"},
-   {"value": "son", "relation_to_threat": "family", "detail": "Sam", "quote": "Amelia awakens and tries to strangle Sam", "confidence": "sourced"},
-   {"value": "pet dog", "relation_to_threat": "family", "detail": "Bugsy", "quote": "she kills Bugsy and attempts to kill Sam", "confidence": "sourced"}
+   {
+    "value": "widowed mother",
+    "relation_to_threat": "self",
+    "detail": "Amelia",
+    "quote": "Amelia Vanek is a troubled, exhausted widow and single mother",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:19",
+      "quote": "I haven't been good since your dad died."
+     }
+    ]
+   },
+   {
+    "value": "son",
+    "relation_to_threat": "family",
+    "detail": "Sam",
+    "quote": "Amelia awakens and tries to strangle Sam",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pet dog",
+    "relation_to_threat": "family",
+    "detail": "Bugsy",
+    "quote": "she kills Bugsy and attempts to kill Sam",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:44",
+      "quote": "(BUGSY'S NECK SNAPS)"
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "threat contained", "quote": "making it retreat into the basement, locking the door in the process", "confidence": "sourced"},
-   {"value": "uneasy coexistence", "quote": "In the garden, they gather worms in a bowl, which Amelia takes to the basement", "confidence": "sourced"}
+   {
+    "value": "threat contained",
+    "quote": "making it retreat into the basement, locking the door in the process",
+    "confidence": "sourced"
+   },
+   {
+    "value": "uneasy coexistence",
+    "quote": "In the garden, they gather worms in a bowl, which Amelia takes to the basement",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:45",
+      "quote": "Where's your bowl?"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:28:37",
+      "quote": "It was pretty quiet today."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "pop-up book", "state": "torn, reassembled", "when": "opening", "role": "threat", "quote": "a pop-up fairy tale book, titled Mister Babadook", "confidence": "sourced"},
-   {"value": "top hat and suit", "when": "opening", "role": "threat", "quote": "a monster with a top hat wearing a suit", "confidence": "sourced"},
-   {"value": "glass shards", "state": "in food", "when": "early", "role": "omen", "quote": "Amelia finding glass shards in her food", "confidence": "sourced"},
-   {"value": "dog", "detail": "Bugsy", "state": "killed", "when": "late", "role": "omen", "quote": "the book now contains pop-ups of her killing their dog Bugsy, Sam, then herself", "confidence": "sourced"},
-   {"value": "black substance", "state": "vomited", "when": "late", "role": "turn", "quote": "she regurgitates a black substance, which seemingly expels the Babadook", "confidence": "sourced"},
-   {"value": "basement", "when": "ending", "role": "setting", "quote": "making it retreat into the basement", "confidence": "sourced"},
-   {"value": "worms", "state": "in a bowl", "when": "ending", "role": "symbol", "quote": "they gather worms in a bowl", "confidence": "sourced"},
-   {"value": "homemade weapons", "when": "opening", "role": "weapon", "quote": "an imaginary monster, which he has built weapons to fight", "confidence": "sourced"}
+   {
+    "value": "pop-up book",
+    "state": "torn, reassembled",
+    "when": "opening",
+    "role": "threat",
+    "quote": "a pop-up fairy tale book, titled Mister Babadook",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:32",
+      "quote": "His name is Mister Babadook and this is his book."
+     }
+    ]
+   },
+   {
+    "value": "top hat and suit",
+    "when": "opening",
+    "role": "threat",
+    "quote": "a monster with a top hat wearing a suit",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "A black top hat, a long black coat, pointy black gloves."
+     }
+    ]
+   },
+   {
+    "value": "glass shards",
+    "state": "in food",
+    "when": "early",
+    "role": "omen",
+    "quote": "Amelia finding glass shards in her food",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Did you put glass in my soup?"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:24:39",
+      "quote": "The Babadook did it, Mum."
+     }
+    ]
+   },
+   {
+    "value": "dog",
+    "detail": "Bugsy",
+    "state": "killed",
+    "when": "late",
+    "role": "omen",
+    "quote": "the book now contains pop-ups of her killing their dog Bugsy, Sam, then herself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:44",
+      "quote": "(BUGSY'S NECK SNAPS)"
+     }
+    ]
+   },
+   {
+    "value": "black substance",
+    "state": "vomited",
+    "when": "late",
+    "role": "turn",
+    "quote": "she regurgitates a black substance, which seemingly expels the Babadook",
+    "confidence": "sourced"
+   },
+   {
+    "value": "basement",
+    "when": "ending",
+    "role": "setting",
+    "quote": "making it retreat into the basement",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Amelia sees Bugsy scratching at the basement door. She freezes, watching him."
+     }
+    ]
+   },
+   {
+    "value": "worms",
+    "state": "in a bowl",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "they gather worms in a bowl",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Amelia picks up another worm and adds it to a bowl full of them."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:26:45",
+      "quote": "Where's your bowl?"
+     }
+    ]
+   },
+   {
+    "value": "homemade weapons",
+    "when": "opening",
+    "role": "weapon",
+    "quote": "an imaginary monster, which he has built weapons to fight",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:04",
+      "quote": "When the monster comes, I'm gonna do this."
+     }
+    ]
+   },
+   {
+    "value": "three knocks at the door",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:11:37",
+    "quote": "A rumbling sound, then three sharp knocks...",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:56",
+      "quote": "(LOUD KNOCKING AT DOOR)"
+     }
+    ]
+   },
+   {
+    "value": "cockroaches",
+    "state": "swarming from a hole in the wall",
+    "when": "middle",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "A hole in the wall. It’s filled with cockroaches.",
+    "confidence": "sourced",
+    "detail": "seen by Amelia but not by the welfare visitors",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:11",
+      "quote": "I just found this cockroach infestation."
+     }
+    ]
+   },
+   {
+    "value": "tv news of a filicide",
+    "when": "late",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:04:11",
+    "quote": "Police say the woman used a kitchen knife to stab her son.",
+    "confidence": "sourced",
+    "detail": "Amelia sees herself in the report"
+   },
+   {
+    "value": "pulled tooth",
+    "state": "pulled out",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:10:18",
+    "quote": "(TOOTH COMES LOOSE)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:32",
+      "quote": "(TOOTH CLATTERS ON FLOOR)"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "widow with troubled child", "when": "opening", "quote": "Her husband, Oskar, was killed in a car accident while driving her to the hospital during labour", "confidence": "sourced"},
-   {"order": 2, "value": "book read aloud", "when": "opening", "role": "trigger", "quote": "he asks his mother to read a pop-up fairy tale book, titled Mister Babadook", "confidence": "sourced"},
-   {"order": 3, "value": "book destroyed, returns", "when": "middle", "role": "omen", "quote": "Amelia finds the Mister Babadook book reassembled at their front door", "confidence": "sourced"},
-   {"order": 4, "value": "first attack", "when": "middle", "quote": "That night, the Babadook attacks her", "confidence": "sourced"},
-   {"order": 5, "value": "dead spouse lures", "when": "late", "role": "turn", "quote": "An apparition of Oskar appears, offering to return if she \"brings the boy\" to him", "confidence": "sourced"},
-   {"order": 6, "value": "parent possessed, attacks child", "when": "late", "quote": "Under its influence, she kills Bugsy and attempts to kill Sam", "confidence": "sourced"},
-   {"order": 7, "value": "confrontation", "when": "late", "role": "turn", "quote": "Furious, she confronts the Babadook, making it retreat into the basement", "confidence": "sourced"},
-   {"order": 8, "value": "monster fed in basement", "when": "ending", "quote": "The Babadook tries to attack her, but she soothes it", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "widow with troubled child",
+    "when": "opening",
+    "quote": "Her husband, Oskar, was killed in a car accident while driving her to the hospital during labour",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:37",
+      "quote": "(SCREECH OF METAL, GLASS SHATTERING)"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "school rejects child",
+    "when": "opening",
+    "source": "subtitles",
+    "at": "00:06:25",
+    "quote": "the boy has significant behavioural problems.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "book read aloud",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "he asks his mother to read a pop-up fairy tale book, titled Mister Babadook",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:32",
+      "quote": "His name is Mister Babadook and this is his book."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "book destroyed, returns",
+    "when": "middle",
+    "role": "omen",
+    "quote": "Amelia finds the Mister Babadook book reassembled at their front door",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "She can see the spine of it. 'MISTER BABADOOK.' Her blood runs cold."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "first attack",
+    "when": "middle",
+    "quote": "That night, the Babadook attacks her",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "news report foreshadows",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:04:11",
+    "quote": "Police say the woman used a kitchen knife to stab her son.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "dead spouse lures",
+    "when": "late",
+    "role": "turn",
+    "quote": "An apparition of Oskar appears, offering to return if she \"brings the boy\" to him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:13",
+      "quote": "You just need to bring me the boy."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "parent possessed, attacks child",
+    "when": "late",
+    "quote": "Under its influence, she kills Bugsy and attempts to kill Sam",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:44",
+      "quote": "(BUGSY'S NECK SNAPS)"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "confrontation",
+    "when": "late",
+    "role": "turn",
+    "quote": "Furious, she confronts the Babadook, making it retreat into the basement",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "child's birthday finally kept",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:25:41",
+    "quote": "It's Sam's birthday today.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "monster fed in basement",
+    "when": "ending",
+    "quote": "The Babadook tries to attack her, but she soothes it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:54",
+      "quote": "It's alright."
+     }
+    ]
+   },
+   {
+    "order": 12,
+    "value": "closing magic trick",
+    "when": "ending",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:29:03",
+    "quote": "Nothing in my hands. Nothing in my hands.",
+    "confidence": "sourced",
+    "detail": "echoes his opening trick"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

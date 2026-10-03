@@ -1,64 +1,481 @@
 {
  "film": "2009-thirst",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vampire", "detail": "Sang-hyun, a priest", "quote": "a Catholic priest who turns into a vampire as a result of a failed medical experiment", "confidence": "sourced"},
-   {"value": "the self", "detail": "his own desires", "quote": "finds himself irresistibly drawn to human blood", "confidence": "observed"}
+   {
+    "value": "vampire",
+    "detail": "Sang-hyun, a priest",
+    "quote": "a Catholic priest who turns into a vampire as a result of a failed medical experiment",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the self",
+    "detail": "his own desires",
+    "quote": "finds himself irresistibly drawn to human blood",
+    "confidence": "observed"
+   }
   ],
   "origin": [
-   {"value": "medical experiment", "detail": "a vaccine trial and blood transfusion", "quote": "is infected with EV, but makes a complete and rapid recovery after receiving a blood transfusion", "confidence": "sourced"}
+   {
+    "value": "medical experiment",
+    "detail": "a vaccine trial and blood transfusion",
+    "quote": "is infected with EV, but makes a complete and rapid recovery after receiving a blood transfusion",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:49",
+      "quote": "I didn't choose the blood that was transfused into me!"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "blood", "quote": "EV's symptoms return and only seem to go away when he drinks blood", "confidence": "sourced"},
-   {"value": "forbidden love", "quote": "Sang-hyun finds himself attracted to Kang-woo's wife, Tae-ju", "confidence": "sourced"}
+   {
+    "value": "blood",
+    "quote": "EV's symptoms return and only seem to go away when he drinks blood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:05",
+      "quote": "But how can I get human blood without killing!"
+     }
+    ]
+   },
+   {
+    "value": "forbidden love",
+    "quote": "Sang-hyun finds himself attracted to Kang-woo's wife, Tae-ju",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:05",
+      "quote": "Now, I thirst after all sinful pleasures."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "adultery", "quote": "eventually begins an affair with Sang-hyun", "confidence": "sourced"},
-   {"value": "murder of a husband", "quote": "Sang-hyun decides to kill Kang-woo during a fishing trip with the couple", "confidence": "sourced"},
-   {"value": "manipulative lie", "quote": "Tae-ju lets slip that Kang-woo never abused her", "confidence": "sourced"}
+   {
+    "value": "adultery",
+    "quote": "eventually begins an affair with Sang-hyun",
+    "confidence": "sourced"
+   },
+   {
+    "value": "murder of a husband",
+    "quote": "Sang-hyun decides to kill Kang-woo during a fishing trip with the couple",
+    "confidence": "sourced"
+   },
+   {
+    "value": "manipulative lie",
+    "quote": "Tae-ju lets slip that Kang-woo never abused her",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "self-sacrifice gone wrong", "quote": "He eventually volunteers to participate in an experiment to find a vaccine", "confidence": "sourced"}
+   {
+    "value": "self-sacrifice gone wrong",
+    "quote": "He eventually volunteers to participate in an experiment to find a vaccine",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "burned by sunlight", "quote": "wakes in need of shelter from the sunlight, having become a vampire", "confidence": "sourced"},
-   {"value": "turned by blood exchange", "quote": "feeds her corpse his own blood. She awakens as a vampire", "confidence": "sourced"},
-   {"value": "illness held off by blood", "quote": "only seem to go away when he drinks blood", "confidence": "sourced"}
+   {
+    "value": "burned by sunlight",
+    "quote": "wakes in need of shelter from the sunlight, having become a vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:33",
+      "quote": "Vampires can't see the sunlight!"
+     }
+    ]
+   },
+   {
+    "value": "turned by blood exchange",
+    "quote": "feeds her corpse his own blood. She awakens as a vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:53",
+      "quote": "Give me the vampire blood!"
+     }
+    ]
+   },
+   {
+    "value": "illness held off by blood",
+    "quote": "only seem to go away when he drinks blood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:33",
+      "quote": "When I drank Hyo-sung's blood... the blisters disappeared."
+     }
+    ]
+   },
+   {
+    "value": "vampires are not immortal",
+    "source": "subtitles",
+    "at": "01:19:31",
+    "quote": "Vampires are not immortal.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "priest", "relation_to_threat": "self", "detail": "Sang-hyun", "quote": "Aghast, Sang-hyun attempts to commit suicide", "confidence": "sourced"},
-   {"value": "lover", "relation_to_threat": "lover", "detail": "Tae-ju", "quote": "Sang-hyun kills her, but after feeding on her blood", "confidence": "sourced"},
-   {"value": "husband", "relation_to_threat": "stranger", "detail": "Kang-woo, childhood friend", "quote": "He pulls Kang-woo into the water", "confidence": "sourced"},
-   {"value": "mother-in-law", "relation_to_threat": "family", "detail": "Mrs. Ra, paralysed witness", "quote": "Mrs. Ra, knocked to the floor by a seizure, witnesses everything", "confidence": "sourced"}
+   {
+    "value": "priest",
+    "relation_to_threat": "self",
+    "detail": "Sang-hyun",
+    "quote": "Aghast, Sang-hyun attempts to commit suicide",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lover",
+    "relation_to_threat": "lover",
+    "detail": "Tae-ju",
+    "quote": "Sang-hyun kills her, but after feeding on her blood",
+    "confidence": "sourced"
+   },
+   {
+    "value": "husband",
+    "relation_to_threat": "stranger",
+    "detail": "Kang-woo, childhood friend",
+    "quote": "He pulls Kang-woo into the water",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother-in-law",
+    "relation_to_threat": "family",
+    "detail": "Mrs. Ra, paralysed witness",
+    "quote": "Mrs. Ra, knocked to the floor by a seizure, witnesses everything",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:00:03",
+      "quote": "Blink if you understand."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "self-destruction", "quote": "she joins him on the car hood, and both are burnt to ash by the sun", "confidence": "sourced"},
-   {"value": "witness survives", "quote": "as Mrs. Ra watches from the backseat of the car", "confidence": "sourced"}
+   {
+    "value": "self-destruction",
+    "quote": "she joins him on the car hood, and both are burnt to ash by the sun",
+    "confidence": "sourced"
+   },
+   {
+    "value": "witness survives",
+    "quote": "as Mrs. Ra watches from the backseat of the car",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "blood transfusion", "when": "opening", "role": "trigger", "quote": "makes a complete and rapid recovery after receiving a blood transfusion", "confidence": "sourced"},
-   {"value": "blood packs", "state": "stolen", "when": "middle", "role": "symbol", "quote": "resorts to stealing blood transfusion packs from the hospital", "confidence": "sourced"},
-   {"value": "bruises", "when": "middle", "role": "clue", "quote": "Sang-hyun notices bruises on Tae-ju", "confidence": "sourced"},
-   {"value": "lake", "when": "middle", "role": "setting", "quote": "a cabinet in a house at the bottom of the lake, putting a rock on the body", "confidence": "sourced"},
-   {"value": "drowned corpse", "state": "haunting visions", "when": "late", "role": "omen", "quote": "Sang-hyun and Tae-ju are haunted by visions of Kang-woo's corpse", "confidence": "sourced"},
-   {"value": "rooftops", "when": "late", "role": "setting", "quote": "a chase across the rooftops and a battle", "confidence": "sourced"},
-   {"value": "sun", "state": "rising", "when": "ending", "role": "weapon", "quote": "both are burnt to ash by the sun", "confidence": "sourced"}
+   {
+    "value": "blood transfusion",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "makes a complete and rapid recovery after receiving a blood transfusion",
+    "confidence": "sourced"
+   },
+   {
+    "value": "blood packs",
+    "state": "stolen",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "resorts to stealing blood transfusion packs from the hospital",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bruises",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Sang-hyun notices bruises on Tae-ju",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:06",
+      "quote": "beat you or not?"
+     }
+    ]
+   },
+   {
+    "value": "lake",
+    "when": "middle",
+    "role": "setting",
+    "quote": "a cabinet in a house at the bottom of the lake, putting a rock on the body",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:35",
+      "quote": "There was a house at the bottom of the lake."
+     }
+    ]
+   },
+   {
+    "value": "drowned corpse",
+    "state": "haunting visions",
+    "when": "late",
+    "role": "omen",
+    "quote": "Sang-hyun and Tae-ju are haunted by visions of Kang-woo's corpse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:17",
+      "quote": "It's a lake. He can't go anywhere."
+     }
+    ]
+   },
+   {
+    "value": "rooftops",
+    "when": "late",
+    "role": "setting",
+    "quote": "a chase across the rooftops and a battle",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sun",
+    "state": "rising",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "both are burnt to ash by the sun",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:11:56",
+      "quote": "The sun's coming up!"
+     }
+    ]
+   },
+   {
+    "value": "sponge cake",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:01:50",
+    "quote": "Yellow, tasty looking sponge cake.",
+    "detail": "a dying patient's story of giving away his cake to starving girls",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:10",
+      "quote": "If you only heard the sponge cake story."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "bandaged saint",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:15:21",
+    "quote": "people are coming to seek prayers from The Bandaged Saint?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mahjong",
+    "when": "early",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:21:23",
+    "quote": "Koreans don't appreciate Mahjong.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:02:23",
+      "quote": "See? It's' KILLED"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "bare feet",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:40:49",
+    "quote": "I run out on my bare feet...",
+    "detail": "Tae-ju runs out barefoot at night; later she orders shoes worn in the house",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:48:15",
+      "quote": "From now on, we wear shoes inside the house like in the States."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "blinking eyes",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:59:53",
+    "quote": "If you blink it means' yes'.",
+    "detail": "the paralysed mother-in-law communicates by blinking",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "priest volunteers for experiment", "when": "opening", "role": "trigger", "quote": "He eventually volunteers to participate in an experiment to find a vaccine for the deadly Emmanuel Virus (EV)", "confidence": "sourced"},
-   {"order": 2, "value": "becomes vampire", "when": "early", "role": "turn", "quote": "wakes in need of shelter from the sunlight, having become a vampire", "confidence": "sourced"},
-   {"order": 3, "value": "forbidden affair", "when": "middle", "quote": "eventually begins an affair with Sang-hyun", "confidence": "sourced"},
-   {"order": 4, "value": "husband murdered", "when": "middle", "quote": "He pulls Kang-woo into the water", "confidence": "sourced"},
-   {"order": 5, "value": "lie revealed", "when": "late", "role": "turn", "quote": "Sang-hyun is enraged because he only killed Kang-woo to protect her", "confidence": "sourced"},
-   {"order": 6, "value": "lover turned", "when": "late", "quote": "She awakens as a vampire", "confidence": "sourced"},
-   {"order": 7, "value": "indiscriminate killing", "when": "late", "quote": "Tae-ju soon starts killing indiscriminately to feed", "confidence": "sourced"},
-   {"order": 8, "value": "lovers burn at dawn", "when": "ending", "quote": "both are burnt to ash by the sun, as Mrs. Ra watches from the backseat of the car", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "dying man's last story",
+    "when": "opening",
+    "source": "subtitles",
+    "at": "00:01:50",
+    "quote": "Yellow, tasty looking sponge cake.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "priest volunteers for experiment",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "He eventually volunteers to participate in an experiment to find a vaccine for the deadly Emmanuel Virus (EV)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:25",
+      "quote": "Ask the bishop to send me to Emmanuel Labs, please?"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "becomes vampire",
+    "when": "early",
+    "role": "turn",
+    "quote": "wakes in need of shelter from the sunlight, having become a vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:02",
+      "quote": "I suddenly got a whiff of blood."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "forbidden affair",
+    "when": "middle",
+    "quote": "eventually begins an affair with Sang-hyun",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:15",
+      "quote": "Holding her is like being in the water."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "husband murdered",
+    "when": "middle",
+    "quote": "He pulls Kang-woo into the water",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:00",
+      "quote": "Accidents happen in the blink of an eye, eh?"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "lie revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Sang-hyun is enraged because he only killed Kang-woo to protect her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:46",
+      "quote": "I killed him cuz of you."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "lover turned",
+    "when": "late",
+    "quote": "She awakens as a vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:41:26",
+      "quote": "Kill me, please."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "indiscriminate killing",
+    "when": "late",
+    "quote": "Tae-ju soon starts killing indiscriminately to feed",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "paralysed witness spells it out",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "02:02:23",
+    "quote": "See? It's' KILLED",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "lovers burn at dawn",
+    "when": "ending",
+    "quote": "both are burnt to ash by the sun, as Mrs. Ra watches from the backseat of the car",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:11:56",
+      "quote": "The sun's coming up!"
+     },
+     {
+      "source": "subtitles",
+      "at": "02:21:10",
+      "quote": "When you're dead, you're dead."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

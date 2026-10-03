@@ -1,63 +1,440 @@
 {
  "film": "1970-valerie-and-her-week-of-wonders",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vampire", "detail": "the Constable (Richard) and the grandmother Elsa", "quote": "Elsa bites her on the neck, stealing the blood necessary to become young again", "confidence": "sourced"},
-   {"value": "predatory priest", "detail": "Gracián", "quote": "Gracián comes into her bedroom and attempts to rape her", "confidence": "sourced"}
+   {
+    "value": "vampire",
+    "detail": "the Constable (Richard) and the grandmother Elsa",
+    "quote": "Elsa bites her on the neck, stealing the blood necessary to become young again",
+    "confidence": "sourced"
+   },
+   {
+    "value": "predatory priest",
+    "detail": "Gracián",
+    "quote": "Gracián comes into her bedroom and attempts to rape her",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "family member", "detail": "Richard is her father, Elsa her grandmother", "quote": "Richard, who has just told Elsa that he is Valerie's father, and that Valerie's blood is the key to their survival", "confidence": "sourced"}
+   {
+    "value": "family member",
+    "detail": "Richard is her father, Elsa her grandmother",
+    "quote": "Richard, who has just told Elsa that he is Valerie's father, and that Valerie's blood is the key to their survival",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "youth", "quote": "He promises to make her young again if she sells him the house that Valerie will inherit", "confidence": "sourced"},
-   {"value": "the girl's blood", "quote": "Valerie's blood is the key to their survival", "confidence": "sourced"},
-   {"value": "inheritance", "detail": "the house and the earrings", "quote": "the Constable, his uncle, killed Orlík's parents and now wants Valerie's earrings back", "confidence": "sourced"}
+   {
+    "value": "youth",
+    "quote": "He promises to make her young again if she sells him the house that Valerie will inherit",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:23",
+      "quote": "You will be young and beautiful again."
+     }
+    ]
+   },
+   {
+    "value": "the girl's blood",
+    "quote": "Valerie's blood is the key to their survival",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:56",
+      "quote": "If my uncle, the Constable, doesn't get enough fresh blood,"
+     }
+    ]
+   },
+   {
+    "value": "inheritance",
+    "detail": "the house and the earrings",
+    "quote": "the Constable, his uncle, killed Orlík's parents and now wants Valerie's earrings back",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "seduction and abandonment", "quote": "she has loved no-one since he seduced and abandoned her when she was 17", "confidence": "sourced"},
-   {"value": "murder", "detail": "the Constable killed Orlík's parents", "quote": "the Constable, his uncle, killed Orlík's parents", "confidence": "sourced"}
+   {
+    "value": "seduction and abandonment",
+    "quote": "she has loved no-one since he seduced and abandoned her when she was 17",
+    "confidence": "sourced"
+   },
+   {
+    "value": "murder",
+    "detail": "the Constable killed Orlík's parents",
+    "quote": "the Constable, his uncle, killed Orlík's parents",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:48",
+      "quote": "He killed my father and mother, and now I fear for you."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "taking an object", "detail": "the thief steals Valerie's earrings", "quote": "Valerie, a 13-year-old girl, is asleep when a thief steals her earrings", "confidence": "sourced"},
-   {"value": "coming of age", "quote": "a 1970 Czechoslovak Gothic coming-of-age surrealist dark fantasy horror film", "confidence": "observed"}
+   {
+    "value": "taking an object",
+    "detail": "the thief steals Valerie's earrings",
+    "quote": "Valerie, a 13-year-old girl, is asleep when a thief steals her earrings",
+    "confidence": "sourced"
+   },
+   {
+    "value": "coming of age",
+    "quote": "a 1970 Czechoslovak Gothic coming-of-age surrealist dark fantasy horror film",
+    "confidence": "observed"
+   }
   ],
   "rules": [
-   {"value": "protective charm", "detail": "swallowing the pearl or earrings protects her", "quote": "she swallows the pearl to protect herself", "confidence": "sourced"},
-   {"value": "magic earrings transform", "quote": "Valerie tricks Richard into drinking one of the earrings, turning him into a polecat", "confidence": "sourced"}
+   {
+    "value": "protective charm",
+    "detail": "swallowing the pearl or earrings protects her",
+    "quote": "she swallows the pearl to protect herself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:36",
+      "quote": "This pearl will save you."
+     }
+    ]
+   },
+   {
+    "value": "magic earrings transform",
+    "quote": "Valerie tricks Richard into drinking one of the earrings, turning him into a polecat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:22",
+      "quote": "They will protect you from danger and death."
+     }
+    ]
+   },
+   {
+    "value": "only a dream",
+    "source": "subtitles",
+    "at": "00:20:56",
+    "quote": "I'm asleep and everything is a dream.",
+    "confidence": "sourced",
+    "detail": "Valerie's own formula for surviving the night"
+   }
   ],
   "who_suffers": [
-   {"value": "adolescent girl", "relation_to_threat": "family", "detail": "Valerie", "quote": "The film portrays the heroine as living in a disorienting dream, cajoled by priests, vampires, and men and women alike", "confidence": "sourced"},
-   {"value": "bride", "relation_to_threat": "community", "detail": "Hedvika, bitten on her wedding night", "quote": "Valerie meets Hedvika, sick from Elsa's bite and depressed about her marriage", "confidence": "sourced"}
+   {
+    "value": "adolescent girl",
+    "relation_to_threat": "family",
+    "detail": "Valerie",
+    "quote": "The film portrays the heroine as living in a disorienting dream, cajoled by priests, vampires, and men and women alike",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bride",
+    "relation_to_threat": "community",
+    "detail": "Hedvika, bitten on her wedding night",
+    "quote": "Valerie meets Hedvika, sick from Elsa's bite and depressed about her marriage",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat transformed", "detail": "Richard turned into a polecat", "quote": "Valerie tricks Richard into drinking one of the earrings, turning him into a polecat", "confidence": "sourced"},
-   {"value": "dream ending", "quote": "Eventually, she falls asleep in a bed in the forest, alone", "confidence": "sourced"}
+   {
+    "value": "threat transformed",
+    "detail": "Richard turned into a polecat",
+    "quote": "Valerie tricks Richard into drinking one of the earrings, turning him into a polecat",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dream ending",
+    "quote": "Eventually, she falls asleep in a bed in the forest, alone",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "earrings", "state": "stolen, returned, swallowed", "when": "opening", "role": "symbol", "quote": "the earrings were left behind by Valerie's mother upon joining a convent", "confidence": "sourced"},
-   {"value": "mask", "state": "worn by the Constable", "when": "opening", "role": "threat", "quote": "she is startled by a horrific man, the Constable, who wears a mask", "confidence": "sourced"},
-   {"value": "pearl", "state": "swallowed", "when": "middle", "role": "weapon", "quote": "Orlík gives Valerie a pearl for protection", "confidence": "sourced"},
-   {"value": "blood", "state": "bitten from neck", "when": "middle", "role": "threat", "quote": "Elsa bites her on the neck, stealing the blood necessary to become young again", "confidence": "sourced"},
-   {"value": "spyhole", "when": "middle", "role": "clue", "quote": "he leads Valerie to a spyhole into a chamber", "confidence": "sourced"},
-   {"value": "waterfall", "state": "boy bound to it", "when": "middle", "role": "setting", "quote": "Valerie finds Orlík bound to a waterfall by Richard", "confidence": "sourced"},
-   {"value": "crypt", "state": "becomes a brothel", "when": "late", "role": "setting", "quote": "In the crypt, now a brothel", "confidence": "sourced"},
-   {"value": "polecat", "state": "transformed villain", "when": "ending", "role": "symbol", "quote": "turning him into a polecat", "confidence": "sourced"}
+   {
+    "value": "earrings",
+    "state": "stolen, returned, swallowed",
+    "when": "opening",
+    "role": "symbol",
+    "quote": "the earrings were left behind by Valerie's mother upon joining a convent",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:59",
+      "quote": "Get rid of those earrings."
+     }
+    ]
+   },
+   {
+    "value": "mask",
+    "state": "worn by the Constable",
+    "when": "opening",
+    "role": "threat",
+    "quote": "she is startled by a horrific man, the Constable, who wears a mask",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lullaby",
+    "state": "recurring song",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:05:35",
+    "quote": "Goodnight, my dark haired girl Goodnight, and sweet dreams",
+    "confidence": "sourced",
+    "detail": "sung at the start, middle and close of the film",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:16",
+      "quote": "Goodnight, my dark haired girl"
+     }
+    ]
+   },
+   {
+    "value": "pearl",
+    "state": "swallowed",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "Orlík gives Valerie a pearl for protection",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:36",
+      "quote": "This pearl will save you."
+     }
+    ]
+   },
+   {
+    "value": "tolling bells",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:25:15",
+    "quote": "Three times the bells have tolled, then gone silent again.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "blood",
+    "state": "bitten from neck",
+    "when": "middle",
+    "role": "threat",
+    "quote": "Elsa bites her on the neck, stealing the blood necessary to become young again",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:26",
+      "quote": "Our salvation lies in her blood."
+     }
+    ]
+   },
+   {
+    "value": "spyhole",
+    "when": "middle",
+    "role": "clue",
+    "quote": "he leads Valerie to a spyhole into a chamber",
+    "confidence": "sourced"
+   },
+   {
+    "value": "waterfall",
+    "state": "boy bound to it",
+    "when": "middle",
+    "role": "setting",
+    "quote": "Valerie finds Orlík bound to a waterfall by Richard",
+    "confidence": "sourced"
+   },
+   {
+    "value": "crypt",
+    "state": "becomes a brothel",
+    "when": "late",
+    "role": "setting",
+    "quote": "In the crypt, now a brothel",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:38",
+      "quote": "Who is in these coffins? Weasel's victims. He sucked their blood."
+     }
+    ]
+   },
+   {
+    "value": "polecat",
+    "state": "transformed villain",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "turning him into a polecat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:42",
+      "quote": "Who's there? Weasel!"
+     }
+    ]
+   },
+   {
+    "value": "driverless carriage",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:05:11",
+    "quote": "A driverless carriage has left the courtyard. That is a good sign.",
+    "confidence": "sourced",
+    "detail": "fulfils the grandmother's curse that the mother may return only when the horses bring her back on their own"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "earrings stolen at night", "when": "opening", "role": "trigger", "quote": "Valerie, a 13-year-old girl, is asleep when a thief steals her earrings", "confidence": "sourced"},
-   {"order": 2, "value": "warning letter", "when": "early", "quote": "Valerie receives a letter from the thief, Orlík (\"Eaglet\"), warning her", "confidence": "sourced"},
-   {"order": 3, "value": "pact for youth", "when": "middle", "quote": "He promises to make her young again if she sells him the house", "confidence": "sourced"},
-   {"order": 4, "value": "grandmother becomes vampire", "when": "middle", "role": "turn", "quote": "Elsa is there, now a vampire", "confidence": "sourced"},
-   {"order": 5, "value": "father revealed", "when": "late", "role": "turn", "quote": "he is Valerie's father, and that Valerie's blood is the key to their survival", "confidence": "sourced"},
-   {"order": 6, "value": "accused as witch, escapes burning", "when": "late", "quote": "He orders her captured and burned at the stake, but Valerie swallows the magic earrings and escapes unharmed", "confidence": "sourced"},
-   {"order": 7, "value": "villain transformed", "when": "ending", "quote": "Valerie tricks Richard into drinking one of the earrings, turning him into a polecat", "confidence": "sourced"},
-   {"order": 8, "value": "falls asleep alone", "when": "ending", "quote": "Eventually, she falls asleep in a bed in the forest, alone", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "earrings stolen at night",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Valerie, a 13-year-old girl, is asleep when a thief steals her earrings",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:22",
+      "quote": "Where are her earrings?"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "warning letter",
+    "when": "early",
+    "quote": "Valerie receives a letter from the thief, Orlík (\"Eaglet\"), warning her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:41",
+      "quote": "It was I who stole your earrings, and who returned them to your hands again."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "pact for youth",
+    "when": "middle",
+    "quote": "He promises to make her young again if she sells him the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:23",
+      "quote": "Very well, let's make a contract."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "grandmother becomes vampire",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Elsa is there, now a vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:41",
+      "quote": "I sacrificed her for my youth."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "father revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "he is Valerie's father, and that Valerie's blood is the key to their survival",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:10",
+      "quote": "I'm Valerie's father!"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "accused as witch, escapes burning",
+    "when": "late",
+    "quote": "He orders her captured and burned at the stake, but Valerie swallows the magic earrings and escapes unharmed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:52",
+      "quote": "Seize her! To the stake with her!"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "villain transformed",
+    "when": "ending",
+    "quote": "Valerie tricks Richard into drinking one of the earrings, turning him into a polecat",
+    "confidence": "sourced"
+   },
+   {
+    "value": "wish for the magic to end",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:00:51",
+    "quote": "I wish for all this magic to end.",
+    "confidence": "sourced",
+    "order": 8
+   },
+   {
+    "value": "lost mother returns",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:06:12",
+    "quote": "\" when the horses bring you back on their own. \" My mother is still alive?",
+    "confidence": "sourced",
+    "order": 9
+   },
+   {
+    "order": 10,
+    "value": "falls asleep alone",
+    "when": "ending",
+    "quote": "Eventually, she falls asleep in a bed in the forest, alone",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:21",
+      "quote": "Goodnight, my dark haired girl Goodnight, and sweet dreams"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }
