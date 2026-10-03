@@ -1,0 +1,57 @@
+{
+ "film": "2016-hush",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "masked killer", "quote": "a masked killer with a crossbow chases a bloodied Sarah to Maddie's house", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "unexplained", "detail": "the killer is never named or explained", "quote": "The killer quickly deduces that Maddie is deaf and decides to make her his next victim", "confidence": "observed"}
+  ],
+  "wants": [
+   {"value": "to terrorize", "quote": "he threatens to take his time terrorizing her before eventually breaking in", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "isolation", "quote": "Maddie has left New York City for a solitary life in the woods with her cat", "confidence": "sourced"},
+   {"value": "neighbor killed at the door", "quote": "her cries for help go unnoticed, and the killer stabs Sarah to death", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "victim cannot hear", "quote": "Horror author Maddie Young lost the ability to hear and speak after contracting bacterial meningitis", "confidence": "sourced"},
+   {"value": "cut off from help", "quote": "before he cuts the house's power and punctures her car tires", "confidence": "sourced"},
+   {"value": "must fight to survive", "quote": "her only chance for survival is to fight", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "deaf woman alone", "relation_to_threat": "stranger", "detail": "Maddie", "quote": "decides to make her his next victim", "confidence": "sourced"},
+   {"value": "neighbor", "relation_to_threat": "stranger", "detail": "Sarah", "quote": "the killer stabs Sarah to death", "confidence": "sourced"},
+   {"value": "would-be rescuer", "relation_to_threat": "stranger", "detail": "John", "quote": "the killer fatally stabs him in the neck", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat destroyed", "quote": "she impales him in the neck with a corkscrew, finally killing him", "confidence": "sourced"},
+   {"value": "survivor", "quote": "where she pets her cat, smiling as the police arrive", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "cat", "detail": "Bitch", "state": "threatened, survives", "when": "early", "role": "symbol", "quote": "a solitary life in the woods with her cat, Bitch", "confidence": "sourced"},
+   {"value": "mask", "state": "removed", "when": "early", "role": "turn", "quote": "the killer responds by taking off his mask", "confidence": "sourced"},
+   {"value": "crossbow", "when": "early", "role": "weapon", "quote": "a masked killer with a crossbow", "confidence": "sourced"},
+   {"value": "glass door", "state": "written on in lipstick and blood", "when": "middle", "role": "symbol", "quote": "Maddie writes \"do it, coward\" on the door with her own blood", "confidence": "sourced"},
+   {"value": "corpse at window", "when": "middle", "role": "threat", "quote": "The killer taunts Maddie by using Sarah's corpse to knock on a window", "confidence": "sourced"},
+   {"value": "earring", "state": "trophy", "when": "late", "role": "clue", "quote": "the killer drops Sarah's earring, which he took as a trophy", "confidence": "sourced"},
+   {"value": "corkscrew", "when": "ending", "role": "weapon", "quote": "she impales him in the neck with a corkscrew", "confidence": "sourced"},
+   {"value": "skylight", "when": "late", "role": "threat", "quote": "the killer crashes through the bathroom skylight behind Maddie, unnoticed until he breathes on her neck", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "isolated heroine", "when": "opening", "quote": "Maddie has left New York City for a solitary life in the woods", "confidence": "sourced"},
+   {"order": 2, "value": "first death unheard", "when": "early", "quote": "her cries for help go unnoticed, and the killer stabs Sarah to death", "confidence": "sourced"},
+   {"order": 3, "value": "killer reveals face", "when": "early", "role": "turn", "quote": "the killer responds by taking off his mask", "confidence": "sourced"},
+   {"order": 4, "value": "failed escape", "when": "middle", "quote": "Attempting to escape through a second-story window, Maddie is shot in the leg", "confidence": "sourced"},
+   {"order": 5, "value": "rescuer killed", "when": "late", "quote": "the killer fatally stabs him in the neck", "confidence": "sourced"},
+   {"order": 6, "value": "decision to fight", "when": "late", "role": "turn", "quote": "her only chance for survival is to fight", "confidence": "sourced"},
+   {"order": 7, "value": "killer killed", "when": "ending", "quote": "she impales him in the neck with a corkscrew, finally killing him", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

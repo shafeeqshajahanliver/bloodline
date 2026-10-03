@@ -1,0 +1,62 @@
+{
+ "film": "1958-dracula-horror-of-dracula",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "vampire", "detail": "Count Dracula, centuries old", "quote": "intends to destroy the Count, who is in truth a centuries-old vampire", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "unexplained", "detail": "an ancient vampire in his castle", "quote": "who is in truth a centuries-old vampire", "confidence": "observed"}
+  ],
+  "wants": [
+   {"value": "to replace someone", "detail": "a new bride for the woman Harker killed", "quote": "He explains to Arthur that Lucy was targeted to replace the woman Harker killed", "confidence": "sourced"},
+   {"value": "to spread", "detail": "turning victims into vampires", "quote": "A chase ensues as Dracula attempts to finish Mina's transformation before the sunrise", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "killing the monster's companion", "detail": "Harker stakes the vampire woman", "quote": "Harker quickly stakes the woman, watching as she withers away and dies", "confidence": "observed"}
+  ],
+  "trigger": [
+   {"value": "hunter enters the lair", "detail": "Harker poses as a librarian", "quote": "revealing that he is actually a vampire hunter and intends to destroy the Count", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "destroyed by stake", "quote": "Without hesitation, Van Helsing stakes him", "confidence": "sourced"},
+   {"value": "repelled by cross", "quote": "Van Helsing appears and wards Lucy off with a cross", "confidence": "sourced"},
+   {"value": "destroyed by sunlight", "quote": "causing him to crumble and die upon the touch of morning light", "confidence": "sourced"},
+   {"value": "must be invited", "quote": "Dracula (having received Mina's permission to do so) slips inside discreetly and bites her again", "confidence": "sourced"},
+   {"value": "victims turn into vampires", "quote": "Knowing that he will soon turn, Harker writes a final entry in his journal and hides it", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "vampire hunter", "relation_to_threat": "stranger", "detail": "Jonathan Harker", "quote": "he finds Harker but is horrified to see that his friend is now a vampire", "confidence": "sourced"},
+   {"value": "fiancée", "relation_to_threat": "stranger", "detail": "Lucy Holmwood", "quote": "Lucy opens the doors to her terrace and lays bare her neck", "confidence": "sourced"},
+   {"value": "wife", "relation_to_threat": "stranger", "detail": "Mina Holmwood", "quote": "Mina can no longer hold a crucifix without burning her hand - proof that she is becoming a vampire", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat destroyed", "quote": "Dracula's ashes blow away in the morning breeze, leaving only his clothes and ring behind", "confidence": "sourced"},
+   {"value": "victim saved", "quote": "Mina recovers and the cross-shaped scar fades from her hand", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "diary", "state": "hidden", "when": "opening", "role": "clue", "quote": "Harker writes a final entry in his journal and hides it", "confidence": "sourced"},
+   {"value": "bite marks", "state": "on the neck", "when": "early", "role": "omen", "quote": "finds bite marks on his neck", "confidence": "sourced"},
+   {"value": "coffin", "state": "empty", "when": "early", "role": "clue", "quote": "He then turns to Dracula's coffin and finds it empty", "confidence": "sourced"},
+   {"value": "portrait", "state": "photos gone", "when": "middle", "role": "clue", "quote": "comes across the miniature portrait that Harker had of his fiancée Lucy Holmwood, with the photos now gone", "confidence": "sourced"},
+   {"value": "garlic", "state": "removed", "when": "middle", "role": "weapon", "quote": "begs the maid Gerda to remove his prescribed garlic bouquets and is found dead the next day", "confidence": "sourced"},
+   {"value": "cross", "state": "burning", "when": "late", "role": "clue", "quote": "Mina can no longer hold a crucifix without burning her hand", "confidence": "sourced"},
+   {"value": "candlesticks", "state": "held as a cross", "when": "ending", "role": "weapon", "quote": "force Dracula back with two candlesticks in the shape of a cross", "confidence": "sourced"},
+   {"value": "curtain", "state": "torn down", "when": "ending", "role": "weapon", "quote": "is able to tear down a heavy curtain", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "guest arrives at castle", "when": "opening", "quote": "librarian Jonathan Harker arrives at Count Dracula's castle near Klausenburg", "confidence": "sourced"},
+   {"order": 2, "value": "hunter bitten", "when": "early", "quote": "realizes too late that she is also a vampire and gets bitten", "confidence": "sourced"},
+   {"order": 3, "value": "friend found turned", "when": "early", "role": "turn", "quote": "horrified to see that his friend is now a vampire and sleeping in Dracula's coffin", "confidence": "sourced"},
+   {"order": 4, "value": "loved one dies and rises", "when": "middle", "quote": "Three days after her burial, an undead Lucy lures Gerda's daughter Tania to a graveyard", "confidence": "sourced"},
+   {"order": 5, "value": "brother consents to staking", "when": "middle", "quote": "Van Helsing stakes his sister in her coffin", "confidence": "sourced"},
+   {"order": 6, "value": "monster abducts a victim", "when": "late", "quote": "the two men find Dracula escaping with both his coffin and Mina", "confidence": "sourced"},
+   {"order": 7, "value": "monster destroyed by daylight", "when": "ending", "role": "turn", "quote": "causing him to crumble and die upon the touch of morning light", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

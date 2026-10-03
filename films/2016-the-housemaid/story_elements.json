@@ -1,0 +1,37 @@
+{
+ "film": "2016-the-housemaid",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "thin",
+ "dimensions": {
+  "threat": [
+   {"value": "vengeful ghost", "detail": "Camille, the landowner's dead wife", "quote": "awakens the vengeful ghost of his dead wife, Camille... who is out for blood", "confidence": "sourced"},
+   {"value": "haunted house", "detail": "a French rubber plantation", "quote": "gets hired to be a housemaid at a haunted French rubber plantation", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "dead spouse", "quote": "the vengeful ghost of his dead wife, Camille", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "blood", "quote": "who is out for blood", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "new job in a house", "quote": "an orphaned country girl named Linh, who gets hired to be a housemaid", "confidence": "sourced"},
+   {"value": "forbidden romance", "quote": "She unexpectedly falls in love with the French landowner Captain Sebastien Laurent, and awakens the vengeful ghost", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "orphaned servant", "relation_to_threat": "stranger", "detail": "Linh", "quote": "an orphaned country girl named Linh, who gets hired to be a housemaid", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "rubber plantation", "when": "opening", "role": "setting", "quote": "a haunted French rubber plantation", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "wartime setting", "when": "opening", "role": "setting", "quote": "Set in 1953 Vietnam during the First Indochinese War", "confidence": "sourced"},
+   {"order": 2, "value": "orphan hired as maid", "when": "opening", "role": "trigger", "quote": "who gets hired to be a housemaid at a haunted French rubber plantation", "confidence": "sourced"},
+   {"order": 3, "value": "falls for the master", "when": "middle", "quote": "She unexpectedly falls in love with the French landowner Captain Sebastien Laurent", "confidence": "sourced"},
+   {"order": 4, "value": "dead wife awakens", "when": "middle", "role": "turn", "quote": "awakens the vengeful ghost of his dead wife, Camille", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong", "rules", "ending"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

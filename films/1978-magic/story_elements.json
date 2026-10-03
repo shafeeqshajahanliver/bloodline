@@ -1,0 +1,57 @@
+{
+ "film": "1978-magic",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "the self", "detail": "Corky's id, voiced through his dummy", "quote": "he suffers from severe mental issues and cannot control Fats (who is a manifestation of Corky's id)", "confidence": "sourced"},
+   {"value": "ventriloquist's dummy", "detail": "Fats", "quote": "a foul-mouthed dummy named Fats", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "mental illness", "quote": "the doctors might find out that he suffers from severe mental issues", "confidence": "sourced"},
+   {"value": "made by someone", "detail": "a gimmick for his act", "quote": "his mentor Merlin says that he needs a better gimmick", "confidence": "observed"}
+  ],
+  "wants": [
+   {"value": "jealousy", "quote": "This sparks jealousy in both Duke and Fats.", "confidence": "sourced"},
+   {"value": "control", "quote": "Fats orders Corky to kill Peggy.", "confidence": "observed"}
+  ],
+  "trigger": [
+   {"value": "returning home", "quote": "Corky bails for the Catskills, where he grew up", "confidence": "sourced"},
+   {"value": "secret discovered", "quote": "Greene confronts Corky, discovering the truth about his state of mind", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "stopped only by self-destruction", "quote": "Corky fatally stabbed himself to prevent further murders by Fats", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "agent", "relation_to_threat": "stranger", "detail": "Ben Greene", "quote": "Corky bludgeons Greene with Fats' wooden head and then drowns him", "confidence": "sourced"},
+   {"value": "jealous husband", "relation_to_threat": "stranger", "detail": "Duke", "quote": "is stabbed to death by Fats with \"help\" from Corky", "confidence": "sourced"},
+   {"value": "old crush", "relation_to_threat": "lover", "detail": "Peggy Ann Snow", "quote": "Corky reunites with his high-school crush, Peggy Ann Snow", "confidence": "sourced"},
+   {"value": "the man himself", "relation_to_threat": "self", "quote": "Corky and Fats each feel faint, wondering which of them will die first", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "self-sacrifice", "quote": "Corky fatally stabbed himself to prevent further murders by Fats", "confidence": "sourced"},
+   {"value": "ambiguous", "detail": "Peggy mimics Fats' voice", "quote": "she playfully changes her voice to impersonate Fats, tossing the wooden heart in the air", "confidence": "observed"}
+  ],
+  "images": [
+   {"value": "dummy", "state": "foul-mouthed", "when": "opening", "role": "threat", "quote": "a combination magician and ventriloquist with a foul-mouthed dummy named Fats", "confidence": "sourced"},
+   {"value": "deck of cards", "state": "used to seduce", "when": "early", "role": "symbol", "quote": "A magic trick with a deck of cards charms Peggy into thinking they are soulmates", "confidence": "sourced"},
+   {"value": "wooden head", "state": "used as a club", "when": "middle", "role": "weapon", "quote": "Corky bludgeons Greene with Fats' wooden head", "confidence": "sourced"},
+   {"value": "lake", "state": "body on its edge", "when": "middle", "role": "clue", "quote": "spots the unconscious body of a man on the edge of the lake", "confidence": "sourced"},
+   {"value": "wooden heart", "state": "carved, tossed", "when": "ending", "role": "symbol", "quote": "leaves her a wooden heart that he carved", "confidence": "sourced"},
+   {"value": "knife", "state": "bloodstained", "when": "ending", "role": "weapon", "quote": "he returns with a bloodstained knife", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "failure, then a gimmick", "when": "opening", "quote": "fails in his first attempt at professional magic, his mentor Merlin says that he needs a better gimmick", "confidence": "sourced"},
+   {"order": 2, "value": "flight from scrutiny", "when": "early", "quote": "he does not want to take the TV network's medical examination", "confidence": "sourced"},
+   {"order": 3, "value": "romance with old flame", "when": "early", "quote": "A magic trick with a deck of cards charms Peggy into thinking they are soulmates, and the pair have sex", "confidence": "sourced"},
+   {"order": 4, "value": "first murder", "when": "middle", "role": "turn", "quote": "Fats convinces Corky to kill him", "confidence": "sourced"},
+   {"order": 5, "value": "witness killed", "when": "middle", "quote": "He discovers that the drowned man was Corky's agent, Greene, and is stabbed to death by Fats", "confidence": "sourced"},
+   {"order": 6, "value": "monster orders a lover's death", "when": "late", "quote": "Fats orders Corky to kill Peggy.", "confidence": "sourced"},
+   {"order": 7, "value": "self-sacrifice", "when": "ending", "role": "turn", "quote": "Corky fatally stabbed himself to prevent further murders by Fats", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

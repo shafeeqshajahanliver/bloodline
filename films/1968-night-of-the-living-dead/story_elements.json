@@ -1,0 +1,55 @@
+{
+ "film": "1968-night-of-the-living-dead",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "zombies", "detail": "flesh-eating reanimated corpses called ghouls", "quote": "a group of people trapped in a farmhouse in rural Pennsylvania, under assault by flesh-eating reanimated corpses", "confidence": "sourced"},
+   {"value": "other survivors", "detail": "infighting and the posse that shoots Ben", "quote": "mistaking him for a ghoul, the posse shoots him", "confidence": "observed"}
+  ],
+  "origin": [
+   {"value": "from outer space", "detail": "radiation from a space probe returning from Venus (a theory)", "quote": "scientists theorize that radiation from an exploding space probe returning from Venus caused the reanimations", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "hunger", "quote": "cannibalistic corpses, referred to as \"ghouls\", are reanimating and committing mass murder", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "visiting a grave", "quote": "drive to a cemetery in rural Pennsylvania to visit their father's grave", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "destroyed by head wound or fire", "quote": "the ghouls can die again from heavy blows to the head, bullets to the brain, or being burned", "confidence": "sourced"},
+   {"value": "bite turns the victim", "quote": "Karen dies from her injuries, becomes a ghoul, feeds on her father's remains", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "strangers sheltering together", "relation_to_threat": "stranger", "quote": "Barbra is surprised to find people already taking shelter in the home's cellar", "confidence": "sourced"},
+   {"value": "family", "relation_to_threat": "family", "detail": "the Coopers, killed by their own daughter", "quote": "stabs her mother to death with a masonry trowel", "confidence": "sourced"},
+   {"value": "siblings", "relation_to_threat": "family", "detail": "Barbra and Johnny", "quote": "freezes upon seeing the reanimated Johnny, who drags her into the horde", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "everyone dies", "quote": "His body is thrown onto a bonfire and burned with the other corpses.", "confidence": "sourced"},
+   {"value": "survivor killed by rescuers", "quote": "Ben emerges from the cellar, but, mistaking him for a ghoul, the posse shoots him", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "grave", "state": "visited", "when": "opening", "role": "setting", "quote": "visit their father's grave, where a pale man in a tattered suit kills Johnny", "confidence": "sourced"},
+   {"value": "half-eaten corpse", "state": "on the stairs", "when": "opening", "role": "omen", "quote": "she finds the resident's corpse lying half-eaten on the stairs", "confidence": "sourced"},
+   {"value": "boarded windows", "state": "barricaded", "when": "early", "role": "setting", "quote": "he boards the windows and doors", "confidence": "sourced"},
+   {"value": "radio and television", "state": "broadcasting", "when": "middle", "role": "clue", "quote": "Through radio and TV reports, the survivors learn that cannibalistic corpses", "confidence": "sourced"},
+   {"value": "truck", "state": "exploding", "when": "middle", "role": "turn", "quote": "spilled gasoline catches fire and causes the truck to explode, killing Tom and Judy", "confidence": "sourced"},
+   {"value": "trowel", "state": "used to kill", "when": "late", "role": "weapon", "quote": "stabs her mother to death with a masonry trowel", "confidence": "sourced"},
+   {"value": "bonfire", "state": "burning bodies", "when": "ending", "role": "symbol", "quote": "His body is thrown onto a bonfire and burned with the other corpses.", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "attack at a cemetery", "when": "opening", "role": "trigger", "quote": "a pale man in a tattered suit kills Johnny and attacks Barbra", "confidence": "sourced"},
+   {"order": 2, "value": "strangers barricade a house", "when": "early", "quote": "After driving back several ghouls, he boards the windows and doors", "confidence": "sourced"},
+   {"order": 3, "value": "cause explained by broadcast", "when": "middle", "quote": "scientists theorize that radiation from an exploding space probe returning from Venus caused the reanimations", "confidence": "sourced"},
+   {"order": 4, "value": "escape attempt fails", "when": "middle", "role": "turn", "quote": "causes the truck to explode, killing Tom and Judy", "confidence": "sourced"},
+   {"order": 5, "value": "siege breaks in", "when": "late", "quote": "the power fails, and the ghouls break through the doors and windows of the unlit home", "confidence": "sourced"},
+   {"order": 6, "value": "child turns on parents", "when": "late", "role": "turn", "quote": "Karen dies from her injuries, becomes a ghoul, feeds on her father's remains", "confidence": "sourced"},
+   {"order": 7, "value": "last survivor shot by rescuers", "when": "ending", "role": "turn", "quote": "mistaking him for a ghoul, the posse shoots him", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

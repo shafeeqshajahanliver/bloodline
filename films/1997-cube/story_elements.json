@@ -1,0 +1,56 @@
+{
+ "film": "1997-cube",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "deadly maze", "quote": "seven individuals trapped in a bizarre and deadly labyrinth of cube-shaped rooms", "confidence": "sourced"},
+   {"value": "fellow prisoner", "detail": "Quentin turns murderous", "quote": "then deliberately drops her to her death, telling the others that she slipped", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "faceless bureaucracy", "quote": "The Cube was created accidentally by a bureaucracy, and that its original purpose has been forgotten", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "nothing stated", "detail": "the Cube exists only to justify itself", "quote": "they have been placed inside only to justify its existence", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "waking up trapped", "quote": "A man named Alderson awakens in a room that has hatches on each wall and floor", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "numbers mark the traps", "quote": "traps are not tagged by prime numbers, but by powers of prime numbers", "confidence": "sourced"},
+   {"value": "rooms move", "quote": "the rooms are moving, and will eventually line up with the exit", "confidence": "sourced"},
+   {"value": "sound triggers traps", "quote": "a room with a sound activated spiked wall trap", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "strangers", "relation_to_threat": "stranger", "quote": "Five different people all meet in another room", "confidence": "sourced"},
+   {"value": "builder of the trap", "relation_to_threat": "self", "detail": "Worth, who designed the shell", "quote": "he was hired to design the maze’s shell", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "lone innocent escapes", "detail": "Kazan, the savant", "quote": "Kazan wanders out into the light", "confidence": "sourced"},
+   {"value": "most die", "quote": "Quentin reappears and, using a detached door lever, fatally stabs Leaven and Worth", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "wire trap", "state": "slicing", "when": "opening", "role": "threat", "quote": "killed by a hidden trelliswork-like wire trap that slices his body into cubes", "confidence": "sourced"},
+   {"value": "hatches", "state": "on every wall", "when": "opening", "role": "setting", "quote": "a room that has hatches on each wall and floor, each leading to other rooms", "confidence": "sourced"},
+   {"value": "numbers on plates", "state": "etched", "when": "early", "role": "clue", "quote": "each hatch has plates with three sets of numbers etched into them", "confidence": "sourced"},
+   {"value": "boot", "state": "thrown as test", "when": "early", "role": "clue", "quote": "by throwing his boot into a room", "confidence": "sourced"},
+   {"value": "corpse", "state": "reappearing", "when": "late", "role": "clue", "quote": "Rennes's corpse is in the room, proving they have moved in a circle", "confidence": "sourced"},
+   {"value": "rope of clothing", "state": "slipping", "when": "middle", "role": "turn", "quote": "Holloway tries to swing over to the shell using a rope made of clothing", "confidence": "sourced"},
+   {"value": "bright light", "state": "beyond the exit", "when": "ending", "role": "symbol", "quote": "they open the hatch, revealing a bright light", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "first death by trap", "when": "opening", "quote": "He enters another room and is killed by a hidden trelliswork-like wire trap", "confidence": "sourced"},
+   {"order": 2, "value": "strangers band together", "when": "early", "quote": "Five different people all meet in another room", "confidence": "sourced"},
+   {"order": 3, "value": "leader killed", "when": "early", "quote": "he is killed by an acid trap", "confidence": "sourced"},
+   {"order": 4, "value": "insider confesses", "when": "middle", "role": "clue", "quote": "Worth admits to Quentin in an ensuing argument that he was hired to design the maze’s shell", "confidence": "sourced"},
+   {"order": 5, "value": "protector turns killer", "when": "middle", "role": "turn", "quote": "Quentin catches it at the last second and pulls her up, but then deliberately drops her to her death", "confidence": "sourced"},
+   {"order": 6, "value": "puzzle solved", "when": "late", "role": "turn", "quote": "Kazan is revealed as a savant who can calculate factorizations in his head instantaneously", "confidence": "sourced"},
+   {"order": 7, "value": "killer strikes at exit", "when": "ending", "quote": "using a detached door lever, fatally stabs Leaven and Worth", "confidence": "sourced"},
+   {"order": 8, "value": "one walks free", "when": "ending", "quote": "Kazan wanders out into the light", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

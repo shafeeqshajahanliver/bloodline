@@ -1,0 +1,64 @@
+{
+ "film": "2008-let-the-right-one-in",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "vampire", "detail": "Eli, who appears to be a 12-year-old girl", "quote": "Eli admits to being a vampire who must drink human blood to survive", "confidence": "sourced"},
+   {"value": "familiar who kills", "detail": "Håkan harvests blood for Eli", "quote": "Håkan kills a person on a footpath to harvest blood for Eli", "confidence": "sourced"},
+   {"value": "bullies", "quote": "His classmates bully him, and he spends his evenings imagining revenge", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "from outside", "detail": "newcomer next door", "quote": "Eli has moved into the adjoining apartment with a man, Håkan", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "hunger", "quote": "Eli admits to being a vampire who must drink human blood to survive", "confidence": "sourced"},
+   {"value": "companionship", "quote": "they agree to \"go steady\", though Eli states, \"I'm not a girl\"", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "bullying", "quote": "Eli learns Oskar is being bullied by schoolmates and encourages him to stand up for himself", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "new neighbour moves in", "quote": "One evening, he meets Eli, who appears to be a girl his age", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "must be invited", "quote": "Eli comes to Oskar's apartment and asks to be invited in, but he refuses. Eli then steps inside and starts to bleed profusely", "confidence": "sourced"},
+   {"value": "burned by sunlight", "quote": "she asks an orderly to open the blinds in her room, and bursts into flames", "confidence": "sourced"},
+   {"value": "victims turn", "quote": "She survives but discovers that exposure to sunlight burns her skin", "confidence": "observed"}
+  ],
+  "who_suffers": [
+   {"value": "bullied boy", "relation_to_threat": "lover", "detail": "Oskar, 12", "quote": "a bullied 12-year-old boy who develops a friendship with a strange child", "confidence": "sourced"},
+   {"value": "locals", "relation_to_threat": "community", "detail": "Jocke, Virginia, Lacke", "quote": "Eli is prompted to waylay and kill a man, Jocke", "confidence": "sourced"},
+   {"value": "caretaker", "relation_to_threat": "family", "detail": "Håkan, drained by Eli", "quote": "Eli visits Håkan in the hospital, where he offers his own neck for feeding", "confidence": "sourced"},
+   {"value": "bullies", "relation_to_threat": "stranger", "quote": "Eli arrives and rescues him by killing and dismembering the bullies", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat escapes with victim", "detail": "Oskar leaves with Eli as new companion", "quote": "Oskar is seen travelling on a train, with Eli in a box beside him", "confidence": "sourced"},
+   {"value": "monster as protector", "quote": "Eli arrives and rescues him by killing and dismembering the bullies", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "shared wall", "state": "coded messages", "when": "opening", "role": "symbol", "quote": "the two begin exchanging coded messages through their shared wall", "confidence": "sourced"},
+   {"value": "hole in ice", "state": "body hidden", "when": "early", "role": "setting", "quote": "Håkan hides Jocke's body in a hole in the lake", "confidence": "sourced"},
+   {"value": "acid", "state": "on face", "when": "early", "role": "turn", "quote": "Håkan pours acid onto his own face to avoid identification", "confidence": "sourced"},
+   {"value": "blood", "state": "from cut hand", "when": "middle", "role": "turn", "quote": "Oskar suggests he and Eli should form a bond and cuts his hand. Eli laps up his blood", "confidence": "sourced"},
+   {"value": "sunlight", "state": "burning", "when": "middle", "role": "weapon", "quote": "open the blinds in her room, and bursts into flames", "confidence": "sourced"},
+   {"value": "bathtub", "state": "sleeping place", "when": "late", "role": "setting", "quote": "whom he finds asleep in the apartment's bathtub", "confidence": "sourced"},
+   {"value": "swimming pool", "when": "ending", "role": "setting", "quote": "One of the bullies holds Oskar under the water", "confidence": "sourced"},
+   {"value": "box", "state": "carrying the vampire", "when": "ending", "role": "symbol", "quote": "with Eli in a box beside him", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "lonely bullied child", "when": "opening", "quote": "His classmates bully him, and he spends his evenings imagining revenge", "confidence": "sourced"},
+   {"order": 2, "value": "strange neighbour arrives", "when": "opening", "role": "trigger", "quote": "Eli has moved into the adjoining apartment with a man, Håkan", "confidence": "sourced"},
+   {"order": 3, "value": "caretaker kills for blood", "when": "early", "quote": "Håkan kills a person on a footpath to harvest blood for Eli", "confidence": "sourced"},
+   {"order": 4, "value": "caretaker sacrifices himself", "when": "early", "quote": "Eli drains him of his blood, and Håkan falls out the window", "confidence": "sourced"},
+   {"order": 5, "value": "boy fights back", "when": "middle", "quote": "hits their leader in the head with a pole, injuring him", "confidence": "sourced"},
+   {"order": 6, "value": "monster's nature revealed", "when": "middle", "role": "turn", "quote": "Eli admits to being a vampire who must drink human blood to survive", "confidence": "sourced"},
+   {"order": 7, "value": "massacre of bullies", "when": "ending", "quote": "Eli arrives and rescues him by killing and dismembering the bullies", "confidence": "sourced"},
+   {"order": 8, "value": "leave together", "when": "ending", "quote": "Oskar is seen travelling on a train, with Eli in a box beside him", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

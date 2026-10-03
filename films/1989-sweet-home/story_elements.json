@@ -1,0 +1,54 @@
+{
+ "film": "1989-sweet-home",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "vengeful ghost", "detail": "Lady Mamiya, the artist's wife", "quote": "Asuka is possessed by the infuriated ghost of Lady Mamiya, Ichirō's wife", "confidence": "sourced"},
+   {"value": "poltergeist", "quote": "paranormal events indicate the presence of a poltergeist", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "grieving mother", "detail": "her toddler burned alive in the incinerator", "quote": "The boy is Ichirō and Lady Mamiya's son, who fell into the house's incinerator and burned alive", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "reunion with her child", "quote": "by reuniting Mamiya with her beloved son, and so giving them peace", "confidence": "sourced"},
+   {"value": "to keep out trespassers", "quote": "Lady Mamiya's ghost haunts the mansion, killing any trespassers", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "death of a child", "quote": "fell into the house's incinerator and burned alive", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "entering an abandoned house", "quote": "A small film crew visits the old, abandoned mansion of famous artist Ichirō Mamiya", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "laid to rest by reunion", "quote": "only Kazuo, Emi, and Akiko survive, by reuniting Mamiya with her beloved son", "confidence": "sourced"},
+   {"value": "possesses the living", "quote": "Asuka is possessed by the infuriated ghost of Lady Mamiya", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "film crew", "relation_to_threat": "stranger", "quote": "The team wants to restore and publish the paintings and film a documentary about Mamiya", "confidence": "sourced"},
+   {"value": "father and daughter", "relation_to_threat": "stranger", "detail": "Kazuo and Emi", "quote": "The team includes Kazuo, his daughter Emi, producer Akiko", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "ghost laid to rest", "quote": "reuniting Mamiya with her beloved son, and so giving them peace", "confidence": "sourced"},
+   {"value": "house destroyed", "quote": "When Kazuo, Emi, and Akiko leave the mansion, it begins to collapse.", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "frescos", "state": "hidden, precious", "when": "opening", "role": "trigger", "quote": "who left several precious frescos inside his house", "confidence": "sourced"},
+   {"value": "abandoned mansion", "state": "collapsing at the end", "when": "opening", "role": "setting", "quote": "the old, abandoned mansion of famous artist Ichirō Mamiya", "confidence": "sourced"},
+   {"value": "child's grave", "state": "makeshift", "when": "middle", "role": "clue", "quote": "The team discovers a makeshift grave where a toddler is buried", "confidence": "sourced"},
+   {"value": "incinerator", "state": "fatal", "when": "middle", "role": "clue", "quote": "fell into the house's incinerator and burned alive", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "crew enters the house", "when": "opening", "role": "trigger", "quote": "A small film crew visits the old, abandoned mansion", "confidence": "sourced"},
+   {"order": 2, "value": "haunting begins", "when": "early", "role": "omen", "quote": "After they enter the mansion, paranormal events indicate the presence of a poltergeist", "confidence": "sourced"},
+   {"order": 3, "value": "possession", "when": "early", "quote": "Asuka is possessed by the infuriated ghost of Lady Mamiya", "confidence": "sourced"},
+   {"order": 4, "value": "child's grave found", "when": "middle", "role": "turn", "quote": "The team discovers a makeshift grave where a toddler is buried", "confidence": "sourced"},
+   {"order": 5, "value": "mother reunited with child", "when": "ending", "role": "turn", "quote": "by reuniting Mamiya with her beloved son, and so giving them peace", "confidence": "sourced"},
+   {"order": 6, "value": "house collapses", "when": "ending", "quote": "When Kazuo, Emi, and Akiko leave the mansion, it begins to collapse.", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

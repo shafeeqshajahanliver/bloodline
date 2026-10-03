@@ -1,0 +1,54 @@
+{
+ "film": "1962-carnival-of-souls",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "ghouls", "detail": "The Man, a pale-faced figure, and other ghouls", "quote": "Mary begins experiencing visions of a ghoulish, pale-faced figure (referred to as \"The Man\" in the credits)", "confidence": "sourced"},
+   {"value": "her own death", "detail": "she died in the crash", "quote": "Mary's body is seen in the front seat alongside the other two women.", "confidence": "observed"}
+  ],
+  "origin": [
+   {"value": "unexplained", "quote": "Mary miraculously surfaces on the river bank, but cannot remember how she survived", "confidence": "observed"}
+  ],
+  "wants": [
+   {"value": "to claim the dead", "quote": "she sees visions of The Man and other ghouls dancing at the pavilion", "confidence": "observed"}
+  ],
+  "trigger": [
+   {"value": "car accident", "quote": "the women's car is nudged by the boys' car and plunges off a bridge into a muddy river", "confidence": "sourced"},
+   {"value": "moving to a new city", "quote": "Mary moves to Salt Lake City, where she has been hired as a church organist", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "victim unseen by the living", "quote": "she becomes invisible and inaudible to the rest of the world", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "young woman", "relation_to_threat": "self", "detail": "Mary Henry, a church organist", "quote": "Mary Henry, a young woman whose life is disturbed after a car accident", "confidence": "sourced"},
+   {"value": "newcomer", "relation_to_threat": "self", "quote": "She relocates to a new city, where she finds herself unable to assimilate with the locals", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "protagonist was dead all along", "quote": "Back in Kansas, the submerged car is finally pulled from the river. Mary's body is seen in the front seat", "confidence": "sourced"},
+   {"value": "taken by the dead", "quote": "chased by the ghouls onto the beach, where she collapses as they close in", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "river", "state": "muddy, dredged", "when": "opening", "role": "setting", "quote": "plunges off a bridge into a muddy river", "confidence": "sourced"},
+   {"value": "car", "state": "submerged", "when": "ending", "role": "clue", "quote": "the submerged car is finally pulled from the river", "confidence": "sourced"},
+   {"value": "abandoned pavilion", "state": "forbidden", "when": "early", "role": "setting", "quote": "the pavilion was first a bathhouse, then a dance hall, and finally a carnival before it was abandoned", "confidence": "sourced"},
+   {"value": "pale-faced man", "state": "stalking", "when": "early", "role": "threat", "quote": "visions of a ghoulish, pale-faced figure", "confidence": "sourced"},
+   {"value": "church organ", "state": "playing eerie music", "when": "middle", "role": "omen", "quote": "finds herself shifting from a hymn to eerie music", "confidence": "sourced"},
+   {"value": "mirror", "state": "showing the ghoul", "when": "late", "role": "threat", "quote": "Mary becomes hysterical when she sees The Man in the mirror", "confidence": "sourced"},
+   {"value": "footprints", "state": "ending in nothing", "when": "ending", "role": "clue", "quote": "They find her footprints but note that she has otherwise vanished", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "crash and miraculous survival", "when": "opening", "role": "trigger", "quote": "Mary miraculously surfaces on the river bank, but cannot remember how she survived", "confidence": "sourced"},
+   {"order": 2, "value": "first apparition", "when": "early", "role": "omen", "quote": "Mary begins experiencing visions of a ghoulish, pale-faced figure", "confidence": "sourced"},
+   {"order": 3, "value": "warned away from the place", "when": "early", "quote": "the church's minister who stops her from entering, warning that it is against the law", "confidence": "sourced"},
+   {"order": 4, "value": "becomes invisible to others", "when": "middle", "role": "turn", "quote": "Mary begins experiencing terrifying interludes when she becomes invisible and inaudible to the rest of the world", "confidence": "sourced"},
+   {"order": 5, "value": "dream within a dream", "when": "late", "quote": "she wakes up in her car, revealing the previous scenes to be merely a nightmare", "confidence": "sourced"},
+   {"order": 6, "value": "dance with her ghoul double", "when": "late", "quote": "she finds the ghouls dancing, with a ghoul version of herself paired with The Man", "confidence": "sourced"},
+   {"order": 7, "value": "body found in the wreck", "when": "ending", "role": "turn", "quote": "Mary's body is seen in the front seat alongside the other two women.", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

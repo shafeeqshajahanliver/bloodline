@@ -1,0 +1,65 @@
+{
+ "film": "1973-lisa-and-the-devil",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "devil", "detail": "Leandro, the butler who resembles the Devil in a fresco", "quote": "the box belongs to Leandro, who resembles the Devil in the fresco", "confidence": "sourced"},
+   {"value": "murderous son", "detail": "Maximilian", "quote": "Maximilian pursues and murders Sophia", "confidence": "sourced"},
+   {"value": "haunted house", "detail": "the villa where nobody has lived for a century", "quote": "no one has lived at the villa for a hundred years", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "family past", "detail": "love triangle of Carlos, Elena and Maximilian", "quote": "Carlos was her husband, Maximilian’s stepfather, who had an affair with Maximilian’s lover, Elena", "confidence": "sourced"},
+   {"value": "unexplained", "quote": "Lisa awakens in the villa’s ruins", "confidence": "observed"}
+  ],
+  "wants": [
+   {"value": "to replace a lost lover", "detail": "Lisa resembles Elena", "quote": "He burns a photograph of Elena, who resembles Lisa", "confidence": "observed"},
+   {"value": "to collect the dead", "quote": "a fresco that depicts the Devil carrying off the dead", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "adultery", "quote": "who had an affair with Maximilian’s lover, Elena", "confidence": "sourced"},
+   {"value": "murder", "quote": "Maximilian stabs the countess to death", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "getting lost", "quote": "a tourist named Lisa (Sommer) who loses her way in Toledo and spends the night at a villa", "confidence": "sourced"},
+   {"value": "car breaks down", "quote": "The car breaks down, and the group seek refuge at a nearby villa", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "dead return", "quote": "but then she immediately runs into Carlos outside again", "confidence": "observed"},
+   {"value": "people become dummies", "quote": "Leandro appears behind the countess, who goes limp like a dummy", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "tourist", "relation_to_threat": "stranger", "detail": "Lisa", "quote": "During a tour of Toledo, Lisa Reiner encounters a fresco", "confidence": "sourced"},
+   {"value": "travellers seeking shelter", "relation_to_threat": "stranger", "detail": "the Lehars and their chauffeur", "quote": "Sophia discovers the body of George, who has been stabbed to death and left in the car", "confidence": "sourced"},
+   {"value": "mother", "relation_to_threat": "family", "detail": "the countess", "quote": "Maximilian stabs the countess to death", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "everyone dies", "quote": "the other passengers are the corpses from the villa and the pilot is Leandro", "confidence": "sourced"},
+   {"value": "victim becomes object", "quote": "Lisa crumples to the floor and turns into a dummy dressed like Elena", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "fresco of the devil", "when": "opening", "role": "omen", "quote": "a fresco that depicts the Devil carrying off the dead", "confidence": "sourced"},
+   {"value": "music box", "state": "rotating figurines", "when": "opening", "role": "omen", "quote": "she finds a music box topped with rotating figurines", "confidence": "sourced"},
+   {"value": "dummy", "when": "opening", "role": "symbol", "quote": "helping a man named Leandro design a mustachioed dummy", "confidence": "sourced"},
+   {"value": "photograph", "state": "burned", "when": "middle", "role": "clue", "quote": "He burns a photograph of Elena, who resembles Lisa", "confidence": "sourced"},
+   {"value": "coffin", "when": "late", "role": "clue", "quote": "apparently arranging Carlos’s body in a coffin", "confidence": "sourced"},
+   {"value": "skeleton", "state": "kept in a bedroom", "when": "late", "role": "turn", "quote": "where he is detaining Elena, now a skeletonized corpse", "confidence": "sourced"},
+   {"value": "corpses at a table", "when": "late", "role": "threat", "quote": "the corpses of Sophia, Francis, Elena, Carlos, and George seated at a table", "confidence": "sourced"},
+   {"value": "plane", "when": "ending", "role": "setting", "quote": "Lisa boards a plane but discovers that the other passengers are the corpses from the villa", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "omen in a painting", "when": "opening", "role": "omen", "quote": "During a tour of Toledo, Lisa Reiner encounters a fresco that depicts the Devil carrying off the dead", "confidence": "sourced"},
+   {"order": 2, "value": "accidental killing", "when": "early", "quote": "inadvertently causing him to fall to his apparent death", "confidence": "sourced"},
+   {"order": 3, "value": "shelter at a villa", "when": "early", "role": "trigger", "quote": "the group seek refuge at a nearby villa", "confidence": "sourced"},
+   {"order": 4, "value": "first murder", "when": "middle", "quote": "Sophia discovers the body of George, who has been stabbed to death", "confidence": "sourced"},
+   {"order": 5, "value": "family secret revealed", "when": "late", "role": "turn", "quote": "Carlos was her husband, Maximilian’s stepfather, who had an affair with Maximilian’s lover, Elena", "confidence": "sourced"},
+   {"order": 6, "value": "dead gather and killer falls", "when": "late", "quote": "Backing away in fear, Maximilian falls out of a window to his death", "confidence": "sourced"},
+   {"order": 7, "value": "waking in ruins", "when": "ending", "role": "turn", "quote": "no one has lived at the villa for a hundred years", "confidence": "sourced"},
+   {"order": 8, "value": "heroine turned into a dummy", "when": "ending", "quote": "Lisa crumples to the floor and turns into a dummy dressed like Elena", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

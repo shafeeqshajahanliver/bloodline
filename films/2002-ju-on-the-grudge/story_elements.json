@@ -1,0 +1,65 @@
+{
+ "film": "2002-ju-on-the-grudge",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "vengeful ghost", "detail": "Kayako, Toshio and Takeo", "quote": "The murders create a curse that revives the family as vengeful ghosts", "confidence": "sourced"},
+   {"value": "curse", "quote": "Whoever enters their house in Nerima, Tokyo, is eventually consumed by the curse", "confidence": "sourced"},
+   {"value": "haunted house", "quote": "Whoever enters their house in Nerima, Tokyo", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "person who died wronged", "quote": "Takeo Saeki murders his wife Kayako after discovering she is in love with another man", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "revenge", "quote": "which results in Kayako's ghost murdering Takeo", "confidence": "sourced"},
+   {"value": "to spread", "quote": "spreads to the place they die in and in turn consumes anyone who comes in", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "family murder", "quote": "also killing the family cat, Mar, and his son, Toshio", "confidence": "sourced"},
+   {"value": "jealousy", "quote": "murders his wife Kayako after discovering she is in love with another man", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "entering a cursed place", "quote": "Whoever enters their house in Nerima, Tokyo, is eventually consumed by the curse", "confidence": "sourced"},
+   {"value": "moving into a new home", "quote": "The latest owners of the house are the Tokunaga family", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "anyone who enters dies", "quote": "Whoever enters their house in Nerima, Tokyo, is eventually consumed by the curse", "confidence": "sourced"},
+   {"value": "curse spreads to new places", "quote": "spreads to the place they die in and in turn consumes anyone who comes in", "confidence": "sourced"},
+   {"value": "cannot be stopped", "quote": "Toyama goes to burn the house down but hears a group of teenage girls upstairs", "confidence": "observed"}
+  ],
+  "who_suffers": [
+   {"value": "new residents", "relation_to_threat": "stranger", "detail": "the Tokunaga family", "quote": "Kazumi is quickly consumed by the curse, and Katsuya is possessed by Takeo before dying as well", "confidence": "sourced"},
+   {"value": "social worker", "relation_to_threat": "stranger", "detail": "Rika", "quote": "Social worker Rika is sent by her boss Hirohashi to take care of Sachie", "confidence": "sourced"},
+   {"value": "investigators", "relation_to_threat": "stranger", "quote": "Kayako then appears, chasing Toyama away but killing Nakagawa and Igarashi", "confidence": "sourced"},
+   {"value": "teenagers", "relation_to_threat": "stranger", "quote": "Izumi visits the house with her friends but flees while Kayako kills her friends", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "victim becomes threat", "detail": "Rika becomes Kayako", "quote": "Rika's corpse, now with a much longer hairstyle similar to Kayako's, lies in the house's attic, only to reawaken with a death rattle", "confidence": "sourced"},
+   {"value": "threat survives and spreads", "quote": "Many posters of missing persons lie on the ground in the almost deserted Tokyo streets", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "cat", "state": "killed", "when": "opening", "role": "omen", "quote": "also killing the family cat, Mar", "confidence": "sourced"},
+   {"value": "ghost child", "when": "early", "role": "threat", "quote": "She discovers Toshio before she witnesses Sachie being killed by Kayako's ghost", "confidence": "sourced"},
+   {"value": "attic", "state": "holding bodies", "when": "middle", "role": "setting", "quote": "discover Katsuya's and Kazumi's bodies in the attic", "confidence": "sourced"},
+   {"value": "photographs", "state": "eyes blackened", "when": "late", "role": "omen", "quote": "she and her dead friends have their eyes blackened out in photos", "confidence": "sourced"},
+   {"value": "missing-person posters", "when": "ending", "role": "symbol", "quote": "Many posters of missing persons lie on the ground", "confidence": "sourced"},
+   {"value": "long black hair", "when": "ending", "role": "turn", "quote": "now with a much longer hairstyle similar to Kayako's", "confidence": "sourced"},
+   {"value": "death rattle", "when": "ending", "role": "threat", "quote": "only to reawaken with a death rattle", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "family murder creates curse", "when": "opening", "quote": "The murders create a curse that revives the family as vengeful ghosts", "confidence": "sourced"},
+   {"order": 2, "value": "new family consumed", "when": "early", "quote": "Kazumi is quickly consumed by the curse, and Katsuya is possessed by Takeo", "confidence": "sourced"},
+   {"order": 3, "value": "outsider witnesses a death", "when": "early", "role": "trigger", "quote": "she witnesses Sachie being killed by Kayako's ghost, causing her to faint in shock", "confidence": "sourced"},
+   {"order": 4, "value": "investigators killed", "when": "middle", "quote": "Kayako then appears, chasing Toyama away but killing Nakagawa and Igarashi", "confidence": "sourced"},
+   {"order": 5, "value": "protagonist becomes the ghost", "when": "late", "role": "turn", "quote": "Rika assumes Kayako's role and, from her perspective, is cornered by Takeo's ghost", "confidence": "sourced"},
+   {"order": 6, "value": "survivor dragged away", "when": "late", "quote": "only for Kayako to appear and drag her into damnation", "confidence": "sourced"},
+   {"order": 7, "value": "city emptied", "when": "ending", "quote": "Many posters of missing persons lie on the ground in the almost deserted Tokyo streets", "confidence": "sourced"},
+   {"order": 8, "value": "corpse reawakens", "when": "ending", "quote": "lies in the house's attic, only to reawaken with a death rattle", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

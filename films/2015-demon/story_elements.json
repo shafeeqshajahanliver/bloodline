@@ -1,0 +1,50 @@
+{
+ "film": "2015-demon",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "possessing spirit", "detail": "Hana, a dybbuk-like Jewish ghost", "quote": "He is eventually possessed by Hana, the woman in the dress", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "person who vanished in war", "detail": "a Jewish girl who disappeared before the war", "quote": "a lovely Jewish girl he knew before the war who suddenly disappeared", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to be acknowledged", "quote": "realizes that Piotr is speaking Yiddish, and that he is possessed by the spirit of Hana", "confidence": "observed"},
+   {"value": "a wedding", "quote": "the vision of a woman in a wedding dress – Hana", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "buried and forgotten victim", "quote": "Piotr finds a skeleton, which at first he keeps quiet about", "confidence": "observed"}
+  ],
+  "trigger": [
+   {"value": "digging up remains", "quote": "While digging in the yard with a backhoe right before the wedding, Piotr finds a skeleton", "confidence": "sourced"},
+   {"value": "moving into a new home", "quote": "He moves into a run-down large rural estate previously owned by Żaneta's grandfather", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "speaks through the possessed", "quote": "Piotr is speaking Yiddish", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "bridegroom", "relation_to_threat": "stranger", "detail": "Piotr, an outsider from England", "quote": "During the wedding reception this vision draws closer and closer to him, and he has apparent seizures", "confidence": "sourced"},
+   {"value": "bride's family", "relation_to_threat": "community", "quote": "they want to keep his breakdown quiet from the rest of the wedding guests", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "skeleton", "state": "buried in the yard", "when": "early", "role": "trigger", "quote": "Piotr finds a skeleton, which at first he keeps quiet about", "confidence": "sourced"},
+   {"value": "backhoe", "when": "early", "quote": "digging in the yard with a backhoe right before the wedding", "confidence": "sourced"},
+   {"value": "wedding dress", "when": "early", "role": "threat", "quote": "the vision of a woman in a wedding dress – Hana", "confidence": "sourced"},
+   {"value": "vodka and loud music", "when": "middle", "role": "symbol", "quote": "they distract their guests with vodka and loud music while locking Piotr in the basement", "confidence": "sourced"},
+   {"value": "basement", "when": "middle", "role": "setting", "quote": "locking Piotr in the basement, first with a doctor, then a priest", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "outsider to marry", "when": "opening", "quote": "Polish Briton Piotr (Itay Tiran), who has been living and working in England for many years", "confidence": "sourced"},
+   {"order": 2, "value": "bones unearthed", "when": "early", "role": "trigger", "quote": "Piotr finds a skeleton, which at first he keeps quiet about", "confidence": "sourced"},
+   {"order": 3, "value": "visions of a bride", "when": "early", "role": "omen", "quote": "He is increasingly haunted by the vision of a woman in a wedding dress", "confidence": "sourced"},
+   {"order": 4, "value": "possession at wedding", "when": "middle", "quote": "He is eventually possessed by Hana, the woman in the dress", "confidence": "sourced"},
+   {"order": 5, "value": "family hides it", "when": "middle", "quote": "they distract their guests with vodka and loud music while locking Piotr in the basement", "confidence": "sourced"},
+   {"order": 6, "value": "elder identifies the spirit", "when": "ending", "role": "turn", "quote": "the teacher (Włodzimierz Press), who appears to be the only surviving Jewish resident of the town pre-war", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["ending"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

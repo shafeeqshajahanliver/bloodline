@@ -1,0 +1,63 @@
+{
+ "film": "1992-candyman",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "vengeful ghost", "detail": "Candyman, the hook-handed ghost of a murdered artist", "quote": "the hook-handed ghost of an African-American artist and son of a slave who was murdered in the late 19th century", "confidence": "sourced"},
+   {"value": "urban legend", "quote": "she familiarizes herself with Candyman, a spirit who kills anyone that speaks his name five times before a mirror", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "person who died wronged", "detail": "lynched for loving a white woman", "quote": "After he fell in love with and impregnated a white woman, her father sent a lynch mob after him", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to be believed", "detail": "he must shed blood to keep his legend alive", "quote": "due to her discredit of his legend, he must shed innocent blood to perpetuate it", "confidence": "sourced"},
+   {"value": "a lost lover", "detail": "Helen resembles his lover", "quote": "Helen bears a striking resemblance to her and is hinted to be her reincarnation", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "racist lynching", "quote": "The mob sawed off his right hand and smeared him with honeycomb stolen from an apiary, attracting bees that stung him to death", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "saying a name", "quote": "Helen and her friend Bernadette Walsh repeat Candyman's name to Helen's bathroom mirror", "confidence": "sourced"},
+   {"value": "investigating a legend", "quote": "a Chicago graduate student completing a thesis on urban legends and folklore", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "name five times in mirror", "quote": "appears whenever his name is chanted five times in the mirror", "confidence": "sourced"},
+   {"value": "lives on belief", "quote": "Attempting to feed his legend, Candyman reneges", "confidence": "observed"},
+   {"value": "destroyed by fire", "quote": "The flames destroy Candyman and Helen dies while rescuing Anthony", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "investigator", "relation_to_threat": "stranger", "detail": "Helen Lyle, graduate student", "quote": "Helen Lyle is an anthropology graduate student at the  University of Illinois Chicago", "confidence": "sourced"},
+   {"value": "housing project residents", "relation_to_threat": "community", "quote": "several others that have been attributed by locals to Candyman", "confidence": "sourced"},
+   {"value": "mother and baby", "relation_to_threat": "community", "detail": "Anne-Marie and her son Anthony", "quote": "Anne-Marie McCoy, a single mother raising her infant son Anthony", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat destroyed", "quote": "The flames destroy Candyman and Helen dies while rescuing Anthony", "confidence": "sourced"},
+   {"value": "victim becomes threat", "detail": "Helen returns as a vengeful spirit", "quote": "Helen's vengeful spirit appears and kills him using Candyman's hook", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "mirror", "when": "opening", "role": "trigger", "quote": "repeat Candyman's name to Helen's bathroom mirror", "confidence": "sourced"},
+   {"value": "hook", "when": "middle", "role": "weapon", "quote": "a man claiming to be Candyman batters her with a hook", "confidence": "sourced"},
+   {"value": "bees", "state": "pouring from a ribcage", "when": "late", "role": "threat", "quote": "revealing a ribcage wreathed in bees", "confidence": "sourced"},
+   {"value": "sweets", "state": "left as offerings", "when": "early", "role": "clue", "quote": "Helen discovers a room where sweets have been left for Candyman", "confidence": "sourced"},
+   {"value": "dog", "state": "decapitated", "when": "middle", "role": "turn", "quote": "finding Anne-Marie's pet Rottweiler, Annie, decapitated", "confidence": "sourced"},
+   {"value": "mural", "when": "late", "role": "mirror", "quote": "Helen awakes to discover a mural of the Candyman and his lover", "confidence": "sourced"},
+   {"value": "pyre", "state": "burning", "when": "ending", "role": "threat", "quote": "attempts to immolate both Helen and Anthony in a pyre", "confidence": "sourced"},
+   {"value": "honeycomb", "when": "early", "role": "clue", "quote": "smeared him with honeycomb stolen from an apiary", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "name said, nothing happens", "when": "opening", "role": "trigger", "quote": "repeat Candyman's name to Helen's bathroom mirror, to no avail", "confidence": "sourced"},
+   {"order": 2, "value": "origin told by expert", "when": "early", "role": "clue", "quote": "\"Candyman\" was an African-American man born in the late 1800s as the son of a slave", "confidence": "sourced"},
+   {"order": 3, "value": "false culprit caught", "when": "middle", "quote": "charge him for the murders attributed to Candyman", "confidence": "sourced"},
+   {"order": 4, "value": "real ghost appears", "when": "middle", "role": "turn", "quote": "the real Candyman appears to Helen in a parking garage, hypnotizing her", "confidence": "sourced"},
+   {"order": 5, "value": "protagonist framed", "when": "middle", "quote": "Framed for the crime, Helen is committed to a psychiatric hospital", "confidence": "sourced"},
+   {"order": 6, "value": "child taken", "when": "late", "quote": "He vanishes with Anthony", "confidence": "sourced"},
+   {"order": 7, "value": "self-sacrifice in fire", "when": "ending", "quote": "Helen stabs Candyman with a flaming plank", "confidence": "sourced"},
+   {"order": 8, "value": "new legend born", "when": "ending", "role": "turn", "quote": "A new mural of Helen dressed in white with her hair ablaze appears in Candyman's lair", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

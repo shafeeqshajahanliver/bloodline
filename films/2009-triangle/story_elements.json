@@ -1,0 +1,63 @@
+{
+ "film": "2009-triangle",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "time loop", "quote": "the old Jess realizes the loop restarts once everyone is killed", "confidence": "sourced"},
+   {"value": "the self", "detail": "masked copies of Jess kill the group", "quote": "a third Jess shoots the new Greg and stabs the new Downey and Sally", "confidence": "sourced"},
+   {"value": "ghost ship", "detail": "the deserted liner Aeolus", "quote": "they board a derelict ocean liner, where they become convinced that someone is stalking them", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "mythic curse", "detail": "Sisyphus", "quote": "The screenplay is partly based on the story of Sisyphus, the Greek mythological figure cursed to repeatedly push a boulder up a hill", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to get home", "detail": "Jess wants to return to her son", "quote": "\"You have to kill them; it's the only way to get home\"", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "abusing a child", "quote": "her earlier self yells abusively and strikes Tommy out of frustration with his autism", "confidence": "sourced"},
+   {"value": "broken promise", "detail": "she promises the taxi driver she will return", "quote": "The driver tells her he will wait for her, and she promises him that she will return", "confidence": "observed"}
+  ],
+  "trigger": [
+   {"value": "a journey", "detail": "a boating trip", "quote": "a single mother who goes on a boating trip with several friends", "confidence": "sourced"},
+   {"value": "boarding an empty ship", "quote": "The five survivors board a passing ocean liner, the Aeolus", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "loop restarts when all die", "quote": "the old Jess realizes the loop restarts once everyone is killed", "confidence": "sourced"},
+   {"value": "cannot change the pattern", "quote": "intending to \"change the pattern\", but a third Jess shoots the new Greg", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "single mother", "relation_to_threat": "self", "detail": "Jess", "quote": "George portrays a single mother who goes on a boating trip with several friends", "confidence": "sourced"},
+   {"value": "friends", "relation_to_threat": "stranger", "quote": "Someone in a burlap mask shoots Sally and Downey", "confidence": "sourced"},
+   {"value": "child", "relation_to_threat": "family", "detail": "Tommy, her autistic son", "quote": "crashes into a truck, killing Tommy", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "endless loop", "quote": "she joins the others on Greg's boat, starting the loop again", "confidence": "sourced"},
+   {"value": "protagonist kills herself", "detail": "kills her earlier self", "quote": "She distracts her counterpart with the doorbell, then kills her", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "crabs on a beach", "state": "dreamt", "when": "opening", "role": "omen", "quote": "On the boat she has a dream about crabs on a beach", "confidence": "sourced"},
+   {"value": "storm", "state": "sudden", "when": "opening", "role": "trigger", "quote": "The sudden storm capsizes the boat", "confidence": "sourced"},
+   {"value": "keys", "state": "dropped, found", "when": "early", "role": "clue", "quote": "They find Jess's keys and fresh food in the dining room", "confidence": "sourced"},
+   {"value": "food", "state": "fresh, then rotting", "when": "early", "role": "clue", "quote": "Jess returns to the dining room, where the food is now rotting", "confidence": "sourced"},
+   {"value": "mirror", "state": "written on in blood", "when": "early", "role": "clue", "quote": "the words \"go to theater\" written in blood on a mirror", "confidence": "sourced"},
+   {"value": "burlap mask", "when": "middle", "role": "threat", "quote": "Someone in a burlap mask shoots Sally and Downey", "confidence": "sourced"},
+   {"value": "lockets", "state": "dozens of copies", "when": "middle", "role": "clue", "quote": "She finds dozens of her own lockets and notes in her own handwriting", "confidence": "sourced"},
+   {"value": "dead seagulls", "state": "piled", "when": "ending", "role": "omen", "quote": "A seagull hits their windshield and dies, but after she tosses it off the road, she sees there's a pile of many dead seagulls", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "child told it was a dream", "when": "opening", "role": "omen", "quote": "When Tommy becomes upset, she tells him that he just had a bad dream", "confidence": "sourced"},
+   {"order": 2, "value": "storm and distress call", "when": "opening", "quote": "he listens to a distress signal from a woman pleading for help", "confidence": "sourced"},
+   {"order": 3, "value": "board empty ship", "when": "early", "role": "trigger", "quote": "The five survivors board a passing ocean liner, the Aeolus", "confidence": "sourced"},
+   {"order": 4, "value": "masked killer attacks", "when": "middle", "quote": "Someone in a burlap mask shoots Sally and Downey", "confidence": "sourced"},
+   {"order": 5, "value": "copies of the group arrive", "when": "middle", "role": "turn", "quote": "sees another copy of her group on Greg's boat", "confidence": "sourced"},
+   {"order": 6, "value": "she becomes the killer", "when": "late", "role": "turn", "quote": "dresses in the shooter's outfit, and puts on a burlap mask", "confidence": "sourced"},
+   {"order": 7, "value": "kills her earlier self", "when": "ending", "quote": "She distracts her counterpart with the doorbell, then kills her", "confidence": "sourced"},
+   {"order": 8, "value": "child dies, loop restarts", "when": "ending", "quote": "she joins the others on Greg's boat, starting the loop again", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

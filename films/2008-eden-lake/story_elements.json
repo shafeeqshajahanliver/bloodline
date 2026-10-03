@@ -1,0 +1,60 @@
+{
+ "film": "2008-eden-lake",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "gang of youths", "detail": "led by Brett", "quote": "a gang of rowdy teenagers, led by their psychopathic leader, Brett", "confidence": "sourced"},
+   {"value": "hostile community", "detail": "the gang's parents", "quote": "causing Jon and two other men to attack Jenny violently", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "abusive parenting", "quote": "they witness a mother aggressively slapping her son", "confidence": "observed"},
+   {"value": "social breakdown", "quote": "deal with concerns about \"Broken Britain\" and \"hoodies\"", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "revenge", "detail": "after Brett's dog is stabbed", "quote": "Brett's dog is stabbed, sending him into a rage", "confidence": "sourced"},
+   {"value": "to cover up crimes", "quote": "Brett orders each of them to stab Steve so they will all be implicated", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "a journey", "detail": "weekend trip to a remote lake", "quote": "set off for a weekend away at Eden Lake, a remote spot in the English countryside", "confidence": "sourced"},
+   {"value": "confronting locals", "quote": "Steve threatens them, only for the gang to start pulling out knives", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "group bound by shared guilt", "quote": "Brett orders each of them to stab Steve so they will all be implicated", "confidence": "sourced"},
+   {"value": "no help from locals", "quote": "a waitress, who defensively insists her children would never harass anyone", "confidence": "observed"}
+  ],
+  "who_suffers": [
+   {"value": "couple", "relation_to_threat": "stranger", "detail": "Jenny and Steve", "quote": "a young couple spending a day at a remote lake, only to be confronted and hunted by a group of hostile youths", "confidence": "sourced"},
+   {"value": "gang members", "relation_to_threat": "community", "quote": "Brett furiously beats another gang member to death", "confidence": "sourced"},
+   {"value": "young boy", "relation_to_threat": "community", "detail": "Adam", "quote": "Brett, who necklaces Adam in retaliation", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "everyone dies", "detail": "Jenny attacked by the parents", "quote": "Brett deletes the videos of his gang's crimes from Paige's phone and stares blankly into a mirror while wearing Steve's sunglasses", "confidence": "observed"},
+   {"value": "threat survives", "quote": "Brett lies that she and Steve murdered his friends and his dog", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "insects", "state": "infesting food", "when": "early", "role": "omen", "quote": "the couple discovers their food supplies have been infested with insects", "confidence": "sourced"},
+   {"value": "dog", "state": "stabbed", "when": "middle", "role": "trigger", "quote": "Brett's dog is stabbed, sending him into a rage", "confidence": "sourced"},
+   {"value": "knives", "when": "middle", "role": "weapon", "quote": "the gang to start pulling out knives", "confidence": "sourced"},
+   {"value": "barbed wire", "state": "binding to a rock", "when": "middle", "role": "weapon", "quote": "Steve being tied to a rock with barbed wire by the gang", "confidence": "sourced"},
+   {"value": "phone camera", "state": "recording", "when": "middle", "role": "symbol", "quote": "Paige, the only female gang member, records Steve's torture on her phone", "confidence": "sourced"},
+   {"value": "pile of wood", "state": "pyre", "when": "late", "role": "threat", "quote": "They capture and tie Jenny, along with Steve's dead body, to a pile of wood", "confidence": "sourced"},
+   {"value": "mirror", "when": "ending", "role": "mirror", "quote": "stares blankly into a mirror while wearing Steve's sunglasses", "confidence": "sourced"},
+   {"value": "sunglasses", "state": "taken from victim", "when": "ending", "role": "symbol", "quote": "while wearing Steve's sunglasses", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "trip to remote place", "when": "opening", "role": "trigger", "quote": "set off for a weekend away at Eden Lake", "confidence": "sourced"},
+   {"order": 2, "value": "omen of violent parenting", "when": "opening", "role": "omen", "quote": "they witness a mother aggressively slapping her son", "confidence": "sourced"},
+   {"order": 3, "value": "harassment escalates", "when": "early", "quote": "the couple discovers their Jeep and belongings are missing at the lake", "confidence": "sourced"},
+   {"order": 4, "value": "confrontation turns violent", "when": "middle", "role": "turn", "quote": "in the scuffle, Brett's dog is stabbed, sending him into a rage", "confidence": "sourced"},
+   {"order": 5, "value": "torture of partner", "when": "middle", "quote": "Brett orders each of them to stab Steve so they will all be implicated", "confidence": "sourced"},
+   {"order": 6, "value": "child betrays victim", "when": "late", "quote": "Adam, a young boy she and Steve previously met, who informs the gang of her location", "confidence": "sourced"},
+   {"order": 7, "value": "escape to town", "when": "late", "quote": "Returning to town, Jenny crashes into a backyard party", "confidence": "sourced"},
+   {"order": 8, "value": "victim in the killer's home", "when": "ending", "role": "turn", "quote": "making Jenny realise that she is in Brett's home", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

@@ -1,0 +1,62 @@
+{
+ "film": "2001-the-devil-s-backbone",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "child ghost", "detail": "Santi", "quote": "haunted by the ghost of a recently deceased boy", "confidence": "sourced"},
+   {"value": "human killer", "detail": "Jacinto, the groundskeeper", "quote": "Jacinto shoved Santi against a stone wall, giving him a severe head injury", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "person who died wronged", "detail": "Santi, murdered and sunk in the cistern", "quote": "A panicked Jacinto then tied stones to Santi before sinking his body in the cistern", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "revenge", "quote": "The ghost quietly demands that Carlos bring Jacinto to him", "confidence": "sourced"},
+   {"value": "gold", "detail": "Jacinto's motive", "quote": "Jacinto and two associates driving back to the orphanage to claim the gold", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "murder of a child", "quote": "Jacinto cornered Santi and attempted to threaten him into keeping silent", "confidence": "sourced"},
+   {"value": "greed", "quote": "uses his affair with Carmen as an opportunity to take her keys and search for the treasure", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "arriving at an orphanage", "quote": "an orphan named Carlos (unaware his father has been killed) arrives with Ayala and Domínguez", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "warns of coming deaths", "quote": "Carlos hears a whisper telling him that \"many of you will die.\"", "confidence": "sourced"},
+   {"value": "fear fades with understanding", "quote": "who he is no longer afraid of after hearing the circumstances of his death", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "orphans", "relation_to_threat": "community", "quote": "Alma is killed by the blast along with several of the children", "confidence": "sourced"},
+   {"value": "newcomer child", "relation_to_threat": "stranger", "detail": "Carlos", "quote": "Carlos soon begins having visions of a mysterious entity", "confidence": "sourced"},
+   {"value": "caretakers", "relation_to_threat": "community", "detail": "Carmen, Casares, Conchita", "quote": "Casares finds a mortally wounded Carmen inside the building and tearfully stays with her as she dies", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "killer dragged down by ghost", "quote": "Santi's ghost appears and drags him to his death", "confidence": "sourced"},
+   {"value": "survivors leave, new ghost remains", "quote": "the remaining children leave the orphanage and head to town. Casares' ghost watches them from the doorway", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "unexploded bomb", "state": "inert", "when": "opening", "role": "symbol", "quote": "an inert bomb sits in the courtyard", "confidence": "sourced"},
+   {"value": "cistern", "state": "holds the body", "when": "early", "role": "setting", "quote": "Carlos saving Jaime from falling in a cistern", "confidence": "sourced"},
+   {"value": "pale boy with head wound", "when": "middle", "role": "threat", "quote": "the pale figure of a young boy with a bleeding wound on his head", "confidence": "sourced"},
+   {"value": "drawing of ghost", "when": "middle", "role": "clue", "quote": "Carlos finds a drawing of a ghostly figure labeled \"Santi\"", "confidence": "sourced"},
+   {"value": "gold", "when": "opening", "role": "trigger", "quote": "hiding a large cache of gold being used to back the Republican treasury", "confidence": "sourced"},
+   {"value": "fire", "when": "late", "role": "weapon", "quote": "Conchita discovers Jacinto pouring gasoline around the kitchen", "confidence": "sourced"},
+   {"value": "sharpened sticks", "when": "ending", "role": "weapon", "quote": "They fashion weapons from sharpened sticks and broken glass", "confidence": "sourced"},
+   {"value": "slugs", "when": "late", "role": "clue", "quote": "Jaime and Santi had been collecting slugs at the cistern", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "boy left at orphanage", "when": "opening", "role": "trigger", "quote": "an orphan named Carlos (unaware his father has been killed) arrives", "confidence": "sourced"},
+   {"order": 2, "value": "ghostly warning", "when": "early", "role": "omen", "quote": "Carlos hears a whisper telling him that \"many of you will die.\"", "confidence": "sourced"},
+   {"order": 3, "value": "ghost seen", "when": "middle", "quote": "encounters the pale figure of a young boy with a bleeding wound on his head", "confidence": "sourced"},
+   {"order": 4, "value": "fire and explosion", "when": "middle", "role": "turn", "quote": "Alma is killed by the blast along with several of the children", "confidence": "sourced"},
+   {"order": 5, "value": "murder revealed", "when": "late", "role": "clue", "quote": "Jaime reveals to Carlos the details of Santi's disappearance", "confidence": "sourced"},
+   {"order": 6, "value": "children fight back", "when": "late", "quote": "Jaime reveals Santi was murdered by Jacinto, encouraging the children to fight back", "confidence": "sourced"},
+   {"order": 7, "value": "ghost takes revenge", "when": "ending", "quote": "Santi's ghost appears and drags him to his death", "confidence": "sourced"},
+   {"order": 8, "value": "survivors depart", "when": "ending", "quote": "Casares' ghost watches them from the doorway", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

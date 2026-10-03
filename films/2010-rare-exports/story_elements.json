@@ -1,0 +1,63 @@
+{
+ "film": "2010-rare-exports",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "monstrous santa claus", "detail": "a horned being frozen in ice", "quote": "they find a horned being - Santa - in an enormous block of ice", "confidence": "sourced"},
+   {"value": "elves", "detail": "skinny, naked old men", "quote": "the caged man is not Santa but one of his elves", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "buried in ancient mound", "quote": "Team leader Riley believes that the fell is an ancient burial mound built by the Sámi and plans to plunder it", "confidence": "sourced"},
+   {"value": "folk legend", "quote": "Pietari tells Juuso that Santa Claus is real, tortures bad children, and is watching them", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "children", "detail": "takes bad children", "quote": "he fears that sneaking up to the Fell makes him a bad boy and he will be taken by Santa", "confidence": "sourced"},
+   {"value": "to be freed", "quote": "in an enormous block of ice being melted by the missing heaters", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "plundering a grave", "quote": "plans to plunder it", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "digging up the past", "quote": "the team begins to excavate the fell using explosives", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "punishes bad children", "quote": "Santa Claus is real, tortures bad children, and is watching them", "confidence": "sourced"},
+   {"value": "be quiet and smile", "quote": "they must be quiet and smile", "confidence": "sourced"},
+   {"value": "elves stop when master dies", "quote": "killing Santa and causing the elves to stop in the reindeer pen", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "children", "relation_to_threat": "community", "quote": "sacks containing the stolen crying children, including Juuso", "confidence": "sourced"},
+   {"value": "boy", "relation_to_threat": "community", "detail": "Pietari", "quote": "Two local boys, Juuso and Pietari, spy on the team at work", "confidence": "sourced"},
+   {"value": "reindeer herders", "relation_to_threat": "community", "quote": "Local reindeer hunters find hundreds of reindeer carcasses", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat destroyed", "quote": "Rauno and Aimo detonate the explosives, killing Santa", "confidence": "sourced"},
+   {"value": "threat tamed and sold", "quote": "train the 198 captured elves to become mall Santas and export them to cities around the world", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "reindeer carcasses", "state": "dead, hundreds", "when": "early", "role": "omen", "quote": "find hundreds of reindeer carcasses that they believe were killed by wolves", "confidence": "sourced"},
+   {"value": "deep pit", "when": "early", "role": "clue", "quote": "they find a deep pit and no trace of the Subzero personnel", "confidence": "sourced"},
+   {"value": "wolf trap", "state": "caught an old man", "when": "middle", "role": "trigger", "quote": "a wolf trap built by Pietari's father, Rauno, has killed a skinny, naked old man", "confidence": "sourced"},
+   {"value": "straw effigy", "state": "in an empty bed", "when": "middle", "role": "omen", "quote": "Pietari finds a straw effigy in Juuso's bed and no sign of Juuso", "confidence": "sourced"},
+   {"value": "block of ice", "state": "melting", "when": "late", "role": "threat", "quote": "in an enormous block of ice being melted by the missing heaters", "confidence": "sourced"},
+   {"value": "sacks", "state": "holding children", "when": "late", "role": "clue", "quote": "Next to the ice are sacks containing the stolen crying children", "confidence": "sourced"},
+   {"value": "horns", "state": "cut off", "when": "ending", "role": "symbol", "quote": "cut off his horns before leaving", "confidence": "sourced"},
+   {"value": "gingerbread", "when": "ending", "role": "weapon", "quote": "distracts the elves by throwing gingerbread at them", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "excavation of sacred mound", "when": "opening", "role": "trigger", "quote": "as the team begins to excavate the fell using explosives", "confidence": "sourced"},
+   {"order": 2, "value": "animals found dead", "when": "early", "role": "omen", "quote": "Local reindeer hunters find hundreds of reindeer carcasses", "confidence": "sourced"},
+   {"order": 3, "value": "children vanish", "when": "middle", "quote": "Pietari calls around and finds that all his friends have gone missing", "confidence": "sourced"},
+   {"order": 4, "value": "strange captive", "when": "middle", "quote": "discover the skinny old man is still alive", "confidence": "sourced"},
+   {"order": 5, "value": "true nature revealed", "when": "late", "role": "turn", "quote": "Riley warns that the caged man is not Santa but one of his elves", "confidence": "sourced"},
+   {"order": 6, "value": "lair with stolen children", "when": "late", "quote": "Next to the ice are sacks containing the stolen crying children, including Juuso", "confidence": "sourced"},
+   {"order": 7, "value": "child's plan destroys monster", "when": "ending", "quote": "Pietari takes control and hatches a plan", "confidence": "sourced"},
+   {"order": 8, "value": "monsters exported", "when": "ending", "role": "turn", "quote": "export them to cities around the world", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

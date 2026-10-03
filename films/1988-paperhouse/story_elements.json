@@ -1,0 +1,56 @@
+{
+ "film": "1988-paperhouse",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "nightmare father figure", "detail": "the dream version of Anna's father", "quote": "the father appears in the dream as a furious, blinded figure with scratch marks over his eyes", "confidence": "sourced"},
+   {"value": "illness", "quote": "Anna wakes up in the hospital, her health having taken a serious turn in her sleep", "confidence": "observed"}
+  ],
+  "origin": [
+   {"value": "made by the dreamer", "detail": "Anna draws her father with an angry expression", "quote": "inadvertently gives him an angry expression which she then crosses out", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "absent alcoholic parent", "quote": "the lingering pain she feels from her father's long absences for work and his alcoholism", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "drawing a picture", "quote": "While suffering from glandular fever, 11-year-old Anna Madden draws a house", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "drawings become dream reality", "quote": "each time adding new things to her drawing which also appear in her dream", "confidence": "sourced"},
+   {"value": "dream mirrors the body", "quote": "her dream father's attack was mimicking the actions of the ambulance staff administering a heart massage", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "sick child", "relation_to_threat": "family", "detail": "Anna", "quote": "her father breaks into the closet and carries Anna away before beating her in the chest repeatedly", "confidence": "sourced"},
+   {"value": "dying boy", "relation_to_threat": "stranger", "detail": "Marc, with muscular dystrophy", "quote": "Marc, a boy who suffers with muscular dystrophy, living in the house", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "acceptance of death", "quote": "Anna reconciles her relationship with her parents, having come to terms with Marc's death", "confidence": "sourced"},
+   {"value": "pulled back from the brink", "quote": "Anna's mother grabs before she can fall off the cliff", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "drawing of a house", "when": "opening", "role": "trigger", "quote": "11-year-old Anna Madden draws a house", "confidence": "sourced"},
+   {"value": "face at the window", "when": "opening", "role": "omen", "quote": "After she draws a face at the window", "confidence": "sourced"},
+   {"value": "scratched-out eyes", "when": "middle", "role": "threat", "quote": "a furious, blinded figure with scratch marks over his eyes", "confidence": "sourced"},
+   {"value": "closet", "state": "hiding place", "when": "middle", "role": "setting", "quote": "After hiding in a closet with Marc", "confidence": "sourced"},
+   {"value": "hammer", "when": "middle", "role": "weapon", "quote": "Marc musters the strength to attack Anna's father with a hammer, destroying him", "confidence": "sourced"},
+   {"value": "lighthouse", "when": "late", "role": "symbol", "quote": "Anna finds Marc at the lighthouse, seemingly cured of his paralysis", "confidence": "sourced"},
+   {"value": "helicopter", "state": "dropping a ladder", "when": "ending", "role": "symbol", "quote": "A helicopter arrives, dropping a ladder", "confidence": "sourced"},
+   {"value": "cliff", "when": "ending", "role": "setting", "quote": "Anna runs to the nearby cliff and calls to Marc", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "sick child draws a house", "when": "opening", "role": "trigger", "quote": "While suffering from glandular fever, 11-year-old Anna Madden draws a house", "confidence": "sourced"},
+   {"order": 2, "value": "dream companion is real", "when": "early", "role": "turn", "quote": "Anna learns from her doctor that Marc is a real person", "confidence": "sourced"},
+   {"order": 3, "value": "parent drawn as monster", "when": "middle", "quote": "the father appears in the dream as a furious, blinded figure", "confidence": "sourced"},
+   {"order": 4, "value": "dream attack, real collapse", "when": "middle", "role": "turn", "quote": "Anna wakes up in the hospital, her health having taken a serious turn in her sleep", "confidence": "sourced"},
+   {"order": 5, "value": "companion goes on alone", "when": "late", "quote": "Marc enters the lighthouse as Anna tells him \"Don't go without me.\"", "confidence": "sourced"},
+   {"order": 6, "value": "death announced", "when": "late", "quote": "Her father tells her that Anna's doctor said that Marc has passed away", "confidence": "sourced"},
+   {"order": 7, "value": "dream place found in reality", "when": "ending", "role": "turn", "quote": "Anna sees the lighthouse from her dream on a nearby cliff", "confidence": "sourced"},
+   {"order": 8, "value": "saved at the cliff edge", "when": "ending", "quote": "until the helicopter flies away and Anna's mother grabs before she can fall off the cliff", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wants"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

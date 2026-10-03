@@ -1,0 +1,65 @@
+{
+ "film": "1989-pet-sematary",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "revenant", "detail": "the dead brought back evil: Church, Gage, Rachel", "quote": "an ancient burial ground that brings it back to life evil", "confidence": "sourced"},
+   {"value": "cursed place", "detail": "the burial ground beyond the pet cemetery", "quote": "Jud insists that the burial ground is evil and Louis must not bury Gage there", "confidence": "sourced"},
+   {"value": "killer child", "detail": "reanimated Gage", "quote": "the reanimated Gage returns home and steals a scalpel from Louis' bag. He taunts Jud before murdering him.", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "sacred burial ground", "quote": "Jud takes Louis beyond the pet cemetery and deep into the woods, to an ancient", "confidence": "sourced"},
+   {"value": "malevolent forces aroused", "quote": "introducing Louis to the ritual ground aroused the malevolent forces present there, which caused Gage's death", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to kill", "quote": "Receiving a phone call from Gage that he has \"played\" with Jud and Rachel", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "refusing to accept death", "quote": "Jud insists that the burial ground is evil and Louis must not bury Gage there, adding that \"sometimes, dead is better\"", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "moving into a new home", "quote": "move from Chicago to rural Ludlow, Maine, after Louis accepts a job as a local physician", "confidence": "sourced"},
+   {"value": "death of a pet", "quote": "During Thanksgiving, while the family is gone, Church is hit by a truck and killed.", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "the dead return wrong", "quote": "He now stinks, moves sluggishly, his eyes glow gold and he is vicious toward Louis.", "confidence": "sourced"},
+   {"value": "must not cross the barrier", "quote": "Pascow's ghost leads Louis to the cemetery and warns him not to cross the barrier", "confidence": "sourced"},
+   {"value": "must not tell", "quote": "warns him not to tell anyone about what they have done", "confidence": "sourced"},
+   {"value": "warnings ignored", "quote": "Despite Pascow and Jud's warnings, Louis exhumes Gage's body and buries him at the ritual site.", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "family", "relation_to_threat": "family", "detail": "the Creeds: Louis, Rachel, Ellie and Gage", "quote": "The Creed family—Louis, Rachel, their children Ellie and Gage and their pet cat Church", "confidence": "sourced"},
+   {"value": "neighbour", "relation_to_threat": "community", "detail": "Jud Crandall", "quote": "He taunts Jud before murdering him.", "confidence": "sourced"},
+   {"value": "mother", "relation_to_threat": "family", "quote": "Rachel reaches down to hug Gage and he kills her", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "cycle repeats", "detail": "Louis buries Rachel too", "quote": "burying Rachel \"will work this time\"", "confidence": "sourced"},
+   {"value": "victim becomes threat", "quote": "Rachel takes a large knife from the counter, and the screen cuts to black before Louis screams.", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "cat", "state": "dead, then returned", "when": "early", "role": "omen", "quote": "a reanimated Church returns to the house", "confidence": "sourced"},
+   {"value": "truck", "state": "speeding on highway", "when": "early", "role": "threat", "quote": "Gage is killed by a truck along the same highway", "confidence": "sourced"},
+   {"value": "pet cemetery", "when": "opening", "role": "setting", "quote": "an isolated pet cemetery (misspelled \"sematary\") in the forest behind the Creeds' home", "confidence": "sourced"},
+   {"value": "dirty feet", "when": "early", "role": "omen", "quote": "Louis awakens from the supposed dream to find his feet covered in dirt", "confidence": "sourced"},
+   {"value": "scalpel", "when": "late", "role": "weapon", "quote": "steals a scalpel from Louis' bag", "confidence": "sourced"},
+   {"value": "muddy footprints", "when": "late", "role": "clue", "quote": "Louis notices Gage's muddy footprints in the house", "confidence": "sourced"},
+   {"value": "dog", "state": "revived", "when": "early", "role": "clue", "quote": "Jud explains that as a boy he revived his pet dog", "confidence": "sourced"},
+   {"value": "syringes", "state": "filled with morphine", "when": "late", "role": "weapon", "quote": "he fills three syringes with morphine and heads to Jud's house", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "family moves in", "when": "opening", "quote": "move from Chicago to rural Ludlow, Maine, after Louis accepts a job as a local physician", "confidence": "sourced"},
+   {"order": 2, "value": "dying man's warning", "when": "early", "role": "omen", "quote": "He warns Louis about the pet cemetery before dying, calling Louis by name though they have never met.", "confidence": "sourced"},
+   {"order": 3, "value": "pet buried and returns", "when": "early", "role": "trigger", "quote": "The next day, a reanimated Church returns to the house.", "confidence": "sourced"},
+   {"order": 4, "value": "child killed", "when": "middle", "role": "turn", "quote": "Sometime later, Gage is killed by a truck along the same highway.", "confidence": "sourced"},
+   {"order": 5, "value": "cautionary tale told", "when": "middle", "role": "clue", "quote": "Timmy returned as a malevolent entity, terrifying the townsfolk.", "confidence": "sourced"},
+   {"order": 6, "value": "child buried in cursed ground", "when": "middle", "quote": "Louis exhumes Gage's body and buries him at the ritual site", "confidence": "sourced"},
+   {"order": 7, "value": "dead child kills", "when": "late", "quote": "In shock and disbelief, Rachel reaches down to hug Gage and he kills her.", "confidence": "sourced"},
+   {"order": 8, "value": "wife buried, returns", "when": "ending", "role": "turn", "quote": "That night, Rachel returns to Louis and they embrace.", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

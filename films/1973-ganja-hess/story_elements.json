@@ -1,0 +1,56 @@
+{
+ "film": "1973-ganja-hess",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "vampire", "detail": "Dr. Hess Green, and later Ganja", "quote": "he has become a vampire endowed with immortality and a need for fresh blood", "confidence": "sourced"},
+   {"value": "cursed object", "detail": "an ancient Myrthian dagger", "quote": "stabs him with an ancient cursed dagger", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "cursed object", "quote": "who becomes a vampire after his intelligent but unstable assistant (Gunn) stabs him with an ancient cursed dagger", "confidence": "sourced"},
+   {"value": "ancient culture", "detail": "the Myrthians, an African nation of blood drinkers", "quote": "the Myrthians, an ancient African nation of blood drinkers", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "blood", "quote": "He steals several bags of blood from a doctor's office, but finds that he needs fresh victims", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "stabbed by an assistant", "quote": "Meda attacks and stabs Green with a Myrthian ceremonial dagger, and then kills himself", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "immortality", "quote": "a vampire endowed with immortality and a need for fresh blood", "confidence": "sourced"},
+   {"value": "released by the cross", "quote": "he kills himself by standing in front of a cross", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "the vampire himself", "relation_to_threat": "self", "detail": "Hess, who becomes disillusioned", "quote": "Eventually, Green becomes disillusioned with this life", "confidence": "sourced"},
+   {"value": "lover", "relation_to_threat": "lover", "detail": "Ganja, turned after marriage", "quote": "agrees to marry her host, who turns her into a vampire as well", "confidence": "sourced"},
+   {"value": "lured victim", "relation_to_threat": "stranger", "quote": "he brings home a young man whom Ganja seduces and then kills", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "redemption through faith", "detail": "Hess returns to the church and dies", "quote": "resolves to return to the Christian church headed by his chauffeur", "confidence": "sourced"},
+   {"value": "threat survives", "detail": "Ganja lives on", "quote": "Ganja, though saddened by his death, lives on, presumably continuing her vampiric lifestyle", "confidence": "sourced"},
+   {"value": "victim rises", "quote": "the young man Ganja had earlier killed rising out of the water, naked but alive", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "dagger", "state": "ceremonial, cursed", "when": "opening", "role": "trigger", "quote": "stabs Green with a Myrthian ceremonial dagger", "confidence": "sourced"},
+   {"value": "african art", "state": "decorating a mansion", "when": "opening", "role": "setting", "quote": "Green's lavish mansion, richly decorated with African art", "confidence": "sourced"},
+   {"value": "blood bags", "state": "stolen", "when": "early", "role": "symbol", "quote": "He steals several bags of blood from a doctor's office", "confidence": "sourced"},
+   {"value": "frozen corpse", "state": "hidden in a cellar", "when": "middle", "role": "clue", "quote": "she unwittingly discovers her husband's corpse frozen in Green's wine cellar", "confidence": "sourced"},
+   {"value": "cross", "state": "fatal", "when": "ending", "role": "weapon", "quote": "he kills himself by standing in front of a cross", "confidence": "sourced"},
+   {"value": "water", "state": "a body rising out of it", "when": "ending", "role": "turn", "quote": "rising out of the water, naked but alive, and running toward her", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "scholar of an ancient cult", "when": "opening", "quote": "doing research on the Myrthians, an ancient African nation of blood drinkers", "confidence": "sourced"},
+   {"order": 2, "value": "attack and suicide", "when": "opening", "role": "trigger", "quote": "Meda attacks and stabs Green with a Myrthian ceremonial dagger, and then kills himself", "confidence": "sourced"},
+   {"order": 3, "value": "first drink of blood", "when": "early", "role": "turn", "quote": "Green survives, but on discovering the body, drinks Meda's blood", "confidence": "sourced"},
+   {"order": 4, "value": "victim's widow becomes lover", "when": "middle", "quote": "Green and Meda quickly become lovers, and she moves into Green's mansion", "confidence": "sourced"},
+   {"order": 5, "value": "lover turned", "when": "middle", "quote": "agrees to marry her host, who turns her into a vampire as well", "confidence": "sourced"},
+   {"order": 6, "value": "monster seeks redemption and dies", "when": "late", "role": "turn", "quote": "Returning home, he kills himself by standing in front of a cross", "confidence": "sourced"},
+   {"order": 7, "value": "dead victim returns", "when": "ending", "quote": "the young man Ganja had earlier killed rising out of the water, naked but alive", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

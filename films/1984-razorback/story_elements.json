@@ -1,0 +1,61 @@
+{
+ "film": "1984-razorback",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "giant animal", "detail": "a gigantic wild boar", "quote": "a gigantic wild boar terrorizes the Australian outback, killing and devouring people", "confidence": "sourced"},
+   {"value": "local criminals", "detail": "the brothers Benny and Dicko", "quote": "Realising that the brothers were responsible for both Beth and Jake's deaths", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "from nature", "detail": "stressed wild pig population", "quote": "something has been causing the wild pigs excess stress leading them to unusual behaviour such as increased aggression", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "hunger", "quote": "the boar rips off the door, drags her out and eats her", "confidence": "sourced"},
+   {"value": "revenge", "detail": "what drives the grandfather hunting the boar", "quote": "The event destroys his life, and he vows revenge on the boar.", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "slaughter of wildlife", "quote": "documenting the hunting of Australian wildlife that is then processed into pet food at a run-down factory", "confidence": "observed"},
+   {"value": "wrongful accusation", "quote": "Jake is accused of murdering the child. Although people do not believe his story", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "journey to remote place", "detail": "a husband comes to look for his missing wife", "quote": "Beth's husband Carl travels to Australia in search of her", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "pigs fear water", "quote": "Carl is saved by landing in a pond, which the pigs fear entering", "confidence": "sourced"},
+   {"value": "nobody believes it", "quote": "the only person who believes his story of the giant razorback", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "grandfather and grandson", "relation_to_threat": "stranger", "quote": "a massive razorback boar smashes through his house and carries off his grandson to devour", "confidence": "sourced"},
+   {"value": "reporter", "relation_to_threat": "stranger", "detail": "Beth Winters, American wildlife reporter", "quote": "American wildlife reporter Beth Winters is in the outback documenting the hunting of Australian wildlife", "confidence": "sourced"},
+   {"value": "outsider", "relation_to_threat": "stranger", "detail": "Carl, Beth's husband", "quote": "Carl is then attacked by a herd of wild pigs, spurred on by the giant boar", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat destroyed", "quote": "Carl lures the boar onto a conveyor belt that throws it into a giant meat grinder.", "confidence": "sourced"},
+   {"value": "couple survives", "quote": "Carl finds and rescues Sarah, who had merely been knocked unconscious, and the two embrace", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "boar", "state": "giant, smashing through house", "when": "opening", "role": "threat", "quote": "a massive razorback boar smashes through his house and carries off his grandson", "confidence": "sourced"},
+   {"value": "mine shaft", "when": "early", "role": "setting", "quote": "people assume she fell down an abandoned mine shaft after wrecking her car", "confidence": "sourced"},
+   {"value": "windmill", "state": "knocked over", "when": "middle", "role": "setting", "quote": "force him to take shelter atop a windmill. The next morning, the pigs knock over the windmill", "confidence": "sourced"},
+   {"value": "wedding ring", "state": "found in faeces", "when": "middle", "role": "clue", "quote": "He also finds Beth's wedding ring in the boar's faeces", "confidence": "sourced"},
+   {"value": "bolt-cutters", "when": "late", "role": "weapon", "quote": "breaking his legs with bolt-cutters and leaving him to be killed by the razorback", "confidence": "sourced"},
+   {"value": "meat grinder", "when": "ending", "role": "weapon", "quote": "Carl lures the boar onto a conveyor belt that throws it into a giant meat grinder.", "confidence": "sourced"},
+   {"value": "pet food factory", "when": "early", "role": "setting", "quote": "processed into pet food at a run-down factory", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "child taken by beast", "when": "opening", "quote": "a massive razorback boar smashes through his house and carries off his grandson to devour", "confidence": "sourced"},
+   {"order": 2, "value": "survivor blamed", "when": "opening", "quote": "Jake is accused of murdering the child.", "confidence": "sourced"},
+   {"order": 3, "value": "reporter killed", "when": "early", "quote": "the boar rips off the door, drags her out and eats her", "confidence": "sourced"},
+   {"order": 4, "value": "husband arrives to search", "when": "early", "role": "trigger", "quote": "Beth's husband Carl travels to Australia in search of her and encounters Jake", "confidence": "sourced"},
+   {"order": 5, "value": "night siege by pigs", "when": "middle", "quote": "which chase him through the night and force him to take shelter atop a windmill", "confidence": "sourced"},
+   {"order": 6, "value": "proof of death found", "when": "middle", "role": "clue", "quote": "He also finds Beth's wedding ring in the boar's faeces, which he returns to a grieving Carl.", "confidence": "sourced"},
+   {"order": 7, "value": "ally killed", "when": "late", "quote": "breaking his legs with bolt-cutters and leaving him to be killed by the razorback", "confidence": "sourced"},
+   {"order": 8, "value": "beast destroyed by machine", "when": "ending", "quote": "Carl lures the boar onto a conveyor belt that throws it into a giant meat grinder.", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

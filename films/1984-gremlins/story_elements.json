@@ -1,0 +1,60 @@
+{
+ "film": "1984-gremlins",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "multiplying creatures", "detail": "gremlins led by Stripe", "quote": "emerging as destructive and reptilian imp-like monsters called \"gremlins\"", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "bought as a pet", "detail": "a mogwai from a Chinatown antique store", "quote": "Struggling inventor Randall Peltzer visits a Chinatown antique store to find a Christmas present for his son", "confidence": "sourced"},
+   {"value": "from folklore", "quote": "It draws on legends of folkloric mischievous creatures that cause malfunctions", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "mischief and destruction", "quote": "spawning an army of gremlins that wreak havoc on Kingston Falls", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "carelessness with nature", "quote": "scolds the family for their negligence and criticizes Western society for its carelessness with nature", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "taking an object", "detail": "buying the mogwai against the owner's wishes", "quote": "The owner, Sam Wing, refuses to sell it to him, but his grandson secretly does", "confidence": "sourced"},
+   {"value": "breaking a rule", "quote": "accidentally spills water on him, five more mogwai spawn from him", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "killed by sunlight", "quote": "keep the mogwai away from light, especially sunlight, which will kill it", "confidence": "sourced"},
+   {"value": "multiplies with water", "quote": "do not let it come in contact with water", "confidence": "sourced"},
+   {"value": "must not eat after midnight", "quote": "and above all, never let it eat after midnight", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "family", "relation_to_threat": "family", "detail": "the Peltzers, the pet's owners", "quote": "those at the Peltzer house torture Gizmo and assault Billy's mother, Lynn", "confidence": "sourced"},
+   {"value": "townspeople", "relation_to_threat": "community", "quote": "Many locals are injured or killed during their rampage, including Deagle", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat destroyed", "quote": "Gizmo then opens a nearby skylight, exposing Stripe to sunlight and killing him", "confidence": "sourced"},
+   {"value": "creature returned to owner", "quote": "Wing arrives at the Peltzer house to reclaim Gizmo", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "antique store", "when": "opening", "role": "setting", "quote": "visits a Chinatown antique store to find a Christmas present", "confidence": "sourced"},
+   {"value": "water", "state": "spilled", "when": "early", "role": "trigger", "quote": "accidentally spills water on him, five more mogwai spawn from him", "confidence": "sourced"},
+   {"value": "clock", "state": "sabotaged", "when": "early", "role": "trigger", "quote": "trick Billy into feeding them after midnight by sabotaging his bedside clock", "confidence": "sourced"},
+   {"value": "cocoons", "when": "early", "role": "turn", "quote": "They form cocoons, as does Hanson's mogwai, which soon hatch", "confidence": "sourced"},
+   {"value": "swimming pool", "when": "middle", "role": "turn", "quote": "escapes to the local YMCA where he jumps into its swimming pool", "confidence": "sourced"},
+   {"value": "chimney", "state": "father found dead in it", "when": "middle", "role": "symbol", "quote": "was then found dead in their house's chimney several days later", "confidence": "sourced"},
+   {"value": "skylight", "state": "opened to sunlight", "when": "ending", "role": "weapon", "quote": "Gizmo then opens a nearby skylight, exposing Stripe to sunlight", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "creature bought with warnings", "when": "opening", "role": "trigger", "quote": "warning Randall to remember three important rules concerning its care", "confidence": "sourced"},
+   {"order": 2, "value": "first rule broken", "when": "early", "quote": "accidentally spills water on him, five more mogwai spawn from him", "confidence": "sourced"},
+   {"order": 3, "value": "tricked into breaking a rule", "when": "early", "quote": "trick Billy into feeding them after midnight by sabotaging his bedside clock", "confidence": "sourced"},
+   {"order": 4, "value": "transformation", "when": "early", "role": "turn", "quote": "They form cocoons, as does Hanson's mogwai, which soon hatch", "confidence": "sourced"},
+   {"order": 5, "value": "home invaded", "when": "middle", "quote": "those at the Peltzer house torture Gizmo and assault Billy's mother, Lynn", "confidence": "sourced"},
+   {"order": 6, "value": "town overrun", "when": "middle", "quote": "spawning an army of gremlins that wreak havoc on Kingston Falls", "confidence": "sourced"},
+   {"order": 7, "value": "mass destruction by explosion", "when": "late", "quote": "set off a natural gas explosion, killing them all except for Stripe", "confidence": "sourced"},
+   {"order": 8, "value": "leader killed by sunlight", "when": "ending", "quote": "exposing Stripe to sunlight and killing him", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

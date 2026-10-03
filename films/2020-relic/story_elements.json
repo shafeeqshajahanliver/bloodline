@@ -1,0 +1,59 @@
+{
+ "film": "2020-relic",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "rot", "detail": "black mould spreading through house and body", "quote": "a strange black mould-like substance on an upstairs wall", "confidence": "sourced"},
+   {"value": "aging parent", "detail": "Edna, transformed by dementia", "quote": "Edna, an elderly widow who is suffering from dementia", "confidence": "sourced"},
+   {"value": "the house", "detail": "looping hidden corridors", "quote": "the mould covered corridors begin to loop in on themselves", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "inherited", "detail": "the bruise passes down the family", "quote": "Sam notices a small black bruise obscured by her collar", "confidence": "observed"},
+   {"value": "illness", "detail": "dementia", "quote": "an elderly widow who is suffering from dementia", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "nothing stated", "quote": "Edna is convinced there is something hiding in the room", "confidence": "observed"}
+  ],
+  "trigger": [
+   {"value": "a disappearance", "quote": "goes missing, her daughter Kay and granddaughter Sam travel to their remote family home", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "marked by a bruise", "quote": "a large black bruise on her chest (resembling the mould)", "confidence": "sourced"},
+   {"value": "must care, not flee", "quote": "Kay realises she cannot leave her mum and returns to Edna", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "mother", "relation_to_threat": "family", "detail": "Edna", "quote": "picking at her rotting face with a knife", "confidence": "sourced"},
+   {"value": "daughter and granddaughter", "relation_to_threat": "family", "detail": "Kay and Sam", "quote": "her daughter Kay and granddaughter Sam", "confidence": "sourced"},
+   {"value": "neighbour's child", "relation_to_threat": "stranger", "detail": "Jamie", "quote": "Edna locked Jamie in his hiding space and left him there for hours", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "acceptance", "detail": "Kay cares for the transformed Edna", "quote": "Kay and Sam then lie on the bed with Edna until she peacefully falls asleep", "confidence": "sourced"},
+   {"value": "cycle passes on", "quote": "Sam notices a small black bruise obscured by her collar", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "black mould", "state": "spreading", "when": "opening", "role": "threat", "quote": "a strange black mould-like substance on an upstairs wall", "confidence": "sourced"},
+   {"value": "post-it notes", "when": "opening", "role": "symbol", "quote": "adorned with reminders for Edna written on post-it notes", "confidence": "sourced"},
+   {"value": "corpse", "state": "withered, in a shack", "when": "early", "role": "omen", "quote": "a withered rotting corpse in an old shack in the woodlands", "confidence": "sourced"},
+   {"value": "bruise", "state": "black", "when": "early", "role": "omen", "quote": "a large black bruise on her chest (resembling the mould)", "confidence": "sourced"},
+   {"value": "ring", "state": "snatched", "when": "middle", "role": "symbol", "quote": "She snatches a ring off Sam's finger", "confidence": "sourced"},
+   {"value": "photo album", "state": "eaten and buried", "when": "middle", "role": "symbol", "quote": "tearing pages from the family photo album and frantically eating them", "confidence": "sourced"},
+   {"value": "knife", "when": "late", "role": "threat", "quote": "picking at her rotting face with a knife", "confidence": "sourced"},
+   {"value": "mummy-like body", "when": "ending", "role": "symbol", "quote": "a withered mummy-like body, like the one in her nightmare", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "elder missing", "when": "opening", "role": "trigger", "quote": "goes missing, her daughter Kay and granddaughter Sam travel to their remote family home", "confidence": "sourced"},
+   {"order": 2, "value": "nightmare omen", "when": "early", "role": "omen", "quote": "Kay experiences nightmares of a withered rotting corpse", "confidence": "sourced"},
+   {"order": 3, "value": "elder returns, marked", "when": "early", "quote": "Kay finds Edna has returned, barefoot and muddied", "confidence": "sourced"},
+   {"order": 4, "value": "elder turns on family", "when": "middle", "quote": "Edna bites her and storms off", "confidence": "sourced"},
+   {"order": 5, "value": "lost in the house", "when": "late", "quote": "becomes lost and disorientated as the mould covered corridors begin to loop", "confidence": "sourced"},
+   {"order": 6, "value": "body rots", "when": "late", "role": "turn", "quote": "picking at her rotting face with a knife", "confidence": "sourced"},
+   {"order": 7, "value": "daughter chooses care", "when": "ending", "role": "turn", "quote": "Kay realises she cannot leave her mum and returns to Edna", "confidence": "sourced"},
+   {"order": 8, "value": "mark on granddaughter", "when": "ending", "role": "omen", "quote": "Sam notices a small black bruise obscured by her collar", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

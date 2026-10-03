@@ -1,0 +1,65 @@
+{
+ "film": "2002-28-days-later",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "disease", "detail": "the rage virus", "quote": "the accidental release of a highly contagious, aggression-inducing virus has caused the breakdown of society", "confidence": "sourced"},
+   {"value": "the infected", "quote": "An infected priest and members of the public appear and chase after Jim", "confidence": "sourced"},
+   {"value": "soldiers", "detail": "Major West's troops", "quote": "his broadcast was intended to lure female survivors into sexual slavery", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "laboratory", "quote": "infiltrate a laboratory in Cambridge which houses abnormally aggressive chimpanzees", "confidence": "sourced"},
+   {"value": "released by accident", "quote": "Despite a scientist warning that the chimpanzees are \"infected\" with \"rage\", an activist frees one", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to spread", "quote": "the virus spreads rapidly across Great Britain, resulting in total societal collapse", "confidence": "sourced"},
+   {"value": "control over women", "detail": "the soldiers", "quote": "to lure female survivors into sexual slavery to maintain his troops' morale", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "animal experiments", "quote": "a laboratory in Cambridge which houses abnormally aggressive chimpanzees", "confidence": "observed"}
+  ],
+  "trigger": [
+   {"value": "freeing a test animal", "quote": "an activist frees one; it attacks her and, within seconds of exposure, she succumbs to the virus", "confidence": "sourced"},
+   {"value": "waking from a coma", "quote": "wakes in St Thomas' Hospital in London to find it deserted", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "infection in seconds", "quote": "within seconds of exposure, she succumbs to the virus", "confidence": "sourced"},
+   {"value": "spread by blood", "quote": "A drop of blood from the corpse falls into Frank's eye, infecting him", "confidence": "sourced"},
+   {"value": "infected starve", "quote": "the infected are shown lying on the roads, dying of starvation", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "survivors", "relation_to_threat": "stranger", "detail": "Jim, Selena, Frank and Hannah", "quote": "he is rescued by survivors Selena and Mark", "confidence": "sourced"},
+   {"value": "father and daughter", "relation_to_threat": "stranger", "detail": "Frank and Hannah", "quote": "cab driver Frank and his young daughter Hannah", "confidence": "sourced"},
+   {"value": "women", "relation_to_threat": "stranger", "detail": "Selena and Hannah, targeted by the soldiers", "quote": "Corporal Mitchell attempts to abduct Selena, but Jim kills him", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "survivors rescued", "quote": "Jim, Selena, and Hannah unfurl a huge cloth banner spelling the word \"HELLO\"", "confidence": "sourced"},
+   {"value": "threat burns out", "quote": "the infected are shown lying on the roads, dying of starvation", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "chimpanzees", "state": "infected, caged", "when": "opening", "role": "trigger", "quote": "a laboratory in Cambridge which houses abnormally aggressive chimpanzees", "confidence": "sourced"},
+   {"value": "deserted city", "when": "early", "role": "setting", "quote": "Jim wanders the empty streets of London, discovers newspapers headlining a mass evacuation", "confidence": "sourced"},
+   {"value": "church massacre", "when": "early", "role": "omen", "quote": "enters a church and witnesses the aftermath of a massacre", "confidence": "sourced"},
+   {"value": "suicide note", "when": "early", "role": "symbol", "quote": "leaving a note instructing him to \"never wake up\"", "confidence": "sourced"},
+   {"value": "candle", "when": "early", "role": "trigger", "quote": "lights a candle, drawing the infected neighbours to the house", "confidence": "sourced"},
+   {"value": "drop of blood", "when": "middle", "role": "threat", "quote": "A drop of blood from the corpse falls into Frank's eye", "confidence": "sourced"},
+   {"value": "chained infected soldier", "when": "late", "role": "weapon", "quote": "\"Private Mailer\", an infected soldier kept chained up for observation", "confidence": "sourced"},
+   {"value": "jet", "state": "flying overhead", "when": "ending", "role": "symbol", "quote": "As a Hawker Hunter jet flies overhead", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "outbreak at the lab", "when": "opening", "role": "trigger", "quote": "She immediately attacks the others, and the virus spreads rapidly across Great Britain", "confidence": "sourced"},
+   {"order": 2, "value": "waking to an empty world", "when": "early", "quote": "wakes in St Thomas' Hospital in London to find it deserted", "confidence": "sourced"},
+   {"order": 3, "value": "parents found dead", "when": "early", "quote": "he learns that they have died by suicide", "confidence": "sourced"},
+   {"order": 4, "value": "companion infected and killed", "when": "middle", "quote": "Mark is infected while eliminating them, forcing Selena to kill him", "confidence": "sourced"},
+   {"order": 5, "value": "promised refuge is empty", "when": "middle", "role": "turn", "quote": "Reaching Manchester, they find the blockade deserted", "confidence": "sourced"},
+   {"order": 6, "value": "sanctuary is a trap", "when": "late", "role": "turn", "quote": "However, the sanctuary turns out to be a ruse", "confidence": "sourced"},
+   {"order": 7, "value": "infected unleashed on captors", "when": "late", "quote": "frees Private Mailer in order to infect and kill the remaining soldiers", "confidence": "sourced"},
+   {"order": 8, "value": "signal to the outside", "when": "ending", "quote": "All three survivors wave at the jet, and wonder among themselves if the pilot has spotted them", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

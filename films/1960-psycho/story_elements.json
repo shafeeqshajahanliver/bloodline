@@ -1,0 +1,62 @@
+{
+ "film": "1960-psycho",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes and style"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "killer with split personality", "detail": "Norman Bates, acting as \"Mother\"", "quote": "re-created his mother as an alternate personality, as jealous and possessive toward Norman as he felt about his mother", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "guilt over a past murder", "detail": "Norman killed his mother and her lover", "quote": "Norman killed his mother and her lover out of jealousy. Unable to bear the guilt, he stole his mother's corpse", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "possession of the son", "quote": "Whenever Norman was attracted to a woman, \"Mother\" would take over", "confidence": "sourced"},
+   {"value": "to preserve the past", "quote": "kills Marion to preserve his past", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "matricide", "quote": "Norman killed his mother and her lover out of jealousy", "confidence": "sourced"},
+   {"value": "theft", "detail": "Marion embezzles $40,000", "quote": "real estate secretary Marion Crane embezzles $40,000 in cash from her employer", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "fleeing after a crime", "quote": "on-the-run embezzler Marion Crane", "confidence": "sourced"},
+   {"value": "stopping at an isolated place", "quote": "A rainstorm forces Marion to stop at the secluded Bates Motel a few miles from Fairvale", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "attraction triggers killing", "quote": "Whenever Norman was attracted to a woman, \"Mother\" would take over", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "woman on the run", "relation_to_threat": "stranger", "detail": "Marion Crane", "quote": "As she showers, a shadowy figure enters the bathroom with a kitchen knife and stabs her to death", "confidence": "sourced"},
+   {"value": "investigator", "relation_to_threat": "stranger", "detail": "Arbogast", "quote": "a shadowy figure at the top of the stairs stabs him to death", "confidence": "sourced"},
+   {"value": "sister searching", "relation_to_threat": "stranger", "detail": "Lila Crane", "quote": "Norman, wearing a dress and a wig, enters the cellar and attempts to attack her", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "killer caught", "quote": "attempts to attack her, only to be subdued by a recovered Sam", "confidence": "sourced"},
+   {"value": "killer consumed by other self", "quote": "The psychiatrist concludes that \"Mother\" has now completely submerged Norman's personality", "confidence": "sourced"},
+   {"value": "body recovered", "quote": "Marion's car is towed from the swamp", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "stolen money", "state": "hidden", "when": "opening", "role": "trigger", "quote": "Marion Crane embezzles $40,000 in cash from her employer", "confidence": "sourced"},
+   {"value": "stuffed birds", "state": "frozen in time", "when": "early", "role": "omen", "quote": "Norman displays stuffed birds that are \"frozen in time\"", "confidence": "sourced"},
+   {"value": "shower", "when": "middle", "role": "setting", "quote": "As she showers, a shadowy figure enters the bathroom with a kitchen knife", "confidence": "sourced"},
+   {"value": "kitchen knife", "when": "middle", "role": "weapon", "quote": "a shadowy figure enters the bathroom with a kitchen knife and stabs her to death", "confidence": "sourced"},
+   {"value": "swamp", "state": "swallowing a car", "when": "middle", "role": "setting", "quote": "the hidden cash in her car before sinking the vehicle in a swamp", "confidence": "sourced"},
+   {"value": "house on the hill", "when": "early", "role": "setting", "quote": "whose Second Empire-style house overlooks the motel", "confidence": "sourced"},
+   {"value": "mummified body", "state": "mother's corpse", "when": "late", "role": "clue", "quote": "Lila hides in the fruit cellar and discovers the mummified body of Norman's mother", "confidence": "sourced"},
+   {"value": "dress and wig", "when": "late", "role": "mirror", "quote": "Norman, wearing a dress and a wig, enters the cellar", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "theft and flight", "when": "opening", "role": "trigger", "quote": "Marion Crane embezzles $40,000 in cash from her employer after hearing her boyfriend, Sam Loomis, complain", "confidence": "sourced"},
+   {"order": 2, "value": "arrival at isolated motel", "when": "early", "role": "setting", "quote": "A rainstorm forces Marion to stop at the secluded Bates Motel", "confidence": "sourced"},
+   {"order": 3, "value": "protagonist killed midway", "when": "middle", "role": "turn", "quote": "As she showers, a shadowy figure enters the bathroom with a kitchen knife and stabs her to death", "confidence": "sourced"},
+   {"order": 4, "value": "cover-up", "when": "middle", "quote": "He hurriedly cleans up the murder scene and places Marion's body, her belongings", "confidence": "sourced"},
+   {"order": 5, "value": "investigator killed", "when": "middle", "quote": "a shadowy figure at the top of the stairs stabs him to death", "confidence": "sourced"},
+   {"order": 6, "value": "mother revealed long dead", "when": "late", "role": "clue", "quote": "Norman's mother died in a murder–suicide by strychnine poisoning ten years before", "confidence": "sourced"},
+   {"order": 7, "value": "killer unmasked", "when": "late", "role": "turn", "quote": "discovers the mummified body of Norman's mother. Lila screams in horror, and Norman, wearing a dress and a wig, enters the cellar", "confidence": "sourced"},
+   {"order": 8, "value": "psychiatric explanation and closing sting", "when": "ending", "quote": "Norman sits in a jail cell and hears his mother's voice stating the murders were his doing", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

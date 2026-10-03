@@ -1,0 +1,66 @@
+{
+ "film": "1987-hellraiser",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "otherworldly beings", "detail": "the Cenobites", "quote": "the Cenobites, a group of extra-dimensional, sadomasochistic beings who cannot differentiate between pain and pleasure", "confidence": "sourced"},
+   {"value": "resurrected relative", "detail": "Frank Cotton, rebuilt from victims", "quote": "which resurrects Frank in a ghoulish form", "confidence": "sourced"},
+   {"value": "murderous stepmother", "detail": "Julia, who lures men to the attic", "quote": "Julia picks up men in bars and brings them back to the attic, where she mortally wounds them", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "summoned by an object", "quote": "a mystical puzzle box that summons the Cenobites", "confidence": "sourced"},
+   {"value": "from another dimension", "quote": "they are simply \"explorers\" from another dimension seeking carnal experiences", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "carnal experience", "quote": "seeking carnal experiences and can no longer distinguish between pain and pleasure", "confidence": "sourced"},
+   {"value": "a body", "detail": "Frank needs victims to regenerate", "quote": "Frank then drains their life, which regenerates his body", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "adultery", "quote": "she had an affair with Frank before their marriage", "confidence": "sourced"},
+   {"value": "hedonism", "quote": "having exhausted all sensory experiences, he sought out the puzzle box", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "opening a forbidden object", "quote": "Frank solves the puzzle, and hooked chains emerge, tearing him apart", "confidence": "sourced"},
+   {"value": "blood spilled", "quote": "his blood drips beneath the attic floor where Frank's organic remains lie undiscovered", "confidence": "sourced"},
+   {"value": "moving into a new home", "quote": "Frank's brother Larry moves into the same house", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "box opens and closes the door", "quote": "banishes them by reversing the motions needed to open the puzzle box", "confidence": "sourced"},
+   {"value": "fed by blood", "quote": "Frank then drains their life, which regenerates his body", "confidence": "sourced"},
+   {"value": "deal requires a confession", "quote": "with the condition that Frank must confess to escaping them", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "teenage daughter", "relation_to_threat": "family", "detail": "Kirsty, Frank's niece", "quote": "Kirsty, Larry's teenage daughter and Frank's niece", "confidence": "sourced"},
+   {"value": "father", "relation_to_threat": "family", "detail": "Larry, killed and skinned by his brother", "quote": "Frank has killed Larry and has taken on his identity by wearing his skin", "confidence": "sourced"},
+   {"value": "strangers lured", "relation_to_threat": "stranger", "quote": "Julia picks up men in bars and brings them back to the attic", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat survives", "quote": "A vagrant who has been stalking Kirsty walks into the fire, retrieves the box", "confidence": "sourced"},
+   {"value": "cycle passes on", "quote": "The box ends up with the same merchant who sold it to Frank, where he offers it to another customer", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "puzzle box", "when": "opening", "role": "trigger", "quote": "Frank Cotton buys a puzzle box said to open the door to a realm of otherworldly pleasure", "confidence": "sourced"},
+   {"value": "hooked chains", "state": "tearing flesh", "when": "opening", "role": "weapon", "quote": "hooked chains emerge, tearing him apart", "confidence": "sourced"},
+   {"value": "blood", "state": "dripping through floor", "when": "early", "role": "trigger", "quote": "his blood drips beneath the attic floor", "confidence": "sourced"},
+   {"value": "attic", "when": "early", "role": "setting", "quote": "At home in his bare attic, Frank solves the puzzle", "confidence": "sourced"},
+   {"value": "skin worn as disguise", "when": "late", "role": "turn", "quote": "has taken on his identity by wearing his skin", "confidence": "sourced"},
+   {"value": "pyre", "state": "burning", "when": "ending", "role": "symbol", "quote": "Kirsty throws the puzzle box onto a burning pyre", "confidence": "sourced"},
+   {"value": "winged skeletal creature", "when": "ending", "role": "threat", "quote": "transforms into a winged skeletal creature and flies away", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "box opened, man torn apart", "when": "opening", "quote": "Frank solves the puzzle, and hooked chains emerge, tearing him apart", "confidence": "sourced"},
+   {"order": 2, "value": "blood resurrects the dead", "when": "early", "role": "trigger", "quote": "which resurrects Frank in a ghoulish form", "confidence": "sourced"},
+   {"order": 3, "value": "lover feeds the monster", "when": "early", "quote": "Julia picks up men in bars and brings them back to the attic", "confidence": "sourced"},
+   {"order": 4, "value": "heroine opens the box", "when": "middle", "role": "turn", "quote": "Kirsty opens the box out of curiosity, unknowingly summoning the Cenobites", "confidence": "sourced"},
+   {"order": 5, "value": "bargain with the beings", "when": "middle", "quote": "The Cenobites agree to spare Kirsty and recapture Frank instead", "confidence": "sourced"},
+   {"order": 6, "value": "monster torn apart", "when": "late", "quote": "they ensnare him with chains with hooks and tear him to pieces", "confidence": "sourced"},
+   {"order": 7, "value": "beings banished", "when": "late", "quote": "she grabs the puzzle box from Julia's dead hands and banishes them", "confidence": "sourced"},
+   {"order": 8, "value": "box returns to circulation", "when": "ending", "quote": "The box ends up with the same merchant who sold it to Frank", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

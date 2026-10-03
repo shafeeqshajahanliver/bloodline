@@ -1,0 +1,63 @@
+{
+ "film": "1994-in-the-mouth-of-madness",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "ancient gods", "detail": "the \"old ones\"", "quote": "enabling the return of the \"old ones\"", "confidence": "sourced"},
+   {"value": "cursed book", "detail": "Sutter Cane's manuscript", "quote": "He exposes her to the unfinished manuscript, driving her insane", "confidence": "sourced"},
+   {"value": "madness", "quote": "begins to question his sanity as the lines between reality and fiction seem to blur", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "made real by belief", "quote": "the sheer number of readers who believe in his work has made his stories real", "confidence": "sourced"},
+   {"value": "ancient evil", "quote": "built on a site of ancient evil predating humanity", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to spread", "detail": "the book must be delivered and read", "quote": "John must deliver the completed manuscript to Arcane", "confidence": "sourced"},
+   {"value": "to replace humanity", "quote": "humanity will soon be reduced to a myth \"they\" will tell their children", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "investigating a disappearance", "quote": "Arcane hires John to investigate the disappearance of acclaimed horror author Sutter Cane", "confidence": "sourced"},
+   {"value": "a journey", "detail": "following a map in the book covers", "quote": "Cane's book covers form a map to Hobb's End, New Hampshire", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "reading drives insane", "quote": "He exposes her to the unfinished manuscript, driving her insane", "confidence": "sourced"},
+   {"value": "cannot escape the town", "quote": "John repeatedly finds himself teleported back to the town center", "confidence": "sourced"},
+   {"value": "events follow the text", "quote": "Linda insists events are unfolding as written in Cane's new book, which foretells the end of the world", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "investigator", "relation_to_threat": "stranger", "detail": "John Trent", "quote": "an insurance investigator who visits a small town while looking into the disappearance", "confidence": "sourced"},
+   {"value": "editor", "relation_to_threat": "stranger", "detail": "Linda Styles", "quote": "Linda returns to the hotel, where she transforms into a monster", "confidence": "sourced"},
+   {"value": "townsfolk", "relation_to_threat": "community", "quote": "angry townspeople arrive demanding Cane return their missing children", "confidence": "sourced"},
+   {"value": "humanity", "relation_to_threat": "community", "quote": "a radio broadcast describing a worldwide epidemic of mass violence, mutations, and the fall of entire cities", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "apocalypse", "quote": "a worldwide epidemic of mass violence, mutations, and the fall of entire cities", "confidence": "sourced"},
+   {"value": "protagonist goes mad", "quote": "John breaks down in hysterical laughter", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "padded room", "when": "opening", "role": "setting", "quote": "He is confined to a padded room, where he experiences disturbing hallucinations", "confidence": "sourced"},
+   {"value": "axe", "when": "opening", "role": "weapon", "quote": "an attack by an axe-wielding man with misshapen pupils", "confidence": "sourced"},
+   {"value": "misshapen eyes", "when": "opening", "role": "omen", "quote": "an axe-wielding man with misshapen pupils", "confidence": "sourced"},
+   {"value": "book covers as map", "when": "early", "role": "clue", "quote": "Cane's book covers form a map to Hobb's End", "confidence": "sourced"},
+   {"value": "cyclist", "state": "young and old", "when": "early", "role": "omen", "quote": "passing the same cyclist as both a youth and an old man", "confidence": "sourced"},
+   {"value": "church", "when": "middle", "role": "setting", "quote": "At a local church, described in Cane's novels as built on a site of ancient evil", "confidence": "sourced"},
+   {"value": "manuscript", "when": "late", "role": "threat", "quote": "He exposes her to the unfinished manuscript", "confidence": "sourced"},
+   {"value": "portal", "state": "torn open", "when": "late", "role": "threat", "quote": "Cane then tears himself apart, creating a portal through which the old ones emerge", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "madman's story frame", "when": "opening", "role": "setting", "quote": "John Trent is delivered by ambulance to an insane asylum, violently agitated and restrained", "confidence": "sourced"},
+   {"order": 2, "value": "axe attack omen", "when": "early", "role": "omen", "quote": "he narrowly survives an attack by an axe-wielding man with misshapen pupils", "confidence": "sourced"},
+   {"order": 3, "value": "journey to a fictional town", "when": "early", "role": "trigger", "quote": "even seeing the road vanish, before they abruptly arrive in Hobb's End", "confidence": "sourced"},
+   {"order": 4, "value": "companion driven mad", "when": "middle", "quote": "He exposes her to the unfinished manuscript, driving her insane", "confidence": "sourced"},
+   {"order": 5, "value": "escape loops back", "when": "middle", "quote": "John repeatedly finds himself teleported back to the town center", "confidence": "sourced"},
+   {"order": 6, "value": "creator reveals the truth", "when": "late", "role": "turn", "quote": "Hobb's End and even John himself exist only because Cane wrote them", "confidence": "sourced"},
+   {"order": 7, "value": "the book already published", "when": "late", "role": "turn", "quote": "reveals that John delivered the manuscript months earlier", "confidence": "sourced"},
+   {"order": 8, "value": "world ends, hero laughs", "when": "ending", "quote": "As the movie replays the events of his story—including him insisting \"this is reality\"—John breaks down in hysterical laughter", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

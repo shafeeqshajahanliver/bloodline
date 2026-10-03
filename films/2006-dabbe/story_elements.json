@@ -1,0 +1,46 @@
+{
+ "film": "2006-dabbe",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}, {"file": "wikipedia.tr.md", "sections": ["Lead", "Hikâye"]}],
+ "plot_quality": "thin",
+ "dimensions": {
+  "threat": [
+   {"value": "apocalyptic beast", "detail": "the Dabbe of the Quran, read as the internet", "quote": "Dâbbetü'l-arz'ı konu ediniyor ve onu internet ağı olarak yorumluyor", "confidence": "sourced"},
+   {"value": "strange creatures", "quote": "They also start seeing strange creatures around themselves.", "confidence": "sourced"},
+   {"value": "suicide epidemic", "quote": "People start to commit suicide using brutal techniques.", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "religious prophecy", "detail": "the Dabbe from Surah an-Naml", "quote": "Film, Kur'an'da Neml Suresi'nde geçen, din alimlerinin ne olduğu hakkında ortak bir zeminde buluşamadığı", "confidence": "sourced"},
+   {"value": "through technology", "quote": "a man kills himself after spending a lot of time on the computer", "confidence": "observed"}
+  ],
+  "wants": [
+   {"value": "to spread", "quote": "this suicide wave spreads all over the earth", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "friend's suicide", "quote": "In a small town, a man kills himself after spending a lot of time on the computer.", "confidence": "sourced"},
+   {"value": "messages from the dead", "quote": "Following this man's death, his  friends start to get e-mails from him.", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "friends", "relation_to_threat": "stranger", "detail": "Tarık's friends in İzmir", "quote": "İlerleyen günlerde Tarık'ın arkadaşına Tarık'tan bir elektronik posta gelir.", "confidence": "sourced"},
+   {"value": "humanity", "relation_to_threat": "stranger", "quote": "Starting from the United States of America, this suicide wave spreads all over the earth.", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "apocalypse", "quote": "This is just the beginning of the doomsday.", "confidence": "observed"}
+  ],
+  "images": [
+   {"value": "computer", "when": "opening", "role": "trigger", "quote": "a man kills himself after spending a lot of time on the computer", "confidence": "sourced"},
+   {"value": "e-mail", "state": "from a dead man", "when": "early", "role": "omen", "quote": "his  friends start to get e-mails from him", "confidence": "sourced"},
+   {"value": "creatures", "when": "early", "role": "threat", "quote": "They also start seeing strange creatures around themselves.", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "suicide wave begins abroad", "when": "opening", "role": "omen", "quote": "Amerika Birleşik Devletleri'nde sıra dışı intihar olayları baş göstermektedir", "confidence": "sourced"},
+   {"order": 2, "value": "friend kills himself", "when": "opening", "quote": "İnternet ile arası diğer insanlara oranla daha iyi olan Tarık, beklenmedik şekilde intihar etmiştir.", "confidence": "sourced"},
+   {"order": 3, "value": "message from the dead", "when": "early", "role": "trigger", "quote": "Following this man's death, his  friends start to get e-mails from him.", "confidence": "sourced"},
+   {"order": 4, "value": "creatures appear", "when": "middle", "quote": "They also start seeing strange creatures around themselves.", "confidence": "sourced"},
+   {"order": 5, "value": "doomsday begins", "when": "ending", "quote": "This is just the beginning of the doomsday.", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong", "rules"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

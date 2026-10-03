@@ -1,0 +1,51 @@
+{
+ "film": "2015-baskin",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "cult", "detail": "led by The Father", "quote": "A hooded figure known as The Father reveals himself to them; he and the cultists kill Apo, Yavuz and Remzi", "confidence": "sourced"},
+   {"value": "hell", "quote": "five police officers who have inadvertently wandered into Hell", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "answering a call for help", "quote": "the men receive a call for back up from colleagues who have gone to Inceagac, a town known for strange rumors", "confidence": "sourced"},
+   {"value": "crash into water", "quote": "accidentally drives their van into a lake", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "hell carried within", "quote": "hell is not somewhere you go, it's something you carry with you at all times", "confidence": "sourced"},
+   {"value": "time loops", "quote": "The five men crash once more into the lake", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "police officers", "relation_to_threat": "stranger", "quote": "Five police officers dining there, Remzi, Arda, Yavuz, Apo, and Seyfi, discuss sex", "confidence": "sourced"},
+   {"value": "boy grown up", "relation_to_threat": "unknown", "detail": "Arda, the boy from the opening", "quote": "Arda was the young boy in the opening scene", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "cycle repeats", "quote": "It is revealed that the vehicle is the same police van the men travelled in earlier", "confidence": "sourced"},
+   {"value": "survivor dies anyway", "quote": "He flags down an oncoming vehicle, but the driver doesn't spot him and he is run over", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "television static", "when": "opening", "role": "omen", "quote": "He sees his TV showing static", "confidence": "sourced"},
+   {"value": "hand from darkness", "when": "opening", "role": "threat", "quote": "a hand reaches toward him from the darkness", "confidence": "sourced"},
+   {"value": "raw meat", "state": "delivered in a bucket", "when": "early", "role": "omen", "quote": "a hooded figure delivering a bucket of raw meat to a small restaurant", "confidence": "sourced"},
+   {"value": "frog", "when": "early", "role": "omen", "quote": "notices a frog on the soap stand", "confidence": "sourced"},
+   {"value": "lake", "when": "early", "role": "setting", "quote": "accidentally drives their van into a lake", "confidence": "sourced"},
+   {"value": "blood and viscera", "when": "middle", "role": "threat", "quote": "a group of cultists covered in blood and viscera", "confidence": "sourced"},
+   {"value": "key", "when": "late", "role": "turn", "quote": "A dying Remzi gives Arda a key", "confidence": "sourced"},
+   {"value": "police van", "when": "ending", "role": "mirror", "quote": "the vehicle is the same police van the men travelled in earlier", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "child's night terror", "when": "opening", "role": "omen", "quote": "A young boy wakes in the night after hearing strange sexual noises from his mother's bedroom", "confidence": "sourced"},
+   {"order": 2, "value": "omens at a restaurant", "when": "early", "role": "omen", "quote": "Seyfi, who has been feeling unwell, runs to the toilet and notices a frog on the soap stand", "confidence": "sourced"},
+   {"order": 3, "value": "van crashes into lake", "when": "early", "role": "trigger", "quote": "Seyfi has a terrifying vision of a bloody figure and accidentally drives their van into a lake", "confidence": "sourced"},
+   {"order": 4, "value": "locals warn", "when": "early", "role": "omen", "quote": "The locals warn them of the dangers in the village", "confidence": "sourced"},
+   {"order": 5, "value": "first taken by cult", "when": "middle", "quote": "the cultists swarm over him, dragging him into their midst", "confidence": "sourced"},
+   {"order": 6, "value": "massacre by the Father", "when": "late", "quote": "he and the cultists kill Apo, Yavuz and Remzi", "confidence": "sourced"},
+   {"order": 7, "value": "escape", "when": "late", "quote": "he uses to overpower The Father and escape the building", "confidence": "sourced"},
+   {"order": 8, "value": "loop closes", "when": "ending", "role": "turn", "quote": "this was the same vision Seyfi had seen. The five men crash once more into the lake", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["origin", "wants", "wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

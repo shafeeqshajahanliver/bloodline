@@ -1,0 +1,38 @@
+{
+ "film": "2013-djinn",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}, {"file": "wikipedia.ar.md", "sections": ["Lead", "القصة"]}],
+ "plot_quality": "thin",
+ "dimensions": {
+  "threat": [
+   {"value": "djinn", "detail": "the couple's neighbours", "quote": "يكتشفان أن جيرانهما ليسوا بشرًا بل هم من الجان", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "haunted land", "detail": "an abandoned fishing village where the apartment was built", "quote": "an abandoned fishing village, where the apartment was eventually built", "confidence": "observed"}
+  ],
+  "wants": [
+   {"value": "to harm the couple", "quote": "حقيقة «الجان» الذي يحاول النيل منهما", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "moving into a new home", "quote": "a young Emirati couple returns to their home country and moves into a high-rise apartment in Ras al-Khaimah", "confidence": "sourced"},
+   {"value": "returning home", "quote": "a young Emirati couple returns to their home country", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "young couple", "relation_to_threat": "stranger", "quote": "a young Emirati couple returns to their home country", "confidence": "sourced"},
+   {"value": "backpacker", "relation_to_threat": "stranger", "quote": "an American backpacker learns about djinn from local Emiratis", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "high-rise apartment", "when": "opening", "role": "setting", "quote": "moves into a high-rise apartment in Ras al-Khaimah", "confidence": "sourced"},
+   {"value": "abandoned fishing village", "when": "middle", "role": "setting", "quote": "The film also flashes back to an abandoned fishing village", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "return home and move in", "when": "opening", "role": "trigger", "quote": "returns to their home country and moves into a high-rise apartment", "confidence": "sourced"},
+   {"order": 2, "value": "neighbours not human", "when": "early", "role": "turn", "quote": "They discover that their neighbors may not be human", "confidence": "sourced"},
+   {"order": 3, "value": "flashback to the site's past", "when": "middle", "role": "clue", "quote": "The film also flashes back to an abandoned fishing village, where the apartment was eventually built", "confidence": "sourced"},
+   {"order": 4, "value": "outsider learns the legend", "when": "late", "role": "clue", "quote": "an American backpacker learns about djinn from local Emiratis", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong", "rules", "ending"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

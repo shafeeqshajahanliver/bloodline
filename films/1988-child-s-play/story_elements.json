@@ -1,0 +1,62 @@
+{
+ "film": "1988-child-s-play",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "possessed doll", "detail": "Chucky, a Good Guy doll", "quote": "a new doll to her son, unaware that it is possessed by the soul of a serial killer", "confidence": "sourced"},
+   {"value": "serial killer", "detail": "Charles Lee Ray, the Lakeshore Strangler", "quote": "fugitive serial killer Charles Lee Ray, known as the \"Lakeshore Strangler\"", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "soul transferred by ritual", "quote": "Ray invokes the power of Damballa and casts a voodoo spell to transfer his soul into a nearby Good Guy-brand talking doll", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "a body", "detail": "to move his soul into Andy", "quote": "he must transfer his soul to the first human he revealed his true identity to: Andy", "confidence": "sourced"},
+   {"value": "revenge", "detail": "on the accomplice who abandoned him", "quote": "kills him in a gas explosion in revenge for abandoning him", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "murder", "quote": "fugitive serial killer Charles Lee Ray", "confidence": "observed"}
+  ],
+  "trigger": [
+   {"value": "bringing an object home", "detail": "doll bought from a peddler as a birthday gift", "quote": "Karen excitedly buys the doll and gives it to Andy", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "doll becomes more human", "quote": "the longer his soul remains in the doll, the more \"human\" the doll will become", "confidence": "sourced"},
+   {"value": "must possess first confidant", "quote": "he must transfer his soul to the first human he revealed his true identity to", "confidence": "sourced"},
+   {"value": "destroy the heart", "quote": "in order to kill Chucky, they must destroy his heart", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "child", "relation_to_threat": "stranger", "detail": "Andy, six years old", "quote": "Widow Karen Barclay's six-year-old son Andy wants a Good Guy doll for his birthday", "confidence": "sourced"},
+   {"value": "single mother", "relation_to_threat": "stranger", "detail": "Karen", "quote": "The plot follows a widowed mother who gives a new doll to her son", "confidence": "sourced"},
+   {"value": "babysitter", "relation_to_threat": "stranger", "detail": "Maggie", "quote": "Chucky comes to life and attacks Maggie, striking her with a hammer", "confidence": "sourced"},
+   {"value": "detective", "relation_to_threat": "stranger", "detail": "Norris", "quote": "Norris, still skeptical, is later attacked by Chucky", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat destroyed", "quote": "Norris shoots Chucky's body through the heart, finally killing him", "confidence": "sourced"},
+   {"value": "false resolution", "quote": "appearing to kill him. Jack arrives, refusing to believe the trio until Chucky's body bursts through a heat vent", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "lightning", "state": "strikes the store", "when": "opening", "role": "omen", "quote": "The store is struck by lightning, causing an explosion", "confidence": "sourced"},
+   {"value": "doll", "state": "possessed", "when": "opening", "role": "threat", "quote": "Norris finds Ray's lifeless body next to the doll", "confidence": "sourced"},
+   {"value": "hammer", "when": "early", "role": "weapon", "quote": "striking her with a hammer and causing her to fall out of a window to her death", "confidence": "sourced"},
+   {"value": "batteries", "state": "absent", "when": "middle", "role": "clue", "quote": "the doll has been moving and speaking without batteries", "confidence": "sourced"},
+   {"value": "voodoo doll", "when": "middle", "role": "weapon", "quote": "is tortured by Chucky with a voodoo doll", "confidence": "sourced"},
+   {"value": "blood", "state": "bleeding doll", "when": "middle", "role": "turn", "quote": "He shoots the doll, whose wound inexplicably bleeds and causes pain", "confidence": "sourced"},
+   {"value": "fire", "when": "ending", "role": "weapon", "quote": "Karen and Andy gain the upper hand, setting him on fire", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "dying killer transfers soul", "when": "opening", "quote": "casts a voodoo spell to transfer his soul into a nearby Good Guy-brand talking doll", "confidence": "sourced"},
+   {"order": 2, "value": "cursed gift given to child", "when": "early", "role": "trigger", "quote": "Karen excitedly buys the doll and gives it to Andy", "confidence": "sourced"},
+   {"order": 3, "value": "babysitter killed", "when": "early", "quote": "causing her to fall out of a window to her death", "confidence": "sourced"},
+   {"order": 4, "value": "child blamed", "when": "middle", "quote": "Andy is discovered by police and again considered a suspect", "confidence": "sourced"},
+   {"order": 5, "value": "mother discovers the truth", "when": "middle", "role": "turn", "quote": "the doll has been moving and speaking without batteries", "confidence": "sourced"},
+   {"order": 6, "value": "rule revealed", "when": "late", "role": "clue", "quote": "in order to kill Chucky, they must destroy his heart", "confidence": "sourced"},
+   {"order": 7, "value": "doll burned and shot", "when": "ending", "quote": "Karen shoots his head and several of his limbs off, appearing to kill him", "confidence": "sourced"},
+   {"order": 8, "value": "final kill through heart", "when": "ending", "quote": "Norris shoots Chucky's body through the heart, finally killing him", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

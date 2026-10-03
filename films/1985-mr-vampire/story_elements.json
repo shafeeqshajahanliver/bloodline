@@ -1,0 +1,60 @@
+{
+ "film": "1985-mr-vampire",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "hopping corpse", "detail": "jiangshi, Yam's dead father", "quote": "The vampire of the film is based on the jiangshi, the hopping corpses of Chinese folklore", "confidence": "sourced"},
+   {"value": "seductive ghost", "detail": "a female spirit who seduces Sang", "quote": "He soon deduces she is a spirit, but she uses her supernatural power to seduce him", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "undecayed corpse", "quote": "Kau notices the body, instead of in a decomposed state, is still intact", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to kill its family", "quote": "It heads straight for Yam's home and savagely kills his son", "confidence": "sourced"},
+   {"value": "a lover", "detail": "the spirit wants Sang", "quote": "Saddened she can no longer be with Sang, the spirit flies away", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "disturbing a grave", "detail": "reburial for family prosperity", "quote": "to remove Yam's deceased father from his grave and rebury him, with the hopes that doing so will bring more prosperity", "confidence": "sourced"},
+   {"value": "ritual done carelessly", "quote": "forget to line the bottom of the coffin, causing the vampire to break out", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "contained by enchanted ink", "quote": "Choi and Sang line the coffin with enchanted ink to safeguard the body", "confidence": "sourced"},
+   {"value": "hides by day", "quote": "before going into hiding by dawn", "confidence": "sourced"},
+   {"value": "bite spreads vampirism", "quote": "after examining Choi's wounds, Kau claims he too may become a vampire", "confidence": "sourced"},
+   {"value": "cured by glutinous rice", "quote": "feed Choi glutinous rice, claiming it may decrease the vampire's venom", "confidence": "sourced"},
+   {"value": "destroyed by fire", "quote": "they manage to destroy the vampire by burning it alive", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "family", "relation_to_threat": "family", "detail": "the Yam family", "quote": "It heads straight for Yam's home and savagely kills his son", "confidence": "sourced"},
+   {"value": "apprentices", "relation_to_threat": "stranger", "detail": "Choi and Sang", "quote": "As Sang tries to free himself, Choi turns into a vampire and attacks him", "confidence": "sourced"},
+   {"value": "priest", "relation_to_threat": "stranger", "detail": "Master Kau", "quote": "Master Kau makes a living as a Taoist priest who performs magic that maintains control over spirits", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat destroyed", "quote": "they manage to destroy the vampire by burning it alive", "confidence": "sourced"},
+   {"value": "victim restored", "quote": "Kau restores Choi's health and turns him back to human", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "talismans and amulets", "when": "opening", "role": "weapon", "quote": "a large house protected from the spiritual world with talismans and amulets", "confidence": "sourced"},
+   {"value": "coffin", "state": "raised", "when": "early", "role": "trigger", "quote": "during the raising of the coffin, Kau notices the body", "confidence": "sourced"},
+   {"value": "intact corpse", "when": "early", "role": "omen", "quote": "the body, instead of in a decomposed state, is still intact", "confidence": "sourced"},
+   {"value": "enchanted ink", "state": "incomplete", "when": "early", "role": "weapon", "quote": "line the coffin with enchanted ink to safeguard the body", "confidence": "sourced"},
+   {"value": "glutinous rice", "state": "adulterated", "when": "middle", "role": "weapon", "quote": "the shady merchant deliberately mixes different kinds of rice in the bag", "confidence": "sourced"},
+   {"value": "ghoul", "state": "transformed", "when": "middle", "role": "threat", "quote": "The spirit transforms into a hideous ghoul and attempts to kill Kau", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "priest and apprentices", "when": "opening", "role": "setting", "quote": "Together with his inept students, Man-choi and Chau-sang", "confidence": "sourced"},
+   {"order": 2, "value": "grave opened", "when": "early", "role": "trigger", "quote": "Knowing it has become a vampire, he has it moved to his house for further study", "confidence": "sourced"},
+   {"order": 3, "value": "monster escapes", "when": "early", "quote": "causing the vampire to break out", "confidence": "sourced"},
+   {"order": 4, "value": "victim rises", "when": "middle", "quote": "only to witness Yam reawakening as a vampire", "confidence": "sourced"},
+   {"order": 5, "value": "ally infected", "when": "middle", "role": "turn", "quote": "Kau claims he too may become a vampire", "confidence": "sourced"},
+   {"order": 6, "value": "ghost seduction", "when": "middle", "quote": "he is lured by a mysterious woman into her house", "confidence": "sourced"},
+   {"order": 7, "value": "ghost let go", "when": "late", "quote": "stops when Sang begs him to let her go", "confidence": "sourced"},
+   {"order": 8, "value": "monster burned", "when": "ending", "quote": "they manage to destroy the vampire by burning it alive", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

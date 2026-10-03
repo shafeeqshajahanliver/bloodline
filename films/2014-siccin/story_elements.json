@@ -1,0 +1,47 @@
+{
+ "film": "2014-siccin",
+ "sources": [{"file": "wikipedia.tr.md", "sections": ["Lead", "Hikâye"]}],
+ "plot_quality": "thin",
+ "dimensions": {
+  "threat": [
+   {"value": "jinn", "detail": "jinn set upon Nisa by a spell", "quote": "Büyünün etkisiyle Nisa'ya cinler musallat olur.", "confidence": "sourced"},
+   {"value": "black magic", "quote": "yasak aşkına kavuşmak adına çözümü kara büyüde arar", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "summoned by spell", "detail": "Öznur turns to black magic", "quote": "Tutkusuna yenik düşen Öznur, yasak aşkına kavuşmak adına çözümü kara büyüde arar.", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "forbidden love", "detail": "Öznur wants her married cousin Kudret", "quote": "Öznur, çocukluktan beri âşık olduğu kuzeni Kudret'i saplantı haline getirmiştir.", "confidence": "sourced"},
+   {"value": "to remove a rival", "detail": "the spell targets Kudret's wife Nisa", "quote": "Büyünün etkisiyle Nisa'ya cinler musallat olur.", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "obsessive jealousy", "quote": "Öznur, çocukluktan beri âşık olduğu kuzeni Kudret'i saplantı haline getirmiştir.", "confidence": "sourced"},
+   {"value": "temptation of married man", "quote": "Nisa ile evli olan Kudret'in aklını bir süreliğine çelmişse de", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "a rejected lover", "detail": "Kudret chooses his marriage", "quote": "Kudret'in son kararı mutlu evliliğinden yana olmuştur", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "death after five prayers", "detail": "after five night (yatsı) prayers", "quote": "Tılsıma göre beş yatsı namazı sonrası Nisa ve onun kanından olanlar ölümle tanışacaktır.", "confidence": "sourced"},
+   {"value": "curse on bloodline", "quote": "Nisa ve onun kanından olanlar ölümle tanışacaktır", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "wife", "relation_to_threat": "family", "detail": "Nisa, wife of the spellcaster's cousin", "quote": "Büyünün etkisiyle Nisa'ya cinler musallat olur.", "confidence": "sourced"},
+   {"value": "blood relatives", "relation_to_threat": "family", "detail": "Nisa's kin", "quote": "Nisa ve onun kanından olanlar ölümle tanışacaktır", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "talisman", "state": "binding a death spell", "when": "late", "role": "threat", "quote": "Tılsıma göre beş yatsı namazı sonrası Nisa ve onun kanından olanlar ölümle tanışacaktır.", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "obsession with a cousin", "when": "opening", "quote": "Öznur, çocukluktan beri âşık olduğu kuzeni Kudret'i saplantı haline getirmiştir.", "confidence": "sourced"},
+   {"order": 2, "value": "lover chooses his marriage", "when": "early", "quote": "Kudret'in son kararı mutlu evliliğinden yana olmuştur", "confidence": "sourced"},
+   {"order": 3, "value": "turns to black magic", "when": "middle", "role": "trigger", "quote": "Tutkusuna yenik düşen Öznur, yasak aşkına kavuşmak adına çözümü kara büyüde arar.", "confidence": "sourced"},
+   {"order": 4, "value": "jinn haunt the rival", "when": "late", "quote": "Büyünün etkisiyle Nisa'ya cinler musallat olur.", "confidence": "sourced"},
+   {"order": 5, "value": "death deadline set", "when": "ending", "role": "turn", "quote": "Tılsıma göre beş yatsı namazı sonrası Nisa ve onun kanından olanlar ölümle tanışacaktır.", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["ending"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

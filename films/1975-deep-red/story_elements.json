@@ -1,0 +1,60 @@
+{
+ "film": "1975-deep-red",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "serial killer", "detail": "Martha, Carlo's mother, the black-gloved figure", "quote": "a series of murders performed by a mysterious figure wearing black leather gloves", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "past murder in the family", "detail": "Martha killed her husband in front of young Carlo", "quote": "after her husband said he would re-commit her to  an insane asylum, she murdered him in front of the young Carlo", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to keep a secret buried", "quote": "Helga says she believes she can identify this person, unaware that someone is listening from the shadows", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "murder witnessed by a child", "quote": "an unseen figure stabs another to death. A bloody knife falls to the floor at the feet of a child", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "psychic senses a killer", "quote": "Helga is suddenly overwhelmed by the \"twisted, perverted, murderous\" thoughts of someone in the audience", "confidence": "sourced"},
+   {"value": "witnessing a murder", "quote": "Marcus Daly sees the murder from the window as he passes by", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "anyone who gets close dies", "quote": "the killer, who has been watching Marcus, attacks Amanda and drowns her in scalding water before Marcus arrives", "confidence": "observed"},
+   {"value": "child's song heralds killer", "quote": "the killer plays a recording of a child's song outside Marcus's door", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "witness", "relation_to_threat": "stranger", "detail": "Marcus Daly, pianist", "quote": "he hears the gruff whisper, \"I'll kill you sooner or later.\"", "confidence": "sourced"},
+   {"value": "psychic", "relation_to_threat": "stranger", "detail": "Helga Ulmann", "quote": "a black-gloved figure invades Helga's apartment and kills her with a meat cleaver", "confidence": "sourced"},
+   {"value": "son", "relation_to_threat": "family", "detail": "Carlo, scarred by what he saw", "quote": "Carlo, scarred psychologically, compulsively drew the scene as a youth", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "killer dies", "detail": "decapitated by an elevator", "quote": "Marcus sends the elevator down, decapitating her", "confidence": "sourced"},
+   {"value": "hidden killer revealed", "quote": "As Marcus realizes he saw Martha, Carlo's mother, she appears behind him with a meat cleaver", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "bloody knife", "when": "opening", "role": "clue", "quote": "A bloody knife falls to the floor at the feet of a child", "confidence": "sourced"},
+   {"value": "black gloves", "when": "early", "role": "threat", "quote": "a black-gloved figure invades Helga's apartment", "confidence": "sourced"},
+   {"value": "meat cleaver", "when": "early", "role": "weapon", "quote": "kills her with a meat cleaver", "confidence": "sourced"},
+   {"value": "child's song", "when": "early", "role": "omen", "quote": "the killer plays a recording of a child's song outside Marcus's door", "confidence": "sourced"},
+   {"value": "mural", "state": "hidden under plaster", "when": "middle", "role": "clue", "quote": "he uncovers a disturbing mural: a child holding a bloody knife over a dead body", "confidence": "sourced"},
+   {"value": "mechanized doll", "when": "middle", "role": "omen", "quote": "after being distracted by a large mechanized doll", "confidence": "sourced"},
+   {"value": "desiccated corpse", "state": "walled up", "when": "late", "role": "clue", "quote": "In the middle of the dusty floor sits a desiccated corpse", "confidence": "sourced"},
+   {"value": "mirror", "state": "reflection mistaken for painting", "when": "ending", "role": "clue", "quote": "was really the killer's reflection in a mirror", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "past murder seen by child", "when": "opening", "role": "omen", "quote": "In 1956, during Christmas at a family home, an unseen figure stabs another to death", "confidence": "sourced"},
+   {"order": 2, "value": "psychic killed", "when": "early", "role": "trigger", "quote": "a black-gloved figure invades Helga's apartment and kills her with a meat cleaver", "confidence": "sourced"},
+   {"order": 3, "value": "witness threatened", "when": "early", "quote": "he hears the gruff whisper, \"I'll kill you sooner or later.\"", "confidence": "sourced"},
+   {"order": 4, "value": "haunted house investigated", "when": "middle", "quote": "Marcus uses the photo from the book to find the huge, abandoned house", "confidence": "sourced"},
+   {"order": 5, "value": "hidden body found", "when": "late", "role": "clue", "quote": "Marcus finds a walled-off room. In the middle of the dusty floor sits a desiccated corpse", "confidence": "sourced"},
+   {"order": 6, "value": "wrong suspect dies", "when": "late", "role": "turn", "quote": "Carlo runs into the dark street and is hit by a garbage truck", "confidence": "sourced"},
+   {"order": 7, "value": "true killer revealed", "when": "ending", "role": "turn", "quote": "As Marcus realizes he saw Martha, Carlo's mother, she appears behind him with a meat cleaver", "confidence": "sourced"},
+   {"order": 8, "value": "killer killed", "when": "ending", "quote": "After Martha's necklace tangles in the bars of the building's elevator, Marcus sends the elevator down, decapitating her", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

@@ -1,0 +1,61 @@
+{
+ "film": "1980-city-of-the-living-dead",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "the undead", "quote": "a priest whose suicide opens a gateway to hell that releases the undead", "confidence": "sourced"},
+   {"value": "dead priest", "detail": "Father Thomas, commanding the dead", "quote": "they face Father Thomas, commanding an army of the undead", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "suicide opens hell", "detail": "Father Thomas hangs himself in Dunwich cemetery", "quote": "Father Thomas' death has opened the gates of Hell, and the invasion will commence on the upcoming All Saints Day", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to invade the living world", "quote": "presage the eruption of the living dead into our world", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "priest's suicide", "quote": "a vision of a priest, Father Thomas, hanging himself in a cemetery of a village called Dunwich", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "séance vision", "quote": "during a séance held in the apartment of medium Theresa, Mary Woodhouse experiences a vision of a priest", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "deadline on a holy day", "quote": "leading a psychic and a reporter team up to close it before All Saints' Day", "confidence": "sourced"},
+   {"value": "foretold in an ancient book", "quote": "according to the ancient book of Enoch, the events Mary witnessed in her visions presage the eruption of the living dead", "confidence": "sourced"},
+   {"value": "killing the leader ends it", "quote": "The priest and the other revived corpses burst into flames and disappear", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "townspeople", "relation_to_threat": "community", "quote": "Mr. Ross is attacked by the re-animated dead people of the town, led by Bob", "confidence": "sourced"},
+   {"value": "psychic", "relation_to_threat": "stranger", "detail": "Mary, buried alive", "quote": "visits her grave as she is about to be buried. However, she is still alive", "confidence": "sourced"},
+   {"value": "family", "relation_to_threat": "family", "detail": "Emily returns and kills her parents", "quote": "Gerry then receives a call from John-John explaining Emily has returned and killed his parents", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat destroyed", "quote": "Gerry grabs a wooden cross and disembowels Father Thomas", "confidence": "sourced"},
+   {"value": "ambiguous", "detail": "final scream at the child", "quote": "Mary is relieved to see John-John alive but becomes frightened and screams as he runs towards her", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "hanged priest", "when": "opening", "role": "trigger", "quote": "a vision of a priest, Father Thomas, hanging himself in a cemetery", "confidence": "sourced"},
+   {"value": "grave", "state": "buried alive", "when": "opening", "role": "turn", "quote": "Peter saves her after hearing her cries", "confidence": "sourced"},
+   {"value": "maggots", "state": "raining", "when": "middle", "role": "omen", "quote": "the four are showered with maggots", "confidence": "sourced"},
+   {"value": "glass dripping blood", "when": "middle", "role": "omen", "quote": "a window breaking, with the glass then dripping human blood", "confidence": "sourced"},
+   {"value": "carcass", "when": "early", "role": "omen", "quote": "visits an abandoned house but flees after seeing a carcass", "confidence": "sourced"},
+   {"value": "drill", "when": "middle", "role": "weapon", "quote": "Ross kills Bob by impaling his head through a drilling lathe", "confidence": "sourced"},
+   {"value": "family tomb", "when": "late", "role": "setting", "quote": "They descend into Father Thomas' family tomb, discovering a cave of skeletal remains", "confidence": "sourced"},
+   {"value": "wooden cross", "when": "ending", "role": "weapon", "quote": "Gerry grabs a wooden cross and disembowels Father Thomas", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "vision at a séance", "when": "opening", "role": "omen", "quote": "Mary Woodhouse experiences a vision of a priest, Father Thomas, hanging himself", "confidence": "sourced"},
+   {"order": 2, "value": "rescued from premature burial", "when": "opening", "quote": "However, she is still alive, and Peter saves her after hearing her cries", "confidence": "sourced"},
+   {"order": 3, "value": "prophecy explained", "when": "early", "role": "clue", "quote": "Father Thomas' death has opened the gates of Hell", "confidence": "sourced"},
+   {"order": 4, "value": "first death", "when": "early", "quote": "smothering Emily to death with a maggot-covered hand", "confidence": "sourced"},
+   {"order": 5, "value": "dead return home", "when": "middle", "role": "turn", "quote": "Emily has returned and killed his parents", "confidence": "sourced"},
+   {"order": 6, "value": "town overrun", "when": "late", "quote": "as a state-of-emergency is declared over the radio", "confidence": "sourced"},
+   {"order": 7, "value": "descent into the tomb", "when": "late", "quote": "They descend into Father Thomas' family tomb", "confidence": "sourced"},
+   {"order": 8, "value": "ambiguous final scream", "when": "ending", "role": "turn", "quote": "becomes frightened and screams as he runs towards her", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

@@ -1,0 +1,63 @@
+{
+ "film": "1979-nosferatu-the-vampyre",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "vampire", "detail": "Count Dracula", "quote": "he finds the Count asleep in a coffin, confirming to him that Dracula is indeed a vampire", "confidence": "sourced"},
+   {"value": "plague", "quote": "attribute to a plague caused by the rats from the ship, which begin swarming through the streets", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "from outside", "detail": "from a castle in Transylvania", "quote": "the locals beg for him to stay away from the accursed castle", "confidence": "observed"}
+  ],
+  "wants": [
+   {"value": "love", "quote": "Weary and unable to die, he demands some of the love that she gives to Jonathan, to no avail", "confidence": "sourced"},
+   {"value": "blood", "quote": "she lures Dracula to her bedroom, where he drinks her blood", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "a journey", "detail": "property sale takes Harker to Transylvania", "quote": "Count Dracula, who wishes to buy a property in the town", "confidence": "sourced"},
+   {"value": "warning ignored", "quote": "Ignoring the villagers' pleas, Harker continues his journey", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "destroyed by sunlight", "quote": "at which time the rays of the sun will destroy him, but only at the cost of her own life", "confidence": "sourced"},
+   {"value": "needs cursed earth", "quote": "taking coffins filled with the cursed earth that he needs for his vampiric rest", "confidence": "sourced"},
+   {"value": "repelled by consecrated host", "quote": "Lucy spreads crumbled, consecrated Hosts in Dracula's coffins and around Jonathan", "confidence": "sourced"},
+   {"value": "stake through the heart", "quote": "He then drives a stake through the heart of Dracula", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "wife", "relation_to_threat": "stranger", "detail": "Lucy Harker, who sacrifices herself", "quote": "Van Helsing arrives to discover Lucy dead but victorious", "confidence": "sourced"},
+   {"value": "husband", "relation_to_threat": "stranger", "detail": "Jonathan Harker, turned", "quote": "Jonathan's illness grows worse as his memory worsens and his skin turns pale", "confidence": "sourced"},
+   {"value": "town", "relation_to_threat": "community", "detail": "Wismar", "quote": "Death spreads throughout the town on the ship's arrival", "confidence": "sourced"},
+   {"value": "ship's crew", "relation_to_threat": "stranger", "quote": "systematically killing the ship's crew during the voyage", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "self-sacrifice", "quote": "She distracts Dracula from the call of the rooster, and at the first light of day he dies", "confidence": "sourced"},
+   {"value": "victim becomes threat", "quote": "Jonathan, now a vampire, then states that he has much to do and rides away on horseback", "confidence": "sourced"},
+   {"value": "threat spreads", "detail": "Renfield sent north", "quote": "Dracula sends Renfield, who has escaped from the asylum, north to Riga as the forerunner for an outbreak of the Black Death", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "portrait", "state": "small", "when": "early", "role": "trigger", "quote": "The Count is enchanted by a small portrait of Lucy", "confidence": "sourced"},
+   {"value": "coffin", "state": "with sleeping vampire", "when": "early", "role": "clue", "quote": "he finds the Count asleep in a coffin", "confidence": "sourced"},
+   {"value": "cow", "state": "bitten", "when": "early", "role": "omen", "quote": "Renfield is committed to an asylum, having apparently gone insane and bitten a cow", "confidence": "sourced"},
+   {"value": "rats", "state": "swarming", "when": "middle", "role": "threat", "quote": "the rats from the ship, which begin swarming through the streets", "confidence": "sourced"},
+   {"value": "ship", "state": "crew killed", "when": "middle", "role": "threat", "quote": "Dracula travels with his coffins by ship to Wismar", "confidence": "sourced"},
+   {"value": "consecrated host", "state": "crumbled", "when": "late", "role": "weapon", "quote": "Lucy spreads crumbled, consecrated Hosts in Dracula's coffins", "confidence": "sourced"},
+   {"value": "rooster", "state": "crowing at dawn", "when": "late", "role": "turn", "quote": "She distracts Dracula from the call of the rooster", "confidence": "sourced"},
+   {"value": "stake", "when": "ending", "role": "weapon", "quote": "drives a stake through the heart of Dracula", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "sent on a journey", "when": "opening", "role": "trigger", "quote": "His employer, Renfield, tasks him to visit Count Dracula", "confidence": "sourced"},
+   {"order": 2, "value": "locals warn traveller", "when": "opening", "role": "omen", "quote": "the locals beg for him to stay away from the accursed castle", "confidence": "sourced"},
+   {"order": 3, "value": "monster revealed", "when": "early", "role": "turn", "quote": "confirming to him that Dracula is indeed a vampire", "confidence": "sourced"},
+   {"order": 4, "value": "threat travels to town", "when": "middle", "quote": "Dracula travels with his coffins by ship to Wismar, systematically killing the ship's crew", "confidence": "sourced"},
+   {"order": 5, "value": "plague spreads", "when": "middle", "quote": "Death spreads throughout the town on the ship's arrival", "confidence": "sourced"},
+   {"order": 6, "value": "townsfolk dance before death", "when": "late", "quote": "they engage in a danse macabre and have a last supper", "confidence": "sourced"},
+   {"order": 7, "value": "woman sacrifices herself", "when": "late", "role": "turn", "quote": "at the first light of day he dies", "confidence": "sourced"},
+   {"order": 8, "value": "victim becomes new threat", "when": "ending", "quote": "Jonathan, now a vampire, then states that he has much to do and rides away on horseback", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

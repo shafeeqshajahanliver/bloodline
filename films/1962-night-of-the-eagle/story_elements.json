@@ -1,0 +1,60 @@
+{
+ "film": "1962-night-of-the-eagle",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "witch", "detail": "Flora Carr, the university secretary", "quote": "Flora uses witchcraft to set fire to the Taylor home with Tansy trapped inside", "confidence": "sourced"},
+   {"value": "animated statue", "detail": "the stone eagle on the chapel", "quote": "a giant stone eagle perching at the top of the university chapel has come to life to attack him", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "witchcraft", "detail": "rival academic's wife", "quote": "university secretary Flora Carr, the wife of Lindsay whose career had stalled in favour of Norman's", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "professional jealousy", "quote": "the wife of Lindsay whose career had stalled in favour of Norman's", "confidence": "observed"},
+   {"value": "to ruin a rival", "quote": "a poppet left by a jealous work rival", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "destroying protective charms", "quote": "He forces her to burn all her magical paraphernalia", "confidence": "observed"}
+  ],
+  "trigger": [
+   {"value": "rejecting the supernatural", "detail": "Norman burns Tansy's charms", "quote": "A firm rationalist, Norman is angered by her acceptance of superstition. He forces her to burn all her magical paraphernalia", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "charms protect", "quote": "She insists that her charms have been responsible for his rapid advancement in his academic career", "confidence": "sourced"},
+   {"value": "life sacrificed for another", "quote": "Tansy, willing to sacrifice her life for her husband's safety, almost drowns herself", "confidence": "sourced"},
+   {"value": "spell by hypnosis", "quote": "Using a form of auditory hypnosis over a loudspeaker system", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "sceptic", "relation_to_threat": "stranger", "detail": "professor Norman Taylor", "quote": "Norman Taylor is a psychology professor lecturing about belief systems and superstition at an English university", "confidence": "sourced"},
+   {"value": "wife", "relation_to_threat": "stranger", "detail": "Tansy, practitioner of obeah", "quote": "Flora uses witchcraft to set fire to the Taylor home with Tansy trapped inside", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat destroyed", "detail": "the eagle statue falls on Flora", "quote": "As she waits for him, the eagle statue falls from the roof and kills her", "confidence": "sourced"},
+   {"value": "sceptic converted", "quote": "Tansy escapes her burning home and rejoins her no longer sceptical  husband", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "poppet", "state": "hidden", "when": "opening", "role": "clue", "quote": "searches frantically and finds a poppet left by a jealous work rival", "confidence": "sourced"},
+   {"value": "fire", "state": "burning charms", "when": "opening", "role": "trigger", "quote": "He forces her to burn all her magical paraphernalia", "confidence": "sourced"},
+   {"value": "thunderstorm", "when": "early", "role": "setting", "quote": "someone tries to break into the Taylors' home during a thunderstorm", "confidence": "sourced"},
+   {"value": "knife", "when": "middle", "role": "weapon", "quote": "Tansy attacks him with a knife while in a trance", "confidence": "sourced"},
+   {"value": "limp", "when": "middle", "role": "clue", "quote": "Her limping walk during the attack gives Norman a clue", "confidence": "sourced"},
+   {"value": "stone eagle", "state": "come to life, then falling", "when": "late", "role": "threat", "quote": "a giant stone eagle perching at the top of the university chapel has come to life to attack him", "confidence": "sourced"},
+   {"value": "door", "state": "ajar", "when": "ending", "role": "turn", "quote": "Lindsay sees the chapel's heavy doors are ajar", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "wife's witchcraft discovered", "when": "opening", "quote": "he discovers that Tansy is practising obeah, referred to in the film as \"conjure magic\"", "confidence": "sourced"},
+   {"order": 2, "value": "charms burned", "when": "opening", "role": "trigger", "quote": "He forces her to burn all her magical paraphernalia", "confidence": "sourced"},
+   {"order": 3, "value": "run of misfortune", "when": "early", "quote": "Almost immediately things start to go wrong: a female student accuses Norman of rape", "confidence": "sourced"},
+   {"order": 4, "value": "sacrifice averted", "when": "middle", "quote": "almost drowns herself and is only saved at the last minute by Norman giving in to the practices he despises", "confidence": "sourced"},
+   {"order": 5, "value": "possessed attack", "when": "middle", "quote": "Tansy attacks him with a knife while in a trance", "confidence": "sourced"},
+   {"order": 6, "value": "true witch revealed", "when": "late", "role": "turn", "quote": "gives Norman a clue to the person responsible for his ill luck: university secretary Flora Carr", "confidence": "sourced"},
+   {"order": 7, "value": "statue attacks", "when": "late", "quote": "Flora convinces Norman that a giant stone eagle perching at the top of the university chapel has come to life", "confidence": "sourced"},
+   {"order": 8, "value": "witch killed by her own spell", "when": "ending", "quote": "the eagle statue falls from the roof and kills her", "confidence": "observed"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

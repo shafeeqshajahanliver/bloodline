@@ -1,0 +1,59 @@
+{
+ "film": "2014-housebound",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "apparent haunting", "quote": "a woman sentenced to house arrest in a potentially haunted house", "confidence": "sourced"},
+   {"value": "hidden killer", "detail": "Dennis, the psychologist", "quote": "he attempts to kill Miriam and Kylie, while incapacitating Amos", "confidence": "sourced"},
+   {"value": "person living in the walls", "detail": "Eugene, a savant", "quote": "a serial killer living in the hidden passageways", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "past murder in the house", "quote": "their home was once a halfway house and the site of a horrific murder", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to hide a past crime", "quote": "When she confronts him with evidence that he was an intern at the halfway house, he attempts to kill Miriam and Kylie", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "murder", "quote": "the site of a horrific murder", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "confinement at home", "quote": "she is sentenced to house arrest for eight months under the care of her mother, Miriam", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "cannot leave the house", "quote": "Kylie's ankle monitor will alert the police if she ever leaves the premises of her mother's house", "confidence": "sourced"},
+   {"value": "haunting has a human cause", "quote": "Realising that their paranormal activity has been Eugene all this time", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "troubled daughter", "relation_to_threat": "stranger", "detail": "Kylie", "quote": "Kylie Bucknell, a troubled young woman, attempts to steal the safe from an ATM", "confidence": "sourced"},
+   {"value": "mother", "relation_to_threat": "stranger", "detail": "Miriam", "quote": "Dennis stabs Eugene, knocks out Kylie, and begins to strangle Miriam", "confidence": "sourced"},
+   {"value": "step-father", "relation_to_threat": "family", "detail": "accidentally stabbed by Kylie", "quote": "she panics and accidentally stabs Graeme", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat destroyed", "quote": "Eugene throws a switch, and high voltage explodes Dennis' head", "confidence": "sourced"},
+   {"value": "outsider accepted", "quote": "Eugene has seemingly become an accepted (albeit mostly unseen) member of the household", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "ankle monitor", "when": "opening", "role": "setting", "quote": "Kylie's ankle monitor will alert the police if she ever leaves the premises", "confidence": "sourced"},
+   {"value": "disembodied hand", "when": "early", "role": "omen", "quote": "After a disembodied hand grabs her in the basement", "confidence": "sourced"},
+   {"value": "basement", "when": "early", "role": "setting", "quote": "a disembodied hand grabs her in the basement", "confidence": "sourced"},
+   {"value": "partial denture", "when": "middle", "role": "clue", "quote": "They discover evidence of the crime, including a partial denture", "confidence": "sourced"},
+   {"value": "secret hallways", "when": "late", "role": "setting", "quote": "Kylie discovers Eugene's secret hallways in their house", "confidence": "sourced"},
+   {"value": "high voltage switch", "when": "ending", "role": "weapon", "quote": "Eugene throws a switch, and high voltage explodes Dennis' head", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "failed robbery", "when": "opening", "quote": "attempts to steal the safe from an ATM but she fails to escape and is arrested", "confidence": "sourced"},
+   {"order": 2, "value": "confined to the family home", "when": "opening", "role": "trigger", "quote": "she is sentenced to house arrest for eight months", "confidence": "sourced"},
+   {"order": 3, "value": "mother says house is haunted", "when": "early", "role": "omen", "quote": "Kylie is further frustrated when Miriam claims the house is haunted", "confidence": "sourced"},
+   {"order": 4, "value": "past murder revealed", "when": "middle", "role": "clue", "quote": "their home was once a halfway house and the site of a horrific murder", "confidence": "sourced"},
+   {"order": 5, "value": "wrong suspect", "when": "middle", "quote": "the neighbour says that he is not the killer", "confidence": "sourced"},
+   {"order": 6, "value": "figure in the walls", "when": "late", "role": "turn", "quote": "Kylie discovers Eugene's secret hallways in their house and comes face to face with Eugene", "confidence": "sourced"},
+   {"order": 7, "value": "trusted helper is the killer", "when": "late", "role": "turn", "quote": "Once Dennis reveals that he wears a partial denture, Kylie becomes suspicious of him", "confidence": "sourced"},
+   {"order": 8, "value": "killer destroyed, ghost befriended", "when": "ending", "quote": "Eugene throws a switch, and high voltage explodes Dennis' head", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

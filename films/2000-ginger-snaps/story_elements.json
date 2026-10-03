@@ -1,0 +1,58 @@
+{
+ "film": "2000-ginger-snaps",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Analysis"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "werewolf", "quote": "they agree that Ginger was attacked by a werewolf and is transforming into one", "confidence": "sourced"},
+   {"value": "sibling turning monstrous", "detail": "Ginger", "quote": "Ginger undergoes transformations that concern Brigitte - she begins behaving aggressively, sprouts a tail", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "bitten by a creature", "quote": "The scent of blood attracts by the creature responsible for the maulings, which bites Ginger", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "hunger", "quote": "Brigitte discovers that Ginger has killed the counselor, and witnesses her killing the janitor", "confidence": "observed"}
+  ],
+  "trigger": [
+   {"value": "first menstruation", "quote": "Ginger begins her first period. The scent of blood attracts by the creature", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "spreads through sex and blood", "quote": "Brigitte is attacked by an infected Jason", "confidence": "observed"},
+   {"value": "cure with monkshood", "quote": "Sam suggests infusing an extract of monkshood, a perennial plant often referred to in lycanthrope folklore", "confidence": "sourced"},
+   {"value": "silver does not work", "quote": "a silver navel piercing proves ineffective as a remedy", "confidence": "sourced"},
+   {"value": "full moon transformation", "quote": "during the next full moon, slowly starts to transform into a werewolf", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "sister", "relation_to_threat": "family", "detail": "Brigitte", "quote": "Brigitte wounds Ginger's and her own palm and clasps their hands together, infecting herself with Ginger's blood", "confidence": "sourced"},
+   {"value": "classmates and staff", "relation_to_threat": "community", "quote": "Ginger has killed the counselor, and witnesses her killing the janitor", "confidence": "sourced"},
+   {"value": "helper", "relation_to_threat": "stranger", "detail": "Sam", "quote": "Ginger senses Brigitte's insincerity and kills Sam", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "loved one killed", "quote": "Ginger lunges at Brigitte and into the knife, fatally wounding herself", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "dead dogs", "state": "mauled", "when": "opening", "role": "omen", "quote": "A rash of dog killings strikes the quiet suburb of Bailey Downs, Ontario", "confidence": "sourced"},
+   {"value": "blood", "state": "menstrual", "when": "opening", "role": "trigger", "quote": "The scent of blood attracts by the creature", "confidence": "sourced"},
+   {"value": "tail", "state": "sprouting", "when": "early", "role": "threat", "quote": "sprouts a tail, and menstruates heavily, and hair grows from her scars", "confidence": "sourced"},
+   {"value": "hair", "state": "growing from scars", "when": "early", "role": "threat", "quote": "hair grows from her scars", "confidence": "sourced"},
+   {"value": "freezer", "state": "hiding a body", "when": "middle", "role": "clue", "quote": "The sisters hide her body in a freezer", "confidence": "sourced"},
+   {"value": "severed fingers", "when": "middle", "role": "clue", "quote": "Brigitte accidentally breaks off two of Trina's fingers", "confidence": "sourced"},
+   {"value": "syringe", "state": "holding the cure", "when": "late", "role": "weapon", "quote": "holding the syringe in one hand and a knife in the other", "confidence": "sourced"},
+   {"value": "knife", "when": "ending", "role": "weapon", "quote": "Ginger lunges at Brigitte and into the knife", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "animal killings", "when": "opening", "role": "omen", "quote": "A rash of dog killings strikes the quiet suburb", "confidence": "sourced"},
+   {"order": 2, "value": "bitten", "when": "opening", "role": "trigger", "quote": "the creature responsible for the maulings, which bites Ginger", "confidence": "sourced"},
+   {"order": 3, "value": "bodily transformation", "when": "early", "quote": "she begins behaving aggressively, sprouts a tail, and menstruates heavily", "confidence": "sourced"},
+   {"order": 4, "value": "accidental death hidden", "when": "middle", "quote": "Trina slips and fatally strikes her head upon the kitchen counter. The sisters hide her body in a freezer", "confidence": "sourced"},
+   {"order": 5, "value": "cure proven", "when": "middle", "role": "turn", "quote": "His behavior suddenly changes, proving that the cure works", "confidence": "sourced"},
+   {"order": 6, "value": "blood pact", "when": "late", "role": "turn", "quote": "clasps their hands together, infecting herself with Ginger's blood", "confidence": "sourced"},
+   {"order": 7, "value": "full transformation", "when": "late", "quote": "Ginger fully transforms into a werewolf and escapes from the van", "confidence": "sourced"},
+   {"order": 8, "value": "sister kills sister", "when": "ending", "quote": "Brigitte lays her head upon her dying sister's chest and weeps", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

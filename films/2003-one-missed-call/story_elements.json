@@ -1,0 +1,63 @@
+{
+ "film": "2003-one-missed-call",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "vengeful ghost", "detail": "Mimiko Mizunuma, a girl who died of an asthma attack", "quote": "Yumi goes to the abandoned hospital alone and encounters the spirit of Mimiko", "confidence": "sourced"},
+   {"value": "cursed phone call", "quote": "a strange voice message on her cell phone, foretelling her death", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "child left to die", "detail": "Mimiko abandoned during an asthma attack", "quote": "The horrified Marie rushed Nanako to the hospital and left Mimiko alone to die", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "someone to control", "detail": "a new victim to \"care\" for", "quote": "implying that in Yamashita she has found a new Nanako to \"care\" for", "confidence": "sourced"},
+   {"value": "to spread", "quote": "the next victim is called one minute after the previous death", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "child abuse", "detail": "Mimiko abused her sister Nanako", "quote": "a video tape found at the Mizunumas' abandoned apartment reveals that the one abusing Nanako was Mimiko", "confidence": "sourced"},
+   {"value": "abandoned child", "quote": "left Mimiko alone to die", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "receiving a message", "quote": "Yoko Okazaki misses a call on her cell phone, playing a peculiar ringtone different from her usual one", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "message foretells time of death", "quote": "listen to the message left on the phone, dated two days into the future", "confidence": "sourced"},
+   {"value": "call comes from your own number", "quote": "notices the caller ID says it came from her own number", "confidence": "sourced"},
+   {"value": "passes on through contacts", "quote": "the next victim is called one minute after the previous death, and victims are found with red jawbreakers in their mouths", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "young friends", "relation_to_threat": "stranger", "detail": "Yoko, Kenji, Natsumi", "quote": "When more people receive calls with the date and time of their deaths", "confidence": "sourced"},
+   {"value": "abuse survivor", "relation_to_threat": "stranger", "detail": "Yumi, abused by her mother", "quote": "she reveals to Yamashita that her mother abused her as a child", "confidence": "sourced"},
+   {"value": "investigator", "relation_to_threat": "stranger", "detail": "detective Yamashita, whose sister died", "quote": "a detective who has been investigating the curse that also claimed the life of his sister Ritsuko", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "victim becomes threat", "detail": "Yumi is possessed by Mimiko", "quote": "sees Yumi appearing as Mimiko in the mirror", "confidence": "sourced"},
+   {"value": "false resolution", "quote": "When Yamashita arrives, he finds Yumi in an apparently normal state and embraces her, but is stabbed", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "cell phone", "state": "ringing with strange tone", "when": "opening", "role": "threat", "quote": "misses a call on her cell phone, playing a peculiar ringtone", "confidence": "sourced"},
+   {"value": "severed hand", "state": "dialing", "when": "opening", "role": "omen", "quote": "Her severed hand is then seen dialing a number", "confidence": "sourced"},
+   {"value": "red jawbreaker", "when": "early", "role": "clue", "quote": "a red jawbreaker falls out of his mouth as his phone dials another number by itself", "confidence": "sourced"},
+   {"value": "asthma inhaler", "when": "middle", "role": "clue", "quote": "Yumi recognizes a sound she heard before Kenji's death as the spraying of an asthma inhaler", "confidence": "sourced"},
+   {"value": "teddy bear", "state": "plays the ringtone", "when": "late", "role": "clue", "quote": "has a teddy bear that plays the same melody as the ringtone", "confidence": "sourced"},
+   {"value": "corpse in a crate", "state": "comes to life", "when": "late", "role": "threat", "quote": "Yamashita uncovers a crate containing Marie's body. It comes to life", "confidence": "sourced"},
+   {"value": "clock", "state": "ticking backward", "when": "ending", "role": "omen", "quote": "her clock starts ticking backward to the time of her death", "confidence": "sourced"},
+   {"value": "mirror", "when": "ending", "role": "mirror", "quote": "sees Yumi appearing as Mimiko in the mirror", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "message from the future", "when": "opening", "role": "trigger", "quote": "hear Yoko's voice say that it's starting to rain, followed by a horrendous scream", "confidence": "sourced"},
+   {"order": 2, "value": "first death", "when": "opening", "quote": "Yoko screams as she is violently thrown off an overpass onto a speeding train", "confidence": "sourced"},
+   {"order": 3, "value": "chain of deaths", "when": "early", "quote": "As Yumi looks on, Kenji is inexplicably pulled down an elevator shaft", "confidence": "sourced"},
+   {"order": 4, "value": "televised exorcism fails", "when": "middle", "role": "turn", "quote": "The night of Natsumi's exorcism goes horribly wrong", "confidence": "sourced"},
+   {"order": 5, "value": "protagonist cursed", "when": "middle", "quote": "a jawbreaker drops out of her mouth, and a cursed voicemail arrives for Yumi", "confidence": "sourced"},
+   {"order": 6, "value": "confrontation at abandoned hospital", "when": "late", "quote": "Yumi goes to the abandoned hospital alone and encounters the spirit of Mimiko", "confidence": "sourced"},
+   {"order": 7, "value": "true abuser revealed", "when": "late", "role": "turn", "quote": "reveals that the one abusing Nanako was Mimiko", "confidence": "sourced"},
+   {"order": 8, "value": "possessed heroine attacks", "when": "ending", "quote": "Holding a knife behind her back, she kisses him and pushes a jawbreaker into his mouth, then smiles", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

@@ -1,0 +1,63 @@
+{
+ "film": "1961-the-pit-and-the-pendulum",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "madman", "detail": "Nicholas Medina, who believes himself his father", "quote": "the young man becomes strapped to the titular torture device by his lunatic brother-in-law", "confidence": "sourced"},
+   {"value": "fake ghost", "detail": "Elizabeth, alive, plotting with her lover", "quote": "Nicholas believes that his late wife's vengeful ghost is haunting the castle", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "childhood trauma", "detail": "Nicholas watched his father torture his mother", "quote": "Sebastian began torturing his wife slowly to death in front of Nicholas", "confidence": "sourced"},
+   {"value": "hoax by the living", "quote": "They had plotted to drive Nicholas mad so that she could inherit his fortune and the castle", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "inheritance", "quote": "so that she could inherit his fortune and the castle", "confidence": "sourced"},
+   {"value": "to relive the past", "quote": "Believing himself to be Sebastian, he replays the events of his mother and uncle's murders", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "buried alive", "detail": "Isabella, entombed by Sebastian", "quote": "she was entombed behind a brick wall while still alive", "confidence": "sourced"},
+   {"value": "adultery", "quote": "his father repeatedly hit Bartolome with a red-hot poker, screaming \"Adulterer!\" at him", "confidence": "sourced"},
+   {"value": "spouse's betrayal", "detail": "Elizabeth and Dr. Leon", "quote": "her lover and accomplice, Dr. Leon, appears", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "investigating a death", "quote": "visits the castle of his brother-in-law, Nicholas Medina, to investigate the mysterious disappearance of his sister, Elizabeth", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "fear of premature burial", "quote": "The very thought of premature interment was enough to drive your brother into convulsions of horror.", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "husband", "relation_to_threat": "lover", "detail": "Nicholas, driven mad by his wife", "quote": "Leon confirms that Nicholas \"is gone\", his mind destroyed by terror", "confidence": "sourced"},
+   {"value": "brother-in-law", "relation_to_threat": "family", "detail": "Francis, strapped under the pendulum", "quote": "He straps him to a stone slab located directly beneath a huge razor-sharp pendulum", "confidence": "sourced"},
+   {"value": "wife", "relation_to_threat": "lover", "detail": "Elizabeth, trapped in the iron maiden", "quote": "a still-living Elizabeth, gagged and trapped in the iron maiden", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "victim becomes threat", "detail": "Nicholas becomes his father", "quote": "Believing himself to be Sebastian, he replays the events of his mother and uncle's murders", "confidence": "sourced"},
+   {"value": "schemer entombed alive", "quote": "watches helplessly as the door is closed and locked forever", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "torture chamber", "state": "forbidden", "when": "early", "role": "setting", "quote": "Nicholas takes him to the castle's torture chamber", "confidence": "sourced"},
+   {"value": "iron maiden", "state": "occupied", "when": "early", "role": "symbol", "quote": "she locked herself into an iron maiden, and died after whispering the name \"Sebastian\"", "confidence": "sourced"},
+   {"value": "red-hot poker", "when": "early", "role": "weapon", "quote": "his father repeatedly hit Bartolome with a red-hot poker", "confidence": "sourced"},
+   {"value": "slashed portrait", "when": "middle", "role": "omen", "quote": "now ransacked and her portrait slashed", "confidence": "sourced"},
+   {"value": "harpsichord", "state": "playing by itself", "when": "middle", "role": "omen", "quote": "Her beloved harpsichord plays in the middle of the night", "confidence": "sourced"},
+   {"value": "corpse in a tomb", "state": "putrefied, clawing", "when": "middle", "role": "clue", "quote": "They discover Elizabeth's putrefied corpse frozen in a position that suggests she died screaming", "confidence": "sourced"},
+   {"value": "pendulum", "state": "descending", "when": "late", "role": "weapon", "quote": "causes it to descend fractions of an inch after each swing, closer to Francis' torso", "confidence": "sourced"},
+   {"value": "pit", "when": "late", "role": "weapon", "quote": "falls to his death in the pit while trying to escape", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "outsider investigates a death", "when": "opening", "quote": "Francis vows not to leave until he discovers the truth behind his sister's death", "confidence": "sourced"},
+   {"order": 2, "value": "family trauma revealed", "when": "early", "role": "clue", "quote": "Hiding in a corner, Nicholas watched in horror as his father repeatedly hit Bartolome", "confidence": "sourced"},
+   {"order": 3, "value": "haunting signs", "when": "middle", "role": "omen", "quote": "Her beloved harpsichord plays in the middle of the night", "confidence": "sourced"},
+   {"order": 4, "value": "tomb opened", "when": "middle", "quote": "Nicholas insists that Francis open his wife's tomb", "confidence": "sourced"},
+   {"order": 5, "value": "dead wife rises", "when": "late", "role": "turn", "quote": "Elizabeth rises from her coffin and pursues Nicholas into the torture chamber", "confidence": "sourced"},
+   {"order": 6, "value": "hoax revealed", "when": "late", "role": "turn", "quote": "They had plotted to drive Nicholas mad", "confidence": "sourced"},
+   {"order": 7, "value": "madman repeats the past", "when": "late", "quote": "Nicholas slams Dr. Leon against a pillar and seizes Elizabeth, repeating his father's promise to Isabella to torture her", "confidence": "sourced"},
+   {"order": 8, "value": "rescue, then sealed fate", "when": "ending", "quote": "Catherine vows that no one shall ever enter it again", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

@@ -1,0 +1,66 @@
+{
+ "film": "1960-black-sunday",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "witch", "detail": "Princess Asa Vajda, a vampiric witch", "quote": "Princess Asa Vajda, a vampiric witch, and her paramour, Javutich, are sentenced to death for sorcery", "confidence": "sourced"},
+   {"value": "undead servant", "detail": "Javutich, risen from his grave", "quote": "He rises from his grave and goes to Prince Vajda's castle", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "person executed", "detail": "Asa put to death by her brother", "quote": "a witch who is put to death by her brother, only to return two centuries later", "confidence": "sourced"},
+   {"value": "revived by blood", "quote": "Kruvajan's blood brings Asa back to life", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "revenge", "detail": "on her brother's descendants", "quote": "Asa vows revenge and puts a curse on Griabi's descendants", "confidence": "sourced"},
+   {"value": "a body", "detail": "to drain Katia, her reincarnation", "quote": "Asa's plan is to revive herself by draining Katia of her life since Katia is physically Asa reincarnated", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "sorcery", "quote": "are sentenced to death for sorcery by Asa's brother Griabi", "confidence": "sourced"},
+   {"value": "sibling executes sibling", "quote": "a witch who is put to death by her brother", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "disturbing a tomb", "detail": "Kruvajan breaks the glass and removes the mask", "quote": "He removes Asa's death mask, revealing a partially preserved corpse", "confidence": "sourced"},
+   {"value": "blood spilled on corpse", "quote": "He cuts his hand on the broken glass, and some of his blood drips onto Asa", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "warded off by crucifix", "quote": "Vajda holds up a crucifix to ward off the reanimated corpse", "confidence": "sourced"},
+   {"value": "kiss turns victim to servant", "quote": "Asa then kisses him, turning him into her servant", "confidence": "sourced"},
+   {"value": "destroyed by fire", "quote": "torch-carrying villagers, and they burn Asa to death", "confidence": "sourced"},
+   {"value": "killed by nail through eye", "quote": "they kill him by driving a nail through his eye", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "descendants", "relation_to_threat": "family", "detail": "the Vajda family", "quote": "seek revenge upon his descendants", "confidence": "sourced"},
+   {"value": "young woman", "relation_to_threat": "family", "detail": "Katia, Asa's reincarnation", "quote": "Asa drains Katia of her youth", "confidence": "sourced"},
+   {"value": "doctor", "relation_to_threat": "stranger", "detail": "Kruvajan, who disturbed the tomb", "quote": "The witch hypnotizes Kruvajan and says she needs the rest of his blood", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat destroyed", "detail": "Asa burned by villagers", "quote": "The priest then arrives with many torch-carrying villagers, and they burn Asa to death", "confidence": "sourced"},
+   {"value": "victim restored", "quote": "Katia awakens from her stupor, her life and beauty restored, and is reunited with Gorobec", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "spiked mask", "state": "hammered into flesh", "when": "opening", "role": "symbol", "quote": "Bronze masks with sharp spikes on the inside are placed over Asa and Javutich's faces and hammered into their flesh", "confidence": "sourced"},
+   {"value": "storm", "state": "sudden", "when": "opening", "role": "omen", "quote": "a sudden storm prevents the villagers from burning them at the stake", "confidence": "sourced"},
+   {"value": "bat", "state": "struck at", "when": "early", "role": "omen", "quote": "breaks the panel (and the cross above it) by accident while striking a bat", "confidence": "sourced"},
+   {"value": "blood", "state": "dripping on corpse", "when": "early", "role": "trigger", "quote": "some of his blood drips onto Asa", "confidence": "sourced"},
+   {"value": "crucifix", "state": "removed, then protective", "when": "middle", "role": "weapon", "quote": "the crucifix around Katia's neck thwarts her", "confidence": "sourced"},
+   {"value": "painting", "state": "of the undead servant", "when": "middle", "role": "clue", "quote": "She identifies Kruvajan's escort with a painting of Javutich", "confidence": "sourced"},
+   {"value": "skeletal body", "state": "fleshless", "when": "ending", "role": "turn", "quote": "opens her robe, revealing a fleshless skeletal frame", "confidence": "sourced"},
+   {"value": "death pit", "when": "late", "role": "setting", "quote": "Javutich throws Constantine into a death pit and takes Katia to Asa", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "witch executed, curses family", "when": "opening", "quote": "Asa vows revenge and puts a curse on Griabi's descendants", "confidence": "sourced"},
+   {"order": 2, "value": "travellers disturb tomb", "when": "early", "role": "trigger", "quote": "the two wander into a nearby ancient crypt and discover Asa's tomb", "confidence": "sourced"},
+   {"order": 3, "value": "witch revived", "when": "early", "quote": "Kruvajan's blood brings Asa back to life", "confidence": "sourced"},
+   {"order": 4, "value": "patriarch murdered", "when": "middle", "quote": "this allows Javutich to return later and murder him", "confidence": "sourced"},
+   {"order": 5, "value": "undead victim destroyed", "when": "middle", "quote": "they kill him by driving a nail through his eye", "confidence": "sourced"},
+   {"order": 6, "value": "witch impersonates heroine", "when": "late", "role": "turn", "quote": "Asa pretends to be Katia and tells Gorobec that Katia is the witch", "confidence": "sourced"},
+   {"order": 7, "value": "witch burned", "when": "ending", "quote": "they burn Asa to death", "confidence": "sourced"},
+   {"order": 8, "value": "lovers reunited", "when": "ending", "quote": "her life and beauty restored, and is reunited with Gorobec", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

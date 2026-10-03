@@ -1,0 +1,64 @@
+{
+ "film": "2007-the-orphanage",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "child ghosts", "detail": "Tomás and the murdered orphans", "quote": "she claims to see the ghosts of the orphans crying for help", "confidence": "sourced"},
+   {"value": "vengeful mother", "detail": "Benigna, who poisoned the orphans", "quote": "Benigna poisoned their meals and killed them for having caused Tomás's death", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "child who died wronged", "detail": "Tomás, drowned after his mask was stolen", "quote": "Tomás refused to leave his hiding place in a nearby sea cave, and the rising tide drowned him", "confidence": "sourced"},
+   {"value": "murdered children", "quote": "Laura discovers the remains of the orphans she grew up with in the orphanage", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to be cared for", "quote": "his wish was for her to stay and take care of the orphans", "confidence": "sourced"},
+   {"value": "to play", "quote": "attempts to contact the children's spirits by playing one of their old games", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "cruelty to a deformed child", "quote": "the orphans stole the mask that Tomás wore to conceal his deformed face and damaged eye", "confidence": "sourced"},
+   {"value": "mass poisoning", "quote": "Benigna poisoned their meals and killed them", "confidence": "sourced"},
+   {"value": "parent's accidental harm", "detail": "Laura unknowingly sealed Simón in", "quote": "Laura moved pieces of construction scaffolding, blocking the entrance to the secret room", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "returning to childhood home", "quote": "adult Laura returns to the closed orphanage, accompanied by her husband", "confidence": "sourced"},
+   {"value": "child goes missing", "quote": "after an argument with Simón, he goes missing", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "game grants a wish", "quote": "Simón teaches Laura a game which grants its winner a wish", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "mother", "relation_to_threat": "family", "detail": "Laura, once an orphan there", "quote": "a young girl named Laura García Rodríguez is adopted from an orphanage", "confidence": "sourced"},
+   {"value": "adopted son", "relation_to_threat": "family", "detail": "Simón, HIV-positive", "quote": "Laura and Carlos adopted Simón and that he is HIV-positive", "confidence": "sourced"},
+   {"value": "orphans", "relation_to_threat": "community", "quote": "the remains of the orphans she grew up with in the orphanage", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "child found dead", "quote": "Inside is Simón's corpse, wearing Tomás' mask", "confidence": "sourced"},
+   {"value": "reunion in death", "quote": "she begs to be with Simón again and the children's spirits appear", "confidence": "sourced"},
+   {"value": "ambiguous", "quote": "He turns to look as the door opens, and he smiles.", "confidence": "observed"}
+  ],
+  "images": [
+   {"value": "sack mask", "state": "worn by a child", "when": "early", "role": "threat", "quote": "draws pictures of him as a child wearing a sack mask", "confidence": "sourced"},
+   {"value": "coal shed", "state": "hiding remains", "when": "early", "role": "clue", "quote": "hid their remains in the orphanage's coal shed", "confidence": "sourced"},
+   {"value": "doll in a pram", "state": "pushed", "when": "middle", "role": "omen", "quote": "Laura spots Benigna (pushing a doll in a pram), who is then struck and killed by an ambulance", "confidence": "sourced"},
+   {"value": "sea cave", "state": "flooding", "when": "middle", "role": "setting", "quote": "his hiding place in a nearby sea cave, and the rising tide drowned him", "confidence": "sourced"},
+   {"value": "crashes in the walls", "state": "unexplained", "when": "middle", "role": "clue", "quote": "Laura hears several loud crashes within the walls of the orphanage", "confidence": "sourced"},
+   {"value": "hidden door", "state": "blocked", "when": "late", "role": "turn", "quote": "The spirits lead her to the door of a hidden underground room", "confidence": "sourced"},
+   {"value": "medallion", "state": "returned", "when": "ending", "role": "symbol", "quote": "finds a medallion that he had instructed Laura to return when she found Simón", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "return to the childhood home", "when": "opening", "role": "trigger", "quote": "Thirty years later, adult Laura returns to the closed orphanage", "confidence": "sourced"},
+   {"order": 2, "value": "child's invisible friend", "when": "early", "role": "omen", "quote": "Simón claims to have befriended a boy named Tomás", "confidence": "sourced"},
+   {"order": 3, "value": "child disappears", "when": "early", "role": "turn", "quote": "When Laura escapes, she realizes that Simón is missing and is unable to find him", "confidence": "sourced"},
+   {"order": 4, "value": "old crime revealed", "when": "middle", "role": "turn", "quote": "she had a son named Tomás, who also lived there but was kept hidden due to his facial deformity", "confidence": "sourced"},
+   {"order": 5, "value": "séance", "when": "middle", "quote": "Aurora conducts a séance during which she claims to see the ghosts of the orphans crying for help", "confidence": "sourced"},
+   {"order": 6, "value": "game played with ghosts", "when": "late", "quote": "attempts to contact the children's spirits by playing one of their old games", "confidence": "sourced"},
+   {"order": 7, "value": "child's body found", "when": "late", "role": "turn", "quote": "Inside is Simón's corpse, wearing Tomás' mask", "confidence": "sourced"},
+   {"order": 8, "value": "mother joins the dead", "when": "ending", "quote": "Laura appears to take an overdose of sleeping pills", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

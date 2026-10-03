@@ -1,0 +1,63 @@
+{
+ "film": "1984-a-nightmare-on-elm-street",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "undead killer in dreams", "detail": "Freddy Krueger", "quote": "an undead child killer who murders teenagers through their dreams", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "person killed by a mob", "detail": "Krueger burned alive by Elm Street parents", "quote": "He was then burned alive by the victims' parents, alongside other Elm Street residents, who sought vigilante justice", "confidence": "sourced"},
+   {"value": "child murderer", "quote": "Krueger was a child murderer who killed 20 children but was released on a technicality", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "revenge", "quote": "as retribution against their parents who burned him alive", "confidence": "sourced"},
+   {"value": "fear", "quote": "Realizing that Krueger is fueled by his victims' fear", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "vigilante killing", "quote": "Krueger targeted her and her friends because their parents were accomplices to his homicide", "confidence": "sourced"},
+   {"value": "sins of the parents", "quote": "the sins of the parents are visited upon the children", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "shared nightmares", "quote": "divulge that they too had nightmares about the same disfigured man", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "kills through dreams", "quote": "When Tina falls asleep, she dreams of the disfigured man attacking her, while Rod sees her fatally slashed by an unseen force", "confidence": "sourced"},
+   {"value": "must stay awake", "quote": "She then relies on caffeine to stay awake", "confidence": "sourced"},
+   {"value": "can be pulled into reality", "quote": "lures Krueger out of her nightmare and into the real world", "confidence": "sourced"},
+   {"value": "powerless without fear", "quote": "she calmly turns her back to him, and Krueger evaporates", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "teenagers", "relation_to_threat": "community", "detail": "children of the parents who killed him", "quote": "a group of teenagers who are targeted by Krueger", "confidence": "sourced"},
+   {"value": "mother", "relation_to_threat": "community", "detail": "Marge, one of the parents", "quote": "Marge is grabbed by Krueger through the front door window", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "false resolution", "quote": "Nancy steps outside into a foggy morning where all her friends and her mother are still alive", "confidence": "sourced"},
+   {"value": "threat survives", "quote": "Marge is grabbed by Krueger through the front door window", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "bladed glove", "when": "opening", "role": "weapon", "quote": "a disfigured man wearing a bladed glove attacks her in a boiler room", "confidence": "sourced"},
+   {"value": "boiler room", "when": "opening", "role": "setting", "quote": "attacks her in a boiler room", "confidence": "sourced"},
+   {"value": "slashed nightgown", "when": "opening", "role": "omen", "quote": "Her mother points out the mysterious slashes on her nightgown", "confidence": "sourced"},
+   {"value": "bathtub", "when": "middle", "role": "threat", "quote": "Nancy falls asleep in the bathtub and is nearly drowned by the man", "confidence": "sourced"},
+   {"value": "fedora", "state": "pulled from a dream", "when": "middle", "role": "clue", "quote": "Nancy grabs the man's fedora with the name \"Fred Krueger\" written in it and pulls it into the real world", "confidence": "sourced"},
+   {"value": "burn mark", "when": "middle", "role": "clue", "quote": "leaves a burn mark on her forearm", "confidence": "sourced"},
+   {"value": "girls skipping rope", "state": "chanting", "when": "ending", "role": "omen", "quote": "Three girls in white dresses playing jump rope chant Krueger's nursery rhyme", "confidence": "sourced"},
+   {"value": "fire", "when": "late", "role": "weapon", "quote": "The booby traps allow her to light him on fire and lock him in the basement", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "nightmare leaves a mark", "when": "opening", "role": "omen", "quote": "Her mother points out the mysterious slashes on her nightgown", "confidence": "sourced"},
+   {"order": 2, "value": "first death", "when": "early", "quote": "Rod sees her fatally slashed by an unseen force", "confidence": "sourced"},
+   {"order": 3, "value": "innocent blamed", "when": "early", "quote": "arrests Rod despite his pleas of innocence", "confidence": "sourced"},
+   {"order": 4, "value": "object brought from dream", "when": "middle", "role": "clue", "quote": "pulls it into the real world", "confidence": "sourced"},
+   {"order": 5, "value": "parents' crime revealed", "when": "middle", "role": "turn", "quote": "He was then burned alive by the victims' parents", "confidence": "sourced"},
+   {"order": 6, "value": "trap set", "when": "late", "quote": "She rigs booby traps and successfully lures Krueger out of her nightmare", "confidence": "sourced"},
+   {"order": 7, "value": "threat denied", "when": "ending", "quote": "she calmly turns her back to him, and Krueger evaporates", "confidence": "sourced"},
+   {"order": 8, "value": "closing sting", "when": "ending", "role": "turn", "quote": "Marge is grabbed by Krueger through the front door window", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

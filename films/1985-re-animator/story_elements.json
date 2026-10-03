@@ -1,0 +1,64 @@
+{
+ "film": "1985-re-animator",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "reanimated dead", "quote": "The corpse they inject comes back to life but in a frenetic and violent zombie-like state", "confidence": "sourced"},
+   {"value": "mad scientist", "detail": "Herbert West", "quote": "a medical student who has invented a reagent which can re-animate deceased bodies", "confidence": "sourced"},
+   {"value": "rival scientist", "detail": "Dr. Carl Hill, who controls corpses", "quote": "laser lobotomies grant him the ability to control other re-animated corpses telepathically", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "made by science", "detail": "West's reagent", "quote": "West demonstrates his reanimating reagent to Dan by reanimating Dan's dead cat Rufus", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to conquer death", "quote": "When accused of killing Gruber, West counters: \"I gave him life!\"", "confidence": "observed"},
+   {"value": "to steal credit", "quote": "hoping to take credit for West's discovery", "confidence": "sourced"},
+   {"value": "lust", "detail": "Hill's obsession with Megan", "quote": "who is infatuated with Cain's fiancée (Barbara Crampton)", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "tampering with the dead", "quote": "West and Dan sneak into the morgue to test the reagent on a human subject", "confidence": "sourced"},
+   {"value": "blackmail", "quote": "attempts to blackmail him into surrendering his reagent and notes", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "experiment", "quote": "West and Dan sneak into the morgue to test the reagent on a human subject in an attempt to prove that it works", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "revived dead turn violent", "quote": "The cat behaves viciously that night", "confidence": "sourced"},
+   {"value": "overdose causes mutation", "quote": "West injects Dr. Hill's body with a lethal overdose of the reagent. Dr. Hill's body mutates rapidly", "confidence": "sourced"},
+   {"value": "lobotomy allows control", "quote": "rendering them susceptible to mind control as Halsey is", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "fiancée", "relation_to_threat": "lover", "detail": "Megan", "quote": "She regains consciousness as Hill's body and bloody, severed head begin to sexually assault her", "confidence": "sourced"},
+   {"value": "father", "relation_to_threat": "family", "detail": "Dean Halsey, killed and reanimated", "quote": "Dr. Halsey stumbles upon the scene and is killed by the reanimated corpse", "confidence": "sourced"},
+   {"value": "assistant", "relation_to_threat": "community", "detail": "Dan", "quote": "Megan chances upon the scene, and is hysterical. Dan collapses in shock", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "victim becomes threat", "detail": "Dan reanimates Megan", "quote": "In despair, he injects her with West's reagent. The scene fades to black and Megan is heard screaming", "confidence": "sourced"},
+   {"value": "creator consumed", "quote": "before being pulled away by Dr. Hill's monstrous entrails", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "cat", "detail": "Rufus", "state": "dead, reanimated, vicious", "when": "early", "role": "omen", "quote": "reanimating Dan's dead cat Rufus. The cat behaves viciously that night", "confidence": "sourced"},
+   {"value": "reagent", "when": "early", "role": "threat", "quote": "West's reagent and notes", "confidence": "sourced"},
+   {"value": "bone-saw", "when": "middle", "role": "weapon", "quote": "which West then kills with a bone-saw", "confidence": "sourced"},
+   {"value": "shovel", "when": "middle", "role": "weapon", "quote": "West clobbers him from behind with a shovel, then decapitates him with it", "confidence": "sourced"},
+   {"value": "severed head", "state": "alive", "when": "late", "role": "threat", "quote": "The body carries the head back to Dr. Hill's office", "confidence": "sourced"},
+   {"value": "morgue", "when": "middle", "role": "setting", "quote": "sneak into the morgue to test the reagent on a human subject", "confidence": "sourced"},
+   {"value": "entrails", "state": "monstrous", "when": "late", "role": "threat", "quote": "pulled away by Dr. Hill's monstrous entrails", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "failed resurrection", "when": "opening", "role": "omen", "quote": "Herbert West brings his dead professor, Dr. Hans Gruber, back to life, to horrific side-effects", "confidence": "sourced"},
+   {"order": 2, "value": "pet reanimated", "when": "early", "quote": "West demonstrates his reanimating reagent to Dan by reanimating Dan's dead cat Rufus", "confidence": "sourced"},
+   {"order": 3, "value": "warning ignored", "when": "early", "quote": "the dean does not believe him", "confidence": "sourced"},
+   {"order": 4, "value": "first human death", "when": "middle", "role": "turn", "quote": "Dr. Halsey stumbles upon the scene and is killed by the reanimated corpse", "confidence": "sourced"},
+   {"order": 5, "value": "rival decapitated and revived", "when": "middle", "quote": "West reanimates Dr. Hill's head and body separately", "confidence": "sourced"},
+   {"order": 6, "value": "army of corpses", "when": "late", "role": "turn", "quote": "he has reanimated and lobotomized several corpses from the morgue", "confidence": "sourced"},
+   {"order": 7, "value": "loved one dies", "when": "ending", "quote": "one of the reanimated corpses attacks and strangles Megan", "confidence": "sourced"},
+   {"order": 8, "value": "cycle continues", "when": "ending", "quote": "In despair, he injects her with West's reagent", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

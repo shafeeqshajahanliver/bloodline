@@ -1,0 +1,61 @@
+{
+ "film": "1985-the-return-of-the-living-dead",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "zombies", "detail": "unkillable, brain-hungry", "quote": "the accidental release of a horde of unkillable, brain-hungry zombies onto an unsuspecting town", "confidence": "sourced"},
+   {"value": "the military", "detail": "Colonel Glover, who nukes the town", "quote": "Glover orders the town destroyed by nuclear artillery on the morning of July 4", "confidence": "observed"}
+  ],
+  "origin": [
+   {"value": "chemical accident", "detail": "military Trioxin gas", "quote": "Frank accidentally unleashes the toxic gas, which seemingly melts the cadaver inside and reanimates another cadaver", "confidence": "sourced"},
+   {"value": "toxic rain", "quote": "A thunderstorm returns the chemical to earth as toxic rain, reanimating the corpses in the nearby cemetery", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "brains", "detail": "to relieve the pain of being dead", "quote": "eating the brains of the living helps relieve the pain of being dead", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "government cover-up", "detail": "military drums misdelivered and forgotten", "quote": "The drums wound up in the basement of the building due to a delivery error years before", "confidence": "observed"}
+  ],
+  "trigger": [
+   {"value": "careless handling", "quote": "While hitting the side of a drum to prove it is secure, Frank accidentally unleashes the toxic gas", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "cannot be killed", "quote": "They discover that every part of the zombie's body can survive independently", "confidence": "sourced"},
+   {"value": "burning spreads it", "quote": "the smoke from the cremated corpse carries Trioxin into the atmosphere", "confidence": "sourced"},
+   {"value": "exposure turns the living", "quote": "the men are technically dead despite remaining conscious", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "workers", "relation_to_threat": "stranger", "detail": "Frank and Freddy", "quote": "the three discover Frank and Freddy growing ill from their exposure to the gas", "confidence": "sourced"},
+   {"value": "teenage punks", "relation_to_threat": "stranger", "quote": "a group of teenage punks", "confidence": "sourced"},
+   {"value": "town", "relation_to_threat": "community", "quote": "Glover orders the town destroyed by nuclear artillery", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "everyone dies", "quote": "apparently killing Burt and the remaining survivors", "confidence": "sourced"},
+   {"value": "threat survives", "quote": "toxic rain begins falling once more, and zombies are heard screaming in their graves", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "military drums", "state": "leaking", "when": "opening", "role": "trigger", "quote": "showing him military drums of a toxic gas called Trioxin", "confidence": "sourced"},
+   {"value": "cadaver", "state": "reanimated", "when": "opening", "role": "threat", "quote": "reanimates another cadaver stored in a meat locker", "confidence": "sourced"},
+   {"value": "crematorium smoke", "state": "rising", "when": "early", "role": "turn", "quote": "the smoke from the cremated corpse carries Trioxin into the atmosphere", "confidence": "sourced"},
+   {"value": "rain", "state": "toxic", "when": "early", "role": "threat", "quote": "A thunderstorm returns the chemical to earth as toxic rain", "confidence": "sourced"},
+   {"value": "cemetery", "state": "graves opening", "when": "early", "role": "setting", "quote": "The zombies emerge from their graves and attack the group", "confidence": "sourced"},
+   {"value": "gravestone", "state": "danced on", "when": "early", "role": "omen", "quote": "While Trash starts stripping and dancing on a gravestone", "confidence": "sourced"},
+   {"value": "tarman", "state": "disfigured", "when": "middle", "role": "threat", "quote": "the reanimated, horribly disfigured cadaver from the basement, later nicknamed \"Tarman.\"", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "gas accidentally released", "when": "opening", "role": "trigger", "quote": "Frank accidentally unleashes the toxic gas", "confidence": "sourced"},
+   {"order": 2, "value": "failed attempt to kill", "when": "early", "quote": "the three try, to no avail, to kill the reanimated corpse by puncturing the brain", "confidence": "sourced"},
+   {"order": 3, "value": "cremation spreads it", "when": "early", "role": "turn", "quote": "A thunderstorm returns the chemical to earth as toxic rain, reanimating the corpses", "confidence": "sourced"},
+   {"order": 4, "value": "dead rise from graves", "when": "middle", "quote": "The zombies emerge from their graves and attack the group", "confidence": "sourced"},
+   {"order": 5, "value": "siege in mortuary", "when": "middle", "quote": "When Burt and Ernie learn that the dead are rising from their graves, they barricade the mortuary", "confidence": "sourced"},
+   {"order": 6, "value": "zombie explains hunger", "when": "middle", "role": "clue", "quote": "the reanimated corpses can feel themselves rotting", "confidence": "sourced"},
+   {"order": 7, "value": "infected man self-cremates", "when": "late", "quote": "commits suicide by climbing into the cremator", "confidence": "sourced"},
+   {"order": 8, "value": "town destroyed, cycle restarts", "when": "ending", "quote": "indicating that the invasion is about to begin again", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

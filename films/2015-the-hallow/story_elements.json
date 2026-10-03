@@ -1,0 +1,65 @@
+{
+ "film": "2015-the-hallow",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "fairies", "detail": "The Hallow, forest-dwelling baby stealers", "quote": "inhabited by \"The Hallow\", a breed of \"fairies, banshees and baby stealers\"", "confidence": "sourced"},
+   {"value": "infectious fungus", "quote": "Adam starting to mutate via the fungus injected into him through the stinger", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "from nature", "detail": "the forest", "quote": "Local legend suggests that the forest is inhabited by hostile fairies", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to steal a child", "quote": "One of The Hallow manages to abduct Finn before his parents can stop it", "confidence": "sourced"},
+   {"value": "to replace someone", "detail": "a changeling left in Finn's place", "quote": "begins to suspect that the Finn that Claire rescued is actually a changeling", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "intruding on nature", "detail": "removing protective iron; later logging", "quote": "Claire (in the midst of removing iron bars from the upper exterior of their home)", "confidence": "observed"}
+  ],
+  "trigger": [
+   {"value": "moving into a new home", "quote": "travel to a remote Irish village surrounded by a large forest", "confidence": "sourced"},
+   {"value": "taking a sample", "quote": "Adam takes a sample and returns home with Finn", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "repelled by light", "quote": "realizes that light repels them", "confidence": "sourced"},
+   {"value": "iron protects", "quote": "tell them to put back the iron bars", "confidence": "observed"},
+   {"value": "changeling destroyed by sunrise", "quote": "The sun rises,  forcing the creatures to retreat and destroying the changeling", "confidence": "sourced"},
+   {"value": "victims transform", "quote": "retrieves the real Finn from a fully transformed Cora", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "newcomer family", "relation_to_threat": "stranger", "detail": "Adam, Claire and baby Finn", "quote": "a conservationist and his family visit an isolated village in Ireland", "confidence": "sourced"},
+   {"value": "baby", "relation_to_threat": "stranger", "quote": "One of The Hallow manages to abduct Finn", "confidence": "sourced"},
+   {"value": "local father", "relation_to_threat": "community", "detail": "Colm, whose daughter was taken", "quote": "claiming that The Hallow took his daughter Cora as well", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "child recovered", "quote": "Claire escapes to the house and cries with the real Finn over Adam's death", "confidence": "sourced"},
+   {"value": "protagonist dies", "quote": "Adam dies from his wounds", "confidence": "sourced"},
+   {"value": "threat survives", "quote": "the fungus substance is revealed to be on several logs being driven away", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "animal carcass", "state": "burst by fungus", "when": "opening", "role": "omen", "quote": "Adam stumbles upon an animal carcass with a strange fungal substance that has burst open the body", "confidence": "sourced"},
+   {"value": "iron bars", "state": "removed", "when": "opening", "role": "clue", "quote": "removing iron bars from the upper exterior of their home", "confidence": "sourced"},
+   {"value": "broken window", "when": "early", "role": "omen", "quote": "the window in Finn's room is broken while he is sleeping", "confidence": "sourced"},
+   {"value": "old book", "when": "early", "role": "clue", "quote": "the book that Colm gave Claire is filled with information about The Hallow", "confidence": "sourced"},
+   {"value": "scratch marks", "when": "middle", "role": "threat", "quote": "He finds Finn unharmed but the car covered in scratch marks", "confidence": "sourced"},
+   {"value": "stinger in the eye", "when": "middle", "role": "weapon", "quote": "Adam is stabbed in the eye by a stinger from one of the creatures", "confidence": "sourced"},
+   {"value": "camera flash", "when": "late", "role": "weapon", "quote": "Claire fends off a group of The Hallow with a camera flash", "confidence": "sourced"},
+   {"value": "logs", "state": "carrying fungus", "when": "ending", "role": "omen", "quote": "the fungus substance is revealed to be on several logs being driven away", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "dead animal found", "when": "opening", "role": "omen", "quote": "Adam stumbles upon an animal carcass with a strange fungal substance", "confidence": "sourced"},
+   {"order": 2, "value": "locals warn newcomers", "when": "early", "quote": "treated coldly by the villagers who repeat the legend of The Hallow and tell them to put back the iron bars", "confidence": "sourced"},
+   {"order": 3, "value": "siege of the house", "when": "middle", "quote": "they are attacked by the creatures the villagers have warned them about", "confidence": "sourced"},
+   {"order": 4, "value": "father infected", "when": "middle", "role": "turn", "quote": "Adam is stabbed in the eye by a stinger from one of the creatures", "confidence": "sourced"},
+   {"order": 5, "value": "baby stolen", "when": "late", "quote": "One of The Hallow manages to abduct Finn before his parents can stop it", "confidence": "sourced"},
+   {"order": 6, "value": "changeling suspected", "when": "late", "role": "turn", "quote": "begins to suspect that the Finn that Claire rescued is actually a changeling", "confidence": "sourced"},
+   {"order": 7, "value": "real child retrieved, father dies", "when": "ending", "quote": "Adam enters The Hallow's nest and retrieves the real Finn from a fully transformed Cora", "confidence": "sourced"},
+   {"order": 8, "value": "closing sting", "when": "ending", "quote": "a logging company start to cut down the forest, and the fungus substance is revealed to be on several logs", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

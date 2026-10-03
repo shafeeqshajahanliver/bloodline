@@ -1,0 +1,65 @@
+{
+ "film": "1992-bram-stoker-s-dracula",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "vampire", "detail": "Count Dracula", "quote": "it follows Count Dracula (Oldman), a vampire who falls in love with Mina Murray", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "pact with dark forces", "detail": "Vlad renounces God after his wife's damnation", "quote": "Dracula denies God and makes a deal with the dark forces", "confidence": "sourced"},
+   {"value": "grief turned to rage", "quote": "declaring he will rise from the grave to avenge Elisabeta with all the powers of darkness", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "reunion with lost lover", "detail": "Mina as Elisabeta reincarnated", "quote": "finds a picture of his fiancée Mina Murray and believes she is Elisabeta reincarnated", "confidence": "sourced"},
+   {"value": "blood", "quote": "drinks the blood that pours from it, becoming a vampire", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "suicide damned by church", "quote": "A Romanian Orthodox priest tells him that his wife's soul is damned to Hell for her suicide", "confidence": "sourced"},
+   {"value": "false report of death", "quote": "his beloved wife Elisabeta has committed suicide after his enemies falsely reported his death", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "a journey", "detail": "Jonathan travels to the castle on business", "quote": "Jonathan travels to Dracula's castle in Transylvania to arrange Dracula's real estate acquisitions in London", "confidence": "sourced"},
+   {"value": "seeing a picture", "quote": "who finds a picture of his fiancée Mina Murray", "confidence": "observed"}
+  ],
+  "rules": [
+   {"value": "needs native soil", "quote": "where they destroy the Count's boxes of soil", "confidence": "observed"},
+   {"value": "weak to holy objects", "quote": "Van Helsing places a communion wafer on her forehead, leaving a mark that slows her transformation", "confidence": "sourced"},
+   {"value": "killed through the heart", "quote": "Mina thrusts the knife through his heart", "confidence": "sourced"},
+   {"value": "victims become vampires", "quote": "A heartbroken Dracula transforms Lucy into a vampire", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "fiancée", "relation_to_threat": "lover", "detail": "Mina Murray", "quote": "Mina admits that she still loves him and remembers Elisabeta's previous life", "confidence": "sourced"},
+   {"value": "best friend", "relation_to_threat": "stranger", "detail": "Lucy Westenra", "quote": "hypnotically seduces and bites Mina's best friend Lucy Westenra", "confidence": "sourced"},
+   {"value": "solicitor", "relation_to_threat": "stranger", "detail": "Jonathan Harker", "quote": "Dracula leaves Jonathan to be fed upon by his brides", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat destroyed by beloved", "quote": "Dracula reverts to his younger self and asks Mina to give him peace. Mina thrusts the knife through his heart", "confidence": "sourced"},
+   {"value": "lovers reunited in death", "quote": "a fresco of Vlad and Elisabeta ascending to heaven together, finally reunited", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "stone cross", "state": "bleeding", "when": "opening", "role": "symbol", "quote": "He then stabs his sword into the chapel's stone cross and drinks the blood that pours from it", "confidence": "sourced"},
+   {"value": "picture of fiancée", "when": "early", "role": "trigger", "quote": "finds a picture of his fiancée Mina Murray", "confidence": "sourced"},
+   {"value": "boxes of soil", "state": "destroyed", "when": "middle", "role": "clue", "quote": "he sails to England with Transylvanian soil, taking up residence at Carfax Abbey", "confidence": "sourced"},
+   {"value": "wolf", "state": "werewolf form", "when": "middle", "role": "threat", "quote": "Dracula, in werewolf form, hypnotically seduces and bites Mina's best friend", "confidence": "sourced"},
+   {"value": "rats", "state": "swarm", "when": "late", "role": "threat", "quote": "before escaping as a swarm of rats", "confidence": "sourced"},
+   {"value": "communion wafer", "state": "burns a mark", "when": "late", "role": "weapon", "quote": "Van Helsing places a communion wafer on her forehead", "confidence": "sourced"},
+   {"value": "ring of fire", "when": "late", "role": "weapon", "quote": "He surrounds them with a ring of fire to protect them from the brides", "confidence": "sourced"},
+   {"value": "coffin", "state": "burst open at sunset", "when": "ending", "role": "threat", "quote": "Dracula bursts from his coffin at sunset", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "loss and renunciation of god", "when": "opening", "role": "trigger", "quote": "Enraged, Vlad desecrates the chapel and renounces God", "confidence": "sourced"},
+   {"order": 2, "value": "visitor trapped in castle", "when": "early", "quote": "Dracula leaves Jonathan to be fed upon by his brides", "confidence": "sourced"},
+   {"order": 3, "value": "friend bitten and wastes away", "when": "middle", "quote": "Lucy's deteriorating health and behavioral changes prompt former suitors", "confidence": "sourced"},
+   {"order": 4, "value": "expert summoned", "when": "middle", "quote": "who recognizes Lucy as being the victim of a vampire", "confidence": "sourced"},
+   {"order": 5, "value": "undead friend destroyed", "when": "middle", "quote": "Van Helsing, Holmwood, Seward, and Morris kill the undead Lucy the following night", "confidence": "sourced"},
+   {"order": 6, "value": "heroine chooses the monster", "when": "late", "role": "turn", "quote": "at her insistence, Dracula begins transforming her into a vampire", "confidence": "sourced"},
+   {"order": 7, "value": "chase to the castle", "when": "late", "quote": "The hunters depart for Varna to intercept him, but Dracula reads Mina's mind and evades them", "confidence": "sourced"},
+   {"order": 8, "value": "mercy killing in the chapel", "when": "ending", "quote": "As he dies, the mark on her forehead disappears, freeing her from his curse", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

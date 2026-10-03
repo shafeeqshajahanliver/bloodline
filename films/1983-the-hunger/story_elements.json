@@ -1,0 +1,63 @@
+{
+ "film": "1983-the-hunger",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "vampire", "detail": "Miriam Blaylock", "quote": "Its plot concerns a vampire (Deneuve) who bestows immortality and apparently eternal youth on her lovers", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "ancient being", "detail": "seen feeding in Ancient Egypt", "quote": "seen in flashbacks drinking blood from victims in Ancient Egypt", "confidence": "sourced"},
+   {"value": "turned by a lover", "detail": "John, turned 200 years ago", "quote": "Now, 200 years after he was turned, John begins suffering from insomnia", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "hunger", "quote": "they bring home and feed upon by slashing their throats with bladed ankh pendants", "confidence": "sourced"},
+   {"value": "companionship", "quote": "Miriam, who feels alone after losing both John and Alice, initiates a sexual encounter with Sarah", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "broken promise", "detail": "eternal life without eternal youth", "quote": "he will have eternal life, but not eternal youth", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "lover begins to age", "quote": "John begins suffering from insomnia and ages years within only a few days", "confidence": "sourced"},
+   {"value": "seduction", "quote": "Miriam bites her arm, and some of Miriam's blood enters Sarah's body", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "immortal but aging", "quote": "he will have eternal life, but not eternal youth", "confidence": "sourced"},
+   {"value": "no release from death", "quote": "Weeping, Miriam tells him there is no release", "confidence": "sourced"},
+   {"value": "spread through blood", "quote": "a foreign and inhuman type of blood, that is taking over her own", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "lovers", "relation_to_threat": "lover", "detail": "John and Miriam's former lovers", "quote": "Miriam's former vampire lovers suffer an eternal living-death, helplessly moaning and trapped in their coffins", "confidence": "sourced"},
+   {"value": "doctor", "relation_to_threat": "lover", "detail": "Sarah Roberts, gerontology researcher", "quote": "a doctor who specialises in sleep and ageing research (Sarandon)", "confidence": "sourced"},
+   {"value": "young victims", "relation_to_threat": "stranger", "detail": "the nightclub couple, Alice, Tom", "quote": "John murders and feeds upon Alice", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "victim becomes threat", "detail": "Sarah lives on with new companions", "quote": "Sarah is now in London with two new companions", "confidence": "sourced"},
+   {"value": "threat entombed", "detail": "Miriam trapped in a coffin", "quote": "From a draped coffin in a storage room, Miriam continuously cries Sarah's name", "confidence": "sourced"},
+   {"value": "past victims take revenge", "quote": "the mummies of Miriam's previous lovers, including John, emerge from their coffins, driving her over the edge of the balcony", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "ankh pendant", "state": "bladed", "when": "opening", "role": "weapon", "quote": "slashing their throats with bladed ankh pendants", "confidence": "sourced"},
+   {"value": "incinerator", "state": "in the basement", "when": "opening", "role": "setting", "quote": "The victims' bodies are disposed of in an incinerator in the basement", "confidence": "sourced"},
+   {"value": "primates", "state": "rapidly ageing", "when": "early", "role": "mirror", "quote": "are studying the effects of rapid ageing in primates", "confidence": "sourced"},
+   {"value": "coffins", "state": "holding living dead", "when": "middle", "role": "setting", "quote": "Miriam carries him to the attic, which is filled with coffins, and places him in one", "confidence": "sourced"},
+   {"value": "blood", "state": "infected", "when": "late", "role": "clue", "quote": "she has an infection, in the form of a foreign and inhuman type of blood", "confidence": "sourced"},
+   {"value": "mummies", "state": "rising, then dust", "when": "ending", "role": "turn", "quote": "As Miriam begins to rapidly age, the mummies become dust", "confidence": "sourced"},
+   {"value": "balcony", "state": "fall from", "when": "ending", "role": "setting", "quote": "driving her over the edge of the balcony", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "couple lured and killed", "when": "opening", "quote": "In a nightclub in New York City, they connect with a young couple whom they bring home and feed upon", "confidence": "sourced"},
+   {"order": 2, "value": "companion ages rapidly", "when": "early", "role": "turn", "quote": "John begins suffering from insomnia and ages years within only a few days", "confidence": "sourced"},
+   {"order": 3, "value": "plea to doctor ignored", "when": "early", "quote": "Sarah assumes that John is delusional and ignores his plea for help", "confidence": "sourced"},
+   {"order": 4, "value": "companion entombed alive", "when": "middle", "quote": "Miriam carries him to the attic, which is filled with coffins, and places him in one", "confidence": "sourced"},
+   {"order": 5, "value": "seduction and infection", "when": "middle", "role": "trigger", "quote": "Miriam bites her arm, and some of Miriam's blood enters Sarah's body", "confidence": "sourced"},
+   {"order": 6, "value": "first kill", "when": "late", "quote": "Sarah, starving and desperate, kills and feeds upon him", "confidence": "sourced"},
+   {"order": 7, "value": "dead lovers rise", "when": "ending", "role": "turn", "quote": "the mummies of Miriam's previous lovers, including John, emerge from their coffins", "confidence": "sourced"},
+   {"order": 8, "value": "new vampire lives on", "when": "ending", "quote": "Sarah is now in London with two new companions, standing on the balcony", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

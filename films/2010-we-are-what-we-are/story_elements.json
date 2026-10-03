@@ -1,0 +1,55 @@
+{
+ "film": "2010-we-are-what-we-are",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "cannibal family", "quote": "this family performs cannibalistic rituals", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "inherited tradition", "quote": "a family who, after the death of the father, try to continue on with a disturbing, ritualistic tradition", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "hunger", "quote": "the children wonder who is going to provide for the family now—specifically, their meals", "confidence": "sourced"},
+   {"value": "to continue the ritual", "quote": "Their mother says that one must survive to carry on the ritual and flees to the rooftop", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "death of the father", "quote": "At a shopping mall, a man suddenly dies on the sidewalk", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "ritual has strict requirements", "quote": "prostitutes are not appropriate for the ritual", "confidence": "sourced"},
+   {"value": "one must survive to continue", "quote": "one must survive to carry on the ritual", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "the poor and marginal", "relation_to_threat": "stranger", "detail": "homeless children, a prostitute, a gay youth", "quote": "Alfredo and Julián attempt to kidnap a homeless child from under a bridge", "confidence": "sourced"},
+   {"value": "prostitute", "relation_to_threat": "stranger", "quote": "Patricia comes in and beats the woman to death with a shovel", "confidence": "sourced"},
+   {"value": "police detectives", "relation_to_threat": "stranger", "quote": "Detective Owen discovers Sabina and Patricia preparing their meal in a ritualistic fashion, but the women kill him", "confidence": "sourced"},
+   {"value": "the family itself", "relation_to_threat": "family", "quote": "Julián, thinking Alfredo's attempting to eat Sabina, shoots Alfredo", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "family destroyed", "quote": "The police kill Julián and take Sabina away in an ambulance, believing that she is a surviving victim", "confidence": "sourced"},
+   {"value": "cycle passes on", "detail": "Sabina continues the tradition", "quote": "After escaping from the hospital, Sabina watches a young man in the market, intent on her next meal", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "finger in a jar", "when": "early", "role": "clue", "quote": "The coroner shows them a finger in a jar: it was pulled from Dad's stomach", "confidence": "sourced"},
+   {"value": "watches", "when": "opening", "role": "symbol", "quote": "Dad is a watchmaker who repairs watches at the street market", "confidence": "sourced"},
+   {"value": "shovel", "when": "middle", "role": "weapon", "quote": "Patricia comes in and beats the woman to death with a shovel", "confidence": "sourced"},
+   {"value": "kitchen table", "state": "victim tied to it", "when": "middle", "role": "setting", "quote": "the boys tie the prostitute to the kitchen table", "confidence": "sourced"},
+   {"value": "bite on the neck", "when": "ending", "role": "turn", "quote": "Meanwhile, Alfredo bites Sabina's neck", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "father dies in public", "when": "opening", "role": "trigger", "quote": "At a shopping mall, a man suddenly dies on the sidewalk", "confidence": "sourced"},
+   {"order": 2, "value": "family secret revealed", "when": "early", "role": "turn", "quote": "this family performs cannibalistic rituals", "confidence": "sourced"},
+   {"order": 3, "value": "clue found in the body", "when": "early", "role": "clue", "quote": "The coroner shows them a finger in a jar", "confidence": "sourced"},
+   {"order": 4, "value": "failed first hunt", "when": "middle", "quote": "Alfredo and Julián attempt to kidnap a homeless child from under a bridge, but are chased off", "confidence": "sourced"},
+   {"order": 5, "value": "mother kills", "when": "middle", "quote": "Patricia comes in and beats the woman to death with a shovel", "confidence": "sourced"},
+   {"order": 6, "value": "police siege", "when": "late", "quote": "The police break into the family's home and Julián shoots several of them", "confidence": "sourced"},
+   {"order": 7, "value": "family turns on itself", "when": "ending", "quote": "Julián, thinking Alfredo's attempting to eat Sabina, shoots Alfredo", "confidence": "sourced"},
+   {"order": 8, "value": "survivor continues", "when": "ending", "quote": "Sabina watches a young man in the market, intent on her next meal", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

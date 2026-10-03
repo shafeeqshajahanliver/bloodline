@@ -1,0 +1,57 @@
+{
+ "film": "2009-coraline",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "false mother", "detail": "the Other Mother, the Beldam", "quote": "the Other Mother is an evil entity called the \"Beldam\"", "confidence": "sourced"},
+   {"value": "alternate world", "quote": "a young girl discovering an idealized alternate universe behind a secret door in her new home", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "children's souls", "quote": "They allowed her to sew buttons over their eyes, and she subsequently swallowed their lives", "confidence": "sourced"},
+   {"value": "to keep a child forever", "quote": "The Other Mother offers for Coraline to stay in the Other World forever", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "moving into a new home", "quote": "move from Pontiac, Michigan, into the Pink Palace Apartments, an old Victorian house in Ashland, Oregon", "confidence": "sourced"},
+   {"value": "opening a hidden door", "quote": "she opens the door and finds that the brick wall has been replaced by a tunnel", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "lures unhappy children", "quote": "who used rag dolls to spy on their unhappy lives and lure them into the Other World", "confidence": "sourced"},
+   {"value": "buttons sewn on eyes", "quote": "on the condition of having buttons sewn onto her eyes", "confidence": "sourced"},
+   {"value": "bound by games", "quote": "Knowing that the Beldam has a penchant for games, Coraline proposes a deal", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "neglected child", "relation_to_threat": "stranger", "detail": "Coraline", "quote": "Since her parents are busy with work, Coraline entertains herself by exploring the house", "confidence": "sourced"},
+   {"value": "lost children", "relation_to_threat": "stranger", "detail": "three ghost children, including Wybie's great-aunt", "quote": "three ghost children from previous time periods, one of whom Coraline recognizes as Wybie's great-aunt", "confidence": "sourced"},
+   {"value": "parents", "relation_to_threat": "stranger", "quote": "the cat informs her that the Beldam has taken her parents", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat sealed away", "quote": "vanquishes the hand before they both throw it and the key down the well", "confidence": "sourced"},
+   {"value": "family restored", "quote": "Coraline's parents return with no recollection of their capture, and she warmly embraces them", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "black cat", "state": "can speak, travels between worlds", "when": "opening", "role": "omen", "quote": "While searching for an old well, she meets a black cat", "confidence": "sourced"},
+   {"value": "rag doll", "state": "resembles her", "when": "opening", "role": "omen", "quote": "who gives her a rag doll that eerily resembles her", "confidence": "sourced"},
+   {"value": "small door", "state": "bricked up, then a tunnel", "when": "early", "role": "trigger", "quote": "discovering a small door with a brick wall behind it in the living room", "confidence": "sourced"},
+   {"value": "button eyes", "when": "early", "role": "threat", "quote": "button-eyed doppelgängers of her parents lavish her with delicious food and their attention", "confidence": "sourced"},
+   {"value": "mirror", "state": "prison", "when": "middle", "role": "setting", "quote": "the Other Mother imprisons her in a dark room behind a mirror", "confidence": "sourced"},
+   {"value": "adder stone", "when": "late", "role": "weapon", "quote": "Coraline finds and collects each of the missing eyes using the adder stone", "confidence": "sourced"},
+   {"value": "snow globe", "state": "holds the parents", "when": "late", "role": "clue", "quote": "Realizing they are trapped in a nearby snow globe", "confidence": "sourced"},
+   {"value": "well", "when": "ending", "role": "setting", "quote": "they both throw it and the key down the well", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "moving in", "when": "opening", "role": "trigger", "quote": "move from Pontiac, Michigan, into the Pink Palace Apartments", "confidence": "sourced"},
+   {"order": 2, "value": "hidden door found", "when": "opening", "quote": "discovering a small door with a brick wall behind it in the living room", "confidence": "sourced"},
+   {"order": 3, "value": "idealised double world", "when": "early", "quote": "button-eyed doppelgängers of her parents lavish her with delicious food and their attention", "confidence": "sourced"},
+   {"order": 4, "value": "warnings from neighbours", "when": "early", "role": "omen", "quote": "who warn her of impending danger in her future regarding the Other World", "confidence": "sourced"},
+   {"order": 5, "value": "true price revealed", "when": "middle", "role": "turn", "quote": "on the condition of having buttons sewn onto her eyes", "confidence": "sourced"},
+   {"order": 6, "value": "past victims revealed", "when": "middle", "role": "clue", "quote": "three ghost children from previous time periods", "confidence": "sourced"},
+   {"order": 7, "value": "wager and escape", "when": "late", "quote": "She and the cat narrowly escape through the door with the ghost children's help", "confidence": "sourced"},
+   {"order": 8, "value": "last attack sealed in well", "when": "ending", "quote": "the Beldam's amputated hand sneaks into the real world and attempts to drag her back", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["origin", "wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

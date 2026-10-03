@@ -1,0 +1,64 @@
+{
+ "film": "2014-the-babadook",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes and symbolism"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "monster from a book", "detail": "the Babadook", "quote": "It describes a monster with a top hat wearing a suit, which grows more sinister and menacing with each page turned", "confidence": "sourced"},
+   {"value": "possessed mother", "quote": "the Babadook finally possesses her. Under its influence, she kills Bugsy and attempts to kill Sam", "confidence": "sourced"},
+   {"value": "grief", "quote": "grief is the \"real monster\" in The Babadook", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "unexplained", "detail": "the book appears mysteriously", "quote": "Amelia is disturbed by the book and its mysterious appearance", "confidence": "sourced"},
+   {"value": "suppressed trauma", "quote": "Amelia's efforts to suppress this led to it becoming stronger", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "the child", "quote": "offering to return if she \"brings the boy\" to him", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "death of a spouse", "quote": "Her husband, Oskar, was killed in a car accident while driving her to the hospital during labour", "confidence": "sourced"},
+   {"value": "resenting one's child", "quote": "even Amelia resents her son for his behavior", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "reading a book", "quote": "he asks his mother to read a pop-up fairy tale book, titled Mister Babadook", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "cannot be destroyed", "quote": "Sam reminds her that \"you can't get rid of the Babadook\"", "confidence": "sourced"},
+   {"value": "returns when discarded", "quote": "Amelia finds the Mister Babadook book reassembled at their front door", "confidence": "sourced"},
+   {"value": "can be contained and fed", "quote": "she soothes it and it retreats to the corner, taking the bowl of worms with it", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "widowed mother", "relation_to_threat": "self", "detail": "Amelia", "quote": "Amelia Vanek is a troubled, exhausted widow and single mother", "confidence": "sourced"},
+   {"value": "son", "relation_to_threat": "family", "detail": "Sam", "quote": "Amelia awakens and tries to strangle Sam", "confidence": "sourced"},
+   {"value": "pet dog", "relation_to_threat": "family", "detail": "Bugsy", "quote": "she kills Bugsy and attempts to kill Sam", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat contained", "quote": "making it retreat into the basement, locking the door in the process", "confidence": "sourced"},
+   {"value": "uneasy coexistence", "quote": "In the garden, they gather worms in a bowl, which Amelia takes to the basement", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "pop-up book", "state": "torn, reassembled", "when": "opening", "role": "threat", "quote": "a pop-up fairy tale book, titled Mister Babadook", "confidence": "sourced"},
+   {"value": "top hat and suit", "when": "opening", "role": "threat", "quote": "a monster with a top hat wearing a suit", "confidence": "sourced"},
+   {"value": "glass shards", "state": "in food", "when": "early", "role": "omen", "quote": "Amelia finding glass shards in her food", "confidence": "sourced"},
+   {"value": "dog", "detail": "Bugsy", "state": "killed", "when": "late", "role": "omen", "quote": "the book now contains pop-ups of her killing their dog Bugsy, Sam, then herself", "confidence": "sourced"},
+   {"value": "black substance", "state": "vomited", "when": "late", "role": "turn", "quote": "she regurgitates a black substance, which seemingly expels the Babadook", "confidence": "sourced"},
+   {"value": "basement", "when": "ending", "role": "setting", "quote": "making it retreat into the basement", "confidence": "sourced"},
+   {"value": "worms", "state": "in a bowl", "when": "ending", "role": "symbol", "quote": "they gather worms in a bowl", "confidence": "sourced"},
+   {"value": "homemade weapons", "when": "opening", "role": "weapon", "quote": "an imaginary monster, which he has built weapons to fight", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "widow with troubled child", "when": "opening", "quote": "Her husband, Oskar, was killed in a car accident while driving her to the hospital during labour", "confidence": "sourced"},
+   {"order": 2, "value": "book read aloud", "when": "opening", "role": "trigger", "quote": "he asks his mother to read a pop-up fairy tale book, titled Mister Babadook", "confidence": "sourced"},
+   {"order": 3, "value": "book destroyed, returns", "when": "middle", "role": "omen", "quote": "Amelia finds the Mister Babadook book reassembled at their front door", "confidence": "sourced"},
+   {"order": 4, "value": "first attack", "when": "middle", "quote": "That night, the Babadook attacks her", "confidence": "sourced"},
+   {"order": 5, "value": "dead spouse lures", "when": "late", "role": "turn", "quote": "An apparition of Oskar appears, offering to return if she \"brings the boy\" to him", "confidence": "sourced"},
+   {"order": 6, "value": "parent possessed, attacks child", "when": "late", "quote": "Under its influence, she kills Bugsy and attempts to kill Sam", "confidence": "sourced"},
+   {"order": 7, "value": "confrontation", "when": "late", "role": "turn", "quote": "Furious, she confronts the Babadook, making it retreat into the basement", "confidence": "sourced"},
+   {"order": 8, "value": "monster fed in basement", "when": "ending", "quote": "The Babadook tries to attack her, but she soothes it", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

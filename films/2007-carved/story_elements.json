@@ -1,0 +1,63 @@
+{
+ "film": "2007-carved",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "urban legend spirit", "detail": "the Slit-Mouthed Woman (Kuchisake-onna)", "quote": "Based on the Japanese urban legend known as , or \"the Slit-Mouthed Woman\"", "confidence": "sourced"},
+   {"value": "possessing spirit", "quote": "revealing that the spirit can possess other women, who develop a cough", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "person who died wronged", "detail": "Taeko Matsuzaki, killed by her son", "quote": "he slit her mouth and stabbed her, dressed her body in a coat and mask, and hid it in a closet", "confidence": "sourced"},
+   {"value": "abusive mother", "quote": "a sickly and unstable woman who abused him and his siblings", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "children", "quote": "taking Natsuki to its lair, cutting her mouth and murdering the abducted boy", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "child abuse", "quote": "Mika Sasaki is reluctant to leave, telling teacher Kyōko that her mother hits her", "confidence": "sourced"},
+   {"value": "parent kills children", "quote": "After Taeko killed Noboru's siblings, she \"disappeared\"", "confidence": "sourced"},
+   {"value": "child kills parent", "quote": "he slit her mouth and stabbed her", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "earthquake uncovers corpse", "quote": "an earthquake causes a corpse matching the entity's description to emerge from a closet in an abandoned house", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "asks a question", "quote": "hears a voice ask, \"Am I pretty?\"", "confidence": "sourced"},
+   {"value": "jumps between hosts", "quote": "Mika's mother then becomes the new host", "confidence": "sourced"},
+   {"value": "destroy the original corpse", "quote": "the only way to defeat  is to obliterate Taeko's corpse in the closet", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "schoolchildren", "relation_to_threat": "stranger", "quote": "A boy searching for  with his friends is then abducted at a playground", "confidence": "sourced"},
+   {"value": "teacher, son of the ghost", "relation_to_threat": "family", "detail": "Noboru Matsuzaki", "quote": "Noboru fights the spirit but is fatally wounded", "confidence": "sourced"},
+   {"value": "divorced mother", "relation_to_threat": "stranger", "detail": "Kyōko", "quote": "The spirit subsequently possesses Kyōko while she visits her daughter", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat survives", "quote": "However, decapitation fails, as the only way to defeat  is to obliterate Taeko's corpse in the closet", "confidence": "sourced"},
+   {"value": "protagonist becomes threat", "quote": "The spirit subsequently possesses Kyōko while she visits her daughter", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "corpse in a closet", "when": "opening", "role": "trigger", "quote": "a corpse matching the entity's description to emerge from a closet in an abandoned house", "confidence": "sourced"},
+   {"value": "mask", "state": "knocked off", "when": "early", "role": "threat", "quote": "Mika knocks off her mask, revealing her disfigured face", "confidence": "sourced"},
+   {"value": "old photograph", "when": "middle", "role": "clue", "quote": "Noboru shows Kyōko a thirty-year-old photograph of a woman resembling", "confidence": "sourced"},
+   {"value": "cough", "when": "middle", "role": "omen", "quote": "the spirit can possess other women, who develop a cough", "confidence": "sourced"},
+   {"value": "slit mouth", "when": "middle", "role": "symbol", "quote": "cutting her mouth and murdering the abducted boy", "confidence": "sourced"},
+   {"value": "house with red roof", "when": "late", "role": "setting", "quote": "a deserted house with a red roof, matching Noboru's childhood home", "confidence": "sourced"},
+   {"value": "knife", "when": "late", "role": "weapon", "quote": "Kyōko stabs the spirit in the neck", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "legend spreads, corpse emerges", "when": "opening", "role": "omen", "quote": "As stories about  (\"The Slit-Mouthed Woman\") spread through a Japanese town", "confidence": "sourced"},
+   {"order": 2, "value": "child abducted", "when": "opening", "quote": "A boy searching for  with his friends is then abducted at a playground", "confidence": "sourced"},
+   {"order": 3, "value": "abused child taken", "when": "early", "quote": "As the entity takes Mika away, Mika knocks off her mask", "confidence": "sourced"},
+   {"order": 4, "value": "spirit shown to possess", "when": "middle", "role": "turn", "quote": "its body transforms into that of a housewife", "confidence": "sourced"},
+   {"order": 5, "value": "ghost is hero's mother", "when": "middle", "role": "turn", "quote": "Noboru identifies the woman in the photograph as his deceased mother, Taeko Matsuzaki", "confidence": "sourced"},
+   {"order": 6, "value": "past crime confessed", "when": "late", "role": "turn", "quote": "Noboru recalls that Taeko had asked him to mercy kill her", "confidence": "sourced"},
+   {"order": 7, "value": "confrontation in the childhood home", "when": "late", "quote": "Kyōko and Noboru find Mika in the house's basement and are attacked", "confidence": "sourced"},
+   {"order": 8, "value": "heroine possessed", "when": "ending", "quote": "The spirit subsequently possesses Kyōko while she visits her daughter", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

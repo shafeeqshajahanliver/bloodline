@@ -1,0 +1,59 @@
+{
+ "film": "1980-prom-night",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "masked killer", "detail": "Alex Hammond, Robin's twin brother", "quote": "four high school seniors who are targeted at their prom by a masked killer", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "grieving relative", "quote": "He is revealed to be Alex, who, in his last moments, exclaims tearfully, \"They killed her!\"", "confidence": "sourced"},
+   {"value": "witness to a death", "quote": "the shadow of an unseen person who witnessed Robin's death appears", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "revenge", "quote": "seeking vengeance for the accidental death of Robin Hammond, a young girl, from six years earlier", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "child's accidental death", "quote": "the group scares her, leading to Robin accidentally falling to her death through a window", "confidence": "sourced"},
+   {"value": "secret kept", "quote": "The children make a pact not to tell anyone what happened in fear of getting in trouble", "confidence": "sourced"},
+   {"value": "innocent man blamed", "quote": "Leonard Murch, a sex offender informally blamed for Robin's death, has escaped from a psychiatric facility", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "anniversary", "quote": "the school prom, which falls on the anniversary of Robin's death", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "only the guilty targeted", "quote": "Kelly, Jude, and Wendy receive anonymous obscene phone calls, while Nick ignores his ringing phone", "confidence": "observed"}
+  ],
+  "who_suffers": [
+   {"value": "teenagers who share a secret", "relation_to_threat": "stranger", "quote": "Wendy, Jude, and Kelly each find their yearbook photos stabbed with a piece of glass", "confidence": "sourced"},
+   {"value": "sister", "relation_to_threat": "family", "detail": "Kim, who fights her brother", "quote": "In the ensuing brawl, Kim strikes the killer in the head with the ax", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "killer dies", "quote": "Alex dies in Kim's arms, crying out Robin's name", "confidence": "sourced"},
+   {"value": "killer unmasked as family", "quote": "He is revealed to be Alex", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "window", "state": "fall to death", "when": "opening", "role": "trigger", "quote": "Robin accidentally falling to her death through a window", "confidence": "sourced"},
+   {"value": "abandoned convent", "when": "opening", "role": "setting", "quote": "play hide-and-seek in an abandoned convent", "confidence": "sourced"},
+   {"value": "phone call", "state": "obscene, anonymous", "when": "early", "role": "omen", "quote": "receive anonymous obscene phone calls", "confidence": "sourced"},
+   {"value": "mirror", "state": "shattered", "when": "early", "role": "omen", "quote": "Kim and Kelly are startled when an unseen assailant shatters a mirror", "confidence": "sourced"},
+   {"value": "yearbook photos", "state": "stabbed", "when": "early", "role": "omen", "quote": "find their yearbook photos stabbed with a piece of glass", "confidence": "sourced"},
+   {"value": "ski mask", "when": "middle", "role": "threat", "quote": "a figure wearing a ski mask targets Kelly first", "confidence": "sourced"},
+   {"value": "axe", "when": "late", "role": "weapon", "quote": "Now wielding an ax, the killer chases Wendy through an empty wing of the school", "confidence": "sourced"},
+   {"value": "severed head", "state": "rolling on stage", "when": "late", "role": "turn", "quote": "Lou's severed head rolls onto the stage, sending the prom-goers fleeing in horror", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "childhood game causes death", "when": "opening", "quote": "the group scares her, leading to Robin accidentally falling to her death through a window", "confidence": "sourced"},
+   {"order": 2, "value": "pact of silence", "when": "opening", "quote": "The children make a pact not to tell anyone what happened", "confidence": "sourced"},
+   {"order": 3, "value": "warnings on the anniversary", "when": "early", "role": "omen", "quote": "Wendy, Jude, and Kelly each find their yearbook photos stabbed with a piece of glass", "confidence": "sourced"},
+   {"order": 4, "value": "red herring suspect", "when": "early", "quote": "learns that Leonard Murch, a sex offender informally blamed for Robin's death, has escaped", "confidence": "sourced"},
+   {"order": 5, "value": "killings at the prom", "when": "middle", "quote": "slitting her throat with a mirror shard in the girls' locker room", "confidence": "sourced"},
+   {"order": 6, "value": "public decapitation", "when": "late", "role": "turn", "quote": "Mistaking him for Nick, the killer decapitates him", "confidence": "sourced"},
+   {"order": 7, "value": "killer unmasked and dies", "when": "ending", "role": "turn", "quote": "He is revealed to be Alex, who, in his last moments, exclaims tearfully", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

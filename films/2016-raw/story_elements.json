@@ -1,0 +1,59 @@
+{
+ "film": "2016-raw",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "cannibal hunger", "quote": "she tastes meat for the first time and develops a craving for human flesh", "confidence": "sourced"},
+   {"value": "the self", "quote": "Justine's craving for human meat grows and she starts lusting after Adrien", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "inherited", "detail": "their mother shares the craving", "quote": "He then opens his shirt, revealing scars and missing chunks of his chest", "confidence": "observed"}
+  ],
+  "wants": [
+   {"value": "hunger", "quote": "Justine begins having cravings for meat, which makes her feel ashamed", "confidence": "sourced"},
+   {"value": "desire", "quote": "she starts lusting after Adrien", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "initiation ritual", "quote": "they are forced to partake in a week-long hazing ritual, welcoming the new students", "confidence": "sourced"},
+   {"value": "forced to eat meat", "quote": "the new class is splattered with blood and is forced to eat raw rabbit kidneys", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "passed down in family", "quote": "Justine's father tells her that what happened is neither hers nor Alexia's fault", "confidence": "observed"}
+  ],
+  "who_suffers": [
+   {"value": "young woman", "relation_to_threat": "self", "detail": "Justine", "quote": "Justine tries to bite Adrien but instead bites her own arm until it bleeds profusely", "confidence": "sourced"},
+   {"value": "roommate and lover", "relation_to_threat": "lover", "detail": "Adrien", "quote": "finding Adrien dead with most of his right leg eaten and a stab wound in his back", "confidence": "sourced"},
+   {"value": "sister", "relation_to_threat": "family", "detail": "Alexia", "quote": "Alexia accidentally cuts off her own finger", "confidence": "sourced"},
+   {"value": "father", "relation_to_threat": "family", "quote": "revealing scars and missing chunks of his chest", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat survives", "quote": "assures Justine that she will find a solution", "confidence": "observed"},
+   {"value": "family secret revealed", "quote": "Her father says he finally realized when they kissed the first time, indicating a scar on his lip", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "blood", "state": "splattered on students", "when": "opening", "role": "symbol", "quote": "the new class is splattered with blood", "confidence": "sourced"},
+   {"value": "raw rabbit kidney", "when": "opening", "role": "trigger", "quote": "is forced to eat raw rabbit kidneys", "confidence": "sourced"},
+   {"value": "rash", "state": "itchy", "when": "early", "role": "omen", "quote": "later discovers an itchy rash all over her body", "confidence": "sourced"},
+   {"value": "hair", "state": "vomited", "when": "early", "role": "omen", "quote": "later throws up a long bundle of her own hair she had been chewing on", "confidence": "sourced"},
+   {"value": "severed finger", "state": "eaten", "when": "middle", "role": "turn", "quote": "Justine picks up the finger, tastes the blood, and starts eating it", "confidence": "sourced"},
+   {"value": "dog", "state": "blamed", "when": "middle", "role": "symbol", "quote": "later tells their parents that her dog, Quicky, ate it", "confidence": "sourced"},
+   {"value": "corpse in morgue", "when": "late", "role": "threat", "quote": "attempting to take a bite out of the arm of a corpse", "confidence": "sourced"},
+   {"value": "scars", "state": "on father's chest", "when": "ending", "role": "clue", "quote": "revealing scars and missing chunks of his chest", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "arrival at school", "when": "opening", "quote": "Lifelong vegetarian Justine begins her first semester at veterinary school", "confidence": "sourced"},
+   {"order": 2, "value": "forced to eat meat", "when": "opening", "role": "trigger", "quote": "Justine refuses because of her vegetarianism, but Alexia forces her to eat one", "confidence": "sourced"},
+   {"order": 3, "value": "body changes", "when": "early", "quote": "later discovers an itchy rash all over her body", "confidence": "sourced"},
+   {"order": 4, "value": "first taste of human flesh", "when": "middle", "role": "turn", "quote": "Justine picks up the finger, tastes the blood, and starts eating it", "confidence": "sourced"},
+   {"order": 5, "value": "sister reveals same hunger", "when": "middle", "role": "turn", "quote": "Alexia starts eating one of the passengers so that her sister will \"learn\"", "confidence": "sourced"},
+   {"order": 6, "value": "public shame", "when": "late", "quote": "The next day, everyone in school stares at Justine, some avoiding her", "confidence": "sourced"},
+   {"order": 7, "value": "lover killed", "when": "late", "quote": "finding Adrien dead with most of his right leg eaten", "confidence": "sourced"},
+   {"order": 8, "value": "family secret revealed", "when": "ending", "role": "clue", "quote": "He then opens his shirt, revealing scars and missing chunks of his chest", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

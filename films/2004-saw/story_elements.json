@@ -1,0 +1,64 @@
+{
+ "film": "2004-saw",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "serial killer", "detail": "the Jigsaw Killer, John Kramer", "quote": "a serial killer who tests his victims' will to survive through murderous contraptions known as \"games\"", "confidence": "sourced"},
+   {"value": "deadly traps", "quote": "they must inflict great physical pain upon themselves to survive", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "terminally ill man", "detail": "John Kramer, a cancer patient of Lawrence", "quote": "after discussing the terminal brain cancer of patient John Kramer with his medical interns", "confidence": "observed"}
+  ],
+  "wants": [
+   {"value": "to test the will to live", "quote": "who tests his victims' will to live by putting them through deadly \"games\"", "confidence": "sourced"},
+   {"value": "punish moral failings", "quote": "Lawrence deduces that the affair is the reason why he is being tested", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "adultery", "quote": "Lawrence's affair with one of his medical students whom he had visited on the night of his abduction", "confidence": "sourced"},
+   {"value": "spying for money", "quote": "he was paid by Tapp to spy on him", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "abduction", "quote": "He recounts his abduction in a parking garage by a pig-masked figure", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "kill or family dies", "quote": "Lawrence's tape orders him to kill Adam by 6:00, or his wife, Alison, and daughter, Diana, will be murdered", "confidence": "sourced"},
+   {"value": "survive by self-mutilation", "quote": "Lawrence realizes that the saws are intended for their feet", "confidence": "sourced"},
+   {"value": "instructions on tape", "quote": "Both men find a tape in their pockets", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "captive strangers", "relation_to_threat": "stranger", "detail": "Adam and Dr. Lawrence Gordon", "quote": "Jigsaw's latest victims (Whannell and Elwes), who awaken in a large, dilapidated bathroom", "confidence": "sourced"},
+   {"value": "mother and daughter", "relation_to_threat": "family", "detail": "Alison and Diana, held hostage", "quote": "Alison and Diana are tied up and gagged in their apartment", "confidence": "sourced"},
+   {"value": "detectives", "relation_to_threat": "stranger", "detail": "Tapp and Sing", "quote": "Jigsaw managed to escape after he critically injured Tapp; Sing was killed by a shotgun trap", "confidence": "sourced"},
+   {"value": "doctor", "relation_to_threat": "stranger", "detail": "Lawrence treated Jigsaw", "quote": "after discussing the terminal brain cancer of patient John Kramer", "confidence": "observed"}
+  ],
+  "ending": [
+   {"value": "threat survives", "quote": "John exits the bathroom before sealing the door, leaving Adam alone to die", "confidence": "sourced"},
+   {"value": "villain hidden in plain sight", "quote": "The \"corpse\" lying in the room suddenly rises to its feet; it turns out to be John Kramer", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "chain", "state": "around ankle", "when": "opening", "role": "setting", "quote": "awakens in a dilapidated bathtub with his ankle chained to a pipe", "confidence": "sourced"},
+   {"value": "corpse", "state": "fake, holding revolver", "when": "opening", "role": "clue", "quote": "the corpse of a suicide victim holding a revolver and a microcassette recorder", "confidence": "sourced"},
+   {"value": "cassette tape", "when": "opening", "role": "trigger", "quote": "Both men find a tape in their pockets, and Adam retrieves the recorder", "confidence": "sourced"},
+   {"value": "hacksaw", "when": "early", "role": "weapon", "quote": "a bag containing two hacksaws inside the toilet", "confidence": "sourced"},
+   {"value": "pig mask", "when": "middle", "role": "threat", "quote": "his abduction in a parking garage by a pig-masked figure", "confidence": "sourced"},
+   {"value": "puppet", "when": "middle", "role": "omen", "quote": "he returned home to find a puppet in his darkroom", "confidence": "sourced"},
+   {"value": "toilet tank lid", "when": "late", "role": "weapon", "quote": "bludgeons him to death with the toilet tank lid", "confidence": "sourced"},
+   {"value": "key down the drain", "when": "ending", "role": "turn", "quote": "it went down the drain when Adam had first awoken and drained the water", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "waking up captive", "when": "opening", "quote": "awakens in a dilapidated bathtub with his ankle chained to a pipe", "confidence": "sourced"},
+   {"order": 2, "value": "rules given", "when": "opening", "role": "trigger", "quote": "Lawrence's tape orders him to kill Adam by 6:00", "confidence": "sourced"},
+   {"order": 3, "value": "flashback to investigation", "when": "early", "quote": "Tapp and Sing later found Jigsaw's warehouse using the videotape from Amanda's game", "confidence": "sourced"},
+   {"order": 4, "value": "secrets confessed", "when": "middle", "role": "turn", "quote": "Adam, who admits to Lawrence that he was paid by Tapp to spy on him", "confidence": "sourced"},
+   {"order": 5, "value": "self-mutilation", "when": "late", "quote": "In desperation, he saws off his foot and shoots Adam with the corpse's revolver", "confidence": "sourced"},
+   {"order": 6, "value": "henchman revealed as victim", "when": "late", "role": "turn", "quote": "Zep was just another victim of Jigsaw, following rules to obtain the antidote", "confidence": "sourced"},
+   {"order": 7, "value": "corpse rises", "when": "ending", "role": "turn", "quote": "The \"corpse\" lying in the room suddenly rises to its feet", "confidence": "sourced"},
+   {"order": 8, "value": "victim sealed in", "when": "ending", "quote": "John exits the bathroom before sealing the door, leaving Adam alone to die", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

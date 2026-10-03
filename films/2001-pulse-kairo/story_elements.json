@@ -1,0 +1,60 @@
+{
+ "film": "2001-pulse-kairo",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "ghosts", "detail": "the dead invading through the Internet", "quote": "mass disappearances amidst a ghostly invasion of the real world via the Internet", "confidence": "sourced"},
+   {"value": "loneliness", "quote": "a ghost tells him that \"death is eternal loneliness.\"", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "the dead invading", "quote": "A graduate student tells Ryosuke his theory that the dead are invading the physical world", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to trap the living", "quote": "ghosts are trying to trap the living in their loneliness rather than kill them", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "connecting to the internet", "quote": "has recently signed with a new ISP. His computer accesses a website by itself", "confidence": "sourced"},
+   {"value": "entering a forbidden room", "quote": "he notices a door sealed with red tape and enters, only to encounter a ghost", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "must not enter the forbidden room", "quote": "He warns Michi not to enter \"the forbidden room.\"", "confidence": "sourced"},
+   {"value": "victims fade into stains", "quote": "Junko walks towards a wall, dissolving into a black stain that scatters", "confidence": "sourced"},
+   {"value": "cannot be stopped", "quote": "they are rescued by a ship crewed by survivors, who reveal that the same events are happening worldwide", "confidence": "observed"}
+  ],
+  "who_suffers": [
+   {"value": "young workers", "relation_to_threat": "stranger", "detail": "Michi's plant shop colleagues", "quote": "works at a plant shop with Junko Sasano, Toshio Yabe, and Taguchi", "confidence": "sourced"},
+   {"value": "student", "relation_to_threat": "stranger", "detail": "Ryosuke Kawashima", "quote": "Ryosuke Kawashima, a university economics student,  has recently signed with a new ISP", "confidence": "sourced"},
+   {"value": "lonely woman", "relation_to_threat": "stranger", "detail": "Harue", "quote": "Harue, who has always felt lonely, happily says that she is \"not alone\"", "confidence": "sourced"},
+   {"value": "whole city", "relation_to_threat": "community", "quote": "resulting in the disappearances of people en masse, and an evacuation of Tokyo commences", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "apocalypse", "quote": "who reveal that the same events are happening worldwide", "confidence": "sourced"},
+   {"value": "last companion lost", "quote": "He fades into a stain on the wall as Michi reflects on finding happiness in being alone with her last friend in the world", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "hanged body", "when": "opening", "role": "omen", "quote": "she turns and finds he has hanged himself", "confidence": "sourced"},
+   {"value": "computer screen", "state": "looping images", "when": "opening", "role": "threat", "quote": "The disk reveals an endless loop of images of Taguchi staring into his monitor", "confidence": "sourced"},
+   {"value": "black stain on the wall", "when": "early", "role": "clue", "quote": "he finds a black stain on the wall where Taguchi hanged himself", "confidence": "sourced"},
+   {"value": "red tape door", "when": "early", "role": "threat", "quote": "he notices a door sealed with red tape", "confidence": "sourced"},
+   {"value": "phone call", "state": "\"help me\"", "when": "early", "role": "omen", "quote": "Yabe receives a distorted phone call saying \"help me\"", "confidence": "sourced"},
+   {"value": "plastic bag over head", "when": "middle", "role": "mirror", "quote": "a video of a man with a plastic bag over his head", "confidence": "sourced"},
+   {"value": "abandoned city", "when": "late", "role": "setting", "quote": "They drive through Tokyo, now completely abandoned", "confidence": "sourced"},
+   {"value": "ship", "when": "ending", "role": "setting", "quote": "As the ship sets off for Latin America", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "colleague's suicide", "when": "opening", "role": "omen", "quote": "she turns and finds he has hanged himself, his decaying body making her question who she had spoken to earlier", "confidence": "sourced"},
+   {"order": 2, "value": "forbidden room entered", "when": "early", "role": "trigger", "quote": "he notices a door sealed with red tape and enters, only to encounter a ghost", "confidence": "sourced"},
+   {"order": 3, "value": "friends vanish one by one", "when": "middle", "quote": "Junko walks towards a wall, dissolving into a black stain that scatters", "confidence": "sourced"},
+   {"order": 4, "value": "computer haunts itself", "when": "middle", "quote": "His computer accesses a website by itself, displaying disturbing images of people alone in dark rooms", "confidence": "sourced"},
+   {"order": 5, "value": "theory explained", "when": "middle", "role": "clue", "quote": "A graduate student tells Ryosuke his theory that the dead are invading the physical world", "confidence": "sourced"},
+   {"order": 6, "value": "mass disappearance", "when": "late", "role": "turn", "quote": "The ghosts launch a full-scale invasion of the Kantō region", "confidence": "sourced"},
+   {"order": 7, "value": "escape by sea", "when": "ending", "quote": "they are rescued by a ship crewed by survivors", "confidence": "sourced"},
+   {"order": 8, "value": "last companion fades", "when": "ending", "quote": "He fades into a stain on the wall", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

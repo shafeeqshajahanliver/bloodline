@@ -1,0 +1,57 @@
+{
+ "film": "2018-in-fabric",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "cursed object", "detail": "a haunted red dress", "quote": "a haunted red dress as it torments various owners", "confidence": "sourced"},
+   {"value": "sinister store", "detail": "Dentley & Soper's and its clerks", "quote": "the store clerks are shown cleaning a lifelike mannequin, which appears to menstruate", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "unexplained", "quote": "the dress is one of its kind, and the store model who wore it for the catalogue was later killed", "confidence": "observed"}
+  ],
+  "wants": [
+   {"value": "to claim wearers", "detail": "victims sew the dress with their blood", "quote": "stitching together the dress from threads made of their blood", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "buying an object", "quote": "Sheila buys a beautiful, flowing red dress", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "cannot be returned", "quote": "Sheila attempts to return the dress to the store but is refused", "confidence": "sourced"},
+   {"value": "indestructible", "quote": "discovers the dress undamaged amongst the rubble", "confidence": "sourced"},
+   {"value": "passes owner to owner", "quote": "The dress comes into the possession of washing machine repairman Reg Speaks", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "lonely woman", "relation_to_threat": "stranger", "detail": "Sheila, recently divorced", "quote": "Recently divorced bank teller Sheila", "confidence": "sourced"},
+   {"value": "engaged couple", "relation_to_threat": "stranger", "detail": "Reg and Babs", "quote": "Babs burns to death in the changing room", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "cycle passes on", "quote": "several empty sewing stations implied to be for future wearers", "confidence": "sourced"},
+   {"value": "threat survives", "quote": "discovers the dress undamaged amongst the rubble", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "red dress", "when": "early", "role": "threat", "quote": "a beautiful, flowing red dress", "confidence": "sourced"},
+   {"value": "rash", "when": "early", "role": "omen", "quote": "Sheila notices a strange rash on her chest", "confidence": "sourced"},
+   {"value": "washing machine", "state": "broken", "when": "early", "role": "omen", "quote": "Her washing machine later breaks down with the dress inside", "confidence": "sourced"},
+   {"value": "mannequin", "state": "menstruating", "when": "early", "role": "symbol", "quote": "a lifelike mannequin, which appears to menstruate", "confidence": "sourced"},
+   {"value": "dog", "state": "german shepherd attacks", "when": "middle", "role": "omen", "quote": "a German Shepherd attacks her, injuring her leg and ripping the dress", "confidence": "sourced"},
+   {"value": "mirror", "state": "dead mother reflected", "when": "middle", "role": "omen", "quote": "seeing her mother reflected in the mirror", "confidence": "sourced"},
+   {"value": "fire", "when": "late", "role": "weapon", "quote": "The dress falls onto a heater and catches fire", "confidence": "sourced"},
+   {"value": "blood thread", "when": "ending", "role": "symbol", "quote": "threads made of their blood", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "lonely woman buys dress", "when": "opening", "role": "trigger", "quote": "Sheila buys a beautiful, flowing red dress", "confidence": "sourced"},
+   {"order": 2, "value": "body marked", "when": "early", "role": "omen", "quote": "Sheila notices a strange rash on her chest", "confidence": "sourced"},
+   {"order": 3, "value": "previous owner died", "when": "middle", "role": "clue", "quote": "the store model who wore it for the catalogue was later killed", "confidence": "sourced"},
+   {"order": 4, "value": "dress attacks", "when": "middle", "quote": "the dress floats above her and tries to suffocate her", "confidence": "sourced"},
+   {"order": 5, "value": "first owner killed", "when": "middle", "quote": "Sheila gets into an accident and is killed", "confidence": "sourced"},
+   {"order": 6, "value": "new owners", "when": "late", "role": "turn", "quote": "The dress comes into the possession of washing machine repairman Reg Speaks", "confidence": "sourced"},
+   {"order": 7, "value": "store burns", "when": "late", "quote": "Babs burns to death in the changing room", "confidence": "sourced"},
+   {"order": 8, "value": "dead sew the dress", "when": "ending", "quote": "stitching together the dress from threads made of their blood", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

@@ -1,0 +1,60 @@
+{
+ "film": "2004-dumplings",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "cannibal cook", "detail": "Aunt Mei", "quote": "the secret ingredient for her rejuvenating dumplings is unborn fetuses imported from an abortion clinic in Shenzhen", "confidence": "sourced"},
+   {"value": "the self", "detail": "Mrs. Li's vanity", "quote": "Mrs. Li makes dumplings from the fetus", "confidence": "observed"}
+  ],
+  "origin": [
+   {"value": "human greed", "quote": "Mrs. Li is frustrated by the lack of progress and asks Mei to keep finding more potent remedies", "confidence": "observed"}
+  ],
+  "wants": [
+   {"value": "youth and beauty", "quote": "Mrs. Li, a former actress, is losing her good looks and longs for passion with her wealthy husband", "confidence": "sourced"},
+   {"value": "a husband's desire", "quote": "he finds her more attractive than before, and they have passionate sex", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "incest", "quote": "Kate, a girl five months pregnant who has been impregnated by her father", "confidence": "sourced"},
+   {"value": "adultery", "quote": "her wealthy husband, who is having an affair with his much younger masseuse", "confidence": "sourced"},
+   {"value": "eating the unborn", "quote": "after Mrs. Li sneaks a look in the kitchen and sees the fetus, she is disgusted and runs away, but shortly returns and consumes them", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "fear of ageing", "quote": "Mrs. Li seeks the help of Aunt Mei, a local chef", "confidence": "observed"}
+  ],
+  "rules": [
+   {"value": "eating restores youth", "quote": "Mei cooks her some special dumplings which she claims to be effective for rejuvenation", "confidence": "sourced"},
+   {"value": "incest child most potent", "quote": "Mei claims that a child conceived by way of incest is the most potent", "confidence": "sourced"},
+   {"value": "side effect: smell", "quote": "there is a horrid fish-like smell in the air, which turns out to be from Mrs. Li herself", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "pregnant girl", "relation_to_threat": "stranger", "detail": "Kate, who bleeds to death", "quote": "Kate collapses on the pavement and dies in her mother's arms", "confidence": "sourced"},
+   {"value": "husband's mistress", "relation_to_threat": "stranger", "detail": "the masseuse", "quote": "Mrs. Li pays her to immediately abort the fetus", "confidence": "sourced"},
+   {"value": "wife", "relation_to_threat": "self", "detail": "Mrs. Li", "quote": "Mrs. Li cries in the bathtub while watching a rerun of her old series", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "victim becomes threat", "detail": "Mrs. Li takes Mei's place", "quote": "Mei is pictured carrying her belongings through the streets while Mrs. Li makes dumplings from the fetus", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "dumplings", "when": "opening", "role": "threat", "quote": "Mei cooks her some special dumplings which she claims to be effective for rejuvenation", "confidence": "sourced"},
+   {"value": "fetus", "state": "cooked", "when": "early", "role": "clue", "quote": "sneaks a look in the kitchen and sees the fetus", "confidence": "sourced"},
+   {"value": "blood", "state": "pooling on a bus seat", "when": "middle", "role": "omen", "quote": "Kate bleeding heavily onto her seat", "confidence": "sourced"},
+   {"value": "fish smell", "when": "middle", "role": "omen", "quote": "a horrid fish-like smell in the air", "confidence": "sourced"},
+   {"value": "broken leg", "when": "middle", "role": "turn", "quote": "her husband has broken his leg", "confidence": "sourced"},
+   {"value": "torn cheque", "when": "late", "role": "symbol", "quote": "leaves her a check, Mei rips it apart", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "aging wife seeks a remedy", "when": "opening", "quote": "Mrs. Li seeks the help of Aunt Mei, a local chef", "confidence": "sourced"},
+   {"order": 2, "value": "secret ingredient revealed", "when": "opening", "role": "turn", "quote": "the secret ingredient for her rejuvenating dumplings is unborn fetuses", "confidence": "sourced"},
+   {"order": 3, "value": "illegal abortion", "when": "early", "quote": "Mei agrees to perform a risky black market abortion on Kate", "confidence": "sourced"},
+   {"order": 4, "value": "remedy works", "when": "middle", "quote": "he finds her more attractive than before", "confidence": "sourced"},
+   {"order": 5, "value": "victim dies", "when": "middle", "quote": "Kate collapses on the pavement and dies in her mother's arms", "confidence": "sourced"},
+   {"order": 6, "value": "husband seduced by the cook", "when": "late", "quote": "He eats them and they have violent sex, during which she reveals she is actually 64 years old", "confidence": "sourced"},
+   {"order": 7, "value": "protagonist takes over the practice", "when": "ending", "role": "turn", "quote": "Mrs. Li makes dumplings from the fetus", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

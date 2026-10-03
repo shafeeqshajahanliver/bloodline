@@ -1,0 +1,58 @@
+{
+ "film": "2007-rec",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "contagious infection", "quote": "more people display violent symptoms and begin attacking others", "confidence": "sourced"},
+   {"value": "possessed girl", "detail": "Tristana Medeiros", "quote": "a sick Portuguese girl, Tristana Medeiros, whose condition was believed to be linked to demonic possession", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "possession turned disease", "quote": "the illness mutated into a contagious infection, and she was sealed inside", "confidence": "sourced"},
+   {"value": "from an animal", "detail": "the official's theory", "quote": "the infection resembles rabies and may have originated with a dog from the building", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to spread", "quote": "As the outbreak escalates, Ángela and Pablo fight their way upstairs, pursued by the infected", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "secret church experiment", "quote": "the penthouse occupant, acting on behalf of the Vatican, had been studying a sick Portuguese girl", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "emergency call", "quote": "after reports that an elderly resident is behaving erratically", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "spread by bite", "quote": "the woman attacks and bites a police officer", "confidence": "sourced"},
+   {"value": "sealed in quarantine", "quote": "authorities seal the building, trapping residents and emergency personnel inside under quarantine", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "reporter and cameraman", "relation_to_threat": "stranger", "detail": "Ángela and Pablo", "quote": "Television reporter Ángela Vidal and her cameraman, Pablo, film a night shift at a Barcelona fire station", "confidence": "sourced"},
+   {"value": "residents", "relation_to_threat": "community", "quote": "trapping residents and emergency personnel inside under quarantine", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "everyone dies", "quote": "she is dragged into the darkness, screaming, as the footage ends", "confidence": "observed"},
+   {"value": "threat survives", "quote": "An emaciated Tristana attacks, killing Pablo", "confidence": "observed"}
+  ],
+  "images": [
+   {"value": "camera", "state": "recording, dropped", "when": "ending", "role": "symbol", "quote": "Ángela flees but drops the camera", "confidence": "sourced"},
+   {"value": "dog", "state": "sick", "when": "early", "role": "clue", "quote": "may have originated with a dog from the building", "confidence": "sourced"},
+   {"value": "protective suit", "when": "early", "role": "symbol", "quote": "A health official in protective gear arrives", "confidence": "sourced"},
+   {"value": "blocked stairwells", "when": "early", "role": "setting", "quote": "only to find stairwells and exits blocked", "confidence": "sourced"},
+   {"value": "tape recording", "when": "late", "role": "clue", "quote": "A tape recording indicates that the penthouse occupant, acting on behalf of the Vatican", "confidence": "sourced"},
+   {"value": "night vision", "when": "ending", "role": "setting", "quote": "In the darkened attic, Pablo switches the camera to night vision", "confidence": "sourced"},
+   {"value": "emaciated girl", "when": "ending", "role": "threat", "quote": "An emaciated Tristana attacks, killing Pablo", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "film crew on night shift", "when": "opening", "quote": "film a night shift at a Barcelona fire station for the programme While You're Sleeping", "confidence": "sourced"},
+   {"order": 2, "value": "first bite", "when": "opening", "role": "trigger", "quote": "Inside the apartment, the woman attacks and bites a police officer", "confidence": "sourced"},
+   {"order": 3, "value": "building sealed", "when": "early", "role": "turn", "quote": "authorities seal the building, trapping residents and emergency personnel inside", "confidence": "sourced"},
+   {"order": 4, "value": "infection spreads", "when": "middle", "quote": "Attempts to control the situation fail as more people display violent symptoms", "confidence": "sourced"},
+   {"order": 5, "value": "origin revealed in penthouse", "when": "late", "role": "clue", "quote": "They reach the penthouse, where they discover religious material and evidence of a prior investigation", "confidence": "sourced"},
+   {"order": 6, "value": "source attacks in darkness", "when": "ending", "quote": "An emaciated Tristana attacks, killing Pablo", "confidence": "sourced"},
+   {"order": 7, "value": "heroine dragged away", "when": "ending", "quote": "she is dragged into the darkness, screaming, as the footage ends", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

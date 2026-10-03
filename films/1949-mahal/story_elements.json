@@ -1,0 +1,62 @@
+{
+ "film": "1949-mahal",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "ghost of a lover", "detail": "Kamini, who died waiting for her drowned lover", "quote": "he gets visions of a mysterious lady (Madhubala) claiming to be his lover in their previous lives", "confidence": "sourced"},
+   {"value": "obsession", "detail": "Shankar's fixation on Kamini; she later proves to be the living Asha", "quote": "Later Asha is revealed to be Kamini", "confidence": "observed"}
+  ],
+  "origin": [
+   {"value": "person who died waiting", "detail": "Kamini's lover drowned and she died days later", "quote": "One stormy night, the man's ship sank and he drowned", "confidence": "sourced"},
+   {"value": "past life", "quote": "Mahal is a reincarnation and a ghost story", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "a body", "detail": "Kamini wants to enter a woman's body to return to life", "quote": "if she could enter into a body of a woman whom Shankar likes, she could return to life", "confidence": "sourced"},
+   {"value": "unfinished love", "quote": "the old gardener narrates the story of incomplete love", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "love left incomplete", "quote": "Before leaving Kamini, he tells her that their love will never fail", "confidence": "observed"},
+   {"value": "betrayal of a spouse", "detail": "Ranjana accuses Shankar after following him to Kamini", "quote": "give a deathbed confession against Shankar of betrayal and poisoning her", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "moving into a new home", "quote": "When a new owner, Hari Shankar (Ashok Kumar), comes to live in this palace", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "ghost needs a host body", "quote": "Kamini tells him to kill the gardener's daughter so that she can use her body", "confidence": "sourced"},
+   {"value": "will draw him to death", "quote": "warns Shankar that she will draw him to death", "confidence": "sourced"},
+   {"value": "cannot be shot", "quote": "Enraged, Shrinath tries to shoot her but fails", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "new owner", "relation_to_threat": "lover", "detail": "Hari Shankar, double of Kamini's lover", "quote": "Shankar is astonished to find the man in the photograph looks exactly like him", "confidence": "sourced"},
+   {"value": "wife", "relation_to_threat": "stranger", "detail": "Ranjana, who poisons herself", "quote": "Ranjana drinks poison and goes to police station", "confidence": "sourced"},
+   {"value": "intended host", "relation_to_threat": "stranger", "detail": "the gardener's daughter Asha", "quote": "Kamini tells him to kill the gardener's daughter so that she can use her body", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "ghost revealed as human", "detail": "Asha had played Kamini", "quote": "She then accepts that she has played Kamini because she had fallen in love with the man in the photograph", "confidence": "sourced"},
+   {"value": "protagonist dies", "quote": "Shankar rushes to Shrinath's place but dies", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "abandoned palace", "state": "abandoned", "when": "opening", "role": "setting", "quote": "In Allahabad, there is a beautiful abandoned palace", "confidence": "sourced"},
+   {"value": "photograph", "state": "falls from wall", "when": "early", "role": "omen", "quote": "a photograph falls from the wall and Shankar is astonished", "confidence": "sourced"},
+   {"value": "singing voice", "state": "disembodied", "when": "early", "role": "omen", "quote": "a woman is heard singing and Shankar follows her voice", "confidence": "sourced"},
+   {"value": "water", "state": "she jumps into it and vanishes", "when": "early", "role": "clue", "quote": "she jumps off into water and the two men find nothing when they look down", "confidence": "sourced"},
+   {"value": "poison", "state": "drunk", "when": "late", "role": "turn", "quote": "Ranjana drinks poison and goes to police station", "confidence": "sourced"},
+   {"value": "shipwreck", "state": "past", "when": "opening", "role": "symbol", "quote": "One stormy night, the man's ship sank and he drowned", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "legend told by servant", "when": "opening", "role": "omen", "quote": "the old gardener narrates the story of incomplete love", "confidence": "sourced"},
+   {"order": 2, "value": "double discovered in portrait", "when": "early", "role": "turn", "quote": "Shankar is astonished to find the man in the photograph looks exactly like him", "confidence": "sourced"},
+   {"order": 3, "value": "apparition vanishes", "when": "early", "quote": "she jumps off into water and the two men find nothing when they look down", "confidence": "sourced"},
+   {"order": 4, "value": "ghost demands a body", "when": "middle", "quote": "Kamini tells Shankar that if she could enter into a body of a woman whom Shankar likes", "confidence": "sourced"},
+   {"order": 5, "value": "marriage to forget", "when": "middle", "quote": "Shankar marries Ranjana (Vijayalaxmi). He decides to move far away with his wife in order to forget Kamini", "confidence": "sourced"},
+   {"order": 6, "value": "wife's suicide and accusation", "when": "late", "quote": "Ranjana drinks poison and goes to police station to give a deathbed confession", "confidence": "sourced"},
+   {"order": 7, "value": "ghost unmasked as woman", "when": "late", "role": "turn", "quote": "Later Asha is revealed to be Kamini", "confidence": "sourced"},
+   {"order": 8, "value": "freed but dies", "when": "ending", "quote": "Later, the police come to know about Ranjana's letter and free Shankar. Shankar rushes to Shrinath's place but dies", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

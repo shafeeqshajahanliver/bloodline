@@ -1,0 +1,54 @@
+{
+ "film": "1974-black-christmas",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "unseen killer", "detail": "an intruder hiding in the attic, calling as 'The Moaner'", "quote": "An unseen man climbs the exterior of a sorority house during a Christmas party and enters the attic", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "unexplained", "detail": "the caller rants about 'Billy' but is never identified", "quote": "The caller rants in strange voices about someone named \"Billy\"", "confidence": "observed"}
+  ],
+  "wants": [
+   {"value": "to kill", "quote": "speaks vulgarities before threatening to kill them", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "intruder enters house", "quote": "climbs the exterior of a sorority house during a Christmas party and enters the attic", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "calls come from inside", "quote": "realizing the calls are originating from within the house", "confidence": "sourced"},
+   {"value": "obscene phone calls", "quote": "The story follows a group of sorority sisters who receive threatening phone calls", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "sorority sisters", "relation_to_threat": "stranger", "quote": "a group of sorority sisters who receive threatening phone calls and are eventually stalked and murdered", "confidence": "sourced"},
+   {"value": "housemother", "relation_to_threat": "stranger", "quote": "Mrs. MacHenry discovers Clare's body in the attic but is killed by the intruder with a crane hook", "confidence": "sourced"},
+   {"value": "wrongly suspected boyfriend", "relation_to_threat": "lover", "detail": "Peter, killed by Jess", "quote": "Peter breaks in, and in a panic, Jess kills him with a fire poker", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat survives", "quote": "From the attic, the killer's voice is heard, and the hatch opens", "confidence": "sourced"},
+   {"value": "wrong person blamed", "quote": "Police arrive to find her barely conscious beside his body, assuming he was the killer", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "telephone", "state": "ringing", "when": "opening", "role": "threat", "quote": "The house phone rings, and sorority sister Jess Bradford answers, discovering an obscene call", "confidence": "sourced"},
+   {"value": "attic", "state": "hiding bodies", "when": "opening", "role": "setting", "quote": "while Clare and Mrs. MacHenry's bodies remain undiscovered", "confidence": "sourced"},
+   {"value": "crane hook", "when": "middle", "role": "weapon", "quote": "killed by the intruder with a crane hook", "confidence": "sourced"},
+   {"value": "glass unicorn", "when": "middle", "role": "weapon", "quote": "murders her with a glass unicorn figurine", "confidence": "sourced"},
+   {"value": "door crack", "state": "eye glimpsed", "when": "late", "role": "threat", "quote": "glimpses the killer through a door crack", "confidence": "sourced"},
+   {"value": "fire poker", "when": "late", "role": "weapon", "quote": "Jess kills him with a fire poker", "confidence": "sourced"},
+   {"value": "christmas carolers", "when": "middle", "role": "setting", "quote": "Christmas carolers distract Jess while the killer enters Barb's room", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "intruder enters unseen", "when": "opening", "role": "omen", "quote": "An unseen man climbs the exterior of a sorority house during a Christmas party and enters the attic", "confidence": "sourced"},
+   {"order": 2, "value": "first death", "when": "opening", "quote": "Clare Harrison, goes upstairs to pack, where she is attacked and asphyxiated by the intruder", "confidence": "sourced"},
+   {"order": 3, "value": "police dismiss concern", "when": "early", "quote": "Sergeant Nash, who brushes them off", "confidence": "sourced"},
+   {"order": 4, "value": "deaths during the holiday", "when": "middle", "quote": "Christmas carolers distract Jess while the killer enters Barb's room and murders her", "confidence": "sourced"},
+   {"order": 5, "value": "call traced inside house", "when": "late", "role": "turn", "quote": "Nash instructs Jess to leave immediately, realizing the calls are originating from within the house", "confidence": "sourced"},
+   {"order": 6, "value": "wrong man killed", "when": "late", "role": "turn", "quote": "Peter breaks in, and in a panic, Jess kills him with a fire poker", "confidence": "sourced"},
+   {"order": 7, "value": "closing sting", "when": "ending", "quote": "From the attic, the killer's voice is heard, and the hatch opens", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

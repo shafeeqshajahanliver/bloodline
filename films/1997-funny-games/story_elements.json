@@ -1,0 +1,58 @@
+{
+ "film": "1997-funny-games",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "home invaders", "detail": "Peter and Paul", "quote": "two young men who hold a family hostage in their vacation home and torture them with sadistic games", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "unexplained", "quote": "accompanied by two young Viennese men whom they do not recognize", "confidence": "observed"}
+  ],
+  "wants": [
+   {"value": "sadistic games", "quote": "Over the following hours, Peter and Paul subject the family to sadistic games", "confidence": "sourced"},
+   {"value": "to win a bet", "quote": "Paul places a bet that the family will not survive past 9:00 in the morning", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "arriving at a holiday home", "quote": "arrive at their lakefront holiday home in Austria", "confidence": "sourced"},
+   {"value": "polite request at the door", "detail": "borrowing eggs", "quote": "comes to Anna's kitchen to borrow eggs on Eva's behalf", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "killers control the story", "quote": "Paul finds and uses a remote control to rewind the movie, \"reversing\" the events that just happened", "confidence": "sourced"},
+   {"value": "no escape allowed", "quote": "the murderers prevent Anna from using a knife in the boat to cut her bonds", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "family on holiday", "relation_to_threat": "stranger", "detail": "the Schobers", "quote": "Georg Schober, his wife Anna, their son Georgie, and their dog Rolfi", "confidence": "sourced"},
+   {"value": "child", "relation_to_threat": "stranger", "detail": "Georgie", "quote": "Georgie panics and runs, which results in Peter shooting him dead", "confidence": "sourced"},
+   {"value": "neighbours", "relation_to_threat": "stranger", "quote": "Georgie escapes and flees to Fred's house, where he finds Sissi's corpse", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "everyone dies", "quote": "here all three family members die", "confidence": "sourced"},
+   {"value": "cycle passes on", "detail": "Paul asks the next family for eggs", "quote": "Paul arrives at Gerda's house and knocks on the door, asking for some eggs on Anna’s behalf", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "dog", "state": "killed", "when": "early", "role": "omen", "quote": "reveals to Anna that they killed Rolfi before taking the family hostage", "confidence": "sourced"},
+   {"value": "eggs", "state": "dropped", "when": "early", "role": "trigger", "quote": "to borrow eggs on Eva's behalf, only to drop them", "confidence": "sourced"},
+   {"value": "phone", "state": "in the sink", "when": "early", "role": "omen", "quote": "knock the family's phone into the sink, seemingly done by accident", "confidence": "sourced"},
+   {"value": "golf club", "when": "early", "role": "weapon", "quote": "Peter breaks Georg's leg with a golf club", "confidence": "sourced"},
+   {"value": "pillowcase", "state": "over a child's head", "when": "middle", "role": "threat", "quote": "puts a pillowcase over Georgie's head", "confidence": "sourced"},
+   {"value": "shotgun", "when": "middle", "role": "weapon", "quote": "Georgie attempts to shoot him, but the shotgun is unloaded", "confidence": "sourced"},
+   {"value": "remote control", "when": "late", "role": "turn", "quote": "uses a remote control to rewind the movie", "confidence": "sourced"},
+   {"value": "lake", "when": "ending", "role": "setting", "quote": "Paul nonchalantly pushes Anna into the water to drown", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "family arrives at holiday home", "when": "opening", "quote": "arrive at their lakefront holiday home in Austria", "confidence": "sourced"},
+   {"order": 2, "value": "polite intrusion", "when": "early", "role": "trigger", "quote": "the other young man Peter comes to Anna's kitchen to borrow eggs on Eva's behalf", "confidence": "sourced"},
+   {"order": 3, "value": "family taken hostage", "when": "early", "quote": "Peter breaks Georg's leg with a golf club and reveals to Anna that they killed Rolfi", "confidence": "sourced"},
+   {"order": 4, "value": "bet on survival", "when": "middle", "quote": "Paul places a bet that the family will not survive past 9:00 in the morning", "confidence": "sourced"},
+   {"order": 5, "value": "child killed", "when": "middle", "role": "turn", "quote": "Georgie panics and runs, which results in Peter shooting him dead", "confidence": "sourced"},
+   {"order": 6, "value": "victory rewound", "when": "late", "role": "turn", "quote": "Anna grabs the shotgun and kills Peter; however, Paul finds and uses a remote control to rewind the movie", "confidence": "sourced"},
+   {"order": 7, "value": "last victim drowned", "when": "ending", "quote": "Around 8:00, Paul nonchalantly pushes Anna into the water to drown, thus winning their bet", "confidence": "sourced"},
+   {"order": 8, "value": "next family targeted", "when": "ending", "quote": "She heads to the kitchen as Paul stares at the camera and smirks", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

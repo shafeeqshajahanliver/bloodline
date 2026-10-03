@@ -1,0 +1,52 @@
+{
+ "film": "1987-a-chinese-ghost-story",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "tree demon", "detail": "the Tree Demoness who enslaves Nie", "quote": "she has been enslaved by a Tree Demoness because her remains are buried at the foot of the tree", "confidence": "sourced"},
+   {"value": "ghost", "detail": "Nie Xiaoqian, a sympathetic ghost", "quote": "he returns to the temple and confirms that Nie is a ghost", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "remains buried in a bad place", "quote": "because her remains are buried at the foot of the tree", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to be freed", "detail": "Nie's soul", "quote": "Ning wants to free her soul, so he seeks help from Yan", "confidence": "observed"}
+  ],
+  "trigger": [
+   {"value": "taking shelter in a haunted place", "quote": "ends up taking shelter in a deserted temple in the forest", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "bound by burial site", "quote": "she has been enslaved by a Tree Demoness because her remains are buried at the foot of the tree", "confidence": "sourced"},
+   {"value": "freed by proper reburial", "quote": "the only way to save Nie's soul is to rebury her remains at a more auspicious burial site", "confidence": "sourced"},
+   {"value": "betrayal punished", "quote": "As a punishment for betraying her master, Nie's soul is banished to the Underworld", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "traveller", "relation_to_threat": "lover", "detail": "Ning, a timid debt collector who loves the ghost", "quote": "That night, he meets Nie Xiaoqian and falls in love with her", "confidence": "sourced"},
+   {"value": "the ghost herself", "relation_to_threat": "unknown", "detail": "Nie, enslaved and banished", "quote": "Nie's soul is banished to the Underworld", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "spirit laid to rest", "quote": "rebury her remains at a more auspicious burial site, which he does so near a hill crest", "confidence": "sourced"},
+   {"value": "lovers parted", "quote": "eventually reuniting with her briefly near dawn", "confidence": "observed"}
+  ],
+  "images": [
+   {"value": "deserted temple", "when": "opening", "role": "setting", "quote": "taking shelter in a deserted temple in the forest", "confidence": "sourced"},
+   {"value": "tree", "state": "remains buried at its foot", "when": "middle", "role": "threat", "quote": "her remains are buried at the foot of the tree", "confidence": "sourced"},
+   {"value": "portal to the underworld", "when": "late", "role": "setting", "quote": "open a temporary portal into the Underworld to search for Nie", "confidence": "sourced"},
+   {"value": "joss stick", "state": "burning", "when": "ending", "role": "symbol", "quote": "He burns a joss stick for her and prays while Yan watches solemnly behind him", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "shelter in a haunted temple", "when": "opening", "role": "trigger", "quote": "ends up taking shelter in a deserted temple in the forest", "confidence": "sourced"},
+   {"order": 2, "value": "falls in love with a ghost", "when": "opening", "quote": "he meets Nie Xiaoqian and falls in love with her", "confidence": "sourced"},
+   {"order": 3, "value": "warned by a priest", "when": "early", "quote": "hearing from Yan Chixia, a Taoist priest, that he had encountered ghosts in the temple", "confidence": "sourced"},
+   {"order": 4, "value": "ghost's bondage revealed", "when": "middle", "role": "clue", "quote": "Nie tells Ning about how she has been enslaved by a Tree Demoness", "confidence": "sourced"},
+   {"order": 5, "value": "failed fight with the demon", "when": "middle", "quote": "who fights the Tree Demoness but loses", "confidence": "sourced"},
+   {"order": 6, "value": "journey to the underworld", "when": "late", "quote": "open a temporary portal into the Underworld to search for Nie", "confidence": "sourced"},
+   {"order": 7, "value": "remains reburied", "when": "ending", "quote": "rebury her remains at a more auspicious burial site, which he does so near a hill crest", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

@@ -1,0 +1,37 @@
+{
+ "film": "1978-the-shout",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "thin",
+ "dimensions": {
+  "threat": [
+   {"value": "sinister stranger", "detail": "Crossley, a travelling man", "quote": "Crossley, a mysterious travelling man, invades the lives of a young couple", "confidence": "sourced"},
+   {"value": "deadly sound", "detail": "the terror shout", "quote": "a \"terror shout\" that can kill anyone who hears it unprotected", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "learned from a shaman", "quote": "He claims he has learned from an Aboriginal shaman how to produce a \"terror shout\"", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "an invited guest", "quote": "The couple provides hospitality to Crossley but his intentions are gradually revealed as more sinister", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "kills whoever hears it", "quote": "can kill anyone who hears it unprotected", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "couple", "relation_to_threat": "stranger", "detail": "Rachel and Anthony Fielding", "quote": "invades the lives of a young couple, Rachel and Anthony Fielding", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "sound studio", "state": "secluded", "when": "opening", "role": "setting", "quote": "experiments with sound effects and various electronic sources in his secluded Devon studio", "confidence": "sourced"},
+   {"value": "shout", "when": "middle", "role": "weapon", "quote": "how to produce a \"terror shout\" that can kill anyone who hears it unprotected", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "stranger enters a home", "when": "opening", "role": "trigger", "quote": "Crossley, a mysterious travelling man, invades the lives of a young couple", "confidence": "sourced"},
+   {"order": 2, "value": "hospitality given", "when": "early", "quote": "The couple provides hospitality to Crossley", "confidence": "sourced"},
+   {"order": 3, "value": "sinister intent revealed", "when": "middle", "role": "turn", "quote": "his intentions are gradually revealed as more sinister", "confidence": "sourced"},
+   {"order": 4, "value": "deadly power claimed", "when": "ending", "quote": "He claims he has learned from an Aboriginal shaman how to produce a \"terror shout\"", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wants", "wrong", "ending"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

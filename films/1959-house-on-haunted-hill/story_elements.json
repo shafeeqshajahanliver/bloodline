@@ -1,0 +1,61 @@
+{
+ "film": "1959-house-on-haunted-hill",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "murder plot", "detail": "Annabelle and David plan Frederick's death", "quote": "Secretly lovers, the two of them have orchestrated the various mishaps to manipulate Nora into killing Frederick", "confidence": "sourced"},
+   {"value": "haunted house", "quote": "the house is genuinely haunted by the ghosts of those murdered there", "confidence": "sourced"},
+   {"value": "staged haunting", "quote": "the puppeteer control unit that he used to manipulate the skeleton", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "made by someone", "detail": "faked by the plotters, then by Frederick", "quote": "Annabelle, who faked her death using a hanging harness and sedatives", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "money", "detail": "Annabelle wants Frederick's wealth", "quote": "Frederick is convinced that Annabelle tried to poison him to acquire his wealth", "confidence": "sourced"},
+   {"value": "revenge", "detail": "Frederick turns the plot back on them", "quote": "revealing that he had known their plot all along", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "murder", "detail": "past killings in the house", "quote": "a vat of acid in the basement, which a previous resident used to kill his wife", "confidence": "sourced"},
+   {"value": "betrayal by spouse", "quote": "his wife and David plotted to kill him", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "an invitation", "detail": "a paid haunted-house party", "quote": "invites five people to a party he is throwing for his fourth wife, Annabelle, in an allegedly haunted house", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "survive the night for money", "quote": "Whoever stays in the house for one night will earn $10,000", "confidence": "sourced"},
+   {"value": "locked in until morning", "quote": "the caretakers lock the doors five minutes early", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "invited strangers", "relation_to_threat": "stranger", "quote": "All are strangers to both the Lorens and each other", "confidence": "sourced"},
+   {"value": "young woman", "relation_to_threat": "stranger", "detail": "Nora, manipulated into shooting", "quote": "Nora is chased from her room into the basement by Annabelle's ghost", "confidence": "sourced"},
+   {"value": "husband", "relation_to_threat": "lover", "detail": "Frederick, target of his wife", "quote": "his wife and David plotted to kill him", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "plotters killed", "quote": "his wife and David plotted to kill him, and that they both died in the vat of acid", "confidence": "sourced"},
+   {"value": "haunting may continue", "quote": "Watson remains convinced that the house is haunted, with David and Annabelle now added to its ranks of ghosts", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "vat of acid", "when": "early", "role": "weapon", "quote": "a vat of acid in the basement, which a previous resident used to kill his wife", "confidence": "sourced"},
+   {"value": "barred windows", "when": "opening", "role": "setting", "quote": "All the windows are barred, there is no electricity and no phones or radios to use", "confidence": "sourced"},
+   {"value": "guns", "state": "loaded with blanks", "when": "middle", "role": "weapon", "quote": "each is given a gun for protection", "confidence": "sourced"},
+   {"value": "hanging body", "state": "faked", "when": "middle", "role": "turn", "quote": "Lance and David find Annabelle's corpse, suspended to suggest that she had hanged herself", "confidence": "sourced"},
+   {"value": "skeleton", "state": "rising from acid", "when": "ending", "role": "weapon", "quote": "A skeleton rises from the acid, accuses her in Frederick's voice, and shoves her into the vat", "confidence": "sourced"},
+   {"value": "secret room", "state": "door shuts", "when": "late", "role": "setting", "quote": "Lance uncovers a secret room at the end of the second-floor hall, but the door shuts behind him", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "guests invited for money", "when": "opening", "role": "trigger", "quote": "He promises to give each guest $10,000 with the stipulation that they stay the entire night", "confidence": "sourced"},
+   {"order": 2, "value": "tour of past murders", "when": "early", "role": "omen", "quote": "He gives a tour of the house, including a vat of acid in the basement", "confidence": "sourced"},
+   {"order": 3, "value": "trapped inside", "when": "middle", "quote": "the caretakers lock the doors five minutes early", "confidence": "sourced"},
+   {"order": 4, "value": "apparent death", "when": "middle", "quote": "Lance and David find Annabelle's corpse", "confidence": "sourced"},
+   {"order": 5, "value": "plot revealed", "when": "late", "role": "turn", "quote": "David instead meets with Annabelle, who faked her death using a hanging harness and sedatives", "confidence": "sourced"},
+   {"order": 6, "value": "manipulated shooting", "when": "late", "quote": "Nora, seeing Frederick enter the basement with a gun in his hand, shoots him", "confidence": "sourced"},
+   {"order": 7, "value": "trickster turns tables", "when": "ending", "role": "turn", "quote": "Frederick emerges from the shadows, holding the puppeteer control unit", "confidence": "sourced"},
+   {"order": 8, "value": "lingering belief in ghosts", "when": "ending", "quote": "Watson remains convinced that the house is haunted", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

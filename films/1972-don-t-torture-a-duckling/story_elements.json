@@ -1,0 +1,54 @@
+{
+ "film": "1972-don-t-torture-a-duckling",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "serial killer", "detail": "Don Alberto, the local priest", "quote": "It is revealed that Alberto killed the boys, not for their sins but to prevent them from sinning when they grow up", "confidence": "sourced"},
+   {"value": "mob violence", "detail": "villagers beat the accused witch to death", "quote": "Nonetheless, Maciara is beaten to death by a group of men", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to prevent sin", "quote": "not for their sins but to prevent them from sinning when they grow up", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "incest and infanticide", "detail": "rumour about Francesco and Maciara", "quote": "He is also rumored to have had (and then disposed of) a baby from an incestuous tryst with Maciara", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "child goes missing", "quote": "When Bruno goes missing, reporters from all over the country converge on the village", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "superstition blames the outsider", "quote": "However, it appears that she believes her Voodoo dolls and incantations alone caused the deaths", "confidence": "observed"}
+  ],
+  "who_suffers": [
+   {"value": "boys", "relation_to_threat": "community", "detail": "members of the priest's boys' group", "quote": "Alberto runs a boys' group at the church, which the victims belonged to", "confidence": "sourced"},
+   {"value": "accused outsider", "relation_to_threat": "community", "detail": "Maciara, the witch", "quote": "Maciara, a reclusive Gypsy witch, conducts black magic ceremonies", "confidence": "sourced"},
+   {"value": "sister", "relation_to_threat": "family", "detail": "Malvina, the deaf-mute witness", "quote": "Alberto attempts to throw his sister off a cliff, but Andrea arrives just in time", "confidence": "sourced"},
+   {"value": "investigator", "relation_to_threat": "stranger", "detail": "Andrea Martelli, journalist from Rome", "quote": "a journalist investigating a series of child murders in an insular Italian village", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "killer dies", "quote": "Alberto is thrown off the cliff by Andrea and falls to his death", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "infant skeleton", "state": "dug up", "when": "opening", "role": "omen", "quote": "first by digging up the skeletal remains of an infant", "confidence": "sourced"},
+   {"value": "clay dolls", "state": "pierced with pins", "when": "opening", "role": "omen", "quote": "plunging pins through the heads of three clay dolls", "confidence": "sourced"},
+   {"value": "thunderstorm", "when": "early", "role": "setting", "quote": "during a raging thunderstorm, Michele sneaks out of his house", "confidence": "sourced"},
+   {"value": "beheaded dolls", "when": "late", "role": "clue", "quote": "she compulsively pulls the heads off her dolls as if imitating the murders", "confidence": "sourced"},
+   {"value": "donald duck doll head", "when": "late", "role": "clue", "quote": "One doll's head, that of Donald Duck, is found near the latest crime scene", "confidence": "sourced"},
+   {"value": "cliff", "when": "ending", "role": "setting", "quote": "Alberto is thrown off the cliff by Andrea and falls to his death", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "witch's ritual", "when": "opening", "role": "omen", "quote": "conducts black magic ceremonies, first by digging up the skeletal remains of an infant", "confidence": "sourced"},
+   {"order": 2, "value": "child disappears", "when": "early", "role": "trigger", "quote": "When Bruno goes missing, reporters from all over the country converge on the village", "confidence": "sourced"},
+   {"order": 3, "value": "wrong suspect arrested", "when": "early", "quote": "When Tonino's body is found, the police realize that Giuseppe is innocent", "confidence": "sourced"},
+   {"order": 4, "value": "false confession", "when": "middle", "quote": "Under questioning, she confesses to the murders", "confidence": "sourced"},
+   {"order": 5, "value": "scapegoat lynched", "when": "middle", "role": "turn", "quote": "Nonetheless, Maciara is beaten to death by a group of men", "confidence": "sourced"},
+   {"order": 6, "value": "child witness clue", "when": "late", "role": "clue", "quote": "Andrea becomes convinced that the girl witnessed the killings", "confidence": "sourced"},
+   {"order": 7, "value": "killer revealed", "when": "late", "role": "turn", "quote": "Aurelia is found barely conscious, begging them to stop her son", "confidence": "sourced"},
+   {"order": 8, "value": "killer falls to death", "when": "ending", "quote": "Alberto is thrown off the cliff by Andrea and falls to his death", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["origin"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

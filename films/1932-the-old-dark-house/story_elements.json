@@ -1,0 +1,59 @@
+{
+ "film": "1932-the-old-dark-house",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "deranged family member", "detail": "Saul Femm, a crazed pyromaniac kept locked up", "quote": "his eldest son, Saul, a crazed pyromaniac kept in the locked room", "confidence": "sourced"},
+   {"value": "violent servant", "detail": "Morgan, the mute, drunken butler", "quote": "their mute butler Morgan is a dangerous, heavy drinker", "confidence": "sourced"},
+   {"value": "isolated house", "detail": "the decaying house of the eccentric Femm family", "quote": "the decaying country house of the eccentric Femm family", "confidence": "observed"}
+  ],
+  "origin": [
+   {"value": "family secret", "detail": "the Femm family keeps its eldest son locked away", "quote": "He warns them about his eldest son, Saul, a crazed pyromaniac kept in the locked room", "confidence": "observed"}
+  ],
+  "wants": [
+   {"value": "to burn", "detail": "Saul tries to burn the house down", "quote": "Saul steals a burning branch from the fireplace and sets fire to a curtain", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "family sin", "detail": "Rebecca calls the Femm family sinful and godless", "quote": "she tells her about the Femm family, which Rebecca says was sinful and godless", "confidence": "observed"}
+  ],
+  "trigger": [
+   {"value": "seeking shelter from a storm", "quote": "the film follows five travellers who seek shelter from a violent storm", "confidence": "sourced"},
+   {"value": "getting lost", "quote": "are lost while driving at night in a heavy storm", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "trapped by the storm", "quote": "Horace fears that the storm will trap the guests inside", "confidence": "sourced"},
+   {"value": "must stay locked up", "quote": "Philip and Margaret discover that Morgan has let Saul out", "confidence": "observed"}
+  ],
+  "who_suffers": [
+   {"value": "travellers", "relation_to_threat": "stranger", "detail": "Philip, Margaret, Roger, Sir William and Gladys", "quote": "the film follows five travellers who seek shelter from a violent storm", "confidence": "sourced"},
+   {"value": "married couple", "relation_to_threat": "stranger", "detail": "Philip and Margaret Waverton", "quote": "Philip Waverton, his wife Margaret and their friend Roger Penderel", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat destroyed", "detail": "Saul dies in a fall", "quote": "They fight and fall off a landing; Saul is killed and Roger injured", "confidence": "sourced"},
+   {"value": "romance ending", "detail": "Roger proposes to Gladys", "quote": "Roger asks Gladys to marry him, and she happily kisses him in response", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "storm", "state": "violent", "when": "opening", "role": "setting", "quote": "are lost while driving at night in a heavy storm", "confidence": "sourced"},
+   {"value": "locked room", "state": "locked", "when": "middle", "role": "clue", "quote": "he notices a locked room and hears a voice coming from another room", "confidence": "sourced"},
+   {"value": "lamp", "state": "thrown", "when": "middle", "role": "weapon", "quote": "Philip throws the lamp at Morgan, knocking him down the stairs", "confidence": "sourced"},
+   {"value": "fire", "state": "burning branch", "when": "late", "role": "threat", "quote": "Saul steals a burning branch from the fireplace and sets fire to a curtain", "confidence": "sourced"},
+   {"value": "stairs", "when": "middle", "role": "setting", "quote": "Morgan, now drunk, attacks her and chases her up the stairs", "confidence": "sourced"},
+   {"value": "closet", "when": "late", "role": "setting", "quote": "Roger tells Margaret and Gladys to hide in a closet", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "lost in a storm", "when": "opening", "role": "trigger", "quote": "are lost while driving at night in a heavy storm", "confidence": "sourced"},
+   {"order": 2, "value": "warning from hosts", "when": "opening", "role": "omen", "quote": "He also warns them that their mute butler Morgan is a dangerous, heavy drinker", "confidence": "sourced"},
+   {"order": 3, "value": "lights go out", "when": "middle", "quote": "The electric lights go out and Rebecca tells Horace to get a lamp", "confidence": "sourced"},
+   {"order": 4, "value": "servant attacks", "when": "middle", "quote": "Morgan, now drunk, attacks her and chases her up the stairs to Philip", "confidence": "sourced"},
+   {"order": 5, "value": "hidden family member revealed", "when": "late", "role": "turn", "quote": "He warns them about his eldest son, Saul, a crazed pyromaniac kept in the locked room", "confidence": "sourced"},
+   {"order": 6, "value": "madman released", "when": "late", "quote": "Philip and Margaret discover that Morgan has let Saul out", "confidence": "sourced"},
+   {"order": 7, "value": "fight to the death", "when": "late", "quote": "They fight and fall off a landing; Saul is killed and Roger injured", "confidence": "sourced"},
+   {"order": 8, "value": "storm passes at dawn", "when": "ending", "quote": "By morning, the storm has subsided", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

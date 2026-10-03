@@ -1,0 +1,66 @@
+{
+ "film": "2002-phone",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "vengeful ghost", "detail": "Jin-hee, a missing teenager", "quote": "Young-ju, who is possessed by Jin-hee's ghost", "confidence": "sourced"},
+   {"value": "cursed object", "detail": "a phone number whose owners die", "quote": "its two subsequent owners had died mysteriously in unusual circumstances", "confidence": "sourced"},
+   {"value": "jealous wife", "detail": "Ho-jung", "quote": "By accident, Ho-jung pushed Jin-hee down the stairs and killed her", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "person who died wronged", "detail": "pregnant girl killed and walled up", "quote": "Ho-jung hid Jin-hee's body inside the wall and plastered cement over it", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "revenge", "quote": "Jin-hee's spirit awakens and, in revenge, strangles Ho-jung to death", "confidence": "sourced"},
+   {"value": "her lover", "detail": "possessed child turns to her father", "quote": "Young-ju begins to show a disturbing attraction for her father and jealous rejection towards her mother", "confidence": "observed"}
+  ],
+  "wrong": [
+   {"value": "affair with a minor", "quote": "she learns that Jin-hee's lover was indeed Chang-hoon", "confidence": "sourced"},
+   {"value": "abandoned pregnant lover", "quote": "Jin-hee found out she was pregnant and called Chang-hoon repeatedly but he ignored her", "confidence": "sourced"},
+   {"value": "murder concealed", "quote": "hid Jin-hee's body inside the wall and plastered cement over it", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "moving into a new home", "quote": "she changes her number and moves to an empty house", "confidence": "sourced"},
+   {"value": "answering a phone call", "quote": "Young-ju answers an anonymous phone call to Ji-won's new number, then screams and passes out", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "number owners die", "quote": "her number originally belonged to a missing teenager, Jin-hee, and that its two subsequent owners had died mysteriously", "confidence": "sourced"},
+   {"value": "possesses a child", "quote": "Young-ju, who is possessed by Jin-hee's ghost", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "journalist", "relation_to_threat": "stranger", "detail": "Ji-won", "quote": "the journalist Ji-won often receives threatening calls on her cell phone", "confidence": "sourced"},
+   {"value": "child", "relation_to_threat": "family", "detail": "Young-ju, daughter of the lover", "quote": "jumps down the stairs and is hospitalized", "confidence": "sourced"},
+   {"value": "best friend", "relation_to_threat": "stranger", "detail": "Sang-mi, who blinded herself", "quote": "she decides to stab her own eyes and ears to make it leave her", "confidence": "sourced"},
+   {"value": "unfaithful husband", "relation_to_threat": "lover", "detail": "Chang-hoon", "quote": "Ho-jung then stages a suicide for Chang-hoon", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "guilty punished", "quote": "Jin-hee's spirit awakens and, in revenge, strangles Ho-jung to death, thus saving Ji-won", "confidence": "sourced"},
+   {"value": "threat survives", "quote": "Ji-won dropping the cursed cell phone into the ocean. After it enters the water, it rings", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "cell phone", "state": "cursed", "when": "opening", "role": "threat", "quote": "the journalist Ji-won often receives threatening calls on her cell phone", "confidence": "sourced"},
+   {"value": "long hair", "when": "early", "role": "threat", "quote": "sees a long-haired ghost playing Beethoven's \"Moonlight Sonata\" on the piano", "confidence": "sourced"},
+   {"value": "piano", "when": "early", "role": "clue", "quote": "playing Beethoven's \"Moonlight Sonata\" on the piano", "confidence": "sourced"},
+   {"value": "diary", "when": "middle", "role": "clue", "quote": "finds a diary and a picture of Jin-hee and Jin-hee's best friend", "confidence": "sourced"},
+   {"value": "stairs", "when": "late", "role": "mirror", "quote": "jumps down the stairs and is hospitalized", "confidence": "sourced"},
+   {"value": "body in the wall", "state": "cemented", "when": "late", "role": "clue", "quote": "finds Jin-hee's dead body hidden inside one of the walls", "confidence": "sourced"},
+   {"value": "gasoline", "when": "ending", "role": "weapon", "quote": "Ho-jung plans to burn the house down with gasoline", "confidence": "sourced"},
+   {"value": "ocean", "state": "phone ringing underwater", "when": "ending", "role": "symbol", "quote": "After it enters the water, it rings", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "threats prompt a move", "when": "opening", "role": "trigger", "quote": "Hence she changes her number and moves to an empty house", "confidence": "sourced"},
+   {"order": 2, "value": "child answers the phone", "when": "opening", "role": "omen", "quote": "answers an anonymous phone call to Ji-won's new number, then screams and passes out", "confidence": "sourced"},
+   {"order": 3, "value": "child changes", "when": "early", "quote": "Young-ju begins to show a disturbing attraction for her father", "confidence": "sourced"},
+   {"order": 4, "value": "investigation of past owner", "when": "middle", "role": "clue", "quote": "Ji-won visits Jin-hee's mother at their home and finds a diary", "confidence": "sourced"},
+   {"order": 5, "value": "affair revealed", "when": "middle", "role": "turn", "quote": "she learns that Jin-hee's lover was indeed Chang-hoon", "confidence": "sourced"},
+   {"order": 6, "value": "body found in wall", "when": "late", "quote": "finds Jin-hee's dead body hidden inside one of the walls", "confidence": "sourced"},
+   {"order": 7, "value": "true killer confesses", "when": "late", "role": "turn", "quote": "By accident, Ho-jung pushed Jin-hee down the stairs and killed her", "confidence": "sourced"},
+   {"order": 8, "value": "ghost takes revenge; closing sting", "when": "ending", "quote": "After it enters the water, it rings", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

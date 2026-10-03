@@ -1,0 +1,57 @@
+{
+ "film": "1960-eyes-without-a-face",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "mad surgeon", "detail": "Dr. Génessier, who removes young women's faces", "quote": "a young woman whose facial skin Dr. Génessier removed and unsuccessfully attempted to graft onto his daughter", "confidence": "sourced"},
+   {"value": "accomplice who lures victims", "detail": "Louise", "quote": "a young woman whom Louise befriends and lures to Génessier's mansion with an offer of a room for rent", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "accident", "detail": "a car crash disfigured Christiane", "quote": "a plastic surgeon who is determined to perform a face transplant on his daughter, who was disfigured in a car crash", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "to restore a loved one", "quote": "After her father leaves with promises to restore her face", "confidence": "sourced"}
+  ],
+  "wrong": [
+   {"value": "murder", "detail": "women killed for their faces", "quote": "investigating the disappearance of young women with similar facial characteristics", "confidence": "sourced"},
+   {"value": "faked death", "detail": "a victim's body passed off as Christiane", "quote": "The body is identified by Dr. Génessier as his daughter Christiane", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "disposing of a body", "quote": "Outside Paris, a woman dumps a corpse in the river", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "grafts always fail", "quote": "Génessier notices the new tissue is rejected within days, and Christiane has to wear the mask again", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "young women", "relation_to_threat": "stranger", "detail": "Edna, Paulette", "quote": "The heavily bandaged and faceless Edna attempts to escape but falls to her death from an upstairs window", "confidence": "sourced"},
+   {"value": "daughter", "relation_to_threat": "family", "detail": "Christiane, kept hidden and masked", "quote": "while slowly losing her mind from guilt and isolation", "confidence": "sourced"},
+   {"value": "decoy", "relation_to_threat": "stranger", "detail": "Paulette, sent in by police", "quote": "Inspector Parot instructs Paulette Mérodon (recently arrested for shoplifting) to check herself into Génessier's clinic", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "threat destroyed", "detail": "Génessier mauled by his own dogs", "quote": "a newly acquired German Shepherd attacks him, inciting the other dogs to follow suit, mauling him to death", "confidence": "sourced"},
+   {"value": "victim breaks free", "detail": "Christiane walks into the woods", "quote": "Christiane, unmoved by his death, strolls out into the woods outside with a dove in her hand", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "mask", "state": "covering a ruined face", "when": "early", "role": "symbol", "quote": "Christiane, wearing a mask to cover her disfigurement", "confidence": "sourced"},
+   {"value": "dogs", "state": "caged, then freed", "when": "early", "role": "weapon", "quote": "guarded by German Shepherds and other large dogs", "confidence": "sourced"},
+   {"value": "doves", "state": "freed", "when": "ending", "role": "symbol", "quote": "She also frees the dogs and doves that her father uses for experiments", "confidence": "sourced"},
+   {"value": "corpse in river", "when": "opening", "role": "omen", "quote": "a woman dumps a corpse in the river", "confidence": "sourced"},
+   {"value": "bandaged face", "state": "faceless", "when": "middle", "role": "threat", "quote": "The heavily bandaged and faceless Edna attempts to escape", "confidence": "sourced"},
+   {"value": "telephone", "state": "silent call", "when": "early", "role": "clue", "quote": "calls her fiancé, Jacques Vernon, Dr. Génessier's assistant, but hangs up without saying a word", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "body dumped", "when": "opening", "role": "omen", "quote": "Outside Paris, a woman dumps a corpse in the river", "confidence": "sourced"},
+   {"order": 2, "value": "hidden daughter revealed", "when": "early", "role": "turn", "quote": "In reality, Christiane still lives in Dr. Génessier's mansion next to his private clinic", "confidence": "sourced"},
+   {"order": 3, "value": "victim lured", "when": "middle", "quote": "Génessier sedates Edna with chloroform, and he and Louise carry her to the lab", "confidence": "sourced"},
+   {"order": 4, "value": "graft fails", "when": "middle", "role": "turn", "quote": "the new tissue is rejected within days", "confidence": "sourced"},
+   {"order": 5, "value": "police plant a decoy", "when": "late", "quote": "Paulette is picked up by Louise and delivered to Dr. Génessier", "confidence": "sourced"},
+   {"order": 6, "value": "daughter turns on father", "when": "ending", "role": "turn", "quote": "She frees Paulette and murders Louise by stabbing her in the neck", "confidence": "sourced"},
+   {"order": 7, "value": "killed by own animals", "when": "ending", "quote": "inciting the other dogs to follow suit, mauling him to death", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": [],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}

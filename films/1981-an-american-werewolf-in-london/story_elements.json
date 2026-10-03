@@ -1,0 +1,59 @@
+{
+ "film": "1981-an-american-werewolf-in-london",
+ "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "plot_quality": "full",
+ "dimensions": {
+  "threat": [
+   {"value": "werewolf", "detail": "David, after being bitten", "quote": "since David was bitten, he is now a werewolf too", "confidence": "sourced"},
+   {"value": "undead victims", "detail": "Jack and the people David killed", "quote": "Jack is cursed to walk the earth in limbo, neither dead nor alive", "confidence": "sourced"}
+  ],
+  "origin": [
+   {"value": "bitten by a creature", "quote": "who are attacked by a werewolf while travelling in England", "confidence": "sourced"}
+  ],
+  "wants": [
+   {"value": "nothing stated", "detail": "the beast kills without motive", "quote": "He prowls the streets and the London Underground, killing six people", "confidence": "observed"},
+   {"value": "release from limbo", "detail": "the undead want David dead", "quote": "suggest different suicide methods to free them from their undead state", "confidence": "sourced"}
+  ],
+  "trigger": [
+   {"value": "ignoring a warning", "detail": "they leave the road onto the moors", "quote": "David and Jack wander off the road and onto the moors", "confidence": "sourced"},
+   {"value": "a journey", "quote": "two American backpackers, David Kessler and Jack Goodman", "confidence": "sourced"}
+  ],
+  "rules": [
+   {"value": "full moon transformation", "quote": "causing David to become a werewolf under the next full moon", "confidence": "sourced"},
+   {"value": "break the bloodline", "quote": "until the wolf's bloodline is severed", "confidence": "sourced"},
+   {"value": "stay on the road", "quote": "warn the pair to keep to the road, stay clear of the moors and beware of the full moon", "confidence": "sourced"}
+  ],
+  "who_suffers": [
+   {"value": "friends", "relation_to_threat": "stranger", "detail": "David and Jack", "quote": "Jack is mauled to death and David is severely injured", "confidence": "sourced"},
+   {"value": "the self", "relation_to_threat": "self", "detail": "David becomes the killer", "quote": "After learning of the previous night's murders and realizing that he is responsible", "confidence": "sourced"},
+   {"value": "lover", "relation_to_threat": "lover", "detail": "Alex, the nurse", "quote": "tries calming David by professing her love to him", "confidence": "sourced"},
+   {"value": "city crowds", "relation_to_threat": "stranger", "quote": "wreaks havoc in the streets, killing several motorists and bystanders", "confidence": "sourced"}
+  ],
+  "ending": [
+   {"value": "victim becomes threat, killed", "quote": "the beast takes over and lunges towards her, forcing the police to shoot him dead", "confidence": "sourced"}
+  ],
+  "images": [
+   {"value": "five-pointed star", "state": "on pub wall", "when": "opening", "role": "omen", "quote": "Jack notices a five-pointed star on the pub's wall", "confidence": "sourced"},
+   {"value": "full moon", "when": "opening", "role": "omen", "quote": "beware of the full moon", "confidence": "sourced"},
+   {"value": "naked dead man", "when": "opening", "role": "clue", "quote": "Instead of an animal carcass, David sees a naked dead man lying next to him", "confidence": "sourced"},
+   {"value": "decaying corpse", "state": "Jack, increasingly rotted", "when": "middle", "role": "omen", "quote": "Jack, now even more decayed, appears and warns David", "confidence": "sourced"},
+   {"value": "wolf enclosure", "when": "middle", "role": "setting", "quote": "naked on the floor of a wolf enclosure at the London Zoo", "confidence": "sourced"},
+   {"value": "pocket knife", "when": "late", "role": "weapon", "quote": "loses the courage to slit his wrists with a pocket knife", "confidence": "sourced"},
+   {"value": "cinema", "when": "late", "role": "setting", "quote": "Jack, whose skeleton is now showing, outside an adult cinema", "confidence": "sourced"}
+  ],
+  "beats": [
+   {"order": 1, "value": "hostile pub warning", "when": "opening", "role": "omen", "quote": "The pub-goers warn the pair to keep to the road", "confidence": "sourced"},
+   {"order": 2, "value": "attack on the moors", "when": "opening", "role": "trigger", "quote": "Jack is mauled to death and David is severely injured", "confidence": "sourced"},
+   {"order": 3, "value": "dead friend returns", "when": "early", "quote": "An undead Jack later appears to David and explains that they were attacked by a werewolf", "confidence": "sourced"},
+   {"order": 4, "value": "first transformation", "when": "middle", "role": "turn", "quote": "he painfully transforms into a werewolf inside Alex's flat", "confidence": "sourced"},
+   {"order": 5, "value": "wakes with no memory", "when": "middle", "quote": "with no recollection of what happened", "confidence": "sourced"},
+   {"order": 6, "value": "victims demand suicide", "when": "late", "quote": "Jack introduces David to his previous night's victims", "confidence": "sourced"},
+   {"order": 7, "value": "rampage", "when": "late", "quote": "He decapitates Inspector Villiers and wreaks havoc in the streets", "confidence": "sourced"},
+   {"order": 8, "value": "shot dead before lover", "when": "ending", "quote": "David's body reverts to human form in front of Alex as she mourns him", "confidence": "sourced"}
+  ]
+ },
+ "not_stated": ["wrong"],
+ "extracted": "2026-10-03",
+ "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
+ "status": "first pass, unreviewed"
+}
