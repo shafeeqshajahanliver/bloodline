@@ -7,6 +7,8 @@ A private research corpus of 500 horror films, built to find the shared patterns
 ## Layout
 
 - `films.csv`: the master list of all 500 films, with archetype tags (first pass) and status.
+- `archetypes.csv`: the 27 archetype codes (26 plus one on probation) with their beat and documented folk roots.
+- `reference/horror-500-story-dna.xlsx`: the original spreadsheet the list and tags came from (Films, Archetypes, Regions tabs). `films.csv` and `archetypes.csv` are the working copies.
 - `films/<year-title>/`: one folder per film. See `schema.md` for every file.
 - `sources/`: articles on legends and real events that films descend from.
 - `graph/`: **generated** network files (`nodes.csv`, `edges.csv`, `shared_nodes.json`). Never edit by hand: run `python3 tools/build_graph.py`.

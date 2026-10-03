@@ -24,6 +24,18 @@ Every fact records where it came from. Confidence values used throughout:
 | `visuals/frames/` | 12 evenly spaced frames | Full film |
 | `visuals/stills/`, `stills.json`, `stills_strip.png` | Curated stills, their colour strip, mean brightness and saturation | FILMGRAB |
 
+## Archetypes: `archetypes.csv`
+
+| Column | Contents |
+|---|---|
+| `code` | Three-letter code used in `films.csv` and the graph |
+| `name` | Archetype name |
+| `status` | `active`, or `probation` (The Endless Night) |
+| `beat` | The story beat in one line |
+| `roots` | Documented folk and literary roots, at least two continents each |
+
+Exported from the Archetypes tab of `reference/horror-500-story-dna.xlsx`. Per-archetype film counts are left out because they derive from `films.csv`.
+
 ## Graph: `graph/`
 
 - **Node types:** film, person, company, country, language, archetype, motif, source (novels, legends, real events, grimoires)
