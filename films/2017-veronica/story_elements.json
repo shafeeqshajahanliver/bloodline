@@ -1,60 +1,509 @@
 {
  "film": "2017-veronica",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "possessing demon", "quote": "realizing she has been possessed by the demon the entire time, and had been harming her siblings under its control", "confidence": "sourced"},
-   {"value": "the self", "detail": "Verónica herself harms her siblings", "quote": "only to learn that she herself was choking Lucia", "confidence": "sourced"}
+   {
+    "value": "possessing demon",
+    "quote": "realizing she has been possessed by the demon the entire time, and had been harming her siblings under its control",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:32",
+      "quote": "It's me."
+     }
+    ]
+   },
+   {
+    "value": "the self",
+    "detail": "Verónica herself harms her siblings",
+    "quote": "only to learn that she herself was choking Lucia",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:55",
+      "quote": "Why were you choking me?"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "summoned by ritual", "detail": "a Ouija séance during an eclipse", "quote": "The nun explains that the séance attached a dark spirit to her", "confidence": "sourced"}
+   {
+    "value": "summoned by ritual",
+    "detail": "a Ouija séance during an eclipse",
+    "quote": "The nun explains that the séance attached a dark spirit to her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:15",
+      "quote": "Someone answered your call. And now walks with you."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "a body", "quote": "she has been possessed by the demon the entire time", "confidence": "observed"},
-   {"value": "her death", "quote": "Verónica whispered that she herself would die in three days", "confidence": "sourced"}
+   {
+    "value": "a body",
+    "quote": "she has been possessed by the demon the entire time",
+    "confidence": "observed"
+   },
+   {
+    "value": "her death",
+    "quote": "Verónica whispered that she herself would die in three days",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:36",
+      "quote": "You said you were going to die today."
+     }
+    ]
+   },
+   {
+    "value": "to pose as the father",
+    "source": "subtitles",
+    "at": "01:06:46",
+    "quote": "Dad came to read it to me.",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "broken ritual rule", "detail": "not saying goodbye to the spirit", "quote": "it is important to say goodbye to the spirit at the end of a séance", "confidence": "sourced"}
+   {
+    "value": "broken ritual rule",
+    "detail": "not saying goodbye to the spirit",
+    "quote": "it is important to say goodbye to the spirit at the end of a séance",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:04",
+      "quote": "We didn't say goodbye!"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "a seance", "quote": "Verónica and her friends Rosa and Diana conduct a séance with a Ouija board", "confidence": "sourced"},
-   {"value": "contacting the dead", "quote": "Verónica wants to reach out to her late father", "confidence": "sourced"}
+   {
+    "value": "a seance",
+    "quote": "Verónica and her friends Rosa and Diana conduct a séance with a Ouija board",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:18",
+      "quote": "I'm the one who called him with the ouija board."
+     }
+    ]
+   },
+   {
+    "value": "contacting the dead",
+    "quote": "Verónica wants to reach out to her late father",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:00",
+      "quote": "I just wanted to talk to my Dad."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "death after three days", "quote": "Verónica whispered that she herself would die in three days", "confidence": "sourced"},
-   {"value": "must say goodbye", "quote": "she can force the spirits to leave by doing right what she did wrong", "confidence": "sourced"},
-   {"value": "protective symbols", "quote": "Verónica draws protective Viking symbols for the kids, only for the demon to destroy them", "confidence": "sourced"}
+   {
+    "value": "death after three days",
+    "quote": "Verónica whispered that she herself would die in three days",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:36",
+      "quote": "You said you were going to die today."
+     }
+    ]
+   },
+   {
+    "value": "must say goodbye",
+    "quote": "she can force the spirits to leave by doing right what she did wrong",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:59",
+      "quote": "Whatever you don't say goodbye to, stays with you."
+     }
+    ]
+   },
+   {
+    "value": "protective symbols",
+    "quote": "Verónica draws protective Viking symbols for the kids, only for the demon to destroy them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:50",
+      "quote": "VIKING SYMBOLS OF PROTECTION"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:55:43",
+      "quote": "The amulets got burned."
+     }
+    ]
+   },
+   {
+    "value": "eclipses invite spirits",
+    "source": "subtitles",
+    "at": "00:11:23",
+    "quote": "were a good time for sacrifices.",
+    "confidence": "observed"
+   }
   ],
   "who_suffers": [
-   {"value": "teenage girl", "relation_to_threat": "self", "detail": "Verónica, fifteen", "quote": "As the detective watches a photograph of Verónica suddenly catch fire, he is informed that she has died", "confidence": "sourced"},
-   {"value": "siblings", "relation_to_threat": "family", "detail": "Lucia, Irene and Antoñito", "quote": "leaving Verónica in charge of her younger siblings: twins Lucia and Irene, and Antoñito", "confidence": "sourced"}
+   {
+    "value": "teenage girl",
+    "relation_to_threat": "self",
+    "detail": "Verónica, fifteen",
+    "quote": "As the detective watches a photograph of Verónica suddenly catch fire, he is informed that she has died",
+    "confidence": "sourced"
+   },
+   {
+    "value": "siblings",
+    "relation_to_threat": "family",
+    "detail": "Lucia, Irene and Antoñito",
+    "quote": "leaving Verónica in charge of her younger siblings: twins Lucia and Irene, and Antoñito",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:33",
+      "quote": "Don't worry, Mom. Vero protects us from the spirit."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "victim dies", "quote": "he is informed that she has died", "confidence": "sourced"},
-   {"value": "unexplained event recorded", "quote": "he mentions unexplained paranormal activity having occurred in the house", "confidence": "sourced"}
+   {
+    "value": "victim dies",
+    "quote": "he is informed that she has died",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:55",
+      "quote": "The girl just died."
+     }
+    ]
+   },
+   {
+    "value": "unexplained event recorded",
+    "quote": "he mentions unexplained paranormal activity having occurred in the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:40:41",
+      "quote": "IN THE INSPECTOR'S REPORT, ROMERO SPEAKS OF PHENOMENA"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "solar eclipse", "state": "occurring", "when": "early", "role": "omen", "quote": "some ancient cultures used eclipses to stage human sacrifices and summon dark spirits", "confidence": "sourced"},
-   {"value": "ouija board", "state": "bloodied", "when": "early", "role": "trigger", "quote": "the cup shatters, cutting Verónica's finger and her blood drips onto the board", "confidence": "sourced"},
-   {"value": "blind nun", "state": "self-blinded", "when": "middle", "role": "mirror", "quote": "intentionally blinded herself in an unsuccessful attempt to stop the visions", "confidence": "sourced"},
-   {"value": "burn marks", "state": "body-shaped on mattresses", "when": "middle", "role": "clue", "quote": "a large burn mark in the shape of a human body", "confidence": "sourced"},
-   {"value": "first period", "state": "begins", "when": "middle", "role": "symbol", "quote": "Verónica wakes up to find that she's on her first period", "confidence": "sourced"},
-   {"value": "mirror", "state": "shows the demon", "when": "ending", "role": "turn", "quote": "Verónica looks at herself in the mirror and sees the demon", "confidence": "sourced"},
-   {"value": "photograph", "state": "catches fire", "when": "ending", "role": "symbol", "quote": "a photograph of Verónica suddenly catch fire", "confidence": "sourced"}
+   {
+    "value": "solar eclipse",
+    "state": "occurring",
+    "when": "early",
+    "role": "omen",
+    "quote": "some ancient cultures used eclipses to stage human sacrifices and summon dark spirits",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:18",
+      "quote": "an astronomical phenomenon occurs, and we call this a solar eclipse."
+     }
+    ]
+   },
+   {
+    "value": "ouija board",
+    "state": "bloodied",
+    "when": "early",
+    "role": "trigger",
+    "quote": "the cup shatters, cutting Verónica's finger and her blood drips onto the board",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:55",
+      "quote": "The board is broken."
+     }
+    ]
+   },
+   {
+    "value": "blind nun",
+    "state": "self-blinded",
+    "when": "middle",
+    "role": "mirror",
+    "quote": "intentionally blinded herself in an unsuccessful attempt to stop the visions",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:44",
+      "quote": "Sister Death is looking at you."
+     }
+    ]
+   },
+   {
+    "value": "burn marks",
+    "state": "body-shaped on mattresses",
+    "when": "middle",
+    "role": "clue",
+    "quote": "a large burn mark in the shape of a human body",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:06",
+      "quote": "I've got a huge black stain, right on top of your bedroom."
+     }
+    ]
+   },
+   {
+    "value": "first period",
+    "state": "begins",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "Verónica wakes up to find that she's on her first period",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:00",
+      "quote": "Are you on your period?"
+     }
+    ]
+   },
+   {
+    "value": "mirror",
+    "state": "shows the demon",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Verónica looks at herself in the mirror and sees the demon",
+    "confidence": "sourced"
+   },
+   {
+    "value": "photograph",
+    "state": "catches fire",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "a photograph of Verónica suddenly catch fire",
+    "confidence": "sourced"
+   },
+   {
+    "value": "wet bed",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:09:45",
+    "quote": "I won't wet the bed tomorrow.",
+    "confidence": "sourced",
+    "detail": "Antoñito's nightly promise, repeated as things worsen",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:23",
+      "quote": "I won't wet the bed tomorrow."
+     }
+    ]
+   },
+   {
+    "value": "ghost story book",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:42:49",
+    "quote": "we're going to read \"The Mount of Spirits\" together.",
+    "confidence": "sourced",
+    "detail": "Bécquer's tale of punishment for imprudence, later 'read' to Antoñito by the spirit posing as Dad",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:46",
+      "quote": "Dad came to read it to me."
+     }
+    ]
+   },
+   {
+    "value": "symbols of invocation",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:19:54",
+    "quote": "SYMBOLS OF INVOCATION",
+    "confidence": "observed"
+   },
+   {
+    "value": "police report",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:03:14",
+    "quote": "THIS STORY IS BASED ON THE POLICE REPORT",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:40:41",
+      "quote": "IN THE INSPECTOR'S REPORT, ROMERO SPEAKS OF PHENOMENA"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "panicked emergency call", "when": "opening", "role": "omen", "quote": "She sounds panicked and screams about something coming to get her brother before the call cuts off", "confidence": "sourced"},
-   {"order": 2, "value": "seance during eclipse", "when": "early", "role": "trigger", "quote": "The moment the eclipse occurs, the cup shatters", "confidence": "sourced"},
-   {"order": 3, "value": "elder explains the curse", "when": "middle", "role": "clue", "quote": "The nun explains that the séance attached a dark spirit to her", "confidence": "sourced"},
-   {"order": 4, "value": "child attacked", "when": "middle", "quote": "She intervenes when the spirit chokes Lucia", "confidence": "sourced"},
-   {"order": 5, "value": "second ritual fails", "when": "late", "quote": "When Verónica tells the spirit to say goodbye, it refuses", "confidence": "sourced"},
-   {"order": 6, "value": "protagonist is the threat", "when": "late", "role": "turn", "quote": "realizing she has been possessed by the demon the entire time", "confidence": "sourced"},
-   {"order": 7, "value": "death of the heroine", "when": "ending", "quote": "The police enter to find her being attacked by an invisible force, partially levitating and passing out", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "panicked emergency call",
+    "when": "opening",
+    "role": "omen",
+    "quote": "She sounds panicked and screams about something coming to get her brother before the call cuts off",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:09",
+      "quote": "Help! Help, please!"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "story framed as police report",
+    "when": "opening",
+    "source": "subtitles",
+    "at": "00:03:14",
+    "quote": "THIS STORY IS BASED ON THE POLICE REPORT",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "seance during eclipse",
+    "when": "early",
+    "role": "trigger",
+    "quote": "The moment the eclipse occurs, the cup shatters",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:23",
+      "quote": "were a good time for sacrifices."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "elder explains the curse",
+    "when": "middle",
+    "role": "clue",
+    "quote": "The nun explains that the séance attached a dark spirit to her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:07",
+      "quote": "They call you Sister Death."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "child attacked",
+    "when": "middle",
+    "quote": "She intervenes when the spirit chokes Lucia",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "spirit poses as dead father",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:06:46",
+    "quote": "Dad came to read it to me.",
+    "confidence": "observed"
+   },
+   {
+    "order": 7,
+    "value": "rule of goodbye learned",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:11:55",
+    "quote": "You should never end a séance without saying goodbye.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "second ritual fails",
+    "when": "late",
+    "quote": "When Verónica tells the spirit to say goodbye, it refuses",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:54",
+      "quote": "We're here to say goodbye to you."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "protagonist is the threat",
+    "when": "late",
+    "role": "turn",
+    "quote": "realizing she has been possessed by the demon the entire time",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:32",
+      "quote": "It's me."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "death of the heroine",
+    "when": "ending",
+    "quote": "The police enter to find her being attacked by an invisible force, partially levitating and passing out",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:55",
+      "quote": "The girl just died."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,60 +1,433 @@
 {
  "film": "2016-the-love-witch",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "witch", "detail": "Elaine Parks", "quote": "a modern-day witch who uses spells and magic to get men to fall in love with her with disastrous results", "confidence": "sourced"},
-   {"value": "femme fatale", "quote": "Her character is an examination of the femme fatale archetype.", "confidence": "sourced"}
+   {
+    "value": "witch",
+    "detail": "Elaine Parks",
+    "quote": "a modern-day witch who uses spells and magic to get men to fall in love with her with disastrous results",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:35",
+      "quote": "And I used love magic on him."
+     }
+    ]
+   },
+   {
+    "value": "femme fatale",
+    "quote": "Her character is an examination of the femme fatale archetype.",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "coven", "quote": "a midsummer solstice festival held by the leaders of Elaine's coven", "confidence": "sourced"}
+   {
+    "value": "coven",
+    "quote": "a midsummer solstice festival held by the leaders of Elaine's coven",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:31",
+      "quote": "They taught me everything I know about magic and about men."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to be loved", "quote": "a young woman who uses magic to make men love her", "confidence": "sourced"}
+   {
+    "value": "to be loved",
+    "quote": "a young woman who uses magic to make men love her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:36",
+      "quote": "by a prince on a white horse."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "suspicious death of a husband", "quote": "Jerry died of an overdose despite having no prior history of drug use", "confidence": "sourced"}
+   {
+    "value": "suspicious death of a husband",
+    "quote": "Jerry died of an overdose despite having no prior history of drug use",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:52",
+      "quote": "After Jerry died, the cops wouldn't stop harassing me."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "moving to a new town", "quote": "relocates to Arcata, California, a town that tolerates witchcraft, to start a new life following the recent death of her husband Jerry", "confidence": "sourced"},
-   {"value": "love ritual", "quote": "After Elaine performs a ritual to attract a new lover", "confidence": "sourced"}
+   {
+    "value": "moving to a new town",
+    "quote": "relocates to Arcata, California, a town that tolerates witchcraft, to start a new life following the recent death of her husband Jerry",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:28",
+      "quote": "I'm starting a new life."
+     }
+    ]
+   },
+   {
+    "value": "love ritual",
+    "quote": "After Elaine performs a ritual to attract a new lover",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "love potion", "quote": "She has him drink a concoction of hallucinogens and they have sex", "confidence": "sourced"},
-   {"value": "emotional men repel her", "quote": "He becomes emotional and delirious, which repulses Elaine", "confidence": "sourced"}
+   {
+    "value": "love potion",
+    "quote": "She has him drink a concoction of hallucinogens and they have sex",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:02",
+      "quote": "Organic berries, vodka, hallucinogenic herbs."
+     }
+    ]
+   },
+   {
+    "value": "emotional men repel her",
+    "quote": "He becomes emotional and delirious, which repulses Elaine",
+    "confidence": "sourced"
+   },
+   {
+    "value": "love spells backfire",
+    "source": "subtitles",
+    "at": "00:44:45",
+    "quote": "Love spells never work the way you think they will.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "give men their fantasy",
+    "source": "subtitles",
+    "at": "00:10:29",
+    "quote": "You have to give a man his fantasy.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "lovers", "relation_to_threat": "lover", "quote": "discovering a shrine dedicated to Elaine's deceased lovers, including Richard", "confidence": "sourced"},
-   {"value": "betrayed wife", "relation_to_threat": "stranger", "detail": "Trish", "quote": "Richard commits suicide in the bathtub and is discovered by Trish", "confidence": "sourced"},
-   {"value": "police officer", "relation_to_threat": "lover", "detail": "Griff", "quote": "She retrieves an athame and stabs Griff multiple times", "confidence": "sourced"}
+   {
+    "value": "lovers",
+    "relation_to_threat": "lover",
+    "quote": "discovering a shrine dedicated to Elaine's deceased lovers, including Richard",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:50",
+      "quote": "I phoned about Wayne Peters, the teacher who disappeared."
+     }
+    ]
+   },
+   {
+    "value": "betrayed wife",
+    "relation_to_threat": "stranger",
+    "detail": "Trish",
+    "quote": "Richard commits suicide in the bathtub and is discovered by Trish",
+    "confidence": "sourced"
+   },
+   {
+    "value": "police officer",
+    "relation_to_threat": "lover",
+    "detail": "Griff",
+    "quote": "She retrieves an athame and stabs Griff multiple times",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat survives", "quote": "Clutching the bloody athame to her chest, Elaine smiles", "confidence": "sourced"},
-   {"value": "retreat into fantasy", "quote": "imagining a mock wedding in which Griff declares his love and proposes to her", "confidence": "sourced"}
+   {
+    "value": "threat survives",
+    "quote": "Clutching the bloody athame to her chest, Elaine smiles",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:53:05",
+      "quote": "Don't worry, everything will be okay because I love you so much."
+     }
+    ]
+   },
+   {
+    "value": "retreat into fantasy",
+    "quote": "imagining a mock wedding in which Griff declares his love and proposes to her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:56:03",
+      "quote": "I love you, Elaine. I've never loved anyone but you. I want to marry you."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "witch bottle", "state": "buried with a body", "when": "early", "role": "clue", "quote": "She buries him along with a witch bottle containing her urine and a used tampon", "confidence": "sourced"},
-   {"value": "cabin in the woods", "state": "isolated", "when": "early", "role": "setting", "quote": "accepts her offer to cook him dinner at his cabin in the woods", "confidence": "sourced"},
-   {"value": "matching rings", "state": "gifted", "when": "middle", "role": "symbol", "quote": "Elaine and Griff are gifted matching rings", "confidence": "sourced"},
-   {"value": "bathtub", "state": "suicide", "when": "middle", "role": "setting", "quote": "Richard commits suicide in the bathtub", "confidence": "sourced"},
-   {"value": "shrine", "state": "to dead lovers", "when": "late", "role": "clue", "quote": "a shrine dedicated to Elaine's deceased lovers", "confidence": "sourced"},
-   {"value": "athame", "state": "bloody", "when": "ending", "role": "weapon", "quote": "She retrieves an athame and stabs Griff multiple times, mirroring a painting on her wall", "confidence": "sourced"},
-   {"value": "unicorn", "state": "imagined", "when": "ending", "role": "symbol", "quote": "leading her away astride a unicorn", "confidence": "sourced"}
+   {
+    "value": "witch bottle",
+    "state": "buried with a body",
+    "when": "early",
+    "role": "clue",
+    "quote": "She buries him along with a witch bottle containing her urine and a used tampon",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:36",
+      "quote": "The contents indicate that it's a witch bottle."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:16:08",
+      "quote": "We found this bottle containing urine and a used tampon"
+     }
+    ]
+   },
+   {
+    "value": "cabin in the woods",
+    "state": "isolated",
+    "when": "early",
+    "role": "setting",
+    "quote": "accepts her offer to cook him dinner at his cabin in the woods",
+    "confidence": "sourced"
+   },
+   {
+    "value": "matching rings",
+    "state": "gifted",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "Elaine and Griff are gifted matching rings",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:58",
+      "quote": "He even gave me this ring."
+     }
+    ]
+   },
+   {
+    "value": "bathtub",
+    "state": "suicide",
+    "when": "middle",
+    "role": "setting",
+    "quote": "Richard commits suicide in the bathtub",
+    "confidence": "sourced"
+   },
+   {
+    "value": "shrine",
+    "state": "to dead lovers",
+    "when": "late",
+    "role": "clue",
+    "quote": "a shrine dedicated to Elaine's deceased lovers",
+    "confidence": "sourced"
+   },
+   {
+    "value": "athame",
+    "state": "bloody",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "She retrieves an athame and stabs Griff multiple times, mirroring a painting on her wall",
+    "confidence": "sourced"
+   },
+   {
+    "value": "unicorn",
+    "state": "imagined",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "leading her away astride a unicorn",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:59:09",
+      "quote": "Unicorns, rainbows, lucky charms"
+     }
+    ]
+   },
+   {
+    "value": "tarot-coloured apartment",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:05:53",
+    "quote": "She had me take all of the colors from the Thoth Tarot deck",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dead cat",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:37:30",
+    "quote": "I've been so depressed since my cat died.",
+    "confidence": "sourced",
+    "detail": "Wayne's black-and-white cat Greymalkin, mourned the night he dies"
+   },
+   {
+    "value": "prince on a white horse",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:07:36",
+    "quote": "by a prince on a white horse.",
+    "confidence": "sourced",
+    "detail": "the fantasy the film ends on, with Griff leading her away on a unicorn"
+   },
+   {
+    "value": "ladies-only tea room",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:11:36",
+    "quote": "This tea room is for ladies only.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "widow moves to a new town", "when": "opening", "role": "trigger", "quote": "Young witch Elaine Parks relocates to Arcata, California", "confidence": "sourced"},
-   {"order": 2, "value": "first lover dies", "when": "early", "quote": "The next morning, Wayne has died", "confidence": "sourced"},
-   {"order": 3, "value": "seduces a married man", "when": "early", "quote": "When Trish leaves town for a few days, Elaine seduces Richard", "confidence": "sourced"},
-   {"order": 4, "value": "mock wedding", "when": "middle", "quote": "A handfasting ceremony is performed", "confidence": "sourced"},
-   {"order": 5, "value": "lover's suicide", "when": "middle", "quote": "Richard commits suicide in the bathtub and is discovered by Trish", "confidence": "sourced"},
-   {"order": 6, "value": "shrine discovered", "when": "late", "role": "turn", "quote": "discovering a shrine dedicated to Elaine's deceased lovers, including Richard", "confidence": "sourced"},
-   {"order": 7, "value": "mob turns on the witch", "when": "late", "quote": "other patrons assault Elaine, chanting \"burn the witch\"", "confidence": "sourced"},
-   {"order": 8, "value": "killing the beloved", "when": "ending", "role": "turn", "quote": "She retrieves an athame and stabs Griff multiple times", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "widow moves to a new town",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Young witch Elaine Parks relocates to Arcata, California",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:28",
+      "quote": "I'm starting a new life."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "coven's teaching recalled",
+    "when": "opening",
+    "source": "subtitles",
+    "at": "00:08:31",
+    "quote": "They taught me everything I know about magic and about men.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "first lover dies",
+    "when": "early",
+    "quote": "The next morning, Wayne has died",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "seduces a married man",
+    "when": "early",
+    "quote": "When Trish leaves town for a few days, Elaine seduces Richard",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "witch bottle examined",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:04:36",
+    "quote": "The contents indicate that it's a witch bottle.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "mock wedding",
+    "when": "middle",
+    "quote": "A handfasting ceremony is performed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:06",
+      "quote": "Welcome to our little gathering."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "lover's suicide",
+    "when": "middle",
+    "quote": "Richard commits suicide in the bathtub and is discovered by Trish",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "shrine discovered",
+    "when": "late",
+    "role": "turn",
+    "quote": "discovering a shrine dedicated to Elaine's deceased lovers, including Richard",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "mob turns on the witch",
+    "when": "late",
+    "quote": "other patrons assault Elaine, chanting \"burn the witch\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:51:31",
+      "quote": "Burn the witch."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "killing the beloved",
+    "when": "ending",
+    "role": "turn",
+    "quote": "She retrieves an athame and stabs Griff multiple times",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:53:05",
+      "quote": "Don't worry, everything will be okay because I love you so much."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "fantasy proposal",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:56:03",
+    "quote": "I love you, Elaine. I've never loved anyone but you.",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

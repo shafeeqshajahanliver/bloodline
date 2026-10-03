@@ -1,47 +1,486 @@
 {
  "film": "2014-siccin",
- "sources": [{"file": "wikipedia.tr.md", "sections": ["Lead", "Hikâye"]}],
+ "sources": [
+  {
+   "file": "wikipedia.tr.md",
+   "sections": [
+    "Lead",
+    "Hikâye"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "thin",
  "dimensions": {
   "threat": [
-   {"value": "jinn", "detail": "jinn set upon Nisa by a spell", "quote": "Büyünün etkisiyle Nisa'ya cinler musallat olur.", "confidence": "sourced"},
-   {"value": "black magic", "quote": "yasak aşkına kavuşmak adına çözümü kara büyüde arar", "confidence": "sourced"}
+   {
+    "value": "jinn",
+    "detail": "jinn set upon Nisa by a spell",
+    "quote": "Büyünün etkisiyle Nisa'ya cinler musallat olur.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:49",
+      "quote": "Among the evil djinns , there 's a notorious tribe named as Anzar"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:23:31",
+      "quote": "That's djinn inside to be pounded."
+     }
+    ]
+   },
+   {
+    "value": "black magic",
+    "quote": "yasak aşkına kavuşmak adına çözümü kara büyüde arar",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:38",
+      "quote": "I will cast pig spell on his wife ."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "summoned by spell", "detail": "Öznur turns to black magic", "quote": "Tutkusuna yenik düşen Öznur, yasak aşkına kavuşmak adına çözümü kara büyüde arar.", "confidence": "sourced"}
+   {
+    "value": "summoned by spell",
+    "detail": "Öznur turns to black magic",
+    "quote": "Tutkusuna yenik düşen Öznur, yasak aşkına kavuşmak adına çözümü kara büyüde arar.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:41",
+      "quote": "I will summon the demon and convince him to possess her ."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "forbidden love", "detail": "Öznur wants her married cousin Kudret", "quote": "Öznur, çocukluktan beri âşık olduğu kuzeni Kudret'i saplantı haline getirmiştir.", "confidence": "sourced"},
-   {"value": "to remove a rival", "detail": "the spell targets Kudret's wife Nisa", "quote": "Büyünün etkisiyle Nisa'ya cinler musallat olur.", "confidence": "observed"}
+   {
+    "value": "forbidden love",
+    "detail": "Öznur wants her married cousin Kudret",
+    "quote": "Öznur, çocukluktan beri âşık olduğu kuzeni Kudret'i saplantı haline getirmiştir.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:41",
+      "quote": "I have to make him enamour to me only ."
+     }
+    ]
+   },
+   {
+    "value": "to remove a rival",
+    "detail": "the spell targets Kudret's wife Nisa",
+    "quote": "Büyünün etkisiyle Nisa'ya cinler musallat olur.",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:54",
+      "quote": "I need to convince a demon among them to posses to Nisa ."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "obsessive jealousy", "quote": "Öznur, çocukluktan beri âşık olduğu kuzeni Kudret'i saplantı haline getirmiştir.", "confidence": "sourced"},
-   {"value": "temptation of married man", "quote": "Nisa ile evli olan Kudret'in aklını bir süreliğine çelmişse de", "confidence": "sourced"}
+   {
+    "value": "obsessive jealousy",
+    "quote": "Öznur, çocukluktan beri âşık olduğu kuzeni Kudret'i saplantı haline getirmiştir.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "temptation of married man",
+    "quote": "Nisa ile evli olan Kudret'in aklını bir süreliğine çelmişse de",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:09",
+      "quote": "You seduced me by yourself."
+     }
+    ]
+   },
+   {
+    "value": "lost pregnancy",
+    "detail": "Öznur's baby by Kudret is stillborn",
+    "source": "subtitles",
+    "at": "00:10:22",
+    "quote": "Baby had been dead in your womb .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child blinded by neglect",
+    "detail": "Kudret delayed taking Nisa to hospital in labour; Ceyda was born blind",
+    "source": "subtitles",
+    "at": "00:14:12",
+    "quote": "Wish you had brought your wife during the labor pains , on time .",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "a rejected lover", "detail": "Kudret chooses his marriage", "quote": "Kudret'in son kararı mutlu evliliğinden yana olmuştur", "confidence": "sourced"}
+   {
+    "value": "a rejected lover",
+    "detail": "Kudret chooses his marriage",
+    "quote": "Kudret'in son kararı mutlu evliliğinden yana olmuştur",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:47",
+      "quote": "Listen . This last time that you see me ."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "death after five prayers", "detail": "after five night (yatsı) prayers", "quote": "Tılsıma göre beş yatsı namazı sonrası Nisa ve onun kanından olanlar ölümle tanışacaktır.", "confidence": "sourced"},
-   {"value": "curse on bloodline", "quote": "Nisa ve onun kanından olanlar ölümle tanışacaktır", "confidence": "sourced"}
+   {
+    "value": "death after five prayers",
+    "detail": "after five night (yatsı) prayers",
+    "quote": "Tılsıma göre beş yatsı namazı sonrası Nisa ve onun kanından olanlar ölümle tanışacaktır.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:02",
+      "quote": "Demon will capture her . And she will die whilst in five nights ."
+     }
+    ]
+   },
+   {
+    "value": "curse on bloodline",
+    "quote": "Nisa ve onun kanından olanlar ölümle tanışacaktır",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:05",
+      "quote": "Her blood descendants will be exterminated ."
+     }
+    ]
+   },
+   {
+    "value": "needs the victim's hair or blood",
+    "source": "subtitles",
+    "at": "00:21:35",
+    "quote": "Some saliva or her hair or blood or a piece of nail .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "recitation expels the jinn",
+    "detail": "the cleric recites the sura Al-Falaq",
+    "source": "subtitles",
+    "at": "01:24:59",
+    "quote": "I seek refuge in the Lord of daylight, from the evil of the blowers in knots.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "wife", "relation_to_threat": "family", "detail": "Nisa, wife of the spellcaster's cousin", "quote": "Büyünün etkisiyle Nisa'ya cinler musallat olur.", "confidence": "sourced"},
-   {"value": "blood relatives", "relation_to_threat": "family", "detail": "Nisa's kin", "quote": "Nisa ve onun kanından olanlar ölümle tanışacaktır", "confidence": "sourced"}
+   {
+    "value": "wife",
+    "relation_to_threat": "family",
+    "detail": "Nisa, wife of the spellcaster's cousin",
+    "quote": "Büyünün etkisiyle Nisa'ya cinler musallat olur.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:03",
+      "quote": "had a sorcerer to cast a spell on my wife."
+     }
+    ]
+   },
+   {
+    "value": "blood relatives",
+    "relation_to_threat": "family",
+    "detail": "Nisa's kin",
+    "quote": "Nisa ve onun kanından olanlar ölümle tanışacaktır",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:10",
+      "quote": "They did to kill my wife and her blood relatives."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "talisman", "state": "binding a death spell", "when": "late", "role": "threat", "quote": "Tılsıma göre beş yatsı namazı sonrası Nisa ve onun kanından olanlar ölümle tanışacaktır.", "confidence": "sourced"}
+   {
+    "value": "knotted rope in a well",
+    "when": "opening",
+    "role": "mirror",
+    "detail": "the hadith of the spell cast on the Prophet, told over the opening",
+    "source": "subtitles",
+    "at": "00:00:17",
+    "quote": "He blown onto the knots on a rope. And thrown it into the draw well named Zervan.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "doll's red lips",
+    "when": "early",
+    "role": "symbol",
+    "detail": "the blind daughter asks what red looks like",
+    "source": "subtitles",
+    "at": "00:09:08",
+    "quote": "Has my doll red lips, too?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "eyes offered to the blind",
+    "state": "dream",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:13:00",
+    "quote": "Would you like to put these into my eye sockets so that I could see like you ?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dog fed the spell",
+    "when": "middle",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "00:34:05",
+    "quote": "Put into dog 's food as 5 pieces for each day . Feed dog at nights .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "razor blade",
+    "when": "middle",
+    "role": "threat",
+    "detail": "Öznur's dead husband appears with the razor he cut himself with",
+    "source": "subtitles",
+    "at": "00:48:46",
+    "quote": "I 'm here to cut you into pieces by razor blade .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lullaby",
+    "when": "late",
+    "role": "omen",
+    "detail": "heard before Öznur sees her dead baby",
+    "source": "subtitles",
+    "at": "01:09:40",
+    "quote": "( Female voice saying a lullaby )",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:52",
+      "quote": "Your baby was a boy ."
+     }
+    ]
+   },
+   {
+    "value": "talisman",
+    "state": "binding a death spell",
+    "when": "late",
+    "role": "threat",
+    "quote": "Tılsıma göre beş yatsı namazı sonrası Nisa ve onun kanından olanlar ölümle tanışacaktır.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:25",
+      "quote": "So , I will write verses from Koran on the shinbone of a corpse , died recently ."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:21:29",
+      "quote": "Then I will wrap it by intestine of a pig ."
+     }
+    ]
+   },
+   {
+    "value": "menstrual blood",
+    "when": "ending",
+    "role": "clue",
+    "detail": "Ceyda's first period: the blood Öznur took from the bin",
+    "source": "subtitles",
+    "at": "01:25:55",
+    "quote": "Our daughter menstruated today.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "obsession with a cousin", "when": "opening", "quote": "Öznur, çocukluktan beri âşık olduğu kuzeni Kudret'i saplantı haline getirmiştir.", "confidence": "sourced"},
-   {"order": 2, "value": "lover chooses his marriage", "when": "early", "quote": "Kudret'in son kararı mutlu evliliğinden yana olmuştur", "confidence": "sourced"},
-   {"order": 3, "value": "turns to black magic", "when": "middle", "role": "trigger", "quote": "Tutkusuna yenik düşen Öznur, yasak aşkına kavuşmak adına çözümü kara büyüde arar.", "confidence": "sourced"},
-   {"order": 4, "value": "jinn haunt the rival", "when": "late", "quote": "Büyünün etkisiyle Nisa'ya cinler musallat olur.", "confidence": "sourced"},
-   {"order": 5, "value": "death deadline set", "when": "ending", "role": "turn", "quote": "Tılsıma göre beş yatsı namazı sonrası Nisa ve onun kanından olanlar ölümle tanışacaktır.", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "hadith of a spell",
+    "when": "opening",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:00:02",
+    "quote": "According to, told by a relative of Mohammed, the prophet,",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "obsession with a cousin",
+    "when": "opening",
+    "quote": "Öznur, çocukluktan beri âşık olduğu kuzeni Kudret'i saplantı haline getirmiştir.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:56",
+      "quote": "Kudret is son of your aunt. He's not proper husband for you."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "stillbirth",
+    "when": "early",
+    "source": "subtitles",
+    "at": "00:10:18",
+    "quote": "Baby has passed away .",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "lover chooses his marriage",
+    "when": "early",
+    "quote": "Kudret'in son kararı mutlu evliliğinden yana olmuştur",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:47",
+      "quote": "Listen . This last time that you see me ."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "turns to black magic",
+    "when": "middle",
+    "role": "trigger",
+    "quote": "Tutkusuna yenik düşen Öznur, yasak aşkına kavuşmak adına çözümü kara büyüde arar.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:39",
+      "quote": "I 'm beseeching you to help me , please ."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "victim's blood stolen",
+    "when": "middle",
+    "role": "trigger",
+    "source": "subtitles",
+    "at": "00:27:54",
+    "quote": "I need something , belongs to her . Hair or blood or a piece of nails .",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "jinn haunt the rival",
+    "when": "late",
+    "quote": "Büyünün etkisiyle Nisa'ya cinler musallat olur.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:55",
+      "quote": "And something strange has fallen onto me ."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "death deadline set",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Tılsıma göre beş yatsı namazı sonrası Nisa ve onun kanından olanlar ölümle tanışacaktır.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:10",
+      "quote": "Up to five nights passes , what you wished is going to come to true ."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "grandmother dies",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "00:56:01",
+    "quote": "I didn 't get that how a bedridden woman could have go to kitchen .",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "cleric diagnoses possession",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:02:59",
+    "quote": "Your wife has been being possessed .",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "exorcism kills the wife",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:25:27",
+    "quote": "You killed my wife!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 12,
+    "value": "daughter revealed as the cursed",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:27:15",
+    "quote": "She is the possessed!",
+    "confidence": "sourced"
+   }
+  ],
+  "ending": [
+   {
+    "value": "everyone dies",
+    "detail": "the whole family is found dead in a mosque basement",
+    "source": "subtitles",
+    "at": "01:27:21",
+    "quote": "A family of father H.K, 42 yrs. old, mother N.K, 33 yrs. old and their daughter L.K, 11 yrs. old found dead in the basement of a mosque.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "curse hit the wrong victim",
+    "detail": "the blood Öznur took was Ceyda's, so the daughter was cursed, not Nisa",
+    "source": "subtitles",
+    "at": "01:25:34",
+    "quote": "She has not been cursed, ... but her.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "innocent blamed",
+    "detail": "the imam is suspected of the deaths",
+    "source": "subtitles",
+    "at": "01:27:28",
+    "quote": "As his testify considered discursive, imam of the mosque is under suspicion for being guilty for deaths.",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["ending"],
+ "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

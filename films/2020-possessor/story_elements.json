@@ -1,62 +1,447 @@
 {
  "film": "2020-possessor",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "body-hijacking assassin", "detail": "Tasya Vos", "quote": "Tasya Vos is an assassin who takes control of other people's bodies to carry out her hits", "confidence": "sourced"},
-   {"value": "the self", "detail": "Vos losing her own identity", "quote": "Vos struggles with neurological symptoms and increasing detachment from her own identity", "confidence": "sourced"},
-   {"value": "corporation", "detail": "Vos's agency and handler Girder", "quote": "Eddie, a co-employee from Tate's workplace reveals himself to be a plant from Vos' agency", "confidence": "sourced"}
+   {
+    "value": "body-hijacking assassin",
+    "detail": "Tasya Vos",
+    "quote": "Tasya Vos is an assassin who takes control of other people's bodies to carry out her hits",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:32",
+      "quote": "I 've heard a lot about you , the great Tasya Vos ."
+     }
+    ]
+   },
+   {
+    "value": "the self",
+    "detail": "Vos losing her own identity",
+    "quote": "Vos struggles with neurological symptoms and increasing detachment from her own identity",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:15",
+      "quote": "Eventually , you realize that she isn 't the same person anymore ."
+     }
+    ]
+   },
+   {
+    "value": "corporation",
+    "detail": "Vos's agency and handler Girder",
+    "quote": "Eddie, a co-employee from Tate's workplace reveals himself to be a plant from Vos' agency",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:04",
+      "quote": "Let 's leave her in , see if she can fight her way back and finish the job ."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "made by technology", "quote": "Through an implant installed in the unwitting host's brain, Vos' consciousness is inserted into their minds", "confidence": "sourced"}
+   {
+    "value": "made by technology",
+    "quote": "Through an implant installed in the unwitting host's brain, Vos' consciousness is inserted into their minds",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:55",
+      "quote": "All right . Interface is active , and we 're at full power ."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "money", "detail": "contract killings", "quote": "Vos agrees to perform a major hit on wealthy CEO John Parse and his daughter", "confidence": "observed"},
-   {"value": "to erase attachments", "detail": "Girder's aim", "quote": "Vos would be a better killer without personal attachments", "confidence": "sourced"},
-   {"value": "to regain one's body", "detail": "Tate", "quote": "demanding to know what she did to him", "confidence": "observed"}
+   {
+    "value": "money",
+    "detail": "contract killings",
+    "quote": "Vos agrees to perform a major hit on wealthy CEO John Parse and his daughter",
+    "confidence": "observed"
+   },
+   {
+    "value": "to erase attachments",
+    "detail": "Girder's aim",
+    "quote": "Vos would be a better killer without personal attachments",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:31",
+      "quote": "He 's only holding you back ."
+     }
+    ]
+   },
+   {
+    "value": "to regain one's body",
+    "detail": "Tate",
+    "quote": "demanding to know what she did to him",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "killing for hire", "quote": "Tasya Vos is an assassin who takes control of other people's bodies to carry out her hits", "confidence": "sourced"},
-   {"value": "childhood cruelty", "quote": "a butterfly that she pinned and framed as a child. She tells Girder she feels guilty for killing it", "confidence": "sourced"}
+   {
+    "value": "killing for hire",
+    "quote": "Tasya Vos is an assassin who takes control of other people's bodies to carry out her hits",
+    "confidence": "sourced"
+   },
+   {
+    "value": "childhood cruelty",
+    "quote": "a butterfly that she pinned and framed as a child. She tells Girder she feels guilty for killing it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:06",
+      "quote": "I killed and mounted it one summer when I was a girl , and then I felt guilty about it ."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "taking a job", "quote": "Vos agrees to perform a major hit on wealthy CEO John Parse and his daughter, Ava, by possessing Ava's fiancé, Colin Tate", "confidence": "sourced"}
+   {
+    "value": "taking a job",
+    "quote": "Vos agrees to perform a major hit on wealthy CEO John Parse and his daughter, Ava, by possessing Ava's fiancé, Colin Tate",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "leave by host's suicide", "quote": "She returns to her own body by forcing the host to commit suicide at the end of the job", "confidence": "sourced"},
-   {"value": "damaged link traps the possessor", "quote": "Vos discovers she can neither leave Tate's body, nor overpower his consciousness", "confidence": "sourced"}
+   {
+    "value": "leave by host's suicide",
+    "quote": "She returns to her own body by forcing the host to commit suicide at the end of the job",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:33",
+      "quote": "You just make sure you pull the trigger on the way out ."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:08:06",
+      "quote": "Brain death in the host confirmed and our link is cleanly severed ."
+     }
+    ]
+   },
+   {
+    "value": "damaged link traps the possessor",
+    "quote": "Vos discovers she can neither leave Tate's body, nor overpower his consciousness",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:53",
+      "quote": "Seems she was unable to maintain control over the host will ."
+     }
+    ]
+   },
+   {
+    "value": "exit on command",
+    "detail": "the possessor asks to be pulled out after the host dies",
+    "source": "subtitles",
+    "at": "00:06:42",
+    "quote": "Pull me out .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "implant fails after five days",
+    "source": "subtitles",
+    "at": "00:25:42",
+    "quote": "The implant web will begin to dissolve after five days .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "daily recalibration needed",
+    "source": "subtitles",
+    "at": "00:25:45",
+    "quote": "Use the calibration device at least once per day ,",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "possessed host", "relation_to_threat": "stranger", "detail": "Colin Tate", "quote": "Tate regains control, but is severely disoriented, in shock and traumatised", "confidence": "sourced"},
-   {"value": "husband and son", "relation_to_threat": "family", "detail": "Michael and Ira", "quote": "Tate kills him with a meat cleaver", "confidence": "sourced"},
-   {"value": "targets", "relation_to_threat": "stranger", "detail": "Ava and others", "quote": "The hit is only a partial success as Ava dies, but not Parse", "confidence": "sourced"}
+   {
+    "value": "possessed host",
+    "relation_to_threat": "stranger",
+    "detail": "Colin Tate",
+    "quote": "Tate regains control, but is severely disoriented, in shock and traumatised",
+    "confidence": "sourced"
+   },
+   {
+    "value": "husband and son",
+    "relation_to_threat": "family",
+    "detail": "Michael and Ira",
+    "quote": "Tate kills him with a meat cleaver",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:59",
+      "quote": "Poor Michael ."
+     }
+    ]
+   },
+   {
+    "value": "targets",
+    "relation_to_threat": "stranger",
+    "detail": "Ava and others",
+    "quote": "The hit is only a partial success as Ava dies, but not Parse",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "family destroyed", "quote": "With Ira and Michael both dead, she is now free of all human attachments, as Girder wanted", "confidence": "sourced"},
-   {"value": "loss of humanity", "quote": "She contemplates and recognizes the butterfly, but does not express any guilt for killing it", "confidence": "sourced"}
+   {
+    "value": "family destroyed",
+    "quote": "With Ira and Michael both dead, she is now free of all human attachments, as Girder wanted",
+    "confidence": "sourced"
+   },
+   {
+    "value": "loss of humanity",
+    "quote": "She contemplates and recognizes the butterfly, but does not express any guilt for killing it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:40",
+      "quote": "I killed and mounted it one summer when I was a little girl ."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "brain implant", "when": "opening", "role": "weapon", "quote": "Through an implant installed in the unwitting host's brain", "confidence": "sourced"},
-   {"value": "gun", "state": "trigger not pulled", "when": "opening", "role": "weapon", "quote": "struggles to control her own gun", "confidence": "sourced"},
-   {"value": "butterfly", "state": "pinned and framed", "when": "early", "role": "symbol", "quote": "pauses on a butterfly that she pinned and framed as a child", "confidence": "sourced"},
-   {"value": "knife in the skull", "when": "middle", "role": "turn", "quote": "he stabs himself in the skull, damaging the implant", "confidence": "sourced"},
-   {"value": "meat cleaver", "when": "late", "role": "weapon", "quote": "Tate kills him with a meat cleaver", "confidence": "sourced"},
-   {"value": "stab to the throat", "when": "late", "role": "mirror", "quote": "Ira stabs Tate in the throat, killing him, reminiscent of the opening sequence's stabbing", "confidence": "sourced"}
+   {
+    "value": "brain implant",
+    "when": "opening",
+    "role": "weapon",
+    "quote": "Through an implant installed in the unwitting host's brain",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:42",
+      "quote": "The implant web will begin to dissolve after five days ."
+     }
+    ]
+   },
+   {
+    "value": "gun",
+    "state": "trigger not pulled",
+    "when": "opening",
+    "role": "weapon",
+    "quote": "struggles to control her own gun",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:46",
+      "quote": "[ COCKS GUN ]"
+     }
+    ]
+   },
+   {
+    "value": "butterfly",
+    "state": "pinned and framed",
+    "when": "early",
+    "role": "symbol",
+    "quote": "pauses on a butterfly that she pinned and framed as a child",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:06",
+      "quote": "I killed and mounted it one summer when I was a girl ,"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:36:40",
+      "quote": "I killed and mounted it one summer when I was a little girl ."
+     }
+    ]
+   },
+   {
+    "value": "knife in the skull",
+    "when": "middle",
+    "role": "turn",
+    "quote": "he stabs himself in the skull, damaging the implant",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:26",
+      "quote": "I 'm reading physical damage to the implants ."
+     }
+    ]
+   },
+   {
+    "value": "meat cleaver",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Tate kills him with a meat cleaver",
+    "confidence": "sourced"
+   },
+   {
+    "value": "stab to the throat",
+    "when": "late",
+    "role": "mirror",
+    "quote": "Ira stabs Tate in the throat, killing him, reminiscent of the opening sequence's stabbing",
+    "confidence": "sourced"
+   },
+   {
+    "value": "grandfather's pipe",
+    "when": "early",
+    "role": "symbol",
+    "detail": "an object in the identity test after each job",
+    "source": "subtitles",
+    "at": "00:08:46",
+    "quote": "Mm , this is my grandfather 's pipe .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "curtains and blinds",
+    "when": "middle",
+    "role": "setting",
+    "detail": "Tate's data-mining job, watching homes through webcams",
+    "source": "subtitles",
+    "at": "00:35:05",
+    "quote": "This week I want you on curtains and blinds .",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "possessed killing", "when": "opening", "quote": "In the first hit shown, she deviates from her protocol and struggles to control her own gun", "confidence": "sourced"},
-   {"order": 2, "value": "identity fraying at home", "when": "early", "quote": "Thoughts of violence haunt her domestic life", "confidence": "sourced"},
-   {"order": 3, "value": "takes a major job", "when": "middle", "role": "trigger", "quote": "Vos agrees to perform a major hit on wealthy CEO John Parse", "confidence": "sourced"},
-   {"order": 4, "value": "trapped in the host", "when": "middle", "role": "turn", "quote": "Vos discovers she can neither leave Tate's body, nor overpower his consciousness", "confidence": "sourced"},
-   {"order": 5, "value": "host fights back", "when": "late", "quote": "His consciousness overpowers hers in a psychic confrontation", "confidence": "sourced"},
-   {"order": 6, "value": "husband killed", "when": "late", "quote": "Vos appears inside Tate's mind and goads Tate into killing Michael", "confidence": "sourced"},
-   {"order": 7, "value": "kills her own son", "when": "ending", "quote": "Vos uses Tate's last moments to shoot Ira dead", "confidence": "sourced"},
-   {"order": 8, "value": "free of attachments", "when": "ending", "quote": "but does not express any guilt for killing it. Girder praises her", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "possessed killing",
+    "when": "opening",
+    "quote": "In the first hit shown, she deviates from her protocol and struggles to control her own gun",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:42",
+      "quote": "Pull me out ."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "identity test with objects",
+    "when": "opening",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:08:46",
+    "quote": "Mm , this is my grandfather 's pipe .",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "identity fraying at home",
+    "when": "early",
+    "quote": "Thoughts of violence haunt her domestic life",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:36",
+      "quote": "Michael , I 'm absolutely ... I 'm absolutely starving ."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "takes a major job",
+    "when": "middle",
+    "role": "trigger",
+    "quote": "Vos agrees to perform a major hit on wealthy CEO John Parse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:57",
+      "quote": "Consider the face of Colin Tate ."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "trapped in the host",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Vos discovers she can neither leave Tate's body, nor overpower his consciousness",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:53",
+      "quote": "Seems she was unable to maintain control over the host will ."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "host fights back",
+    "when": "late",
+    "quote": "His consciousness overpowers hers in a psychic confrontation",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "husband killed",
+    "when": "late",
+    "quote": "Vos appears inside Tate's mind and goads Tate into killing Michael",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "kills her own son",
+    "when": "ending",
+    "quote": "Vos uses Tate's last moments to shoot Ira dead",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "identity test repeated",
+    "when": "ending",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:36:14",
+    "quote": "This is my grandfather 's pipe .",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "free of attachments",
+    "when": "ending",
+    "quote": "but does not express any guilt for killing it. Girder praises her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:40",
+      "quote": "I killed and mounted it one summer when I was a little girl ."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

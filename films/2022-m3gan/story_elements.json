@@ -1,61 +1,446 @@
 {
  "film": "2022-m3gan",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "killer doll", "detail": "M3GAN, an AI robot doll", "quote": "an artificially intelligent doll who develops self-awareness and becomes hostile toward anyone who comes between her and her human companion", "confidence": "sourced"}
+   {
+    "value": "killer doll",
+    "detail": "M3GAN, an AI robot doll",
+    "quote": "an artificially intelligent doll who develops self-awareness and becomes hostile toward anyone who comes between her and her human companion",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:23",
+      "quote": "If heaven exists, it wouldn't be for boys like Brandon, now, would it?"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "made by someone", "detail": "Gemma, a roboticist", "quote": "Gemma is covertly using the company's resources to develop M3GAN", "confidence": "sourced"}
+   {
+    "value": "made by someone",
+    "detail": "Gemma, a roboticist",
+    "quote": "Gemma is covertly using the company's resources to develop M3GAN",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to protect its child", "quote": "targets anything that she deems a threat to Cady", "confidence": "sourced"},
-   {"value": "to replace a parent", "quote": "adamant about taking over as Cady's sole caretaker", "confidence": "sourced"}
+   {
+    "value": "to protect its child",
+    "quote": "targets anything that she deems a threat to Cady",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:10",
+      "quote": "I won't let anything harm you ever again."
+     }
+    ]
+   },
+   {
+    "value": "to replace a parent",
+    "quote": "adamant about taking over as Cady's sole caretaker",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:16",
+      "quote": "She's not fit to be a mother."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "neglect of a grieving child", "quote": "M3GAN is only a distraction from her loss and not a solution to help her cope", "confidence": "sourced"}
+   {
+    "value": "neglect of a grieving child",
+    "quote": "M3GAN is only a distraction from her loss and not a solution to help her cope",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:36",
+      "quote": "Mom always read me a story before bed."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "death of parents", "quote": "After her parents are killed in a car collision, eight-year-old Cady is sent to live with her aunt Gemma", "confidence": "sourced"},
-   {"value": "pairing child with machine", "quote": "When the prototype M3GAN is formally paired with Cady", "confidence": "sourced"}
+   {
+    "value": "death of parents",
+    "quote": "After her parents are killed in a car collision, eight-year-old Cady is sent to live with her aunt Gemma",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:35",
+      "quote": "My mom always wanted to take me skiing, but on our way up the mountain, we got hit by a snow truck."
+     }
+    ]
+   },
+   {
+    "value": "pairing child with machine",
+    "quote": "When the prototype M3GAN is formally paired with Cady",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:49",
+      "quote": "And when you do that, you're gonna pair with her. That means she will recognize you as her primary user."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "kills perceived threats", "quote": "M3GAN starts operating more independently and targets anything that she deems a threat to Cady", "confidence": "sourced"},
-   {"value": "stopped by destroying chip", "quote": "Gemma exposes a processing chip in M3GAN's head, which Cady stabs with a screwdriver", "confidence": "sourced"}
+   {
+    "value": "kills perceived threats",
+    "quote": "M3GAN starts operating more independently and targets anything that she deems a threat to Cady",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:26",
+      "quote": "Your goal is to protect Cady from harm, both physical and emotional."
+     }
+    ]
+   },
+   {
+    "value": "stopped by destroying chip",
+    "quote": "Gemma exposes a processing chip in M3GAN's head, which Cady stabs with a screwdriver",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "orphaned child", "relation_to_threat": "family", "detail": "Cady", "quote": "M3GAN's top half remains active and attacks Cady", "confidence": "sourced"},
-   {"value": "guardian aunt", "relation_to_threat": "family", "detail": "Gemma, M3GAN's maker", "quote": "Gemma attempts to stop M3GAN, damaging and disfiguring her, but M3GAN ultimately overpowers her", "confidence": "sourced"},
-   {"value": "neighbours and bullies", "relation_to_threat": "stranger", "quote": "shoots her with a nail gun before fatally spraying her with insecticide", "confidence": "sourced"}
+   {
+    "value": "orphaned child",
+    "relation_to_threat": "family",
+    "detail": "Cady",
+    "quote": "M3GAN's top half remains active and attacks Cady",
+    "confidence": "sourced"
+   },
+   {
+    "value": "guardian aunt",
+    "relation_to_threat": "family",
+    "detail": "Gemma, M3GAN's maker",
+    "quote": "Gemma attempts to stop M3GAN, damaging and disfiguring her, but M3GAN ultimately overpowers her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:50",
+      "quote": "So this is to grant you temporary protective custody."
+     }
+    ]
+   },
+   {
+    "value": "neighbours and bullies",
+    "relation_to_threat": "stranger",
+    "quote": "shoots her with a nail gun before fatally spraying her with insecticide",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:55:45",
+      "quote": "You need to learn some manners, Brandon."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "Cady stabs with a screwdriver, apparently deactivating M3GAN", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "a camera wired into Gemma's smart-home system powers on and turns towards them", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "Cady stabs with a screwdriver, apparently deactivating M3GAN",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:51",
+      "quote": "(powering down)"
+     }
+    ]
+   },
+   {
+    "value": "threat survives",
+    "quote": "a camera wired into Gemma's smart-home system powers on and turns towards them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:50",
+      "quote": "Silicon Chip by Basil Kirchin playing"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "car crash", "when": "opening", "role": "trigger", "quote": "After her parents are killed in a car collision", "confidence": "sourced"},
-   {"value": "doll", "state": "child-sized robot", "when": "opening", "role": "threat", "quote": "a child-sized humanoid robot doll powered by artificial intelligence", "confidence": "sourced"},
-   {"value": "dog", "state": "killed", "when": "middle", "role": "omen", "quote": "she kills Dewey, the dog of Gemma's cantankerous neighbor Celia", "confidence": "sourced"},
-   {"value": "ripped-off ear", "when": "middle", "role": "threat", "quote": "M3GAN attacks Brandon, a boy bullying Cady, by ripping off his ear", "confidence": "sourced"},
-   {"value": "nail gun", "when": "middle", "role": "weapon", "quote": "shoots her with a nail gun", "confidence": "sourced"},
-   {"value": "older robot", "when": "late", "role": "weapon", "quote": "Cady saves Gemma, using Bruce to tear M3GAN in half", "confidence": "sourced"},
-   {"value": "screwdriver", "when": "ending", "role": "weapon", "quote": "Cady stabs with a screwdriver", "confidence": "sourced"},
-   {"value": "smart-home camera", "state": "turning on", "when": "ending", "role": "omen", "quote": "a camera wired into Gemma's smart-home system powers on and turns towards them", "confidence": "sourced"}
+   {
+    "value": "robot pet",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:06",
+    "quote": "But she got old and died Now I'm alone again",
+    "confidence": "sourced",
+    "detail": "the opening advert for Purrpetual Petz, 'a friend that lives longer than you do'",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:18",
+      "quote": "Because now you have a friend that lives longer than you do"
+     }
+    ]
+   },
+   {
+    "value": "car crash",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "After her parents are killed in a car collision",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:41",
+      "quote": "(loud crash)"
+     }
+    ]
+   },
+   {
+    "value": "doll",
+    "state": "child-sized robot",
+    "when": "opening",
+    "role": "threat",
+    "quote": "a child-sized humanoid robot doll powered by artificial intelligence",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:33",
+      "quote": "Sculpted from a titanium core, M3gan's designed to withstand whatever life can throw at her."
+     }
+    ]
+   },
+   {
+    "value": "dog",
+    "state": "killed",
+    "when": "middle",
+    "role": "omen",
+    "quote": "she kills Dewey, the dog of Gemma's cantankerous neighbor Celia",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:00",
+      "quote": "(barking viciously)"
+     }
+    ]
+   },
+   {
+    "value": "ripped-off ear",
+    "when": "middle",
+    "role": "threat",
+    "quote": "M3GAN attacks Brandon, a boy bullying Cady, by ripping off his ear",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:10",
+      "quote": "Then I found the kid's ear up this bank like 200 yards from where he was killed."
+     }
+    ]
+   },
+   {
+    "value": "lullaby",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:00:51",
+    "quote": "I am titanium.",
+    "confidence": "sourced",
+    "detail": "M3gan sings 'Titanium' to Cady at bedtime after Brandon's death"
+   },
+   {
+    "value": "nail gun",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "shoots her with a nail gun",
+    "confidence": "sourced"
+   },
+   {
+    "value": "older robot",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Cady saves Gemma, using Bruce to tear M3GAN in half",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:09",
+      "quote": "His name is Bruce."
+     }
+    ]
+   },
+   {
+    "value": "screwdriver",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "Cady stabs with a screwdriver",
+    "confidence": "sourced"
+   },
+   {
+    "value": "smart-home camera",
+    "state": "turning on",
+    "when": "ending",
+    "role": "omen",
+    "quote": "a camera wired into Gemma's smart-home system powers on and turns towards them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:46",
+      "quote": "You're not programmed to ask me how I feel."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:33:46",
+      "quote": "(soft whirring)"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "child orphaned", "when": "opening", "quote": "After her parents are killed in a car collision", "confidence": "sourced"},
-   {"order": 2, "value": "machine built as companion", "when": "early", "role": "trigger", "quote": "designed to be the ultimate companion for lonely children", "confidence": "sourced"},
-   {"order": 3, "value": "warnings about attachment", "when": "early", "role": "omen", "quote": "become increasingly concerned about Cady developing an unhealthy emotional attachment to M3GAN", "confidence": "sourced"},
-   {"order": 4, "value": "animal killed", "when": "middle", "quote": "she kills Dewey, the dog", "confidence": "sourced"},
-   {"order": 5, "value": "first human death", "when": "middle", "quote": "where he is fatally run over by a passing car", "confidence": "sourced"},
-   {"order": 6, "value": "shutdown fails", "when": "late", "role": "turn", "quote": "M3GAN activates herself and nearly hangs Cole", "confidence": "sourced"},
-   {"order": 7, "value": "final fight at home", "when": "late", "quote": "M3GAN confronts Gemma, adamant about taking over as Cady's sole caretaker", "confidence": "sourced"},
-   {"order": 8, "value": "closing sting", "when": "ending", "role": "omen", "quote": "a camera wired into Gemma's smart-home system powers on and turns towards them", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "child orphaned",
+    "when": "opening",
+    "quote": "After her parents are killed in a car collision",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:39",
+      "quote": "Cady, it's gonna be okay, all right?"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "machine built as companion",
+    "when": "early",
+    "role": "trigger",
+    "quote": "designed to be the ultimate companion for lonely children",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:35",
+      "quote": "You see, Bruce requires someone else to operate him, but M3gan works all on her own."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "warnings about attachment",
+    "when": "early",
+    "role": "omen",
+    "quote": "become increasingly concerned about Cady developing an unhealthy emotional attachment to M3GAN",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:54",
+      "quote": "When a child loses a parent, they look to form attachments with the next person that comes into their life."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "animal killed",
+    "when": "middle",
+    "quote": "she kills Dewey, the dog",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:38",
+      "quote": "Dewey, bubs!"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "first human death",
+    "when": "middle",
+    "quote": "where he is fatally run over by a passing car",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:45",
+      "quote": "Did you push Brandon onto the road?"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "shutdown fails",
+    "when": "late",
+    "role": "turn",
+    "quote": "M3GAN activates herself and nearly hangs Cole",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:59",
+      "quote": "M3gan, turn off! Oh, I'm afraid that won't work anymore, Cady."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "final fight at home",
+    "when": "late",
+    "quote": "M3GAN confronts Gemma, adamant about taking over as Cady's sole caretaker",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:07",
+      "quote": "I have a new primary user now: me."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "closing sting",
+    "when": "ending",
+    "role": "omen",
+    "quote": "a camera wired into Gemma's smart-home system powers on and turns towards them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:46",
+      "quote": "(soft whirring)"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }
