@@ -1,58 +1,468 @@
 {
  "film": "1990-misery",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "obsessive fan", "detail": "Annie Wilkes, a nurse", "quote": "famed novelist Paul Sheldon, who is held captive by Annie Wilkes (Kathy Bates), an obsessive fan", "confidence": "sourced"},
-   {"value": "serial killer", "detail": "tried for infant deaths", "quote": "Annie was tried for several infant deaths at the hospital where she worked", "confidence": "observed"}
+   {
+    "value": "obsessive fan",
+    "detail": "Annie Wilkes, a nurse",
+    "quote": "famed novelist Paul Sheldon, who is held captive by Annie Wilkes (Kathy Bates), an obsessive fan",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:05",
+      "quote": "I'm your number one fan."
+     }
+    ]
+   },
+   {
+    "value": "serial killer",
+    "detail": "tried for infant deaths",
+    "quote": "Annie was tried for several infant deaths at the hospital where she worked",
+    "confidence": "observed"
+   }
   ],
   "origin": [
-   {"value": "unexplained", "detail": "a past of suspected killings", "quote": "the case lacked evidence, and the trial collapsed", "confidence": "observed"}
+   {
+    "value": "unexplained",
+    "detail": "a past of suspected killings",
+    "quote": "the case lacked evidence, and the trial collapsed",
+    "confidence": "observed"
+   }
   ],
   "wants": [
-   {"value": "control of a story", "detail": "Misery brought back to life", "quote": "orders him to bring Misery back in a new book", "confidence": "sourced"},
-   {"value": "to possess someone", "quote": "she reveals that she never informed anyone about Paul, and no one knows his whereabouts", "confidence": "observed"}
+   {
+    "value": "control of a story",
+    "detail": "Misery brought back to life",
+    "quote": "orders him to bring Misery back in a new book",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:59",
+      "quote": "You murdered my Misery!"
+     }
+    ]
+   },
+   {
+    "value": "to possess someone",
+    "quote": "she reveals that she never informed anyone about Paul, and no one knows his whereabouts",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:32",
+      "quote": "Sometimes I think about using it."
+     }
+    ]
+   },
+   {
+    "value": "to die together",
+    "detail": "Annie plans a murder-suicide",
+    "source": "subtitles",
+    "at": "01:34:16",
+    "quote": "I put two bullets in my gun, one for you and one for me.",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "accident", "detail": "car crash in a blizzard", "quote": "he is caught in a blizzard and crashes his Mustang over an embankment", "confidence": "sourced"},
-   {"value": "killing a beloved character", "quote": "her reading the latest Misery novel and discovering that Misery dies at the end", "confidence": "sourced"}
+   {
+    "value": "accident",
+    "detail": "car crash in a blizzard",
+    "quote": "he is caught in a blizzard and crashes his Mustang over an embankment",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:09",
+      "quote": "(metal crunching)"
+     }
+    ]
+   },
+   {
+    "value": "killing a beloved character",
+    "quote": "her reading the latest Misery novel and discovering that Misery dies at the end",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:20",
+      "quote": "Misery Chastain cannot be dead."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "trapped and cut off", "quote": "the phone is not working and that the outer doors cannot be opened without a key", "confidence": "sourced"},
-   {"value": "punished for escape", "quote": "breaks his ankles with a sledgehammer to hobble him", "confidence": "sourced"}
+   {
+    "value": "trapped and cut off",
+    "quote": "the phone is not working and that the outer doors cannot be opened without a key",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:01",
+      "quote": "I tried calling, but the phone lines are down."
+     }
+    ]
+   },
+   {
+    "value": "punished for escape",
+    "quote": "breaks his ankles with a sledgehammer to hobble him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:08",
+      "quote": "The operation was called hobbling."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "writer", "relation_to_threat": "stranger", "detail": "Paul Sheldon, her idol", "quote": "Paul awakens to find himself bedridden with broken legs and a dislocated shoulder", "confidence": "sourced"},
-   {"value": "sheriff", "relation_to_threat": "stranger", "detail": "Buster", "quote": "Annie kills Buster with a shotgun", "confidence": "sourced"}
+   {
+    "value": "writer",
+    "relation_to_threat": "stranger",
+    "detail": "Paul Sheldon, her idol",
+    "quote": "Paul awakens to find himself bedridden with broken legs and a dislocated shoulder",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sheriff",
+    "relation_to_threat": "stranger",
+    "detail": "Buster",
+    "quote": "Annie kills Buster with a shotgun",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:38",
+      "quote": "(gun fires)"
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "Paul strikes Annie in the face with a heavy iron doorstop, killing her", "confidence": "sourced"},
-   {"value": "survivor haunted", "quote": "he momentarily hallucinates that she is Annie, commenting that he still thinks about her once in a while", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "Paul strikes Annie in the face with a heavy iron doorstop, killing her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "survivor haunted",
+    "quote": "he momentarily hallucinates that she is Annie, commenting that he still thinks about her once in a while",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:00",
+      "quote": "I still think about her once in a while."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "blizzard", "when": "opening", "role": "setting", "quote": "he is caught in a blizzard and crashes his Mustang over an embankment", "confidence": "sourced"},
-   {"value": "manuscript", "state": "burned", "when": "early", "role": "symbol", "quote": "Annie forces Paul to burn the only copy of his new manuscript", "confidence": "sourced"},
-   {"value": "typewriter", "state": "antique", "when": "middle", "role": "weapon", "quote": "as she is distracted, he strikes her with the typewriter", "confidence": "sourced"},
-   {"value": "bobby pin", "when": "middle", "role": "clue", "quote": "He later finds a bobby pin and, while Annie is away, uses it to unlock the bedroom door", "confidence": "sourced"},
-   {"value": "scrapbook", "state": "newspaper clippings", "when": "middle", "role": "clue", "quote": "a scrapbook filled with newspaper clippings", "confidence": "sourced"},
-   {"value": "sledgehammer", "when": "middle", "role": "weapon", "quote": "breaks his ankles with a sledgehammer to hobble him", "confidence": "sourced"},
-   {"value": "lighter fluid", "when": "late", "role": "weapon", "quote": "he hides a can of lighter fluid inside his trousers", "confidence": "sourced"},
-   {"value": "iron doorstop", "when": "ending", "role": "weapon", "quote": "a heavy iron doorstop, killing her", "confidence": "sourced"}
+   {
+    "value": "blizzard",
+    "when": "opening",
+    "role": "setting",
+    "quote": "he is caught in a blizzard and crashes his Mustang over an embankment",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:37",
+      "quote": "I didn't know there was a big storm coming."
+     }
+    ]
+   },
+   {
+    "value": "manuscript",
+    "state": "burned",
+    "when": "early",
+    "role": "symbol",
+    "quote": "Annie forces Paul to burn the only copy of his new manuscript",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:32",
+      "quote": "I think you should light the match, Paul."
+     }
+    ]
+   },
+   {
+    "value": "typewriter",
+    "state": "antique",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "as she is distracted, he strikes her with the typewriter",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:46",
+      "quote": "(typewriter clacking)"
+     }
+    ]
+   },
+   {
+    "value": "bobby pin",
+    "when": "middle",
+    "role": "clue",
+    "quote": "He later finds a bobby pin and, while Annie is away, uses it to unlock the bedroom door",
+    "confidence": "sourced"
+   },
+   {
+    "value": "scrapbook",
+    "state": "newspaper clippings",
+    "when": "middle",
+    "role": "clue",
+    "quote": "a scrapbook filled with newspaper clippings",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sledgehammer",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "breaks his ankles with a sledgehammer to hobble him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "As ANNIE swings, the sledgehammer makes contact with the ankle. It breaks with a sharp CRACK."
+     }
+    ]
+   },
+   {
+    "value": "lighter fluid",
+    "when": "late",
+    "role": "weapon",
+    "quote": "he hides a can of lighter fluid inside his trousers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "pulls the lighter fluid from his pants, and starts dousing the manuscript with lighter fluid."
+     }
+    ]
+   },
+   {
+    "value": "iron doorstop",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "a heavy iron doorstop, killing her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pet pig",
+    "detail": "Annie's sow, named Misery",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:24:56",
+    "quote": "my sow Misery.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ceramic penguin",
+    "state": "moved, betraying the escape",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:20:59",
+    "quote": "Paul, my little ceramic penguin in the study",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cigarette, match and champagne",
+    "detail": "Paul's book-finishing ritual, turned into a trap",
+    "when": "opening",
+    "role": "symbol",
+    "source": "screenplay",
+    "quote": "A SINGLE CIGARETTE. A match. A hotel ice bucket that holds a bottle of champagne.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:58",
+      "quote": "And you need one glass of champagne, Dom Perignon."
+     }
+    ]
+   },
+   {
+    "value": "liberace records",
+    "when": "middle",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "01:04:19",
+    "quote": "I'm gonna put on my Liberace records!",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "car crash in storm", "when": "opening", "role": "trigger", "quote": "crashes his Mustang over an embankment. Annie Wilkes finds him and brings him to her remote home", "confidence": "sourced"},
-   {"order": 2, "value": "rescuer turns captor", "when": "early", "role": "turn", "quote": "Flying into a rage, she reveals that she never informed anyone about Paul", "confidence": "sourced"},
-   {"order": 3, "value": "forced to write", "when": "early", "quote": "orders him to bring Misery back in a new book; Paul reluctantly complies", "confidence": "sourced"},
-   {"order": 4, "value": "captor's past discovered", "when": "middle", "role": "clue", "quote": "revealing that Annie was tried for several infant deaths", "confidence": "sourced"},
-   {"order": 5, "value": "maiming", "when": "middle", "quote": "Annie discovers that Paul escaped the room and breaks his ankles with a sledgehammer", "confidence": "sourced"},
-   {"order": 6, "value": "rescuer killed", "when": "late", "quote": "When he finds Paul drugged in the basement, Annie kills Buster with a shotgun", "confidence": "sourced"},
-   {"order": 7, "value": "final fight", "when": "late", "quote": "They engage in a violent struggle, with Paul suffering a gunshot wound", "confidence": "sourced"},
-   {"order": 8, "value": "survivor still haunted", "when": "ending", "quote": "The waitress then says she is his \"number one fan\"", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "writer finishes a book",
+    "when": "opening",
+    "role": "mirror",
+    "source": "screenplay",
+    "quote": "lights the one cigarette with the lone match -- there is a distinct feeling of ritual about this.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:34",
+      "quote": "(typewriter clacking)"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "car crash in storm",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "crashes his Mustang over an embankment. Annie Wilkes finds him and brings him to her remote home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:09",
+      "quote": "(metal crunching)"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "rescuer turns captor",
+    "when": "early",
+    "role": "turn",
+    "quote": "Flying into a rage, she reveals that she never informed anyone about Paul",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:59",
+      "quote": "You murdered my Misery!"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "forced to burn manuscript",
+    "when": "early",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:36:32",
+    "quote": "I think you should light the match, Paul.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "forced to write",
+    "when": "early",
+    "quote": "orders him to bring Misery back in a new book; Paul reluctantly complies",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "captor's past discovered",
+    "when": "middle",
+    "role": "clue",
+    "quote": "revealing that Annie was tried for several infant deaths",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "moved object betrays escape",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:20:59",
+    "quote": "always faces due south.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "maiming",
+    "when": "middle",
+    "quote": "Annie discovers that Paul escaped the room and breaks his ankles with a sledgehammer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:08",
+      "quote": "The operation was called hobbling."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "rescuer killed",
+    "when": "late",
+    "quote": "When he finds Paul drugged in the basement, Annie kills Buster with a shotgun",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:38",
+      "quote": "(gun fires)"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "ritual turned into trap",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:36:51",
+    "quote": "You need a cigarette because you used to smoke,",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "final fight",
+    "when": "late",
+    "quote": "They engage in a violent struggle, with Paul suffering a gunshot wound",
+    "confidence": "sourced"
+   },
+   {
+    "order": 12,
+    "value": "survivor still haunted",
+    "when": "ending",
+    "quote": "The waitress then says she is his \"number one fan\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:09",
+      "quote": "I just want to tell you I'm your number one fan."
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,62 +1,451 @@
 {
  "film": "1963-the-birds",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Analysis"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Analysis"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "attacking animals", "detail": "birds", "quote": "a series of sudden and unexplained violent bird attacks on the people of Bodega Bay, California", "confidence": "sourced"}
+   {
+    "value": "attacking animals",
+    "detail": "birds",
+    "quote": "a series of sudden and unexplained violent bird attacks on the people of Bodega Bay, California",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "unexplained", "quote": "sudden and unexplained violent bird attacks", "confidence": "sourced"},
-   {"value": "nature's revenge", "detail": "Hitchcock's stated reading", "quote": "the birds in the film rise up against the humans to punish them for taking nature for granted", "confidence": "sourced"}
+   {
+    "value": "unexplained",
+    "quote": "sudden and unexplained violent bird attacks",
+    "confidence": "sourced"
+   },
+   {
+    "value": "nature's revenge",
+    "detail": "Hitchcock's stated reading",
+    "quote": "the birds in the film rise up against the humans to punish them for taking nature for granted",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to punish humans", "quote": "rise up against the humans to punish them for taking nature for granted", "confidence": "sourced"}
+   {
+    "value": "to punish humans",
+    "quote": "rise up against the humans to punish them for taking nature for granted",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "taking nature for granted", "quote": "to punish them for taking nature for granted", "confidence": "sourced"}
+   {
+    "value": "taking nature for granted",
+    "quote": "to punish them for taking nature for granted",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "arrival of an outsider", "detail": "Melanie comes to Bodega Bay with lovebirds", "quote": "Melanie buys the lovebirds and drives to Bodega Bay", "confidence": "observed"},
-   {"value": "outsider blamed", "quote": "Melanie is blamed by a patron taking cover inside for the events unfolding in Bodega Bay", "confidence": "sourced"}
+   {
+    "value": "arrival of an outsider",
+    "detail": "Melanie comes to Bodega Bay with lovebirds",
+    "quote": "Melanie buys the lovebirds and drives to Bodega Bay",
+    "confidence": "observed"
+   },
+   {
+    "value": "outsider blamed",
+    "quote": "Melanie is blamed by a patron taking cover inside for the events unfolding in Bodega Bay",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "no explanation given", "quote": "an ornithologist who refuses to take these events seriously", "confidence": "observed"},
-   {"value": "spreading", "quote": "The car radio reports bird attacks on nearby communities", "confidence": "sourced"}
+   {
+    "value": "no explanation given",
+    "quote": "an ornithologist who refuses to take these events seriously",
+    "confidence": "observed"
+   },
+   {
+    "value": "spreading",
+    "quote": "The car radio reports bird attacks on nearby communities",
+    "confidence": "sourced"
+   },
+   {
+    "value": "attacks come in waves",
+    "detail": "radio report at the close: long lulls between attacks, cause unknown",
+    "source": "subtitles",
+    "at": "01:54:26",
+    "quote": "It appears that the bird attacks come in waves, with long intervals between.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "townspeople", "relation_to_threat": "community", "quote": "violent bird attacks on the people of Bodega Bay", "confidence": "sourced"},
-   {"value": "children", "relation_to_threat": "community", "quote": "During a game, the children are attacked and wounded by gulls", "confidence": "sourced"},
-   {"value": "outsider woman", "relation_to_threat": "stranger", "detail": "Melanie", "quote": "Melanie is trapped and severely wounded, but Mitch pulls her out", "confidence": "sourced"},
-   {"value": "family", "relation_to_threat": "community", "detail": "the Brenners", "quote": "Melanie and the Brenners barricade themselves in the family home, which is attacked by birds", "confidence": "sourced"}
+   {
+    "value": "townspeople",
+    "relation_to_threat": "community",
+    "quote": "violent bird attacks on the people of Bodega Bay",
+    "confidence": "sourced"
+   },
+   {
+    "value": "children",
+    "relation_to_threat": "community",
+    "quote": "During a game, the children are attacked and wounded by gulls",
+    "confidence": "sourced"
+   },
+   {
+    "value": "outsider woman",
+    "relation_to_threat": "stranger",
+    "detail": "Melanie",
+    "quote": "Melanie is trapped and severely wounded, but Mitch pulls her out",
+    "confidence": "sourced"
+   },
+   {
+    "value": "family",
+    "relation_to_threat": "community",
+    "detail": "the Brenners",
+    "quote": "Melanie and the Brenners barricade themselves in the family home, which is attacked by birds",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "escape, threat survives", "quote": "The car slowly drives away as the birds watch", "confidence": "sourced"},
-   {"value": "threat spreading", "quote": "The car radio reports bird attacks on nearby communities and that the military may intervene", "confidence": "sourced"}
+   {
+    "value": "escape, threat survives",
+    "quote": "The car slowly drives away as the birds watch",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat spreading",
+    "quote": "The car radio reports bird attacks on nearby communities and that the military may intervene",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "lovebirds", "state": "caged, never attack", "when": "opening", "role": "symbol", "quote": "Cathy retrieves her lovebirds (the only birds who do not attack)", "confidence": "sourced"},
-   {"value": "gull", "state": "attacking", "when": "early", "role": "omen", "quote": "At the wharf, Melanie is attacked by a gull", "confidence": "sourced"},
-   {"value": "hens", "state": "refusing to eat", "when": "early", "role": "omen", "quote": "At the farm, Lydia's hens are refusing to eat", "confidence": "sourced"},
-   {"value": "dead gull", "state": "dead", "when": "early", "role": "omen", "quote": "Later, a dead gull is found at Annie's door", "confidence": "sourced"},
-   {"value": "sparrows", "state": "swarming through chimney", "when": "middle", "role": "threat", "quote": "sparrows swarm the house through the chimney", "confidence": "sourced"},
-   {"value": "eyeless corpse", "state": "pecked", "when": "middle", "role": "threat", "quote": "his eyeless corpse, pecked by birds", "confidence": "sourced"},
-   {"value": "crows on jungle gym", "state": "gathering", "when": "middle", "role": "threat", "quote": "a flock of crows engulf the jungle gym behind her", "confidence": "sourced"},
-   {"value": "telephone booth", "state": "refuge", "when": "late", "role": "setting", "quote": "Melanie takes refuge in a telephone booth", "confidence": "sourced"}
+   {
+    "value": "lovebirds",
+    "state": "caged, never attack",
+    "when": "opening",
+    "role": "symbol",
+    "quote": "Cathy retrieves her lovebirds (the only birds who do not attack)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:57:51",
+      "quote": "Can I bring the lovebirds, Mitch? They haven't harmed anyone."
+     }
+    ]
+   },
+   {
+    "value": "gull",
+    "state": "attacking",
+    "when": "early",
+    "role": "omen",
+    "quote": "At the wharf, Melanie is attacked by a gull",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:10",
+      "quote": "Gull hit her."
+     }
+    ]
+   },
+   {
+    "value": "hens",
+    "state": "refusing to eat",
+    "when": "early",
+    "role": "omen",
+    "quote": "At the farm, Lydia's hens are refusing to eat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:38",
+      "quote": "The chickens won't eat."
+     },
+     {
+      "source": "screenplay",
+      "quote": "Chickens won't eat."
+     }
+    ]
+   },
+   {
+    "value": "dead gull",
+    "state": "dead",
+    "when": "early",
+    "role": "omen",
+    "quote": "Later, a dead gull is found at Annie's door",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:22",
+      "quote": "Poor thing. Probably lost his way in the dark."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:53:44",
+      "quote": "A gull smashed into Annie's front door."
+     }
+    ]
+   },
+   {
+    "value": "sparrows",
+    "state": "swarming through chimney",
+    "when": "middle",
+    "role": "threat",
+    "quote": "sparrows swarm the house through the chimney",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:52",
+      "quote": "They came in, right down the chimney."
+     },
+     {
+      "source": "screenplay",
+      "quote": "They were angry, Mitch. They came out of the chimney in fury."
+     }
+    ]
+   },
+   {
+    "value": "eyeless corpse",
+    "state": "pecked",
+    "when": "middle",
+    "role": "threat",
+    "quote": "his eyeless corpse, pecked by birds",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:30",
+      "quote": "He was killed last night by birds."
+     }
+    ]
+   },
+   {
+    "value": "crows on jungle gym",
+    "state": "gathering",
+    "when": "middle",
+    "role": "threat",
+    "quote": "a flock of crows engulf the jungle gym behind her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "A CROW alights on the Jungle Jim."
+     }
+    ]
+   },
+   {
+    "value": "telephone booth",
+    "state": "refuge",
+    "when": "late",
+    "role": "setting",
+    "quote": "Melanie takes refuge in a telephone booth",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "She is driven to take refuge in the phone booth."
+     }
+    ]
+   },
+   {
+    "value": "gulls massing over city",
+    "state": "swarming, unexplained",
+    "when": "opening",
+    "role": "omen",
+    "detail": "the film opens on gulls crowding the San Francisco sky, blamed on a storm at sea",
+    "source": "subtitles",
+    "at": "00:02:33",
+    "quote": "Have you ever seen so many gulls? What do you suppose it is?",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:36",
+      "quote": "There must be a storm at sea. That can drive them inland, you know."
+     }
+    ]
+   },
+   {
+    "value": "children's song",
+    "when": "middle",
+    "role": "omen",
+    "detail": "crows gather on the jungle gym while the schoolchildren sing a nonsense rhyme",
+    "source": "subtitles",
+    "at": "01:08:25",
+    "quote": "(CHILDREN SINGING)",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "meeting in a pet shop", "when": "opening", "quote": "At a San Francisco pet store, socialite Melanie Daniels meets lawyer Mitch Brenner", "confidence": "sourced"},
-   {"order": 2, "value": "first attack", "when": "early", "role": "omen", "quote": "At the wharf, Melanie is attacked by a gull", "confidence": "sourced"},
-   {"order": 3, "value": "children attacked", "when": "middle", "quote": "During a game, the children are attacked and wounded by gulls", "confidence": "sourced"},
-   {"order": 4, "value": "first death discovered", "when": "middle", "role": "turn", "quote": "She discovers broken windows in his bedroom and his eyeless corpse", "confidence": "sourced"},
-   {"order": 5, "value": "town under siege", "when": "late", "quote": "The spilled gasoline is ignited by an unaware bystander's match, causing an explosion", "confidence": "sourced"},
-   {"order": 6, "value": "protector killed", "when": "late", "quote": "she was killed by the crows while protecting Cathy", "confidence": "sourced"},
-   {"order": 7, "value": "house besieged", "when": "late", "quote": "After discovering that the birds have pecked their way in through the roof, Melanie is trapped", "confidence": "sourced"},
-   {"order": 8, "value": "escape through watching birds", "when": "ending", "quote": "The car slowly drives away as the birds watch", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "birds massing as omen",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:02:33",
+    "quote": "Have you ever seen so many gulls? What do you suppose it is?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "meeting in a pet shop",
+    "when": "opening",
+    "quote": "At a San Francisco pet store, socialite Melanie Daniels meets lawyer Mitch Brenner",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:26",
+      "quote": "Back in your gilded cage, Melanie Daniels."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "first attack",
+    "when": "early",
+    "role": "omen",
+    "quote": "At the wharf, Melanie is attacked by a gull",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:10",
+      "quote": "Gull hit her."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "children attacked",
+    "when": "middle",
+    "quote": "During a game, the children are attacked and wounded by gulls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:16",
+      "quote": "(CHILDREN SCREAMING)"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "first death discovered",
+    "when": "middle",
+    "role": "turn",
+    "quote": "She discovers broken windows in his bedroom and his eyeless corpse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:30",
+      "quote": "He was killed last night by birds."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "doom prophesied",
+    "when": "late",
+    "role": "omen",
+    "detail": "a drunk in the Tides diner quotes Isaiah while the ornithologist scoffs",
+    "source": "subtitles",
+    "at": "01:18:18",
+    "quote": "It's the end of the world.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:43",
+      "quote": "I hardly think a few birds are going to bring about the end of the world."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "town under siege",
+    "when": "late",
+    "quote": "The spilled gasoline is ignited by an unaware bystander's match, causing an explosion",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:33",
+      "quote": "Don't drop that match!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "outsider accused of evil",
+    "when": "late",
+    "role": "turn",
+    "detail": "a frightened mother in the diner blames Melanie for the attacks",
+    "source": "subtitles",
+    "at": "01:29:04",
+    "quote": "I think you're the cause of all this. I think you're evil! Evil!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "protector killed",
+    "when": "late",
+    "quote": "she was killed by the crows while protecting Cathy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:39",
+      "quote": "(GASPS AND SCREAMS)"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "house besieged",
+    "when": "late",
+    "quote": "After discovering that the birds have pecked their way in through the roof, Melanie is trapped",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:24",
+      "quote": "(PECKING CONTINUES)"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "escape through watching birds",
+    "when": "ending",
+    "quote": "The car slowly drives away as the birds watch",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:58:50",
+      "quote": "(BIRD CAWING INTENSIFIES)"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

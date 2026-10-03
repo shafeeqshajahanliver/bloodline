@@ -1,62 +1,498 @@
 {
  "film": "1988-beetlejuice",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "trickster demon", "detail": "Betelgeuse, a \"bio-exorcist\"", "quote": "They contact Betelgeuse, a sleazy \"bio-exorcist\", to scare the house's new inhabitants away", "confidence": "sourced"},
-   {"value": "ghosts", "detail": "the Maitlands, as haunters", "quote": "the couple realizes that they drowned in the river and are ghosts", "confidence": "sourced"}
+   {
+    "value": "trickster demon",
+    "detail": "Betelgeuse, a \"bio-exorcist\"",
+    "quote": "They contact Betelgeuse, a sleazy \"bio-exorcist\", to scare the house's new inhabitants away",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:37",
+      "quote": "Well, come on down and see me, folks, I'm the afterlife's leading bio-exorcist."
+     }
+    ]
+   },
+   {
+    "value": "ghosts",
+    "detail": "the Maitlands, as haunters",
+    "quote": "the couple realizes that they drowned in the river and are ghosts",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:43",
+      "quote": "I feel so stupid. ADAM: It's not stupid. We're ghosts."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "summoned by name", "quote": "who can only be summoned by uttering his name three times", "confidence": "sourced"},
-   {"value": "accidental death", "quote": "they swerve to avoid a stray dog and their car plunges off a bridge and into the river", "confidence": "sourced"}
+   {
+    "value": "summoned by name",
+    "quote": "who can only be summoned by uttering his name three times",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:08",
+      "quote": "is by calling his name three times."
+     }
+    ]
+   },
+   {
+    "value": "accidental death",
+    "quote": "they swerve to avoid a stray dog and their car plunges off a bridge and into the river",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Just before the bridge the dog waddles out in the road. Stops to pee. Barbara swerves."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to stay in the living world", "quote": "who will help if she marries him so he can remain in the mortal world", "confidence": "sourced"},
-   {"value": "to drive out newcomers", "detail": "the Maitlands' aim", "quote": "to scare the house's new inhabitants away", "confidence": "sourced"}
+   {
+    "value": "to stay in the living world",
+    "quote": "who will help if she marries him so he can remain in the mortal world",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Hey, I've been bottled up for six hundred years. Every dog has his day. This is my town. I need a night to howl."
+     }
+    ]
+   },
+   {
+    "value": "to drive out newcomers",
+    "detail": "the Maitlands' aim",
+    "quote": "to scare the house's new inhabitants away",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "new family moves in", "quote": "The house is sold to New York City real estate developer Charles Deetz and his second wife, Delia", "confidence": "sourced"},
-   {"value": "summoned by ritual", "quote": "The Maitlands invoke Betelgeuse and are transported into the model", "confidence": "sourced"}
+   {
+    "value": "new family moves in",
+    "quote": "The house is sold to New York City real estate developer Charles Deetz and his second wife, Delia",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:49",
+      "quote": "Delia Deetz, welcome home."
+     }
+    ]
+   },
+   {
+    "value": "summoned by ritual",
+    "quote": "The Maitlands invoke Betelgeuse and are transported into the model",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "ghosts bound to house", "quote": "As ghosts, they are not allowed to leave their house", "confidence": "sourced"},
-   {"value": "say name three times", "quote": "can only be summoned by uttering his name three times", "confidence": "sourced"},
-   {"value": "invisible to most living", "quote": "Adam and Barbara are invisible to Charles and Delia", "confidence": "sourced"},
-   {"value": "no reflection", "quote": "After noticing they now lack reflections", "confidence": "sourced"}
+   {
+    "value": "ghosts bound to house",
+    "quote": "As ghosts, they are not allowed to leave their house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:59",
+      "quote": "The vacuum's out in the garage and we can't leave the house."
+     }
+    ]
+   },
+   {
+    "value": "say name three times",
+    "quote": "can only be summoned by uttering his name three times",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:32",
+      "quote": "But, you know, in order to do that you've gotta say my name three times."
+     }
+    ]
+   },
+   {
+    "value": "invisible to most living",
+    "quote": "Adam and Barbara are invisible to Charles and Delia",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:16",
+      "quote": "It says, \" Live people ignore the strange and unusual. \""
+     }
+    ]
+   },
+   {
+    "value": "no reflection",
+    "quote": "After noticing they now lack reflections",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:03",
+      "quote": "How do I look? There are no mirrors on this side."
+     }
+    ]
+   },
+   {
+    "value": "bound for 125 years",
+    "source": "subtitles",
+    "at": "00:30:19",
+    "quote": "You spend 125 years on Earth actually in that house",
+    "detail": "the caseworker Juno's terms; help is limited to three intercessions",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "dead couple", "relation_to_threat": "stranger", "detail": "the Maitlands", "quote": "Adam and Barbara Maitland, a recently deceased couple", "confidence": "sourced"},
-   {"value": "new family", "relation_to_threat": "stranger", "detail": "the Deetzes", "quote": "Betelgeuse, transformed it into a giant snake, soon terrorizes the Deetzes", "confidence": "sourced"},
-   {"value": "teenage girl", "relation_to_threat": "stranger", "detail": "Lydia, forced toward marriage", "quote": "then prepares to wed Lydia", "confidence": "sourced"}
+   {
+    "value": "dead couple",
+    "relation_to_threat": "stranger",
+    "detail": "the Maitlands",
+    "quote": "Adam and Barbara Maitland, a recently deceased couple",
+    "confidence": "sourced"
+   },
+   {
+    "value": "new family",
+    "relation_to_threat": "stranger",
+    "detail": "the Deetzes",
+    "quote": "Betelgeuse, transformed it into a giant snake, soon terrorizes the Deetzes",
+    "confidence": "sourced"
+   },
+   {
+    "value": "teenage girl",
+    "relation_to_threat": "stranger",
+    "detail": "Lydia, forced toward marriage",
+    "quote": "then prepares to wed Lydia",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat devoured", "quote": "Barbara rides back into the house on a sandworm, which devours Betelgeuse", "confidence": "sourced"},
-   {"value": "living and dead coexist", "quote": "The Deetzes and the Maitlands agree to harmoniously live together", "confidence": "sourced"}
+   {
+    "value": "threat devoured",
+    "quote": "Barbara rides back into the house on a sandworm, which devours Betelgeuse",
+    "confidence": "sourced"
+   },
+   {
+    "value": "living and dead coexist",
+    "quote": "The Deetzes and the Maitlands agree to harmoniously live together",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "stray dog", "when": "opening", "role": "omen", "quote": "they swerve to avoid a stray dog", "confidence": "sourced"},
-   {"value": "scale model of town", "when": "opening", "role": "setting", "quote": "Adam is building a scale model of the town in the attic", "confidence": "sourced"},
-   {"value": "sandworms", "when": "early", "role": "threat", "quote": "Saturn's moon Titan, populated by enormous sandworms", "confidence": "sourced"},
-   {"value": "handbook for the dead", "when": "early", "role": "clue", "quote": "discovering a Handbook for the Recently Deceased", "confidence": "sourced"},
-   {"value": "waiting room", "state": "bureaucratic afterlife", "when": "middle", "role": "setting", "quote": "an otherworldly waiting room populated by other distressed souls", "confidence": "sourced"},
-   {"value": "giant snake", "when": "middle", "role": "threat", "quote": "Betelgeuse, transformed it into a giant snake", "confidence": "sourced"},
-   {"value": "wedding clothes", "when": "late", "role": "trigger", "quote": "He summons Adam and Barbara by using their wedding clothes", "confidence": "sourced"},
-   {"value": "shrunken head", "when": "ending", "role": "symbol", "quote": "who retaliates by shrinking his head", "confidence": "sourced"}
+   {
+    "value": "giant spider",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "A GIANT DADDY LONGLEGS SPIDER mounts the crest of the hill beside the house",
+    "detail": "a real spider walking over the model town in the opening shot",
+    "confidence": "sourced"
+   },
+   {
+    "value": "stray dog",
+    "when": "opening",
+    "role": "omen",
+    "quote": "they swerve to avoid a stray dog",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The dog finishes, looks over at the car, walks across the bridge and steps on the one board which holds the car aloft."
+     }
+    ]
+   },
+   {
+    "value": "scale model of town",
+    "when": "opening",
+    "role": "setting",
+    "quote": "Adam is building a scale model of the town in the attic",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:51",
+      "quote": "How's the model coming? - Oh, it's great."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:45:31",
+      "quote": "I think we're in the model."
+     }
+    ]
+   },
+   {
+    "value": "sandworms",
+    "when": "early",
+    "role": "threat",
+    "quote": "Saturn's moon Titan, populated by enormous sandworms",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:28",
+      "quote": "Whoa. Sandworms."
+     }
+    ]
+   },
+   {
+    "value": "handbook for the dead",
+    "when": "early",
+    "role": "clue",
+    "quote": "discovering a Handbook for the Recently Deceased",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:11",
+      "quote": "\" Handbook for the Recently Deceased Press. \""
+     }
+    ]
+   },
+   {
+    "value": "bed sheets as ghost costume",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:39:56",
+    "quote": "This is so corny. Is this what we've been reduced to? Sheets?",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:44",
+      "quote": "I'm not scared of sheets."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "fly eaten alive",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:38:18",
+    "quote": "FLY: Help me. Help me. Help me.",
+    "detail": "Betelgeuse catches and eats a talking fly",
+    "confidence": "sourced"
+   },
+   {
+    "value": "waiting room",
+    "state": "bureaucratic afterlife",
+    "when": "middle",
+    "role": "setting",
+    "quote": "an otherworldly waiting room populated by other distressed souls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:54",
+      "quote": "All new arrivals, report to Waiting Room Number 8."
+     }
+    ]
+   },
+   {
+    "value": "giant snake",
+    "when": "middle",
+    "role": "threat",
+    "quote": "Betelgeuse, transformed it into a giant snake",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:07",
+      "quote": "That snake was a nasty customer."
+     }
+    ]
+   },
+   {
+    "value": "wedding clothes",
+    "when": "late",
+    "role": "trigger",
+    "quote": "He summons Adam and Barbara by using their wedding clothes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:21",
+      "quote": "The wedding clothes."
+     }
+    ]
+   },
+   {
+    "value": "shrunken head",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "who retaliates by shrinking his head",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "couple die in accident", "when": "opening", "quote": "their car plunges off a bridge and into the river", "confidence": "sourced"},
-   {"order": 2, "value": "realising they are dead", "when": "early", "role": "turn", "quote": "the couple realizes that they drowned in the river and are ghosts", "confidence": "sourced"},
-   {"order": 3, "value": "newcomers move in", "when": "early", "role": "trigger", "quote": "The house is sold to New York City real estate developer Charles Deetz", "confidence": "sourced"},
-   {"order": 4, "value": "failed haunting", "when": "middle", "quote": "Unexpectedly, their antics only amuse the group", "confidence": "sourced"},
-   {"order": 5, "value": "child talked out of suicide", "when": "middle", "quote": "the Maitlands return and stop her as well as talk her out of suicide", "confidence": "sourced"},
-   {"order": 6, "value": "botched séance", "when": "late", "role": "turn", "quote": "Otho had mistakenly mixed the incantation with an exorcism", "confidence": "sourced"},
-   {"order": 7, "value": "forced wedding", "when": "late", "quote": "A horrified Lydia invokes Betelgeuse, who will help if she marries him", "confidence": "sourced"},
-   {"order": 8, "value": "monster devoured", "when": "ending", "quote": "Barbara rides back into the house on a sandworm, which devours Betelgeuse", "confidence": "sourced"}
+   {
+    "value": "model town opening",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "Reveals Winter River as a miniature town, while The Daddy Longlegs and the hand are normal size.",
+    "confidence": "sourced",
+    "order": 1
+   },
+   {
+    "order": 2,
+    "value": "couple die in accident",
+    "when": "opening",
+    "quote": "their car plunges off a bridge and into the river",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:24",
+      "quote": "Perfect start to our vacation."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "realising they are dead",
+    "when": "early",
+    "role": "turn",
+    "quote": "the couple realizes that they drowned in the river and are ghosts",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:14",
+      "quote": "You know what? I don't think we survived the crash."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "newcomers move in",
+    "when": "early",
+    "role": "trigger",
+    "quote": "The house is sold to New York City real estate developer Charles Deetz",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:35",
+      "quote": "We'll have to rip out all the plumbing."
+     }
+    ]
+   },
+   {
+    "value": "visit to the afterlife office",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:33:25",
+    "quote": "All new arrivals, report to Waiting Room Number 8.",
+    "confidence": "sourced",
+    "order": 5
+   },
+   {
+    "value": "child sees the ghosts",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:42:04",
+    "quote": "You can see us without the sheets? - Of course I can see you.",
+    "confidence": "sourced",
+    "order": 6
+   },
+   {
+    "order": 7,
+    "value": "failed haunting",
+    "when": "middle",
+    "quote": "Unexpectedly, their antics only amuse the group",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:36",
+      "quote": "[SINGING \" DAY-O \" IN HARRY BELAFONTE'S VOICE]"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "child talked out of suicide",
+    "when": "middle",
+    "quote": "the Maitlands return and stop her as well as talk her out of suicide",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "botched séance",
+    "when": "late",
+    "role": "turn",
+    "quote": "Otho had mistakenly mixed the incantation with an exorcism",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:34",
+      "quote": "[CHANTING] Hands vermilion"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "forced wedding",
+    "when": "late",
+    "quote": "A horrified Lydia invokes Betelgeuse, who will help if she marries him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:17",
+      "quote": "And you, do you, Lydia, take this man..."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "monster devoured",
+    "when": "ending",
+    "quote": "Barbara rides back into the house on a sandworm, which devours Betelgeuse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:46",
+      "quote": "[SANDWORM GROWLING]"
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

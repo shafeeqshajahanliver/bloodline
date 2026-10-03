@@ -1,62 +1,449 @@
 {
  "film": "1963-matango",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "mutagenic fungus", "detail": "mushrooms that turn eaters into mushroom creatures", "quote": "a group of castaways on an island who are unwittingly altered by a local species of mutagenic mushrooms", "confidence": "sourced"},
-   {"value": "humanoid creatures", "quote": "those who have been eating the mushrooms have turned into humanoid mushroom creatures themselves", "confidence": "sourced"},
-   {"value": "each other", "detail": "the castaways turn on one another", "quote": "Yoshida pulls a gun and declares his intent to have his way with the women after murdering the others", "confidence": "sourced"}
+   {
+    "value": "mutagenic fungus",
+    "detail": "mushrooms that turn eaters into mushroom creatures",
+    "quote": "a group of castaways on an island who are unwittingly altered by a local species of mutagenic mushrooms",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:38",
+      "quote": "A kind of mushroom."
+     }
+    ]
+   },
+   {
+    "value": "humanoid creatures",
+    "quote": "those who have been eating the mushrooms have turned into humanoid mushroom creatures themselves",
+    "confidence": "sourced"
+   },
+   {
+    "value": "each other",
+    "detail": "the castaways turn on one another",
+    "quote": "Yoshida pulls a gun and declares his intent to have his way with the women after murdering the others",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:18",
+      "quote": "The weak restraints of society disintegrate..."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "nuclear fallout", "quote": "the resultant fallout forcing a bizarre mutation on various organisms native to the surrounding area, including the mushrooms", "confidence": "sourced"}
+   {
+    "value": "nuclear fallout",
+    "quote": "the resultant fallout forcing a bizarre mutation on various organisms native to the surrounding area, including the mushrooms",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:34",
+      "quote": "mutation caused by radiation."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to spread", "detail": "creatures feed mushrooms to the survivors", "quote": "he discovers that she has been fed mushrooms and is under their influence", "confidence": "observed"}
+   {
+    "value": "to spread",
+    "detail": "creatures feed mushrooms to the survivors",
+    "quote": "he discovers that she has been fed mushrooms and is under their influence",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "nuclear testing", "quote": "the ship was connected to nuclear tests conducted in the vicinity of the island", "confidence": "sourced"}
+   {
+    "value": "nuclear testing",
+    "quote": "the ship was connected to nuclear tests conducted in the vicinity of the island",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:29",
+      "quote": "But involved in some kind of nuclear research."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "shipwreck on an island", "quote": "A sudden storm causes the yacht to nearly capsize", "confidence": "sourced"},
-   {"value": "hunger", "quote": "the group grows restless as their supply of food stores starts to run low", "confidence": "sourced"}
+   {
+    "value": "shipwreck on an island",
+    "quote": "A sudden storm causes the yacht to nearly capsize",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hunger",
+    "quote": "the group grows restless as their supply of food stores starts to run low",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:13",
+      "quote": "and turtles eggs."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "must not eat", "quote": "warns them not to eat the mushrooms because they might be poisonous", "confidence": "sourced"},
-   {"value": "irresistible after first bite", "quote": "The mushrooms are delicious and cannot be resisted after the first bite", "confidence": "sourced"},
-   {"value": "weak to cleaning products", "detail": "the mould on the ship", "quote": "Finding that the mold is killed by cleaning products", "confidence": "sourced"}
+   {
+    "value": "must not eat",
+    "quote": "warns them not to eat the mushrooms because they might be poisonous",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:17",
+      "quote": "But don't you even touch the mushrooms."
+     }
+    ]
+   },
+   {
+    "value": "irresistible after first bite",
+    "quote": "The mushrooms are delicious and cannot be resisted after the first bite",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:50",
+      "quote": "And once you start you can't stop."
+     }
+    ]
+   },
+   {
+    "value": "weak to cleaning products",
+    "detail": "the mould on the ship",
+    "quote": "Finding that the mold is killed by cleaning products",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:45",
+      "quote": "But I wonder why the mold hasn't covered these shelves too."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "castaways", "relation_to_threat": "stranger", "quote": "the story of his band of day trippers on a yacht", "confidence": "sourced"},
-   {"value": "lover", "relation_to_threat": "lover", "detail": "Akiko, left behind by Murai", "quote": "he begins to wonder if he should have stayed with Akiko on the island", "confidence": "sourced"}
+   {
+    "value": "castaways",
+    "relation_to_threat": "stranger",
+    "quote": "the story of his band of day trippers on a yacht",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lover",
+    "relation_to_threat": "lover",
+    "detail": "Akiko, left behind by Murai",
+    "quote": "he begins to wonder if he should have stayed with Akiko on the island",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "lone survivor", "quote": "he was the only one to be rescued", "confidence": "sourced"},
-   {"value": "survivor infected", "quote": "His face is revealed to show signs of being infected with fungal growths", "confidence": "sourced"}
+   {
+    "value": "lone survivor",
+    "quote": "he was the only one to be rescued",
+    "confidence": "sourced"
+   },
+   {
+    "value": "survivor infected",
+    "quote": "His face is revealed to show signs of being infected with fungal growths",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:34",
+      "quote": "I ate them!"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "giant mushrooms", "state": "mutated", "when": "opening", "role": "threat", "quote": "a forest populated by unusually-large mushrooms", "confidence": "sourced"},
-   {"value": "wrecked ship", "state": "rotted, covered in mould", "when": "early", "role": "omen", "quote": "a wrecked ship on the shore whose sails are rotted and its interior is covered with a mysterious mold", "confidence": "sourced"},
-   {"value": "ship's log", "when": "early", "role": "clue", "quote": "Murai, after reading the ship's log, warns them not to eat the mushrooms", "confidence": "sourced"},
-   {"value": "storm", "when": "opening", "role": "trigger", "quote": "A sudden storm causes the yacht to nearly capsize", "confidence": "sourced"},
-   {"value": "gun", "when": "middle", "role": "weapon", "quote": "Yoshida pulls a gun and declares his intent", "confidence": "sourced"},
-   {"value": "note crossed out", "state": "listing the dead", "when": "late", "role": "symbol", "quote": "Murai draws a large X over the note", "confidence": "sourced"},
-   {"value": "fungal growth on face", "state": "spreading", "when": "ending", "role": "turn", "quote": "His face is revealed to show signs of being infected with fungal growths", "confidence": "sourced"},
-   {"value": "rain", "state": "perpetual", "when": "middle", "role": "setting", "quote": "Perpetual rainfall has caused wild fungal growth", "confidence": "sourced"}
+   {
+    "value": "giant mushrooms",
+    "state": "mutated",
+    "when": "opening",
+    "role": "threat",
+    "quote": "a forest populated by unusually-large mushrooms",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:31",
+      "quote": "It looks like a giant mushroom, huh?"
+     }
+    ]
+   },
+   {
+    "value": "wrecked ship",
+    "state": "rotted, covered in mould",
+    "when": "early",
+    "role": "omen",
+    "quote": "a wrecked ship on the shore whose sails are rotted and its interior is covered with a mysterious mold",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:07",
+      "quote": "It's thick with fungus."
+     }
+    ]
+   },
+   {
+    "value": "ship's log",
+    "when": "early",
+    "role": "clue",
+    "quote": "Murai, after reading the ship's log, warns them not to eat the mushrooms",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:51",
+      "quote": "According to the logbook..."
+     }
+    ]
+   },
+   {
+    "value": "mirrors removed",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:31:02",
+    "quote": "I wonder what happened to all the mirrors?",
+    "detail": "the crew took the mirrors off so they could not see themselves change",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:46",
+      "quote": "took the mirrors off the ship, you see."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "no birds",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:40:46",
+    "quote": "Even the birds don't want to hang around here.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "storm",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "A sudden storm causes the yacht to nearly capsize",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:41",
+      "quote": "I paid a lot of money for this yacht, and I think it'll weather any storm we hit."
+     }
+    ]
+   },
+   {
+    "value": "gun",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "Yoshida pulls a gun and declares his intent",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:52",
+      "quote": "All you've done is carry that gun around all day!"
+     }
+    ]
+   },
+   {
+    "value": "turtle eggs",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:58:21",
+    "quote": "Turtle. They're nutritious.",
+    "detail": "the hoarded food the castaways fight over",
+    "confidence": "sourced"
+   },
+   {
+    "value": "note crossed out",
+    "state": "listing the dead",
+    "when": "late",
+    "role": "symbol",
+    "quote": "Murai draws a large X over the note",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fungal growth on face",
+    "state": "spreading",
+    "when": "ending",
+    "role": "turn",
+    "quote": "His face is revealed to show signs of being infected with fungal growths",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rain",
+    "state": "perpetual",
+    "when": "middle",
+    "role": "setting",
+    "quote": "Perpetual rainfall has caused wild fungal growth",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:32",
+      "quote": "It's been raining for a whole week now."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "survivor tells story in asylum", "when": "opening", "quote": "Quarantined in a Tokyo mental hospital, a psychology professor named Kenji Murai is visited by a group of doctors", "confidence": "sourced"},
-   {"order": 2, "value": "storm strands group", "when": "opening", "role": "trigger", "quote": "The group arrive at a seemingly deserted island and begin to explore", "confidence": "sourced"},
-   {"order": 3, "value": "warning found", "when": "early", "role": "omen", "quote": "the former crew had hallucinations after eating them", "confidence": "sourced"},
-   {"order": 4, "value": "first creature sighting", "when": "early", "quote": "he is attacked by a grotesque-looking man who promptly disappears", "confidence": "sourced"},
-   {"order": 5, "value": "group turns on itself", "when": "middle", "role": "turn", "quote": "they attempt to take over the ship, shooting and killing Senzō in the process", "confidence": "sourced"},
-   {"order": 6, "value": "temptation accepted", "when": "middle", "quote": "Kasai eats the mushrooms, hallucinates scenes of Tokyo nightlife, and falls to his knees amongst the creatures", "confidence": "sourced"},
-   {"order": 7, "value": "escape without loved one", "when": "late", "quote": "he is overwhelmed by the mushroom creatures and flees without her", "confidence": "sourced"},
-   {"order": 8, "value": "survivor revealed infected", "when": "ending", "role": "turn", "quote": "Murai notes that humans are not much different from the mushroom creatures", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "survivor tells story in asylum",
+    "when": "opening",
+    "quote": "Quarantined in a Tokyo mental hospital, a psychology professor named Kenji Murai is visited by a group of doctors",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:33",
+      "quote": "This is the psychiatric ward."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "storm strands group",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "The group arrive at a seemingly deserted island and begin to explore",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:14",
+      "quote": "The yacht was reported missing after the heavy storm."
+     }
+    ]
+   },
+   {
+    "value": "signs of former visitors",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:22:22",
+    "quote": "It's not deserted. - Huh? - Somebody arranged those rocks.",
+    "confidence": "sourced",
+    "order": 3
+   },
+   {
+    "order": 4,
+    "value": "warning found",
+    "when": "early",
+    "role": "omen",
+    "quote": "the former crew had hallucinations after eating them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:46",
+      "quote": "Perhaps this was due to the mushrooms..."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "first creature sighting",
+    "when": "early",
+    "quote": "he is attacked by a grotesque-looking man who promptly disappears",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "group turns on itself",
+    "when": "middle",
+    "role": "turn",
+    "quote": "they attempt to take over the ship, shooting and killing Senzō in the process",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:39",
+      "quote": "So, after I've killed you all..."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "temptation accepted",
+    "when": "middle",
+    "quote": "Kasai eats the mushrooms, hallucinates scenes of Tokyo nightlife, and falls to his knees amongst the creatures",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:39",
+      "quote": "So, go eat mushrooms!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "escape without loved one",
+    "when": "late",
+    "quote": "he is overwhelmed by the mushroom creatures and flees without her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "survivor regrets not eating",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:28:07",
+    "quote": "I should've eaten the mushrooms with her, and... and become one.",
+    "confidence": "sourced",
+    "order": 9
+   },
+   {
+    "order": 10,
+    "value": "survivor revealed infected",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Murai notes that humans are not much different from the mushroom creatures",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:47",
+      "quote": "Tokyo is not very different from that island."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

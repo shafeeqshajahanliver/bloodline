@@ -1,61 +1,451 @@
 {
  "film": "2018-mandy",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "cult", "detail": "Children of the New Dawn, led by Jeremiah Sand", "quote": "Jeremiah Sand, leader of the religious cult Children of the New Dawn", "confidence": "sourced"},
-   {"value": "demonic bikers", "detail": "the Black Skulls", "quote": "the Black Skulls, a cannibalistic, demonic biker gang that regularly consumes LSD", "confidence": "sourced"}
+   {
+    "value": "cult",
+    "detail": "Children of the New Dawn, led by Jeremiah Sand",
+    "quote": "Jeremiah Sand, leader of the religious cult Children of the New Dawn",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:22",
+      "quote": "Jeremiah Sand was a righteous man whose heart"
+     }
+    ]
+   },
+   {
+    "value": "demonic bikers",
+    "detail": "the Black Skulls",
+    "quote": "the Black Skulls, a cannibalistic, demonic biker gang that regularly consumes LSD",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:34",
+      "quote": "Black Skulls. Black Skulls."
+     },
+     {
+      "source": "screenplay",
+      "quote": "Hell spawned super freaks playing out a ritual only they can understand."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "summoned by ritual", "detail": "Swan summons the bikers", "quote": "Swan summons the Black Skulls", "confidence": "sourced"}
+   {
+    "value": "summoned by ritual",
+    "detail": "Swan summons the bikers",
+    "quote": "Swan summons the Black Skulls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Swan hesitantly raises The Horn of Abraxas to his lips."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "a woman", "quote": "Sand orders his disciple Brother Swan to kidnap Mandy", "confidence": "sourced"},
-   {"value": "revenge", "detail": "Red's drive", "quote": "a lumberjack seeking vengeance against cult leader Jeremiah Sand", "confidence": "sourced"},
-   {"value": "sacrifice", "detail": "the bikers' price", "quote": "After being offered a cult member as a sacrifice, the gang breaks into their home", "confidence": "sourced"}
+   {
+    "value": "a woman",
+    "quote": "Sand orders his disciple Brother Swan to kidnap Mandy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:50",
+      "quote": "I've been blessed to know the comfort of many women. But there are few that have had your radiance."
+     }
+    ]
+   },
+   {
+    "value": "revenge",
+    "detail": "Red's drive",
+    "quote": "a lumberjack seeking vengeance against cult leader Jeremiah Sand",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sacrifice",
+    "detail": "the bikers' price",
+    "quote": "After being offered a cult member as a sacrifice, the gang breaks into their home",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "murder", "quote": "Sand stabs the bound and gagged Red and burns Mandy alive before him", "confidence": "sourced"}
+   {
+    "value": "murder",
+    "quote": "Sand stabs the bound and gagged Red and burns Mandy alive before him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Swan LIGHT A MATCH and IGNITE HER."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "noticed by the threat", "quote": "While walking to work, Mandy catches the attention of Jeremiah Sand", "confidence": "sourced"},
-   {"value": "rejection", "quote": "she just laughs at Sand, infuriating him", "confidence": "sourced"}
+   {
+    "value": "noticed by the threat",
+    "quote": "While walking to work, Mandy catches the attention of Jeremiah Sand",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rejection",
+    "quote": "she just laughs at Sand, infuriating him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:09",
+      "quote": "[LAUGHING] Shut up!"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "bikers summoned with a price", "quote": "After being offered a cult member as a sacrifice", "confidence": "observed"}
+   {
+    "value": "bikers summoned with a price",
+    "quote": "After being offered a cult member as a sacrifice",
+    "confidence": "observed"
+   },
+   {
+    "value": "summoned by a horn",
+    "source": "subtitles",
+    "at": "00:24:22",
+    "quote": "Do you have the Horn of Abraxas?",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:38",
+      "quote": "[HORN BLOWING]"
+     }
+    ],
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "couple", "relation_to_threat": "stranger", "detail": "Red and Mandy", "quote": "the gang breaks into their home and subdues Mandy and Red", "confidence": "sourced"},
-   {"value": "artist", "relation_to_threat": "stranger", "detail": "Mandy Bloom", "quote": "artist and author Mandy Bloom, who had an abusive childhood", "confidence": "sourced"}
+   {
+    "value": "couple",
+    "relation_to_threat": "stranger",
+    "detail": "Red and Mandy",
+    "quote": "the gang breaks into their home and subdues Mandy and Red",
+    "confidence": "sourced"
+   },
+   {
+    "value": "artist",
+    "relation_to_threat": "stranger",
+    "detail": "Mandy Bloom",
+    "quote": "artist and author Mandy Bloom, who had an abusive childhood",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "revenge completed", "quote": "He then confronts Sand, taunting him by throwing Marlene's severed head at him before crushing his skull", "confidence": "sourced"},
-   {"value": "hero transformed", "quote": "the landscape behind him now appears fantastical and otherworldly", "confidence": "sourced"}
+   {
+    "value": "revenge completed",
+    "quote": "He then confronts Sand, taunting him by throwing Marlene's severed head at him before crushing his skull",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hero transformed",
+    "quote": "the landscape behind him now appears fantastical and otherworldly",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "fantasy art", "when": "opening", "role": "symbol", "quote": "at night creates elaborate fantasy art, which Red greatly admires", "confidence": "sourced"},
-   {"value": "giant wasp venom", "when": "early", "role": "weapon", "quote": "drug Mandy with LSD eye drops and the venom of a giant wasp", "confidence": "sourced"},
-   {"value": "fire", "state": "burning alive", "when": "middle", "role": "threat", "quote": "burns Mandy alive before him", "confidence": "sourced"},
-   {"value": "bottle of vodka", "when": "middle", "role": "turn", "quote": "after consuming a bottle of vodka, wordlessly swears revenge", "confidence": "sourced"},
-   {"value": "crossbow", "when": "middle", "role": "weapon", "quote": "Red visits his friend Caruthers to retrieve his crossbow and bolts", "confidence": "sourced"},
-   {"value": "battle axe", "state": "forged", "when": "middle", "role": "weapon", "quote": "Red reinforces his determination by forging a battle axe", "confidence": "sourced"},
-   {"value": "wooden church", "state": "burning", "when": "ending", "role": "setting", "quote": "He sets Sand's body and the church on fire before driving away", "confidence": "sourced"},
-   {"value": "severed head", "when": "ending", "role": "weapon", "quote": "throwing Marlene's severed head at him", "confidence": "sourced"}
+   {
+    "value": "fantasy art",
+    "when": "opening",
+    "role": "symbol",
+    "quote": "at night creates elaborate fantasy art, which Red greatly admires",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:58",
+      "quote": "What are you drawing? Uh, it's kind of like, um, jungle temple."
+     }
+    ]
+   },
+   {
+    "value": "giant wasp venom",
+    "when": "early",
+    "role": "weapon",
+    "quote": "drug Mandy with LSD eye drops and the venom of a giant wasp",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "revealing a MONSTROUS BLACK WASP."
+     }
+    ]
+   },
+   {
+    "value": "fire",
+    "state": "burning alive",
+    "when": "middle",
+    "role": "threat",
+    "quote": "burns Mandy alive before him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:33",
+      "quote": "The darker the whore, the brighter the flame."
+     }
+    ]
+   },
+   {
+    "value": "bottle of vodka",
+    "when": "middle",
+    "role": "turn",
+    "quote": "after consuming a bottle of vodka, wordlessly swears revenge",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Pulls out a hidden bottle of Vodka."
+     }
+    ]
+   },
+   {
+    "value": "crossbow",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "Red visits his friend Caruthers to retrieve his crossbow and bolts",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:46",
+      "quote": "Come for the Reaper."
+     },
+     {
+      "source": "screenplay",
+      "quote": "A WEATHERED CROSSBOW. THE REAPER."
+     }
+    ]
+   },
+   {
+    "value": "battle axe",
+    "state": "forged",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "Red reinforces his determination by forging a battle axe",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Rivulets of metal track along the mold like contained lava."
+     }
+    ]
+   },
+   {
+    "value": "wooden church",
+    "state": "burning",
+    "when": "ending",
+    "role": "setting",
+    "quote": "He sets Sand's body and the church on fire before driving away",
+    "confidence": "sourced"
+   },
+   {
+    "value": "severed head",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "throwing Marlene's severed head at him",
+    "confidence": "sourced"
+   },
+   {
+    "value": "baby starlings",
+    "state": "killed with a crowbar",
+    "when": "early",
+    "role": "symbol",
+    "detail": "Mandy's childhood memory of her father making the children kill baby birds",
+    "source": "subtitles",
+    "at": "00:15:32",
+    "quote": "It was a bunch of baby starlings. And he told us that he was gonna show us how to kill them.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dead deer",
+    "state": "stillborn, rotting",
+    "when": "early",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "the CARCASS OF A STILLBORN DEER ROTTING at the base of the log.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ritual horn",
+    "when": "early",
+    "role": "trigger",
+    "detail": "the Horn of Abraxas",
+    "source": "subtitles",
+    "at": "00:24:22",
+    "quote": "Do you have the Horn of Abraxas?",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "It feels cursed to the glance."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "cartoon goblin advert",
+    "when": "middle",
+    "role": "symbol",
+    "detail": "the Cheddar Goblin macaroni commercial on Red's TV",
+    "source": "subtitles",
+    "at": "01:05:37",
+    "quote": "Cheddar Goblin, did you eat all the macaroni and cheese?",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "quiet life of a couple", "when": "opening", "quote": "lumberjack Red Miller lives with his girlfriend, artist and author Mandy Bloom", "confidence": "sourced"},
-   {"order": 2, "value": "cult leader fixates", "when": "early", "role": "trigger", "quote": "Mandy catches the attention of Jeremiah Sand", "confidence": "sourced"},
-   {"order": 3, "value": "home invasion", "when": "early", "quote": "the gang breaks into their home and subdues Mandy and Red", "confidence": "sourced"},
-   {"order": 4, "value": "lover killed before hero", "when": "middle", "role": "turn", "quote": "Sand stabs the bound and gagged Red and burns Mandy alive before him", "confidence": "sourced"},
-   {"order": 5, "value": "vow of revenge", "when": "middle", "quote": "Red frees himself, mourns Mandy's death, and, after consuming a bottle of vodka, wordlessly swears revenge", "confidence": "sourced"},
-   {"order": 6, "value": "bikers slaughtered", "when": "late", "quote": "Red breaks free from his restraints and kills the rest of the bikers", "confidence": "sourced"},
-   {"order": 7, "value": "cult destroyed", "when": "late", "quote": "Red kills the cult members one by one in increasingly brutal fashion", "confidence": "sourced"},
-   {"order": 8, "value": "vision of the dead lover", "when": "ending", "quote": "he hallucinates Mandy smiling in the passenger seat of his car", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "broadcast on spiritual awakening",
+    "when": "opening",
+    "role": "omen",
+    "detail": "a Ronald Reagan speech on the radio",
+    "source": "subtitles",
+    "at": "00:05:23",
+    "quote": "There's a great spiritual awakening in America.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "quiet life of a couple",
+    "when": "opening",
+    "quote": "lumberjack Red Miller lives with his girlfriend, artist and author Mandy Bloom",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:07",
+      "quote": "What's your favorite planet? Jupiter."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "childhood cruelty recalled",
+    "when": "early",
+    "source": "subtitles",
+    "at": "00:14:17",
+    "quote": "Did I ever tell you about the starlings when I was a little kid?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "cult leader fixates",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Mandy catches the attention of Jeremiah Sand",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Mandy happens to look up and their eyes meet."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "home invasion",
+    "when": "early",
+    "quote": "the gang breaks into their home and subdues Mandy and Red",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The Skulls drag them screaming through the house."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "vision of death",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:43:01",
+    "quote": "What do you see? I see the reaper fast approaching.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "lover killed before hero",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Sand stabs the bound and gagged Red and burns Mandy alive before him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "As MANDY’S body burns she AWAKENS"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "vow of revenge",
+    "when": "middle",
+    "quote": "Red frees himself, mourns Mandy's death, and, after consuming a bottle of vodka, wordlessly swears revenge",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "bikers slaughtered",
+    "when": "late",
+    "quote": "Red breaks free from his restraints and kills the rest of the bikers",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "cult destroyed",
+    "when": "late",
+    "quote": "Red kills the cult members one by one in increasingly brutal fashion",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:51:33",
+      "quote": "I don't kneel before you! You kneel before me!"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "vision of the dead lover",
+    "when": "ending",
+    "quote": "he hallucinates Mandy smiling in the passenger seat of his car",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,54 +1,397 @@
 {
  "film": "1962-carnival-of-souls",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "ghouls", "detail": "The Man, a pale-faced figure, and other ghouls", "quote": "Mary begins experiencing visions of a ghoulish, pale-faced figure (referred to as \"The Man\" in the credits)", "confidence": "sourced"},
-   {"value": "her own death", "detail": "she died in the crash", "quote": "Mary's body is seen in the front seat alongside the other two women.", "confidence": "observed"}
+   {
+    "value": "ghouls",
+    "detail": "The Man, a pale-faced figure, and other ghouls",
+    "quote": "Mary begins experiencing visions of a ghoulish, pale-faced figure (referred to as \"The Man\" in the credits)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:46",
+      "quote": "Who's the man in the hall?"
+     }
+    ]
+   },
+   {
+    "value": "her own death",
+    "detail": "she died in the crash",
+    "quote": "Mary's body is seen in the front seat alongside the other two women.",
+    "confidence": "observed"
+   }
   ],
   "origin": [
-   {"value": "unexplained", "quote": "Mary miraculously surfaces on the river bank, but cannot remember how she survived", "confidence": "observed"}
+   {
+    "value": "unexplained",
+    "quote": "Mary miraculously surfaces on the river bank, but cannot remember how she survived",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:12",
+      "quote": "It's been less than a week since you were in a car that crashed into the river. How you got out of that no one seems to know."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to claim the dead", "quote": "she sees visions of The Man and other ghouls dancing at the pavilion", "confidence": "observed"}
+   {
+    "value": "to claim the dead",
+    "quote": "she sees visions of The Man and other ghouls dancing at the pavilion",
+    "confidence": "observed"
+   }
   ],
   "trigger": [
-   {"value": "car accident", "quote": "the women's car is nudged by the boys' car and plunges off a bridge into a muddy river", "confidence": "sourced"},
-   {"value": "moving to a new city", "quote": "Mary moves to Salt Lake City, where she has been hired as a church organist", "confidence": "sourced"}
+   {
+    "value": "car accident",
+    "quote": "the women's car is nudged by the boys' car and plunges off a bridge into a muddy river",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:03",
+      "quote": "We were the first ones on the bridge"
+     }
+    ]
+   },
+   {
+    "value": "moving to a new city",
+    "quote": "Mary moves to Salt Lake City, where she has been hired as a church organist",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:36",
+      "quote": "Well, Mary, you'll make a fine organist for that church."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "victim unseen by the living", "quote": "she becomes invisible and inaudible to the rest of the world", "confidence": "sourced"}
+   {
+    "value": "victim unseen by the living",
+    "quote": "she becomes invisible and inaudible to the rest of the world",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:46",
+      "quote": "(SHOUTING) Why can't anybody hear me?"
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "young woman", "relation_to_threat": "self", "detail": "Mary Henry, a church organist", "quote": "Mary Henry, a young woman whose life is disturbed after a car accident", "confidence": "sourced"},
-   {"value": "newcomer", "relation_to_threat": "self", "quote": "She relocates to a new city, where she finds herself unable to assimilate with the locals", "confidence": "sourced"}
+   {
+    "value": "young woman",
+    "relation_to_threat": "self",
+    "detail": "Mary Henry, a church organist",
+    "quote": "Mary Henry, a young woman whose life is disturbed after a car accident",
+    "confidence": "sourced"
+   },
+   {
+    "value": "newcomer",
+    "relation_to_threat": "self",
+    "quote": "She relocates to a new city, where she finds herself unable to assimilate with the locals",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:34",
+      "quote": "you cannot live in isolation from the human race, you know."
+     }
+    ]
+   },
+   {
+    "value": "outsider who cannot connect",
+    "relation_to_threat": "self",
+    "source": "subtitles",
+    "at": "00:39:25",
+    "quote": "As though I had no place in the world, no part of the life around me.",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "protagonist was dead all along", "quote": "Back in Kansas, the submerged car is finally pulled from the river. Mary's body is seen in the front seat", "confidence": "sourced"},
-   {"value": "taken by the dead", "quote": "chased by the ghouls onto the beach, where she collapses as they close in", "confidence": "sourced"}
+   {
+    "value": "protagonist was dead all along",
+    "quote": "Back in Kansas, the submerged car is finally pulled from the river. Mary's body is seen in the front seat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:25",
+      "quote": "The Buick's right down there. Bring it on up."
+     }
+    ]
+   },
+   {
+    "value": "taken by the dead",
+    "quote": "chased by the ghouls onto the beach, where she collapses as they close in",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "river", "state": "muddy, dredged", "when": "opening", "role": "setting", "quote": "plunges off a bridge into a muddy river", "confidence": "sourced"},
-   {"value": "car", "state": "submerged", "when": "ending", "role": "clue", "quote": "the submerged car is finally pulled from the river", "confidence": "sourced"},
-   {"value": "abandoned pavilion", "state": "forbidden", "when": "early", "role": "setting", "quote": "the pavilion was first a bathhouse, then a dance hall, and finally a carnival before it was abandoned", "confidence": "sourced"},
-   {"value": "pale-faced man", "state": "stalking", "when": "early", "role": "threat", "quote": "visions of a ghoulish, pale-faced figure", "confidence": "sourced"},
-   {"value": "church organ", "state": "playing eerie music", "when": "middle", "role": "omen", "quote": "finds herself shifting from a hymn to eerie music", "confidence": "sourced"},
-   {"value": "mirror", "state": "showing the ghoul", "when": "late", "role": "threat", "quote": "Mary becomes hysterical when she sees The Man in the mirror", "confidence": "sourced"},
-   {"value": "footprints", "state": "ending in nothing", "when": "ending", "role": "clue", "quote": "They find her footprints but note that she has otherwise vanished", "confidence": "sourced"}
+   {
+    "value": "river",
+    "state": "muddy, dredged",
+    "when": "opening",
+    "role": "setting",
+    "quote": "plunges off a bridge into a muddy river",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:39",
+      "quote": "Sir, as high as this river is right now, and with all the mud and sand it's carryin', they may never find that car."
+     }
+    ]
+   },
+   {
+    "value": "car",
+    "state": "submerged",
+    "when": "ending",
+    "role": "clue",
+    "quote": "the submerged car is finally pulled from the river",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:25",
+      "quote": "The Buick's right down there."
+     }
+    ]
+   },
+   {
+    "value": "abandoned pavilion",
+    "state": "forbidden",
+    "when": "early",
+    "role": "setting",
+    "quote": "the pavilion was first a bathhouse, then a dance hall, and finally a carnival before it was abandoned",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:13",
+      "quote": "Then the lake went down and they made a dance hall out of it."
+     }
+    ]
+   },
+   {
+    "value": "pale-faced man",
+    "state": "stalking",
+    "when": "early",
+    "role": "threat",
+    "quote": "visions of a ghoulish, pale-faced figure",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:09",
+      "quote": "What is it? That man!"
+     }
+    ]
+   },
+   {
+    "value": "church organ",
+    "state": "playing eerie music",
+    "when": "middle",
+    "role": "omen",
+    "quote": "finds herself shifting from a hymn to eerie music",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:09",
+      "quote": "Profane! Sacrilege! What are you playing in this church?"
+     }
+    ]
+   },
+   {
+    "value": "mirror",
+    "state": "showing the ghoul",
+    "when": "late",
+    "role": "threat",
+    "quote": "Mary becomes hysterical when she sees The Man in the mirror",
+    "confidence": "sourced"
+   },
+   {
+    "value": "footprints",
+    "state": "ending in nothing",
+    "when": "ending",
+    "role": "clue",
+    "quote": "They find her footprints but note that she has otherwise vanished",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:40",
+      "quote": "Her car's still over there, and then there are footprints leading up to here."
+     }
+    ]
+   },
+   {
+    "value": "eerie organ music",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:04:15",
+    "quote": "# # (EERIE ORGAN)",
+    "confidence": "sourced",
+    "detail": "the organ theme plays over the river search and returns with every apparition"
+   },
+   {
+    "value": "birdsong",
+    "state": "sound returning",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:37:37",
+    "quote": "(BIRD TWITTERING)",
+    "confidence": "sourced",
+    "detail": "each spell of silence ends with a bird twittering as sound returns",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:17",
+      "quote": "(BIRD TWITTERING)"
+     }
+    ]
+   },
+   {
+    "value": "silence",
+    "state": "no ambient noise",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:37:10",
+    "quote": "(NO AMBIENT NOISE)",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "crash and miraculous survival", "when": "opening", "role": "trigger", "quote": "Mary miraculously surfaces on the river bank, but cannot remember how she survived", "confidence": "sourced"},
-   {"order": 2, "value": "first apparition", "when": "early", "role": "omen", "quote": "Mary begins experiencing visions of a ghoulish, pale-faced figure", "confidence": "sourced"},
-   {"order": 3, "value": "warned away from the place", "when": "early", "quote": "the church's minister who stops her from entering, warning that it is against the law", "confidence": "sourced"},
-   {"order": 4, "value": "becomes invisible to others", "when": "middle", "role": "turn", "quote": "Mary begins experiencing terrifying interludes when she becomes invisible and inaudible to the rest of the world", "confidence": "sourced"},
-   {"order": 5, "value": "dream within a dream", "when": "late", "quote": "she wakes up in her car, revealing the previous scenes to be merely a nightmare", "confidence": "sourced"},
-   {"order": 6, "value": "dance with her ghoul double", "when": "late", "quote": "she finds the ghouls dancing, with a ghoul version of herself paired with The Man", "confidence": "sourced"},
-   {"order": 7, "value": "body found in the wreck", "when": "ending", "role": "turn", "quote": "Mary's body is seen in the front seat alongside the other two women.", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "drag race",
+    "when": "opening",
+    "role": "trigger",
+    "source": "subtitles",
+    "at": "00:00:36",
+    "quote": "Hey, you wanna drag, huh?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "crash and miraculous survival",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Mary miraculously surfaces on the river bank, but cannot remember how she survived",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:25",
+      "quote": "MAN: Why, it's Mary Henry. Are you all right?"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "first apparition",
+    "when": "early",
+    "role": "omen",
+    "quote": "Mary begins experiencing visions of a ghoulish, pale-faced figure",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "warned away from the place",
+    "when": "early",
+    "quote": "the church's minister who stops her from entering, warning that it is against the law",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:56",
+      "quote": "The law has placed it off-limits."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "becomes invisible to others",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Mary begins experiencing terrifying interludes when she becomes invisible and inaudible to the rest of the world",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:12",
+      "quote": "(THINKING) Why can't I hear anything?"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "music condemned as profane",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:52:09",
+    "quote": "Profane! Sacrilege!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "dream within a dream",
+    "when": "late",
+    "quote": "she wakes up in her car, revealing the previous scenes to be merely a nightmare",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "dance with her ghoul double",
+    "when": "late",
+    "quote": "she finds the ghouls dancing, with a ghoul version of herself paired with The Man",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "body found in the wreck",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Mary's body is seen in the front seat alongside the other two women.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:25",
+      "quote": "The Buick's right down there. Bring it on up."
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

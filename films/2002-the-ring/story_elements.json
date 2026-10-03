@@ -1,66 +1,499 @@
 {
  "film": "2002-the-ring",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vengeful ghost", "detail": "Samara, a psychic adopted girl", "quote": "Samara's ghost crawls out of his TV screen and kills him", "confidence": "sourced"},
-   {"value": "cursed object", "detail": "a VHS tape", "quote": "a cursed VHS tape that causes its viewers to die seven days later", "confidence": "sourced"}
+   {
+    "value": "vengeful ghost",
+    "detail": "Samara, a psychic adopted girl",
+    "quote": "Samara's ghost crawls out of his TV screen and kills him",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cursed object",
+    "detail": "a VHS tape",
+    "quote": "a cursed VHS tape that causes its viewers to die seven days later",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "person who died wronged", "detail": "Samara thrown into a well by her adoptive mother", "quote": "a vision of Anna dumping Samara into the well, where she survived for one week", "confidence": "sourced"},
-   {"value": "psychic child", "quote": "who possessed the ability to psychically etch images onto objects and into people's minds", "confidence": "sourced"}
+   {
+    "value": "person who died wronged",
+    "detail": "Samara thrown into a well by her adoptive mother",
+    "quote": "a vision of Anna dumping Samara into the well, where she survived for one week",
+    "confidence": "sourced"
+   },
+   {
+    "value": "psychic child",
+    "quote": "who possessed the ability to psychically etch images onto objects and into people's minds",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to kill endlessly", "quote": "fulfilling Samara's goal of killing endlessly", "confidence": "sourced"},
-   {"value": "to spread", "quote": "she was only spared since she made a copy of the cursed video and passed it to Noah", "confidence": "sourced"}
+   {
+    "value": "to kill endlessly",
+    "quote": "fulfilling Samara's goal of killing endlessly",
+    "confidence": "sourced"
+   },
+   {
+    "value": "to spread",
+    "quote": "she was only spared since she made a copy of the cursed video and passed it to Noah",
+    "confidence": "sourced"
+   },
+   {
+    "value": "to be heard",
+    "source": "subtitles",
+    "at": "01:45:28",
+    "quote": "(echoing): She just wanted to be heard.",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "child killed by a parent", "quote": "a vision of Anna dumping Samara into the well", "confidence": "sourced"},
-   {"value": "child isolated by parents", "quote": "which the Morgans used to isolate Samara from themselves and the outside world", "confidence": "sourced"}
+   {
+    "value": "child killed by a parent",
+    "quote": "a vision of Anna dumping Samara into the well",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child isolated by parents",
+    "quote": "which the Morgans used to isolate Samara from themselves and the outside world",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "watching a cursed object", "quote": "She finds and views the tape; it contains strange and frightening imagery", "confidence": "sourced"}
+   {
+    "value": "watching a cursed object",
+    "quote": "She finds and views the tape; it contains strange and frightening imagery",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "death after seven days", "quote": "a cursed videotape that causes whoever views it to die a week later", "confidence": "sourced"},
-   {"value": "warning phone call", "quote": "the room phone rings, and when she answers, the unknown caller whispers, \"Seven days\"", "confidence": "sourced"},
-   {"value": "survive by passing it on", "quote": "she was only spared since she made a copy of the cursed video and passed it to Noah", "confidence": "sourced"},
-   {"value": "burial does not end it", "quote": "Aidan warns Rachel that it was a mistake to help Samara", "confidence": "observed"}
+   {
+    "value": "death after seven days",
+    "quote": "a cursed videotape that causes whoever views it to die a week later",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:40",
+      "quote": "\" You will die in seven days \" and exactly seven days later..."
+     }
+    ]
+   },
+   {
+    "value": "warning phone call",
+    "quote": "the room phone rings, and when she answers, the unknown caller whispers, \"Seven days\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:30",
+      "quote": "GIRL (whispering): Seven days."
+     }
+    ]
+   },
+   {
+    "value": "survive by passing it on",
+    "quote": "she was only spared since she made a copy of the cursed video and passed it to Noah",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:46:06",
+      "quote": "RACHEL: I made a copy."
+     }
+    ]
+   },
+   {
+    "value": "burial does not end it",
+    "quote": "Aidan warns Rachel that it was a mistake to help Samara",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:07",
+      "quote": "You weren't supposed to help her."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:39:24",
+      "quote": "She never sleeps."
+     }
+    ]
+   },
+   {
+    "value": "phone rings after viewing",
+    "detail": "the legend as told by Katie",
+    "source": "subtitles",
+    "at": "00:01:33",
+    "quote": "and as soon as it's over... your phone rings. Someone knows you've watched it",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "teenagers", "relation_to_threat": "stranger", "detail": "Katie and her friends", "quote": "Rachel discovers that Katie's friends all died in bizarre accidents at the same time as Katie's death", "confidence": "sourced"},
-   {"value": "investigator", "relation_to_threat": "stranger", "detail": "Rachel, a journalist", "quote": "Rachel Keller, a journalist who discovers a cursed VHS tape", "confidence": "sourced"},
-   {"value": "child", "relation_to_threat": "stranger", "detail": "Aidan", "quote": "Rachel and Noah's 8-year-old son Aidan watches the tape", "confidence": "sourced"},
-   {"value": "ex-husband", "relation_to_threat": "stranger", "detail": "Noah", "quote": "Samara's ghost crawls out of his TV screen and kills him", "confidence": "sourced"},
-   {"value": "adoptive family", "relation_to_threat": "family", "quote": "tormenting her parents and their horses", "confidence": "sourced"}
+   {
+    "value": "teenagers",
+    "relation_to_threat": "stranger",
+    "detail": "Katie and her friends",
+    "quote": "Rachel discovers that Katie's friends all died in bizarre accidents at the same time as Katie's death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "investigator",
+    "relation_to_threat": "stranger",
+    "detail": "Rachel, a journalist",
+    "quote": "Rachel Keller, a journalist who discovers a cursed VHS tape",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child",
+    "relation_to_threat": "stranger",
+    "detail": "Aidan",
+    "quote": "Rachel and Noah's 8-year-old son Aidan watches the tape",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ex-husband",
+    "relation_to_threat": "stranger",
+    "detail": "Noah",
+    "quote": "Samara's ghost crawls out of his TV screen and kills him",
+    "confidence": "sourced"
+   },
+   {
+    "value": "adoptive family",
+    "relation_to_threat": "family",
+    "quote": "tormenting her parents and their horses",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "cycle passes on", "quote": "She helps Aidan make a copy of the tape and refuses to answer his question on what would happen to the person who watches it", "confidence": "sourced"},
-   {"value": "false resolution", "detail": "proper burial seems to end it", "quote": "After Rachel is rescued, they arrange a proper burial for Samara", "confidence": "observed"}
+   {
+    "value": "cycle passes on",
+    "quote": "She helps Aidan make a copy of the tape and refuses to answer his question on what would happen to the person who watches it",
+    "confidence": "sourced"
+   },
+   {
+    "value": "false resolution",
+    "detail": "proper burial seems to end it",
+    "quote": "After Rachel is rescued, they arrange a proper burial for Samara",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "videotape", "state": "cursed", "when": "opening", "role": "threat", "quote": "an urban legend about a cursed videotape that causes whoever views it to die a week later", "confidence": "sourced"},
-   {"value": "phone call", "state": "whispering", "when": "early", "role": "omen", "quote": "the unknown caller whispers, \"Seven days\"", "confidence": "sourced"},
-   {"value": "horses", "state": "drowned, suicidal", "when": "middle", "role": "omen", "quote": "a horse aboard the ferry kills itself by jumping overboard", "confidence": "sourced"},
-   {"value": "tree", "state": "behind wallpaper", "when": "late", "role": "clue", "quote": "There is an image of a tree behind the wallpaper", "confidence": "sourced"},
-   {"value": "well", "state": "beneath floorboards", "when": "late", "role": "clue", "quote": "led to a well beneath the floorboards", "confidence": "sourced"},
-   {"value": "body in water", "state": "surfacing", "when": "late", "role": "clue", "quote": "Samara's body surfaces from the water", "confidence": "sourced"},
-   {"value": "television", "state": "ghost crawls out", "when": "ending", "role": "threat", "quote": "Samara's ghost crawls out of his TV screen and kills him", "confidence": "sourced"}
+   {
+    "value": "videotape",
+    "state": "cursed",
+    "when": "opening",
+    "role": "threat",
+    "quote": "an urban legend about a cursed videotape that causes whoever views it to die a week later",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:54",
+      "quote": "(TV static blaring)"
+     }
+    ]
+   },
+   {
+    "value": "phone call",
+    "state": "whispering",
+    "when": "early",
+    "role": "omen",
+    "quote": "the unknown caller whispers, \"Seven days\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:16",
+      "quote": "(phone ringing)"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:26:30",
+      "quote": "GIRL (whispering): Seven days."
+     }
+    ]
+   },
+   {
+    "value": "horses",
+    "state": "drowned, suicidal",
+    "when": "middle",
+    "role": "omen",
+    "quote": "a horse aboard the ferry kills itself by jumping overboard",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:30",
+      "quote": "Daddy, my horse!"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:57:35",
+      "quote": "(horse whinnying) He's going out!"
+     }
+    ]
+   },
+   {
+    "value": "tree",
+    "state": "behind wallpaper",
+    "when": "late",
+    "role": "clue",
+    "quote": "There is an image of a tree behind the wallpaper",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:30",
+      "quote": "I've seen this tree before. Yeah, it was on the tape."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:23:13",
+      "quote": "(wallpaper ripping)"
+     }
+    ]
+   },
+   {
+    "value": "well",
+    "state": "beneath floorboards",
+    "when": "late",
+    "role": "clue",
+    "quote": "led to a well beneath the floorboards",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:00",
+      "quote": "(rock hitting bottom)"
+     }
+    ]
+   },
+   {
+    "value": "body in water",
+    "state": "surfacing",
+    "when": "late",
+    "role": "clue",
+    "quote": "Samara's body surfaces from the water",
+    "confidence": "sourced"
+   },
+   {
+    "value": "television",
+    "state": "ghost crawls out",
+    "when": "ending",
+    "role": "threat",
+    "quote": "Samara's ghost crawls out of his TV screen and kills him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:41:29",
+      "quote": "(phone ringing)"
+     }
+    ]
+   },
+   {
+    "value": "fly",
+    "when": "middle",
+    "role": "clue",
+    "detail": "a fly from the tape crosses into the real world; buzzing recurs at the well",
+    "source": "subtitles",
+    "at": "00:41:27",
+    "quote": "(fly buzzes)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:43",
+      "quote": "(fly buzzing)"
+     }
+    ]
+   },
+   {
+    "value": "child's drawings",
+    "when": "early",
+    "role": "clue",
+    "detail": "Aidan's drawings of Katie dead, and later of the Morgan house",
+    "source": "subtitles",
+    "at": "00:09:35",
+    "quote": "Ms. Keller... I'm bothered by these drawings.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:43",
+      "quote": "(whispering): She lives in a dark place now."
+     }
+    ]
+   },
+   {
+    "value": "lighthouse",
+    "when": "middle",
+    "role": "clue",
+    "detail": "identified on the tape, leading to Moesko Island",
+    "source": "subtitles",
+    "at": "00:40:32",
+    "quote": "Lighthouse. Shit.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "creaking merry-go-round",
+    "when": "middle",
+    "role": "setting",
+    "detail": "where the doctor tells Rachel that Anna wanted a child more than anything",
+    "source": "subtitles",
+    "at": "01:10:27",
+    "quote": "(squeaking loudly)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:28",
+      "quote": "She wanted a child more than anything."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "legend told by teenagers", "when": "opening", "role": "omen", "quote": "Teenage girls Katie and Becca discuss an urban legend about a cursed videotape", "confidence": "sourced"},
-   {"order": 2, "value": "first death", "when": "opening", "quote": "Katie, who viewed it one week ago with her friends, is killed by an unseen force", "confidence": "sourced"},
-   {"order": 3, "value": "protagonist becomes cursed", "when": "early", "role": "trigger", "quote": "She finds and views the tape; it contains strange and frightening imagery", "confidence": "sourced"},
-   {"order": 4, "value": "child endangered", "when": "middle", "role": "turn", "quote": "Rachel and Noah's 8-year-old son Aidan watches the tape", "confidence": "sourced"},
-   {"order": 5, "value": "parent's suicide", "when": "middle", "quote": "Richard insists that Samara is evil and electrocutes himself", "confidence": "sourced"},
-   {"order": 6, "value": "past crime revealed, body recovered", "when": "late", "role": "turn", "quote": "Rachel falls inside and experiences a vision of Anna dumping Samara into the well", "confidence": "sourced"},
-   {"order": 7, "value": "false relief, then death", "when": "ending", "quote": "Rachel realizes that Noah's week is up; Samara's ghost crawls out of his TV screen and kills him", "confidence": "sourced"},
-   {"order": 8, "value": "curse passed on", "when": "ending", "quote": "She helps Aidan make a copy of the tape", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "legend told by teenagers",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Teenage girls Katie and Becca discuss an urban legend about a cursed videotape",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:40",
+      "quote": "\" You will die in seven days \""
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "first death",
+    "when": "opening",
+    "quote": "Katie, who viewed it one week ago with her friends, is killed by an unseen force",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "protagonist becomes cursed",
+    "when": "early",
+    "role": "trigger",
+    "quote": "She finds and views the tape; it contains strange and frightening imagery",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:35",
+      "quote": "(eerie humming and whining)"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "child endangered",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Rachel and Noah's 8-year-old son Aidan watches the tape",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "parent's suicide",
+    "when": "middle",
+    "quote": "Richard insists that Samara is evil and electrocutes himself",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "past crime revealed, body recovered",
+    "when": "late",
+    "role": "turn",
+    "quote": "Rachel falls inside and experiences a vision of Anna dumping Samara into the well",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:58",
+      "quote": "(stone scraping)"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "lesson that it never stops",
+    "when": "ending",
+    "role": "turn",
+    "detail": "voices from the investigation replay as Rachel realises the curse is endless",
+    "source": "subtitles",
+    "at": "01:45:59",
+    "quote": "It won't stop.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:46:23",
+      "quote": "It's going to keep killing, isn't it? She'll never stop."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "false relief, then death",
+    "when": "ending",
+    "quote": "Rachel realizes that Noah's week is up; Samara's ghost crawls out of his TV screen and kills him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:07",
+      "quote": "You weren't supposed to help her."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "curse passed on",
+    "when": "ending",
+    "quote": "She helps Aidan make a copy of the tape",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:46:06",
+      "quote": "RACHEL: I made a copy. Push it in."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:46:39",
+      "quote": "What about the person we show it to? What happens to them?"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

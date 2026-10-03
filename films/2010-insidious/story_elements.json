@@ -1,64 +1,457 @@
 {
  "film": "2010-insidious",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "demon", "detail": "the red-faced demon", "quote": "Josh's mother Lorraine arrives and explains she had a nightmare about a demon with a red face in Dalton's bedroom", "confidence": "sourced"},
-   {"value": "spirits of the dead", "detail": "inhabitants of The Further", "quote": "a place inhabited by the tortured spirits of the deceased", "confidence": "sourced"},
-   {"value": "possessing spirit", "detail": "the old woman from Josh's childhood", "quote": "the parasitic spirit of an evil old woman that wanted to possess him", "confidence": "sourced"}
+   {
+    "value": "demon",
+    "detail": "the red-faced demon",
+    "quote": "Josh's mother Lorraine arrives and explains she had a nightmare about a demon with a red face in Dalton's bedroom",
+    "confidence": "sourced"
+   },
+   {
+    "value": "spirits of the dead",
+    "detail": "inhabitants of The Further",
+    "quote": "a place inhabited by the tortured spirits of the deceased",
+    "confidence": "sourced"
+   },
+   {
+    "value": "possessing spirit",
+    "detail": "the old woman from Josh's childhood",
+    "quote": "the parasitic spirit of an evil old woman that wanted to possess him",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "spirit realm", "quote": "has been captured in a purgatory realm called \"The Further,\"", "confidence": "sourced"},
-   {"value": "inherited ability", "detail": "father and son both astral project", "quote": "Josh also possesses the ability to astral project", "confidence": "sourced"}
+   {
+    "value": "spirit realm",
+    "quote": "has been captured in a purgatory realm called \"The Further,\"",
+    "confidence": "sourced"
+   },
+   {
+    "value": "inherited ability",
+    "detail": "father and son both astral project",
+    "quote": "Josh also possesses the ability to astral project",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "a body", "quote": "spirits desire to use it so they can re-enter the physical world", "confidence": "sourced"}
+   {
+    "value": "a body",
+    "quote": "spirits desire to use it so they can re-enter the physical world",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:03",
+      "quote": "he's just left us with a physical body, an empty vessel."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:56:46",
+      "quote": "A demon who seeks Dalton's body"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "suppressed memory", "quote": "had suppressed his memory of it years ago with Elise's help", "confidence": "sourced"}
+   {
+    "value": "suppressed memory",
+    "quote": "had suppressed his memory of it years ago with Elise's help",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "moving into a new home", "quote": "Married couple Josh and Renai Lambert have recently moved in to a new home", "confidence": "sourced"},
-   {"value": "child wanders too far", "quote": "This time he has travelled too far", "confidence": "sourced"}
+   {
+    "value": "moving into a new home",
+    "quote": "Married couple Josh and Renai Lambert have recently moved in to a new home",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child wanders too far",
+    "quote": "This time he has travelled too far",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "follows the person, not the house", "quote": "the supernatural activity continues in their new home", "confidence": "sourced"},
-   {"value": "rescue by entering spirit realm", "quote": "The only way to rescue Dalton is for Josh to go into The Further and save him", "confidence": "sourced"},
-   {"value": "photograph reveals the possessor", "quote": "It reveals that Josh is now possessed by the ghost of the old woman", "confidence": "sourced"}
+   {
+    "value": "follows the person, not the house",
+    "quote": "the supernatural activity continues in their new home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:23",
+      "quote": "is because, it's not the house that's haunted."
+     }
+    ]
+   },
+   {
+    "value": "rescue by entering spirit realm",
+    "quote": "The only way to rescue Dalton is for Josh to go into The Further and save him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:00",
+      "quote": "Remember why you're traveling. And keep one foot in this world."
+     }
+    ]
+   },
+   {
+    "value": "photograph reveals the possessor",
+    "quote": "It reveals that Josh is now possessed by the ghost of the old woman",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:55",
+      "quote": "In each photo ... she got closer"
+     }
+    ]
+   },
+   {
+    "value": "lack of fear lets soul stray",
+    "source": "subtitles",
+    "at": "00:55:18",
+    "quote": "And it's that very lack of fear that has led him to travel... too far.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "child", "relation_to_threat": "stranger", "detail": "Dalton, in a coma", "quote": "a married couple whose young son inexplicably enters a comatose state", "confidence": "sourced"},
-   {"value": "mother", "relation_to_threat": "stranger", "detail": "Renai", "quote": "Renai begins seeing a fiendish, long-haired apparition that tries to attack her", "confidence": "sourced"},
-   {"value": "father", "relation_to_threat": "stranger", "detail": "Josh, targeted since childhood", "quote": "Josh is confronted by the old woman spirit that tormented him as a child", "confidence": "sourced"},
-   {"value": "psychic", "relation_to_threat": "stranger", "detail": "Elise Rainier", "quote": "When she snaps a photo of him, Josh goes berserk and strangles her", "confidence": "sourced"}
+   {
+    "value": "child",
+    "relation_to_threat": "stranger",
+    "detail": "Dalton, in a coma",
+    "quote": "a married couple whose young son inexplicably enters a comatose state",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother",
+    "relation_to_threat": "stranger",
+    "detail": "Renai",
+    "quote": "Renai begins seeing a fiendish, long-haired apparition that tries to attack her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "father",
+    "relation_to_threat": "stranger",
+    "detail": "Josh, targeted since childhood",
+    "quote": "Josh is confronted by the old woman spirit that tormented him as a child",
+    "confidence": "sourced"
+   },
+   {
+    "value": "psychic",
+    "relation_to_threat": "stranger",
+    "detail": "Elise Rainier",
+    "quote": "When she snaps a photo of him, Josh goes berserk and strangles her",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "false resolution", "quote": "The family celebrates their victory, believing that the nightmare is over", "confidence": "sourced"},
-   {"value": "rescuer becomes threat", "quote": "Josh is now possessed by the ghost of the old woman from his childhood", "confidence": "sourced"}
+   {
+    "value": "false resolution",
+    "quote": "The family celebrates their victory, believing that the nightmare is over",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rescuer becomes threat",
+    "quote": "Josh is now possessed by the ghost of the old woman from his childhood",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "attic", "when": "opening", "role": "trigger", "quote": "Dalton sneaks into the attic, where he encounters a mysterious entity", "confidence": "sourced"},
-   {"value": "ladder", "state": "rickety", "when": "opening", "role": "omen", "quote": "after falling from a rickety ladder and hitting his head", "confidence": "sourced"},
-   {"value": "security alarm", "state": "going off by itself", "when": "early", "role": "omen", "quote": "their home security alarm going off on its own repeatedly", "confidence": "sourced"},
-   {"value": "bloody handprint", "when": "early", "role": "omen", "quote": "Renai finds a bloody handprint on Dalton's bed", "confidence": "sourced"},
-   {"value": "red-faced demon", "when": "middle", "role": "threat", "quote": "Elise sees a vision of the red-faced demon", "confidence": "sourced"},
-   {"value": "child's drawings", "when": "middle", "role": "clue", "quote": "later finds drawings in Dalton's room that seem to confirm Elise's theory", "confidence": "sourced"},
-   {"value": "photograph", "when": "ending", "role": "clue", "quote": "Renai discovers Elise's corpse and sees the photograph she took", "confidence": "sourced"}
+   {
+    "value": "attic",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Dalton sneaks into the attic, where he encounters a mysterious entity",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ladder",
+    "state": "rickety",
+    "when": "opening",
+    "role": "omen",
+    "quote": "after falling from a rickety ladder and hitting his head",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:33",
+      "quote": "What happened?! Did you fall off the ladder?"
+     }
+    ]
+   },
+   {
+    "value": "security alarm",
+    "state": "going off by itself",
+    "when": "early",
+    "role": "omen",
+    "quote": "their home security alarm going off on its own repeatedly",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:11",
+      "quote": "I saw someone! (ALARM BLARING)"
+     },
+     {
+      "source": "screenplay",
+      "quote": "The house alarm screams to deafening life, shaving a few years off Josh's life in the process."
+     }
+    ]
+   },
+   {
+    "value": "bloody handprint",
+    "when": "early",
+    "role": "omen",
+    "quote": "Renai finds a bloody handprint on Dalton's bed",
+    "confidence": "sourced"
+   },
+   {
+    "value": "red-faced demon",
+    "when": "middle",
+    "role": "threat",
+    "quote": "Elise sees a vision of the red-faced demon",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:31",
+      "quote": "Red... red face."
+     },
+     {
+      "source": "screenplay",
+      "quote": "crouched in the corner of the ceiling, staring down at Dalton below. It is the RED- FACED DEMON Lorraine saw earlier."
+     }
+    ]
+   },
+   {
+    "value": "child's drawings",
+    "when": "middle",
+    "role": "clue",
+    "quote": "later finds drawings in Dalton's room that seem to confirm Elise's theory",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "At the bottom of the first drawing, Dalton has written 'Last night I watched myself sleep'."
+     }
+    ]
+   },
+   {
+    "value": "photograph",
+    "when": "ending",
+    "role": "clue",
+    "quote": "Renai discovers Elise's corpse and sees the photograph she took",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:35",
+      "quote": "you're still afraid to have your picture taken"
+     }
+    ]
+   },
+   {
+    "value": "voice on baby monitor",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:21:48",
+    "quote": "(MALE VOICE): There's nothing you can do.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "old record song",
+    "state": "plays by itself",
+    "when": "middle",
+    "role": "omen",
+    "detail": "\"Tiptoe Through the Tulips\" on the record player, heard again in The Further",
+    "source": "subtitles",
+    "at": "00:40:11",
+    "quote": "(NEEDLE SCRATCHING ON RECORD)",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:51",
+      "quote": "♪ Tiptoe ♪"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "old woman in victorian dress",
+    "when": "middle",
+    "role": "threat",
+    "source": "screenplay",
+    "quote": "split-second glimpses of an OLD WOMAN, dressed in Victorian era garb - standing directly behind Josh.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "camera flash",
+    "when": "middle",
+    "role": "clue",
+    "source": "screenplay",
+    "quote": "The CAMERA FLASH goes off again, lighting the darkened room for a split second and showing Elise the lipstick-smeared face of a demon",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "move into new home", "when": "opening", "quote": "have recently moved in to a new home with their sons", "confidence": "sourced"},
-   {"order": 2, "value": "child falls into coma", "when": "opening", "role": "trigger", "quote": "The next day, he inexplicably slips into a coma", "confidence": "sourced"},
-   {"order": 3, "value": "haunting follows to second house", "when": "early", "role": "turn", "quote": "the supernatural activity continues in their new home", "confidence": "sourced"},
-   {"order": 4, "value": "psychic called in", "when": "middle", "quote": "Lorraine calls psychic Elise Rainier and her paranormal investigators", "confidence": "sourced"},
-   {"order": 5, "value": "father's forgotten past revealed", "when": "middle", "role": "turn", "quote": "had previously helped Josh when he was a child", "confidence": "sourced"},
-   {"order": 6, "value": "journey into spirit realm", "when": "late", "quote": "Elise puts Josh in a hypnotic trance and he projects himself into The Further", "confidence": "sourced"},
-   {"order": 7, "value": "child rescued", "when": "late", "quote": "Josh and Dalton wake up in the real world and the invading spirits vanish", "confidence": "sourced"},
-   {"order": 8, "value": "possessed father kills", "when": "ending", "role": "turn", "quote": "When she snaps a photo of him, Josh goes berserk and strangles her", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "move into new home",
+    "when": "opening",
+    "quote": "have recently moved in to a new home with their sons",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "child falls into coma",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "The next day, he inexplicably slips into a coma",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:10",
+      "quote": "Technically, yes, he's in a coma."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "haunting follows to second house",
+    "when": "early",
+    "role": "turn",
+    "quote": "the supernatural activity continues in their new home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:23",
+      "quote": "it's not the house that's haunted. It's your son."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "psychic called in",
+    "when": "middle",
+    "quote": "Lorraine calls psychic Elise Rainier and her paranormal investigators",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "spirit realm explained",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:55:33",
+    "quote": "In a place that I call \" The Further. \"",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "father's forgotten past revealed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "had previously helped Josh when he was a child",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:47",
+      "quote": "You, uh, were terrified of an old woman"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "journey into spirit realm",
+    "when": "late",
+    "quote": "Elise puts Josh in a hypnotic trance and he projects himself into The Further",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:46",
+      "quote": "Into The Further you go."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "child rescued",
+    "when": "late",
+    "quote": "Josh and Dalton wake up in the real world and the invading spirits vanish",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:59",
+      "quote": "I've got Dalton! He's awake!"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "possessed father kills",
+    "when": "ending",
+    "role": "turn",
+    "quote": "When she snaps a photo of him, Josh goes berserk and strangles her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:51",
+      "quote": "Why did you do that?!"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "wife searches for husband",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:37:44",
+    "quote": "Josh! (DRAMATIC SOUND-SCAPE)",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "closing sting",
+    "when": "ending",
+    "role": "turn",
+    "detail": "possessed Josh's hand on Renai's shoulder",
+    "source": "subtitles",
+    "at": "01:38:31",
+    "quote": "Renai, I'm right here.",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,59 +1,503 @@
 {
  "film": "1988-they-live",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "hidden aliens", "detail": "the ruling class are camouflaged aliens", "quote": "a working class drifter (Piper) who discovers that the ruling class are camouflaged aliens", "confidence": "sourced"},
-   {"value": "human collaborators", "quote": "the aliens have been bribing human collaborators in exchange for wealth", "confidence": "sourced"}
+   {
+    "value": "hidden aliens",
+    "detail": "the ruling class are camouflaged aliens",
+    "quote": "a working class drifter (Piper) who discovers that the ruling class are camouflaged aliens",
+    "confidence": "sourced"
+   },
+   {
+    "value": "human collaborators",
+    "quote": "the aliens have been bribing human collaborators in exchange for wealth",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:17",
+      "quote": "We all sell out every day. Might as well be on the winning team."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "from outside", "quote": "The picture's premise is that the 'Reagan Revolution' is run by aliens from another galaxy", "confidence": "sourced"}
+   {
+    "value": "from outside",
+    "quote": "The picture's premise is that the 'Reagan Revolution' is run by aliens from another galaxy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:19",
+      "quote": "but you can move from place to place. World to world if you want to."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to exploit resources", "quote": "depleting its resources for their own gain", "confidence": "sourced"},
-   {"value": "control of humanity", "quote": "a preacher warning that \"they\" have recruited the rich and powerful to control humanity", "confidence": "sourced"}
+   {
+    "value": "to exploit resources",
+    "quote": "depleting its resources for their own gain",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:45",
+      "quote": "We are like a natural resource to them. Deplete the planet, move on to another."
+     }
+    ]
+   },
+   {
+    "value": "control of humanity",
+    "quote": "a preacher warning that \"they\" have recruited the rich and powerful to control humanity",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:48",
+      "quote": "Keep us asleep, keep us selfish, keep us sedated."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "unrestrained capitalism", "quote": "the film \"is about yuppies and unrestrained capitalism\"", "confidence": "sourced"}
+   {
+    "value": "unrestrained capitalism",
+    "quote": "the film \"is about yuppies and unrestrained capitalism\"",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "finding a hidden object", "detail": "the sunglasses", "quote": "Nada retrieves one of the boxes from the church and takes a pair of sunglasses from it", "confidence": "sourced"}
+   {
+    "value": "finding a hidden object",
+    "detail": "the sunglasses",
+    "quote": "Nada retrieves one of the boxes from the church and takes a pair of sunglasses from it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "revealing 20 or so oairs of sunglasses -- all the same style"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "seen only through special lenses", "quote": "They also disclose that many people are ghoulish, bug-eyed aliens hiding under human façades", "confidence": "sourced"},
-   {"value": "signal hides them", "quote": "the aliens broadcast a signal that prevents humans from identifying them and their hidden messages", "confidence": "sourced"},
-   {"value": "subliminal messages", "quote": "reveal subliminal messages in the media to consume and conform", "confidence": "sourced"}
+   {
+    "value": "seen only through special lenses",
+    "quote": "They also disclose that many people are ghoulish, bug-eyed aliens hiding under human façades",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:28",
+      "quote": "You can only see them with these special glasses."
+     }
+    ]
+   },
+   {
+    "value": "signal hides them",
+    "quote": "the aliens broadcast a signal that prevents humans from identifying them and their hidden messages",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:34",
+      "quote": "There is a signal broadcast every second of every day"
+     }
+    ]
+   },
+   {
+    "value": "subliminal messages",
+    "quote": "reveal subliminal messages in the media to consume and conform",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:12",
+      "quote": "Sleep... Sleep..."
+     }
+    ]
+   },
+   {
+    "value": "glasses cause pain",
+    "source": "subtitles",
+    "at": "01:04:05",
+    "quote": "Don't wear them glasses too long. It starts to feel like a knife turning in your skull.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "drifter", "relation_to_threat": "stranger", "detail": "Nada", "quote": "\"Nada\" is a homeless man who comes to Los Angeles, California in pursuit of work", "confidence": "sourced"},
-   {"value": "the poor", "relation_to_threat": "community", "quote": "The shantytown and church are destroyed in a police raid", "confidence": "sourced"},
-   {"value": "humanity", "relation_to_threat": "community", "quote": "alerting that humanity is \"their cattle\"", "confidence": "sourced"}
+   {
+    "value": "drifter",
+    "relation_to_threat": "stranger",
+    "detail": "Nada",
+    "quote": "\"Nada\" is a homeless man who comes to Los Angeles, California in pursuit of work",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:47",
+      "quote": "Worked there for ten years. Then things just seemed to dry up."
+     }
+    ]
+   },
+   {
+    "value": "the poor",
+    "relation_to_threat": "community",
+    "quote": "The shantytown and church are destroyed in a police raid",
+    "confidence": "sourced"
+   },
+   {
+    "value": "humanity",
+    "relation_to_threat": "community",
+    "quote": "alerting that humanity is \"their cattle\"",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "hero dies destroying it", "quote": "Nada kills Holly and blasts the transmitter before police gun him down", "confidence": "sourced"},
-   {"value": "truth exposed", "quote": "humans discover the aliens among them and react in horror and disgust", "confidence": "sourced"}
+   {
+    "value": "hero dies destroying it",
+    "quote": "Nada kills Holly and blasts the transmitter before police gun him down",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:13",
+      "quote": "Drop your weapon."
+     }
+    ]
+   },
+   {
+    "value": "truth exposed",
+    "quote": "humans discover the aliens among them and react in horror and disgust",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:22",
+      "quote": "Gloria, you look like shit."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "sunglasses", "when": "early", "role": "clue", "quote": "He finds out that they make the world appear monochrome and reveal subliminal messages", "confidence": "sourced"},
-   {"value": "television broadcast", "state": "hijacked", "when": "early", "role": "omen", "quote": "A hacker takes over TV broadcasts, alerting that humanity is \"their cattle\"", "confidence": "sourced"},
-   {"value": "ghoulish faces", "when": "middle", "role": "threat", "quote": "many people are ghoulish, bug-eyed aliens hiding under human façades", "confidence": "sourced"},
-   {"value": "wristwatch", "state": "teleporting", "when": "middle", "role": "clue", "quote": "the creatures have wristwatch communicators that allow them to teleport", "confidence": "sourced"},
-   {"value": "transmitter", "state": "blasted", "when": "ending", "role": "weapon", "quote": "Nada kills Holly and blasts the transmitter before police gun him down", "confidence": "sourced"},
-   {"value": "church", "state": "hiding equipment", "when": "early", "role": "setting", "quote": "Nada also uncovers equipment and boxes inside, but escapes when he bumps into the preacher", "confidence": "sourced"}
+   {
+    "value": "sunglasses",
+    "when": "early",
+    "role": "clue",
+    "quote": "He finds out that they make the world appear monochrome and reveal subliminal messages",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:45",
+      "quote": "You see, I take these glasses off, she looks like a regular person, doesn't she, huh?"
+     }
+    ]
+   },
+   {
+    "value": "television broadcast",
+    "state": "hijacked",
+    "when": "early",
+    "role": "omen",
+    "quote": "A hacker takes over TV broadcasts, alerting that humanity is \"their cattle\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:53",
+      "quote": "We are being bred for slavery."
+     }
+    ]
+   },
+   {
+    "value": "ghoulish faces",
+    "when": "middle",
+    "role": "threat",
+    "quote": "many people are ghoulish, bug-eyed aliens hiding under human façades",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:50",
+      "quote": "Put them on... formaldehyde face!"
+     }
+    ]
+   },
+   {
+    "value": "wristwatch",
+    "state": "teleporting",
+    "when": "middle",
+    "role": "clue",
+    "quote": "the creatures have wristwatch communicators that allow them to teleport",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:18",
+      "quote": "They all wear these expensive watches."
+     }
+    ]
+   },
+   {
+    "value": "transmitter",
+    "state": "blasted",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "Nada kills Holly and blasts the transmitter before police gun him down",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:07",
+      "quote": "Master signal goes out from here to the satellite."
+     }
+    ]
+   },
+   {
+    "value": "church",
+    "state": "hiding equipment",
+    "when": "early",
+    "role": "setting",
+    "quote": "Nada also uncovers equipment and boxes inside, but escapes when he bumps into the preacher",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:25",
+      "quote": "The church lets us use their kitchen."
+     }
+    ]
+   },
+   {
+    "value": "train",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:00:45",
+    "quote": "(TRAIN APPROACHES)",
+    "confidence": "sourced",
+    "detail": "Nada arrives in Los Angeles along the railway tracks"
+   },
+   {
+    "value": "cardboard boxes",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:21:39",
+    "quote": "All kinds of cardboard boxes, some kind of lab setup.",
+    "confidence": "sourced",
+    "detail": "hidden in the church; one holds the sunglasses"
+   },
+   {
+    "value": "bulldozer",
+    "when": "early",
+    "role": "threat",
+    "source": "screenplay",
+    "quote": "Now a bulldozer comes RUMBLING IN, its shovel lowering",
+    "confidence": "sourced",
+    "detail": "flattening the shantytown in the raid"
+   },
+   {
+    "value": "subliminal commands",
+    "when": "early",
+    "role": "symbol",
+    "source": "screenplay",
+    "quote": "'OBEY' 'CONSUME' 'SUBMIT'",
+    "confidence": "sourced",
+    "detail": "on billboards and magazines seen through the glasses"
+   },
+   {
+    "value": "banknotes",
+    "state": "read 'this is your god'",
+    "when": "early",
+    "role": "symbol",
+    "source": "screenplay",
+    "quote": "'THIS IS YOUR GOD' Down come the sunglasses, and the money returns to normal.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "street preacher's warning", "when": "opening", "role": "omen", "quote": "he spots a preacher warning that \"they\" have recruited the rich and powerful to control humanity", "confidence": "sourced"},
-   {"order": 2, "value": "resistance crushed by police", "when": "early", "quote": "The shantytown and church are destroyed in a police raid", "confidence": "sourced"},
-   {"order": 3, "value": "seeing the truth", "when": "early", "role": "turn", "quote": "many people are ghoulish, bug-eyed aliens hiding under human façades", "confidence": "sourced"},
-   {"order": 4, "value": "friend forced to see", "when": "middle", "quote": "Nada subdues Frank, and places the glasses on his face", "confidence": "sourced"},
-   {"order": 5, "value": "resistance massacred", "when": "late", "quote": "the meeting is raided by police, with the majority of those present killed", "confidence": "sourced"},
-   {"order": 6, "value": "betrayal by ally", "when": "late", "role": "turn", "quote": "Holly reveals herself as a collaborator and murders Frank", "confidence": "sourced"},
-   {"order": 7, "value": "signal destroyed, hero dies", "when": "ending", "quote": "Nada kills Holly and blasts the transmitter before police gun him down", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "drifter arrives by train",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:00:52",
+    "quote": "(TRAIN HORN BLARES)",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "street preacher's warning",
+    "when": "opening",
+    "role": "omen",
+    "quote": "he spots a preacher warning that \"they\" have recruited the rich and powerful to control humanity",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:33",
+      "quote": "They have taken the hearts and minds of our leaders."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "pirate broadcast warning",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:15:53",
+    "quote": "We are their cattle. We are being bred for slavery.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "resistance crushed by police",
+    "when": "early",
+    "quote": "The shantytown and church are destroyed in a police raid",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:38",
+      "quote": "(SIRENS WAILING)"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "seeing the truth",
+    "when": "early",
+    "role": "turn",
+    "quote": "many people are ghoulish, bug-eyed aliens hiding under human façades",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:12",
+      "quote": "(DISTORTED VOICE)' Sleep..."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "friend forced to see",
+    "when": "middle",
+    "quote": "Nada subdues Frank, and places the glasses on his face",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:31",
+      "quote": "Either put these on these glasses or start eating that trash can."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "secret meeting of resistance",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "01:12:31",
+    "quote": "We seek out and locate their signal and shut it off. Wake people up!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "resistance massacred",
+    "when": "late",
+    "quote": "the meeting is raided by police, with the majority of those present killed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:02",
+      "quote": "(GUN SHOTS)"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "aliens toast human elite",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:18:52",
+    "quote": "You have given us entree to the resources we need",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "betrayal by ally",
+    "when": "late",
+    "role": "turn",
+    "quote": "Holly reveals herself as a collaborator and murders Frank",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:00",
+      "quote": "Don't interfere. You can't win."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "signal destroyed, hero dies",
+    "when": "ending",
+    "quote": "Nada kills Holly and blasts the transmitter before police gun him down",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:17",
+      "quote": "Stand away from the dish or we will open fire."
+     }
+    ]
+   },
+   {
+    "order": 12,
+    "value": "lover revealed as alien",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:30:53",
+    "quote": "Hey, what's wrong, baby?",
+    "confidence": "sourced",
+    "detail": "closing sting: a woman in bed sees her partner is a ghoul",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Her partner is a GHOUL LOVER."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

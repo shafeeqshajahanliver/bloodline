@@ -8,6 +8,12 @@
     "Plot",
     "Themes"
    ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
   }
  ],
  "plot_quality": "full",
@@ -34,7 +40,14 @@
    {
     "value": "built on burial ground",
     "quote": "the house was built atop a Shinnecock burial ground",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:21",
+      "quote": "[Carolyn Whispering] THERE ARE PEOPLE BURIED HERE."
+     }
+    ]
    },
    {
     "value": "site of past murders",
@@ -45,14 +58,36 @@
    {
     "value": "satanic former resident",
     "quote": "a known Satanic worshipper named John Ketchum once lived on the land",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:10",
+      "quote": "[Carolyn] THEY RAN HIM OUT OF SALEM FOR BEING A WITCH."
+     }
+    ]
    }
   ],
   "wants": [
    {
     "value": "to drive the family out",
     "quote": "hears a hostile voice ordering him to leave, causing him to flee",
-    "confidence": "observed"
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:48",
+      "quote": "[Disembodied Voice] GET OUT."
+     }
+    ]
+   },
+   {
+    "value": "to keep the child",
+    "detail": "Amy's invisible friend Jody wants her to stay forever",
+    "source": "subtitles",
+    "at": "01:11:56",
+    "quote": "SHE SAYS SHE WANTS ME TO LIVE HERE FOREVER AND EVER, SO WE CAN ALL PLAY TOGETHER.",
+    "confidence": "sourced"
    }
   ],
   "wrong": [
@@ -79,7 +114,14 @@
     "value": "repeats the past murders",
     "detail": "waking at the hour of the DeFeo murders",
     "quote": "George recurrently awakens at 3:15 a.m.—the same time the DeFeos were murdered",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:41",
+      "quote": "3: 00, 3: 15... AND THAT'S PRETTY CLOSE."
+     }
+    ]
    },
    {
     "value": "blocks religious help",
@@ -89,6 +131,13 @@
    {
     "value": "escape by leaving",
     "quote": "the rest of the family drive away, abandoning their home and belongings",
+    "confidence": "sourced"
+   },
+   {
+    "value": "demons think like people",
+    "source": "subtitles",
+    "at": "01:23:36",
+    "quote": "DEMONS ARE SMART. THEY'RE NOT JUST MONSTERS. THEY- - THEY THINK, JUST LIKE YOU AND I DO.",
     "confidence": "sourced"
    }
   ],
@@ -134,7 +183,18 @@
     "when": "early",
     "role": "omen",
     "quote": "Delaney is swarmed by flies upstairs and hears a hostile voice ordering him to leave",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:05",
+      "quote": "[Flies Buzzing]"
+     },
+     {
+      "source": "screenplay",
+      "quote": "It is black with a moving mass. ZOOM TIGHT TO REVEAL that this mass is composed of houseflies."
+     }
+    ]
    },
    {
     "value": "pig",
@@ -152,7 +212,14 @@
     "when": "middle",
     "role": "clue",
     "quote": "a brick wall that the family dog, Harry, has repeatedly scratched at",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:46",
+      "quote": "HARRY, KNOCK IT OFF!"
+     }
+    ]
    },
    {
     "value": "hidden red room",
@@ -174,7 +241,14 @@
     "when": "late",
     "role": "weapon",
     "quote": "attempts to kill the children with an axe",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:38",
+      "quote": "[Continues Sharpening Axe]"
+     }
+    ]
    },
    {
     "value": "firewood",
@@ -182,7 +256,14 @@
     "when": "early",
     "role": "symbol",
     "quote": "obsesses over keeping the home warm with firewood",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:34",
+      "quote": "YOU HAVE GOT ENOUGH WOOD HERE TO HEAT THE WHOLE SOUTH SHORE!"
+     }
+    ]
    },
    {
     "value": "black sludge",
@@ -190,6 +271,58 @@
     "role": "threat",
     "quote": "falling through the basement stairs into a pit of black sludge",
     "confidence": "sourced"
+   },
+   {
+    "value": "invisible friend",
+    "detail": "Jody, whom only Amy sees",
+    "when": "middle",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:33:26",
+    "quote": "MY FRIEND, JODY, WANTS TO PLAY UPSTAIRS.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:53",
+      "quote": "JODY DOESN'T LIKE GEORGE."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "telephone static",
+    "state": "calls to the priest cut off",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:19:17",
+    "quote": "[Static Continues] KATHY, CAN YOU HEAR ME? KATHY?",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:25",
+      "quote": "[Static] FATHER? FATHER?"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "well",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:26:39",
+    "quote": "[Gruff Voice] FIND THE WELL.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "falling crucifix",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:29:55",
+    "quote": "[Cross Hits Floor]",
+    "confidence": "observed"
    }
   ],
   "beats": [
@@ -199,10 +332,27 @@
     "when": "opening",
     "role": "omen",
     "quote": "Ronald DeFeo Jr. murders his entire family with a rifle at their home",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:31",
+      "quote": "ALL SHOT IN THEIR BEDS, EXECUTION STYLE."
+     }
+    ]
    },
    {
     "order": 2,
+    "value": "house bought despite murders",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:09:44",
+    "quote": "YEAH, SURE, BUT HOUSES DON'T HAVE MEMORIES.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
     "value": "family moves in",
     "when": "early",
     "role": "trigger",
@@ -210,14 +360,31 @@
     "confidence": "sourced"
    },
    {
-    "order": 3,
+    "order": 4,
     "value": "priest driven out",
     "when": "early",
     "quote": "hears a hostile voice ordering him to leave, causing him to flee",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:48",
+      "quote": "[Disembodied Voice] GET OUT."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "child's invisible friend appears",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:33:26",
+    "quote": "MY FRIEND, JODY, WANTS TO PLAY UPSTAIRS.",
     "confidence": "sourced"
    },
    {
-    "order": 4,
+    "order": 6,
     "value": "father changes",
     "when": "middle",
     "role": "turn",
@@ -225,15 +392,22 @@
     "confidence": "sourced"
    },
    {
-    "order": 5,
+    "order": 7,
     "value": "hidden room found",
     "when": "middle",
     "role": "turn",
     "quote": "Carolyn, in terror, shrieks that they have found \"the passage...",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:44",
+      "quote": "IT'S THE PASSAGE... TO HELL!"
+     }
+    ]
    },
    {
-    "order": 6,
+    "order": 8,
     "value": "history researched",
     "when": "late",
     "role": "clue",
@@ -241,14 +415,30 @@
     "confidence": "sourced"
    },
    {
-    "order": 7,
+    "order": 9,
     "value": "father attacks children",
     "when": "late",
     "quote": "a seemingly possessed George attempts to kill the children with an axe, but regains his wits after Kathy intervenes",
     "confidence": "sourced"
    },
    {
-    "order": 8,
+    "order": 10,
+    "value": "going back for the dog",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:52:18",
+    "quote": "HARRY! COME ON, BOY!",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:53:51",
+      "quote": "PULL, HARRY! PULL!"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
     "value": "family flees",
     "when": "ending",
     "quote": "George and the rest of the family drive away, abandoning their home and belongings",
@@ -259,5 +449,6 @@
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

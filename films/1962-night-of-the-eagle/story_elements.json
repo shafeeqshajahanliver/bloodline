@@ -1,60 +1,484 @@
 {
  "film": "1962-night-of-the-eagle",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "witch", "detail": "Flora Carr, the university secretary", "quote": "Flora uses witchcraft to set fire to the Taylor home with Tansy trapped inside", "confidence": "sourced"},
-   {"value": "animated statue", "detail": "the stone eagle on the chapel", "quote": "a giant stone eagle perching at the top of the university chapel has come to life to attack him", "confidence": "sourced"}
+   {
+    "value": "witch",
+    "detail": "Flora Carr, the university secretary",
+    "quote": "Flora uses witchcraft to set fire to the Taylor home with Tansy trapped inside",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:48",
+      "quote": "Just a silly woman setting fire to some cards."
+     }
+    ]
+   },
+   {
+    "value": "animated statue",
+    "detail": "the stone eagle on the chapel",
+    "quote": "a giant stone eagle perching at the top of the university chapel has come to life to attack him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:36",
+      "quote": "[eagle squawking]"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "witchcraft", "detail": "rival academic's wife", "quote": "university secretary Flora Carr, the wife of Lindsay whose career had stalled in favour of Norman's", "confidence": "sourced"}
+   {
+    "value": "witchcraft",
+    "detail": "rival academic's wife",
+    "quote": "university secretary Flora Carr, the wife of Lindsay whose career had stalled in favour of Norman's",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "professional jealousy", "quote": "the wife of Lindsay whose career had stalled in favour of Norman's", "confidence": "observed"},
-   {"value": "to ruin a rival", "quote": "a poppet left by a jealous work rival", "confidence": "observed"}
+   {
+    "value": "professional jealousy",
+    "quote": "the wife of Lindsay whose career had stalled in favour of Norman's",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:00",
+      "quote": "Just because he manages to charm better grades out of his idiot students, you and Lindsay stand to be pushed aside."
+     }
+    ]
+   },
+   {
+    "value": "to ruin a rival",
+    "quote": "a poppet left by a jealous work rival",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:36",
+      "quote": "Nothing. Except that the dean will probably change his mind again."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "destroying protective charms", "quote": "He forces her to burn all her magical paraphernalia", "confidence": "observed"}
+   {
+    "value": "destroying protective charms",
+    "quote": "He forces her to burn all her magical paraphernalia",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:07",
+      "quote": "Did you burn everything? Yes. Everything."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "rejecting the supernatural", "detail": "Norman burns Tansy's charms", "quote": "A firm rationalist, Norman is angered by her acceptance of superstition. He forces her to burn all her magical paraphernalia", "confidence": "sourced"}
+   {
+    "value": "rejecting the supernatural",
+    "detail": "Norman burns Tansy's charms",
+    "quote": "A firm rationalist, Norman is angered by her acceptance of superstition. He forces her to burn all her magical paraphernalia",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:07",
+      "quote": "Did you burn everything? Yes. Everything."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "charms protect", "quote": "She insists that her charms have been responsible for his rapid advancement in his academic career", "confidence": "sourced"},
-   {"value": "life sacrificed for another", "quote": "Tansy, willing to sacrifice her life for her husband's safety, almost drowns herself", "confidence": "sourced"},
-   {"value": "spell by hypnosis", "quote": "Using a form of auditory hypnosis over a loudspeaker system", "confidence": "sourced"}
+   {
+    "value": "charms protect",
+    "quote": "She insists that her charms have been responsible for his rapid advancement in his academic career",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:42",
+      "quote": "if you make me give up my protection!"
+     }
+    ]
+   },
+   {
+    "value": "life sacrificed for another",
+    "quote": "Tansy, willing to sacrifice her life for her husband's safety, almost drowns herself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:08",
+      "quote": "I shall die in your place, my darling."
+     }
+    ]
+   },
+   {
+    "value": "spell by hypnosis",
+    "quote": "Using a form of auditory hypnosis over a loudspeaker system",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:04",
+      "quote": "Do you realize you've got it switched through onto the public address system?"
+     }
+    ]
+   },
+   {
+    "value": "magic needs belief",
+    "detail": "Norman's lecture, later turned against him",
+    "source": "subtitles",
+    "at": "00:04:48",
+    "quote": "And can only exist in an atmosphere of belief. Belief is vital.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "sceptic", "relation_to_threat": "stranger", "detail": "professor Norman Taylor", "quote": "Norman Taylor is a psychology professor lecturing about belief systems and superstition at an English university", "confidence": "sourced"},
-   {"value": "wife", "relation_to_threat": "stranger", "detail": "Tansy, practitioner of obeah", "quote": "Flora uses witchcraft to set fire to the Taylor home with Tansy trapped inside", "confidence": "sourced"}
+   {
+    "value": "sceptic",
+    "relation_to_threat": "stranger",
+    "detail": "professor Norman Taylor",
+    "quote": "Norman Taylor is a psychology professor lecturing about belief systems and superstition at an English university",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:24",
+      "quote": "I do not believe. I do not believe."
+     }
+    ]
+   },
+   {
+    "value": "wife",
+    "relation_to_threat": "stranger",
+    "detail": "Tansy, practitioner of obeah",
+    "quote": "Flora uses witchcraft to set fire to the Taylor home with Tansy trapped inside",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "detail": "the eagle statue falls on Flora", "quote": "As she waits for him, the eagle statue falls from the roof and kills her", "confidence": "sourced"},
-   {"value": "sceptic converted", "quote": "Tansy escapes her burning home and rejoins her no longer sceptical  husband", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "detail": "the eagle statue falls on Flora",
+    "quote": "As she waits for him, the eagle statue falls from the roof and kills her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:52",
+      "quote": "Flora! Flora!"
+     }
+    ]
+   },
+   {
+    "value": "sceptic converted",
+    "quote": "Tansy escapes her burning home and rejoins her no longer sceptical  husband",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:02",
+      "quote": "Darling! Thank God."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "poppet", "state": "hidden", "when": "opening", "role": "clue", "quote": "searches frantically and finds a poppet left by a jealous work rival", "confidence": "sourced"},
-   {"value": "fire", "state": "burning charms", "when": "opening", "role": "trigger", "quote": "He forces her to burn all her magical paraphernalia", "confidence": "sourced"},
-   {"value": "thunderstorm", "when": "early", "role": "setting", "quote": "someone tries to break into the Taylors' home during a thunderstorm", "confidence": "sourced"},
-   {"value": "knife", "when": "middle", "role": "weapon", "quote": "Tansy attacks him with a knife while in a trance", "confidence": "sourced"},
-   {"value": "limp", "when": "middle", "role": "clue", "quote": "Her limping walk during the attack gives Norman a clue", "confidence": "sourced"},
-   {"value": "stone eagle", "state": "come to life, then falling", "when": "late", "role": "threat", "quote": "a giant stone eagle perching at the top of the university chapel has come to life to attack him", "confidence": "sourced"},
-   {"value": "door", "state": "ajar", "when": "ending", "role": "turn", "quote": "Lindsay sees the chapel's heavy doors are ajar", "confidence": "sourced"}
+   {
+    "value": "poppet",
+    "state": "hidden",
+    "when": "opening",
+    "role": "clue",
+    "quote": "searches frantically and finds a poppet left by a jealous work rival",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fire",
+    "state": "burning charms",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "He forces her to burn all her magical paraphernalia",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:44",
+      "quote": "Do you really believe your home is burning?"
+     }
+    ]
+   },
+   {
+    "value": "thunderstorm",
+    "when": "early",
+    "role": "setting",
+    "quote": "someone tries to break into the Taylors' home during a thunderstorm",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:24",
+      "quote": "[thunder clapping]"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:44:19",
+      "quote": "Norman, don't open the door!"
+     }
+    ]
+   },
+   {
+    "value": "knife",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "Tansy attacks him with a knife while in a trance",
+    "confidence": "sourced"
+   },
+   {
+    "value": "limp",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Her limping walk during the attack gives Norman a clue",
+    "confidence": "sourced"
+   },
+   {
+    "value": "stone eagle",
+    "state": "come to life, then falling",
+    "when": "late",
+    "role": "threat",
+    "quote": "a giant stone eagle perching at the top of the university chapel has come to life to attack him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:36",
+      "quote": "[eagle squawking]"
+     }
+    ]
+   },
+   {
+    "value": "door",
+    "state": "ajar",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Lindsay sees the chapel's heavy doors are ajar",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:37",
+      "quote": "Who the deuce has left the door open at this time of night?"
+     }
+    ]
+   },
+   {
+    "value": "tarot cards",
+    "state": "burned one by one",
+    "when": "late",
+    "role": "weapon",
+    "detail": "Flora burns cards that stand for Norman's home",
+    "source": "subtitles",
+    "at": "01:18:15",
+    "quote": "These, as you can see, are tarot cards. You know their significance, of course. They represent your home.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dried spider",
+    "when": "early",
+    "role": "symbol",
+    "detail": "one of Tansy's protective charms",
+    "source": "subtitles",
+    "at": "00:23:43",
+    "quote": "About one dried up spider, yes, but not all that rubbish!",
+    "confidence": "sourced"
+   },
+   {
+    "value": "graveyard dirt",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:23:45",
+    "quote": "Graveyard dirt, things from...",
+    "confidence": "sourced"
+   },
+   {
+    "value": "tape recording",
+    "when": "middle",
+    "role": "clue",
+    "detail": "Tansy's farewell tape; later Norman's lecture tape used to hypnotise him",
+    "source": "subtitles",
+    "at": "00:51:07",
+    "quote": "This is goodbye, my darling.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:41",
+      "quote": "[tape recorder stops]"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "wife's witchcraft discovered", "when": "opening", "quote": "he discovers that Tansy is practising obeah, referred to in the film as \"conjure magic\"", "confidence": "sourced"},
-   {"order": 2, "value": "charms burned", "when": "opening", "role": "trigger", "quote": "He forces her to burn all her magical paraphernalia", "confidence": "sourced"},
-   {"order": 3, "value": "run of misfortune", "when": "early", "quote": "Almost immediately things start to go wrong: a female student accuses Norman of rape", "confidence": "sourced"},
-   {"order": 4, "value": "sacrifice averted", "when": "middle", "quote": "almost drowns herself and is only saved at the last minute by Norman giving in to the practices he despises", "confidence": "sourced"},
-   {"order": 5, "value": "possessed attack", "when": "middle", "quote": "Tansy attacks him with a knife while in a trance", "confidence": "sourced"},
-   {"order": 6, "value": "true witch revealed", "when": "late", "role": "turn", "quote": "gives Norman a clue to the person responsible for his ill luck: university secretary Flora Carr", "confidence": "sourced"},
-   {"order": 7, "value": "statue attacks", "when": "late", "quote": "Flora convinces Norman that a giant stone eagle perching at the top of the university chapel has come to life", "confidence": "sourced"},
-   {"order": 8, "value": "witch killed by her own spell", "when": "ending", "quote": "the eagle statue falls from the roof and kills her", "confidence": "observed"}
+   {
+    "order": 1,
+    "value": "narrator casts protective spell",
+    "when": "opening",
+    "role": "omen",
+    "detail": "spoken prologue of the US release, Burn, Witch, Burn",
+    "source": "subtitles",
+    "at": "00:00:12",
+    "quote": "the motion picture you are about to see contains an evil spell,",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:43",
+      "quote": "cast a protecting shield above those gathered here present."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "sceptic's lecture",
+    "when": "opening",
+    "source": "subtitles",
+    "at": "00:04:24",
+    "quote": "I do not believe. I do not believe.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "wife's witchcraft discovered",
+    "when": "opening",
+    "quote": "he discovers that Tansy is practising obeah, referred to in the film as \"conjure magic\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:53",
+      "quote": "I'm a witch."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "charms burned",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "He forces her to burn all her magical paraphernalia",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:07",
+      "quote": "Did you burn everything? Yes. Everything."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "run of misfortune",
+    "when": "early",
+    "quote": "Almost immediately things start to go wrong: a female student accuses Norman of rape",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:27",
+      "quote": "Do you realize the seriousness of such a disgusting accusation?"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "sacrifice averted",
+    "when": "middle",
+    "quote": "almost drowns herself and is only saved at the last minute by Norman giving in to the practices he despises",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:07",
+      "quote": "This is goodbye, my darling. It's really the only way for me."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "possessed attack",
+    "when": "middle",
+    "quote": "Tansy attacks him with a knife while in a trance",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "true witch revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "gives Norman a clue to the person responsible for his ill luck: university secretary Flora Carr",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "cards burned to burn the house",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:18:15",
+    "quote": "These, as you can see, are tarot cards.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "statue attacks",
+    "when": "late",
+    "quote": "Flora convinces Norman that a giant stone eagle perching at the top of the university chapel has come to life",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:58",
+      "quote": "[eagle squawking]"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "witch killed by her own spell",
+    "when": "ending",
+    "quote": "the eagle statue falls from the roof and kills her",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:52",
+      "quote": "Flora! Flora!"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

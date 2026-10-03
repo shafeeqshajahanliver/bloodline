@@ -1,63 +1,507 @@
 {
  "film": "2019-the-lighthouse",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Analysis"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Analysis"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "madness", "quote": "a study in slow-brewing mutual insanity", "confidence": "sourced"},
-   {"value": "tyrannical older man", "detail": "Thomas Wake", "quote": "Wake proves to be demanding", "confidence": "sourced"},
-   {"value": "the sea", "detail": "storm and sea creatures", "quote": "stranded at a remote New England outpost by a violent storm", "confidence": "sourced"}
+   {
+    "value": "madness",
+    "quote": "a study in slow-brewing mutual insanity",
+    "confidence": "sourced"
+   },
+   {
+    "value": "tyrannical older man",
+    "detail": "Thomas Wake",
+    "quote": "Wake proves to be demanding",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the sea",
+    "detail": "storm and sea creatures",
+    "quote": "stranded at a remote New England outpost by a violent storm",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:46",
+      "quote": "Let Neptune strike ye dead, Winslow!"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "isolation", "quote": "like a purgatory and then the little personality, the little sense of self that they've created for themselves starts to get stripped away", "confidence": "sourced"},
-   {"value": "broken superstition", "quote": "Ephraim kills it later and brings on a storm that traps the two men on the island", "confidence": "sourced"}
+   {
+    "value": "isolation",
+    "quote": "like a purgatory and then the little personality, the little sense of self that they've created for themselves starts to get stripped away",
+    "confidence": "sourced"
+   },
+   {
+    "value": "broken superstition",
+    "quote": "Ephraim kills it later and brings on a storm that traps the two men on the island",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:36",
+      "quote": "Twas ye what changed the wind on us."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "forbidden knowledge", "detail": "the light in the lantern room", "quote": "after finally reaching the light and learning what is in it", "confidence": "sourced"}
+   {
+    "value": "forbidden knowledge",
+    "detail": "the light in the lantern room",
+    "quote": "after finally reaching the light and learning what is in it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:09",
+      "quote": "Just let me into that lantern, is all."
+     }
+    ]
+   },
+   {
+    "value": "to keep the light",
+    "detail": "Wake guards the lantern as his own",
+    "source": "screenplay",
+    "quote": "THE LIGHT B’LONGS TO ME!",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "murder", "detail": "the real Ephraim Winslow allowed to drown", "quote": "a cruel foreman in Canada whom he deliberately allowed to drown during a log drive", "confidence": "sourced"},
-   {"value": "stolen identity", "quote": "he assumed the identity of Ephraim Winslow", "confidence": "sourced"},
-   {"value": "killing a sacred animal", "quote": "The one-eyed gull attacks him and he bludgeons it to death", "confidence": "sourced"}
+   {
+    "value": "murder",
+    "detail": "the real Ephraim Winslow allowed to drown",
+    "quote": "a cruel foreman in Canada whom he deliberately allowed to drown during a log drive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:15",
+      "quote": "He shouted up. And I... I just stood there."
+     }
+    ]
+   },
+   {
+    "value": "stolen identity",
+    "quote": "he assumed the identity of Ephraim Winslow",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:58",
+      "quote": "And Thomas Howard, well, he don't."
+     }
+    ]
+   },
+   {
+    "value": "killing a sacred animal",
+    "quote": "The one-eyed gull attacks him and he bludgeons it to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "HE GRASPS THE GULL BY THE LEGS AND BEATS IT AGAINST THE EDGE OF THE CISTERN"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "taking a remote job", "quote": "Ephraim Winslow begins a four-week stint as a \"wickie\" (lighthouse keeper) on an isolated island", "confidence": "sourced"}
+   {
+    "value": "taking a remote job",
+    "quote": "Ephraim Winslow begins a four-week stint as a \"wickie\" (lighthouse keeper) on an isolated island",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "must not kill gulls", "quote": "under the superstitious belief that gulls are reincarnated sailors", "confidence": "sourced"},
-   {"value": "must not look", "detail": "the lantern room is forbidden", "quote": "a \"Promethean\" punishment that awaits those who look in the lantern", "confidence": "sourced"}
+   {
+    "value": "must not kill gulls",
+    "quote": "under the superstitious belief that gulls are reincarnated sailors",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:10",
+      "quote": "Bad luck to kill a sea bird."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:35:37",
+      "quote": "In' em's the souls of sailors what met their maker."
+     }
+    ]
+   },
+   {
+    "value": "must not look",
+    "detail": "the lantern room is forbidden",
+    "quote": "a \"Promethean\" punishment that awaits those who look in the lantern",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:47",
+      "quote": "See to yer duties. The light is mine."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:37:27",
+      "quote": "Ye wish to see what's in the lantern? So did me last assistant."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "young worker", "relation_to_threat": "self", "detail": "Thomas Howard, posing as Winslow", "quote": "Winslow begins to hallucinate sea monsters and logs floating in the sea", "confidence": "sourced"},
-   {"value": "older keeper", "relation_to_threat": "stranger", "detail": "Thomas Wake", "quote": "Howard disarms and kills Wake before ascending the lighthouse", "confidence": "sourced"}
+   {
+    "value": "young worker",
+    "relation_to_threat": "self",
+    "detail": "Thomas Howard, posing as Winslow",
+    "quote": "Winslow begins to hallucinate sea monsters and logs floating in the sea",
+    "confidence": "sourced"
+   },
+   {
+    "value": "older keeper",
+    "relation_to_threat": "stranger",
+    "detail": "Thomas Wake",
+    "quote": "Howard disarms and kills Wake before ascending the lighthouse",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "everyone dies", "quote": "Howard ends lying up nude on the rocks with a damaged eye as a flock of gulls peck at his exposed organs", "confidence": "sourced"},
-   {"value": "punishment for looking", "quote": "the Fresnel lens opens to Howard, who reaches in and screams before falling down the lighthouse steps", "confidence": "sourced"}
+   {
+    "value": "everyone dies",
+    "quote": "Howard ends lying up nude on the rocks with a damaged eye as a flock of gulls peck at his exposed organs",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "It is THE ONE-EYED GULL... It pulls at YOUNG’S liver..."
+     }
+    ]
+   },
+   {
+    "value": "punishment for looking",
+    "quote": "the Fresnel lens opens to Howard, who reaches in and screams before falling down the lighthouse steps",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:33",
+      "quote": "[distorted screaming]"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "mermaid scrimshaw", "when": "opening", "role": "omen", "quote": "Winslow discovers a small scrimshaw of a mermaid and keeps it in his jacket", "confidence": "sourced"},
-   {"value": "one-eyed gull", "state": "harassing, later killed", "when": "early", "role": "omen", "quote": "Winslow is bothered by a one-eyed gull", "confidence": "sourced"},
-   {"value": "dead gull in cistern", "when": "middle", "role": "omen", "quote": "Winslow discovers a dead gull fouling the drinking water in the cistern", "confidence": "sourced"},
-   {"value": "mermaid", "state": "beached, howling", "when": "middle", "role": "threat", "quote": "he discovers the beached body of a mermaid, which waves and howls at him", "confidence": "sourced"},
-   {"value": "severed head in lobster trap", "when": "middle", "role": "clue", "quote": "the one-eyed head of Wake's previous wickie in a lobster trap", "confidence": "sourced"},
-   {"value": "axe", "when": "late", "role": "weapon", "quote": "Wake destroys the boat with an axe", "confidence": "sourced"},
-   {"value": "lantern", "state": "forbidden light", "when": "ending", "role": "symbol", "quote": "Wake bars Winslow from the lantern room", "confidence": "sourced"},
-   {"value": "gulls", "state": "eating organs", "when": "ending", "role": "symbol", "quote": "a flock of gulls peck at his exposed organs", "confidence": "sourced"}
+   {
+    "value": "mermaid scrimshaw",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Winslow discovers a small scrimshaw of a mermaid and keeps it in his jacket",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:01",
+      "quote": "That scrimshaw trinket."
+     },
+     {
+      "source": "screenplay",
+      "quote": "It’s a MERMAID carved from ivory, with scrimshawed scales on her tail."
+     }
+    ]
+   },
+   {
+    "value": "one-eyed gull",
+    "state": "harassing, later killed",
+    "when": "early",
+    "role": "omen",
+    "quote": "Winslow is bothered by a one-eyed gull",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "THE ONE-EYED GULL STANDS ON TOP OF THE CISTERN"
+     }
+    ]
+   },
+   {
+    "value": "dead gull in cistern",
+    "when": "middle",
+    "role": "omen",
+    "quote": "Winslow discovers a dead gull fouling the drinking water in the cistern",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "DEAD GULLS float in the bloody cistern."
+     }
+    ]
+   },
+   {
+    "value": "mermaid",
+    "state": "beached, howling",
+    "when": "middle",
+    "role": "threat",
+    "quote": "he discovers the beached body of a mermaid, which waves and howls at him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:43",
+      "quote": "[mermaid screeches]"
+     }
+    ]
+   },
+   {
+    "value": "severed head in lobster trap",
+    "when": "middle",
+    "role": "clue",
+    "quote": "the one-eyed head of Wake's previous wickie in a lobster trap",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:44",
+      "quote": "Your one-eyed junior man. I found him. In the lobster pot."
+     }
+    ]
+   },
+   {
+    "value": "axe",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Wake destroys the boat with an axe",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:45",
+      "quote": "when y'smashed up that life boat just now, a-chasing me with an axe"
+     }
+    ]
+   },
+   {
+    "value": "lantern",
+    "state": "forbidden light",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "Wake bars Winslow from the lantern room",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:27",
+      "quote": "Doggin' it? I was' specting I'd git up to see the lantern."
+     }
+    ]
+   },
+   {
+    "value": "gulls",
+    "state": "eating organs",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "a flock of gulls peck at his exposed organs",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:49",
+      "quote": "[seagulls squawking]"
+     }
+    ]
+   },
+   {
+    "value": "foghorn",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:39",
+    "quote": "[foghorn blasts]",
+    "confidence": "sourced",
+    "detail": "the foghorn opens the film and sounds through it"
+   },
+   {
+    "value": "tentacles",
+    "state": "imagined sea god",
+    "when": "middle",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "01:01:31",
+    "quote": "with slithering tentacled tail and steaming beard",
+    "confidence": "sourced",
+    "detail": "Wake's curse pictures the sea king; Winslow later sees Wake with tentacles",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "IMAGE: WET TENTACLES WRITHING"
+     }
+    ]
+   },
+   {
+    "value": "logbook",
+    "when": "late",
+    "role": "clue",
+    "source": "screenplay",
+    "quote": "YOUNG reveals the LOG book. He reads aloud",
+    "confidence": "sourced",
+    "detail": "Wake's log records Winslow as drunk and dangerous; 'Recommend severance without pay'",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:38",
+      "quote": "Severance without pay?"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "newcomer arrives at isolated post", "when": "opening", "quote": "begins a four-week stint as a \"wickie\" (lighthouse keeper) on an isolated island", "confidence": "sourced"},
-   {"order": 2, "value": "warning about the bird", "when": "early", "role": "omen", "quote": "Wake warns him against killing it", "confidence": "sourced"},
-   {"order": 3, "value": "sacred bird killed", "when": "middle", "role": "trigger", "quote": "The one-eyed gull attacks him and he bludgeons it to death", "confidence": "sourced"},
-   {"order": 4, "value": "storm strands them", "when": "middle", "quote": "a severe storm that prevents the lighthouse tender from collecting them", "confidence": "sourced"},
-   {"order": 5, "value": "confession of past crime", "when": "middle", "role": "turn", "quote": "Winslow drunkenly confesses to Wake that his real name is Thomas Howard", "confidence": "sourced"},
-   {"order": 6, "value": "escape destroyed", "when": "late", "quote": "Wake destroys the boat with an axe", "confidence": "sourced"},
-   {"order": 7, "value": "companion buried alive and killed", "when": "late", "quote": "takes him to the hole at the base of the lighthouse to bury him alive", "confidence": "sourced"},
-   {"order": 8, "value": "looking into the light", "when": "ending", "role": "turn", "quote": "In the lantern room, the Fresnel lens opens to Howard", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "newcomer arrives at isolated post",
+    "when": "opening",
+    "quote": "begins a four-week stint as a \"wickie\" (lighthouse keeper) on an isolated island",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:49",
+      "quote": "The cistern needs a-lookin' to. One of yer duties, lad."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "warning about the bird",
+    "when": "early",
+    "role": "omen",
+    "quote": "Wake warns him against killing it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:10",
+      "quote": "Bad luck to kill a sea bird."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "sacred bird killed",
+    "when": "middle",
+    "role": "trigger",
+    "quote": "The one-eyed gull attacks him and he bludgeons it to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "THE ONE-EYED GULL IS DEAD."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "storm strands them",
+    "when": "middle",
+    "quote": "a severe storm that prevents the lighthouse tender from collecting them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:35",
+      "quote": "They didn't come."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "curse called on the sea",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:00:54",
+    "quote": "Hark, Triton, Hark!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "confession of past crime",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Winslow drunkenly confesses to Wake that his real name is Thomas Howard",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:58",
+      "quote": "And Thomas Howard, well, he don't."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "escape destroyed",
+    "when": "late",
+    "quote": "Wake destroys the boat with an axe",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:05",
+      "quote": "You smashed up the life boat!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "companion buried alive and killed",
+    "when": "late",
+    "quote": "takes him to the hole at the base of the lighthouse to bury him alive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:14",
+      "quote": "[Thomas] Woof."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "looking into the light",
+    "when": "ending",
+    "role": "turn",
+    "quote": "In the lantern room, the Fresnel lens opens to Howard",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:33",
+      "quote": "[distorted screaming]"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

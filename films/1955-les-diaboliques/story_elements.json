@@ -1,61 +1,491 @@
 {
  "film": "1955-les-diaboliques",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "staged ghost", "detail": "Michel pretending to be a vengeful ghost", "quote": "Michel acting as a vengeful ghost to scare Christina to death", "confidence": "sourced"},
-   {"value": "conspiring lovers", "detail": "Michel and Nicole", "quote": "It is revealed that Michel and Nicole have set up Christina from the beginning", "confidence": "sourced"}
+   {
+    "value": "staged ghost",
+    "detail": "Michel pretending to be a vengeful ghost",
+    "quote": "Michel acting as a vengeful ghost to scare Christina to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:08",
+      "quote": "It can't be him. It's impossible."
+     }
+    ]
+   },
+   {
+    "value": "conspiring lovers",
+    "detail": "Michel and Nicole",
+    "quote": "It is revealed that Michel and Nicole have set up Christina from the beginning",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:49:40",
+      "quote": "In the bathroom, it took me... more than one hour to get out of the tub without making noise."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "murder that seemed to happen", "quote": "Christina sedates him with laced whiskey before the two women drown him in a bathtub", "confidence": "observed"}
+   {
+    "value": "murder that seemed to happen",
+    "quote": "Christina sedates him with laced whiskey before the two women drown him in a bathtub",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:34",
+      "quote": "instead of carrying him to the tub. Who filled up the tub? Who pushed him under water?"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "money", "detail": "Christina owns the school", "quote": "The school is owned, however, by Delassalle's wife Christina, a wealthy, devout Catholic", "confidence": "observed"},
-   {"value": "to scare victim to death", "quote": "Michel acting as a vengeful ghost to scare Christina to death", "confidence": "sourced"}
+   {
+    "value": "money",
+    "detail": "Christina owns the school",
+    "quote": "The school is owned, however, by Delassalle's wife Christina, a wealthy, devout Catholic",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:50:00",
+      "quote": "Wasn't it worth it? Now, we're rich."
+     }
+    ]
+   },
+   {
+    "value": "to scare victim to death",
+    "quote": "Michel acting as a vengeful ghost to scare Christina to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:31",
+      "quote": "Don't worry. With her heart condition, it won't take long."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "domestic abuse", "quote": "Michel subjects her to significant emotional abuse, humiliating and mocking her", "confidence": "sourced"},
-   {"value": "murder plot", "quote": "the plot focusing on a woman and her husband's mistress who conspire to murder the man", "confidence": "sourced"}
+   {
+    "value": "domestic abuse",
+    "quote": "Michel subjects her to significant emotional abuse, humiliating and mocking her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:13",
+      "quote": "Today, she's a cute little ruin."
+     }
+    ]
+   },
+   {
+    "value": "murder plot",
+    "quote": "the plot focusing on a woman and her husband's mistress who conspire to murder the man",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:11",
+      "quote": "We'II never find a better opportunity. And we have just three days."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "the body disappears", "quote": "Almost everything goes according to their plans until the body fails to surface", "confidence": "sourced"}
+   {
+    "value": "the body disappears",
+    "quote": "Almost everything goes according to their plans until the body fails to surface",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:57",
+      "quote": "I'II manage to have the pool emptied."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "weak heart", "quote": "The frail Christina suffers from a chronic heart condition", "confidence": "sourced"},
-   {"value": "haunting is a hoax", "quote": "Michel and Nicole have set up Christina from the beginning", "confidence": "sourced"}
+   {
+    "value": "weak heart",
+    "quote": "The frail Christina suffers from a chronic heart condition",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:17",
+      "quote": "Mme. DeIassaIIe has a heart condition. We must spare her."
+     }
+    ]
+   },
+   {
+    "value": "haunting is a hoax",
+    "quote": "Michel and Nicole have set up Christina from the beginning",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:49:32",
+      "quote": "The bitch. She used to say that she had a heart condition."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "abused wife", "relation_to_threat": "family", "detail": "Christina", "quote": "Michel rises from the tub, and Christina suffers a fatal heart attack", "confidence": "sourced"},
-   {"value": "schoolchildren", "relation_to_threat": "community", "quote": "as well as mistreating the students", "confidence": "sourced"}
+   {
+    "value": "abused wife",
+    "relation_to_threat": "family",
+    "detail": "Christina",
+    "quote": "Michel rises from the tub, and Christina suffers a fatal heart attack",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:37",
+      "quote": "My heart is about to explode."
+     }
+    ]
+   },
+   {
+    "value": "schoolchildren",
+    "relation_to_threat": "community",
+    "quote": "as well as mistreating the students",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:20",
+      "quote": "go straight to the corner."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "plotters exposed", "quote": "Alfred hears their celebration and exposes their plot", "confidence": "sourced"},
-   {"value": "victim dies", "quote": "Christina suffers a fatal heart attack", "confidence": "sourced"},
-   {"value": "ambiguous ghost sting", "detail": "the boy says Christina returned his slingshot", "quote": "When asked how he recovered his slingshot, the boy says that Christina gave it to him", "confidence": "sourced"}
+   {
+    "value": "plotters exposed",
+    "quote": "Alfred hears their celebration and exposes their plot",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:50:06",
+      "quote": "Between 15 and 20 years in jail."
+     }
+    ]
+   },
+   {
+    "value": "victim dies",
+    "quote": "Christina suffers a fatal heart attack",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:49:24",
+      "quote": "It's over, this time."
+     }
+    ]
+   },
+   {
+    "value": "ambiguous ghost sting",
+    "detail": "the boy says Christina returned his slingshot",
+    "quote": "When asked how he recovered his slingshot, the boy says that Christina gave it to him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:50:54",
+      "quote": "She's not dead. She came back."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "bathtub", "state": "filled with water", "when": "early", "role": "mirror", "quote": "the two women drown him in a bathtub", "confidence": "sourced"},
-   {"value": "swimming pool", "state": "unused, then drained", "when": "early", "role": "setting", "quote": "Michel's corpse is nowhere to be found when the pool is drained", "confidence": "sourced"},
-   {"value": "wicker trunk", "when": "early", "quote": "Concealing his body in a wicker trunk", "confidence": "sourced"},
-   {"value": "returned suit", "when": "middle", "role": "clue", "quote": "the suit that Michel had been wearing when they drowned him is returned from the dry cleaners", "confidence": "sourced"},
-   {"value": "spectral photograph", "when": "middle", "role": "omen", "quote": "the result seems to show Michel's spectral figure in the window behind the students", "confidence": "sourced"},
-   {"value": "slingshot", "state": "confiscated, then returned", "when": "ending", "role": "clue", "quote": "Accusing him of lying, Christina confiscates his slingshot", "confidence": "sourced"},
-   {"value": "corpse rising from water", "when": "late", "role": "threat", "quote": "Michel rises from the tub", "confidence": "sourced"}
+   {
+    "value": "bathtub",
+    "state": "filled with water",
+    "when": "early",
+    "role": "mirror",
+    "quote": "the two women drown him in a bathtub",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:43",
+      "quote": "Bathtubs that we fill up, swimming pools that we empty."
+     }
+    ]
+   },
+   {
+    "value": "swimming pool",
+    "state": "unused, then drained",
+    "when": "early",
+    "role": "setting",
+    "quote": "Michel's corpse is nowhere to be found when the pool is drained",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:49",
+      "quote": "I want you to empty the pool."
+     }
+    ]
+   },
+   {
+    "value": "wicker trunk",
+    "when": "early",
+    "quote": "Concealing his body in a wicker trunk",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:03",
+      "quote": "in a wicker trunk. When we got here, we threw him in the swimming pool."
+     }
+    ]
+   },
+   {
+    "value": "returned suit",
+    "when": "middle",
+    "role": "clue",
+    "quote": "the suit that Michel had been wearing when they drowned him is returned from the dry cleaners",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:58",
+      "quote": "Somebody brought back monsieur's suit."
+     }
+    ]
+   },
+   {
+    "value": "spectral photograph",
+    "when": "middle",
+    "role": "omen",
+    "quote": "the result seems to show Michel's spectral figure in the window behind the students",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:25",
+      "quote": "What do I see behind the window? - Looks like the boss."
+     }
+    ]
+   },
+   {
+    "value": "slingshot",
+    "state": "confiscated, then returned",
+    "when": "ending",
+    "role": "clue",
+    "quote": "Accusing him of lying, Christina confiscates his slingshot",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:00",
+      "quote": "How did you break the window? - With my slingshot."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:50:43",
+      "quote": "She gave me back my slingshot."
+     }
+    ]
+   },
+   {
+    "value": "corpse rising from water",
+    "when": "late",
+    "role": "threat",
+    "quote": "Michel rises from the tub",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:37",
+      "quote": "Who's there?"
+     }
+    ]
+   },
+   {
+    "value": "rotten fish",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:09:44",
+    "quote": "you can smell that it's fish.",
+    "confidence": "sourced",
+    "detail": "Michel forces Christina to swallow spoiled fish in front of the staff",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:54",
+      "quote": "I can't help it. I just can't."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "cruel husband established", "when": "opening", "quote": "is run by the tyrannical and cruel Michel Delassalle", "confidence": "sourced"},
-   {"order": 2, "value": "women commit murder", "when": "early", "role": "trigger", "quote": "the two women drown him in a bathtub", "confidence": "sourced"},
-   {"order": 3, "value": "body vanishes", "when": "early", "role": "turn", "quote": "Michel's corpse is nowhere to be found when the pool is drained", "confidence": "sourced"},
-   {"order": 4, "value": "signs of the dead man", "when": "middle", "role": "omen", "quote": "the result seems to show Michel's spectral figure in the window behind the students", "confidence": "sourced"},
-   {"order": 5, "value": "confession", "when": "late", "quote": "Christina, overcome by fear, confesses everything to Alfred", "confidence": "sourced"},
-   {"order": 6, "value": "dead rises, victim dies", "when": "late", "quote": "Michel rises from the tub, and Christina suffers a fatal heart attack", "confidence": "sourced"},
-   {"order": 7, "value": "twist revealed", "when": "ending", "role": "turn", "quote": "It is revealed that Michel and Nicole have set up Christina from the beginning", "confidence": "sourced"},
-   {"order": 8, "value": "closing sting", "when": "ending", "quote": "the boy says that Christina gave it to him", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "cruel husband established",
+    "when": "opening",
+    "quote": "is run by the tyrannical and cruel Michel Delassalle",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:54",
+      "quote": "I can't help it. I just can't."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "murder plotted",
+    "when": "opening",
+    "source": "subtitles",
+    "at": "00:09:11",
+    "quote": "We'II never find a better opportunity.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "women commit murder",
+    "when": "early",
+    "role": "trigger",
+    "quote": "the two women drown him in a bathtub",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:36",
+      "quote": "Who filled up the tub? Who pushed him under water?"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "body vanishes",
+    "when": "early",
+    "role": "turn",
+    "quote": "Michel's corpse is nowhere to be found when the pool is drained",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:23",
+      "quote": "I think it comes from the open space, the empty pool."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "dead man's suit returned",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:06:58",
+    "quote": "Somebody brought back monsieur's suit.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "signs of the dead man",
+    "when": "middle",
+    "role": "omen",
+    "quote": "the result seems to show Michel's spectral figure in the window behind the students",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:41",
+      "quote": "The reflection of a cloud or some spot on the window..."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "confession",
+    "when": "late",
+    "quote": "Christina, overcome by fear, confesses everything to Alfred",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "dead rises, victim dies",
+    "when": "late",
+    "quote": "Michel rises from the tub, and Christina suffers a fatal heart attack",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:37",
+      "quote": "Who's there?"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "twist revealed",
+    "when": "ending",
+    "role": "turn",
+    "quote": "It is revealed that Michel and Nicole have set up Christina from the beginning",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:49:45",
+      "quote": "You must've suffered during the trip in the trunk."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "closing sting",
+    "when": "ending",
+    "quote": "the boy says that Christina gave it to him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:50:45",
+      "quote": "She said: \" This is for you, Moinet. Have fun. \""
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "closing plea to viewers",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:51:21",
+    "quote": "Don't be devils. Don't ruin... the interest your friends could take in this film.",
+    "confidence": "sourced",
+    "detail": "a title card asks the audience not to reveal the ending"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

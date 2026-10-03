@@ -1,59 +1,352 @@
 {
  "film": "1982-next-of-kin",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "hidden relative", "detail": "aunt Rita, posing as Mrs. Ryan", "quote": "She is soon confronted by Mrs. Ryan, who is actually Rita", "confidence": "sourced"},
-   {"value": "killer", "detail": "Kelvin, Rita's son and Linda's cousin", "quote": "A crazed Kelvin—Rita's son (and Linda's cousin)—attacks Linda with a sledgehammer.", "confidence": "sourced"}
+   {
+    "value": "hidden relative",
+    "detail": "aunt Rita, posing as Mrs. Ryan",
+    "quote": "She is soon confronted by Mrs. Ryan, who is actually Rita",
+    "confidence": "sourced"
+   },
+   {
+    "value": "killer",
+    "detail": "Kelvin, Rita's son and Linda's cousin",
+    "quote": "A crazed Kelvin—Rita's son (and Linda's cousin)—attacks Linda with a sledgehammer.",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "family member locked away", "quote": "seeking vengeance against Linda's mother for placing her in the hospital", "confidence": "sourced"}
+   {
+    "value": "family member locked away",
+    "quote": "seeking vengeance against Linda's mother for placing her in the hospital",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "revenge", "quote": "seeking vengeance against Linda's mother for placing her in the hospital", "confidence": "sourced"}
+   {
+    "value": "revenge",
+    "quote": "seeking vengeance against Linda's mother for placing her in the hospital",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "relative committed", "detail": "Linda's mother put Rita in a psychiatric hospital", "quote": "Linda's mother for placing her in the hospital; Rita claims that it was Linda's mother who was in fact insane", "confidence": "sourced"}
+   {
+    "value": "relative committed",
+    "detail": "Linda's mother put Rita in a psychiatric hospital",
+    "quote": "Linda's mother for placing her in the hospital; Rita claims that it was Linda's mother who was in fact insane",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:50",
+      "quote": "20 years, they sent me away."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "inheriting a house", "quote": "After her estranged mother's death, Linda Stevens inherits a rural estate called Montclare", "confidence": "sourced"},
-   {"value": "new arrival", "quote": "Linda arrives on the same night as a new boarder, the aged Mrs. Ryan, dropped off by her son Kelvin", "confidence": "sourced"}
+   {
+    "value": "inheriting a house",
+    "quote": "After her estranged mother's death, Linda Stevens inherits a rural estate called Montclare",
+    "confidence": "sourced"
+   },
+   {
+    "value": "new arrival",
+    "quote": "Linda arrives on the same night as a new boarder, the aged Mrs. Ryan, dropped off by her son Kelvin",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "death by drowning", "quote": "there is a precedent for mysterious deaths in the retirement community, particularly an inordinate number of drownings", "confidence": "sourced"},
-   {"value": "the dead may not be dead", "quote": "handwritten medical records for her aunt Rita, which disturbs her as she was told that Rita had been dead", "confidence": "sourced"}
+   {
+    "value": "death by drowning",
+    "quote": "there is a precedent for mysterious deaths in the retirement community, particularly an inordinate number of drownings",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:06",
+      "quote": "was found dead in her bath."
+     }
+    ]
+   },
+   {
+    "value": "the dead may not be dead",
+    "quote": "handwritten medical records for her aunt Rita, which disturbs her as she was told that Rita had been dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:09",
+      "quote": "Why was I told my aunt Rita was dead?"
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "heir", "relation_to_threat": "family", "detail": "Linda", "quote": "Linda comes to suspect that Rita may still be alive and stalking the house", "confidence": "sourced"},
-   {"value": "elderly residents", "relation_to_threat": "community", "quote": "a resident of the home is found drowned in a bathtub", "confidence": "sourced"},
-   {"value": "lover", "relation_to_threat": "stranger", "detail": "Barney", "quote": "Linda flees into the house in search of Barney, only to find him also murdered.", "confidence": "sourced"}
+   {
+    "value": "heir",
+    "relation_to_threat": "family",
+    "detail": "Linda",
+    "quote": "Linda comes to suspect that Rita may still be alive and stalking the house",
+    "confidence": "sourced"
+   },
+   {
+    "value": "elderly residents",
+    "relation_to_threat": "community",
+    "quote": "a resident of the home is found drowned in a bathtub",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lover",
+    "relation_to_threat": "stranger",
+    "detail": "Barney",
+    "quote": "Linda flees into the house in search of Barney, only to find him also murdered.",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "Using a shotgun, Linda manages to shoot and kill Kelvin.", "confidence": "sourced"},
-   {"value": "survivor escapes", "quote": "At dawn, the two drive away as the diner becomes engulfed in flames", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "Using a shotgun, Linda manages to shoot and kill Kelvin.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "survivor escapes",
+    "quote": "At dawn, the two drive away as the diner becomes engulfed in flames",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:59",
+      "quote": "Let's get out of here!"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "bathtub", "state": "drowning site", "when": "opening", "role": "threat", "quote": "a resident of the home is found drowned in a bathtub", "confidence": "sourced"},
-   {"value": "diaries", "when": "early", "role": "clue", "quote": "Linda begins reading old diaries left in the house by her mother", "confidence": "sourced"},
-   {"value": "medical records", "when": "early", "role": "clue", "quote": "She also finds handwritten medical records for her aunt Rita", "confidence": "sourced"},
-   {"value": "sledgehammer", "when": "late", "role": "weapon", "quote": "attacks Linda with a sledgehammer", "confidence": "sourced"},
-   {"value": "comb", "state": "stabbed through a keyhole", "when": "late", "role": "weapon", "quote": "She stabs Rita through the eye with the sharp handle of a comb as Rita peers through the door lock", "confidence": "sourced"},
-   {"value": "corpses in bathtub", "when": "late", "role": "turn", "quote": "she finds Dr. Barton's and Connie's bloodied corpses in the bathtub", "confidence": "sourced"},
-   {"value": "fire", "state": "engulfing the diner", "when": "ending", "role": "setting", "quote": "the diner becomes engulfed in flames, ignited by the petrol leaking from Kelvin's damaged truck", "confidence": "sourced"}
+   {
+    "value": "bathtub",
+    "state": "drowning site",
+    "when": "opening",
+    "role": "threat",
+    "quote": "a resident of the home is found drowned in a bathtub",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:46",
+      "quote": "lying in the bath. Drowned."
+     }
+    ]
+   },
+   {
+    "value": "diaries",
+    "when": "early",
+    "role": "clue",
+    "quote": "Linda begins reading old diaries left in the house by her mother",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:32",
+      "quote": "I have no strength to write now."
+     }
+    ]
+   },
+   {
+    "value": "medical records",
+    "when": "early",
+    "role": "clue",
+    "quote": "She also finds handwritten medical records for her aunt Rita",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:01",
+      "quote": "Someone's been at the files."
+     }
+    ]
+   },
+   {
+    "value": "sledgehammer",
+    "when": "late",
+    "role": "weapon",
+    "quote": "attacks Linda with a sledgehammer",
+    "confidence": "sourced"
+   },
+   {
+    "value": "comb",
+    "state": "stabbed through a keyhole",
+    "when": "late",
+    "role": "weapon",
+    "quote": "She stabs Rita through the eye with the sharp handle of a comb as Rita peers through the door lock",
+    "confidence": "sourced"
+   },
+   {
+    "value": "corpses in bathtub",
+    "when": "late",
+    "role": "turn",
+    "quote": "she finds Dr. Barton's and Connie's bloodied corpses in the bathtub",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fire",
+    "state": "engulfing the diner",
+    "when": "ending",
+    "role": "setting",
+    "quote": "the diner becomes engulfed in flames, ignited by the petrol leaking from Kelvin's damaged truck",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cat",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:09:45",
+    "quote": "(cat mewing)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:28",
+      "quote": "Here, kitty, kitty, Kitty, come on."
+     }
+    ]
+   },
+   {
+    "value": "running taps",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:52:42",
+    "quote": "and all the taps in my room were left running.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "owl",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:08:37",
+    "quote": "(owl hooting)",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "inheritance of the house", "when": "opening", "quote": "After her estranged mother's death, Linda Stevens inherits a rural estate called Montclare", "confidence": "sourced"},
-   {"order": 2, "value": "first death", "when": "opening", "quote": "a resident of the home is found drowned in a bathtub", "confidence": "sourced"},
-   {"order": 3, "value": "mother's diaries read", "when": "early", "role": "clue", "quote": "she describes being unsettled in the home and believing someone is watching her", "confidence": "sourced"},
-   {"order": 4, "value": "wrong suspects accused", "when": "middle", "quote": "Convinced that Dr. Barton and another employee, Connie, are murdering residents, she flees to town", "confidence": "sourced"},
-   {"order": 5, "value": "lover killed", "when": "late", "quote": "Linda flees into the house in search of Barney, only to find him also murdered.", "confidence": "sourced"},
-   {"order": 6, "value": "hidden relative revealed", "when": "late", "role": "turn", "quote": "She is soon confronted by Mrs. Ryan, who is actually Rita", "confidence": "sourced"},
-   {"order": 7, "value": "siege and killer shot", "when": "ending", "quote": "Kelvin arrives, driving his truck through the side of the building. Using a shotgun, Linda manages to shoot and kill Kelvin.", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "inheritance of the house",
+    "when": "opening",
+    "quote": "After her estranged mother's death, Linda Stevens inherits a rural estate called Montclare",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:14",
+      "quote": "I leave my entire inheritance."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "first death",
+    "when": "opening",
+    "quote": "a resident of the home is found drowned in a bathtub",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:00",
+      "quote": "Died in his bath."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "mother's diaries read",
+    "when": "early",
+    "role": "clue",
+    "quote": "she describes being unsettled in the home and believing someone is watching her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:46",
+      "quote": "Now mother and father have gone,"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "lights and taps tampered with",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:00:03",
+    "quote": "Lights going on and off. Taps left running.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "wrong suspects accused",
+    "when": "middle",
+    "quote": "Convinced that Dr. Barton and another employee, Connie, are murdering residents, she flees to town",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "lover killed",
+    "when": "late",
+    "quote": "Linda flees into the house in search of Barney, only to find him also murdered.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "hidden relative revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "She is soon confronted by Mrs. Ryan, who is actually Rita",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:44",
+      "quote": "(Rita laughing maniacally)"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "siege and killer shot",
+    "when": "ending",
+    "quote": "Kelvin arrives, driving his truck through the side of the building. Using a shotgun, Linda manages to shoot and kill Kelvin.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:25",
+      "quote": "(gun firing)"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

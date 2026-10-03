@@ -1,59 +1,482 @@
 {
  "film": "1932-vampyr",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vampire", "detail": "Marguerite Chopin, the old woman who holds sway over the shadows", "quote": "a vampire was really behind a previous epidemic in Courtempierre, with a woman named Marguerite Chopin being the prime suspect", "confidence": "sourced"},
-   {"value": "human accomplice", "detail": "the village doctor who serves the old woman", "quote": "he stops her from drinking poison that the old woman had the doctor bring to the manor", "confidence": "sourced"},
-   {"value": "living shadows", "detail": "the shadow of a peg-legged soldier", "quote": "sees the lord of the manor, who is the man who gave him the package, get shot by the shadow of the soldier", "confidence": "sourced"}
+   {
+    "value": "vampire",
+    "detail": "Marguerite Chopin, the old woman who holds sway over the shadows",
+    "quote": "a vampire was really behind a previous epidemic in Courtempierre, with a woman named Marguerite Chopin being the prime suspect",
+    "confidence": "sourced"
+   },
+   {
+    "value": "human accomplice",
+    "detail": "the village doctor who serves the old woman",
+    "quote": "he stops her from drinking poison that the old woman had the doctor bring to the manor",
+    "confidence": "sourced"
+   },
+   {
+    "value": "living shadows",
+    "detail": "the shadow of a peg-legged soldier",
+    "quote": "sees the lord of the manor, who is the man who gave him the package, get shot by the shadow of the soldier",
+    "confidence": "sourced"
+   }
+  ],
+  "origin": [
+   {
+    "value": "unrepentant dead woman",
+    "detail": "Marguerite Chopin, believed to be the vampire behind an epidemic 25 years earlier",
+    "source": "subtitles",
+    "at": "00:50:26",
+    "quote": "Many firmly believed that vampire to be none other than Marguerite Chopin , who lay buried in the village cemetery .",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:39",
+      "quote": "She died an unrepentant soul , and the Church denied her the Last Sacraments ."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "blood", "quote": "how the creatures suck blood and gain control over the living and dead", "confidence": "sourced"},
-   {"value": "control over the living", "quote": "how the creatures suck blood and gain control over the living and dead", "confidence": "sourced"}
+   {
+    "value": "blood",
+    "quote": "how the creatures suck blood and gain control over the living and dead",
+    "confidence": "sourced"
+   },
+   {
+    "value": "control over the living",
+    "quote": "how the creatures suck blood and gain control over the living and dead",
+    "confidence": "sourced"
+   },
+   {
+    "value": "to prolong its existence",
+    "source": "subtitles",
+    "at": "00:30:28",
+    "quote": "to suck the blood of children and young adults and thus prolong their shadowy existence .",
+    "confidence": "sourced"
+   }
+  ],
+  "wrong": [
+   {
+    "value": "evil life unrepented",
+    "source": "subtitles",
+    "at": "00:50:34",
+    "quote": "All her life , Marguerite Chopin had been a monster in human form .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "soul sold to evil",
+    "detail": "the doctor as henchman, per the vampire book",
+    "source": "subtitles",
+    "at": "00:41:18",
+    "quote": "An account from Hungary tells of a village doctor who , having sold his soul to the Evil One ,",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "a stranger arrives", "detail": "Allan Gray rents a room at an inn near Courtempierre", "quote": "Allan Gray, a wandering student of the occult, arrives at an inn close to the village of Courtempierre", "confidence": "sourced"},
-   {"value": "receiving a mysterious package", "quote": "leaves a small rectangular package on the table with \"To be opened upon my death\" written on the wrapping paper", "confidence": "sourced"}
+   {
+    "value": "a stranger arrives",
+    "detail": "Allan Gray rents a room at an inn near Courtempierre",
+    "quote": "Allan Gray, a wandering student of the occult, arrives at an inn close to the village of Courtempierre",
+    "confidence": "sourced"
+   },
+   {
+    "value": "receiving a mysterious package",
+    "quote": "leaves a small rectangular package on the table with \"To be opened upon my death\" written on the wrapping paper",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "stake through the heart", "detail": "an iron bar driven through its heart at dawn", "quote": "a vampire can be defeated by opening its grave at dawn and driving an iron bar through its heart", "confidence": "sourced"},
-   {"value": "curse lifts when vampire dies", "quote": "The curse of the vampire is lifted, and, back at the manor, Léone suddenly recovers", "confidence": "sourced"}
+   {
+    "value": "stake through the heart",
+    "detail": "an iron bar driven through its heart at dawn",
+    "quote": "a vampire can be defeated by opening its grave at dawn and driving an iron bar through its heart",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:55",
+      "quote": "At dawn the grave was opened , and the old woman was found lying as if asleep ."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:49:06",
+      "quote": "An iron stake was driven through her heart , nailing her horrid soul to the earth ."
+     }
+    ]
+   },
+   {
+    "value": "curse lifts when vampire dies",
+    "quote": "The curse of the vampire is lifted, and, back at the manor, Léone suddenly recovers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:16",
+      "quote": "She then died a true death , and the curse that had lain upon herself and her victims was broken ."
+     }
+    ]
+   },
+   {
+    "value": "victim becomes vampire",
+    "source": "subtitles",
+    "at": "00:35:40",
+    "quote": "The innocent young person itself becomes a vampire and seeks to prey on its nearest and dearest .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "drives victim to suicide",
+    "source": "subtitles",
+    "at": "00:46:17",
+    "quote": "Once the vampire has gained complete control over its victim , it seeks to drive the victim to suicide ,",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rises under full moon",
+    "source": "subtitles",
+    "at": "00:30:20",
+    "quote": "Under the bright light of the full moon , they rise from their graves to suck the blood of children and young adults",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "village", "relation_to_threat": "community", "quote": "the French village of Courtempierre, which is under the curse of a vampire", "confidence": "sourced"},
-   {"value": "sick daughter", "relation_to_threat": "stranger", "detail": "Léone, bitten and gravely ill", "quote": "Léone, who is discovered to have fresh bite wounds, is carried back to bed", "confidence": "sourced"},
-   {"value": "father", "relation_to_threat": "stranger", "detail": "the lord of the manor, shot by a shadow", "quote": "Gray gets the attention of an old servant, and they rush to the lord of the manor, but it is too late to save him", "confidence": "sourced"},
-   {"value": "outsider investigator", "relation_to_threat": "stranger", "detail": "Allan Gray, a student of the occult", "quote": "a student of the occult who wanders into the French village of Courtempierre", "confidence": "sourced"}
+   {
+    "value": "village",
+    "relation_to_threat": "community",
+    "quote": "the French village of Courtempierre, which is under the curse of a vampire",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sick daughter",
+    "relation_to_threat": "stranger",
+    "detail": "Léone, bitten and gravely ill",
+    "quote": "Léone, who is discovered to have fresh bite wounds, is carried back to bed",
+    "confidence": "sourced"
+   },
+   {
+    "value": "father",
+    "relation_to_threat": "stranger",
+    "detail": "the lord of the manor, shot by a shadow",
+    "quote": "Gray gets the attention of an old servant, and they rush to the lord of the manor, but it is too late to save him",
+    "confidence": "sourced"
+   },
+   {
+    "value": "outsider investigator",
+    "relation_to_threat": "stranger",
+    "detail": "Allan Gray, a student of the occult",
+    "quote": "a student of the occult who wanders into the French village of Courtempierre",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "detail": "the vampire becomes a skeleton when staked", "quote": "they hammer a large metal bar through her heart, at which point she becomes a skeleton", "confidence": "sourced"},
-   {"value": "accomplice punished", "detail": "the doctor suffocated in flour at the mill", "quote": "activates the mill's machinery, which fills the chamber with flour and suffocates the doctor", "confidence": "sourced"},
-   {"value": "escape into light", "quote": "Giséle and Gray cross a foggy river in a boat and find themselves in a bright clearing", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "detail": "the vampire becomes a skeleton when staked",
+    "quote": "they hammer a large metal bar through her heart, at which point she becomes a skeleton",
+    "confidence": "sourced"
+   },
+   {
+    "value": "accomplice punished",
+    "detail": "the doctor suffocated in flour at the mill",
+    "quote": "activates the mill's machinery, which fills the chamber with flour and suffocates the doctor",
+    "confidence": "sourced"
+   },
+   {
+    "value": "escape into light",
+    "quote": "Giséle and Gray cross a foggy river in a boat and find themselves in a bright clearing",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "package", "state": "to be opened upon death", "when": "opening", "role": "omen", "quote": "leaves a small rectangular package on the table with \"To be opened upon my death\" written on the wrapping paper", "confidence": "sourced"},
-   {"value": "shadows", "state": "detached, dancing", "when": "early", "role": "omen", "quote": "he sees the shadow reunite with its body, and witnesses other shadows dancing", "confidence": "sourced"},
-   {"value": "book about vampires", "when": "middle", "role": "clue", "quote": "finds a book inside about horrific demons called vampires", "confidence": "sourced"},
-   {"value": "bite wounds", "state": "fresh", "when": "middle", "role": "clue", "quote": "Léone, who is discovered to have fresh bite wounds", "confidence": "sourced"},
-   {"value": "coffin with a window", "state": "carrying himself", "when": "late", "role": "mirror", "quote": "he sees himself dead, sealed in a coffin with a window, and carried away to be buried", "confidence": "sourced"},
-   {"value": "iron bar", "when": "late", "role": "weapon", "quote": "they hammer a large metal bar through her heart", "confidence": "sourced"},
-   {"value": "flour", "state": "suffocating", "when": "ending", "role": "weapon", "quote": "fills the chamber with flour and suffocates the doctor", "confidence": "sourced"},
-   {"value": "foggy river", "when": "ending", "role": "setting", "quote": "cross a foggy river in a boat and find themselves in a bright clearing", "confidence": "sourced"}
+   {
+    "value": "package",
+    "state": "to be opened upon death",
+    "when": "opening",
+    "role": "omen",
+    "quote": "leaves a small rectangular package on the table with \"To be opened upon my death\" written on the wrapping paper",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:38",
+      "quote": "TO BE OPENED ... UPON MY DEATH"
+     }
+    ]
+   },
+   {
+    "value": "shadows",
+    "state": "detached, dancing",
+    "when": "early",
+    "role": "omen",
+    "quote": "he sees the shadow reunite with its body, and witnesses other shadows dancing",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:55",
+      "quote": "Light and shadow , voices and faces seemed to take on hidden meaning ."
+     }
+    ]
+   },
+   {
+    "value": "book about vampires",
+    "when": "middle",
+    "role": "clue",
+    "quote": "finds a book inside about horrific demons called vampires",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:02",
+      "quote": "THE STRANGE HISTORY OF VAMPIRES"
+     }
+    ]
+   },
+   {
+    "value": "bite wounds",
+    "state": "fresh",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Léone, who is discovered to have fresh bite wounds",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:50",
+      "quote": "The wounds have almost healed ."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:42:16",
+      "quote": "She has another of those marks on her neck ."
+     }
+    ]
+   },
+   {
+    "value": "coffin with a window",
+    "state": "carrying himself",
+    "when": "late",
+    "role": "mirror",
+    "quote": "he sees himself dead, sealed in a coffin with a window, and carried away to be buried",
+    "confidence": "sourced"
+   },
+   {
+    "value": "iron bar",
+    "when": "late",
+    "role": "weapon",
+    "quote": "they hammer a large metal bar through her heart",
+    "confidence": "sourced"
+   },
+   {
+    "value": "flour",
+    "state": "suffocating",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "fills the chamber with flour and suffocates the doctor",
+    "confidence": "sourced"
+   },
+   {
+    "value": "foggy river",
+    "when": "ending",
+    "role": "setting",
+    "quote": "cross a foggy river in a boat and find themselves in a bright clearing",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bite like a cat or rat",
+    "state": "wound on the throat",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:31:48",
+    "quote": "A wound on the throat , as from the bite of a cat or rat , is the mark of damnation .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "phantom child and dogs",
+    "when": "early",
+    "role": "omen",
+    "detail": "Gray hears a child and dogs; the vampire insists there are none",
+    "source": "subtitles",
+    "at": "00:17:49",
+    "quote": "Did you hear that ? Yes . The child .",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:28",
+      "quote": "But the dogs . There are no children or dogs here ."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "stranger arrives at inn", "when": "opening", "role": "trigger", "quote": "Late one evening, Allan Gray, a wandering student of the occult, arrives at an inn", "confidence": "sourced"},
-   {"order": 2, "value": "mysterious warning gift", "when": "opening", "role": "omen", "quote": "He is awakened from his sleep by an old man, who enters the locked room and leaves a small rectangular package", "confidence": "sourced"},
-   {"order": 3, "value": "father killed", "when": "early", "quote": "sees the lord of the manor, who is the man who gave him the package, get shot by the shadow of the soldier", "confidence": "sourced"},
-   {"order": 4, "value": "vampire caught feeding", "when": "middle", "role": "turn", "quote": "see the old woman from the factory bent over Léone's unconscious body", "confidence": "sourced"},
-   {"order": 5, "value": "protagonist sees own burial", "when": "late", "role": "mirror", "quote": "Gray trips and has an out-of-body experience, in which he sees himself dead", "confidence": "sourced"},
-   {"order": 6, "value": "vampire staked in grave", "when": "late", "quote": "They open the grave and find the old woman perfectly preserved", "confidence": "sourced"},
-   {"order": 7, "value": "accomplice killed", "when": "ending", "quote": "locks the doctor in a chamber where flour sacks are filled and activates the mill's machinery", "confidence": "sourced"},
-   {"order": 8, "value": "survivors escape", "when": "ending", "quote": "Giséle and Gray cross a foggy river in a boat and find themselves in a bright clearing", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "stranger arrives at inn",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Late one evening, Allan Gray, a wandering student of the occult, arrives at an inn",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:53",
+      "quote": "His aimless wanderings led him late one evening to a secluded inn by the river"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "mysterious warning gift",
+    "when": "opening",
+    "role": "omen",
+    "quote": "He is awakened from his sleep by an old man, who enters the locked room and leaves a small rectangular package",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:05",
+      "quote": "She must die . You understand ?"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "father killed",
+    "when": "early",
+    "quote": "sees the lord of the manor, who is the man who gave him the package, get shot by the shadow of the soldier",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:40",
+      "quote": "Quick . They 're trying to kill him ."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "blood transfusion from hero",
+    "when": "middle",
+    "role": "turn",
+    "detail": "the doctor drains Gray to give Léone human blood",
+    "source": "subtitles",
+    "at": "00:44:33",
+    "quote": "But she needs blood . It must be human blood .",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:22",
+      "quote": "I 'm losing blood ."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "victim called to death",
+    "when": "late",
+    "role": "omen",
+    "detail": "the vampire's voice summons Léone",
+    "source": "subtitles",
+    "at": "00:49:36",
+    "quote": "Come ... follow me . We shall become one soul , one blood .",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "vampire caught feeding",
+    "when": "middle",
+    "role": "turn",
+    "quote": "see the old woman from the factory bent over Léone's unconscious body",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:10",
+      "quote": "See that ? Blood ."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "protagonist sees own burial",
+    "when": "late",
+    "role": "mirror",
+    "quote": "Gray trips and has an out-of-body experience, in which he sees himself dead",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "victim freed",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:05:37",
+    "quote": "I feel strong . My soul is free .",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "vampire staked in grave",
+    "when": "late",
+    "quote": "They open the grave and find the old woman perfectly preserved",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:12",
+      "quote": "FROM DUST THOU ART UNTO DUST THOU SHALT RETURN"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "accomplice killed",
+    "when": "ending",
+    "quote": "locks the doctor in a chamber where flour sacks are filled and activates the mill's machinery",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:16",
+      "quote": "Let me out of here ."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "survivors escape",
+    "when": "ending",
+    "quote": "Giséle and Gray cross a foggy river in a boat and find themselves in a bright clearing",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:58",
+      "quote": "Over here ."
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["origin", "wrong"],
+ "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

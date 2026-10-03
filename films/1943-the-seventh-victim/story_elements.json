@@ -1,59 +1,475 @@
 {
  "film": "1943-the-seventh-victim",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes and analysis"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes and analysis"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "cult", "detail": "the Palladists, devil worshippers in Greenwich Village", "quote": "stumbles on an underground cult of devil worshippers in Greenwich Village, New York City", "confidence": "sourced"},
-   {"value": "despair", "detail": "fear of meaninglessness that makes death welcome", "quote": "a fear of meaninglessness or the irrational which can make death seem almost a welcome release from life", "confidence": "sourced"}
+   {
+    "value": "cult",
+    "detail": "the Palladists, devil worshippers in Greenwich Village",
+    "quote": "stumbles on an underground cult of devil worshippers in Greenwich Village, New York City",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:23",
+      "quote": "I'll tell you that the Palladists are a society of devil worshipers."
+     }
+    ]
+   },
+   {
+    "value": "despair",
+    "detail": "fear of meaninglessness that makes death welcome",
+    "quote": "a fear of meaninglessness or the irrational which can make death seem almost a welcome release from life",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:00",
+      "quote": "That it wasn't worth living unless one could end it."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:07:00",
+      "quote": "I've always wanted to die."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "lured in by co-workers", "detail": "Esther and others at La Sagesse", "quote": "Jacqueline was lured into joining the cult by her former co-workers at La Sagesse, particularly Esther", "confidence": "sourced"}
+   {
+    "value": "lured in by co-workers",
+    "detail": "Esther and others at La Sagesse",
+    "quote": "Jacqueline was lured into joining the cult by her former co-workers at La Sagesse, particularly Esther",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "punish betrayal", "quote": "The Palladists have a rule that any member who betrays the cult must die", "confidence": "sourced"},
-   {"value": "victim's suicide", "quote": "the Paladists prefer to goad perceived offenders into committing suicide", "confidence": "sourced"}
+   {
+    "value": "punish betrayal",
+    "quote": "The Palladists have a rule that any member who betrays the cult must die",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:38",
+      "quote": "Since our order was founded, six betrayals have been listed. And six deaths as punishment."
+     }
+    ]
+   },
+   {
+    "value": "victim's suicide",
+    "quote": "the Paladists prefer to goad perceived offenders into committing suicide",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:34",
+      "quote": "They wanted me to die. Kill myself."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "betrayal of a secret group", "detail": "Jacqueline discussed the cult with an outsider", "quote": "they believe Jacqueline betrayed them by discussing the cult with Judd, an outsider", "confidence": "sourced"}
+   {
+    "value": "betrayal of a secret group",
+    "detail": "Jacqueline discussed the cult with an outsider",
+    "quote": "they believe Jacqueline betrayed them by discussing the cult with Judd, an outsider",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:30",
+      "quote": "They felt that I'd betrayed them."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "search for a missing relative", "quote": "Mary decides to leave the school to find her sister", "confidence": "sourced"}
+   {
+    "value": "search for a missing relative",
+    "quote": "Mary decides to leave the school to find her sister",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:45",
+      "quote": "We've been unable to get in touch with your sister."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "betrayers must die", "quote": "any member who betrays the cult must die", "confidence": "sourced"},
-   {"value": "murder only as last resort", "quote": "Believing that murder is permissible only as a last resort", "confidence": "sourced"}
+   {
+    "value": "betrayers must die",
+    "quote": "any member who betrays the cult must die",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:56",
+      "quote": "and the law that whoever betrays us must die."
+     }
+    ]
+   },
+   {
+    "value": "murder only as last resort",
+    "quote": "Believing that murder is permissible only as a last resort",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:17",
+      "quote": "We will avoid violence. For, once undertaken, violence can become its own master"
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "sister", "relation_to_threat": "community", "detail": "Jacqueline, a member trying to leave", "quote": "her membership in a Satanic cult called the Palladists, and her subsequent efforts to leave the group", "confidence": "sourced"},
-   {"value": "younger sister searching", "relation_to_threat": "stranger", "detail": "Mary Gibson", "quote": "a young woman who stumbles on an underground cult of devil worshippers", "confidence": "sourced"},
-   {"value": "investigator", "relation_to_threat": "stranger", "detail": "private detective Irving August", "quote": "Irving is stabbed to death by an unseen assailant", "confidence": "sourced"}
+   {
+    "value": "sister",
+    "relation_to_threat": "community",
+    "detail": "Jacqueline, a member trying to leave",
+    "quote": "her membership in a Satanic cult called the Palladists, and her subsequent efforts to leave the group",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:40",
+      "quote": "They kept me locked up at La Sagesse."
+     }
+    ]
+   },
+   {
+    "value": "younger sister searching",
+    "relation_to_threat": "stranger",
+    "detail": "Mary Gibson",
+    "quote": "a young woman who stumbles on an underground cult of devil worshippers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:22",
+      "quote": "Maybe if I went to New York... If I saw Mrs. Redi myself"
+     }
+    ]
+   },
+   {
+    "value": "investigator",
+    "relation_to_threat": "stranger",
+    "detail": "private detective Irving August",
+    "quote": "Irving is stabbed to death by an unseen assailant",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:19",
+      "quote": "She killed Irving August."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "suicide", "quote": "Jacqueline enters her own apartment and apparently hangs herself", "confidence": "sourced"},
-   {"value": "threat survives", "detail": "the cult is never brought down", "quote": "The Palladists let Jacqueline leave, but they send an assassin to follow her", "confidence": "observed"}
+   {
+    "value": "suicide",
+    "quote": "Jacqueline enters her own apartment and apparently hangs herself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:48",
+      "quote": "I run to death, and death meets me as fast."
+     }
+    ]
+   },
+   {
+    "value": "threat survives",
+    "detail": "the cult is never brought down",
+    "quote": "The Palladists let Jacqueline leave, but they send an assassin to follow her",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:38",
+      "quote": "The decision was against violence. But there'll be another decision."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "noose", "state": "hanging from the ceiling", "when": "early", "role": "omen", "quote": "which she finds empty aside from a wooden chair and a noose hanging from the ceiling", "confidence": "sourced"},
-   {"value": "wooden chair", "state": "falling over", "when": "ending", "role": "symbol", "quote": "Mimi hears the thud of the chair falling over as she leaves for the evening", "confidence": "sourced"},
-   {"value": "corpse on the subway", "state": "carried", "when": "middle", "role": "threat", "quote": "she witnesses two men board her car, carrying Irving's corpse between them", "confidence": "sourced"},
-   {"value": "shower", "when": "middle", "role": "setting", "quote": "Esther breaks into Mary's apartment and confronts her in the shower", "confidence": "sourced"},
-   {"value": "glass of poison", "state": "knocked away", "when": "late", "role": "weapon", "quote": "harangue her to drink from a glass of poison placed before her", "confidence": "sourced"},
-   {"value": "switchblade", "when": "late", "role": "weapon", "quote": "The assassin chases her through the streets with a switchblade", "confidence": "sourced"}
+   {
+    "value": "noose",
+    "state": "hanging from the ceiling",
+    "when": "early",
+    "role": "omen",
+    "quote": "which she finds empty aside from a wooden chair and a noose hanging from the ceiling",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:00",
+      "quote": "I saw a hangman's noose that Jacqueline had hanging. Waiting."
+     }
+    ]
+   },
+   {
+    "value": "wooden chair",
+    "state": "falling over",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "Mimi hears the thud of the chair falling over as she leaves for the evening",
+    "confidence": "sourced"
+   },
+   {
+    "value": "corpse on the subway",
+    "state": "carried",
+    "when": "middle",
+    "role": "threat",
+    "quote": "she witnesses two men board her car, carrying Irving's corpse between them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:36",
+      "quote": "And then on the subway, I saw him."
+     }
+    ]
+   },
+   {
+    "value": "shower",
+    "when": "middle",
+    "role": "setting",
+    "quote": "Esther breaks into Mary's apartment and confronts her in the shower",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:31",
+      "quote": "You saw it on the subway. And I warn you, Mary, go back."
+     }
+    ]
+   },
+   {
+    "value": "glass of poison",
+    "state": "knocked away",
+    "when": "late",
+    "role": "weapon",
+    "quote": "harangue her to drink from a glass of poison placed before her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:37",
+      "quote": "take up the glass and drink a little. It won't hurt."
+     }
+    ]
+   },
+   {
+    "value": "switchblade",
+    "when": "late",
+    "role": "weapon",
+    "quote": "The assassin chases her through the streets with a switchblade",
+    "confidence": "sourced"
+   },
+   {
+    "value": "locked room",
+    "when": "early",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:09:15",
+    "quote": "The lady rents one of our upstairs rooms, and the chauffeur changes the lock on the doors.",
+    "detail": "Jacqueline's rented room holding only a noose and a chair; a second locked room at La Sagesse",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:09",
+      "quote": "All but one room. That room was locked."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "cult symbol",
+    "state": "traced from a library book",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:39:16",
+    "quote": "This figure is the symbol of the Palladists.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:43",
+      "quote": "A parallelogram with a split triangle in its very center."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "nursery rhyme",
+    "state": "sung by children outside",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:57:21",
+    "quote": "Here comes a candle To light you to bed",
+    "detail": "'Oranges and Lemons' ending 'here comes a chopper to chop off your head' plays during the cult's judgement",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:25",
+      "quote": "Here comes a chopper To chop off your head"
+     }
+    ],
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "relative goes missing", "when": "opening", "role": "trigger", "quote": "her older sister and only relative, Jacqueline, has gone missing", "confidence": "sourced"},
-   {"order": 2, "value": "ominous empty room", "when": "early", "role": "omen", "quote": "she finds empty aside from a wooden chair and a noose hanging from the ceiling", "confidence": "sourced"},
-   {"order": 3, "value": "helper killed", "when": "middle", "quote": "Irving is stabbed to death by an unseen assailant", "confidence": "sourced"},
-   {"order": 4, "value": "cult revealed", "when": "middle", "role": "turn", "quote": "seeking treatment for depression stemming from her membership in a Satanic cult called the Palladists", "confidence": "sourced"},
-   {"order": 5, "value": "cult judges a member", "when": "late", "quote": "The cult members congregate to decide Jacqueline's fate", "confidence": "sourced"},
-   {"order": 6, "value": "forced suicide resisted", "when": "late", "role": "turn", "quote": "Frances swipes the glass out of Jacqueline's hand and to the floor", "confidence": "sourced"},
-   {"order": 7, "value": "chase through the streets", "when": "late", "quote": "The assassin chases her through the streets with a switchblade, but she eludes him", "confidence": "sourced"},
-   {"order": 8, "value": "victim takes her own life", "when": "ending", "quote": "Jacqueline enters her own apartment and apparently hangs herself", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "relative goes missing",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "her older sister and only relative, Jacqueline, has gone missing",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:45",
+      "quote": "We've been unable to get in touch with your sister."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "warned never to return",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:49",
+    "quote": "Don't come back. No matter if you never find your sister, no matter what happens to you, don't come back.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "ominous empty room",
+    "when": "early",
+    "role": "omen",
+    "quote": "she finds empty aside from a wooden chair and a noose hanging from the ceiling",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:17",
+      "quote": "He said he always wanted to see the inside of this room anyway."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "helper killed",
+    "when": "middle",
+    "quote": "Irving is stabbed to death by an unseen assailant",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:19",
+      "quote": "She killed Irving August."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "cult revealed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "seeking treatment for depression stemming from her membership in a Satanic cult called the Palladists",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:23",
+      "quote": "I'll tell you that the Palladists are a society of devil worshipers."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "lost sister found",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "00:54:21",
+    "quote": "I wasn't happy with them. Wanted to break away. I was miserable.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "cult judges a member",
+    "when": "late",
+    "quote": "The cult members congregate to decide Jacqueline's fate",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:59",
+      "quote": "the necessity of dying if one betrayed that secret."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "forced suicide resisted",
+    "when": "late",
+    "role": "turn",
+    "quote": "Frances swipes the glass out of Jacqueline's hand and to the floor",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:07",
+      "quote": "Then you also understand that you must die. No."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "chase through the streets",
+    "when": "late",
+    "quote": "The assassin chases her through the streets with a switchblade, but she eludes him",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "victim takes her own life",
+    "when": "ending",
+    "quote": "Jacqueline enters her own apartment and apparently hangs herself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:48",
+      "quote": "I run to death, and death meets me as fast."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

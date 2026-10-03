@@ -1,63 +1,526 @@
 {
  "film": "1968-hour-of-the-wolf",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes and interpretations"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes and interpretations"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "demons", "detail": "the castle guests, Johan's visions made real", "quote": "The baron's guests are revealed to be the demons that Johan described to Alma", "confidence": "sourced"},
-   {"value": "the self", "detail": "Johan's disintegrating mind", "quote": "the von Merkens et al. are manifestations of Johan's own self-loathing", "confidence": "sourced"},
-   {"value": "vampire-like aristocrats", "quote": "the castle's people become vampire-like and \"the unreality of Johan's world takes over\"", "confidence": "sourced"}
+   {
+    "value": "demons",
+    "detail": "the castle guests, Johan's visions made real",
+    "quote": "The baron's guests are revealed to be the demons that Johan described to Alma",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:14",
+      "quote": "The meat-eaters, the insects... and especially the spider men."
+     }
+    ]
+   },
+   {
+    "value": "the self",
+    "detail": "Johan's disintegrating mind",
+    "quote": "the von Merkens et al. are manifestations of Johan's own self-loathing",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:02",
+      "quote": "See yourself now in the mirror."
+     }
+    ]
+   },
+   {
+    "value": "vampire-like aristocrats",
+    "quote": "the castle's people become vampire-like and \"the unreality of Johan's world takes over\"",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "childhood trauma", "detail": "locked in a closet as a child", "quote": "his childhood trauma of being locked into a closet where, as his parents said, a small person lived", "confidence": "sourced"},
-   {"value": "artist's madness", "quote": "the \"story of an artist's disintegration\"", "confidence": "sourced"}
+   {
+    "value": "childhood trauma",
+    "detail": "locked in a closet as a child",
+    "quote": "his childhood trauma of being locked into a closet where, as his parents said, a small person lived",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:33",
+      "quote": "They threw me into a closet."
+     }
+    ]
+   },
+   {
+    "value": "artist's madness",
+    "quote": "the \"story of an artist's disintegration\"",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to consume", "quote": "the film's central notion of cannibalism, with a fear of being consumed", "confidence": "sourced"},
-   {"value": "humiliation", "quote": "The artist's \"humiliation\" is also depicted", "confidence": "sourced"}
+   {
+    "value": "to consume",
+    "quote": "the film's central notion of cannibalism, with a fear of being consumed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:19",
+      "quote": "Was that why those \" cannibals, \" as he called them..."
+     }
+    ]
+   },
+   {
+    "value": "humiliation",
+    "quote": "The artist's \"humiliation\" is also depicted",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "murder of a child", "quote": "culminated with him killing the boy", "confidence": "sourced"},
-   {"value": "obsession with former lover", "detail": "Veronica Vogler", "quote": "Johan and Alma begin quarreling over his obsession with Veronica", "confidence": "sourced"}
+   {
+    "value": "murder of a child",
+    "quote": "culminated with him killing the boy",
+    "confidence": "sourced"
+   },
+   {
+    "value": "obsession with former lover",
+    "detail": "Veronica Vogler",
+    "quote": "Johan and Alma begin quarreling over his obsession with Veronica",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:13",
+      "quote": "My attachment to Veronica finally was painful for us both."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "an invitation", "detail": "to the baron's castle", "quote": "Johan was approached by Baron von Merkens, who lives in a nearby castle", "confidence": "sourced"},
-   {"value": "reading a diary", "quote": "an elderly lady stops by the house and tells Alma to read Johan's diary", "confidence": "sourced"}
+   {
+    "value": "an invitation",
+    "detail": "to the baron's castle",
+    "quote": "Johan was approached by Baron von Merkens, who lives in a nearby castle",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:56",
+      "quote": "But it will interest you that Veronica Vogler will be there."
+     }
+    ]
+   },
+   {
+    "value": "reading a diary",
+    "quote": "an elderly lady stops by the house and tells Alma to read Johan's diary",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:50",
+      "quote": "He hides his diary in the same satchel. Read it!"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "hour of births and deaths", "quote": "during which, he says, most births and deaths occur", "confidence": "sourced"},
-   {"value": "visions shared by spouse", "quote": "she and Johan lived together for so long and became so similar was why she could see his Man-Eaters", "confidence": "sourced"}
+   {
+    "value": "hour of births and deaths",
+    "quote": "during which, he says, most births and deaths occur",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:57",
+      "quote": "The old people used to call it the \" Hour of the Wolf. \" It's the hour at which most people die and most children are born."
+     }
+    ]
+   },
+   {
+    "value": "visions shared by spouse",
+    "quote": "she and Johan lived together for so long and became so similar was why she could see his Man-Eaters",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:23",
+      "quote": "Isn't it true that when a woman has lived a long time with a man... isn't it true she finally becomes like that man?"
+     }
+    ]
+   },
+   {
+    "value": "sleep only after dawn",
+    "source": "subtitles",
+    "at": "00:12:58",
+    "quote": "In just an hour or so it will be dawn... and then I can sleep.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "artist", "relation_to_threat": "self", "detail": "painter Johan Borg", "quote": "Painter Johan Borg and his pregnant young wife Alma live on the small island of Baltrum", "confidence": "sourced"},
-   {"value": "pregnant wife", "relation_to_threat": "lover", "detail": "Alma, shot by Johan", "quote": "Johan finally picks up the pistol, shoots Alma and runs to the castle", "confidence": "sourced"}
+   {
+    "value": "artist",
+    "relation_to_threat": "self",
+    "detail": "painter Johan Borg",
+    "quote": "Painter Johan Borg and his pregnant young wife Alma live on the small island of Baltrum",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:27",
+      "quote": "I cannot sleep. I wake out of fear."
+     }
+    ]
+   },
+   {
+    "value": "pregnant wife",
+    "relation_to_threat": "lover",
+    "detail": "Alma, shot by Johan",
+    "quote": "Johan finally picks up the pistol, shoots Alma and runs to the castle",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:29",
+      "quote": "Yes, he fired three shots."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "victim disappears", "quote": "She witnesses the attacks on him before he finally disappears, leaving her alone in the woods", "confidence": "sourced"},
-   {"value": "survivor left questioning", "quote": "whether she would have been better able to protect him if she had loved him less, or more", "confidence": "sourced"}
+   {
+    "value": "victim disappears",
+    "quote": "She witnesses the attacks on him before he finally disappears, leaving her alone in the woods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:25",
+      "quote": "Then by mid-morning he packed his satchel and headed off toward the woods."
+     }
+    ]
+   },
+   {
+    "value": "survivor left questioning",
+    "quote": "whether she would have been better able to protect him if she had loved him less, or more",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:56",
+      "quote": "I mean, if I'd loved him less"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "sketches of visions", "when": "opening", "role": "omen", "quote": "He shares sketches with Alma of frightening visions he has had", "confidence": "sourced"},
-   {"value": "birdman", "when": "opening", "role": "threat", "quote": "including the Birdman, the Insects, the Meat-Eaters, the Schoolmaster, and the Lady With a Hat", "confidence": "sourced"},
-   {"value": "diary", "state": "hidden under bed", "when": "early", "role": "clue", "quote": "read Johan's diary, which he hides under his bed", "confidence": "sourced"},
-   {"value": "portrait", "when": "early", "role": "clue", "quote": "she has a portrait of Veronica by Johan", "confidence": "sourced"},
-   {"value": "closet", "when": "middle", "role": "symbol", "quote": "being locked into a closet where, as his parents said, a small person lived", "confidence": "sourced"},
-   {"value": "pistol", "when": "middle", "role": "weapon", "quote": "He places a pistol on the table, for protection against \"small animals\", and leaves", "confidence": "sourced"},
-   {"value": "corpse that laughs", "state": "dead, then sits up", "when": "late", "role": "turn", "quote": "as he looks over her naked body, she suddenly sits up and laughs", "confidence": "sourced"},
-   {"value": "body in water", "state": "floating back up", "when": "middle", "role": "symbol", "quote": "after he throws the body into the waters the body floats back to the surface", "confidence": "sourced"}
+   {
+    "value": "sketches of visions",
+    "when": "opening",
+    "role": "omen",
+    "quote": "He shares sketches with Alma of frightening visions he has had",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:19",
+      "quote": "Here, the schoolmaster, his pointer in his trousers."
+     }
+    ]
+   },
+   {
+    "value": "birdman",
+    "when": "opening",
+    "role": "threat",
+    "quote": "including the Birdman, the Insects, the Meat-Eaters, the Schoolmaster, and the Lady With a Hat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:54",
+      "quote": "I call him the Bird Man. I don't know if it's a real beak or only a mask."
+     }
+    ]
+   },
+   {
+    "value": "diary",
+    "state": "hidden under bed",
+    "when": "early",
+    "role": "clue",
+    "quote": "read Johan's diary, which he hides under his bed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:25",
+      "quote": "DIARY Wednesday, July 22nd."
+     }
+    ]
+   },
+   {
+    "value": "portrait",
+    "when": "early",
+    "role": "clue",
+    "quote": "she has a portrait of Veronica by Johan",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:48",
+      "quote": "Here is the painting, directly in front of my bed."
+     }
+    ]
+   },
+   {
+    "value": "closet",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "being locked into a closet where, as his parents said, a small person lived",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:46",
+      "quote": "because they had told me that a little person lived in that closet..."
+     }
+    ]
+   },
+   {
+    "value": "pistol",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "He places a pistol on the table, for protection against \"small animals\", and leaves",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:56",
+      "quote": "Then I hid the pistol and sat down to wait."
+     }
+    ]
+   },
+   {
+    "value": "corpse that laughs",
+    "state": "dead, then sits up",
+    "when": "late",
+    "role": "turn",
+    "quote": "as he looks over her naked body, she suddenly sits up and laughs",
+    "confidence": "sourced"
+   },
+   {
+    "value": "body in water",
+    "state": "floating back up",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "after he throws the body into the waters the body floats back to the surface",
+    "confidence": "sourced"
+   },
+   {
+    "value": "footprints under the window",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:04:34",
+    "quote": "Then we discovered footprints under the kitchen window in the flower bed.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "woman who removes her face",
+    "when": "opening",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:11:38",
+    "quote": "the one always threatening to take off her hat.",
+    "confidence": "sourced",
+    "detail": "the lady with a hat whose face comes off with it",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:43",
+      "quote": "Her face comes off along with it, you see."
+     }
+    ]
+   },
+   {
+    "value": "puppet show",
+    "when": "middle",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:35:39",
+    "quote": "May I offer a small puppet show to divert us?",
+    "confidence": "sourced",
+    "detail": "The Magic Flute performed by puppets at the castle",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:57",
+      "quote": "The Magic Flute is the greatest example."
+     }
+    ]
+   },
+   {
+    "value": "shattered mirror",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:18:26",
+    "quote": "The mirror has been shattered. But what do the splinters reflect?",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "isolated couple, sleepless artist", "when": "opening", "quote": "As his insomnia grows worse, Alma stays awake by his side", "confidence": "sourced"},
-   {"order": 2, "value": "diary reveals hauntings", "when": "early", "role": "clue", "quote": "Alma discovers that Johan is haunted not only by the real or imaginary strangers", "confidence": "sourced"},
-   {"order": 3, "value": "visit to the castle", "when": "early", "quote": "The painter and his wife visit them and their household", "confidence": "sourced"},
-   {"order": 4, "value": "confession of a killing", "when": "middle", "role": "turn", "quote": "Alma is shocked by Johan's confessions", "confidence": "sourced"},
-   {"order": 5, "value": "husband shoots wife", "when": "middle", "role": "turn", "quote": "Johan finally picks up the pistol, shoots Alma and runs to the castle", "confidence": "sourced"},
-   {"order": 6, "value": "demons revealed at party", "when": "late", "quote": "The baron's guests are revealed to be the demons that Johan described to Alma", "confidence": "sourced"},
-   {"order": 7, "value": "victim vanishes", "when": "ending", "quote": "Johan is physically attacked by the demons and flees into underbrush", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "widow's testimony",
+    "when": "opening",
+    "source": "subtitles",
+    "at": "00:02:32",
+    "quote": "I have nothing more to tell. I've given you the diary.",
+    "confidence": "sourced",
+    "detail": "the film opens on a film set, then Alma speaks to camera",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:38",
+      "quote": "Quiet, all! Rolling!"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "isolated couple, sleepless artist",
+    "when": "opening",
+    "quote": "As his insomnia grows worse, Alma stays awake by his side",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:11",
+      "quote": "And he became sleepless."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "diary reveals hauntings",
+    "when": "early",
+    "role": "clue",
+    "quote": "Alma discovers that Johan is haunted not only by the real or imaginary strangers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:45",
+      "quote": "I have to confess that I have read your diary."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "visit to the castle",
+    "when": "early",
+    "quote": "The painter and his wife visit them and their household",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:31",
+      "quote": "This place must be a painter's dream or what?"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "hour of the wolf named",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:47:57",
+    "quote": "The old people used to call it the \" Hour of the Wolf. \"",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "confession of a killing",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Alma is shocked by Johan's confessions",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:33",
+      "quote": "They threw me into a closet."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "husband shoots wife",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Johan finally picks up the pistol, shoots Alma and runs to the castle",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:29",
+      "quote": "Yes, he fired three shots."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "demons revealed at party",
+    "when": "late",
+    "quote": "The baron's guests are revealed to be the demons that Johan described to Alma",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:43",
+      "quote": "Veronica, no! No, them... Don't pay attention to them!"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "victim vanishes",
+    "when": "ending",
+    "quote": "Johan is physically attacked by the demons and flees into underbrush",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:33",
+      "quote": "Where is he? - I know where you can find him."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "survivor's closing questions",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:25:23",
+    "quote": "Isn't it true that when a woman has lived a long time with a man...",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

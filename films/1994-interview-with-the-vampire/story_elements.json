@@ -1,63 +1,586 @@
 {
  "film": "1994-interview-with-the-vampire",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vampire", "detail": "Lestat de Lioncourt", "quote": "is attacked by vampire Lestat de Lioncourt", "confidence": "sourced"},
-   {"value": "vampire coven", "detail": "the Théâtre des Vampires", "quote": "the Parisian vampires abduct the three of them and punish them for Lestat's murder", "confidence": "sourced"}
+   {
+    "value": "vampire",
+    "detail": "Lestat de Lioncourt",
+    "quote": "is attacked by vampire Lestat de Lioncourt",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:44",
+      "quote": "I'm a vampire."
+     }
+    ]
+   },
+   {
+    "value": "vampire coven",
+    "detail": "the Théâtre des Vampires",
+    "quote": "the Parisian vampires abduct the three of them and punish them for Lestat's murder",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:45",
+      "quote": "We live beneath."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "turned by another", "quote": "Lestat senses Louis's dissatisfaction with life and offers to turn him into a vampire", "confidence": "sourced"}
+   {
+    "value": "turned by another",
+    "quote": "Lestat senses Louis's dissatisfaction with life and offers to turn him into a vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:37",
+      "quote": "I'm going to give you the choice I never had."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "companionship", "quote": "To entice Louis to stay with him, Lestat turns the dying girl, Claudia, into a vampire", "confidence": "sourced"},
-   {"value": "blood", "quote": "Lestat revels in the hunt and killing of humans", "confidence": "sourced"}
+   {
+    "value": "companionship",
+    "quote": "To entice Louis to stay with him, Lestat turns the dying girl, Claudia, into a vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:52:06",
+      "quote": "If you stay with me, Louis"
+     }
+    ]
+   },
+   {
+    "value": "blood",
+    "quote": "Lestat revels in the hunt and killing of humans",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:59",
+      "quote": "The blood of the aristocrat thrilled him best of all."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "turning a child", "quote": "Lestat expresses regret for turning Claudia into a vampire", "confidence": "sourced"},
-   {"value": "murder of a maker", "quote": "punish them for Lestat's murder", "confidence": "sourced"}
+   {
+    "value": "turning a child",
+    "quote": "Lestat expresses regret for turning Claudia into a vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:52",
+      "quote": "Do you want me to be a doll forever?"
+     }
+    ]
+   },
+   {
+    "value": "murder of a maker",
+    "quote": "punish them for Lestat's murder",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:43",
+      "quote": "Did you kill this vampire who made you both?"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "grief", "detail": "death of his pregnant wife", "quote": "Despondent following the death of his pregnant wife and their future baby", "confidence": "sourced"},
-   {"value": "an interview", "quote": "reporter Daniel Molloy interviews Louis de Pointe du Lac, who claims to be a vampire", "confidence": "sourced"}
+   {
+    "value": "grief",
+    "detail": "death of his pregnant wife",
+    "quote": "Despondent following the death of his pregnant wife and their future baby",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:10",
+      "quote": "I had lost my wife in childbirth."
+     }
+    ]
+   },
+   {
+    "value": "an interview",
+    "quote": "reporter Daniel Molloy interviews Louis de Pointe du Lac, who claims to be a vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:05",
+      "quote": "So you want me to tell you the story of my life."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "destroyed by sunlight", "quote": "trapping Claudia and Madeleine in a chamber where sunlight burns them to ash", "confidence": "sourced"},
-   {"value": "never ages", "quote": "Claudia matures psychologically but remains a little girl in appearance", "confidence": "sourced"},
-   {"value": "dead blood poisons", "quote": "She tricks Lestat into drinking the \"dead blood\" of twin boys", "confidence": "sourced"}
+   {
+    "value": "destroyed by sunlight",
+    "quote": "trapping Claudia and Madeleine in a chamber where sunlight burns them to ash",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:16",
+      "quote": "And then I said farewell to sunlight"
+     }
+    ]
+   },
+   {
+    "value": "never ages",
+    "quote": "Claudia matures psychologically but remains a little girl in appearance",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:55",
+      "quote": "You will never grow old. And you will never die."
+     }
+    ]
+   },
+   {
+    "value": "dead blood poisons",
+    "quote": "She tricks Lestat into drinking the \"dead blood\" of twin boys",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:40",
+      "quote": "You let me drink dead blood?"
+     }
+    ]
+   },
+   {
+    "value": "killing own kind forbidden",
+    "source": "subtitles",
+    "at": "01:24:18",
+    "quote": "There is but one crime among us vampires here.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:23",
+      "quote": "It is the crime that means death to any vampire: To kill your own kind."
+     }
+    ]
+   },
+   {
+    "value": "never kill at home",
+    "source": "subtitles",
+    "at": "00:48:47",
+    "quote": "Claudia! What have we told you! Never in the house.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "the turned man", "relation_to_threat": "self", "detail": "Louis", "quote": "Louis accepts but quickly comes to regret it", "confidence": "sourced"},
-   {"value": "vampire child", "relation_to_threat": "family", "detail": "Claudia, raised as their daughter", "quote": "Together, they raise her as a daughter", "confidence": "sourced"},
-   {"value": "interviewer", "relation_to_threat": "stranger", "detail": "Daniel Molloy", "quote": "On the Golden Gate Bridge, Lestat appears and attacks Molloy, taking control of the car", "confidence": "sourced"}
+   {
+    "value": "the turned man",
+    "relation_to_threat": "self",
+    "detail": "Louis",
+    "quote": "Louis accepts but quickly comes to regret it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:45",
+      "quote": "I wasn't given a choice, remember?"
+     }
+    ]
+   },
+   {
+    "value": "vampire child",
+    "relation_to_threat": "family",
+    "detail": "Claudia, raised as their daughter",
+    "quote": "Together, they raise her as a daughter",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:33",
+      "quote": "Please, wake Mama, Monsieur."
+     }
+    ]
+   },
+   {
+    "value": "interviewer",
+    "relation_to_threat": "stranger",
+    "detail": "Daniel Molloy",
+    "quote": "On the Golden Gate Bridge, Lestat appears and attacks Molloy, taking control of the car",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:54:23",
+      "quote": "Do you like being food for the immortals?"
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "threat survives", "quote": "Revived by Molloy's blood, Lestat offers him the choice that Lestat \"never had\"", "confidence": "sourced"},
-   {"value": "cycle passes on", "detail": "Molloy offered the chance to be turned", "quote": "whether to become a vampire—and, laughing, continues driving", "confidence": "observed"}
+   {
+    "value": "threat survives",
+    "quote": "Revived by Molloy's blood, Lestat offers him the choice that Lestat \"never had\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:56:24",
+      "quote": "I feel better already."
+     }
+    ]
+   },
+   {
+    "value": "cycle passes on",
+    "detail": "Molloy offered the chance to be turned",
+    "quote": "whether to become a vampire—and, laughing, continues driving",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:56:58",
+      "quote": "I'm going to give you the choice I never had."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "cassette tapes", "state": "recording", "when": "ending", "role": "clue", "quote": "playing the cassette tapes of Louis's interview", "confidence": "sourced"},
-   {"value": "animal blood", "state": "drunk instead", "when": "early", "role": "symbol", "quote": "instead drinking animal blood to sustain himself", "confidence": "sourced"},
-   {"value": "little girl", "state": "dying of plague", "when": "early", "role": "turn", "quote": "Louis feeds on a little girl whose mother died in the plague", "confidence": "sourced"},
-   {"value": "swamp", "state": "body dumped", "when": "middle", "role": "setting", "quote": "he helps Claudia dump Lestat's body in a swamp", "confidence": "sourced"},
-   {"value": "fire", "state": "spreading", "when": "middle", "role": "weapon", "quote": "Louis sets him on fire, causing the fire to spread throughout the French Quarter", "confidence": "sourced"},
-   {"value": "iron coffin", "state": "prison", "when": "late", "role": "threat", "quote": "imprisoning Louis in an iron coffin for slow starvation", "confidence": "sourced"},
-   {"value": "rats", "state": "fed on", "when": "late", "role": "mirror", "quote": "surviving on rat blood as Louis once had", "confidence": "sourced"}
+   {
+    "value": "cassette tapes",
+    "state": "recording",
+    "when": "ending",
+    "role": "clue",
+    "quote": "playing the cassette tapes of Louis's interview",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:15",
+      "quote": "You'll need a lot of tape for my story."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:55:37",
+      "quote": "1791 was the year it happened."
+     }
+    ]
+   },
+   {
+    "value": "animal blood",
+    "state": "drunk instead",
+    "when": "early",
+    "role": "symbol",
+    "quote": "instead drinking animal blood to sustain himself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:03",
+      "quote": "Rats, chickens poodles."
+     }
+    ]
+   },
+   {
+    "value": "little girl",
+    "state": "dying of plague",
+    "when": "early",
+    "role": "turn",
+    "quote": "Louis feeds on a little girl whose mother died in the plague",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:55",
+      "quote": "Mama. Please help us."
+     }
+    ]
+   },
+   {
+    "value": "swamp",
+    "state": "body dumped",
+    "when": "middle",
+    "role": "setting",
+    "quote": "he helps Claudia dump Lestat's body in a swamp",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:05",
+      "quote": "The swamp?"
+     }
+    ]
+   },
+   {
+    "value": "fire",
+    "state": "spreading",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "Louis sets him on fire, causing the fire to spread throughout the French Quarter",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:16",
+      "quote": "Though the fire seemed to spread"
+     }
+    ]
+   },
+   {
+    "value": "iron coffin",
+    "state": "prison",
+    "when": "late",
+    "role": "threat",
+    "quote": "imprisoning Louis in an iron coffin for slow starvation",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rats",
+    "state": "fed on",
+    "when": "late",
+    "role": "mirror",
+    "quote": "surviving on rat blood as Louis once had",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:07",
+      "quote": "Rats? When did you eat rats, Louis?"
+     }
+    ]
+   },
+   {
+    "value": "last sunrise",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:10:54",
+    "quote": "and I saw my last sunrise.",
+    "confidence": "sourced",
+    "detail": "Louis's farewell to daylight; he sees sunrise again only on film",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:46:37",
+      "quote": "And there a mechanical wonder allowed me to see the sunrise"
+     }
+    ]
+   },
+   {
+    "value": "butterflies",
+    "state": "killed",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:23:18",
+    "quote": "My butterflies, he killed them!",
+    "confidence": "sourced"
+   },
+   {
+    "value": "coffin",
+    "when": "early",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:15:44",
+    "quote": "Coffins, unfortunately, are a necessity.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:14",
+      "quote": "It's a coffin!"
+     }
+    ]
+   },
+   {
+    "value": "dolls",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:51:45",
+    "quote": "Another doll.",
+    "confidence": "sourced",
+    "detail": "Claudia is given a doll every year on the night she was turned",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:57",
+      "quote": "You always give me a doll on the same night of the year."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "confession to a reporter", "when": "opening", "quote": "reporter Daniel Molloy interviews Louis de Pointe du Lac, who claims to be a vampire", "confidence": "sourced"},
-   {"order": 2, "value": "grieving man turned", "when": "opening", "role": "trigger", "quote": "is attacked by vampire Lestat de Lioncourt", "confidence": "sourced"},
-   {"order": 3, "value": "child made a vampire", "when": "early", "role": "turn", "quote": "Lestat turns the dying girl, Claudia, into a vampire", "confidence": "sourced"},
-   {"order": 4, "value": "child kills her maker", "when": "middle", "quote": "When he is weakened, she slits his throat", "confidence": "sourced"},
-   {"order": 5, "value": "monster returns", "when": "middle", "quote": "Lestat returns on the night of their departure, having survived on the blood of swamp creatures", "confidence": "sourced"},
-   {"order": 6, "value": "child destroyed by sunlight", "when": "late", "role": "turn", "quote": "trapping Claudia and Madeleine in a chamber where sunlight burns them to ash", "confidence": "sourced"},
-   {"order": 7, "value": "revenge by fire", "when": "late", "quote": "Louis returns to the theater at dawn and sets it on fire, killing all the vampires", "confidence": "sourced"},
-   {"order": 8, "value": "listener attacked", "when": "ending", "quote": "On the Golden Gate Bridge, Lestat appears and attacks Molloy", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "confession to a reporter",
+    "when": "opening",
+    "quote": "reporter Daniel Molloy interviews Louis de Pointe du Lac, who claims to be a vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:44",
+      "quote": "I'm a vampire."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "grieving man turned",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "is attacked by vampire Lestat de Lioncourt",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:39",
+      "quote": "[Lestat hisses]"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "last sunrise",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:10:54",
+    "quote": "and I saw my last sunrise.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "child made a vampire",
+    "when": "early",
+    "role": "turn",
+    "quote": "Lestat turns the dying girl, Claudia, into a vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:38",
+      "quote": "Claudia. Listen to me."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "child rebels against maker",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:52:04",
+    "quote": "Is this my birthday? You dress me like a doll.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "child kills her maker",
+    "when": "middle",
+    "quote": "When he is weakened, she slits his throat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:05",
+      "quote": "I'll put you in your coffin!"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "monster returns",
+    "when": "middle",
+    "quote": "Lestat returns on the night of their departure, having survived on the blood of swamp creatures",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:12",
+      "quote": "Ask the alligator. His blood helped."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "trial by the coven",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:24:18",
+    "quote": "There is but one crime among us vampires here.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "child destroyed by sunlight",
+    "when": "late",
+    "role": "turn",
+    "quote": "trapping Claudia and Madeleine in a chamber where sunlight burns them to ash",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:05",
+      "quote": "[Madeleine and Claudia screaming and gasping, echoes]"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "revenge by fire",
+    "when": "late",
+    "quote": "Louis returns to the theater at dawn and sets it on fire, killing all the vampires",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:41:32",
+      "quote": "Get him! Stop him!"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "listener attacked",
+    "when": "ending",
+    "quote": "On the Golden Gate Bridge, Lestat appears and attacks Molloy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:56:07",
+      "quote": "I assume I need no introduction."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

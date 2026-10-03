@@ -8,6 +8,12 @@
     "Plot",
     "Analysis"
    ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
   }
  ],
  "plot_quality": "full",
@@ -16,7 +22,14 @@
    {
     "value": "cannibal family",
     "quote": "a group of friends who fall victim to a family of cannibals",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:10",
+      "quote": "My family's always been in meat."
+     }
+    ]
    },
    {
     "value": "masked killer",
@@ -30,7 +43,14 @@
     "value": "obsolete workers",
     "detail": "slaughterhouse workers replaced by technology",
     "quote": "victims of industrial capitalism, their jobs as slaughterhouse workers having been rendered obsolete by technological advances",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:37",
+      "quote": "With the new way, the people are put out of jobs."
+     }
+    ]
    },
    {
     "value": "real crimes",
@@ -44,7 +64,14 @@
     "value": "hunger",
     "detail": "cannibalism; Grandpa sucks Sally's blood",
     "quote": "cut Sally's finger so that Grandpa can suck her blood",
-    "confidence": "observed"
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:01",
+      "quote": "See, they make head cheese."
+     }
+    ]
    }
   ],
   "wrong": [
@@ -76,7 +103,14 @@
    {
     "value": "no fuel, no escape",
     "quote": "Low on gas, the group stops at a gas station but its proprietor says that fuel is unavailable",
-    "confidence": "observed"
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:43",
+      "quote": "I got no gas."
+     }
+    ]
    },
    {
     "value": "final girl survives",
@@ -118,14 +152,28 @@
     "when": "opening",
     "role": "omen",
     "quote": "The robber ties a rotting corpse and other body parts onto a monument",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:36",
+      "quote": "Officers there discovered what appeared to be a grisly work of art,"
+     }
+    ]
    },
    {
     "value": "slaughterhouse",
     "when": "early",
     "role": "omen",
     "quote": "As the group drives past a slaughterhouse, Franklin recounts the Hardesty family's history with animal slaughter",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:58",
+      "quote": "Hey, that's the old slaughterhouse."
+     }
+    ]
    },
    {
     "value": "blood on the van",
@@ -133,7 +181,14 @@
     "when": "early",
     "role": "omen",
     "quote": "he smears blood on the side as they drive off",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:52",
+      "quote": "(Sally) Hey, that guy smeared blood all over the van."
+     }
+    ]
    },
    {
     "value": "skin mask",
@@ -147,7 +202,13 @@
     "when": "middle",
     "role": "setting",
     "quote": "a room strewn with decaying remains and furniture made from human and animal bones",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "bits. and pieces of human bones and skUl.ls"
+     }
+    ]
    },
    {
     "value": "meat hook",
@@ -161,7 +222,14 @@
     "when": "middle",
     "role": "weapon",
     "quote": "The man then starts up a chainsaw, dismembering Kirk as Pam watches",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:51",
+      "quote": "(chainsaw motor whirs)"
+     }
+    ]
    },
    {
     "value": "polaroid photo",
@@ -169,7 +237,44 @@
     "when": "early",
     "role": "omen",
     "quote": "When they refuse to pay, he burns the photo and attacks Franklin with a straight razor",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:01",
+      "quote": "Hey, you took my picture."
+     }
+    ]
+   },
+   {
+    "value": "saturn in retrograde",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:06:54",
+    "quote": "Hence, when malefic planets are in retrograde -",
+    "confidence": "sourced",
+    "detail": "Pam reads the horoscope: Saturn is malefic and in retrograde"
+   },
+   {
+    "value": "pig squealing",
+    "when": "middle",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:35:03",
+    "quote": "(sound of pig squealing)",
+    "confidence": "sourced",
+    "detail": "Leatherface's squeals as he kills Kirk and Pam"
+   },
+   {
+    "value": "chicken",
+    "when": "middle",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:37:06",
+    "quote": "(chicken clucking)",
+    "confidence": "sourced",
+    "detail": "a caged chicken in the house's living room"
    }
   ],
   "beats": [
@@ -179,54 +284,136 @@
     "when": "opening",
     "role": "omen",
     "quote": "creating a grisly display that is discovered by a local resident as the sun rises",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:28",
+      "quote": "An informant led officers of the Muerto County Sheriff's Department to a cemetery"
+     }
+    ]
    },
    {
     "order": 2,
-    "value": "violent hitchhiker",
-    "when": "early",
+    "value": "radio news of atrocities",
+    "when": "opening",
     "role": "omen",
-    "quote": "he burns the photo and attacks Franklin with a straight razor",
+    "source": "subtitles",
+    "at": "00:03:32",
+    "quote": "Oil storage units continue to burn out of control",
     "confidence": "sourced"
    },
    {
     "order": 3,
-    "value": "first death",
-    "when": "middle",
-    "quote": "a large man wearing a mask made of skin appears and murders Kirk with a hammer",
-    "confidence": "sourced"
+    "value": "old man's warning",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:08:01",
+    "quote": "Things happen hereabout they don't tell about.",
+    "confidence": "sourced",
+    "detail": "the drunk at the cemetery"
    },
    {
     "order": 4,
+    "value": "violent hitchhiker",
+    "when": "early",
+    "role": "omen",
+    "quote": "he burns the photo and attacks Franklin with a straight razor",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:28",
+      "quote": "(Sally) Oh! What are you doing to yourself?"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "stranded without fuel",
+    "when": "early",
+    "role": "trigger",
+    "source": "subtitles",
+    "at": "00:19:43",
+    "quote": "I got no gas.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "first death",
+    "when": "middle",
+    "quote": "a large man wearing a mask made of skin appears and murders Kirk with a hammer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:49",
+      "quote": "Hello, is anybody home?"
+     }
+    ]
+   },
+   {
+    "order": 7,
     "value": "friends killed one by one",
     "when": "middle",
     "quote": "finds Pam's nearly-dead, spasming body in a chest freezer and is killed by the masked man",
     "confidence": "sourced"
    },
    {
-    "order": 5,
+    "order": 8,
     "value": "false helper",
     "when": "late",
     "role": "turn",
     "quote": "The station's proprietor comforts Sally with the offer of help, after which he beats and subdues her",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:49",
+      "quote": "There's no phone here."
+     }
+    ]
    },
    {
-    "order": 6,
+    "order": 9,
     "value": "family dinner torment",
     "when": "late",
     "quote": "cut Sally's finger so that Grandpa can suck her blood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:25",
+      "quote": "Why, old Grandpa is the best killer there ever was."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "grandfather given the hammer",
+    "when": "late",
+    "source": "subtitles",
+    "at": "01:15:59",
+    "quote": "Let's let him have a whack. Hey, Grandpa, we going to let you have this one.",
     "confidence": "sourced"
    },
    {
-    "order": 7,
+    "order": 11,
     "value": "escape onto the road",
     "when": "ending",
     "quote": "Sally breaks free and runs onto a road in front of the house, pursued by the brothers",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:43",
+      "quote": "(truck horn)"
+     }
+    ]
    },
    {
-    "order": 8,
+    "order": 12,
     "value": "killer left raging",
     "when": "ending",
     "quote": "Sally laughs hysterically while Leatherface swings his chainsaw in the road",
@@ -237,5 +424,6 @@
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

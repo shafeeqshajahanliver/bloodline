@@ -1,62 +1,472 @@
 {
  "film": "1961-the-innocents",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Analysis"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Analysis"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "ghosts", "detail": "Peter Quint and Miss Jessel", "quote": "the ghosts of Quint and Miss Jessel possess the bodies of the children", "confidence": "sourced"},
-   {"value": "possessed children", "quote": "comes to fear that their large estate is haunted by ghosts and that the children are being possessed", "confidence": "sourced"},
-   {"value": "the self", "detail": "the governess's repression as possible source", "quote": "insisting that the supernatural phenomena were in fact the product of Miss Giddens' own sexual repression", "confidence": "observed"}
+   {
+    "value": "ghosts",
+    "detail": "Peter Quint and Miss Jessel",
+    "quote": "the ghosts of Quint and Miss Jessel possess the bodies of the children",
+    "confidence": "sourced"
+   },
+   {
+    "value": "possessed children",
+    "quote": "comes to fear that their large estate is haunted by ghosts and that the children are being possessed",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the self",
+    "detail": "the governess's repression as possible source",
+    "quote": "insisting that the supernatural phenomena were in fact the product of Miss Giddens' own sexual repression",
+    "confidence": "observed"
+   }
   ],
   "origin": [
-   {"value": "dead servants", "detail": "the former governess and the valet, both dead", "quote": "Miss Jessel and the uncle's valet, Peter Quint, also dead", "confidence": "sourced"},
-   {"value": "repressed desire", "quote": "the film's underlying themes of sexual repression becoming the focus of supernatural activity", "confidence": "observed"}
+   {
+    "value": "dead servants",
+    "detail": "the former governess and the valet, both dead",
+    "quote": "Miss Jessel and the uncle's valet, Peter Quint, also dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:38",
+      "quote": "She put an end to herself. She was found in the lake, drowned."
+     }
+    ]
+   },
+   {
+    "value": "repressed desire",
+    "quote": "the film's underlying themes of sexual repression becoming the focus of supernatural activity",
+    "confidence": "observed"
+   }
   ],
   "wants": [
-   {"value": "a body", "detail": "to continue their relationship through the children", "quote": "possess the bodies of the children so they can physically continue their relationship", "confidence": "sourced"}
+   {
+    "value": "a body",
+    "detail": "to continue their relationship through the children",
+    "quote": "possess the bodies of the children so they can physically continue their relationship",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:33",
+      "quote": "they can only reach each other by entering the souls of the children..."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "abusive relationship", "quote": "the couple had been in an abusive romantic relationship", "confidence": "sourced"},
-   {"value": "neglected children", "detail": "the uncle wants nothing to do with them", "quote": "he has \"no room, mentally or emotionally\" for his niece and nephew", "confidence": "sourced"}
+   {
+    "value": "abusive relationship",
+    "quote": "the couple had been in an abusive romantic relationship",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:30",
+      "quote": "Quint took advantage, that's all."
+     }
+    ]
+   },
+   {
+    "value": "neglected children",
+    "detail": "the uncle wants nothing to do with them",
+    "quote": "he has \"no room, mentally or emotionally\" for his niece and nephew",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "taking a new job", "quote": "Miss Giddens applies for her first job as a governess.", "confidence": "sourced"},
-   {"value": "child expelled from school", "quote": "soon returns to Bly after being expelled for being a \"bad influence\" on his peers", "confidence": "sourced"}
+   {
+    "value": "taking a new job",
+    "quote": "Miss Giddens applies for her first job as a governess.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child expelled from school",
+    "quote": "soon returns to Bly after being expelled for being a \"bad influence\" on his peers",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "must not trouble the master", "quote": "never troubling him with whatever problems may arise", "confidence": "sourced"},
-   {"value": "only she sees them", "quote": "Quint appears on a hedge nearby, but Miles does not seem to see him.", "confidence": "observed"},
-   {"value": "naming the ghost frees the child", "quote": "Miles finally shouts Quint's name, and Quint waves his hand. Miles grows still and falls to the ground.", "confidence": "observed"}
+   {
+    "value": "must not trouble the master",
+    "quote": "never troubling him with whatever problems may arise",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:47",
+      "quote": "She must never trouble me."
+     }
+    ]
+   },
+   {
+    "value": "only she sees them",
+    "quote": "Quint appears on a hedge nearby, but Miles does not seem to see him.",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:57",
+      "quote": "- But you can see her. You must! - [FLORA SCREAMING]"
+     }
+    ]
+   },
+   {
+    "value": "naming the ghost frees the child",
+    "quote": "Miles finally shouts Quint's name, and Quint waves his hand. Miles grows still and falls to the ground.",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:21",
+      "quote": "Say his name... and it will all be over."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "children", "relation_to_threat": "community", "detail": "Miles and Flora, orphans in the ghosts' former household", "quote": "They were orphaned and left in his care as infants, and he keeps them at Bly", "confidence": "sourced"},
-   {"value": "governess", "relation_to_threat": "stranger", "detail": "Miss Giddens, a newcomer", "quote": "is bothered by disembodied voices and apparitions of a man and woman she witnesses in the house and grounds", "confidence": "sourced"}
+   {
+    "value": "children",
+    "relation_to_threat": "community",
+    "detail": "Miles and Flora, orphans in the ghosts' former household",
+    "quote": "They were orphaned and left in his care as infants, and he keeps them at Bly",
+    "confidence": "sourced"
+   },
+   {
+    "value": "governess",
+    "relation_to_threat": "stranger",
+    "detail": "Miss Giddens, a newcomer",
+    "quote": "is bothered by disembodied voices and apparitions of a man and woman she witnesses in the house and grounds",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "child dies", "quote": "Miss Giddens cradles him and assures him that he is free. She then realises that Miles is dead.", "confidence": "sourced"},
-   {"value": "ambiguous", "quote": "a final work that suggests other alternatives to the plot", "confidence": "observed"}
+   {
+    "value": "child dies",
+    "quote": "Miss Giddens cradles him and assures him that he is free. She then realises that Miles is dead.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ambiguous",
+    "quote": "a final work that suggests other alternatives to the plot",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "face in window", "state": "laughing", "when": "late", "role": "threat", "quote": "Quint's face appears in the window behind him, joining in the boy's laughter", "confidence": "sourced"},
-   {"value": "weeping apparition", "when": "middle", "role": "threat", "quote": "she is thwarted by a weeping apparition of Miss Jessel in the schoolroom", "confidence": "sourced"},
-   {"value": "hedge", "when": "ending", "role": "setting", "quote": "Quint appears on a hedge nearby, but Miles does not seem to see him.", "confidence": "sourced"},
-   {"value": "kiss", "state": "on dead lips", "when": "ending", "role": "symbol", "quote": "Sobbing, she leans over him and kisses him on the lips.", "confidence": "sourced"},
-   {"value": "country estate", "when": "opening", "role": "setting", "quote": "he keeps them at Bly, his large country estate", "confidence": "sourced"},
-   {"value": "disembodied voices", "when": "middle", "role": "omen", "quote": "is bothered by disembodied voices and apparitions of a man and woman", "confidence": "sourced"}
+   {
+    "value": "face in window",
+    "state": "laughing",
+    "when": "late",
+    "role": "threat",
+    "quote": "Quint's face appears in the window behind him, joining in the boy's laughter",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:44",
+      "quote": "peering in through the window, looking for someone."
+     }
+    ]
+   },
+   {
+    "value": "weeping apparition",
+    "when": "middle",
+    "role": "threat",
+    "quote": "she is thwarted by a weeping apparition of Miss Jessel in the schoolroom",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:58",
+      "quote": "[WOMAN SOBBING]"
+     }
+    ]
+   },
+   {
+    "value": "hedge",
+    "when": "ending",
+    "role": "setting",
+    "quote": "Quint appears on a hedge nearby, but Miles does not seem to see him.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "kiss",
+    "state": "on dead lips",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "Sobbing, she leans over him and kisses him on the lips.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "country estate",
+    "when": "opening",
+    "role": "setting",
+    "quote": "he keeps them at Bly, his large country estate",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:39",
+      "quote": "No. They are at my country estate in Bly."
+     }
+    ]
+   },
+   {
+    "value": "disembodied voices",
+    "when": "middle",
+    "role": "omen",
+    "quote": "is bothered by disembodied voices and apparitions of a man and woman",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:22",
+      "quote": "[WOMAN'S VOICE ECHOING] The children are watching."
+     }
+    ]
+   },
+   {
+    "value": "willow song",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:14",
+    "quote": "CHILD: We lay, my love and I",
+    "detail": "'O Willow Waly', a song of a dead lover, sung over the black opening and recurring through the film",
+    "confidence": "sourced"
+   },
+   {
+    "value": "tortoise",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:10:32",
+    "quote": "- Oh, a tortoise. - We love each other.",
+    "detail": "Flora's pet Rupert",
+    "confidence": "sourced"
+   },
+   {
+    "value": "spider eating a butterfly",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:20:53",
+    "quote": "It's a lovely spider... and it's eating a butterfly.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "man on the tower",
+    "when": "early",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:31:04",
+    "quote": "The man who was standing here on the tower.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "music box",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:37:30",
+    "quote": "[MUSIC BOX: \" O WILLOW WALY \"]",
+    "detail": "plays the willow song; found hidden in the attic",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dead pigeon",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:15:18",
+    "quote": "I found it this morning, one of my pigeons.",
+    "detail": "Miles keeps it hidden under his pillow",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "hired by indifferent guardian", "when": "opening", "quote": "Miss Giddens applies for her first job as a governess.", "confidence": "sourced"},
-   {"order": 2, "value": "predecessor's death mentioned", "when": "opening", "role": "omen", "quote": "The previous governess, Mary Jessel, died suddenly less than a year earlier.", "confidence": "sourced"},
-   {"order": 3, "value": "child returns in disgrace", "when": "early", "quote": "soon returns to Bly after being expelled for being a \"bad influence\" on his peers", "confidence": "sourced"},
-   {"order": 4, "value": "apparitions identified", "when": "middle", "role": "clue", "quote": "whom Mrs Grose identifies from their descriptions as Miss Jessel and the uncle's valet, Peter Quint, also dead", "confidence": "sourced"},
-   {"order": 5, "value": "possession theory", "when": "middle", "role": "turn", "quote": "Miss Giddens concludes that the ghosts of Quint and Miss Jessel possess the bodies of the children", "confidence": "sourced"},
-   {"order": 6, "value": "alone with the child", "when": "late", "quote": "Left alone with Miles, Miss Giddens presses him to talk about the ghosts", "confidence": "sourced"},
-   {"order": 7, "value": "confrontation and naming", "when": "ending", "role": "turn", "quote": "Miles finally shouts Quint's name, and Quint waves his hand.", "confidence": "sourced"},
-   {"order": 8, "value": "child dies", "when": "ending", "quote": "She then realises that Miles is dead. Sobbing, she leans over him and kisses him on the lips.", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "song in darkness",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:14",
+    "quote": "CHILD: We lay, my love and I",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "whispered vow to save children",
+    "when": "opening",
+    "source": "subtitles",
+    "at": "00:03:02",
+    "quote": "WOMAN: [WHISPERING] All I want to do is save the children...",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:06",
+      "quote": "not destroy them."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "hired by indifferent guardian",
+    "when": "opening",
+    "quote": "Miss Giddens applies for her first job as a governess.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:47",
+      "quote": "She must never trouble me."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "predecessor's death mentioned",
+    "when": "opening",
+    "role": "omen",
+    "quote": "The previous governess, Mary Jessel, died suddenly less than a year earlier.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:34",
+      "quote": "- [CLOCK CHIMING] - She died."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "child returns in disgrace",
+    "when": "early",
+    "quote": "soon returns to Bly after being expelled for being a \"bad influence\" on his peers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:23",
+      "quote": "Miles has been dismissed from school."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "first sighting on the tower",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:31:04",
+    "quote": "The man who was standing here on the tower.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "apparitions identified",
+    "when": "middle",
+    "role": "clue",
+    "quote": "whom Mrs Grose identifies from their descriptions as Miss Jessel and the uncle's valet, Peter Quint, also dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:46",
+      "quote": "- Peter Quint, the master's valet. - But you said..."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "drowned governess's fate told",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:02:38",
+    "quote": "She put an end to herself. She was found in the lake, drowned.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "possession theory",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Miss Giddens concludes that the ghosts of Quint and Miss Jessel possess the bodies of the children",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:38",
+      "quote": "The children are possessed."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "alone with the child",
+    "when": "late",
+    "quote": "Left alone with Miles, Miss Giddens presses him to talk about the ghosts",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:15",
+      "quote": "[EXHALES] But you must take her to her uncle."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "confrontation and naming",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Miles finally shouts Quint's name, and Quint waves his hand.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:03",
+      "quote": "Quint! Peter Quint! Where? Where?"
+     }
+    ]
+   },
+   {
+    "order": 12,
+    "value": "child dies",
+    "when": "ending",
+    "quote": "She then realises that Miles is dead. Sobbing, she leans over him and kisses him on the lips.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:49",
+      "quote": "He's lost you forever."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

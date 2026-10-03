@@ -1,57 +1,347 @@
 {
  "film": "1978-invasion-of-the-body-snatchers",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "alien duplicates", "quote": "humans are being replaced by alien duplicates; each is a perfect biological clone of the person replaced, but devoid of empathy and humanity", "confidence": "sourced"}
+   {
+    "value": "alien duplicates",
+    "quote": "humans are being replaced by alien duplicates; each is a perfect biological clone of the person replaced, but devoid of empathy and humanity",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "from outer space", "quote": "An amorphous parasitic alien race abandons its dying planet and travels across space, eventually coming to Earth", "confidence": "sourced"}
+   {
+    "value": "from outer space",
+    "quote": "An amorphous parasitic alien race abandons its dying planet and travels across space, eventually coming to Earth",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to replace humanity", "quote": "the aliens' plan to replace humanity with emotionless duplicates whose only goal is survival", "confidence": "sourced"},
-   {"value": "survival", "quote": "emotionless duplicates whose only goal is survival", "confidence": "sourced"}
+   {
+    "value": "to replace humanity",
+    "quote": "the aliens' plan to replace humanity with emotionless duplicates whose only goal is survival",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "We left a dying world and came here to evolve, to reform and reconstitute themselves into duplicates"
+     }
+    ]
+   },
+   {
+    "value": "survival",
+    "quote": "emotionless duplicates whose only goal is survival",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "bringing a plant home", "quote": "brings one of the flowers home, and shows it to her boyfriend, Geoffrey", "confidence": "sourced"}
+   {
+    "value": "bringing a plant home",
+    "quote": "brings one of the flowers home, and shows it to her boyfriend, Geoffrey",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "replaced while asleep", "quote": "needing them to fall asleep to be replaced", "confidence": "sourced"},
-   {"value": "hide emotions to pass", "quote": "Nancy, who tricked the pod people by hiding her emotions", "confidence": "sourced"},
-   {"value": "scream exposes humans", "quote": "alerting the pod people who emit high-pitched screams", "confidence": "sourced"}
+   {
+    "value": "replaced while asleep",
+    "quote": "needing them to fall asleep to be replaced",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "he kept saying \"Just sleep, go to sleep, sleep and everything will bo fine in the morning.\""
+     }
+    ]
+   },
+   {
+    "value": "hide emotions to pass",
+    "quote": "Nancy, who tricked the pod people by hiding her emotions",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Everyone else on the cable car seems to be looking at the crying child without compassion."
+     }
+    ]
+   },
+   {
+    "value": "scream exposes humans",
+    "quote": "alerting the pod people who emit high-pitched screams",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "AN OLD LADY LIFTS HER BONY FINGER, POINTS IT ACCUSING- LY AT ELIZABETH, SCREAMS HER CONDEMNATION OUT"
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "colleagues", "relation_to_threat": "stranger", "detail": "health inspectors Matthew and Elizabeth", "quote": "a San Francisco health inspector (Sutherland) and his colleague (Adams)", "confidence": "sourced"},
-   {"value": "lover", "relation_to_threat": "lover", "detail": "Elizabeth's boyfriend Geoffrey, first replaced", "quote": "She awakens the next morning to find him being cold and distant", "confidence": "sourced"},
-   {"value": "city", "relation_to_threat": "community", "quote": "Matthew resumes work in the health department, acting emotionless among the duplicated employees", "confidence": "sourced"}
+   {
+    "value": "colleagues",
+    "relation_to_threat": "stranger",
+    "detail": "health inspectors Matthew and Elizabeth",
+    "quote": "a San Francisco health inspector (Sutherland) and his colleague (Adams)",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lover",
+    "relation_to_threat": "lover",
+    "detail": "Elizabeth's boyfriend Geoffrey, first replaced",
+    "quote": "She awakens the next morning to find him being cold and distant",
+    "confidence": "sourced"
+   },
+   {
+    "value": "city",
+    "relation_to_threat": "community",
+    "quote": "Matthew resumes work in the health department, acting emotionless among the duplicated employees",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "hero assimilated", "quote": "he points at her and emits the duplicates' high-pitched scream", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "Noticing a nearby ship, Matthew leaves Elizabeth (whose ankle is sprained) to investigate, only to find it being loaded with pods", "confidence": "observed"}
+   {
+    "value": "hero assimilated",
+    "quote": "he points at her and emits the duplicates' high-pitched scream",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat survives",
+    "quote": "Noticing a nearby ship, Matthew leaves Elizabeth (whose ankle is sprained) to investigate, only to find it being loaded with pods",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "pink flowers", "state": "fragrant", "when": "opening", "role": "trigger", "quote": "the spores take the form of small pods with fragrant pink flowers", "confidence": "sourced"},
-   {"value": "grey material", "state": "dry, discarded", "when": "early", "role": "omen", "quote": "a garbage truck, itself filled with fuzzy and dry grey material", "confidence": "sourced"},
-   {"value": "duplicate body", "state": "embryonic", "when": "middle", "role": "clue", "quote": "The two find a mysterious embryonic adult-body resembling Jack", "confidence": "sourced"},
-   {"value": "pods", "state": "birthing replacements", "when": "middle", "role": "threat", "quote": "big flower pods emerge from the garden and start birthing their replacements", "confidence": "sourced"},
-   {"value": "dog-human hybrid", "when": "late", "role": "turn", "quote": "Elizabeth sees a dog-human hybrid – a byproduct of a damaged pod – and screams", "confidence": "sourced"},
-   {"value": "ship", "state": "loaded with pods", "when": "late", "role": "threat", "quote": "only to find it being loaded with pods", "confidence": "sourced"},
-   {"value": "pointing finger and scream", "when": "ending", "role": "turn", "quote": "he points at her and emits the duplicates' high-pitched scream", "confidence": "sourced"}
+   {
+    "value": "pink flowers",
+    "state": "fragrant",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "the spores take the form of small pods with fragrant pink flowers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "SENDING FORTH THE PRETTIEST LITTLE FLOWER ... NOW THESE FLOWERS ARE EVERYWHERE"
+     }
+    ]
+   },
+   {
+    "value": "grey material",
+    "state": "dry, discarded",
+    "when": "early",
+    "role": "omen",
+    "quote": "a garbage truck, itself filled with fuzzy and dry grey material",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "dumps the contents of Geoffrey's container -- A TANGLE OF GREY FIBROUS STRANDS"
+     }
+    ]
+   },
+   {
+    "value": "duplicate body",
+    "state": "embryonic",
+    "when": "middle",
+    "role": "clue",
+    "quote": "The two find a mysterious embryonic adult-body resembling Jack",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pods",
+    "state": "birthing replacements",
+    "when": "middle",
+    "role": "threat",
+    "quote": "big flower pods emerge from the garden and start birthing their replacements",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "THE POD CRACKS OPEN, FALLS AWAY, PLANT MATERIAL CRADLING A GROTESQUE CREATURE THE SIZE OF A HUMAN INFANT"
+     }
+    ]
+   },
+   {
+    "value": "dog-human hybrid",
+    "when": "late",
+    "role": "turn",
+    "quote": "Elizabeth sees a dog-human hybrid – a byproduct of a damaged pod – and screams",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "IT'S THE OLD BLIND MAN'S DOG, WAS THE OLD BLIND MAN'S DOG -- NOW IT BEARS HIS FACE"
+     }
+    ]
+   },
+   {
+    "value": "ship",
+    "state": "loaded with pods",
+    "when": "late",
+    "role": "threat",
+    "quote": "only to find it being loaded with pods",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pointing finger and scream",
+    "when": "ending",
+    "role": "turn",
+    "quote": "he points at her and emits the duplicates' high-pitched scream",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rat dropping in food",
+    "when": "early",
+    "role": "clue",
+    "detail": "Matthew, a health inspector, finds it in a restaurant whose chef has changed",
+    "source": "screenplay",
+    "quote": "It's a rat turd.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fractured windshield",
+    "when": "early",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "a rather dramatically FRACTURED WINDSHIELD over the driver's side, like someone's gone at it with a club",
+    "confidence": "sourced"
+   },
+   {
+    "value": "beggar and his dog",
+    "when": "early",
+    "role": "omen",
+    "detail": "the pair later duplicated together as the dog-human hybrid",
+    "source": "screenplay",
+    "quote": "passing by a BANJO-PLAYING BEGGAR and his faithful companion, a feisty dog, a BOXER",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "aliens arrive", "when": "opening", "quote": "An amorphous parasitic alien race abandons its dying planet", "confidence": "sourced"},
-   {"order": 2, "value": "loved one changed", "when": "early", "role": "omen", "quote": "she fears he is an impostor", "confidence": "sourced"},
-   {"order": 3, "value": "warning ignored", "when": "early", "quote": "Kibner brushes off both women's concerns, insisting the behavior is just a case of non-commitment", "confidence": "sourced"},
-   {"order": 4, "value": "duplicates discovered", "when": "middle", "role": "turn", "quote": "discovers a semi-formed duplicate of her near her bedroom", "confidence": "sourced"},
-   {"order": 5, "value": "trusted ally is one of them", "when": "middle", "role": "turn", "quote": "They call Kibner, who promises to help, but in fact is another duplicate", "confidence": "sourced"},
-   {"order": 6, "value": "lover replaced", "when": "late", "quote": "She disintegrates while her duplicate emerges from the grass", "confidence": "sourced"},
-   {"order": 7, "value": "hero burns the source", "when": "late", "quote": "burns down the building, destroying several plants and killing many pod people", "confidence": "sourced"},
-   {"order": 8, "value": "hero revealed as duplicate", "when": "ending", "role": "turn", "quote": "To her horror, he points at her and emits the duplicates' high-pitched scream", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "aliens arrive",
+    "when": "opening",
+    "quote": "An amorphous parasitic alien race abandons its dying planet",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "SPORES SETTLE ON THE CITY LIKE A GENTLE SHOWER OF DANDELION FLUFF"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "loved one changed",
+    "when": "early",
+    "role": "omen",
+    "quote": "she fears he is an impostor",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fleeing man struck in street",
+    "when": "early",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "The man seems absolutely crazed. He thrusts him- self off the windshield",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "He jumped right on my windshield and a minute later we saw him lying in the road."
+     }
+    ],
+    "order": 3
+   },
+   {
+    "order": 4,
+    "value": "warning ignored",
+    "when": "early",
+    "quote": "Kibner brushes off both women's concerns, insisting the behavior is just a case of non-commitment",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "duplicates discovered",
+    "when": "middle",
+    "role": "turn",
+    "quote": "discovers a semi-formed duplicate of her near her bedroom",
+    "confidence": "sourced"
+   },
+   {
+    "value": "duplicates born during sleep",
+    "when": "middle",
+    "role": "turn",
+    "source": "screenplay",
+    "quote": "THE POD CRACKS OPEN, FALLS AWAY, PLANT MATERIAL CRADLING A GROTESQUE CREATURE",
+    "confidence": "sourced",
+    "order": 6
+   },
+   {
+    "order": 7,
+    "value": "trusted ally is one of them",
+    "when": "middle",
+    "role": "turn",
+    "quote": "They call Kibner, who promises to help, but in fact is another duplicate",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "lover replaced",
+    "when": "late",
+    "quote": "She disintegrates while her duplicate emerges from the grass",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "HER SKIN TURNS GRAY IN HIS ARMS, THE TISSUE SPLITTING APART INTO FILAMENTS"
+     },
+     {
+      "source": "screenplay",
+      "quote": "Everything's the same. Our love was too hard. Come with us, Matthew. Sleep with me."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "hero burns the source",
+    "when": "late",
+    "quote": "burns down the building, destroying several plants and killing many pod people",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "SPARKS CASCADE FROM ABOVE, LIKE A METEOR SHOWER ONTO THE FIELD OF PODS!"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "hero revealed as duplicate",
+    "when": "ending",
+    "role": "turn",
+    "quote": "To her horror, he points at her and emits the duplicates' high-pitched scream",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,65 +1,462 @@
 {
  "film": "2024-nosferatu",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vampire", "detail": "Count Orlok, the Nosferatu", "quote": "a powerful being known as the Nosferatu", "confidence": "sourced"},
-   {"value": "plague", "quote": "Thomas returns to Wisburg as Orlok's plague ravages the populace", "confidence": "sourced"},
-   {"value": "human servant", "detail": "Herr Knock", "quote": "Knock is actually in league with Orlok", "confidence": "sourced"}
+   {
+    "value": "vampire",
+    "detail": "Count Orlok, the Nosferatu",
+    "quote": "a powerful being known as the Nosferatu",
+    "confidence": "sourced"
+   },
+   {
+    "value": "plague",
+    "quote": "Thomas returns to Wisburg as Orlok's plague ravages the populace",
+    "confidence": "sourced"
+   },
+   {
+    "value": "human servant",
+    "detail": "Herr Knock",
+    "quote": "Knock is actually in league with Orlok",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "pact with the devil", "quote": "Orlok became a vampire after making a pact with the Devil", "confidence": "sourced"},
-   {"value": "summoned by prayer", "quote": "She inadvertently contacts a powerful being known as the Nosferatu, forging a psychic link between them", "confidence": "sourced"}
+   {
+    "value": "pact with the devil",
+    "quote": "Orlok became a vampire after making a pact with the Devil",
+    "confidence": "sourced"
+   },
+   {
+    "value": "summoned by prayer",
+    "quote": "She inadvertently contacts a powerful being known as the Nosferatu, forging a psychic link between them",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "a woman", "detail": "Ellen", "quote": "He demands that she submit to him in three days or he will kill  Thomas", "confidence": "sourced"}
+   {
+    "value": "a woman",
+    "detail": "Ellen",
+    "quote": "He demands that she submit to him in three days or he will kill  Thomas",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Upon the third night you will submit, or he you call your husband shall perish by my hand."
+     }
+    ]
+   },
+   {
+    "value": "eternal union",
+    "detail": "the shadow's oath with the young Ellen",
+    "source": "screenplay",
+    "quote": "And shall you be one with me ever- eternally. Do you swear it?",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "wife sold unknowingly", "quote": "tells her that Thomas \"sold\" her to him for his commission of the home sale", "confidence": "sourced"}
+   {
+    "value": "wife sold unknowingly",
+    "quote": "tells her that Thomas \"sold\" her to him for his commission of the home sale",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "a prayer for company", "quote": "A young girl named Ellen prays for a companion to ease her loneliness", "confidence": "sourced"},
-   {"value": "journey for a property sale", "quote": "Thomas is sent to Transylvania by his employer, Herr Knock, to sell the decrepit Grünewald Manor", "confidence": "sourced"}
+   {
+    "value": "a prayer for company",
+    "quote": "A young girl named Ellen prays for a companion to ease her loneliness",
+    "confidence": "sourced"
+   },
+   {
+    "value": "journey for a property sale",
+    "quote": "Thomas is sent to Transylvania by his employer, Herr Knock, to sell the decrepit Grünewald Manor",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "killed by sunlight", "quote": "Von Franz reveals that sunlight will kill Nosferatu", "confidence": "sourced"},
-   {"value": "maiden's willing sacrifice", "quote": "a fair maiden's willing sacrifice can destroy Nosferatu", "confidence": "sourced"},
-   {"value": "psychic link", "quote": "Ellen, under Orlok's influence, begins suffering from seizures and sleepwalking", "confidence": "sourced"}
+   {
+    "value": "killed by sunlight",
+    "quote": "Von Franz reveals that sunlight will kill Nosferatu",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The sunlight rakes over him... He puts up his hands to shield himself..."
+     }
+    ]
+   },
+   {
+    "value": "maiden's willing sacrifice",
+    "quote": "a fair maiden's willing sacrifice can destroy Nosferatu",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Her willing sacrifice thus broke the curse,/ And freed them from the plague of Nosferatu."
+     }
+    ]
+   },
+   {
+    "value": "psychic link",
+    "quote": "Ellen, under Orlok's influence, begins suffering from seizures and sleepwalking",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "SHE SPEAKS TO ORLOK WITHOUT OPENING HER MOUTH. TELEPATHICALLY."
+     }
+    ]
+   },
+   {
+    "value": "bond sworn in childhood",
+    "source": "screenplay",
+    "quote": "Then the covenant is fulfilled. Your oath re-pledged.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "young wife", "relation_to_threat": "lover", "detail": "Ellen, psychically bound to Orlok", "quote": "Thomas returns and holds Ellen's hand as she dies", "confidence": "sourced"},
-   {"value": "husband", "relation_to_threat": "stranger", "detail": "Thomas", "quote": "Thomas discovers bite marks on his chest and becomes increasingly ill and fearful", "confidence": "sourced"},
-   {"value": "friends' family", "relation_to_threat": "community", "detail": "Anna, her children, Friedrich", "quote": "Orlok retaliates by killing Anna and her children", "confidence": "sourced"},
-   {"value": "townspeople", "relation_to_threat": "community", "quote": "Orlok's plague ravages the populace", "confidence": "sourced"}
+   {
+    "value": "young wife",
+    "relation_to_threat": "lover",
+    "detail": "Ellen, psychically bound to Orlok",
+    "quote": "Thomas returns and holds Ellen's hand as she dies",
+    "confidence": "sourced"
+   },
+   {
+    "value": "husband",
+    "relation_to_threat": "stranger",
+    "detail": "Thomas",
+    "quote": "Thomas discovers bite marks on his chest and becomes increasingly ill and fearful",
+    "confidence": "sourced"
+   },
+   {
+    "value": "friends' family",
+    "relation_to_threat": "community",
+    "detail": "Anna, her children, Friedrich",
+    "quote": "Orlok retaliates by killing Anna and her children",
+    "confidence": "sourced"
+   },
+   {
+    "value": "townspeople",
+    "relation_to_threat": "community",
+    "quote": "Orlok's plague ravages the populace",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "Distracted by her, Orlok is killed by the sunrise", "confidence": "sourced"},
-   {"value": "self-sacrifice", "quote": "von Franz confirms that her sacrifice has freed them from Nosferatu", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "Distracted by her, Orlok is killed by the sunrise",
+    "confidence": "sourced"
+   },
+   {
+    "value": "self-sacrifice",
+    "quote": "von Franz confirms that her sacrifice has freed them from Nosferatu",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "staked corpse", "state": "gushing blood", "when": "early", "role": "omen", "quote": "a group of Roma exhuming and staking an alleged vampire's corpse, which gushes blood", "confidence": "sourced"},
-   {"value": "horse", "state": "gone", "when": "early", "role": "omen", "quote": "He wakes up to the hamlet deserted and his horse gone", "confidence": "sourced"},
-   {"value": "carriage", "state": "mysterious", "when": "early", "role": "setting", "quote": "a mysterious carriage takes him to Orlok's castle", "confidence": "sourced"},
-   {"value": "cut hand", "state": "bleeding", "when": "early", "role": "trigger", "quote": "Thomas cuts his hand, which agitates the Count", "confidence": "sourced"},
-   {"value": "locket", "detail": "with a lock of Ellen's hair", "when": "early", "role": "symbol", "quote": "takes Thomas' locket, containing a lock of Ellen's hair", "confidence": "sourced"},
-   {"value": "coffin", "when": "middle", "role": "setting", "quote": "he finds the Count asleep in a coffin, naked and decayed", "confidence": "sourced"},
-   {"value": "rats", "state": "plague-carrying", "when": "middle", "role": "threat", "quote": "on a ship with plague-carrying rats", "confidence": "sourced"},
-   {"value": "sheep", "state": "eaten raw", "when": "middle", "role": "omen", "quote": "Knock is institutionalized after killing and eating sheep raw", "confidence": "sourced"}
+   {
+    "value": "staked corpse",
+    "state": "gushing blood",
+    "when": "early",
+    "role": "omen",
+    "quote": "a group of Roma exhuming and staking an alleged vampire's corpse, which gushes blood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "THE HANDSOME ROMA MAN POUNDS AN IRON STAKE INTO THE CORPSE'S NAVEL! THE CORPSE SCREAMS IN PAIN!"
+     }
+    ]
+   },
+   {
+    "value": "horse",
+    "state": "gone",
+    "when": "early",
+    "role": "omen",
+    "quote": "He wakes up to the hamlet deserted and his horse gone",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The gypsy camp has gone. Extinguished fires smoulder. His horse is gone too."
+     }
+    ]
+   },
+   {
+    "value": "carriage",
+    "state": "mysterious",
+    "when": "early",
+    "role": "setting",
+    "quote": "a mysterious carriage takes him to Orlok's castle",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "It is a CARRIAGE drawn by four black horses. Their long manes, plumes, bells and tassels float in the air weightlessly."
+     }
+    ]
+   },
+   {
+    "value": "cut hand",
+    "state": "bleeding",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Thomas cuts his hand, which agitates the Count",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "HE CUTS HIMSELF! ORLOK'S eyes shift to THOMAS' hand: BLOOD!"
+     }
+    ]
+   },
+   {
+    "value": "locket",
+    "detail": "with a lock of Ellen's hair",
+    "when": "early",
+    "role": "symbol",
+    "quote": "takes Thomas' locket, containing a lock of Ellen's hair",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "She snips a small LOCK OF HER BLACK HAIR and puts it in the locket."
+     },
+     {
+      "source": "screenplay",
+      "quote": "ORLOK smells THE LOCKET, remembering..."
+     }
+    ]
+   },
+   {
+    "value": "coffin",
+    "when": "middle",
+    "role": "setting",
+    "quote": "he finds the Count asleep in a coffin, naked and decayed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "ORLOK rises from his coffin, the soil falling from his naked, emaciated body"
+     }
+    ]
+   },
+   {
+    "value": "rats",
+    "state": "plague-carrying",
+    "when": "middle",
+    "role": "threat",
+    "quote": "on a ship with plague-carrying rats",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Hundreds of RATS run through the streets and gutters."
+     }
+    ]
+   },
+   {
+    "value": "sheep",
+    "state": "eaten raw",
+    "when": "middle",
+    "role": "omen",
+    "quote": "Knock is institutionalized after killing and eating sheep raw",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "killed three sheep with his bare hands – and he was eatin' em raw-like."
+     }
+    ]
+   },
+   {
+    "value": "lilacs",
+    "state": "cut, then dried",
+    "when": "early",
+    "role": "symbol",
+    "detail": "flowers from her wedding, worn as a crown at the end and scattered on the bodies",
+    "source": "screenplay",
+    "quote": "ELLEN Why have you killed these beautiful flowers?",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "VON FRANZ holds a bouquet of LILACS which he scatters upon the remains of Ellen and Orlok."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "cat",
+    "detail": "Greta",
+    "when": "early",
+    "role": "symbol",
+    "source": "screenplay",
+    "quote": "GRETA the CAT crawls into bed on top of them.",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "GRETA crawls by and leaps up into his arms."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "black wolves",
+    "when": "early",
+    "role": "threat",
+    "source": "screenplay",
+    "quote": "Huge, muscular BLACK WOLVES chase the carriage, growling and howling in excitement.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "shadow of a hand",
+    "when": "middle",
+    "role": "threat",
+    "source": "screenplay",
+    "quote": "IT IS THE SHADOW OF ORLOK'S HAND... SHE HEARS THE FAMILIAR WHISPER OF HIS LANGUAGE...",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "lonely girl's prayer", "when": "opening", "role": "trigger", "quote": "A young girl named Ellen prays for a companion to ease her loneliness", "confidence": "sourced"},
-   {"order": 2, "value": "journey to the castle", "when": "early", "quote": "Thomas is shunned by the locals when he mentions Castle Orlok", "confidence": "sourced"},
-   {"order": 3, "value": "bitten guest", "when": "early", "role": "turn", "quote": "Thomas discovers bite marks on his chest", "confidence": "sourced"},
-   {"order": 4, "value": "monster sails to town", "when": "middle", "quote": "Orlok sets sail for Wisburg inside his coffin on a ship with plague-carrying rats", "confidence": "sourced"},
-   {"order": 5, "value": "plague arrives", "when": "middle", "quote": "Thomas returns to Wisburg as Orlok's plague ravages the populace", "confidence": "sourced"},
-   {"order": 6, "value": "friend's family killed", "when": "late", "quote": "Orlok retaliates by killing Anna and her children", "confidence": "sourced"},
-   {"order": 7, "value": "willing sacrifice", "when": "ending", "role": "turn", "quote": "Ellen summons Orlok and allows him to feed on her until sunrise", "confidence": "sourced"},
-   {"order": 8, "value": "monster and heroine die", "when": "ending", "quote": "Distracted by her, Orlok is killed by the sunrise", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "lonely girl's prayer",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "A young girl named Ellen prays for a companion to ease her loneliness",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Come to me. Come to me: A guardian angel, a spirit of comfort – spirit of any celestial sphere – anything – hear my call."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "dream of marrying death",
+    "when": "early",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "Standing before me, all in black... was... Death.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "journey to the castle",
+    "when": "early",
+    "quote": "Thomas is shunned by the locals when he mentions Castle Orlok",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "bitten guest",
+    "when": "early",
+    "role": "turn",
+    "quote": "Thomas discovers bite marks on his chest",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "There is a triangular BITE MARK ON HIS CHEST, OVER HIS HEART. Like a rat bite, only larger."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "monster sails to town",
+    "when": "middle",
+    "quote": "Orlok sets sail for Wisburg inside his coffin on a ship with plague-carrying rats",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "A large, coffin-shaped wooden CRATE sit menacingly in the creaking bowels of the ship."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "plague arrives",
+    "when": "middle",
+    "quote": "Thomas returns to Wisburg as Orlok's plague ravages the populace",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "I fear this ship has brought the plague to Wisburg."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "friend's family killed",
+    "when": "late",
+    "quote": "Orlok retaliates by killing Anna and her children",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "HARDING IS DEAD, TOO. HE HOLDS HER IN HIS ARMS"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "wrong body staked",
+    "when": "late",
+    "role": "turn",
+    "detail": "the hunters stake Knock in Orlok's coffin",
+    "source": "screenplay",
+    "quote": "IT IS NO VAMPIRE – IT IS KNOCK, NAKED IN ORLOK'S DIRT!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "willing sacrifice",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Ellen summons Orlok and allows him to feed on her until sunrise",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "I am ready. I bid you, come to me."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "monster and heroine die",
+    "when": "ending",
+    "quote": "Distracted by her, Orlok is killed by the sunrise",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "ELLEN AND THOMAS EXCHANGE ONE FINAL LOOK OF LOVE, AS SHE AND ORLOK DIE."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

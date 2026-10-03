@@ -1,59 +1,369 @@
 {
  "film": "1980-friday-the-13th",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "masked or unseen killer", "detail": "Mrs. Pamela Voorhees, revealed late", "quote": "a group of teenage camp counselors who are murdered one by one by an unknown killer", "confidence": "sourced"},
-   {"value": "grieving mother", "quote": "Pamela Voorhees, a middle-aged woman seeking revenge over the death of her son", "confidence": "sourced"}
+   {
+    "value": "masked or unseen killer",
+    "detail": "Mrs. Pamela Voorhees, revealed late",
+    "quote": "a group of teenage camp counselors who are murdered one by one by an unknown killer",
+    "confidence": "sourced"
+   },
+   {
+    "value": "grieving mother",
+    "quote": "Pamela Voorhees, a middle-aged woman seeking revenge over the death of her son",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "child who died through neglect", "detail": "Jason drowned in 1957", "quote": "She blames his death on the counselors who failed to supervise him, instead having sex", "confidence": "sourced"}
+   {
+    "value": "child who died through neglect",
+    "detail": "Jason drowned in 1957",
+    "quote": "She blames his death on the counselors who failed to supervise him, instead having sex",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "revenge", "quote": "a middle-aged woman seeking revenge over the death of her son", "confidence": "sourced"}
+   {
+    "value": "revenge",
+    "quote": "a middle-aged woman seeking revenge over the death of her son",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "I can't let them kill any more children."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "negligent supervision of child", "quote": "a young boy drowned in Crystal Lake in 1957", "confidence": "sourced"}
+   {
+    "value": "negligent supervision of child",
+    "quote": "a young boy drowned in Crystal Lake in 1957",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "It was my son they killed. They said he drowned, but I know it was inadequate supervision"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "reopening a place with a past", "quote": "attempting to reopen an abandoned summer camp with a tragic past", "confidence": "sourced"}
+   {
+    "value": "reopening a place with a past",
+    "quote": "attempting to reopen an abandoned summer camp with a tragic past",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "They gonna open that place Camp Blood? again?"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "sex is punished", "quote": "teenage characters suffering violent murders after their engagement in premarital sex", "confidence": "sourced"},
-   {"value": "warning ignored", "quote": "Enos warns her about the camp's troubled past", "confidence": "sourced"}
+   {
+    "value": "sex is punished",
+    "quote": "teenage characters suffering violent murders after their engagement in premarital sex",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "counselors were not paying enough attention... They were making love when that boy drowned."
+     }
+    ]
+   },
+   {
+    "value": "warning ignored",
+    "quote": "Enos warns her about the camp's troubled past",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "camp counselors", "relation_to_threat": "stranger", "quote": "Counselors Ned, Jack, Bill, Marcie, Brenda, and Alice arrive at the camp", "confidence": "sourced"},
-   {"value": "final girl", "relation_to_threat": "stranger", "detail": "Alice", "quote": "Revealing herself as the killer, she brutally attacks Alice", "confidence": "sourced"}
+   {
+    "value": "camp counselors",
+    "relation_to_threat": "stranger",
+    "quote": "Counselors Ned, Jack, Bill, Marcie, Brenda, and Alice arrive at the camp",
+    "confidence": "sourced"
+   },
+   {
+    "value": "final girl",
+    "relation_to_threat": "stranger",
+    "detail": "Alice",
+    "quote": "Revealing herself as the killer, she brutally attacks Alice",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "killer destroyed", "quote": "The two struggle until Alice decapitates Mrs. Voorhees with a machete", "confidence": "sourced"},
-   {"value": "threat survives", "detail": "Jason may still be in the lake", "quote": "The sergeant says that there was no sign of a boy at the lake. Alice replies, \"Then he's still there.\"", "confidence": "sourced"}
+   {
+    "value": "killer destroyed",
+    "quote": "The two struggle until Alice decapitates Mrs. Voorhees with a machete",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat survives",
+    "detail": "Jason may still be in the lake",
+    "quote": "The sergeant says that there was no sign of a boy at the lake. Alice replies, \"Then he's still there.\"",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "lake", "state": "where a boy drowned", "when": "opening", "role": "setting", "quote": "a young boy drowned in Crystal Lake in 1957", "confidence": "sourced"},
-   {"value": "arrow", "when": "middle", "role": "weapon", "quote": "the killer pierces Jack's throat with an arrow", "confidence": "sourced"},
-   {"value": "axe", "state": "bloodied", "when": "middle", "role": "weapon", "quote": "They find a bloodied axe in Brenda's bed", "confidence": "sourced"},
-   {"value": "child's voice", "when": "middle", "role": "trigger", "quote": "She is lured outside by a little boy's voice calling for help", "confidence": "sourced"},
-   {"value": "thunderstorm", "when": "middle", "role": "omen", "quote": "As a thunderstorm approaches, Steve leaves for supplies", "confidence": "sourced"},
-   {"value": "machete", "when": "late", "role": "weapon", "quote": "Alice decapitates Mrs. Voorhees with a machete", "confidence": "sourced"},
-   {"value": "canoe", "when": "ending", "quote": "Alice seeks refuge inside a canoe, which she pushes out onto the lake", "confidence": "sourced"},
-   {"value": "corpse rising from water", "state": "decomposing", "when": "ending", "role": "threat", "quote": "Jason's decomposing corpse rises from the lake and pulls Alice underwater", "confidence": "sourced"}
+   {
+    "value": "camp sign",
+    "when": "opening",
+    "role": "setting",
+    "source": "screenplay",
+    "quote": "The CAMERA looks at a sign. It reads: CAMP CRYSTAL LAKE Established 1935",
+    "detail": "the film opens on the sign, with distant sounds of children playing",
+    "confidence": "sourced"
+   },
+   {
+    "value": "unseen watcher's view",
+    "when": "opening",
+    "role": "threat",
+    "source": "screenplay",
+    "quote": "gives the impression that we are watching the action from the POV of another person, an unseen visitor",
+    "detail": "the killer is shown only as a prowling point of view until the reveal",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lake",
+    "state": "where a boy drowned",
+    "when": "opening",
+    "role": "setting",
+    "quote": "a young boy drowned in Crystal Lake in 1957",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "LONG SHOT of the camp with the sun sparkling on the waters of Crystal Lake. The canoe lies half sunken in the shallows."
+     }
+    ]
+   },
+   {
+    "value": "arrow",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "the killer pierces Jack's throat with an arrow",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "It is BILL -- dead -- in a travesty of the martyrdom of St. Sebastian, shot with arrows."
+     }
+    ]
+   },
+   {
+    "value": "axe",
+    "state": "bloodied",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "They find a bloodied axe in Brenda's bed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "A camp hatchet lies across her pillow. The shiny blade is marked with blood."
+     }
+    ]
+   },
+   {
+    "value": "snake",
+    "state": "hidden in a cabin, then cut in two",
+    "when": "middle",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "ALICE opens the forth drawer and the snake strikes!",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Carefully, he winds up and smashes down with the edge of the machete, cutting the snake into two pieces."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "child's voice",
+    "when": "middle",
+    "role": "trigger",
+    "quote": "She is lured outside by a little boy's voice calling for help",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Kill her, mommy! Kill her!"
+     }
+    ]
+   },
+   {
+    "value": "thunderstorm",
+    "when": "middle",
+    "role": "omen",
+    "quote": "As a thunderstorm approaches, Steve leaves for supplies",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "There is the low rumble of thunder preceeded by a faint glow on the horizon."
+     }
+    ]
+   },
+   {
+    "value": "machete",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Alice decapitates Mrs. Voorhees with a machete",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "ALICE shoots up out of the water holding the machete, and in one, wild swing, decapitates MRS. VOORHEES"
+     }
+    ]
+   },
+   {
+    "value": "canoe",
+    "when": "ending",
+    "quote": "Alice seeks refuge inside a canoe, which she pushes out onto the lake",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "ALICE pushes a canoe into the water and paddles, as rapidly as her tired body will permit, out in the lake to safety."
+     }
+    ]
+   },
+   {
+    "value": "corpse rising from water",
+    "state": "decomposing",
+    "when": "ending",
+    "role": "threat",
+    "quote": "Jason's decomposing corpse rises from the lake and pulls Alice underwater",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "prologue murder of lovers", "when": "opening", "quote": "An unseen assailant attacks and murders them", "confidence": "sourced"},
-   {"order": 2, "value": "warning from a local", "when": "early", "role": "omen", "quote": "Enos warns her about the camp's troubled past", "confidence": "sourced"},
-   {"order": 3, "value": "first death on arrival", "when": "early", "quote": "fleeing into the woods where the driver eventually slashes her throat", "confidence": "sourced"},
-   {"order": 4, "value": "killed one by one", "when": "middle", "quote": "the killer pierces Jack's throat with an arrow before following Marcie into the bathroom", "confidence": "sourced"},
-   {"order": 5, "value": "killer revealed", "when": "late", "role": "turn", "quote": "She reveals that it is her son Jason's birthday and that he was the young boy who drowned in 1957", "confidence": "sourced"},
-   {"order": 6, "value": "final girl kills killer", "when": "late", "quote": "Alice decapitates Mrs. Voorhees with a machete", "confidence": "sourced"},
-   {"order": 7, "value": "jump scare from the lake", "when": "ending", "role": "turn", "quote": "Jason's decomposing corpse rises from the lake and pulls Alice underwater", "confidence": "sourced"},
-   {"order": 8, "value": "threat may remain", "when": "ending", "quote": "Alice replies, \"Then he's still there.\"", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "prologue murder of lovers",
+    "when": "opening",
+    "quote": "An unseen assailant attacks and murders them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "A hatchet flashes into FRAME and CLAUDETTE goes down under the blow."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "unlucky date announced",
+    "when": "early",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "It's 7:01 on Friday the 13th of June.",
+    "detail": "a radio DJ: 'It's black cat day in Crystal Lake'",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "It's black cat day in Crystal Lake."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "warning from a local",
+    "when": "early",
+    "role": "omen",
+    "quote": "Enos warns her about the camp's troubled past",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Must be the forth time somebody's tried to reopen that place."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "first death on arrival",
+    "when": "early",
+    "quote": "fleeing into the woods where the driver eventually slashes her throat",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "snake in the cabin",
+    "when": "early",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "ALICE (a tight whisper) There's a fucking snake in here.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "killed one by one",
+    "when": "middle",
+    "quote": "the killer pierces Jack's throat with an arrow before following Marcie into the bathroom",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "killer revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "She reveals that it is her son Jason's birthday and that he was the young boy who drowned in 1957",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The hand is missing its little finger!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "final girl kills killer",
+    "when": "late",
+    "quote": "Alice decapitates Mrs. Voorhees with a machete",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "jump scare from the lake",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Jason's decomposing corpse rises from the lake and pulls Alice underwater",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "threat may remain",
+    "when": "ending",
+    "quote": "Alice replies, \"Then he's still there.\"",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

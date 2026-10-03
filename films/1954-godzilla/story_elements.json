@@ -1,61 +1,417 @@
 {
  "film": "1954-godzilla",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "giant monster", "detail": "Godzilla, a giant radioactive dinosaur", "quote": "Japanese authorities deal with the sudden appearance of a gigantic monster, mutated from nuclear bomb testing", "confidence": "sourced"}
+   {
+    "value": "giant monster",
+    "detail": "Godzilla, a giant radioactive dinosaur",
+    "quote": "Japanese authorities deal with the sudden appearance of a gigantic monster, mutated from nuclear bomb testing",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "made by human science", "detail": "mutated and disturbed by hydrogen bomb testing", "quote": "He concludes that Godzilla has been disturbed by underwater hydrogen bomb testing", "confidence": "sourced"},
-   {"value": "ancient creature from the sea", "quote": "blamed by an elder on the ancient sea creature known as \"Godzilla\"", "confidence": "sourced"}
+   {
+    "value": "made by human science",
+    "detail": "mutated and disturbed by hydrogen bomb testing",
+    "quote": "He concludes that Godzilla has been disturbed by underwater hydrogen bomb testing",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ancient creature from the sea",
+    "quote": "blamed by an elder on the ancient sea creature known as \"Godzilla\"",
+    "confidence": "sourced"
+   },
+   {
+    "value": "island folklore",
+    "source": "subtitles",
+    "at": "00:11:56",
+    "quote": "It's the name of a monster that lives in the sea.",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "nature's revenge", "quote": "Mankind had created the bomb, and now nature was going to take revenge on mankind", "confidence": "sourced"}
+   {
+    "value": "nature's revenge",
+    "quote": "Mankind had created the bomb, and now nature was going to take revenge on mankind",
+    "confidence": "sourced"
+   },
+   {
+    "value": "to feed on humans",
+    "source": "subtitles",
+    "at": "00:12:01",
+    "quote": "It will come from the ocean to feed on humankind to survive.",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "nuclear weapons testing", "detail": "the atomic bombs and H-bomb tests", "quote": "as the atomic bomb testing that woke Godzilla was carried out by the United States", "confidence": "sourced"}
+   {
+    "value": "nuclear weapons testing",
+    "detail": "the atomic bombs and H-bomb tests",
+    "quote": "as the atomic bomb testing that woke Godzilla was carried out by the United States",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:01",
+      "quote": "Isn't Godzilla a product of the atomic bomb that still haunts many of us Japanese?"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "ships destroyed at sea", "quote": "after the Japanese freighter Eiko-maru is destroyed near Odo Island, another ship—the Bingo-maru—is sent to investigate, only to meet the same fate", "confidence": "sourced"}
+   {
+    "value": "ships destroyed at sea",
+    "quote": "after the Japanese freighter Eiko-maru is destroyed near Odo Island, another ship—the Bingo-maru—is sent to investigate, only to meet the same fate",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "conventional weapons fail", "quote": "Further attempts to kill the monster with tanks and fighter jets fail, and Godzilla returns to the ocean", "confidence": "sourced"},
-   {"value": "spreads radiation", "quote": "some survivors suffering from radiation sickness", "confidence": "sourced"},
-   {"value": "killed only by a doomsday weapon", "detail": "the Oxygen Destroyer", "quote": "a weapon called the \"Oxygen Destroyer\", which disintegrates oxygen atoms and causes organisms to asphyxiate, then dissolve", "confidence": "sourced"}
+   {
+    "value": "conventional weapons fail",
+    "quote": "Further attempts to kill the monster with tanks and fighter jets fail, and Godzilla returns to the ocean",
+    "confidence": "sourced"
+   },
+   {
+    "value": "spreads radiation",
+    "quote": "some survivors suffering from radiation sickness",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:14",
+      "quote": "This is horrible! We can't use the well anymore?"
+     }
+    ]
+   },
+   {
+    "value": "killed only by a doomsday weapon",
+    "detail": "the Oxygen Destroyer",
+    "quote": "a weapon called the \"Oxygen Destroyer\", which disintegrates oxygen atoms and causes organisms to asphyxiate, then dissolve",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:20",
+      "quote": "Used as a weapon, this would be as powerful as a nuclear bomb."
+     }
+    ]
+   },
+   {
+    "value": "appeased with girl sacrifices",
+    "detail": "old Odo Island custom, now an exorcism dance",
+    "source": "subtitles",
+    "at": "00:12:08",
+    "quote": "In the old days, during times when the fishing was poor, we used to sacrifice girls",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "fishing village", "relation_to_threat": "community", "detail": "Odo Island", "quote": "Godzilla, briefly seen, destroys 17 homes, kills nine people, and kills 20 of the villagers' livestock", "confidence": "sourced"},
-   {"value": "a whole city", "relation_to_threat": "community", "detail": "Tokyo", "quote": "hospitals and shelters are crowded with the maimed and the dead", "confidence": "sourced"},
-   {"value": "scientist", "relation_to_threat": "stranger", "detail": "Serizawa, who dies using his weapon", "quote": "Serizawa activates the device and cuts off his air supply, taking the secret of the Oxygen Destroyer to his grave", "confidence": "sourced"}
+   {
+    "value": "fishing village",
+    "relation_to_threat": "community",
+    "detail": "Odo Island",
+    "quote": "Godzilla, briefly seen, destroys 17 homes, kills nine people, and kills 20 of the villagers' livestock",
+    "confidence": "sourced"
+   },
+   {
+    "value": "a whole city",
+    "relation_to_threat": "community",
+    "detail": "Tokyo",
+    "quote": "hospitals and shelters are crowded with the maimed and the dead",
+    "confidence": "sourced"
+   },
+   {
+    "value": "scientist",
+    "relation_to_threat": "stranger",
+    "detail": "Serizawa, who dies using his weapon",
+    "quote": "Serizawa activates the device and cuts off his air supply, taking the secret of the Oxygen Destroyer to his grave",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "The Oxygen Destroyer successfully kills Godzilla and disintegrates its body", "confidence": "sourced"},
-   {"value": "self-sacrifice", "quote": "Serizawa activates the device and cuts off his air supply, taking the secret of the Oxygen Destroyer to his grave", "confidence": "sourced"},
-   {"value": "threat may return", "quote": "Yamane believes that if nuclear weapons testing continues, another Godzilla may rise in the future", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "The Oxygen Destroyer successfully kills Godzilla and disintegrates its body",
+    "confidence": "sourced"
+   },
+   {
+    "value": "self-sacrifice",
+    "quote": "Serizawa activates the device and cuts off his air supply, taking the secret of the Oxygen Destroyer to his grave",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat may return",
+    "quote": "Yamane believes that if nuclear weapons testing continues, another Godzilla may rise in the future",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:36",
+      "quote": "that another Godzilla might appear..."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "sinking ships", "state": "destroyed", "when": "opening", "role": "omen", "quote": "after the Japanese freighter Eiko-maru is destroyed near Odo Island", "confidence": "sourced"},
-   {"value": "empty fishing nets", "when": "opening", "role": "omen", "quote": "Fishing catches mysteriously drop to zero", "confidence": "sourced"},
-   {"value": "giant footprints", "state": "radioactive", "when": "early", "role": "clue", "quote": "giant radioactive footprints and a trilobite are discovered", "confidence": "sourced"},
-   {"value": "trilobite", "when": "early", "role": "clue", "quote": "giant radioactive footprints and a trilobite are discovered", "confidence": "sourced"},
-   {"value": "electrified fence", "state": "broken through", "when": "middle", "role": "setting", "quote": "Godzilla resurfaces and breaks through the fence to Tokyo with its atomic breath", "confidence": "sourced"},
-   {"value": "atomic breath", "when": "middle", "role": "threat", "quote": "breaks through the fence to Tokyo with its atomic breath", "confidence": "sourced"},
-   {"value": "burning notes", "when": "late", "role": "symbol", "quote": "As Serizawa burns his notes, Emiko breaks down crying", "confidence": "sourced"}
+   {
+    "value": "sinking ships",
+    "state": "destroyed",
+    "when": "opening",
+    "role": "omen",
+    "quote": "after the Japanese freighter Eiko-maru is destroyed near Odo Island",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:46",
+      "quote": "It was incredible. The ocean just blew up!"
+     }
+    ]
+   },
+   {
+    "value": "empty fishing nets",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Fishing catches mysteriously drop to zero",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:26",
+      "quote": "It's no good! We didn't catch anything! It can't get any worse than this!"
+     }
+    ]
+   },
+   {
+    "value": "giant footprints",
+    "state": "radioactive",
+    "when": "early",
+    "role": "clue",
+    "quote": "giant radioactive footprints and a trilobite are discovered",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:26",
+      "quote": "This footprint is radioactive."
+     }
+    ]
+   },
+   {
+    "value": "trilobite",
+    "when": "early",
+    "role": "clue",
+    "quote": "giant radioactive footprints and a trilobite are discovered",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:49",
+      "quote": "It's a trilobite! A three-lobed creature that has long since been extinct!"
+     }
+    ]
+   },
+   {
+    "value": "electrified fence",
+    "state": "broken through",
+    "when": "middle",
+    "role": "setting",
+    "quote": "Godzilla resurfaces and breaks through the fence to Tokyo with its atomic breath",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:39",
+      "quote": "We will send 50,000 volts of electric current through the fence in hope of electrocuting Godzilla to death."
+     }
+    ]
+   },
+   {
+    "value": "atomic breath",
+    "when": "middle",
+    "role": "threat",
+    "quote": "breaks through the fence to Tokyo with its atomic breath",
+    "confidence": "sourced"
+   },
+   {
+    "value": "burning notes",
+    "when": "late",
+    "role": "symbol",
+    "quote": "As Serizawa burns his notes, Emiko breaks down crying",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:25",
+      "quote": "Even if I burn my notes, the secret will still be in my head."
+     }
+    ]
+   },
+   {
+    "value": "exorcism dance",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:12:22",
+    "quote": "Now, this exorcism ceremony is all that remains of the old traditions.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "radioactive well",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:19:14",
+    "quote": "This is horrible! We can't use the well anymore?",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother holding children",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:02:10",
+    "quote": "We'll be joining your father in just a moment!",
+    "confidence": "sourced"
+   },
+   {
+    "value": "schoolgirls' prayer song",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:20:56",
+    "quote": "\" Oh Peace, Oh Light, Return, \" the prayer for peace",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "ships vanish at sea", "when": "opening", "role": "omen", "quote": "after the Japanese freighter Eiko-maru is destroyed near Odo Island", "confidence": "sourced"},
-   {"order": 2, "value": "village attacked at night", "when": "early", "quote": "That evening, a storm strikes the island, destroying the reporters' helicopter", "confidence": "sourced"},
-   {"order": 3, "value": "scientist explains cause", "when": "early", "role": "clue", "quote": "He concludes that Godzilla has been disturbed by underwater hydrogen bomb testing", "confidence": "sourced"},
-   {"order": 4, "value": "military fails", "when": "middle", "quote": "Ten frigates are dispatched to attempt to kill the monster using depth charges", "confidence": "sourced"},
-   {"order": 5, "value": "city destroyed", "when": "middle", "role": "turn", "quote": "Godzilla resurfaces and breaks through the fence to Tokyo with its atomic breath, unleashing more destruction across the city", "confidence": "sourced"},
-   {"order": 6, "value": "secret weapon revealed", "when": "late", "role": "turn", "quote": "Emiko tells Ogata about Serizawa's research, a weapon called the \"Oxygen Destroyer\"", "confidence": "sourced"},
-   {"order": 7, "value": "sacrifice kills monster", "when": "ending", "quote": "The Oxygen Destroyer successfully kills Godzilla and disintegrates its body; many mourn Serizawa's death", "confidence": "sourced"},
-   {"order": 8, "value": "warning of return", "when": "ending", "quote": "if nuclear weapons testing continues, another Godzilla may rise in the future", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "ships vanish at sea",
+    "when": "opening",
+    "role": "omen",
+    "quote": "after the Japanese freighter Eiko-maru is destroyed near Odo Island",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:45",
+      "quote": "The fishing boat sank the same way."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "legend told and exorcism danced",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:12:08",
+    "quote": "In the old days, during times when the fishing was poor, we used to sacrifice girls",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "village attacked at night",
+    "when": "early",
+    "quote": "That evening, a storm strikes the island, destroying the reporters' helicopter",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "scientist explains cause",
+    "when": "early",
+    "role": "clue",
+    "quote": "He concludes that Godzilla has been disturbed by underwater hydrogen bomb testing",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:23",
+      "quote": "has absorbed a massive dose of radiation, the type generated only from an atomic bomb."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "military fails",
+    "when": "middle",
+    "quote": "Ten frigates are dispatched to attempt to kill the monster using depth charges",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "city destroyed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Godzilla resurfaces and breaks through the fence to Tokyo with its atomic breath, unleashing more destruction across the city",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "secret weapon revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Emiko tells Ogata about Serizawa's research, a weapon called the \"Oxygen Destroyer\"",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "nation prays for peace",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:20:56",
+    "quote": "\" Oh Peace, Oh Light, Return, \" the prayer for peace",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "sacrifice kills monster",
+    "when": "ending",
+    "quote": "The Oxygen Destroyer successfully kills Godzilla and disintegrates its body; many mourn Serizawa's death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:38",
+      "quote": "Both of you, be happy."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "warning of return",
+    "when": "ending",
+    "quote": "if nuclear weapons testing continues, another Godzilla may rise in the future",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:26",
+      "quote": "But, if we keep on conducting nuclear tests,"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

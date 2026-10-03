@@ -1,57 +1,381 @@
 {
  "film": "1962-bees-saal-baad",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vengeful ghost", "detail": "the spirit of a girl who killed herself after rape, as villagers believe", "quote": "the Thakur is killed by what the local people call the girl's vengeful spirit", "confidence": "sourced"},
-   {"value": "human posing as ghost", "detail": "Ramlal, the girl's father", "quote": "the one who was pretending to be the spirit of the girl was none other than her uncle Ramlal", "confidence": "sourced"}
+   {
+    "value": "vengeful ghost",
+    "detail": "the spirit of a girl who killed herself after rape, as villagers believe",
+    "quote": "the Thakur is killed by what the local people call the girl's vengeful spirit",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:16",
+      "quote": "From that night a fearsome ghost was born in this village"
+     }
+    ]
+   },
+   {
+    "value": "human posing as ghost",
+    "detail": "Ramlal, the girl's father",
+    "quote": "the one who was pretending to be the spirit of the girl was none other than her uncle Ramlal",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:00",
+      "quote": "I think, it's a shrewd man posing as a ghost who's doing it all"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "person who died wronged", "quote": "After a lustful Thakur in the village of Chandanghat rapes a young girl, she kills herself", "confidence": "sourced"}
+   {
+    "value": "person who died wronged",
+    "quote": "After a lustful Thakur in the village of Chandanghat rapes a young girl, she kills herself",
+    "confidence": "sourced"
+   },
+   {
+    "value": "family curse",
+    "source": "subtitles",
+    "at": "00:07:34",
+    "quote": "Your Uncle firmly believed that the family was cursed",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "revenge on a bloodline", "quote": "he killed Thakur and Thakur's son and was trying to kill Thakur's grandson", "confidence": "sourced"}
+   {
+    "value": "revenge on a bloodline",
+    "quote": "he killed Thakur and Thakur's son and was trying to kill Thakur's grandson",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:14:43",
+      "quote": "But for one man's crime you wanted to finish off the whole lineage?"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "rape", "quote": "After a lustful Thakur in the village of Chandanghat rapes a young girl, she kills herself", "confidence": "sourced"}
+   {
+    "value": "rape",
+    "quote": "After a lustful Thakur in the village of Chandanghat rapes a young girl, she kills herself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:14:27",
+      "quote": "To quench his lust, Kumar's grandpa had kidnapped my daughter Champa on her wedding night."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "heir returns home", "quote": "Twenty years after the Thakur's death, his grandson Kumar comes to the village", "confidence": "sourced"}
+   {
+    "value": "heir returns home",
+    "quote": "Twenty years after the Thakur's death, his grandson Kumar comes to the village",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "kills each generation", "quote": "Kumar is the grandson of a rapist and two generations of his family have met violent deaths", "confidence": "sourced"},
-   {"value": "kills under the same tree", "quote": "He was killed in the swamp under the same tree where his father and grandfather were killed", "confidence": "sourced"},
-   {"value": "singing lures victims", "quote": "He hears the singing voice of the supposed spirit the first night from the swamp", "confidence": "sourced"}
+   {
+    "value": "kills each generation",
+    "quote": "Kumar is the grandson of a rapist and two generations of his family have met violent deaths",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:27",
+      "quote": "It's 20 years now since your Grandpa was murdered Then, your father."
+     }
+    ]
+   },
+   {
+    "value": "kills under the same tree",
+    "quote": "He was killed in the swamp under the same tree where his father and grandfather were killed",
+    "confidence": "sourced"
+   },
+   {
+    "value": "singing lures victims",
+    "quote": "He hears the singing voice of the supposed spirit the first night from the swamp",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:12",
+      "quote": "First, it was the anklets jingle that pulled your forefather to the swamp. Now, there's a song added!"
+     }
+    ]
+   },
+   {
+    "value": "strikes at 9:30 at night",
+    "source": "subtitles",
+    "at": "00:46:08",
+    "quote": "A pitch-black night... 9: 30 p.m. Jingle of the anklets... What link does that sound have with the death of the Landlords",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "heir of the wrongdoer", "relation_to_threat": "family", "detail": "Kumar, the Thakur's grandson", "quote": "is warned by the locals that the spirit will kill him as well, but he does not believe them", "confidence": "sourced"},
-   {"value": "mistaken victim", "relation_to_threat": "stranger", "detail": "Laxman's fugitive brother-in-law, wearing Kumar's coat", "quote": "the \"spirit\" had chanced upon the fugitive in the forest, mistaken him for Kumar, and killed him", "confidence": "sourced"}
+   {
+    "value": "heir of the wrongdoer",
+    "relation_to_threat": "family",
+    "detail": "Kumar, the Thakur's grandson",
+    "quote": "is warned by the locals that the spirit will kill him as well, but he does not believe them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:44",
+      "quote": "Honestly, your life's in danger"
+     }
+    ]
+   },
+   {
+    "value": "mistaken victim",
+    "relation_to_threat": "stranger",
+    "detail": "Laxman's fugitive brother-in-law, wearing Kumar's coat",
+    "quote": "the \"spirit\" had chanced upon the fugitive in the forest, mistaken him for Kumar, and killed him",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "hoax exposed", "quote": "Police arrive and persuade Ramlal to surrender himself", "confidence": "sourced"},
-   {"value": "lovers united", "quote": "Kumar and Radha meet each other and have a happy ending", "confidence": "sourced"}
+   {
+    "value": "hoax exposed",
+    "quote": "Police arrive and persuade Ramlal to surrender himself",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lovers united",
+    "quote": "Kumar and Radha meet each other and have a happy ending",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "swamp", "when": "early", "role": "setting", "quote": "He hears the singing voice of the supposed spirit the first night from the swamp", "confidence": "sourced"},
-   {"value": "singing voice", "when": "early", "role": "omen", "quote": "The singing continues the second night, but Kumar is unable to find the identity of the girl singing the song", "confidence": "sourced"},
-   {"value": "light on the terrace", "when": "early", "role": "clue", "quote": "He notices that there is a source of light in his house on the terrace", "confidence": "sourced"},
-   {"value": "coat", "state": "stolen", "when": "middle", "role": "clue", "quote": "Since the fugitive needed a coat, Laxman stole Kumar's coat and gave it to him", "confidence": "sourced"},
-   {"value": "tree", "when": "middle", "role": "setting", "quote": "under the same tree where his father and grandfather were killed", "confidence": "sourced"},
-   {"value": "lantern", "when": "middle", "role": "clue", "quote": "using the light from his lantern, after which that man would come to the house for supplies", "confidence": "sourced"}
+   {
+    "value": "swamp",
+    "when": "early",
+    "role": "setting",
+    "quote": "He hears the singing voice of the supposed spirit the first night from the swamp",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:09",
+      "quote": "That door... It opens... straight towards the swamp"
+     }
+    ]
+   },
+   {
+    "value": "singing voice",
+    "when": "early",
+    "role": "omen",
+    "quote": "The singing continues the second night, but Kumar is unable to find the identity of the girl singing the song",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:23",
+      "quote": "\" Somewhere there burns a lamp, elsewhere a heart \""
+     }
+    ]
+   },
+   {
+    "value": "light on the terrace",
+    "when": "early",
+    "role": "clue",
+    "quote": "He notices that there is a source of light in his house on the terrace",
+    "confidence": "sourced"
+   },
+   {
+    "value": "coat",
+    "state": "stolen",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Since the fugitive needed a coat, Laxman stole Kumar's coat and gave it to him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:44",
+      "quote": "Where's my black coat? My overcoat is missing too"
+     }
+    ]
+   },
+   {
+    "value": "tree",
+    "when": "middle",
+    "role": "setting",
+    "quote": "under the same tree where his father and grandfather were killed",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lantern",
+    "when": "middle",
+    "role": "clue",
+    "quote": "using the light from his lantern, after which that man would come to the house for supplies",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:07:58",
+      "quote": "He lived in the swamp. My sis asked me to signal him with a lantern"
+     }
+    ]
+   },
+   {
+    "value": "jingling anklets",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:11:29",
+    "quote": "The same jingling of the anklets... And all the landlords were murdered",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:08",
+      "quote": "A pitch-black night... 9: 30 p.m. Jingle of the anklets..."
+     }
+    ]
+   },
+   {
+    "value": "room of the murdered",
+    "when": "early",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:10:56",
+    "quote": "Again the same room. A landlord... All the landlords... they all stayed in this room",
+    "confidence": "sourced"
+   },
+   {
+    "value": "tunnel under the trees",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:57:43",
+    "quote": "it was found that there was an underground tunnel there",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:15:37",
+      "quote": "Kumar's trapped in the tunnel"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "past crime and suicide", "when": "opening", "quote": "After a lustful Thakur in the village of Chandanghat rapes a young girl, she kills herself", "confidence": "sourced"},
-   {"order": 2, "value": "heir arrives, warning ignored", "when": "opening", "role": "trigger", "quote": "is warned by the locals that the spirit will kill him as well, but he does not believe them", "confidence": "sourced"},
-   {"order": 3, "value": "ghostly singing at night", "when": "early", "role": "omen", "quote": "He hears the singing voice of the supposed spirit the first night from the swamp", "confidence": "sourced"},
-   {"order": 4, "value": "wrong man killed", "when": "middle", "role": "turn", "quote": "it was not he that was killed, but another man wearing his suit", "confidence": "sourced"},
-   {"order": 5, "value": "lovers forbidden", "when": "late", "quote": "Ramlal forbids his niece Radha to meet Kumar, since tongues in the village have begun to wag", "confidence": "sourced"},
-   {"order": 6, "value": "lured to the swamp", "when": "late", "quote": "Kumar goes to the swamp, and the spirit tries to kill him, but he escapes", "confidence": "sourced"},
-   {"order": 7, "value": "ghost unmasked as avenger", "when": "ending", "role": "turn", "quote": "It was Ramlal's daughter who had been raped by Thakur, so he killed Thakur and Thakur's son", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "past crime and suicide",
+    "when": "opening",
+    "quote": "After a lustful Thakur in the village of Chandanghat rapes a young girl, she kills herself",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "heir arrives, warning ignored",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "is warned by the locals that the spirit will kill him as well, but he does not believe them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:57",
+      "quote": "You seem new around here. Don't you know? All the Thakur's have been got rid of You shouldn't venture out there alone"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "heir vows to face the swamp",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "00:44:44",
+    "quote": "Tonight I'll go towards the swamp You're repeating the same mistake that your forefathers did",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "ghostly singing at night",
+    "when": "early",
+    "role": "omen",
+    "quote": "He hears the singing voice of the supposed spirit the first night from the swamp",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "wrong man killed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "it was not he that was killed, but another man wearing his suit",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:51",
+      "quote": "You mean, the killer took him to be you, and killed him by mistake!"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "lovers forbidden",
+    "when": "late",
+    "quote": "Ramlal forbids his niece Radha to meet Kumar, since tongues in the village have begun to wag",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "lured to the swamp",
+    "when": "late",
+    "quote": "Kumar goes to the swamp, and the spirit tries to kill him, but he escapes",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "ghost unmasked as avenger",
+    "when": "ending",
+    "role": "turn",
+    "quote": "It was Ramlal's daughter who had been raped by Thakur, so he killed Thakur and Thakur's son",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:14:12",
+      "quote": "By lying about fixing the marriage you had come to kill Kumar..."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "song plays over the end",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "02:22:34",
+    "quote": "That's it! Crime never pays \" Somewhere there burns a lamp, elsewhere, a heart \"",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -7,6 +7,12 @@
     "Lead",
     "Plot"
    ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
   }
  ],
  "plot_quality": "full",
@@ -16,7 +22,14 @@
     "value": "haunted room",
     "detail": "room 1408 at The Dolphin hotel",
     "quote": "he is soon trapped in the room, where he experiences bizarre and frightful events",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:59",
+      "quote": "It's an evil fucking room."
+     }
+    ]
    }
   ],
   "origin": [
@@ -32,7 +45,14 @@
     "value": "victim's suicide",
     "detail": "the 'express checkout'",
     "quote": "he can either relive the past hour over and over again, or use their \"express checkout system\". A hangman's noose appears",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:30",
+      "quote": "or you can take advantage of our express checkout system."
+     }
+    ]
    },
    {
     "value": "to lure another victim",
@@ -65,12 +85,26 @@
    {
     "value": "no one lasts an hour",
     "quote": "no one has lasted more than an hour inside of 1408",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:21",
+      "quote": "No one's ever lasted more than an hour."
+     }
+    ]
    },
    {
     "value": "time loop",
     "quote": "when the countdown ends, the room restores itself and the clock radio resets to 60:00",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:28",
+      "quote": "You can choose to relive this hour over and over,"
+     }
+    ]
    },
    {
     "value": "cannot leave",
@@ -80,7 +114,14 @@
    {
     "value": "destroyed by fire",
     "quote": "Mike improvises a Molotov cocktail and sets the room on fire",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:15",
+      "quote": "but this fire- -"
+     }
+    ]
    }
   ],
   "who_suffers": [
@@ -118,7 +159,14 @@
     "when": "opening",
     "role": "omen",
     "quote": "he receives an anonymous postcard depicting The Dolphin",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:42",
+      "quote": "Did I drop a postcard?"
+     }
+    ]
    },
    {
     "value": "clock radio",
@@ -126,7 +174,14 @@
     "when": "early",
     "role": "threat",
     "quote": "the digital display changes to a countdown starting from 60:00",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:23",
+      "quote": "- Radio: We've only just begun... - Ow!"
+     }
+    ]
    },
    {
     "value": "painting of ship",
@@ -134,7 +189,14 @@
     "when": "middle",
     "role": "threat",
     "quote": "a picture of a ship in a storm, from which water floods the room",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:22",
+      "quote": "beneath a thrift-store painting of a schooner lost at sea."
+     }
+    ]
    },
    {
     "value": "doppelgänger",
@@ -148,7 +210,13 @@
     "when": "late",
     "role": "threat",
     "quote": "A hangman's noose appears, but he refuses to give in",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Something FALLS right behind him. Mike t1rns -- A ROPE NOOSE"
+     }
+    ]
    },
    {
     "value": "phone",
@@ -164,12 +232,67 @@
     "when": "ending",
     "role": "clue",
     "quote": "Mike takes the damaged mini-cassette recorder from it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:29",
+      "quote": "Mike: Round one goes to the hideous Mr. Olin"
+     }
+    ]
+   },
+   {
+    "value": "hellfire sermon on radio",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:47",
+    "quote": "that the open gates of Hell are yawning up widely in our path.",
     "confidence": "sourced"
+   },
+   {
+    "value": "missing 13th floor",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:24:26",
+    "quote": "Just as they pretend there's no 1 3th floor.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "chocolates on the pillow",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:48:14",
+    "quote": "It was the booze or the chocolates.",
+    "confidence": "sourced",
+    "detail": "turn-down mints Mike eats before the hallucinations"
+   },
+   {
+    "value": "crying baby",
+    "when": "middle",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:51:16",
+    "quote": "- Kid, be quiet. - (baby wailing)",
+    "confidence": "sourced",
+    "detail": "a baby's crying recurs through the walls"
    }
   ],
   "beats": [
    {
     "order": 1,
+    "value": "checking into a fake haunted inn",
+    "when": "opening",
+    "source": "subtitles",
+    "at": "00:01:47",
+    "quote": "Mike Enslin. Checking in.",
+    "confidence": "sourced",
+    "detail": "the debunker's routine before the postcard"
+   },
+   {
+    "order": 2,
     "value": "anonymous warning",
     "when": "opening",
     "role": "omen",
@@ -177,60 +300,113 @@
     "confidence": "sourced"
    },
    {
-    "order": 2,
+    "order": 3,
     "value": "warned by manager",
     "when": "early",
     "quote": "Olin repeatedly and impassionately attempts to dissuade and bribe Mike",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:57",
+      "quote": "four overdoses, five hangings,"
+     }
+    ]
    },
    {
-    "order": 3,
+    "order": 4,
     "value": "countdown begins",
     "when": "early",
     "role": "trigger",
     "quote": "the digital display changes to a countdown starting from 60:00",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:04",
+      "quote": "Nobody lasts more than an hour."
+     }
+    ]
    },
    {
-    "order": 4,
+    "order": 5,
     "value": "trapped in room",
     "when": "middle",
     "quote": "Mike makes numerous attempts to leave the room, all in vain",
     "confidence": "sourced"
    },
    {
-    "order": 5,
-    "value": "false escape",
+    "order": 6,
+    "value": "dead daughter appears",
     "when": "middle",
     "role": "turn",
-    "quote": "revealing that Mike is still trapped inside 1408",
-    "confidence": "sourced"
-   },
-   {
-    "order": 6,
-    "value": "offered suicide",
-    "when": "late",
-    "quote": "A hangman's noose appears, but he refuses to give in",
+    "source": "subtitles",
+    "at": "01:01:09",
+    "quote": "Katie: Daddy, I can't see you.",
     "confidence": "sourced"
    },
    {
     "order": 7,
-    "value": "room set on fire",
-    "when": "late",
-    "quote": "Mike improvises a Molotov cocktail and sets the room on fire",
-    "confidence": "sourced"
+    "value": "false escape",
+    "when": "middle",
+    "role": "turn",
+    "quote": "revealing that Mike is still trapped inside 1408",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:42",
+      "quote": "Did I drop a postcard?"
+     }
+    ]
    },
    {
     "order": 8,
+    "value": "offered suicide",
+    "when": "late",
+    "quote": "A hangman's noose appears, but he refuses to give in",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:50",
+      "quote": "Are you ready to check out, Mr. Enslin?"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "room set on fire",
+    "when": "late",
+    "quote": "Mike improvises a Molotov cocktail and sets the room on fire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:37",
+      "quote": "(fire alarm ringing)"
+     }
+    ]
+   },
+   {
+    "order": 10,
     "value": "evidence of the dead",
     "when": "ending",
     "quote": "they both hear Katie's voice coming from it, confirming Mike's account",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:39",
+      "quote": "Katie: Daddy, don't you love me anymore?"
+     }
+    ]
    }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

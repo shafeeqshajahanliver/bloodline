@@ -1,62 +1,455 @@
 {
  "film": "2021-malignant",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "parasitic twin", "detail": "Gabriel, living inside Madison's skull", "quote": "Gabriel is Madison's parasitic twin brother who appeared as a half-formed child facing out of her back", "confidence": "sourced"},
-   {"value": "the self", "quote": "Once freed, Gabriel was able to take control of Madison's body to commit the murders", "confidence": "sourced"}
+   {
+    "value": "parasitic twin",
+    "detail": "Gabriel, living inside Madison's skull",
+    "quote": "Gabriel is Madison's parasitic twin brother who appeared as a half-formed child facing out of her back",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:10",
+      "quote": "He was the cause of your miscarriages."
+     }
+    ]
+   },
+   {
+    "value": "the self",
+    "quote": "Once freed, Gabriel was able to take control of Madison's body to commit the murders",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:33",
+      "quote": "He's been controlling her body like a puppet."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "born with it", "quote": "a half-formed child facing out of her back", "confidence": "sourced"},
-   {"value": "failed surgery", "quote": "Weaver surgically removed most of Gabriel's body, but could not destroy his brain without killing Madison", "confidence": "sourced"}
+   {
+    "value": "born with it",
+    "quote": "a half-formed child facing out of her back",
+    "confidence": "sourced"
+   },
+   {
+    "value": "failed surgery",
+    "quote": "Weaver surgically removed most of Gabriel's body, but could not destroy his brain without killing Madison",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:07",
+      "quote": "we cut out the cancer."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "revenge on his doctors", "quote": "Shaw finds a link between the doctors and Madison hidden in Weaver's records", "confidence": "observed"},
-   {"value": "to replace someone", "detail": "kill the sister who replaced him", "quote": "Gabriel attempts to kill Sydney for replacing him in Madison's life", "confidence": "sourced"}
+   {
+    "value": "revenge on his doctors",
+    "quote": "Shaw finds a link between the doctors and Madison hidden in Weaver's records",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:57",
+      "quote": "It's time to cut out the cancer."
+     }
+    ]
+   },
+   {
+    "value": "to replace someone",
+    "detail": "kill the sister who replaced him",
+    "quote": "Gabriel attempts to kill Sydney for replacing him in Madison's life",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:41:48",
+      "quote": "She's not your sister!"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "domestic abuse", "quote": "her abusive husband Derek smashes Madison's head against a wall, drawing blood", "confidence": "sourced"},
-   {"value": "child cut away", "quote": "Weaver determines that he is a lost cause and states the \"cancer\" must be removed", "confidence": "sourced"}
+   {
+    "value": "domestic abuse",
+    "quote": "her abusive husband Derek smashes Madison's head against a wall, drawing blood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:03",
+      "quote": "Sometimes it's like I can't control myself, okay?"
+     }
+    ]
+   },
+   {
+    "value": "child cut away",
+    "quote": "Weaver determines that he is a lost cause and states the \"cancer\" must be removed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:28",
+      "quote": "It's time to cutout the cancer."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "head injury", "quote": "where he remained dormant until the altercation with Derek", "confidence": "sourced"}
+   {
+    "value": "head injury",
+    "quote": "where he remained dormant until the altercation with Derek",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "controls electricity", "quote": "Gabriel, who is able to control electricity and broadcast his thoughts via speakers", "confidence": "sourced"},
-   {"value": "host sees through visions", "quote": "a woman who begins to have visions of people being murdered, only to realize the events are happening in real life", "confidence": "sourced"},
-   {"value": "contained by willpower", "quote": "she subconsciously locks an enraged Gabriel behind bars", "confidence": "sourced"}
+   {
+    "value": "controls electricity",
+    "quote": "Gabriel, who is able to control electricity and broadcast his thoughts via speakers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:49",
+      "quote": "It was like he was drinking the electricity"
+     }
+    ]
+   },
+   {
+    "value": "host sees through visions",
+    "quote": "a woman who begins to have visions of people being murdered, only to realize the events are happening in real life",
+    "confidence": "sourced"
+   },
+   {
+    "value": "contained by willpower",
+    "quote": "she subconsciously locks an enraged Gabriel behind bars",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:39",
+      "quote": "You can't lock me in here forever."
+     }
+    ]
+   },
+   {
+    "value": "feeds on host's pregnancies",
+    "source": "subtitles",
+    "at": "01:42:10",
+    "quote": "He was the cause of your miscarriages.",
+    "detail": "Gabriel fed off Madison's fetuses",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "host woman", "relation_to_threat": "self", "detail": "Madison", "quote": "Believing Madison to be the murderer, the police arrest her", "confidence": "sourced"},
-   {"value": "doctors", "relation_to_threat": "stranger", "quote": "She has a vision of Weaver being brutally bludgeoned by the killer", "confidence": "sourced"},
-   {"value": "sister", "relation_to_threat": "family", "detail": "Sydney", "quote": "Gabriel almost led her to kill Sydney while Sydney was still in her mother's womb", "confidence": "sourced"}
+   {
+    "value": "host woman",
+    "relation_to_threat": "self",
+    "detail": "Madison",
+    "quote": "Believing Madison to be the murderer, the police arrest her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:59",
+      "quote": "You got the murder weapon, the coat, the gloves,"
+     }
+    ]
+   },
+   {
+    "value": "doctors",
+    "relation_to_threat": "stranger",
+    "quote": "She has a vision of Weaver being brutally bludgeoned by the killer",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sister",
+    "relation_to_threat": "family",
+    "detail": "Sydney",
+    "quote": "Gabriel almost led her to kill Sydney while Sydney was still in her mother's womb",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:46:34",
+      "quote": "Blood or not, you will always be my sister."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "threat contained", "quote": "With his influence gone, Gabriel sinks back inside her head", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "the electric humming that accompanied Gabriel's attacks is faintly heard", "confidence": "sourced"}
+   {
+    "value": "threat contained",
+    "quote": "With his influence gone, Gabriel sinks back inside her head",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:43",
+      "quote": "Sooner or later I will get out."
+     }
+    ]
+   },
+   {
+    "value": "threat survives",
+    "quote": "the electric humming that accompanied Gabriel's attacks is faintly heard",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:47:23",
+      "quote": "[Electrical buzzing]"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "speakers", "when": "opening", "role": "threat", "quote": "broadcast his thoughts via speakers", "confidence": "sourced"},
-   {"value": "bleeding head wound", "when": "early", "role": "omen", "quote": "Madison's head wound continues bleeding", "confidence": "sourced"},
-   {"value": "child photo", "when": "middle", "role": "clue", "quote": "discover a photo of Madison as a child in Weaver's house", "confidence": "sourced"},
-   {"value": "attic", "when": "middle", "role": "setting", "quote": "falls from the attic of Madison's home, revealing that Gabriel was secretly living there", "confidence": "sourced"},
-   {"value": "bars", "state": "imagined", "when": "ending", "role": "symbol", "quote": "locks an enraged Gabriel behind bars", "confidence": "sourced"},
-   {"value": "electric humming", "when": "ending", "role": "omen", "quote": "the electric humming that accompanied Gabriel's attacks is faintly heard", "confidence": "sourced"}
+   {
+    "value": "speakers",
+    "when": "opening",
+    "role": "threat",
+    "quote": "broadcast his thoughts via speakers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:41",
+      "quote": "Gabriel: [Distorted] I will kill you all."
+     }
+    ]
+   },
+   {
+    "value": "baby mobile",
+    "when": "opening",
+    "role": "symbol",
+    "source": "screenplay",
+    "quote": "A BABY MOBILE GENTLY TURNS as it's hung above the crib.",
+    "detail": "Madison prepares a nursery after three miscarriages",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bleeding head wound",
+    "when": "early",
+    "role": "omen",
+    "quote": "Madison's head wound continues bleeding",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child photo",
+    "when": "middle",
+    "role": "clue",
+    "quote": "discover a photo of Madison as a child in Weaver's house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:43",
+      "quote": "The girl in the picture."
+     }
+    ]
+   },
+   {
+    "value": "buried underground city",
+    "when": "middle",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:28:29",
+    "quote": "Welcome to the Seattle underground.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "attic",
+    "when": "middle",
+    "role": "setting",
+    "quote": "falls from the attic of Madison's home, revealing that Gabriel was secretly living there",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:49",
+      "quote": "Why was your stuff in her attic, hmm?"
+     }
+    ]
+   },
+   {
+    "value": "trophy made into blade",
+    "when": "late",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "01:14:45",
+    "quote": "It's the rest of the missing trophy, fashioned into a weapon.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bars",
+    "state": "imagined",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "locks an enraged Gabriel behind bars",
+    "confidence": "sourced"
+   },
+   {
+    "value": "electric humming",
+    "when": "ending",
+    "role": "omen",
+    "quote": "the electric humming that accompanied Gabriel's attacks is faintly heard",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:47:23",
+      "quote": "[Electrical buzzing]"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "hospital prologue escape", "when": "opening", "quote": "escapes and kills several staff members", "confidence": "sourced"},
-   {"order": 2, "value": "abuse wakes the threat", "when": "early", "role": "trigger", "quote": "her abusive husband Derek smashes Madison's head against a wall, drawing blood", "confidence": "sourced"},
-   {"order": 3, "value": "husband murdered", "when": "early", "quote": "When Madison wakes up, she finds Derek's corpse", "confidence": "sourced"},
-   {"order": 4, "value": "visions of murders", "when": "middle", "quote": "She has a vision of Weaver being brutally bludgeoned by the killer", "confidence": "sourced"},
-   {"order": 5, "value": "hypnosis recovers memory", "when": "middle", "role": "clue", "quote": "The detectives enlist a psychiatric hypnotherapist to unlock Madison's memories", "confidence": "sourced"},
-   {"order": 6, "value": "twin revealed", "when": "late", "role": "turn", "quote": "learns that Gabriel is Madison's parasitic twin brother", "confidence": "sourced"},
-   {"order": 7, "value": "massacre at precinct", "when": "late", "quote": "He kills the inmates and most of the precinct's officers", "confidence": "sourced"},
-   {"order": 8, "value": "host retakes control", "when": "ending", "quote": "Madison wakes up and takes back control of her body", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "hospital prologue escape",
+    "when": "opening",
+    "quote": "escapes and kills several staff members",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:30",
+      "quote": "You've been a bad, bad boy, Gabriel."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "abuse wakes the threat",
+    "when": "early",
+    "role": "trigger",
+    "quote": "her abusive husband Derek smashes Madison's head against a wall, drawing blood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:47",
+      "quote": "Oh, baby, I'm so sorry."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "husband murdered",
+    "when": "early",
+    "quote": "When Madison wakes up, she finds Derek's corpse",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "visions of murders",
+    "when": "middle",
+    "quote": "She has a vision of Weaver being brutally bludgeoned by the killer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:02",
+      "quote": "Time to cut out the cancer."
+     }
+    ]
+   },
+   {
+    "value": "imaginary friend recalled",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:56:30",
+    "quote": "Is he your imaginary friend? Gabriel isn't made up.",
+    "confidence": "sourced",
+    "order": 5
+   },
+   {
+    "order": 6,
+    "value": "hypnosis recovers memory",
+    "when": "middle",
+    "role": "clue",
+    "quote": "The detectives enlist a psychiatric hypnotherapist to unlock Madison's memories",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:48",
+      "quote": "We are gonna turn back the hands of time."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "twin revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "learns that Gabriel is Madison's parasitic twin brother",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:32",
+      "quote": "Gabriel's parasitic nature has increased significantly"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "massacre at precinct",
+    "when": "late",
+    "quote": "He kills the inmates and most of the precinct's officers",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "host retakes control",
+    "when": "ending",
+    "quote": "Madison wakes up and takes back control of her body",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:15",
+      "quote": "You don't get to control me ever again."
+     }
+    ]
+   },
+   {
+    "value": "closing vow of sisterhood",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:46:34",
+    "quote": "Blood or not, you will always be my sister.",
+    "confidence": "sourced",
+    "order": 10
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,61 +1,471 @@
 {
  "film": "1943-i-walked-with-a-zombie",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes and interpretations"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes and interpretations"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "zombie", "detail": "Jessica, said to be made a zombie; Carrefour, guardian zombie", "quote": "Mrs. Rand says Jessica is not sick or insane, but dead", "confidence": "sourced"},
-   {"value": "vodou ritual", "detail": "the houngan and the man in black draw Jessica with an effigy", "quote": "Using a small effigy of Jessica, the man in black and the houngan attempt to draw her to the houmfort", "confidence": "sourced"}
+   {
+    "value": "zombie",
+    "detail": "Jessica, said to be made a zombie; Carrefour, guardian zombie",
+    "quote": "Mrs. Rand says Jessica is not sick or insane, but dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:24",
+      "quote": "Just what is a zombie?"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:17:29",
+      "quote": "A ghost, a living dead."
+     }
+    ]
+   },
+   {
+    "value": "vodou ritual",
+    "detail": "the houngan and the man in black draw Jessica with an effigy",
+    "quote": "Using a small effigy of Jessica, the man in black and the houngan attempt to draw her to the houmfort",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:37",
+      "quote": "The houngan will speak to the rada drums..."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "made by a curse", "detail": "Mrs. Rand, possessed, asked the houngan to make Jessica a zombie", "quote": "possessed, asked the houngan to make Jessica a zombie", "confidence": "sourced"},
-   {"value": "fever", "detail": "the medical explanation", "quote": "after a tropical fever irreparably damaged her spinal cord", "confidence": "sourced"}
+   {
+    "value": "made by a curse",
+    "detail": "Mrs. Rand, possessed, asked the houngan to make Jessica a zombie",
+    "quote": "possessed, asked the houngan to make Jessica a zombie",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:30",
+      "quote": "and asked him to make her a zombie."
+     }
+    ]
+   },
+   {
+    "value": "fever",
+    "detail": "the medical explanation",
+    "quote": "after a tropical fever irreparably damaged her spinal cord",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:49",
+      "quote": "We might say that portions of the spinal cord were burned out by this fever."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to reclaim the zombie", "detail": "the congregation wants Jessica brought to them", "quote": "The Voudou congregation demands Jessica be delivered to them for further ritual tests", "confidence": "sourced"}
+   {
+    "value": "to reclaim the zombie",
+    "detail": "the congregation wants Jessica brought to them",
+    "quote": "The Voudou congregation demands Jessica be delivered to them for further ritual tests",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:18",
+      "quote": "won't stop drumming and dancing till they've gotten Jessica back..."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "slavery", "detail": "islanders descended from slaves brought by the Holland family", "quote": "descended from slaves brought by Paul's ancestors", "confidence": "sourced"},
-   {"value": "adultery", "detail": "Jessica tried to run away with Wesley", "quote": "the night Jessica tried to run away with Wesley", "confidence": "sourced"}
+   {
+    "value": "slavery",
+    "detail": "islanders descended from slaves brought by the Holland family",
+    "quote": "descended from slaves brought by Paul's ancestors",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:51",
+      "quote": "from the misery and pain of slavery."
+     }
+    ]
+   },
+   {
+    "value": "adultery",
+    "detail": "Jessica tried to run away with Wesley",
+    "quote": "the night Jessica tried to run away with Wesley",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "taking a job far away", "detail": "Betsy travels to Saint Sebastian as a nurse", "quote": "a Canadian nurse who travels to care for the ailing wife of a sugar plantation owner", "confidence": "sourced"},
-   {"value": "seeking a ritual cure", "quote": "convinces Betsy to take Jessica to be healed by the houngan", "confidence": "sourced"}
+   {
+    "value": "taking a job far away",
+    "detail": "Betsy travels to Saint Sebastian as a nurse",
+    "quote": "a Canadian nurse who travels to care for the ailing wife of a sugar plantation owner",
+    "confidence": "sourced"
+   },
+   {
+    "value": "seeking a ritual cure",
+    "quote": "convinces Betsy to take Jessica to be healed by the houngan",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "zombie does not bleed", "quote": "She does not bleed, causing murmurs of \"zombie\" among the onlookers", "confidence": "sourced"},
-   {"value": "effigy controls the body", "quote": "The man in black stabs the doll with a pin to mirror Wesley stabbing Jessica", "confidence": "sourced"}
+   {
+    "value": "zombie does not bleed",
+    "quote": "She does not bleed, causing murmurs of \"zombie\" among the onlookers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:50",
+      "quote": "She doesn't bleed."
+     }
+    ]
+   },
+   {
+    "value": "effigy controls the body",
+    "quote": "The man in black stabs the doll with a pin to mirror Wesley stabbing Jessica",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "wife", "relation_to_threat": "family", "detail": "Jessica, the zombified wife", "quote": "Paul kept Jessica from running away with Wesley right before she became sick", "confidence": "sourced"},
-   {"value": "newcomer", "relation_to_threat": "stranger", "detail": "Betsy, the nurse", "quote": "young nurse Betsy Connell is interviewed to care for the wife of Paul Holland", "confidence": "sourced"},
-   {"value": "brothers", "relation_to_threat": "family", "detail": "Paul and Wesley", "quote": "with her sons at each other's throats", "confidence": "sourced"}
+   {
+    "value": "wife",
+    "relation_to_threat": "family",
+    "detail": "Jessica, the zombified wife",
+    "quote": "Paul kept Jessica from running away with Wesley right before she became sick",
+    "confidence": "sourced"
+   },
+   {
+    "value": "newcomer",
+    "relation_to_threat": "stranger",
+    "detail": "Betsy, the nurse",
+    "quote": "young nurse Betsy Connell is interviewed to care for the wife of Paul Holland",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:57",
+      "quote": "It's easy enough to read the thoughts of a newcomer."
+     }
+    ]
+   },
+   {
+    "value": "brothers",
+    "relation_to_threat": "family",
+    "detail": "Paul and Wesley",
+    "quote": "with her sons at each other's throats",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "lovers die", "detail": "Wesley kills Jessica and drowns", "quote": "Jessica and Wesley are discovered floating in the surf", "confidence": "sourced"},
-   {"value": "survivors comforted", "quote": "Betsy and Paul console each other", "confidence": "sourced"}
+   {
+    "value": "lovers die",
+    "detail": "Wesley kills Jessica and drowns",
+    "quote": "Jessica and Wesley are discovered floating in the surf",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:49",
+      "quote": "The woman was a wicked woman..."
+     }
+    ]
+   },
+   {
+    "value": "survivors comforted",
+    "quote": "Betsy and Paul console each other",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "snow", "when": "opening", "role": "setting", "quote": "On a snowy Ottawa day, young nurse Betsy Connell is interviewed", "confidence": "sourced"},
-   {"value": "sword", "state": "ritual", "when": "middle", "role": "weapon", "quote": "a man dressed in black performs a ritual dance using a small sword", "confidence": "sourced"},
-   {"value": "figurehead", "state": "slave-ship statue", "when": "late", "role": "symbol", "quote": "a garden statue depicting Saint Sebastian, \"Ti-Misery\", that was once the figurehead of a Holland-family slave ship", "confidence": "sourced"},
-   {"value": "effigy doll", "state": "pierced with a pin", "when": "late", "role": "weapon", "quote": "The man in black stabs the doll with a pin", "confidence": "sourced"},
-   {"value": "arrow", "state": "taken from statue", "when": "late", "role": "weapon", "quote": "following with an arrow removed from a garden statue", "confidence": "sourced"},
-   {"value": "sea", "state": "bodies floating", "when": "ending", "role": "setting", "quote": "as he carries her body into the sea", "confidence": "sourced"},
-   {"value": "crossroads", "state": "guarded", "when": "late", "role": "setting", "quote": "Carrefour, a zombie who guards a crossroads", "confidence": "sourced"}
+   {
+    "value": "snow",
+    "when": "opening",
+    "role": "setting",
+    "quote": "On a snowy Ottawa day, young nurse Betsy Connell is interviewed",
+    "confidence": "sourced"
+   },
+   {
+    "value": "flying fish fleeing",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:04",
+    "quote": "they are not leaping for joy. They're jumping in terror.",
+    "detail": "Paul on the boat: the glowing sea 'takes its gleam from millions of tiny dead bodies'",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:12",
+      "quote": "it takes its gleam from millions of tiny dead bodies."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:03:28",
+      "quote": "Everything good dies here, even the stars."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "drums",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:07:49",
+    "quote": "The jungle drums, mysterious, eerie.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:12",
+      "quote": "The drums, the chanting, the lights."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "woman crying in the tower",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:12:49",
+    "quote": "I heard someone crying, a woman.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:53",
+      "quote": "And what's so alarming about the tower, Miss Connell?"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "wife dressed like a doll",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:15:24",
+    "quote": "It's just like dressing a great big doll.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "conch shell call",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:26:24",
+    "quote": "It's a big seashell, a conch.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sword",
+    "state": "ritual",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "a man dressed in black performs a ritual dance using a small sword",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:05",
+      "quote": "Just like that old Sabreur man at the houmfort..."
+     }
+    ]
+   },
+   {
+    "value": "figurehead",
+    "state": "slave-ship statue",
+    "when": "late",
+    "role": "symbol",
+    "quote": "a garden statue depicting Saint Sebastian, \"Ti-Misery\", that was once the figurehead of a Holland-family slave ship",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:40",
+      "quote": "With arrows stuck in him and a sorrowful, weeping look on his black face."
+     }
+    ]
+   },
+   {
+    "value": "effigy doll",
+    "state": "pierced with a pin",
+    "when": "late",
+    "role": "weapon",
+    "quote": "The man in black stabs the doll with a pin",
+    "confidence": "sourced"
+   },
+   {
+    "value": "arrow",
+    "state": "taken from statue",
+    "when": "late",
+    "role": "weapon",
+    "quote": "following with an arrow removed from a garden statue",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sea",
+    "state": "bodies floating",
+    "when": "ending",
+    "role": "setting",
+    "quote": "as he carries her body into the sea",
+    "confidence": "sourced"
+   },
+   {
+    "value": "crossroads",
+    "state": "guarded",
+    "when": "late",
+    "role": "setting",
+    "quote": "Carrefour, a zombie who guards a crossroads",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:18",
+      "quote": "There's a guard there, Carrefour. He keeps the crossroads."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "newcomer hired", "when": "opening", "quote": "young nurse Betsy Connell is interviewed to care for the wife of Paul Holland", "confidence": "sourced"},
-   {"order": 2, "value": "meets the patient at night", "when": "early", "quote": "She encounters Jessica, her patient, wandering the grounds that night", "confidence": "sourced"},
-   {"order": 3, "value": "ritual visit", "when": "middle", "role": "turn", "quote": "convinces Betsy to take Jessica to be healed by the houngan (Vodou priest)", "confidence": "sourced"},
-   {"order": 4, "value": "zombie test", "when": "middle", "role": "clue", "quote": "She does not bleed, causing murmurs of \"zombie\" among the onlookers", "confidence": "sourced"},
-   {"order": 5, "value": "zombie sent at night", "when": "middle", "quote": "Carrefour, a zombie who guards a crossroads, is sent to retrieve Jessica", "confidence": "sourced"},
-   {"order": 6, "value": "confession of the curse", "when": "late", "role": "turn", "quote": "possessed, asked the houngan to make Jessica a zombie", "confidence": "sourced"},
-   {"order": 7, "value": "mercy killing and drowning", "when": "ending", "quote": "Wesley stabbing Jessica with the arrow, who is pursued slowly by Carrefour as he carries her body into the sea", "confidence": "sourced"}
+   {
+    "value": "narrator's confession opening",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:59",
+    "quote": "I walked with a zombie. It does seem an odd thing to say.",
+    "confidence": "sourced",
+    "order": 1
+   },
+   {
+    "order": 2,
+    "value": "newcomer hired",
+    "when": "opening",
+    "quote": "young nurse Betsy Connell is interviewed to care for the wife of Paul Holland",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:34",
+      "quote": "Do you believe in witchcraft?"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "meets the patient at night",
+    "when": "early",
+    "quote": "She encounters Jessica, her patient, wandering the grounds that night",
+    "confidence": "sourced"
+   },
+   {
+    "value": "calypso song exposes family",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:20:43",
+    "quote": "The Holland man, he kept in a tower A wife as pretty as a big, white flower",
+    "confidence": "sourced",
+    "order": 4
+   },
+   {
+    "order": 5,
+    "value": "ritual visit",
+    "when": "middle",
+    "role": "turn",
+    "quote": "convinces Betsy to take Jessica to be healed by the houngan (Vodou priest)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:15",
+      "quote": "and you'll come to the crossroads."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "zombie test",
+    "when": "middle",
+    "role": "clue",
+    "quote": "She does not bleed, causing murmurs of \"zombie\" among the onlookers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:50",
+      "quote": "She doesn't bleed. - Zombie."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "zombie sent at night",
+    "when": "middle",
+    "quote": "Carrefour, a zombie who guards a crossroads, is sent to retrieve Jessica",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:55:47",
+      "quote": "Carrefour! Carrefour, go back."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "confession of the curse",
+    "when": "late",
+    "role": "turn",
+    "quote": "possessed, asked the houngan to make Jessica a zombie",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:25",
+      "quote": "I was possessed."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "mercy killing and drowning",
+    "when": "ending",
+    "quote": "Wesley stabbing Jessica with the arrow, who is pursued slowly by Carrefour as he carries her body into the sea",
+    "confidence": "sourced"
+   },
+   {
+    "value": "closing prayer for the dead",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:07:45",
+    "quote": "deliver them from the bitter pains of eternal death.",
+    "confidence": "sourced",
+    "order": 10
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

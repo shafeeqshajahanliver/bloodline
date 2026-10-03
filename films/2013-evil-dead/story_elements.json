@@ -1,59 +1,544 @@
 {
  "film": "2013-evil-dead",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "possessing demon", "detail": "the Taker of Souls", "quote": "a group of five people under attack by a corpse-animating demonic entity in a remote cabin in the woods", "confidence": "sourced"}
+   {
+    "value": "possessing demon",
+    "detail": "the Taker of Souls",
+    "quote": "a group of five people under attack by a corpse-animating demonic entity in a remote cabin in the woods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:25",
+      "quote": "I'll rip your soul out, you pathetic fuck!"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "summoned by reading a book", "detail": "the Naturom Demonto", "quote": "Eric reads an incantation from the book, awakening a malevolent force", "confidence": "sourced"}
+   {
+    "value": "summoned by reading a book",
+    "detail": "the Naturom Demonto",
+    "quote": "Eric reads an incantation from the book, awakening a malevolent force",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:37",
+      "quote": "I read a passage from that book and it was some sort of prayer."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "souls", "quote": "the Taker of Souls must claim five souls to unleash the Abomination", "confidence": "sourced"}
+   {
+    "value": "souls",
+    "quote": "the Taker of Souls must claim five souls to unleash the Abomination",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:42",
+      "quote": "evil entity, uh, the Taker of Souls."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:22:53",
+      "quote": "I will feast on your soul."
+     }
+    ]
+   }
+  ],
+  "wrong": [
+   {
+    "value": "abandoned sister",
+    "source": "subtitles",
+    "at": "01:09:50",
+    "quote": "You left me all alone with our sick mother.",
+    "confidence": "sourced",
+    "detail": "David left Mia alone to care for their sick mother; the demon throws it at him"
+   }
   ],
   "trigger": [
-   {"value": "reading forbidden text", "quote": "Eric reads an incantation from the book, awakening a malevolent force", "confidence": "sourced"},
-   {"value": "isolated retreat", "detail": "staying at the cabin while Mia quits heroin", "quote": "They plan to stay in the cabin while Mia overcomes her heroin addiction", "confidence": "sourced"}
+   {
+    "value": "reading forbidden text",
+    "quote": "Eric reads an incantation from the book, awakening a malevolent force",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:54",
+      "quote": "Leave this book..."
+     }
+    ]
+   },
+   {
+    "value": "isolated retreat",
+    "detail": "staying at the cabin while Mia quits heroin",
+    "quote": "They plan to stay in the cabin while Mia overcomes her heroin addiction",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:46",
+      "quote": "She won't survive another OD."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "needs five souls", "quote": "the Taker of Souls must claim five souls to unleash the Abomination", "confidence": "sourced"},
-   {"value": "purify by burial, dismemberment or fire", "quote": "they must purify her by either live burial, dismemberment, or burning", "confidence": "sourced"},
-   {"value": "spreads by wound", "quote": "Natalie's wound becomes infected, causing it to become possessed", "confidence": "sourced"}
+   {
+    "value": "needs five souls",
+    "quote": "the Taker of Souls must claim five souls to unleash the Abomination",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:54",
+      "quote": "Once he feasts on five souls, the sky will bleed again and the abomination will rise from hell."
+     }
+    ]
+   },
+   {
+    "value": "purify by burial, dismemberment or fire",
+    "quote": "they must purify her by either live burial, dismemberment, or burning",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:55:41",
+      "quote": "In order to stop this, the possessed must be cleansed. Purified."
+     }
+    ]
+   },
+   {
+    "value": "spreads by wound",
+    "quote": "Natalie's wound becomes infected, causing it to become possessed",
+    "confidence": "sourced"
+   },
+   {
+    "value": "book cannot be destroyed",
+    "source": "subtitles",
+    "at": "00:50:00",
+    "quote": "But this book does not burn. It does not fucking burn.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "friends at a cabin", "relation_to_threat": "stranger", "quote": "They reunite with David's estranged younger half-sister, Mia, and their friends, high school teacher Eric and nurse Olivia", "confidence": "sourced"},
-   {"value": "addict sister", "relation_to_threat": "stranger", "detail": "Mia", "quote": "She is trapped by vines that sexually assault her, and she is possessed", "confidence": "sourced"},
-   {"value": "brother", "relation_to_threat": "family", "detail": "David", "quote": "David shoots a gasoline can, sacrificing himself to defeat the possessed Eric", "confidence": "sourced"}
+   {
+    "value": "friends at a cabin",
+    "relation_to_threat": "stranger",
+    "quote": "They reunite with David's estranged younger half-sister, Mia, and their friends, high school teacher Eric and nurse Olivia",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:30",
+      "quote": "You are all going to die tonight."
+     }
+    ]
+   },
+   {
+    "value": "addict sister",
+    "relation_to_threat": "stranger",
+    "detail": "Mia",
+    "quote": "She is trapped by vines that sexually assault her, and she is possessed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:36",
+      "quote": "There was something in the woods, David."
+     }
+    ]
+   },
+   {
+    "value": "brother",
+    "relation_to_threat": "family",
+    "detail": "David",
+    "quote": "David shoots a gasoline can, sacrificing himself to defeat the possessed Eric",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:06",
+      "quote": "[demonic voice] He's coming."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "she bisects the Abomination's head and torso with the chainsaw before it sinks back into the ground", "confidence": "sourced"},
-   {"value": "final girl survives", "quote": "An exhausted Mia leaves, unaware the Naturom Demonto is still intact", "confidence": "sourced"},
-   {"value": "threat survives", "detail": "the book remains", "quote": "unaware the Naturom Demonto is still intact", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "she bisects the Abomination's head and torso with the chainsaw before it sinks back into the ground",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:37",
+      "quote": "Go back to hell, bitch."
+     }
+    ]
+   },
+   {
+    "value": "final girl survives",
+    "quote": "An exhausted Mia leaves, unaware the Naturom Demonto is still intact",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat survives",
+    "detail": "the book remains",
+    "quote": "unaware the Naturom Demonto is still intact",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:57",
+      "quote": "The first few pages warned that these enduring creatures may lie dormant, but are never truly dead."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "burning girl", "when": "opening", "role": "omen", "quote": "Her father, Harold, sets her ablaze before shooting her dead", "confidence": "sourced"},
-   {"value": "book", "when": "early", "role": "trigger", "quote": "a worn double-barrel shotgun, and a book called the Naturom Demonto", "confidence": "sourced"},
-   {"value": "rotting animal corpses", "when": "early", "role": "omen", "quote": "finding the cellar littered with rotting animal corpses", "confidence": "sourced"},
-   {"value": "doppelgänger", "when": "early", "role": "mirror", "quote": "Mia begins seeing a demonic doppelgänger of herself in the woods", "confidence": "sourced"},
-   {"value": "vines", "when": "early", "role": "threat", "quote": "She is trapped by vines that sexually assault her", "confidence": "sourced"},
-   {"value": "dog", "state": "beaten to death", "when": "middle", "role": "omen", "quote": "David finds Grandpa beaten to death", "confidence": "sourced"},
-   {"value": "chainsaw", "when": "ending", "role": "weapon", "quote": "Mia manages to sever the Abomination's legs with a chainsaw", "confidence": "sourced"},
-   {"value": "blood rain", "when": "ending", "role": "omen", "quote": "blood begins to rain from the sky and the Taker of Souls rises as the Abomination", "confidence": "sourced"}
+   {
+    "value": "burning girl",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Her father, Harold, sets her ablaze before shooting her dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:09",
+      "quote": "Daddy, why are you doing this to me?"
+     }
+    ]
+   },
+   {
+    "value": "book",
+    "when": "early",
+    "role": "trigger",
+    "quote": "a worn double-barrel shotgun, and a book called the Naturom Demonto",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:44",
+      "quote": "The book is bound in human flesh and inked in human blood."
+     }
+    ]
+   },
+   {
+    "value": "rotting animal corpses",
+    "when": "early",
+    "role": "omen",
+    "quote": "finding the cellar littered with rotting animal corpses",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:23",
+      "quote": "I'll bury those dead cats out back later."
+     }
+    ]
+   },
+   {
+    "value": "doppelgänger",
+    "when": "early",
+    "role": "mirror",
+    "quote": "Mia begins seeing a demonic doppelgänger of herself in the woods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:36",
+      "quote": "There was something in the woods, David."
+     }
+    ]
+   },
+   {
+    "value": "vines",
+    "when": "early",
+    "role": "threat",
+    "quote": "She is trapped by vines that sexually assault her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dog",
+    "state": "beaten to death",
+    "when": "middle",
+    "role": "omen",
+    "quote": "David finds Grandpa beaten to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:35",
+      "quote": "Grandpa. No, no, no."
+     }
+    ]
+   },
+   {
+    "value": "chainsaw",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "Mia manages to sever the Abomination's legs with a chainsaw",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:16",
+      "quote": "[chainsaw revving]"
+     }
+    ]
+   },
+   {
+    "value": "blood rain",
+    "when": "ending",
+    "role": "omen",
+    "quote": "blood begins to rain from the sky and the Taker of Souls rises as the Abomination",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:57",
+      "quote": "the sky will bleed again"
+     }
+    ]
+   },
+   {
+    "value": "flies",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:51",
+    "quote": "[fly buzzing]",
+    "confidence": "sourced",
+    "detail": "flies open the film, fill the cellar and buzz again in the closing sting",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:58",
+      "quote": "[fly buzzing]"
+     }
+    ]
+   },
+   {
+    "value": "smell of death",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:14:30",
+    "quote": "What the fuck is that smell?",
+    "confidence": "sourced",
+    "detail": "Mia smells something dead the others put down to withdrawal"
+   },
+   {
+    "value": "mother's lullaby",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:11:14",
+    "quote": "Do you remember that lullaby Mom used to sing us?",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:03",
+      "quote": "Baby, little baby"
+     }
+    ]
+   },
+   {
+    "value": "nail gun",
+    "when": "middle",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "00:57:33",
+    "quote": "[nail gun fires]",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "possessed girl burned by father", "when": "opening", "role": "omen", "quote": "Her father, Harold, sets her ablaze before shooting her dead", "confidence": "sourced"},
-   {"order": 2, "value": "arrival at cabin", "when": "early", "quote": "David, his girlfriend Natalie, and their dog Grandpa arrive at the cabin", "confidence": "sourced"},
-   {"order": 3, "value": "book read aloud", "when": "early", "role": "trigger", "quote": "Eric reads an incantation from the book, awakening a malevolent force", "confidence": "sourced"},
-   {"order": 4, "value": "first possession", "when": "early", "quote": "She is trapped by vines that sexually assault her, and she is possessed", "confidence": "sourced"},
-   {"order": 5, "value": "possession spreads", "when": "middle", "quote": "A now-possessed Olivia mutilates her face and stabs Eric before he bludgeons her to death", "confidence": "sourced"},
-   {"order": 6, "value": "buried alive and revived", "when": "late", "role": "turn", "quote": "David sedates and buries Mia but after hearing her heartbeat stop, digs her back up", "confidence": "sourced"},
-   {"order": 7, "value": "brother's sacrifice", "when": "late", "quote": "David shoots a gasoline can, sacrificing himself to defeat the possessed Eric", "confidence": "sourced"},
-   {"order": 8, "value": "final fight with chainsaw", "when": "ending", "quote": "she bisects the Abomination's head and torso with the chainsaw", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "possessed girl burned by father",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Her father, Harold, sets her ablaze before shooting her dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:56",
+      "quote": "[shrieks] - [gunshot]"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "arrival at cabin",
+    "when": "early",
+    "quote": "David, his girlfriend Natalie, and their dog Grandpa arrive at the cabin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:26",
+      "quote": "[David] Hey, Mia."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "witchcraft found in cellar",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:16:54",
+    "quote": "I don't know. Witchcraft?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "book read aloud",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Eric reads an incantation from the book, awakening a malevolent force",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:54",
+      "quote": "Leave this book..."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "first possession",
+    "when": "early",
+    "quote": "She is trapped by vines that sexually assault her, and she is possessed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:42",
+      "quote": "[demonic voice] Mia."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "dog killed",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:32:35",
+    "quote": "Grandpa. No, no, no.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "possession spreads",
+    "when": "middle",
+    "quote": "A now-possessed Olivia mutilates her face and stabs Eric before he bludgeons her to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:27",
+      "quote": "She tried to kill me."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "cure read from the book",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:55:41",
+    "quote": "In order to stop this, the possessed must be cleansed. Purified.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "buried alive and revived",
+    "when": "late",
+    "role": "turn",
+    "quote": "David sedates and buries Mia but after hearing her heartbeat stop, digs her back up",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:51",
+      "quote": "[heartbeat thumping]"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:11:04",
+      "quote": "[heartbeat stops]"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "brother's sacrifice",
+    "when": "late",
+    "quote": "David shoots a gasoline can, sacrificing himself to defeat the possessed Eric",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:13",
+      "quote": "[gunshot] [flames roaring]"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "final fight with chainsaw",
+    "when": "ending",
+    "quote": "she bisects the Abomination's head and torso with the chainsaw",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:00",
+      "quote": "Feast on this, motherfucker."
+     }
+    ]
+   },
+   {
+    "order": 12,
+    "value": "closing sting",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:29:28",
+    "quote": "I believe I have made a significant find in the Candarian Ruins,",
+    "confidence": "sourced",
+    "detail": "a recording of the book's discovery after the credits"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

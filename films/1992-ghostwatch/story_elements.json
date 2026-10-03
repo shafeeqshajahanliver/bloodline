@@ -1,62 +1,473 @@
 {
  "film": "1992-ghostwatch",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Synopsis"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Synopsis"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "poltergeist", "detail": "\"Pipes\"", "quote": "are tormented by a poltergeist referred to by Kim as \"Pipes\"", "confidence": "sourced"},
-   {"value": "ancient evil", "quote": "a possibly ancient evil that possessed Mother Seddons, Tunstall, and countless others", "confidence": "sourced"}
+   {
+    "value": "poltergeist",
+    "detail": "\"Pipes\"",
+    "quote": "are tormented by a poltergeist referred to by Kim as \"Pipes\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:21",
+      "quote": "It's Pipes. Pipes is here."
+     }
+    ]
+   },
+   {
+    "value": "ancient evil",
+    "quote": "a possibly ancient evil that possessed Mother Seddons, Tunstall, and countless others",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:46",
+      "quote": "Before Turnstall, before Mother Seddons, way back... Maybe into prehistory..."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "person who died wronged", "detail": "Raymond Tunstall, who hanged himself under the stairs", "quote": "hanged himself in the room under the stairs, where his body was eaten by his relatives' cats", "confidence": "sourced"},
-   {"value": "local legend", "detail": "Mother Seddons, Victorian baby farmer", "quote": "Mother Seddons, a Victorian baby farmer who murdered children, re-imagined as a bogeyman by the locals", "confidence": "sourced"}
+   {
+    "value": "person who died wronged",
+    "detail": "Raymond Tunstall, who hanged himself under the stairs",
+    "quote": "hanged himself in the room under the stairs, where his body was eaten by his relatives' cats",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:36",
+      "quote": "Tunstall hanged himself."
+     }
+    ]
+   },
+   {
+    "value": "local legend",
+    "detail": "Mother Seddons, Victorian baby farmer",
+    "quote": "Mother Seddons, a Victorian baby farmer who murdered children, re-imagined as a bogeyman by the locals",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:34",
+      "quote": "Mother Seddons will come to get you."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to spread", "quote": "Pipes has used the free will to create a nationwide séance circle, invading the public's homes", "confidence": "sourced"}
+   {
+    "value": "to spread",
+    "quote": "Pipes has used the free will to create a nationwide séance circle, invading the public's homes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:28",
+      "quote": "Pipes wants to see everybody."
+     }
+    ]
+   },
+   {
+    "value": "to hurt everybody",
+    "detail": "Kim's answer in the family's own video",
+    "source": "subtitles",
+    "at": "00:26:08",
+    "quote": "I think he's come to hurt everybody.",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "child murder", "quote": "a Victorian baby farmer who murdered children", "confidence": "sourced"},
-   {"value": "child abuse", "quote": "Raymond Tunstall, a disturbed paedophile who believed he was possessed by Seddons", "confidence": "sourced"}
+   {
+    "value": "child murder",
+    "quote": "a Victorian baby farmer who murdered children",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child abuse",
+    "quote": "Raymond Tunstall, a disturbed paedophile who believed he was possessed by Seddons",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "broadcasting the haunting", "quote": "the programme launches an on-air investigation into a house in the fictional Foxhill Drive", "confidence": "sourced"}
+   {
+    "value": "broadcasting the haunting",
+    "quote": "the programme launches an on-air investigation into a house in the fictional Foxhill Drive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:52",
+      "quote": "the house in Foxhill Drive."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "spreads through watching", "detail": "the broadcast acts as a séance", "quote": "Pipes has used the free will to create a nationwide séance circle", "confidence": "sourced"},
-   {"value": "lives in a forbidden room", "quote": "is said to dwell in a room under the house's stairs", "confidence": "sourced"},
-   {"value": "possesses the vulnerable", "quote": "Pipes routinely possesses and harms Suzanne", "confidence": "sourced"}
+   {
+    "value": "spreads through watching",
+    "detail": "the broadcast acts as a séance",
+    "quote": "Pipes has used the free will to create a nationwide séance circle",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:18",
+      "quote": "we've created a seance. A massive seance."
+     }
+    ]
+   },
+   {
+    "value": "lives in a forbidden room",
+    "quote": "is said to dwell in a room under the house's stairs",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:33",
+      "quote": "Pipes, that's where he hides."
+     }
+    ]
+   },
+   {
+    "value": "possesses the vulnerable",
+    "quote": "Pipes routinely possesses and harms Suzanne",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:46",
+      "quote": "Pipes says she's got to be punished."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "mother and daughters", "relation_to_threat": "stranger", "detail": "the Early family", "quote": "Pamela Early (Brid Brennan) and her daughters Suzanne (Michelle Wesson) and Kim (Cherise Wesson)", "confidence": "sourced"},
-   {"value": "television crew", "relation_to_threat": "stranger", "quote": "Greene is dragged through the under-stairs door, which slams shut", "confidence": "sourced"},
-   {"value": "viewing public", "relation_to_threat": "community", "quote": "others say paranormal incidents are happening in their own homes", "confidence": "sourced"}
+   {
+    "value": "mother and daughters",
+    "relation_to_threat": "stranger",
+    "detail": "the Early family",
+    "quote": "Pamela Early (Brid Brennan) and her daughters Suzanne (Michelle Wesson) and Kim (Cherise Wesson)",
+    "confidence": "sourced"
+   },
+   {
+    "value": "television crew",
+    "relation_to_threat": "stranger",
+    "quote": "Greene is dragged through the under-stairs door, which slams shut",
+    "confidence": "sourced"
+   },
+   {
+    "value": "viewing public",
+    "relation_to_threat": "community",
+    "quote": "others say paranormal incidents are happening in their own homes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:55",
+      "quote": "What's really weird is that these are all tallying with the description."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "threat survives", "quote": "inexplicable paranormal activity starts happening in the TV studio, causing all on-set save Parkinson to flee", "confidence": "sourced"},
-   {"value": "host possessed", "quote": "Parkinson wanders about in the darkened studio, beginning to show signs that he has been possessed by Pipes", "confidence": "sourced"}
+   {
+    "value": "threat survives",
+    "quote": "inexplicable paranormal activity starts happening in the TV studio, causing all on-set save Parkinson to flee",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:06",
+      "quote": "Clear the studio!"
+     }
+    ]
+   },
+   {
+    "value": "host possessed",
+    "quote": "Parkinson wanders about in the darkened studio, beginning to show signs that he has been possessed by Pipes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:40",
+      "quote": "Didn't believe those stories about Mother Seddons, did you?"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "knocking pipes", "when": "opening", "role": "omen", "quote": "knocking noises which Pamela first attributed to the house's plumbing", "confidence": "sourced"},
-   {"value": "room under the stairs", "when": "opening", "role": "setting", "quote": "is said to dwell in a room under the house's stairs", "confidence": "sourced"},
-   {"value": "scratches on face", "when": "middle", "role": "threat", "quote": "Suzanne then speaks in an unearthly guttural voice and develops scratches across her face", "confidence": "sourced"},
-   {"value": "cats", "state": "eating a corpse", "when": "middle", "role": "clue", "quote": "his body was eaten by his relatives' cats", "confidence": "sourced"},
-   {"value": "mirror", "state": "falling", "when": "late", "role": "threat", "quote": "only for a mirror to fall and wound Aiton", "confidence": "sourced"},
-   {"value": "locked door", "state": "slams shut", "when": "ending", "role": "threat", "quote": "Greene is dragged through the under-stairs door, which slams shut", "confidence": "sourced"},
-   {"value": "television studio", "state": "darkened", "when": "ending", "role": "setting", "quote": "Parkinson wanders about in the darkened studio", "confidence": "sourced"}
+   {
+    "value": "knocking pipes",
+    "when": "opening",
+    "role": "omen",
+    "quote": "knocking noises which Pamela first attributed to the house's plumbing",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:14",
+      "quote": "So, I said it was pipes."
+     }
+    ]
+   },
+   {
+    "value": "room under the stairs",
+    "when": "opening",
+    "role": "setting",
+    "quote": "is said to dwell in a room under the house's stairs",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:34",
+      "quote": "glory hole, as we used to call it when I was a kid."
+     }
+    ]
+   },
+   {
+    "value": "scratches on face",
+    "when": "middle",
+    "role": "threat",
+    "quote": "Suzanne then speaks in an unearthly guttural voice and develops scratches across her face",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cats",
+    "state": "eating a corpse",
+    "when": "middle",
+    "role": "clue",
+    "quote": "his body was eaten by his relatives' cats",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:06",
+      "quote": "Cats running round up there on the ceiling."
+     }
+    ]
+   },
+   {
+    "value": "mirror",
+    "state": "falling",
+    "when": "late",
+    "role": "threat",
+    "quote": "only for a mirror to fall and wound Aiton",
+    "confidence": "sourced"
+   },
+   {
+    "value": "locked door",
+    "state": "slams shut",
+    "when": "ending",
+    "role": "threat",
+    "quote": "Greene is dragged through the under-stairs door, which slams shut",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:36",
+      "quote": "I can't open the door."
+     }
+    ]
+   },
+   {
+    "value": "television studio",
+    "state": "darkened",
+    "when": "ending",
+    "role": "setting",
+    "quote": "Parkinson wanders about in the darkened studio",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:24",
+      "quote": "In this studio. This totally deserted studio."
+     }
+    ]
+   },
+   {
+    "value": "figure by the curtain",
+    "detail": "viewers phone in about a shape in the bedroom footage",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:13:42",
+    "quote": "but I was sure I could see a figure standing behind against the wall, just by the curtain.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "nursery rhyme",
+    "detail": "'Round and round the garden', spoken in the ghost's voice and on the autocue",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:30:22",
+    "quote": "Round and round the garden...",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:34",
+      "quote": "Round and round the garden..."
+     }
+    ]
+   },
+   {
+    "value": "dead pregnant cat",
+    "state": "foetuses scattered",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:47:30",
+    "quote": "There were foetuses scattered all over.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "live investigation begins", "when": "opening", "quote": "Ghostwatch is presented as a live broadcast, hosted by Michael Parkinson, in an attempt to present concrete evidence of paranormal phenomena", "confidence": "sourced"},
-   {"order": 2, "value": "hoax suspected", "when": "early", "quote": "Suzanne is exposed falsifying the knocking sounds, convincing Parkinson that the whole affair is a hoax", "confidence": "sourced"},
-   {"order": 3, "value": "possession shows", "when": "middle", "role": "turn", "quote": "Suzanne then speaks in an unearthly guttural voice and develops scratches across her face", "confidence": "sourced"},
-   {"order": 4, "value": "dark history revealed", "when": "middle", "role": "clue", "quote": "Pipes' background is slowly pieced together", "confidence": "sourced"},
-   {"order": 5, "value": "child vanishes", "when": "late", "quote": "Suzanne disappears and is heard from behind the locked door", "confidence": "sourced"},
-   {"order": 6, "value": "haunting enters the broadcast", "when": "late", "role": "turn", "quote": "Pascoe realises the footage is from earlier in the broadcast", "confidence": "sourced"},
-   {"order": 7, "value": "presenter taken", "when": "ending", "quote": "Greene is dragged through the under-stairs door, which slams shut", "confidence": "sourced"},
-   {"order": 8, "value": "host possessed", "when": "ending", "quote": "beginning to show signs that he has been possessed by Pipes", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "footage of a night attack",
+    "detail": "the programme opens on the family's own recording of screaming",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:51",
+    "quote": "Help me.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "live investigation begins",
+    "when": "opening",
+    "quote": "Ghostwatch is presented as a live broadcast, hosted by Michael Parkinson, in an attempt to present concrete evidence of paranormal phenomena",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:52",
+      "quote": "the house in Foxhill Drive."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "viewers see a figure",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:13:42",
+    "quote": "but I was sure I could see a figure standing behind against the wall, just by the curtain.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "ghost voice recites rhyme",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:30:22",
+    "quote": "Round and round the garden...",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "hoax suspected",
+    "when": "early",
+    "quote": "Suzanne is exposed falsifying the knocking sounds, convincing Parkinson that the whole affair is a hoax",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "possession shows",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Suzanne then speaks in an unearthly guttural voice and develops scratches across her face",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "dark history revealed",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Pipes' background is slowly pieced together",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "child vanishes",
+    "when": "late",
+    "quote": "Suzanne disappears and is heard from behind the locked door",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:35",
+      "quote": "He's hurting me."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "haunting enters the broadcast",
+    "when": "late",
+    "role": "turn",
+    "quote": "Pascoe realises the footage is from earlier in the broadcast",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:56",
+      "quote": "(TAPE REWINDING)"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "presenter taken",
+    "when": "ending",
+    "quote": "Greene is dragged through the under-stairs door, which slams shut",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:48",
+      "quote": "(WIND HOWLING LOUDER)"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "host possessed",
+    "when": "ending",
+    "quote": "beginning to show signs that he has been possessed by Pipes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:40",
+      "quote": "Didn't believe those stories about Mother Seddons, did you? Fee fie foe fum..."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

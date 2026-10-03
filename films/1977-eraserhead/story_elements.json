@@ -1,57 +1,357 @@
 {
  "film": "1977-eraserhead",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes and analysis"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes and analysis"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "deformed child", "detail": "a swaddled infant with an inhuman face", "quote": "a man (Nance) who is left to care for his grossly deformed child in a desolate industrial landscape", "confidence": "sourced"},
-   {"value": "the self", "detail": "Henry's own urge to kill his child", "quote": "the Lady in the Radiator is in fact Spencer's subconscious, a manifestation of his own urge to kill his child", "confidence": "sourced"},
-   {"value": "fear of sex", "quote": "portrays Henry Spencer as a character who is terrified of, but fascinated by, sex", "confidence": "sourced"}
+   {
+    "value": "deformed child",
+    "detail": "a swaddled infant with an inhuman face",
+    "quote": "a man (Nance) who is left to care for his grossly deformed child in a desolate industrial landscape",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the self",
+    "detail": "Henry's own urge to kill his child",
+    "quote": "the Lady in the Radiator is in fact Spencer's subconscious, a manifestation of his own urge to kill his child",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fear of sex",
+    "quote": "portrays Henry Spencer as a character who is terrified of, but fascinated by, sex",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "unwanted pregnancy", "quote": "She tells him that Mary has had his child and that the two must wed", "confidence": "sourced"}
+   {
+    "value": "unwanted pregnancy",
+    "quote": "She tells him that Mary has had his child and that the two must wed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:43",
+      "quote": "Mother, they're still not sure it is a baby. It's premature, but there's a baby."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "nothing stated", "detail": "the child only cries and refuses food", "quote": "The infant refuses all food and cries incessantly and intolerably", "confidence": "observed"}
+   {
+    "value": "nothing stated",
+    "detail": "the child only cries and refuses food",
+    "quote": "The infant refuses all food and cries incessantly and intolerably",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "infanticide", "quote": "his apparent act of infanticide is driven by the domineering and controlling influences that beset him", "confidence": "sourced"}
+   {
+    "value": "infanticide",
+    "quote": "his apparent act of infanticide is driven by the domineering and controlling influences that beset him",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "becoming a parent", "quote": "The couple moves into Henry's one-room apartment and begins caring for the child", "confidence": "sourced"},
-   {"value": "an invitation", "detail": "dinner with Mary's family", "quote": "his girlfriend, Mary, has invited him to dinner with her family", "confidence": "sourced"}
+   {
+    "value": "becoming a parent",
+    "quote": "The couple moves into Henry's one-room apartment and begins caring for the child",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:36",
+      "quote": "There's a baby. It's at the hospital."
+     }
+    ]
+   },
+   {
+    "value": "an invitation",
+    "detail": "dinner with Mary's family",
+    "quote": "his girlfriend, Mary, has invited him to dinner with her family",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "young father", "relation_to_threat": "family", "detail": "Henry Spencer", "quote": "Spencer displays a pacifistic and fatalistic inactivity throughout the film", "confidence": "sourced"},
-   {"value": "mother", "relation_to_threat": "family", "detail": "Mary, driven away", "quote": "The sound drives Mary hysterical, and she leaves Henry and the child", "confidence": "sourced"},
-   {"value": "infant", "relation_to_threat": "family", "quote": "The child gasps in pain, and Henry stabs its organs with the scissors", "confidence": "sourced"}
+   {
+    "value": "young father",
+    "relation_to_threat": "family",
+    "detail": "Henry Spencer",
+    "quote": "Spencer displays a pacifistic and fatalistic inactivity throughout the film",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother",
+    "relation_to_threat": "family",
+    "detail": "Mary, driven away",
+    "quote": "The sound drives Mary hysterical, and she leaves Henry and the child",
+    "confidence": "sourced"
+   },
+   {
+    "value": "infant",
+    "relation_to_threat": "family",
+    "quote": "The child gasps in pain, and Henry stabs its organs with the scissors",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "parent kills child", "quote": "The child gasps in pain, and Henry stabs its organs with the scissors", "confidence": "sourced"},
-   {"value": "ambiguous", "detail": "embraced in a white void", "quote": "Henry is embraced warmly by the lady in the radiator in a white void", "confidence": "sourced"}
+   {
+    "value": "parent kills child",
+    "quote": "The child gasps in pain, and Henry stabs its organs with the scissors",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ambiguous",
+    "detail": "embraced in a white void",
+    "quote": "Henry is embraced warmly by the lady in the radiator in a white void",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "sperm creature", "state": "emerging from mouth", "when": "opening", "role": "omen", "quote": "He opens his mouth and a spermatozoon-like creature emerges", "confidence": "sourced"},
-   {"value": "planet", "when": "opening", "role": "symbol", "quote": "Henry Spencer's face appears superimposed over a planet in space", "confidence": "sourced"},
-   {"value": "dead plants", "state": "piled with dirt", "when": "early", "role": "setting", "quote": "his apartment, which is filled with piles of dirt and dead plants", "confidence": "sourced"},
-   {"value": "roast bird", "state": "writhing, bleeding", "when": "early", "role": "omen", "quote": "the bird moves and writhes on the plate and gushes blood when cut", "confidence": "sourced"},
-   {"value": "radiator", "state": "lady lives inside", "when": "middle", "role": "symbol", "quote": "a lady who inhabits his radiator and stomps more of the sperm creatures", "confidence": "sourced"},
-   {"value": "severed head", "state": "made into erasers", "when": "middle", "role": "symbol", "quote": "A boy finds it and takes it to a pencil factory to be turned into erasers", "confidence": "sourced"},
-   {"value": "scissors", "when": "ending", "role": "weapon", "quote": "He takes a pair of scissors and for the first time removes the child's swaddling clothes", "confidence": "sourced"},
-   {"value": "flickering lights", "when": "ending", "role": "turn", "quote": "The power in the room overloads, causing the lights to flicker", "confidence": "sourced"}
+   {
+    "value": "sperm creature",
+    "state": "emerging from mouth",
+    "when": "opening",
+    "role": "omen",
+    "quote": "He opens his mouth and a spermatozoon-like creature emerges",
+    "confidence": "sourced"
+   },
+   {
+    "value": "planet",
+    "when": "opening",
+    "role": "symbol",
+    "quote": "Henry Spencer's face appears superimposed over a planet in space",
+    "confidence": "sourced"
+   },
+   {
+    "value": "industrial white noise",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:02:38",
+    "quote": "(WHITE NOISE ROARING)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:22",
+      "quote": "(WHITE NOISE ROARING)"
+     }
+    ]
+   },
+   {
+    "value": "dead plants",
+    "state": "piled with dirt",
+    "when": "early",
+    "role": "setting",
+    "quote": "his apartment, which is filled with piles of dirt and dead plants",
+    "confidence": "sourced"
+   },
+   {
+    "value": "nursing puppies",
+    "when": "early",
+    "role": "omen",
+    "detail": "at the dinner where Henry learns he is a father",
+    "source": "subtitles",
+    "at": "00:19:34",
+    "quote": "(PUPPIES SQUEALING, SUCKLING)",
+    "confidence": "sourced"
+   },
+   {
+    "value": "roast bird",
+    "state": "writhing, bleeding",
+    "when": "early",
+    "role": "omen",
+    "quote": "the bird moves and writhes on the plate and gushes blood when cut",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:57",
+      "quote": "We've got chicken tonight. Strangest damn things. They're man-made."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:25:08",
+      "quote": "just cut them up like regular chickens?"
+     }
+    ]
+   },
+   {
+    "value": "radiator",
+    "state": "lady lives inside",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "a lady who inhabits his radiator and stomps more of the sperm creatures",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:07",
+      "quote": "(RADIATOR HISSING)"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:03:27",
+      "quote": "In heaven Everything is fine"
+     }
+    ]
+   },
+   {
+    "value": "crying infant",
+    "when": "middle",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:36:20",
+    "quote": "(BABY CRYING)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:57",
+      "quote": "Shut up!"
+     }
+    ]
+   },
+   {
+    "value": "severed head",
+    "state": "made into erasers",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "A boy finds it and takes it to a pencil factory to be turned into erasers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:49",
+      "quote": "Okay, Paul! Hiya, sonny. What do you got there?"
+     }
+    ]
+   },
+   {
+    "value": "scissors",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "He takes a pair of scissors and for the first time removes the child's swaddling clothes",
+    "confidence": "sourced"
+   },
+   {
+    "value": "flickering lights",
+    "when": "ending",
+    "role": "turn",
+    "quote": "The power in the room overloads, causing the lights to flicker",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:40",
+      "quote": "(ELECTRICITY SPARKING)"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "image of conception", "when": "opening", "role": "omen", "quote": "He opens his mouth and a spermatozoon-like creature emerges", "confidence": "sourced"},
-   {"order": 2, "value": "told he is a father", "when": "early", "role": "trigger", "quote": "She tells him that Mary has had his child and that the two must wed", "confidence": "sourced"},
-   {"order": 3, "value": "mother abandons child", "when": "middle", "quote": "The sound drives Mary hysterical, and she leaves Henry and the child", "confidence": "sourced"},
-   {"order": 4, "value": "dream of losing head", "when": "middle", "quote": "his head pops off his body while he is fidgeting, replaced by the baby's crying head", "confidence": "sourced"},
-   {"order": 5, "value": "rejected by neighbour", "when": "late", "quote": "seeks out the girl across the hall, but finds her with another man", "confidence": "sourced"},
-   {"order": 6, "value": "father kills child", "when": "ending", "role": "turn", "quote": "The child gasps in pain, and Henry stabs its organs with the scissors", "confidence": "sourced"},
-   {"order": 7, "value": "embrace in white void", "when": "ending", "quote": "Henry is embraced warmly by the lady in the radiator in a white void", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "image of conception",
+    "when": "opening",
+    "role": "omen",
+    "quote": "He opens his mouth and a spermatozoon-like creature emerges",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "told he is a father",
+    "when": "early",
+    "role": "trigger",
+    "quote": "She tells him that Mary has had his child and that the two must wed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:46",
+      "quote": "It's premature, but there's a baby. After the two of you are married,"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "mother abandons child",
+    "when": "middle",
+    "quote": "The sound drives Mary hysterical, and she leaves Henry and the child",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:56",
+      "quote": "And you better take real good care of things while I'm gone!"
+     }
+    ]
+   },
+   {
+    "value": "song of heaven in radiator",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:03:27",
+    "quote": "In heaven Everything is fine",
+    "confidence": "sourced",
+    "order": 4
+   },
+   {
+    "order": 5,
+    "value": "dream of losing head",
+    "when": "middle",
+    "quote": "his head pops off his body while he is fidgeting, replaced by the baby's crying head",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:49",
+      "quote": "Okay, Paul!"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "rejected by neighbour",
+    "when": "late",
+    "quote": "seeks out the girl across the hall, but finds her with another man",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "father kills child",
+    "when": "ending",
+    "role": "turn",
+    "quote": "The child gasps in pain, and Henry stabs its organs with the scissors",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "embrace in white void",
+    "when": "ending",
+    "quote": "Henry is embraced warmly by the lady in the radiator in a white void",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["rules"],
+ "not_stated": [
+  "rules"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

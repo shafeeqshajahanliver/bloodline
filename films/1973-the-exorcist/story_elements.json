@@ -1,62 +1,492 @@
 {
  "film": "1973-the-exorcist",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "possessing demon", "detail": "claims to be the Devil", "quote": "The possessed Regan claims to be the Devil, and vomits into Karras's face while speaking in tongues", "confidence": "sourced"},
-   {"value": "ancient evil", "quote": "a credible portrait of the modern urban world ripped apart by an obscene, ancient evil", "confidence": "sourced"}
+   {
+    "value": "possessing demon",
+    "detail": "claims to be the Devil",
+    "quote": "The possessed Regan claims to be the Devil, and vomits into Karras's face while speaking in tongues",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ancient evil",
+    "quote": "a credible portrait of the modern urban world ripped apart by an obscene, ancient evil",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "summoned through a spirit board", "detail": "Regan contacts \"Captain Howdy\"", "quote": "She tells her mother she has made repeated contact with an entity she calls \"Captain Howdy.\"", "confidence": "observed"},
-   {"value": "ancient place", "detail": "a winged being linked to the ruins of Hatra", "quote": "he finds a stone talisman of a winged being that evokes a concerned look on his face", "confidence": "observed"}
+   {
+    "value": "summoned through a spirit board",
+    "detail": "Regan contacts \"Captain Howdy\"",
+    "quote": "She tells her mother she has made repeated contact with an entity she calls \"Captain Howdy.\"",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:07",
+      "quote": "Captain howdy. Who's captain howdy? I make the questions, and he does the answers."
+     }
+    ]
+   },
+   {
+    "value": "ancient place",
+    "detail": "a winged being linked to the ruins of Hatra",
+    "quote": "he finds a stone talisman of a winged being that evokes a concerned look on his face",
+    "confidence": "observed"
+   }
   ],
   "wants": [
-   {"value": "a body", "quote": "The demon says it will remain in Regan until she is dead", "confidence": "sourced"}
+   {
+    "value": "a body",
+    "quote": "The demon says it will remain in Regan until she is dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:00",
+      "quote": "Until she rots and lies stinking in the earth."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "playing with a spirit board", "quote": "Regan discovers a spirit board. Unaware of traditional superstitions regarding the board, she plays with it alone", "confidence": "sourced"},
-   {"value": "moving into a new home", "quote": "Chris, along with her 12-year-old daughter Regan MacNeil, rents a large house with hired help", "confidence": "observed"}
+   {
+    "value": "playing with a spirit board",
+    "quote": "Regan discovers a spirit board. Unaware of traditional superstitions regarding the board, she plays with it alone",
+    "confidence": "sourced"
+   },
+   {
+    "value": "moving into a new home",
+    "quote": "Chris, along with her 12-year-old daughter Regan MacNeil, rents a large house with hired help",
+    "confidence": "observed"
+   }
   ],
   "rules": [
-   {"value": "expelled by exorcism", "quote": "As the two priests read from the Roman Ritual, the demon curses them", "confidence": "sourced"},
-   {"value": "reacts to holy water", "quote": "Karras throws holy water onto Regan, causing her to react violently", "confidence": "sourced"},
-   {"value": "can be drawn into another host", "quote": "Karras beats the possessed Regan and demands that the demon take him instead", "confidence": "sourced"}
+   {
+    "value": "expelled by exorcism",
+    "quote": "As the two priests read from the Roman Ritual, the demon curses them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:50:35",
+      "quote": "The power of Christ compels you!"
+     }
+    ]
+   },
+   {
+    "value": "reacts to holy water",
+    "quote": "Karras throws holy water onto Regan, causing her to react violently",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:48",
+      "quote": "I told Regan that was holy water. I sprinkled it on her,"
+     }
+    ]
+   },
+   {
+    "value": "can be drawn into another host",
+    "quote": "Karras beats the possessed Regan and demands that the demon take him instead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:01:10",
+      "quote": "Take me! Come into me!"
+     }
+    ]
+   },
+   {
+    "value": "possessed answers under hypnosis",
+    "source": "subtitles",
+    "at": "01:02:10",
+    "quote": "If you are there, you, too, are hypnotized, and must answer all my questions.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "child", "relation_to_threat": "self", "detail": "12-year-old Regan", "quote": "follows the demonic possession of a young girl and the attempt to rescue her", "confidence": "sourced"},
-   {"value": "single mother", "relation_to_threat": "family", "detail": "Chris MacNeil", "quote": "the film's depiction of a single working mother and her uncontrollable daughter", "confidence": "sourced"},
-   {"value": "priest losing faith", "relation_to_threat": "stranger", "detail": "Father Karras", "quote": "He later confides to a colleague that he is having a crisis of faith", "confidence": "sourced"},
-   {"value": "friend of family", "relation_to_threat": "stranger", "detail": "Burke Dennings", "quote": "Dennings had been left with her but is found dead at the bottom of a set of public stairs", "confidence": "sourced"}
+   {
+    "value": "child",
+    "relation_to_threat": "self",
+    "detail": "12-year-old Regan",
+    "quote": "follows the demonic possession of a young girl and the attempt to rescue her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "single mother",
+    "relation_to_threat": "family",
+    "detail": "Chris MacNeil",
+    "quote": "the film's depiction of a single working mother and her uncontrollable daughter",
+    "confidence": "sourced"
+   },
+   {
+    "value": "priest losing faith",
+    "relation_to_threat": "stranger",
+    "detail": "Father Karras",
+    "quote": "He later confides to a colleague that he is having a crisis of faith",
+    "confidence": "sourced"
+   },
+   {
+    "value": "friend of family",
+    "relation_to_threat": "stranger",
+    "detail": "Burke Dennings",
+    "quote": "Dennings had been left with her but is found dead at the bottom of a set of public stairs",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "self-sacrifice", "quote": "Karras sacrifices himself by jumping out the window, tumbling down the stone stairs outside to his death", "confidence": "sourced"},
-   {"value": "victim freed", "quote": "Chris embraces the freed Regan, and Kinderman surveys the scene", "confidence": "sourced"},
-   {"value": "victim forgets", "quote": "Despite having no memory of her ordeal, Regan, moved by the sight of Dyer's clerical collar, kisses him", "confidence": "sourced"}
+   {
+    "value": "self-sacrifice",
+    "quote": "Karras sacrifices himself by jumping out the window, tumbling down the stone stairs outside to his death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "victim freed",
+    "quote": "Chris embraces the freed Regan, and Kinderman surveys the scene",
+    "confidence": "sourced"
+   },
+   {
+    "value": "victim forgets",
+    "quote": "Despite having no memory of her ordeal, Regan, moved by the sight of Dyer's clerical collar, kisses him",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "stone talisman", "state": "unearthed", "when": "opening", "role": "omen", "quote": "he finds a stone talisman of a winged being", "confidence": "sourced"},
-   {"value": "spirit board", "when": "early", "role": "trigger", "quote": "Regan discovers a spirit board", "confidence": "sourced"},
-   {"value": "shaking bed", "state": "violent", "when": "early", "role": "omen", "quote": "Regan's bed shakes violently after Chris returns her to it", "confidence": "sourced"},
-   {"value": "head turned backward", "when": "middle", "role": "threat", "quote": "turning her head backward and speaking in the voice of Dennings", "confidence": "sourced"},
-   {"value": "crucifix", "state": "desecrated", "when": "middle", "role": "symbol", "quote": "furiously masturbating with a crucifix", "confidence": "sourced"},
-   {"value": "words carved in skin", "state": "from the inside", "when": "middle", "role": "clue", "quote": "the words 'help me' appear carved in Regan's stomach from the inside", "confidence": "sourced"},
-   {"value": "stone stairs", "when": "ending", "role": "setting", "quote": "tumbling down the stone stairs outside to his death", "confidence": "sourced"},
-   {"value": "medallion", "state": "ripped off", "when": "ending", "role": "symbol", "quote": "The demon rips the medallion of Saint Joseph from Karras's neck", "confidence": "sourced"}
+   {
+    "value": "stone talisman",
+    "state": "unearthed",
+    "when": "opening",
+    "role": "omen",
+    "quote": "he finds a stone talisman of a winged being",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "sees a huge statue of the demon Pazuzu, which has the head of the small rock he earlier found"
+     }
+    ]
+   },
+   {
+    "value": "spirit board",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Regan discovers a spirit board",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:20",
+      "quote": "Here, I'll show you. Captain howdy, do you think my mom's pretty?"
+     }
+    ]
+   },
+   {
+    "value": "shaking bed",
+    "state": "violent",
+    "when": "early",
+    "role": "omen",
+    "quote": "Regan's bed shakes violently after Chris returns her to it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:40",
+      "quote": "My bed was shaking. I can't get to sleep."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:48:34",
+      "quote": "The whole bed was thumping and rising off the floor and shaking."
+     }
+    ]
+   },
+   {
+    "value": "head turned backward",
+    "when": "middle",
+    "role": "threat",
+    "quote": "turning her head backward and speaking in the voice of Dennings",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:22",
+      "quote": "was found at the bottom of those steps leading to \" m \" street with his head turned completely around, facing backwards."
+     },
+     {
+      "source": "screenplay",
+      "quote": "Her head completly turns in a 360-degree turn and stares at Karras."
+     }
+    ]
+   },
+   {
+    "value": "crucifix",
+    "state": "desecrated",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "furiously masturbating with a crucifix",
+    "confidence": "sourced"
+   },
+   {
+    "value": "words carved in skin",
+    "state": "from the inside",
+    "when": "middle",
+    "role": "clue",
+    "quote": "the words 'help me' appear carved in Regan's stomach from the inside",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "rising up slowly on her skin are two words HELP ME"
+     }
+    ]
+   },
+   {
+    "value": "stone stairs",
+    "when": "ending",
+    "role": "setting",
+    "quote": "tumbling down the stone stairs outside to his death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:02:00",
+      "quote": "Somebody fell here! On the steps here!"
+     }
+    ]
+   },
+   {
+    "value": "medallion",
+    "state": "ripped off",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "The demon rips the medallion of Saint Joseph from Karras's neck",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "She hands him Karras' St. Joseph medal. Dyer clutches it tightly."
+     }
+    ]
+   },
+   {
+    "value": "fighting dogs",
+    "state": "savage, unseen",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:10:05",
+    "quote": "[Dogs growling]",
+    "confidence": "sourced",
+    "detail": "two dogs attack each other as Merrin faces the statue at Nineveh",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "he hears two dogs savagely attacking each other. The noise is something of an evil nature."
+     }
+    ]
+   },
+   {
+    "value": "noises in the attic",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:12:40",
+    "quote": "Oh, Karl, we've got rats in the attic. You better get some traps.",
+    "confidence": "sourced",
+    "detail": "the scratching is blamed on rats, but the traps stay empty",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:02",
+      "quote": "No rats. No rats. Thanks a lot. That's terrific."
+     }
+    ]
+   },
+   {
+    "value": "desecrated statue",
+    "when": "middle",
+    "role": "clue",
+    "source": "screenplay",
+    "quote": "It's the statue of the Virgin Mary, which has been horribly desecrated",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:53",
+      "quote": "a black mass-type desecration in the church."
+     }
+    ]
+   },
+   {
+    "value": "dead mother's voice",
+    "when": "late",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "01:56:09",
+    "quote": "[Voice of Karras' mother] Dimmie... Why you do this to me?",
+    "confidence": "sourced",
+    "detail": "the demon speaks as Karras's dead mother",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:56:21",
+      "quote": "You're not my mother."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "omen at ancient dig", "when": "opening", "role": "omen", "quote": "He then visits an ancient statue of the same being, silently confronting it", "confidence": "sourced"},
-   {"order": 2, "value": "child contacts an entity", "when": "early", "role": "trigger", "quote": "she has made repeated contact with an entity she calls \"Captain Howdy.\"", "confidence": "sourced"},
-   {"order": 3, "value": "medicine fails", "when": "middle", "quote": "Regan's personality becomes violent, and medical tests find no physical cause", "confidence": "sourced"},
-   {"order": 4, "value": "first death", "when": "middle", "quote": "the only plausible explanation for Dennings's death is that he was pushed from Regan's window", "confidence": "sourced"},
-   {"order": 5, "value": "possession confirmed", "when": "middle", "role": "turn", "quote": "he concludes that an exorcism is warranted", "confidence": "sourced"},
-   {"order": 6, "value": "exorcism", "when": "late", "quote": "As the two priests read from the Roman Ritual, the demon curses them", "confidence": "sourced"},
-   {"order": 7, "value": "elder exorcist dies", "when": "late", "quote": "finding Merrin dead from a heart attack while Regan watches and laughs", "confidence": "sourced"},
-   {"order": 8, "value": "priest takes demon and dies", "when": "ending", "role": "turn", "quote": "Unwilling to let the demon harm Regan, Karras sacrifices himself by jumping out the window", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "omen at ancient dig",
+    "when": "opening",
+    "role": "omen",
+    "quote": "He then visits an ancient statue of the same being, silently confronting it",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "child contacts an entity",
+    "when": "early",
+    "role": "trigger",
+    "quote": "she has made repeated contact with an entity she calls \"Captain Howdy.\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:03",
+      "quote": "Captain howdy said no."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "medicine fails",
+    "when": "middle",
+    "quote": "Regan's personality becomes violent, and medical tests find no physical cause",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:55",
+      "quote": "A lesion. A lesion in the temporal lobe. It's a kind of seizure disorder."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "demon claims the child",
+    "when": "middle",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:53:44",
+    "quote": "[demonic voice] Keep away! The sow is mine!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "first death",
+    "when": "middle",
+    "quote": "the only plausible explanation for Dennings's death is that he was pushed from Regan's window",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:04",
+      "quote": "Burke's dead. He must have been drunk. He fell down the steps right outside."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "demon names its enemy",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:36:04",
+    "quote": "Fear the priest! Fear the priest. Ooh... Merrin.",
+    "confidence": "sourced",
+    "detail": "Karras's slowed tape reveals the name Merrin"
+   },
+   {
+    "order": 7,
+    "value": "possession confirmed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "he concludes that an exorcism is warranted",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "exorcism",
+    "when": "late",
+    "quote": "As the two priests read from the Roman Ritual, the demon curses them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:50:31",
+      "quote": "It's the power of Christ that compels you!"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "elder exorcist dies",
+    "when": "late",
+    "quote": "finding Merrin dead from a heart attack while Regan watches and laughs",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "priest takes demon and dies",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Unwilling to let the demon harm Regan, Karras sacrifices himself by jumping out the window",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:01:10",
+      "quote": "Take me! Come into me! God damn you!"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "absolution on the steps",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "02:02:31",
+    "quote": "Do you want to make your confession?",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

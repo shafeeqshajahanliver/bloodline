@@ -1,60 +1,454 @@
 {
  "film": "1945-the-picture-of-dorian-gray",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "cursed portrait", "detail": "Dorian's portrait ages and warps instead of him", "quote": "the portrait of the young, handsome, Dorian Gray has warped into a hideous, demon-like creature reflecting his many sins", "confidence": "sourced"},
-   {"value": "the self", "detail": "Dorian's own sinful life", "quote": "becomes more dedicated to a sinful and heartless life", "confidence": "observed"}
+   {
+    "value": "cursed portrait",
+    "detail": "Dorian's portrait ages and warps instead of him",
+    "quote": "the portrait of the young, handsome, Dorian Gray has warped into a hideous, demon-like creature reflecting his many sins",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the self",
+    "detail": "Dorian's own sinful life",
+    "quote": "becomes more dedicated to a sinful and heartless life",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:16",
+      "quote": "Each of us has heaven and hell in him."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "wish granted by magic", "detail": "a wish made before an Egyptian cat statue", "quote": "He makes this wish in the presence of an Egyptian cat statue with supposed magical powers", "confidence": "sourced"}
+   {
+    "value": "wish granted by magic",
+    "detail": "a wish made before an Egyptian cat statue",
+    "quote": "He makes this wish in the presence of an Egyptian cat statue with supposed magical powers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:09",
+      "quote": "You oughtn't to express such a wish in the presence of that cat, Dorian."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "eternal youth", "quote": "Gray wishes his portrait could age instead of him", "confidence": "sourced"},
-   {"value": "pleasure", "quote": "Wotton persuades Gray the only worthwhile life is dedicated to pleasure", "confidence": "sourced"}
+   {
+    "value": "eternal youth",
+    "quote": "Gray wishes his portrait could age instead of him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:49",
+      "quote": "If only the picture could change, and I could be always what I am now."
+     }
+    ]
+   },
+   {
+    "value": "pleasure",
+    "quote": "Wotton persuades Gray the only worthwhile life is dedicated to pleasure",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:47",
+      "quote": "There's only one way to get rid of a temptation and that's to yield to it."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "jilted lover's suicide", "detail": "Sibyl Vane", "quote": "After callously breaking off his engagement to tavern singer Sibyl Vane", "confidence": "sourced"},
-   {"value": "murder", "detail": "Dorian kills Basil Hallward", "quote": "When Hallward sees his painting, Gray murders his friend and seals his body in the school room", "confidence": "sourced"}
+   {
+    "value": "jilted lover's suicide",
+    "detail": "Sibyl Vane",
+    "quote": "After callously breaking off his engagement to tavern singer Sibyl Vane",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:27",
+      "quote": "Sibyl Vane is dead."
+     }
+    ]
+   },
+   {
+    "value": "murder",
+    "detail": "Dorian kills Basil Hallward",
+    "quote": "When Hallward sees his painting, Gray murders his friend and seals his body in the school room",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:44",
+      "quote": "Allen, it was murder. I killed him."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "a wish", "quote": "Contemplating this, Gray wishes his portrait could age instead of him", "confidence": "sourced"}
+   {
+    "value": "a wish",
+    "quote": "Contemplating this, Gray wishes his portrait could age instead of him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:00",
+      "quote": "If it were I who was always to be young and the picture that was to grow old."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "portrait carries his sins", "quote": "warped into a hideous, demon-like creature reflecting his many sins", "confidence": "sourced"},
-   {"value": "harming the image harms him", "quote": "He stabs the portrait in the heart, seeking to end the spell, but cries out as if he has also been stabbed", "confidence": "sourced"},
-   {"value": "secret must be hidden", "quote": "The portrait has remained locked away, with Gray holding the only key", "confidence": "sourced"}
+   {
+    "value": "portrait carries his sins",
+    "quote": "warped into a hideous, demon-like creature reflecting his many sins",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:42",
+      "quote": "that the painting should bear the burden of the years and of his corruption."
+     }
+    ]
+   },
+   {
+    "value": "harming the image harms him",
+    "quote": "He stabs the portrait in the heart, seeking to end the spell, but cries out as if he has also been stabbed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:46:33",
+      "quote": "The knife that had killed Basil Hallward would kill his portrait also..."
+     }
+    ]
+   },
+   {
+    "value": "secret must be hidden",
+    "quote": "The portrait has remained locked away, with Gray holding the only key",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:17",
+      "quote": "He could lock it up. He himself would keep the key."
+     }
+    ]
+   },
+   {
+    "value": "good deeds show in portrait",
+    "source": "subtitles",
+    "at": "01:45:17",
+    "quote": "Would there be any sign of his one good deed in the portrait?",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "lover", "relation_to_threat": "lover", "detail": "Sibyl Vane", "quote": "Gray, after Sibyl's suicide, becomes more dedicated to a sinful and heartless life", "confidence": "sourced"},
-   {"value": "friends", "relation_to_threat": "community", "detail": "Hallward murdered, Campbell driven to suicide", "quote": "Campbell, distraught at his role in destroying Hallward's corpse, commits suicide", "confidence": "sourced"},
-   {"value": "the protagonist himself", "relation_to_threat": "self", "quote": "discover Gray dead next to the portrait, his deformed body now reflecting his sins in physical form", "confidence": "sourced"}
+   {
+    "value": "lover",
+    "relation_to_threat": "lover",
+    "detail": "Sibyl Vane",
+    "quote": "Gray, after Sibyl's suicide, becomes more dedicated to a sinful and heartless life",
+    "confidence": "sourced"
+   },
+   {
+    "value": "friends",
+    "relation_to_threat": "community",
+    "detail": "Hallward murdered, Campbell driven to suicide",
+    "quote": "Campbell, distraught at his role in destroying Hallward's corpse, commits suicide",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:57",
+      "quote": "Allen Campbell had shot himself."
+     }
+    ]
+   },
+   {
+    "value": "the protagonist himself",
+    "relation_to_threat": "self",
+    "quote": "discover Gray dead next to the portrait, his deformed body now reflecting his sins in physical form",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "protagonist dies", "quote": "discover Gray dead next to the portrait", "confidence": "sourced"},
-   {"value": "curse reverses at death", "quote": "The portrait, by contrast, once more shows Dorian Gray as a young, innocent man", "confidence": "sourced"}
+   {
+    "value": "protagonist dies",
+    "quote": "discover Gray dead next to the portrait",
+    "confidence": "sourced"
+   },
+   {
+    "value": "curse reverses at death",
+    "quote": "The portrait, by contrast, once more shows Dorian Gray as a young, innocent man",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "portrait", "state": "warping into a monster", "when": "opening", "role": "threat", "quote": "Gray finds the portrait has begun to change and wonders if his wish may have come true", "confidence": "sourced"},
-   {"value": "cat statue", "state": "magical", "when": "opening", "role": "omen", "quote": "an Egyptian cat statue with supposed magical powers", "confidence": "sourced"},
-   {"value": "locked room", "detail": "old schoolroom", "when": "early", "role": "setting", "quote": "He has the portrait locked away in his old schoolroom", "confidence": "sourced"},
-   {"value": "key", "when": "middle", "role": "symbol", "quote": "with Gray holding the only key", "confidence": "sourced"},
-   {"value": "knife", "state": "stabbing the portrait", "when": "ending", "role": "weapon", "quote": "He stabs the portrait in the heart, seeking to end the spell", "confidence": "sourced"},
-   {"value": "corpse", "state": "sealed away", "when": "middle", "role": "clue", "quote": "seals his body in the school room next to the portrait", "confidence": "sourced"}
+   {
+    "value": "portrait",
+    "state": "warping into a monster",
+    "when": "opening",
+    "role": "threat",
+    "quote": "Gray finds the portrait has begun to change and wonders if his wish may have come true",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:14",
+      "quote": "It's as if the painting had a life of its own, independent of me."
+     }
+    ]
+   },
+   {
+    "value": "cat statue",
+    "state": "magical",
+    "when": "opening",
+    "role": "omen",
+    "quote": "an Egyptian cat statue with supposed magical powers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:13",
+      "quote": "It's one of the 73 great gods of Egypt and is quite capable of granting your wish."
+     }
+    ]
+   },
+   {
+    "value": "locked room",
+    "detail": "old schoolroom",
+    "when": "early",
+    "role": "setting",
+    "quote": "He has the portrait locked away in his old schoolroom",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:01",
+      "quote": "At the top of the house was his old schoolroom..."
+     }
+    ]
+   },
+   {
+    "value": "key",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "with Gray holding the only key",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:17",
+      "quote": "He could lock it up. He himself would keep the key."
+     }
+    ]
+   },
+   {
+    "value": "knife",
+    "state": "stabbing the portrait",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "He stabs the portrait in the heart, seeking to end the spell",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:47:03",
+      "quote": "But when the knife pierced the heart of the portrait..."
+     }
+    ]
+   },
+   {
+    "value": "corpse",
+    "state": "sealed away",
+    "when": "middle",
+    "role": "clue",
+    "quote": "seals his body in the school room next to the portrait",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:38",
+      "quote": "a dead man is lying across a table."
+     }
+    ]
+   },
+   {
+    "value": "butterfly",
+    "state": "caught and pinned",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:09:29",
+    "quote": "I've found a rare and beautiful butterfly, Euvanesse antiope.",
+    "confidence": "sourced",
+    "detail": "Lord Henry catches a butterfly as he wins Dorian over; an earlier one is named Limenitis sibylla",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:04",
+      "quote": "That's a very common type of butterfly."
+     }
+    ]
+   },
+   {
+    "value": "little yellow bird song",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:16:08",
+    "quote": "Goodbye, little yellow bird",
+    "confidence": "sourced",
+    "detail": "Sibyl Vane's song; Dorian later plays it at the piano",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:01",
+      "quote": "Goodbye, little yellow bird"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "portrait painted, wish made", "when": "opening", "role": "trigger", "quote": "Gray wishes his portrait could age instead of him", "confidence": "sourced"},
-   {"order": 2, "value": "first sign of change", "when": "early", "role": "omen", "quote": "Gray finds the portrait has begun to change and wonders if his wish may have come true", "confidence": "sourced"},
-   {"order": 3, "value": "years pass unaging", "when": "middle", "quote": "Years later, Dorian is 40 but still looks 22", "confidence": "sourced"},
-   {"order": 4, "value": "murder of a friend", "when": "middle", "role": "turn", "quote": "When Hallward sees his painting, Gray murders his friend", "confidence": "sourced"},
-   {"order": 5, "value": "avenger killed by accident", "when": "late", "quote": "is shot by accident during a hunting party", "confidence": "sourced"},
-   {"order": 6, "value": "attempt to break spell", "when": "ending", "quote": "He stabs the portrait in the heart, seeking to end the spell", "confidence": "sourced"},
-   {"order": 7, "value": "death and restoration", "when": "ending", "quote": "The portrait, by contrast, once more shows Dorian Gray as a young, innocent man", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "tempter introduced",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:02:10",
+    "quote": "He diverted himself by exercising a subtle influence on the lives of others.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "portrait painted, wish made",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Gray wishes his portrait could age instead of him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:00",
+      "quote": "If it were I who was always to be young and the picture that was to grow old."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "first sign of change",
+    "when": "early",
+    "role": "omen",
+    "quote": "Gray finds the portrait has begun to change and wonders if his wish may have come true",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:22",
+      "quote": "The lines of cruelty about the mouth were unmistakable."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "years pass unaging",
+    "when": "middle",
+    "quote": "Years later, Dorian is 40 but still looks 22",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:52",
+      "quote": "As the years passed, the miracle of Dorian's changeless youth..."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "murder of a friend",
+    "when": "middle",
+    "role": "turn",
+    "quote": "When Hallward sees his painting, Gray murders his friend",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:44",
+      "quote": "Allen, it was murder. I killed him."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "avenger killed by accident",
+    "when": "late",
+    "quote": "is shot by accident during a hunting party",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:42",
+      "quote": "I'm Sibyl Vane's brother."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "attempt to break spell",
+    "when": "ending",
+    "quote": "He stabs the portrait in the heart, seeking to end the spell",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:47:03",
+      "quote": "But when the knife pierced the heart of the portrait..."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "dying prayer for forgiveness",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:47:42",
+    "quote": "Pray, Father, forgive me for I have sinned.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "death and restoration",
+    "when": "ending",
+    "quote": "The portrait, by contrast, once more shows Dorian Gray as a young, innocent man",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

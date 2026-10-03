@@ -1,64 +1,504 @@
 {
  "film": "1978-halloween",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Analysis"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Analysis"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "masked killer", "detail": "Michael Myers, escaped mental patient", "quote": "The film follows escaped mental patient Michael Myers, who was committed to a mental institution for murdering his teenage sister", "confidence": "sourced"},
-   {"value": "boogeyman", "detail": "seemingly unkillable", "quote": "Tommy insists that you cannot kill the boogeyman just as Michael reappears upstairs with a knife", "confidence": "sourced"}
+   {
+    "value": "masked killer",
+    "detail": "Michael Myers, escaped mental patient",
+    "quote": "The film follows escaped mental patient Michael Myers, who was committed to a mental institution for murdering his teenage sister",
+    "confidence": "sourced"
+   },
+   {
+    "value": "boogeyman",
+    "detail": "seemingly unkillable",
+    "quote": "Tommy insists that you cannot kill the boogeyman just as Michael reappears upstairs with a knife",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:18",
+      "quote": "The Boogeyman is coming."
+     }
+    ]
+   },
+   {
+    "value": "pure evil",
+    "detail": "Loomis's description of the boy he treated",
+    "source": "subtitles",
+    "at": "00:39:44",
+    "quote": "was purely and simply evil.",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "child who killed", "quote": "six-year-old Michael Myers brutally stabs his teenage sister Judith to death with a chef's knife", "confidence": "sourced"},
-   {"value": "escaped from asylum", "quote": "they realize the patients have broken out of the hospital", "confidence": "sourced"}
+   {
+    "value": "child who killed",
+    "quote": "six-year-old Michael Myers brutally stabs his teenage sister Judith to death with a chef's knife",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:09",
+      "quote": "[Judith screaming]"
+     }
+    ]
+   },
+   {
+    "value": "escaped from asylum",
+    "quote": "they realize the patients have broken out of the hospital",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:13",
+      "quote": "The evil is gone!"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "nothing stated", "detail": "the analysis offers sexual fury as one reading", "quote": "killers in slasher films are fueled by a \"psychosexual fury\" and that all the killings are sexual in nature", "confidence": "observed"},
-   {"value": "to return home", "quote": "15 years later, he returns to Haddonfield", "confidence": "sourced"}
+   {
+    "value": "nothing stated",
+    "detail": "the analysis offers sexual fury as one reading",
+    "quote": "killers in slasher films are fueled by a \"psychosexual fury\" and that all the killings are sexual in nature",
+    "confidence": "observed"
+   },
+   {
+    "value": "to return home",
+    "quote": "15 years later, he returns to Haddonfield",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:17",
+      "quote": "He came home."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "sibling murder", "quote": "six-year-old Michael Myers brutally stabs his teenage sister Judith to death", "confidence": "sourced"}
+   {
+    "value": "sibling murder",
+    "quote": "six-year-old Michael Myers brutally stabs his teenage sister Judith to death",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "anniversary", "detail": "Halloween, 15 years later", "quote": "On October 31, 1963, in the suburban Illinois town of Haddonfield", "confidence": "observed"},
-   {"value": "visiting the killer's house", "quote": "when she drops off a key at his abandoned childhood home that her realtor father is trying to sell", "confidence": "sourced"}
+   {
+    "value": "anniversary",
+    "detail": "Halloween, 15 years later",
+    "quote": "On October 31, 1963, in the suburban Illinois town of Haddonfield",
+    "confidence": "observed"
+   },
+   {
+    "value": "visiting the killer's house",
+    "quote": "when she drops off a key at his abandoned childhood home that her realtor father is trying to sell",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:39",
+      "quote": "The Myers' house!"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "cannot be killed", "quote": "even Loomis, the male hero of the story, who shoots Michael repeatedly with a revolver, cannot kill him", "confidence": "sourced"},
-   {"value": "warnings dismissed", "quote": "Laurie notices Michael throughout the day, but her friends Annie Brackett and Lynda Van Der Klok dismiss her concerns.", "confidence": "sourced"},
-   {"value": "sex linked to death", "quote": "the film, and its genre at large, links sexuality with danger", "confidence": "observed"}
+   {
+    "value": "cannot be killed",
+    "quote": "even Loomis, the male hero of the story, who shoots Michael repeatedly with a revolver, cannot kill him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:39",
+      "quote": "You can't kill the boogeyman."
+     }
+    ]
+   },
+   {
+    "value": "warnings dismissed",
+    "quote": "Laurie notices Michael throughout the day, but her friends Annie Brackett and Lynda Van Der Klok dismiss her concerns.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:28",
+      "quote": "I saw the boogeyman."
+     }
+    ]
+   },
+   {
+    "value": "sex linked to death",
+    "quote": "the film, and its genre at large, links sexuality with danger",
+    "confidence": "observed"
+   },
+   {
+    "value": "only comes on halloween",
+    "detail": "Laurie reassures Tommy",
+    "source": "subtitles",
+    "at": "00:45:41",
+    "quote": "The boogeyman can only come out on Halloween night, right?",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "teenage babysitters", "relation_to_threat": "stranger", "quote": "he stalks teenage babysitter Laurie Strode (Curtis) and her friends", "confidence": "sourced"},
-   {"value": "children", "relation_to_threat": "stranger", "detail": "Tommy and Lindsey", "quote": "Tommy spots Michael from the windows and thinks he is the boogeyman", "confidence": "sourced"},
-   {"value": "sister", "relation_to_threat": "family", "detail": "Judith, the first victim", "quote": "brutally stabs his teenage sister Judith to death with a chef's knife", "confidence": "sourced"}
+   {
+    "value": "teenage babysitters",
+    "relation_to_threat": "stranger",
+    "quote": "he stalks teenage babysitter Laurie Strode (Curtis) and her friends",
+    "confidence": "sourced"
+   },
+   {
+    "value": "children",
+    "relation_to_threat": "stranger",
+    "detail": "Tommy and Lindsey",
+    "quote": "Tommy spots Michael from the windows and thinks he is the boogeyman",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:55:54",
+      "quote": "There he is, the boogeyman, he's outside!"
+     }
+    ]
+   },
+   {
+    "value": "sister",
+    "relation_to_threat": "family",
+    "detail": "Judith, the first victim",
+    "quote": "brutally stabs his teenage sister Judith to death with a chef's knife",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat survives", "quote": "When Loomis goes to check on the body, he is unsurprised to see that Michael has vanished.", "confidence": "sourced"},
-   {"value": "final girl survives", "quote": "Halloween initiates the role of the \"final girl\" who ultimately triumphs", "confidence": "sourced"}
+   {
+    "value": "threat survives",
+    "quote": "When Loomis goes to check on the body, he is unsurprised to see that Michael has vanished.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:40",
+      "quote": "As a matter of fact, it was."
+     }
+    ]
+   },
+   {
+    "value": "final girl survives",
+    "quote": "Halloween initiates the role of the \"final girl\" who ultimately triumphs",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:40",
+      "quote": "It was the boogeyman."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "chef's knife", "when": "opening", "role": "weapon", "quote": "brutally stabs his teenage sister Judith to death with a chef's knife", "confidence": "sourced"},
-   {"value": "white mask", "state": "stolen", "when": "early", "role": "symbol", "quote": "stealing a white mask, a rope, and two kitchen knives from a hardware store", "confidence": "sourced"},
-   {"value": "tombstone", "state": "stolen", "when": "early", "role": "clue", "quote": "Michael has stolen Judith's tombstone from the local cemetery", "confidence": "sourced"},
-   {"value": "dog", "state": "killed", "when": "middle", "role": "omen", "quote": "Michael spies on Annie and kills Lester, the family's German Shepherd", "confidence": "sourced"},
-   {"value": "ghost costume", "when": "middle", "role": "threat", "quote": "Michael poses as Bob in a ghost costume to taunt Lynda", "confidence": "sourced"},
-   {"value": "phone cord", "state": "used to strangle", "when": "middle", "role": "weapon", "quote": "Michael strangles her with the phone cord while Laurie listens on the other end", "confidence": "sourced"},
-   {"value": "knitting needle", "when": "late", "role": "weapon", "quote": "she defends herself by stabbing him in the neck with a knitting needle", "confidence": "sourced"},
-   {"value": "wire hanger", "when": "late", "role": "weapon", "quote": "stabs him in the eye with a piece of wire hanger", "confidence": "sourced"}
+   {
+    "value": "chef's knife",
+    "when": "opening",
+    "role": "weapon",
+    "quote": "brutally stabs his teenage sister Judith to death with a chef's knife",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:13",
+      "quote": "[knife slicing]"
+     }
+    ]
+   },
+   {
+    "value": "white mask",
+    "state": "stolen",
+    "when": "early",
+    "role": "symbol",
+    "quote": "stealing a white mask, a rope, and two kitchen knives from a hardware store",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:48",
+      "quote": "all they took was some Halloween masks, a rope,"
+     },
+     {
+      "source": "screenplay",
+      "quote": "We get closer and closer until we see that the shape is a Halloween mask."
+     }
+    ]
+   },
+   {
+    "value": "tombstone",
+    "state": "stolen",
+    "when": "early",
+    "role": "clue",
+    "quote": "Michael has stolen Judith's tombstone from the local cemetery",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:03",
+      "quote": "Whose grave is it?"
+     }
+    ]
+   },
+   {
+    "value": "dog",
+    "state": "killed",
+    "when": "middle",
+    "role": "omen",
+    "quote": "Michael spies on Annie and kills Lester, the family's German Shepherd",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:55",
+      "quote": "[Lester whimpering]"
+     }
+    ]
+   },
+   {
+    "value": "ghost costume",
+    "when": "middle",
+    "role": "threat",
+    "quote": "Michael poses as Bob in a ghost costume to taunt Lynda",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:12",
+      "quote": "Can't I get your ghost, Bob?"
+     }
+    ]
+   },
+   {
+    "value": "phone cord",
+    "state": "used to strangle",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "Michael strangles her with the phone cord while Laurie listens on the other end",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:11",
+      "quote": "[Lynda choking]"
+     }
+    ]
+   },
+   {
+    "value": "knitting needle",
+    "when": "late",
+    "role": "weapon",
+    "quote": "she defends herself by stabbing him in the neck with a knitting needle",
+    "confidence": "sourced"
+   },
+   {
+    "value": "wire hanger",
+    "when": "late",
+    "role": "weapon",
+    "quote": "stabs him in the eye with a piece of wire hanger",
+    "confidence": "sourced"
+   },
+   {
+    "value": "jack-o'-lantern",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:31:44",
+    "quote": "I figured carving a jack-o-lantern would keep him occupied.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dead dog",
+    "state": "half eaten",
+    "when": "middle",
+    "role": "omen",
+    "detail": "Loomis and Brackett find it in the Myers house",
+    "source": "subtitles",
+    "at": "00:37:21",
+    "quote": "He got hungry.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "breathing under mask",
+    "when": "early",
+    "role": "threat",
+    "detail": "recurs every time Michael watches",
+    "source": "subtitles",
+    "at": "00:17:43",
+    "quote": "[heavy breathing under mask]",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "childhood murder prologue", "when": "opening", "quote": "six-year-old Michael Myers brutally stabs his teenage sister Judith to death with a chef's knife", "confidence": "sourced"},
-   {"order": 2, "value": "killer escapes", "when": "early", "quote": "they realize the patients have broken out of the hospital", "confidence": "sourced"},
-   {"order": 3, "value": "stalking begins", "when": "early", "role": "trigger", "quote": "Michael begins stalking a teenage girl, Laurie Strode", "confidence": "sourced"},
-   {"order": 4, "value": "warnings dismissed", "when": "middle", "quote": "Laurie sees nothing and dismisses him", "confidence": "sourced"},
-   {"order": 5, "value": "friends killed one by one", "when": "middle", "quote": "Michael hides in Annie's car and strangles her before cutting her throat.", "confidence": "sourced"},
-   {"order": 6, "value": "bodies discovered", "when": "late", "role": "turn", "quote": "finds her friends' bodies and Judith's tombstone in one of the upstairs bedrooms", "confidence": "sourced"},
-   {"order": 7, "value": "killer seems dead, rises", "when": "late", "quote": "After Laurie sends Tommy and Lindsey to a neighbor's house to call the police, Michael rises and attacks her again.", "confidence": "sourced"},
-   {"order": 8, "value": "shot, body vanishes", "when": "ending", "role": "turn", "quote": "When Loomis goes to check on the body, he is unsurprised to see that Michael has vanished.", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "children's halloween rhyme",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:02:29",
+    "quote": "Black cats and goblins on Halloween night.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "childhood murder prologue",
+    "when": "opening",
+    "quote": "six-year-old Michael Myers brutally stabs his teenage sister Judith to death with a chef's knife",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:13",
+      "quote": "[knife slicing]"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "killer escapes",
+    "when": "early",
+    "quote": "they realize the patients have broken out of the hospital",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:52",
+      "quote": "[glass shattering]"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "stalking begins",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Michael begins stalking a teenage girl, Laurie Strode",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:38",
+      "quote": "[heavy breathing continues]"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "lesson on fate",
+    "when": "early",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:15:37",
+    "quote": "You see, fate caught up with several lives here.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "warnings dismissed",
+    "when": "middle",
+    "quote": "Laurie sees nothing and dismisses him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:40",
+      "quote": "Laurie, the boogeyman is outside."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "empty grave found",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:31:12",
+    "quote": "He came home.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "friends killed one by one",
+    "when": "middle",
+    "quote": "Michael hides in Annie's car and strangles her before cutting her throat.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:10",
+      "quote": "[Annie gasping]"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "bodies discovered",
+    "when": "late",
+    "role": "turn",
+    "quote": "finds her friends' bodies and Judith's tombstone in one of the upstairs bedrooms",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "killer seems dead, rises",
+    "when": "late",
+    "quote": "After Laurie sends Tommy and Lindsey to a neighbor's house to call the police, Michael rises and attacks her again.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "shot, body vanishes",
+    "when": "ending",
+    "role": "turn",
+    "quote": "When Loomis goes to check on the body, he is unsurprised to see that Michael has vanished.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:16",
+      "quote": "[shots firing]"
+     }
+    ]
+   },
+   {
+    "order": 12,
+    "value": "breathing over empty rooms",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:28:44",
+    "quote": "[Michael breathing heavily]",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

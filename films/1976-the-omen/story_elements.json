@@ -1,63 +1,439 @@
 {
  "film": "1976-the-omen",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Analysis"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Analysis"
+   ]
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "antichrist child", "detail": "Damien Thorn", "quote": "they come to understand he is in fact the prophesied Antichrist", "confidence": "sourced"},
-   {"value": "devoted servant", "detail": "Mrs. Baylock, the nanny", "quote": "Mrs. Baylock throws Katherine to her death from the window of her room", "confidence": "sourced"}
+   {
+    "value": "antichrist child",
+    "detail": "Damien Thorn",
+    "quote": "they come to understand he is in fact the prophesied Antichrist",
+    "confidence": "sourced"
+   },
+   {
+    "value": "devoted servant",
+    "detail": "Mrs. Baylock, the nanny",
+    "quote": "Mrs. Baylock throws Katherine to her death from the window of her room",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "son of satan", "quote": "tells Robert that Damien is the son of Satan", "confidence": "sourced"},
-   {"value": "child swapped at birth", "quote": "a young child replaced at birth by his father, unbeknownst to his wife", "confidence": "sourced"}
+   {
+    "value": "son of satan",
+    "quote": "tells Robert that Damien is the son of Satan",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child swapped at birth",
+    "quote": "a young child replaced at birth by his father, unbeknownst to his wife",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to remove obstacles", "detail": "kill his sibling and parents", "quote": "Damien will kill his unborn sibling and parents", "confidence": "sourced"}
+   {
+    "value": "to remove obstacles",
+    "detail": "kill his sibling and parents",
+    "quote": "Damien will kill his unborn sibling and parents",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "He will.kill the unborn child and then he will kill your wirer"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "child murdered", "detail": "Robert's own son killed so Damien could replace him", "quote": "the child is his own son, murdered so that Damien could take his place", "confidence": "sourced"},
-   {"value": "secret kept from wife", "quote": "Robert does not tell Katherine that the child is not their own", "confidence": "sourced"}
+   {
+    "value": "child murdered",
+    "detail": "Robert's own son killed so Damien could replace him",
+    "quote": "the child is his own son, murdered so that Damien could take his place",
+    "confidence": "sourced"
+   },
+   {
+    "value": "secret kept from wife",
+    "quote": "Robert does not tell Katherine that the child is not their own",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "secret adoption", "quote": "persuades him to secretly adopt another baby whose mother also died in childbirth", "confidence": "sourced"}
+   {
+    "value": "secret adoption",
+    "quote": "persuades him to secretly adopt another baby whose mother also died in childbirth",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "mark of three sixes", "quote": "he will bear a birthmark in the shape of three sixes", "confidence": "sourced"},
-   {"value": "killed only on hallowed ground", "detail": "with seven daggers", "quote": "seven daggers with which to kill Damien on hallowed ground", "confidence": "sourced"},
-   {"value": "deaths foretold in photos", "quote": "shadows in photographs of the nanny and Father Brennan that presage their deaths", "confidence": "sourced"}
+   {
+    "value": "mark of three sixes",
+    "quote": "he will bear a birthmark in the shape of three sixes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "He bears a birthmark. A sequence of sixes."
+     }
+    ]
+   },
+   {
+    "value": "killed only on hallowed ground",
+    "detail": "with seven daggers",
+    "quote": "seven daggers with which to kill Damien on hallowed ground",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "It must be done on hallowed ground ••• the grounds of a church"
+     }
+    ]
+   },
+   {
+    "value": "deaths foretold in photos",
+    "quote": "shadows in photographs of the nanny and Father Brennan that presage their deaths",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "parents", "relation_to_threat": "family", "detail": "Robert and Katherine Thorn", "quote": "A double funeral ceremony is attended by the U.S. President and the First Lady", "confidence": "sourced"},
-   {"value": "warners", "relation_to_threat": "stranger", "detail": "Father Brennan and Keith", "quote": "Keith is decapitated by a sliding pane of sheet glass from a truck", "confidence": "sourced"},
-   {"value": "unborn child", "relation_to_threat": "family", "quote": "hospitalizing her and causing her to miscarry", "confidence": "sourced"}
+   {
+    "value": "parents",
+    "relation_to_threat": "family",
+    "detail": "Robert and Katherine Thorn",
+    "quote": "A double funeral ceremony is attended by the U.S. President and the First Lady",
+    "confidence": "sourced"
+   },
+   {
+    "value": "warners",
+    "relation_to_threat": "stranger",
+    "detail": "Father Brennan and Keith",
+    "quote": "Keith is decapitated by a sliding pane of sheet glass from a truck",
+    "confidence": "sourced"
+   },
+   {
+    "value": "unborn child",
+    "relation_to_threat": "family",
+    "quote": "hospitalizing her and causing her to miscarry",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat survives", "detail": "Damien adopted by the President", "quote": "Damien, standing with the first couple, turns and breaks the fourth wall to smile", "confidence": "sourced"},
-   {"value": "hero killed", "quote": "the police arrive on the scene and shoot him dead as he brandishes the first dagger", "confidence": "sourced"}
+   {
+    "value": "threat survives",
+    "detail": "Damien adopted by the President",
+    "quote": "Damien, standing with the first couple, turns and breaks the fourth wall to smile",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Damien in the custody of his new parents -- flanked by Secret"
+     }
+    ]
+   },
+   {
+    "value": "hero killed",
+    "quote": "the police arrive on the scene and shoot him dead as he brandishes the first dagger",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "dog", "state": "menacing rottweiler", "when": "early", "role": "omen", "quote": "a menacing Rottweiler appears at their home", "confidence": "sourced"},
-   {"value": "noose", "state": "nanny hangs herself", "when": "early", "role": "omen", "quote": "Damien's nanny publicly hangs herself during his fifth birthday party", "confidence": "sourced"},
-   {"value": "animals", "state": "terrified", "when": "early", "role": "omen", "quote": "animals at a safari park are terrified by his presence", "confidence": "sourced"},
-   {"value": "lightning rod", "state": "impaling", "when": "early", "role": "weapon", "quote": "its lightning rod is struck by lightning and impales him", "confidence": "sourced"},
-   {"value": "photographs", "state": "marked with shadows", "when": "middle", "role": "clue", "quote": "notices shadows in photographs of the nanny and Father Brennan that presage their deaths", "confidence": "sourced"},
-   {"value": "jackal", "state": "carcass in grave", "when": "middle", "role": "clue", "quote": "Robert and Keith find a jackal carcass", "confidence": "sourced"},
-   {"value": "daggers", "state": "seven", "when": "late", "role": "weapon", "quote": "Carl gives Robert seven daggers with which to kill Damien", "confidence": "sourced"},
-   {"value": "birthmark", "state": "666 on scalp", "when": "late", "role": "clue", "quote": "Robert finds the birthmark on the sleeping Damien's scalp", "confidence": "sourced"}
+   {
+    "value": "dog",
+    "state": "menacing rottweiler",
+    "when": "early",
+    "role": "omen",
+    "quote": "a menacing Rottweiler appears at their home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "revealing, just barely visible beside a tree -- seated motionless as statuary -- a black, German Shepherd dog."
+     }
+    ]
+   },
+   {
+    "value": "noose",
+    "state": "nanny hangs herself",
+    "when": "early",
+    "role": "omen",
+    "quote": "Damien's nanny publicly hangs herself during his fifth birthday party",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "REVEALING the Nanny standing on the edge, holding a rope in her hand; cheerfully stretching it upward to show it is wound around her neck."
+     }
+    ]
+   },
+   {
+    "value": "animals",
+    "state": "terrified",
+    "when": "early",
+    "role": "omen",
+    "quote": "animals at a safari park are terrified by his presence",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "gazing at him, suddenly shrieking in fear: others joining in, beginning to bound about the road in panic"
+     }
+    ]
+   },
+   {
+    "value": "lightning rod",
+    "state": "impaling",
+    "when": "early",
+    "role": "weapon",
+    "quote": "its lightning rod is struck by lightning and impales him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "streaking downward, arrested by a lightning rod: the ROD SNAPPING OFF at its base and hitting the tiled roof"
+     }
+    ]
+   },
+   {
+    "value": "photographs",
+    "state": "marked with shadows",
+    "when": "middle",
+    "role": "clue",
+    "quote": "notices shadows in photographs of the nanny and Father Brennan that presage their deaths",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "showing the Priest pushing through the crowd ••• and again, the phantom-like appendage rising"
+     }
+    ]
+   },
+   {
+    "value": "jackal",
+    "state": "carcass in grave",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Robert and Keith find a jackal carcass",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "ZOOMING IN to the decayed carcass of a JACKAL."
+     }
+    ]
+   },
+   {
+    "value": "daggers",
+    "state": "seven",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Carl gives Robert seven daggers with which to kill Damien",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "REVEALING seven stilettos laid out before him"
+     }
+    ]
+   },
+   {
+    "value": "birthmark",
+    "state": "666 on scalp",
+    "when": "late",
+    "role": "clue",
+    "quote": "Robert finds the birthmark on the sleeping Damien's scalp",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "suddenly REVEALING a small, scar-like birthmark"
+     }
+    ]
+   },
+   {
+    "value": "chanting voices",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "It is a CHANT. Unison and resounding",
+    "confidence": "sourced",
+    "detail": "a rising chant over the night sky opens the film and returns before each death"
+   },
+   {
+    "value": "church spires",
+    "state": "looming",
+    "when": "early",
+    "role": "threat",
+    "source": "screenplay",
+    "quote": "the church co.mes closer; its massive spires seeming to spear the clouds",
+    "confidence": "sourced",
+    "detail": "Damien panics as the car approaches the church for a wedding"
+   },
+   {
+    "value": "pack of dogs",
+    "when": "middle",
+    "role": "threat",
+    "source": "screenplay",
+    "quote": "as the heads of other dogs appear: insane and ravenous -- a pack of eight materializing",
+    "confidence": "sourced",
+    "detail": "guarding the graves at Cerveteri"
+   },
+   {
+    "value": "thunder",
+    "when": "ending",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "Again, there comes a RUMBLE of THUNDER.",
+    "confidence": "sourced",
+    "detail": "over the funeral as Damien leaves with the President"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "baby swapped", "when": "opening", "role": "trigger", "quote": "persuades him to secretly adopt another baby", "confidence": "sourced"},
-   {"order": 2, "value": "public suicide at party", "when": "early", "role": "omen", "quote": "Damien's nanny publicly hangs herself during his fifth birthday party", "confidence": "sourced"},
-   {"order": 3, "value": "priest's warning, then death", "when": "early", "quote": "Father Brennan attempts to find shelter in a nearby church and is killed", "confidence": "sourced"},
-   {"order": 4, "value": "mother attacked", "when": "middle", "quote": "Damien knocks Katherine over a railing to the floor below", "confidence": "sourced"},
-   {"order": 5, "value": "grave reveals the truth", "when": "middle", "role": "turn", "quote": "Robert realizes that the child is his own son, murdered so that Damien could take his place", "confidence": "sourced"},
-   {"order": 6, "value": "helper decapitated", "when": "late", "quote": "Keith is decapitated by a sliding pane of sheet glass from a truck", "confidence": "sourced"},
-   {"order": 7, "value": "failed killing at altar", "when": "late", "quote": "Robert drags a screaming Damien onto the altar to kill him", "confidence": "sourced"},
-   {"order": 8, "value": "child smiles at audience", "when": "ending", "role": "turn", "quote": "turns and breaks the fourth wall to smile at the film audience", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "new star in the sky",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "as a new STAR slowly forms in their midst",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "baby swapped",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "persuades him to secretly adopt another baby",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "public suicide at party",
+    "when": "early",
+    "role": "omen",
+    "quote": "Damien's nanny publicly hangs herself during his fifth birthday party",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "jumping easily from the roof, her body plummeting downward, snapped back up by the rope, then hanging limp."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "child panics at church",
+    "when": "early",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "His lips going dry as his eyes turn again toward the church looming closer",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "priest's warning, then death",
+    "when": "early",
+    "quote": "Father Brennan attempts to find shelter in a nearby church and is killed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "From the Eternal Sea He rises, Creating Armies on either shore; Turning man against his brother,"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "animals panic at child",
+    "when": "early",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "ANGLE ON THE BABOON 193 frenzied., trying to get a.t him.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "mother attacked",
+    "when": "middle",
+    "quote": "Damien knocks Katherine over a railing to the floor below",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "gazing hard at the child: as if directing him with sheer"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "grave reveals the truth",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Robert realizes that the child is his own son, murdered so that Damien could take his place",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "REVEALING the remains of a human child"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "dogs attack at graveyard",
+    "when": "middle",
+    "source": "screenplay",
+    "quote": "its muzzle scarred and dripping",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "helper decapitated",
+    "when": "late",
+    "quote": "Keith is decapitated by a sliding pane of sheet glass from a truck",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "catching Jennings just above the collar~ and neatly severing his head"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "failed killing at altar",
+    "when": "late",
+    "quote": "Robert drags a screaming Damien onto the altar to kill him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "as the knife suddenly streaks downward: a SHOT RINGING OUT in the night."
+     }
+    ]
+   },
+   {
+    "order": 12,
+    "value": "child smiles at audience",
+    "when": "ending",
+    "role": "turn",
+    "quote": "turns and breaks the fourth wall to smile at the film audience",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,63 +1,465 @@
 {
  "film": "1973-messiah-of-evil",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Analysis"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Analysis"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "cannibal townspeople", "detail": "zombie-like ghouls of Point Dume", "quote": "he encounters a crowd of zombie-like townspeople", "confidence": "sourced"},
-   {"value": "cult leader", "detail": "the \"dark stranger\"", "quote": "a survivor of the Donner Party who founded a cannibalistic cult 100 years earlier", "confidence": "sourced"}
+   {
+    "value": "cannibal townspeople",
+    "detail": "zombie-like ghouls of Point Dume",
+    "quote": "he encounters a crowd of zombie-like townspeople",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cult leader",
+    "detail": "the \"dark stranger\"",
+    "quote": "a survivor of the Donner Party who founded a cannibalistic cult 100 years earlier",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "returning cult founder", "detail": "walked into the ocean promising to return in a century", "quote": "He ultimately walked into the ocean, promising to return in a century", "confidence": "sourced"},
-   {"value": "blood moon", "quote": "the townspeople descended into cannibalism once the moon turned red", "confidence": "sourced"}
+   {
+    "value": "returning cult founder",
+    "detail": "walked into the ocean promising to return in a century",
+    "quote": "He ultimately walked into the ocean, promising to return in a century",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:04",
+      "quote": "when the dark stranger said he was spreading his new religion."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:13:46",
+      "quote": "The dark stranger watched the chaos and he walked into the sea."
+     }
+    ]
+   },
+   {
+    "value": "blood moon",
+    "quote": "the townspeople descended into cannibalism once the moon turned red",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:00",
+      "quote": "It was like the redder the moon got up there, the closer that people were being jerked toward hell."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "hunger", "quote": "townspeople who are feasting on raw meat", "confidence": "sourced"},
-   {"value": "to spread", "quote": "they are sent to spread their disease to other areas of California", "confidence": "sourced"}
+   {
+    "value": "hunger",
+    "quote": "townspeople who are feasting on raw meat",
+    "confidence": "sourced"
+   },
+   {
+    "value": "to spread",
+    "quote": "they are sent to spread their disease to other areas of California",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:41",
+      "quote": "and moving out into the rest of the world spreading their sickness"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "cannibalism", "detail": "the Donner Party survivor", "quote": "a survivor of the Donner Party who founded a cannibalistic cult", "confidence": "sourced"}
+   {
+    "value": "cannibalism",
+    "detail": "the Donner Party survivor",
+    "quote": "a survivor of the Donner Party who founded a cannibalistic cult",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:50",
+      "quote": "He said that he himself had eaten human flesh,"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "searching for a missing parent", "quote": "a woman who travels to a remote coastal town in California to find her missing artist father", "confidence": "sourced"}
+   {
+    "value": "searching for a missing parent",
+    "quote": "a woman who travels to a remote coastal town in California to find her missing artist father",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:00",
+      "quote": "I went there looking for my father."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "must burn the dead", "quote": "she must burn him instead of burying him", "confidence": "sourced"},
-   {"value": "bleeding eyes", "detail": "sign of infection", "quote": "They start bleeding from their eyes while becoming insensitive to pain", "confidence": "sourced"},
-   {"value": "blood moon deadline", "quote": "must be destroyed before the moon turns red", "confidence": "sourced"}
+   {
+    "value": "must burn the dead",
+    "quote": "she must burn him instead of burying him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:25",
+      "quote": "You got to burn him."
+     }
+    ]
+   },
+   {
+    "value": "bleeding eyes",
+    "detail": "sign of infection",
+    "quote": "They start bleeding from their eyes while becoming insensitive to pain",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:25",
+      "quote": "Without feeling any pain I..."
+     }
+    ]
+   },
+   {
+    "value": "blood moon deadline",
+    "quote": "must be destroyed before the moon turns red",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:11",
+      "quote": "He's got to be destroyed before the moon turns blood red"
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "daughter", "relation_to_threat": "family", "detail": "Arletty, whose father is turning", "quote": "Arletty Lang drives to the small coastal town of Point Dume to visit her estranged father", "confidence": "sourced"},
-   {"value": "outsiders", "relation_to_threat": "stranger", "detail": "Thom, Laura and Toni", "quote": "Laura leaves the house late one evening and walks into a local grocery store", "confidence": "sourced"},
-   {"value": "father", "relation_to_threat": "self", "detail": "Joseph, succumbing", "quote": "he feared he was possessed", "confidence": "sourced"}
+   {
+    "value": "daughter",
+    "relation_to_threat": "family",
+    "detail": "Arletty, whose father is turning",
+    "quote": "Arletty Lang drives to the small coastal town of Point Dume to visit her estranged father",
+    "confidence": "sourced"
+   },
+   {
+    "value": "outsiders",
+    "relation_to_threat": "stranger",
+    "detail": "Thom, Laura and Toni",
+    "quote": "Laura leaves the house late one evening and walks into a local grocery store",
+    "confidence": "sourced"
+   },
+   {
+    "value": "father",
+    "relation_to_threat": "self",
+    "detail": "Joseph, succumbing",
+    "quote": "he feared he was possessed",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "lone survivor not believed", "detail": "Arletty committed to an asylum", "quote": "knowing that no one will believe her story. This causes her to be committed to an insane asylum", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "dreading the day the \"dark stranger\" and his followers come to take her away", "confidence": "sourced"}
+   {
+    "value": "lone survivor not believed",
+    "detail": "Arletty committed to an asylum",
+    "quote": "knowing that no one will believe her story. This causes her to be committed to an insane asylum",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:16",
+      "quote": "I made it back and they put me here."
+     }
+    ]
+   },
+   {
+    "value": "threat survives",
+    "quote": "dreading the day the \"dark stranger\" and his followers come to take her away",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:52",
+      "quote": "and no one will hear you scream."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "diary", "when": "opening", "role": "clue", "quote": "discovers a diary in which he detailed his disturbing nightmares", "confidence": "sourced"},
-   {"value": "red moon", "when": "early", "role": "omen", "quote": "once the moon turned red", "confidence": "sourced"},
-   {"value": "bonfires", "state": "on the beach", "when": "early", "role": "omen", "quote": "a group of people gather on the beach around bonfires and stare up at the moon", "confidence": "sourced"},
-   {"value": "bleeding eyes", "when": "middle", "role": "threat", "quote": "the other theater patrons, who weep blood from their eyes", "confidence": "sourced"},
-   {"value": "cinema", "when": "middle", "role": "setting", "quote": "Toni goes to see a Western film and is devoured by the other theater patrons", "confidence": "sourced"},
-   {"value": "insects", "state": "vomited", "when": "late", "role": "omen", "quote": "finds a spider in her mouth and vomits a lizard, cockroaches, and maggots", "confidence": "sourced"},
-   {"value": "garden shears", "when": "late", "role": "weapon", "quote": "she stabs him with garden shears and burns him alive", "confidence": "sourced"},
-   {"value": "ocean", "when": "ending", "role": "setting", "quote": "who emerges from the ocean and frees her", "confidence": "sourced"}
+   {
+    "value": "diary",
+    "when": "opening",
+    "role": "clue",
+    "quote": "discovers a diary in which he detailed his disturbing nightmares",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:26",
+      "quote": "JOSEPH: July 21st. My body temperature has dropped to 85."
+     }
+    ]
+   },
+   {
+    "value": "red moon",
+    "when": "early",
+    "role": "omen",
+    "quote": "once the moon turned red",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:53",
+      "quote": "100 years ago the moon started turning red up in the sky"
+     }
+    ]
+   },
+   {
+    "value": "bonfires",
+    "state": "on the beach",
+    "when": "early",
+    "role": "omen",
+    "quote": "a group of people gather on the beach around bonfires and stare up at the moon",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:32",
+      "quote": "Have you seen the fires on the beach?"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:26:32",
+      "quote": "They built their fires, not for warmth, but as beacons to be seen from the black ocean."
+     }
+    ]
+   },
+   {
+    "value": "bleeding eyes",
+    "when": "middle",
+    "role": "threat",
+    "quote": "the other theater patrons, who weep blood from their eyes",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cinema",
+    "when": "middle",
+    "role": "setting",
+    "quote": "Toni goes to see a Western film and is devoured by the other theater patrons",
+    "confidence": "sourced"
+   },
+   {
+    "value": "insects",
+    "state": "vomited",
+    "when": "late",
+    "role": "omen",
+    "quote": "finds a spider in her mouth and vomits a lizard, cockroaches, and maggots",
+    "confidence": "sourced"
+   },
+   {
+    "value": "garden shears",
+    "when": "late",
+    "role": "weapon",
+    "quote": "she stabs him with garden shears and burns him alive",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ocean",
+    "when": "ending",
+    "role": "setting",
+    "quote": "who emerges from the ocean and frees her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rats",
+    "state": "eaten raw",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:34:45",
+    "quote": "Beach rats.",
+    "confidence": "sourced",
+    "detail": "a townsman collects beach rats at night and eats them",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:58",
+      "quote": "I eat them, that's what I do with them."
+     }
+    ]
+   },
+   {
+    "value": "howling dogs",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:05:26",
+    "quote": "Dogs. Stray dogs.",
+    "confidence": "sourced",
+    "detail": "howling near the town that the attendant insists is dogs",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:29",
+      "quote": "It doesn't sound like dogs."
+     }
+    ]
+   },
+   {
+    "value": "severed finger",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:08:13",
+    "quote": "My finger was nearly severed.",
+    "confidence": "sourced",
+    "detail": "Joseph's diary: he tears it off without pain"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "arrives in remote town", "when": "opening", "quote": "Arletty Lang drives to the small coastal town of Point Dume", "confidence": "sourced"},
-   {"order": 2, "value": "legend told by warner", "when": "early", "role": "omen", "quote": "the townspeople descended into cannibalism once the moon turned red", "confidence": "sourced"},
-   {"order": 3, "value": "warner killed", "when": "early", "quote": "Charlie's body was found half-eaten in an alley", "confidence": "sourced"},
-   {"order": 4, "value": "victim devoured in store", "when": "middle", "quote": "she is cornered and devoured by townspeople who are feasting on raw meat", "confidence": "sourced"},
-   {"order": 5, "value": "victim devoured in cinema", "when": "middle", "quote": "is devoured by the other theater patrons, who weep blood from their eyes", "confidence": "sourced"},
-   {"order": 6, "value": "parent attacks child", "when": "late", "role": "turn", "quote": "Joseph then attacks Arletty, reluctantly succumbing to his cannibalistic urges", "confidence": "sourced"},
-   {"order": 7, "value": "dark stranger rises", "when": "ending", "quote": "who emerges from the ocean and frees her", "confidence": "sourced"},
-   {"order": 8, "value": "survivor committed", "when": "ending", "quote": "This causes her to be committed to an insane asylum", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "warning from the asylum",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:53",
+    "quote": "They say that nightmares are dreams perverted.",
+    "confidence": "sourced",
+    "detail": "Arletty narrates from the asylum, framing the story"
+   },
+   {
+    "order": 2,
+    "value": "warned away from town",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:05:47",
+    "quote": "I can't understand why anybody would want to go to Pointe Dume, visiting.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "arrives in remote town",
+    "when": "opening",
+    "quote": "Arletty Lang drives to the small coastal town of Point Dume",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "legend told by warner",
+    "when": "early",
+    "role": "omen",
+    "quote": "the townspeople descended into cannibalism once the moon turned red",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:53",
+      "quote": "100 years ago the moon started turning red up in the sky"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "warner killed",
+    "when": "early",
+    "quote": "Charlie's body was found half-eaten in an alley",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:10",
+      "quote": "They found this body half eaten."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "victim devoured in store",
+    "when": "middle",
+    "quote": "she is cornered and devoured by townspeople who are feasting on raw meat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:51",
+      "quote": "(SHE SCREAMS)"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "victim devoured in cinema",
+    "when": "middle",
+    "quote": "is devoured by the other theater patrons, who weep blood from their eyes",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "parent attacks child",
+    "when": "late",
+    "role": "turn",
+    "quote": "Joseph then attacks Arletty, reluctantly succumbing to his cannibalistic urges",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "dark stranger rises",
+    "when": "ending",
+    "quote": "who emerges from the ocean and frees her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:50",
+      "quote": "And the dark stranger returned."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "survivor committed",
+    "when": "ending",
+    "quote": "This causes her to be committed to an insane asylum",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:16",
+      "quote": "I made it back and they put me here."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "warning repeated",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:28:52",
+    "quote": "and no one will hear you scream.",
+    "confidence": "sourced",
+    "detail": "closing narration echoes the opening"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

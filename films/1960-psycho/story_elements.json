@@ -1,62 +1,481 @@
 {
  "film": "1960-psycho",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes and style"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes and style"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "killer with split personality", "detail": "Norman Bates, acting as \"Mother\"", "quote": "re-created his mother as an alternate personality, as jealous and possessive toward Norman as he felt about his mother", "confidence": "sourced"}
+   {
+    "value": "killer with split personality",
+    "detail": "Norman Bates, acting as \"Mother\"",
+    "quote": "re-created his mother as an alternate personality, as jealous and possessive toward Norman as he felt about his mother",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "guilt over a past murder", "detail": "Norman killed his mother and her lover", "quote": "Norman killed his mother and her lover out of jealousy. Unable to bear the guilt, he stole his mother's corpse", "confidence": "sourced"}
+   {
+    "value": "guilt over a past murder",
+    "detail": "Norman killed his mother and her lover",
+    "quote": "Norman killed his mother and her lover out of jealousy. Unable to bear the guilt, he stole his mother's corpse",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "possession of the son", "quote": "Whenever Norman was attracted to a woman, \"Mother\" would take over", "confidence": "sourced"},
-   {"value": "to preserve the past", "quote": "kills Marion to preserve his past", "confidence": "sourced"}
+   {
+    "value": "possession of the son",
+    "quote": "Whenever Norman was attracted to a woman, \"Mother\" would take over",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:14",
+      "quote": "a boy's best friend is his mother."
+     }
+    ]
+   },
+   {
+    "value": "to preserve the past",
+    "quote": "kills Marion to preserve his past",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "matricide", "quote": "Norman killed his mother and her lover out of jealousy", "confidence": "sourced"},
-   {"value": "theft", "detail": "Marion embezzles $40,000", "quote": "real estate secretary Marion Crane embezzles $40,000 in cash from her employer", "confidence": "sourced"}
+   {
+    "value": "matricide",
+    "quote": "Norman killed his mother and her lover out of jealousy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:43:52",
+      "quote": "to the time when Norman murdered his mother and her lover."
+     }
+    ]
+   },
+   {
+    "value": "theft",
+    "detail": "Marion embezzles $40,000",
+    "quote": "real estate secretary Marion Crane embezzles $40,000 in cash from her employer",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "fleeing after a crime", "quote": "an encounter between on-the-run embezzler Marion Crane (Leigh), shy motel proprietor Norman Bates", "confidence": "sourced"},
-   {"value": "stopping at an isolated place", "quote": "A rainstorm forces Marion to stop at the secluded Bates Motel a few miles from Fairvale", "confidence": "sourced"}
+   {
+    "value": "fleeing after a crime",
+    "quote": "an encounter between on-the-run embezzler Marion Crane (Leigh), shy motel proprietor Norman Bates",
+    "confidence": "sourced"
+   },
+   {
+    "value": "stopping at an isolated place",
+    "quote": "A rainstorm forces Marion to stop at the secluded Bates Motel a few miles from Fairvale",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "attraction triggers killing", "quote": "Whenever Norman was attracted to a woman, \"Mother\" would take over", "confidence": "sourced"}
+   {
+    "value": "attraction triggers killing",
+    "quote": "Whenever Norman was attracted to a woman, \"Mother\" would take over",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:45:30",
+      "quote": "Therefore, if he felt a strong attraction to any other woman, the mother side of him would go wild."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "woman on the run", "relation_to_threat": "stranger", "detail": "Marion Crane", "quote": "As she showers, a shadowy figure enters the bathroom with a kitchen knife and stabs her to death", "confidence": "sourced"},
-   {"value": "investigator", "relation_to_threat": "stranger", "detail": "Arbogast", "quote": "a shadowy figure at the top of the stairs stabs him to death", "confidence": "sourced"},
-   {"value": "sister searching", "relation_to_threat": "stranger", "detail": "Lila Crane", "quote": "Norman, wearing a dress and a wig, enters the cellar and attempts to attack her", "confidence": "sourced"}
+   {
+    "value": "woman on the run",
+    "relation_to_threat": "stranger",
+    "detail": "Marion Crane",
+    "quote": "As she showers, a shadowy figure enters the bathroom with a kitchen knife and stabs her to death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "investigator",
+    "relation_to_threat": "stranger",
+    "detail": "Arbogast",
+    "quote": "a shadowy figure at the top of the stairs stabs him to death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sister searching",
+    "relation_to_threat": "stranger",
+    "detail": "Lila Crane",
+    "quote": "Norman, wearing a dress and a wig, enters the cellar and attempts to attack her",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "killer caught", "quote": "attempts to attack her, only to be subdued by a recovered Sam", "confidence": "sourced"},
-   {"value": "killer consumed by other self", "quote": "The psychiatrist concludes that \"Mother\" has now completely submerged Norman's personality", "confidence": "sourced"},
-   {"value": "body recovered", "quote": "Marion's car is towed from the swamp", "confidence": "sourced"}
+   {
+    "value": "killer caught",
+    "quote": "attempts to attack her, only to be subdued by a recovered Sam",
+    "confidence": "sourced"
+   },
+   {
+    "value": "killer consumed by other self",
+    "quote": "The psychiatrist concludes that \"Mother\" has now completely submerged Norman's personality",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:47:06",
+      "quote": "In Norman's case, the battle is over, and the dominant personality has won."
+     }
+    ]
+   },
+   {
+    "value": "body recovered",
+    "quote": "Marion's car is towed from the swamp",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:48:53",
+      "quote": "(TOW CHAIN CLINKING)"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "stolen money", "state": "hidden", "when": "opening", "role": "trigger", "quote": "Marion Crane embezzles $40,000 in cash from her employer", "confidence": "sourced"},
-   {"value": "stuffed birds", "state": "frozen in time", "when": "early", "role": "omen", "quote": "Norman displays stuffed birds that are \"frozen in time\"", "confidence": "sourced"},
-   {"value": "shower", "when": "middle", "role": "setting", "quote": "As she showers, a shadowy figure enters the bathroom with a kitchen knife", "confidence": "sourced"},
-   {"value": "kitchen knife", "when": "middle", "role": "weapon", "quote": "a shadowy figure enters the bathroom with a kitchen knife and stabs her to death", "confidence": "sourced"},
-   {"value": "swamp", "state": "swallowing a car", "when": "middle", "role": "setting", "quote": "the hidden cash in her car before sinking the vehicle in a swamp", "confidence": "sourced"},
-   {"value": "house on the hill", "when": "early", "role": "setting", "quote": "whose Second Empire-style house overlooks the motel", "confidence": "sourced"},
-   {"value": "mummified body", "state": "mother's corpse", "when": "late", "role": "clue", "quote": "Lila hides in the fruit cellar and discovers the mummified body of Norman's mother", "confidence": "sourced"},
-   {"value": "dress and wig", "when": "late", "role": "mirror", "quote": "Norman, wearing a dress and a wig, enters the cellar", "confidence": "sourced"}
+   {
+    "value": "stolen money",
+    "state": "hidden",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Marion Crane embezzles $40,000 in cash from her employer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:43",
+      "quote": "I'm buying this house for my baby's wedding present. $ 40,000 cash."
+     }
+    ]
+   },
+   {
+    "value": "stuffed birds",
+    "state": "frozen in time",
+    "when": "early",
+    "role": "omen",
+    "quote": "Norman displays stuffed birds that are \"frozen in time\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:56",
+      "quote": "But I don't really know anything about birds. My hobby is stuffing things."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:41:36",
+      "quote": "She's as harmless as one of those stuffed birds."
+     }
+    ]
+   },
+   {
+    "value": "shower",
+    "when": "middle",
+    "role": "setting",
+    "quote": "As she showers, a shadowy figure enters the bathroom with a kitchen knife",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:05",
+      "quote": "(UNWRAPPING SOAP)"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:33:41",
+      "quote": "No shower curtain. Sam!"
+     }
+    ]
+   },
+   {
+    "value": "kitchen knife",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "a shadowy figure enters the bathroom with a kitchen knife and stabs her to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "A hand comes into the shot. The hand holds an enormous bread knife."
+     }
+    ]
+   },
+   {
+    "value": "swamp",
+    "state": "swallowing a car",
+    "when": "middle",
+    "role": "setting",
+    "quote": "the hidden cash in her car before sinking the vehicle in a swamp",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:39",
+      "quote": "(GURGLING CONTINUES)"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:47:12",
+      "quote": "And the $ 40,000? Who got that? The swamp."
+     }
+    ]
+   },
+   {
+    "value": "house on the hill",
+    "when": "early",
+    "role": "setting",
+    "quote": "whose Second Empire-style house overlooks the motel",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:33",
+      "quote": "I grew up in that house up there. I had a very happy childhood."
+     }
+    ]
+   },
+   {
+    "value": "mummified body",
+    "state": "mother's corpse",
+    "when": "late",
+    "role": "clue",
+    "quote": "Lila hides in the fruit cellar and discovers the mummified body of Norman's mother",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "It is the body of a woman long dead."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:44:44",
+      "quote": "He stole her corpse. A weighted coffin was buried. He hid the body in the fruit cellar,"
+     }
+    ]
+   },
+   {
+    "value": "dress and wig",
+    "when": "late",
+    "role": "mirror",
+    "quote": "Norman, wearing a dress and a wig, enters the cellar",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:46:39",
+      "quote": "he'd dress up, even to a cheap wig he bought."
+     }
+    ]
+   },
+   {
+    "value": "fly",
+    "state": "left unswatted",
+    "when": "ending",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:48:38",
+    "quote": "I'm not even gonna swat that fly.",
+    "detail": "Norman, as Mother, lets a fly crawl on his hand to prove 'she wouldn't even harm a fly'",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "A fly buzzes close, and then continues buzzing and flying about Norman's face."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "fruit cellar",
+    "when": "late",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "01:26:36",
+    "quote": "In that dark, dank fruit cellar? No!",
+    "confidence": "sourced"
+   },
+   {
+    "value": "private traps",
+    "state": "spoken metaphor",
+    "when": "middle",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:38:00",
+    "quote": "we're all in our private traps, clamped in them, and none of us can ever get out.",
+    "detail": "Norman and Marion's parlour talk; she resolves to return the money",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "theft and flight", "when": "opening", "role": "trigger", "quote": "Marion Crane embezzles $40,000 in cash from her employer after hearing her boyfriend, Sam Loomis, complain", "confidence": "sourced"},
-   {"order": 2, "value": "arrival at isolated motel", "when": "early", "role": "setting", "quote": "A rainstorm forces Marion to stop at the secluded Bates Motel", "confidence": "sourced"},
-   {"order": 3, "value": "protagonist killed midway", "when": "middle", "role": "turn", "quote": "As she showers, a shadowy figure enters the bathroom with a kitchen knife and stabs her to death", "confidence": "sourced"},
-   {"order": 4, "value": "cover-up", "when": "middle", "quote": "He hurriedly cleans up the murder scene and places Marion's body, her belongings", "confidence": "sourced"},
-   {"order": 5, "value": "investigator killed", "when": "middle", "quote": "a shadowy figure at the top of the stairs stabs him to death", "confidence": "sourced"},
-   {"order": 6, "value": "mother revealed long dead", "when": "late", "role": "clue", "quote": "Norman's mother died in a murder–suicide by strychnine poisoning ten years before", "confidence": "sourced"},
-   {"order": 7, "value": "killer unmasked", "when": "late", "role": "turn", "quote": "discovers the mummified body of Norman's mother. Lila screams in horror, and Norman, wearing a dress and a wig, enters the cellar", "confidence": "sourced"},
-   {"order": 8, "value": "psychiatric explanation and closing sting", "when": "ending", "quote": "Norman sits in a jail cell and hears his mother's voice stating the murders were his doing", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "lovers in a cheap hotel",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:04:01",
+    "quote": "Oh, Sam, this is the last time.",
+    "detail": "lunch-hour tryst with Sam in Phoenix",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "theft and flight",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Marion Crane embezzles $40,000 in cash from her employer after hearing her boyfriend, Sam Loomis, complain",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:56",
+      "quote": "I guess I'll go put this money in the bank and then go home and sleep it off."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "arrival at isolated motel",
+    "when": "early",
+    "role": "setting",
+    "quote": "A rainstorm forces Marion to stop at the secluded Bates Motel",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:31",
+      "quote": "Oh, we have 12 vacancies. Twelve cabins, 12 vacancies."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "protagonist killed midway",
+    "when": "middle",
+    "role": "turn",
+    "quote": "As she showers, a shadowy figure enters the bathroom with a kitchen knife and stabs her to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:04",
+      "quote": "(HIGH-PITCHED SCREAMING)"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "cover-up",
+    "when": "middle",
+    "quote": "He hurriedly cleans up the murder scene and places Marion's body, her belongings",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:59",
+      "quote": "Mother! Oh, God, Mother! Blood! Blood!"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "investigator killed",
+    "when": "middle",
+    "quote": "a shadowy figure at the top of the stairs stabs him to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:50",
+      "quote": "(ARBOGAST SCREAMS)"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "mother revealed long dead",
+    "when": "late",
+    "role": "clue",
+    "quote": "Norman's mother died in a murder–suicide by strychnine poisoning ten years before",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:09",
+      "quote": "Norman Bates' mother has been dead and buried in Green Lawn Cemetery for the past 10 years."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "killer unmasked",
+    "when": "late",
+    "role": "turn",
+    "quote": "discovers the mummified body of Norman's mother. Lila screams in horror, and Norman, wearing a dress and a wig, enters the cellar",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:41:44",
+      "quote": "I'm Norma Bates!"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "psychiatric explanation and closing sting",
+    "when": "ending",
+    "quote": "Norman sits in a jail cell and hears his mother's voice stating the murders were his doing",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:38",
+      "quote": "Norman Bates no longer exists. He only half-existed to begin with."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "car pulled from swamp",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:48:53",
+    "quote": "(TOW CHAIN CLINKING)",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The chain is attached to Mary's car. The car is coming out of the swamp."
+     }
+    ],
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

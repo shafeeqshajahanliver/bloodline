@@ -7,6 +7,9 @@
     "Lead",
     "Plot"
    ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
   }
  ],
  "plot_quality": "full",
@@ -30,12 +33,26 @@
     "value": "child who died through neglect",
     "detail": "trampled during a drunken festival",
     "quote": "Melissa was trampled to death while fetching a ball during a drunken festival",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:24",
+      "quote": "And she bled to death."
+     }
+    ]
    },
    {
     "value": "summoned by a parent",
     "quote": "who has invoked her daughter's ghost to punish the villagers",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:24",
+      "quote": "She uses me to return among the living."
+     }
+    ]
    }
   ],
   "wants": [
@@ -49,7 +66,14 @@
    {
     "value": "child's death ignored by community",
     "quote": "Melissa was trampled to death while fetching a ball during a drunken festival",
-    "confidence": "observed"
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:58",
+      "quote": "They let my little girl die twenty years ago. The village was celebrating, everybody was drunk."
+     }
+    ]
    }
   ],
   "trigger": [
@@ -62,7 +86,14 @@
     "value": "returning to one's birthplace",
     "detail": "Monica, secretly the Baroness's daughter",
     "quote": "a medical student who has recently returned to visit her parents' graves",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:11",
+      "quote": "I returned on the same day this girl died."
+     }
+    ]
    }
   ],
   "rules": [
@@ -74,7 +105,14 @@
    {
     "value": "compels victims to self-harm",
     "quote": "who compels her to impale herself with a candelabra",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:03",
+      "quote": "They could not use their free will... and those poor people were unable to resist."
+     }
+    ]
    },
    {
     "value": "coins as protective talismans",
@@ -84,6 +122,27 @@
    {
     "value": "ends when summoner dies",
     "quote": "Ruth manages to strangle her to death before dying, thus laying Melissa's soul to rest",
+    "confidence": "sourced"
+   },
+   {
+    "value": "coin in heart brings peace",
+    "source": "subtitles",
+    "at": "00:17:50",
+    "quote": "It says that only a coin in the heart would bring peace... to those whose lives ended violently.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bell rings before a death",
+    "source": "subtitles",
+    "at": "00:43:47",
+    "quote": "It's the hatred, the bell is being moved by the hatred. It always sounds this way when someone has to die.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "blood rite protects",
+    "source": "subtitles",
+    "at": "00:26:46",
+    "quote": "Blood! Strengthen yourself. Death will not touch you.",
     "confidence": "sourced"
    }
   ],
@@ -113,7 +172,14 @@
    {
     "value": "spirit laid to rest",
     "quote": "thus laying Melissa's soul to rest; Eswai arrives in time to save Monica",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:26",
+      "quote": "The chain of death has finally been broken."
+     }
+    ]
    },
    {
     "value": "dawn escape",
@@ -128,14 +194,28 @@
     "when": "opening",
     "role": "clue",
     "quote": "they find a silver coin embedded in Hollander's heart",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:37",
+      "quote": "They slipped a coin into her heart! Just like the legend says."
+     }
+    ]
    },
    {
     "value": "doll",
     "when": "middle",
     "role": "omen",
     "quote": "awakens to find a doll at the foot of her bed",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:18",
+      "quote": "This was her favorite doll."
+     }
+    ]
    },
    {
     "value": "leech vine",
@@ -149,7 +229,14 @@
     "when": "middle",
     "role": "threat",
     "quote": "Nadienne is awoken by the young girl at her window",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:31",
+      "quote": "At the window! Did you see her?"
+     }
+    ]
    },
    {
     "value": "candelabra",
@@ -162,7 +249,14 @@
     "value": "church bell",
     "when": "late",
     "quote": "attempt to get the reluctant villagers' attention by ringing the church bell",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:03",
+      "quote": "She would hang on to those cords of the bell, looking for help! Her name was Melissa."
+     }
+    ]
    },
    {
     "value": "repeating doorways",
@@ -177,39 +271,101 @@
     "role": "clue",
     "quote": "trampled to death while fetching a ball",
     "confidence": "sourced"
+   },
+   {
+    "value": "amulet",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:08:48",
+    "quote": "An amulet! An amulet!",
+    "confidence": "sourced"
+   },
+   {
+    "value": "confession letter",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:09:48",
+    "quote": "I can't resist it anymore. I have decided to talk, to break the cycle of death...",
+    "confidence": "sourced"
    }
   ],
   "beats": [
    {
     "order": 1,
-    "value": "autopsy of mysterious death",
+    "value": "woman flees and dies",
     "when": "opening",
-    "quote": "During the autopsy, they find a silver coin embedded in Hollander's heart",
-    "confidence": "sourced"
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:27",
+    "quote": "Help... help!",
+    "confidence": "observed"
    },
    {
     "order": 2,
-    "value": "village superstition dismissed",
-    "when": "early",
-    "quote": "superstitions Eswai finds preposterous, and",
+    "value": "outsider warned off",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:04:30",
+    "quote": "Death rules here.",
     "confidence": "sourced"
    },
    {
     "order": 3,
+    "value": "autopsy of mysterious death",
+    "when": "opening",
+    "quote": "During the autopsy, they find a silver coin embedded in Hollander's heart",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:37",
+      "quote": "They slipped a coin into her heart! Just like the legend says."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "village superstition dismissed",
+    "when": "early",
+    "quote": "superstitions Eswai finds preposterous, and",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:52",
+      "quote": "That's what's keeping you from talking. It's superstition, ignorance."
+     }
+    ]
+   },
+   {
+    "order": 5,
     "value": "ghost encountered",
     "when": "early",
     "quote": "Upon leaving, Eswai encounters the ghostly young girl",
     "confidence": "sourced"
    },
    {
-    "order": 4,
+    "order": 6,
+    "value": "bell tolls for a death",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:43:47",
+    "quote": "It's the hatred, the bell is being moved by the hatred.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
     "value": "victims forced to kill themselves",
     "when": "middle",
     "quote": "he is compelled by Melissa into destroying the documents and killing himself",
     "confidence": "sourced"
    },
    {
-    "order": 5,
+    "order": 8,
     "value": "child's tomb found",
     "when": "late",
     "role": "clue",
@@ -217,7 +373,7 @@
     "confidence": "sourced"
    },
    {
-    "order": 6,
+    "order": 9,
     "value": "hidden family tie revealed",
     "when": "late",
     "role": "turn",
@@ -225,14 +381,21 @@
     "confidence": "sourced"
    },
    {
-    "order": 7,
+    "order": 10,
     "value": "witch kills summoner",
     "when": "ending",
     "quote": "The Baroness stabs her through the chest with a fire poker, but Ruth manages to strangle her to death",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:56",
+      "quote": "Die you damned bitch! You and all your demonic creatures!"
+     }
+    ]
    },
    {
-    "order": 8,
+    "order": 11,
     "value": "survivors leave at sunrise",
     "when": "ending",
     "quote": "the pair leave Villa Graps as the sun rises in the distance",
@@ -243,5 +406,6 @@
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

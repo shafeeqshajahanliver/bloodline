@@ -1,58 +1,416 @@
 {
  "film": "2010-black-swan",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "the self", "detail": "Nina's descent into madness", "quote": "causing her to lose her tenuous grip on reality and descend into madness", "confidence": "sourced"},
-   {"value": "doppelgänger", "detail": "Lily appears as Nina's double", "quote": "Lily appears to transform into a doppelgänger copy of Nina", "confidence": "sourced"},
-   {"value": "rival", "detail": "Lily", "quote": "Nina becomes convinced Lily intends to replace her", "confidence": "sourced"}
+   {
+    "value": "the self",
+    "detail": "Nina's descent into madness",
+    "quote": "causing her to lose her tenuous grip on reality and descend into madness",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The only person standing in your way is you. It's time to let her go. Lose yourself."
+     }
+    ]
+   },
+   {
+    "value": "doppelgänger",
+    "detail": "Lily appears as Nina's double",
+    "quote": "Lily appears to transform into a doppelgänger copy of Nina",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rival",
+    "detail": "Lily",
+    "quote": "Nina becomes convinced Lily intends to replace her",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "pressure to be perfect", "quote": "Nina is overwhelmed by immense pressure when she finds herself competing for the role", "confidence": "sourced"}
+   {
+    "value": "pressure to be perfect",
+    "quote": "Nina is overwhelmed by immense pressure when she finds herself competing for the role",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to replace someone", "quote": "Nina becomes convinced Lily intends to replace her, especially after learning that Thomas has made Lily her alternate", "confidence": "sourced"},
-   {"value": "perfection", "quote": "\"I felt it. Perfect. I was perfect\"", "confidence": "sourced"}
+   {
+    "value": "to replace someone",
+    "quote": "Nina becomes convinced Lily intends to replace her, especially after learning that Thomas has made Lily her alternate",
+    "confidence": "sourced"
+   },
+   {
+    "value": "perfection",
+    "quote": "\"I felt it. Perfect. I was perfect\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:10",
+      "quote": "I just want to be perfect."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "winning a role", "quote": "Nina is surprised to find she has received the lead role", "confidence": "sourced"}
+   {
+    "value": "winning a role",
+    "quote": "Nina is surprised to find she has received the lead role",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "transformation into the role", "quote": "seemingly begins to turn into a black swan, her arms covered in feathers", "confidence": "sourced"},
-   {"value": "harming the double harms oneself", "quote": "realizing she stabbed herself and not Lily", "confidence": "sourced"}
+   {
+    "value": "transformation into the role",
+    "quote": "seemingly begins to turn into a black swan, her arms covered in feathers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:13",
+      "quote": "Perfection is not just about control. It's also about letting go."
+     }
+    ]
+   },
+   {
+    "value": "harming the double harms oneself",
+    "quote": "realizing she stabbed herself and not Lily",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "dancer", "relation_to_threat": "self", "detail": "Nina", "quote": "she dances the final act of the ballet with blood gradually seeping through her tutu", "confidence": "sourced"},
-   {"value": "overprotective mother", "relation_to_threat": "family", "quote": "After a physical confrontation with her mother", "confidence": "sourced"},
-   {"value": "predecessor", "relation_to_threat": "stranger", "detail": "Beth, hit by a car", "quote": "Nina visits Beth in the hospital and is distraught to see her injured legs", "confidence": "sourced"}
+   {
+    "value": "dancer",
+    "relation_to_threat": "self",
+    "detail": "Nina",
+    "quote": "she dances the final act of the ballet with blood gradually seeping through her tutu",
+    "confidence": "sourced"
+   },
+   {
+    "value": "overprotective mother",
+    "relation_to_threat": "family",
+    "quote": "After a physical confrontation with her mother",
+    "confidence": "sourced"
+   },
+   {
+    "value": "predecessor",
+    "relation_to_threat": "stranger",
+    "detail": "Beth, hit by a car",
+    "quote": "Nina visits Beth in the hospital and is distraught to see her injured legs",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "self-destruction", "quote": "She looks down and pulls a piece of glass from her abdomen, realizing she stabbed herself", "confidence": "sourced"},
-   {"value": "goal achieved at a cost", "quote": "Nina calmly replies: \"I felt it. Perfect. I was perfect\", as the screen fades to white", "confidence": "sourced"}
+   {
+    "value": "self-destruction",
+    "quote": "She looks down and pulls a piece of glass from her abdomen, realizing she stabbed herself",
+    "confidence": "sourced"
+   },
+   {
+    "value": "goal achieved at a cost",
+    "quote": "Nina calmly replies: \"I felt it. Perfect. I was perfect\", as the screen fades to white",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "swan", "state": "white and black", "when": "opening", "role": "symbol", "quote": "the innocent and fragile White Swan, Odette, and the sensual and dark Black Swan, Odile", "confidence": "sourced"},
-   {"value": "scratch marks", "when": "middle", "role": "omen", "quote": "Nina has hallucinations and finds scratch marks on her back", "confidence": "sourced"},
-   {"value": "mirror", "state": "broken", "when": "late", "role": "mirror", "quote": "The two fight, breaking a mirror", "confidence": "sourced"},
-   {"value": "glass shard", "when": "late", "role": "weapon", "quote": "Nina stabs her doppelgänger with a shard of glass", "confidence": "sourced"},
-   {"value": "feathers", "when": "late", "role": "turn", "quote": "her arms covered in feathers", "confidence": "sourced"},
-   {"value": "blood", "state": "seeping through tutu", "when": "ending", "role": "turn", "quote": "blood gradually seeping through her tutu", "confidence": "sourced"},
-   {"value": "stolen makeup", "when": "opening", "role": "omen", "quote": "whom Nina admired and even stole some makeup from her dressing room", "confidence": "sourced"}
+   {
+    "value": "swan",
+    "state": "white and black",
+    "when": "opening",
+    "role": "symbol",
+    "quote": "the innocent and fragile White Swan, Odette, and the sensual and dark Black Swan, Odile",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:47:52",
+      "quote": "[Swans Calling]"
+     }
+    ]
+   },
+   {
+    "value": "scratch marks",
+    "when": "middle",
+    "role": "omen",
+    "quote": "Nina has hallucinations and finds scratch marks on her back",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:26",
+      "quote": "You've been scratching yourself again."
+     }
+    ]
+   },
+   {
+    "value": "mirror",
+    "state": "broken",
+    "when": "late",
+    "role": "mirror",
+    "quote": "The two fight, breaking a mirror",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Behind the first reflection, another Nina has her arm behind her back, like she's scratching her shoulder."
+     }
+    ]
+   },
+   {
+    "value": "glass shard",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Nina stabs her doppelgänger with a shard of glass",
+    "confidence": "sourced"
+   },
+   {
+    "value": "feathers",
+    "when": "late",
+    "role": "turn",
+    "quote": "her arms covered in feathers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:34",
+      "quote": "[Feathers Rustling]"
+     },
+     {
+      "source": "screenplay",
+      "quote": "Some fully emerge as shiny BLACK FEATHERS."
+     }
+    ]
+   },
+   {
+    "value": "blood",
+    "state": "seeping through tutu",
+    "when": "ending",
+    "role": "turn",
+    "quote": "blood gradually seeping through her tutu",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:32",
+      "quote": "The blood drips. The black swan stole your love!"
+     }
+    ]
+   },
+   {
+    "value": "stolen makeup",
+    "when": "opening",
+    "role": "omen",
+    "quote": "whom Nina admired and even stole some makeup from her dressing room",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Her fingers brush a tube of LIPSTICK. She picks it up. Nina slips the lipstick into her bag and exits the room."
+     }
+    ]
+   },
+   {
+    "value": "music box ballerina",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:18:38",
+    "quote": "[Music Box: \" Dance Of The Swans \"]",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:22",
+      "quote": "[Music Box: \" Dance Of The Swans \"]"
+     }
+    ]
+   },
+   {
+    "value": "whispered 'sweet girl'",
+    "when": "middle",
+    "role": "omen",
+    "detail": "the mother's pet name, later whispered by the paintings and the double",
+    "source": "subtitles",
+    "at": "01:04:43",
+    "quote": "Sweet girl. Sweet girl. Sweet girl.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:16",
+      "quote": "What happened to my sweet girl, huh?"
+     }
+    ]
+   },
+   {
+    "value": "celebration cake",
+    "when": "early",
+    "role": "symbol",
+    "detail": "the mother's cake for Nina's casting, almost thrown away",
+    "source": "screenplay",
+    "quote": "she sees a CAKE with a lit SPARKLER sitting on the table",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "predecessor pushed out", "when": "opening", "quote": "Thomas Leroy announces he is looking for a new dancer for the dual roles", "confidence": "sourced"},
-   {"order": 2, "value": "role won", "when": "early", "role": "trigger", "quote": "Nina is surprised to find she has received the lead role", "confidence": "sourced"},
-   {"order": 3, "value": "rival double arrives", "when": "early", "role": "mirror", "quote": "Lily, who has a physical resemblance to Nina but also an uninhibited quality Nina lacks", "confidence": "sourced"},
-   {"order": 4, "value": "reality questioned", "when": "middle", "role": "turn", "quote": "Lily denies that it happened and teases Nina for fantasizing about her", "confidence": "sourced"},
-   {"order": 5, "value": "body transforming", "when": "middle", "quote": "an incident where she believes she is transforming into Odile", "confidence": "sourced"},
-   {"order": 6, "value": "double killed", "when": "late", "role": "turn", "quote": "Nina stabs her doppelgänger with a shard of glass, killing her and breaking the illusion", "confidence": "sourced"},
-   {"order": 7, "value": "self-wound revealed", "when": "ending", "role": "turn", "quote": "pulls a piece of glass from her abdomen, realizing she stabbed herself and not Lily", "confidence": "sourced"},
-   {"order": 8, "value": "perfect final fall", "when": "ending", "quote": "The show ends with her jumping from the set onto a hidden mattress", "confidence": "sourced"}
+   {
+    "value": "dream of the swan's curse",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:55",
+    "quote": "I had the craziest dream last night. I was dancing the white swan.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:10",
+      "quote": "It was the prologue... when Rothbart casts his spell."
+     }
+    ],
+    "order": 1
+   },
+   {
+    "order": 2,
+    "value": "predecessor pushed out",
+    "when": "opening",
+    "quote": "Thomas Leroy announces he is looking for a new dancer for the dual roles",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:19",
+      "quote": "Did you see Beth today? I can't believe she's back."
+     }
+    ]
+   },
+   {
+    "value": "told to let go",
+    "when": "early",
+    "role": "trigger",
+    "source": "subtitles",
+    "at": "00:21:00",
+    "quote": "but I never see you lose yourself.",
+    "confidence": "sourced",
+    "order": 3
+   },
+   {
+    "order": 4,
+    "value": "role won",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Nina is surprised to find she has received the lead role",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:11",
+      "quote": "Hey. It's been posted."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "rival double arrives",
+    "when": "early",
+    "role": "mirror",
+    "quote": "Lily, who has a physical resemblance to Nina but also an uninhibited quality Nina lacks",
+    "confidence": "sourced"
+   },
+   {
+    "value": "tragic ending foretold",
+    "when": "middle",
+    "role": "omen",
+    "detail": "Nina tells strangers the plot of Swan Lake",
+    "source": "subtitles",
+    "at": "01:03:48",
+    "quote": "so she kills herself.",
+    "confidence": "sourced",
+    "order": 6
+   },
+   {
+    "order": 7,
+    "value": "reality questioned",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Lily denies that it happened and teases Nina for fantasizing about her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:51",
+      "quote": "Sweet girl. Sweet girl."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "body transforming",
+    "when": "middle",
+    "quote": "an incident where she believes she is transforming into Odile",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "double killed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Nina stabs her doppelgänger with a shard of glass, killing her and breaking the illusion",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:42",
+      "quote": "It's my turn!"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "self-wound revealed",
+    "when": "ending",
+    "role": "turn",
+    "quote": "pulls a piece of glass from her abdomen, realizing she stabbed herself and not Lily",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "perfect final fall",
+    "when": "ending",
+    "quote": "The show ends with her jumping from the set onto a hidden mattress",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:33",
+      "quote": "Perfect. It was perfect."
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

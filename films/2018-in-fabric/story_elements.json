@@ -1,57 +1,436 @@
 {
  "film": "2018-in-fabric",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "cursed object", "detail": "a haunted red dress", "quote": "a haunted red dress as it torments various owners", "confidence": "sourced"},
-   {"value": "sinister store", "detail": "Dentley & Soper's and its clerks", "quote": "the store clerks are shown cleaning a lifelike mannequin, which appears to menstruate", "confidence": "sourced"}
+   {
+    "value": "cursed object",
+    "detail": "a haunted red dress",
+    "quote": "a haunted red dress as it torments various owners",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sinister store",
+    "detail": "Dentley & Soper's and its clerks",
+    "quote": "the store clerks are shown cleaning a lifelike mannequin, which appears to menstruate",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "unexplained", "quote": "the dress is one of its kind, and the store model who wore it for the catalogue was later killed", "confidence": "observed"}
+   {
+    "value": "unexplained",
+    "quote": "the dress is one of its kind, and the store model who wore it for the catalogue was later killed",
+    "confidence": "observed"
+   }
   ],
   "wants": [
-   {"value": "to claim wearers", "detail": "victims sew the dress with their blood", "quote": "stitching together the dress from threads made of their blood", "confidence": "sourced"}
+   {
+    "value": "to claim wearers",
+    "detail": "victims sew the dress with their blood",
+    "quote": "stitching together the dress from threads made of their blood",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "buying an object", "quote": "Sheila buys a beautiful, flowing red dress", "confidence": "sourced"}
+   {
+    "value": "buying an object",
+    "quote": "Sheila buys a beautiful, flowing red dress",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "cannot be returned", "quote": "Sheila attempts to return the dress to the store but is refused", "confidence": "sourced"},
-   {"value": "indestructible", "quote": "discovers the dress undamaged amongst the rubble", "confidence": "sourced"},
-   {"value": "passes owner to owner", "quote": "The dress comes into the possession of washing machine repairman Reg Speaks", "confidence": "sourced"}
+   {
+    "value": "cannot be returned",
+    "quote": "Sheila attempts to return the dress to the store but is refused",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:23",
+      "quote": "I can't claim with its reacceptance if its purchase is not evidenced."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:59:11",
+      "quote": "I just don't see why I couldn't return this dress."
+     }
+    ]
+   },
+   {
+    "value": "indestructible",
+    "quote": "discovers the dress undamaged amongst the rubble",
+    "confidence": "sourced"
+   },
+   {
+    "value": "passes owner to owner",
+    "quote": "The dress comes into the possession of washing machine repairman Reg Speaks",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:33",
+      "quote": "We both got the same rash, we both wore the dress."
+     }
+    ]
+   },
+   {
+    "value": "hypnotic incantation",
+    "detail": "the shop staff's mantra, repeated in Reg's washing-machine talk, entrances listeners",
+    "source": "subtitles",
+    "at": "00:58:15",
+    "quote": "Like a whisper in an ocean, like a feather in a storm,",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:21",
+      "quote": "(Mr Lundy whispers) Like a whisper in an ocean, like a feather in a storm,"
+     }
+    ]
+   },
+   {
+    "value": "fits any body",
+    "detail": "the dress fits wearers of different sizes",
+    "source": "subtitles",
+    "at": "01:22:53",
+    "quote": "(Babs) You don't get it, do you? How comes you ﬁt into a size 36?",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "lonely woman", "relation_to_threat": "stranger", "detail": "Sheila, recently divorced", "quote": "Recently divorced bank teller Sheila", "confidence": "sourced"},
-   {"value": "engaged couple", "relation_to_threat": "stranger", "detail": "Reg and Babs", "quote": "Babs burns to death in the changing room", "confidence": "sourced"}
+   {
+    "value": "lonely woman",
+    "relation_to_threat": "stranger",
+    "detail": "Sheila, recently divorced",
+    "quote": "Recently divorced bank teller Sheila",
+    "confidence": "sourced"
+   },
+   {
+    "value": "engaged couple",
+    "relation_to_threat": "stranger",
+    "detail": "Reg and Babs",
+    "quote": "Babs burns to death in the changing room",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "cycle passes on", "quote": "several empty sewing stations implied to be for future wearers", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "discovers the dress undamaged amongst the rubble", "confidence": "sourced"}
+   {
+    "value": "cycle passes on",
+    "quote": "several empty sewing stations implied to be for future wearers",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat survives",
+    "quote": "discovers the dress undamaged amongst the rubble",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "red dress", "when": "early", "role": "threat", "quote": "a beautiful, flowing red dress", "confidence": "sourced"},
-   {"value": "rash", "when": "early", "role": "omen", "quote": "Sheila notices a strange rash on her chest", "confidence": "sourced"},
-   {"value": "washing machine", "state": "broken", "when": "early", "role": "omen", "quote": "Her washing machine later breaks down with the dress inside", "confidence": "sourced"},
-   {"value": "mannequin", "state": "menstruating", "when": "early", "role": "symbol", "quote": "a lifelike mannequin, which appears to menstruate", "confidence": "sourced"},
-   {"value": "dog", "state": "german shepherd attacks", "when": "middle", "role": "omen", "quote": "a German Shepherd attacks her, injuring her leg and ripping the dress", "confidence": "sourced"},
-   {"value": "mirror", "state": "dead mother reflected", "when": "middle", "role": "omen", "quote": "seeing her mother reflected in the mirror", "confidence": "sourced"},
-   {"value": "fire", "when": "late", "role": "weapon", "quote": "The dress falls onto a heater and catches fire", "confidence": "sourced"},
-   {"value": "blood thread", "when": "ending", "role": "symbol", "quote": "threads made of their blood", "confidence": "sourced"}
+   {
+    "value": "red dress",
+    "when": "early",
+    "role": "threat",
+    "quote": "a beautiful, flowing red dress",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:15",
+      "quote": "(Sheila) Isn't it a little risque?"
+     }
+    ]
+   },
+   {
+    "value": "rash",
+    "when": "early",
+    "role": "omen",
+    "quote": "Sheila notices a strange rash on her chest",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:24",
+      "quote": "Just some sort of rash."
+     }
+    ]
+   },
+   {
+    "value": "washing machine",
+    "state": "broken",
+    "when": "early",
+    "role": "omen",
+    "quote": "Her washing machine later breaks down with the dress inside",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:28",
+      "quote": "(washing machine whirs in distance)"
+     },
+     {
+      "source": "screenplay",
+      "quote": "The washing machine starts to violently shake."
+     }
+    ]
+   },
+   {
+    "value": "mannequin",
+    "state": "menstruating",
+    "when": "early",
+    "role": "symbol",
+    "quote": "a lifelike mannequin, which appears to menstruate",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Miss Luckmore discovers that Reading is menstruating."
+     }
+    ]
+   },
+   {
+    "value": "dog",
+    "state": "german shepherd attacks",
+    "when": "middle",
+    "role": "omen",
+    "quote": "a German Shepherd attacks her, injuring her leg and ripping the dress",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:55:11",
+      "quote": "- (screams) - (dog growls)"
+     }
+    ]
+   },
+   {
+    "value": "mirror",
+    "state": "dead mother reflected",
+    "when": "middle",
+    "role": "omen",
+    "quote": "seeing her mother reflected in the mirror",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fire",
+    "when": "late",
+    "role": "weapon",
+    "quote": "The dress falls onto a heater and catches fire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The dress falls off the rail onto the electric heater and catches fire."
+     }
+    ]
+   },
+   {
+    "value": "blood thread",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "threads made of their blood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "machine with red thread coming out of her arms."
+     }
+    ]
+   },
+   {
+    "value": "pneumatic tube",
+    "when": "early",
+    "role": "setting",
+    "detail": "the store's payment capsule rattling through the tubes at the purchase",
+    "source": "subtitles",
+    "at": "00:15:24",
+    "quote": "(air escapes)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:28",
+      "quote": "(capsule rattles through tubes)"
+     }
+    ]
+   },
+   {
+    "value": "catalogue",
+    "when": "late",
+    "role": "clue",
+    "detail": "Babs's vision of a catalogue where she shrinks while her measurements grow",
+    "source": "subtitles",
+    "at": "01:43:51",
+    "quote": "It was in this room and in this catalogue.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:43:59",
+      "quote": "Every image was of me in this slip getting skinnier and skinnier,"
+     }
+    ]
+   },
+   {
+    "value": "sewing machine",
+    "when": "ending",
+    "role": "symbol",
+    "detail": "the closing sound over the dead sewing in the store",
+    "source": "subtitles",
+    "at": "01:52:26",
+    "quote": "(sewing machine whirs)",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "lonely woman buys dress", "when": "opening", "role": "trigger", "quote": "Sheila buys a beautiful, flowing red dress", "confidence": "sourced"},
-   {"order": 2, "value": "body marked", "when": "early", "role": "omen", "quote": "Sheila notices a strange rash on her chest", "confidence": "sourced"},
-   {"order": 3, "value": "previous owner died", "when": "middle", "role": "clue", "quote": "the store model who wore it for the catalogue was later killed", "confidence": "sourced"},
-   {"order": 4, "value": "dress attacks", "when": "middle", "quote": "the dress floats above her and tries to suffocate her", "confidence": "sourced"},
-   {"order": 5, "value": "first owner killed", "when": "middle", "quote": "Sheila gets into an accident and is killed", "confidence": "sourced"},
-   {"order": 6, "value": "new owners", "when": "late", "role": "turn", "quote": "The dress comes into the possession of washing machine repairman Reg Speaks", "confidence": "sourced"},
-   {"order": 7, "value": "store burns", "when": "late", "quote": "Babs burns to death in the changing room", "confidence": "sourced"},
-   {"order": 8, "value": "dead sew the dress", "when": "ending", "quote": "stitching together the dress from threads made of their blood", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "lonely woman buys dress",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Sheila buys a beautiful, flowing red dress",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:15",
+      "quote": "(Sheila) Isn't it a little risque?"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "dead model mourned",
+    "when": "middle",
+    "role": "clue",
+    "detail": "Miss Luckmoore shows Sheila the last dress the catalogue model wore",
+    "source": "subtitles",
+    "at": "00:42:10",
+    "quote": "And here, the last dress she wore. Oh, how she adored it.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "body marked",
+    "when": "early",
+    "role": "omen",
+    "quote": "Sheila notices a strange rash on her chest",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:24",
+      "quote": "Just some sort of rash."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "previous owner died",
+    "when": "middle",
+    "role": "clue",
+    "quote": "the store model who wore it for the catalogue was later killed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:36",
+      "quote": "A woman who modelled it died."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "dress attacks",
+    "when": "middle",
+    "quote": "the dress floats above her and tries to suffocate her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Sheila is asleep and the cursed dress floats directly above her."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "first owner killed",
+    "when": "middle",
+    "quote": "Sheila gets into an accident and is killed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:53",
+      "quote": "- (screams) - (tyres soreech)"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "new owners",
+    "when": "late",
+    "role": "turn",
+    "quote": "The dress comes into the possession of washing machine repairman Reg Speaks",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "store evacuated",
+    "when": "ending",
+    "role": "turn",
+    "detail": "the tannoy repeats over screams and evil laughter as the store burns",
+    "source": "subtitles",
+    "at": "01:50:17",
+    "quote": "(tannoy) A dramatic affliction has compromised our Trusted Department Store.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "store burns",
+    "when": "late",
+    "quote": "Babs burns to death in the changing room",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "dead sew the dress",
+    "when": "ending",
+    "quote": "stitching together the dress from threads made of their blood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:52:26",
+      "quote": "(sewing machine whirs)"
+     },
+     {
+      "source": "screenplay",
+      "quote": "floors reveal Sheila, Craig and Babs similarly sewing with red thread from their arms."
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

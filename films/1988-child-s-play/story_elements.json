@@ -1,62 +1,519 @@
 {
  "film": "1988-child-s-play",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "possessed doll", "detail": "Chucky, a Good Guy doll", "quote": "a new doll to her son, unaware that it is possessed by the soul of a serial killer", "confidence": "sourced"},
-   {"value": "serial killer", "detail": "Charles Lee Ray, the Lakeshore Strangler", "quote": "fugitive serial killer Charles Lee Ray, known as the \"Lakeshore Strangler\"", "confidence": "sourced"}
+   {
+    "value": "possessed doll",
+    "detail": "Chucky, a Good Guy doll",
+    "quote": "a new doll to her son, unaware that it is possessed by the soul of a serial killer",
+    "confidence": "sourced"
+   },
+   {
+    "value": "serial killer",
+    "detail": "Charles Lee Ray, the Lakeshore Strangler",
+    "quote": "fugitive serial killer Charles Lee Ray, known as the \"Lakeshore Strangler\"",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "soul transferred by ritual", "quote": "Ray invokes the power of Damballa and casts a voodoo spell to transfer his soul into a nearby Good Guy-brand talking doll", "confidence": "sourced"}
+   {
+    "value": "soul transferred by ritual",
+    "quote": "Ray invokes the power of Damballa and casts a voodoo spell to transfer his soul into a nearby Good Guy-brand talking doll",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:35",
+      "quote": "Ade due damballa. Give me the power, I beg of you!"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "a body", "detail": "to move his soul into Andy", "quote": "he must transfer his soul to the first human he revealed his true identity to: Andy", "confidence": "sourced"},
-   {"value": "revenge", "detail": "on the accomplice who abandoned him", "quote": "kills him in a gas explosion in revenge for abandoning him", "confidence": "sourced"}
+   {
+    "value": "a body",
+    "detail": "to move his soul into Andy",
+    "quote": "he must transfer his soul to the first human he revealed his true identity to: Andy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:46",
+      "quote": "The first person I let in on my little secret was a six-year-old kid. I'm gonna be six years old again."
+     }
+    ]
+   },
+   {
+    "value": "revenge",
+    "detail": "on the accomplice who abandoned him",
+    "quote": "kills him in a gas explosion in revenge for abandoning him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:21",
+      "quote": "I'm gonna get you, and I'm gonna get Eddie, no matter what!"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "murder", "quote": "fugitive serial killer Charles Lee Ray", "confidence": "observed"}
+   {
+    "value": "murder",
+    "quote": "fugitive serial killer Charles Lee Ray",
+    "confidence": "observed"
+   }
   ],
   "trigger": [
-   {"value": "bringing an object home", "detail": "doll bought from a peddler as a birthday gift", "quote": "Karen excitedly buys the doll and gives it to Andy", "confidence": "sourced"}
+   {
+    "value": "bringing an object home",
+    "detail": "doll bought from a peddler as a birthday gift",
+    "quote": "Karen excitedly buys the doll and gives it to Andy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:41",
+      "quote": "A burned-out toy store on Wabash. That's where I got it."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "doll becomes more human", "quote": "the longer his soul remains in the doll, the more \"human\" the doll will become", "confidence": "sourced"},
-   {"value": "must possess first confidant", "quote": "he must transfer his soul to the first human he revealed his true identity to", "confidence": "sourced"},
-   {"value": "destroy the heart", "quote": "in order to kill Chucky, they must destroy his heart", "confidence": "sourced"}
+   {
+    "value": "doll becomes more human",
+    "quote": "the longer his soul remains in the doll, the more \"human\" the doll will become",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:06",
+      "quote": "You're turning human."
+     }
+    ]
+   },
+   {
+    "value": "must possess first confidant",
+    "quote": "he must transfer his soul to the first human he revealed his true identity to",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:36",
+      "quote": "You mean the first person I let in on the fact that I was really alive?"
+     }
+    ]
+   },
+   {
+    "value": "destroy the heart",
+    "quote": "in order to kill Chucky, they must destroy his heart",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:14",
+      "quote": "The heart. His heart is almost human. It's the only way. Through the heart."
+     }
+    ]
+   },
+   {
+    "value": "secret kept by threat",
+    "detail": "Chucky tells Andy he will kill him if he tells",
+    "source": "subtitles",
+    "at": "00:40:51",
+    "quote": "He told me never to tell about him or he'd kill me.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "child", "relation_to_threat": "stranger", "detail": "Andy, six years old", "quote": "Widow Karen Barclay's six-year-old son Andy wants a Good Guy doll for his birthday", "confidence": "sourced"},
-   {"value": "single mother", "relation_to_threat": "stranger", "detail": "Karen", "quote": "The plot follows a widowed mother who gives a new doll to her son", "confidence": "sourced"},
-   {"value": "babysitter", "relation_to_threat": "stranger", "detail": "Maggie", "quote": "Chucky comes to life and attacks Maggie, striking her with a hammer", "confidence": "sourced"},
-   {"value": "detective", "relation_to_threat": "stranger", "detail": "Norris", "quote": "Norris, still skeptical, is later attacked by Chucky", "confidence": "sourced"}
+   {
+    "value": "child",
+    "relation_to_threat": "stranger",
+    "detail": "Andy, six years old",
+    "quote": "Widow Karen Barclay's six-year-old son Andy wants a Good Guy doll for his birthday",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:28",
+      "quote": "Give me the boy, and I'll let you live."
+     }
+    ]
+   },
+   {
+    "value": "single mother",
+    "relation_to_threat": "stranger",
+    "detail": "Karen",
+    "quote": "The plot follows a widowed mother who gives a new doll to her son",
+    "confidence": "sourced"
+   },
+   {
+    "value": "babysitter",
+    "relation_to_threat": "stranger",
+    "detail": "Maggie",
+    "quote": "Chucky comes to life and attacks Maggie, striking her with a hammer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:42",
+      "quote": "She fell from your kitchen window."
+     }
+    ]
+   },
+   {
+    "value": "detective",
+    "relation_to_threat": "stranger",
+    "detail": "Norris",
+    "quote": "Norris, still skeptical, is later attacked by Chucky",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:17",
+      "quote": "Won't do you any good, Mikey. You can't hurt me."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "Norris shoots Chucky's body through the heart, finally killing him", "confidence": "sourced"},
-   {"value": "false resolution", "quote": "appearing to kill him. Jack arrives, refusing to believe the trio until Chucky's body bursts through a heat vent", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "Norris shoots Chucky's body through the heart, finally killing him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:59",
+      "quote": "The heart. Shoot him in the heart."
+     }
+    ]
+   },
+   {
+    "value": "false resolution",
+    "quote": "appearing to kill him. Jack arrives, refusing to believe the trio until Chucky's body bursts through a heat vent",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:35",
+      "quote": "Oh, God. Chucky's dead."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:16:51",
+      "quote": "Mommy, Chucky's gone."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "lightning", "state": "strikes the store", "when": "opening", "role": "omen", "quote": "The store is struck by lightning, causing an explosion", "confidence": "sourced"},
-   {"value": "doll", "state": "possessed", "when": "opening", "role": "threat", "quote": "Norris finds Ray's lifeless body next to the doll", "confidence": "sourced"},
-   {"value": "hammer", "when": "early", "role": "weapon", "quote": "striking her with a hammer and causing her to fall out of a window to her death", "confidence": "sourced"},
-   {"value": "batteries", "state": "absent", "when": "middle", "role": "clue", "quote": "the doll has been moving and speaking without batteries", "confidence": "sourced"},
-   {"value": "voodoo doll", "when": "middle", "role": "weapon", "quote": "is tortured by Chucky with a voodoo doll", "confidence": "sourced"},
-   {"value": "blood", "state": "bleeding doll", "when": "middle", "role": "turn", "quote": "He shoots the doll, whose wound inexplicably bleeds and causes pain", "confidence": "sourced"},
-   {"value": "fire", "when": "ending", "role": "weapon", "quote": "Karen and Andy gain the upper hand, setting him on fire", "confidence": "sourced"}
+   {
+    "value": "lightning",
+    "state": "strikes the store",
+    "when": "opening",
+    "role": "omen",
+    "quote": "The store is struck by lightning, causing an explosion",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:42",
+      "quote": "(THUNDER RUMBLING)"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:51:23",
+      "quote": "It was struck by lightning the night that Charles Lee Ray died."
+     }
+    ]
+   },
+   {
+    "value": "doll",
+    "state": "possessed",
+    "when": "opening",
+    "role": "threat",
+    "quote": "Norris finds Ray's lifeless body next to the doll",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:04",
+      "quote": "Hi, I'm Chucky, and I'm your friend to the end. Hidey-ho."
+     }
+    ]
+   },
+   {
+    "value": "hammer",
+    "when": "early",
+    "role": "weapon",
+    "quote": "striking her with a hammer and causing her to fall out of a window to her death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "batteries",
+    "state": "absent",
+    "when": "middle",
+    "role": "clue",
+    "quote": "the doll has been moving and speaking without batteries",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:07",
+      "quote": "He's been moving and talking for days without any batteries in him."
+     }
+    ]
+   },
+   {
+    "value": "voodoo doll",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "is tortured by Chucky with a voodoo doll",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:05",
+      "quote": "Shouldn't tell your customers where you hide things like this, John."
+     }
+    ]
+   },
+   {
+    "value": "blood",
+    "state": "bleeding doll",
+    "when": "middle",
+    "role": "turn",
+    "quote": "He shoots the doll, whose wound inexplicably bleeds and causes pain",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:02",
+      "quote": "It hurt like a son of a bitch. It even bled."
+     }
+    ]
+   },
+   {
+    "value": "fire",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "Karen and Andy gain the upper hand, setting him on fire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:13",
+      "quote": "See, I threatened to throw him into the fireplace"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:15:07",
+      "quote": "Andy, help me. The matches."
+     }
+    ]
+   },
+   {
+    "value": "tv advert",
+    "state": "selling the doll",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:07:29",
+    "quote": "Now you can have your very own Good Guy doll.",
+    "detail": "the Good Guys show and its jingle 'friend to the end', later Chucky's catchphrase",
+    "confidence": "sourced"
+   },
+   {
+    "value": "small footprints",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:26:21",
+    "quote": "They look like footprints, don't they? Very small footprints.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "baseball bat",
+    "when": "late",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "01:11:27",
+    "quote": "Batter up!",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "dying killer transfers soul", "when": "opening", "quote": "casts a voodoo spell to transfer his soul into a nearby Good Guy-brand talking doll", "confidence": "sourced"},
-   {"order": 2, "value": "cursed gift given to child", "when": "early", "role": "trigger", "quote": "Karen excitedly buys the doll and gives it to Andy", "confidence": "sourced"},
-   {"order": 3, "value": "babysitter killed", "when": "early", "quote": "causing her to fall out of a window to her death", "confidence": "sourced"},
-   {"order": 4, "value": "child blamed", "when": "middle", "quote": "Andy is discovered by police and again considered a suspect", "confidence": "sourced"},
-   {"order": 5, "value": "mother discovers the truth", "when": "middle", "role": "turn", "quote": "the doll has been moving and speaking without batteries", "confidence": "sourced"},
-   {"order": 6, "value": "rule revealed", "when": "late", "role": "clue", "quote": "in order to kill Chucky, they must destroy his heart", "confidence": "sourced"},
-   {"order": 7, "value": "doll burned and shot", "when": "ending", "quote": "Karen shoots his head and several of his limbs off, appearing to kill him", "confidence": "sourced"},
-   {"order": 8, "value": "final kill through heart", "when": "ending", "quote": "Norris shoots Chucky's body through the heart, finally killing him", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "dying killer transfers soul",
+    "when": "opening",
+    "quote": "casts a voodoo spell to transfer his soul into a nearby Good Guy-brand talking doll",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:35",
+      "quote": "Ade due damballa. Give me the power, I beg of you!"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "toy advert on tv",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:07:29",
+    "quote": "Now you can have your very own Good Guy doll.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "cursed gift given to child",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Karen excitedly buys the doll and gives it to Andy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:04",
+      "quote": "Hi, I'm Chucky, and I'm your friend to the end. Hidey-ho."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "babysitter killed",
+    "when": "early",
+    "quote": "causing her to fall out of a window to her death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:42",
+      "quote": "She fell from your kitchen window."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "accomplice killed",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "00:37:02",
+    "quote": "(GAS HISSING)",
+    "detail": "Chucky gasses Eddie Caputo's hideout",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:56",
+      "quote": "Chucky is alive and he killed Eddie Caputo."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "child blamed",
+    "when": "middle",
+    "quote": "Andy is discovered by police and again considered a suspect",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:05",
+      "quote": "Nobody believes you about Chucky."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "mother discovers the truth",
+    "when": "middle",
+    "role": "turn",
+    "quote": "the doll has been moving and speaking without batteries",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:09",
+      "quote": "I said talk to me, damn it, or else I am gonna throw you in the fire!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "rule revealed",
+    "when": "late",
+    "role": "clue",
+    "quote": "in order to kill Chucky, they must destroy his heart",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:36",
+      "quote": "You mean the first person I let in on the fact that I was really alive?"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "doll burned and shot",
+    "when": "ending",
+    "quote": "Karen shoots his head and several of his limbs off, appearing to kill him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:24",
+      "quote": "Andy, no, please. We're friends to the end. Remember?"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "final kill through heart",
+    "when": "ending",
+    "quote": "Norris shoots Chucky's body through the heart, finally killing him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:59",
+      "quote": "The heart. Shoot him in the heart."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "toy voice repeats greeting",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:22:26",
+    "quote": "Hi, I'm Chucky. Wanna play?",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

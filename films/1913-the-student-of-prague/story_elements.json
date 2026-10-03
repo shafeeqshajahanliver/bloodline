@@ -1,61 +1,450 @@
 {
  "film": "1913-the-student-of-prague",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot summary"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot summary"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "doppelganger", "detail": "Balduin's mirror double, taken from him by Scapinelli", "quote": "the double appears again and terrorizes both lovers", "confidence": "sourced"},
-   {"value": "devil figure", "detail": "Scapinelli, a diabolical old gentleman in black", "quote": "he is approached by a diabolical old gentleman dressed in black named Scapinelli", "confidence": "sourced"}
+   {
+    "value": "doppelganger",
+    "detail": "Balduin's mirror double, taken from him by Scapinelli",
+    "quote": "the double appears again and terrorizes both lovers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:33",
+      "quote": "a pilgrim in everything black, resembling me like a brother!"
+     }
+    ]
+   },
+   {
+    "value": "devil figure",
+    "detail": "Scapinelli, a diabolical old gentleman in black",
+    "quote": "he is approached by a diabolical old gentleman dressed in black named Scapinelli",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "pact with the devil", "detail": "Balduin sells anything in his lodgings for 100,000 gold pieces", "quote": "Balduin agrees and signs a contract thinking he owns nothing", "confidence": "sourced"},
-   {"value": "reflection made separate", "quote": "Scapinelli calls forth Balduin's reflection from the mirror and absconds with it", "confidence": "sourced"}
+   {
+    "value": "pact with the devil",
+    "detail": "Balduin sells anything in his lodgings for 100,000 gold pieces",
+    "quote": "Balduin agrees and signs a contract thinking he owns nothing",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:07",
+      "quote": "I hereby certify that I was paid 100,000 guilder."
+     }
+    ]
+   },
+   {
+    "value": "reflection made separate",
+    "quote": "Scapinelli calls forth Balduin's reflection from the mirror and absconds with it",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to destroy its original", "detail": "the double ruins Balduin's love and honour", "quote": "his double again appears at the duel in his place and kills the rival suitor", "confidence": "observed"},
-   {"value": "a soul", "detail": "Scapinelli collects on the contract", "quote": "Scapinelli arrives, takes the contract Balduin signed with him and tears it up", "confidence": "observed"}
+   {
+    "value": "to destroy its original",
+    "detail": "the double ruins Balduin's love and honour",
+    "quote": "his double again appears at the duel in his place and kills the rival suitor",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:19",
+      "quote": "The deed he would not commit, the other committed."
+     }
+    ]
+   },
+   {
+    "value": "a soul",
+    "detail": "Scapinelli collects on the contract",
+    "quote": "Scapinelli arrives, takes the contract Balduin signed with him and tears it up",
+    "confidence": "observed"
+   },
+   {
+    "value": "to stay by his side",
+    "source": "subtitles",
+    "at": "01:21:03",
+    "quote": "Where you are, I too will always be,",
+    "confidence": "sourced",
+    "detail": "the double's verse: wherever Balduin is, it will be"
+   }
   ],
   "wrong": [
-   {"value": "selling oneself for wealth", "detail": "Balduin trades for gold to woo the Countess", "quote": "offers Balduin 100,000 pieces of gold in exchange for any item to be found in his student lodgings", "confidence": "sourced"}
+   {
+    "value": "selling oneself for wealth",
+    "detail": "Balduin trades for gold to woo the Countess",
+    "quote": "offers Balduin 100,000 pieces of gold in exchange for any item to be found in his student lodgings",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:10",
+      "quote": "In exchange, I give Mister Scapinelli the right to take from this room whatever pleases him."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "signing a contract", "quote": "Balduin agrees and signs a contract thinking he owns nothing", "confidence": "sourced"},
-   {"value": "poverty", "quote": "Despondent over his lack of funds, he is approached by a diabolical old gentleman", "confidence": "sourced"}
+   {
+    "value": "signing a contract",
+    "quote": "Balduin agrees and signs a contract thinking he owns nothing",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:37",
+      "quote": "the right to take from this room whatever pleases him."
+     }
+    ]
+   },
+   {
+    "value": "poverty",
+    "quote": "Despondent over his lack of funds, he is approached by a diabolical old gentleman",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:14",
+      "quote": "I'm ruined! If only I had a great fortune or a rich heiress."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "no reflection", "quote": "The baffled student realizes that he now produces no mirror image", "confidence": "sourced"},
-   {"value": "killing the double kills you", "quote": "he fires at it and it vanishes, but soon he becomes stricken himself and falls dead", "confidence": "sourced"}
+   {
+    "value": "no reflection",
+    "quote": "The baffled student realizes that he now produces no mirror image",
+    "confidence": "sourced"
+   },
+   {
+    "value": "killing the double kills you",
+    "quote": "he fires at it and it vanishes, but soon he becomes stricken himself and falls dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:03",
+      "quote": "Where you are, I too will always be,"
+     }
+    ]
+   },
+   {
+    "value": "the double follows everywhere",
+    "source": "subtitles",
+    "at": "00:58:18",
+    "quote": "Everywhere where I wanted to sleep, everywhere where I wanted to die,",
+    "confidence": "sourced",
+    "detail": "Musset verse used as an intertitle"
+   }
   ],
   "who_suffers": [
-   {"value": "poor student", "relation_to_threat": "self", "detail": "Balduin", "quote": "a poor university student named Balduin is the city's wildest carouser and greatest swordsman", "confidence": "sourced"},
-   {"value": "lover", "relation_to_threat": "lover", "detail": "Countess Margit", "quote": "becomes frightened by Balduin's lack of a mirror reflection followed quickly by the sudden appearance of the double", "confidence": "sourced"},
-   {"value": "rival suitor", "relation_to_threat": "stranger", "detail": "Baron Waldis-Schwarzenberg", "quote": "his double again appears at the duel in his place and kills the rival suitor", "confidence": "sourced"}
+   {
+    "value": "poor student",
+    "relation_to_threat": "self",
+    "detail": "Balduin",
+    "quote": "a poor university student named Balduin is the city's wildest carouser and greatest swordsman",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:07",
+      "quote": "Long live Balduin, the best swordsman of Prague and its most audacious student!"
+     }
+    ]
+   },
+   {
+    "value": "lover",
+    "relation_to_threat": "lover",
+    "detail": "Countess Margit",
+    "quote": "becomes frightened by Balduin's lack of a mirror reflection followed quickly by the sudden appearance of the double",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rival suitor",
+    "relation_to_threat": "stranger",
+    "detail": "Baron Waldis-Schwarzenberg",
+    "quote": "his double again appears at the duel in his place and kills the rival suitor",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:46",
+      "quote": "Spare him! He is my sister's only child, my daughter's fiancé, my heir and the last to carry our name."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "protagonist dies", "quote": "soon he becomes stricken himself and falls dead", "confidence": "sourced"},
-   {"value": "threat survives", "detail": "the double sits on his grave", "quote": "we see Balduin's double sitting atop his fresh grave, stroking a raven, and glowering menacingly at the viewer", "confidence": "sourced"}
+   {
+    "value": "protagonist dies",
+    "quote": "soon he becomes stricken himself and falls dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:24",
+      "quote": "Here lies Balduin"
+     }
+    ]
+   },
+   {
+    "value": "threat survives",
+    "detail": "the double sits on his grave",
+    "quote": "we see Balduin's double sitting atop his fresh grave, stroking a raven, and glowering menacingly at the viewer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:08",
+      "quote": "and on your final hour, by the stone on your grave I will sit."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "mirror", "state": "empty of reflection", "when": "early", "role": "trigger", "quote": "Scapinelli calls forth Balduin's reflection from the mirror and absconds with it", "confidence": "sourced"},
-   {"value": "contract", "state": "signed, later torn up", "when": "early", "role": "trigger", "quote": "takes the contract Balduin signed with him and tears it up, throws it like confetti", "confidence": "sourced"},
-   {"value": "graveyard", "when": "middle", "role": "setting", "quote": "Balduin and the Countess meet secretly at an old Jewish graveyard", "confidence": "sourced"},
-   {"value": "sabres", "when": "middle", "role": "weapon", "quote": "the Baron challenges Balduin to a duel with sabres", "confidence": "sourced"},
-   {"value": "pistol", "when": "ending", "role": "weapon", "quote": "Balduin returns to his own now lavish lodgings and retrieves a pistol", "confidence": "sourced"},
-   {"value": "raven", "state": "stroked by the double", "when": "ending", "role": "symbol", "quote": "sitting atop his fresh grave, stroking a raven", "confidence": "sourced"},
-   {"value": "handkerchief", "state": "stolen as evidence", "when": "middle", "role": "clue", "quote": "she has stolen the handkerchief as evidence", "confidence": "sourced"}
+   {
+    "value": "mirror",
+    "state": "empty of reflection",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Scapinelli calls forth Balduin's reflection from the mirror and absconds with it",
+    "confidence": "sourced"
+   },
+   {
+    "value": "contract",
+    "state": "signed, later torn up",
+    "when": "early",
+    "role": "trigger",
+    "quote": "takes the contract Balduin signed with him and tears it up, throws it like confetti",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:18",
+      "quote": "Prague, May 13, 1820."
+     }
+    ]
+   },
+   {
+    "value": "graveyard",
+    "when": "middle",
+    "role": "setting",
+    "quote": "Balduin and the Countess meet secretly at an old Jewish graveyard",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:46",
+      "quote": "Eleven o'clock tomorrow night, meet me at the Jewish Cemetery."
+     }
+    ]
+   },
+   {
+    "value": "sabres",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "the Baron challenges Balduin to a duel with sabres",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:47",
+      "quote": "With swords? But Balduin is the best swordsman in Prague."
+     }
+    ]
+   },
+   {
+    "value": "pistol",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "Balduin returns to his own now lavish lodgings and retrieves a pistol",
+    "confidence": "sourced"
+   },
+   {
+    "value": "raven",
+    "state": "stroked by the double",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "sitting atop his fresh grave, stroking a raven",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:24",
+      "quote": "Here lies Balduin"
+     }
+    ]
+   },
+   {
+    "value": "handkerchief",
+    "state": "stolen as evidence",
+    "when": "middle",
+    "role": "clue",
+    "quote": "she has stolen the handkerchief as evidence",
+    "confidence": "sourced"
+   },
+   {
+    "value": "locket",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:13:31",
+    "quote": "The Countess slips her locket to Balduin.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "card game",
+    "when": "late",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:02:36",
+    "quote": "Dare you also play against me?",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "poor hero meets tempter", "when": "opening", "quote": "Despondent over his lack of funds, he is approached by a diabolical old gentleman dressed in black", "confidence": "sourced"},
-   {"order": 2, "value": "pact signed, reflection taken", "when": "early", "role": "trigger", "quote": "Scapinelli calls forth Balduin's reflection from the mirror and absconds with it", "confidence": "sourced"},
-   {"order": 3, "value": "double haunts the lovers", "when": "middle", "quote": "the double appears again and terrorizes both lovers", "confidence": "sourced"},
-   {"order": 4, "value": "double kills in his place", "when": "middle", "role": "turn", "quote": "his double again appears at the duel in his place and kills the rival suitor", "confidence": "sourced"},
-   {"order": 5, "value": "lover rejects him", "when": "late", "quote": "She collapses in a swoon", "confidence": "sourced"},
-   {"order": 6, "value": "shoots double, dies himself", "when": "ending", "quote": "When the double appears there he fires at it and it vanishes, but soon he becomes stricken himself and falls dead", "confidence": "sourced"},
-   {"order": 7, "value": "double on the grave", "when": "ending", "role": "turn", "quote": "Balduin's double sitting atop his fresh grave, stroking a raven", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "poor hero meets tempter",
+    "when": "opening",
+    "quote": "Despondent over his lack of funds, he is approached by a diabolical old gentleman dressed in black",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:14",
+      "quote": "I'm ruined! If only I had a great fortune or a rich heiress."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "pact signed, reflection taken",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Scapinelli calls forth Balduin's reflection from the mirror and absconds with it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:46",
+      "quote": "Prague, May 13, 1820. Balduin"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "double speaks its verse",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:35:26",
+    "quote": "I am no god nor a demon, but the one who once scornfully called me by your name",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "double haunts the lovers",
+    "when": "middle",
+    "quote": "the double appears again and terrorizes both lovers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:37",
+      "quote": "Who are you?"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "rival's father begs for mercy",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "00:54:46",
+    "quote": "Spare him! He is my sister's only child,",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "double kills in his place",
+    "when": "middle",
+    "role": "turn",
+    "quote": "his double again appears at the duel in his place and kills the rival suitor",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:19",
+      "quote": "The deed he would not commit, the other committed."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "gambling to forget",
+    "when": "late",
+    "source": "subtitles",
+    "at": "00:59:16",
+    "quote": "Giving himself over to dance and play, Balduin seeks to forget his love.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "lover rejects him",
+    "when": "late",
+    "quote": "She collapses in a swoon",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:45",
+      "quote": "Mister Balduin is no longer permitted to see the Count and the Lady."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "shoots double, dies himself",
+    "when": "ending",
+    "quote": "When the double appears there he fires at it and it vanishes, but soon he becomes stricken himself and falls dead",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "double on the grave",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Balduin's double sitting atop his fresh grave, stroking a raven",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:08",
+      "quote": "and on your final hour, by the stone on your grave I will sit."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

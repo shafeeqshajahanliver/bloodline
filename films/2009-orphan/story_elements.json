@@ -1,64 +1,490 @@
 {
  "film": "2009-orphan",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "impostor child", "detail": "Esther, really 33-year-old Leena Klammer", "quote": "Esther is actually a 33-year-old Estonian woman named Leena Klammer", "confidence": "sourced"},
-   {"value": "psychopath", "quote": "adopt a psychopathic nine-year-old girl with a mysterious past", "confidence": "sourced"}
+   {
+    "value": "impostor child",
+    "detail": "Esther, really 33-year-old Leena Klammer",
+    "quote": "Esther is actually a 33-year-old Estonian woman named Leena Klammer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:47",
+      "quote": "It causes proportional dwarfism. She only looks like a child."
+     }
+    ]
+   },
+   {
+    "value": "psychopath",
+    "quote": "adopt a psychopathic nine-year-old girl with a mysterious past",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "adopted into the family", "quote": "She and John then decide to adopt a 9-year-old Russian girl, Esther", "confidence": "sourced"},
-   {"value": "escaped from an institution", "quote": "Esther came from a mental hospital named the Saarne Institute", "confidence": "sourced"}
+   {
+    "value": "adopted into the family",
+    "quote": "She and John then decide to adopt a 9-year-old Russian girl, Esther",
+    "confidence": "sourced"
+   },
+   {
+    "value": "escaped from an institution",
+    "quote": "Esther came from a mental hospital named the Saarne Institute",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:40",
+      "quote": "You do not understand. Saarne Institute is not an orphanage."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to replace someone", "detail": "to take the mother's place with the father", "quote": "Esther dresses provocatively and attempts to seduce John", "confidence": "observed"},
-   {"value": "the father", "quote": "when she failed to seduce the father, she killed him and the rest of the family", "confidence": "sourced"}
+   {
+    "value": "to replace someone",
+    "detail": "to take the mother's place with the father",
+    "quote": "Esther dresses provocatively and attempts to seduce John",
+    "confidence": "observed"
+   },
+   {
+    "value": "the father",
+    "quote": "when she failed to seduce the father, she killed him and the rest of the family",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "loss of a child", "detail": "stillborn Jessica", "quote": "Kate and John Coleman's marriage is strained after the stillbirth of their third child, Jessica", "confidence": "sourced"}
+   {
+    "value": "loss of a child",
+    "detail": "stillborn Jessica",
+    "quote": "Kate and John Coleman's marriage is strained after the stillbirth of their third child, Jessica",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:29",
+      "quote": "Your baby's dead."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "adoption", "quote": "decide to adopt a 9-year-old Russian girl, Esther, from St. Mariana's Home for Girls", "confidence": "sourced"}
+   {
+    "value": "adoption",
+    "quote": "decide to adopt a 9-year-old Russian girl, Esther, from St. Mariana's Home for Girls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:24",
+      "quote": "Adopting an older child is not an easy decision to make."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "disguised as a child", "quote": "she has spent most of her life posing as a little girl", "confidence": "sourced"},
-   {"value": "turns family against mother", "quote": "Esther breaks her own arm with a vice, and falsely blames Kate", "confidence": "sourced"},
-   {"value": "repeats past pattern", "quote": "burning the house down to destroy the evidence", "confidence": "sourced"}
+   {
+    "value": "disguised as a child",
+    "quote": "she has spent most of her life posing as a little girl",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:56",
+      "quote": "She's 33 years old."
+     }
+    ]
+   },
+   {
+    "value": "turns family against mother",
+    "quote": "Esther breaks her own arm with a vice, and falsely blames Kate",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:29",
+      "quote": "God, she did this on purpose."
+     }
+    ]
+   },
+   {
+    "value": "repeats past pattern",
+    "quote": "burning the house down to destroy the evidence",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:41",
+      "quote": "The family that brought her to America died in a house fire."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:40:38",
+      "quote": "She tricked a family here in Estonia into adopting her."
+     }
+    ]
+   },
+   {
+    "value": "silence enforced by threats",
+    "detail": "Esther threatens Daniel with John's gun",
+    "source": "subtitles",
+    "at": "01:18:35",
+    "quote": "I'll shoot Mommy if you tell.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "mother", "relation_to_threat": "family", "detail": "Kate, a recovering alcoholic", "quote": "whose loss is particularly hard on Kate, a recovering alcoholic", "confidence": "sourced"},
-   {"value": "father", "relation_to_threat": "family", "detail": "John, stabbed to death", "quote": "She then attacks him downstairs and stabs him to death", "confidence": "sourced"},
-   {"value": "siblings", "relation_to_threat": "family", "detail": "Daniel and deaf Max", "quote": "Esther tries to suffocate him, stopping his heart", "confidence": "sourced"},
-   {"value": "nun", "relation_to_threat": "stranger", "detail": "Sister Abigail", "quote": "bludgeons her to death with a hammer", "confidence": "sourced"}
+   {
+    "value": "mother",
+    "relation_to_threat": "family",
+    "detail": "Kate, a recovering alcoholic",
+    "quote": "whose loss is particularly hard on Kate, a recovering alcoholic",
+    "confidence": "sourced"
+   },
+   {
+    "value": "father",
+    "relation_to_threat": "family",
+    "detail": "John, stabbed to death",
+    "quote": "She then attacks him downstairs and stabs him to death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "siblings",
+    "relation_to_threat": "family",
+    "detail": "Daniel and deaf Max",
+    "quote": "Esther tries to suffocate him, stopping his heart",
+    "confidence": "sourced"
+   },
+   {
+    "value": "nun",
+    "relation_to_threat": "stranger",
+    "detail": "Sister Abigail",
+    "quote": "bludgeons her to death with a hammer",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "kills her by kicking her in the face, snapping her neck and sinking her body", "confidence": "sourced"},
-   {"value": "mother rejects false child", "quote": "Kate retorts angrily that she is not Leena's mother", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "kills her by kicking her in the face, snapping her neck and sinking her body",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mother rejects false child",
+    "quote": "Kate retorts angrily that she is not Leena's mother",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "pigeon", "state": "injured, killed", "when": "early", "role": "omen", "quote": "such as killing an injured pigeon and breaking the ankle of a bullying classmate", "confidence": "sourced"},
-   {"value": "hammer", "state": "bludgeoning", "when": "early", "role": "weapon", "quote": "bludgeons her to death with a hammer", "confidence": "sourced"},
-   {"value": "treehouse", "state": "set on fire", "when": "middle", "role": "setting", "quote": "searches the treehouse, Esther, having heard their conversation last night, sets it on fire with him inside", "confidence": "sourced"},
-   {"value": "grave flowers", "state": "ripped out", "when": "middle", "role": "symbol", "quote": "Esther rips out the flowers from Jessica's grave and gives them to Kate as a bouquet", "confidence": "sourced"},
-   {"value": "ribbons", "state": "hiding scars", "when": "late", "role": "clue", "quote": "the ribbons she wears around her neck and wrists conceal the livid scars", "confidence": "sourced"},
-   {"value": "false teeth", "state": "removed", "when": "late", "role": "turn", "quote": "She also removes her prosthetic childlike teeth, revealing her real, rotting teeth", "confidence": "sourced"},
-   {"value": "blacklight paintings", "state": "hidden", "when": "late", "role": "clue", "quote": "uses the aquarium blacklight to find her hidden, violent paintings", "confidence": "sourced"},
-   {"value": "frozen pond", "state": "ice shattering", "when": "ending", "role": "setting", "quote": "Leena attacks them near the frozen pond, hurling them onto the ice", "confidence": "sourced"}
+   {
+    "value": "pigeon",
+    "state": "injured, killed",
+    "when": "early",
+    "role": "omen",
+    "quote": "such as killing an injured pigeon and breaking the ankle of a bullying classmate",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:04",
+      "quote": "Put it out of its misery."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:30:31",
+      "quote": "It's in heaven now."
+     }
+    ]
+   },
+   {
+    "value": "hammer",
+    "state": "bludgeoning",
+    "when": "early",
+    "role": "weapon",
+    "quote": "bludgeons her to death with a hammer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Esther scowls and grabs the ·hammer. Sister Abigail looks up at her, moaning louder."
+     }
+    ]
+   },
+   {
+    "value": "treehouse",
+    "state": "set on fire",
+    "when": "middle",
+    "role": "setting",
+    "quote": "searches the treehouse, Esther, having heard their conversation last night, sets it on fire with him inside",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:49",
+      "quote": "I'll get the stuff from the tree house. Then they'll have to believe us."
+     }
+    ]
+   },
+   {
+    "value": "grave flowers",
+    "state": "ripped out",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "Esther rips out the flowers from Jessica's grave and gives them to Kate as a bouquet",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:34",
+      "quote": "She knew what these roses meant to me."
+     }
+    ]
+   },
+   {
+    "value": "ribbons",
+    "state": "hiding scars",
+    "when": "late",
+    "role": "clue",
+    "quote": "the ribbons she wears around her neck and wrists conceal the livid scars",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:03",
+      "quote": "She wears those ribbons on her wrists and her neck all the time."
+     }
+    ]
+   },
+   {
+    "value": "false teeth",
+    "state": "removed",
+    "when": "late",
+    "role": "turn",
+    "quote": "She also removes her prosthetic childlike teeth, revealing her real, rotting teeth",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:15",
+      "quote": "She's not thrilled about the dentist."
+     },
+     {
+      "source": "screenplay",
+      "quote": "She reaches up, pulls on her teeth and -- :KA-CLICK."
+     }
+    ]
+   },
+   {
+    "value": "blacklight paintings",
+    "state": "hidden",
+    "when": "late",
+    "role": "clue",
+    "quote": "uses the aquarium blacklight to find her hidden, violent paintings",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:34",
+      "quote": "My paintings always tell stories."
+     },
+     {
+      "source": "screenplay",
+      "quote": "All the lights are out except for the BLACK LIGHT in the aquarium."
+     }
+    ]
+   },
+   {
+    "value": "frozen pond",
+    "state": "ice shattering",
+    "when": "ending",
+    "role": "setting",
+    "quote": "Leena attacks them near the frozen pond, hurling them onto the ice",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:54:45",
+      "quote": "Go back. It's too dangerous. Go back."
+     }
+    ]
+   },
+   {
+    "value": "bible",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:33:43",
+    "quote": "Is this a Bible?",
+    "confidence": "sourced",
+    "detail": "Esther is mocked as a 'Jesus Freak' before she pushes Brenda off the slide"
+   },
+   {
+    "value": "child's song",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:15:43",
+    "quote": "[ESTHER SINGING \" GLORY OF LOVE \"]",
+    "confidence": "sourced",
+    "detail": "how John first finds Esther, alone and singing"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "grieving couple adopts", "when": "opening", "role": "trigger", "quote": "She and John then decide to adopt a 9-year-old Russian girl, Esther", "confidence": "sourced"},
-   {"order": 2, "value": "child shows cruelty", "when": "early", "role": "omen", "quote": "killing an injured pigeon and breaking the ankle of a bullying classmate named Brenda", "confidence": "sourced"},
-   {"order": 3, "value": "warner killed", "when": "early", "quote": "Esther causes her to crash her car on the road and then bludgeons her to death with a hammer", "confidence": "sourced"},
-   {"order": 4, "value": "mother disbelieved", "when": "middle", "quote": "John believes she is being paranoid", "confidence": "sourced"},
-   {"order": 5, "value": "sibling nearly killed", "when": "middle", "quote": "sets it on fire with him inside", "confidence": "sourced"},
-   {"order": 6, "value": "true identity revealed", "when": "late", "role": "turn", "quote": "Esther is actually a 33-year-old Estonian woman named Leena Klammer", "confidence": "sourced"},
-   {"order": 7, "value": "father killed", "when": "late", "quote": "She then attacks him downstairs and stabs him to death", "confidence": "sourced"},
-   {"order": 8, "value": "fight on the ice", "when": "ending", "quote": "Leena reverts to her Esther persona, begging \"Mommy\" not to let her die", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "nightmare of stillbirth",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:02:29",
+    "quote": "Your baby's dead.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:09",
+      "quote": "Congratulations, Mrs. Coleman. It's a girl."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "grieving couple adopts",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "She and John then decide to adopt a 9-year-old Russian girl, Esther",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:24",
+      "quote": "Adopting an older child is not an easy decision to make."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "past family died in fire",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:18:41",
+    "quote": "The family that brought her to America died in a house fire.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "child shows cruelty",
+    "when": "early",
+    "role": "omen",
+    "quote": "killing an injured pigeon and breaking the ankle of a bullying classmate named Brenda",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:04",
+      "quote": "Put it out of its misery."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "warner killed",
+    "when": "early",
+    "quote": "Esther causes her to crash her car on the road and then bludgeons her to death with a hammer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Esther scowls and grabs the ·hammer. Sister Abigail looks up at her, moaning louder."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "mother disbelieved",
+    "when": "middle",
+    "quote": "John believes she is being paranoid",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:58",
+      "quote": "I'm not the one who passed out drunk and let Max almost drown in the pond."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "sibling nearly killed",
+    "when": "middle",
+    "quote": "sets it on fire with him inside",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:36",
+      "quote": "Don't worry. You're going to heaven."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "true identity revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Esther is actually a 33-year-old Estonian woman named Leena Klammer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:56",
+      "quote": "She's 33 years old."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "father killed",
+    "when": "late",
+    "quote": "She then attacks him downstairs and stabs him to death",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "fight on the ice",
+    "when": "ending",
+    "quote": "Leena reverts to her Esther persona, begging \"Mommy\" not to let her die",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:55:10",
+      "quote": "I'm not your fucking Mommy!"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

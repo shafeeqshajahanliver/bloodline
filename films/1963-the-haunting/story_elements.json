@@ -1,63 +1,552 @@
 {
  "film": "1963-the-haunting",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "haunted house", "detail": "Hill House", "quote": "a small group of people invited by a paranormal investigator to investigate a purportedly haunted house", "confidence": "sourced"},
-   {"value": "unseen force", "detail": "banging intruder that never appears", "quote": "an unseen intruder attempting to force its way into the room, causing the door to bulge inward", "confidence": "sourced"},
-   {"value": "mental breakdown", "detail": "Eleanor's instability", "quote": "He perceived the book to be more about mental breakdown than ghosts", "confidence": "sourced"}
+   {
+    "value": "haunted house",
+    "detail": "Hill House",
+    "quote": "a small group of people invited by a paranormal investigator to investigate a purportedly haunted house",
+    "confidence": "sourced"
+   },
+   {
+    "value": "unseen force",
+    "detail": "banging intruder that never appears",
+    "quote": "an unseen intruder attempting to force its way into the room, causing the door to bulge inward",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mental breakdown",
+    "detail": "Eleanor's instability",
+    "quote": "He perceived the book to be more about mental breakdown than ghosts",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "house with a history of deaths", "detail": "Crain's wives, Abigail and the companion all died there", "quote": "The companion inherited the house, but hanged herself from a spiral staircase in the library", "confidence": "sourced"}
+   {
+    "value": "house with a history of deaths",
+    "detail": "Crain's wives, Abigail and the companion all died there",
+    "quote": "The companion inherited the house, but hanged herself from a spiral staircase in the library",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:30",
+      "quote": "It was an evil house from the beginning. A house that was born bad."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to keep someone", "detail": "the house calls Eleanor home", "quote": "the words \"Help Eleanor come home\" are found scrawled on a wall", "confidence": "sourced"},
-   {"value": "to claim a victim", "quote": "Markway insists Eleanor leave but she pleads to stay, convinced the house wants her", "confidence": "observed"}
+   {
+    "value": "to keep someone",
+    "detail": "the house calls Eleanor home",
+    "quote": "the words \"Help Eleanor come home\" are found scrawled on a wall",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:45:40",
+      "quote": "It didn't want her to leave"
+     }
+    ]
+   },
+   {
+    "value": "to claim a victim",
+    "quote": "Markway insists Eleanor leave but she pleads to stay, convinced the house wants her",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:46:12",
+      "quote": "The house has what it wants... for a while."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "guilt over a dead parent", "detail": "Eleanor's guilt over her mother's death", "quote": "Eleanor has spent her adult life caring for her invalid mother, whose recent death has left Eleanor with severe guilt", "confidence": "sourced"}
+   {
+    "value": "guilt over a dead parent",
+    "detail": "Eleanor's guilt over her mother's death",
+    "quote": "Eleanor has spent her adult life caring for her invalid mother, whose recent death has left Eleanor with severe guilt",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:27",
+      "quote": "My sister says I wanted Mother to die."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "an invitation", "detail": "Markway's investigation", "quote": "sends invitations for people to join his investigation", "confidence": "sourced"},
-   {"value": "paranormal investigation", "quote": "Markway wishes to study the reported paranormal activity at Hill House", "confidence": "sourced"}
+   {
+    "value": "an invitation",
+    "detail": "Markway's investigation",
+    "quote": "sends invitations for people to join his investigation",
+    "confidence": "sourced"
+   },
+   {
+    "value": "paranormal investigation",
+    "quote": "Markway wishes to study the reported paranormal activity at Hill House",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:57",
+      "quote": "I shall occupy the house with a group of carefully selected assistants"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "targets the vulnerable one", "detail": "only the women hear the first night's noises", "quote": "Luke and the doctor, however, report the house had been silent for them", "confidence": "observed"},
-   {"value": "house traps people", "quote": "tried to find her husband but the house kept her lost", "confidence": "sourced"}
+   {
+    "value": "targets the vulnerable one",
+    "detail": "only the women hear the first night's noises",
+    "quote": "Luke and the doctor, however, report the house had been silent for them",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:14",
+      "quote": "He can't make me leave, not if Hill House means me to stay."
+     }
+    ]
+   },
+   {
+    "value": "house traps people",
+    "quote": "tried to find her husband but the house kept her lost",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:56",
+      "quote": "We couldn't leave now even if we wanted to."
+     }
+    ]
+   },
+   {
+    "value": "no help in the dark",
+    "detail": "the housekeeper leaves before dark",
+    "source": "subtitles",
+    "at": "00:22:13",
+    "quote": "No one will come any nearer than that... in the night... in the dark.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cold marks a presence",
+    "source": "subtitles",
+    "at": "00:39:58",
+    "quote": "It's only a noise, and the room is terribly cold.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:25",
+      "quote": "A genuine cold spot."
+     }
+    ],
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "fragile woman", "relation_to_threat": "unknown", "detail": "Eleanor Lance", "quote": "Wise, who found her ideal for the psychologically fragile Eleanor", "confidence": "sourced"},
-   {"value": "investigators", "relation_to_threat": "stranger", "detail": "Markway, Theo, Luke", "quote": "Only two other individuals accept—Theodora, a psychic, and Eleanor Lance", "confidence": "sourced"},
-   {"value": "sceptic", "relation_to_threat": "stranger", "detail": "Grace, lost in the house", "quote": "Dr Markway's sceptical wife Grace arrives with plans to join the group", "confidence": "sourced"}
+   {
+    "value": "fragile woman",
+    "relation_to_threat": "unknown",
+    "detail": "Eleanor Lance",
+    "quote": "Wise, who found her ideal for the psychologically fragile Eleanor",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:08",
+      "quote": "I've spent all my adult life taking care of my invalid mother... until she died."
+     }
+    ]
+   },
+   {
+    "value": "investigators",
+    "relation_to_threat": "stranger",
+    "detail": "Markway, Theo, Luke",
+    "quote": "Only two other individuals accept—Theodora, a psychic, and Eleanor Lance",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sceptic",
+    "relation_to_threat": "stranger",
+    "detail": "Grace, lost in the house",
+    "quote": "Dr Markway's sceptical wife Grace arrives with plans to join the group",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "victim dies", "detail": "Eleanor crashes into the same tree as Mrs Crain", "quote": "causing Eleanor to crash into a tree and die", "confidence": "sourced"},
-   {"value": "victim absorbed by house", "quote": "Theo remarks that Eleanor got what she wanted—to remain with the house", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "\"It ought to be burned down and the ground sowed with salt.\"", "confidence": "observed"}
+   {
+    "value": "victim dies",
+    "detail": "Eleanor crashes into the same tree as Mrs Crain",
+    "quote": "causing Eleanor to crash into a tree and die",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:17",
+      "quote": "She's dead."
+     }
+    ]
+   },
+   {
+    "value": "victim absorbed by house",
+    "quote": "Theo remarks that Eleanor got what she wanted—to remain with the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:45:58",
+      "quote": "The house belongs to her now, too."
+     }
+    ]
+   },
+   {
+    "value": "threat survives",
+    "quote": "\"It ought to be burned down and the ground sowed with salt.\"",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:46:33",
+      "quote": "Hill House has stood for 90 years and might stand for 90 more."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "tree", "state": "crash site", "when": "opening", "role": "omen", "quote": "She died when her carriage crashed against a tree as she approached the house for the first time", "confidence": "sourced"},
-   {"value": "spiral staircase", "state": "coming loose", "when": "late", "role": "threat", "quote": "climbs the spiral staircase, followed by Markway, who tries to coax her down despite the stairwell coming loose from the wall", "confidence": "sourced"},
-   {"value": "door", "state": "bulging inward", "when": "late", "role": "threat", "quote": "an unseen intruder attempting to force its way into the room, causing the door to bulge inward", "confidence": "sourced"},
-   {"value": "writing on wall", "state": "scrawled", "when": "middle", "role": "omen", "quote": "the words \"Help Eleanor come home\" are found scrawled on a wall", "confidence": "sourced"},
-   {"value": "statue", "state": "composite marble", "when": "middle", "role": "mirror", "quote": "discovering a huge marble composite statue, supposedly of St Francis curing lepers", "confidence": "sourced"},
-   {"value": "hand held in the dark", "state": "not Theo's", "when": "middle", "role": "turn", "quote": "Eleanor realises it was not Theo's hand she held", "confidence": "sourced"},
-   {"value": "nursery", "state": "cold spot", "when": "middle", "role": "setting", "quote": "Dr Markway discovers a cold spot outside the nursery room", "confidence": "sourced"},
-   {"value": "steering wheel", "state": "turning by itself", "when": "ending", "role": "threat", "quote": "The steering wheel begins to turn by itself, and she surrenders to the unseen force", "confidence": "sourced"}
+   {
+    "value": "tree",
+    "state": "crash site",
+    "when": "opening",
+    "role": "omen",
+    "quote": "She died when her carriage crashed against a tree as she approached the house for the first time",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:50",
+      "quote": "the horses bolted, crashing her carriage against a big tree."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:45:21",
+      "quote": "deliberately aimed the car at this tree."
+     }
+    ]
+   },
+   {
+    "value": "spiral staircase",
+    "state": "coming loose",
+    "when": "late",
+    "role": "threat",
+    "quote": "climbs the spiral staircase, followed by Markway, who tries to coax her down despite the stairwell coming loose from the wall",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:10",
+      "quote": "A library complete with ivory tower."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:35:15",
+      "quote": "Eleanor, turn around and come down."
+     }
+    ]
+   },
+   {
+    "value": "door",
+    "state": "bulging inward",
+    "when": "late",
+    "role": "threat",
+    "quote": "an unseen intruder attempting to force its way into the room, causing the door to bulge inward",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:27",
+      "quote": "all the doors are hung slightly off-center. Probably explains why they keep swinging shut by themselves."
+     }
+    ]
+   },
+   {
+    "value": "writing on wall",
+    "state": "scrawled",
+    "when": "middle",
+    "role": "omen",
+    "quote": "the words \"Help Eleanor come home\" are found scrawled on a wall",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:54",
+      "quote": "Chalk. Or something like chalk."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:51:38",
+      "quote": "It's my name! It belongs to me and something is using it."
+     }
+    ]
+   },
+   {
+    "value": "statue",
+    "state": "composite marble",
+    "when": "middle",
+    "role": "mirror",
+    "quote": "discovering a huge marble composite statue, supposedly of St Francis curing lepers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:11",
+      "quote": "I wonder how this statue got here. It wasn't on the original inventory."
+     }
+    ]
+   },
+   {
+    "value": "hand held in the dark",
+    "state": "not Theo's",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Eleanor realises it was not Theo's hand she held",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:30",
+      "quote": "Whose hand was I holding?"
+     }
+    ]
+   },
+   {
+    "value": "nursery",
+    "state": "cold spot",
+    "when": "middle",
+    "role": "setting",
+    "quote": "Dr Markway discovers a cold spot outside the nursery room",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:47",
+      "quote": "The nursery. Abigail Crain grew up and died there."
+     }
+    ]
+   },
+   {
+    "value": "steering wheel",
+    "state": "turning by itself",
+    "when": "ending",
+    "role": "threat",
+    "quote": "The steering wheel begins to turn by itself, and she surrenders to the unseen force",
+    "confidence": "sourced"
+   },
+   {
+    "value": "stone lions",
+    "state": "imagined at a gate",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:13:15",
+    "quote": "in a house with a pair of stone lions guarding the gate.",
+    "detail": "Eleanor's daydream of a home of her own",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dog",
+    "state": "glimpsed, maybe not a dog",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:44:37",
+    "quote": "Chasing a dog. At least, we assumed it was a dog.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cold spot",
+    "when": "middle",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "01:03:25",
+    "quote": "A genuine cold spot. I guarantee it won't register on any thermometer.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "trap door",
+    "when": "late",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "01:38:42",
+    "quote": "there she was above the trap door.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "history of deaths in house", "when": "opening", "role": "omen", "quote": "Dr John Markway narrates the history of the 90-year-old Hill House", "confidence": "sourced"},
-   {"order": 2, "value": "group invited to investigate", "when": "early", "role": "trigger", "quote": "sends invitations for people to join his investigation", "confidence": "sourced"},
-   {"order": 3, "value": "first night of banging", "when": "early", "quote": "Eleanor and Theo are terrified by banging sounds made against the door, and hear menacing laughter", "confidence": "sourced"},
-   {"order": 4, "value": "message names the victim", "when": "middle", "role": "omen", "quote": "the words \"Help Eleanor come home\" are found scrawled on a wall, distressing Eleanor", "confidence": "sourced"},
-   {"order": 5, "value": "near fall from staircase", "when": "late", "quote": "At the top, Eleanor nearly falls to her death whilst glimpsing Grace above her", "confidence": "sourced"},
-   {"order": 6, "value": "sent away, house takes control", "when": "ending", "role": "turn", "quote": "The steering wheel begins to turn by itself, and she surrenders to the unseen force", "confidence": "sourced"},
-   {"order": 7, "value": "death repeats the past", "when": "ending", "quote": "He notes that the tree was the same one where Mrs Crain died", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "narrator introduces evil house",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:14",
+    "quote": "An evil old house, the kind some people call haunted...",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "history of deaths in house",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Dr John Markway narrates the history of the 90-year-old Hill House",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:07",
+      "quote": "Scandal, murder, insanity, suicide."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "group invited to investigate",
+    "when": "early",
+    "role": "trigger",
+    "quote": "sends invitations for people to join his investigation",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:57",
+      "quote": "I shall occupy the house with a group of carefully selected assistants"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "escape from family",
+    "when": "early",
+    "source": "subtitles",
+    "at": "00:11:10",
+    "quote": "I want my car. I mean to take it.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "warning about the dark",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:22:13",
+    "quote": "No one will come any nearer than that... in the night... in the dark.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "first night of banging",
+    "when": "early",
+    "quote": "Eleanor and Theo are terrified by banging sounds made against the door, and hear menacing laughter",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:50",
+      "quote": "It's against the top of the door! It's found us."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "message names the victim",
+    "when": "middle",
+    "role": "omen",
+    "quote": "the words \"Help Eleanor come home\" are found scrawled on a wall, distressing Eleanor",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:38",
+      "quote": "It's my name! It belongs to me and something is using it."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "sceptic wife arrives",
+    "when": "late",
+    "source": "subtitles",
+    "at": "01:18:13",
+    "quote": "Grace Markway. Didn't John tell you he's married?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "near fall from staircase",
+    "when": "late",
+    "quote": "At the top, Eleanor nearly falls to her death whilst glimpsing Grace above her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:42",
+      "quote": "Stand still! Don't move!"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "sent away, house takes control",
+    "when": "ending",
+    "role": "turn",
+    "quote": "The steering wheel begins to turn by itself, and she surrenders to the unseen force",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "death repeats the past",
+    "when": "ending",
+    "quote": "He notes that the tree was the same one where Mrs Crain died",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:45:21",
+      "quote": "deliberately aimed the car at this tree. Where the first Mrs. Crain was also killed in an accident."
+     }
+    ]
+   },
+   {
+    "order": 12,
+    "value": "closing narration",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:46:48",
+    "quote": "Silence lies steadily against the wood and stone of Hill House. And we who walk here walk alone.",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

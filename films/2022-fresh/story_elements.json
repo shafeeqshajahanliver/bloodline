@@ -1,63 +1,516 @@
 {
  "film": "2022-fresh",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "cannibal", "detail": "Steve / Brendan, a butcher of human meat", "quote": "Steve explains that he is a butcher of human meat, which he both consumes and sells to wealthy gastronomic cannibals", "confidence": "sourced"},
-   {"value": "wealthy cannibal clients", "quote": "five of Brendan's clients in a white room, seated at a table with bleeding human meat at the center", "confidence": "sourced"},
-   {"value": "complicit wife", "detail": "Ann", "quote": "Ann, realizing she's been exposed, knocks Mollie unconscious", "confidence": "sourced"}
+   {
+    "value": "cannibal",
+    "detail": "Steve / Brendan, a butcher of human meat",
+    "quote": "Steve explains that he is a butcher of human meat, which he both consumes and sells to wealthy gastronomic cannibals",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:52",
+      "quote": "I'm gonna sell your meat."
+     }
+    ]
+   },
+   {
+    "value": "wealthy cannibal clients",
+    "quote": "five of Brendan's clients in a white room, seated at a table with bleeding human meat at the center",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:46",
+      "quote": "The clients wanna feel closer to the women. They become a part of you in some way."
+     }
+    ]
+   },
+   {
+    "value": "complicit wife",
+    "detail": "Ann",
+    "quote": "Ann, realizing she's been exposed, knocks Mollie unconscious",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:25",
+      "quote": "Mollie, right? Really shouldn't have done that."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "ordinary man", "detail": "a married father with a double life", "quote": "Steve is actually named Brendan and is married to a woman named Ann with whom he has children", "confidence": "sourced"}
+   {
+    "value": "ordinary man",
+    "detail": "a married father with a double life",
+    "quote": "Steve is actually named Brendan and is married to a woman named Ann with whom he has children",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:48:59",
+      "quote": "He's married?"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "human flesh", "quote": "he intends to surgically remove pieces of her body over time", "confidence": "sourced"},
-   {"value": "money", "quote": "sells to wealthy gastronomic cannibals", "confidence": "sourced"}
+   {
+    "value": "human flesh",
+    "quote": "he intends to surgically remove pieces of her body over time",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:28",
+      "quote": "breast meat. And it's, um, it's really nice."
+     }
+    ]
+   },
+   {
+    "value": "money",
+    "quote": "sells to wealthy gastronomic cannibals",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:56",
+      "quote": "People pay me a lot of money for it."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "deception in courtship", "quote": "A man calling himself Steve flirts with her at a supermarket", "confidence": "observed"}
+   {
+    "value": "deception in courtship",
+    "quote": "A man calling himself Steve flirts with her at a supermarket",
+    "confidence": "observed"
+   }
   ],
   "trigger": [
-   {"value": "a date", "quote": "Steve invites Noa for a weekend getaway to a surprise destination", "confidence": "sourced"},
-   {"value": "drugged drink", "quote": "he drugs her cocktail and she collapses", "confidence": "sourced"}
+   {
+    "value": "a date",
+    "quote": "Steve invites Noa for a weekend getaway to a surprise destination",
+    "confidence": "sourced"
+   },
+   {
+    "value": "drugged drink",
+    "quote": "he drugs her cocktail and she collapses",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:19",
+      "quote": "And, um, it's gonna have some cherries in it."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "kept alive to stay fresh", "quote": "he will keep her alive as long as possible in order to keep her meat fresh", "confidence": "sourced"},
-   {"value": "seduce the captor", "quote": "She makes herself more alluring and pretends to be curious about the taste of human meat", "confidence": "sourced"}
+   {
+    "value": "kept alive to stay fresh",
+    "quote": "he will keep her alive as long as possible in order to keep her meat fresh",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:11",
+      "quote": "Because the fresher the meat, the better. So I'm gonna keep you alive for as long as I can."
+     }
+    ]
+   },
+   {
+    "value": "seduce the captor",
+    "quote": "She makes herself more alluring and pretends to be curious about the taste of human meat",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fear spoils the meat",
+    "source": "subtitles",
+    "at": "00:57:38",
+    "quote": "Fear and stress isn't good for the meat.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "obedience spares pain",
+    "source": "subtitles",
+    "at": "00:38:28",
+    "quote": "As long as you don't act up, nothing bad has to happen, all right?",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "young women", "relation_to_threat": "stranger", "quote": "for whom he regularly lures and abducts young women", "confidence": "sourced"},
-   {"value": "woman dating", "relation_to_threat": "lover", "detail": "Noa", "quote": "Noa, a woman from Portland, is increasingly disillusioned with online dating", "confidence": "sourced"},
-   {"value": "best friend", "relation_to_threat": "stranger", "detail": "Mollie", "quote": "Mollie becomes concerned about Noa's disappearance and begins investigating", "confidence": "sourced"}
+   {
+    "value": "young women",
+    "relation_to_threat": "stranger",
+    "quote": "for whom he regularly lures and abducts young women",
+    "confidence": "sourced"
+   },
+   {
+    "value": "woman dating",
+    "relation_to_threat": "lover",
+    "detail": "Noa",
+    "quote": "Noa, a woman from Portland, is increasingly disillusioned with online dating",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:47",
+      "quote": "but what a weird way to start off a date."
+     }
+    ]
+   },
+   {
+    "value": "best friend",
+    "relation_to_threat": "stranger",
+    "detail": "Mollie",
+    "quote": "Mollie becomes concerned about Noa's disappearance and begins investigating",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:41",
+      "quote": "You're getting me all freaked out."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "Noa takes the gun and shoots him dead", "confidence": "sourced"},
-   {"value": "threat survives", "detail": "the clients carry on", "quote": "A mid-credits scene depicts five of Brendan's clients in a white room", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "Noa takes the gun and shoots him dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:49:03",
+      "quote": "Was... Was married."
+     }
+    ]
+   },
+   {
+    "value": "threat survives",
+    "detail": "the clients carry on",
+    "quote": "A mid-credits scene depicts five of Brendan's clients in a white room",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "supermarket", "when": "opening", "role": "setting", "quote": "A man calling himself Steve flirts with her at a supermarket", "confidence": "sourced"},
-   {"value": "cocktail", "state": "drugged", "when": "early", "role": "trigger", "quote": "he drugs her cocktail and she collapses", "confidence": "sourced"},
-   {"value": "chains", "when": "early", "role": "setting", "quote": "Noa awakens in captivity, chained to the floor", "confidence": "sourced"},
-   {"value": "ringing phone", "state": "in killer's pocket", "when": "middle", "role": "clue", "quote": "Mollie calls Noa's phone, which begins ringing in Brendan's pocket", "confidence": "sourced"},
-   {"value": "prosthetic leg", "when": "middle", "role": "clue", "quote": "Ann is shown to have a prosthetic leg", "confidence": "sourced"},
-   {"value": "trophy case", "when": "late", "role": "clue", "quote": "a concealed case containing the belongings of two dozen victims", "confidence": "sourced"},
-   {"value": "pink dress", "when": "late", "role": "symbol", "quote": "Brendan invites Noa to a formal dinner, providing her a pink dress to wear", "confidence": "sourced"},
-   {"value": "shovel", "when": "ending", "role": "weapon", "quote": "Mollie bludgeons Ann to death with a shovel", "confidence": "sourced"}
+   {
+    "value": "supermarket",
+    "when": "opening",
+    "role": "setting",
+    "quote": "A man calling himself Steve flirts with her at a supermarket",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:21",
+      "quote": "Have you ever had these?"
+     }
+    ]
+   },
+   {
+    "value": "cocktail",
+    "state": "drugged",
+    "when": "early",
+    "role": "trigger",
+    "quote": "he drugs her cocktail and she collapses",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:06",
+      "quote": "Can I get a Manhattan with, like, as many cherries as you can spare, please?"
+     }
+    ]
+   },
+   {
+    "value": "chains",
+    "when": "early",
+    "role": "setting",
+    "quote": "Noa awakens in captivity, chained to the floor",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:37",
+      "quote": "(CHAIN RATTLES)"
+     }
+    ]
+   },
+   {
+    "value": "ringing phone",
+    "state": "in killer's pocket",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Mollie calls Noa's phone, which begins ringing in Brendan's pocket",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:15",
+      "quote": "(CELL PHONE RINGING)"
+     }
+    ]
+   },
+   {
+    "value": "prosthetic leg",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Ann is shown to have a prosthetic leg",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "she has an entire prosthetic leg from her groin down."
+     }
+    ]
+   },
+   {
+    "value": "trophy case",
+    "when": "late",
+    "role": "clue",
+    "quote": "a concealed case containing the belongings of two dozen victims",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pink dress",
+    "when": "late",
+    "role": "symbol",
+    "quote": "Brendan invites Noa to a formal dinner, providing her a pink dress to wear",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:51",
+      "quote": "It's pink."
+     }
+    ]
+   },
+   {
+    "value": "shovel",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "Mollie bludgeons Ann to death with a shovel",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "A shovel flies across Ann’s head."
+     }
+    ]
+   },
+   {
+    "value": "cotton candy grapes",
+    "when": "opening",
+    "role": "trigger",
+    "source": "subtitles",
+    "at": "00:09:28",
+    "quote": "No. Cotton Candy grapes.",
+    "confidence": "sourced",
+    "detail": "Steve's opening line at the supermarket"
+   },
+   {
+    "value": "cherries",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:56:21",
+    "quote": "Extra cherries. You've earned it.",
+    "confidence": "sourced",
+    "detail": "Noa's favourite garnish, used by Steve as reward in captivity"
+   },
+   {
+    "value": "meat freezer",
+    "state": "full of body parts",
+    "when": "late",
+    "role": "setting",
+    "source": "screenplay",
+    "quote": "It’s a walk in freezer. Different body parts sit on shelves.",
+    "confidence": "sourced",
+    "detail": "Penny's leg is recovered from it, labelled with her name"
+   },
+   {
+    "value": "dumbwaiter",
+    "when": "late",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "01:39:14",
+    "quote": "(DUMBWAITER DINGS)",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "bad dates", "when": "opening", "quote": "increasingly disillusioned with online dating and the crass men she encounters", "confidence": "sourced"},
-   {"order": 2, "value": "warning ignored", "when": "early", "quote": "Against the advice of her best friend Mollie, Noa agrees", "confidence": "sourced"},
-   {"order": 3, "value": "drugged and captured", "when": "early", "role": "trigger", "quote": "Noa awakens in captivity, chained to the floor", "confidence": "sourced"},
-   {"order": 4, "value": "cannibal reveal", "when": "early", "role": "turn", "quote": "Steve explains that he is a butcher of human meat", "confidence": "sourced"},
-   {"order": 5, "value": "friend investigates, captured", "when": "middle", "quote": "Ann, realizing she's been exposed, knocks Mollie unconscious", "confidence": "sourced"},
-   {"order": 6, "value": "playing along", "when": "late", "quote": "which Noa pretends to enjoy but secretly vomits up", "confidence": "sourced"},
-   {"order": 7, "value": "captives escape and fight", "when": "late", "quote": "the three fight Brendan in the kitchen, then escape into the woods", "confidence": "sourced"},
-   {"order": 8, "value": "killer killed, clients remain", "when": "ending", "quote": "Noa takes the gun and shoots him dead", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "bad dates",
+    "when": "opening",
+    "quote": "increasingly disillusioned with online dating and the crass men she encounters",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:47",
+      "quote": "but what a weird way to start off a date."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "meet-cute at supermarket",
+    "when": "opening",
+    "role": "trigger",
+    "source": "subtitles",
+    "at": "00:09:21",
+    "quote": "Have you ever had these?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "date refuses to eat meat",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:22:35",
+    "quote": "I just don't eat animals.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "warning ignored",
+    "when": "early",
+    "quote": "Against the advice of her best friend Mollie, Noa agrees",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "drugged and captured",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Noa awakens in captivity, chained to the floor",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:55",
+      "quote": "Steve, can you take these off, please?"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "cannibal reveal",
+    "when": "early",
+    "role": "turn",
+    "quote": "Steve explains that he is a butcher of human meat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:52",
+      "quote": "I'm gonna sell your meat. People pay me a lot of money for it."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "friend investigates, captured",
+    "when": "middle",
+    "quote": "Ann, realizing she's been exposed, knocks Mollie unconscious",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:31",
+      "quote": "(BLOW LANDS)"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "playing along",
+    "when": "late",
+    "quote": "which Noa pretends to enjoy but secretly vomits up",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:05",
+      "quote": "(NOA RETCHING)"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "dinner of human meat",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:30:28",
+    "quote": "breast meat. And it's, um, it's really nice.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "captives escape and fight",
+    "when": "late",
+    "quote": "the three fight Brendan in the kitchen, then escape into the woods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:14",
+      "quote": "(DUMBWAITER DINGS)"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "killer killed, clients remain",
+    "when": "ending",
+    "quote": "Noa takes the gun and shoots him dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:30",
+      "quote": "Hey, you fucking half-dick!"
+     }
+    ]
+   },
+   {
+    "order": 12,
+    "value": "friends laugh together",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:49:13",
+    "quote": "I fucking love you, Mollie.",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,56 +1,391 @@
 {
  "film": "1990-tremors",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "giant creatures", "detail": "subterranean worms called Graboids", "quote": "confront giant subterranean worms dubbed Graboids", "confidence": "sourced"}
+   {
+    "value": "giant creatures",
+    "detail": "subterranean worms called Graboids",
+    "quote": "confront giant subterranean worms dubbed Graboids",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "unexplained", "quote": "its monsters were deliberately left without a fixed origin", "confidence": "sourced"}
+   {
+    "value": "unexplained",
+    "quote": "its monsters were deliberately left without a fixed origin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:04",
+      "quote": "It doesn't matter where they come from."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "hunger", "quote": "the creatures hunt by sensing vibrations in the ground", "confidence": "observed"}
+   {
+    "value": "hunger",
+    "quote": "the creatures hunt by sensing vibrations in the ground",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:53",
+      "quote": "They sit and goddamn wait until they hear something that sounds like lunch."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "attempt to leave town", "quote": "decide to leave for the nearby town of Bixby after growing dissatisfied with their work", "confidence": "sourced"},
-   {"value": "discovering a body", "quote": "they discover resident Edgar Deems dead atop an electrical tower", "confidence": "sourced"}
+   {
+    "value": "attempt to leave town",
+    "quote": "decide to leave for the nearby town of Bixby after growing dissatisfied with their work",
+    "confidence": "sourced"
+   },
+   {
+    "value": "discovering a body",
+    "quote": "they discover resident Edgar Deems dead atop an electrical tower",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "hunts by vibration", "quote": "the three realize that the creatures hunt by sensing vibrations in the ground", "confidence": "sourced"},
-   {"value": "safe on rock and rooftops", "quote": "Stranded overnight on boulders, the three realize", "confidence": "observed"},
-   {"value": "isolated town", "quote": "a rockslide blocks the only road out of town", "confidence": "sourced"}
+   {
+    "value": "hunts by vibration",
+    "quote": "the three realize that the creatures hunt by sensing vibrations in the ground",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:17",
+      "quote": "It senses seismic vibration. It can hear every move we make, especially on this rock."
+     }
+    ]
+   },
+   {
+    "value": "safe on rock and rooftops",
+    "quote": "Stranded overnight on boulders, the three realize",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:26",
+      "quote": "But they can't move through rock."
+     }
+    ]
+   },
+   {
+    "value": "isolated town",
+    "quote": "a rockslide blocks the only road out of town",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:30",
+      "quote": "The phone's out. The road's out. We're on our own."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "handymen", "relation_to_threat": "stranger", "detail": "Val and Earl", "quote": "handymen Valentine \"Val\" McKee and Earl Bassett", "confidence": "sourced"},
-   {"value": "small-town residents", "relation_to_threat": "community", "quote": "attack again and kill Walter, forcing the townspeople onto rooftops", "confidence": "sourced"},
-   {"value": "scientist", "relation_to_threat": "stranger", "detail": "Rhonda, a seismology student", "quote": "Rhonda LeBeck, a graduate student studying seismic activity", "confidence": "sourced"}
+   {
+    "value": "handymen",
+    "relation_to_threat": "stranger",
+    "detail": "Val and Earl",
+    "quote": "handymen Valentine \"Val\" McKee and Earl Bassett",
+    "confidence": "sourced"
+   },
+   {
+    "value": "small-town residents",
+    "relation_to_threat": "community",
+    "quote": "attack again and kill Walter, forcing the townspeople onto rooftops",
+    "confidence": "sourced"
+   },
+   {
+    "value": "scientist",
+    "relation_to_threat": "stranger",
+    "detail": "Rhonda, a seismology student",
+    "quote": "Rhonda LeBeck, a graduate student studying seismic activity",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "Val then uses the last bomb to drive the last Graboid over a cliff, killing it", "confidence": "sourced"},
-   {"value": "romance begins", "quote": "Earl encourages Val to pursue a relationship with Rhonda", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "Val then uses the last bomb to drive the last Graboid over a cliff, killing it",
+    "confidence": "sourced"
+   },
+   {
+    "value": "romance begins",
+    "quote": "Earl encourages Val to pursue a relationship with Rhonda",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "electrical tower", "state": "dead man atop", "when": "opening", "role": "omen", "quote": "they discover resident Edgar Deems dead atop an electrical tower", "confidence": "sourced"},
-   {"value": "sheep", "state": "killed", "when": "early", "role": "omen", "quote": "a shepherd and his flock are killed by an unseen creature", "confidence": "sourced"},
-   {"value": "severed head", "when": "early", "role": "clue", "quote": "When Val and Earl find the shepherd's severed head", "confidence": "sourced"},
-   {"value": "tentacled tongue", "state": "torn apart", "when": "early", "role": "clue", "quote": "the earlier snake-like creature was one of its tentacled tongues", "confidence": "sourced"},
-   {"value": "boulders", "state": "refuge", "when": "middle", "role": "setting", "quote": "Using discarded poles, they jump between rocks", "confidence": "sourced"},
-   {"value": "basement armory", "when": "late", "role": "weapon", "quote": "kill one Graboid after it breaks into their basement armory", "confidence": "sourced"},
-   {"value": "pipe bombs", "when": "ending", "role": "weapon", "quote": "lure the creatures into swallowing homemade pipe bombs", "confidence": "sourced"}
+   {
+    "value": "cattle stampede",
+    "when": "opening",
+    "role": "mirror",
+    "detail": "Val's opening joke about stampedes returns as the idea that kills the last graboid",
+    "source": "subtitles",
+    "at": "00:01:19",
+    "quote": "Stampede! Stampede, Earl! Get outta the way!",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:22",
+      "quote": "Well, it just... suddenly hit me, you know. Stampede."
+     }
+    ]
+   },
+   {
+    "value": "seismograph",
+    "when": "opening",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:05:17",
+    "quote": "Well, I'm supposed to monitor the seismographs.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "electrical tower",
+    "state": "dead man atop",
+    "when": "opening",
+    "role": "omen",
+    "quote": "they discover resident Edgar Deems dead atop an electrical tower",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:11",
+      "quote": "It's not like I don't have better things to do than climb towers"
+     }
+    ]
+   },
+   {
+    "value": "sheep",
+    "state": "killed",
+    "when": "early",
+    "role": "omen",
+    "quote": "a shepherd and his flock are killed by an unseen creature",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:54",
+      "quote": "[Sheep Bleating]"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:22:27",
+      "quote": "just one of these couldn't eat up Fred and his whole flock of sheep."
+     }
+    ]
+   },
+   {
+    "value": "severed head",
+    "when": "early",
+    "role": "clue",
+    "quote": "When Val and Earl find the shepherd's severed head",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:30",
+      "quote": "He's cuttin' people's heads off."
+     }
+    ]
+   },
+   {
+    "value": "tentacled tongue",
+    "state": "torn apart",
+    "when": "early",
+    "role": "clue",
+    "quote": "the earlier snake-like creature was one of its tentacled tongues",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:32",
+      "quote": "The snake things are just their tongues or something. These animals are huge!"
+     }
+    ]
+   },
+   {
+    "value": "boulders",
+    "state": "refuge",
+    "when": "middle",
+    "role": "setting",
+    "quote": "Using discarded poles, they jump between rocks",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pogo stick",
+    "when": "middle",
+    "role": "omen",
+    "detail": "Mindy's bouncing draws a graboid",
+    "source": "subtitles",
+    "at": "00:49:27",
+    "quote": "[Pogo Stick Hopping]",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:38",
+      "quote": "Mindy, get off the pogo stick."
+     }
+    ]
+   },
+   {
+    "value": "basement armory",
+    "when": "late",
+    "role": "weapon",
+    "quote": "kill one Graboid after it breaks into their basement armory",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pipe bombs",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "lure the creatures into swallowing homemade pipe bombs",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "plan to leave town", "when": "opening", "quote": "decide to leave for the nearby town of Bixby", "confidence": "sourced"},
-   {"order": 2, "value": "mysterious deaths", "when": "early", "role": "omen", "quote": "he died of dehydration after refusing to come down", "confidence": "sourced"},
-   {"order": 3, "value": "town cut off", "when": "early", "quote": "a rockslide blocks the only road out of town", "confidence": "sourced"},
-   {"order": 4, "value": "monster revealed", "when": "middle", "role": "turn", "quote": "A giant, burrowing, worm-like creature suddenly erupts from the ground", "confidence": "sourced"},
-   {"order": 5, "value": "rules discovered", "when": "middle", "role": "turn", "quote": "the creatures hunt by sensing vibrations in the ground", "confidence": "sourced"},
-   {"order": 6, "value": "town under siege", "when": "late", "quote": "forcing the townspeople onto rooftops", "confidence": "sourced"},
-   {"order": 7, "value": "monsters outwitted", "when": "ending", "quote": "drive the last Graboid over a cliff, killing it", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "plan to leave town",
+    "when": "opening",
+    "quote": "decide to leave for the nearby town of Bixby",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:07",
+      "quote": "We're headin' for Bixby permanent."
+     }
+    ]
+   },
+   {
+    "value": "strange seismic readings",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:05:28",
+    "quote": "Well, I've been getting some really strange readings.",
+    "confidence": "sourced",
+    "order": 2
+   },
+   {
+    "order": 3,
+    "value": "mysterious deaths",
+    "when": "early",
+    "role": "omen",
+    "quote": "he died of dehydration after refusing to come down",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:46",
+      "quote": "He sat up there and just died of thirst?"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "town cut off",
+    "when": "early",
+    "quote": "a rockslide blocks the only road out of town",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:40",
+      "quote": "The phone is dead. Walter, your phone is dead!"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "monster revealed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "A giant, burrowing, worm-like creature suddenly erupts from the ground",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "rules discovered",
+    "when": "middle",
+    "role": "turn",
+    "quote": "the creatures hunt by sensing vibrations in the ground",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:17",
+      "quote": "Of course! It senses seismic vibration."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "town under siege",
+    "when": "late",
+    "quote": "forcing the townspeople onto rooftops",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:35",
+      "quote": "They'll just wait out there'til we're dead."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "monsters outwitted",
+    "when": "ending",
+    "quote": "drive the last Graboid over a cliff, killing it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:51",
+      "quote": "Can you fly, you sucker? Can you fly?"
+     }
+    ]
+   },
+   {
+    "value": "hero declares himself",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:31:23",
+    "quote": "I mean, what's a woman like her want with a guy like me?",
+    "confidence": "sourced",
+    "order": 9
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

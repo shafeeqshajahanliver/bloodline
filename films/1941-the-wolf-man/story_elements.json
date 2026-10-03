@@ -1,58 +1,496 @@
 {
  "film": "1941-the-wolf-man",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes and interpretations"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes and interpretations"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "werewolf", "detail": "Larry Talbot, after being bitten", "quote": "Larry transforms into a humanoid wolf hybrid on the following night and kills a villager", "confidence": "sourced"},
-   {"value": "the self", "detail": "his own animal nature", "quote": "The monster is one's animal nature, out of control and making one behave like an animal.", "confidence": "sourced"}
+   {
+    "value": "werewolf",
+    "detail": "Larry Talbot, after being bitten",
+    "quote": "Larry transforms into a humanoid wolf hybrid on the following night and kills a villager",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:31",
+      "quote": "That's a human being who, at certain times of the year, changes into a wolf."
+     }
+    ]
+   },
+   {
+    "value": "the self",
+    "detail": "his own animal nature",
+    "quote": "The monster is one's animal nature, out of control and making one behave like an animal.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:11:27",
+      "quote": "It's probably an ancient explanation of the dual personality in each of us."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "bitten by a monster", "detail": "Bela, the fortuneteller, in wolf form", "quote": "Larry is now a werewolf too because he was bitten by one", "confidence": "sourced"}
+   {
+    "value": "bitten by a monster",
+    "detail": "Bela, the fortuneteller, in wolf form",
+    "quote": "Larry is now a werewolf too because he was bitten by one",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:17",
+      "quote": "Bela became a wolf, and you killed him."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to kill", "detail": "uncontrolled aggression", "quote": "expresses and exorcises the Id-force of uncontrolled aggression", "confidence": "sourced"}
+   {
+    "value": "to kill",
+    "detail": "uncontrolled aggression",
+    "quote": "expresses and exorcises the Id-force of uncontrolled aggression",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "homecoming", "detail": "returns home after his brother's death", "quote": "Larry Talbot returns to his ancestral home in Llanwelly, Wales, to bury his recently deceased brother", "confidence": "sourced"},
-   {"value": "bitten while rescuing", "quote": "He kills the wolf with his new walking stick but is bitten on the chest", "confidence": "sourced"}
+   {
+    "value": "homecoming",
+    "detail": "returns home after his brother's death",
+    "quote": "Larry Talbot returns to his ancestral home in Llanwelly, Wales, to bury his recently deceased brother",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:32",
+      "quote": "Your brother's death was a blow to all of us."
+     }
+    ]
+   },
+   {
+    "value": "bitten while rescuing",
+    "quote": "He kills the wolf with his new walking stick but is bitten on the chest",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:34",
+      "quote": "(JENNY SCREAMING)"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "victim marked by pentagram", "quote": "The werewolf always sees a pentagram on the palm of his next victim", "confidence": "sourced"},
-   {"value": "killed only by silver", "quote": "Silver is the only thing that can kill a werewolf", "confidence": "sourced"},
-   {"value": "transforms when moon rises", "quote": "When the moon rises Larry transforms again, breaks free of his restraints", "confidence": "sourced"},
-   {"value": "charm prevents it", "quote": "Maleva gives him a charm to prevent the transformation", "confidence": "sourced"}
+   {
+    "value": "victim marked by pentagram",
+    "quote": "The werewolf always sees a pentagram on the palm of his next victim",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:06",
+      "quote": "Every werewolf is marked with that, and sees it in the palm of his next victim's hand."
+     }
+    ]
+   },
+   {
+    "value": "killed only by silver",
+    "quote": "Silver is the only thing that can kill a werewolf",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:20",
+      "quote": "A werewolf can be killed only with a silver bullet, or a silver knife or a stick with a silver handle."
+     }
+    ]
+   },
+   {
+    "value": "transforms when moon rises",
+    "quote": "When the moon rises Larry transforms again, breaks free of his restraints",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:55",
+      "quote": "Even a man who is pure in heart and says his prayers by night May become a wolf when the wolfsbane blooms and the autumn moon is bright"
+     }
+    ]
+   },
+   {
+    "value": "charm prevents it",
+    "quote": "Maleva gives him a charm to prevent the transformation",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:33",
+      "quote": "Take this charm. The pentagram, the sign of the wolf. It can break the evil spell."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "the cursed man", "relation_to_threat": "self", "detail": "Larry Talbot", "quote": "he is a victim of a cruel or indifferent fate in a less comprehensible world", "confidence": "sourced"},
-   {"value": "woman he loves", "relation_to_threat": "lover", "detail": "Gwen Conliffe", "quote": "When he says his goodbye to Gwen, he sees a pentagram on her palm", "confidence": "sourced"},
-   {"value": "villagers", "relation_to_threat": "community", "quote": "Larry transforms into a humanoid wolf hybrid on the following night and kills a villager", "confidence": "sourced"}
+   {
+    "value": "the cursed man",
+    "relation_to_threat": "self",
+    "detail": "Larry Talbot",
+    "quote": "he is a victim of a cruel or indifferent fate in a less comprehensible world",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:18",
+      "quote": "The way you walk is thorny, through no fault of your own."
+     }
+    ]
+   },
+   {
+    "value": "woman he loves",
+    "relation_to_threat": "lover",
+    "detail": "Gwen Conliffe",
+    "quote": "When he says his goodbye to Gwen, he sees a pentagram on her palm",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:06",
+      "quote": "Your hand. I can't see anything."
+     }
+    ]
+   },
+   {
+    "value": "villagers",
+    "relation_to_threat": "community",
+    "quote": "Larry transforms into a humanoid wolf hybrid on the following night and kills a villager",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "father kills son", "detail": "Sir John bludgeons the werewolf with the silver cane", "quote": "Not recognizing the werewolf as his son, Sir John bludgeons him over the head with Larry's silver-headed cane", "confidence": "sourced"},
-   {"value": "threat destroyed", "quote": "Sir John watches in horror as the dead werewolf transforms into Larry's human corpse.", "confidence": "sourced"}
+   {
+    "value": "father kills son",
+    "detail": "Sir John bludgeons the werewolf with the silver cane",
+    "quote": "Not recognizing the werewolf as his son, Sir John bludgeons him over the head with Larry's silver-headed cane",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat destroyed",
+    "quote": "Sir John watches in horror as the dead werewolf transforms into Larry's human corpse.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:24",
+      "quote": "Your suffering is over. Now you will find peace for eternity."
+     }
+    ]
+   },
+   {
+    "value": "truth covered up",
+    "source": "subtitles",
+    "at": "01:09:11",
+    "quote": "The wolf must have attacked her, and Larry came to the rescue.",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "silver wolf's head cane", "state": "bought", "when": "opening", "role": "weapon", "quote": "he purchases a walking stick decorated with a silver wolf's head", "confidence": "sourced"},
-   {"value": "pentagram", "state": "on a palm", "when": "early", "role": "omen", "quote": "The Romani fortuneteller, Bela, sees a pentagram when he examines Jenny's palm", "confidence": "sourced"},
-   {"value": "wolf", "state": "attacking", "when": "early", "role": "threat", "quote": "They hear screams from Jenny, who is being attacked by a wolf", "confidence": "sourced"},
-   {"value": "wound", "state": "healed overnight", "when": "early", "role": "clue", "quote": "his chest wound miraculously healed overnight", "confidence": "sourced"},
-   {"value": "trap", "state": "springs shut", "when": "middle", "role": "threat", "quote": "Larry turns into a werewolf and is caught in one of the traps", "confidence": "sourced"},
-   {"value": "moon", "state": "rising", "when": "ending", "role": "trigger", "quote": "When the moon rises Larry transforms again", "confidence": "sourced"},
-   {"value": "chair", "state": "restraining", "when": "late", "role": "symbol", "quote": "ties him to a chair to prevent him from leaving", "confidence": "sourced"}
+   {
+    "value": "silver wolf's head cane",
+    "state": "bought",
+    "when": "opening",
+    "role": "weapon",
+    "quote": "he purchases a walking stick decorated with a silver wolf's head",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:26",
+      "quote": "It shows the wolf and the pentagram, the sign of the werewolf."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:21:54",
+      "quote": "silver-handled stick mounted with a wolf's head."
+     }
+    ]
+   },
+   {
+    "value": "pentagram",
+    "state": "on a palm",
+    "when": "early",
+    "role": "omen",
+    "quote": "The Romani fortuneteller, Bela, sees a pentagram when he examines Jenny's palm",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:00",
+      "quote": "The pentagram. Yes. She said that I was a werewolf."
+     }
+    ]
+   },
+   {
+    "value": "wolf",
+    "state": "attacking",
+    "when": "early",
+    "role": "threat",
+    "quote": "They hear screams from Jenny, who is being attacked by a wolf",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:22",
+      "quote": "(WOLF HOWLING)"
+     }
+    ]
+   },
+   {
+    "value": "wound",
+    "state": "healed overnight",
+    "when": "early",
+    "role": "clue",
+    "quote": "his chest wound miraculously healed overnight",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:28",
+      "quote": "It must have healed up."
+     }
+    ]
+   },
+   {
+    "value": "trap",
+    "state": "springs shut",
+    "when": "middle",
+    "role": "threat",
+    "quote": "Larry turns into a werewolf and is caught in one of the traps",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:38",
+      "quote": "(TRAP SNAPS)"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:56:54",
+      "quote": "You are caught in a trap."
+     }
+    ]
+   },
+   {
+    "value": "moon",
+    "state": "rising",
+    "when": "ending",
+    "role": "trigger",
+    "quote": "When the moon rises Larry transforms again",
+    "confidence": "sourced"
+   },
+   {
+    "value": "chair",
+    "state": "restraining",
+    "when": "late",
+    "role": "symbol",
+    "quote": "ties him to a chair to prevent him from leaving",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:35",
+      "quote": "You're fast to the chair, all the windows are locked"
+     }
+    ]
+   },
+   {
+    "value": "telescope",
+    "when": "opening",
+    "role": "clue",
+    "detail": "Larry spies on Gwen's room through his father's telescope",
+    "source": "subtitles",
+    "at": "00:15:19",
+    "quote": "And it does the same thing to people in their rooms.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:44",
+      "quote": "I think it's the new part for the telescope."
+     }
+    ]
+   },
+   {
+    "value": "wolfsbane",
+    "state": "blooming",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:13:45",
+    "quote": "Oh, look! Wolfsbane.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pentagram charm",
+    "state": "worn over the heart",
+    "when": "middle",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "00:37:05",
+    "quote": "Wear this charm over your heart always.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hunting dogs",
+    "state": "barking, tracking him",
+    "when": "late",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:57:01",
+    "quote": "Hurry. The dogs. They are hunting you.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "return home after a death", "when": "opening", "quote": "Larry Talbot returns to his ancestral home in Llanwelly, Wales, to bury his recently deceased brother", "confidence": "sourced"},
-   {"order": 2, "value": "omen at a fortune telling", "when": "early", "role": "omen", "quote": "sees a pentagram when he examines Jenny's palm, and frantically sends her away", "confidence": "sourced"},
-   {"order": 3, "value": "hero bitten", "when": "early", "role": "trigger", "quote": "He kills the wolf with his new walking stick but is bitten on the chest", "confidence": "sourced"},
-   {"order": 4, "value": "curse explained", "when": "middle", "role": "turn", "quote": "Maleva, reveals to Larry that the wolf which bit him was Bela in the form of a wolf", "confidence": "sourced"},
-   {"order": 5, "value": "first transformation kill", "when": "middle", "quote": "Larry transforms into a humanoid wolf hybrid on the following night and kills a villager", "confidence": "sourced"},
-   {"order": 6, "value": "confession disbelieved", "when": "late", "quote": "his father thinks Larry is delusional and ties him to a chair", "confidence": "sourced"},
-   {"order": 7, "value": "father kills the monster", "when": "ending", "role": "turn", "quote": "Sir John bludgeons him over the head with Larry's silver-headed cane which Larry gave him", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "return home after a death",
+    "when": "opening",
+    "quote": "Larry Talbot returns to his ancestral home in Llanwelly, Wales, to bury his recently deceased brother",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:36",
+      "quote": "Welcome home, Larry."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "spying through a telescope",
+    "when": "opening",
+    "source": "subtitles",
+    "at": "00:15:19",
+    "quote": "And it does the same thing to people in their rooms.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "omen at a fortune telling",
+    "when": "early",
+    "role": "omen",
+    "quote": "sees a pentagram when he examines Jenny's palm, and frantically sends her away",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:52",
+      "quote": "Now go away. Go quickly."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "hero bitten",
+    "when": "early",
+    "role": "trigger",
+    "quote": "He kills the wolf with his new walking stick but is bitten on the chest",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:34",
+      "quote": "(JENNY SCREAMING)"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "curse explained",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Maleva, reveals to Larry that the wolf which bit him was Bela in the form of a wolf",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:17",
+      "quote": "Bela became a wolf, and you killed him."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "first transformation kill",
+    "when": "middle",
+    "quote": "Larry transforms into a humanoid wolf hybrid on the following night and kills a villager",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:04",
+      "quote": "(WOLF MAN HOWLING)"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "confession disbelieved",
+    "when": "late",
+    "quote": "his father thinks Larry is delusional and ties him to a chair",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:43",
+      "quote": "She's been filling your mind with this gibberish, this talk of werewolves and pentagrams."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "village hunt",
+    "when": "late",
+    "source": "subtitles",
+    "at": "01:01:16",
+    "quote": "They caught nothing in the traps, so now they're going to hunt the wolf.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "father kills the monster",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Sir John bludgeons him over the head with Larry's silver-headed cane which Larry gave him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:07",
+      "quote": "The way you walked was thorny, through no fault of your own."
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,56 +1,356 @@
 {
  "film": "2024-i-saw-the-tv-glow",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "false reality", "detail": "the Midnight Realm", "quote": "She explains that they are in fact in the Midnight Realm and that their true identities are those of Tara and Isabel", "confidence": "sourced"},
-   {"value": "the self", "detail": "a denied identity", "quote": "the moment in a transgender person's life upon realizing that their identity does not correspond to their assigned sex", "confidence": "sourced"}
+   {
+    "value": "false reality",
+    "detail": "the Midnight Realm",
+    "quote": "She explains that they are in fact in the Midnight Realm and that their true identities are those of Tara and Isabel",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the self",
+    "detail": "a denied identity",
+    "quote": "the moment in a transgender person's life upon realizing that their identity does not correspond to their assigned sex",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "television show", "quote": "two troubled high school students whose connection to their favorite television show drives them to question their reality and identities", "confidence": "sourced"}
+   {
+    "value": "television show",
+    "quote": "two troubled high school students whose connection to their favorite television show drives them to question their reality and identities",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "nothing stated", "quote": "the \"world is content to ignore his screams that something inside of him is dying\"", "confidence": "observed"}
+   {
+    "value": "nothing stated",
+    "quote": "the \"world is content to ignore his screams that something inside of him is dying\"",
+    "confidence": "observed"
+   },
+   {
+    "value": "to trap them forever",
+    "detail": "Mr. Melancholy, the show's villain",
+    "source": "screenplay",
+    "quote": "He wants to rule the world, to trap Isabel and Tara in The Midnight Realm.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Don't fight it. Let my poison work its magic. You're going to love the Midnight Realm - it's a wonderful prison."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "watching something", "quote": "isolated teenagers Owen and Maddy bond over the young adult television show The Pink Opaque", "confidence": "sourced"},
-   {"value": "a friend returns", "quote": "Maddy suddenly reappears one night and takes Owen to a bar", "confidence": "sourced"}
+   {
+    "value": "watching something",
+    "quote": "isolated teenagers Owen and Maddy bond over the young adult television show The Pink Opaque",
+    "confidence": "sourced"
+   },
+   {
+    "value": "a friend returns",
+    "quote": "Maddy suddenly reappears one night and takes Owen to a bar",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "escape by being buried alive", "quote": "Maddy then encourages Owen to allow her to bury him alive so that they may return to their reality", "confidence": "sourced"},
-   {"value": "memories disguised as tv", "quote": "the memories of their actual lives have manifested as episodes of a TV show", "confidence": "sourced"}
+   {
+    "value": "escape by being buried alive",
+    "quote": "Maddy then encourages Owen to allow her to bury him alive so that they may return to their reality",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "I paid this burnout kid who would always hit on me in the food court fifty dollars to bury me alive."
+     }
+    ]
+   },
+   {
+    "value": "memories disguised as tv",
+    "quote": "the memories of their actual lives have manifested as episodes of a TV show",
+    "confidence": "sourced"
+   },
+   {
+    "value": "forgetting that you are dying",
+    "source": "screenplay",
+    "quote": "Soon you won't remember anything. You won't even remember... that you're dying.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "isolated teenager", "relation_to_threat": "self", "detail": "Owen", "quote": "Over the next twenty years, both Owen's depression and asthma increasingly worsen", "confidence": "sourced"},
-   {"value": "friend", "relation_to_threat": "self", "detail": "Maddy", "quote": "paid a man to bury her alive; after suffocating, she awoke in The Pink Opaque as Tara", "confidence": "sourced"}
+   {
+    "value": "isolated teenager",
+    "relation_to_threat": "self",
+    "detail": "Owen",
+    "quote": "Over the next twenty years, both Owen's depression and asthma increasingly worsen",
+    "confidence": "sourced"
+   },
+   {
+    "value": "friend",
+    "relation_to_threat": "self",
+    "detail": "Maddy",
+    "quote": "paid a man to bury her alive; after suffocating, she awoke in The Pink Opaque as Tara",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "ambiguous", "quote": "cuts his chest open with a box cutter, smiling when he sees a TV screen inside of himself", "confidence": "sourced"},
-   {"value": "life unlived", "quote": "illustrative of their personal fears of potentially living out their life without having transitioned", "confidence": "sourced"}
+   {
+    "value": "ambiguous",
+    "quote": "cuts his chest open with a box cutter, smiling when he sees a TV screen inside of himself",
+    "confidence": "sourced"
+   },
+   {
+    "value": "life unlived",
+    "quote": "illustrative of their personal fears of potentially living out their life without having transitioned",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "television", "when": "opening", "role": "setting", "quote": "bond over the young adult television show The Pink Opaque", "confidence": "sourced"},
-   {"value": "videotapes", "when": "opening", "role": "clue", "quote": "she also provides him with tapes of the show when he misses it", "confidence": "sourced"},
-   {"value": "burial alive", "when": "middle", "role": "threat", "quote": "Mr. Melancholy's minions then bury Isabel and Tara alive before the episode abruptly ends", "confidence": "sourced"},
-   {"value": "head through tv screen", "when": "middle", "role": "turn", "quote": "attempts to stick his head through the TV screen before Frank pulls him out", "confidence": "sourced"},
-   {"value": "football field", "when": "late", "role": "setting", "quote": "She leads Owen to a football field to be buried", "confidence": "sourced"},
-   {"value": "box cutter", "when": "ending", "role": "weapon", "quote": "cuts his chest open with a box cutter", "confidence": "sourced"},
-   {"value": "tv screen inside the body", "when": "ending", "role": "symbol", "quote": "smiling when he sees a TV screen inside of himself", "confidence": "sourced"}
+   {
+    "value": "pink parachute",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "each holding onto their share of a big plastic PARACHUTE, colored vibrantly with those same pastel shades of pink and purple",
+    "confidence": "sourced"
+   },
+   {
+    "value": "television",
+    "when": "opening",
+    "role": "setting",
+    "quote": "bond over the young adult television show The Pink Opaque",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Owen now sits on the couch in his living room flipping channels on a television from the 1990s."
+     }
+    ]
+   },
+   {
+    "value": "videotapes",
+    "when": "opening",
+    "role": "clue",
+    "quote": "she also provides him with tapes of the show when he misses it",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ice cream truck",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "A smiling, animatronic SOFT-SERVE HEAD creaks and rotates in a circle, accompanied by an endless loop of anemic music box melody.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "chalk drawings",
+    "when": "opening",
+    "role": "symbol",
+    "source": "screenplay",
+    "quote": "A child's CHALK SCRIBBLINGS on the pavement, an epic pink and purple neon collage",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "handwritten pink: THERE IS STILL TIME"
+     }
+    ]
+   },
+   {
+    "value": "man in the moon",
+    "when": "early",
+    "role": "threat",
+    "source": "screenplay",
+    "quote": "It has a GRINNING FACE. Like from the old silent film 'A Trip to the Moon.'",
+    "confidence": "sourced"
+   },
+   {
+    "value": "burial alive",
+    "when": "middle",
+    "role": "threat",
+    "quote": "Mr. Melancholy's minions then bury Isabel and Tara alive before the episode abruptly ends",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Tara lying buried underground, covered in dirt, coughing violently."
+     }
+    ]
+   },
+   {
+    "value": "head through tv screen",
+    "when": "middle",
+    "role": "turn",
+    "quote": "attempts to stick his head through the TV screen before Frank pulls him out",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "He works to pull his son out from inside the TV screen."
+     }
+    ]
+   },
+   {
+    "value": "football field",
+    "when": "late",
+    "role": "setting",
+    "quote": "She leads Owen to a football field to be buried",
+    "confidence": "sourced"
+   },
+   {
+    "value": "broken inhaler",
+    "when": "ending",
+    "role": "symbol",
+    "source": "screenplay",
+    "quote": "The asthma inhaler is long broken, now. A stop-gap solution that no longer works...",
+    "confidence": "sourced"
+   },
+   {
+    "value": "box cutter",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "cuts his chest open with a box cutter",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The BOX CUTTER we saw him using earlier. Hand-shaking and desperate, he begins to slowly CUT INTO HIMSELF"
+     }
+    ]
+   },
+   {
+    "value": "tv screen inside the body",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "smiling when he sees a TV screen inside of himself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "A GLOWING LIGHT -- flickering blue, like the calibration screen on a television."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "bond over a tv show", "when": "opening", "quote": "isolated teenagers Owen and Maddy bond over the young adult television show The Pink Opaque", "confidence": "sourced"},
-   {"order": 2, "value": "refusal to run away", "when": "early", "role": "turn", "quote": "She expects Owen to join her, but he finds himself unable to go through with it and stays behind", "confidence": "sourced"},
-   {"order": 3, "value": "friend vanishes, mother dies", "when": "early", "quote": "Maddy goes missing, Owen's mother Brenda dies of cancer", "confidence": "sourced"},
-   {"order": 4, "value": "missing friend returns", "when": "middle", "role": "trigger", "quote": "Maddy suddenly reappears one night and takes Owen to a bar", "confidence": "sourced"},
-   {"order": 5, "value": "breakdown at the screen", "when": "middle", "quote": "Owen suffers a nervous breakdown and attempts to stick his head through the TV screen", "confidence": "sourced"},
-   {"order": 6, "value": "offer refused", "when": "late", "role": "turn", "quote": "he pushes her away and rushes home", "confidence": "sourced"},
-   {"order": 7, "value": "decades of decline", "when": "late", "quote": "Over the next twenty years, both Owen's depression and asthma increasingly worsen", "confidence": "sourced"},
-   {"order": 8, "value": "unheard scream", "when": "ending", "quote": "a now middle-aged Owen abruptly screams that he is \"dying\" and begs for help, though nobody reacts", "confidence": "sourced"}
+   {
+    "value": "boy wakes to being alive",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "Like he's just realized that he's alive, and that's a kind of horrifying realization.",
+    "confidence": "sourced",
+    "order": 1
+   },
+   {
+    "order": 2,
+    "value": "bond over a tv show",
+    "when": "opening",
+    "quote": "isolated teenagers Owen and Maddy bond over the young adult television show The Pink Opaque",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "TV ANNOUNCER (V.O.) (serious voice) Next week on The \"Pink Opaque...\""
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "refusal to run away",
+    "when": "early",
+    "role": "turn",
+    "quote": "She expects Owen to join her, but he finds himself unable to go through with it and stays behind",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "friend vanishes, mother dies",
+    "when": "early",
+    "quote": "Maddy goes missing, Owen's mother Brenda dies of cancer",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "missing friend returns",
+    "when": "middle",
+    "role": "trigger",
+    "quote": "Maddy suddenly reappears one night and takes Owen to a bar",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "breakdown at the screen",
+    "when": "middle",
+    "quote": "Owen suffers a nervous breakdown and attempts to stick his head through the TV screen",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "offer refused",
+    "when": "late",
+    "role": "turn",
+    "quote": "he pushes her away and rushes home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "This isn't the Midnight Realm, Maddy. It's just the suburbs."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "decades of decline",
+    "when": "late",
+    "quote": "Over the next twenty years, both Owen's depression and asthma increasingly worsen",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "unheard scream",
+    "when": "ending",
+    "quote": "a now middle-aged Owen abruptly screams that he is \"dying\" and begs for help, though nobody reacts",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "You need to help me! You need to help me!! I\"M DYING!! I'M DYING RIGHT NOW!!"
+     }
+    ]
+   },
+   {
+    "value": "body opened, then apologies",
+    "when": "ending",
+    "role": "turn",
+    "detail": "the screenplay ends on Owen apologising as he rushes through the arcade",
+    "source": "screenplay",
+    "quote": "Sorry about that before. I'm sorry about that. Just a new medication I'm on.",
+    "confidence": "sourced",
+    "order": 10
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

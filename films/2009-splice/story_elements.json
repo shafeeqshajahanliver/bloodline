@@ -1,65 +1,473 @@
 {
  "film": "2009-splice",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "created creature", "detail": "Dren, a human-animal hybrid", "quote": "resulting in the creation of a human–animal hybrid", "confidence": "sourced"},
-   {"value": "scientists", "detail": "Clive and Elsa's hubris", "quote": "Clive and Elsa follow their plans in secret and develop a viable prepubescent female creature", "confidence": "observed"}
+   {
+    "value": "created creature",
+    "detail": "Dren, a human-animal hybrid",
+    "quote": "resulting in the creation of a human–animal hybrid",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:29",
+      "quote": "Her name's Dren."
+     }
+    ]
+   },
+   {
+    "value": "scientists",
+    "detail": "Clive and Elsa's hubris",
+    "quote": "Clive and Elsa follow their plans in secret and develop a viable prepubescent female creature",
+    "confidence": "observed"
+   }
   ],
   "origin": [
-   {"value": "made by scientists", "quote": "attempt to introduce human DNA into their work of splicing animal genes", "confidence": "sourced"},
-   {"value": "from the mother's body", "quote": "the human DNA used to create Dren is not that of an anonymous donor, as Elsa told him, but Elsa's", "confidence": "sourced"}
+   {
+    "value": "made by scientists",
+    "quote": "attempt to introduce human DNA into their work of splicing animal genes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:55",
+      "quote": "By incorporating human DNA into the hybrid template"
+     }
+    ]
+   },
+   {
+    "value": "from the mother's body",
+    "quote": "the human DNA used to create Dren is not that of an anonymous donor, as Elsa told him, but Elsa's",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "freedom", "quote": "She grows bored of confinement", "confidence": "sourced"},
-   {"value": "to reproduce", "quote": "She offers a visibly pregnant Elsa a large sum of money to go through with the pregnancy", "confidence": "observed"}
+   {
+    "value": "freedom",
+    "quote": "She grows bored of confinement",
+    "confidence": "sourced"
+   },
+   {
+    "value": "to reproduce",
+    "quote": "She offers a visibly pregnant Elsa a large sum of money to go through with the pregnancy",
+    "confidence": "observed"
+   },
+   {
+    "value": "to mate with its maker",
+    "detail": "male Dren answers Elsa before raping her",
+    "source": "subtitles",
+    "at": "01:34:18",
+    "quote": "What do you want? What do you want? Inside you.",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "forbidden experiment", "quote": "Their employers Joan Chorot and William Barlow forbid this", "confidence": "sourced"},
-   {"value": "abuse of a child", "quote": "Elsa restrains her roughly and amputates the stinger", "confidence": "sourced"},
-   {"value": "incestuous sex", "quote": "While alone with each other, Dren and Clive have sex, much to Elsa's horror", "confidence": "observed"}
+   {
+    "value": "forbidden experiment",
+    "quote": "Their employers Joan Chorot and William Barlow forbid this",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:59",
+      "quote": "There are moral considerations."
+     }
+    ]
+   },
+   {
+    "value": "abuse of a child",
+    "quote": "Elsa restrains her roughly and amputates the stinger",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:39",
+      "quote": "So you cut off her tail?"
+     }
+    ]
+   },
+   {
+    "value": "incestuous sex",
+    "quote": "While alone with each other, Dren and Clive have sex, much to Elsa's horror",
+    "confidence": "observed"
+   }
   ],
   "trigger": [
-   {"value": "creating life", "quote": "Clive and Elsa plan to create a revolutionary human–animal hybrid", "confidence": "sourced"},
-   {"value": "ambition", "quote": "hope to achieve fame by splicing animal DNA to create hybrids", "confidence": "sourced"}
+   {
+    "value": "creating life",
+    "quote": "Clive and Elsa plan to create a revolutionary human–animal hybrid",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:46",
+      "quote": "We need to know if we can generate a sustainable embryo."
+     }
+    ]
+   },
+   {
+    "value": "ambition",
+    "quote": "hope to achieve fame by splicing animal DNA to create hybrids",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "rapid growth", "quote": "The hybrid physically ages much faster than humans and mentally develops like a human child", "confidence": "sourced"},
-   {"value": "changes sex", "quote": "Having spontaneously metamorphosed into a male, Dren rises from the grave", "confidence": "sourced"}
+   {
+    "value": "rapid growth",
+    "quote": "The hybrid physically ages much faster than humans and mentally develops like a human child",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:40",
+      "quote": "though her rapid growth should generate a proportionate appetite."
+     }
+    ]
+   },
+   {
+    "value": "changes sex",
+    "quote": "Having spontaneously metamorphosed into a male, Dren rises from the grave",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:19",
+      "quote": "It's the same thing that happened with Fred and Ginger."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "creators", "relation_to_threat": "family", "detail": "Clive and Elsa, as parents", "quote": "Elsa forms a motherly bond with Dren", "confidence": "sourced"},
-   {"value": "intruders", "relation_to_threat": "stranger", "detail": "Barlow and Gavin", "quote": "killing Barlow and Gavin before raping Elsa", "confidence": "sourced"},
-   {"value": "pet", "relation_to_threat": "unknown", "quote": "After Dren kills her pet cat with the stinger on her tail", "confidence": "sourced"}
+   {
+    "value": "creators",
+    "relation_to_threat": "family",
+    "detail": "Clive and Elsa, as parents",
+    "quote": "Elsa forms a motherly bond with Dren",
+    "confidence": "sourced"
+   },
+   {
+    "value": "intruders",
+    "relation_to_threat": "stranger",
+    "detail": "Barlow and Gavin",
+    "quote": "killing Barlow and Gavin before raping Elsa",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pet",
+    "relation_to_threat": "unknown",
+    "quote": "After Dren kills her pet cat with the stinger on her tail",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:32",
+      "quote": "She killed the cat."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "Elsa then kills Dren in retaliation", "confidence": "sourced"},
-   {"value": "threat lives on in a pregnancy", "quote": "She offers a visibly pregnant Elsa a large sum of money to go through with the pregnancy that Elsa accepts", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "Elsa then kills Dren in retaliation",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat lives on in a pregnancy",
+    "quote": "She offers a visibly pregnant Elsa a large sum of money to go through with the pregnancy that Elsa accepts",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:12",
+      "quote": "What's the worst that could happen?"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "worm creatures", "state": "fighting to death", "when": "early", "role": "omen", "quote": "At a publicized presentation, Fred and Ginger fight and kill each other", "confidence": "sourced"},
-   {"value": "toys spelling a word", "when": "early", "role": "symbol", "quote": "After it spells out NERD with toys after seeing the acronym on Elsa's shirt", "confidence": "sourced"},
-   {"value": "water tank", "state": "drowning", "when": "middle", "role": "turn", "quote": "Clive holds Dren underwater. This forces Dren to use her gills", "confidence": "sourced"},
-   {"value": "farm", "state": "isolated", "when": "middle", "role": "setting", "quote": "The couple moves Dren to the isolated farm where Elsa grew up", "confidence": "sourced"},
-   {"value": "cat", "state": "killed", "when": "late", "role": "omen", "quote": "Dren kills her pet cat with the stinger on her tail", "confidence": "sourced"},
-   {"value": "stinger", "state": "amputated", "when": "late", "role": "weapon", "quote": "amputates the stinger, then uses it to synthesize a protein", "confidence": "sourced"},
-   {"value": "wings", "state": "retractable", "when": "middle", "role": "symbol", "quote": "Dren reveals she has carnivorous tendencies and retractable wings", "confidence": "sourced"},
-   {"value": "grave", "when": "ending", "role": "turn", "quote": "Dren rises from the grave and attacks them", "confidence": "sourced"}
+   {
+    "value": "worm creatures",
+    "state": "fighting to death",
+    "when": "early",
+    "role": "omen",
+    "quote": "At a publicized presentation, Fred and Ginger fight and kill each other",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:39",
+      "quote": "Ginger, meet Fred. Fred, meet Ginger."
+     }
+    ]
+   },
+   {
+    "value": "toys spelling a word",
+    "when": "early",
+    "role": "symbol",
+    "quote": "After it spells out NERD with toys after seeing the acronym on Elsa's shirt",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:54",
+      "quote": "Yeah! I'm a nerd."
+     }
+    ]
+   },
+   {
+    "value": "water tank",
+    "state": "drowning",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Clive holds Dren underwater. This forces Dren to use her gills",
+    "confidence": "sourced"
+   },
+   {
+    "value": "farm",
+    "state": "isolated",
+    "when": "middle",
+    "role": "setting",
+    "quote": "The couple moves Dren to the isolated farm where Elsa grew up",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:13",
+      "quote": "I thought you said your mom left it just the way it was."
+     }
+    ]
+   },
+   {
+    "value": "cat",
+    "state": "killed",
+    "when": "late",
+    "role": "omen",
+    "quote": "Dren kills her pet cat with the stinger on her tail",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:23",
+      "quote": "[CAT MEOWS]"
+     }
+    ]
+   },
+   {
+    "value": "stinger",
+    "state": "amputated",
+    "when": "late",
+    "role": "weapon",
+    "quote": "amputates the stinger, then uses it to synthesize a protein",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:30",
+      "quote": "to remove her zootoxin glands and stinger."
+     }
+    ]
+   },
+   {
+    "value": "wings",
+    "state": "retractable",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "Dren reveals she has carnivorous tendencies and retractable wings",
+    "confidence": "sourced"
+   },
+   {
+    "value": "grave",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Dren rises from the grave and attacks them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "DREN. Covered in grave dirt. Resurrected. Transformed. MALE."
+     }
+    ]
+   },
+   {
+    "value": "birth seen from the womb",
+    "when": "opening",
+    "role": "mirror",
+    "source": "screenplay",
+    "quote": "We are experiencing the POV of an infant's birth.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rabbit",
+    "state": "killed and eaten",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:59:27",
+    "quote": "I'm sorry, is rabbit considered a vegetable?",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "forbidden experiment", "when": "opening", "role": "trigger", "quote": "Clive and Elsa follow their plans in secret and develop a viable prepubescent female creature", "confidence": "sourced"},
-   {"order": 2, "value": "decision to let it live", "when": "early", "quote": "Elsa persuades Clive to let it live", "confidence": "sourced"},
-   {"order": 3, "value": "earlier creations kill each other", "when": "early", "role": "omen", "quote": "Fred and Ginger fight and kill each other", "confidence": "sourced"},
-   {"order": 4, "value": "hidden on a farm", "when": "middle", "quote": "The couple moves Dren to the isolated farm where Elsa grew up", "confidence": "sourced"},
-   {"order": 5, "value": "secret origin revealed", "when": "middle", "role": "turn", "quote": "the human DNA used to create Dren is not that of an anonymous donor", "confidence": "sourced"},
-   {"order": 6, "value": "creature rises from grave", "when": "late", "quote": "Dren rises from the grave and attacks them, killing Barlow and Gavin before raping Elsa", "confidence": "sourced"},
-   {"order": 7, "value": "creature killed", "when": "late", "quote": "Elsa then kills Dren in retaliation", "confidence": "sourced"},
-   {"order": 8, "value": "pregnancy sold to company", "when": "ending", "quote": "She offers a visibly pregnant Elsa a large sum of money to go through with the pregnancy", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "birth that nearly fails",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:57",
+    "quote": "Wait. Dropping fast. BP's dropping fast.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "We are experiencing the POV of an infant's birth."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "forbidden experiment",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Clive and Elsa follow their plans in secret and develop a viable prepubescent female creature",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:46",
+      "quote": "We need to know if we can generate a sustainable embryo."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "decision to let it live",
+    "when": "early",
+    "quote": "Elsa persuades Clive to let it live",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "earlier creations kill each other",
+    "when": "early",
+    "role": "omen",
+    "quote": "Fred and Ginger fight and kill each other",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:57",
+      "quote": "[CROWD GASPS THEN CHATTERS]"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "hidden on a farm",
+    "when": "middle",
+    "quote": "The couple moves Dren to the isolated farm where Elsa grew up",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "secret origin revealed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "the human DNA used to create Dren is not that of an anonymous donor",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "creature rises from grave",
+    "when": "late",
+    "quote": "Dren rises from the grave and attacks them, killing Barlow and Gavin before raping Elsa",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:59",
+      "quote": "[DREN SQUEALING THEN BARLOW SCREAMING]"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "threat says what it wants",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:34:18",
+    "quote": "What do you want? What do you want? Inside you.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "creature killed",
+    "when": "late",
+    "quote": "Elsa then kills Dren in retaliation",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:39",
+      "quote": "[ELSA SCREAMS THEN DREN SQUEALS]"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "pregnancy sold to company",
+    "when": "ending",
+    "quote": "She offers a visibly pregnant Elsa a large sum of money to go through with the pregnancy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:05",
+      "quote": "We think the figure we've come up with is very generous."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "earlier line repeated",
+    "detail": "Clive's joke about male pregnancy returns as the final question",
+    "when": "ending",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:39:12",
+    "quote": "What's the worst that could happen?",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:02",
+      "quote": "What's the worst that can happen?"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

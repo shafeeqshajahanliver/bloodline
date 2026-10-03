@@ -1,64 +1,476 @@
 {
  "film": "2019-ready-or-not",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "wealthy family", "detail": "the Le Domases", "quote": "a young bride who is hunted by her spouse's wealthy family as part of a wedding night ritual", "confidence": "sourced"},
-   {"value": "devil's bargain", "detail": "Le Bail", "quote": "Victor Le Domas made a deal with someone named \"Le Bail\" to build the Le Domas fortune", "confidence": "sourced"}
+   {
+    "value": "wealthy family",
+    "detail": "the Le Domases",
+    "quote": "a young bride who is hunted by her spouse's wealthy family as part of a wedding night ritual",
+    "confidence": "sourced"
+   },
+   {
+    "value": "devil's bargain",
+    "detail": "Le Bail",
+    "quote": "Victor Le Domas made a deal with someone named \"Le Bail\" to build the Le Domas fortune",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:45",
+      "quote": "No, you don't fuck Mr. Le Bail. Mr. Le Bail fucks you."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "pact for wealth", "quote": "made a deal with someone named \"Le Bail\" to build the Le Domas fortune in exchange for the family observing a tradition", "confidence": "sourced"}
+   {
+    "value": "pact for wealth",
+    "quote": "made a deal with someone named \"Le Bail\" to build the Le Domas fortune in exchange for the family observing a tradition",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:51",
+      "quote": "Our family has a very special friend named Mr. Le Bail. Mr. Le Bail is the reason we have all the nice things we have."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "sacrifice", "quote": "the rest must find and ritually sacrifice them before dawn, or they die instead", "confidence": "sourced"},
-   {"value": "to keep wealth", "quote": "to build the Le Domas fortune in exchange for the family observing a tradition", "confidence": "observed"}
+   {
+    "value": "sacrifice",
+    "quote": "the rest must find and ritually sacrifice them before dawn, or they die instead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:59",
+      "quote": "We must kill the bride by dawn."
+     }
+    ]
+   },
+   {
+    "value": "to keep wealth",
+    "quote": "to build the Le Domas fortune in exchange for the family observing a tradition",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "deal with a dark power", "quote": "made a deal with someone named \"Le Bail\"", "confidence": "sourced"},
-   {"value": "past ritual murder", "quote": "The card was last drawn by Helene's husband, Charles, who was then found and murdered", "confidence": "sourced"}
+   {
+    "value": "deal with a dark power",
+    "quote": "made a deal with someone named \"Le Bail\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:26",
+      "quote": "Mr. Le Bail proposed a wager. If Great-Grandfather could solve the mystery of the box"
+     }
+    ]
+   },
+   {
+    "value": "past ritual murder",
+    "quote": "The card was last drawn by Helene's husband, Charles, who was then found and murdered",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "marrying into a family", "quote": "at midnight on their wedding day every new member draws a game card from Le Bail's puzzle box", "confidence": "sourced"},
-   {"value": "drawing a card", "quote": "Grace draws \"Hide-and-Seek\". Believing it to be a harmless game", "confidence": "sourced"}
+   {
+    "value": "marrying into a family",
+    "quote": "at midnight on their wedding day every new member draws a game card from Le Bail's puzzle box",
+    "confidence": "sourced"
+   },
+   {
+    "value": "drawing a card",
+    "quote": "Grace draws \"Hide-and-Seek\". Believing it to be a harmless game",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:59",
+      "quote": "It says, \" hide and seek. \" Are we really gonna play that?"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "sacrifice before dawn", "quote": "the rest must find and ritually sacrifice them before dawn, or they die instead", "confidence": "sourced"},
-   {"value": "family dies if ritual fails", "quote": "The remaining members of the family explode one by one", "confidence": "sourced"}
+   {
+    "value": "sacrifice before dawn",
+    "quote": "the rest must find and ritually sacrifice them before dawn, or they die instead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:43",
+      "quote": "If we don't find her and perform the ritual before dawn, we're all dead."
+     }
+    ]
+   },
+   {
+    "value": "family dies if ritual fails",
+    "quote": "The remaining members of the family explode one by one",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:25",
+      "quote": "Do you realize that if she lives till dawn, that we're all gonna die? You all remember what happened to the Van Horns, right?"
+     }
+    ]
+   },
+   {
+    "value": "a card chooses the game",
+    "source": "subtitles",
+    "at": "00:20:08",
+    "quote": "Our initiate then has the privilege of drawing the card, and Mr. Le Bail will tell us which game to play.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "bride", "relation_to_threat": "family", "detail": "Grace, a former foster child", "quote": "is set to marry Grace MacCaullay, a former foster child", "confidence": "sourced"},
-   {"value": "servants", "relation_to_threat": "community", "quote": "Emilie accidentally kills another maid in the chaos", "confidence": "sourced"},
-   {"value": "past in-law", "relation_to_threat": "family", "detail": "Charles", "quote": "Charles is shot with a speargun and dragged away into a locked room", "confidence": "sourced"}
+   {
+    "value": "bride",
+    "relation_to_threat": "family",
+    "detail": "Grace, a former foster child",
+    "quote": "is set to marry Grace MacCaullay, a former foster child",
+    "confidence": "sourced"
+   },
+   {
+    "value": "servants",
+    "relation_to_threat": "community",
+    "quote": "Emilie accidentally kills another maid in the chaos",
+    "confidence": "sourced"
+   },
+   {
+    "value": "past in-law",
+    "relation_to_threat": "family",
+    "detail": "Charles",
+    "quote": "Charles is shot with a speargun and dragged away into a locked room",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "curse destroys the guilty", "quote": "she explodes into pieces, revealing the curse to actually be true", "confidence": "sourced"},
-   {"value": "final girl survives", "quote": "The sole survivor of the night, a blood-covered Grace, walks out of the burning manor", "confidence": "sourced"}
+   {
+    "value": "curse destroys the guilty",
+    "quote": "she explodes into pieces, revealing the curse to actually be true",
+    "confidence": "sourced"
+   },
+   {
+    "value": "final girl survives",
+    "quote": "The sole survivor of the night, a blood-covered Grace, walks out of the burning manor",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "masks and robes", "state": "ceremonial", "when": "opening", "role": "omen", "quote": "who arrive in ceremonial masks and robes", "confidence": "sourced"},
-   {"value": "speargun", "when": "opening", "role": "weapon", "quote": "Charles is shot with a speargun", "confidence": "sourced"},
-   {"value": "puzzle box", "when": "early", "role": "trigger", "quote": "draws a game card from Le Bail's puzzle box", "confidence": "sourced"},
-   {"value": "goat", "state": "startling", "when": "middle", "role": "omen", "quote": "is startled by a goat and falls into a pit filled with the remains", "confidence": "sourced"},
-   {"value": "pit of remains", "when": "middle", "role": "clue", "quote": "a pit filled with the remains of the Le Domases' previous sacrifices", "confidence": "sourced"},
-   {"value": "ritual cup", "state": "poisoned", "when": "late", "role": "turn", "quote": "a non-lethal dose of hydrochloric acid in the ritual cup", "confidence": "sourced"},
-   {"value": "axe", "when": "ending", "role": "weapon", "quote": "as soon as Helene attempts to kill her with an axe, she explodes into pieces", "confidence": "sourced"},
-   {"value": "wedding ring", "state": "tossed back", "when": "ending", "role": "symbol", "quote": "She refuses and tosses her ring back, declaring she wants a divorce", "confidence": "sourced"},
-   {"value": "burning mansion", "when": "ending", "role": "setting", "quote": "walks out of the burning manor just as the police arrive", "confidence": "sourced"}
+   {
+    "value": "masks and robes",
+    "state": "ceremonial",
+    "when": "opening",
+    "role": "omen",
+    "quote": "who arrive in ceremonial masks and robes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The robed figures wear identical devil-like masks; reminiscent of the logo, but terrifying."
+     }
+    ]
+   },
+   {
+    "value": "speargun",
+    "when": "opening",
+    "role": "weapon",
+    "quote": "Charles is shot with a speargun",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "One of the masked figures fires another spear from a SPEAR GUN into the man’s chest."
+     }
+    ]
+   },
+   {
+    "value": "puzzle box",
+    "when": "early",
+    "role": "trigger",
+    "quote": "draws a game card from Le Bail's puzzle box",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:47",
+      "quote": "(box clicking, whirring)"
+     }
+    ]
+   },
+   {
+    "value": "goat",
+    "state": "startling",
+    "when": "middle",
+    "role": "omen",
+    "quote": "is startled by a goat and falls into a pit filled with the remains",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:07",
+      "quote": "(goat bleating)"
+     }
+    ]
+   },
+   {
+    "value": "pit of remains",
+    "when": "middle",
+    "role": "clue",
+    "quote": "a pit filled with the remains of the Le Domases' previous sacrifices",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ritual cup",
+    "state": "poisoned",
+    "when": "late",
+    "role": "turn",
+    "quote": "a non-lethal dose of hydrochloric acid in the ritual cup",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:47",
+      "quote": "Stuff we poured on the maids. White bottle, little red cap. Hydrochloric acid!"
+     }
+    ]
+   },
+   {
+    "value": "axe",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "as soon as Helene attempts to kill her with an axe, she explodes into pieces",
+    "confidence": "sourced"
+   },
+   {
+    "value": "wedding ring",
+    "state": "tossed back",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "She refuses and tosses her ring back, declaring she wants a divorce",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:24",
+      "quote": "I want a divorce."
+     }
+    ]
+   },
+   {
+    "value": "burning mansion",
+    "when": "ending",
+    "role": "setting",
+    "quote": "walks out of the burning manor just as the police arrive",
+    "confidence": "sourced"
+   },
+   {
+    "value": "devil-faced playing cards",
+    "when": "opening",
+    "role": "symbol",
+    "source": "screenplay",
+    "quote": "CLOSE ON the image of an impish, devil-like face. Pull back to reveal that it’s the logo on a deck of antique PLAYING CARDS",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hide-and-seek song",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:22:58",
+    "quote": "MAN (on phonograph): Who wants to play a game? It's time for hide and seek.",
+    "confidence": "sourced",
+    "detail": "a phonograph record counts down; it plays again as the family dies",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:01",
+      "quote": "MAN (on phonograph): Who wants to play a game?"
+     }
+    ]
+   },
+   {
+    "value": "empty chair at the table",
+    "when": "early",
+    "role": "symbol",
+    "source": "screenplay",
+    "quote": "He stares at the EMPTY CHAIR at the head of the long DINING TABLE, troubled.",
+    "confidence": "sourced",
+    "detail": "Le Bail's seat, which only Alex claims to have seen him in",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:07",
+      "quote": "who has ever seen Mr. Le Bail in his chair?"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "past victim hunted", "when": "opening", "role": "omen", "quote": "Charles is shot with a speargun and dragged away into a locked room", "confidence": "sourced"},
-   {"order": 2, "value": "wedding night tradition", "when": "early", "role": "trigger", "quote": "Grace draws \"Hide-and-Seek\". Believing it to be a harmless game", "confidence": "sourced"},
-   {"order": 3, "value": "first accidental death", "when": "early", "quote": "witnesses Emilie accidentally kill a maid whom she mistakes for Grace", "confidence": "sourced"},
-   {"order": 4, "value": "curse explained", "when": "early", "role": "turn", "quote": "Alex reveals that his family is cursed", "confidence": "sourced"},
-   {"order": 5, "value": "pit of past victims", "when": "middle", "role": "clue", "quote": "falls into a pit filled with the remains of the Le Domases' previous sacrifices, including that of Charles", "confidence": "sourced"},
-   {"order": 6, "value": "husband betrays bride", "when": "late", "role": "turn", "quote": "subdues her to complete the ritual", "confidence": "sourced"},
-   {"order": 7, "value": "dawn: family explodes", "when": "ending", "quote": "The remaining members of the family explode one by one", "confidence": "sourced"},
-   {"order": 8, "value": "survivor's quip", "when": "ending", "quote": "when asked what has happened to her, she simply replies, \"In-laws.\"", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "past victim hunted",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Charles is shot with a speargun and dragged away into a locked room",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:18",
+      "quote": "Daniel, please. They're trying to kill me."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "opening wedding vows",
+    "when": "opening",
+    "source": "subtitles",
+    "at": "00:03:15",
+    "quote": "GRACE: To have and to hold. From this day forward.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "warning to flee",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:05:30",
+    "quote": "It's not too late to flee, you know. You don't belong in this family.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "wedding night tradition",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Grace draws \"Hide-and-Seek\". Believing it to be a harmless game",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:03",
+      "quote": "we place a blank playing card into the box. Our initiate then has the privilege of drawing the card,"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "first accidental death",
+    "when": "early",
+    "quote": "witnesses Emilie accidentally kill a maid whom she mistakes for Grace",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:04",
+      "quote": "Guys, I found her!"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "curse explained",
+    "when": "early",
+    "role": "turn",
+    "quote": "Alex reveals that his family is cursed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:51",
+      "quote": "Hide and seek. You pulled the one bad card. They think... They think they have to kill you before sunrise."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "pit of past victims",
+    "when": "middle",
+    "role": "clue",
+    "quote": "falls into a pit filled with the remains of the Le Domases' previous sacrifices, including that of Charles",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:13",
+      "quote": "(flies buzzing)"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "husband betrays bride",
+    "when": "late",
+    "role": "turn",
+    "quote": "subdues her to complete the ritual",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "dawn: family explodes",
+    "when": "ending",
+    "quote": "The remaining members of the family explode one by one",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The girl still dies-- Helene explodes. Bones, organs, blood, and viscera cover the family."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "survivor's quip",
+    "when": "ending",
+    "quote": "when asked what has happened to her, she simply replies, \"In-laws.\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:41",
+      "quote": "Jesus Christ, what happened to you? In-laws."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "closing laugh",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:35:12",
+    "quote": "MAN: Ready or not, here I come.",
+    "confidence": "sourced",
+    "detail": "Le Bail's voice after the credits"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,66 +1,494 @@
 {
  "film": "1968-rosemary-s-baby",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "cult", "detail": "the Castevets' Satanic coven in the Bramford", "quote": "She suspects the Castevets belong to a Satanic coven and have sinister plans for her baby", "confidence": "sourced"},
-   {"value": "devil's child", "quote": "he is not Guy's son but Satan's son", "confidence": "sourced"},
-   {"value": "complicit husband", "detail": "Guy trades Rosemary for his career", "quote": "Rosemary calls the blinded actor, and confirms that Guy visited him and took one of his neckties", "confidence": "observed"}
+   {
+    "value": "cult",
+    "detail": "the Castevets' Satanic coven in the Bramford",
+    "quote": "She suspects the Castevets belong to a Satanic coven and have sinister plans for her baby",
+    "confidence": "sourced"
+   },
+   {
+    "value": "devil's child",
+    "quote": "he is not Guy's son but Satan's son",
+    "confidence": "sourced"
+   },
+   {
+    "value": "complicit husband",
+    "detail": "Guy trades Rosemary for his career",
+    "quote": "Rosemary calls the blinded actor, and confirms that Guy visited him and took one of his neckties",
+    "confidence": "observed"
+   }
   ],
   "origin": [
-   {"value": "satanists among neighbours", "quote": "begins to suspect that her neighbors have sinister intentions regarding her and her baby", "confidence": "sourced"},
-   {"value": "building's dark past", "quote": "their friend Hutch's warning about the Bramford's dark past involving witchcraft and murder", "confidence": "sourced"}
+   {
+    "value": "satanists among neighbours",
+    "quote": "begins to suspect that her neighbors have sinister intentions regarding her and her baby",
+    "confidence": "sourced"
+   },
+   {
+    "value": "building's dark past",
+    "quote": "their friend Hutch's warning about the Bramford's dark past involving witchcraft and murder",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "a child for the devil", "quote": "the child that resulted is destined to lead the Satanists in a revolt against all who oppose their beliefs", "confidence": "sourced"},
-   {"value": "success", "detail": "Guy's acting career", "quote": "When Guy tries to calm Rosemary by claiming they will be generously rewarded", "confidence": "observed"}
+   {
+    "value": "a child for the devil",
+    "quote": "the child that resulted is destined to lead the Satanists in a revolt against all who oppose their beliefs",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:11:05",
+      "quote": "Out of all the women in the whole world, he chose you."
+     }
+    ]
+   },
+   {
+    "value": "success",
+    "detail": "Guy's acting career",
+    "quote": "When Guy tries to calm Rosemary by claiming they will be generously rewarded",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "rape", "detail": "drugged and raped by a demonic presence", "quote": "experiences a dreamlike vision in which a demonic presence rapes her as Guy, the Castevets, and other Bramford tenants", "confidence": "sourced"},
-   {"value": "betrayal by spouse", "quote": "making her fear that Guy may be conspiring with the Castevets", "confidence": "sourced"}
+   {
+    "value": "rape",
+    "detail": "drugged and raped by a demonic presence",
+    "quote": "experiences a dreamlike vision in which a demonic presence rapes her as Guy, the Castevets, and other Bramford tenants",
+    "confidence": "sourced"
+   },
+   {
+    "value": "betrayal by spouse",
+    "quote": "making her fear that Guy may be conspiring with the Castevets",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "moving into a new home", "quote": "Guy and Rosemary Woodhouse rent a recently vacated apartment in the Bramford, a large Gothic building in New York City", "confidence": "sourced"},
-   {"value": "pregnancy", "quote": "a newlywed living in Manhattan who becomes pregnant", "confidence": "sourced"}
+   {
+    "value": "moving into a new home",
+    "quote": "Guy and Rosemary Woodhouse rent a recently vacated apartment in the Bramford, a large Gothic building in New York City",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pregnancy",
+    "quote": "a newlywed living in Manhattan who becomes pregnant",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "spell needs victim's belonging", "quote": "a coven needs an item that belongs to their intended victim in order to perform their harmful spells", "confidence": "sourced"},
-   {"value": "name hides identity", "quote": "Roman Castevet is an anagram for Steven Marcato", "confidence": "sourced"},
-   {"value": "drugged food", "quote": "Guy chastises Rosemary for complaining hers has a chalky \"under-taste\"", "confidence": "observed"}
+   {
+    "value": "spell needs victim's belonging",
+    "quote": "a coven needs an item that belongs to their intended victim in order to perform their harmful spells",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:37:34",
+      "quote": "without one of the victim's belongings."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:48:59",
+      "quote": "Took his glove. And they put a spell on him too."
+     }
+    ]
+   },
+   {
+    "value": "name hides identity",
+    "quote": "Roman Castevet is an anagram for Steven Marcato",
+    "confidence": "sourced"
+   },
+   {
+    "value": "drugged food",
+    "quote": "Guy chastises Rosemary for complaining hers has a chalky \"under-taste\"",
+    "confidence": "observed"
+   }
   ],
   "who_suffers": [
-   {"value": "pregnant woman", "relation_to_threat": "family", "detail": "Rosemary", "quote": "During her first trimester, Rosemary suffers severe abdominal pains and loses weight", "confidence": "sourced"},
-   {"value": "friend who investigates", "relation_to_threat": "stranger", "detail": "Hutch", "quote": "Hutch fell into a mysterious coma the night before", "confidence": "sourced"},
-   {"value": "earlier victim", "relation_to_threat": "stranger", "detail": "Terry Gionoffrio", "quote": "One night, Terry apparently jumps to her death from the Castevets' seventh-floor apartment", "confidence": "sourced"}
+   {
+    "value": "pregnant woman",
+    "relation_to_threat": "family",
+    "detail": "Rosemary",
+    "quote": "During her first trimester, Rosemary suffers severe abdominal pains and loses weight",
+    "confidence": "sourced"
+   },
+   {
+    "value": "friend who investigates",
+    "relation_to_threat": "stranger",
+    "detail": "Hutch",
+    "quote": "Hutch fell into a mysterious coma the night before",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:47",
+      "quote": "He's in a deep coma at St. Vincent's Hospital."
+     }
+    ]
+   },
+   {
+    "value": "earlier victim",
+    "relation_to_threat": "stranger",
+    "detail": "Terry Gionoffrio",
+    "quote": "One night, Terry apparently jumps to her death from the Castevets' seventh-floor apartment",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat wins", "quote": "the child that resulted is destined to lead the Satanists in a revolt", "confidence": "observed"},
-   {"value": "victim accepts the evil", "detail": "Rosemary rocks the cradle", "quote": "after hearing the infant's cries, she tenderly begins to rock the cradle", "confidence": "sourced"}
+   {
+    "value": "threat wins",
+    "quote": "the child that resulted is destined to lead the Satanists in a revolt",
+    "confidence": "observed"
+   },
+   {
+    "value": "victim accepts the evil",
+    "detail": "Rosemary rocks the cradle",
+    "quote": "after hearing the infant's cries, she tenderly begins to rock the cradle",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "pendant", "state": "pungent tannis root", "when": "early", "role": "omen", "quote": "Rosemary admires a pendant necklace the Castevets gave to Terry but dislikes its pungent odor", "confidence": "sourced"},
-   {"value": "chocolate mousse", "state": "drugged", "when": "early", "role": "trigger", "quote": "Minnie brings them individual cups of chocolate mousse", "confidence": "sourced"},
-   {"value": "scratches", "when": "early", "role": "clue", "quote": "The next morning, Rosemary's body is covered in scratches", "confidence": "sourced"},
-   {"value": "book on witchcraft", "when": "late", "role": "clue", "quote": "told Grace to give Rosemary a book on witchcraft along with the cryptic message", "confidence": "sourced"},
-   {"value": "necktie", "state": "taken", "when": "late", "role": "clue", "quote": "Guy visited him and took one of his neckties", "confidence": "sourced"},
-   {"value": "hidden door", "when": "ending", "role": "turn", "quote": "discovers a hidden door leading into the apartment", "confidence": "sourced"},
-   {"value": "cradle", "when": "ending", "role": "symbol", "quote": "gathered around a cradle as if celebrating", "confidence": "sourced"},
-   {"value": "eyes", "state": "demonic", "when": "ending", "role": "turn", "quote": "the child has eyes that recall the demonic figure she saw in her vision", "confidence": "sourced"}
+   {
+    "value": "pendant",
+    "state": "pungent tannis root",
+    "when": "early",
+    "role": "omen",
+    "quote": "Rosemary admires a pendant necklace the Castevets gave to Terry but dislikes its pungent odor",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:34",
+      "quote": "Yeah. The green inside is called tannis root."
+     }
+    ]
+   },
+   {
+    "value": "chocolate mousse",
+    "state": "drugged",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Minnie brings them individual cups of chocolate mousse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:22",
+      "quote": "Mousse au chocolat... or as Minnie calls it..."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:40:12",
+      "quote": "A chalky under-taste."
+     }
+    ]
+   },
+   {
+    "value": "scratches",
+    "when": "early",
+    "role": "clue",
+    "quote": "The next morning, Rosemary's body is covered in scratches",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "sees more scratches, seven or eight going this way and that."
+     }
+    ]
+   },
+   {
+    "value": "book on witchcraft",
+    "when": "late",
+    "role": "clue",
+    "quote": "told Grace to give Rosemary a book on witchcraft along with the cryptic message",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:28",
+      "quote": "All of them... All of Them Witches."
+     }
+    ]
+   },
+   {
+    "value": "necktie",
+    "state": "taken",
+    "when": "late",
+    "role": "clue",
+    "quote": "Guy visited him and took one of his neckties",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:38:44",
+      "quote": "You... You don't mean my tie, do you?"
+     }
+    ]
+   },
+   {
+    "value": "hidden door",
+    "when": "ending",
+    "role": "turn",
+    "quote": "discovers a hidden door leading into the apartment",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:37",
+      "quote": "There's a closet behind that secretary."
+     }
+    ]
+   },
+   {
+    "value": "cradle",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "gathered around a cradle as if celebrating",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "stands a black bassinet, skirted with black taffeta, hooded and flounced with black organza"
+     }
+    ]
+   },
+   {
+    "value": "eyes",
+    "state": "demonic",
+    "when": "ending",
+    "role": "turn",
+    "quote": "the child has eyes that recall the demonic figure she saw in her vision",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:10:19",
+      "quote": "What have you done to its eyes?"
+     },
+     {
+      "source": "subtitles",
+      "at": "02:10:21",
+      "quote": "He has his father's eyes."
+     }
+    ]
+   },
+   {
+    "value": "dead infant in basement",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:08:34",
+    "quote": "In' 59, a dead infant was found...",
+    "detail": "Hutch's history of the 'Black Bramford', with child-eating sisters and Adrian Marcato",
+    "confidence": "sourced"
+   },
+   {
+    "value": "chanting through the wall",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:15:48",
+    "quote": "[Ritualistic Chanting]",
+    "detail": "chanting and a recorder heard from the Castevets' apartment",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:13",
+      "quote": "[Chanting In Foreign Language]"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "neighbour's piano",
+    "state": "Für Elise, recurring",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:04:16",
+    "quote": "[Piano: \" Für Elise \"]",
+    "detail": "a piano somewhere in the building plays Für Elise throughout",
+    "confidence": "observed"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "moving in despite warning", "when": "opening", "quote": "Guy and Rosemary ignore their friend Hutch's warning about the Bramford's dark past", "confidence": "sourced"},
-   {"order": 2, "value": "earlier victim dies", "when": "early", "role": "omen", "quote": "Terry apparently jumps to her death from the Castevets' seventh-floor apartment", "confidence": "sourced"},
-   {"order": 3, "value": "drugged and raped", "when": "early", "role": "trigger", "quote": "She passes out and experiences a dreamlike vision in which a demonic presence rapes her", "confidence": "sourced"},
-   {"order": 4, "value": "pregnancy brings pain", "when": "middle", "quote": "Rosemary suffers severe abdominal pains and loses weight", "confidence": "sourced"},
-   {"order": 5, "value": "investigator struck down", "when": "middle", "quote": "Hutch fell into a mysterious coma the night before", "confidence": "sourced"},
-   {"order": 6, "value": "coven revealed", "when": "late", "role": "turn", "quote": "Rosemary studies the book and deduces that Roman Castevet is an anagram for Steven Marcato", "confidence": "sourced"},
-   {"order": 7, "value": "captured and baby taken", "when": "late", "quote": "When she awakens, she is told the baby was stillborn", "confidence": "sourced"},
-   {"order": 8, "value": "mother accepts devil's child", "when": "ending", "quote": "Roman gently urges her to be a mother to the child", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "opening lullaby",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:26",
+    "quote": "[Woman Vocalizing]",
+    "detail": "wordless lullaby over the New York skyline",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "moving in despite warning",
+    "when": "opening",
+    "quote": "Guy and Rosemary ignore their friend Hutch's warning about the Bramford's dark past",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:31",
+      "quote": "Are you aware that the Bramford had rather an unpleasant reputation..."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "earlier victim dies",
+    "when": "early",
+    "role": "omen",
+    "quote": "Terry apparently jumps to her death from the Castevets' seventh-floor apartment",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:28",
+      "quote": "She's dead. Jumped out of the window."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "drugged and raped",
+    "when": "early",
+    "role": "trigger",
+    "quote": "She passes out and experiences a dreamlike vision in which a demonic presence rapes her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:59",
+      "quote": "This is no dream! This is really happening!"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "pregnancy brings pain",
+    "when": "middle",
+    "quote": "Rosemary suffers severe abdominal pains and loses weight",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:51",
+      "quote": "You have been in pain since November..."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "investigator struck down",
+    "when": "middle",
+    "quote": "Hutch fell into a mysterious coma the night before",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:47",
+      "quote": "He's in a deep coma at St. Vincent's Hospital."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "coven revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Rosemary studies the book and deduces that Roman Castevet is an anagram for Steven Marcato",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:10",
+      "quote": "Oh, and I'm to tell you: The name is an anagram."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "captured and baby taken",
+    "when": "late",
+    "quote": "When she awakens, she is told the baby was stillborn",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:00:14",
+      "quote": "There were complications, Rosemary, but nothing that will affect future births."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "coven hails the child",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "02:10:58",
+    "quote": "Hail, Adrian!",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:11:36",
+      "quote": "Satan lives! The year is One!"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "mother accepts devil's child",
+    "when": "ending",
+    "quote": "Roman gently urges her to be a mother to the child",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:11:53",
+      "quote": "Be a real mother to Adrian. You don't have to join if you don't want to."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "closing lullaby",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "02:15:50",
+    "quote": "[Rosemary Vocalizing]",
+    "detail": "the opening lullaby returns over the end",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

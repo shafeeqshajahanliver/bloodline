@@ -1,63 +1,434 @@
 {
  "film": "1953-ugetsu",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "seductive ghost", "detail": "Lady Wakasa, last of the Kutsuki clan", "quote": "Wakasa and her servant concede that they are spirits", "confidence": "sourced"},
-   {"value": "war", "detail": "armies and soldiers sweeping the countryside", "quote": "soldiers desperately searching for food accost Miyagi and stab her", "confidence": "observed"}
+   {
+    "value": "seductive ghost",
+    "detail": "Lady Wakasa, last of the Kutsuki clan",
+    "quote": "Wakasa and her servant concede that they are spirits",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:10",
+      "quote": "She is a spirit of the dead."
+     }
+    ]
+   },
+   {
+    "value": "war",
+    "detail": "armies and soldiers sweeping the countryside",
+    "quote": "soldiers desperately searching for food accost Miyagi and stab her",
+    "confidence": "observed"
+   }
   ],
   "origin": [
-   {"value": "person who died wronged", "detail": "Wakasa, slain before experiencing love", "quote": "returned to this world so Wakasa, who was slain before experiencing love, could fulfill that desire", "confidence": "sourced"}
+   {
+    "value": "person who died wronged",
+    "detail": "Wakasa, slain before experiencing love",
+    "quote": "returned to this world so Wakasa, who was slain before experiencing love, could fulfill that desire",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "love denied in life", "quote": "Wakasa, who was slain before experiencing love, could fulfill that desire", "confidence": "sourced"},
-   {"value": "to keep the living", "quote": "Wakasa attempts to stop him from leaving but cannot touch him", "confidence": "observed"}
+   {
+    "value": "love denied in life",
+    "quote": "Wakasa, who was slain before experiencing love, could fulfill that desire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:29",
+      "quote": "Lady Wakasa departed this world without ever having known love in her life."
+     }
+    ]
+   },
+   {
+    "value": "to keep the living",
+    "quote": "Wakasa attempts to stop him from leaving but cannot touch him",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:48",
+      "quote": "By swearing your love for Lady Wakasa, and pledging your troth to her at once."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "neglecting family for ambition", "detail": "Genjūrō and Tōbei chase profit and glory", "quote": "by neglecting his family, Genjūrō failed to appreciate he has already been blessed with a good life", "confidence": "sourced"},
-   {"value": "massacre", "detail": "the Kutsuki clan slaughtered by Oda Nobunaga's army", "quote": "the only survivors of the Kutsuki clan following a massacre by Oda Nobunaga's army", "confidence": "sourced"}
+   {
+    "value": "neglecting family for ambition",
+    "detail": "Genjūrō and Tōbei chase profit and glory",
+    "quote": "by neglecting his family, Genjūrō failed to appreciate he has already been blessed with a good life",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:38",
+      "quote": "The war drove us mad with ambition."
+     }
+    ]
+   },
+   {
+    "value": "massacre",
+    "detail": "the Kutsuki clan slaughtered by Oda Nobunaga's army",
+    "quote": "the only survivors of the Kutsuki clan following a massacre by Oda Nobunaga's army",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "a journey for profit", "quote": "a potter leaves his wife and young son behind to make money selling pottery", "confidence": "sourced"},
-   {"value": "an invitation", "detail": "Wakasa orders pottery delivered to her mansion", "quote": "ordering several pieces of pottery and requesting that he deliver them to her mansion", "confidence": "sourced"}
+   {
+    "value": "a journey for profit",
+    "quote": "a potter leaves his wife and young son behind to make money selling pottery",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:26",
+      "quote": "I need to sell all this before the fighting starts."
+     }
+    ]
+   },
+   {
+    "value": "an invitation",
+    "detail": "Wakasa orders pottery delivered to her mansion",
+    "quote": "ordering several pieces of pottery and requesting that he deliver them to her mansion",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "loving a ghost brings death", "quote": "a relationship between a spirit and a living person, which runs contrary to nature and will lead to the death of the person", "confidence": "sourced"},
-   {"value": "holy symbols repel spirit", "detail": "Sanskrit symbols painted on his body", "quote": "Wakasa attempts to stop him from leaving but cannot touch him due to the presence of the symbols", "confidence": "sourced"}
+   {
+    "value": "loving a ghost brings death",
+    "quote": "a relationship between a spirit and a living person, which runs contrary to nature and will lead to the death of the person",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:23",
+      "quote": "The shadow of death is upon your face."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:12:15",
+      "quote": "This love of yours is forbidden."
+     }
+    ]
+   },
+   {
+    "value": "holy symbols repel spirit",
+    "detail": "Sanskrit symbols painted on his body",
+    "quote": "Wakasa attempts to stop him from leaving but cannot touch him due to the presence of the symbols",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "artisan husband", "relation_to_threat": "lover", "detail": "Genjūrō", "quote": "ends up being seduced by a spirit that makes him forget all about his family", "confidence": "sourced"},
-   {"value": "abandoned wife", "relation_to_threat": "stranger", "detail": "Miyagi, stabbed by soldiers", "quote": "the chief, surprised to see him home, explains that he has been caring for Genichi after Miyagi was stabbed to death", "confidence": "sourced"},
-   {"value": "wife", "relation_to_threat": "stranger", "detail": "Ohama, raped and forced into prostitution", "quote": "Ohama is captured by a group of soldiers and raped", "confidence": "sourced"}
+   {
+    "value": "artisan husband",
+    "relation_to_threat": "lover",
+    "detail": "Genjūrō",
+    "quote": "ends up being seduced by a spirit that makes him forget all about his family",
+    "confidence": "sourced"
+   },
+   {
+    "value": "abandoned wife",
+    "relation_to_threat": "stranger",
+    "detail": "Miyagi, stabbed by soldiers",
+    "quote": "the chief, surprised to see him home, explains that he has been caring for Genichi after Miyagi was stabbed to death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "wife",
+    "relation_to_threat": "stranger",
+    "detail": "Ohama, raped and forced into prostitution",
+    "quote": "Ohama is captured by a group of soldiers and raped",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "ghost of wife", "detail": "Genjūrō is welcomed home by Miyagi, already dead", "quote": "Genjūrō returns home and is reunited with an overjoyed Miyagi", "confidence": "observed"},
-   {"value": "lesson learned too late", "quote": "He reflects on his mistakes and resolves to work hard from then on", "confidence": "sourced"}
+   {
+    "value": "ghost of wife",
+    "detail": "Genjūrō is welcomed home by Miyagi, already dead",
+    "quote": "Genjūrō returns home and is reunited with an overjoyed Miyagi",
+    "confidence": "observed"
+   },
+   {
+    "value": "lesson learned too late",
+    "quote": "He reflects on his mistakes and resolves to work hard from then on",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "pottery", "state": "made, sold, delivered", "when": "opening", "role": "symbol", "quote": "Genjūrō persists in working to finish his pottery, intending on making a profit", "confidence": "sourced"},
-   {"value": "boat with dying man", "state": "drifting", "when": "early", "role": "omen", "quote": "they encounter a boat carrying a dying man, who warns them of pirates", "confidence": "sourced"},
-   {"value": "fog on the lake", "when": "early", "role": "omen", "quote": "The scene where the protagonists cross Lake Biwa is an example, given the fogs", "confidence": "sourced"},
-   {"value": "samurai armor", "state": "bought", "when": "early", "role": "symbol", "quote": "Tōbei purchases samurai armor and sneaks into an army camp", "confidence": "sourced"},
-   {"value": "severed head", "state": "stolen", "when": "middle", "role": "symbol", "quote": "Tōbei steals the head of a defeated general", "confidence": "sourced"},
-   {"value": "sanskrit symbols on body", "state": "painted", "when": "late", "role": "weapon", "quote": "painting Sanskrit symbols on his body", "confidence": "sourced"},
-   {"value": "ruin", "state": "mansion long destroyed", "when": "late", "role": "turn", "quote": "Genjūrō wakes up the next day and finds himself in the middle of a ruin", "confidence": "sourced"},
-   {"value": "grave", "state": "offered food", "when": "ending", "role": "symbol", "quote": "places on his mother's grave", "confidence": "sourced"}
+   {
+    "value": "pottery",
+    "state": "made, sold, delivered",
+    "when": "opening",
+    "role": "symbol",
+    "quote": "Genjūrō persists in working to finish his pottery, intending on making a profit",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:15",
+      "quote": "I'll try and make as much pottery as I can."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:34:16",
+      "quote": "What a beautiful shape!"
+     }
+    ]
+   },
+   {
+    "value": "burning kiln",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:12:50",
+    "quote": "They've thrown everything into this kiln, their strength, their souls, everything.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:26",
+      "quote": "I can't let the fire go out!"
+     }
+    ]
+   },
+   {
+    "value": "boat with dying man",
+    "state": "drifting",
+    "when": "early",
+    "role": "omen",
+    "quote": "they encounter a boat carrying a dying man, who warns them of pirates",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:46",
+      "quote": "when I was attacked by pirates."
+     }
+    ]
+   },
+   {
+    "value": "fog on the lake",
+    "when": "early",
+    "role": "omen",
+    "quote": "The scene where the protagonists cross Lake Biwa is an example, given the fogs",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:57",
+      "quote": "We've got to be careful, the fog is thick."
+     }
+    ]
+   },
+   {
+    "value": "samurai armor",
+    "state": "bought",
+    "when": "early",
+    "role": "symbol",
+    "quote": "Tōbei purchases samurai armor and sneaks into an army camp",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:09",
+      "quote": "Get some armour first!"
+     }
+    ]
+   },
+   {
+    "value": "severed head",
+    "state": "stolen",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "Tōbei steals the head of a defeated general",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:34",
+      "quote": "I've brought you a head! A head! A general's head!"
+     }
+    ]
+   },
+   {
+    "value": "singing dead lord",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:51:24",
+    "quote": "But the spirit of the late daimyo lingers in the palace, and it sings like this every time her ladyship dances.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sanskrit symbols on body",
+    "state": "painted",
+    "when": "late",
+    "role": "weapon",
+    "quote": "painting Sanskrit symbols on his body",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ruin",
+    "state": "mansion long destroyed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Genjūrō wakes up the next day and finds himself in the middle of a ruin",
+    "confidence": "sourced"
+   },
+   {
+    "value": "grave",
+    "state": "offered food",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "places on his mother's grave",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "war drives villagers out", "when": "opening", "quote": "Shibata Katsuie's army sweeps through the village and forces the villagers to flee", "confidence": "sourced"},
-   {"order": 2, "value": "family separated on journey", "when": "early", "quote": "Miyagi, Genjūrō's wife, is returned to the shore with their young son, Genichi", "confidence": "sourced"},
-   {"order": 3, "value": "seduced by a stranger", "when": "middle", "role": "trigger", "quote": "Wakasa seduces Genjūrō and convinces him to marry her", "confidence": "sourced"},
-   {"order": 4, "value": "wife killed at home", "when": "middle", "quote": "soldiers desperately searching for food accost Miyagi and stab her", "confidence": "sourced"},
-   {"order": 5, "value": "holy man warns", "when": "late", "role": "turn", "quote": "Genjūrō meets a priest who tells him to return to his loved ones or accept death", "confidence": "sourced"},
-   {"order": 6, "value": "ghost revealed and escaped", "when": "late", "role": "turn", "quote": "Wakasa and her servant concede that they are spirits", "confidence": "sourced"},
-   {"order": 7, "value": "homecoming to a ghost", "when": "ending", "role": "turn", "quote": "explains that he has been caring for Genichi after Miyagi was stabbed to death", "confidence": "sourced"},
-   {"order": 8, "value": "mourning and continuing life", "when": "ending", "quote": "Genjūrō continues caring for Genichi and working on his pottery", "confidence": "sourced"}
+   {
+    "value": "warning against war profits",
+    "when": "opening",
+    "role": "omen",
+    "detail": "the village chief",
+    "source": "subtitles",
+    "at": "00:05:04",
+    "quote": "I tell you, quick profits made in chaotic times never last.",
+    "confidence": "sourced",
+    "order": 1
+   },
+   {
+    "order": 2,
+    "value": "war drives villagers out",
+    "when": "opening",
+    "quote": "Shibata Katsuie's army sweeps through the village and forces the villagers to flee",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:59",
+      "quote": "The villagers are scattering like spiders!"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "family separated on journey",
+    "when": "early",
+    "quote": "Miyagi, Genjūrō's wife, is returned to the shore with their young son, Genichi",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "seduced by a stranger",
+    "when": "middle",
+    "role": "trigger",
+    "quote": "Wakasa seduces Genjūrō and convinces him to marry her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:20",
+      "quote": "Even if you are a ghost or enchantress, I'll never let you go."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "wife killed at home",
+    "when": "middle",
+    "quote": "soldiers desperately searching for food accost Miyagi and stab her",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "holy man warns",
+    "when": "late",
+    "role": "turn",
+    "quote": "Genjūrō meets a priest who tells him to return to his loved ones or accept death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:39",
+      "quote": "but I cannot let you walk into the jaws of death. I will exorcise this ghost."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "ghost revealed and escaped",
+    "when": "late",
+    "role": "turn",
+    "quote": "Wakasa and her servant concede that they are spirits",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "homecoming to a ghost",
+    "when": "ending",
+    "role": "turn",
+    "quote": "explains that he has been caring for Genichi after Miyagi was stabbed to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:40",
+      "quote": "but I'm home at last... home at last..."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:31:21",
+      "quote": "Miyagi was killed by soldiers of the defeated army."
+     }
+    ]
+   },
+   {
+    "value": "dead wife's voice at the wheel",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:34:22",
+    "quote": "Helping you spin the wheel is my greatest pleasure.",
+    "confidence": "sourced",
+    "order": 9
+   },
+   {
+    "order": 10,
+    "value": "mourning and continuing life",
+    "when": "ending",
+    "quote": "Genjūrō continues caring for Genichi and working on his pottery",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:04",
+      "quote": "But, alas I am no longer among the living."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

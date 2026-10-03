@@ -1,60 +1,432 @@
 {
  "film": "1984-gremlins",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "multiplying creatures", "detail": "gremlins led by Stripe", "quote": "emerging as destructive and reptilian imp-like monsters called \"gremlins\"", "confidence": "sourced"}
+   {
+    "value": "multiplying creatures",
+    "detail": "gremlins led by Stripe",
+    "quote": "emerging as destructive and reptilian imp-like monsters called \"gremlins\"",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "bought as a pet", "detail": "a mogwai from a Chinatown antique store", "quote": "Struggling inventor Randall Peltzer visits a Chinatown antique store to find a Christmas present for his son", "confidence": "sourced"},
-   {"value": "from folklore", "quote": "It draws on legends of folkloric mischievous creatures that cause malfunctions", "confidence": "sourced"}
+   {
+    "value": "bought as a pet",
+    "detail": "a mogwai from a Chinatown antique store",
+    "quote": "Struggling inventor Randall Peltzer visits a Chinatown antique store to find a Christmas present for his son",
+    "confidence": "sourced"
+   },
+   {
+    "value": "from folklore",
+    "quote": "It draws on legends of folkloric mischievous creatures that cause malfunctions",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:38",
+      "quote": "' cause they plant gremlins in their machinery. The same gremlins brought down our planes in the big one."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "mischief and destruction", "quote": "spawning an army of gremlins that wreak havoc on Kingston Falls", "confidence": "sourced"}
+   {
+    "value": "mischief and destruction",
+    "quote": "spawning an army of gremlins that wreak havoc on Kingston Falls",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "carelessness with nature", "quote": "scolds the family for their negligence and criticizes Western society for its carelessness with nature", "confidence": "sourced"}
+   {
+    "value": "carelessness with nature",
+    "quote": "scolds the family for their negligence and criticizes Western society for its carelessness with nature",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:40:26",
+      "quote": "You do with mogwai what your society has done with all of nature's gifts."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "taking an object", "detail": "buying the mogwai against the owner's wishes", "quote": "The owner, Sam Wing, refuses to sell it to him, but his grandson secretly does", "confidence": "sourced"},
-   {"value": "breaking a rule", "quote": "accidentally spills water on him, five more mogwai spawn from him", "confidence": "sourced"}
+   {
+    "value": "taking an object",
+    "detail": "buying the mogwai against the owner's wishes",
+    "quote": "The owner, Sam Wing, refuses to sell it to him, but his grandson secretly does",
+    "confidence": "sourced"
+   },
+   {
+    "value": "breaking a rule",
+    "quote": "accidentally spills water on him, five more mogwai spawn from him",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "killed by sunlight", "quote": "keep the mogwai away from light, especially sunlight, which will kill it", "confidence": "sourced"},
-   {"value": "multiplies with water", "quote": "do not let it come in contact with water", "confidence": "sourced"},
-   {"value": "must not eat after midnight", "quote": "and above all, never let it eat after midnight", "confidence": "sourced"}
+   {
+    "value": "killed by sunlight",
+    "quote": "keep the mogwai away from light, especially sunlight, which will kill it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:10",
+      "quote": "He hates bright light, especially sunlight. It'll kill him."
+     }
+    ]
+   },
+   {
+    "value": "multiplies with water",
+    "quote": "do not let it come in contact with water",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:14",
+      "quote": "And keep him away from water. Don't get him wet."
+     }
+    ]
+   },
+   {
+    "value": "must not eat after midnight",
+    "quote": "and above all, never let it eat after midnight",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:26",
+      "quote": "never, never feed him after midnight."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "family", "relation_to_threat": "family", "detail": "the Peltzers, the pet's owners", "quote": "those at the Peltzer house torture Gizmo and assault Billy's mother, Lynn", "confidence": "sourced"},
-   {"value": "townspeople", "relation_to_threat": "community", "quote": "Many locals are injured or killed during their rampage, including Deagle", "confidence": "sourced"}
+   {
+    "value": "family",
+    "relation_to_threat": "family",
+    "detail": "the Peltzers, the pet's owners",
+    "quote": "those at the Peltzer house torture Gizmo and assault Billy's mother, Lynn",
+    "confidence": "sourced"
+   },
+   {
+    "value": "townspeople",
+    "relation_to_threat": "community",
+    "quote": "Many locals are injured or killed during their rampage, including Deagle",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "Gizmo then opens a nearby skylight, exposing Stripe to sunlight and killing him", "confidence": "sourced"},
-   {"value": "creature returned to owner", "quote": "Wing arrives at the Peltzer house to reclaim Gizmo", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "Gizmo then opens a nearby skylight, exposing Stripe to sunlight and killing him",
+    "confidence": "sourced"
+   },
+   {
+    "value": "creature returned to owner",
+    "quote": "Wing arrives at the Peltzer house to reclaim Gizmo",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:41:23",
+      "quote": "Perhaps, someday, you may be ready. Until then, mogwai will be waiting."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "antique store", "when": "opening", "role": "setting", "quote": "visits a Chinatown antique store to find a Christmas present", "confidence": "sourced"},
-   {"value": "water", "state": "spilled", "when": "early", "role": "trigger", "quote": "accidentally spills water on him, five more mogwai spawn from him", "confidence": "sourced"},
-   {"value": "clock", "state": "sabotaged", "when": "early", "role": "trigger", "quote": "trick Billy into feeding them after midnight by sabotaging his bedside clock", "confidence": "sourced"},
-   {"value": "cocoons", "when": "early", "role": "turn", "quote": "They form cocoons, as does Hanson's mogwai, which soon hatch", "confidence": "sourced"},
-   {"value": "swimming pool", "when": "middle", "role": "turn", "quote": "escapes to the local YMCA where he jumps into its swimming pool", "confidence": "sourced"},
-   {"value": "chimney", "state": "father found dead in it", "when": "middle", "role": "symbol", "quote": "was then found dead in their house's chimney several days later", "confidence": "sourced"},
-   {"value": "skylight", "state": "opened to sunlight", "when": "ending", "role": "weapon", "quote": "Gizmo then opens a nearby skylight, exposing Stripe to sunlight", "confidence": "sourced"}
+   {
+    "value": "antique store",
+    "when": "opening",
+    "role": "setting",
+    "quote": "visits a Chinatown antique store to find a Christmas present",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:03",
+      "quote": "This is your grandfather's store? - Yeah."
+     }
+    ]
+   },
+   {
+    "value": "water",
+    "state": "spilled",
+    "when": "early",
+    "role": "trigger",
+    "quote": "accidentally spills water on him, five more mogwai spawn from him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:44",
+      "quote": "Well, it multiplies with water."
+     }
+    ]
+   },
+   {
+    "value": "clock",
+    "state": "sabotaged",
+    "when": "early",
+    "role": "trigger",
+    "quote": "trick Billy into feeding them after midnight by sabotaging his bedside clock",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:35",
+      "quote": "Well, it's not twelve o'clock yet."
+     }
+    ]
+   },
+   {
+    "value": "cocoons",
+    "when": "early",
+    "role": "turn",
+    "quote": "They form cocoons, as does Hanson's mogwai, which soon hatch",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:15",
+      "quote": "This is a cocoon, and inside, he's going through changes."
+     }
+    ]
+   },
+   {
+    "value": "swimming pool",
+    "when": "middle",
+    "role": "turn",
+    "quote": "escapes to the local YMCA where he jumps into its swimming pool",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "HUNDREDS OF CREATURES are now coming out of the pool."
+     }
+    ]
+   },
+   {
+    "value": "chimney",
+    "state": "father found dead in it",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "was then found dead in their house's chimney several days later",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:19",
+      "quote": "He'd been climbing down the chimney on Christmas Eve, his arms loaded with presents."
+     }
+    ]
+   },
+   {
+    "value": "skylight",
+    "state": "opened to sunlight",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "Gizmo then opens a nearby skylight, exposing Stripe to sunlight",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dog",
+    "state": "hung up in christmas lights",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:30:30",
+    "quote": "Barney, who did this to you?",
+    "detail": "Barney, the family dog, is strung up by the new mogwai",
+    "confidence": "sourced"
+   },
+   {
+    "value": "santa suit",
+    "state": "father found dead in chimney",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:20:19",
+    "quote": "He was dressed in a Santa Claus suit.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cinema screening",
+    "when": "late",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "01:24:20",
+    "quote": "They're watching Snow White. And they love it.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bright light",
+    "when": "early",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "00:19:14",
+    "quote": "Bright light! Bright light!",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:26",
+      "quote": "Light bright! Light bright!"
+     }
+    ],
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "creature bought with warnings", "when": "opening", "role": "trigger", "quote": "warning Randall to remember three important rules concerning its care", "confidence": "sourced"},
-   {"order": 2, "value": "first rule broken", "when": "early", "quote": "accidentally spills water on him, five more mogwai spawn from him", "confidence": "sourced"},
-   {"order": 3, "value": "tricked into breaking a rule", "when": "early", "quote": "trick Billy into feeding them after midnight by sabotaging his bedside clock", "confidence": "sourced"},
-   {"order": 4, "value": "transformation", "when": "early", "role": "turn", "quote": "They form cocoons, as does Hanson's mogwai, which soon hatch", "confidence": "sourced"},
-   {"order": 5, "value": "home invaded", "when": "middle", "quote": "those at the Peltzer house torture Gizmo and assault Billy's mother, Lynn", "confidence": "sourced"},
-   {"order": 6, "value": "town overrun", "when": "middle", "quote": "spawning an army of gremlins that wreak havoc on Kingston Falls", "confidence": "sourced"},
-   {"order": 7, "value": "mass destruction by explosion", "when": "late", "quote": "set off a natural gas explosion, killing them all except for Stripe", "confidence": "sourced"},
-   {"order": 8, "value": "leader killed by sunlight", "when": "ending", "quote": "exposing Stripe to sunlight and killing him", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "creature bought with warnings",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "warning Randall to remember three important rules concerning its care",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:23",
+      "quote": "With mogwai comes much responsibility. I cannot sell him at any price."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "first rule broken",
+    "when": "early",
+    "quote": "accidentally spills water on him, five more mogwai spawn from him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:33",
+      "quote": "Nothing. Just water!"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "family pet attacked",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:30:30",
+    "quote": "Barney, who did this to you?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "tricked into breaking a rule",
+    "when": "early",
+    "quote": "trick Billy into feeding them after midnight by sabotaging his bedside clock",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:37",
+      "quote": "Did you feed them after midnight?"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "transformation",
+    "when": "early",
+    "role": "turn",
+    "quote": "They form cocoons, as does Hanson's mogwai, which soon hatch",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:15",
+      "quote": "This is a cocoon, and inside, he's going through changes."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "home invaded",
+    "when": "middle",
+    "quote": "those at the Peltzer house torture Gizmo and assault Billy's mother, Lynn",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "town overrun",
+    "when": "middle",
+    "quote": "spawning an army of gremlins that wreak havoc on Kingston Falls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:37",
+      "quote": "They're gremlins, Kate. Just like Mr. Futterman said."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "mass destruction by explosion",
+    "when": "late",
+    "quote": "set off a natural gas explosion, killing them all except for Stripe",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:34",
+      "quote": "It's in the back of the theater."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "leader killed by sunlight",
+    "when": "ending",
+    "quote": "exposing Stripe to sunlight and killing him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:11",
+      "quote": "That's Stripe. He's the leader. If he gets to water, it'll start all over again."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "warning to the audience",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:42:44",
+    "quote": "turn on the lights, check all the closets and cupboards, look under all the beds.",
+    "detail": "closing narration: 'There just might be a gremlin in your house.'",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

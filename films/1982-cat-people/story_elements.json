@@ -1,63 +1,484 @@
 {
  "film": "1982-cat-people",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "shapeshifter", "detail": "werecats who become black panthers", "quote": "Paul visits Irena again and explains their shared werecat heritage, thus revealing himself as the escaped panther", "confidence": "sourced"},
-   {"value": "the self", "detail": "Irena's own feline instincts", "quote": "As Irena's feline instincts gradually emerge, she stalks and nearly attacks Alice twice", "confidence": "sourced"}
+   {
+    "value": "shapeshifter",
+    "detail": "werecats who become black panthers",
+    "quote": "Paul visits Irena again and explains their shared werecat heritage, thus revealing himself as the escaped panther",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the self",
+    "detail": "Irena's own feline instincts",
+    "quote": "As Irena's feline instincts gradually emerge, she stalks and nearly attacks Alice twice",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "inherited", "quote": "a young woman who, upon reuniting with her brother, learns she has descended from werecats", "confidence": "sourced"},
-   {"value": "ancient sacrificial cult", "quote": "a sacrificial maiden is tied to a tree. A black panther approaches", "confidence": "observed"}
+   {
+    "value": "inherited",
+    "quote": "a young woman who, upon reuniting with her brother, learns she has descended from werecats",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:56",
+      "quote": "You do know that they were brother and sister, don't you?"
+     }
+    ]
+   },
+   {
+    "value": "ancient sacrificial cult",
+    "quote": "a sacrificial maiden is tied to a tree. A black panther approaches",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:39",
+      "quote": "Long ago, our ancestors sacrificed their children to the leopards."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "sexual union", "quote": "Paul resumes his sexual advances, hoping Irena will accept their predicament", "confidence": "sourced"},
-   {"value": "to be with its own kind", "quote": "so she can transform and \"be with [her] own kind\"", "confidence": "sourced"}
+   {
+    "value": "sexual union",
+    "quote": "Paul resumes his sexual advances, hoping Irena will accept their predicament",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:38",
+      "quote": "You've got to make love with me as brother and sister."
+     }
+    ]
+   },
+   {
+    "value": "to be with its own kind",
+    "quote": "so she can transform and \"be with [her] own kind\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:48:19",
+      "quote": "I want to live with my own."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "incest", "quote": "their parents were siblings because werecats are ancestrally incestuous", "confidence": "sourced"}
+   {
+    "value": "incest",
+    "quote": "their parents were siblings because werecats are ancestrally incestuous",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:53",
+      "quote": "We are an incestuous race."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "reuniting with a sibling", "quote": "Irena Gallier travels to New Orleans from Canada to reconnect with her brother Paul", "confidence": "sourced"}
+   {
+    "value": "reuniting with a sibling",
+    "quote": "Irena Gallier travels to New Orleans from Canada to reconnect with her brother Paul",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:24",
+      "quote": "Female, this is my sister Irena."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "sex causes transformation", "quote": "Mating with a human transforms a werecat into a black panther", "confidence": "sourced"},
-   {"value": "must kill to turn back", "quote": "only by killing a human can it regain human form", "confidence": "sourced"},
-   {"value": "only mate with own kind", "quote": "only mating between werecats prevents the transformation", "confidence": "sourced"}
+   {
+    "value": "sex causes transformation",
+    "quote": "Mating with a human transforms a werecat into a black panther",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:56",
+      "quote": "We can only make love with our own, otherwise we transform."
+     }
+    ]
+   },
+   {
+    "value": "must kill to turn back",
+    "quote": "only by killing a human can it regain human form",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:02",
+      "quote": "And before we can become human again, we must kill."
+     }
+    ]
+   },
+   {
+    "value": "only mate with own kind",
+    "quote": "only mating between werecats prevents the transformation",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:56",
+      "quote": "We can only make love with our own"
+     }
+    ]
+   },
+   {
+    "value": "live hidden, never love",
+    "detail": "Paul's advice on how to live with the curse",
+    "source": "subtitles",
+    "at": "01:24:24",
+    "quote": "Live as he did. Hidden. In chains. Never love.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "young woman", "relation_to_threat": "self", "detail": "Irena", "quote": "fearing the consequences of physical intimacy", "confidence": "sourced"},
-   {"value": "lover", "relation_to_threat": "lover", "detail": "Oliver", "quote": "Irena tells Oliver she did not kill him because she loves him", "confidence": "sourced"},
-   {"value": "zoo worker", "relation_to_threat": "stranger", "detail": "Joe", "quote": "the panther tears Joe's arm off during a routine cage cleaning", "confidence": "sourced"}
+   {
+    "value": "young woman",
+    "relation_to_threat": "self",
+    "detail": "Irena",
+    "quote": "fearing the consequences of physical intimacy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:36",
+      "quote": "I mean, I knew I had a brother, but I was only four."
+     }
+    ]
+   },
+   {
+    "value": "lover",
+    "relation_to_threat": "lover",
+    "detail": "Oliver",
+    "quote": "Irena tells Oliver she did not kill him because she loves him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:21",
+      "quote": "Well, that's the lie that will kill your lover."
+     }
+    ]
+   },
+   {
+    "value": "zoo worker",
+    "relation_to_threat": "stranger",
+    "detail": "Joe",
+    "quote": "the panther tears Joe's arm off during a routine cage cleaning",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:29",
+      "quote": "(JOE YELLING)"
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "victim becomes threat", "detail": "Irena permanently a caged panther", "quote": "Irena, now permanently trapped in her panther form", "confidence": "sourced"},
-   {"value": "threat contained", "quote": "He stops at the cage holding the \"recaptured panther\"", "confidence": "observed"}
+   {
+    "value": "victim becomes threat",
+    "detail": "Irena permanently a caged panther",
+    "quote": "Irena, now permanently trapped in her panther form",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:48:19",
+      "quote": "I want to live with my own."
+     }
+    ]
+   },
+   {
+    "value": "threat contained",
+    "quote": "He stops at the cage holding the \"recaptured panther\"",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "black panther", "when": "opening", "role": "threat", "quote": "A black panther approaches and rests its paws on her", "confidence": "sourced"},
-   {"value": "maiden tied to tree", "when": "opening", "role": "omen", "quote": "a sacrificial maiden is tied to a tree", "confidence": "sourced"},
-   {"value": "melted flesh", "when": "middle", "role": "clue", "quote": "In its cage lies a puddle of melted flesh like the one found by the prostitute", "confidence": "sourced"},
-   {"value": "shackles and bones", "when": "middle", "role": "clue", "quote": "In Paul's basement, police find shackles, bones and remains of dozens of corpses", "confidence": "sourced"},
-   {"value": "cage", "when": "ending", "role": "symbol", "quote": "Reaching through the bars, Oliver hand-feeds and strokes the now-docile Irena's neck", "confidence": "sourced"},
-   {"value": "slime", "state": "melting corpse", "when": "late", "quote": "Paul's corpse melts into a pool of slime", "confidence": "sourced"},
-   {"value": "bridge", "when": "late", "role": "setting", "quote": "is later trapped on a bridge by police", "confidence": "sourced"},
-   {"value": "bedposts", "when": "ending", "quote": "He ties Irena naked to the bedposts by her arms and legs", "confidence": "sourced"}
+   {
+    "value": "black panther",
+    "when": "opening",
+    "role": "threat",
+    "quote": "A black panther approaches and rests its paws on her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:40",
+      "quote": "Looks like we have a gourmet leopard on our hands."
+     }
+    ]
+   },
+   {
+    "value": "maiden tied to tree",
+    "when": "opening",
+    "role": "omen",
+    "quote": "a sacrificial maiden is tied to a tree",
+    "confidence": "sourced"
+   },
+   {
+    "value": "melted flesh",
+    "when": "middle",
+    "role": "clue",
+    "quote": "In its cage lies a puddle of melted flesh like the one found by the prostitute",
+    "confidence": "sourced"
+   },
+   {
+    "value": "shackles and bones",
+    "when": "middle",
+    "role": "clue",
+    "quote": "In Paul's basement, police find shackles, bones and remains of dozens of corpses",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:17",
+      "quote": "I suppose you don't know anything about the basement, either?"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:24:24",
+      "quote": "Live as he did. Hidden. In chains. Never love."
+     }
+    ]
+   },
+   {
+    "value": "cage",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "Reaching through the bars, Oliver hand-feeds and strokes the now-docile Irena's neck",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:40",
+      "quote": "He's not so dangerous in a cage."
+     }
+    ]
+   },
+   {
+    "value": "slime",
+    "state": "melting corpse",
+    "when": "late",
+    "quote": "Paul's corpse melts into a pool of slime",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bridge",
+    "when": "late",
+    "role": "setting",
+    "quote": "is later trapped on a bridge by police",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bedposts",
+    "when": "ending",
+    "quote": "He ties Irena naked to the bedposts by her arms and legs",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pizza in leopard's vomit",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:27:40",
+    "quote": "He threw up in the cage. Joe found pizza in the vomit...",
+    "detail": "the captured leopard has eaten human food: it is Paul",
+    "confidence": "sourced"
+   },
+   {
+    "value": "barking dog",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:52:01",
+    "quote": "the dog picked up the scent real strong.",
+    "detail": "police dog finds the remains in Paul's basement",
+    "confidence": "sourced"
+   },
+   {
+    "value": "crows and porcupines",
+    "state": "caged together",
+    "when": "ending",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:52:21",
+    "quote": "The crows are plucking the quills out of the porcupines and I don't know what to do.",
+    "detail": "zoo chatter in the last scene: two species that should be kept apart",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "mythic prologue sacrifice", "when": "opening", "role": "omen", "quote": "a sacrificial maiden is tied to a tree. A black panther approaches and rests its paws on her", "confidence": "sourced"},
-   {"order": 2, "value": "reunion with brother", "when": "opening", "role": "trigger", "quote": "Irena Gallier travels to New Orleans from Canada to reconnect with her brother Paul", "confidence": "sourced"},
-   {"order": 3, "value": "panther attacks", "when": "early", "quote": "finds a black panther that mauls her foot", "confidence": "sourced"},
-   {"order": 4, "value": "brother's crimes found", "when": "middle", "role": "clue", "quote": "police find shackles, bones and remains of dozens of corpses", "confidence": "sourced"},
-   {"order": 5, "value": "heritage explained", "when": "middle", "role": "turn", "quote": "Paul visits Irena again and explains their shared werecat heritage", "confidence": "sourced"},
-   {"order": 6, "value": "brother killed", "when": "late", "quote": "Paul transforms, attacks Oliver, and is shot by Alice", "confidence": "sourced"},
-   {"order": 7, "value": "heroine transforms", "when": "late", "quote": "She later sleeps with Oliver and transforms into a panther, but she flees, sparing his life", "confidence": "sourced"},
-   {"order": 8, "value": "heroine caged forever", "when": "ending", "quote": "Irena, now permanently trapped in her panther form", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "mythic prologue sacrifice",
+    "when": "opening",
+    "role": "omen",
+    "quote": "a sacrificial maiden is tied to a tree. A black panther approaches and rests its paws on her",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "reunion with brother",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Irena Gallier travels to New Orleans from Canada to reconnect with her brother Paul",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:24",
+      "quote": "Female, this is my sister Irena."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "panther attacks",
+    "when": "early",
+    "quote": "finds a black panther that mauls her foot",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "leopard caught at the zoo",
+    "when": "early",
+    "source": "subtitles",
+    "at": "00:18:43",
+    "quote": "Let's knock him down quick and get him in the squeeze cage.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "keeper mauled",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "00:44:29",
+    "quote": "(JOE YELLING)",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "brother's crimes found",
+    "when": "middle",
+    "role": "clue",
+    "quote": "police find shackles, bones and remains of dozens of corpses",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:18",
+      "quote": "I expect Gallier killed them first, possibly as part of some ritual,"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "brother proposes incest",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:14:38",
+    "quote": "You've got to make love with me as brother and sister.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "heritage explained",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Paul visits Irena again and explains their shared werecat heritage",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:39",
+      "quote": "Long ago, our ancestors sacrificed their children to the leopards. The souls of the children grew inside the leopards until the leopards became human."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "brother killed",
+    "when": "late",
+    "quote": "Paul transforms, attacks Oliver, and is shot by Alice",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:52",
+      "quote": "(GUN FIRING)"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "heroine transforms",
+    "when": "late",
+    "quote": "She later sleeps with Oliver and transforms into a panther, but she flees, sparing his life",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:58",
+      "quote": "(BONES CRACKING)"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "heroine caged forever",
+    "when": "ending",
+    "quote": "Irena, now permanently trapped in her panther form",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:48:05",
+      "quote": "Free me. Make love to me again."
+     }
+    ]
+   },
+   {
+    "order": 12,
+    "value": "zoo life goes on",
+    "when": "ending",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "01:52:21",
+    "quote": "The crows are plucking the quills out of the porcupines",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

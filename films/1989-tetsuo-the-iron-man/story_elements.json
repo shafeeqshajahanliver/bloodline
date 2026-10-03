@@ -1,60 +1,325 @@
 {
  "film": "1989-tetsuo-the-iron-man",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "body transformation", "detail": "metal overtaking the salaryman's flesh", "quote": "he either imagines or discovers that metal is taking over his body", "confidence": "sourced"},
-   {"value": "the self", "quote": "As the man steadily becomes a hybrid of man and machine", "confidence": "sourced"},
-   {"value": "vengeful victim", "detail": "the metal fetishist", "quote": "reaches out to the salaryman and his girlfriend initially to menace them", "confidence": "sourced"}
+   {
+    "value": "body transformation",
+    "detail": "metal overtaking the salaryman's flesh",
+    "quote": "he either imagines or discovers that metal is taking over his body",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the self",
+    "quote": "As the man steadily becomes a hybrid of man and machine",
+    "confidence": "sourced"
+   },
+   {
+    "value": "vengeful victim",
+    "detail": "the metal fetishist",
+    "quote": "reaches out to the salaryman and his girlfriend initially to menace them",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "victim of the protagonist", "detail": "hit-and-run victim", "quote": "he develops a connection with a victim from a hit-and-run accident, who is undergoing a similar transformation", "confidence": "sourced"},
-   {"value": "self-mutilation", "quote": "inserts scrap metal into a self-inflicted wound on his thigh", "confidence": "sourced"}
+   {
+    "value": "victim of the protagonist",
+    "detail": "hit-and-run victim",
+    "quote": "he develops a connection with a victim from a hit-and-run accident, who is undergoing a similar transformation",
+    "confidence": "sourced"
+   },
+   {
+    "value": "self-mutilation",
+    "quote": "inserts scrap metal into a self-inflicted wound on his thigh",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "revenge", "quote": "the salaryman out of vengeance whereas the fetishist for pleasure", "confidence": "sourced"},
-   {"value": "to merge", "quote": "says he needs to merge with the salaryman as he is overcome with rust", "confidence": "sourced"},
-   {"value": "to spread", "quote": "convinced they can mutate the entire world into metal", "confidence": "sourced"}
+   {
+    "value": "revenge",
+    "quote": "the salaryman out of vengeance whereas the fetishist for pleasure",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:48",
+      "quote": "You can't escape me."
+     }
+    ]
+   },
+   {
+    "value": "to merge",
+    "quote": "says he needs to merge with the salaryman as he is overcome with rust",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:13",
+      "quote": "Let me show you something wonderful. A new world..."
+     }
+    ]
+   },
+   {
+    "value": "to spread",
+    "quote": "convinced they can mutate the entire world into metal",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:46",
+      "quote": "Your future is metal!"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:04:30",
+      "quote": "We can rust the world into the dust of the universe."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "hit-and-run", "quote": "he becomes a victim in a hit-and-run accident. The driver, a typical salaryman", "confidence": "sourced"}
+   {
+    "value": "hit-and-run",
+    "quote": "he becomes a victim in a hit-and-run accident. The driver, a typical salaryman",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "car accident", "quote": "he becomes a victim in a hit-and-run accident", "confidence": "sourced"}
+   {
+    "value": "car accident",
+    "quote": "he becomes a victim in a hit-and-run accident",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "transformation spreads", "quote": "finding their entire bodies more metal than flesh", "confidence": "sourced"},
-   {"value": "telekinesis", "quote": "The fetishist realizes he has telekinetic powers", "confidence": "sourced"}
+   {
+    "value": "transformation spreads",
+    "quote": "finding their entire bodies more metal than flesh",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:08",
+      "quote": "Soon even your brain will turn into metal."
+     }
+    ]
+   },
+   {
+    "value": "telekinesis",
+    "quote": "The fetishist realizes he has telekinetic powers",
+    "confidence": "sourced"
+   },
+   {
+    "value": "removing the metal kills",
+    "source": "subtitles",
+    "at": "00:35:59",
+    "quote": "You'll die instantly if it's removed.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "office worker", "relation_to_threat": "self", "detail": "the salaryman", "quote": "an unnamed Japanese salaryman who wakes up to find pieces of metal sprouting from various parts of his body", "confidence": "sourced"},
-   {"value": "girlfriend", "relation_to_threat": "lover", "quote": "his girlfriend has impaled herself on the drill, killing her", "confidence": "sourced"}
+   {
+    "value": "office worker",
+    "relation_to_threat": "self",
+    "detail": "the salaryman",
+    "quote": "an unnamed Japanese salaryman who wakes up to find pieces of metal sprouting from various parts of his body",
+    "confidence": "sourced"
+   },
+   {
+    "value": "girlfriend",
+    "relation_to_threat": "lover",
+    "quote": "his girlfriend has impaled herself on the drill, killing her",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat and victim merge", "quote": "The two merge into a giant metallic monster", "confidence": "sourced"},
-   {"value": "threat spreads to world", "quote": "They take to the streets of the city convinced they can mutate the entire world into metal", "confidence": "sourced"}
+   {
+    "value": "threat and victim merge",
+    "quote": "The two merge into a giant metallic monster",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat spreads to world",
+    "quote": "They take to the streets of the city convinced they can mutate the entire world into metal",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:45",
+      "quote": "Our love can destroy this whole fucking world!"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "scrap metal in a wound", "when": "opening", "role": "trigger", "quote": "inserts scrap metal into a self-inflicted wound on his thigh", "confidence": "sourced"},
-   {"value": "metal thorn", "state": "protruding from cheek", "when": "early", "role": "omen", "quote": "finds a metallic thorn protruding from his cheek while shaving", "confidence": "sourced"},
-   {"value": "metallic tentacles", "when": "early", "role": "threat", "quote": "attacked and chased by a woman who sprouts metallic tentacles", "confidence": "sourced"},
-   {"value": "drill", "state": "replacing penis", "when": "middle", "role": "weapon", "quote": "his penis becomes a metallic drill", "confidence": "sourced"},
-   {"value": "rust", "state": "attacking body", "when": "late", "role": "threat", "quote": "he is overcome with rust that is attacking his body", "confidence": "sourced"},
-   {"value": "metal monster", "state": "giant, merged", "when": "ending", "role": "threat", "quote": "The two merge into a giant metallic monster", "confidence": "sourced"}
+   {
+    "value": "scrap metal in a wound",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "inserts scrap metal into a self-inflicted wound on his thigh",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:59",
+      "quote": "There's a piece of metal stuck in your brain."
+     }
+    ]
+   },
+   {
+    "value": "metal thorn",
+    "state": "protruding from cheek",
+    "when": "early",
+    "role": "omen",
+    "quote": "finds a metallic thorn protruding from his cheek while shaving",
+    "confidence": "sourced"
+   },
+   {
+    "value": "metallic tentacles",
+    "when": "early",
+    "role": "threat",
+    "quote": "attacked and chased by a woman who sprouts metallic tentacles",
+    "confidence": "sourced"
+   },
+   {
+    "value": "drill",
+    "state": "replacing penis",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "his penis becomes a metallic drill",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:59",
+      "quote": "You want a taste of my sewage pipe?"
+     }
+    ]
+   },
+   {
+    "value": "rust",
+    "state": "attacking body",
+    "when": "late",
+    "role": "threat",
+    "quote": "he is overcome with rust that is attacking his body",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:48",
+      "quote": "You see all this rust on my body?"
+     }
+    ]
+   },
+   {
+    "value": "metal monster",
+    "state": "giant, merged",
+    "when": "ending",
+    "role": "threat",
+    "quote": "The two merge into a giant metallic monster",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "self-mutilation", "when": "opening", "quote": "inserts scrap metal into a self-inflicted wound on his thigh", "confidence": "sourced"},
-   {"order": 2, "value": "hit-and-run", "when": "opening", "role": "trigger", "quote": "he becomes a victim in a hit-and-run accident", "confidence": "sourced"},
-   {"order": 3, "value": "first sign on the body", "when": "early", "role": "omen", "quote": "later finds a metallic thorn protruding from his cheek while shaving", "confidence": "sourced"},
-   {"order": 4, "value": "lover killed", "when": "middle", "quote": "his girlfriend has impaled herself on the drill, killing her", "confidence": "sourced"},
-   {"order": 5, "value": "victim reveals himself", "when": "middle", "role": "turn", "quote": "promise the salaryman a \"new world of metal\"", "confidence": "sourced"},
-   {"order": 6, "value": "two become one monster", "when": "ending", "quote": "The two merge into a giant metallic monster", "confidence": "sourced"},
-   {"order": 7, "value": "set out to change the world", "when": "ending", "quote": "They take to the streets of the city convinced they can mutate the entire world into metal", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "self-mutilation",
+    "when": "opening",
+    "quote": "inserts scrap metal into a self-inflicted wound on his thigh",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "hit-and-run",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "he becomes a victim in a hit-and-run accident",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:09",
+      "quote": "You know, I've felt very strange ever since the hit-and-run accident."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "first sign on the body",
+    "when": "early",
+    "role": "omen",
+    "quote": "later finds a metallic thorn protruding from his cheek while shaving",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "change seen as punishment",
+    "when": "early",
+    "source": "subtitles",
+    "at": "00:27:07",
+    "quote": "I'm being punished. That must be it.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "lover killed",
+    "when": "middle",
+    "quote": "his girlfriend has impaled herself on the drill, killing her",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "victim reveals himself",
+    "when": "middle",
+    "role": "turn",
+    "quote": "promise the salaryman a \"new world of metal\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:48",
+      "quote": "I know all about you. You can't escape me."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "two become one monster",
+    "when": "ending",
+    "quote": "The two merge into a giant metallic monster",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "set out to change the world",
+    "when": "ending",
+    "quote": "They take to the streets of the city convinced they can mutate the entire world into metal",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:22",
+      "quote": "We can mutate the whole world into metal."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

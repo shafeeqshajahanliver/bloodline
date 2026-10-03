@@ -1,57 +1,434 @@
 {
  "film": "1988-the-serpent-and-the-rainbow",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "sorcerer", "detail": "Captain Peytraud, a bokor and Tonton Macoute commander", "quote": "Peytraud, revealed to be a bokor who turns enemies into zombies and steals their souls", "confidence": "sourced"},
-   {"value": "zombification", "quote": "allegedly poisoned, buried alive, and revived with an herbal brew which produced what was called a zombie", "confidence": "sourced"},
-   {"value": "political terror", "detail": "the Tonton Macoute", "quote": "tortured by having a nail driven through his scrotum, and then dumped on a street with the message that he must leave Haiti or face death", "confidence": "sourced"}
+   {
+    "value": "sorcerer",
+    "detail": "Captain Peytraud, a bokor and Tonton Macoute commander",
+    "quote": "Peytraud, revealed to be a bokor who turns enemies into zombies and steals their souls",
+    "confidence": "sourced"
+   },
+   {
+    "value": "zombification",
+    "quote": "allegedly poisoned, buried alive, and revived with an herbal brew which produced what was called a zombie",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:43",
+      "quote": "Zombification- - the process of making zombies, the living dead."
+     }
+    ]
+   },
+   {
+    "value": "political terror",
+    "detail": "the Tonton Macoute",
+    "quote": "tortured by having a nail driven through his scrotum, and then dumped on a street with the message that he must leave Haiti or face death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:42",
+      "quote": "He's the chief of the tonton macoutes, duvalier's secret police."
+     }
+    ]
+   }
+  ],
+  "origin": [
+   {
+    "value": "made by a sorcerer",
+    "source": "subtitles",
+    "at": "00:26:30",
+    "quote": "Thebokortook his soul and sealed it away. He makes me do evil things.",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "souls", "quote": "turns enemies into zombies and steals their souls", "confidence": "sourced"},
-   {"value": "power", "quote": "Mozart is beheaded as a sacrifice for Peytraud's power", "confidence": "sourced"}
+   {
+    "value": "souls",
+    "quote": "turns enemies into zombies and steals their souls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:51",
+      "quote": "After you're dead, I'll take your soul."
+     }
+    ]
+   },
+   {
+    "value": "power",
+    "quote": "Mozart is beheaded as a sacrifice for Peytraud's power",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:20",
+      "quote": "Thesecanarihold the souls of those who were masters in the realm of the spirits. Now their spirits serve me."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "outsider seeks a secret", "detail": "a drug company sends Alan to find the zombie drug", "quote": "Alan is approached by a pharmaceutical company looking to investigate a drug used in voodoo to create zombies", "confidence": "sourced"}
+   {
+    "value": "outsider seeks a secret",
+    "detail": "a drug company sends Alan to find the zombie drug",
+    "quote": "Alan is approached by a pharmaceutical company looking to investigate a drug used in voodoo to create zombies",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:45",
+      "quote": "But the fact is somebody brought him back from the grave. And I wanna know how they did it."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "poison mimics death", "quote": "Alan is sprayed with the zombie powder and dies", "confidence": "sourced"},
-   {"value": "soul kept in a jar", "quote": "Peytraud shows Alan Celine's soul in a canari", "confidence": "sourced"},
-   {"value": "defeated by white magic", "quote": "using Celine's white magic to drive a nail into Peytraud's groin, and sends his soul to hell", "confidence": "sourced"}
+   {
+    "value": "poison mimics death",
+    "quote": "Alan is sprayed with the zombie powder and dies",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:07",
+      "quote": "Put the powder in the palms. It went right into the blood. Ten to 20 minutes later, they were dead. Or, at least, they looked dead."
+     }
+    ]
+   },
+   {
+    "value": "soul kept in a jar",
+    "quote": "Peytraud shows Alan Celine's soul in a canari",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:57",
+      "quote": "You keep the zombie's soul sealed up. It makes the flesh your slave."
+     }
+    ]
+   },
+   {
+    "value": "defeated by white magic",
+    "quote": "using Celine's white magic to drive a nail into Peytraud's groin, and sends his soul to hell",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:09",
+      "quote": "It'll be fought in your mind, in your soul."
+     }
+    ]
+   },
+   {
+    "value": "poison through the skin",
+    "source": "subtitles",
+    "at": "00:27:45",
+    "quote": "Through the skin. A powder.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:42",
+      "quote": "[mozart] you cannot give the powder in food. That would kill completely."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "investigator", "relation_to_threat": "stranger", "detail": "Dennis Alan, Harvard anthropologist", "quote": "Alan is then buried alive with a tarantula to \"keep him company.\"", "confidence": "sourced"},
-   {"value": "zombified man", "relation_to_threat": "community", "detail": "Christophe", "quote": "Christophe, who was also turned into a zombie by Peytraud", "confidence": "sourced"},
-   {"value": "local allies", "relation_to_threat": "community", "detail": "Celine and Mozart", "quote": "his only ally, a houngan named Lucien Celine, is killed by Peytraud, and Mozart is beheaded", "confidence": "sourced"}
+   {
+    "value": "investigator",
+    "relation_to_threat": "stranger",
+    "detail": "Dennis Alan, Harvard anthropologist",
+    "quote": "Alan is then buried alive with a tarantula to \"keep him company.\"",
+    "confidence": "sourced"
+   },
+   {
+    "value": "zombified man",
+    "relation_to_threat": "community",
+    "detail": "Christophe",
+    "quote": "Christophe, who was also turned into a zombie by Peytraud",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:25:50",
+      "quote": "I remember it all- - The coffin, the- - the burial. I-I saw it all."
+     }
+    ]
+   },
+   {
+    "value": "local allies",
+    "relation_to_threat": "community",
+    "detail": "Celine and Mozart",
+    "quote": "his only ally, a houngan named Lucien Celine, is killed by Peytraud, and Mozart is beheaded",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "Alan defeats Peytraud through a battle of wills", "confidence": "sourced"},
-   {"value": "tyranny falls", "quote": "As the Haitian people celebrate the downfall of Jean-Claude Duvalier, Marielle proclaims, \"The nightmare is over.\"", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "Alan defeats Peytraud through a battle of wills",
+    "confidence": "sourced"
+   },
+   {
+    "value": "tyranny falls",
+    "quote": "As the Haitian people celebrate the downfall of Jean-Claude Duvalier, Marielle proclaims, \"The nightmare is over.\"",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "voodoo parade", "when": "opening", "role": "omen", "quote": "mysteriously dies in a French missionary clinic while a voodoo parade marches past his window", "confidence": "sourced"},
-   {"value": "eyes opening in coffin", "state": "weeping", "when": "opening", "role": "omen", "quote": "As the coffin is lowered into the ground, Christophe's eyes open and tears roll down his cheeks", "confidence": "sourced"},
-   {"value": "pit of corpses", "state": "vision", "when": "early", "role": "omen", "quote": "surrounded by corpses in a bottomless pit", "confidence": "sourced"},
-   {"value": "nail", "when": "middle", "role": "weapon", "quote": "tortured by having a nail driven through his scrotum", "confidence": "sourced"},
-   {"value": "decapitated body", "when": "middle", "role": "threat", "quote": "he is lying next to Christophe's sister who has been decapitated", "confidence": "sourced"},
-   {"value": "zombie powder", "when": "late", "role": "weapon", "quote": "Alan is sprayed with the zombie powder and dies", "confidence": "sourced"},
-   {"value": "tarantula", "state": "in the coffin", "when": "late", "role": "threat", "quote": "Alan is then buried alive with a tarantula", "confidence": "sourced"},
-   {"value": "soul jar", "when": "late", "role": "symbol", "quote": "Peytraud shows Alan Celine's soul in a canari", "confidence": "sourced"}
+   {
+    "value": "voodoo parade",
+    "when": "opening",
+    "role": "omen",
+    "quote": "mysteriously dies in a French missionary clinic while a voodoo parade marches past his window",
+    "confidence": "sourced"
+   },
+   {
+    "value": "eyes opening in coffin",
+    "state": "weeping",
+    "when": "opening",
+    "role": "omen",
+    "quote": "As the coffin is lowered into the ground, Christophe's eyes open and tears roll down his cheeks",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:47",
+      "quote": "Christophe! [pleading in french] christophe!"
+     }
+    ]
+   },
+   {
+    "value": "pit of corpses",
+    "state": "vision",
+    "when": "early",
+    "role": "omen",
+    "quote": "surrounded by corpses in a bottomless pit",
+    "confidence": "sourced"
+   },
+   {
+    "value": "nail",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "tortured by having a nail driven through his scrotum",
+    "confidence": "sourced"
+   },
+   {
+    "value": "decapitated body",
+    "when": "middle",
+    "role": "threat",
+    "quote": "he is lying next to Christophe's sister who has been decapitated",
+    "confidence": "sourced"
+   },
+   {
+    "value": "zombie powder",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Alan is sprayed with the zombie powder and dies",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:51",
+      "quote": "With this powder, you must be very careful. I make it so there is no second chance."
+     }
+    ]
+   },
+   {
+    "value": "tarantula",
+    "state": "in the coffin",
+    "when": "late",
+    "role": "threat",
+    "quote": "Alan is then buried alive with a tarantula",
+    "confidence": "sourced"
+   },
+   {
+    "value": "soul jar",
+    "when": "late",
+    "role": "symbol",
+    "quote": "Peytraud shows Alan Celine's soul in a canari",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:10",
+      "quote": "Whose soul is that? This place's previous owner."
+     }
+    ]
+   },
+   {
+    "value": "jaguar spirit",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:12:21",
+    "quote": "They showed him his animal spirit, his totem. The jaguar guided him back to us safe and sound.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:22",
+      "quote": "[purring]"
+     }
+    ]
+   },
+   {
+    "value": "goat raised from the dead",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:34:17",
+    "quote": "That you get tomorrow when I see you raise the goat from the dead.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:16",
+      "quote": "[goat bleating]"
+     }
+    ]
+   },
+   {
+    "value": "spider and web",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:30:47",
+    "quote": "I will catch his soul like a spider catches a fly in his web...",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "man buried alive", "when": "opening", "role": "omen", "quote": "As the coffin is lowered into the ground, Christophe's eyes open and tears roll down his cheeks", "confidence": "sourced"},
-   {"order": 2, "value": "prophetic vision", "when": "early", "role": "omen", "quote": "He drinks a potion and experiences a hallucination of the suited man from Christophe's funeral", "confidence": "sourced"},
-   {"order": 3, "value": "outsider sent to investigate", "when": "early", "role": "trigger", "quote": "The company provides Alan with funding and sends him to Haiti, which is in the middle of a revolution", "confidence": "sourced"},
-   {"order": 4, "value": "warning ignored", "when": "middle", "quote": "Alan again refuses to leave and meets with Mozart to create the drug", "confidence": "sourced"},
-   {"order": 5, "value": "framed and expelled", "when": "middle", "quote": "The Tonton Macoutes enter, take photos and frame Alan for murder", "confidence": "sourced"},
-   {"order": 6, "value": "possession at home", "when": "late", "role": "turn", "quote": "the wife of Alan's employer is possessed by Peytraud, who warns Alan of his own imminent death", "confidence": "sourced"},
-   {"order": 7, "value": "protagonist buried alive", "when": "late", "quote": "Alan is then buried alive with a tarantula", "confidence": "sourced"},
-   {"order": 8, "value": "sorcerer defeated", "when": "ending", "quote": "Alan defeats Peytraud through a battle of wills, using Celine's white magic", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "man buried alive",
+    "when": "opening",
+    "role": "omen",
+    "quote": "As the coffin is lowered into the ground, Christophe's eyes open and tears roll down his cheeks",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "prophetic vision",
+    "when": "early",
+    "role": "omen",
+    "quote": "He drinks a potion and experiences a hallucination of the suited man from Christophe's funeral",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:07",
+      "quote": "No, he wants you to drink it. He says he has something he wants you to see."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "outsider sent to investigate",
+    "when": "early",
+    "role": "trigger",
+    "quote": "The company provides Alan with funding and sends him to Haiti, which is in the middle of a revolution",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:11",
+      "quote": "Now, what if this zombie drug could be discovered?"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "night in the graveyard",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:38:30",
+    "quote": "[christophe] blanc. Blanc?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "warning ignored",
+    "when": "middle",
+    "quote": "Alan again refuses to leave and meets with Mozart to create the drug",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "framed and expelled",
+    "when": "middle",
+    "quote": "The Tonton Macoutes enter, take photos and frame Alan for murder",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "possession at home",
+    "when": "late",
+    "role": "turn",
+    "quote": "the wife of Alan's employer is possessed by Peytraud, who warns Alan of his own imminent death",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "protagonist buried alive",
+    "when": "late",
+    "quote": "Alan is then buried alive with a tarantula",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:04",
+      "quote": "You'll feel it- - the cold in the coffin. It is worse. Much, much worse."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "sorcerer defeated",
+    "when": "ending",
+    "quote": "Alan defeats Peytraud through a battle of wills, using Celine's white magic",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:47",
+      "quote": "Your soul is mine. Get up, dr. Alan. I control your thoughts now."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "dictator falls",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:22:39",
+    "quote": "It is confirmed now that the duvaliers are fleeing haiti.",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["origin", "wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

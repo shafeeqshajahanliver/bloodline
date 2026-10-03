@@ -7,6 +7,12 @@
     "Lead",
     "Plot"
    ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
   }
  ],
  "plot_quality": "full",
@@ -21,7 +27,14 @@
    {
     "value": "urban legend",
     "quote": "she familiarizes herself with Candyman, a spirit who kills anyone that speaks his name five times before a mirror",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:51",
+      "quote": "I am the writing on the wall, the whisper in the classroom. Without these things, I am nothing."
+     }
+    ]
    }
   ],
   "origin": [
@@ -43,14 +56,41 @@
     "value": "a lost lover",
     "detail": "Helen resembles his lover",
     "quote": "Helen bears a striking resemblance to her and is hinted to be her reincarnation",
-    "confidence": "observed"
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:06",
+      "quote": "It was always you."
+     }
+    ]
+   },
+   {
+    "value": "to be whispered about",
+    "source": "subtitles",
+    "at": "01:02:19",
+    "quote": "I am rumor. tis a blessed condition, believe me. To be whispered about at street corners.",
+    "detail": "Candyman's own words: to live in other people's dreams",
+    "confidence": "sourced"
    }
   ],
   "wrong": [
    {
     "value": "racist lynching",
     "quote": "The mob sawed off his right hand and smeared him with honeycomb stolen from an apiary, attracting bees that stung him to death",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:50",
+      "quote": "They smashed the hives and stole the honeycomb, and smeared it over his prone, naked body."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:32:00",
+      "quote": "Candyman was stung to death by the bees."
+     }
+    ]
    }
   ],
   "trigger": [
@@ -62,24 +102,52 @@
    {
     "value": "investigating a legend",
     "quote": "a Chicago graduate student completing a thesis on urban legends and folklore",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:36",
+      "quote": "An entire community starts attributing the daily horrors of their lives to a mythical figure."
+     }
+    ]
    }
   ],
   "rules": [
    {
     "value": "name five times in mirror",
     "quote": "appears whenever his name is chanted five times in the mirror",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:11",
+      "quote": "And if you look in the mirror, and you say his name five times, he'll appear behind you breathing down your neck."
+     }
+    ]
    },
    {
     "value": "lives on belief",
     "quote": "Attempting to feed his legend, Candyman reneges",
-    "confidence": "observed"
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:15",
+      "quote": "Believe in me. Be my victim."
+     }
+    ]
    },
    {
     "value": "destroyed by fire",
     "quote": "The flames destroy Candyman and Helen dies while rescuing Anthony",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:46",
+      "quote": "Burn him! Burn him!"
+     }
+    ]
    }
   ],
   "who_suffers": [
@@ -114,7 +182,14 @@
     "value": "victim becomes threat",
     "detail": "Helen returns as a vengeful spirit",
     "quote": "Helen's vengeful spirit appears and kills him using Candyman's hook",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:34:41",
+      "quote": "What's the matter, Trevor? Scared of something?"
+     }
+    ]
    }
   ],
   "images": [
@@ -123,6 +198,30 @@
     "when": "opening",
     "role": "trigger",
     "quote": "repeat Candyman's name to Helen's bathroom mirror",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:19",
+      "quote": "Candyman, Candyman, Candyman, Candyman, Candyman."
+     }
+    ]
+   },
+   {
+    "value": "hole behind the mirror",
+    "state": "smashed through the wall",
+    "when": "early",
+    "role": "clue",
+    "source": "screenplay",
+    "quote": "She sees the medicine cabinet. Helen opens it. The back pane has been smashed through, leaving a gaping black hole.",
+    "detail": "the killer comes 'through the walls' of Cabrini-Green flats",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:13",
+      "quote": "He can come right through these walls, you know?"
+     }
+    ],
     "confidence": "sourced"
    },
    {
@@ -130,7 +229,14 @@
     "when": "middle",
     "role": "weapon",
     "quote": "a man claiming to be Candyman batters her with a hook",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:04",
+      "quote": "his right hand is sawn off and he has a hook jammed in the bloody stump."
+     }
+    ]
    },
    {
     "value": "bees",
@@ -138,7 +244,13 @@
     "when": "late",
     "role": "threat",
     "quote": "revealing a ribcage wreathed in bees",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "THOUSANDS OF BEES FILL THE SCREEN, dimly perceived, packed together, crawling over one, another."
+     }
+    ]
    },
    {
     "value": "sweets",
@@ -146,7 +258,18 @@
     "when": "early",
     "role": "clue",
     "quote": "Helen discovers a room where sweets have been left for Candyman",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:25",
+      "quote": "Sweets to the sweet."
+     },
+     {
+      "source": "screenplay",
+      "quote": "A razor blade has been neatly inserted into the piece of candy."
+     }
+    ]
    },
    {
     "value": "dog",
@@ -154,14 +277,27 @@
     "when": "middle",
     "role": "turn",
     "quote": "finding Anne-Marie's pet Rottweiler, Annie, decapitated",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:39",
+      "quote": "She discovered her dog with its head cut off."
+     }
+    ]
    },
    {
     "value": "mural",
     "when": "late",
     "role": "mirror",
     "quote": "Helen awakes to discover a mural of the Candyman and his lover",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "A VAST HEAD has been sprayed onto the bare cinderblock around the hole, which is placed centrally like a mouth."
+     }
+    ]
    },
    {
     "value": "pyre",
@@ -169,6 +305,22 @@
     "when": "ending",
     "role": "threat",
     "quote": "attempts to immolate both Helen and Anthony in a pyre",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "In the center of the blacktop looms the pile of broken turniture and dead saplings, a makeshift bonfire."
+     }
+    ]
+   },
+   {
+    "value": "crying baby",
+    "when": "late",
+    "role": "trigger",
+    "source": "subtitles",
+    "at": "01:25:09",
+    "quote": "(BABY CRYING)",
+    "detail": "Helen follows the cry into the bonfire",
     "confidence": "sourced"
    },
    {
@@ -176,68 +328,160 @@
     "when": "early",
     "role": "clue",
     "quote": "smeared him with honeycomb stolen from an apiary",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:50",
+      "quote": "They smashed the hives and stole the honeycomb"
+     }
+    ]
    }
   ],
   "beats": [
    {
     "order": 1,
-    "value": "name said, nothing happens",
+    "value": "threat speaks over darkness",
     "when": "opening",
-    "role": "trigger",
-    "quote": "repeat Candyman's name to Helen's bathroom mirror, to no avail",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:02:34",
+    "quote": "They will say that I have shed innocent blood. What's blood for, if not for shedding?",
+    "detail": "Candyman's voice over buzzing bees before the story begins",
     "confidence": "sourced"
    },
    {
     "order": 2,
+    "value": "name said, nothing happens",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "repeat Candyman's name to Helen's bathroom mirror, to no avail",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:28",
+      "quote": "Oh, you chicken!"
+     }
+    ]
+   },
+   {
+    "order": 3,
     "value": "origin told by expert",
     "when": "early",
     "role": "clue",
     "quote": "\"Candyman\" was an African-American man born in the late 1800s as the son of a slave",
-    "confidence": "sourced"
-   },
-   {
-    "order": 3,
-    "value": "false culprit caught",
-    "when": "middle",
-    "quote": "charge him for the murders attributed to Candyman",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:43",
+      "quote": "Well, if you're after the hook man, Helen, you really must read the paper I wrote about him 10 years ago."
+     }
+    ]
    },
    {
     "order": 4,
+    "value": "false culprit caught",
+    "when": "middle",
+    "quote": "charge him for the murders attributed to Candyman",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "He pulls it out. He is holding a butcher's hook."
+     }
+    ]
+   },
+   {
+    "order": 5,
     "value": "real ghost appears",
     "when": "middle",
     "role": "turn",
     "quote": "the real Candyman appears to Helen in a parking garage, hypnotizing her",
-    "confidence": "sourced"
-   },
-   {
-    "order": 5,
-    "value": "protagonist framed",
-    "when": "middle",
-    "quote": "Framed for the crime, Helen is committed to a psychiatric hospital",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:40",
+      "quote": "Be my victim. Be my victim."
+     }
+    ]
    },
    {
     "order": 6,
-    "value": "child taken",
-    "when": "late",
-    "quote": "He vanishes with Anthony, and Helen awakes",
+    "value": "friend killed",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "01:00:23",
+    "quote": "(SLASHING) (BERNADETTE SCREAMING)",
     "confidence": "sourced"
    },
    {
     "order": 7,
-    "value": "self-sacrifice in fire",
-    "when": "ending",
-    "quote": "Helen stabs Candyman with a flaming plank",
-    "confidence": "sourced"
+    "value": "protagonist framed",
+    "when": "middle",
+    "quote": "Framed for the crime, Helen is committed to a psychiatric hospital",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:58",
+      "quote": "you've been charged with first-degree murder."
+     }
+    ]
    },
    {
     "order": 8,
+    "value": "child taken",
+    "when": "late",
+    "quote": "He vanishes with Anthony, and Helen awakes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:32",
+      "quote": "that baby Anthony was abducted and may still be alive."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "self-sacrifice in fire",
+    "when": "ending",
+    "quote": "Helen stabs Candyman with a flaming plank",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:10",
+      "quote": "We must be on our way now, you and I. Our bones will soon be ashes"
+     }
+    ]
+   },
+   {
+    "order": 10,
     "value": "new legend born",
     "when": "ending",
     "role": "turn",
     "quote": "A new mural of Helen dressed in white with her hair ablaze appears in Candyman's lair",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "it depicts Helen rising from the bonfire like a phoenix, her hair aflame like a halo."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "her name said in mirror",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:33:59",
+    "quote": "Helen. Oh, Helen. Helen.",
+    "detail": "Trevor repeats Helen's name at the mirror and summons her",
     "confidence": "sourced"
    }
   ]
@@ -245,5 +489,6 @@
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

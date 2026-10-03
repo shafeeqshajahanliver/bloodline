@@ -1,59 +1,393 @@
 {
  "film": "1993-cronos",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "cursed object", "detail": "the scarab-shaped Cronos device", "quote": "it unfurls spider-like legs which grip him tightly and inserts a needle into his skin", "confidence": "sourced"},
-   {"value": "the self becoming vampire", "quote": "He also develops a thirst for blood", "confidence": "sourced"},
-   {"value": "greedy collector", "detail": "Dieter and his nephew Angel", "quote": "a rich, dying businessman, Dieter de la Guardia, who has been amassing information about the mechanism", "confidence": "sourced"}
+   {
+    "value": "cursed object",
+    "detail": "the scarab-shaped Cronos device",
+    "quote": "it unfurls spider-like legs which grip him tightly and inserts a needle into his skin",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the self becoming vampire",
+    "quote": "He also develops a thirst for blood",
+    "confidence": "sourced"
+   },
+   {
+    "value": "greedy collector",
+    "detail": "Dieter and his nephew Angel",
+    "quote": "a rich, dying businessman, Dieter de la Guardia, who has been amassing information about the mechanism",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "made by someone", "detail": "a 16th-century alchemist", "quote": "In the year 1536, an alchemist in Veracruz develops a mechanism that can give eternal life", "confidence": "sourced"}
+   {
+    "value": "made by someone",
+    "detail": "a 16th-century alchemist",
+    "quote": "In the year 1536, an alchemist in Veracruz develops a mechanism that can give eternal life",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "eternal life", "quote": "a mechanism that can give eternal life", "confidence": "sourced"},
-   {"value": "blood", "quote": "He also develops a thirst for blood", "confidence": "sourced"}
+   {
+    "value": "eternal life",
+    "quote": "a mechanism that can give eternal life",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:33",
+      "quote": "which would provide him with the key to eternal life."
+     }
+    ]
+   },
+   {
+    "value": "blood",
+    "quote": "He also develops a thirst for blood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:00",
+      "quote": "Blood. Human?"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "finding a hidden object", "quote": "notices that the base of an archangel statue is hollow. He opens it and finds the 460-year-old mechanism", "confidence": "sourced"}
+   {
+    "value": "finding a hidden object",
+    "quote": "notices that the base of an archangel statue is hollow. He opens it and finds the 460-year-old mechanism",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "restores youth", "quote": "Gris eventually discovers his health and vigor are returning, as is his youth", "confidence": "sourced"},
-   {"value": "burned by sunlight", "quote": "his skin burns in the presence of sunlight and sleeps in a box to avoid it", "confidence": "sourced"},
-   {"value": "heart must be destroyed", "quote": "Dieter beats Angel for not ensuring Gris's heart was destroyed", "confidence": "sourced"},
-   {"value": "destroying it kills the user", "quote": "Gris threatens to destroy the mechanism but is told that he will die should that happen", "confidence": "sourced"}
+   {
+    "value": "restores youth",
+    "quote": "Gris eventually discovers his health and vigor are returning, as is his youth",
+    "confidence": "sourced"
+   },
+   {
+    "value": "burned by sunlight",
+    "quote": "his skin burns in the presence of sunlight and sleeps in a box to avoid it",
+    "confidence": "sourced"
+   },
+   {
+    "value": "heart must be destroyed",
+    "quote": "Dieter beats Angel for not ensuring Gris's heart was destroyed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:31",
+      "quote": "Did you check his heart? It wasn't beating."
+     }
+    ]
+   },
+   {
+    "value": "destroying it kills the user",
+    "quote": "Gris threatens to destroy the mechanism but is told that he will die should that happen",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:25",
+      "quote": "If the device goes, you go."
+     }
+    ]
+   },
+   {
+    "value": "instructions kept from user",
+    "detail": "the alchemist's book, written backwards in Latin",
+    "source": "subtitles",
+    "at": "00:32:56",
+    "quote": "But I'm keeping the instructions.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "elderly man", "relation_to_threat": "self", "detail": "Jesús Gris", "quote": "an elderly antique dealer, Jesús Gris, notices that the base of an archangel statue is hollow", "confidence": "sourced"},
-   {"value": "grandchild", "relation_to_threat": "family", "detail": "Aurora", "quote": "Noticing that her hand is bleeding, Gris is tempted to feed off his granddaughter", "confidence": "sourced"}
+   {
+    "value": "elderly man",
+    "relation_to_threat": "self",
+    "detail": "Jesús Gris",
+    "quote": "an elderly antique dealer, Jesús Gris, notices that the base of an archangel statue is hollow",
+    "confidence": "sourced"
+   },
+   {
+    "value": "grandchild",
+    "relation_to_threat": "family",
+    "detail": "Aurora",
+    "quote": "Noticing that her hand is bleeding, Gris is tempted to feed off his granddaughter",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "self-sacrifice destroys threat", "quote": "He then painfully destroys the mechanism, despite previous warnings", "confidence": "sourced"},
-   {"value": "temptation resisted", "quote": "Gris is tempted to feed off his granddaughter, but he eventually controls himself", "confidence": "sourced"}
+   {
+    "value": "self-sacrifice destroys threat",
+    "quote": "He then painfully destroys the mechanism, despite previous warnings",
+    "confidence": "sourced"
+   },
+   {
+    "value": "temptation resisted",
+    "quote": "Gris is tempted to feed off his granddaughter, but he eventually controls himself",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "basins of blood", "when": "opening", "role": "omen", "quote": "basins filled with blood from a corpse", "confidence": "sourced"},
-   {"value": "archangel statue", "state": "hollow", "when": "early", "role": "clue", "quote": "the base of an archangel statue is hollow", "confidence": "sourced"},
-   {"value": "scarab device", "state": "clockwork with insect inside", "when": "early", "role": "threat", "quote": "After he winds the ornate, scarab-shaped device, it unfurls spider-like legs", "confidence": "sourced"},
-   {"value": "insect", "state": "entombed", "when": "early", "role": "threat", "quote": "An insect — entombed within the device and meshed with the internal clockwork — filters the blood", "confidence": "sourced"},
-   {"value": "blood on the floor", "when": "middle", "role": "symbol", "quote": "Gris notices blood on the floor and decides to lick it up", "confidence": "sourced"},
-   {"value": "marble-white skin", "when": "late", "role": "symbol", "quote": "he has new skin underneath, which is marble-white like the dead alchemist", "confidence": "sourced"},
-   {"value": "box for sleeping", "when": "middle", "quote": "sleeps in a box to avoid it", "confidence": "sourced"}
+   {
+    "value": "basins of blood",
+    "when": "opening",
+    "role": "omen",
+    "quote": "basins filled with blood from a corpse",
+    "confidence": "sourced"
+   },
+   {
+    "value": "archangel statue",
+    "state": "hollow",
+    "when": "early",
+    "role": "clue",
+    "quote": "the base of an archangel statue is hollow",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:07",
+      "quote": "I found another archangel."
+     }
+    ]
+   },
+   {
+    "value": "scarab device",
+    "state": "clockwork with insect inside",
+    "when": "early",
+    "role": "threat",
+    "quote": "After he winds the ornate, scarab-shaped device, it unfurls spider-like legs",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:01",
+      "quote": "A toy? Don't get close to it."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:19:14",
+      "quote": "No, it's more like a sting... from a bee, I don't know."
+     }
+    ]
+   },
+   {
+    "value": "insect",
+    "state": "entombed",
+    "when": "early",
+    "role": "threat",
+    "quote": "An insect — entombed within the device and meshed with the internal clockwork — filters the blood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:08",
+      "quote": "The insect is trapped inside the invention. Like a sort of... living filter."
+     }
+    ]
+   },
+   {
+    "value": "blood on the floor",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "Gris notices blood on the floor and decides to lick it up",
+    "confidence": "sourced"
+   },
+   {
+    "value": "marble-white skin",
+    "when": "late",
+    "role": "symbol",
+    "quote": "he has new skin underneath, which is marble-white like the dead alchemist",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:43",
+      "quote": "What's this, why the new skin?"
+     }
+    ]
+   },
+   {
+    "value": "box for sleeping",
+    "when": "middle",
+    "quote": "sleeps in a box to avoid it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:38",
+      "quote": "Bring me a box."
+     }
+    ]
+   },
+   {
+    "value": "clocks",
+    "state": "chiming in the antique shop",
+    "when": "early",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:06:32",
+    "quote": "(clocks chiming)",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pool of his own blood",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:48:25",
+    "quote": "All this blood, my God. All this blood is mine.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "alchemist's death prologue", "when": "opening", "role": "omen", "quote": "the alchemist, who has marble-white skin, is killed when his heart is pierced by the debris", "confidence": "sourced"},
-   {"order": 2, "value": "object found", "when": "early", "role": "trigger", "quote": "He opens it and finds the 460-year-old mechanism", "confidence": "sourced"},
-   {"order": 3, "value": "youth and blood-thirst", "when": "early", "quote": "This initially disgusts him, but he eventually succumbs to the temptation", "confidence": "sourced"},
-   {"order": 4, "value": "killed and revives", "when": "middle", "role": "turn", "quote": "He later revives in an undertaker's establishment and escapes before he can be cremated", "confidence": "sourced"},
-   {"order": 5, "value": "confrontation with collector", "when": "late", "quote": "Gris agrees to hand it over in exchange for knowing the \"way out\", whereupon Dieter stabs him", "confidence": "sourced"},
-   {"order": 6, "value": "rooftop fall", "when": "late", "quote": "Gris throws them both off the roof, killing Angel", "confidence": "sourced"},
-   {"order": 7, "value": "refuses to feed on family", "when": "ending", "role": "turn", "quote": "Gris is tempted to feed off his granddaughter, but he eventually controls himself", "confidence": "sourced"},
-   {"order": 8, "value": "destroys object, dies at home", "when": "ending", "quote": "He returns to his home and is shown lying in bed, with Aurora and his wife in attendance", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "alchemist's death prologue",
+    "when": "opening",
+    "role": "omen",
+    "quote": "the alchemist, who has marble-white skin, is killed when his heart is pierced by the debris",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:10",
+      "quote": "Among the victims was a man of strange skin, the color of marble in moonlight."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "alchemist's last words",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:02:20",
+    "quote": "his last words... Suo tempore.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "object found",
+    "when": "early",
+    "role": "trigger",
+    "quote": "He opens it and finds the 460-year-old mechanism",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "youth and blood-thirst",
+    "when": "early",
+    "quote": "This initially disgusts him, but he eventually succumbs to the temptation",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:01",
+      "quote": "And it hurts me to be alive. The thirst is burning me,"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "killed and revives",
+    "when": "middle",
+    "role": "turn",
+    "quote": "He later revives in an undertaker's establishment and escapes before he can be cremated",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:57",
+      "quote": "but don't work on it too hard, we're going to cremate him."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "confrontation with collector",
+    "when": "late",
+    "quote": "Gris agrees to hand it over in exchange for knowing the \"way out\", whereupon Dieter stabs him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:42",
+      "quote": "There is a way out. But first, the device."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "rooftop fall",
+    "when": "late",
+    "quote": "Gris throws them both off the roof, killing Angel",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "refuses to feed on family",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Gris is tempted to feed off his granddaughter, but he eventually controls himself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:25",
+      "quote": "Grandpa. No!"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "destroys object, dies at home",
+    "when": "ending",
+    "quote": "He returns to his home and is shown lying in bed, with Aurora and his wife in attendance",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:27",
+      "quote": "I'm Jesus... Gris."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "names himself at the end",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:21:40",
+    "quote": "Jesus Gris. Jesus Gris.",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

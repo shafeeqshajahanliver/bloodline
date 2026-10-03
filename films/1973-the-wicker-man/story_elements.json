@@ -1,60 +1,424 @@
 {
  "film": "1973-the-wicker-man",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "pagan community", "detail": "the islanders of Summerisle", "quote": "the inhabitants of the island have abandoned Christianity and now practise a form of Celtic paganism", "confidence": "sourced"},
-   {"value": "cult leader", "detail": "Lord Summerisle", "quote": "Howie meets the island's leader, Lord Summerisle, grandson of a Victorian agronomist", "confidence": "sourced"}
+   {
+    "value": "pagan community",
+    "detail": "the islanders of Summerisle",
+    "quote": "the inhabitants of the island have abandoned Christianity and now practise a form of Celtic paganism",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cult leader",
+    "detail": "Lord Summerisle",
+    "quote": "Howie meets the island's leader, Lord Summerisle, grandson of a Victorian agronomist",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "revived old religion", "detail": "the grandfather encouraged a return to the old gods", "quote": "encouraged the belief that returning to the old gods would bring prosperity to the island", "confidence": "sourced"}
+   {
+    "value": "revived old religion",
+    "detail": "the grandfather encouraged a return to the old gods",
+    "quote": "encouraged the belief that returning to the old gods would bring prosperity to the island",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "sacrifice for harvest", "quote": "a human sacrifice is offered to the gods in the event of crop failure", "confidence": "sourced"}
+   {
+    "value": "sacrifice for harvest",
+    "quote": "a human sacrifice is offered to the gods in the event of crop failure",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "If my people are not to go hungry next year, your death has to be a reality."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "abandoning christianity", "quote": "the Christian ministers fled to the mainland", "confidence": "observed"},
-   {"value": "religious extremism", "quote": "Religious extremism has been cited by numerous scholars as a prominent theme in the film", "confidence": "sourced"}
+   {
+    "value": "abandoning christianity",
+    "quote": "the Christian ministers fled to the mainland",
+    "confidence": "observed"
+   },
+   {
+    "value": "religious extremism",
+    "quote": "Religious extremism has been cited by numerous scholars as a prominent theme in the film",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "a journey", "detail": "to a remote island", "quote": "journeys by seaplane to the remote, verdant Hebridean island of Summerisle", "confidence": "sourced"},
-   {"value": "missing child", "detail": "anonymous letter about Rowan Morrison", "quote": "to investigate the disappearance of a young girl, Rowan Morrison, about whom he has received an anonymous letter", "confidence": "sourced"}
+   {
+    "value": "a journey",
+    "detail": "to a remote island",
+    "quote": "journeys by seaplane to the remote, verdant Hebridean island of Summerisle",
+    "confidence": "sourced"
+   },
+   {
+    "value": "missing child",
+    "detail": "anonymous letter about Rowan Morrison",
+    "quote": "to investigate the disappearance of a young girl, Rowan Morrison, about whom he has received an anonymous letter",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "None of us have seen May Morrison's daughter Rowan, since last year."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "victim must meet requirements", "detail": "free will, king's power, virgin, fool", "quote": "He fits their gods' four requirements: he came of his own free will", "confidence": "sourced"},
-   {"value": "cannot escape", "quote": "it no longer functions and its radio is damaged; he cannot leave or call for help", "confidence": "sourced"}
+   {
+    "value": "victim must meet requirements",
+    "detail": "free will, king's power, virgin, fool",
+    "quote": "He fits their gods' four requirements: he came of his own free will",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "who would come here as a virgin, as incredibly it seems you still are"
+     }
+    ]
+   },
+   {
+    "value": "cannot escape",
+    "quote": "it no longer functions and its radio is damaged; he cannot leave or call for help",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "There is no wa~t out. Go with dignity."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "outsider investigator", "relation_to_threat": "stranger", "detail": "Sergeant Howie, a devout Christian policeman", "quote": "the visit of a police officer, Sergeant Neil Howie, to the fictional, isolated Scottish island", "confidence": "sourced"}
+   {
+    "value": "outsider investigator",
+    "relation_to_threat": "stranger",
+    "detail": "Sergeant Howie, a devout Christian policeman",
+    "quote": "the visit of a police officer, Sergeant Neil Howie, to the fictional, isolated Scottish island",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "protagonist sacrificed", "quote": "Howie and the animals burn to death as the head of the wicker man collapses in flames", "confidence": "sourced"},
-   {"value": "lured by deception", "detail": "the missing girl was bait", "quote": "Summerisle tells Howie that Rowan was never the intended sacrifice — Howie is", "confidence": "sourced"}
+   {
+    "value": "protagonist sacrificed",
+    "quote": "Howie and the animals burn to death as the head of the wicker man collapses in flames",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lured by deception",
+    "detail": "the missing girl was bait",
+    "quote": "Summerisle tells Howie that Rowan was never the intended sacrifice — Howie is",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "toad", "state": "in a child's mouth", "when": "opening", "role": "omen", "quote": "one places a toad in a child's mouth to cure a sore throat", "confidence": "sourced"},
-   {"value": "maypole", "when": "opening", "role": "symbol", "quote": "teach children of the phallic association of the maypole", "confidence": "sourced"},
-   {"value": "photograph", "state": "missing", "when": "early", "role": "clue", "quote": "The photograph of the most recent celebration is missing and the landlord tells him it was broken", "confidence": "sourced"},
-   {"value": "hare", "state": "dead, in coffin", "when": "middle", "role": "clue", "quote": "the coffin contains only the body of a hare", "confidence": "sourced"},
-   {"value": "mask", "state": "stolen fool's mask", "when": "late", "role": "symbol", "quote": "steals his costume and mask of Punch (the Fool) to infiltrate the parade", "confidence": "sourced"},
-   {"value": "wicker man", "state": "burning", "when": "ending", "role": "weapon", "quote": "force Howie inside a giant wicker man statue along with various animals, set it ablaze", "confidence": "sourced"},
-   {"value": "animals", "state": "burning", "when": "ending", "role": "symbol", "quote": "Howie and the animals burn to death", "confidence": "sourced"},
-   {"value": "setting sun", "when": "ending", "role": "symbol", "quote": "the head of the wicker man collapses in flames, revealing the setting sun", "confidence": "sourced"}
+   {
+    "value": "toad",
+    "state": "in a child's mouth",
+    "when": "opening",
+    "role": "omen",
+    "quote": "one places a toad in a child's mouth to cure a sore throat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "A hand holding a frog comes into frame and pops the frog into the open mouth."
+     }
+    ]
+   },
+   {
+    "value": "maypole",
+    "when": "opening",
+    "role": "symbol",
+    "quote": "teach children of the phallic association of the maypole",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "please what the maypole represents"
+     }
+    ]
+   },
+   {
+    "value": "photograph",
+    "state": "missing",
+    "when": "early",
+    "role": "clue",
+    "quote": "The photograph of the most recent celebration is missing and the landlord tells him it was broken",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The most recent year's photo- graph is missing. The nail on which it hung is there"
+     }
+    ]
+   },
+   {
+    "value": "hare",
+    "state": "dead, in coffin",
+    "when": "middle",
+    "role": "clue",
+    "quote": "the coffin contains only the body of a hare",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "quite empty except for a dead hare"
+     }
+    ]
+   },
+   {
+    "value": "mask",
+    "state": "stolen fool's mask",
+    "when": "late",
+    "role": "symbol",
+    "quote": "steals his costume and mask of Punch (the Fool) to infiltrate the parade",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "stands the hook nosed, hook chinned mask of Punch"
+     }
+    ]
+   },
+   {
+    "value": "wicker man",
+    "state": "burning",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "force Howie inside a giant wicker man statue along with various animals, set it ablaze",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Over sixty feet high, it is constructed of segmented wicker cages lashed together"
+     }
+    ]
+   },
+   {
+    "value": "animals",
+    "state": "burning",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "Howie and the animals burn to death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "setting sun",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "the head of the wicker man collapses in flames, revealing the setting sun",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "topples off, revealing behind it the bloou orange sun sinking"
+     }
+    ]
+   },
+   {
+    "value": "beetle on a nail",
+    "state": "tethered, circling",
+    "when": "early",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "Attached to the nail by a thread is a black beetle.",
+    "confidence": "sourced",
+    "detail": "a schoolgirl's beetle winds round a nail until it is trapped, foreshadowing Howie's fate"
+   },
+   {
+    "value": "chocolate hares",
+    "when": "early",
+    "role": "clue",
+    "source": "screenplay",
+    "quote": "It is-full of magnificent chocolate hares an~ strange distended sugar babies.",
+    "confidence": "sourced",
+    "detail": "in May Morrison's sweet shop; Myrtle later says 'Rowan's a hare'",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "She's a hare. Rowan's a hare."
+     }
+    ]
+   },
+   {
+    "value": "animal masks",
+    "when": "late",
+    "role": "symbol",
+    "source": "screenplay",
+    "quote": "All wear elaborate animal masks - otters, badgers, foxes~ eagles, stoats, rats",
+    "confidence": "sourced"
+   },
+   {
+    "value": "shrivelled apple",
+    "state": "failed crop",
+    "when": "middle",
+    "role": "clue",
+    "source": "screenplay",
+    "quote": "produces a slightly shrivelled brown apple which he cuts open with a knife",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "No apples?"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "outsider arrives on island", "when": "opening", "role": "trigger", "quote": "journeys by seaplane to the remote, verdant Hebridean island of Summerisle", "confidence": "sourced"},
-   {"order": 2, "value": "community denies the child", "when": "early", "quote": "The islanders appear to be trying to thwart his investigation by claiming that Rowan never existed", "confidence": "sourced"},
-   {"order": 3, "value": "grave exhumed, animal inside", "when": "middle", "role": "clue", "quote": "Exhuming Rowan's grave, Howie finds that the coffin contains only the body of a hare", "confidence": "sourced"},
-   {"order": 4, "value": "sacrifice suspected", "when": "middle", "quote": "He concludes that Rowan is alive and will soon be sacrificed", "confidence": "sourced"},
-   {"order": 5, "value": "escape cut off", "when": "late", "quote": "he cannot leave or call for help", "confidence": "sourced"},
-   {"order": 6, "value": "infiltrates festival", "when": "late", "quote": "steals his costume and mask of Punch (the Fool) to infiltrate the parade", "confidence": "sourced"},
-   {"order": 7, "value": "hero revealed as victim", "when": "ending", "role": "turn", "quote": "Summerisle tells Howie that Rowan was never the intended sacrifice — Howie is", "confidence": "sourced"},
-   {"order": 8, "value": "burned alive", "when": "ending", "quote": "Howie and the animals burn to death as the head of the wicker man collapses in flames", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "anonymous letter arrives",
+    "when": "opening",
+    "role": "trigger",
+    "source": "screenplay",
+    "quote": "There's a letter for you, Sergeant.",
+    "confidence": "sourced",
+    "detail": "the film opens on the mainland with the postman bringing the letter about Rowan"
+   },
+   {
+    "order": 2,
+    "value": "outsider arrives on island",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "journeys by seaplane to the remote, verdant Hebridean island of Summerisle",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The seaplane comes down and lands in the harbour."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "community denies the child",
+    "when": "early",
+    "quote": "The islanders appear to be trying to thwart his investigation by claiming that Rowan never existed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "That's right. She's not from here."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "grave exhumed, animal inside",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Exhuming Rowan's grave, Howie finds that the coffin contains only the body of a hare",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "quite empty except for a dead hare"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "sacrifice suspected",
+    "when": "middle",
+    "quote": "He concludes that Rowan is alive and will soon be sacrificed",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "escape cut off",
+    "when": "late",
+    "quote": "he cannot leave or call for help",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Bit of a coincidence that neither the engine or the radio are working."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "infiltrates festival",
+    "when": "late",
+    "quote": "steals his costume and mask of Punch (the Fool) to infiltrate the parade",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "is changing into his Punch costume and already has half of it on"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "mock beheading in procession",
+    "when": "late",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "Behind him the knot descends on the girl with the hare's head.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "hero revealed as victim",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Summerisle tells Howie that Rowan was never the intended sacrifice — Howie is",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "What of course you failed to guess, was that you yourself were going to provide the willing, virgin, stranger"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "burned alive",
+    "when": "ending",
+    "quote": "Howie and the animals burn to death as the head of the wicker man collapses in flames",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Nuada, mighty God of the Sun, accept our sacrifice and be appeased."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "victim curses the leader",
+    "when": "ending",
+    "role": "turn",
+    "source": "screenplay",
+    "quote": "If the crops fail your people will see to it thint it is you LI who will burn next May Day.",
+    "confidence": "sourced",
+    "detail": "Howie warns Summerisle that he will be next; a flicker of doubt crosses his face"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,68 +1,557 @@
 {
  "film": "2006-pan-s-labyrinth",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "cruel stepfather", "detail": "Captain Vidal, Francoist officer", "quote": "Ofelia becomes aware of Vidal's ruthlessness in the course of hunting down the Maquis", "confidence": "sourced"},
-   {"value": "child-eating monster", "detail": "the Pale Man", "quote": "retrieving a dagger from the lair of the Pale Man, a child-eating monster", "confidence": "sourced"},
-   {"value": "ambiguous guide", "detail": "the faun", "quote": "Infuriated at her disobedience, the faun refuses to give Ofelia the third task and abandons her", "confidence": "observed"}
+   {
+    "value": "cruel stepfather",
+    "detail": "Captain Vidal, Francoist officer",
+    "quote": "Ofelia becomes aware of Vidal's ruthlessness in the course of hunting down the Maquis",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child-eating monster",
+    "detail": "the Pale Man",
+    "quote": "retrieving a dagger from the lair of the Pale Man, a child-eating monster",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The Pale Man lifts his head and grabs the two human eyeballs from the metallic plate in front of him."
+     }
+    ]
+   },
+   {
+    "value": "ambiguous guide",
+    "detail": "the faun",
+    "quote": "Infuriated at her disobedience, the faun refuses to give Ofelia the third task and abandons her",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:57",
+      "quote": "You cannot return. The moon will be full in three days."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "political regime", "quote": "Ofelia's stepfather, Captain Vidal, hunts down the Spanish Maquis who resist the Francoist regime", "confidence": "sourced"},
-   {"value": "fairy tale world", "quote": "a mythical world centered on an overgrown, abandoned labyrinth and a mysterious faun", "confidence": "sourced"}
+   {
+    "value": "political regime",
+    "quote": "Ofelia's stepfather, Captain Vidal, hunts down the Spanish Maquis who resist the Francoist regime",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fairy tale world",
+    "quote": "a mythical world centered on an overgrown, abandoned labyrinth and a mysterious faun",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "control", "detail": "Vidal starves out the resistance", "quote": "he will stockpile food and supplies in the granary in order to weaken the Maquis and their collaborators", "confidence": "sourced"},
-   {"value": "an heir", "quote": "asking that his son be told the time of his father's death", "confidence": "observed"},
-   {"value": "innocent blood", "detail": "the faun's demand", "quote": "opening the portal to the underworld requires the blood of an innocent", "confidence": "sourced"}
+   {
+    "value": "control",
+    "detail": "Vidal starves out the resistance",
+    "quote": "he will stockpile food and supplies in the granary in order to weaken the Maquis and their collaborators",
+    "confidence": "sourced"
+   },
+   {
+    "value": "an heir",
+    "quote": "asking that his son be told the time of his father's death",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:48:07",
+      "quote": "Tell my son... Tell him what time his father died."
+     }
+    ]
+   },
+   {
+    "value": "innocent blood",
+    "detail": "the faun's demand",
+    "quote": "opening the portal to the underworld requires the blood of an innocent",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:45:27",
+      "quote": "The portal will only open if we offer the blood of an innocent."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "political violence", "quote": "He interrogates and kills two local farmers (who only hunted rabbits)", "confidence": "sourced"}
+   {
+    "value": "political violence",
+    "quote": "He interrogates and kills two local farmers (who only hunted rabbits)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:12",
+      "quote": "Captain, if my father says so, he was hunting rabbits."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "moving into a new home", "detail": "to live with her new stepfather", "quote": "Ofelia travels with her pregnant mother Carmen to meet Captain Vidal, her new stepfather", "confidence": "sourced"},
-   {"value": "following a creature", "quote": "A large stick insect, which Ofelia believes to be a fairy, leads Ofelia into an ancient stone labyrinth", "confidence": "sourced"}
+   {
+    "value": "moving into a new home",
+    "detail": "to live with her new stepfather",
+    "quote": "Ofelia travels with her pregnant mother Carmen to meet Captain Vidal, her new stepfather",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:29",
+      "quote": "I want you to call him father."
+     }
+    ]
+   },
+   {
+    "value": "following a creature",
+    "quote": "A large stick insect, which Ofelia believes to be a fairy, leads Ofelia into an ancient stone labyrinth",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:26",
+      "quote": "Are you a fairy?"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "three tasks", "quote": "three tasks to complete in order for her to acquire immortality and return to her kingdom", "confidence": "sourced"},
-   {"value": "must not eat", "quote": "Despite the faun's warning not to consume anything there, she gives in to her temptation and eats two grapes", "confidence": "sourced"},
-   {"value": "labyrinths are portals", "quote": "he builds labyrinths around the world which act as portals", "confidence": "sourced"},
-   {"value": "self-sacrifice passes the test", "quote": "by choosing to spill her own blood rather than that of another, she passed the final test", "confidence": "sourced"}
+   {
+    "value": "three tasks",
+    "quote": "three tasks to complete in order for her to acquire immortality and return to her kingdom",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:12",
+      "quote": "You must complete three tasks before the moon is full."
+     }
+    ]
+   },
+   {
+    "value": "must not eat",
+    "quote": "Despite the faun's warning not to consume anything there, she gives in to her temptation and eats two grapes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:36",
+      "quote": "You will see a sumptuous feast, but don't eat or drink anything."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:17:42",
+      "quote": "It was only two grapes. I thought no one would notice."
+     }
+    ]
+   },
+   {
+    "value": "labyrinths are portals",
+    "quote": "he builds labyrinths around the world which act as portals",
+    "confidence": "sourced"
+   },
+   {
+    "value": "self-sacrifice passes the test",
+    "quote": "by choosing to spill her own blood rather than that of another, she passed the final test",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:50:39",
+      "quote": "You have spilled your own blood rather than the blood of an innocent."
+     }
+    ]
+   },
+   {
+    "value": "mark proves royal birth",
+    "source": "subtitles",
+    "at": "00:23:30",
+    "quote": "It was the moon that bore you. Look on your left shoulder and you will find a mark that proves it.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "return before sand runs out",
+    "source": "subtitles",
+    "at": "00:56:33",
+    "quote": "come back before the last grain of sand falls.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "child", "relation_to_threat": "family", "detail": "Ofelia, his stepdaughter", "quote": "Vidal takes the baby from Ofelia's arms before shooting her", "confidence": "sourced"},
-   {"value": "pregnant mother", "relation_to_threat": "family", "detail": "Carmen", "quote": "She immediately develops painful contractions and dies giving birth to Vidal's son", "confidence": "sourced"},
-   {"value": "resistance fighters", "relation_to_threat": "community", "quote": "Vidal interrogates and tortures a captive member of the Maquis", "confidence": "sourced"}
+   {
+    "value": "child",
+    "relation_to_threat": "family",
+    "detail": "Ofelia, his stepdaughter",
+    "quote": "Vidal takes the baby from Ofelia's arms before shooting her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pregnant mother",
+    "relation_to_threat": "family",
+    "detail": "Carmen",
+    "quote": "She immediately develops painful contractions and dies giving birth to Vidal's son",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:23",
+      "quote": "She's sick with baby."
+     }
+    ]
+   },
+   {
+    "value": "resistance fighters",
+    "relation_to_threat": "community",
+    "quote": "Vidal interrogates and tortures a captive member of the Maquis",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "tyrant killed", "quote": "Mercedes replies that his son will not even know his name, before Pedro shoots Vidal dead", "confidence": "sourced"},
-   {"value": "heroine dies", "quote": "Back in the stone labyrinth, Ofelia smiles as she dies.", "confidence": "sourced"},
-   {"value": "ambiguous", "detail": "she is welcomed as a princess in the underworld", "quote": "Ofelia, well dressed and uninjured, then appears in a golden throne room", "confidence": "observed"}
+   {
+    "value": "tyrant killed",
+    "quote": "Mercedes replies that his son will not even know his name, before Pedro shoots Vidal dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:48:20",
+      "quote": "He won't even know your name."
+     }
+    ]
+   },
+   {
+    "value": "heroine dies",
+    "quote": "Back in the stone labyrinth, Ofelia smiles as she dies.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ambiguous",
+    "detail": "she is welcomed as a princess in the underworld",
+    "quote": "Ofelia, well dressed and uninjured, then appears in a golden throne room",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:52:04",
+      "quote": "And it is said that the princess... returned to her father's kingdom."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "stick insect", "state": "becoming a fairy", "when": "early", "role": "omen", "quote": "A large stick insect, which Ofelia believes to be a fairy", "confidence": "sourced"},
-   {"value": "stone labyrinth", "state": "ancient, overgrown", "when": "early", "role": "setting", "quote": "leads Ofelia into an ancient stone labyrinth", "confidence": "sourced"},
-   {"value": "book", "state": "magic", "when": "early", "role": "clue", "quote": "He gives her a book and tells her she will find in it three tasks", "confidence": "sourced"},
-   {"value": "giant toad", "state": "key in its belly", "when": "middle", "role": "threat", "quote": "retrieving a key from the belly of a giant toad", "confidence": "sourced"},
-   {"value": "mandrake root", "state": "fed blood, burned", "when": "middle", "role": "symbol", "quote": "The faun gives Ofelia a mandrake root, instructing her to keep it under Carmen's bed and regularly supply it with blood", "confidence": "sourced"},
-   {"value": "grapes", "state": "forbidden, eaten", "when": "middle", "role": "trigger", "quote": "eats two grapes, awakening the Pale Man", "confidence": "sourced"},
-   {"value": "pocket watch", "state": "smashed", "when": "ending", "role": "symbol", "quote": "wanting to smash his pocket watch the same way Vidal's father had done during the war", "confidence": "sourced"},
-   {"value": "blood", "state": "dripping onto an altar", "when": "ending", "role": "turn", "quote": "Drops of Ofelia's blood fall down the centre of the spiral stone staircase onto an altar", "confidence": "sourced"}
+   {
+    "value": "stick insect",
+    "state": "becoming a fairy",
+    "when": "early",
+    "role": "omen",
+    "quote": "A large stick insect, which Ofelia believes to be a fairy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:20",
+      "quote": "I saw a fairy."
+     },
+     {
+      "source": "screenplay",
+      "quote": "Ofelia follows the Stick Insect to the edge of a small rise."
+     }
+    ]
+   },
+   {
+    "value": "stone labyrinth",
+    "state": "ancient, overgrown",
+    "when": "early",
+    "role": "setting",
+    "quote": "leads Ofelia into an ancient stone labyrinth",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:36",
+      "quote": "It's a labyrinth. Just a pile of old rocks that have always been here."
+     }
+    ]
+   },
+   {
+    "value": "book",
+    "state": "magic",
+    "when": "early",
+    "role": "clue",
+    "quote": "He gives her a book and tells her she will find in it three tasks",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:20",
+      "quote": "This is the Book Of Crossroads."
+     }
+    ]
+   },
+   {
+    "value": "giant toad",
+    "state": "key in its belly",
+    "when": "middle",
+    "role": "threat",
+    "quote": "retrieving a key from the belly of a giant toad",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:09",
+      "quote": "You must put the three magic stones in the toad's mouth... and retrieve the golden key from inside his belly."
+     }
+    ]
+   },
+   {
+    "value": "mandrake root",
+    "state": "fed blood, burned",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "The faun gives Ofelia a mandrake root, instructing her to keep it under Carmen's bed and regularly supply it with blood",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:44",
+      "quote": "This is a mandrake root. A plant that dreamt of being human."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:23:38",
+      "quote": "(Root squealing)"
+     }
+    ]
+   },
+   {
+    "value": "grapes",
+    "state": "forbidden, eaten",
+    "when": "middle",
+    "role": "trigger",
+    "quote": "eats two grapes, awakening the Pale Man",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Ofelia eating yet another grape."
+     }
+    ]
+   },
+   {
+    "value": "pocket watch",
+    "state": "smashed",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "wanting to smash his pocket watch the same way Vidal's father had done during the war",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:54",
+      "quote": "He smashed his watch on a rock... so that his son would know the exact hour and minute of his death."
+     }
+    ]
+   },
+   {
+    "value": "blood",
+    "state": "dripping onto an altar",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Drops of Ofelia's blood fall down the centre of the spiral stone staircase onto an altar",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:45:32",
+      "quote": "Just a drop of blood. A pinprick, that's all."
+     }
+    ]
+   },
+   {
+    "value": "magic rose",
+    "state": "blooming, wilting unpicked",
+    "when": "early",
+    "role": "symbol",
+    "detail": "the bedtime story Ofelia tells her unborn brother",
+    "source": "subtitles",
+    "at": "00:14:01",
+    "quote": "a magic rose blossomed every night... that made whoever plucked it immortal.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "chalk door",
+    "when": "middle",
+    "role": "trigger",
+    "source": "subtitles",
+    "at": "00:56:08",
+    "quote": "Use the chalk to trace a door... anywhere in your room.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "eyes in palms",
+    "when": "middle",
+    "role": "threat",
+    "detail": "the Pale Man sees through eyeballs set in his hands",
+    "source": "screenplay",
+    "quote": "He introduces the eyeballs into twin stigmatas in his palms",
+    "confidence": "sourced"
+   },
+   {
+    "value": "flowering fig tree",
+    "state": "blooming again",
+    "when": "ending",
+    "role": "symbol",
+    "source": "screenplay",
+    "quote": "The fig tree is flowering again.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "fairy tale prologue", "when": "opening", "quote": "Princess Moanna, whose father is the king of the underworld, visits the human world", "confidence": "sourced"},
-   {"order": 2, "value": "arrival at the stepfather's house", "when": "opening", "role": "trigger", "quote": "Ofelia travels with her pregnant mother Carmen to meet Captain Vidal, her new stepfather", "confidence": "sourced"},
-   {"order": 3, "value": "magical guide gives tasks", "when": "early", "quote": "There, she meets a faun, who believes she is the reincarnation of Princess Moanna", "confidence": "sourced"},
-   {"order": 4, "value": "rule broken, monster wakes", "when": "middle", "role": "turn", "quote": "she gives in to her temptation and eats two grapes, awakening the Pale Man", "confidence": "sourced"},
-   {"order": 5, "value": "mother dies in childbirth", "when": "middle", "role": "turn", "quote": "Carmen agrees and throws the root into the fire. She immediately develops painful contractions and dies", "confidence": "sourced"},
-   {"order": 6, "value": "refuses to harm a baby", "when": "late", "quote": "Ofelia refuses to harm her brother", "confidence": "sourced"},
-   {"order": 7, "value": "child shot, tyrant killed", "when": "ending", "quote": "Vidal takes the baby from Ofelia's arms before shooting her", "confidence": "sourced"},
-   {"order": 8, "value": "dying child enters the other world", "when": "ending", "quote": "Ofelia, well dressed and uninjured, then appears in a golden throne room", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "fairy tale prologue",
+    "when": "opening",
+    "quote": "Princess Moanna, whose father is the king of the underworld, visits the human world",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:50",
+      "quote": "A long time ago, in the underground realm..."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "arrival at the stepfather's house",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Ofelia travels with her pregnant mother Carmen to meet Captain Vidal, her new stepfather",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:08",
+      "quote": "15 minutes late."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "magical guide gives tasks",
+    "when": "early",
+    "quote": "There, she meets a faun, who believes she is the reincarnation of Princess Moanna",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:16",
+      "quote": "You're Princess Moanna... daughter of the king of the underworld."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "first task completed",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "00:44:55",
+    "quote": "I got the key out.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "rule broken, monster wakes",
+    "when": "middle",
+    "role": "turn",
+    "quote": "she gives in to her temptation and eats two grapes, awakening the Pale Man",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The Pale Man jerks toward her, in spastic, disembodied steps."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "mother dies in childbirth",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Carmen agrees and throws the root into the fire. She immediately develops painful contractions and dies",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "refuses to harm a baby",
+    "when": "late",
+    "quote": "Ofelia refuses to harm her brother",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:45:48",
+      "quote": "No! My brother stays with me."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "child shot, tyrant killed",
+    "when": "ending",
+    "quote": "Vidal takes the baby from Ofelia's arms before shooting her",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "dying child enters the other world",
+    "when": "ending",
+    "quote": "Ofelia, well dressed and uninjured, then appears in a golden throne room",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:50:05",
+      "quote": "Arise, my daughter."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "closing narration",
+    "when": "ending",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:52:17",
+    "quote": "And that she left behind small traces of her time on earth... visible only to those... who know where to look.",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,63 +1,452 @@
 {
  "film": "2025-sinners",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vampires", "detail": "Remmick, an Irish-immigrant vampire, and his thralls", "quote": "the Irish-immigrant vampire Remmick shelters from Choctaw vampire hunters with a married Klansmen couple", "confidence": "sourced"},
-   {"value": "racist mob", "detail": "the local Klan led by Hogwood", "quote": "revealing that Hogwood heads the local Klan and plans to attack the joint at dawn", "confidence": "sourced"}
+   {
+    "value": "vampires",
+    "detail": "Remmick, an Irish-immigrant vampire, and his thralls",
+    "quote": "the Irish-immigrant vampire Remmick shelters from Choctaw vampire hunters with a married Klansmen couple",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Pickled garlic. (beat) These ain't Haints. They vampires."
+     }
+    ]
+   },
+   {
+    "value": "racist mob",
+    "detail": "the local Klan led by Hogwood",
+    "quote": "revealing that Hogwood heads the local Klan and plans to attack the joint at dawn",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Club Juke, huh? Grand opening, grand closing."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "from outside", "quote": "the Irish-immigrant vampire Remmick shelters from Choctaw vampire hunters", "confidence": "sourced"}
+   {
+    "value": "from outside",
+    "quote": "the Irish-immigrant vampire Remmick shelters from Choctaw vampire hunters",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to spread", "quote": "wanting to kill the vampires before they turn others", "confidence": "sourced"},
-   {"value": "a gifted person", "detail": "Sammie, whose music summons spirits", "quote": "He then promises to leave the others in exchange for Sammie, whose musical skills could summon the spirits of his lost community", "confidence": "sourced"}
+   {
+    "value": "to spread",
+    "quote": "wanting to kill the vampires before they turn others",
+    "confidence": "sourced"
+   },
+   {
+    "value": "a gifted person",
+    "detail": "Sammie, whose music summons spirits",
+    "quote": "He then promises to leave the others in exchange for Sammie, whose musical skills could summon the spirits of his lost community",
+    "confidence": "sourced"
+   },
+   {
+    "value": "songs and stories",
+    "source": "screenplay",
+    "quote": "I want your stories. I want your songs. And you will have mine.",
+    "detail": "Remmick to Sammie",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "racial oppression", "quote": "criminal twin brothers who return to their hometown in the Jim Crow South, where they are confronted by a supernatural evil", "confidence": "observed"}
+   {
+    "value": "racial oppression",
+    "quote": "criminal twin brothers who return to their hometown in the Jim Crow South, where they are confronted by a supernatural evil",
+    "confidence": "observed"
+   }
   ],
   "trigger": [
-   {"value": "homecoming", "quote": "return to Clarksdale, Mississippi, after seven years in Chicago working for the Chicago mob", "confidence": "sourced"},
-   {"value": "music summons spirits", "quote": "Unbeknownst to Sammie, his music summons spirits of performers from the past and future", "confidence": "sourced"}
+   {
+    "value": "homecoming",
+    "quote": "return to Clarksdale, Mississippi, after seven years in Chicago working for the Chicago mob",
+    "confidence": "sourced"
+   },
+   {
+    "value": "music summons spirits",
+    "quote": "Unbeknownst to Sammie, his music summons spirits of performers from the past and future",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "There are legends of people born with the gift of making music so true, that it can pierce the veil between life and death."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "must be invited", "quote": "Still unable to enter the joint unless invited", "confidence": "sourced"},
-   {"value": "weak to garlic", "quote": "Annie repels him with pickled garlic juice", "confidence": "sourced"},
-   {"value": "killed by sunlight", "quote": "incapacitating Remmick, who is incinerated along with the horde by the light of the sunrise", "confidence": "sourced"},
-   {"value": "hive mind", "quote": "Although Remmick and his vampires share a hive mind, their personalities remain intact", "confidence": "sourced"}
+   {
+    "value": "must be invited",
+    "quote": "Still unable to enter the joint unless invited",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Why you can't just walk yo' big ass on in here without an invite, huh?"
+     }
+    ]
+   },
+   {
+    "value": "weak to garlic",
+    "quote": "Annie repels him with pickled garlic juice",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "In the kitchen area, Annie, Grace, and Pearline gather garlic."
+     }
+    ]
+   },
+   {
+    "value": "eating garlic proves human",
+    "source": "screenplay",
+    "quote": "We all gonna eat this clove of garlic.",
+    "detail": "Annie's test of everyone left inside; Delta Slim chokes on it",
+    "confidence": "sourced"
+   },
+   {
+    "value": "killed by sunlight",
+    "quote": "incapacitating Remmick, who is incinerated along with the horde by the light of the sunrise",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "They fall to the ground and burst into flames."
+     }
+    ]
+   },
+   {
+    "value": "hive mind",
+    "quote": "Although Remmick and his vampires share a hive mind, their personalities remain intact",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Cause I know everything he knows now. And I want you to let us in there."
+     }
+    ]
+   },
+   {
+    "value": "charm bag stops a bite",
+    "source": "screenplay",
+    "quote": "Stack prepares to bite Smoke but his fangs stop as they get to his Mojo bag.",
+    "detail": "Annie's hoodoo charm",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "twin brothers", "relation_to_threat": "stranger", "detail": "Smoke and Stack", "quote": "She then seduces and fatally bites Stack", "confidence": "sourced"},
-   {"value": "black community", "relation_to_threat": "community", "quote": "as the patrons and Bo leave, the vampires turn them", "confidence": "sourced"},
-   {"value": "ex-lover", "relation_to_threat": "lover", "detail": "Mary, turned by Remmick", "quote": "Mary goes outside and talks to Remmick, and is turned into a vampire thrall by him", "confidence": "sourced"}
+   {
+    "value": "twin brothers",
+    "relation_to_threat": "stranger",
+    "detail": "Smoke and Stack",
+    "quote": "She then seduces and fatally bites Stack",
+    "confidence": "sourced"
+   },
+   {
+    "value": "black community",
+    "relation_to_threat": "community",
+    "quote": "as the patrons and Bo leave, the vampires turn them",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ex-lover",
+    "relation_to_threat": "lover",
+    "detail": "Mary, turned by Remmick",
+    "quote": "Mary goes outside and talks to Remmick, and is turned into a vampire thrall by him",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "who is incinerated along with the horde by the light of the sunrise", "confidence": "sourced"},
-   {"value": "some threats survive", "detail": "Stack and Mary live on as vampires", "quote": "Sammie, now a successful blues musician, is visited by an ageless Stack and Mary at his local blues club", "confidence": "sourced"},
-   {"value": "hero dies fighting", "quote": "Smoke sends Sammie home before he kills Hogwood and his men, but is fatally shot", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "who is incinerated along with the horde by the light of the sunrise",
+    "confidence": "sourced"
+   },
+   {
+    "value": "some threats survive",
+    "detail": "Stack and Mary live on as vampires",
+    "quote": "Sammie, now a successful blues musician, is visited by an ageless Stack and Mary at his local blues club",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hero dies fighting",
+    "quote": "Smoke sends Sammie home before he kills Hogwood and his men, but is fatally shot",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Smoke takes a SHOT to the belly. Falls to a knee."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "sawmill", "state": "abandoned, made a juke joint", "when": "opening", "role": "setting", "quote": "they purchase an abandoned sawmill from the landowner Hogwood to open a juke joint", "confidence": "sourced"},
-   {"value": "guitar music", "when": "middle", "role": "trigger", "quote": "his music summons spirits of performers from the past and future", "confidence": "sourced"},
-   {"value": "garlic", "state": "pickled", "when": "middle", "role": "weapon", "quote": "Annie repels him with pickled garlic juice", "confidence": "sourced"},
-   {"value": "bite", "when": "middle", "role": "threat", "quote": "She then seduces and fatally bites Stack", "confidence": "sourced"},
-   {"value": "sunrise", "when": "ending", "role": "weapon", "quote": "incinerated along with the horde by the light of the sunrise", "confidence": "sourced"},
-   {"value": "hoodoo", "when": "early", "role": "symbol", "quote": "Annie believes her Hoodoo practices kept the twins safe", "confidence": "sourced"}
+   {
+    "value": "red-eyed figure at window",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "A FIGURE with RED EYES peers in the window.",
+    "detail": "in the opening woodcuts of legendary musicians",
+    "confidence": "sourced"
+   },
+   {
+    "value": "klan uniform",
+    "when": "opening",
+    "role": "clue",
+    "source": "screenplay",
+    "quote": "a RIFLE and a SHOTGUN sit propped next to a folded KU KLUX KLAN uni form.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sawmill",
+    "state": "abandoned, made a juke joint",
+    "when": "opening",
+    "role": "setting",
+    "quote": "they purchase an abandoned sawmill from the landowner Hogwood to open a juke joint",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Smoke lumbers to the entrance of the mill, carrying the tool box."
+     }
+    ]
+   },
+   {
+    "value": "rattlesnake",
+    "state": "killed with a knife",
+    "when": "early",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "It's a TIMBER RATTLESNAKE coiled on the truck bed, its tail vibrating loudly.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "guitar music",
+    "when": "middle",
+    "role": "trigger",
+    "quote": "his music summons spirits of performers from the past and future",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Faces cry out to the guitarist from the dark and light portions of the woodcut."
+     }
+    ]
+   },
+   {
+    "value": "garlic",
+    "state": "pickled",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "Annie repels him with pickled garlic juice",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bite",
+    "when": "middle",
+    "role": "threat",
+    "quote": "She then seduces and fatally bites Stack",
+    "confidence": "sourced"
+   },
+   {
+    "value": "wooden stakes",
+    "when": "late",
+    "role": "weapon",
+    "source": "screenplay",
+    "quote": "Sammie, Smoke, and Delta Slim gather wood and begin to break it down into stakes.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sunrise",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "incinerated along with the horde by the light of the sunrise",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "He then turns to the sun, smiles and EXPLODES into a PILLAR OF FIRE."
+     }
+    ]
+   },
+   {
+    "value": "hoodoo",
+    "when": "early",
+    "role": "symbol",
+    "quote": "Annie believes her Hoodoo practices kept the twins safe",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "You still got that mojo bag? Smoke reaches down into his shirt and pulls up a leather necklace."
+     }
+    ]
+   },
+   {
+    "value": "broken guitar neck",
+    "when": "ending",
+    "role": "symbol",
+    "source": "screenplay",
+    "quote": "Sammie follows behind him holding the tattered guitar neck.",
+    "detail": "the twins' father's guitar; Sammie will not let it go",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Drop the guitar Samuel. In the name of God!"
+     }
+    ],
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "return home", "when": "opening", "role": "trigger", "quote": "Elias \"Stack\" Moore return to Clarksdale, Mississippi, after seven years in Chicago", "confidence": "sourced"},
-   {"order": 2, "value": "warning ignored", "when": "opening", "role": "omen", "quote": "despite his pastor father Jedidiah's warnings about blues music being sinful", "confidence": "sourced"},
-   {"order": 3, "value": "outsider monster arrives", "when": "early", "quote": "whom he turns into vampire thralls", "confidence": "sourced"},
-   {"order": 4, "value": "music draws the threat", "when": "middle", "quote": "The performance also attracts Remmick and his vampires, who offer money and music in exchange for entry", "confidence": "sourced"},
-   {"order": 5, "value": "brother turned", "when": "middle", "role": "turn", "quote": "She then seduces and fatally bites Stack", "confidence": "sourced"},
-   {"order": 6, "value": "invitation and massacre", "when": "late", "quote": "invites them into the joint, and a fight ensues", "confidence": "sourced"},
-   {"order": 7, "value": "sunrise destroys horde", "when": "late", "quote": "incinerated along with the horde by the light of the sunrise", "confidence": "sourced"},
-   {"order": 8, "value": "epilogue decades later", "when": "ending", "quote": "it was the greatest day of his life until the sun went down and the violence began", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "legend of gifted musicians",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "This gift can bring healing to their communities. A FIGURE with RED EYES peers in the window. ANNIE (V.O.) But it also attracts evil.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "return home",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Elias \"Stack\" Moore return to Clarksdale, Mississippi, after seven years in Chicago",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "warning ignored",
+    "when": "opening",
+    "role": "omen",
+    "quote": "despite his pastor father Jedidiah's warnings about blues music being sinful",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Where you got to go that's more important than being in this house of God?"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "outsider monster arrives",
+    "when": "early",
+    "quote": "whom he turns into vampire thralls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "He ain't what he seems. God forbid you let him into your home."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "music draws the threat",
+    "when": "middle",
+    "quote": "The performance also attracts Remmick and his vampires, who offer money and music in exchange for entry",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "brother turned",
+    "when": "middle",
+    "role": "turn",
+    "quote": "She then seduces and fatally bites Stack",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "garlic test",
+    "when": "late",
+    "role": "turn",
+    "source": "screenplay",
+    "quote": "Delta Slim eats the garlic and swallows it. Then... he begins to choke.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "invitation and massacre",
+    "when": "late",
+    "quote": "invites them into the joint, and a fight ensues",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "It's better this way, baby. Go'on ahead and invite us in."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "lover staked",
+    "when": "late",
+    "source": "screenplay",
+    "quote": "Smoke drives the stake into the chest of the love of his life.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "sunrise destroys horde",
+    "when": "late",
+    "quote": "incinerated along with the horde by the light of the sunrise",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The sun breaks further and crests the horizon and the other vampires begin to howl in agony"
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "son returns to church",
+    "when": "ending",
+    "source": "screenplay",
+    "quote": "Swear to never again answer the devils call.",
+    "detail": "Sammie's preacher father demands he drop the guitar",
+    "confidence": "sourced"
+   },
+   {
+    "order": 12,
+    "value": "epilogue decades later",
+    "when": "ending",
+    "quote": "it was the greatest day of his life until the sun went down and the violence began",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "But before the sun went down, I think it was the best day of my life."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

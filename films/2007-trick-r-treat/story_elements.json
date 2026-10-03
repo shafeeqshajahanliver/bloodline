@@ -1,68 +1,475 @@
 {
  "film": "2007-trick-r-treat",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "guardian spirit of a festival", "detail": "Sam, the trick-or-treating demon", "quote": "Sam, a trick-or-treating demon wearing orange footie pajamas with a burlap sack over his head", "confidence": "sourced"},
-   {"value": "serial killer", "detail": "principal Steven Wilkins", "quote": "Steven, who is in fact a serial killer, reveals that he laced the candy with hydrofluoric acid", "confidence": "sourced"},
-   {"value": "undead children", "quote": "The actual drowned children, now risen as undead, emerge from the lake and attack the teens", "confidence": "sourced"},
-   {"value": "werewolves", "quote": "revealing themselves to be werewolves", "confidence": "sourced"}
+   {
+    "value": "guardian spirit of a festival",
+    "detail": "Sam, the trick-or-treating demon",
+    "quote": "Sam, a trick-or-treating demon wearing orange footie pajamas with a burlap sack over his head",
+    "confidence": "sourced"
+   },
+   {
+    "value": "serial killer",
+    "detail": "principal Steven Wilkins",
+    "quote": "Steven, who is in fact a serial killer, reveals that he laced the candy with hydrofluoric acid",
+    "confidence": "sourced"
+   },
+   {
+    "value": "undead children",
+    "quote": "The actual drowned children, now risen as undead, emerge from the lake and attack the teens",
+    "confidence": "sourced"
+   },
+   {
+    "value": "werewolves",
+    "quote": "revealing themselves to be werewolves",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:17",
+      "quote": "Fresh meat."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "festival tradition", "quote": "who appears to enforce the \"rules\" of Halloween", "confidence": "sourced"},
-   {"value": "children who died wronged", "quote": "The parents of eight mentally disabled children bribed their bus driver to dispose of them", "confidence": "sourced"}
+   {
+    "value": "festival tradition",
+    "quote": "who appears to enforce the \"rules\" of Halloween",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:13",
+      "quote": "they were started to protect us, but nowadays..."
+     }
+    ]
+   },
+   {
+    "value": "children who died wronged",
+    "quote": "The parents of eight mentally disabled children bribed their bus driver to dispose of them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:30",
+      "quote": "Every day, parents put their dirty secrets on this bus"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "traditions kept", "quote": "who appears in each story whenever one of the other characters breaks a Halloween tradition", "confidence": "sourced"},
-   {"value": "revenge", "detail": "the drowned children on Kreeg", "quote": "brutally torn apart by the undead children from the bus", "confidence": "observed"},
-   {"value": "hunger", "quote": "Sam watches as the werewolves feast on their deceased dates", "confidence": "observed"}
+   {
+    "value": "traditions kept",
+    "quote": "who appears in each story whenever one of the other characters breaks a Halloween tradition",
+    "confidence": "sourced"
+   },
+   {
+    "value": "revenge",
+    "detail": "the drowned children on Kreeg",
+    "quote": "brutally torn apart by the undead children from the bus",
+    "confidence": "observed"
+   },
+   {
+    "value": "hunger",
+    "quote": "Sam watches as the werewolves feast on their deceased dates",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "parents kill children", "quote": "The parents of eight mentally disabled children bribed their bus driver to dispose of them", "confidence": "sourced"},
-   {"value": "cruel prank", "quote": "a prank planned by Macy", "confidence": "sourced"}
+   {
+    "value": "parents kill children",
+    "quote": "The parents of eight mentally disabled children bribed their bus driver to dispose of them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:21",
+      "quote": "he drove the bus to an abandoned rock quarry."
+     }
+    ]
+   },
+   {
+    "value": "cruel prank",
+    "quote": "a prank planned by Macy",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "breaking a rule", "detail": "blowing out a jack-o'-lantern early", "quote": "blows out their jack-o'-lantern before midnight against Henry's advice", "confidence": "sourced"}
+   {
+    "value": "breaking a rule",
+    "detail": "blowing out a jack-o'-lantern early",
+    "quote": "blows out their jack-o'-lantern before midnight against Henry's advice",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:20",
+      "quote": "You're supposed to keep it lit."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "punished for breaking tradition", "quote": "appears in each story whenever one of the other characters breaks a Halloween tradition", "confidence": "sourced"},
-   {"value": "spared by giving a treat", "quote": "Kreeg accidentally \"gives\" the candy to Sam; completing the tradition of handing out treats on Halloween. Satisfied, Sam spares a confused Kreeg", "confidence": "sourced"},
-   {"value": "transforms under full moon", "quote": "Under the light of the full moon, the girls all shed their clothing and skin", "confidence": "sourced"}
+   {
+    "value": "punished for breaking tradition",
+    "quote": "appears in each story whenever one of the other characters breaks a Halloween tradition",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:36",
+      "quote": "There are rules. You might upset someone."
+     }
+    ]
+   },
+   {
+    "value": "spared by giving a treat",
+    "quote": "Kreeg accidentally \"gives\" the candy to Sam; completing the tradition of handing out treats on Halloween. Satisfied, Sam spares a confused Kreeg",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Trick or treat, trick or treat, give me something good to eat! TRICK OR TREAT!"
+     }
+    ]
+   },
+   {
+    "value": "transforms under full moon",
+    "quote": "Under the light of the full moon, the girls all shed their clothing and skin",
+    "confidence": "sourced"
+   },
+   {
+    "value": "keep the lantern lit",
+    "source": "screenplay",
+    "quote": "First, carve a Jack O'Lantern and make sure you keep it lit. They represent lost souls, and lighting one is a simple way of showing your respect.",
+    "detail": "lanterns represent lost souls",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:57",
+      "quote": "each one representing a lost soul."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "always check your candy",
+    "source": "subtitles",
+    "at": "00:14:53",
+    "quote": "Always check your candy.",
+    "detail": "Wilkins's lesson to Charlie before poisoning him",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "rule breakers", "relation_to_threat": "community", "quote": "Sam sees Emma prematurely extinguishing the jack-o'-lantern and moves in to kill her as punishment", "confidence": "sourced"},
-   {"value": "teenagers", "relation_to_threat": "stranger", "quote": "emerge from the lake and attack the teens, killing Sara", "confidence": "sourced"},
-   {"value": "child", "relation_to_threat": "stranger", "detail": "Charlie", "quote": "Shortly after, Charlie begins vomiting violently", "confidence": "sourced"},
-   {"value": "guilty old man", "relation_to_threat": "unknown", "detail": "Kreeg, the bus driver", "quote": "photographs burning in the fireplace reveal that Kreeg was the missing driver from the School Bus Massacre", "confidence": "sourced"}
+   {
+    "value": "rule breakers",
+    "relation_to_threat": "community",
+    "quote": "Sam sees Emma prematurely extinguishing the jack-o'-lantern and moves in to kill her as punishment",
+    "confidence": "sourced"
+   },
+   {
+    "value": "teenagers",
+    "relation_to_threat": "stranger",
+    "quote": "emerge from the lake and attack the teens, killing Sara",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child",
+    "relation_to_threat": "stranger",
+    "detail": "Charlie",
+    "quote": "Shortly after, Charlie begins vomiting violently",
+    "confidence": "sourced"
+   },
+   {
+    "value": "guilty old man",
+    "relation_to_threat": "unknown",
+    "detail": "Kreeg, the bus driver",
+    "quote": "photographs burning in the fireplace reveal that Kreeg was the missing driver from the School Bus Massacre",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat survives", "quote": "Sam sees Emma prematurely extinguishing the jack-o'-lantern and moves in to kill her as punishment", "confidence": "sourced"},
-   {"value": "guilty punished", "quote": "surrounded and brutally torn apart by the undead children from the bus", "confidence": "sourced"}
+   {
+    "value": "threat survives",
+    "quote": "Sam sees Emma prematurely extinguishing the jack-o'-lantern and moves in to kill her as punishment",
+    "confidence": "sourced"
+   },
+   {
+    "value": "guilty punished",
+    "quote": "surrounded and brutally torn apart by the undead children from the bus",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "jack-o'-lantern", "state": "blown out", "when": "opening", "role": "trigger", "quote": "blows out their jack-o'-lantern before midnight against Henry's advice", "confidence": "sourced"},
-   {"value": "burlap sack mask", "when": "opening", "role": "threat", "quote": "orange footie pajamas with a burlap sack over his head", "confidence": "sourced"},
-   {"value": "poisoned candy", "when": "early", "role": "weapon", "quote": "he laced the candy with hydrofluoric acid", "confidence": "sourced"},
-   {"value": "severed head", "state": "carved as lantern", "when": "early", "role": "turn", "quote": "a jack-o'-lantern, which is revealed to be Charlie's severed head", "confidence": "sourced"},
-   {"value": "flooded quarry", "when": "middle", "role": "setting", "quote": "Macy leads the group to a flooded quarry", "confidence": "sourced"},
-   {"value": "red riding hood costume", "when": "middle", "role": "symbol", "quote": "Laurie dresses up as Little Red Riding Hood", "confidence": "sourced"},
-   {"value": "full moon", "when": "late", "role": "turn", "quote": "Under the light of the full moon", "confidence": "sourced"},
-   {"value": "photographs", "state": "burning", "when": "late", "role": "clue", "quote": "photographs burning in the fireplace reveal that Kreeg was the missing driver", "confidence": "sourced"}
+   {
+    "value": "jack-o'-lantern",
+    "state": "blown out",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "blows out their jack-o'-lantern before midnight against Henry's advice",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:54",
+      "quote": "eight jack-o' - lanterns..."
+     }
+    ]
+   },
+   {
+    "value": "burlap sack mask",
+    "when": "opening",
+    "role": "threat",
+    "quote": "orange footie pajamas with a burlap sack over his head",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bitten lollipop as blade",
+    "when": "opening",
+    "role": "weapon",
+    "source": "screenplay",
+    "quote": "holding A PUMPKIN LOLLIPOP with a large bite taken out so that it now has a very sharp edge.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "poisoned candy",
+    "when": "early",
+    "role": "weapon",
+    "quote": "he laced the candy with hydrofluoric acid",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Steven casually picks up the apple, breaks off a small piece and uncovers A SMALL RAZOR BLADE covered in caramel and blood."
+     }
+    ]
+   },
+   {
+    "value": "severed head",
+    "state": "carved as lantern",
+    "when": "early",
+    "role": "turn",
+    "quote": "a jack-o'-lantern, which is revealed to be Charlie's severed head",
+    "confidence": "sourced"
+   },
+   {
+    "value": "old man's dog",
+    "state": "barking, later silenced",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:19:45",
+    "quote": "[man] Spite!",
+    "detail": "Kreeg's dog Spite; on the night of the attack he calls it and it does not come",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:14",
+      "quote": "[Spite chomps and growls]"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "flooded quarry",
+    "when": "middle",
+    "role": "setting",
+    "quote": "Macy leads the group to a flooded quarry",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:21",
+      "quote": "he drove the bus to an abandoned rock quarry."
+     }
+    ]
+   },
+   {
+    "value": "school bus",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:32:03",
+    "quote": "A school bus was on its usual route.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "red riding hood costume",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "Laurie dresses up as Little Red Riding Hood",
+    "confidence": "sourced"
+   },
+   {
+    "value": "full moon",
+    "when": "late",
+    "role": "turn",
+    "quote": "Under the light of the full moon",
+    "confidence": "sourced"
+   },
+   {
+    "value": "photographs",
+    "state": "burning",
+    "when": "late",
+    "role": "clue",
+    "quote": "photographs burning in the fireplace reveal that Kreeg was the missing driver",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "rule broken, woman killed", "when": "opening", "role": "trigger", "quote": "Emma begins tearing down the decorations; but is then ambushed and murdered by an unseen assailant", "confidence": "sourced"},
-   {"order": 2, "value": "child poisoned", "when": "early", "quote": "As Charlie dies, Steven, who is in fact a serial killer, reveals that he laced the candy", "confidence": "sourced"},
-   {"order": 3, "value": "legend told at a lake", "when": "middle", "role": "omen", "quote": "recounts the urban legend of the \"Halloween School Bus Massacre\"", "confidence": "sourced"},
-   {"order": 4, "value": "dead children rise", "when": "middle", "quote": "The actual drowned children, now risen as undead, emerge from the lake", "confidence": "sourced"},
-   {"order": 5, "value": "victim revealed as predator", "when": "late", "role": "turn", "quote": "revealing themselves to be werewolves", "confidence": "sourced"},
-   {"order": 6, "value": "monster attacks a hater", "when": "late", "quote": "Sam ambushes and attacks Kreeg", "confidence": "sourced"},
-   {"order": 7, "value": "past crime revealed", "when": "late", "role": "clue", "quote": "Kreeg was the missing driver from the School Bus Massacre", "confidence": "sourced"},
-   {"order": 8, "value": "loop closes, guilty killed", "when": "ending", "quote": "Kreeg answers another knock at his door but is surrounded and brutally torn apart", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "rule broken, woman killed",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Emma begins tearing down the decorations; but is then ambushed and murdered by an unseen assailant",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:29",
+      "quote": "But our little friend here, his night's over."
+     }
+    ]
+   },
+   {
+    "value": "town festival opening",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:08:36",
+    "quote": "Werewolves, zombies and demons of every variety,",
+    "detail": "a TV report frames the town's Halloween parade",
+    "confidence": "sourced",
+    "order": 2
+   },
+   {
+    "order": 3,
+    "value": "child poisoned",
+    "when": "early",
+    "quote": "As Charlie dies, Steven, who is in fact a serial killer, reveals that he laced the candy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:53",
+      "quote": "Always check your candy."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "legend told at a lake",
+    "when": "middle",
+    "role": "omen",
+    "quote": "recounts the urban legend of the \"Halloween School Bus Massacre\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:29",
+      "quote": "The Halloween School Bus Massacre."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "dead children rise",
+    "when": "middle",
+    "quote": "The actual drowned children, now risen as undead, emerge from the lake",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:46:40",
+      "quote": "[ghostly voices]"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "victim revealed as predator",
+    "when": "late",
+    "role": "turn",
+    "quote": "revealing themselves to be werewolves",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:20",
+      "quote": "It's my first time, so..."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "monster attacks a hater",
+    "when": "late",
+    "quote": "Sam ambushes and attacks Kreeg",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "KREEG SCREAMS as Sam tears into his leg, chewing and shaking like a wild dog."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "past crime revealed",
+    "when": "late",
+    "role": "clue",
+    "quote": "Kreeg was the missing driver from the School Bus Massacre",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "loop closes, guilty killed",
+    "when": "ending",
+    "quote": "Kreeg answers another knock at his door but is surrounded and brutally torn apart",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:58",
+      "quote": "[all] Trick or treat."
+     }
+    ]
+   },
+   {
+    "value": "closing replay of opening",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:16:45",
+    "quote": "You know, you should be more careful. There are rules.",
+    "detail": "the film returns to Emma and Henry's porch at the end",
+    "confidence": "sourced",
+    "order": 10
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

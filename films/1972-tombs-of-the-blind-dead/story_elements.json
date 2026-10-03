@@ -1,60 +1,387 @@
 {
  "film": "1972-tombs-of-the-blind-dead",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "undead knights", "detail": "the Knights Templar revenants", "quote": "leave their tombs at night and come back from the dead as revenants", "confidence": "sourced"},
-   {"value": "victim turned undead", "detail": "Virginia rises in the morgue", "quote": "Virginia's corpse comes back to life and kills a custodian", "confidence": "sourced"}
+   {
+    "value": "undead knights",
+    "detail": "the Knights Templar revenants",
+    "quote": "leave their tombs at night and come back from the dead as revenants",
+    "confidence": "sourced"
+   },
+   {
+    "value": "victim turned undead",
+    "detail": "Virginia rises in the morgue",
+    "quote": "Virginia's corpse comes back to life and kills a custodian",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "executed heretics", "quote": "dissolved in the 14th century following charges of witchcraft and heresy", "confidence": "sourced"},
-   {"value": "local legend", "quote": "Legend has it that in the abandoned medieval town of Berzano", "confidence": "sourced"}
+   {
+    "value": "executed heretics",
+    "quote": "dissolved in the 14th century following charges of witchcraft and heresy",
+    "confidence": "sourced"
+   },
+   {
+    "value": "local legend",
+    "quote": "Legend has it that in the abandoned medieval town of Berzano",
+    "confidence": "sourced"
+   },
+   {
+    "value": "devil worship",
+    "detail": "the knights were excommunicated",
+    "source": "subtitles",
+    "at": "00:50:19",
+    "quote": "These knights worshipped the devil and were excommunicated.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pact for eternal life",
+    "source": "subtitles",
+    "at": "01:01:34",
+    "quote": "Apart from many other secrets , the Eastern knights ... solved the mystery of eternal life .",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "hunger", "quote": "killing the conductor and cannibalizing passengers on board", "confidence": "sourced"}
+   {
+    "value": "hunger",
+    "quote": "killing the conductor and cannibalizing passengers on board",
+    "confidence": "sourced"
+   },
+   {
+    "value": "human sacrifice",
+    "detail": "offerings to their evil master",
+    "source": "subtitles",
+    "at": "01:02:04",
+    "quote": "they find their victims by the sounds they make ... and continue to offer human sacrifices to their evil master .",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "execution", "detail": "hanged and left on the gallows", "quote": "their eyes were pecked out by birds while their hanged bodies rotted on the gallows", "confidence": "sourced"}
+   {
+    "value": "execution",
+    "detail": "hanged and left on the gallows",
+    "quote": "their eyes were pecked out by birds while their hanged bodies rotted on the gallows",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sacrifice of virgins",
+    "source": "subtitles",
+    "at": "01:01:51",
+    "quote": "The knights performed human sacrifices ... consummating the offering with a virgin 's blood .",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "jealousy", "detail": "Virginia leaves the train", "quote": "provoking Virginia's jealousy, as the two women had a romantic relationship years prior", "confidence": "sourced"},
-   {"value": "entering a forbidden place", "quote": "she comes upon the ruins of Berzano, where she decides to camp overnight", "confidence": "sourced"}
+   {
+    "value": "jealousy",
+    "detail": "Virginia leaves the train",
+    "quote": "provoking Virginia's jealousy, as the two women had a romantic relationship years prior",
+    "confidence": "sourced"
+   },
+   {
+    "value": "entering a forbidden place",
+    "quote": "she comes upon the ruins of Berzano, where she decides to camp overnight",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "rise at night", "quote": "leave their tombs at night and come back from the dead", "confidence": "sourced"},
-   {"value": "blind, hunt by sound", "quote": "The knights find Betty through her heartbeat", "confidence": "sourced"},
-   {"value": "stopped by fire", "quote": "set Virginia on fire inside the mannequin factory", "confidence": "observed"}
+   {
+    "value": "rise at night",
+    "quote": "leave their tombs at night and come back from the dead",
+    "confidence": "sourced"
+   },
+   {
+    "value": "blind, hunt by sound",
+    "quote": "The knights find Betty through her heartbeat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:59",
+      "quote": "Now they 've awakened from the beyond , and without eyes to see ... they find their victims by the sounds they make ..."
+     }
+    ]
+   },
+   {
+    "value": "stopped by fire",
+    "quote": "set Virginia on fire inside the mannequin factory",
+    "confidence": "observed"
+   },
+   {
+    "value": "silence keeps you safe",
+    "source": "subtitles",
+    "at": "01:30:21",
+    "quote": "Roger . - Don 't speak . That 's the only way you 'll be safe .",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "friends", "relation_to_threat": "stranger", "detail": "Virginia, Betty and Roger", "quote": "Virginia White reconnects with her dear college friend Betty \"Bet\" Turner", "confidence": "sourced"},
-   {"value": "train passengers", "relation_to_threat": "stranger", "quote": "As several passengers go to board the train, they scream in horror at the sight inside", "confidence": "sourced"}
+   {
+    "value": "friends",
+    "relation_to_threat": "stranger",
+    "detail": "Virginia, Betty and Roger",
+    "quote": "Virginia White reconnects with her dear college friend Betty \"Bet\" Turner",
+    "confidence": "sourced"
+   },
+   {
+    "value": "train passengers",
+    "relation_to_threat": "stranger",
+    "quote": "As several passengers go to board the train, they scream in horror at the sight inside",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat survives", "quote": "The knights take charge of the train, killing the conductor and cannibalizing passengers on board", "confidence": "sourced"},
-   {"value": "lone traumatised survivor", "quote": "Betty, speechless, is helped by a station attendant", "confidence": "sourced"}
+   {
+    "value": "threat survives",
+    "quote": "The knights take charge of the train, killing the conductor and cannibalizing passengers on board",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lone traumatised survivor",
+    "quote": "Betty, speechless, is helped by a station attendant",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "birds", "state": "pecking out eyes", "when": "opening", "role": "omen", "quote": "their eyes were pecked out by birds while their hanged bodies rotted on the gallows", "confidence": "sourced"},
-   {"value": "gallows", "state": "hanged bodies rotting", "when": "opening", "role": "symbol", "quote": "their hanged bodies rotted on the gallows", "confidence": "sourced"},
-   {"value": "tombs", "state": "opening at night", "when": "early", "role": "threat", "quote": "The knights rise from their tombs and attack her", "confidence": "sourced"},
-   {"value": "ruined town", "when": "early", "role": "setting", "quote": "the abandoned medieval town of Berzano, at the border between Spain and Portugal", "confidence": "sourced"},
-   {"value": "mannequins", "when": "middle", "role": "setting", "quote": "set Virginia on fire inside the mannequin factory", "confidence": "sourced"},
-   {"value": "train", "state": "overrun", "when": "ending", "role": "setting", "quote": "She boards a passing train, hiding in a cargo of coal", "confidence": "sourced"},
-   {"value": "heartbeat", "when": "late", "role": "clue", "quote": "The knights find Betty through her heartbeat", "confidence": "sourced"}
+   {
+    "value": "birds",
+    "state": "pecking out eyes",
+    "when": "opening",
+    "role": "omen",
+    "quote": "their eyes were pecked out by birds while their hanged bodies rotted on the gallows",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:02",
+      "quote": "and as a lesson , their bodies were hung for public display ... until the crows ate their eyes ."
+     }
+    ]
+   },
+   {
+    "value": "gallows",
+    "state": "hanged bodies rotting",
+    "when": "opening",
+    "role": "symbol",
+    "quote": "their hanged bodies rotted on the gallows",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:00",
+      "quote": "They were sentenced to death ..."
+     }
+    ]
+   },
+   {
+    "value": "tombs",
+    "state": "opening at night",
+    "when": "early",
+    "role": "threat",
+    "quote": "The knights rise from their tombs and attack her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ruined town",
+    "when": "early",
+    "role": "setting",
+    "quote": "the abandoned medieval town of Berzano, at the border between Spain and Portugal",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:23",
+      "quote": "You mean Berzano. An abandoned medieval town. It's not interesting."
+     }
+    ]
+   },
+   {
+    "value": "mannequins",
+    "when": "middle",
+    "role": "setting",
+    "quote": "set Virginia on fire inside the mannequin factory",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:29",
+      "quote": "l manufacture mannequins for showcases."
+     }
+    ]
+   },
+   {
+    "value": "train",
+    "state": "overrun",
+    "when": "ending",
+    "role": "setting",
+    "quote": "She boards a passing train, hiding in a cargo of coal",
+    "confidence": "sourced"
+   },
+   {
+    "value": "heartbeat",
+    "when": "late",
+    "role": "clue",
+    "quote": "The knights find Betty through her heartbeat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:21",
+      "quote": "Don 't speak . That 's the only way you 'll be safe ."
+     }
+    ]
+   },
+   {
+    "value": "frightened horses",
+    "state": "bolting",
+    "when": "middle",
+    "role": "omen",
+    "detail": "the hired horses panic and escape near Berzano",
+    "source": "subtitles",
+    "at": "00:41:35",
+    "quote": "Why do you think the horses got scared?",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:41",
+      "quote": "We rented two horses from the hotel. They just escaped."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "legend told", "when": "opening", "role": "omen", "quote": "Legend has it that in the abandoned medieval town of Berzano", "confidence": "sourced"},
-   {"order": 2, "value": "friend leaves group", "when": "early", "role": "trigger", "quote": "Angry at both, Virginia jumps off the train", "confidence": "sourced"},
-   {"order": 3, "value": "first death", "when": "early", "quote": "The knights rise from their tombs and attack her, ultimately biting and ripping her flesh", "confidence": "sourced"},
-   {"order": 4, "value": "victim rises", "when": "middle", "role": "turn", "quote": "Virginia's corpse comes back to life and kills a custodian", "confidence": "sourced"},
-   {"order": 5, "value": "return to the cursed place", "when": "late", "quote": "Betty and Roger return with Pedro and his lover Maria to Berzano, to confront the knights once and for all", "confidence": "sourced"},
-   {"order": 6, "value": "group killed", "when": "late", "quote": "they are confronted by the knights, who kill Roger, Pedro and Maria", "confidence": "sourced"},
-   {"order": 7, "value": "massacre on the train", "when": "ending", "quote": "As several passengers go to board the train, they scream in horror at the sight inside", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "old school bond resurfaces",
+    "when": "opening",
+    "role": "trigger",
+    "detail": "Virginia and Betty, former boarding-school roommates, meet again",
+    "source": "subtitles",
+    "at": "00:09:06",
+    "quote": "Why do you talk like that? l was your roommate in boarding school.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "legend told",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Legend has it that in the abandoned medieval town of Berzano",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:11",
+      "quote": "Everybody used to talk about it. Berzano belonged to the knights."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "friend leaves group",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Angry at both, Virginia jumps off the train",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:02",
+      "quote": "Virginia, are you mad?"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "first death",
+    "when": "early",
+    "quote": "The knights rise from their tombs and attack her, ultimately biting and ripping her flesh",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "locals refuse to talk",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:37:39",
+    "quote": "What's going on in Berzano? l don't know anything, sir.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "scholar explains the legend",
+    "when": "middle",
+    "role": "clue",
+    "detail": "the professor recounts the trial, the crows and the sacrifices",
+    "source": "subtitles",
+    "at": "01:01:26",
+    "quote": "They 're the same . The old ones came back .",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "victim rises",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Virginia's corpse comes back to life and kills a custodian",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "return to the cursed place",
+    "when": "late",
+    "quote": "Betty and Roger return with Pedro and his lover Maria to Berzano, to confront the knights once and for all",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:06",
+      "quote": "We must spend the night in Berzano."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "group killed",
+    "when": "late",
+    "quote": "they are confronted by the knights, who kill Roger, Pedro and Maria",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "massacre on the train",
+    "when": "ending",
+    "quote": "As several passengers go to board the train, they scream in horror at the sight inside",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:19",
+      "quote": "Hey ! What are you doing in there ?"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

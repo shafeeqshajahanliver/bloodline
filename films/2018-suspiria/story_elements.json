@@ -1,61 +1,416 @@
 {
  "film": "2018-suspiria",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "coven of witches", "detail": "the matrons of the Markos Dance Academy", "quote": "a prestigious dance academy in Berlin run by a coven of witches", "confidence": "sourced"},
-   {"value": "ancient witch", "detail": "Mother Markos", "quote": "Mother Markos, an aged and grossly disfigured witch who has long controlled the coven", "confidence": "sourced"}
+   {
+    "value": "coven of witches",
+    "detail": "the matrons of the Markos Dance Academy",
+    "quote": "a prestigious dance academy in Berlin run by a coven of witches",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ancient witch",
+    "detail": "Mother Markos",
+    "quote": "Mother Markos, an aged and grossly disfigured witch who has long controlled the coven",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:41",
+      "quote": "Patricia said that, uh, Markos claims to be one of the three."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "ancient beings", "detail": "the Three Mothers", "quote": "The Three Mothers, a trio of witches who predate Christianity", "confidence": "sourced"}
+   {
+    "value": "ancient beings",
+    "detail": "the Three Mothers",
+    "quote": "The Three Mothers, a trio of witches who predate Christianity",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "a new body", "detail": "Markos seeks a young vessel", "quote": "Mother Markos, for whom Susie is to be a new vessel", "confidence": "sourced"},
-   {"value": "power", "detail": "Susie comes to claim the academy", "quote": "she is there to claim the academy and eradicate Markos", "confidence": "sourced"}
+   {
+    "value": "a new body",
+    "detail": "Markos seeks a young vessel",
+    "quote": "Mother Markos, for whom Susie is to be a new vessel",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:24",
+      "quote": "Oh, she wants to get inside of me."
+     }
+    ]
+   },
+   {
+    "value": "power",
+    "detail": "Susie comes to claim the academy",
+    "quote": "she is there to claim the academy and eradicate Markos",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "generational guilt", "detail": "Germany's Nazi past", "quote": "to explore themes of generational guilt in that country during the Cold War", "confidence": "sourced"},
-   {"value": "holocaust death", "detail": "Klemperer's wife died at Theresienstadt", "quote": "recounts to him the fate of Anke, who died at the Theresienstadt concentration camp", "confidence": "sourced"}
+   {
+    "value": "generational guilt",
+    "detail": "Germany's Nazi past",
+    "quote": "to explore themes of generational guilt in that country during the Cold War",
+    "confidence": "sourced"
+   },
+   {
+    "value": "holocaust death",
+    "detail": "Klemperer's wife died at Theresienstadt",
+    "quote": "recounts to him the fate of Anke, who died at the Theresienstadt concentration camp",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:22:01",
+      "quote": "She was then taken to Theresienstadt camp."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "joining an institution", "quote": "Susie Bannion, an American from a Mennonite family in Ohio, is admitted at the Markos Dance Academy", "confidence": "sourced"}
+   {
+    "value": "joining an institution",
+    "quote": "Susie Bannion, an American from a Mennonite family in Ohio, is admitted at the Markos Dance Academy",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "dance as witchcraft", "quote": "her movements begin physically afflicting Olga, ravaging her body and damaging her organs and bones", "confidence": "sourced"},
-   {"value": "coven leader chosen by vote", "quote": "the matrons hold an informal election for who is to serve as the coven's new leader", "confidence": "sourced"}
+   {
+    "value": "dance as witchcraft",
+    "quote": "her movements begin physically afflicting Olga, ravaging her body and damaging her organs and bones",
+    "confidence": "sourced"
+   },
+   {
+    "value": "coven leader chosen by vote",
+    "quote": "the matrons hold an informal election for who is to serve as the coven's new leader",
+    "confidence": "sourced"
+   },
+   {
+    "value": "three mothers",
+    "detail": "Tenebrarum, Lachrymarum and Suspiriorum: darkness, tears and sighs",
+    "source": "subtitles",
+    "at": "01:30:20",
+    "quote": "Mother Tenebrarum, mother Lachrymarum and mother Suspiriorum.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:05",
+      "quote": "\" three mothers \" lost in time,"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "reject your own mother",
+    "detail": "the chosen girl must renounce any other mother",
+    "source": "subtitles",
+    "at": "02:09:00",
+    "quote": "You have the only mother you need here. Death to any other mother.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "dance students", "relation_to_threat": "community", "detail": "Patricia, Olga, Sara", "quote": "Patricia, Olga, and Sara, each physically ravaged, plead to die", "confidence": "sourced"},
-   {"value": "psychotherapist", "relation_to_threat": "stranger", "detail": "Josef Klemperer", "quote": "he has been lured there to bear witness to an impending witches' sabbath", "confidence": "sourced"},
-   {"value": "newcomer", "relation_to_threat": "community", "detail": "Susie, chosen as vessel", "quote": "Susie quickly climbs the ranks as Blanc's protégée", "confidence": "sourced"}
+   {
+    "value": "dance students",
+    "relation_to_threat": "community",
+    "detail": "Patricia, Olga, Sara",
+    "quote": "Patricia, Olga, and Sara, each physically ravaged, plead to die",
+    "confidence": "sourced"
+   },
+   {
+    "value": "psychotherapist",
+    "relation_to_threat": "stranger",
+    "detail": "Josef Klemperer",
+    "quote": "he has been lured there to bear witness to an impending witches' sabbath",
+    "confidence": "sourced"
+   },
+   {
+    "value": "newcomer",
+    "relation_to_threat": "community",
+    "detail": "Susie, chosen as vessel",
+    "quote": "Susie quickly climbs the ranks as Blanc's protégée",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "victim revealed as greater threat", "quote": "Susie reveals that she, not Markos, is Mother Suspiriorum", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "The following day, the academy resumes operations as usual", "confidence": "sourced"}
+   {
+    "value": "victim revealed as greater threat",
+    "quote": "Susie reveals that she, not Markos, is Mother Suspiriorum",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat survives",
+    "quote": "The following day, the academy resumes operations as usual",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "journals", "when": "opening", "role": "clue", "quote": "Journals left by Patricia in Klemperer's office detail The Three Mothers", "confidence": "sourced"},
-   {"value": "mirrored room", "when": "early", "role": "setting", "quote": "finds herself trapped alone in a room lined with mirrors", "confidence": "sourced"},
-   {"value": "hooks", "when": "early", "role": "weapon", "quote": "drag Olga's mangled body away with large hooks", "confidence": "sourced"},
-   {"value": "hidden hallways", "when": "middle", "role": "setting", "quote": "uncovers clandestine hallways in the building where she discovers esoteric relics", "confidence": "sourced"},
-   {"value": "holes in the floor", "when": "middle", "role": "threat", "quote": "the matrons manifest holes in the floor, causing her to fall and fracture her leg", "confidence": "sourced"},
-   {"value": "disembowelment", "when": "late", "role": "threat", "quote": "The matrons disembowel Sara to begin the sabbath", "confidence": "sourced"},
-   {"value": "carved initials", "state": "unnoticed", "when": "ending", "role": "symbol", "quote": "a carving of Klemperer and Anke's initials on the wall of their dacha goes unnoticed", "confidence": "sourced"}
+   {
+    "value": "journals",
+    "when": "opening",
+    "role": "clue",
+    "quote": "Journals left by Patricia in Klemperer's office detail The Three Mothers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:17:29",
+      "quote": "This is Patricia's diary."
+     },
+     {
+      "source": "screenplay",
+      "quote": "he begins to see some of the icon- ography rendered in Patricia's journals around him here"
+     }
+    ]
+   },
+   {
+    "value": "mirrored room",
+    "when": "early",
+    "role": "setting",
+    "quote": "finds herself trapped alone in a room lined with mirrors",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:55",
+      "quote": "can you close the mirrors, please?"
+     }
+    ]
+   },
+   {
+    "value": "hooks",
+    "when": "early",
+    "role": "weapon",
+    "quote": "drag Olga's mangled body away with large hooks",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "place silver hooks under Olga's arms to drag her out of the room."
+     }
+    ]
+   },
+   {
+    "value": "hidden hallways",
+    "when": "middle",
+    "role": "setting",
+    "quote": "uncovers clandestine hallways in the building where she discovers esoteric relics",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:01",
+      "quote": "Whole hidden areas of the building."
+     }
+    ]
+   },
+   {
+    "value": "holes in the floor",
+    "when": "middle",
+    "role": "threat",
+    "quote": "the matrons manifest holes in the floor, causing her to fall and fracture her leg",
+    "confidence": "sourced"
+   },
+   {
+    "value": "disembowelment",
+    "when": "late",
+    "role": "threat",
+    "quote": "The matrons disembowel Sara to begin the sabbath",
+    "confidence": "sourced"
+   },
+   {
+    "value": "carved initials",
+    "state": "unnoticed",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "a carving of Klemperer and Anke's initials on the wall of their dacha goes unnoticed",
+    "confidence": "sourced"
+   },
+   {
+    "value": "street protests",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:00:45",
+    "quote": "(Crowd shouting and chanting in German)",
+    "detail": "divided Berlin in 1977, with riots and hijacking news outside the academy",
+    "confidence": "sourced"
+   },
+   {
+    "value": "grinning dog",
+    "when": "late",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "The dog pushes the turd toward Klemperer, and then bares its teeth as if grinning.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:16",
+      "quote": "(Dog barking)"
+     }
+    ],
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "newcomer arrives after disappearance", "when": "opening", "quote": "The academy is reeling from the disappearance of a student, Patricia Hingle", "confidence": "sourced"},
-   {"order": 2, "value": "dance kills a rival", "when": "early", "quote": "her movements begin physically afflicting Olga", "confidence": "sourced"},
-   {"order": 3, "value": "friend investigates and is caught", "when": "middle", "quote": "Sara explores a passageway leading into the catacombs where she finds a heavily withering Patricia", "confidence": "sourced"},
-   {"order": 4, "value": "investigator lured by dead wife", "when": "middle", "role": "turn", "quote": "he realizes Anke is, in fact, Miss Huller, one of the matrons", "confidence": "sourced"},
-   {"order": 5, "value": "sacrificial sabbath", "when": "late", "quote": "The matrons disembowel Sara to begin the sabbath", "confidence": "sourced"},
-   {"order": 6, "value": "true identity revealed", "when": "late", "role": "turn", "quote": "Susie reveals that she, not Markos, is Mother Suspiriorum", "confidence": "sourced"},
-   {"order": 7, "value": "massacre of the coven", "when": "late", "quote": "Susie summons Death, killing Markos and her most faithful matrons", "confidence": "sourced"},
-   {"order": 8, "value": "witness's memory erased", "when": "ending", "quote": "he suffers a violent seizure that erases his memories before she leaves", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "patient warns her therapist",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:24",
+    "quote": "I have to tell Sara to get out of there.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:55",
+      "quote": "She saw how they groomed me."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "newcomer arrives after disappearance",
+    "when": "opening",
+    "quote": "The academy is reeling from the disappearance of a student, Patricia Hingle",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:11",
+      "quote": "Patricia is gone, Olga."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "dance kills a rival",
+    "when": "early",
+    "quote": "her movements begin physically afflicting Olga",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "friend investigates and is caught",
+    "when": "middle",
+    "quote": "Sara explores a passageway leading into the catacombs where she finds a heavily withering Patricia",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:40",
+      "quote": "(Whispering): 33, 34, 35, 36,"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "investigator lured by dead wife",
+    "when": "middle",
+    "role": "turn",
+    "quote": "he realizes Anke is, in fact, Miss Huller, one of the matrons",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "sacrificial sabbath",
+    "when": "late",
+    "quote": "The matrons disembowel Sara to begin the sabbath",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:07:31",
+      "quote": "Matrons (chanting): Markos! Markos! Markos!"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "true identity revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Susie reveals that she, not Markos, is Mother Suspiriorum",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:10:00",
+      "quote": "Mother Suspiriorum. I am she."
+     },
+     {
+      "source": "subtitles",
+      "at": "02:13:15",
+      "quote": "(whispering): I am the mother."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "massacre of the coven",
+    "when": "late",
+    "quote": "Susie summons Death, killing Markos and her most faithful matrons",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:11:51",
+      "quote": "(Echoing): Death to any other mother."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "witness's memory erased",
+    "when": "ending",
+    "quote": "he suffers a violent seizure that erases his memories before she leaves",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:24:39",
+      "quote": "Every memory will vanish."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "closing song of the mother",
+    "when": "ending",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "02:29:59",
+    "quote": "♪ mother wants us ♪ ♪ right beside her ♪",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

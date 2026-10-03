@@ -1,62 +1,453 @@
 {
  "film": "1977-house-hausu",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "devouring house", "quote": "the girls are, one by one, devoured by the home", "confidence": "sourced"},
-   {"value": "ghost", "detail": "the aunt, who died waiting for her fiancé", "quote": "her aunt died waiting for her fiancé to return from World War II", "confidence": "sourced"}
+   {
+    "value": "devouring house",
+    "quote": "the girls are, one by one, devoured by the home",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ghost",
+    "detail": "the aunt, who died waiting for her fiancé",
+    "quote": "her aunt died waiting for her fiancé to return from World War II",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "person who died waiting", "quote": "her aunt died waiting for her fiancé to return from World War II, and now eats unmarried girls", "confidence": "sourced"}
+   {
+    "value": "person who died waiting",
+    "quote": "her aunt died waiting for her fiancé to return from World War II, and now eats unmarried girls",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "hunger", "detail": "eats unmarried girls", "quote": "now eats unmarried girls who arrive at her home", "confidence": "sourced"}
+   {
+    "value": "hunger",
+    "detail": "eats unmarried girls",
+    "quote": "now eats unmarried girls who arrive at her home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:56",
+      "quote": "And she eats all the unmarried girls who come here."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "lover lost to war", "quote": "died waiting for her fiancé to return from World War II", "confidence": "sourced"}
+   {
+    "value": "lover lost to war",
+    "quote": "died waiting for her fiancé to return from World War II",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:06",
+      "quote": "The war ended, but my aunt's fiance never returned."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "visiting a relative's home", "quote": "a schoolgirl traveling with her six friends to her ailing aunt's country home", "confidence": "sourced"},
-   {"value": "father remarries", "quote": "he surprises Gorgeous by announcing he has married a woman named Ryoko Ema", "confidence": "sourced"}
+   {
+    "value": "visiting a relative's home",
+    "quote": "a schoolgirl traveling with her six friends to her ailing aunt's country home",
+    "confidence": "sourced"
+   },
+   {
+    "value": "father remarries",
+    "quote": "he surprises Gorgeous by announcing he has married a woman named Ryoko Ema",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:26",
+      "quote": "This is Ryoko Ema."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "household objects attack", "quote": "The girls are attacked or possessed by various items that have seemingly become alive", "confidence": "sourced"},
-   {"value": "takes unmarried girls", "quote": "now eats unmarried girls who arrive at her home", "confidence": "sourced"},
-   {"value": "cannot leave", "quote": "after Gorgeous manages to leave through a door, the others find themselves locked in", "confidence": "sourced"}
+   {
+    "value": "household objects attack",
+    "quote": "The girls are attacked or possessed by various items that have seemingly become alive",
+    "confidence": "sourced"
+   },
+   {
+    "value": "takes unmarried girls",
+    "quote": "now eats unmarried girls who arrive at her home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:02",
+      "quote": "That's the only time she can wear her bridal gown."
+     }
+    ]
+   },
+   {
+    "value": "cannot leave",
+    "quote": "after Gorgeous manages to leave through a door, the others find themselves locked in",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:54",
+      "quote": "The door won't open."
+     }
+    ]
+   },
+   {
+    "value": "witch cat closes doors",
+    "source": "subtitles",
+    "at": "00:17:06",
+    "quote": "Any old cat can open a door. Only a witch cat can close a door.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:29",
+      "quote": "Only a witch cat can close a door."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "aunt fears sunlight",
+    "source": "subtitles",
+    "at": "00:32:13",
+    "quote": "Why do you wear glasses outdoors? The bright sunlight frightens me.",
+    "confidence": "observed"
+   }
   ],
   "who_suffers": [
-   {"value": "schoolgirl friends", "relation_to_threat": "stranger", "quote": "Gorgeous invites her six friends along", "confidence": "sourced"},
-   {"value": "niece", "relation_to_threat": "family", "detail": "Gorgeous, possessed by her aunt", "quote": "Gorgeous becomes possessed after using her aunt's mirror", "confidence": "sourced"},
-   {"value": "stepmother", "relation_to_threat": "family", "detail": "Ryoko", "quote": "She then shakes hands with Ryoko, who burns away to nothing", "confidence": "sourced"}
+   {
+    "value": "schoolgirl friends",
+    "relation_to_threat": "stranger",
+    "quote": "Gorgeous invites her six friends along",
+    "confidence": "sourced"
+   },
+   {
+    "value": "niece",
+    "relation_to_threat": "family",
+    "detail": "Gorgeous, possessed by her aunt",
+    "quote": "Gorgeous becomes possessed after using her aunt's mirror",
+    "confidence": "sourced"
+   },
+   {
+    "value": "stepmother",
+    "relation_to_threat": "family",
+    "detail": "Ryoko",
+    "quote": "She then shakes hands with Ryoko, who burns away to nothing",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "victim becomes threat", "detail": "Gorgeous takes the aunt's place", "quote": "In the reflection, Gorgeous appears as her aunt and cradles Fantasy", "confidence": "sourced"},
-   {"value": "threat survives", "quote": "Gorgeous tells her the others will wake soon and that they will be hungry", "confidence": "sourced"}
+   {
+    "value": "victim becomes threat",
+    "detail": "Gorgeous takes the aunt's place",
+    "quote": "In the reflection, Gorgeous appears as her aunt and cradles Fantasy",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat survives",
+    "quote": "Gorgeous tells her the others will wake soon and that they will be hungry",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:41",
+      "quote": "They'II get up soon. They'lI be hungry."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "watermelon", "state": "gift, left in well", "when": "early", "role": "omen", "quote": "they leave the watermelon in a well to keep it cold", "confidence": "sourced"},
-   {"value": "well", "when": "early", "role": "threat", "quote": "When Fantasy goes to the well, she finds Mac's disembodied head", "confidence": "sourced"},
-   {"value": "disembodied head", "state": "flying, biting", "when": "early", "role": "threat", "quote": "Mac's disembodied head, which flies into the air and bites Fantasy's buttocks", "confidence": "sourced"},
-   {"value": "cat", "detail": "Blanche, the aunt's cat", "state": "portrait bleeding", "when": "late", "role": "threat", "quote": "Prof shouts to Kung Fu to attack the aunt's cat, Blanche", "confidence": "sourced"},
-   {"value": "mirror", "when": "middle", "role": "trigger", "quote": "Gorgeous becomes possessed after using her aunt's mirror", "confidence": "sourced"},
-   {"value": "piano", "state": "eating", "when": "middle", "role": "threat", "quote": "the piano comes to life, bites off Melody's fingers and ultimately eats her", "confidence": "sourced"},
-   {"value": "bridal gown", "when": "late", "role": "symbol", "quote": "find Gorgeous wearing a bridal gown", "confidence": "sourced"},
-   {"value": "blood", "state": "flooding", "when": "late", "role": "threat", "quote": "The portrait gushes blood, flooding the room", "confidence": "sourced"}
+   {
+    "value": "watermelon",
+    "state": "gift, left in well",
+    "when": "early",
+    "role": "omen",
+    "quote": "they leave the watermelon in a well to keep it cold",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:38",
+      "quote": "How about a natural refrigerator? You mean a well?"
+     }
+    ]
+   },
+   {
+    "value": "well",
+    "when": "early",
+    "role": "threat",
+    "quote": "When Fantasy goes to the well, she finds Mac's disembodied head",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:11",
+      "quote": "ln the well!"
+     }
+    ]
+   },
+   {
+    "value": "disembodied head",
+    "state": "flying, biting",
+    "when": "early",
+    "role": "threat",
+    "quote": "Mac's disembodied head, which flies into the air and bites Fantasy's buttocks",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:01",
+      "quote": "A human head!"
+     }
+    ]
+   },
+   {
+    "value": "cat",
+    "detail": "Blanche, the aunt's cat",
+    "state": "portrait bleeding",
+    "when": "late",
+    "role": "threat",
+    "quote": "Prof shouts to Kung Fu to attack the aunt's cat, Blanche",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:22",
+      "quote": "Blanche! There you are."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:12:40",
+      "quote": "Kung Fu! The cat! Destroy it!"
+     }
+    ]
+   },
+   {
+    "value": "mirror",
+    "when": "middle",
+    "role": "trigger",
+    "quote": "Gorgeous becomes possessed after using her aunt's mirror",
+    "confidence": "sourced"
+   },
+   {
+    "value": "piano",
+    "state": "eating",
+    "when": "middle",
+    "role": "threat",
+    "quote": "the piano comes to life, bites off Melody's fingers and ultimately eats her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:59",
+      "quote": "But it felt as if the piano bit me."
+     }
+    ]
+   },
+   {
+    "value": "bridal gown",
+    "when": "late",
+    "role": "symbol",
+    "quote": "find Gorgeous wearing a bridal gown",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:20",
+      "quote": "My mom's wedding. all in white."
+     }
+    ]
+   },
+   {
+    "value": "blood",
+    "state": "flooding",
+    "when": "late",
+    "role": "threat",
+    "quote": "The portrait gushes blood, flooding the room",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:42",
+      "quote": "The cat's blood!"
+     }
+    ]
+   },
+   {
+    "value": "promise to wait forever",
+    "state": "written vow",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:18:23",
+    "quote": "I promise I'LL COME BACK!",
+    "detail": "the fiance's parting vow, shown in the flashback film",
+    "confidence": "sourced"
+   },
+   {
+    "value": "skeleton",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:27:48",
+    "quote": "A skeleton. Her grandpa used to treat patients in this room.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "parent remarries", "when": "opening", "role": "trigger", "quote": "he surprises Gorgeous by announcing he has married a woman named Ryoko Ema", "confidence": "sourced"},
-   {"order": 2, "value": "journey to remote house", "when": "early", "quote": "On arriving at the aunt's house in the countryside, the girls are greeted by her", "confidence": "sourced"},
-   {"order": 3, "value": "first disappearance", "when": "early", "quote": "Mac later goes to retrieve it and does not return", "confidence": "sourced"},
-   {"order": 4, "value": "trapped inside", "when": "middle", "role": "turn", "quote": "the others find themselves locked in", "confidence": "sourced"},
-   {"order": 5, "value": "deaths one by one", "when": "middle", "quote": "the piano comes to life, bites off Melody's fingers and ultimately eats her", "confidence": "sourced"},
-   {"order": 6, "value": "past revealed", "when": "late", "role": "turn", "quote": "her aunt died waiting for her fiancé to return from World War II", "confidence": "sourced"},
-   {"order": 7, "value": "last friends consumed", "when": "late", "quote": "Prof is pulled underwater by a jar with teeth and dissolves", "confidence": "sourced"},
-   {"order": 8, "value": "new victim arrives", "when": "ending", "quote": "She then shakes hands with Ryoko, who burns away to nothing", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "parent remarries",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "he surprises Gorgeous by announcing he has married a woman named Ryoko Ema",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:26",
+      "quote": "This is Ryoko Ema."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "aunt's story told on train",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:17:43",
+    "quote": "A long time ago, Japan was in a big war.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "journey to remote house",
+    "when": "early",
+    "quote": "On arriving at the aunt's house in the countryside, the girls are greeted by her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:22",
+      "quote": "Blanche is leading the way."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "first disappearance",
+    "when": "early",
+    "quote": "Mac later goes to retrieve it and does not return",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:23",
+      "quote": "Mac's still gone."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "trapped inside",
+    "when": "middle",
+    "role": "turn",
+    "quote": "the others find themselves locked in",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:23",
+      "quote": "So the doors must close automatically at night."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "deaths one by one",
+    "when": "middle",
+    "quote": "the piano comes to life, bites off Melody's fingers and ultimately eats her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:59",
+      "quote": "But it felt as if the piano bit me."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "past revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "her aunt died waiting for her fiancé to return from World War II",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:51",
+      "quote": "She wanted to be married so badly that her body remained alive after her death."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "last friends consumed",
+    "when": "late",
+    "quote": "Prof is pulled underwater by a jar with teeth and dissolves",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "new victim arrives",
+    "when": "ending",
+    "quote": "She then shakes hands with Ryoko, who burns away to nothing",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:01",
+      "quote": "Come in. Thank you."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "closing words on love",
+    "when": "ending",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:25:43",
+    "quote": "the story of love must be told many times so that the spirits of lovers may live forever.",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,67 +1,544 @@
 {
  "film": "1967-viy",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "witch", "detail": "the old woman, who is also the sotnik's daughter", "quote": "Khoma suddenly finds that they are flying and realizes she is a witch.", "confidence": "sourced"},
-   {"value": "risen corpse", "quote": "the girl opens her eyes and climbs out of the coffin", "confidence": "sourced"},
-   {"value": "demons", "detail": "Viy, a large humanoid creature, and demonic figures", "quote": "She ultimately summons Viy, a large humanoid creature.", "confidence": "sourced"}
+   {
+    "value": "witch",
+    "detail": "the old woman, who is also the sotnik's daughter",
+    "quote": "Khoma suddenly finds that they are flying and realizes she is a witch.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "risen corpse",
+    "quote": "the girl opens her eyes and climbs out of the coffin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:30",
+      "quote": "She won't rise up from her coffin. Even corpses fear the word of God."
+     }
+    ]
+   },
+   {
+    "value": "demons",
+    "detail": "Viy, a large humanoid creature, and demonic figures",
+    "quote": "She ultimately summons Viy, a large humanoid creature.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:06",
+      "quote": "I summon the vampires! I summon the werewolves!"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "person who died wronged", "detail": "the witch, beaten by Khoma, dies", "quote": "to his horror, he realizes she is the witch and that he has caused her death", "confidence": "sourced"},
-   {"value": "summoned", "detail": "Viy called up by the dead witch", "quote": "The girl summons various demonic figures to torment him", "confidence": "sourced"}
+   {
+    "value": "person who died wronged",
+    "detail": "the witch, beaten by Khoma, dies",
+    "quote": "to his horror, he realizes she is the witch and that he has caused her death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "summoned",
+    "detail": "Viy called up by the dead witch",
+    "quote": "The girl summons various demonic figures to torment him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:19",
+      "quote": "I summon Viy! Bring Viy here!"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "revenge", "quote": "she attempts to curse Khoma, causing his hair to turn grey", "confidence": "observed"},
-   {"value": "to reach the victim", "quote": "the girl persistently tries to get to him as he prays fervently", "confidence": "sourced"}
+   {
+    "value": "revenge",
+    "quote": "she attempts to curse Khoma, causing his hair to turn grey",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:07",
+      "quote": "By the shades of night, may he go blind, turn his hair white."
+     }
+    ]
+   },
+   {
+    "value": "to reach the victim",
+    "quote": "the girl persistently tries to get to him as he prays fervently",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "killing", "detail": "Khoma beats the witch until she cries he is killing her", "quote": "beats her violently with a stick until she turns into a beautiful young woman, who cries out that he is killing her", "confidence": "sourced"}
+   {
+    "value": "killing",
+    "detail": "Khoma beats the witch until she cries he is killing her",
+    "quote": "beats her violently with a stick until she turns into a beautiful young woman, who cries out that he is killing her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:01",
+      "quote": "Oh, you're killing me!"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "lost on a journey", "quote": "three of them become lost in the countryside in the middle of the night", "confidence": "sourced"},
-   {"value": "asking for shelter", "quote": "They spot a farmhouse and ask the old woman at the gate to let them spend the night.", "confidence": "sourced"},
-   {"value": "summoned to pray for the dead", "quote": "a wealthy sotnik's dying daughter has specifically requested that Khoma say prayers for her soul", "confidence": "sourced"}
+   {
+    "value": "lost on a journey",
+    "quote": "three of them become lost in the countryside in the middle of the night",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:17",
+      "quote": "The devil would lose his way in this darkness, too."
+     }
+    ]
+   },
+   {
+    "value": "asking for shelter",
+    "quote": "They spot a farmhouse and ask the old woman at the gate to let them spend the night.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:22",
+      "quote": "Have mercy on us, my good woman!"
+     }
+    ]
+   },
+   {
+    "value": "summoned to pray for the dead",
+    "quote": "a wealthy sotnik's dying daughter has specifically requested that Khoma say prayers for her soul",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:35",
+      "quote": "Let him pray for three nights for the salvation of my soul."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "three nights' vigil", "quote": "stand vigil and pray for her soul for the next three nights", "confidence": "sourced"},
-   {"value": "protective circle", "quote": "Khoma quickly draws a sacred circle of chalk around himself, which acts as a barrier", "confidence": "sourced"},
-   {"value": "retreats at cockcrow", "quote": "When the rooster crows in the morning, the girl returns to her coffin and all the candles blow out.", "confidence": "sourced"},
-   {"value": "must not look", "detail": "eye contact with Viy breaks the protection", "quote": "when he makes eye contact with Viy, Viy commands the demons to attack Khoma", "confidence": "sourced"}
+   {
+    "value": "three nights' vigil",
+    "quote": "stand vigil and pray for her soul for the next three nights",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:06",
+      "quote": "You will start your vigil tonight, and recite the prayers for three nights."
+     }
+    ]
+   },
+   {
+    "value": "protective circle",
+    "quote": "Khoma quickly draws a sacred circle of chalk around himself, which acts as a barrier",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:28",
+      "quote": "Sacred circle, save me! Sacred circle, protect me!"
+     }
+    ]
+   },
+   {
+    "value": "retreats at cockcrow",
+    "quote": "When the rooster crows in the morning, the girl returns to her coffin and all the candles blow out.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:30",
+      "quote": "A cock."
+     }
+    ]
+   },
+   {
+    "value": "must not look",
+    "detail": "eye contact with Viy breaks the protection",
+    "quote": "when he makes eye contact with Viy, Viy commands the demons to attack Khoma",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:10",
+      "quote": "Don't look him in the eye, or you're lost."
+     }
+    ]
+   },
+   {
+    "value": "fear gives the witch power",
+    "source": "subtitles",
+    "at": "01:13:46",
+    "quote": "If he hadn't been afraid, the witch couldn't have harmed him. He should've spit on her tail, and made the sign of the cross.",
+    "detail": "a friend's verdict at the wake",
+    "confidence": "sourced"
+   },
+   {
+    "value": "prayer holds the dead back",
+    "source": "subtitles",
+    "at": "00:39:30",
+    "quote": "She won't rise up from her coffin. Even corpses fear the word of God.",
+    "confidence": "observed"
+   }
   ],
   "who_suffers": [
-   {"value": "student", "relation_to_threat": "stranger", "detail": "Khoma Brutus, a seminarian", "quote": "As one of the students, Khoma Brutus, lies down in the barn to sleep, the old woman sneaks into the barn.", "confidence": "sourced"},
-   {"value": "huntsman", "relation_to_threat": "community", "quote": "a huntsman who was bewitched by the girl and asked her to ride him like a horse", "confidence": "sourced"}
+   {
+    "value": "student",
+    "relation_to_threat": "stranger",
+    "detail": "Khoma Brutus, a seminarian",
+    "quote": "As one of the students, Khoma Brutus, lies down in the barn to sleep, the old woman sneaks into the barn.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "huntsman",
+    "relation_to_threat": "community",
+    "quote": "a huntsman who was bewitched by the girl and asked her to ride him like a horse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:33",
+      "quote": "Tell them how the witch cast a spell on the huntsman."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "protagonist dies", "quote": "The rooster crows again and the demons all flee, leaving Khoma motionless on the floor.", "confidence": "sourced"},
-   {"value": "threat ends too", "quote": "The girl turns back into the old woman and lies down in the coffin, which instantly falls apart.", "confidence": "sourced"},
-   {"value": "ambiguous", "quote": "the other doubts that Khoma is actually dead", "confidence": "sourced"}
+   {
+    "value": "protagonist dies",
+    "quote": "The rooster crows again and the demons all flee, leaving Khoma motionless on the floor.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:09",
+      "quote": "The Fates were unkind to Khoma."
+     }
+    ]
+   },
+   {
+    "value": "threat ends too",
+    "quote": "The girl turns back into the old woman and lies down in the coffin, which instantly falls apart.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ambiguous",
+    "quote": "the other doubts that Khoma is actually dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:09",
+      "quote": "No one can prove he's dead."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "witch riding a man", "state": "flying", "when": "opening", "role": "omen", "quote": "climbs on his back and rides him across the countryside like a horse", "confidence": "sourced"},
-   {"value": "coffin", "state": "rising into the air", "when": "middle", "role": "threat", "quote": "The coffin rises into the air and bangs against the sacred circle's barrier", "confidence": "sourced"},
-   {"value": "chalk circle", "state": "protective", "when": "middle", "role": "weapon", "quote": "Khoma quickly draws a sacred circle of chalk around himself, which acts as a barrier", "confidence": "sourced"},
-   {"value": "rooster", "state": "crowing", "when": "middle", "role": "symbol", "quote": "When the rooster crows in the morning, the girl returns to her coffin", "confidence": "sourced"},
-   {"value": "candles", "state": "blown out", "when": "middle", "role": "setting", "quote": "He lights every candle in the chapel and begins to recite the prayers.", "confidence": "sourced"},
-   {"value": "grey hair", "state": "turned overnight", "when": "middle", "role": "symbol", "quote": "she attempts to curse Khoma, causing his hair to turn grey", "confidence": "sourced"},
-   {"value": "stick", "state": "used to beat", "when": "opening", "role": "weapon", "quote": "beats her violently with a stick until she turns into a beautiful young woman", "confidence": "sourced"},
-   {"value": "chapel", "state": "locked", "when": "middle", "role": "setting", "quote": "Khoma is taken to the chapel where the girl's corpse lies and is locked in for the night.", "confidence": "sourced"}
+   {
+    "value": "witch riding a man",
+    "state": "flying",
+    "when": "opening",
+    "role": "omen",
+    "quote": "climbs on his back and rides him across the countryside like a horse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:14",
+      "quote": "Mikitka, let me put my foot on you to help me onto the horse."
+     }
+    ]
+   },
+   {
+    "value": "coffin",
+    "state": "rising into the air",
+    "when": "middle",
+    "role": "threat",
+    "quote": "The coffin rises into the air and bangs against the sacred circle's barrier",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:39:30",
+      "quote": "She won't rise up from her coffin."
+     }
+    ]
+   },
+   {
+    "value": "chalk circle",
+    "state": "protective",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "Khoma quickly draws a sacred circle of chalk around himself, which acts as a barrier",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:28",
+      "quote": "Sacred circle, save me! Sacred circle, protect me!"
+     }
+    ]
+   },
+   {
+    "value": "rooster",
+    "state": "crowing",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "When the rooster crows in the morning, the girl returns to her coffin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:30",
+      "quote": "A cock."
+     }
+    ]
+   },
+   {
+    "value": "candles",
+    "state": "blown out",
+    "when": "middle",
+    "role": "setting",
+    "quote": "He lights every candle in the chapel and begins to recite the prayers.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:25",
+      "quote": "Ah, candles... That's good. Lots of candles... to chase away..."
+     }
+    ]
+   },
+   {
+    "value": "grey hair",
+    "state": "turned overnight",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "she attempts to curse Khoma, causing his hair to turn grey",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:53",
+      "quote": "Oh, your hair has turned white! As white as milk."
+     }
+    ]
+   },
+   {
+    "value": "stick",
+    "state": "used to beat",
+    "when": "opening",
+    "role": "weapon",
+    "quote": "beats her violently with a stick until she turns into a beautiful young woman",
+    "confidence": "sourced"
+   },
+   {
+    "value": "vodka",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:07:20",
+    "quote": "We have to keep looking. Someone might give us a glass of vodka.",
+    "detail": "courage, comfort and doubt from start to closing toast",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:24",
+      "quote": "After a flask of vodka, even I begin to see witches."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "chapel",
+    "state": "locked",
+    "when": "middle",
+    "role": "setting",
+    "quote": "Khoma is taken to the chapel where the girl's corpse lies and is locked in for the night.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "heavy eyelids",
+    "when": "late",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "01:11:04",
+    "quote": "Raise my eyelids. I cannot see!",
+    "detail": "Viy must have his eyelids lifted to see Khoma",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "travellers lost at night", "when": "opening", "quote": "three of them become lost in the countryside in the middle of the night", "confidence": "sourced"},
-   {"order": 2, "value": "witch attacks and is beaten", "when": "opening", "role": "trigger", "quote": "beats her violently with a stick until she turns into a beautiful young woman, who cries out that he is killing her", "confidence": "sourced"},
-   {"order": 3, "value": "forced to return", "when": "early", "role": "turn", "quote": "He reluctantly complies and finds he is returning to the farm where he met the witch.", "confidence": "sourced"},
-   {"order": 4, "value": "first night: corpse rises", "when": "middle", "quote": "the girl opens her eyes and climbs out of the coffin", "confidence": "sourced"},
-   {"order": 5, "value": "second night: marked by curse", "when": "middle", "quote": "she attempts to curse Khoma, causing his hair to turn grey", "confidence": "sourced"},
-   {"order": 6, "value": "escape fails", "when": "late", "quote": "Khoma attempts to escape but is stopped by the sotnik's servants", "confidence": "sourced"},
-   {"order": 7, "value": "third night: demon summoned", "when": "late", "role": "turn", "quote": "when he makes eye contact with Viy, Viy commands the demons to attack Khoma", "confidence": "sourced"},
-   {"order": 8, "value": "friends toast the dead", "when": "ending", "quote": "one of Khoma's two friends proposes they drink to his memory", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "students sent home",
+    "when": "opening",
+    "source": "subtitles",
+    "at": "00:03:07",
+    "quote": "Now that you're going home, try to stay out of mischief!",
+    "detail": "the rector dismisses the seminarians for vacation",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "travellers lost at night",
+    "when": "opening",
+    "quote": "three of them become lost in the countryside in the middle of the night",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:21",
+      "quote": "Where did the road go? There is no road."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "witch attacks and is beaten",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "beats her violently with a stick until she turns into a beautiful young woman, who cries out that he is killing her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:01",
+      "quote": "Oh, you're killing me!"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "forced to return",
+    "when": "early",
+    "role": "turn",
+    "quote": "He reluctantly complies and finds he is returning to the farm where he met the witch.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "first night: corpse rises",
+    "when": "middle",
+    "quote": "the girl opens her eyes and climbs out of the coffin",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:28",
+      "quote": "Sacred circle, save me!"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "second night: marked by curse",
+    "when": "middle",
+    "quote": "she attempts to curse Khoma, causing his hair to turn grey",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:54:07",
+      "quote": "may he go blind, turn his hair white."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "lashes or gold",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:59:53",
+    "quote": "If you fail to do them, you'll have a thousand lashes. But if you do them, one thousand gold pieces.",
+    "detail": "the sotnik's threat and reward",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "escape fails",
+    "when": "late",
+    "quote": "Khoma attempts to escape but is stopped by the sotnik's servants",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:37",
+      "quote": "I'll run away from here so fast that even your dogs will never catch up with me."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "third night: demon summoned",
+    "when": "late",
+    "role": "turn",
+    "quote": "when he makes eye contact with Viy, Viy commands the demons to attack Khoma",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:19",
+      "quote": "I summon Viy!"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "friends toast the dead",
+    "when": "ending",
+    "quote": "one of Khoma's two friends proposes they drink to his memory",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:17",
+      "quote": "Let's drink to him, may his soul rest in peace."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "doubt he is dead",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:14:33",
+    "quote": "Suppose he wasn't dead? Suppose that the one walking this way now... was him!",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,56 +1,428 @@
 {
  "film": "1975-picnic-at-hanging-rock",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "place", "detail": "Hanging Rock", "quote": "The girls begin climbing, and fall asleep under a strange influence", "confidence": "observed"},
-   {"value": "unseen force", "quote": "they awaken, Miranda, Marion and Irma proceed in a trance into a crevice", "confidence": "observed"}
+   {
+    "value": "place",
+    "detail": "Hanging Rock",
+    "quote": "The girls begin climbing, and fall asleep under a strange influence",
+    "confidence": "observed"
+   },
+   {
+    "value": "unseen force",
+    "quote": "they awaken, Miranda, Marion and Irma proceed in a trance into a crevice",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:39",
+      "quote": "Everything begins and ends at exactly the right time and place."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "unexplained", "quote": "the disappearance of Miranda, Marion, and Miss McCraw remains an unsolved mystery", "confidence": "sourced"}
+   {
+    "value": "unexplained",
+    "quote": "the disappearance of Miranda, Marion, and Miss McCraw remains an unsolved mystery",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "nothing stated", "quote": "remains an unsolved mystery that continues to haunt the local community", "confidence": "observed"}
+   {
+    "value": "nothing stated",
+    "quote": "remains an unsolved mystery that continues to haunt the local community",
+    "confidence": "observed"
+   }
   ],
   "trigger": [
-   {"value": "a journey into nature", "detail": "a school picnic on Valentine's Day 1900", "quote": "embark on a picnic to Hanging Rock led by teachers Miss Greta McCraw and Mlle de Poitiers", "confidence": "sourced"}
+   {
+    "value": "a journey into nature",
+    "detail": "a school picnic on Valentine's Day 1900",
+    "quote": "embark on a picnic to Hanging Rock led by teachers Miss Greta McCraw and Mlle de Poitiers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:36",
+      "quote": "we are indeed fortunate in the weather for our picnic to Hanging Rock."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "time stops", "quote": "the only two available watches have both stopped at exactly noon", "confidence": "sourced"},
-   {"value": "trance and sleep", "quote": "fall asleep under a strange influence", "confidence": "sourced"}
+   {
+    "value": "time stops",
+    "quote": "the only two available watches have both stopped at exactly noon",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:52",
+      "quote": "Blowed if me watch hasn't stopped. Dead on 12.00."
+     }
+    ]
+   },
+   {
+    "value": "trance and sleep",
+    "quote": "fall asleep under a strange influence",
+    "confidence": "sourced"
+   },
+   {
+    "value": "the rock is forbidden",
+    "detail": "Mrs Appleyard forbids exploring even the lower slopes",
+    "source": "subtitles",
+    "at": "00:09:52",
+    "quote": "the rock itself is extremely dangerous and you are therefore forbidden any tomboy foolishness in the matter of exploration",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "schoolgirls", "relation_to_threat": "stranger", "quote": "the disappearance of several schoolgirls and their teacher during a picnic at Hanging Rock", "confidence": "sourced"},
-   {"value": "orphan girl", "relation_to_threat": "community", "detail": "Sara", "quote": "Sara's dead body is discovered in a greenhouse adjacent to the school building", "confidence": "sourced"},
-   {"value": "local community", "relation_to_threat": "community", "quote": "their unexplained disappearances cause a scandal, leading to girls being withdrawn from the school", "confidence": "sourced"}
+   {
+    "value": "schoolgirls",
+    "relation_to_threat": "stranger",
+    "quote": "the disappearance of several schoolgirls and their teacher during a picnic at Hanging Rock",
+    "confidence": "sourced"
+   },
+   {
+    "value": "orphan girl",
+    "relation_to_threat": "community",
+    "detail": "Sara",
+    "quote": "Sara's dead body is discovered in a greenhouse adjacent to the school building",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:45:47",
+      "quote": "You will be returned to the orphanage."
+     }
+    ]
+   },
+   {
+    "value": "local community",
+    "relation_to_threat": "community",
+    "quote": "their unexplained disappearances cause a scandal, leading to girls being withdrawn from the school",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:27",
+      "quote": "The three who have been withdrawn, plus the three still missing on the rock"
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "mystery unsolved", "quote": "remains an unsolved mystery that continues to haunt the local community", "confidence": "sourced"},
-   {"value": "collapse and deaths", "quote": "was later found dead at the base of Hanging Rock, having apparently fallen while climbing it", "confidence": "sourced"}
+   {
+    "value": "mystery unsolved",
+    "quote": "remains an unsolved mystery that continues to haunt the local community",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:55:51",
+      "quote": "To this day, their disappearance remains a mystery."
+     }
+    ]
+   },
+   {
+    "value": "collapse and deaths",
+    "quote": "was later found dead at the base of Hanging Rock, having apparently fallen while climbing it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:55:24",
+      "quote": "The body of Mrs Arthur Appleyard, principal of Appleyard College, was found at the base of Hanging Rock"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "stopped watches", "state": "stopped at noon", "when": "early", "role": "omen", "quote": "the only two available watches have both stopped at exactly noon", "confidence": "sourced"},
-   {"value": "crevice", "when": "early", "role": "threat", "quote": "proceed in a trance into a crevice", "confidence": "sourced"},
-   {"value": "red cloud", "when": "middle", "role": "omen", "quote": "she recalls seeing a strange red cloud", "confidence": "sourced"},
-   {"value": "torn dress scrap", "when": "middle", "role": "clue", "quote": "Michael passes Albert a torn scrap of Irma’s dress", "confidence": "sourced"},
-   {"value": "white swan", "when": "late", "role": "symbol", "quote": "Miranda symbolized by the presence of a white swan", "confidence": "sourced"},
-   {"value": "greenhouse", "when": "ending", "role": "setting", "quote": "Sara's dead body is discovered in a greenhouse", "confidence": "sourced"},
-   {"value": "funeral attire", "when": "ending", "role": "symbol", "quote": "finds her sitting calmly at her desk wearing funeral attire", "confidence": "sourced"}
+   {
+    "value": "stopped watches",
+    "state": "stopped at noon",
+    "when": "early",
+    "role": "omen",
+    "quote": "the only two available watches have both stopped at exactly noon",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:52",
+      "quote": "Blowed if me watch hasn't stopped. Dead on 12.00."
+     }
+    ]
+   },
+   {
+    "value": "crevice",
+    "when": "early",
+    "role": "threat",
+    "quote": "proceed in a trance into a crevice",
+    "confidence": "sourced"
+   },
+   {
+    "value": "red cloud",
+    "when": "middle",
+    "role": "omen",
+    "quote": "she recalls seeing a strange red cloud",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:34",
+      "quote": "What sort of a cloud? It was red."
+     }
+    ]
+   },
+   {
+    "value": "torn dress scrap",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Michael passes Albert a torn scrap of Irma’s dress",
+    "confidence": "sourced"
+   },
+   {
+    "value": "white swan",
+    "when": "late",
+    "role": "symbol",
+    "quote": "Miranda symbolized by the presence of a white swan",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:39",
+      "quote": "Beautiful birds, them swans."
+     }
+    ]
+   },
+   {
+    "value": "greenhouse",
+    "when": "ending",
+    "role": "setting",
+    "quote": "Sara's dead body is discovered in a greenhouse",
+    "confidence": "sourced"
+   },
+   {
+    "value": "funeral attire",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "finds her sitting calmly at her desk wearing funeral attire",
+    "confidence": "sourced"
+   },
+   {
+    "value": "snakes and ants",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:10:03",
+    "quote": "the vicinity is renowned for its venomous snakes and poisonous ants of various species.",
+    "detail": "the warning recurs: Miranda sees the picnickers below 'like a lot of ants'",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:06",
+      "quote": "Like a lot of ants."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "deer",
+    "state": "a simile for the orphan",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:31:23",
+    "quote": "Sara reminds me of a little deer Papa brought home once.",
+    "detail": "Irma compares Sara to a fragile pet deer",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pansies",
+    "state": "scent in a dream",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:48:31",
+    "quote": "Pansies. That's what it smelt like.",
+    "detail": "Bertie dreams his lost sister Sara visits him, smelling of pansies, then passes through the wall",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ticking clock",
+    "state": "stops",
+    "when": "ending",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:55:21",
+    "quote": "(TICKING STOPS)",
+    "detail": "the clock ticks through the film and falls silent before the closing title",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "school picnic", "when": "opening", "quote": "On Valentine's Day 1900, students from Appleyard College, a girls' private school", "confidence": "sourced"},
-   {"order": 2, "value": "watches stop", "when": "early", "role": "omen", "quote": "the only two available watches have both stopped at exactly noon", "confidence": "sourced"},
-   {"order": 3, "value": "girls vanish", "when": "early", "role": "trigger", "quote": "Miranda, Marion and Irma proceed in a trance into a crevice", "confidence": "sourced"},
-   {"order": 4, "value": "failed search", "when": "middle", "quote": "The police undertake their own search the next day without success", "confidence": "sourced"},
-   {"order": 5, "value": "one survivor without memory", "when": "middle", "role": "turn", "quote": "Albert goes back to the rock and locates Irma, who has no memory of what happened", "confidence": "sourced"},
-   {"order": 6, "value": "community unravels", "when": "late", "quote": "locals speculate about sexual motives, rape and murder", "confidence": "sourced"},
-   {"order": 7, "value": "orphan dies", "when": "ending", "quote": "Sara's dead body is discovered in a greenhouse adjacent to the school building, having fallen from above", "confidence": "sourced"},
-   {"order": 8, "value": "mystery left open", "when": "ending", "quote": "remains an unsolved mystery that continues to haunt the local community", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "dream within a dream epigraph",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:50",
+    "quote": "are but a dream. A dream within a dream.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "school picnic",
+    "when": "opening",
+    "quote": "On Valentine's Day 1900, students from Appleyard College, a girls' private school",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:25",
+      "quote": "There she is, ladies. Hangin' Rock."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "warning about the rock",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:09:52",
+    "quote": "the rock itself is extremely dangerous",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "watches stop",
+    "when": "early",
+    "role": "omen",
+    "quote": "the only two available watches have both stopped at exactly noon",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:52",
+      "quote": "Blowed if me watch hasn't stopped. Dead on 12.00."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "girls vanish",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Miranda, Marion and Irma proceed in a trance into a crevice",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:22",
+      "quote": "Miranda, don't go up there! Come back!"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "failed search",
+    "when": "middle",
+    "quote": "The police undertake their own search the next day without success",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "one survivor without memory",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Albert goes back to the rock and locates Irma, who has no memory of what happened",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:09",
+      "quote": "Nothing! I remember nothing!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "community unravels",
+    "when": "late",
+    "quote": "locals speculate about sexual motives, rape and murder",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:27",
+      "quote": "The three who have been withdrawn, plus the three still missing on the rock"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "survivor mobbed by classmates",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:41:51",
+    "quote": "(HYSTERICAL SCREAMING)",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "orphan dies",
+    "when": "ending",
+    "quote": "Sara's dead body is discovered in a greenhouse adjacent to the school building, having fallen from above",
+    "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "dead sister visits in a dream",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:49:16",
+    "quote": "Goodbye, Bertie, she says. I've come a long way to see ya, and now I must go.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 12,
+    "value": "mystery left open",
+    "when": "ending",
+    "quote": "remains an unsolved mystery that continues to haunt the local community",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:55:51",
+      "quote": "To this day, their disappearance remains a mystery."
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

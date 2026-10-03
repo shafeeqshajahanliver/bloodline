@@ -1,61 +1,475 @@
 {
  "film": "1986-the-fly",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "the self transformed", "detail": "Seth Brundle becoming \"Brundlefly\"", "quote": "an eccentric scientist who, after one of his experiments goes wrong, slowly turns into a fly-hybrid creature", "confidence": "sourced"},
-   {"value": "body horror", "quote": "Seth continues to deteriorate, losing body parts and becoming less human in appearance", "confidence": "sourced"}
+   {
+    "value": "the self transformed",
+    "detail": "Seth Brundle becoming \"Brundlefly\"",
+    "quote": "an eccentric scientist who, after one of his experiments goes wrong, slowly turns into a fly-hybrid creature",
+    "confidence": "sourced"
+   },
+   {
+    "value": "body horror",
+    "quote": "Seth continues to deteriorate, losing body parts and becoming less human in appearance",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "experiment gone wrong", "quote": "The computer, confused by the presence of two lifeforms, fused him with the fly at the molecular-genetic level", "confidence": "sourced"}
+   {
+    "value": "experiment gone wrong",
+    "quote": "The computer, confused by the presence of two lifeforms, fused him with the fly at the molecular-genetic level",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to stay human", "quote": "planning to dilute the fly genes in his body with human DNA", "confidence": "sourced"},
-   {"value": "to merge with loved ones", "quote": "he will use the telepods to fuse himself and her, together with their unborn child, into one entity", "confidence": "sourced"}
+   {
+    "value": "to stay human",
+    "quote": "planning to dilute the fly genes in his body with human DNA",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:44",
+      "quote": "HELP ME TO BE HUMAN."
+     }
+    ]
+   },
+   {
+    "value": "to merge with loved ones",
+    "quote": "he will use the telepods to fuse himself and her, together with their unborn child, into one entity",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:45",
+      "quote": "A FAMILY OF THREE, JOINED TOGETHER IN ONE BODY."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "scientific hubris", "detail": "teleporting himself alone out of jealousy", "quote": "Embittered and convinced she is rekindling her relationship with Stathis, Seth teleports himself alone", "confidence": "observed"}
+   {
+    "value": "scientific hubris",
+    "detail": "teleporting himself alone out of jealousy",
+    "quote": "Embittered and convinced she is rekindling her relationship with Stathis, Seth teleports himself alone",
+    "confidence": "observed"
+   }
   ],
   "trigger": [
-   {"value": "self-experiment", "quote": "Seth teleports himself alone, unaware that a fly has slipped inside the transmitter pod with him", "confidence": "sourced"}
+   {
+    "value": "self-experiment",
+    "quote": "Seth teleports himself alone, unaware that a fly has slipped inside the transmitter pod with him",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "gradual transformation", "quote": "he is losing his human reason and compassion, driven by primitive impulses he cannot control", "confidence": "sourced"},
-   {"value": "cannot be reversed", "quote": "his final transformation into an insectoid-human \"Brundlefly\" creature, shedding his decayed human skin", "confidence": "observed"}
+   {
+    "value": "gradual transformation",
+    "quote": "he is losing his human reason and compassion, driven by primitive impulses he cannot control",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:49",
+      "quote": "MY TEETH HAVE BEGUN TO FALL OUT."
+     }
+    ]
+   },
+   {
+    "value": "cannot be reversed",
+    "quote": "his final transformation into an insectoid-human \"Brundlefly\" creature, shedding his decayed human skin",
+    "confidence": "observed"
+   },
+   {
+    "value": "pod splices two creatures",
+    "source": "subtitles",
+    "at": "01:01:14",
+    "quote": "GOT INTO THE TRANSMITTER POD WITH ME THAT FIRST TIME,",
+    "detail": "the computer fused Seth and a housefly at the genetic level",
+    "confidence": "sourced"
+   },
+   {
+    "value": "insect has no compassion",
+    "source": "subtitles",
+    "at": "01:14:00",
+    "quote": "NO COMPASSION, NO COMPROMISE.",
+    "detail": "Seth warns that the insect in him cannot be trusted",
+    "confidence": "observed"
+   }
   ],
   "who_suffers": [
-   {"value": "scientist", "relation_to_threat": "self", "detail": "Seth Brundle", "quote": "When his fingernails begin falling off, Seth realizes something is wrong", "confidence": "sourced"},
-   {"value": "pregnant lover", "relation_to_threat": "lover", "detail": "Ronnie Quaife", "quote": "Ronnie learns that she is pregnant by Seth, but does not know if the conception occurred before or after Seth's genes were corrupted", "confidence": "sourced"},
-   {"value": "rival", "relation_to_threat": "stranger", "detail": "Stathis Borans", "quote": "Seth incapacitates him with his corrosive vomit", "confidence": "sourced"}
+   {
+    "value": "scientist",
+    "relation_to_threat": "self",
+    "detail": "Seth Brundle",
+    "quote": "When his fingernails begin falling off, Seth realizes something is wrong",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pregnant lover",
+    "relation_to_threat": "lover",
+    "detail": "Ronnie Quaife",
+    "quote": "Ronnie learns that she is pregnant by Seth, but does not know if the conception occurred before or after Seth's genes were corrupted",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rival",
+    "relation_to_threat": "stranger",
+    "detail": "Stathis Borans",
+    "quote": "Seth incapacitates him with his corrosive vomit",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "mercy killing", "quote": "silently requests for her to end his misery by aiming Stathis's shotgun barrel, which she had picked up, at his own head", "confidence": "sourced"},
-   {"value": "threat destroyed", "quote": "She eventually, and tearfully, shoots and kills him, falling to her knees in despair", "confidence": "sourced"}
+   {
+    "value": "mercy killing",
+    "quote": "silently requests for her to end his misery by aiming Stathis's shotgun barrel, which she had picked up, at his own head",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat destroyed",
+    "quote": "She eventually, and tearfully, shoots and kills him, falling to her knees in despair",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "telepods", "when": "opening", "role": "setting", "quote": "a set of \"telepods\" that allows instantaneous teleportation between them", "confidence": "sourced"},
-   {"value": "baboon", "state": "turned inside-out", "when": "opening", "role": "omen", "quote": "a baboon is turned inside-out during an experiment", "confidence": "sourced"},
-   {"value": "fly", "state": "slipped into the pod", "when": "early", "role": "trigger", "quote": "unaware that a fly has slipped inside the transmitter pod with him", "confidence": "sourced"},
-   {"value": "bristly hairs", "state": "growing from a wound", "when": "middle", "role": "omen", "quote": "the strange, bristly hairs growing from a wound on his back", "confidence": "sourced"},
-   {"value": "fingernails", "state": "falling off", "when": "middle", "role": "clue", "quote": "When his fingernails begin falling off", "confidence": "sourced"},
-   {"value": "giant maggot", "state": "dreamed birth", "when": "late", "role": "omen", "quote": "has a nightmare of giving birth to a giant maggot", "confidence": "sourced"},
-   {"value": "corrosive vomit", "when": "late", "role": "weapon", "quote": "He has begun vomiting digestive enzymes onto his food to dissolve it", "confidence": "sourced"},
-   {"value": "shotgun", "when": "ending", "role": "weapon", "quote": "aiming Stathis's shotgun barrel, which she had picked up, at his own head", "confidence": "sourced"}
+   {
+    "value": "telepods",
+    "when": "opening",
+    "role": "setting",
+    "quote": "a set of \"telepods\" that allows instantaneous teleportation between them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:30",
+      "quote": "I CALL THEM TELE-PODS."
+     }
+    ]
+   },
+   {
+    "value": "baboon",
+    "state": "turned inside-out",
+    "when": "opening",
+    "role": "omen",
+    "quote": "a baboon is turned inside-out during an experiment",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:58",
+      "quote": "I THINK, UH, IT TURNED THE BABOON INSIDE OUT."
+     }
+    ]
+   },
+   {
+    "value": "fly",
+    "state": "slipped into the pod",
+    "when": "early",
+    "role": "trigger",
+    "quote": "unaware that a fly has slipped inside the transmitter pod with him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:17",
+      "quote": "(fly buzzing)"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:01:34",
+      "quote": "IT MATED US, ME AND THE FLY."
+     }
+    ]
+   },
+   {
+    "value": "bristly hairs",
+    "state": "growing from a wound",
+    "when": "middle",
+    "role": "omen",
+    "quote": "the strange, bristly hairs growing from a wound on his back",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:09",
+      "quote": "IT'S, LIKE, HAIRS OR SOMETHING."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:51:55",
+      "quote": "IN FACT, VERY LIKELY, INSECT HAIRS."
+     }
+    ]
+   },
+   {
+    "value": "fingernails",
+    "state": "falling off",
+    "when": "middle",
+    "role": "clue",
+    "quote": "When his fingernails begin falling off",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "THE NAIL COMES OFF IN HIS MOUTH! THE ENTIRE NAIL."
+     }
+    ]
+   },
+   {
+    "value": "giant maggot",
+    "state": "dreamed birth",
+    "when": "late",
+    "role": "omen",
+    "quote": "has a nightmare of giving birth to a giant maggot",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "THE HIDEOUS, SQUIRMING GIANT FLY- MAGGOT!"
+     }
+    ]
+   },
+   {
+    "value": "corrosive vomit",
+    "when": "late",
+    "role": "weapon",
+    "quote": "He has begun vomiting digestive enzymes onto his food to dissolve it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:16",
+      "quote": "PLAYFULLY CALLED, VOMIT DROP."
+     }
+    ]
+   },
+   {
+    "value": "shotgun",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "aiming Stathis's shotgun barrel, which she had picked up, at his own head",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "a very expensive Italian over-and-under skeet shotgun"
+     }
+    ]
+   },
+   {
+    "value": "nylon stocking",
+    "state": "teleported",
+    "when": "opening",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:07:11",
+    "quote": "UM, KEEP YOUR EYE ON THE STOCKING.",
+    "detail": "Veronica's stocking is the first thing teleported",
+    "confidence": "sourced"
+   },
+   {
+    "value": "teleported steak",
+    "state": "tastes synthetic",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:24:13",
+    "quote": "THE COMPUTER IS GIVING US IT'S INTERPRETATION OF A STEAK.",
+    "detail": "the machine cannot yet copy living flesh",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fly nursery rhyme",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:00:56",
+    "quote": "I KNOW AN OLD LADY WHO SWALLOWED A FLY",
+    "detail": "Seth sings it when he admits the fusion",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cabinet of shed body parts",
+    "state": "kept as relics",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:12:52",
+    "quote": "THE BRUNDLE MUSEUM OF NATURAL HISTORY.",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The fridge is empty except for a few other barely recognizable lost appendages - Brundle's shrivelled ears, his fingernails."
+     }
+    ],
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "scientist shows invention", "when": "opening", "quote": "shows her his invention: a set of \"telepods\"", "confidence": "sourced"},
-   {"order": 2, "value": "animal test fails", "when": "opening", "role": "omen", "quote": "a baboon is turned inside-out during an experiment", "confidence": "sourced"},
-   {"order": 3, "value": "self-experiment in jealousy", "when": "early", "role": "trigger", "quote": "Seth teleports himself alone, unaware that a fly has slipped inside the transmitter pod with him", "confidence": "sourced"},
-   {"order": 4, "value": "strength and arrogance", "when": "middle", "quote": "Seth becomes arrogant and violent, insisting that the teleportation process is beneficial", "confidence": "sourced"},
-   {"order": 5, "value": "cause discovered", "when": "middle", "role": "turn", "quote": "He reviews the telepod's computer and discovers the fly that was in the pod with him", "confidence": "sourced"},
-   {"order": 6, "value": "pregnancy dread", "when": "late", "quote": "She worries that the child will not be human", "confidence": "sourced"},
-   {"order": 7, "value": "final transformation", "when": "ending", "role": "turn", "quote": "she accidentally rips off his jaw, triggering his final transformation", "confidence": "sourced"},
-   {"order": 8, "value": "lover kills the monster", "when": "ending", "quote": "She eventually, and tearfully, shoots and kills him", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "scientist shows invention",
+    "when": "opening",
+    "quote": "shows her his invention: a set of \"telepods\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:57",
+      "quote": "UH, I'M WORKING ON SOMETHING THAT'LL CHANGE THE WORLD,"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "animal test fails",
+    "when": "opening",
+    "role": "omen",
+    "quote": "a baboon is turned inside-out during an experiment",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:58",
+      "quote": "I THINK, UH, IT TURNED THE BABOON INSIDE OUT."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "self-experiment in jealousy",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Seth teleports himself alone, unaware that a fly has slipped inside the transmitter pod with him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:47",
+      "quote": "(fly buzzing)"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:35:32",
+      "quote": "WITHOUT TESTING THE BABOON?"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "strength and arrogance",
+    "when": "middle",
+    "quote": "Seth becomes arrogant and violent, insisting that the teleportation process is beneficial",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:30",
+      "quote": "A DEEP, PENETRATING DIVE INTO THE PLASMA POOL!"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "warning to a stranger",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:50:35",
+    "quote": "NO, BE AFRAID- - BE VERY AFRAID.",
+    "detail": "Veronica warns the woman Seth brought home",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "cause discovered",
+    "when": "middle",
+    "role": "turn",
+    "quote": "He reviews the telepod's computer and discovers the fly that was in the pod with him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:34",
+      "quote": "IT MATED US, ME AND THE FLY."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "monster admits it is not human",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:14:40",
+    "quote": "WHO DREAMT HE WAS A MAN, AND LOVED IT,",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:44",
+      "quote": "BUT NOW, THE DREAM'S OVER AND THE INSECT IS AWAKE."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "pregnancy dread",
+    "when": "late",
+    "quote": "She worries that the child will not be human",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:04",
+      "quote": "I WANT AN ABORTION."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "final transformation",
+    "when": "ending",
+    "role": "turn",
+    "quote": "she accidentally rips off his jaw, triggering his final transformation",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "lover kills the monster",
+    "when": "ending",
+    "quote": "She eventually, and tearfully, shoots and kills him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:57",
+      "quote": "I CAN'T!"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

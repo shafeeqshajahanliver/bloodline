@@ -1,58 +1,458 @@
 {
  "film": "1987-the-lost-boys",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vampires", "detail": "David's gang", "quote": "the fictional California town of Santa Carla, which they discover is a haven for vampires", "confidence": "sourced"},
-   {"value": "head vampire", "detail": "Max, the video store owner", "quote": "Max confesses he is the head vampire", "confidence": "sourced"}
+   {
+    "value": "vampires",
+    "detail": "David's gang",
+    "quote": "the fictional California town of Santa Carla, which they discover is a haven for vampires",
+    "confidence": "sourced"
+   },
+   {
+    "value": "head vampire",
+    "detail": "Max, the video store owner",
+    "quote": "Max confesses he is the head vampire",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "a family", "quote": "Max explains his desire to create a vampire family", "confidence": "sourced"},
-   {"value": "to recruit", "quote": "David and his gang attempt to push Michael into killing", "confidence": "sourced"}
+   {
+    "value": "a family",
+    "quote": "Max explains his desire to create a vampire family",
+    "confidence": "sourced"
+   },
+   {
+    "value": "to recruit",
+    "quote": "David and his gang attempt to push Michael into killing",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:06",
+      "quote": "You'll never grow old, Michael."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:25:08",
+      "quote": "[DAVID] I tried to make you immortal."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "moving into a new home", "quote": "their recently divorced mother Lucy move to the seaside town of Santa Carla, California", "confidence": "sourced"},
-   {"value": "drinking blood", "quote": "Although Star warns him that it contains blood, Michael drinks it", "confidence": "sourced"}
+   {
+    "value": "moving into a new home",
+    "quote": "their recently divorced mother Lucy move to the seaside town of Santa Carla, California",
+    "confidence": "sourced"
+   },
+   {
+    "value": "drinking blood",
+    "quote": "Although Star warns him that it contains blood, Michael drinks it",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "complete only after feeding", "quote": "His transformation will only be complete, though, if he feeds on human blood", "confidence": "sourced"},
-   {"value": "reversed by killing head vampire", "quote": "it may be reversible if they kill the head vampire", "confidence": "sourced"},
-   {"value": "invitation removes weaknesses", "quote": "he had been invited into their home, making him immune to those vulnerabilities", "confidence": "sourced"},
-   {"value": "weak to stakes and holy water", "quote": "arming themselves with holy water, a longbow, and stakes", "confidence": "sourced"}
+   {
+    "value": "complete only after feeding",
+    "quote": "His transformation will only be complete, though, if he feeds on human blood",
+    "confidence": "sourced"
+   },
+   {
+    "value": "reversed by killing head vampire",
+    "quote": "it may be reversible if they kill the head vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:43",
+      "quote": "Look, it says here that if you kill the head vampire,"
+     }
+    ]
+   },
+   {
+    "value": "invitation removes weaknesses",
+    "quote": "he had been invited into their home, making him immune to those vulnerabilities",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:55:53",
+      "quote": "and I'm not coming in until you invite me."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:29:01",
+      "quote": "Don't ever invite a vampire into your house, you silly boy."
+     }
+    ]
+   },
+   {
+    "value": "weak to stakes and holy water",
+    "quote": "arming themselves with holy water, a longbow, and stakes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:58",
+      "quote": "Get yourself a good, sharp stake."
+     }
+    ]
+   },
+   {
+    "value": "sunlight destroys",
+    "source": "subtitles",
+    "at": "01:11:48",
+    "quote": "Get him into the sun!",
+    "confidence": "sourced",
+    "detail": "the hunters drag a vampire into daylight in the lair"
+   }
   ],
   "who_suffers": [
-   {"value": "teenage brothers", "relation_to_threat": "stranger", "detail": "Michael and Sam Emerson", "quote": "two teenage brothers who move with their divorced mother", "confidence": "sourced"},
-   {"value": "single mother", "relation_to_threat": "lover", "detail": "Lucy, courted by Max", "quote": "Lucy takes a job at a video store owned by Max, who takes a romantic interest in her", "confidence": "sourced"},
-   {"value": "partygoers", "relation_to_threat": "stranger", "quote": "demonstrating their ability to fly as they murder a group of partygoers", "confidence": "sourced"}
+   {
+    "value": "teenage brothers",
+    "relation_to_threat": "stranger",
+    "detail": "Michael and Sam Emerson",
+    "quote": "two teenage brothers who move with their divorced mother",
+    "confidence": "sourced"
+   },
+   {
+    "value": "single mother",
+    "relation_to_threat": "lover",
+    "detail": "Lucy, courted by Max",
+    "quote": "Lucy takes a job at a video store owned by Max, who takes a romantic interest in her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "partygoers",
+    "relation_to_threat": "stranger",
+    "quote": "demonstrating their ability to fly as they murder a group of partygoers",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "Grandpa crashes his truck through the wall, impaling Max with a large wooden fence post", "confidence": "sourced"},
-   {"value": "victims restored", "quote": "With Max's death, Michael, Star, and Laddie revert to normal", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "Grandpa crashes his truck through the wall, impaling Max with a large wooden fence post",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:59",
+      "quote": "It's over."
+     }
+    ]
+   },
+   {
+    "value": "victims restored",
+    "quote": "With Max's death, Michael, Star, and Laddie revert to normal",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "bottle of blood", "state": "red liquid", "when": "early", "role": "trigger", "quote": "before offering him a bottle of red liquid", "confidence": "sourced"},
-   {"value": "maggots", "state": "illusion", "when": "early", "role": "omen", "quote": "making his food appear as maggots or worms", "confidence": "sourced"},
-   {"value": "railway bridge", "state": "hanging over a drop", "when": "early", "role": "setting", "quote": "a railway bridge, where they hang suspended over a vast drop", "confidence": "sourced"},
-   {"value": "fading reflection", "when": "middle", "role": "clue", "quote": "finds normal food revolting, and notices his reflection fading", "confidence": "sourced"},
-   {"value": "dog", "state": "protective", "when": "middle", "role": "turn", "quote": "Sam's dog, Nanook, intervenes and stops him", "confidence": "sourced"},
-   {"value": "antlers", "when": "ending", "role": "weapon", "quote": "impales him on Grandpa's collection of antlers", "confidence": "sourced"},
-   {"value": "fence post", "when": "ending", "role": "weapon", "quote": "impaling Max with a large wooden fence post", "confidence": "sourced"},
-   {"value": "garlic and holy water", "when": "middle", "role": "clue", "quote": "has no reaction to garlic or holy water", "confidence": "sourced"}
+   {
+    "value": "bottle of blood",
+    "state": "red liquid",
+    "when": "early",
+    "role": "trigger",
+    "quote": "before offering him a bottle of red liquid",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:04:47",
+      "quote": "That wasn't wine they gave me to drink. It was blood."
+     }
+    ]
+   },
+   {
+    "value": "maggots",
+    "state": "illusion",
+    "when": "early",
+    "role": "omen",
+    "quote": "making his food appear as maggots or worms",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:54",
+      "quote": "Maggots, Michael."
+     }
+    ]
+   },
+   {
+    "value": "railway bridge",
+    "state": "hanging over a drop",
+    "when": "early",
+    "role": "setting",
+    "quote": "a railway bridge, where they hang suspended over a vast drop",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:56",
+      "quote": "[TRAIN HORN BLARING]"
+     }
+    ]
+   },
+   {
+    "value": "fading reflection",
+    "when": "middle",
+    "role": "clue",
+    "quote": "finds normal food revolting, and notices his reflection fading",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:33",
+      "quote": "Look at your reflection in the mirror."
+     }
+    ]
+   },
+   {
+    "value": "dog",
+    "state": "protective",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Sam's dog, Nanook, intervenes and stops him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:17",
+      "quote": "Nothing. I didn't hurt him. He bit me. This is my blood."
+     }
+    ]
+   },
+   {
+    "value": "antlers",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "impales him on Grandpa's collection of antlers",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fence post",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "impaling Max with a large wooden fence post",
+    "confidence": "sourced"
+   },
+   {
+    "value": "garlic and holy water",
+    "when": "middle",
+    "role": "clue",
+    "quote": "has no reaction to garlic or holy water",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:51",
+      "quote": "I bet you hate garlic, don't ya?"
+     }
+    ]
+   },
+   {
+    "value": "carousel",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:01:39",
+    "quote": "[CAROUSEL BELL RINGS]",
+    "confidence": "sourced",
+    "detail": "the boardwalk carousel where the gang first appears"
+   },
+   {
+    "value": "horror comics",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:18:59",
+    "quote": "I told you, I don't like horror comics.",
+    "confidence": "sourced",
+    "detail": "the Frog brothers' vampire comic, 'a survival manual'"
+   },
+   {
+    "value": "sunglasses indoors",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:41:44",
+    "quote": "He wears sunglasses in the house.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "vampire's dog",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:13:10",
+    "quote": "- Uh, that's my dog, Thorn. - Hi, Thorn.",
+    "confidence": "sourced",
+    "detail": "Max's dog Thorn, who later attacks Lucy"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "family moves to new town", "when": "opening", "role": "trigger", "quote": "move to the seaside town of Santa Carla, California", "confidence": "sourced"},
-   {"order": 2, "value": "warned by local experts", "when": "opening", "role": "omen", "quote": "self-proclaimed vampire hunters who believe vampires have infested the town", "confidence": "sourced"},
-   {"order": 3, "value": "initiation by blood", "when": "early", "quote": "Although Star warns him that it contains blood, Michael drinks it", "confidence": "sourced"},
-   {"order": 4, "value": "transformation begins", "when": "middle", "role": "turn", "quote": "he becomes sensitive to light, finds normal food revolting, and notices his reflection fading", "confidence": "sourced"},
-   {"order": 5, "value": "test on wrong suspect", "when": "middle", "quote": "they notice he has a reflection and has no reaction to garlic or holy water", "confidence": "sourced"},
-   {"order": 6, "value": "daytime raid on lair", "when": "late", "quote": "They stake and kill Marko, whose pained screams awaken the others", "confidence": "sourced"},
-   {"order": 7, "value": "siege of the home", "when": "late", "quote": "As night falls, David's gang breaks into the Emerson home", "confidence": "sourced"},
-   {"order": 8, "value": "true head revealed and killed", "when": "ending", "role": "turn", "quote": "Max confesses he is the head vampire", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "night attack on boardwalk",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:02",
+    "quote": "[GUARD SCREAMING]",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "family moves to new town",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "move to the seaside town of Santa Carla, California",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "town called murder capital",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:08:50",
+    "quote": "is the murder capital of the world?",
+    "confidence": "sourced",
+    "detail": "asked of Grandpa on arrival"
+   },
+   {
+    "order": 4,
+    "value": "warned by local experts",
+    "when": "opening",
+    "role": "omen",
+    "quote": "self-proclaimed vampire hunters who believe vampires have infested the town",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:35",
+      "quote": "You think we just work in a comic bookstore for our folks, huh?"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "initiation by blood",
+    "when": "early",
+    "quote": "Although Star warns him that it contains blood, Michael drinks it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:05",
+      "quote": "It's blood."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "transformation begins",
+    "when": "middle",
+    "role": "turn",
+    "quote": "he becomes sensitive to light, finds normal food revolting, and notices his reflection fading",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:51",
+      "quote": "in the middle of the night, you sleep all day."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "test on wrong suspect",
+    "when": "middle",
+    "quote": "they notice he has a reflection and has no reaction to garlic or holy water",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:59",
+      "quote": "Garlic? How did that happen?"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "daytime raid on lair",
+    "when": "late",
+    "quote": "They stake and kill Marko, whose pained screams awaken the others",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:14",
+      "quote": "Here's one. Come on, let's stake her, man."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "siege of the home",
+    "when": "late",
+    "quote": "As night falls, David's gang breaks into the Emerson home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:24",
+      "quote": "Garlic don't work, boys."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "true head revealed and killed",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Max confesses he is the head vampire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:48",
+      "quote": "I knew it! You're the head vampire."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "closing joke",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:32:50",
+    "quote": "One thing about living in Santa Carla I never could stomach.",
+    "confidence": "sourced",
+    "detail": "Grandpa: 'All the damn vampires.'"
+   }
   ]
  },
- "not_stated": ["origin", "wrong"],
+ "not_stated": [
+  "origin",
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

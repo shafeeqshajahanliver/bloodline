@@ -1,57 +1,495 @@
 {
  "film": "2009-coraline",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "false mother", "detail": "the Other Mother, the Beldam", "quote": "the Other Mother is an evil entity called the \"Beldam\"", "confidence": "sourced"},
-   {"value": "alternate world", "quote": "a young girl discovering an idealized alternate universe behind a secret door in her new home", "confidence": "sourced"}
+   {
+    "value": "false mother",
+    "detail": "the Other Mother, the Beldam",
+    "quote": "the Other Mother is an evil entity called the \"Beldam\"",
+    "confidence": "sourced"
+   },
+   {
+    "value": "alternate world",
+    "quote": "a young girl discovering an idealized alternate universe behind a secret door in her new home",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "children's souls", "quote": "They allowed her to sew buttons over their eyes, and she subsequently swallowed their lives", "confidence": "sourced"},
-   {"value": "to keep a child forever", "quote": "The Other Mother offers for Coraline to stay in the Other World forever", "confidence": "sourced"}
+   {
+    "value": "children's souls",
+    "quote": "They allowed her to sew buttons over their eyes, and she subsequently swallowed their lives",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:14",
+      "quote": "Find our eyes, mistress, and our souls will be freed."
+     }
+    ]
+   },
+   {
+    "value": "to keep a child forever",
+    "quote": "The Other Mother offers for Coraline to stay in the Other World forever",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:45",
+      "quote": "And ate up our lives."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "moving into a new home", "quote": "move from Pontiac, Michigan, into the Pink Palace Apartments, an old Victorian house in Ashland, Oregon", "confidence": "sourced"},
-   {"value": "opening a hidden door", "quote": "she opens the door and finds that the brick wall has been replaced by a tunnel", "confidence": "sourced"}
+   {
+    "value": "moving into a new home",
+    "quote": "move from Pontiac, Michigan, into the Pink Palace Apartments, an old Victorian house in Ashland, Oregon",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:37",
+      "quote": "Surprised she let you move in."
+     }
+    ]
+   },
+   {
+    "value": "opening a hidden door",
+    "quote": "she opens the door and finds that the brick wall has been replaced by a tunnel",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:51",
+      "quote": "Hey, Mom! Where does this door go?"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "lures unhappy children", "quote": "who used rag dolls to spy on their unhappy lives and lure them into the Other World", "confidence": "sourced"},
-   {"value": "buttons sewn on eyes", "quote": "on the condition of having buttons sewn onto her eyes", "confidence": "sourced"},
-   {"value": "bound by games", "quote": "Knowing that the Beldam has a penchant for games, Coraline proposes a deal", "confidence": "sourced"}
+   {
+    "value": "lures unhappy children",
+    "quote": "who used rag dolls to spy on their unhappy lives and lure them into the Other World",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:12",
+      "quote": "She spied on our lives through the little doll's eyes. And saw that we weren't happy."
+     }
+    ]
+   },
+   {
+    "value": "buttons sewn on eyes",
+    "quote": "on the condition of having buttons sewn onto her eyes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:01",
+      "quote": "You're not sewing buttons in my eyes! Oh, but we need a yes if you want to stay here."
+     }
+    ]
+   },
+   {
+    "value": "bound by games",
+    "quote": "Knowing that the Beldam has a penchant for games, Coraline proposes a deal",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:26",
+      "quote": "She's got a thing for games."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "neglected child", "relation_to_threat": "stranger", "detail": "Coraline", "quote": "Since her parents are busy with work, Coraline entertains herself by exploring the house", "confidence": "sourced"},
-   {"value": "lost children", "relation_to_threat": "stranger", "detail": "three ghost children, including Wybie's great-aunt", "quote": "three ghost children from previous time periods, one of whom Coraline recognizes as Wybie's great-aunt", "confidence": "sourced"},
-   {"value": "parents", "relation_to_threat": "stranger", "quote": "the cat informs her that the Beldam has taken her parents", "confidence": "sourced"}
+   {
+    "value": "neglected child",
+    "relation_to_threat": "stranger",
+    "detail": "Coraline",
+    "quote": "Since her parents are busy with work, Coraline entertains herself by exploring the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:17",
+      "quote": "So explore it. Go out and count all the doors and windows"
+     }
+    ]
+   },
+   {
+    "value": "lost children",
+    "relation_to_threat": "stranger",
+    "detail": "three ghost children, including Wybie's great-aunt",
+    "quote": "three ghost children from previous time periods, one of whom Coraline recognizes as Wybie's great-aunt",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:09",
+      "quote": "Why are you all here? The Beldam."
+     }
+    ]
+   },
+   {
+    "value": "parents",
+    "relation_to_threat": "stranger",
+    "quote": "the cat informs her that the Beldam has taken her parents",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat sealed away", "quote": "vanquishes the hand before they both throw it and the key down the well", "confidence": "sourced"},
-   {"value": "family restored", "quote": "Coraline's parents return with no recollection of their capture, and she warmly embraces them", "confidence": "sourced"}
+   {
+    "value": "threat sealed away",
+    "quote": "vanquishes the hand before they both throw it and the key down the well",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:04",
+      "quote": "It's the key, miss. There's only one, and the Beldam will find it."
+     }
+    ]
+   },
+   {
+    "value": "family restored",
+    "quote": "Coraline's parents return with no recollection of their capture, and she warmly embraces them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:31",
+      "quote": "You were right, Coraline. I really hate dirt! But the tulips look nice."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "black cat", "state": "can speak, travels between worlds", "when": "opening", "role": "omen", "quote": "While searching for an old well, she meets a black cat", "confidence": "sourced"},
-   {"value": "rag doll", "state": "resembles her", "when": "opening", "role": "omen", "quote": "who gives her a rag doll that eerily resembles her", "confidence": "sourced"},
-   {"value": "small door", "state": "bricked up, then a tunnel", "when": "early", "role": "trigger", "quote": "discovering a small door with a brick wall behind it in the living room", "confidence": "sourced"},
-   {"value": "button eyes", "when": "early", "role": "threat", "quote": "button-eyed doppelgängers of her parents lavish her with delicious food and their attention", "confidence": "sourced"},
-   {"value": "mirror", "state": "prison", "when": "middle", "role": "setting", "quote": "the Other Mother imprisons her in a dark room behind a mirror", "confidence": "sourced"},
-   {"value": "adder stone", "when": "late", "role": "weapon", "quote": "Coraline finds and collects each of the missing eyes using the adder stone", "confidence": "sourced"},
-   {"value": "snow globe", "state": "holds the parents", "when": "late", "role": "clue", "quote": "Realizing they are trapped in a nearby snow globe", "confidence": "sourced"},
-   {"value": "well", "when": "ending", "role": "setting", "quote": "they both throw it and the key down the well", "confidence": "sourced"}
+   {
+    "value": "black cat",
+    "state": "can speak, travels between worlds",
+    "when": "opening",
+    "role": "omen",
+    "quote": "While searching for an old well, she meets a black cat",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:58",
+      "quote": "You scared me to death, you mangy thing!"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:45:42",
+      "quote": "She hates cats and tries to keep me out."
+     }
+    ]
+   },
+   {
+    "value": "rag doll",
+    "state": "resembles her",
+    "when": "opening",
+    "role": "omen",
+    "quote": "who gives her a rag doll that eerily resembles her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:14",
+      "quote": "The doll's her spy! It's how she watches you."
+     }
+    ]
+   },
+   {
+    "value": "small door",
+    "state": "bricked up, then a tunnel",
+    "when": "early",
+    "role": "trigger",
+    "quote": "discovering a small door with a brick wall behind it in the living room",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:40",
+      "quote": "And why is the door so small?"
+     }
+    ]
+   },
+   {
+    "value": "button eyes",
+    "when": "early",
+    "role": "threat",
+    "quote": "button-eyed doppelgängers of her parents lavish her with delicious food and their attention",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:48",
+      "quote": "Black is traditional."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:52:01",
+      "quote": "You're not sewing buttons in my eyes!"
+     }
+    ]
+   },
+   {
+    "value": "mirror",
+    "state": "prison",
+    "when": "middle",
+    "role": "setting",
+    "quote": "the Other Mother imprisons her in a dark room behind a mirror",
+    "confidence": "sourced"
+   },
+   {
+    "value": "adder stone",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Coraline finds and collects each of the missing eyes using the adder stone",
+    "confidence": "sourced"
+   },
+   {
+    "value": "snow globe",
+    "state": "holds the parents",
+    "when": "late",
+    "role": "clue",
+    "quote": "Realizing they are trapped in a nearby snow globe",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:23",
+      "quote": "Oh, no, you broke my favorite snow globe."
+     }
+    ]
+   },
+   {
+    "value": "well",
+    "when": "ending",
+    "role": "setting",
+    "quote": "they both throw it and the key down the well",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:28",
+      "quote": "It's supposed to be so deep, if you fell to the bottom and looked up, you'd see a sky full of stars in the middle of the day."
+     }
+    ]
+   },
+   {
+    "value": "jumping mice",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:26:07",
+    "quote": "The jumping mice? They are saying, Do not go through little door.",
+    "detail": "Mr. Bobinsky's circus mice carry the warning; in the other world they are rats",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rat",
+    "state": "spy, killed by the cat",
+    "when": "middle",
+    "role": "threat",
+    "source": "subtitles",
+    "at": "00:56:26",
+    "quote": "I don't like rats at the best of times. But this one was sounding an alarm.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "key",
+    "when": "late",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "01:10:34",
+    "quote": "Only one key.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:04",
+      "quote": "It's the key, miss. There's only one, and the Beldam will find it."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "old photograph",
+    "state": "lost twin sister",
+    "when": "ending",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:32:09",
+    "quote": "It's her and her sister before she disappeared. The sweet ghost girl.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "moving in", "when": "opening", "role": "trigger", "quote": "move from Pontiac, Michigan, into the Pink Palace Apartments", "confidence": "sourced"},
-   {"order": 2, "value": "hidden door found", "when": "opening", "quote": "discovering a small door with a brick wall behind it in the living room", "confidence": "sourced"},
-   {"order": 3, "value": "idealised double world", "when": "early", "quote": "button-eyed doppelgängers of her parents lavish her with delicious food and their attention", "confidence": "sourced"},
-   {"order": 4, "value": "warnings from neighbours", "when": "early", "role": "omen", "quote": "who warn her of impending danger in her future regarding the Other World", "confidence": "sourced"},
-   {"order": 5, "value": "true price revealed", "when": "middle", "role": "turn", "quote": "on the condition of having buttons sewn onto her eyes", "confidence": "sourced"},
-   {"order": 6, "value": "past victims revealed", "when": "middle", "role": "clue", "quote": "three ghost children from previous time periods", "confidence": "sourced"},
-   {"order": 7, "value": "wager and escape", "when": "late", "quote": "She and the cat narrowly escape through the door with the ghost children's help", "confidence": "sourced"},
-   {"order": 8, "value": "last attack sealed in well", "when": "ending", "quote": "the Beldam's amputated hand sneaks into the real world and attempts to drag her back", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "moving in",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "move from Pontiac, Michigan, into the Pink Palace Apartments",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:49",
+      "quote": "We're here."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "hidden door found",
+    "when": "opening",
+    "quote": "discovering a small door with a brick wall behind it in the living room",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:51",
+      "quote": "Hey, Mom! Where does this door go?"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "idealised double world",
+    "when": "early",
+    "quote": "button-eyed doppelgängers of her parents lavish her with delicious food and their attention",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:03",
+      "quote": "I love your garden! Our garden, Coraline."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "warnings from neighbours",
+    "when": "early",
+    "role": "omen",
+    "quote": "who warn her of impending danger in her future regarding the Other World",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:12",
+      "quote": "Do not go through little door."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:32:06",
+      "quote": "When they were kids, Grandma's sister disappeared. She says she was stolen."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "true price revealed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "on the condition of having buttons sewn onto her eyes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:01",
+      "quote": "You're not sewing buttons in my eyes!"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "past victims revealed",
+    "when": "middle",
+    "role": "clue",
+    "quote": "three ghost children from previous time periods",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:12",
+      "quote": "She spied on our lives through the little doll's eyes."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "parents abducted",
+    "when": "middle",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:03:58",
+    "quote": "Mom? Dad?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "wager and escape",
+    "when": "late",
+    "quote": "She and the cat narrowly escape through the door with the ghost children's help",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:11:29",
+      "quote": "An exploring game. A finding things game."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "last attack sealed in well",
+    "when": "ending",
+    "quote": "the Beldam's amputated hand sneaks into the real world and attempts to drag her back",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:04",
+      "quote": "It's the key, miss. There's only one, and the Beldam will find it."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "victim's sister welcomed",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:34:04",
+    "quote": "I'm Coraline Jones. I've got so much to tell you!",
+    "detail": "Coraline greets Wybie's grandmother, whose twin was taken",
+    "confidence": "sourced"
+   }
   ]
  },
- "not_stated": ["origin", "wrong"],
+ "not_stated": [
+  "origin",
+  "wrong"
+ ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

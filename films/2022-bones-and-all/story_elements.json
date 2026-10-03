@@ -1,63 +1,420 @@
 {
  "film": "2022-bones-and-all",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "cannibal hunger", "detail": "Maren and Lee are 'eaters'", "quote": "a pair of young cannibals who develop feelings for each other on a road trip across the United States", "confidence": "sourced"},
-   {"value": "predatory stalker", "detail": "Sully, an older eater", "quote": "She is eventually approached by Sully, who has been following her", "confidence": "sourced"}
+   {
+    "value": "cannibal hunger",
+    "detail": "Maren and Lee are 'eaters'",
+    "quote": "a pair of young cannibals who develop feelings for each other on a road trip across the United States",
+    "confidence": "sourced"
+   },
+   {
+    "value": "predatory stalker",
+    "detail": "Sully, an older eater",
+    "quote": "She is eventually approached by Sully, who has been following her",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "inherited", "detail": "from her mother; Lee's father also ate people", "quote": "Lee reveals to Maren that his father also ate people", "confidence": "sourced"}
+   {
+    "value": "inherited",
+    "detail": "from her mother; Lee's father also ate people",
+    "quote": "Lee reveals to Maren that his father also ate people",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "hunger", "quote": "she compulsively bites her classmate's finger, partially severing it", "confidence": "sourced"},
-   {"value": "love and normal life", "quote": "the two decide to attempt to live a normal life together", "confidence": "sourced"}
+   {
+    "value": "hunger",
+    "quote": "she compulsively bites her classmate's finger, partially severing it",
+    "confidence": "sourced"
+   },
+   {
+    "value": "love and normal life",
+    "quote": "the two decide to attempt to live a normal life together",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "abandoned child", "quote": "Shortly after Maren's 18th birthday, Frank abandons her", "confidence": "sourced"},
-   {"value": "patricide", "detail": "Lee ate his abusive father", "quote": "bit his son during their fight, and that Lee eventually fed on him", "confidence": "sourced"}
+   {
+    "value": "abandoned child",
+    "quote": "Shortly after Maren's 18th birthday, Frank abandons her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "patricide",
+    "detail": "Lee ate his abusive father",
+    "quote": "bit his son during their fight, and that Lee eventually fed on him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:47:07",
+      "quote": "I duct-taped the shit out of him too."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "breaking a rule", "detail": "sneaking out to a sleepover", "quote": "Although she knows she's not allowed to go, she sneaks out", "confidence": "sourced"},
-   {"value": "abandoned by parent", "quote": "Frank abandons her, leaving her cash, her birth certificate, and a tape", "confidence": "sourced"}
+   {
+    "value": "breaking a rule",
+    "detail": "sneaking out to a sleepover",
+    "quote": "Although she knows she's not allowed to go, she sneaks out",
+    "confidence": "sourced"
+   },
+   {
+    "value": "abandoned by parent",
+    "quote": "Frank abandons her, leaving her cash, her birth certificate, and a tape",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "eaters find each other by smell", "quote": "an eccentric fellow \"eater\" who located her by smell", "confidence": "sourced"},
-   {"value": "the urge cannot be overcome", "quote": "He concludes the tape with the hope that she will overcome her urges", "confidence": "observed"}
+   {
+    "value": "eaters find each other by smell",
+    "quote": "an eccentric fellow \"eater\" who located her by smell",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:36",
+      "quote": "I smelled you. You probably smell me now."
+     }
+    ]
+   },
+   {
+    "value": "the urge cannot be overcome",
+    "quote": "He concludes the tape with the hope that she will overcome her urges",
+    "confidence": "observed"
+   },
+   {
+    "value": "never eat an eater",
+    "detail": "Sully's first rule",
+    "source": "subtitles",
+    "at": "00:18:45",
+    "quote": "is never, never, ever eat an Eater.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "eaters smell coming death",
+    "source": "subtitles",
+    "at": "00:25:34",
+    "quote": "When the time comes, you'll smell it.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "eating whole changes you",
+    "detail": "'bones and all'",
+    "source": "subtitles",
+    "at": "00:57:15",
+    "quote": "before Bones and all, and then there's after.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "young woman", "relation_to_threat": "self", "detail": "Maren", "quote": "she reads a letter Janelle wrote to her, which concludes with the belief that Maren would be better off dead", "confidence": "sourced"},
-   {"value": "strangers eaten", "relation_to_threat": "stranger", "quote": "Maren is guilt-ridden to discover that the man was married and had children", "confidence": "sourced"},
-   {"value": "lover", "relation_to_threat": "lover", "detail": "Lee", "quote": "Lee is fatally wounded in the struggle", "confidence": "sourced"},
-   {"value": "lover's sister", "relation_to_threat": "family", "detail": "Kayla", "quote": "realizes she was Sully's last victim", "confidence": "sourced"}
+   {
+    "value": "young woman",
+    "relation_to_threat": "self",
+    "detail": "Maren",
+    "quote": "she reads a letter Janelle wrote to her, which concludes with the belief that Maren would be better off dead",
+    "confidence": "sourced"
+   },
+   {
+    "value": "strangers eaten",
+    "relation_to_threat": "stranger",
+    "quote": "Maren is guilt-ridden to discover that the man was married and had children",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lover",
+    "relation_to_threat": "lover",
+    "detail": "Lee",
+    "quote": "Lee is fatally wounded in the struggle",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lover's sister",
+    "relation_to_threat": "family",
+    "detail": "Kayla",
+    "quote": "realizes she was Sully's last victim",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "predator killed", "quote": "the pair manage to kill Sully, but Lee is fatally wounded in the struggle", "confidence": "sourced"},
-   {"value": "loved one consumed", "quote": "Lee expresses his wish for Maren to eat him, \"bones and all\", which she reluctantly does", "confidence": "sourced"}
+   {
+    "value": "predator killed",
+    "quote": "the pair manage to kill Sully, but Lee is fatally wounded in the struggle",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:58:32",
+      "quote": "[Sully stops breathing]"
+     }
+    ]
+   },
+   {
+    "value": "loved one consumed",
+    "quote": "Lee expresses his wish for Maren to eat him, \"bones and all\", which she reluctantly does",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "finger", "state": "bitten, severed", "when": "opening", "role": "omen", "quote": "she compulsively bites her classmate's finger, partially severing it", "confidence": "sourced"},
-   {"value": "cassette tape", "when": "early", "role": "clue", "quote": "leaving her cash, her birth certificate, and a tape", "confidence": "sourced"},
-   {"value": "road trip truck", "when": "middle", "role": "setting", "quote": "Stealing his victim's truck, Lee offers Maren a ride", "confidence": "sourced"},
-   {"value": "eaten hands", "when": "late", "role": "mirror", "quote": "Maren meets Janelle, who has eaten her own hands", "confidence": "sourced"},
-   {"value": "hair", "state": "strands collected", "when": "ending", "role": "clue", "quote": "Maren finds strands of Kayla's hair", "confidence": "sourced"},
-   {"value": "knife", "when": "ending", "role": "weapon", "quote": "taunts her with a knife", "confidence": "sourced"},
-   {"value": "carnival", "when": "middle", "role": "setting", "quote": "during a stop at a local carnival", "confidence": "sourced"}
+   {
+    "value": "finger",
+    "state": "bitten, severed",
+    "when": "opening",
+    "role": "omen",
+    "quote": "she compulsively bites her classmate's finger, partially severing it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:31",
+      "quote": "Kim, give me your hand."
+     }
+    ]
+   },
+   {
+    "value": "cassette tape",
+    "when": "early",
+    "role": "clue",
+    "quote": "leaving her cash, her birth certificate, and a tape",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:14",
+      "quote": "this tape is good and destroyed. Don't keep it."
+     }
+    ]
+   },
+   {
+    "value": "road trip truck",
+    "when": "middle",
+    "role": "setting",
+    "quote": "Stealing his victim's truck, Lee offers Maren a ride",
+    "confidence": "sourced"
+   },
+   {
+    "value": "eaten hands",
+    "when": "late",
+    "role": "mirror",
+    "quote": "Maren meets Janelle, who has eaten her own hands",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:05",
+      "quote": "She ate her own fucking hands."
+     }
+    ]
+   },
+   {
+    "value": "hair",
+    "state": "strands collected",
+    "when": "ending",
+    "role": "clue",
+    "quote": "Maren finds strands of Kayla's hair",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:46",
+      "quote": "Keeps this braid woven with the hair. People that he eats."
+     }
+    ]
+   },
+   {
+    "value": "knife",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "taunts her with a knife",
+    "confidence": "sourced"
+   },
+   {
+    "value": "carnival",
+    "when": "middle",
+    "role": "setting",
+    "quote": "during a stop at a local carnival",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:26",
+      "quote": "What's there to do around here besides this dumbass carnival?"
+     }
+    ]
+   },
+   {
+    "value": "flies",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:29:39",
+    "quote": "[flies buzzing]",
+    "confidence": "sourced",
+    "detail": "over Sully and Maren after their first shared meal"
+   },
+   {
+    "value": "cows at a slaughterhouse",
+    "when": "middle",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:49:35",
+    "quote": "[cows mooing]",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:37",
+      "quote": "The music's supposed to keep' em calm."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "forbidden sleepover, first bite", "when": "opening", "role": "trigger", "quote": "During the sleepover, she compulsively bites her classmate's finger", "confidence": "sourced"},
-   {"order": 2, "value": "abandoned by father", "when": "early", "quote": "Frank abandons her, leaving her cash, her birth certificate, and a tape", "confidence": "sourced"},
-   {"order": 3, "value": "meets another of her kind", "when": "early", "quote": "Maren awakens to find Sully devouring the woman's corpse and joins him", "confidence": "sourced"},
-   {"order": 4, "value": "lovers on the road", "when": "middle", "quote": "As they embark on a cross-country road trip, Maren and Lee fall in love", "confidence": "sourced"},
-   {"order": 5, "value": "meets monstrous mother", "when": "late", "role": "turn", "quote": "Maren meets Janelle, who has eaten her own hands", "confidence": "sourced"},
-   {"order": 6, "value": "attempt at normal life", "when": "late", "quote": "the two decide to attempt to live a normal life together", "confidence": "sourced"},
-   {"order": 7, "value": "stalker attacks", "when": "ending", "quote": "Sully has broken into their apartment, and he forces himself on to her", "confidence": "sourced"},
-   {"order": 8, "value": "lover eaten", "when": "ending", "quote": "Lee expresses his wish for Maren to eat him", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "ordinary school day",
+    "when": "opening",
+    "source": "subtitles",
+    "at": "00:01:44",
+    "quote": "You didn't tell me you played piano.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "forbidden sleepover, first bite",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "During the sleepover, she compulsively bites her classmate's finger",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:16",
+      "quote": "[bones crunching] [screaming]"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "abandoned by father",
+    "when": "early",
+    "quote": "Frank abandons her, leaving her cash, her birth certificate, and a tape",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:08",
+      "quote": "I've got some things to say."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "meets another of her kind",
+    "when": "early",
+    "quote": "Maren awakens to find Sully devouring the woman's corpse and joins him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:58",
+      "quote": "I smelled you from the yard, little missy."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "first shared feeding",
+    "when": "early",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:26:42",
+    "quote": "[crunching and slurping]",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "lovers on the road",
+    "when": "middle",
+    "quote": "As they embark on a cross-country road trip, Maren and Lee fall in love",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "meets monstrous mother",
+    "when": "late",
+    "role": "turn",
+    "quote": "Maren meets Janelle, who has eaten her own hands",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:06",
+      "quote": "Maren, if a day comes when you show up here,"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "attempt at normal life",
+    "when": "late",
+    "quote": "the two decide to attempt to live a normal life together",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:50:10",
+      "quote": "You wanna be people? Let's be people."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "stalker attacks",
+    "when": "ending",
+    "quote": "Sully has broken into their apartment, and he forces himself on to her",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "lover eaten",
+    "when": "ending",
+    "quote": "Lee expresses his wish for Maren to eat him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:02:05",
+      "quote": "It's the easiest thing, Maren, love."
+     },
+     {
+      "source": "subtitles",
+      "at": "02:02:07",
+      "quote": "Just love me and eat."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

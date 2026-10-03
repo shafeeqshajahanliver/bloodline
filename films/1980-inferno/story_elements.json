@@ -1,60 +1,483 @@
 {
  "film": "1980-inferno",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "witch", "detail": "Mater Tenebrarum, the Mother of Darkness", "quote": "a New York City apartment building that also served as a home for a powerful, centuries-old witch", "confidence": "sourced"},
-   {"value": "hidden killer", "detail": "a gloved, black-robed figure", "quote": "both Sara and Carlo are stabbed to death by a gloved killer", "confidence": "sourced"}
+   {
+    "value": "witch",
+    "detail": "Mater Tenebrarum, the Mother of Darkness",
+    "quote": "a New York City apartment building that also served as a home for a powerful, centuries-old witch",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hidden killer",
+    "detail": "a gloved, black-robed figure",
+    "quote": "both Sara and Carlo are stabbed to death by a gloved killer",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "ancient evil", "detail": "three sisters housed by the alchemist Varelli", "quote": "tells of three evil sisters who rule the world with sorrow, tears, and darkness and dwell in separate homes built for them by the alchemist", "confidence": "sourced"}
+   {
+    "value": "ancient evil",
+    "detail": "three sisters housed by the alchemist Varelli",
+    "quote": "tells of three evil sisters who rule the world with sorrow, tears, and darkness and dwell in separate homes built for them by the alchemist",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to rule", "quote": "three evil sisters who rule the world with sorrow, tears, and darkness", "confidence": "sourced"},
-   {"value": "to stay hidden", "quote": "She is grabbed from behind by a clawed assailant and guillotined across the neck", "confidence": "observed"}
+   {
+    "value": "to rule",
+    "quote": "three evil sisters who rule the world with sorrow, tears, and darkness",
+    "confidence": "sourced"
+   },
+   {
+    "value": "to stay hidden",
+    "quote": "She is grabbed from behind by a clawed assailant and guillotined across the neck",
+    "confidence": "observed"
+   }
+  ],
+  "wrong": [
+   {
+    "value": "building houses for evil",
+    "detail": "Varelli the architect designed the three mothers' dwellings",
+    "source": "subtitles",
+    "at": "00:01:21",
+    "quote": "who is the youngest and cruelest of the three , controls New York and I built their horrible houses .",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "finding a forbidden book", "quote": "Rose Elliot, a poet living alone in NYC, finds an ancient book titled The Three Mothers.", "confidence": "sourced"},
-   {"value": "search for missing sibling", "quote": "a young man's investigation into the disappearance of his sister", "confidence": "sourced"}
+   {
+    "value": "finding a forbidden book",
+    "quote": "Rose Elliot, a poet living alone in NYC, finds an ancient book titled The Three Mothers.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "search for missing sibling",
+    "quote": "a young man's investigation into the disappearance of his sister",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "knowledge of the book kills", "detail": "those who read or seek it die", "quote": "Sara is attacked by a monstrous figure in a laboratory within the building, who recognizes the book.", "confidence": "observed"},
-   {"value": "always being watched", "quote": "Mark frees him, only to be told that he is still being watched as Varelli dies.", "confidence": "sourced"},
-   {"value": "destroyed by fire", "quote": "Debris crashes down on Tenebrarum, destroying her.", "confidence": "observed"}
+   {
+    "value": "knowledge of the book kills",
+    "detail": "those who read or seek it die",
+    "quote": "Sara is attacked by a monstrous figure in a laboratory within the building, who recognizes the book.",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:34",
+      "quote": "I do not know what price I shall have to pay for breaking what we alchemists call silentium ."
+     }
+    ]
+   },
+   {
+    "value": "always being watched",
+    "quote": "Mark frees him, only to be told that he is still being watched as Varelli dies.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:13",
+      "quote": "You are being watched ."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:01:29",
+      "quote": "It 's as if I were constantly being watched ."
+     }
+    ]
+   },
+   {
+    "value": "destroyed by fire",
+    "quote": "Debris crashes down on Tenebrarum, destroying her.",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:40:29",
+      "quote": "It 's on fire . It 's all going to burn down , just like before ."
+     }
+    ]
+   },
+   {
+    "value": "three keys to the secret",
+    "detail": "a foul smell, the cellar picture, and the floor underfoot",
+    "source": "subtitles",
+    "at": "00:02:09",
+    "quote": "And that is the first key to the mothers ' secret .",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:30",
+      "quote": "The third key can be found under the soles of your shoes ."
+     }
+    ]
+   },
+   {
+    "value": "the house is a living body",
+    "source": "subtitles",
+    "at": "01:37:00",
+    "quote": "This building has become my body . Its bricks , my cells , its passageways , my veins .",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "siblings", "relation_to_threat": "stranger", "detail": "Rose and her brother Mark", "quote": "writes to her brother Mark, a music student in Rome, urging him to visit her", "confidence": "sourced"},
-   {"value": "residents", "relation_to_threat": "community", "quote": "More strange deaths occur in the building", "confidence": "sourced"},
-   {"value": "friends", "relation_to_threat": "stranger", "detail": "Sara and her neighbour Carlo", "quote": "both Sara and Carlo are stabbed to death by a gloved killer", "confidence": "sourced"}
+   {
+    "value": "siblings",
+    "relation_to_threat": "stranger",
+    "detail": "Rose and her brother Mark",
+    "quote": "writes to her brother Mark, a music student in Rome, urging him to visit her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "residents",
+    "relation_to_threat": "community",
+    "quote": "More strange deaths occur in the building",
+    "confidence": "sourced"
+   },
+   {
+    "value": "friends",
+    "relation_to_threat": "stranger",
+    "detail": "Sara and her neighbour Carlo",
+    "quote": "both Sara and Carlo are stabbed to death by a gloved killer",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "the fire that has consumed much of the building enables Mark to escape from the witch's den. Debris crashes down on Tenebrarum, destroying her.", "confidence": "sourced"},
-   {"value": "hidden identity revealed", "quote": "Laughing maniacally, she reveals to him that she is Mater Tenebrarum. She transforms into Death personified.", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "the fire that has consumed much of the building enables Mark to escape from the witch's den. Debris crashes down on Tenebrarum, destroying her.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hidden identity revealed",
+    "quote": "Laughing maniacally, she reveals to him that she is Mater Tenebrarum. She transforms into Death personified.",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "ancient book", "when": "opening", "role": "trigger", "quote": "finds an ancient book titled The Three Mothers", "confidence": "sourced"},
-   {"value": "flooded ballroom", "when": "early", "role": "setting", "quote": "discovers a hole in the floor that leads to a water-filled ballroom", "confidence": "sourced"},
-   {"value": "corpse", "state": "rising from water", "when": "early", "role": "omen", "quote": "a putrid corpse rises from the depths, frightening her into screaming", "confidence": "sourced"},
-   {"value": "broken glass", "state": "used to behead", "when": "middle", "role": "weapon", "quote": "guillotined across the neck with glass from a broken window", "confidence": "sourced"},
-   {"value": "cats", "state": "swarming", "when": "middle", "role": "threat", "quote": "she is attacked by a swarm of vicious cats", "confidence": "sourced"},
-   {"value": "rats", "state": "gnawing", "when": "late", "role": "threat", "quote": "Hundreds of rats from a nearby drain crawl over him, gnawing his flesh.", "confidence": "sourced"},
-   {"value": "blood trail", "when": "middle", "role": "clue", "quote": "After the two find blood on the carpet outside Rose's room, Mark follows the trail of blood.", "confidence": "sourced"},
-   {"value": "fire", "state": "consuming the building", "when": "ending", "role": "weapon", "quote": "drops a lit candle, which starts a fire", "confidence": "sourced"}
+   {
+    "value": "ancient book",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "finds an ancient book titled The Three Mothers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:14",
+      "quote": "The one that you sold me . The three mothers ."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:26:15",
+      "quote": "This book is neither fictional , nor a work of imagination ."
+     }
+    ]
+   },
+   {
+    "value": "flooded ballroom",
+    "when": "early",
+    "role": "setting",
+    "quote": "discovers a hole in the floor that leads to a water-filled ballroom",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:38",
+      "quote": "The second key is hidden in the cellar ."
+     }
+    ]
+   },
+   {
+    "value": "corpse",
+    "state": "rising from water",
+    "when": "early",
+    "role": "omen",
+    "quote": "a putrid corpse rises from the depths, frightening her into screaming",
+    "confidence": "sourced"
+   },
+   {
+    "value": "broken glass",
+    "state": "used to behead",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "guillotined across the neck with glass from a broken window",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cats",
+    "state": "swarming",
+    "when": "middle",
+    "role": "threat",
+    "quote": "she is attacked by a swarm of vicious cats",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:10",
+      "quote": "Damn cats ."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:11:13",
+      "quote": "I want all of those damn cats away from here ."
+     }
+    ]
+   },
+   {
+    "value": "rats",
+    "state": "gnawing",
+    "when": "late",
+    "role": "threat",
+    "quote": "Hundreds of rats from a nearby drain crawl over him, gnawing his flesh.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:56",
+      "quote": "The rats are eating me !"
+     }
+    ]
+   },
+   {
+    "value": "blood trail",
+    "when": "middle",
+    "role": "clue",
+    "quote": "After the two find blood on the carpet outside Rose's room, Mark follows the trail of blood.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:59:35",
+      "quote": "Blood ."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:00:25",
+      "quote": "I 'm sure I stepped on blood ."
+     }
+    ]
+   },
+   {
+    "value": "fire",
+    "state": "consuming the building",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "drops a lit candle, which starts a fire",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:40:29",
+      "quote": "It 's on fire ."
+     }
+    ]
+   },
+   {
+    "value": "sickly sweet smell",
+    "when": "opening",
+    "role": "clue",
+    "detail": "the stench the book promises around each house, blamed on a cake factory",
+    "source": "subtitles",
+    "at": "00:06:10",
+    "quote": "That book mentions a horrible odor , for example .",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:22:45",
+      "quote": "What a strange smell . Sickly sweet ."
+     }
+    ]
+   },
+   {
+    "value": "shoe soles",
+    "when": "opening",
+    "role": "clue",
+    "detail": "the riddle of the third key, repeated until Mark tears up the floor",
+    "source": "subtitles",
+    "at": "00:02:30",
+    "quote": "The third key can be found under the soles of your shoes .",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:27:58",
+      "quote": "\" The key is under the soles of your shoes . \""
+     }
+    ]
+   },
+   {
+    "value": "speaking pipes",
+    "when": "middle",
+    "role": "setting",
+    "detail": "hidden tubes that carry voices through every room of the building",
+    "source": "subtitles",
+    "at": "00:53:31",
+    "quote": "See this hole in the wall ? There 's one going into my flat too .",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lunar eclipse",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:12:33",
+    "quote": "There 's going to be an eclipse of the moon tonight .",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "forbidden book found", "when": "opening", "role": "trigger", "quote": "Rose Elliot, a poet living alone in NYC, finds an ancient book titled The Three Mothers.", "confidence": "sourced"},
-   {"order": 2, "value": "descent finds a corpse", "when": "early", "role": "omen", "quote": "a putrid corpse rises from the depths, frightening her into screaming and beginning to drown", "confidence": "sourced"},
-   {"order": 3, "value": "friend killed", "when": "early", "quote": "The lights go out, and both Sara and Carlo are stabbed to death by a gloved killer.", "confidence": "sourced"},
-   {"order": 4, "value": "sister killed", "when": "middle", "quote": "She is grabbed from behind by a clawed assailant and guillotined across the neck", "confidence": "sourced"},
-   {"order": 5, "value": "brother arrives at the building", "when": "middle", "quote": "Arriving in New York, Mark goes straight to Rose's building", "confidence": "sourced"},
-   {"order": 6, "value": "deaths multiply", "when": "late", "quote": "Hundreds of rats from a nearby drain crawl over him, gnawing his flesh.", "confidence": "sourced"},
-   {"order": 7, "value": "hidden maker revealed", "when": "late", "role": "turn", "quote": "who reveals, via a mechanical voice generator, that he is in fact Varelli", "confidence": "sourced"},
-   {"order": 8, "value": "witch unmasked and destroyed", "when": "ending", "role": "turn", "quote": "she reveals to him that she is Mater Tenebrarum. She transforms into Death personified.", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "alchemist's warning narrated",
+    "when": "opening",
+    "role": "omen",
+    "detail": "Varelli's voice reads from the book over the opening",
+    "source": "subtitles",
+    "at": "00:00:45",
+    "quote": "I , varelli , an architect living in London , met the three mothers ...",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "forbidden book found",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Rose Elliot, a poet living alone in NYC, finds an ancient book titled The Three Mothers.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:07",
+      "quote": "Good evening . I 'd like to talk to you about that book ."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "descent finds a corpse",
+    "when": "early",
+    "role": "omen",
+    "quote": "a putrid corpse rises from the depths, frightening her into screaming and beginning to drown",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "friend killed",
+    "when": "early",
+    "quote": "The lights go out, and both Sara and Carlo are stabbed to death by a gloved killer.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:04",
+      "quote": "But keep talking , so I know where you are ."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "sister killed",
+    "when": "middle",
+    "quote": "She is grabbed from behind by a clawed assailant and guillotined across the neck",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "eclipse foretold",
+    "when": "late",
+    "role": "omen",
+    "detail": "the bookseller tells Mark of the night's eclipse before his own death",
+    "source": "subtitles",
+    "at": "01:12:33",
+    "quote": "There 's going to be an eclipse of the moon tonight .",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "brother arrives at the building",
+    "when": "middle",
+    "quote": "Arriving in New York, Mark goes straight to Rose's building",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:23",
+      "quote": "I \" m Mark Elliot , Rose Elliot 's brother ."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "deaths multiply",
+    "when": "late",
+    "quote": "Hundreds of rats from a nearby drain crawl over him, gnawing his flesh.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:14",
+      "quote": "they 're eating me alive !"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "hidden maker revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "who reveals, via a mechanical voice generator, that he is in fact Varelli",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:37",
+      "quote": "When I lived in London many years ago , I called myself varelli ."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "witch unmasked and destroyed",
+    "when": "ending",
+    "role": "turn",
+    "quote": "she reveals to him that she is Mater Tenebrarum. She transforms into Death personified.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:42:02",
+      "quote": "But men call us by a single name - a name which strikes fear into everyone 's heart ."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:42:08",
+      "quote": "They call us ... death !"
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

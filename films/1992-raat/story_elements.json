@@ -1,63 +1,352 @@
 {
  "film": "1992-raat",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vengeful ghost", "detail": "Sunanda, murdered mistress of the previous owner", "quote": "the ghost is that of Sunanda, the mistress of the previous homeowner, who had been brutally murdered by her paramour on the property", "confidence": "sourced"},
-   {"value": "possessing spirit", "quote": "The entity completely possesses Mini’s body, leading to a series of violent incidents", "confidence": "sourced"}
+   {
+    "value": "vengeful ghost",
+    "detail": "Sunanda, murdered mistress of the previous owner",
+    "quote": "the ghost is that of Sunanda, the mistress of the previous homeowner, who had been brutally murdered by her paramour on the property",
+    "confidence": "sourced"
+   },
+   {
+    "value": "possessing spirit",
+    "quote": "The entity completely possesses Mini’s body, leading to a series of violent incidents",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "person who died wronged", "quote": "who had been brutally murdered by her paramour on the property", "confidence": "sourced"}
+   {
+    "value": "person who died wronged",
+    "quote": "who had been brutally murdered by her paramour on the property",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "revenge", "quote": "Concurrently, the ghost exacts vengeance on her actual killer", "confidence": "sourced"},
-   {"value": "a body", "quote": "The entity completely possesses Mini’s body", "confidence": "observed"}
+   {
+    "value": "revenge",
+    "quote": "Concurrently, the ghost exacts vengeance on her actual killer",
+    "confidence": "sourced"
+   },
+   {
+    "value": "a body",
+    "quote": "The entity completely possesses Mini’s body",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "murder of a mistress", "quote": "the mistress of the previous homeowner, who had been brutally murdered by her paramour on the property", "confidence": "sourced"}
+   {
+    "value": "murder of a mistress",
+    "quote": "the mistress of the previous homeowner, who had been brutally murdered by her paramour on the property",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "moving into a new home", "quote": "relocates into a suburban house that carries rumors of being haunted", "confidence": "sourced"},
-   {"value": "killing an animal", "detail": "the cat crushed by the family car", "quote": "is accidentally crushed to death as he reverses the car", "confidence": "observed"}
+   {
+    "value": "moving into a new home",
+    "quote": "relocates into a suburban house that carries rumors of being haunted",
+    "confidence": "sourced"
+   },
+   {
+    "value": "killing an animal",
+    "detail": "the cat crushed by the family car",
+    "quote": "is accidentally crushed to death as he reverses the car",
+    "confidence": "observed"
+   }
   ],
   "rules": [
-   {"value": "lives beneath the house", "quote": "Sharji detects a malevolent entity residing beneath the basement floorboards", "confidence": "sourced"},
-   {"value": "driven out by sacred ash", "quote": "Utilizing sacred chants and the consecrated ashes, he successfully neutralizes the spirit", "confidence": "sourced"},
-   {"value": "neck twisted", "detail": "the ghost's method of killing", "quote": "Sunanda's spectral arms emerge from the mattress and twist his neck", "confidence": "sourced"}
+   {
+    "value": "lives beneath the house",
+    "quote": "Sharji detects a malevolent entity residing beneath the basement floorboards",
+    "confidence": "sourced"
+   },
+   {
+    "value": "driven out by sacred ash",
+    "quote": "Utilizing sacred chants and the consecrated ashes, he successfully neutralizes the spirit",
+    "confidence": "sourced"
+   },
+   {
+    "value": "neck twisted",
+    "detail": "the ghost's method of killing",
+    "quote": "Sunanda's spectral arms emerge from the mattress and twist his neck",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:24",
+      "quote": "The neck was completely twisted and her head had turned around,"
+     }
+    ]
+   },
+   {
+    "value": "a cat's death is an omen",
+    "detail": "the servant's warning, which the mother dismisses",
+    "source": "subtitles",
+    "at": "00:36:32",
+    "quote": "but a cat's death in the house is considered a bad omen.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "daughter", "relation_to_threat": "stranger", "detail": "Mini, possessed", "quote": "The entity completely possesses Mini’s body", "confidence": "sourced"},
-   {"value": "family", "relation_to_threat": "stranger", "quote": "The Sharma family, comprising Mr. Sharma, his wife Shalini, their college-going daughter Manisha", "confidence": "sourced"},
-   {"value": "friend", "relation_to_threat": "stranger", "detail": "Rashmi", "quote": "Rashmi is brutally murdered inside a restroom, her neck completely snapped backwards", "confidence": "sourced"},
-   {"value": "killer", "relation_to_threat": "lover", "detail": "the murderer, killed by the ghost", "quote": "the ghost exacts vengeance on her actual killer", "confidence": "sourced"}
+   {
+    "value": "daughter",
+    "relation_to_threat": "stranger",
+    "detail": "Mini, possessed",
+    "quote": "The entity completely possesses Mini’s body",
+    "confidence": "sourced"
+   },
+   {
+    "value": "family",
+    "relation_to_threat": "stranger",
+    "quote": "The Sharma family, comprising Mr. Sharma, his wife Shalini, their college-going daughter Manisha",
+    "confidence": "sourced"
+   },
+   {
+    "value": "friend",
+    "relation_to_threat": "stranger",
+    "detail": "Rashmi",
+    "quote": "Rashmi is brutally murdered inside a restroom, her neck completely snapped backwards",
+    "confidence": "sourced"
+   },
+   {
+    "value": "killer",
+    "relation_to_threat": "lover",
+    "detail": "the murderer, killed by the ghost",
+    "quote": "the ghost exacts vengeance on her actual killer",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "spirit exorcised", "quote": "forcing it to exit Mini's body in a thundering flash of light", "confidence": "sourced"},
-   {"value": "threat survives", "detail": "warning that darkness only recedes", "quote": "the primordial darkness existing beyond human comprehension never truly vanishes, but merely recedes into the shadows", "confidence": "sourced"}
+   {
+    "value": "spirit exorcised",
+    "quote": "forcing it to exit Mini's body in a thundering flash of light",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat survives",
+    "detail": "warning that darkness only recedes",
+    "quote": "the primordial darkness existing beyond human comprehension never truly vanishes, but merely recedes into the shadows",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "cat", "state": "eerie stare, crushed, returns", "when": "opening", "role": "omen", "quote": "Bunty discovers a stray cat with a distinctly eerie, vacant stare", "confidence": "sourced"},
-   {"value": "second cat", "state": "identical to the dead one", "when": "early", "role": "omen", "quote": "Bunty brings home a new cat that bears an uncanny, identical resemblance to the deceased one", "confidence": "sourced"},
-   {"value": "red eyes", "when": "early", "role": "threat", "quote": "she glares at him with fierce, reddening eyes that mirror the dead cat’s gaze", "confidence": "sourced"},
-   {"value": "doll", "state": "head twisted", "when": "middle", "role": "clue", "quote": "a catatonic Mini absentmindedly twists the head of her doll in the exact manner Rashmi's neck was broken", "confidence": "sourced"},
-   {"value": "basement", "when": "late", "role": "setting", "quote": "a malevolent entity residing beneath the basement floorboards", "confidence": "sourced"},
-   {"value": "consecrated ashes", "when": "late", "role": "weapon", "quote": "to obtain consecrated ashes infused with mystical firepower", "confidence": "sourced"},
-   {"value": "pond", "when": "early", "role": "setting", "quote": "he discovers Mini weeping under a tree near a pond", "confidence": "sourced"}
+   {
+    "value": "cat",
+    "state": "eerie stare, crushed, returns",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Bunty discovers a stray cat with a distinctly eerie, vacant stare",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:54",
+      "quote": "A cat? Where did she come from? What were you doing down there?"
+     }
+    ]
+   },
+   {
+    "value": "second cat",
+    "state": "identical to the dead one",
+    "when": "early",
+    "role": "omen",
+    "quote": "Bunty brings home a new cat that bears an uncanny, identical resemblance to the deceased one",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:18",
+      "quote": "Granny, my cat has returned."
+     }
+    ]
+   },
+   {
+    "value": "red eyes",
+    "when": "early",
+    "role": "threat",
+    "quote": "she glares at him with fierce, reddening eyes that mirror the dead cat’s gaze",
+    "confidence": "sourced"
+   },
+   {
+    "value": "doll",
+    "state": "head twisted",
+    "when": "middle",
+    "role": "clue",
+    "quote": "a catatonic Mini absentmindedly twists the head of her doll in the exact manner Rashmi's neck was broken",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:26:14",
+      "quote": "Then the cat and dolly will fight."
+     }
+    ]
+   },
+   {
+    "value": "basement",
+    "when": "late",
+    "role": "setting",
+    "quote": "a malevolent entity residing beneath the basement floorboards",
+    "confidence": "sourced"
+   },
+   {
+    "value": "consecrated ashes",
+    "when": "late",
+    "role": "weapon",
+    "quote": "to obtain consecrated ashes infused with mystical firepower",
+    "confidence": "sourced"
+   },
+   {
+    "value": "pond",
+    "when": "early",
+    "role": "setting",
+    "quote": "he discovers Mini weeping under a tree near a pond",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lamps against the dark",
+    "when": "ending",
+    "role": "symbol",
+    "detail": "the closing speech",
+    "source": "subtitles",
+    "at": "02:02:44",
+    "quote": "When there's darkness of the night, we light the lamps.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "moving into a haunted house", "when": "opening", "role": "trigger", "quote": "relocates into a suburban house that carries rumors of being haunted", "confidence": "sourced"},
-   {"order": 2, "value": "animal omen dies", "when": "opening", "role": "omen", "quote": "the cat wanders behind Mr. Sharma’s vehicle and is accidentally crushed to death", "confidence": "sourced"},
-   {"order": 3, "value": "first sign of possession", "when": "early", "quote": "she glares at him with fierce, reddening eyes that mirror the dead cat’s gaze", "confidence": "sourced"},
-   {"order": 4, "value": "first death", "when": "middle", "quote": "Rashmi is brutally murdered inside a restroom, her neck completely snapped backwards", "confidence": "sourced"},
-   {"order": 5, "value": "science versus faith", "when": "middle", "quote": "Mini’s parents split on how to proceed", "confidence": "sourced"},
-   {"order": 6, "value": "past crime revealed", "when": "late", "role": "turn", "quote": "He uncovers the history of the house", "confidence": "sourced"},
-   {"order": 7, "value": "exorcism", "when": "ending", "quote": "Sharji confronts the possessed Mini in a final spiritual showdown", "confidence": "sourced"},
-   {"order": 8, "value": "closing warning", "when": "ending", "quote": "never truly vanishes, but merely recedes into the shadows", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "moving into a haunted house",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "relocates into a suburban house that carries rumors of being haunted",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:29",
+      "quote": "Madam, it's good that we shifted into a new house."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "animal omen dies",
+    "when": "opening",
+    "role": "omen",
+    "quote": "the cat wanders behind Mr. Sharma’s vehicle and is accidentally crushed to death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:44",
+      "quote": "The cat came under the car by mistake."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "first sign of possession",
+    "when": "early",
+    "quote": "she glares at him with fierce, reddening eyes that mirror the dead cat’s gaze",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "first death",
+    "when": "middle",
+    "quote": "Rashmi is brutally murdered inside a restroom, her neck completely snapped backwards",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:20",
+      "quote": "Maybe, you're not aware how Rashmi was killed."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "science versus faith",
+    "when": "middle",
+    "quote": "Mini’s parents split on how to proceed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:02",
+      "quote": "that it's the effect of that women's spirit."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "past crime revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "He uncovers the history of the house",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "exorcism",
+    "when": "ending",
+    "quote": "Sharji confronts the possessed Mini in a final spiritual showdown",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:54:36",
+      "quote": "Dig here."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:58:51",
+      "quote": "Deepak, I'm very scared. Take me away from here Deepak, please."
+     }
+    ]
+   },
+   {
+    "value": "victim remembers nothing",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "02:01:58",
+    "quote": "It seems that Mini doesn't remember anything.",
+    "confidence": "sourced",
+    "order": 8
+   },
+   {
+    "order": 9,
+    "value": "closing warning",
+    "when": "ending",
+    "quote": "never truly vanishes, but merely recedes into the shadows",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:03:22",
+      "quote": "But we should be cautious of that darkness, which has not yet come within the perimeter of human light."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

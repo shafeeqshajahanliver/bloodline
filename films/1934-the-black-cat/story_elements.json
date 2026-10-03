@@ -1,58 +1,438 @@
 {
  "film": "1934-the-black-cat",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "satanic cult leader", "detail": "Hjalmar Poelzig, architect and cult leader", "quote": "That night, Poelzig's cult gathers at his house", "confidence": "sourced"},
-   {"value": "avenger", "detail": "Werdegast, who skins Poelzig alive", "quote": "Werdegast says he has come for revenge", "confidence": "sourced"}
+   {
+    "value": "satanic cult leader",
+    "detail": "Hjalmar Poelzig, architect and cult leader",
+    "quote": "That night, Poelzig's cult gathers at his house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:04",
+      "quote": "Herr Poelzig is a great modern priest of that ancient cult and tonight, dark of the moon, the rites of Lucifer are celebrated."
+     }
+    ]
+   },
+   {
+    "value": "avenger",
+    "detail": "Werdegast, who skins Poelzig alive",
+    "quote": "Werdegast says he has come for revenge",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "war crime", "detail": "Poelzig betrayed Fort Marmorus to the Russians", "quote": "Poelzig betrayed Fort Marmorus, which Poelzig commanded, to the Russians, resulting in the deaths of thousands of Austro-Hungarian soldiers", "confidence": "sourced"}
+   {
+    "value": "war crime",
+    "detail": "Poelzig betrayed Fort Marmorus to the Russians",
+    "quote": "Poelzig betrayed Fort Marmorus, which Poelzig commanded, to the Russians, resulting in the deaths of thousands of Austro-Hungarian soldiers",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:15",
+      "quote": "You sold Marmaris to the Russians. Scattered away in the night and left us to die."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "revenge", "detail": "Werdegast against Poelzig", "quote": "Werdegast says he has come for revenge", "confidence": "sourced"},
-   {"value": "a sacrifice", "detail": "Poelzig wants Joan for his ceremony", "quote": "Poelzig mentions a ceremony scheduled for that night and admits he intends for her to stay", "confidence": "observed"}
+   {
+    "value": "revenge",
+    "detail": "Werdegast against Poelzig",
+    "quote": "Werdegast says he has come for revenge",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:00",
+      "quote": "Did you ever see an animal skinned Hjalmar? That's what I'm going to do to you now."
+     }
+    ]
+   },
+   {
+    "value": "a sacrifice",
+    "detail": "Poelzig wants Joan for his ceremony",
+    "quote": "Poelzig mentions a ceremony scheduled for that night and admits he intends for her to stay",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:13",
+      "quote": "And if I'm not mistaken, he intends you to play a part of that ritual, a very important part."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "betrayal", "quote": "he knows Poelzig betrayed Fort Marmorus, which Poelzig commanded, to the Russians", "confidence": "sourced"},
-   {"value": "stolen wife and daughter", "quote": "stole his wife and daughter, both named Karen, after telling them he was dead", "confidence": "sourced"}
+   {
+    "value": "betrayal",
+    "quote": "he knows Poelzig betrayed Fort Marmorus, which Poelzig commanded, to the Russians",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:48",
+      "quote": "and left us all to die in Marmaris, you went to Karen, induced her to go to America with you."
+     }
+    ]
+   },
+   {
+    "value": "stolen wife and daughter",
+    "quote": "stole his wife and daughter, both named Karen, after telling them he was dead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:49:34",
+      "quote": "He took Karen, my wife. Murdered her, and murdered my child."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "a journey", "detail": "a honeymoon trip", "quote": "On their honeymoon in Hungary, American mystery novelist Peter Alison and his new wife Joan", "confidence": "sourced"},
-   {"value": "accident strands travellers", "quote": "the driver of the bus loses control and drives off the road", "confidence": "sourced"}
+   {
+    "value": "a journey",
+    "detail": "a honeymoon trip",
+    "quote": "On their honeymoon in Hungary, American mystery novelist Peter Alison and his new wife Joan",
+    "confidence": "sourced"
+   },
+   {
+    "value": "accident strands travellers",
+    "quote": "the driver of the bus loses control and drives off the road",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "fate decided by a game", "quote": "He and Werdegast play a game of chess to decide the fate of the Alisons", "confidence": "sourced"}
+   {
+    "value": "fate decided by a game",
+    "quote": "He and Werdegast play a game of chess to decide the fate of the Alisons",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:08",
+      "quote": "Do you dare play chess with me for her? Yes. I will even play you chess for her, provided if I win, they are free to go."
+     }
+    ]
+   },
+   {
+    "value": "black cat cannot die",
+    "source": "subtitles",
+    "at": "00:21:51",
+    "quote": "The black cat does not die. Those same books, if I'm not mistaken, teach that the black cat is deathless.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:41",
+      "quote": "certain Asian books say that the black cat is the living embodiment of evil."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "newlywed couple", "relation_to_threat": "stranger", "detail": "Peter and Joan Alison", "quote": "On their honeymoon in Hungary, American mystery novelist Peter Alison and his new wife Joan", "confidence": "sourced"},
-   {"value": "wife and daughter", "relation_to_threat": "family", "detail": "both named Karen, taken by Poelzig", "quote": "finding Karen dead on a slab", "confidence": "sourced"}
+   {
+    "value": "newlywed couple",
+    "relation_to_threat": "stranger",
+    "detail": "Peter and Joan Alison",
+    "quote": "On their honeymoon in Hungary, American mystery novelist Peter Alison and his new wife Joan",
+    "confidence": "sourced"
+   },
+   {
+    "value": "wife and daughter",
+    "relation_to_threat": "family",
+    "detail": "both named Karen, taken by Poelzig",
+    "quote": "finding Karen dead on a slab",
+    "confidence": "sourced"
+   },
+   {
+    "value": "war survivors",
+    "relation_to_threat": "community",
+    "source": "subtitles",
+    "at": "00:31:09",
+    "quote": "Are we not both the living dead",
+    "confidence": "observed"
+   }
   ],
   "ending": [
-   {"value": "house destroyed", "quote": "ignites demolition charges left over from when the house was a military installation, destroying the building and eradicating Poelzig's cult", "confidence": "sourced"},
-   {"value": "couple escapes", "quote": "on the trip home, Peter and Joan read a review of his latest novel", "confidence": "sourced"}
+   {
+    "value": "house destroyed",
+    "quote": "ignites demolition charges left over from when the house was a military installation, destroying the building and eradicating Poelzig's cult",
+    "confidence": "sourced"
+   },
+   {
+    "value": "couple escapes",
+    "quote": "on the trip home, Peter and Joan read a review of his latest novel",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "black cat", "state": "killed with a knife", "when": "early", "role": "omen", "quote": "Poelzig's black cat walks by and Werdegast, who suffers from severe ailurophobia, kills it with a thrown knife", "confidence": "sourced"},
-   {"value": "preserved women in glass", "state": "dead, displayed", "when": "middle", "role": "clue", "quote": "a \"collection\" of preserved dead women on display in glass cases in his basement", "confidence": "sourced"},
-   {"value": "book of rites", "when": "middle", "role": "symbol", "quote": "he opens a book titled The Rites of Lucifer", "confidence": "sourced"},
-   {"value": "chess game", "when": "middle", "role": "turn", "quote": "He and Werdegast play a game of chess to decide the fate of the Alisons", "confidence": "sourced"},
-   {"value": "embalming rack", "state": "victim shackled", "when": "late", "role": "weapon", "quote": "shackles him to his embalming rack, and Werdegast begins to skin Poelzig alive", "confidence": "sourced"},
-   {"value": "fortress ruins", "when": "early", "role": "setting", "quote": "the remote home that Austrian architect Hjalmar Poelzig built upon the ruins of Fort Marmorus", "confidence": "sourced"}
+   {
+    "value": "black cat",
+    "state": "killed with a knife",
+    "when": "early",
+    "role": "omen",
+    "quote": "Poelzig's black cat walks by and Werdegast, who suffers from severe ailurophobia, kills it with a thrown knife",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:17",
+      "quote": "He has an intense and all-consuming horror of cats."
+     }
+    ]
+   },
+   {
+    "value": "preserved women in glass",
+    "state": "dead, displayed",
+    "when": "middle",
+    "role": "clue",
+    "quote": "a \"collection\" of preserved dead women on display in glass cases in his basement",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:54",
+      "quote": "Is she not beautiful? I wanted to have her beauty always."
+     }
+    ]
+   },
+   {
+    "value": "book of rites",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "he opens a book titled The Rites of Lucifer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:34",
+      "quote": "Tonight is the dark of the moon."
+     }
+    ]
+   },
+   {
+    "value": "chess game",
+    "when": "middle",
+    "role": "turn",
+    "quote": "He and Werdegast play a game of chess to decide the fate of the Alisons",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:41:46",
+      "quote": "I beg your pardon, but do you play chess?"
+     }
+    ]
+   },
+   {
+    "value": "embalming rack",
+    "state": "victim shackled",
+    "when": "late",
+    "role": "weapon",
+    "quote": "shackles him to his embalming rack, and Werdegast begins to skin Poelzig alive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:37",
+      "quote": "How does it feel to hang on your own embalming rack, Hjalmar?"
+     }
+    ]
+   },
+   {
+    "value": "fortress ruins",
+    "when": "early",
+    "role": "setting",
+    "quote": "the remote home that Austrian architect Hjalmar Poelzig built upon the ruins of Fort Marmorus",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:50",
+      "quote": "This place was built on the ruins of that same Fort Marmaris"
+     }
+    ]
+   },
+   {
+    "value": "battlefield graveyard",
+    "when": "early",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:08:36",
+    "quote": "The ravine down there was piled 12 deep with dead and wounded men.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:55",
+      "quote": "Marmaris, the greatest graveyard in the world."
+     }
+    ]
+   },
+   {
+    "value": "house mined with dynamite",
+    "when": "middle",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "00:33:14",
+    "quote": "And this place is so undermined with dynamite that the slightest mistake by one of us",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dead telephone",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:44:17",
+    "quote": "The phone's dead. You hear that, Vitus? The phone is dead. Even the phone is dead.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "strangers share a train", "when": "opening", "quote": "they must share a train compartment with Dr. Vitus Werdegast, a Hungarian psychiatrist", "confidence": "sourced"},
-   {"order": 2, "value": "crash strands travellers", "when": "early", "role": "trigger", "quote": "He is killed in the crash and Joan is injured", "confidence": "sourced"},
-   {"order": 3, "value": "past crime revealed", "when": "early", "role": "turn", "quote": "Werdegast says he has come for revenge, as he knows Poelzig betrayed Fort Marmorus", "confidence": "sourced"},
-   {"order": 4, "value": "dead wife displayed", "when": "middle", "quote": "He brings Werdegast to see one of the women, who Werdegast recognizes as his wife", "confidence": "sourced"},
-   {"order": 5, "value": "cult ceremony", "when": "late", "quote": "Joan is brought in and, as Poelzig approaches her, a female acolyte sees something which causes her to scream and faint", "confidence": "sourced"},
-   {"order": 6, "value": "villain skinned alive", "when": "late", "quote": "Werdegast begins to skin Poelzig alive", "confidence": "sourced"},
-   {"order": 7, "value": "house blown up", "when": "ending", "quote": "destroying the building and eradicating Poelzig's cult", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "strangers share a train",
+    "when": "opening",
+    "quote": "they must share a train compartment with Dr. Vitus Werdegast, a Hungarian psychiatrist",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:13",
+      "quote": "A terrible mistake has occurred. We have sold space in your compartment to a gentlemen."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "crash strands travellers",
+    "when": "early",
+    "role": "trigger",
+    "quote": "He is killed in the crash and Joan is injured",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:18",
+      "quote": "Driver is dead."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "past crime revealed",
+    "when": "early",
+    "role": "turn",
+    "quote": "Werdegast says he has come for revenge, as he knows Poelzig betrayed Fort Marmorus",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:57",
+      "quote": "I was taken prisoner to Kurgaal. Kurgaal, where the soul is killed, slowly."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "cat killed in fear",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:21:28",
+    "quote": "Strange about the cat. Joan seemed so curiously affected when you killed it.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "dead wife displayed",
+    "when": "middle",
+    "quote": "He brings Werdegast to see one of the women, who Werdegast recognizes as his wife",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:21",
+      "quote": "You will find her almost as beautiful as when you last saw her."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "lost daughter found alive",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "00:51:36",
+    "quote": "I'm Karen, Madame Poelzig. Karen? Not Karen Werdegast?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "cult ceremony",
+    "when": "late",
+    "quote": "Joan is brought in and, as Poelzig approaches her, a female acolyte sees something which causes her to scream and faint",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "villain skinned alive",
+    "when": "late",
+    "quote": "Werdegast begins to skin Poelzig alive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:08",
+      "quote": "Tear the skin from your body... slowly. Bit by bit."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "house blown up",
+    "when": "ending",
+    "quote": "destroying the building and eradicating Poelzig's cult",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:45",
+      "quote": "It's the red switch, isn't it, Hjalmar? The red switch ignites the dynamite."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "story dismissed as fiction",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:04:37",
+    "quote": "These things could never, by the furthest stretch of the imagination actually happen.",
+    "confidence": "sourced",
+    "detail": "closing joke: a review of Peter's novel"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

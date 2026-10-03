@@ -1,66 +1,459 @@
 {
  "film": "2009-drag-me-to-hell",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes and interpretations"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes and interpretations"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "curse", "detail": "placed by Sylvia Ganush", "quote": "The old woman places a retaliatory curse on her", "confidence": "sourced"},
-   {"value": "demon", "detail": "the Lamia or 'Black Goat'", "quote": "the curse of the Lamia or \"Black Goat\", an ancient and powerful demon", "confidence": "sourced"}
+   {
+    "value": "curse",
+    "detail": "placed by Sylvia Ganush",
+    "quote": "The old woman places a retaliatory curse on her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "demon",
+    "detail": "the Lamia or 'Black Goat'",
+    "quote": "the curse of the Lamia or \"Black Goat\", an ancient and powerful demon",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "curse by a wronged person", "quote": "Sylvia rips a button from Christine's coat and places a curse on it", "confidence": "sourced"}
+   {
+    "value": "curse by a wronged person",
+    "quote": "Sylvia rips a button from Christine's coat and places a curse on it",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "revenge", "quote": "places a retaliatory curse on her", "confidence": "sourced"},
-   {"value": "to take victim to hell", "quote": "torments its victims for three days before literally dragging them to Hell", "confidence": "sourced"}
+   {
+    "value": "revenge",
+    "quote": "places a retaliatory curse on her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "to take victim to hell",
+    "quote": "torments its victims for three days before literally dragging them to Hell",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:06",
+      "quote": "I desire the soul of Christine Brown!"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "greed", "quote": "a person who wants to be a good person but who makes a sinful choice out of greed", "confidence": "sourced"},
-   {"value": "refusing help to the poor", "detail": "denying an elderly woman's mortgage extension", "quote": "Christine, against her better judgement, denies her request, and Sylvia desperately begs not to have her house repossessed", "confidence": "sourced"},
-   {"value": "public shaming", "quote": "she accuses Christine of publicly shaming her", "confidence": "sourced"}
+   {
+    "value": "greed",
+    "quote": "a person who wants to be a good person but who makes a sinful choice out of greed",
+    "confidence": "sourced"
+   },
+   {
+    "value": "refusing help to the poor",
+    "detail": "denying an elderly woman's mortgage extension",
+    "quote": "Christine, against her better judgement, denies her request, and Sylvia desperately begs not to have her house repossessed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:25",
+      "quote": "but another extension on the loan is out of the question."
+     }
+    ]
+   },
+   {
+    "value": "public shaming",
+    "quote": "she accuses Christine of publicly shaming her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:27",
+      "quote": "You shamed me."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "denying a request", "quote": "chooses not to extend an elderly woman's mortgage", "confidence": "sourced"},
-   {"value": "taking an object", "detail": "the prologue: a stolen necklace", "quote": "after having stolen a silver necklace from a Romani woman's wagon", "confidence": "sourced"}
+   {
+    "value": "denying a request",
+    "quote": "chooses not to extend an elderly woman's mortgage",
+    "confidence": "sourced"
+   },
+   {
+    "value": "taking an object",
+    "detail": "the prologue: a stolen necklace",
+    "quote": "after having stolen a silver necklace from a Romani woman's wagon",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "three days to death", "quote": "after three days of escalating torment, will plunge her into the depths of Hell to burn for eternity", "confidence": "sourced"},
-   {"value": "survive by passing it on", "quote": "she can remove the curse by giving the button to someone else, thus transferring the curse to them", "confidence": "sourced"},
-   {"value": "returning it fails", "quote": "despite his attempts to return it", "confidence": "sourced"},
-   {"value": "sacrifice may appease", "quote": "Following his suggestion of an appeasatory sacrifice, Christine reluctantly kills her pet kitten", "confidence": "sourced"}
+   {
+    "value": "three days to death",
+    "quote": "after three days of escalating torment, will plunge her into the depths of Hell to burn for eternity",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:45",
+      "quote": "For the first three days, the Lamia appears as a nasty spirit that torments its victim."
+     }
+    ]
+   },
+   {
+    "value": "survive by passing it on",
+    "quote": "she can remove the curse by giving the button to someone else, thus transferring the curse to them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:09",
+      "quote": "Make a gift of it and you've given the curse away."
+     }
+    ]
+   },
+   {
+    "value": "returning it fails",
+    "quote": "despite his attempts to return it",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sacrifice may appease",
+    "quote": "Following his suggestion of an appeasatory sacrifice, Christine reluctantly kills her pet kitten",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:45",
+      "quote": "You will be surprised what you'll be willing to do when the Lamia comes for you."
+     }
+    ]
+   },
+   {
+    "value": "destroying the object fails",
+    "source": "subtitles",
+    "at": "00:45:10",
+    "quote": "I'm afraid no matter what condition the button is in, you would still be the owner.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "loan officer", "relation_to_threat": "stranger", "detail": "Christine Brown", "quote": "The story focuses on a loan officer who, in an effort to prove to her boss that she can make the \"hard decisions\"", "confidence": "sourced"},
-   {"value": "boy", "relation_to_threat": "stranger", "detail": "Juan, in the 1969 prologue", "quote": "an unseen force attacks them and drags Juan to Hell", "confidence": "sourced"},
-   {"value": "medium", "relation_to_threat": "stranger", "detail": "Shaun San Dena", "quote": "After successfully banishing the Lamia, she dies soon afterwards.", "confidence": "sourced"}
+   {
+    "value": "loan officer",
+    "relation_to_threat": "stranger",
+    "detail": "Christine Brown",
+    "quote": "The story focuses on a loan officer who, in an effort to prove to her boss that she can make the \"hard decisions\"",
+    "confidence": "sourced"
+   },
+   {
+    "value": "boy",
+    "relation_to_threat": "stranger",
+    "detail": "Juan, in the 1969 prologue",
+    "quote": "an unseen force attacks them and drags Juan to Hell",
+    "confidence": "sourced"
+   },
+   {
+    "value": "medium",
+    "relation_to_threat": "stranger",
+    "detail": "Shaun San Dena",
+    "quote": "After successfully banishing the Lamia, she dies soon afterwards.",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "protagonist taken to hell", "quote": "demonic hands emerge from the ground and drag her into Hell below", "confidence": "sourced"},
-   {"value": "false resolution", "detail": "the button had been swapped for a coin", "quote": "she had mistaken it for a similar envelope containing a rare coin and had given to Clay earlier", "confidence": "sourced"}
+   {
+    "value": "protagonist taken to hell",
+    "quote": "demonic hands emerge from the ground and drag her into Hell below",
+    "confidence": "sourced"
+   },
+   {
+    "value": "false resolution",
+    "detail": "the button had been swapped for a coin",
+    "quote": "she had mistaken it for a similar envelope containing a rare coin and had given to Clay earlier",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "silver necklace", "state": "stolen", "when": "opening", "role": "trigger", "quote": "after having stolen a silver necklace from a Romani woman's wagon", "confidence": "sourced"},
-   {"value": "coat button", "state": "cursed", "when": "early", "role": "threat", "quote": "Sylvia rips a button from Christine's coat and places a curse on it", "confidence": "sourced"},
-   {"value": "nosebleed", "state": "violent", "when": "early", "role": "omen", "quote": "she suffers a violent nosebleed while hallucinating about Sylvia", "confidence": "sourced"},
-   {"value": "kitten", "state": "sacrificed", "when": "middle", "role": "omen", "quote": "Christine reluctantly kills her pet kitten", "confidence": "sourced"},
-   {"value": "goat", "state": "possessed", "when": "middle", "role": "weapon", "quote": "attempting to trap the spirit in a goat and kill the animal to destroy the demon", "confidence": "sourced"},
-   {"value": "envelope", "state": "swapped", "when": "ending", "role": "turn", "quote": "Clay presents her with an envelope he had discovered in his car which contains her cursed coat button", "confidence": "sourced"},
-   {"value": "grave", "state": "flooding", "when": "late", "role": "setting", "quote": "she exhumes Sylvia's corpse and forces the envelope into her mouth", "confidence": "sourced"},
-   {"value": "demonic hands", "state": "from the ground", "when": "ending", "role": "threat", "quote": "demonic hands emerge from the ground and drag her into Hell below", "confidence": "sourced"}
+   {
+    "value": "silver necklace",
+    "state": "stolen",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "after having stolen a silver necklace from a Romani woman's wagon",
+    "confidence": "sourced"
+   },
+   {
+    "value": "coat button",
+    "state": "cursed",
+    "when": "early",
+    "role": "threat",
+    "quote": "Sylvia rips a button from Christine's coat and places a curse on it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:13",
+      "quote": "The old woman today, she took a button from my sleeve."
+     }
+    ]
+   },
+   {
+    "value": "nosebleed",
+    "state": "violent",
+    "when": "early",
+    "role": "omen",
+    "quote": "she suffers a violent nosebleed while hallucinating about Sylvia",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:36",
+      "quote": "It's just a nosebleed."
+     }
+    ]
+   },
+   {
+    "value": "kitten",
+    "state": "sacrificed",
+    "when": "middle",
+    "role": "omen",
+    "quote": "Christine reluctantly kills her pet kitten",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:30:03",
+      "quote": "Kitty, take care of her."
+     },
+     {
+      "source": "screenplay",
+      "quote": "The distant SCREAM of the kitten is heard."
+     }
+    ]
+   },
+   {
+    "value": "goat",
+    "state": "possessed",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "attempting to trap the spirit in a goat and kill the animal to destroy the demon",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:03",
+      "quote": "I force the spirit of the Lamia into the goat."
+     }
+    ]
+   },
+   {
+    "value": "envelope",
+    "state": "swapped",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Clay presents her with an envelope he had discovered in his car which contains her cursed coat button",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:56",
+      "quote": "Wait! Where's my envelope?"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:33:00",
+      "quote": "I think you might have my Standing Liberty quarter, 'cause the envelopes kind of look the same."
+     }
+    ]
+   },
+   {
+    "value": "grave",
+    "state": "flooding",
+    "when": "late",
+    "role": "setting",
+    "quote": "she exhumes Sylvia's corpse and forces the envelope into her mouth",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "CLUNK: The shovel has hit the buried coffin. The rain intensifies."
+     }
+    ]
+   },
+   {
+    "value": "demonic hands",
+    "state": "from the ground",
+    "when": "ending",
+    "role": "threat",
+    "quote": "demonic hands emerge from the ground and drag her into Hell below",
+    "confidence": "sourced"
+   },
+   {
+    "value": "black fly",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:26",
+    "quote": "(fly buzzing)",
+    "confidence": "sourced",
+    "detail": "buzzes in the 1969 prologue and around Christine after the curse; she coughs one up at dinner",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "A large black, BUZZING fly lands on Stephanie's face."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:58:15",
+      "quote": "(loud pop) (fly buzzing)"
+     }
+    ]
+   },
+   {
+    "value": "train",
+    "when": "ending",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "01:33:24",
+    "quote": "(train honking)",
+    "confidence": "sourced",
+    "detail": "Union Station platform where the ground opens"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "prologue: boy dragged to hell", "when": "opening", "role": "omen", "quote": "San Dena prepares a séance, but an unseen force attacks them and drags Juan to Hell.", "confidence": "sourced"},
-   {"order": 2, "value": "plea refused", "when": "early", "role": "trigger", "quote": "Christine, against her better judgement, denies her request", "confidence": "sourced"},
-   {"order": 3, "value": "curse placed", "when": "early", "quote": "Sylvia rips a button from Christine's coat and places a curse on it", "confidence": "sourced"},
-   {"order": 4, "value": "curser dies, no apology possible", "when": "middle", "role": "turn", "quote": "Christine visits Sylvia's granddaughter Ilenka, intending to apologize to Sylvia, but Ilenka reveals Sylvia has recently died", "confidence": "sourced"},
-   {"order": 5, "value": "failed exorcism", "when": "middle", "quote": "the entity possesses her, the goat and her assistant", "confidence": "sourced"},
-   {"order": 6, "value": "curse given to the dead", "when": "late", "quote": "she exhumes Sylvia's corpse and forces the envelope into her mouth", "confidence": "sourced"},
-   {"order": 7, "value": "false happy ending", "when": "ending", "quote": "Jacks also informs Christine that she has received the promotion", "confidence": "sourced"},
-   {"order": 8, "value": "dragged to hell", "when": "ending", "role": "turn", "quote": "as a train speeds towards her, demonic hands emerge from the ground and drag her into Hell below", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "prologue: boy dragged to hell",
+    "when": "opening",
+    "role": "omen",
+    "quote": "San Dena prepares a séance, but an unseen force attacks them and drags Juan to Hell.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:09",
+      "quote": "I lost a young boy's soul to the beast."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "plea refused",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Christine, against her better judgement, denies her request",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:35",
+      "quote": "On my mother's grave, I beg you!"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "curse placed",
+    "when": "early",
+    "quote": "Sylvia rips a button from Christine's coat and places a curse on it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:53",
+      "quote": "Soon it will be you who comes begging to me."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "fortune teller's reading",
+    "when": "early",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:26:50",
+    "quote": "And you've recently lost something.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "curser dies, no apology possible",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Christine visits Sylvia's granddaughter Ilenka, intending to apologize to Sylvia, but Ilenka reveals Sylvia has recently died",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "failed exorcism",
+    "when": "middle",
+    "quote": "the entity possesses her, the goat and her assistant",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:44",
+      "quote": "The goat was never slaughtered."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "curse given to the dead",
+    "when": "late",
+    "quote": "she exhumes Sylvia's corpse and forces the envelope into her mouth",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "false happy ending",
+    "when": "ending",
+    "quote": "Jacks also informs Christine that she has received the promotion",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:12",
+      "quote": "another extension on her loan, but I didn't. It was my decision, and it was wrong of me."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "dragged to hell",
+    "when": "ending",
+    "role": "turn",
+    "quote": "as a train speeds towards her, demonic hands emerge from the ground and drag her into Hell below",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:33:45",
+      "quote": "Help me, please!"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

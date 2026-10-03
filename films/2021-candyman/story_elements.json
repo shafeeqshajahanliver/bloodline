@@ -1,65 +1,470 @@
 {
  "film": "2021-candyman",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vengeful spirit", "detail": "the Candyman, a hive of murdered black men", "quote": "the souls of other murdered innocent black men joining the Candyman \"hive\"", "confidence": "sourced"},
-   {"value": "police", "quote": "the police try to intimidate her into agreeing that Anthony was the killer", "confidence": "observed"}
+   {
+    "value": "vengeful spirit",
+    "detail": "the Candyman, a hive of murdered black men",
+    "quote": "the souls of other murdered innocent black men joining the Candyman \"hive\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:34",
+      "quote": "[William] Candyman ain't a he."
+     }
+    ]
+   },
+   {
+    "value": "police",
+    "quote": "the police try to intimidate her into agreeing that Anthony was the killer",
+    "confidence": "observed"
+   }
   ],
   "origin": [
-   {"value": "person who died wronged", "detail": "Daniel Robitaille, then Sherman Fields", "quote": "After the daughter claimed Robitaille raped her, he was mutilated and burnt alive", "confidence": "sourced"},
-   {"value": "summoned by ritual", "quote": "by saying \"Candyman\" five times to a mirror, Sherman's spirit will appear and kill the summoner", "confidence": "sourced"}
+   {
+    "value": "person who died wronged",
+    "detail": "Daniel Robitaille, then Sherman Fields",
+    "quote": "After the daughter claimed Robitaille raped her, he was mutilated and burnt alive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:52",
+      "quote": "They cut off his arm and jammed a meat hook in the stump."
+     }
+    ]
+   },
+   {
+    "value": "summoned by ritual",
+    "quote": "by saying \"Candyman\" five times to a mirror, Sherman's spirit will appear and kill the summoner",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "revenge", "quote": "William plans to resurrect the Candyman \"hive\" as a form of retaliation against gentrifiers", "confidence": "sourced"},
-   {"value": "to be acknowledged", "quote": "instructing Brianna to \"tell everyone\" what she has witnessed", "confidence": "sourced"}
+   {
+    "value": "revenge",
+    "quote": "William plans to resurrect the Candyman \"hive\" as a form of retaliation against gentrifiers",
+    "confidence": "sourced"
+   },
+   {
+    "value": "to be acknowledged",
+    "quote": "instructing Brianna to \"tell everyone\" what she has witnessed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:14",
+      "quote": "the writing on the walls."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:24:27",
+      "quote": "They will say I shed innocent blood."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "racist killing", "detail": "Sherman, beaten to death by police, later proven innocent", "quote": "Sherman is beaten to death by police but later proven innocent", "confidence": "sourced"},
-   {"value": "lynching", "quote": "he was mutilated and burnt alive", "confidence": "sourced"}
+   {
+    "value": "racist killing",
+    "detail": "Sherman, beaten to death by police, later proven innocent",
+    "quote": "Sherman is beaten to death by police but later proven innocent",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lynching",
+    "quote": "he was mutilated and burnt alive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:48",
+      "quote": "William Bell, lynched in the' 20s."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "saying the name", "quote": "jokingly performs its curse: by saying \"Candyman\" five times to a mirror", "confidence": "sourced"},
-   {"value": "making art of a legend", "quote": "Anthony creates an elaborate art piece titled \"Say My Name\"", "confidence": "sourced"}
+   {
+    "value": "saying the name",
+    "quote": "jokingly performs its curse: by saying \"Candyman\" five times to a mirror",
+    "confidence": "sourced"
+   },
+   {
+    "value": "making art of a legend",
+    "quote": "Anthony creates an elaborate art piece titled \"Say My Name\"",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "say name five times", "quote": "by saying \"Candyman\" five times to a mirror, Sherman's spirit will appear and kill the summoner", "confidence": "sourced"},
-   {"value": "silence protects", "quote": "the community vowed never to speak his name", "confidence": "sourced"},
-   {"value": "new victims join the legend", "quote": "The legend has been renewed for generations", "confidence": "sourced"}
+   {
+    "value": "say name five times",
+    "quote": "by saying \"Candyman\" five times to a mirror, Sherman's spirit will appear and kill the summoner",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:23:56",
+      "quote": "The legend is if you say his name five times"
+     }
+    ]
+   },
+   {
+    "value": "silence protects",
+    "quote": "the community vowed never to speak his name",
+    "confidence": "sourced"
+   },
+   {
+    "value": "new victims join the legend",
+    "quote": "The legend has been renewed for generations",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:36",
+      "quote": "Candyman's the whole damn hive."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "artist", "relation_to_threat": "self", "detail": "Anthony McCoy, who becomes the Candyman", "quote": "Anthony undergoes a physical transformation, spreading from the bee sting on his hand across his entire body", "confidence": "sourced"},
-   {"value": "summoners", "relation_to_threat": "stranger", "quote": "Clive and his girlfriend Jerrica unwittingly summon the Candyman, who brutally murders them", "confidence": "sourced"},
-   {"value": "girlfriend", "relation_to_threat": "lover", "detail": "Brianna Cartwright", "quote": "Brianna seeks out William, who abducts her to an abandoned church", "confidence": "sourced"}
+   {
+    "value": "artist",
+    "relation_to_threat": "self",
+    "detail": "Anthony McCoy, who becomes the Candyman",
+    "quote": "Anthony undergoes a physical transformation, spreading from the bee sting on his hand across his entire body",
+    "confidence": "sourced"
+   },
+   {
+    "value": "summoners",
+    "relation_to_threat": "stranger",
+    "quote": "Clive and his girlfriend Jerrica unwittingly summon the Candyman, who brutally murders them",
+    "confidence": "sourced"
+   },
+   {
+    "value": "girlfriend",
+    "relation_to_threat": "lover",
+    "detail": "Brianna Cartwright",
+    "quote": "Brianna seeks out William, who abducts her to an abandoned church",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "victim becomes threat", "detail": "Anthony appears as the Candyman", "quote": "she uses the rearview mirror to summon the Candyman, who appears as Anthony and massacres the police", "confidence": "sourced"},
-   {"value": "cycle continues", "quote": "a shadow puppet montage of members of the growing Candyman hive", "confidence": "sourced"}
+   {
+    "value": "victim becomes threat",
+    "detail": "Anthony appears as the Candyman",
+    "quote": "she uses the rearview mirror to summon the Candyman, who appears as Anthony and massacres the police",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cycle continues",
+    "quote": "a shadow puppet montage of members of the growing Candyman hive",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:57",
+      "quote": "Tell... everyone."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "hook for a hand", "state": "attached", "when": "opening", "role": "threat", "quote": "a homeless African American man with a hook for a hand", "confidence": "sourced"},
-   {"value": "razor blade in candy", "state": "hidden", "when": "opening", "role": "clue", "quote": "giving a white child a razor blade in a piece of candy", "confidence": "sourced"},
-   {"value": "bee", "state": "stinging", "when": "early", "role": "omen", "quote": "Stung on the hand by a bee, Anthony meets laundromat owner William Burke", "confidence": "sourced"},
-   {"value": "mirror", "state": "summoning portal", "when": "middle", "role": "trigger", "quote": "has another vision in a mirror of himself as Sherman", "confidence": "sourced"},
-   {"value": "paintings", "state": "gruesome", "when": "middle", "role": "clue", "quote": "Anthony compulsively paints gruesome portraits of unknown men", "confidence": "sourced"},
-   {"value": "elevator", "state": "ghost seen inside", "when": "middle", "role": "setting", "quote": "has a vision of Sherman's ghost in an elevator", "confidence": "sourced"},
-   {"value": "rearview mirror", "state": "used to summon", "when": "ending", "role": "weapon", "quote": "she uses the rearview mirror to summon the Candyman", "confidence": "sourced"},
-   {"value": "shadow puppets", "state": "end credits", "when": "ending", "role": "symbol", "quote": "The film's end credits feature a shadow puppet montage", "confidence": "sourced"}
+   {
+    "value": "hook for a hand",
+    "state": "attached",
+    "when": "opening",
+    "role": "threat",
+    "quote": "a homeless African American man with a hook for a hand",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:45",
+      "quote": "He had a hook for a hand."
+     }
+    ]
+   },
+   {
+    "value": "razor blade in candy",
+    "state": "hidden",
+    "when": "opening",
+    "role": "clue",
+    "quote": "giving a white child a razor blade in a piece of candy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:55",
+      "quote": "a razor blade shows up in a little white girl's Halloween candy."
+     }
+    ]
+   },
+   {
+    "value": "bee",
+    "state": "stinging",
+    "when": "early",
+    "role": "omen",
+    "quote": "Stung on the hand by a bee, Anthony meets laundromat owner William Burke",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:43",
+      "quote": "- Fucking bee sting. - Really?"
+     }
+    ]
+   },
+   {
+    "value": "mirror",
+    "state": "summoning portal",
+    "when": "middle",
+    "role": "trigger",
+    "quote": "has another vision in a mirror of himself as Sherman",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:00",
+      "quote": "while looking in the mirror,"
+     }
+    ]
+   },
+   {
+    "value": "paintings",
+    "state": "gruesome",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Anthony compulsively paints gruesome portraits of unknown men",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:40",
+      "quote": "from rising star Anthony McCoy entitled Say My Name."
+     }
+    ]
+   },
+   {
+    "value": "elevator",
+    "state": "ghost seen inside",
+    "when": "middle",
+    "role": "setting",
+    "quote": "has a vision of Sherman's ghost in an elevator",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:04",
+      "quote": "[elevator alarm rings]"
+     }
+    ]
+   },
+   {
+    "value": "rearview mirror",
+    "state": "used to summon",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "she uses the rearview mirror to summon the Candyman",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "He turns the rear view mirror so she’s looking at herself."
+     }
+    ]
+   },
+   {
+    "value": "shadow puppets",
+    "state": "end credits",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "The film's end credits feature a shadow puppet montage",
+    "confidence": "sourced"
+   },
+   {
+    "value": "candy man song",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:07",
+    "quote": "♪ Hey, Candy Man ♪",
+    "confidence": "sourced",
+    "detail": "the 1970s pop song over the opening credits"
+   },
+   {
+    "value": "beheaded dog",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:09:52",
+    "quote": "- She beheaded a Rottweiler. - [blood dripping]",
+    "confidence": "sourced",
+    "detail": "from Helen Lyle's story told at the dinner party"
+   },
+   {
+    "value": "honeycomb",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:52:55",
+    "quote": "They smeared honeycomb from the nearby hives on his chest",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "innocent man killed by police", "when": "opening", "quote": "Sherman is beaten to death by police but later proven innocent", "confidence": "sourced"},
-   {"order": 2, "value": "legend told, name said", "when": "early", "role": "trigger", "quote": "William introduces him to the urban legend of the Candyman", "confidence": "sourced"},
-   {"order": 3, "value": "first deaths", "when": "early", "quote": "Clive and his girlfriend Jerrica unwittingly summon the Candyman, who brutally murders them", "confidence": "sourced"},
-   {"order": 4, "value": "obsession and visions", "when": "middle", "quote": "Anthony compulsively paints gruesome portraits of unknown men, becoming obsessed", "confidence": "sourced"},
-   {"order": 5, "value": "origin story told", "when": "middle", "role": "clue", "quote": "the legend originated in the 1890s with Daniel Robitaille", "confidence": "sourced"},
-   {"order": 6, "value": "hidden origin revealed", "when": "late", "role": "turn", "quote": "he was born near Cabrini-Green, and was the baby taken the night Helen died", "confidence": "sourced"},
-   {"order": 7, "value": "protagonist killed by police", "when": "ending", "quote": "She is confronted by Anthony, who collapses in her arms and is shot dead by the police", "confidence": "sourced"},
-   {"order": 8, "value": "spirit summoned for vengeance", "when": "ending", "quote": "who appears as Anthony and massacres the police", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "children taunt with legend",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:01:50",
+    "quote": "[girl] I hope Sherman gets you.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "innocent man killed by police",
+    "when": "opening",
+    "quote": "Sherman is beaten to death by police but later proven innocent",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:27",
+      "quote": "[William] They swarmed him."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "legend told, name said",
+    "when": "early",
+    "role": "trigger",
+    "quote": "William introduces him to the urban legend of the Candyman",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:24:37",
+      "quote": "- [whispers] Candyman. - Anthony, you play too much!"
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "stung by a bee",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:24:43",
+    "quote": "- Fucking bee sting. - Really?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "first deaths",
+    "when": "early",
+    "quote": "Clive and his girlfriend Jerrica unwittingly summon the Candyman, who brutally murders them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:13",
+      "quote": "- [Jerrica] Candyman. - Are you serious?"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "obsession and visions",
+    "when": "middle",
+    "quote": "Anthony compulsively paints gruesome portraits of unknown men, becoming obsessed",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "origin story told",
+    "when": "middle",
+    "role": "clue",
+    "quote": "the legend originated in the 1890s with Daniel Robitaille",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:58",
+      "quote": "It's a story Helen found. The story of Daniel Robitaille."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "hidden origin revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "he was born near Cabrini-Green, and was the baby taken the night Helen died",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "protagonist killed by police",
+    "when": "ending",
+    "quote": "She is confronted by Anthony, who collapses in her arms and is shot dead by the police",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:42",
+      "quote": "seeing his hook, knowing you were in danger,"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "spirit summoned for vengeance",
+    "when": "ending",
+    "quote": "who appears as Anthony and massacres the police",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:31",
+      "quote": "[Brianna] In the mirror."
+     }
+    ]
+   },
+   {
+    "order": 11,
+    "value": "message to spread the story",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:25:57",
+    "quote": "Tell... everyone.",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -7,6 +7,9 @@
     "Lead",
     "Plot"
    ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
   }
  ],
  "plot_quality": "full",
@@ -30,7 +33,19 @@
     "value": "local legend",
     "detail": "Dr. Satan, said to have been hanged",
     "quote": "they learn of the local legend of Dr.",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:06",
+      "quote": "S. Quentin Quale, aka Dr. Satan."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:15:58",
+      "quote": "Until today no trace of Dr. Satan has ever been discovered."
+     }
+    ]
    },
    {
     "value": "family violence",
@@ -43,7 +58,14 @@
    {
     "value": "sadistic pleasure",
     "quote": "the cheerleaders were being tortured, raped and killed by the Firefly family",
-    "confidence": "observed"
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:56",
+      "quote": "Huntin' humans, ain't nothin' but nothin'. They all run like scared little rabbits."
+     }
+    ]
    }
   ],
   "trigger": [
@@ -61,7 +83,14 @@
    {
     "value": "seeking a legend",
     "quote": "As they take off in search of the tree from which Dr. Satan was hanged",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:02",
+      "quote": "I know it seems stupid, but I really wanna see this tree."
+     }
+    ]
    }
   ],
   "who_suffers": [
@@ -104,14 +133,44 @@
     "when": "opening",
     "role": "setting",
     "quote": "attempt an armed robbery at a gas station/horror museum",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:14",
+      "quote": "Come on down to Captain Spaulding's Museum of Monsters and Madmen."
+     }
+    ]
+   },
+   {
+    "value": "fried chicken",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:01:26",
+    "quote": "some of my tasty fried chicken. It just tastes so damn good.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:27",
+      "quote": "Here's your complimentary chicken."
+     }
+    ]
    },
    {
     "value": "hanging tree",
     "when": "opening",
     "role": "omen",
     "quote": "the tree from which Dr. Satan was hanged",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:15:41",
+      "quote": "And that infamous hanging tree is no more than a stone's throw away"
+     }
+    ]
    },
    {
     "value": "scarecrows",
@@ -132,6 +191,43 @@
     "when": "late",
     "role": "symbol",
     "quote": "the three remaining teenagers are dressed as rabbits",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:01",
+      "quote": "Run, rabbit, run."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:27:45",
+      "quote": "Run, run, run rabbit"
+     }
+    ]
+   },
+   {
+    "value": "howling coyotes",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:01:31",
+    "quote": "(coyote howling)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:10:56",
+      "quote": "(coyote howling)"
+     }
+    ]
+   },
+   {
+    "value": "chanted 'nameless grave'",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:11:13",
+    "quote": "Bury me in a nameless grave.",
     "confidence": "sourced"
    },
    {
@@ -160,22 +256,46 @@
   ],
   "beats": [
    {
-    "order": 1,
+    "value": "tv horror host's welcome",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:00:30",
+    "quote": "Attention, boils and ghouls, it's time for Dr. Wolfenstein's",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:55",
+      "quote": "I will be with you until the end."
+     }
+    ],
+    "order": 1
+   },
+   {
+    "order": 2,
     "value": "robbery ends in murder",
     "when": "opening",
     "quote": "attempt an armed robbery at a gas station/horror museum, but are killed by the owner",
     "confidence": "sourced"
    },
    {
-    "order": 2,
+    "order": 3,
     "value": "legend told",
     "when": "opening",
     "role": "omen",
     "quote": "they learn of the local legend of Dr.",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:16:23",
+      "quote": "Dr. Satan. Ah-hhh, Dr. Satan. Maybe he lives next door to you."
+     }
+    ]
    },
    {
-    "order": 3,
+    "order": 4,
     "value": "stranded by sabotage",
     "when": "early",
     "role": "trigger",
@@ -183,41 +303,86 @@
     "confidence": "sourced"
    },
    {
-    "order": 4,
+    "order": 5,
     "value": "dinner with the family",
     "when": "early",
     "quote": "the family puts on a Halloween show for their guests",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:28:58",
+      "quote": "tonight is Halloween Eve,"
+     }
+    ]
    },
    {
-    "order": 5,
+    "order": 6,
     "value": "abducted and tortured",
     "when": "middle",
     "quote": "attack them in the driveway and take them captive",
     "confidence": "sourced"
    },
    {
-    "order": 6,
+    "order": 7,
     "value": "rescuers killed",
     "when": "middle",
     "role": "turn",
     "quote": "Mother Firefly shoots Wydell in the head and kills him",
-    "confidence": "sourced"
-   },
-   {
-    "order": 7,
-    "value": "descent into underground lair",
-    "when": "late",
-    "quote": "leaving Denise to find her way through an underground lair",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:58:16",
+      "quote": "Sheriff's Department, open up."
+     }
+    ]
    },
    {
     "order": 8,
+    "value": "descent into underground lair",
+    "when": "late",
+    "quote": "leaving Denise to find her way through an underground lair",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:58",
+      "quote": "Jerry? Is that you?"
+     }
+    ]
+   },
+   {
+    "order": 9,
     "value": "escape, then recapture",
     "when": "ending",
     "role": "turn",
     "quote": "The movie ends with Denise screaming in horror",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:23:39",
+      "quote": "What the hell happened to you? I got away."
+     }
+    ]
+   },
+   {
+    "value": "credits song mocks the prey",
+    "when": "ending",
+    "detail": "the closing song repeats the family's 'run, rabbit' taunt",
+    "source": "subtitles",
+    "at": "01:27:56",
+    "quote": "Run, run, rabbit",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:28",
+      "quote": "A child so pure"
+     }
+    ],
+    "order": 10
    }
   ]
  },
@@ -227,5 +392,6 @@
  ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

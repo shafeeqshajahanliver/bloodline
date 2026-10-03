@@ -1,63 +1,506 @@
 {
  "film": "2005-the-descent",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "cave creatures", "detail": "pale humanoid 'Crawlers'", "quote": "six women who enter an uncharted cave system and struggle to survive against the monstrous creatures inside", "confidence": "sourced"},
-   {"value": "betrayal by a friend", "detail": "Juno", "quote": "confirming Sarah's suspicions that Juno and Paul were having an affair", "confidence": "observed"},
-   {"value": "grief", "quote": "she hallucinates seeing a bloodied Juno beside her, and screams", "confidence": "observed"}
+   {
+    "value": "cave creatures",
+    "detail": "pale humanoid 'Crawlers'",
+    "quote": "six women who enter an uncharted cave system and struggle to survive against the monstrous creatures inside",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "It’s just a pale, agile figure, darting this way and that, and letting rip a hideous, piercing shriek"
+     }
+    ]
+   },
+   {
+    "value": "betrayal by a friend",
+    "detail": "Juno",
+    "quote": "confirming Sarah's suspicions that Juno and Paul were having an affair",
+    "confidence": "observed"
+   },
+   {
+    "value": "grief",
+    "quote": "she hallucinates seeing a bloodied Juno beside her, and screams",
+    "confidence": "observed"
+   }
   ],
   "origin": [
-   {"value": "from nature", "detail": "creatures living in an unexplored cave", "quote": "sees a pale, humanoid creature drinking from a pool before it scampers away", "confidence": "observed"}
+   {
+    "value": "from nature",
+    "detail": "creatures living in an unexplored cave",
+    "quote": "sees a pale, humanoid creature drinking from a pool before it scampers away",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:37",
+      "quote": "And they've evolved perfectly to live down here in the dark."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "hunger", "quote": "sees Holly's body being eaten by Crawlers", "confidence": "observed"}
+   {
+    "value": "hunger",
+    "quote": "sees Holly's body being eaten by Crawlers",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "adultery", "quote": "Juno's pendant was a gift from Paul, confirming Sarah's suspicions that Juno and Paul were having an affair", "confidence": "sourced"},
-   {"value": "lying to the group", "quote": "Juno admits that she has led the group into an unexplored cave system instead of the mapped one", "confidence": "sourced"}
+   {
+    "value": "adultery",
+    "quote": "Juno's pendant was a gift from Paul, confirming Sarah's suspicions that Juno and Paul were having an affair",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lying to the group",
+    "quote": "Juno admits that she has led the group into an unexplored cave system instead of the mapped one",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:51",
+      "quote": "I put in a flight plan for Boreham Caverns and this isn't Boreham Caverns, is it, Juno?"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "a journey", "detail": "a spelunking trip a year after a family tragedy", "quote": "reunite for a spelunking adventure in the Appalachian Mountains of North Carolina", "confidence": "sourced"},
-   {"value": "way back blocked", "quote": "manages to escape before it collapses, blocking the way back", "confidence": "sourced"}
+   {
+    "value": "a journey",
+    "detail": "a spelunking trip a year after a family tragedy",
+    "quote": "reunite for a spelunking adventure in the Appalachian Mountains of North Carolina",
+    "confidence": "sourced"
+   },
+   {
+    "value": "way back blocked",
+    "quote": "manages to escape before it collapses, blocking the way back",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:58",
+      "quote": "We lost it, when the cave collapsed."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "blind, hunt by sound", "quote": "Sam deduces that the creatures are blind and hunt by sound", "confidence": "sourced"},
-   {"value": "no rescue possible", "quote": "which means that a rescue party would be unable to locate them", "confidence": "sourced"}
+   {
+    "value": "blind, hunt by sound",
+    "quote": "Sam deduces that the creatures are blind and hunt by sound",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:30",
+      "quote": "they're totally blind."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:12:34",
+      "quote": "I'd say they use sound to hunt with."
+     }
+    ]
+   },
+   {
+    "value": "no rescue possible",
+    "quote": "which means that a rescue party would be unable to locate them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:45",
+      "quote": "You filed a flight plan to mountain rescue. If we don't report in, they'll come looking for us."
+     }
+    ]
+   },
+   {
+    "value": "no light but their own",
+    "source": "subtitles",
+    "at": "00:53:33",
+    "quote": "We're two miles underground. The only light down here is ours.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "group of women friends", "relation_to_threat": "stranger", "quote": "The plot follows six women who enter an uncharted cave system", "confidence": "sourced"},
-   {"value": "grieving mother", "relation_to_threat": "stranger", "detail": "Sarah, who lost her husband and daughter", "quote": "causing a car crash that kills both him and Jessica", "confidence": "sourced"}
+   {
+    "value": "group of women friends",
+    "relation_to_threat": "stranger",
+    "quote": "The plot follows six women who enter an uncharted cave system",
+    "confidence": "sourced"
+   },
+   {
+    "value": "grieving mother",
+    "relation_to_threat": "stranger",
+    "detail": "Sarah, who lost her husband and daughter",
+    "quote": "causing a car crash that kills both him and Jessica",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:20",
+      "quote": "Shh! I'm sorry. She's gone."
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "sole survivor escapes", "quote": "she sees sunlight and clambers up a bone-strewn slope to escape the cave", "confidence": "sourced"},
-   {"value": "ambiguous", "detail": "UK ending: she is still in the cave", "quote": "In the UK version, Sarah awakens, still in the cave, and has a vision of Jessica", "confidence": "sourced"},
-   {"value": "survivor leaves betrayer to die", "quote": "stabs Juno in the leg with a pickaxe and leaves her to die as a horde of Crawlers approaches", "confidence": "sourced"}
+   {
+    "value": "sole survivor escapes",
+    "quote": "she sees sunlight and clambers up a bone-strewn slope to escape the cave",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "SARAH emerges at the mouth of the cave starkly silhouetted against the blinding SUNSET."
+     }
+    ]
+   },
+   {
+    "value": "ambiguous",
+    "detail": "UK ending: she is still in the cave",
+    "quote": "In the UK version, Sarah awakens, still in the cave, and has a vision of Jessica",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "sit in front of a birthday cake with SIX flickering candles"
+     }
+    ]
+   },
+   {
+    "value": "survivor leaves betrayer to die",
+    "quote": "stabs Juno in the leg with a pickaxe and leaves her to die as a horde of Crawlers approaches",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "JUNO collapses in agony, the PICK protruding sideways from her KNEE!"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "car crash", "when": "opening", "role": "trigger", "quote": "causing a car crash that kills both him and Jessica", "confidence": "sourced"},
-   {"value": "narrow tunnel", "state": "collapsing", "when": "early", "role": "setting", "quote": "Sarah becomes stuck in a narrow tunnel, but manages to escape before it collapses", "confidence": "sourced"},
-   {"value": "cave painting", "when": "early", "role": "clue", "quote": "discovers old climbing equipment and a cave painting that suggests a way out", "confidence": "sourced"},
-   {"value": "animal bones", "state": "piled in a den", "when": "middle", "role": "omen", "quote": "they come across a den of animal bones", "confidence": "sourced"},
-   {"value": "pickaxe", "when": "middle", "role": "weapon", "quote": "kills a Crawler with her pickaxe, but then accidentally stabs Beth in the neck", "confidence": "sourced"},
-   {"value": "pendant", "when": "middle", "role": "clue", "quote": "Beth grabs Juno's pendant as she collapses", "confidence": "sourced"},
-   {"value": "pool of blood", "when": "late", "role": "turn", "quote": "falling into a blood-filled pool in the process", "confidence": "sourced"},
-   {"value": "sunlight", "when": "ending", "role": "symbol", "quote": "When she wakes, she sees sunlight and clambers up a bone-strewn slope", "confidence": "sourced"}
+   {
+    "value": "car crash",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "causing a car crash that kills both him and Jessica",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "one of the scaffold supports to hurtle forward like a missile, through the cab of the VAN, through both windscreens and into PAUL’s face"
+     }
+    ]
+   },
+   {
+    "value": "narrow tunnel",
+    "state": "collapsing",
+    "when": "early",
+    "role": "setting",
+    "quote": "Sarah becomes stuck in a narrow tunnel, but manages to escape before it collapses",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:16",
+      "quote": "I think she might be stuck."
+     }
+    ]
+   },
+   {
+    "value": "cave painting",
+    "when": "early",
+    "role": "clue",
+    "quote": "discovers old climbing equipment and a cave painting that suggests a way out",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "It’s the mountain, it’s the forest, it’s the cave. And - it has two entrances."
+     }
+    ]
+   },
+   {
+    "value": "animal bones",
+    "state": "piled in a den",
+    "when": "middle",
+    "role": "omen",
+    "quote": "they come across a den of animal bones",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "the top of the waterfall is blocked by a DAM made out of BONES!"
+     }
+    ]
+   },
+   {
+    "value": "pickaxe",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "kills a Crawler with her pickaxe, but then accidentally stabs Beth in the neck",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "BETH is still alive, blood gushing from her neck."
+     }
+    ]
+   },
+   {
+    "value": "pendant",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Beth grabs Juno's pendant as she collapses",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:10:44",
+      "quote": "Love each day."
+     }
+    ]
+   },
+   {
+    "value": "pool of blood",
+    "when": "late",
+    "role": "turn",
+    "quote": "falling into a blood-filled pool in the process",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Just as her face disappears beneath the surface and blood flows into her gasping, open mouth"
+     }
+    ]
+   },
+   {
+    "value": "sunlight",
+    "when": "ending",
+    "role": "symbol",
+    "quote": "When she wakes, she sees sunlight and clambers up a bone-strewn slope",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "daylight is shining in through a cleft in the rock."
+     }
+    ]
+   },
+   {
+    "value": "bats",
+    "state": "swarming",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:23:42",
+    "quote": "One bat, two bats! Fifty bats!",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Suddenly, the HOLE erupts with BATS! Hundreds of them, swarming out and around a very panicky SARAH."
+     }
+    ]
+   },
+   {
+    "value": "birthday cake and candles",
+    "state": "remembered",
+    "when": "early",
+    "role": "symbol",
+    "source": "screenplay",
+    "quote": "Illuminated by five flickering candles on the birthday cake in front of her",
+    "confidence": "sourced",
+    "detail": "Jessica's fifth birthday recurs in Sarah's visions; six candles in the final image"
+   },
+   {
+    "value": "false daylight",
+    "state": "glowing rock",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:53:31",
+    "quote": "It wasn't daylight. It was phosphorus in the rock.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:04",
+      "quote": "Daylight! I can see daylight!"
+     }
+    ]
+   },
+   {
+    "value": "white-water rapids",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:00:51",
+    "quote": "Look out girls! Here we go!",
+    "confidence": "sourced",
+    "detail": "the film opens with the friends rafting before the crash"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "family killed in crash", "when": "opening", "quote": "causing a car crash that kills both him and Jessica", "confidence": "sourced"},
-   {"order": 2, "value": "way back sealed", "when": "early", "role": "trigger", "quote": "manages to escape before it collapses, blocking the way back", "confidence": "sourced"},
-   {"order": 3, "value": "leader's lie revealed", "when": "early", "role": "turn", "quote": "Juno admits that she has led the group into an unexplored cave system", "confidence": "sourced"},
-   {"order": 4, "value": "first sighting", "when": "middle", "quote": "sees a pale, humanoid creature drinking from a pool before it scampers away", "confidence": "sourced"},
-   {"order": 5, "value": "first death", "when": "middle", "quote": "suddenly attacked by a creature they call a \"Crawler\", which kills Holly", "confidence": "sourced"},
-   {"order": 6, "value": "betrayal revealed", "when": "late", "role": "turn", "quote": "Sarah finds a dying Beth, who reveals both that Juno stabbed her", "confidence": "sourced"},
-   {"order": 7, "value": "revenge on betrayer", "when": "late", "quote": "She then stabs Juno in the leg with a pickaxe and leaves her to die", "confidence": "sourced"},
-   {"order": 8, "value": "escape, then hallucination", "when": "ending", "role": "turn", "quote": "she hallucinates seeing a bloodied Juno beside her, and screams", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "rafting trip",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:00:51",
+    "quote": "Look out girls! Here we go!",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "family killed in crash",
+    "when": "opening",
+    "quote": "causing a car crash that kills both him and Jessica",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:20",
+      "quote": "Shh! I'm sorry. She's gone."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "way back sealed",
+    "when": "early",
+    "role": "trigger",
+    "quote": "manages to escape before it collapses, blocking the way back",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:58",
+      "quote": "We lost it, when the cave collapsed."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "leader's lie revealed",
+    "when": "early",
+    "role": "turn",
+    "quote": "Juno admits that she has led the group into an unexplored cave system",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:51",
+      "quote": "and this isn't Boreham Caverns, is it, Juno?"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "first sighting",
+    "when": "middle",
+    "quote": "sees a pale, humanoid creature drinking from a pool before it scampers away",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "a silhouetted hand, humanoid, reaches down and picks up the half eaten CANDY BAR"
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "false hope of exit",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:48:04",
+    "quote": "Daylight! I can see daylight!",
+    "confidence": "sourced",
+    "detail": "Holly runs at phosphorescent light and falls into a sinkhole"
+   },
+   {
+    "order": 7,
+    "value": "first death",
+    "when": "middle",
+    "quote": "suddenly attacked by a creature they call a \"Crawler\", which kills Holly",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "HOLLY’s CORPSE is dropped right in front of her!"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "betrayal revealed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Sarah finds a dying Beth, who reveals both that Juno stabbed her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:17",
+      "quote": "She did this to me."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "revenge on betrayer",
+    "when": "late",
+    "quote": "She then stabs Juno in the leg with a pickaxe and leaves her to die",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "JUNO collapses in agony, the PICK protruding sideways from her KNEE!"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "escape, then hallucination",
+    "when": "ending",
+    "role": "turn",
+    "quote": "she hallucinates seeing a bloodied Juno beside her, and screams",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "JUNO is now sitting in the passenger seat beside her, streaked in blood!"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

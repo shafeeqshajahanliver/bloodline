@@ -1,62 +1,384 @@
 {
  "film": "1983-sleepaway-camp",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "serial killer", "detail": "an unseen figure at the camp", "quote": "it focuses on serial killings which occur at a summer camp for teenagers", "confidence": "sourced"},
-   {"value": "traumatised child", "detail": "Angela, revealed to be Peter", "quote": "a naked Angela humming and clutching a hunting knife alongside Paul's severed head", "confidence": "observed"}
+   {
+    "value": "serial killer",
+    "detail": "an unseen figure at the camp",
+    "quote": "it focuses on serial killings which occur at a summer camp for teenagers",
+    "confidence": "sourced"
+   },
+   {
+    "value": "traumatised child",
+    "detail": "Angela, revealed to be Peter",
+    "quote": "a naked Angela humming and clutching a hunting knife alongside Paul's severed head",
+    "confidence": "observed"
+   }
   ],
   "origin": [
-   {"value": "childhood trauma", "detail": "survivor of the boating accident", "quote": "Eight years later, Angela, the surviving child, is traumatized and lives with her eccentric aunt", "confidence": "sourced"},
-   {"value": "made by a guardian", "detail": "aunt raised Peter as a girl", "quote": "she decided to raise Peter as \"Angela\", the girl she had always wanted, which mentally affected him", "confidence": "sourced"}
+   {
+    "value": "childhood trauma",
+    "detail": "survivor of the boating accident",
+    "quote": "Eight years later, Angela, the surviving child, is traumatized and lives with her eccentric aunt",
+    "confidence": "sourced"
+   },
+   {
+    "value": "made by a guardian",
+    "detail": "aunt raised Peter as a girl",
+    "quote": "she decided to raise Peter as \"Angela\", the girl she had always wanted, which mentally affected him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:35",
+      "quote": "You see, I've always wanted a little girl."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "revenge", "detail": "on those who bully or abuse Angela", "quote": "the bodies of the four children who threw sand at Angela, brutally murdered in their sleeping bags", "confidence": "observed"}
+   {
+    "value": "revenge",
+    "detail": "on those who bully or abuse Angela",
+    "quote": "the bodies of the four children who threw sand at Angela, brutally murdered in their sleeping bags",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "identity imposed by guardian", "quote": "she decided to raise Peter as \"Angela\", the girl she had always wanted", "confidence": "sourced"},
-   {"value": "bullying", "quote": "Angela's introverted nature makes her a target for bullying by fellow camper Judy and camp counselor Meg", "confidence": "sourced"},
-   {"value": "attempted sexual assault", "quote": "The head cook, Artie, attempts to sexually assault her, but Ricky intervenes", "confidence": "sourced"}
+   {
+    "value": "identity imposed by guardian",
+    "quote": "she decided to raise Peter as \"Angela\", the girl she had always wanted",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:58",
+      "quote": "I mean, we already have a boy. So another one simply would not do."
+     }
+    ]
+   },
+   {
+    "value": "bullying",
+    "quote": "Angela's introverted nature makes her a target for bullying by fellow camper Judy and camp counselor Meg",
+    "confidence": "sourced"
+   },
+   {
+    "value": "attempted sexual assault",
+    "quote": "The head cook, Artie, attempts to sexually assault her, but Ricky intervenes",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "going to summer camp", "quote": "Angela and Ricky are sent to Camp Arawak", "confidence": "sourced"}
+   {
+    "value": "going to summer camp",
+    "quote": "Angela and Ricky are sent to Camp Arawak",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "deaths dismissed as accidents", "quote": "Kenny is found the next morning, drowned, and Mel again rules the death an accident", "confidence": "sourced"}
+   {
+    "value": "deaths dismissed as accidents",
+    "quote": "Kenny is found the next morning, drowned, and Mel again rules the death an accident",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:39",
+      "quote": "So it was one of those fluke accidents we could not have foreseen, and that is all there is to it!"
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "campers", "relation_to_threat": "community", "detail": "bullies and those who hurt Angela", "quote": "Campers Kenny and Mike mock Angela, prompting Ricky and his friend Paul to confront them", "confidence": "sourced"},
-   {"value": "counsellors and staff", "relation_to_threat": "community", "quote": "Meg's back is split open during her shower in one of the vacated cabins, killing her", "confidence": "sourced"},
-   {"value": "boyfriend", "relation_to_threat": "lover", "detail": "Paul", "quote": "clutching a hunting knife alongside Paul's severed head", "confidence": "sourced"}
+   {
+    "value": "campers",
+    "relation_to_threat": "community",
+    "detail": "bullies and those who hurt Angela",
+    "quote": "Campers Kenny and Mike mock Angela, prompting Ricky and his friend Paul to confront them",
+    "confidence": "sourced"
+   },
+   {
+    "value": "counsellors and staff",
+    "relation_to_threat": "community",
+    "quote": "Meg's back is split open during her shower in one of the vacated cabins, killing her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "boyfriend",
+    "relation_to_threat": "lover",
+    "detail": "Paul",
+    "quote": "clutching a hunting knife alongside Paul's severed head",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "killer's identity revealed", "quote": "It is then revealed that Angela is actually her presumed-dead brother Peter", "confidence": "sourced"},
-   {"value": "twist ending", "quote": "garnering notoriety for its twist ending, which has been named as one of the most shocking", "confidence": "sourced"}
+   {
+    "value": "killer's identity revealed",
+    "quote": "It is then revealed that Angela is actually her presumed-dead brother Peter",
+    "confidence": "sourced"
+   },
+   {
+    "value": "twist ending",
+    "quote": "garnering notoriety for its twist ending, which has been named as one of the most shocking",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "capsized boat", "when": "opening", "role": "omen", "quote": "After the boat capsizes, John and the children try to swim to shore", "confidence": "sourced"},
-   {"value": "boiling water", "state": "scalding", "when": "early", "role": "weapon", "quote": "an unseen figure causes Artie to be severely scalded by boiling water", "confidence": "sourced"},
-   {"value": "canoe", "state": "capsized", "when": "early", "role": "setting", "quote": "after Kenny is out at night on the lake and capsizes his canoe", "confidence": "sourced"},
-   {"value": "beehive", "when": "middle", "role": "weapon", "quote": "someone traps him in a public toilet with a beehive, exploiting his allergy", "confidence": "sourced"},
-   {"value": "curling iron", "state": "hot", "when": "late", "role": "weapon", "quote": "being vaginally penetrated with a hot electric curling iron", "confidence": "sourced"},
-   {"value": "arrow", "when": "late", "role": "weapon", "quote": "being killed by an arrow to the throat", "confidence": "sourced"},
-   {"value": "severed head", "when": "ending", "role": "turn", "quote": "clutching a hunting knife alongside Paul's severed head", "confidence": "sourced"},
-   {"value": "hunting knife", "when": "ending", "role": "weapon", "quote": "a naked Angela humming and clutching a hunting knife", "confidence": "sourced"}
+   {
+    "value": "capsized boat",
+    "when": "opening",
+    "role": "omen",
+    "quote": "After the boat capsizes, John and the children try to swim to shore",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:34",
+      "quote": "There's a boat!"
+     }
+    ]
+   },
+   {
+    "value": "forged physicals",
+    "when": "early",
+    "role": "clue",
+    "detail": "the aunt signs the camp medical forms herself so no doctor examines Angela",
+    "source": "subtitles",
+    "at": "00:08:29",
+    "quote": "Why, they're your physicals, of course.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:35",
+      "quote": "Just be careful not to tell anyone how you got them."
+     }
+    ]
+   },
+   {
+    "value": "boiling water",
+    "state": "scalding",
+    "when": "early",
+    "role": "weapon",
+    "quote": "an unseen figure causes Artie to be severely scalded by boiling water",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:17:12",
+      "quote": "That damn water better be done. It's been on a half hour."
+     }
+    ]
+   },
+   {
+    "value": "canoe",
+    "state": "capsized",
+    "when": "early",
+    "role": "setting",
+    "quote": "after Kenny is out at night on the lake and capsizes his canoe",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:23",
+      "quote": "Of course he drowned. He was horsing around, the canoe tipped over."
+     }
+    ]
+   },
+   {
+    "value": "water snakes",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:33:10",
+    "quote": "All the water snakes and snapping turtles come out at night.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "beehive",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "someone traps him in a public toilet with a beehive, exploiting his allergy",
+    "confidence": "sourced"
+   },
+   {
+    "value": "curling iron",
+    "state": "hot",
+    "when": "late",
+    "role": "weapon",
+    "quote": "being vaginally penetrated with a hot electric curling iron",
+    "confidence": "sourced"
+   },
+   {
+    "value": "arrow",
+    "when": "late",
+    "role": "weapon",
+    "quote": "being killed by an arrow to the throat",
+    "confidence": "sourced"
+   },
+   {
+    "value": "severed head",
+    "when": "ending",
+    "role": "turn",
+    "quote": "clutching a hunting knife alongside Paul's severed head",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hunting knife",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "a naked Angela humming and clutching a hunting knife",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "family boating accident", "when": "opening", "quote": "they swim into the path of a reckless motorboat and are struck. John and one of the children are killed", "confidence": "sourced"},
-   {"order": 2, "value": "sent to summer camp", "when": "early", "role": "trigger", "quote": "Angela and Ricky are sent to Camp Arawak", "confidence": "sourced"},
-   {"order": 3, "value": "first attack on abuser", "when": "early", "quote": "an unseen figure causes Artie to be severely scalded by boiling water", "confidence": "sourced"},
-   {"order": 4, "value": "deaths dismissed", "when": "middle", "quote": "Mel again rules the death an accident", "confidence": "sourced"},
-   {"order": 5, "value": "public humiliation", "when": "middle", "quote": "Judy goads Meg into carrying Angela to the pier and throwing her into the water", "confidence": "sourced"},
-   {"order": 6, "value": "wrong suspect blamed", "when": "late", "quote": "Believing that Ricky is the killer, Mel beats him unconscious", "confidence": "sourced"},
-   {"order": 7, "value": "killer revealed", "when": "ending", "role": "turn", "quote": "They are shocked to realize that \"Angela\" is actually a boy", "confidence": "sourced"},
-   {"order": 8, "value": "closing sting", "when": "ending", "quote": "The nude, blood-covered Angela/Peter stands before the horrified Susie and Ronnie, hissing and growling", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "family boating accident",
+    "when": "opening",
+    "quote": "they swim into the path of a reckless motorboat and are struck. John and one of the children are killed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:56",
+      "quote": "Oh my God, we just hit them both."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "sent to summer camp",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Angela and Ricky are sent to Camp Arawak",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:49",
+      "quote": "I packed you and your cousin some goodies for the ride up to camp."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "first attack on abuser",
+    "when": "early",
+    "quote": "an unseen figure causes Artie to be severely scalded by boiling water",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:21:11",
+      "quote": "Real shame what happened to Artie in here."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "deaths dismissed",
+    "when": "middle",
+    "quote": "Mel again rules the death an accident",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:43",
+      "quote": "It was an accident!"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "public humiliation",
+    "when": "middle",
+    "quote": "Judy goads Meg into carrying Angela to the pier and throwing her into the water",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "wrong suspect blamed",
+    "when": "late",
+    "quote": "Believing that Ricky is the killer, Mel beats him unconscious",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:14:40",
+      "quote": "I gotcha now, you little monster. Now it's my turn!"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "killer revealed",
+    "when": "ending",
+    "role": "turn",
+    "quote": "They are shocked to realize that \"Angela\" is actually a boy",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:39",
+      "quote": "Hey. You hear something?"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:18:44",
+      "quote": "Sounds like singing."
+     }
+    ]
+   },
+   {
+    "value": "flashback to the renaming",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:20:10",
+    "quote": "Angela... Such a lovely name. Why, I believe it means \" angel \".",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:19",
+      "quote": "I know you're going to like that name. Won't you, Peter?"
+     }
+    ],
+    "order": 8
+   },
+   {
+    "order": 9,
+    "value": "closing sting",
+    "when": "ending",
+    "quote": "The nude, blood-covered Angela/Peter stands before the horrified Susie and Ronnie, hissing and growling",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:28",
+      "quote": "How can it be? My God, she's a boy."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

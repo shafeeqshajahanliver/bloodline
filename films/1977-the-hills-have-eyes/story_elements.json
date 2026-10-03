@@ -1,57 +1,395 @@
 {
  "film": "1977-the-hills-have-eyes",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "cannibal family", "detail": "Papa Jupiter, Mama and their sons", "quote": "a suburban family targeted by a family of cannibal savages after becoming stranded in the Nevada desert", "confidence": "sourced"}
+   {
+    "value": "cannibal family",
+    "detail": "Papa Jupiter, Mama and their sons",
+    "quote": "a suburban family targeted by a family of cannibal savages after becoming stranded in the Nevada desert",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "abandoned child", "detail": "Jupiter, left in the hills to die by his father", "quote": "Fred attacked Jupiter with a tire iron and left him in the hills to die. However, Jupiter survived", "confidence": "sourced"}
+   {
+    "value": "abandoned child",
+    "detail": "Jupiter, left in the hills to die by his father",
+    "quote": "Fred attacked Jupiter with a tire iron and left him in the hills to die. However, Jupiter survived",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "hunger", "quote": "The family led by \"Papa Jupiter\" survives by cannibalizing travelers and stealing supplies", "confidence": "sourced"}
+   {
+    "value": "hunger",
+    "quote": "The family led by \"Papa Jupiter\" survives by cannibalizing travelers and stealing supplies",
+    "confidence": "sourced"
+   },
+   {
+    "value": "revenge on his father",
+    "detail": "Papa Jupiter vows to eat Fred's descendants",
+    "source": "subtitles",
+    "at": "01:07:47",
+    "quote": "I'll eat the heart of your stinking memory.",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "parent tries to kill child", "quote": "Fred attacked Jupiter with a tire iron and left him in the hills to die", "confidence": "sourced"}
+   {
+    "value": "parent tries to kill child",
+    "quote": "Fred attacked Jupiter with a tire iron and left him in the hills to die",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "stranded on a journey", "quote": "The Carter family is traveling on vacation towing a trailer en route to Los Angeles", "confidence": "sourced"}
+   {
+    "value": "stranded on a journey",
+    "quote": "The Carter family is traveling on vacation towing a trailer en route to Los Angeles",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "can be fought and killed", "quote": "Brenda and Bobby ultimately overpower Papa Jupiter with a series of booby traps and fatally shoot him", "confidence": "sourced"}
+   {
+    "value": "can be fought and killed",
+    "quote": "Brenda and Bobby ultimately overpower Papa Jupiter with a series of booby traps and fatally shoot him",
+    "confidence": "sourced"
+   },
+   {
+    "value": "stay on the main road",
+    "detail": "old Fred's warning at the gas station",
+    "source": "subtitles",
+    "at": "00:07:48",
+    "quote": "You folks stay on the main road now, you hear?",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "family on a road trip", "relation_to_threat": "stranger", "detail": "the Carters", "quote": "Parents Bob and Ethel are driving, accompanied by their children Bobby, Brenda, eldest daughter Lynne", "confidence": "sourced"},
-   {"value": "baby", "relation_to_threat": "stranger", "detail": "Katy, abducted to be eaten", "quote": "Pluto abducts Katy and flees with Mars, intending for the family to eat her", "confidence": "sourced"},
-   {"value": "abused daughter", "relation_to_threat": "family", "detail": "Ruby", "quote": "forces her to eat Beauty as punishment for sympathizing with the Carters", "confidence": "sourced"}
+   {
+    "value": "family on a road trip",
+    "relation_to_threat": "stranger",
+    "detail": "the Carters",
+    "quote": "Parents Bob and Ethel are driving, accompanied by their children Bobby, Brenda, eldest daughter Lynne",
+    "confidence": "sourced"
+   },
+   {
+    "value": "baby",
+    "relation_to_threat": "stranger",
+    "detail": "Katy, abducted to be eaten",
+    "quote": "Pluto abducts Katy and flees with Mars, intending for the family to eat her",
+    "confidence": "sourced"
+   },
+   {
+    "value": "abused daughter",
+    "relation_to_threat": "family",
+    "detail": "Ruby",
+    "quote": "forces her to eat Beauty as punishment for sympathizing with the Carters",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "With the help of a remorseful Ruby, Doug is able to save Katy and fatally stabs Mars", "confidence": "sourced"},
-   {"value": "victims become violent", "quote": "overpower Papa Jupiter with a series of booby traps and fatally shoot him while Pluto is mauled by Beast", "confidence": "observed"}
+   {
+    "value": "threat destroyed",
+    "quote": "With the help of a remorseful Ruby, Doug is able to save Katy and fatally stabs Mars",
+    "confidence": "sourced"
+   },
+   {
+    "value": "victims become violent",
+    "quote": "overpower Papa Jupiter with a series of booby traps and fatally shoot him while Pluto is mauled by Beast",
+    "confidence": "observed"
+   }
   ],
   "images": [
-   {"value": "dogs", "state": "barking at the hills", "when": "opening", "role": "omen", "quote": "The dogs are on alert, becoming anxious and barking at the hills", "confidence": "sourced"},
-   {"value": "dead dog", "state": "mutilated", "when": "opening", "role": "omen", "quote": "Chasing after her, Bobby finds her mutilated body", "confidence": "sourced"},
-   {"value": "tire iron", "when": "early", "role": "weapon", "quote": "kills Fred with a tire iron, takes Bob prisoner, and crucifies him", "confidence": "sourced"},
-   {"value": "crucifixion and fire", "state": "burning", "when": "middle", "role": "threat", "quote": "signals Papa Jupiter to set Bob on fire as a distraction", "confidence": "sourced"},
-   {"value": "trailer", "when": "middle", "role": "setting", "quote": "Pluto sneaks into the trailer and signals Papa Jupiter", "confidence": "sourced"},
-   {"value": "cave", "when": "late", "role": "setting", "quote": "Mars and Pluto return to their home, a cave", "confidence": "sourced"},
-   {"value": "guard dog", "state": "fighting back", "when": "late", "role": "weapon", "quote": "Beast pushes Mercury off a hilltop to his death", "confidence": "sourced"}
+   {
+    "value": "dogs",
+    "state": "barking at the hills",
+    "when": "opening",
+    "role": "omen",
+    "quote": "The dogs are on alert, becoming anxious and barking at the hills",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:04",
+      "quote": "(DOGS BARKING)"
+     }
+    ]
+   },
+   {
+    "value": "dead dog",
+    "state": "mutilated",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Chasing after her, Bobby finds her mutilated body",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:48:58",
+      "quote": "Beauty is dead."
+     }
+    ]
+   },
+   {
+    "value": "tire iron",
+    "when": "early",
+    "role": "weapon",
+    "quote": "kills Fred with a tire iron, takes Bob prisoner, and crucifies him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:13",
+      "quote": "I hit him with a tyre iron, and I split his face wide open."
+     }
+    ]
+   },
+   {
+    "value": "crucifixion and fire",
+    "state": "burning",
+    "when": "middle",
+    "role": "threat",
+    "quote": "signals Papa Jupiter to set Bob on fire as a distraction",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "ETHEL RUNS AT THE TREE OF FIRE, CLUTCHING AT HER CRUCIFIED HUSBAND'S FEET."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:53:19",
+      "quote": "That's not my Bob!"
+     }
+    ]
+   },
+   {
+    "value": "trailer",
+    "when": "middle",
+    "role": "setting",
+    "quote": "Pluto sneaks into the trailer and signals Papa Jupiter",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cave",
+    "when": "late",
+    "role": "setting",
+    "quote": "Mars and Pluto return to their home, a cave",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:43",
+      "quote": "Got yourself trapped right where they breed, boy!"
+     }
+    ]
+   },
+   {
+    "value": "guard dog",
+    "state": "fighting back",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Beast pushes Mercury off a hilltop to his death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:06:23",
+      "quote": "Mercury's dead, Papa. He's at the bottom of the cliff."
+     }
+    ]
+   },
+   {
+    "value": "buzzard",
+    "state": "circling",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:12:35",
+    "quote": "It's a turkey buzzard.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:37",
+      "quote": "It's the janitor of the desert."
+     }
+    ]
+   },
+   {
+    "value": "pet finches",
+    "state": "killed and drunk",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:11:17",
+    "quote": "My finches OK?",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "PULLS OUT THE STUNNED BIRDS, TEARING OFF THEIR HEADS LIKE ANOTHER MAN MIGHT UNCORK TWO BOTTLES."
+     }
+    ]
+   },
+   {
+    "value": "breathing over the radio",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:24:21",
+    "quote": "(HEAVY BREATHING OVER RADIO)",
+    "confidence": "sourced",
+    "detail": "the cannibals listen in on the family's CB radio"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "family on the road", "when": "opening", "quote": "The Carter family is traveling on vacation towing a trailer en route to Los Angeles", "confidence": "sourced"},
-   {"order": 2, "value": "animal omen", "when": "opening", "role": "omen", "quote": "The dogs are on alert, becoming anxious and barking at the hills. Beauty then runs off", "confidence": "sourced"},
-   {"order": 3, "value": "backstory told", "when": "early", "role": "clue", "quote": "As a child, Jupiter killed the family's livestock and later murdered his sister", "confidence": "sourced"},
-   {"order": 4, "value": "father killed", "when": "middle", "quote": "The Carters eventually extinguish the fire, but Bob dies shortly afterward", "confidence": "sourced"},
-   {"order": 5, "value": "night attack on the trailer", "when": "middle", "role": "turn", "quote": "When Ethel and Lynne return, Mars shoots them both", "confidence": "sourced"},
-   {"order": 6, "value": "baby taken", "when": "middle", "quote": "Pluto abducts Katy and flees with Mars, intending for the family to eat her", "confidence": "sourced"},
-   {"order": 7, "value": "survivors fight back", "when": "ending", "quote": "Brenda and Bobby ultimately overpower Papa Jupiter with a series of booby traps", "confidence": "sourced"},
-   {"order": 8, "value": "baby rescued", "when": "ending", "quote": "With the help of a remorseful Ruby, Doug is able to save Katy and fatally stabs Mars", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "daughter begs to escape",
+    "when": "opening",
+    "source": "subtitles",
+    "at": "00:03:09",
+    "quote": "Take me with you.",
+    "confidence": "sourced",
+    "detail": "Ruby asks Fred to take her away from the pack"
+   },
+   {
+    "order": 2,
+    "value": "family on the road",
+    "when": "opening",
+    "quote": "The Carter family is traveling on vacation towing a trailer en route to Los Angeles",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:26",
+      "quote": "California. L.A."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "warning to stay on road",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:07:48",
+    "quote": "You folks stay on the main road now, you hear?",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "animal omen",
+    "when": "opening",
+    "role": "omen",
+    "quote": "The dogs are on alert, becoming anxious and barking at the hills. Beauty then runs off",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:19:43",
+      "quote": "Beauty, get back here!"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "backstory told",
+    "when": "early",
+    "role": "clue",
+    "quote": "As a child, Jupiter killed the family's livestock and later murdered his sister",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:28",
+      "quote": "so I took him out in the desert and I left him there."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "father killed",
+    "when": "middle",
+    "quote": "The Carters eventually extinguish the fire, but Bob dies shortly afterward",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:53:19",
+      "quote": "That's not my Bob!"
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "night attack on the trailer",
+    "when": "middle",
+    "role": "turn",
+    "quote": "When Ethel and Lynne return, Mars shoots them both",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "baby taken",
+    "when": "middle",
+    "quote": "Pluto abducts Katy and flees with Mars, intending for the family to eat her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:08",
+      "quote": "We caught us a young Thanksgiving turkey."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "survivors fight back",
+    "when": "ending",
+    "quote": "Brenda and Bobby ultimately overpower Papa Jupiter with a series of booby traps",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:12",
+      "quote": "Fire it up."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "baby rescued",
+    "when": "ending",
+    "quote": "With the help of a remorseful Ruby, Doug is able to save Katy and fatally stabs Mars",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:04",
+      "quote": "Take the baby, here."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

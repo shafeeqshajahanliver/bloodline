@@ -1,64 +1,434 @@
 {
  "film": "1981-possession",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "tentacled creature", "detail": "Anna's 'Faith', which becomes Mark's double", "quote": "after he finds the tentacled creature and the detective's body in her apartment", "confidence": "sourced"},
-   {"value": "spouse turned killer", "detail": "Anna", "quote": "He finds a bizarre creature in the bathroom, after which Anna kills him", "confidence": "sourced"},
-   {"value": "doppelgänger", "quote": "now a fully formed doppelgänger of Mark with green irises", "confidence": "sourced"}
+   {
+    "value": "tentacled creature",
+    "detail": "Anna's 'Faith', which becomes Mark's double",
+    "quote": "after he finds the tentacled creature and the detective's body in her apartment",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:03:21",
+      "quote": "(SQUELCHING AND DEEP BREATHING)"
+     }
+    ]
+   },
+   {
+    "value": "spouse turned killer",
+    "detail": "Anna",
+    "quote": "He finds a bizarre creature in the bathroom, after which Anna kills him",
+    "confidence": "sourced"
+   },
+   {
+    "value": "doppelgänger",
+    "quote": "now a fully formed doppelgänger of Mark with green irises",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "born from a woman", "detail": "Anna miscarries it in the subway", "quote": "she is caring for her Faith in her apartment after violently miscarrying it in the subway", "confidence": "sourced"},
-   {"value": "projection of the mind", "quote": "it may be a reflection of Anna's psychosis; the product of Mark's inflamed consciousness", "confidence": "sourced"}
+   {
+    "value": "born from a woman",
+    "detail": "Anna miscarries it in the subway",
+    "quote": "she is caring for her Faith in her apartment after violently miscarrying it in the subway",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:17",
+      "quote": "What I miscarried there was Sister Faith. And what was left is Sister Chance."
+     }
+    ]
+   },
+   {
+    "value": "projection of the mind",
+    "quote": "it may be a reflection of Anna's psychosis; the product of Mark's inflamed consciousness",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:13",
+      "quote": "I recognise the self who has just done something horrible like the sister I've casually met on the street."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to replace someone", "quote": "Both spouses die, but they are replaced by doubles, ideal models of husband and wife", "confidence": "sourced"}
+   {
+    "value": "to replace someone",
+    "quote": "Both spouses die, but they are replaced by doubles, ideal models of husband and wife",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:57:50",
+      "quote": "I wanted to show it to you. It is finished now."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "infidelity", "quote": "his wife, Anna, is seeing another man and wants to separate", "confidence": "sourced"},
-   {"value": "domestic violence", "quote": "culminating in Mark repeatedly striking Anna", "confidence": "sourced"}
+   {
+    "value": "infidelity",
+    "quote": "his wife, Anna, is seeing another man and wants to separate",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:39",
+      "quote": "Were you unfaithful to me? The truth is not really."
+     }
+    ]
+   },
+   {
+    "value": "domestic violence",
+    "quote": "culminating in Mark repeatedly striking Anna",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "marriage breakdown", "quote": "his wife (Isabelle Adjani), who begins exhibiting increasingly disturbing behavior after asking for a divorce", "confidence": "sourced"}
+   {
+    "value": "marriage breakdown",
+    "quote": "his wife (Isabelle Adjani), who begins exhibiting increasingly disturbing behavior after asking for a divorce",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "anyone who sees it dies", "quote": "killed Margie, who saw the creature", "confidence": "observed"},
-   {"value": "doubles replace originals", "quote": "Anna \"grows\" a double of Mark from the creature", "confidence": "sourced"}
+   {
+    "value": "anyone who sees it dies",
+    "quote": "killed Margie, who saw the creature",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:39:51",
+      "quote": "Did Margie see it? Yes. That's why you killed her. She tried to take it away from me."
+     }
+    ]
+   },
+   {
+    "value": "doubles replace originals",
+    "quote": "Anna \"grows\" a double of Mark from the creature",
+    "confidence": "sourced"
+   },
+   {
+    "value": "creature must be protected",
+    "source": "subtitles",
+    "at": "01:39:57",
+    "quote": "Is this faith that helpless? It needs to be protected. Like a child.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "husband", "relation_to_threat": "lover", "detail": "Mark", "quote": "Mark and Anna share a final kiss before Anna kills herself with his gun, and Mark jumps to his death", "confidence": "sourced"},
-   {"value": "child", "relation_to_threat": "family", "detail": "Bob", "quote": "Bob races to the bathroom and drowns himself in the bath", "confidence": "sourced"},
-   {"value": "investigators", "relation_to_threat": "stranger", "detail": "the detective and Zimmermann", "quote": "Anna kills Zimmermann, the detective's work superior and romantic partner", "confidence": "sourced"},
-   {"value": "lover", "relation_to_threat": "lover", "detail": "Heinrich", "quote": "Anna shows Heinrich the creature and dismembered corpses before stabbing him", "confidence": "sourced"}
+   {
+    "value": "husband",
+    "relation_to_threat": "lover",
+    "detail": "Mark",
+    "quote": "Mark and Anna share a final kiss before Anna kills herself with his gun, and Mark jumps to his death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child",
+    "relation_to_threat": "family",
+    "detail": "Bob",
+    "quote": "Bob races to the bathroom and drowns himself in the bath",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:01:23",
+      "quote": "Please don't open."
+     }
+    ]
+   },
+   {
+    "value": "investigators",
+    "relation_to_threat": "stranger",
+    "detail": "the detective and Zimmermann",
+    "quote": "Anna kills Zimmermann, the detective's work superior and romantic partner",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lover",
+    "relation_to_threat": "lover",
+    "detail": "Heinrich",
+    "quote": "Anna shows Heinrich the creature and dismembered corpses before stabbing him",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "everyone dies", "quote": "Mark and Anna share a final kiss before Anna kills herself with his gun, and Mark jumps to his death", "confidence": "sourced"},
-   {"value": "threat survives", "detail": "the doppelgänger reaches Helen's door", "quote": "Mark's doppelgänger presses his hands on the glass door pane as Helen stares straight ahead", "confidence": "sourced"},
-   {"value": "apocalyptic hint", "quote": "The sounds of sirens, planes, and explosions fill the air outside", "confidence": "sourced"}
+   {
+    "value": "everyone dies",
+    "quote": "Mark and Anna share a final kiss before Anna kills herself with his gun, and Mark jumps to his death",
+    "confidence": "sourced"
+   },
+   {
+    "value": "threat survives",
+    "detail": "the doppelgänger reaches Helen's door",
+    "quote": "Mark's doppelgänger presses his hands on the glass door pane as Helen stares straight ahead",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:01:23",
+      "quote": "Please don't open."
+     }
+    ]
+   },
+   {
+    "value": "apocalyptic hint",
+    "quote": "The sounds of sirens, planes, and explosions fill the air outside",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:01:48",
+      "quote": "(SIREN WAILS)"
+     },
+     {
+      "source": "subtitles",
+      "at": "02:02:15",
+      "quote": "(LOUD EXPLOSIONS)"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "electric knife", "state": "self-harm", "when": "early", "role": "weapon", "quote": "Anna responds by cutting her neck with an electric knife", "confidence": "sourced"},
-   {"value": "green eyes", "when": "early", "role": "mirror", "quote": "looks identical to Anna except for her lighter hair and green eyes", "confidence": "sourced"},
-   {"value": "subway", "when": "middle", "role": "setting", "quote": "after violently miscarrying it in the subway", "confidence": "sourced"},
-   {"value": "dismembered corpses", "when": "late", "role": "clue", "quote": "Anna shows Heinrich the creature and dismembered corpses", "confidence": "sourced"},
-   {"value": "bath", "state": "drowning", "when": "ending", "role": "turn", "quote": "Bob races to the bathroom and drowns himself in the bath", "confidence": "sourced"},
-   {"value": "door", "state": "doorbell ringing", "when": "ending", "role": "threat", "quote": "Bob implores her not to open the door", "confidence": "sourced"},
-   {"value": "berlin wall", "when": "opening", "role": "symbol", "quote": "the wall that separates it from East Berlin being a symbol of disconnection", "confidence": "sourced"}
+   {
+    "value": "electric knife",
+    "state": "self-harm",
+    "when": "early",
+    "role": "weapon",
+    "quote": "Anna responds by cutting her neck with an electric knife",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:11",
+      "quote": "(CARVING KNIFE BUZZES)"
+     }
+    ]
+   },
+   {
+    "value": "green eyes",
+    "when": "early",
+    "role": "mirror",
+    "quote": "looks identical to Anna except for her lighter hair and green eyes",
+    "confidence": "sourced"
+   },
+   {
+    "value": "subway",
+    "when": "middle",
+    "role": "setting",
+    "quote": "after violently miscarrying it in the subway",
+    "confidence": "sourced"
+   },
+   {
+    "value": "dismembered corpses",
+    "when": "late",
+    "role": "clue",
+    "quote": "Anna shows Heinrich the creature and dismembered corpses",
+    "confidence": "sourced"
+   },
+   {
+    "value": "bath",
+    "state": "drowning",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Bob races to the bathroom and drowns himself in the bath",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:15",
+      "quote": "He's actually been in the bath for about an hour."
+     }
+    ]
+   },
+   {
+    "value": "door",
+    "state": "doorbell ringing",
+    "when": "ending",
+    "role": "threat",
+    "quote": "Bob implores her not to open the door",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:01:08",
+      "quote": "It could be your father. Don't open."
+     }
+    ]
+   },
+   {
+    "value": "berlin wall",
+    "when": "opening",
+    "role": "symbol",
+    "quote": "the wall that separates it from East Berlin being a symbol of disconnection",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fly",
+    "state": "buzzing",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:28:58",
+    "quote": "(FLY BUZZING)",
+    "confidence": "sourced"
+   },
+   {
+    "value": "church bells",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:41:59",
+    "quote": "(CHURCH BELLS RINGING)",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:56:16",
+      "quote": "(CHURCH BELLS RINGING)"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "wife asks to separate", "when": "opening", "role": "trigger", "quote": "Mark is a spy who returns home to West Berlin after a mission to discover that his wife, Anna, is seeing another man", "confidence": "sourced"},
-   {"order": 2, "value": "double of wife appears", "when": "early", "role": "mirror", "quote": "Mark meets Bob's teacher, Helen, who inexplicably looks identical to Anna", "confidence": "sourced"},
-   {"order": 3, "value": "investigator finds creature", "when": "middle", "role": "turn", "quote": "He finds a bizarre creature in the bathroom, after which Anna kills him", "confidence": "sourced"},
-   {"order": 4, "value": "origin confessed", "when": "middle", "quote": "she is caring for her Faith in her apartment after violently miscarrying it in the subway", "confidence": "sourced"},
-   {"order": 5, "value": "husband kills rival", "when": "late", "quote": "Mark meets Heinrich, kills him in the bar's toilet, and stages it as an accidental death", "confidence": "sourced"},
-   {"order": 6, "value": "creature becomes double", "when": "late", "role": "turn", "quote": "He is found by Anna and the creature, now a fully formed doppelgänger of Mark", "confidence": "sourced"},
-   {"order": 7, "value": "couple die", "when": "ending", "quote": "Anna kills herself with his gun, and Mark jumps to his death", "confidence": "sourced"},
-   {"order": 8, "value": "double at the door", "when": "ending", "quote": "Mark's doppelgänger presses his hands on the glass door pane", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "wife asks to separate",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Mark is a spy who returns home to West Berlin after a mission to discover that his wife, Anna, is seeing another man",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:39",
+      "quote": "Were you unfaithful to me?"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "rival lover confronts husband",
+    "when": "early",
+    "source": "subtitles",
+    "at": "00:24:45",
+    "quote": "I left the day you arrived to give her the chance to decide for herself.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "double of wife appears",
+    "when": "early",
+    "role": "mirror",
+    "quote": "Mark meets Bob's teacher, Helen, who inexplicably looks identical to Anna",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "investigator finds creature",
+    "when": "middle",
+    "role": "turn",
+    "quote": "He finds a bizarre creature in the bathroom, after which Anna kills him",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:47:40",
+      "quote": "The bathroom doesn't have a window."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "origin confessed",
+    "when": "middle",
+    "quote": "she is caring for her Faith in her apartment after violently miscarrying it in the subway",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:17",
+      "quote": "What I miscarried there was Sister Faith."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "husband kills rival",
+    "when": "late",
+    "quote": "Mark meets Heinrich, kills him in the bar's toilet, and stages it as an accidental death",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "creature becomes double",
+    "when": "late",
+    "role": "turn",
+    "quote": "He is found by Anna and the creature, now a fully formed doppelgänger of Mark",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "couple die",
+    "when": "ending",
+    "quote": "Anna kills herself with his gun, and Mark jumps to his death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:00:32",
+      "quote": "How do you want to finish it?"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "double at the door",
+    "when": "ending",
+    "quote": "Mark's doppelgänger presses his hands on the glass door pane",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:01:03",
+      "quote": "Would you open it please?"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "sirens and explosions",
+    "when": "ending",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "02:01:48",
+    "quote": "(SIREN WAILS)",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

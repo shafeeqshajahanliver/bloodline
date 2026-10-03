@@ -1,62 +1,433 @@
 {
  "film": "1981-ghost-story",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vengeful ghost", "detail": "Eva Galli, returning as Alma", "quote": "Ricky and Don conclude Alma and Eva are the same woman and her ghost has returned for revenge", "confidence": "sourced"},
-   {"value": "human accomplices", "detail": "escaped asylum patients Gregory and Fenny Bate", "quote": "he swerves off the road and is attacked and killed by Fenny Bate, one of Eva's accomplices", "confidence": "sourced"}
+   {
+    "value": "vengeful ghost",
+    "detail": "Eva Galli, returning as Alma",
+    "quote": "Ricky and Don conclude Alma and Eva are the same woman and her ghost has returned for revenge",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:44:56",
+      "quote": "I've come for you."
+     }
+    ]
+   },
+   {
+    "value": "human accomplices",
+    "detail": "escaped asylum patients Gregory and Fenny Bate",
+    "quote": "he swerves off the road and is attacked and killed by Fenny Bate, one of Eva's accomplices",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:00",
+      "quote": "My name is Gregory Bate. Although I've been known by other names, in other places."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "person who died wronged", "detail": "Eva, sunk alive in a pond in 1929", "quote": "As the car descended, Eva stirred inside, screaming and hammering at the back window as the car sank", "confidence": "sourced"}
+   {
+    "value": "person who died wronged",
+    "detail": "Eva, sunk alive in a pond in 1929",
+    "quote": "As the car descended, Eva stirred inside, screaming and hammering at the back window as the car sank",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:40:30",
+      "quote": "Good lord! She's in the pond. Alive."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "revenge", "quote": "her ghost has returned for revenge", "confidence": "sourced"},
-   {"value": "the truth told", "quote": "With the truth about Eva now known, Don is spared from her vengeance", "confidence": "observed"}
+   {
+    "value": "revenge",
+    "quote": "her ghost has returned for revenge",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:46:01",
+      "quote": "And I will see the life run out of you."
+     }
+    ]
+   },
+   {
+    "value": "the truth told",
+    "quote": "With the truth about Eva now known, Don is spared from her vengeance",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "accidental killing covered up", "quote": "Assuming Eva to be dead, they loaded her body into her car and pushed it into a nearby pond", "confidence": "sourced"},
-   {"value": "group secret", "quote": "John, realizing what has happened, pleads with his friends to tell the truth but is rebuffed", "confidence": "sourced"}
+   {
+    "value": "accidental killing covered up",
+    "quote": "Assuming Eva to be dead, they loaded her body into her car and pushed it into a nearby pond",
+    "confidence": "sourced"
+   },
+   {
+    "value": "group secret",
+    "quote": "John, realizing what has happened, pleads with his friends to tell the truth but is rebuffed",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "unexplained", "quote": "when one of them suspects her ghost has been haunting him", "confidence": "observed"}
+   {
+    "value": "unexplained",
+    "quote": "when one of them suspects her ghost has been haunting him",
+    "confidence": "observed"
+   }
   ],
   "rules": [
-   {"value": "takes the shape of a lover", "quote": "after seeing a girl he's been sleeping with turn into a living corpse", "confidence": "sourced"},
-   {"value": "laid to rest by recovering body", "quote": "Ricky tells the authorities to pull Eva's car up from the lake to reveal her body inside", "confidence": "sourced"},
-   {"value": "ends when the truth is known", "quote": "With the truth about Eva now known, Don is spared from her vengeance and the town is restored to peace", "confidence": "sourced"}
+   {
+    "value": "takes the shape of a lover",
+    "quote": "after seeing a girl he's been sleeping with turn into a living corpse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:38",
+      "quote": "I will show you things that you've never seen."
+     }
+    ]
+   },
+   {
+    "value": "laid to rest by recovering body",
+    "quote": "Ricky tells the authorities to pull Eva's car up from the lake to reveal her body inside",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:43:37",
+      "quote": "(ICE CRASHES)"
+     }
+    ]
+   },
+   {
+    "value": "ends when the truth is known",
+    "quote": "With the truth about Eva now known, Don is spared from her vengeance and the town is restored to peace",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "elderly friends", "relation_to_threat": "stranger", "detail": "the Chowder Society, who caused her death", "quote": "a group of elderly businessmen in New England who gather to recount their involvement in a woman's death decades prior", "confidence": "sourced"},
-   {"value": "sons of the guilty", "relation_to_threat": "family", "detail": "David and Don Wanderley", "quote": "Edward's son David, living in New York City, falls to his death from his apartment window", "confidence": "sourced"}
+   {
+    "value": "elderly friends",
+    "relation_to_threat": "stranger",
+    "detail": "the Chowder Society, who caused her death",
+    "quote": "a group of elderly businessmen in New England who gather to recount their involvement in a woman's death decades prior",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:09",
+      "quote": "Milburn, the Chowder Society. Especially the Chowder Society."
+     }
+    ]
+   },
+   {
+    "value": "sons of the guilty",
+    "relation_to_threat": "family",
+    "detail": "David and Don Wanderley",
+    "quote": "Edward's son David, living in New York City, falls to his death from his apartment window",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "ghost laid to rest", "quote": "The rotting corpse of Eva falls harmlessly to the ground", "confidence": "sourced"},
-   {"value": "order restored", "quote": "the town is restored to peace", "confidence": "sourced"}
+   {
+    "value": "ghost laid to rest",
+    "quote": "The rotting corpse of Eva falls harmlessly to the ground",
+    "confidence": "sourced"
+   },
+   {
+    "value": "order restored",
+    "quote": "the town is restored to peace",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "living corpse", "state": "transformed lover", "when": "opening", "role": "threat", "quote": "seeing a girl he's been sleeping with turn into a living corpse", "confidence": "sourced"},
-   {"value": "snowstorm", "when": "early", "role": "setting", "quote": "Edward sees him walking through town during a snowstorm and follows him to a bridge", "confidence": "sourced"},
-   {"value": "bridge", "when": "early", "role": "setting", "quote": "follows him to a bridge, where he disappears", "confidence": "sourced"},
-   {"value": "old photograph", "when": "middle", "role": "clue", "quote": "an old photograph he's found among his father's possessions, showing a young woman who looks identical to Alma", "confidence": "sourced"},
-   {"value": "stone mantelpiece", "when": "middle", "role": "weapon", "quote": "causing her to smash her head on a stone mantelpiece", "confidence": "sourced"},
-   {"value": "car sinking in pond", "state": "woman alive inside", "when": "middle", "role": "clue", "quote": "screaming and hammering at the back window as the car sank", "confidence": "sourced"},
-   {"value": "cold body", "state": "corpse-cold", "when": "middle", "role": "omen", "quote": "he touched her one night and realized she was as cold as a corpse", "confidence": "sourced"},
-   {"value": "rotting corpse", "state": "recovered", "when": "ending", "role": "turn", "quote": "The rotting corpse of Eva falls harmlessly to the ground", "confidence": "sourced"}
+   {
+    "value": "living corpse",
+    "state": "transformed lover",
+    "when": "opening",
+    "role": "threat",
+    "quote": "seeing a girl he's been sleeping with turn into a living corpse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:15",
+      "quote": "What are you? (SCREAMS)"
+     }
+    ]
+   },
+   {
+    "value": "snowstorm",
+    "when": "early",
+    "role": "setting",
+    "quote": "Edward sees him walking through town during a snowstorm and follows him to a bridge",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:51",
+      "quote": "Break out the snowmobiles, boys and girls."
+     }
+    ]
+   },
+   {
+    "value": "bridge",
+    "when": "early",
+    "role": "setting",
+    "quote": "follows him to a bridge, where he disappears",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:34",
+      "quote": "My God! He went off the bridge."
+     }
+    ]
+   },
+   {
+    "value": "old photograph",
+    "when": "middle",
+    "role": "clue",
+    "quote": "an old photograph he's found among his father's possessions, showing a young woman who looks identical to Alma",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:41",
+      "quote": "He's found a picture of her."
+     }
+    ]
+   },
+   {
+    "value": "stone mantelpiece",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "causing her to smash her head on a stone mantelpiece",
+    "confidence": "sourced"
+   },
+   {
+    "value": "car sinking in pond",
+    "state": "woman alive inside",
+    "when": "middle",
+    "role": "clue",
+    "quote": "screaming and hammering at the back window as the car sank",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:27",
+      "quote": "Still at the bottom of the Dedham Pond."
+     }
+    ]
+   },
+   {
+    "value": "cold body",
+    "state": "corpse-cold",
+    "when": "middle",
+    "role": "omen",
+    "quote": "he touched her one night and realized she was as cold as a corpse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:57:18",
+      "quote": "You know like when you touch her? She's cold."
+     }
+    ]
+   },
+   {
+    "value": "rotting corpse",
+    "state": "recovered",
+    "when": "ending",
+    "role": "turn",
+    "quote": "The rotting corpse of Eva falls harmlessly to the ground",
+    "confidence": "sourced"
+   },
+   {
+    "value": "funeral song",
+    "when": "opening",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:00:51",
+    "quote": "Am laid in earth",
+    "confidence": "sourced",
+    "detail": "Purcell's Dido's Lament opens the film and returns later",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:00:59",
+      "quote": "Remember me"
+     }
+    ]
+   },
+   {
+    "value": "disturbed grave",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:04:39",
+    "quote": "The grave had been disturbed, the soil was upset and the cross lay on its side.",
+    "confidence": "sourced",
+    "detail": "in the tale of a woman buried alive told at the club"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "old men share horror tales", "when": "opening", "quote": "an informal men's club who get together weekly to share tales of horror", "confidence": "sourced"},
-   {"order": 2, "value": "son dies", "when": "opening", "quote": "falls to his death from his apartment window after seeing a girl he's been sleeping with turn into a living corpse", "confidence": "sourced"},
-   {"order": 3, "value": "father lured to death", "when": "early", "quote": "Calling out to his dead son, Edward sees a female apparition and he falls to his death", "confidence": "sourced"},
-   {"order": 4, "value": "story of a cold lover", "when": "middle", "quote": "began an affair with a mysterious secretary named Alma", "confidence": "sourced"},
-   {"order": 5, "value": "confession of past crime", "when": "middle", "role": "turn", "quote": "in the spring of 1929, the four friends became smitten with a flirtatious young woman named Eva Galli", "confidence": "sourced"},
-   {"order": 6, "value": "remaining guilty die", "when": "late", "quote": "John has a nightmare about Alma and dies of a heart attack", "confidence": "sourced"},
-   {"order": 7, "value": "body recovered", "when": "ending", "quote": "Ricky and the authorities drag out the car and wrench open the rusted door", "confidence": "sourced"},
-   {"order": 8, "value": "ghost released", "when": "ending", "quote": "Don is spared from her vengeance and the town is restored to peace", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "old men share horror tales",
+    "when": "opening",
+    "quote": "an informal men's club who get together weekly to share tales of horror",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:22",
+      "quote": "I'm alive, still alive."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:06:45",
+      "quote": "To us! Chowder Society!"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "son dies",
+    "when": "opening",
+    "quote": "falls to his death from his apartment window after seeing a girl he's been sleeping with turn into a living corpse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:08:15",
+      "quote": "What are you? (SCREAMS)"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "father lured to death",
+    "when": "early",
+    "quote": "Calling out to his dead son, Edward sees a female apparition and he falls to his death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:34",
+      "quote": "My God! He went off the bridge."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "strange pair appears",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:24:30",
+    "quote": "What are you doing here? What do you want? We want to play.",
+    "confidence": "sourced",
+    "detail": "Gregory Bate and the boy Fenny, the ghost's helpers"
+   },
+   {
+    "order": 5,
+    "value": "story of a cold lover",
+    "when": "middle",
+    "quote": "began an affair with a mysterious secretary named Alma",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:13",
+      "quote": "Alma Mobley."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "confession of past crime",
+    "when": "middle",
+    "role": "turn",
+    "quote": "in the spring of 1929, the four friends became smitten with a flirtatious young woman named Eva Galli",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:49",
+      "quote": "The worst thing that ever happened to us."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:09:57",
+      "quote": "The Chowder Society. In the spring of 50 years ago."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "remaining guilty die",
+    "when": "late",
+    "quote": "John has a nightmare about Alma and dies of a heart attack",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "body recovered",
+    "when": "ending",
+    "quote": "Ricky and the authorities drag out the car and wrench open the rusted door",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:43:37",
+      "quote": "(ICE CRASHES)"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "ghost confronts last survivor",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:44:56",
+    "quote": "I've come for you.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 10,
+    "value": "ghost released",
+    "when": "ending",
+    "quote": "Don is spared from her vengeance and the town is restored to peace",
+    "confidence": "sourced"
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

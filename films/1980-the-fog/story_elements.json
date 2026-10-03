@@ -1,64 +1,580 @@
 {
  "film": "1980-the-fog",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes and interpretations"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes and interpretations"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "vengeful ghosts", "detail": "revenants of Blake and his crew", "quote": "carrying the vengeful revenants of Blake and his crew, who kill the three fishermen", "confidence": "sourced"},
-   {"value": "supernatural fog", "quote": "a strange, glowing fog that sweeps over a small coastal town in Northern California", "confidence": "sourced"}
+   {
+    "value": "vengeful ghosts",
+    "detail": "revenants of Blake and his crew",
+    "quote": "carrying the vengeful revenants of Blake and his crew, who kill the three fishermen",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:15:09",
+      "quote": "Blake and his men have come for us."
+     }
+    ]
+   },
+   {
+    "value": "supernatural fog",
+    "quote": "a strange, glowing fog that sweeps over a small coastal town in Northern California",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:48",
+      "quote": "Suddenly, out of the night, the fog rolled in."
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "people who died wronged", "detail": "the crew of the Elizabeth Dane, deliberately wrecked", "quote": "the six founders of Antonio Bay, including Malone's grandfather, deliberately wrecked a clipper ship named the Elizabeth Dane", "confidence": "sourced"}
+   {
+    "value": "people who died wronged",
+    "detail": "the crew of the Elizabeth Dane, deliberately wrecked",
+    "quote": "the six founders of Antonio Bay, including Malone's grandfather, deliberately wrecked a clipper ship named the Elizabeth Dane",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:46",
+      "quote": "April 20. The six of us met tonight."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "revenge", "quote": "a man's voice is inexplicably heard on the tape, vowing revenge", "confidence": "sourced"},
-   {"value": "lives for lives", "detail": "six to match the six conspirators", "quote": "the revenants have returned to take six lives to match the six original conspirators", "confidence": "sourced"},
-   {"value": "stolen gold returned", "quote": "Blake's revenant seizes the gold cross, and he and his crew disappear", "confidence": "observed"}
+   {
+    "value": "revenge",
+    "quote": "a man's voice is inexplicably heard on the tape, vowing revenge",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:45:51",
+      "quote": "Something that one lives with"
+     },
+     {
+      "source": "subtitles",
+      "at": "00:46:01",
+      "quote": "Damn them all!"
+     }
+    ]
+   },
+   {
+    "value": "lives for lives",
+    "detail": "six to match the six conspirators",
+    "quote": "the revenants have returned to take six lives to match the six original conspirators",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:49",
+      "quote": "That's what they want. They've come back for the six original conspirators."
+     }
+    ]
+   },
+   {
+    "value": "stolen gold returned",
+    "quote": "Blake's revenant seizes the gold cross, and he and his crew disappear",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:39",
+      "quote": "Blake, I have your gold."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "founders' crime", "detail": "wrecking a leper's ship and looting its gold", "quote": "The conspirators used the gold plundered from the ship to establish the town.", "confidence": "sourced"},
-   {"value": "exclusion of the sick", "detail": "to stop a leper colony", "quote": "so that its wealthy, leprosy-afflicted owner, Blake, would not establish a leper colony nearby", "confidence": "sourced"}
+   {
+    "value": "founders' crime",
+    "detail": "wrecking a leper's ship and looting its gold",
+    "quote": "The conspirators used the gold plundered from the ship to establish the town.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:56",
+      "quote": "I tell myself that Blake's gold will allow the church to be built"
+     }
+    ]
+   },
+   {
+    "value": "exclusion of the sick",
+    "detail": "to stop a leper colony",
+    "quote": "so that its wealthy, leprosy-afflicted owner, Blake, would not establish a leper colony nearby",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:37",
+      "quote": "of a leper colony only a mile distant."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "anniversary", "detail": "the town's centennial", "quote": "On the eve of the centennial of the small coastal town of Antonio Bay", "confidence": "sourced"}
+   {
+    "value": "anniversary",
+    "detail": "the town's centennial",
+    "quote": "On the eve of the centennial of the small coastal town of Antonio Bay",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:34",
+      "quote": "One hundred years ago, on the 21st of April,"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "comes with the fog", "quote": "The fog brings with it the Elizabeth Dane", "confidence": "sourced"},
-   {"value": "appeased by returning the gold", "quote": "He offers the gold and himself in exchange for sparing the others", "confidence": "sourced"},
-   {"value": "fixed number must die", "quote": "the words \"6 must die\" appear on the wood before it bursts into flames", "confidence": "sourced"}
+   {
+    "value": "comes with the fog",
+    "quote": "The fog brings with it the Elizabeth Dane",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:09",
+      "quote": "that when the fog returns to Antonio Bay, the men at the bottom of the sea"
+     }
+    ]
+   },
+   {
+    "value": "appeased by returning the gold",
+    "quote": "He offers the gold and himself in exchange for sparing the others",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:28",
+      "quote": "This is your gold, Blake. My grandfather stole it from you. I'm the one who must answer for it."
+     }
+    ]
+   },
+   {
+    "value": "fixed number must die",
+    "quote": "the words \"6 must die\" appear on the wood before it bursts into flames",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:42",
+      "quote": "Six must die. That was on the"
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "townspeople", "relation_to_threat": "community", "quote": "the supernatural vengeance inflicted on the residents of a community that has prospered from looted salvage", "confidence": "sourced"},
-   {"value": "descendant of the wrongdoer", "relation_to_threat": "community", "detail": "Father Malone", "quote": "feels guilty that his ancestor was one of them", "confidence": "sourced"},
-   {"value": "mother and son", "relation_to_threat": "stranger", "detail": "Stevie and Andy", "quote": "Stevie begs her listeners to go to her house and save her son", "confidence": "sourced"}
+   {
+    "value": "townspeople",
+    "relation_to_threat": "community",
+    "quote": "the supernatural vengeance inflicted on the residents of a community that has prospered from looted salvage",
+    "confidence": "sourced"
+   },
+   {
+    "value": "descendant of the wrongdoer",
+    "relation_to_threat": "community",
+    "detail": "Father Malone",
+    "quote": "feels guilty that his ancestor was one of them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:55",
+      "quote": "My grandfather hid his sins in the walls."
+     }
+    ]
+   },
+   {
+    "value": "mother and son",
+    "relation_to_threat": "stranger",
+    "detail": "Stevie and Andy",
+    "quote": "Stevie begs her listeners to go to her house and save her son",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:55",
+      "quote": "My son is trapped! Get him out of the fog!"
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "threat appeased", "quote": "he and his crew disappear in a blinding flash of light as the fog miraculously vanishes", "confidence": "sourced"},
-   {"value": "threat returns", "detail": "Malone killed as the sixth", "quote": "The fog then reappears along with the revenants, and Blake decapitates Malone.", "confidence": "sourced"}
+   {
+    "value": "threat appeased",
+    "quote": "he and his crew disappear in a blinding flash of light as the fog miraculously vanishes",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:31",
+      "quote": "It's going away."
+     }
+    ]
+   },
+   {
+    "value": "threat returns",
+    "detail": "Malone killed as the sixth",
+    "quote": "The fog then reappears along with the revenants, and Blake decapitates Malone.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:13",
+      "quote": "Why not six, Blake?"
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "campfire", "state": "ghost stories told", "when": "opening", "role": "omen", "quote": "tells ghost stories to children by a campfire on the beach", "confidence": "sourced"},
-   {"value": "fog", "state": "glowing", "when": "early", "role": "threat", "quote": "a strange, glowing fog envelops a fishermen's trawler", "confidence": "sourced"},
-   {"value": "diary", "state": "hidden in a wall", "when": "opening", "role": "clue", "quote": "discovers his grandfather's diary when a stone spontaneously falls from a wall in the church", "confidence": "sourced"},
-   {"value": "driftwood", "state": "seeping water, burning", "when": "early", "role": "omen", "quote": "It is inscribed with the word \"DANE\"", "confidence": "sourced"},
-   {"value": "ghost ship", "state": "returning", "when": "early", "role": "threat", "quote": "The fog brings with it the Elizabeth Dane", "confidence": "sourced"},
-   {"value": "corpse", "state": "briefly reviving", "when": "middle", "role": "omen", "quote": "the fisherman's corpse briefly comes to life and accosts her before collapsing", "confidence": "sourced"},
-   {"value": "lighthouse", "state": "besieged", "when": "late", "role": "setting", "quote": "trapped and under siege by the revenants when the fog envelops her lighthouse", "confidence": "sourced"},
-   {"value": "gold cross", "state": "made of stolen gold", "when": "late", "role": "symbol", "quote": "a large gold cross in the wall cavity, fashioned from the remaining stolen gold", "confidence": "sourced"}
+   {
+    "value": "campfire",
+    "state": "ghost stories told",
+    "when": "opening",
+    "role": "omen",
+    "quote": "tells ghost stories to children by a campfire on the beach",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:16",
+      "quote": "but it was a campfire like this one."
+     }
+    ]
+   },
+   {
+    "value": "fog",
+    "state": "glowing",
+    "when": "early",
+    "role": "threat",
+    "quote": "a strange, glowing fog envelops a fishermen's trawler",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:03",
+      "quote": "It's moving down 10th Street."
+     }
+    ]
+   },
+   {
+    "value": "diary",
+    "state": "hidden in a wall",
+    "when": "opening",
+    "role": "clue",
+    "quote": "discovers his grandfather's diary when a stone spontaneously falls from a wall in the church",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:46",
+      "quote": "Blake's gold will be recovered tomorrow, but may the Lord forgive us for what we have done."
+     }
+    ]
+   },
+   {
+    "value": "driftwood",
+    "state": "seeping water, burning",
+    "when": "early",
+    "role": "omen",
+    "quote": "It is inscribed with the word \"DANE\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:10",
+      "quote": "First, it was a gold coin, and then it turned into this neat piece of wood."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:47:26",
+      "quote": "Andy, where did you get that piece of driftwood?"
+     }
+    ]
+   },
+   {
+    "value": "ghost ship",
+    "state": "returning",
+    "when": "early",
+    "role": "threat",
+    "quote": "The fog brings with it the Elizabeth Dane",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:39",
+      "quote": "lay the Elizabeth Dane with her crew,"
+     }
+    ]
+   },
+   {
+    "value": "corpse",
+    "state": "briefly reviving",
+    "when": "middle",
+    "role": "omen",
+    "quote": "the fisherman's corpse briefly comes to life and accosts her before collapsing",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:13",
+      "quote": "A whole body would take a year to decompose,"
+     }
+    ]
+   },
+   {
+    "value": "lighthouse",
+    "state": "besieged",
+    "when": "late",
+    "role": "setting",
+    "quote": "trapped and under siege by the revenants when the fog envelops her lighthouse",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:14:40",
+      "quote": "I'm high tonight in the KAB lighthouse on Spivey Point."
+     }
+    ]
+   },
+   {
+    "value": "gold cross",
+    "state": "made of stolen gold",
+    "when": "late",
+    "role": "symbol",
+    "quote": "a large gold cross in the wall cavity, fashioned from the remaining stolen gold",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:18:35",
+      "quote": "He melted down the gold into this."
+     }
+    ]
+   },
+   {
+    "value": "church bell at midnight",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:03:33",
+    "quote": "[bell tolling]",
+    "confidence": "sourced",
+    "detail": "the bell tolls as the legend ends and the fog's night begins"
+   },
+   {
+    "value": "rhythmic knocking",
+    "state": "three knocks on a door",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:23:38",
+    "quote": "[rhythmical knocking on door]",
+    "confidence": "sourced",
+    "detail": "the revenants knock before they kill; it returns at Stevie's house",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:07:03",
+      "quote": "[rhythmical pounding on door]"
+     }
+    ]
+   },
+   {
+    "value": "dog barking at the sea",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:32:00",
+    "quote": "My dog started to bark at 12: 00 last night and didn't stop until 6: 00 this morning.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:32:09",
+      "quote": "My dog goes crazy and decides to bark at the water."
+     }
+    ]
+   },
+   {
+    "value": "frogs fall silent",
+    "when": "late",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "01:05:48",
+    "quote": "[frogs croaking]",
+    "confidence": "sourced",
+    "detail": "the frogs stop croaking as the fog reaches Stevie's house",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:54",
+      "quote": "[frogs stop croaking]"
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "legend told by a campfire", "when": "opening", "role": "omen", "quote": "old Mr. Machen tells ghost stories to children by a campfire on the beach", "confidence": "sourced"},
-   {"order": 2, "value": "founders' crime revealed", "when": "opening", "role": "turn", "quote": "The journal reveals that a century earlier, on April 21, 1880, the six founders of Antonio Bay", "confidence": "sourced"},
-   {"order": 3, "value": "first deaths at sea", "when": "early", "quote": "carrying the vengeful revenants of Blake and his crew, who kill the three fishermen", "confidence": "sourced"},
-   {"order": 4, "value": "warning from the dead", "when": "early", "role": "omen", "quote": "the words \"6 must die\" appear on the wood before it bursts into flames", "confidence": "sourced"},
-   {"order": 5, "value": "threat moves into town", "when": "middle", "quote": "The fog has returned and starts moving inland, disrupting the town's telephone and power lines", "confidence": "sourced"},
-   {"order": 6, "value": "siege of the church", "when": "late", "quote": "just as the fog begins to envelop the church and the revenants begin their attack", "confidence": "sourced"},
-   {"order": 7, "value": "stolen treasure returned", "when": "late", "role": "turn", "quote": "Blake's revenant seizes the gold cross, and he and his crew disappear in a blinding flash of light", "confidence": "sourced"},
-   {"order": 8, "value": "closing kill", "when": "ending", "quote": "The fog then reappears along with the revenants, and Blake decapitates Malone.", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "legend told by a campfire",
+    "when": "opening",
+    "role": "omen",
+    "quote": "old Mr. Machen tells ghost stories to children by a campfire on the beach",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:15",
+      "quote": "Enough time for one more story,"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "objects come alive at midnight",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:09:17",
+    "quote": "[glass shatters]",
+    "confidence": "sourced",
+    "detail": "windows break, car alarms and horns go off across town"
+   },
+   {
+    "order": 3,
+    "value": "founders' crime revealed",
+    "when": "opening",
+    "role": "turn",
+    "quote": "The journal reveals that a century earlier, on April 21, 1880, the six founders of Antonio Bay",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:37:46",
+      "quote": "April 20. The six of us met tonight."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "first deaths at sea",
+    "when": "early",
+    "quote": "carrying the vengeful revenants of Blake and his crew, who kill the three fishermen",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:50",
+      "quote": "[whispers] Listen. - [loudly] Who's there?"
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "warning from the dead",
+    "when": "early",
+    "role": "omen",
+    "quote": "the words \"6 must die\" appear on the wood before it bursts into flames",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "threat moves into town",
+    "when": "middle",
+    "quote": "The fog has returned and starts moving inland, disrupting the town's telephone and power lines",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:18",
+      "quote": "It's moving faster now."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "siege of the church",
+    "when": "late",
+    "quote": "just as the fog begins to envelop the church and the revenants begin their attack",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:21",
+      "quote": "[pounding gets closer]"
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "stolen treasure returned",
+    "when": "late",
+    "role": "turn",
+    "quote": "Blake's revenant seizes the gold cross, and he and his crew disappear in a blinding flash of light",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:28",
+      "quote": "This is your gold, Blake."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "closing radio warning",
+    "when": "ending",
+    "source": "subtitles",
+    "at": "01:25:08",
+    "quote": "I don't know what happened to Antonio Bay tonight.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:25:42",
+      "quote": "Look for the fog."
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "closing kill",
+    "when": "ending",
+    "quote": "The fog then reappears along with the revenants, and Blake decapitates Malone.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:18",
+      "quote": "Why not me?"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

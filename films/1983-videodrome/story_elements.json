@@ -1,61 +1,443 @@
 {
  "film": "1983-videodrome",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "broadcast signal", "detail": "Videodrome, a snuff show whose signal causes tumors", "quote": "Videodrome carries a broadcast signal that gives malignant brain tumors", "confidence": "sourced"},
-   {"value": "corporate conspiracy", "detail": "Spectacular Optical, a front for an arms company", "quote": "an eyeglasses company that acts as a front for an arms company", "confidence": "sourced"},
-   {"value": "mind control", "quote": "Layers of deception and mind-control conspiracy unfold as he attempts to uncover the signal's source", "confidence": "sourced"}
+   {
+    "value": "broadcast signal",
+    "detail": "Videodrome, a snuff show whose signal causes tumors",
+    "quote": "Videodrome carries a broadcast signal that gives malignant brain tumors",
+    "confidence": "sourced"
+   },
+   {
+    "value": "corporate conspiracy",
+    "detail": "Spectacular Optical, a front for an arms company",
+    "quote": "an eyeglasses company that acts as a front for an arms company",
+    "confidence": "sourced"
+   },
+   {
+    "value": "mind control",
+    "quote": "Layers of deception and mind-control conspiracy unfold as he attempts to uncover the signal's source",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "made by someone", "detail": "Brian O'Blivion's invention, misused by his partners", "quote": "he attempted to stop his partners, only to be killed by his own invention", "confidence": "sourced"}
+   {
+    "value": "made by someone",
+    "detail": "Brian O'Blivion's invention, misused by his partners",
+    "quote": "he attempted to stop his partners, only to be killed by his own invention",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "to control minds", "quote": "a war is being fought to control the minds of the people of North America", "confidence": "sourced"},
-   {"value": "purge of the depraved", "quote": "using Videodrome to kill anyone too obsessed with sex and violence", "confidence": "sourced"}
+   {
+    "value": "to control minds",
+    "quote": "a war is being fought to control the minds of the people of North America",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:43:41",
+      "quote": "which will produce and control hallucination... to the point that it will change human reality."
+     }
+    ]
+   },
+   {
+    "value": "purge of the depraved",
+    "quote": "using Videodrome to kill anyone too obsessed with sex and violence",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:32",
+      "quote": "North America's getting soft, patrón."
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "appetite for violent media", "quote": "Believing this to be the future of television, Max orders Harlan to begin recording the Videodrome broadcasts", "confidence": "observed"}
+   {
+    "value": "appetite for violent media",
+    "quote": "Believing this to be the future of television, Max orders Harlan to begin recording the Videodrome broadcasts",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:15",
+      "quote": "Why deny you get your kicks out of watching torture and murder?"
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "watching something", "quote": "shows Max Videodrome, a plotless show purportedly broadcast from Malaysia depicting victims being violently tortured", "confidence": "sourced"}
+   {
+    "value": "watching something",
+    "quote": "shows Max Videodrome, a plotless show purportedly broadcast from Malaysia depicting victims being violently tortured",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "viewing causes hallucinations", "quote": "complicated by increasingly intense hallucinations that cause him to lose his grip on reality", "confidence": "sourced"},
-   {"value": "body programmed like a machine", "quote": "Convex then inserts a brainwashing Betamax tape into Max's torso", "confidence": "sourced"}
+   {
+    "value": "viewing causes hallucinations",
+    "quote": "complicated by increasingly intense hallucinations that cause him to lose his grip on reality",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:44",
+      "quote": "The signal induces a brain tumor in the viewer. It's the tumor that creates the hallucinations."
+     }
+    ]
+   },
+   {
+    "value": "body programmed like a machine",
+    "quote": "Convex then inserts a brainwashing Betamax tape into Max's torso",
+    "confidence": "sourced"
+   },
+   {
+    "value": "screen is part of the brain",
+    "source": "subtitles",
+    "at": "00:35:31",
+    "quote": "The television screen is the retina of the mind's eye. Therefore, the television screen is part of the physical structure of the brain.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "signal hides under any picture",
+    "source": "subtitles",
+    "at": "00:40:34",
+    "quote": "it can be delivered under a test pattern, anything.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "kill the old flesh",
+    "source": "subtitles",
+    "at": "01:24:53",
+    "quote": "To become the new flesh, you first have to kill the old flesh.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "media executive", "relation_to_threat": "self", "detail": "Max Renn", "quote": "Max's mastery is transformed into a viciously imaged victimhood", "confidence": "sourced"},
-   {"value": "lover", "relation_to_threat": "lover", "detail": "Nicki Brand, murdered on the Videodrome set", "quote": "showing him a videotape of Nicki's murder on the Videodrome set", "confidence": "sourced"}
+   {
+    "value": "media executive",
+    "relation_to_threat": "self",
+    "detail": "Max Renn",
+    "quote": "Max's mastery is transformed into a viciously imaged victimhood",
+    "confidence": "sourced"
+   },
+   {
+    "value": "lover",
+    "relation_to_threat": "lover",
+    "detail": "Nicki Brand, murdered on the Videodrome set",
+    "quote": "showing him a videotape of Nicki's murder on the Videodrome set",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "protagonist kills himself", "quote": "Max utters the words \"Long live the new flesh\" and shoots himself", "confidence": "sourced"},
-   {"value": "transcendence promised", "quote": "he must \"leave the old flesh\" and ascend to the next level", "confidence": "sourced"}
+   {
+    "value": "protagonist kills himself",
+    "quote": "Max utters the words \"Long live the new flesh\" and shoots himself",
+    "confidence": "sourced"
+   },
+   {
+    "value": "transcendence promised",
+    "quote": "he must \"leave the old flesh\" and ascend to the next level",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:24:34",
+      "quote": "the beginning of the new flesh."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "satellite dish", "when": "opening", "role": "trigger", "quote": "the operator of CIVIC-TV's unauthorized satellite dish", "confidence": "sourced"},
-   {"value": "television", "state": "undulating, kissed", "when": "middle", "role": "threat", "quote": "causing his television to undulate as he kisses the screen", "confidence": "sourced"},
-   {"value": "videotape", "state": "recorded messages of a dead man", "when": "middle", "role": "clue", "quote": "Max views a videotape of O'Blivion explaining that Videodrome is a socio-political battleground", "confidence": "sourced"},
-   {"value": "slit in abdomen", "when": "middle", "role": "symbol", "quote": "Max hallucinates placing his handgun in a slit in his abdomen", "confidence": "sourced"},
-   {"value": "corpse in bed", "state": "vanishes", "when": "middle", "role": "turn", "quote": "Max then wakes up at home to find Masha's corpse in his bed", "confidence": "sourced"},
-   {"value": "gun fused to hand", "when": "late", "role": "weapon", "quote": "after Max shoots him with a gun fused to his hand", "confidence": "sourced"},
-   {"value": "tumors", "state": "erupting", "when": "late", "role": "threat", "quote": "whose body erupts into massive tumors and tears itself apart", "confidence": "sourced"},
-   {"value": "derelict boat", "when": "ending", "role": "setting", "quote": "Max takes refuge on a derelict boat in the Port Lands", "confidence": "sourced"}
+   {
+    "value": "satellite dish",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "the operator of CIVIC-TV's unauthorized satellite dish",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:05",
+      "quote": "Pittsburgh. That's in the U.S.A."
+     }
+    ]
+   },
+   {
+    "value": "television",
+    "state": "undulating, kissed",
+    "when": "middle",
+    "role": "threat",
+    "quote": "causing his television to undulate as he kisses the screen",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:31",
+      "quote": "The television screen is the retina of the mind's eye."
+     }
+    ]
+   },
+   {
+    "value": "videotape",
+    "state": "recorded messages of a dead man",
+    "when": "middle",
+    "role": "clue",
+    "quote": "Max views a videotape of O'Blivion explaining that Videodrome is a socio-political battleground",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:35:18",
+      "quote": "[Tape Loads, Clicks]"
+     }
+    ]
+   },
+   {
+    "value": "slit in abdomen",
+    "when": "middle",
+    "role": "symbol",
+    "quote": "Max hallucinates placing his handgun in a slit in his abdomen",
+    "confidence": "sourced"
+   },
+   {
+    "value": "corpse in bed",
+    "state": "vanishes",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Max then wakes up at home to find Masha's corpse in his bed",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:19",
+      "quote": "and I want you to take a look at what's in my bed."
+     }
+    ]
+   },
+   {
+    "value": "gun fused to hand",
+    "when": "late",
+    "role": "weapon",
+    "quote": "after Max shoots him with a gun fused to his hand",
+    "confidence": "sourced"
+   },
+   {
+    "value": "tumors",
+    "state": "erupting",
+    "when": "late",
+    "role": "threat",
+    "quote": "whose body erupts into massive tumors and tears itself apart",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:36:24",
+      "quote": "I had a brain tumor... and I had visions."
+     }
+    ]
+   },
+   {
+    "value": "derelict boat",
+    "when": "ending",
+    "role": "setting",
+    "quote": "Max takes refuge on a derelict boat in the Port Lands",
+    "confidence": "sourced"
+   },
+   {
+    "value": "video wake-up call",
+    "when": "opening",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:00:55",
+    "quote": "[Announcer] Civic TV... the one you take to bed with you.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "electrified clay wall",
+    "when": "opening",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:07:51",
+    "quote": "What is that wall behind her? What is that, clay?",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:57",
+      "quote": "I think it's electrified."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "red dress",
+    "when": "early",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:10:52",
+    "quote": "It's very stimulating, and - and it's red.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "hallucination recorder",
+    "detail": "headset that tapes Max's visions",
+    "when": "middle",
+    "role": "weapon",
+    "source": "subtitles",
+    "at": "00:49:50",
+    "quote": "I would like to use this machine to record one of your hallucinations now.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "forbidden broadcast discovered", "when": "opening", "role": "trigger", "quote": "Harlan, the operator of CIVIC-TV's unauthorized satellite dish, shows Max Videodrome", "confidence": "sourced"},
-   {"order": 2, "value": "lover vanishes", "when": "early", "quote": "she goes to audition for the show but never returns", "confidence": "sourced"},
-   {"order": 3, "value": "hallucinations begin", "when": "middle", "quote": "Max then hallucinates Nicki speaking directly to him", "confidence": "sourced"},
-   {"order": 4, "value": "signal's purpose revealed", "when": "middle", "role": "turn", "quote": "Bianca tells him that Videodrome carries a broadcast signal that gives malignant brain tumors", "confidence": "sourced"},
-   {"order": 5, "value": "protagonist programmed to kill", "when": "late", "role": "turn", "quote": "Under Convex's influence, Max kills his partners at CIVIC-TV", "confidence": "sourced"},
-   {"order": 6, "value": "reprogrammed by other side", "when": "late", "quote": "Bianca then \"reprograms\" Max to her father's cause", "confidence": "sourced"},
-   {"order": 7, "value": "conspirators killed", "when": "late", "quote": "whose body erupts into massive tumors and tears itself apart", "confidence": "sourced"},
-   {"order": 8, "value": "suicide as ascension", "when": "ending", "quote": "Reenacting what he has just seen, Max utters the words \"Long live the new flesh\" and shoots himself", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "woken by a videotape",
+    "when": "opening",
+    "role": "mirror",
+    "source": "subtitles",
+    "at": "00:00:55",
+    "quote": "[Announcer] Civic TV... the one you take to bed with you.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "forbidden broadcast discovered",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Harlan, the operator of CIVIC-TV's unauthorized satellite dish, shows Max Videodrome",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:23",
+      "quote": "- Torture, murder... - [Air Hisses]"
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "lover vanishes",
+    "when": "early",
+    "quote": "she goes to audition for the show but never returns",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:59",
+      "quote": "[Nicki] I'm gonna audition."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "hallucinations begin",
+    "when": "middle",
+    "quote": "Max then hallucinates Nicki speaking directly to him",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "hallucination taped",
+    "when": "middle",
+    "source": "subtitles",
+    "at": "00:49:50",
+    "quote": "I would like to use this machine to record one of your hallucinations now.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "signal's purpose revealed",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Bianca tells him that Videodrome carries a broadcast signal that gives malignant brain tumors",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:32",
+      "quote": "North America's getting soft, patrón."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "protagonist programmed to kill",
+    "when": "late",
+    "role": "turn",
+    "quote": "Under Convex's influence, Max kills his partners at CIVIC-TV",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:08:51",
+      "quote": "[Convex] Kill Bianca O'Blivion."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "reprogrammed by other side",
+    "when": "late",
+    "quote": "Bianca then \"reprograms\" Max to her father's cause",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:49",
+      "quote": "[Exhales] I am the video word made flesh."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "conspirators killed",
+    "when": "late",
+    "quote": "whose body erupts into massive tumors and tears itself apart",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:20:43",
+      "quote": "Death to Videodrome! Long live the new flesh!"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "suicide as ascension",
+    "when": "ending",
+    "quote": "Reenacting what he has just seen, Max utters the words \"Long live the new flesh\" and shoots himself",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:35",
+      "quote": "Long live the new flesh."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

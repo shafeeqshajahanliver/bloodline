@@ -1,58 +1,465 @@
 {
  "film": "1975-jaws",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot", "Themes"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot",
+    "Themes"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "man-eating animal", "detail": "a great white shark", "quote": "hunts a man-eating great white shark that attacks beachgoers at a New England resort town", "confidence": "sourced"}
+   {
+    "value": "man-eating animal",
+    "detail": "a great white shark",
+    "quote": "hunts a man-eating great white shark that attacks beachgoers at a New England resort town",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:52:38",
+      "quote": "All this machine does is swim and eat"
+     }
+    ]
+   }
   ],
   "origin": [
-   {"value": "from nature", "quote": "with the core of a nature-based monster movie while adding elements of a slasher film", "confidence": "sourced"}
+   {
+    "value": "from nature",
+    "quote": "with the core of a nature-based monster movie while adding elements of a slasher film",
+    "confidence": "sourced"
+   }
   ],
   "wants": [
-   {"value": "hunger", "quote": "The shark leaps onto the boat's stern, subsequently devouring Quint", "confidence": "observed"}
+   {
+    "value": "hunger",
+    "quote": "The shark leaps onto the boat's stern, subsequently devouring Quint",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:54",
+      "quote": "Opening the beaches on the Fourth of July is like"
+     }
+    ]
+   }
   ],
   "wrong": [
-   {"value": "authorities hide the danger", "detail": "the mayor protects the summer economy", "quote": "Mayor Larry Vaughn persuades him to reconsider, fearing the town's summer economy will suffer", "confidence": "sourced"}
+   {
+    "value": "authorities hide the danger",
+    "detail": "the mayor protects the summer economy",
+    "quote": "Mayor Larry Vaughn persuades him to reconsider, fearing the town's summer economy will suffer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:12:48",
+      "quote": "Well, I think, uh, possibly, uh, yes, a boating accident."
+     },
+     {
+      "source": "subtitles",
+      "at": "00:53:21",
+      "quote": "But those beaches will be open for this weekend."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "night swim", "quote": "a young woman goes for a late-night ocean swim. An unseen force attacks and pulls her underwater", "confidence": "sourced"}
+   {
+    "value": "night swim",
+    "quote": "a young woman goes for a late-night ocean swim. An unseen force attacks and pulls her underwater",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:03:31",
+      "quote": "Come on in the water!"
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "warning ignored", "quote": "Vaughn dismisses Brody and Hooper's assertions that a great white shark caused the deaths and refuses to close the beaches", "confidence": "sourced"},
-   {"value": "cannot be stopped by ordinary means", "quote": "harpoons it with a line attached to a flotation barrel, but the shark pulls it underwater and disappears", "confidence": "sourced"}
+   {
+    "value": "warning ignored",
+    "quote": "Vaughn dismisses Brody and Hooper's assertions that a great white shark caused the deaths and refuses to close the beaches",
+    "confidence": "sourced"
+   },
+   {
+    "value": "cannot be stopped by ordinary means",
+    "quote": "harpoons it with a line attached to a flotation barrel, but the shark pulls it underwater and disappears",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:45:18",
+      "quote": "He can't stay down with three barrels on him."
+     }
+    ]
+   }
   ],
   "who_suffers": [
-   {"value": "beachgoers", "relation_to_threat": "community", "quote": "Brody reluctantly accepts their conclusion until a young boy is killed at a crowded beach", "confidence": "sourced"},
-   {"value": "child", "relation_to_threat": "family", "detail": "Brody's son Michael", "quote": "nearly killing Brody's son, Michael, who is hospitalized with shock", "confidence": "sourced"},
-   {"value": "hunters", "relation_to_threat": "stranger", "detail": "Quint, Hooper and Brody", "quote": "the three head out to sea on Quint's boat, the Orca, to hunt for the shark", "confidence": "sourced"}
+   {
+    "value": "beachgoers",
+    "relation_to_threat": "community",
+    "quote": "Brody reluctantly accepts their conclusion until a young boy is killed at a crowded beach",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child",
+    "relation_to_threat": "family",
+    "detail": "Brody's son Michael",
+    "quote": "nearly killing Brody's son, Michael, who is hospitalized with shock",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:01:45",
+      "quote": "Michael's in the pond."
+     }
+    ]
+   },
+   {
+    "value": "hunters",
+    "relation_to_threat": "stranger",
+    "detail": "Quint, Hooper and Brody",
+    "quote": "the three head out to sea on Quint's boat, the Orca, to hunt for the shark",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "threat destroyed", "quote": "shoots the tank with a rifle. The resulting explosion kills the shark", "confidence": "sourced"},
-   {"value": "survivors return", "quote": "Hooper resurfaces, and he and Brody paddle back to shore, clinging to the remaining barrels", "confidence": "sourced"}
+   {
+    "value": "threat destroyed",
+    "quote": "shoots the tank with a rifle. The resulting explosion kills the shark",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:00:12",
+      "quote": "Smile, you son of a bitch!"
+     }
+    ]
+   },
+   {
+    "value": "survivors return",
+    "quote": "Hooper resurfaces, and he and Brody paddle back to shore, clinging to the remaining barrels",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:02:20",
+      "quote": "I used to hate the water."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "partial remains", "state": "washed up", "when": "opening", "role": "omen", "quote": "Her partial remains are found washed up on the beach the next morning", "confidence": "sourced"},
-   {"value": "shark tooth", "state": "embedded in a hull", "when": "middle", "role": "clue", "quote": "finds a large shark tooth embedded into it", "confidence": "sourced"},
-   {"value": "severed head", "when": "middle", "role": "omen", "quote": "He drops the tooth after encountering Gardner's severed head", "confidence": "sourced"},
-   {"value": "barrels", "state": "attached to the shark", "when": "late", "role": "clue", "quote": "the cleats break off; the barrels stay attached to the shark", "confidence": "sourced"},
-   {"value": "shark cage", "state": "destroyed", "when": "late", "role": "setting", "quote": "While the shark destroys the cage, Hooper escapes to the ocean bottom", "confidence": "sourced"},
-   {"value": "scuba tank", "state": "exploding", "when": "ending", "role": "weapon", "quote": "Brody thrusts a scuba tank into the shark's mouth", "confidence": "sourced"},
-   {"value": "scars", "when": "late", "role": "symbol", "quote": "Quint and Hooper drunkenly exchange stories about their assorted body scars", "confidence": "sourced"}
+   {
+    "value": "view from inside the jaws",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "suggesting that we are inside of a tremendous gullet, looking out at the onrushing undersea world at night.",
+    "detail": "the script opens from the shark's point of view",
+    "confidence": "sourced"
+   },
+   {
+    "value": "partial remains",
+    "state": "washed up",
+    "when": "opening",
+    "role": "omen",
+    "quote": "Her partial remains are found washed up on the beach the next morning",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:38",
+      "quote": "The right arm has been severed"
+     }
+    ]
+   },
+   {
+    "value": "missing dog",
+    "state": "vanished in the surf",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:16:45",
+    "quote": "Tippet! Come on, Tippet!",
+    "detail": "the owner calls for his dog, Tippet, after the Kintner attack",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The Man is throwing a stick out into the surf, the dog, a happy retriever, is bounding into the waves after it."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "torn bloody raft",
+    "when": "early",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "Alex Kintner's raft washes in behind him, ripped in half, the water pink",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:47",
+      "quote": "I'm going to get my raft and go back out in the water."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "shark tooth",
+    "state": "embedded in a hull",
+    "when": "middle",
+    "role": "clue",
+    "quote": "finds a large shark tooth embedded into it",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:00",
+      "quote": "I pulled a tooth the size of a shot glass"
+     }
+    ]
+   },
+   {
+    "value": "severed head",
+    "when": "middle",
+    "role": "omen",
+    "quote": "He drops the tooth after encountering Gardner's severed head",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "A White! A Great White, I found a tooth buried in the hull. He must've attacked... I knew it... Gardner's dead in there."
+     }
+    ]
+   },
+   {
+    "value": "barrels",
+    "state": "attached to the shark",
+    "when": "late",
+    "role": "clue",
+    "quote": "the cleats break off; the barrels stay attached to the shark",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:12:57",
+      "quote": "Had to stick two barrels in him."
+     }
+    ]
+   },
+   {
+    "value": "shark cage",
+    "state": "destroyed",
+    "when": "late",
+    "role": "setting",
+    "quote": "While the shark destroys the cage, Hooper escapes to the ocean bottom",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:09:51",
+      "quote": "An anti-shark cage."
+     }
+    ]
+   },
+   {
+    "value": "scuba tank",
+    "state": "exploding",
+    "when": "ending",
+    "role": "weapon",
+    "quote": "Brody thrusts a scuba tank into the shark's mouth",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:13:47",
+      "quote": "You screw around with these tanks,"
+     },
+     {
+      "source": "subtitles",
+      "at": "01:59:47",
+      "quote": "Show me the tank. Show me the tank."
+     }
+    ]
+   },
+   {
+    "value": "scars",
+    "when": "late",
+    "role": "symbol",
+    "quote": "Quint and Hooper drunkenly exchange stories about their assorted body scars",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:28",
+      "quote": "Right there. Mary Ellen Moffit."
+     }
+    ]
+   },
+   {
+    "value": "shark's black eyes",
+    "when": "late",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "01:30:54",
+    "quote": "he's got lifeless eyes.",
+    "detail": "Quint: 'Black eyes, like a doll's eyes'",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "night attack on a swimmer", "when": "opening", "quote": "An unseen force attacks and pulls her underwater", "confidence": "sourced"},
-   {"order": 2, "value": "authorities cover it up", "when": "early", "quote": "now concurs with the mayor's theory that it was a boating accident", "confidence": "sourced"},
-   {"order": 3, "value": "child killed in public", "when": "early", "role": "turn", "quote": "a young boy is killed at a crowded beach", "confidence": "sourced"},
-   {"order": 4, "value": "false resolution", "when": "middle", "quote": "When local fishermen catch a tiger shark, Vaughn declares the beaches safe", "confidence": "sourced"},
-   {"order": 5, "value": "hero's family endangered", "when": "middle", "quote": "nearly killing Brody's son, Michael, who is hospitalized with shock", "confidence": "sourced"},
-   {"order": 6, "value": "hunters set out", "when": "middle", "quote": "the three head out to sea on Quint's boat, the Orca, to hunt for the shark", "confidence": "sourced"},
-   {"order": 7, "value": "mentor devoured", "when": "late", "quote": "The shark leaps onto the boat's stern, subsequently devouring Quint", "confidence": "sourced"},
-   {"order": 8, "value": "monster blown up", "when": "ending", "quote": "The resulting explosion kills the shark", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "night attack on a swimmer",
+    "when": "opening",
+    "quote": "An unseen force attacks and pulls her underwater",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:04:11",
+      "quote": "Oh, God, help!"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "authorities cover it up",
+    "when": "early",
+    "quote": "now concurs with the mayor's theory that it was a boating accident",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:14",
+      "quote": "Probable boating accident."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "child killed in public",
+    "when": "early",
+    "role": "turn",
+    "quote": "a young boy is killed at a crowded beach",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:12",
+      "quote": "Alex Kintner is the kid who was missing at the beach."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "false resolution",
+    "when": "middle",
+    "quote": "When local fishermen catch a tiger shark, Vaughn declares the beaches safe",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:34:22",
+      "quote": "Tiger shark."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "hero's family endangered",
+    "when": "middle",
+    "quote": "nearly killing Brody's son, Michael, who is hospitalized with shock",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "hunters set out",
+    "when": "middle",
+    "quote": "the three head out to sea on Quint's boat, the Orca, to hunt for the shark",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:44",
+      "quote": "This is Amity Point Light Station to Orca."
+     }
+    ]
+   },
+   {
+    "value": "first sight of the monster",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:21:20",
+    "quote": "You're gonna need a bigger boat.",
+    "confidence": "sourced",
+    "order": 7
+   },
+   {
+    "value": "survivor's war story",
+    "when": "late",
+    "source": "subtitles",
+    "at": "01:29:40",
+    "quote": "1,100 men went into the water.",
+    "detail": "Quint's USS Indianapolis speech",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "You were on the Indianapolis? In '45? Jesus..."
+     }
+    ],
+    "confidence": "sourced",
+    "order": 8
+   },
+   {
+    "order": 9,
+    "value": "mentor devoured",
+    "when": "late",
+    "quote": "The shark leaps onto the boat's stern, subsequently devouring Quint",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:57:11",
+      "quote": "[Quint screaming]"
+     }
+    ]
+   },
+   {
+    "order": 10,
+    "value": "monster blown up",
+    "when": "ending",
+    "quote": "The resulting explosion kills the shark",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "02:00:14",
+      "quote": "[gun fires]"
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

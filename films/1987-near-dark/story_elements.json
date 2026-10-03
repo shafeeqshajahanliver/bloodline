@@ -7,6 +7,9 @@
     "Lead",
     "Plot"
    ]
+  },
+  {
+   "file": "script/screenplay.txt"
   }
  ],
  "plot_quality": "full",
@@ -37,21 +40,39 @@
     "value": "a companion",
     "detail": "Homer wants Sarah",
     "quote": "wants to turn her into his companion",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "I turned Mae. She went off.an' turned you. Now I'm turnin' your little sister."
+     }
+    ]
    }
   ],
   "trigger": [
    {
     "value": "a bite from a stranger",
     "quote": "Just before sunrise, she bites him on the neck and runs off",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "She rips her blood moistened lips from his neck"
+     }
+    ]
    }
   ],
   "rules": [
    {
     "value": "burned by sunlight",
     "quote": "The rising sun causes Caleb's flesh to smoke and burn",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Normal folks· don't burn up in everyday sunshine"
+     }
+    ]
    },
    {
     "value": "cured by transfusion",
@@ -61,7 +82,25 @@
    {
     "value": "must kill to feed",
     "quote": "Mae kills for him and then has him drink from her wrist",
-    "confidence": "observed"
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Tonight you make a kill. How you do it is your business. You do it, or you're done."
+     }
+    ]
+   },
+   {
+    "value": "bullets do not kill",
+    "source": "screenplay",
+    "quote": "Normal f.olks, they don't spit out bullets after you shoot them.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "feeding can kill the giver",
+    "source": "screenplay",
+    "quote": "You could kill me if you drink too much.",
+    "confidence": "sourced"
    }
   ],
   "who_suffers": [
@@ -70,7 +109,13 @@
     "relation_to_threat": "lover",
     "detail": "Caleb, turned by Mae",
     "quote": "Mae reveals that she has already turned him",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "He's turned by now."
+     }
+    ]
    },
    {
     "value": "sister",
@@ -104,7 +149,13 @@
     "when": "opening",
     "role": "omen",
     "quote": "The rising sun causes Caleb's flesh to smoke and burn",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Smoke rises from his fingers. His skin stinging."
+     }
+    ]
    },
    {
     "value": "rv",
@@ -118,21 +169,39 @@
     "when": "early",
     "role": "symbol",
     "quote": "has him drink from her wrist",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Turning a glistening white wrist to her lips. And sinks her teeth into the skin."
+     }
+    ]
    },
    {
     "value": "burning bar",
     "when": "early",
     "role": "setting",
     "quote": "They set the bar on fire and flee the scene",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "squat barn of a Roadhouse going up in flames."
+     }
+    ]
    },
    {
     "value": "sunlight through door",
     "when": "middle",
     "role": "weapon",
     "quote": "Sarah opens a door, letting in the sunlight and forcing the vampires back",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "A shaft of sunlight shoots through the bullet hole in the door."
+     }
+    ]
    },
    {
     "value": "bullet",
@@ -140,7 +209,13 @@
     "when": "middle",
     "role": "clue",
     "quote": "Jesse taunts him into shooting him, then regurgitates the bullet",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Spitting the used bullet into the palm of his hand."
+     }
+    ]
    },
    {
     "value": "horse",
@@ -148,7 +223,13 @@
     "when": "late",
     "role": "setting",
     "quote": "gives chase on horseback. When the horse shies and throws him",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Grabbing a fistful cf reins and hurling himself onto the animal's back."
+     }
+    ]
    },
    {
     "value": "tractor-trailer",
@@ -156,12 +237,84 @@
     "when": "late",
     "role": "weapon",
     "quote": "Caleb jackknifes the vehicle and jumps out as the truck explodes, killing Severen",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The truck crushes like a tin can. EXPLODES into a million pieces."
+     }
+    ]
+   },
+   {
+    "value": "mosquito",
+    "state": "bursting with blood",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "A MOSQUITO alights on a human arm.",
+    "confidence": "sourced",
+    "detail": "Caleb traps a feeding mosquito until it pops: 'Dumb suck'",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Blood engorges it, swelling its body. It swells. swells. POPS in a SPRITZ of blood."
+     }
+    ]
+   },
+   {
+    "value": "frightened horse",
+    "state": "shying",
+    "when": "early",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "the horse backs so abruptly it almost trips. Eyes wild with fear.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "MAE Horses don't like me."
+     }
+    ]
+   },
+   {
+    "value": "rooster crow",
+    "when": "early",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "Mae's ears perk at the rooster crow.",
+    "confidence": "sourced"
+   },
+   {
+    "value": "coyotes",
+    "state": "running",
+    "when": "middle",
+    "role": "symbol",
+    "source": "screenplay",
+    "quote": "Caleb and Mae YI~ back. Barreling across the badlands with the running Coyotes",
     "confidence": "sourced"
    }
   ],
   "beats": [
    {
     "order": 1,
+    "value": "insect gorges on blood",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "insectile body becomes full and red as it sucks the blood",
+    "confidence": "sourced"
+   },
+   {
+    "order": 2,
+    "value": "animal shies from stranger",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "Diesel shies. Caleb tries to shush it.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
     "value": "seduced and bitten",
     "when": "opening",
     "role": "trigger",
@@ -169,50 +322,88 @@
     "confidence": "sourced"
    },
    {
-    "order": 2,
+    "order": 4,
     "value": "taken in by the pack",
     "when": "opening",
     "quote": "Jesse Hooker, reluctantly agrees to allow Caleb to remain with them for a week",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "If he's turned ... JESSE ... He comes with us."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "told to learn to kill",
+    "when": "early",
+    "source": "screenplay",
+    "quote": "Yo~ have to learn to kill. CALEB I don't want to kill.",
     "confidence": "sourced"
    },
    {
-    "order": 3,
+    "order": 6,
     "value": "massacre",
     "when": "early",
     "quote": "Jesse's group enters a bar and kills the occupants",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Six tall silhouettes approach. A big, squat barn with a neon sign on the window."
+     }
+    ]
    },
    {
-    "order": 4,
+    "order": 7,
     "value": "family comes looking",
     "when": "middle",
     "quote": "Caleb's father arrives and holds them at gunpoint, demanding that Sarah be released",
     "confidence": "sourced"
    },
    {
-    "order": 5,
+    "order": 8,
     "value": "cure found",
     "when": "middle",
     "role": "turn",
     "quote": "The transfusion unexpectedly reverses Caleb's transformation",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The blood transfusion apparat~s rising· above her."
+     }
+    ]
    },
    {
-    "order": 6,
+    "order": 9,
     "value": "sister kidnapped",
     "when": "late",
     "quote": "the others kidnap his sister",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Homer hugs a struggling, breathless Sarah to his chest."
+     }
+    ]
    },
    {
-    "order": 7,
+    "order": 10,
     "value": "pack destroyed at dawn",
     "when": "ending",
     "quote": "Jesse and Diamondback also begin to burn. They attempt to run Caleb and Sarah over but fail",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "As he explodes in a small ball of flames. Igniting like the head of a match."
+     }
+    ]
    },
    {
-    "order": 8,
+    "order": 11,
     "value": "lover cured",
     "when": "ending",
     "quote": "Mae says she is afraid, and Caleb pulls her into a hug to comfort her as the film ends",
@@ -225,5 +416,6 @@
  ],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

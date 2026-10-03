@@ -7,6 +7,12 @@
     "Lead",
     "Plot"
    ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
   }
  ],
  "plot_quality": "full",
@@ -16,7 +22,14 @@
     "value": "child-eating demon",
     "detail": "Bughuul, a Babylonian god",
     "quote": "Babylonian god Bughuul, who lures children into his realm and consumes their souls",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:41",
+      "quote": "Named Bughuul, the eater of children."
+     }
+    ]
    },
    {
     "value": "possessed child",
@@ -40,14 +53,28 @@
    {
     "value": "summoned through images",
     "quote": "Bughuul was summoned through artwork of him, and that he possessed children who see them",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:21",
+      "quote": "Early Christians believed that Bughuul actually lived in the images themselves"
+     }
+    ]
    }
   ],
   "wants": [
    {
     "value": "children's souls",
     "quote": "lures children into his realm and consumes their souls",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:58",
+      "quote": "Well, Bughuul eats children."
+     }
+    ]
    }
   ],
   "wrong": [
@@ -59,7 +86,14 @@
    {
     "value": "deceiving family for ambition",
     "quote": "Tracy is furious that Ellison moved them into the site of a crime without her knowledge",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:19:01",
+      "quote": "The previous owners of this home were hung from a tree in our backyard?"
+     }
+    ]
    }
   ],
   "trigger": [
@@ -78,16 +112,45 @@
    {
     "value": "children who watch are possessed",
     "quote": "he possessed children who see them",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:32:43",
+      "quote": "Children exposed to the images were especially vulnerable to Bughuul's possession and / or abduction."
+     }
+    ]
    },
    {
     "value": "fleeing the house triggers it",
     "quote": "the pattern of families being killed after moving in and fleeing from the previous victims' house",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:36",
+      "quote": "Listen, Mr Oswalt, you just moved out of the last house in line."
+     }
+    ]
    },
    {
     "value": "one child vanishes",
     "quote": "with a child from each family having disappeared",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:51:55",
+      "quote": "One of their sons, nine years old, they never found him."
+     }
+    ]
+   },
+   {
+    "value": "images are gateways",
+    "source": "subtitles",
+    "at": "01:32:21",
+    "quote": "Early Christians believed that Bughuul actually lived in the images themselves and that they were gateways into his realm.",
+    "detail": "destroying an image closes the gateway, in the stories",
     "confidence": "sourced"
    }
   ],
@@ -128,11 +191,38 @@
   ],
   "images": [
    {
+    "value": "hanging tree",
+    "when": "opening",
+    "role": "setting",
+    "source": "screenplay",
+    "quote": "A LARGE, LEAFLESS TREE sits ominously in frame.",
+    "detail": "the backyard tree from the first reel; Trevor draws it at school",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:31:20",
+      "quote": "I drew a tree. With four people hanging from it."
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
     "value": "scorpion",
     "when": "early",
     "role": "omen",
     "quote": "a box containing a scorpion, a projector, and film reels",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:39",
+      "quote": "I did kill a scorpion when we first moved in here."
+     },
+     {
+      "source": "screenplay",
+      "quote": "On the floor next the grey cardboard box is a BLACK SCORPION."
+     }
+    ]
    },
    {
     "value": "snake",
@@ -140,7 +230,14 @@
     "when": "early",
     "role": "omen",
     "quote": "Ellison finds a king snake and childlike doodles of the killings",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:15",
+      "quote": "I did see a small snake, though."
+     }
+    ]
    },
    {
     "value": "dog",
@@ -149,7 +246,18 @@
     "when": "early",
     "role": "omen",
     "quote": "Ellison later encounters a Rottweiler in the garden, which flees",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:56:50",
+      "quote": "(DOG GROWLS)"
+     },
+     {
+      "source": "screenplay",
+      "quote": "Standing in the brush right behind Ellison are THE SILHOUETTES OF SIX CHILDREN, their faces unrecognizable in the dark."
+     }
+    ]
    },
    {
     "value": "film reels",
@@ -157,6 +265,22 @@
     "when": "early",
     "role": "threat",
     "quote": "The footage displays families being murdered in various ways, such as drowning and immolation",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:42:26",
+      "quote": "Family Hanging Out. Pool Party. Barbecue. Sleepy Time."
+     }
+    ]
+   },
+   {
+    "value": "lawn mower",
+    "when": "middle",
+    "role": "weapon",
+    "source": "screenplay",
+    "quote": "There is a lawn mower lowering onto DAD.",
+    "detail": "the reel labelled Lawn Work '86",
     "confidence": "sourced"
    },
    {
@@ -165,13 +289,42 @@
     "when": "late",
     "role": "threat",
     "quote": "Ellison finds the undamaged projector and reels",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:40",
+      "quote": "(FILM WHIRS)"
+     }
+    ]
    },
    {
     "value": "children's drawings",
     "when": "early",
     "role": "clue",
     "quote": "childlike doodles of the killings, which feature a figure called \"Mr.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "There is a stick figure hiding behind the tree. It is labeled as well: MR. BOOGIE."
+     }
+    ]
+   },
+   {
+    "value": "paintings on the wall",
+    "when": "middle",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "00:04:29",
+    "quote": "Paint only goes in the bedroom.",
+    "detail": "Ashley's paintings show the dead girl Stephanie and the hanging tree",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "On the wall, in fresh paint, is A PAINTING OF A LITTLE GIRL that looks remarkably like Stephanie."
+     }
+    ],
     "confidence": "sourced"
    },
    {
@@ -179,80 +332,177 @@
     "when": "early",
     "role": "clue",
     "quote": "He notices a cultic symbol and a strange figure in the film",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:31",
+      "quote": "It's a symbol associated with the worship of a pagan deity."
+     }
+    ]
    },
    {
     "value": "axe",
     "when": "ending",
     "role": "weapon",
     "quote": "dismembering them with an axe",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "ASHLEY steps into view, holding the SUPER 8 CAMERA in one hand, and the AXE from outside in the other."
+     }
+    ]
    }
   ],
   "beats": [
    {
     "order": 1,
-    "value": "moving into murder house",
+    "value": "opening snuff footage",
     "when": "opening",
-    "role": "trigger",
-    "quote": "the site where the Stevenson family were killed via hanging",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "ALL FOUR PEOPLE ARE HOISTED IMMEDIATELY INTO THE AIR, their legs thrashing against the sudden strangulation.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:00:40",
+      "quote": "(FILM WHIRS)"
+     }
+    ],
     "confidence": "sourced"
    },
    {
     "order": 2,
-    "value": "footage found",
-    "when": "early",
-    "quote": "In the attic, Ellison finds a box containing a scorpion, a projector, and film reels",
-    "confidence": "sourced"
+    "value": "moving into murder house",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "the site where the Stevenson family were killed via hanging",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:16:20",
+      "quote": "Four people were hung by their necks in the tree in your backyard"
+     }
+    ]
    },
    {
     "order": 3,
-    "value": "warning ignored",
+    "value": "footage found",
     "when": "early",
-    "quote": "Ellison contemplates giving the videos to the police, but ultimately decides to keep them",
-    "confidence": "sourced"
+    "quote": "In the attic, Ellison finds a box containing a scorpion, a projector, and film reels",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "written on the box with a black magic marker, are the words “HOME MOVIES”."
+     }
+    ]
    },
    {
     "order": 4,
-    "value": "demon identified",
-    "when": "middle",
-    "role": "turn",
-    "quote": "Jonas links to Babylonian god Bughuul, who lures children into his realm",
+    "value": "son's night terror",
+    "when": "early",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:26:24",
+    "quote": "Your brother had a night terror.",
+    "detail": "Trevor is found screaming inside a moving box",
     "confidence": "sourced"
    },
    {
     "order": 5,
-    "value": "family flees",
-    "when": "middle",
-    "quote": "Ellison destroys the camera, projector, and reels, and moves the family back to their old home",
-    "confidence": "sourced"
+    "value": "warning ignored",
+    "when": "early",
+    "quote": "Ellison contemplates giving the videos to the police, but ultimately decides to keep them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:05:09",
+      "quote": "unless I can convince you to load those boxes back on that truck and leave as soon as you're able."
+     }
+    ]
    },
    {
     "order": 6,
+    "value": "demon identified",
+    "when": "middle",
+    "role": "turn",
+    "quote": "Jonas links to Babylonian god Bughuul, who lures children into his realm",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:05:41",
+      "quote": "Named Bughuul, the eater of children."
+     }
+    ]
+   },
+   {
+    "order": 7,
+    "value": "family flees",
+    "when": "middle",
+    "quote": "Ellison destroys the camera, projector, and reels, and moves the family back to their old home",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:34",
+      "quote": "Leave town and never look back."
+     }
+    ]
+   },
+   {
+    "order": 8,
     "value": "children revealed as killers",
     "when": "late",
     "role": "turn",
     "quote": "depicts the missing children entering the frame after each murder",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "The little girl is STEPHANIE. She gets close, tilts her head, gives a creepy little smile and waves at us."
+     }
+    ]
    },
    {
-    "order": 7,
+    "order": 9,
     "value": "child kills family",
     "when": "ending",
     "quote": "Ashley states that she will make Ellison famous again before dismembering them with an axe",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Don't worry, Daddy. I'll make you famous again."
+     }
+    ]
    },
    {
-    "order": 8,
+    "order": 10,
     "value": "demon takes child",
     "when": "ending",
     "quote": "Bughuul appears and consumes Ashley's soul",
     "confidence": "sourced"
+   },
+   {
+    "order": 11,
+    "value": "closing praise of the films",
+    "when": "ending",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:39:16",
+    "quote": "I like that you made the movies longer. They're better this way.",
+    "confidence": "observed"
    }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

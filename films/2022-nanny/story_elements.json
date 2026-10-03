@@ -1,56 +1,372 @@
 {
  "film": "2022-nanny",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "jealous child spirit", "detail": "Lamine, Aisha's son, causing visions", "quote": "it is Lamine causing the visions, as he is jealous of Aisha's attention to Rose", "confidence": "sourced"},
-   {"value": "exploitative employers", "quote": "The Havs are often remiss in paying Aisha, which delays her being able to cover airfare", "confidence": "sourced"}
+   {
+    "value": "jealous child spirit",
+    "detail": "Lamine, Aisha's son, causing visions",
+    "quote": "it is Lamine causing the visions, as he is jealous of Aisha's attention to Rose",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:15",
+      "quote": "He's jealous."
+     }
+    ]
+   },
+   {
+    "value": "exploitative employers",
+    "quote": "The Havs are often remiss in paying Aisha, which delays her being able to cover airfare",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "child left behind", "quote": "She left her now six-year-old son, Lamine, in the care of her cousin, Mariatou, in Senegal", "confidence": "sourced"}
+   {
+    "value": "child left behind",
+    "quote": "She left her now six-year-old son, Lamine, in the care of her cousin, Mariatou, in Senegal",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:20:28",
+      "quote": "Lamine, tell Mommy bye-bye."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "mother's attention", "quote": "he is jealous of Aisha's attention to Rose", "confidence": "sourced"}
+   {
+    "value": "mother's attention",
+    "quote": "he is jealous of Aisha's attention to Rose",
+    "confidence": "sourced"
+   },
+   {
+    "value": "to warn her",
+    "detail": "Kathleen on Anansi and Mami Wata",
+    "source": "subtitles",
+    "at": "01:02:41",
+    "quote": "I wish I knew what they wanted from me. You should be asking what they want for you.",
+    "confidence": "observed"
+   }
   ],
   "wrong": [
-   {"value": "unpaid labour", "quote": "The Havs are often remiss in paying Aisha", "confidence": "sourced"},
-   {"value": "sexual harassment", "quote": "Adam offers to assist her and instead makes sexual advances towards her", "confidence": "sourced"}
+   {
+    "value": "unpaid labour",
+    "quote": "The Havs are often remiss in paying Aisha",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:29:29",
+      "quote": "but I think Amy forgets sometimes, um, to pay me."
+     }
+    ]
+   },
+   {
+    "value": "sexual harassment",
+    "quote": "Adam offers to assist her and instead makes sexual advances towards her",
+    "confidence": "sourced"
+   }
   ],
   "trigger": [
-   {"value": "new job", "quote": "Aisha is hired as a nanny for Rose, the young daughter of Amy and Adam Hav", "confidence": "sourced"},
-   {"value": "immigration", "quote": "Aisha is an undocumented Senegalese immigrant in New York City", "confidence": "sourced"}
+   {
+    "value": "new job",
+    "quote": "Aisha is hired as a nanny for Rose, the young daughter of Amy and Adam Hav",
+    "confidence": "sourced"
+   },
+   {
+    "value": "immigration",
+    "quote": "Aisha is an undocumented Senegalese immigrant in New York City",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "drowning visions", "quote": "She begins having dreams of drowning, as well as waking visions of Lamine", "confidence": "sourced"}
+   {
+    "value": "drowning visions",
+    "quote": "She begins having dreams of drowning, as well as waking visions of Lamine",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child speaks for the spirit",
+    "detail": "Rose relays what Anansi tells her",
+    "source": "subtitles",
+    "at": "01:21:55",
+    "quote": "Anansi told me.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "immigrant mother", "relation_to_threat": "family", "detail": "Aisha", "quote": "she is mysteriously pulled into the full tub and almost drowns", "confidence": "sourced"},
-   {"value": "child left behind", "relation_to_threat": "family", "detail": "Lamine", "quote": "Lamine drowned in the ocean during a beach visit", "confidence": "sourced"}
+   {
+    "value": "immigrant mother",
+    "relation_to_threat": "family",
+    "detail": "Aisha",
+    "quote": "she is mysteriously pulled into the full tub and almost drowns",
+    "confidence": "sourced"
+   },
+   {
+    "value": "child left behind",
+    "relation_to_threat": "family",
+    "detail": "Lamine",
+    "quote": "Lamine drowned in the ocean during a beach visit",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "child dies", "quote": "Mariatou arrives alone, saying that during the long wait for the airfare, Lamine drowned in the ocean", "confidence": "sourced"},
-   {"value": "rescued from suicide", "quote": "Malik rescues her, and they discover that she is pregnant with their child", "confidence": "sourced"},
-   {"value": "new life", "quote": "They move on with life, including their new baby.", "confidence": "sourced"}
+   {
+    "value": "child dies",
+    "quote": "Mariatou arrives alone, saying that during the long wait for the airfare, Lamine drowned in the ocean",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:52",
+      "quote": "He drowned."
+     }
+    ]
+   },
+   {
+    "value": "rescued from suicide",
+    "quote": "Malik rescues her, and they discover that she is pregnant with their child",
+    "confidence": "sourced"
+   },
+   {
+    "value": "new life",
+    "quote": "They move on with life, including their new baby.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:30:38",
+      "quote": "She's pregnant. Be careful."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "water", "state": "drowning", "when": "middle", "role": "omen", "quote": "She begins having dreams of drowning", "confidence": "sourced"},
-   {"value": "knife", "state": "grabbed in fear", "when": "late", "role": "weapon", "quote": "she grabs a knife from the kitchen and checks the bathroom", "confidence": "sourced"},
-   {"value": "bathtub", "state": "full, pulling her in", "when": "late", "role": "threat", "quote": "she is mysteriously pulled into the full tub and almost drowns", "confidence": "sourced"},
-   {"value": "ocean", "state": "drowning a child", "when": "ending", "role": "turn", "quote": "Lamine drowned in the ocean during a beach visit", "confidence": "sourced"},
-   {"value": "river", "state": "suicide attempt", "when": "ending", "role": "setting", "quote": "a ruse to go and drown herself in the Hudson River", "confidence": "sourced"}
+   {
+    "value": "water",
+    "state": "drowning",
+    "when": "middle",
+    "role": "omen",
+    "quote": "She begins having dreams of drowning",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "A halo of water ripples around her, threatening to engulf her."
+     }
+    ]
+   },
+   {
+    "value": "knife",
+    "state": "grabbed in fear",
+    "when": "late",
+    "role": "weapon",
+    "quote": "she grabs a knife from the kitchen and checks the bathroom",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:21",
+      "quote": "(grabs knife)"
+     }
+    ]
+   },
+   {
+    "value": "bathtub",
+    "state": "full, pulling her in",
+    "when": "late",
+    "role": "threat",
+    "quote": "she is mysteriously pulled into the full tub and almost drowns",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ocean",
+    "state": "drowning a child",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Lamine drowned in the ocean during a beach visit",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:34",
+      "quote": "When we went to the beach."
+     },
+     {
+      "source": "subtitles",
+      "at": "01:38:19",
+      "quote": "(waves lapping)"
+     }
+    ]
+   },
+   {
+    "value": "river",
+    "state": "suicide attempt",
+    "when": "ending",
+    "role": "setting",
+    "quote": "a ruse to go and drown herself in the Hudson River",
+    "confidence": "sourced"
+   },
+   {
+    "value": "spider",
+    "state": "crawling on her face",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "A SPIDER, emerging from nowhere, ambles across her cheek.",
+    "confidence": "sourced",
+    "detail": "Anansi the trickster, from the picture book Aisha reads to Rose",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:50:00",
+      "quote": "Anansi the spider said to his child."
+     }
+    ]
+   },
+   {
+    "value": "mermaid",
+    "when": "middle",
+    "role": "symbol",
+    "source": "subtitles",
+    "at": "00:38:15",
+    "quote": "It's an interpretation of Mami Wata.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:38:27",
+      "quote": "but they're very dangerous, unpredictable and impermanent."
+     }
+    ]
+   }
   ],
   "beats": [
-   {"order": 1, "value": "mother separated from child", "when": "opening", "quote": "She left her now six-year-old son, Lamine, in the care of her cousin, Mariatou, in Senegal a year earlier", "confidence": "sourced"},
-   {"order": 2, "value": "hired by a wealthy family", "when": "early", "role": "trigger", "quote": "Aisha is hired as a nanny for Rose", "confidence": "sourced"},
-   {"order": 3, "value": "drowning dreams begin", "when": "middle", "role": "omen", "quote": "She begins having dreams of drowning, as well as waking visions of Lamine", "confidence": "sourced"},
-   {"order": 4, "value": "near-drowning in the bath", "when": "late", "quote": "she is mysteriously pulled into the full tub and almost drowns", "confidence": "sourced"},
-   {"order": 5, "value": "child's death revealed", "when": "ending", "role": "turn", "quote": "Mariatou arrives alone, saying that during the long wait for the airfare, Lamine drowned", "confidence": "sourced"},
-   {"order": 6, "value": "suicide attempt and rescue", "when": "ending", "quote": "Aisha goes for a walk, a ruse to go and drown herself in the Hudson River. Malik rescues her", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "dream of rising water",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "A halo of water ripples around her, threatening to engulf her.",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:01:04",
+      "quote": "(waves lapping)"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "mother separated from child",
+    "when": "opening",
+    "quote": "She left her now six-year-old son, Lamine, in the care of her cousin, Mariatou, in Senegal a year earlier",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:27",
+      "quote": "Lamine, my baby."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "hired by a wealthy family",
+    "when": "early",
+    "role": "trigger",
+    "quote": "Aisha is hired as a nanny for Rose",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "drowning dreams begin",
+    "when": "middle",
+    "role": "omen",
+    "quote": "She begins having dreams of drowning, as well as waking visions of Lamine",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "folk tale of death",
+    "when": "middle",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:49:53",
+    "quote": "Hold on, son, for if you fall, Death is going to get you,",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "near-drowning in the bath",
+    "when": "late",
+    "quote": "she is mysteriously pulled into the full tub and almost drowns",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "child voices the spirit",
+    "when": "late",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:21:55",
+    "quote": "Anansi told me. He said it's my fault.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "child's death revealed",
+    "when": "ending",
+    "role": "turn",
+    "quote": "Mariatou arrives alone, saying that during the long wait for the airfare, Lamine drowned",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:26:52",
+      "quote": "He drowned."
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "suicide attempt and rescue",
+    "when": "ending",
+    "quote": "Aisha goes for a walk, a ruse to go and drown herself in the Hudson River. Malik rescues her",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:03",
+      "quote": "Going to get some air."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

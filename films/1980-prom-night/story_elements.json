@@ -1,59 +1,355 @@
 {
  "film": "1980-prom-night",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "masked killer", "detail": "Alex Hammond, Robin's twin brother", "quote": "four high school seniors who are targeted at their prom by a masked killer", "confidence": "sourced"}
+   {
+    "value": "masked killer",
+    "detail": "Alex Hammond, Robin's twin brother",
+    "quote": "four high school seniors who are targeted at their prom by a masked killer",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "grieving relative", "quote": "He is revealed to be Alex, who, in his last moments, exclaims tearfully, \"They killed her!\"", "confidence": "sourced"},
-   {"value": "witness to a death", "quote": "the shadow of an unseen person who witnessed Robin's death appears", "confidence": "sourced"}
+   {
+    "value": "grieving relative",
+    "quote": "He is revealed to be Alex, who, in his last moments, exclaims tearfully, \"They killed her!\"",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:25",
+      "quote": "They... they killed her. They... killed her."
+     }
+    ]
+   },
+   {
+    "value": "witness to a death",
+    "quote": "the shadow of an unseen person who witnessed Robin's death appears",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:18",
+      "quote": "I... saw it. Saw it all."
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "revenge", "quote": "seeking vengeance for the accidental death of Robin Hammond, a young girl, from six years earlier", "confidence": "sourced"}
+   {
+    "value": "revenge",
+    "quote": "seeking vengeance for the accidental death of Robin Hammond, a young girl, from six years earlier",
+    "confidence": "sourced"
+   }
   ],
   "wrong": [
-   {"value": "child's accidental death", "quote": "the group scares her, leading to Robin accidentally falling to her death through a window", "confidence": "sourced"},
-   {"value": "secret kept", "quote": "The children make a pact not to tell anyone what happened in fear of getting in trouble", "confidence": "sourced"},
-   {"value": "innocent man blamed", "quote": "Leonard Murch, a sex offender informally blamed for Robin's death, has escaped from a psychiatric facility", "confidence": "sourced"}
+   {
+    "value": "child's accidental death",
+    "quote": "the group scares her, leading to Robin accidentally falling to her death through a window",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:16",
+      "quote": "If we tell anyone they'll say it's our fault. Who'd believe it was an accident?"
+     }
+    ]
+   },
+   {
+    "value": "secret kept",
+    "quote": "The children make a pact not to tell anyone what happened in fear of getting in trouble",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:22",
+      "quote": "We'll go home now and never, ever tell anyone. No one but us will ever know."
+     }
+    ]
+   },
+   {
+    "value": "innocent man blamed",
+    "quote": "Leonard Murch, a sex offender informally blamed for Robin's death, has escaped from a psychiatric facility",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:12",
+      "quote": "Murch lived near the place where she died and he's a known sex offender."
+     }
+    ]
+   }
   ],
   "trigger": [
-   {"value": "anniversary", "quote": "the school prom, which falls on the anniversary of Robin's death", "confidence": "sourced"}
+   {
+    "value": "anniversary",
+    "quote": "the school prom, which falls on the anniversary of Robin's death",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:33:03",
+      "quote": "Would have been her first prom."
+     }
+    ]
+   }
   ],
   "rules": [
-   {"value": "only the guilty targeted", "quote": "Kelly, Jude, and Wendy receive anonymous obscene phone calls, while Nick ignores his ringing phone", "confidence": "observed"}
+   {
+    "value": "only the guilty targeted",
+    "quote": "Kelly, Jude, and Wendy receive anonymous obscene phone calls, while Nick ignores his ringing phone",
+    "confidence": "observed"
+   }
   ],
   "who_suffers": [
-   {"value": "teenagers who share a secret", "relation_to_threat": "stranger", "quote": "Wendy, Jude, and Kelly each find their yearbook photos stabbed with a piece of glass", "confidence": "sourced"},
-   {"value": "sister", "relation_to_threat": "family", "detail": "Kim, who fights her brother", "quote": "In the ensuing brawl, Kim strikes the killer in the head with the ax", "confidence": "sourced"}
+   {
+    "value": "teenagers who share a secret",
+    "relation_to_threat": "stranger",
+    "quote": "Wendy, Jude, and Kelly each find their yearbook photos stabbed with a piece of glass",
+    "confidence": "sourced"
+   },
+   {
+    "value": "sister",
+    "relation_to_threat": "family",
+    "detail": "Kim, who fights her brother",
+    "quote": "In the ensuing brawl, Kim strikes the killer in the head with the ax",
+    "confidence": "sourced"
+   }
   ],
   "ending": [
-   {"value": "killer dies", "quote": "Alex dies in Kim's arms, crying out Robin's name", "confidence": "sourced"},
-   {"value": "killer unmasked as family", "quote": "He is revealed to be Alex", "confidence": "sourced"}
+   {
+    "value": "killer dies",
+    "quote": "Alex dies in Kim's arms, crying out Robin's name",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:32",
+      "quote": "Robin, Robin."
+     }
+    ]
+   },
+   {
+    "value": "killer unmasked as family",
+    "quote": "He is revealed to be Alex",
+    "confidence": "sourced"
+   }
   ],
   "images": [
-   {"value": "window", "state": "fall to death", "when": "opening", "role": "trigger", "quote": "Robin accidentally falling to her death through a window", "confidence": "sourced"},
-   {"value": "abandoned convent", "when": "opening", "role": "setting", "quote": "play hide-and-seek in an abandoned convent", "confidence": "sourced"},
-   {"value": "phone call", "state": "obscene, anonymous", "when": "early", "role": "omen", "quote": "receive anonymous obscene phone calls", "confidence": "sourced"},
-   {"value": "mirror", "state": "shattered", "when": "early", "role": "omen", "quote": "Kim and Kelly are startled when an unseen assailant shatters a mirror", "confidence": "sourced"},
-   {"value": "yearbook photos", "state": "stabbed", "when": "early", "role": "omen", "quote": "find their yearbook photos stabbed with a piece of glass", "confidence": "sourced"},
-   {"value": "ski mask", "when": "middle", "role": "threat", "quote": "a figure wearing a ski mask targets Kelly first", "confidence": "sourced"},
-   {"value": "axe", "when": "late", "role": "weapon", "quote": "Now wielding an ax, the killer chases Wendy through an empty wing of the school", "confidence": "sourced"},
-   {"value": "severed head", "state": "rolling on stage", "when": "late", "role": "turn", "quote": "Lou's severed head rolls onto the stage, sending the prom-goers fleeing in horror", "confidence": "sourced"}
+   {
+    "value": "window",
+    "state": "fall to death",
+    "when": "opening",
+    "role": "trigger",
+    "quote": "Robin accidentally falling to her death through a window",
+    "confidence": "sourced"
+   },
+   {
+    "value": "abandoned convent",
+    "when": "opening",
+    "role": "setting",
+    "quote": "play hide-and-seek in an abandoned convent",
+    "confidence": "sourced"
+   },
+   {
+    "value": "phone call",
+    "state": "obscene, anonymous",
+    "when": "early",
+    "role": "omen",
+    "quote": "receive anonymous obscene phone calls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:13:38",
+      "quote": "An obscene call and not very obscene at that."
+     }
+    ]
+   },
+   {
+    "value": "mirror",
+    "state": "shattered",
+    "when": "early",
+    "role": "omen",
+    "quote": "Kim and Kelly are startled when an unseen assailant shatters a mirror",
+    "confidence": "sourced"
+   },
+   {
+    "value": "yearbook photos",
+    "state": "stabbed",
+    "when": "early",
+    "role": "omen",
+    "quote": "find their yearbook photos stabbed with a piece of glass",
+    "confidence": "sourced"
+   },
+   {
+    "value": "ski mask",
+    "when": "middle",
+    "role": "threat",
+    "quote": "a figure wearing a ski mask targets Kelly first",
+    "confidence": "sourced"
+   },
+   {
+    "value": "axe",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Now wielding an ax, the killer chases Wendy through an empty wing of the school",
+    "confidence": "sourced"
+   },
+   {
+    "value": "severed head",
+    "state": "rolling on stage",
+    "when": "late",
+    "role": "turn",
+    "quote": "Lou's severed head rolls onto the stage, sending the prom-goers fleeing in horror",
+    "confidence": "sourced"
+   },
+   {
+    "value": "childhood game chant",
+    "when": "opening",
+    "role": "omen",
+    "detail": "'killers are coming', chanted at Robin before she falls and echoed by the dying killer",
+    "source": "subtitles",
+    "at": "00:00:37",
+    "quote": "Killer is coming. The killer is coming.",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:28:33",
+      "quote": "Killers are coming!"
+     }
+    ],
+    "confidence": "sourced"
+   },
+   {
+    "value": "disco floor",
+    "when": "middle",
+    "role": "setting",
+    "source": "subtitles",
+    "at": "00:28:00",
+    "quote": "Yeah, that disco floor looked fantastic.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "childhood game causes death", "when": "opening", "quote": "the group scares her, leading to Robin accidentally falling to her death through a window", "confidence": "sourced"},
-   {"order": 2, "value": "pact of silence", "when": "opening", "quote": "The children make a pact not to tell anyone what happened", "confidence": "sourced"},
-   {"order": 3, "value": "warnings on the anniversary", "when": "early", "role": "omen", "quote": "Wendy, Jude, and Kelly each find their yearbook photos stabbed with a piece of glass", "confidence": "sourced"},
-   {"order": 4, "value": "red herring suspect", "when": "early", "quote": "learns that Leonard Murch, a sex offender informally blamed for Robin's death, has escaped", "confidence": "sourced"},
-   {"order": 5, "value": "killings at the prom", "when": "middle", "quote": "slitting her throat with a mirror shard in the girls' locker room", "confidence": "sourced"},
-   {"order": 6, "value": "public decapitation", "when": "late", "role": "turn", "quote": "Mistaking him for Nick, the killer decapitates him", "confidence": "sourced"},
-   {"order": 7, "value": "killer unmasked and dies", "when": "ending", "role": "turn", "quote": "He is revealed to be Alex, who, in his last moments, exclaims tearfully", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "childhood game causes death",
+    "when": "opening",
+    "quote": "the group scares her, leading to Robin accidentally falling to her death through a window",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:06:32",
+      "quote": "P-p-please. I d-d-didn't want to p-play."
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "pact of silence",
+    "when": "opening",
+    "quote": "The children make a pact not to tell anyone what happened",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:28",
+      "quote": "Jude, swear? I swear."
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "value": "warnings on the anniversary",
+    "when": "early",
+    "role": "omen",
+    "quote": "Wendy, Jude, and Kelly each find their yearbook photos stabbed with a piece of glass",
+    "confidence": "sourced"
+   },
+   {
+    "order": 4,
+    "value": "red herring suspect",
+    "when": "early",
+    "quote": "learns that Leonard Murch, a sex offender informally blamed for Robin's death, has escaped",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:18:51",
+      "quote": "Last night, Murch escaped from the state hospital in Cleveland."
+     }
+    ]
+   },
+   {
+    "order": 5,
+    "value": "killings at the prom",
+    "when": "middle",
+    "quote": "slitting her throat with a mirror shard in the girls' locker room",
+    "confidence": "sourced"
+   },
+   {
+    "order": 6,
+    "value": "wrong suspect caught far away",
+    "when": "late",
+    "role": "turn",
+    "source": "subtitles",
+    "at": "01:20:38",
+    "quote": "Well, actually the state patrol got him, out near Alderson.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "public decapitation",
+    "when": "late",
+    "role": "turn",
+    "quote": "Mistaking him for Nick, the killer decapitates him",
+    "confidence": "sourced"
+   },
+   {
+    "order": 8,
+    "value": "killer repeats the childhood chant",
+    "when": "ending",
+    "role": "clue",
+    "source": "subtitles",
+    "at": "01:28:22",
+    "quote": "Killers are coming.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 9,
+    "value": "killer unmasked and dies",
+    "when": "ending",
+    "role": "turn",
+    "quote": "He is revealed to be Alex, who, in his last moments, exclaims tearfully",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:18",
+      "quote": "I... saw it. Saw it all."
+     }
+    ]
+   }
   ]
  },
  "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }

@@ -1,54 +1,412 @@
 {
  "film": "1974-black-christmas",
- "sources": [{"file": "wikipedia.en.md", "sections": ["Lead", "Plot"]}],
+ "sources": [
+  {
+   "file": "wikipedia.en.md",
+   "sections": [
+    "Lead",
+    "Plot"
+   ]
+  },
+  {
+   "file": "dialogue/subtitles.en.srt"
+  },
+  {
+   "file": "script/screenplay.txt"
+  }
+ ],
  "plot_quality": "full",
  "dimensions": {
   "threat": [
-   {"value": "unseen killer", "detail": "an intruder hiding in the attic, calling as 'The Moaner'", "quote": "An unseen man climbs the exterior of a sorority house during a Christmas party and enters the attic", "confidence": "sourced"}
+   {
+    "value": "unseen killer",
+    "detail": "an intruder hiding in the attic, calling as 'The Moaner'",
+    "quote": "An unseen man climbs the exterior of a sorority house during a Christmas party and enters the attic",
+    "confidence": "sourced"
+   }
   ],
   "origin": [
-   {"value": "unexplained", "detail": "the caller rants about 'Billy' but is never identified", "quote": "The caller rants in strange voices about someone named \"Billy\"", "confidence": "observed"}
+   {
+    "value": "unexplained",
+    "detail": "the caller rants about 'Billy' but is never identified",
+    "quote": "The caller rants in strange voices about someone named \"Billy\"",
+    "confidence": "observed",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:44:59",
+      "quote": "I know what you did, Billy! Filthy Billy!"
+     }
+    ]
+   }
   ],
   "wants": [
-   {"value": "to kill", "quote": "speaks vulgarities before threatening to kill them", "confidence": "sourced"}
+   {
+    "value": "to kill",
+    "quote": "speaks vulgarities before threatening to kill them",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:09:05",
+      "quote": "I'm going to kill you."
+     }
+    ]
+   }
+  ],
+  "wrong": [
+   {
+    "value": "something done to a baby",
+    "detail": "the caller's voices hint that Billy harmed baby Agnes",
+    "source": "subtitles",
+    "at": "01:04:35",
+    "quote": "Agnes, don't you tell what we did, Agnes...",
+    "confidence": "observed"
+   }
   ],
   "trigger": [
-   {"value": "intruder enters house", "quote": "climbs the exterior of a sorority house during a Christmas party and enters the attic", "confidence": "sourced"}
+   {
+    "value": "intruder enters house",
+    "quote": "climbs the exterior of a sorority house during a Christmas party and enters the attic",
+    "confidence": "sourced"
+   }
   ],
   "rules": [
-   {"value": "calls come from inside", "quote": "realizing the calls are originating from within the house", "confidence": "sourced"},
-   {"value": "obscene phone calls", "quote": "The story follows a group of sorority sisters who receive threatening phone calls", "confidence": "sourced"}
+   {
+    "value": "calls come from inside",
+    "quote": "realizing the calls are originating from within the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:22:08",
+      "quote": "The calls are coming from the house!"
+     }
+    ]
+   },
+   {
+    "value": "obscene phone calls",
+    "quote": "The story follows a group of sorority sisters who receive threatening phone calls",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:07:48",
+      "quote": "Let me lick it!"
+     },
+     {
+      "source": "screenplay",
+      "quote": "It's him again. The moaner."
+     }
+    ]
+   },
+   {
+    "value": "trace needs a long call",
+    "source": "subtitles",
+    "at": "01:13:19",
+    "quote": "You're not giving us enough time to get a trace.",
+    "confidence": "sourced"
+   }
   ],
   "who_suffers": [
-   {"value": "sorority sisters", "relation_to_threat": "stranger", "quote": "a group of sorority sisters who receive threatening phone calls and are eventually stalked and murdered", "confidence": "sourced"},
-   {"value": "housemother", "relation_to_threat": "stranger", "quote": "Mrs. MacHenry discovers Clare's body in the attic but is killed by the intruder with a crane hook", "confidence": "sourced"},
-   {"value": "wrongly suspected boyfriend", "relation_to_threat": "lover", "detail": "Peter, killed by Jess", "quote": "Peter breaks in, and in a panic, Jess kills him with a fire poker", "confidence": "sourced"}
+   {
+    "value": "sorority sisters",
+    "relation_to_threat": "stranger",
+    "quote": "a group of sorority sisters who receive threatening phone calls and are eventually stalked and murdered",
+    "confidence": "sourced"
+   },
+   {
+    "value": "housemother",
+    "relation_to_threat": "stranger",
+    "quote": "Mrs. MacHenry discovers Clare's body in the attic but is killed by the intruder with a crane hook",
+    "confidence": "sourced"
+   },
+   {
+    "value": "wrongly suspected boyfriend",
+    "relation_to_threat": "lover",
+    "detail": "Peter, killed by Jess",
+    "quote": "Peter breaks in, and in a panic, Jess kills him with a fire poker",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:24",
+      "quote": "Why would Peter start killing people?"
+     }
+    ]
+   }
   ],
   "ending": [
-   {"value": "threat survives", "quote": "From the attic, the killer's voice is heard, and the hatch opens", "confidence": "sourced"},
-   {"value": "wrong person blamed", "quote": "Police arrive to find her barely conscious beside his body, assuming he was the killer", "confidence": "sourced"}
+   {
+    "value": "threat survives",
+    "quote": "From the attic, the killer's voice is heard, and the hatch opens",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:38",
+      "quote": "Agnes! It's me, Billy!"
+     }
+    ]
+   },
+   {
+    "value": "wrong person blamed",
+    "quote": "Police arrive to find her barely conscious beside his body, assuming he was the killer",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:31:20",
+      "quote": "I knew it. I knew it in my gut. It was that kid."
+     }
+    ]
+   }
   ],
   "images": [
-   {"value": "telephone", "state": "ringing", "when": "opening", "role": "threat", "quote": "The house phone rings, and sorority sister Jess Bradford answers, discovering an obscene call", "confidence": "sourced"},
-   {"value": "attic", "state": "hiding bodies", "when": "opening", "role": "setting", "quote": "while Clare and Mrs. MacHenry's bodies remain undiscovered", "confidence": "sourced"},
-   {"value": "crane hook", "when": "middle", "role": "weapon", "quote": "killed by the intruder with a crane hook", "confidence": "sourced"},
-   {"value": "glass unicorn", "when": "middle", "role": "weapon", "quote": "murders her with a glass unicorn figurine", "confidence": "sourced"},
-   {"value": "door crack", "state": "eye glimpsed", "when": "late", "role": "threat", "quote": "glimpses the killer through a door crack", "confidence": "sourced"},
-   {"value": "fire poker", "when": "late", "role": "weapon", "quote": "Jess kills him with a fire poker", "confidence": "sourced"},
-   {"value": "christmas carolers", "when": "middle", "role": "setting", "quote": "Christmas carolers distract Jess while the killer enters Barb's room", "confidence": "sourced"}
+   {
+    "value": "telephone",
+    "state": "ringing",
+    "when": "opening",
+    "role": "threat",
+    "quote": "The house phone rings, and sorority sister Jess Bradford answers, discovering an obscene call",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:36:37",
+      "quote": "[Phone ringing]"
+     }
+    ]
+   },
+   {
+    "value": "attic",
+    "state": "hiding bodies",
+    "when": "opening",
+    "role": "setting",
+    "quote": "while Clare and Mrs. MacHenry's bodies remain undiscovered",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Rags and half-rotted food and old clothes form a bed in one corner of the moonlit attic and it appears someone has been living here."
+     }
+    ]
+   },
+   {
+    "value": "crane hook",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "killed by the intruder with a crane hook",
+    "confidence": "sourced"
+   },
+   {
+    "value": "glass unicorn",
+    "when": "middle",
+    "role": "weapon",
+    "quote": "murders her with a glass unicorn figurine",
+    "confidence": "sourced"
+   },
+   {
+    "value": "door crack",
+    "state": "eye glimpsed",
+    "when": "late",
+    "role": "threat",
+    "quote": "glimpses the killer through a door crack",
+    "confidence": "sourced"
+   },
+   {
+    "value": "fire poker",
+    "when": "late",
+    "role": "weapon",
+    "quote": "Jess kills him with a fire poker",
+    "confidence": "sourced"
+   },
+   {
+    "value": "christmas carolers",
+    "when": "middle",
+    "role": "setting",
+    "quote": "Christmas carolers distract Jess while the killer enters Barb's room",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:02:09",
+      "quote": "O Come, All Ye Faithful being sung outside"
+     }
+    ]
+   },
+   {
+    "value": "cat",
+    "state": "missing, wanders to the attic",
+    "when": "early",
+    "role": "clue",
+    "detail": "Mrs. Mac's cat Claude, whose meowing leads her and others toward the attic",
+    "source": "subtitles",
+    "at": "00:21:44",
+    "quote": "Is that you, Claudekins?",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:40:12",
+      "quote": "How did you get up in the attic, Claude?"
+     },
+     {
+      "source": "screenplay",
+      "quote": "it leaps and lands on the lap of Clare's corpse in the rocking chair"
+     }
+    ]
+   },
+   {
+    "value": "plastic bag",
+    "state": "over the victim's head",
+    "when": "early",
+    "role": "weapon",
+    "source": "screenplay",
+    "quote": "Her head is swathed grotesquely in the clear, plastic bag",
+    "confidence": "sourced"
+   },
+   {
+    "value": "corpse in rocking chair",
+    "state": "dead, at the attic window",
+    "when": "early",
+    "role": "threat",
+    "source": "screenplay",
+    "quote": "Clare's corpse in the rocking chair which-begins to move back and forth",
+    "confidence": "sourced"
+   },
+   {
+    "value": "rocking horse",
+    "state": "squeaking in the dark",
+    "when": "opening",
+    "role": "omen",
+    "source": "screenplay",
+    "quote": "There are dusty old toys in the attic and as the camera passes, a rocking horse squeaks and swings back and forth.",
+    "confidence": "sourced"
+   }
   ],
   "beats": [
-   {"order": 1, "value": "intruder enters unseen", "when": "opening", "role": "omen", "quote": "An unseen man climbs the exterior of a sorority house during a Christmas party and enters the attic", "confidence": "sourced"},
-   {"order": 2, "value": "first death", "when": "opening", "quote": "Clare Harrison, goes upstairs to pack, where she is attacked and asphyxiated by the intruder", "confidence": "sourced"},
-   {"order": 3, "value": "police dismiss concern", "when": "early", "quote": "Sergeant Nash, who brushes them off", "confidence": "sourced"},
-   {"order": 4, "value": "deaths during the holiday", "when": "middle", "quote": "Christmas carolers distract Jess while the killer enters Barb's room and murders her", "confidence": "sourced"},
-   {"order": 5, "value": "call traced inside house", "when": "late", "role": "turn", "quote": "Nash instructs Jess to leave immediately, realizing the calls are originating from within the house", "confidence": "sourced"},
-   {"order": 6, "value": "wrong man killed", "when": "late", "role": "turn", "quote": "Peter breaks in, and in a panic, Jess kills him with a fire poker", "confidence": "sourced"},
-   {"order": 7, "value": "closing sting", "when": "ending", "quote": "From the attic, the killer's voice is heard, and the hatch opens", "confidence": "sourced"}
+   {
+    "order": 1,
+    "value": "intruder enters unseen",
+    "when": "opening",
+    "role": "omen",
+    "quote": "An unseen man climbs the exterior of a sorority house during a Christmas party and enters the attic",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:02:46",
+      "quote": "Hey, who left the goddamn front door open?"
+     }
+    ]
+   },
+   {
+    "order": 2,
+    "value": "caller threatens to kill",
+    "when": "opening",
+    "role": "omen",
+    "source": "subtitles",
+    "at": "00:09:05",
+    "quote": "I'm going to kill you.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 3,
+    "value": "first death",
+    "when": "opening",
+    "quote": "Clare Harrison, goes upstairs to pack, where she is attacked and asphyxiated by the intruder",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "screenplay",
+      "quote": "Her head is swathed grotesquely in the clear, plastic bag which is sucked hideously up into her mouth and nostrils."
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "value": "unwanted pregnancy revealed",
+    "when": "early",
+    "source": "subtitles",
+    "at": "00:23:10",
+    "quote": "I'm pregnant.",
+    "confidence": "sourced"
+   },
+   {
+    "order": 5,
+    "value": "police dismiss concern",
+    "when": "early",
+    "quote": "Sergeant Nash, who brushes them off",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "00:27:00",
+      "quote": "girls who are reported missing from the college, they're at a cabin somewhere, with a boyfriend."
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "value": "deaths during the holiday",
+    "when": "middle",
+    "quote": "Christmas carolers distract Jess while the killer enters Barb's room and murders her",
+    "confidence": "sourced"
+   },
+   {
+    "order": 7,
+    "value": "call traced inside house",
+    "when": "late",
+    "role": "turn",
+    "quote": "Nash instructs Jess to leave immediately, realizing the calls are originating from within the house",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:21:48",
+      "quote": "walk to the front door, and leave the house."
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "value": "wrong man killed",
+    "when": "late",
+    "role": "turn",
+    "quote": "Peter breaks in, and in a panic, Jess kills him with a fire poker",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:29:46",
+      "quote": "Jess, why didn't you answer me?"
+     }
+    ]
+   },
+   {
+    "order": 9,
+    "value": "closing sting",
+    "when": "ending",
+    "quote": "From the attic, the killer's voice is heard, and the hatch opens",
+    "confidence": "sourced",
+    "moments": [
+     {
+      "source": "subtitles",
+      "at": "01:35:38",
+      "quote": "Agnes! It's me, Billy!"
+     },
+     {
+      "source": "screenplay",
+      "quote": "Far off in the distance, barely discernable, a telephone begins to ring"
+     }
+    ]
+   }
   ]
  },
- "not_stated": ["wrong"],
+ "not_stated": [],
  "extracted": "2026-10-03",
  "method": "Claude's reading of the film's Wikipedia article (lead, plot, themes); every entry quoted",
- "status": "first pass, unreviewed"
+ "status": "first pass, unreviewed",
+ "refined": "2026-10-03"
 }
