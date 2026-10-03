@@ -142,30 +142,7 @@ ul.plain li:first-child{border-top:0}
 .blockhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;border-top:3px solid var(--ink);padding-top:10px;margin-top:44px}
 .blockhead h3{font-family:var(--display);font-weight:400;font-size:26px;margin:0;line-height:1.2}
 .blockhead p{margin:0;font-size:14px;color:var(--mute);max-width:60ch}
-.glance{margin:12px 0 0;min-width:0}
-.glance svg{display:block;width:100%;overflow:visible}
-.glance svg text{font-family:var(--mono);font-size:11px;fill:var(--mute)}
-.glance svg text.rowlab{font-family:var(--text);font-size:12.5px;fill:var(--ink)}
-.glance svg .mk{cursor:pointer}
-.glance svg .mk:hover circle,.glance svg .mk:hover rect,.glance svg .mk.on circle,.glance svg .mk.on rect{stroke:var(--red);stroke-width:2}
-.readout{min-height:48px;margin:10px 0 0;padding:8px 0 0;border-top:1px solid var(--rule);font-size:15px}
-.readout .tag{margin-right:8px}
-.legend{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:8px;font-size:13px;color:var(--mute)}
-.legend span{display:inline-flex;align-items:center;gap:6px}
 .sw{display:inline-block;width:10px;height:10px}
-.spec{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-left:1px solid var(--hair);border-top:1px solid var(--hair);margin-top:12px}
-.cell{all:unset;box-sizing:border-box;display:flex;flex-direction:column;gap:6px;padding:12px 14px 14px;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);cursor:pointer;min-height:132px;min-width:0}
-.cell:hover{background:var(--soft)}
-.cell:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
-.cell .cl{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
-.cell .cv{font-family:var(--display);font-size:19px;line-height:1.25;overflow-wrap:anywhere}
-.cell .cn{font-family:var(--mono);font-size:11.5px;color:var(--mute);margin-top:auto}
-.cell.empty{background:repeating-linear-gradient(135deg,var(--paper) 0 7px,var(--soft) 7px 9px)}
-.cell.empty .cv{font-style:italic;color:var(--mute);font-size:16px}
-.cell .mini{display:flex;flex-wrap:wrap;gap:3px;margin-top:2px}
-.cell .mini i{width:8px;height:8px;display:block}
-.cell .zones{display:grid;grid-template-columns:repeat(5,1fr);gap:3px;align-items:end;height:34px}
-.cell .zones i{display:block;background:var(--ink)}
 .tones{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px;margin-top:4px;height:14px}
 .tones button{all:unset;cursor:pointer;display:block}
 .tones button:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
@@ -200,37 +177,55 @@ ul.plain li:first-child{border-top:0}
 ol.beats li{scroll-margin-top:24px}
 ol.beats li.flash{background:var(--soft)}
 
-/* story-first layout */
-.story8{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-left:1px solid var(--hair);border-top:1px solid var(--hair);margin-top:14px}
-.story8 .cell{min-height:150px;gap:4px}
-.story8 .vals{display:flex;flex-direction:column;gap:3px}
-.story8 .vals > span{font-family:var(--display);font-size:18px;line-height:1.25;overflow-wrap:anywhere}
-.story8 .vals > span:first-child{font-size:22px}
-.story8 .vals > span+span{color:var(--mute);font-size:16px}
-.tray{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin-top:14px}
-.icard{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:6px;border-top:5px solid var(--hair);background:var(--soft);padding:12px 14px 14px;min-width:0}
-.icard:hover{background:var(--rule)}
-.icard:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
-.icard .role{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
-.icard .iv{font-family:var(--display);font-size:24px;line-height:1.15;overflow-wrap:anywhere}
-.icard .st{font-size:14px;font-style:italic;color:var(--mute)}
-.icard .dt{font-size:13.5px;line-height:1.45}
-.icard .wbar{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-top:auto;padding-top:8px}
-.icard .wbar i{height:4px;background:var(--hair)}
-.icard .wbar i.on{background:var(--ink)}
-.icard .wl{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10.5px;color:var(--mute)}
-ol.beatseq{list-style:none;margin:14px 0 0;padding:0;columns:2 340px;column-gap:40px}
-ol.beatseq li{break-inside:avoid;display:grid;grid-template-columns:30px minmax(0,1fr);gap:8px;padding:7px 0;border-top:1px solid var(--rule)}
-ol.beatseq li button{all:unset;cursor:pointer;font-family:var(--display);font-size:18px;line-height:1.3}
-ol.beatseq li button:hover{text-decoration:underline;text-decoration-color:var(--hair)}
-ol.beatseq li button:focus-visible{outline:2px solid var(--ink)}
-ol.beatseq .no{font-family:var(--mono);font-size:13px;color:var(--mute);padding-top:3px}
-ol.beatseq .tag{margin-left:6px}
-.filmband{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:28px;margin-top:14px;align-items:start}
-@media (max-width:980px){ .story8{grid-template-columns:repeat(2,minmax(0,1fr))} .filmband{grid-template-columns:1fr} }
-@media (max-width:620px){ .tray{grid-template-columns:1fr 1fr;gap:8px} .icard .iv{font-size:19px} .story8 .vals > span:first-child{font-size:19px} }
-@media (max-width:980px){ .spec{grid-template-columns:repeat(2,minmax(0,1fr))} }
-@media (max-width:620px){ .entry{grid-template-columns:1fr} .ringwrap{grid-template-columns:1fr} .cell{min-height:110px} }
+@media (max-width:620px){ .entry{grid-template-columns:1fr} .ringwrap{grid-template-columns:1fr} }
+
+/* film page: still and story up top, the running time as the anchor, evidence below */
+.top{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:36px;margin-top:22px;align-items:start}
+.frame{position:relative}
+.thumbs{display:flex;gap:3px;margin-top:3px}
+.thumbs button{all:unset;cursor:pointer;flex:1;aspect-ratio:16/10;background-repeat:no-repeat;background-color:var(--soft);position:relative;min-width:0}
+.thumbs button::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:3px;background:var(--tone,transparent)}
+.thumbs button[aria-current="true"]{outline:2px solid var(--ink);outline-offset:-2px}
+.thumbs button:focus-visible{outline:2px solid var(--red);outline-offset:-2px}
+.nostill{aspect-ratio:16/9;background:var(--ink);color:var(--on-ink);display:flex;flex-direction:column;justify-content:flex-end;padding:28px 30px}
+.nostill q{font-family:var(--display);font-style:italic;font-size:26px;line-height:1.3;quotes:"“" "”"}
+.nostill span{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;opacity:.7;margin-top:14px}
+.prose{font-family:var(--display);font-size:24px;line-height:1.5;margin:0;text-wrap:pretty}
+.prose i{font-style:italic;color:var(--mute)}
+.prose button{all:unset;cursor:pointer;color:var(--ink);background-image:linear-gradient(var(--hair),var(--hair));background-size:100% 1px;background-repeat:no-repeat;background-position:0 92%}
+.prose button:hover{background-image:linear-gradient(var(--red),var(--red))}
+.prose button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.prose .rel{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--mute);vertical-align:2px}
+.prose-note{font-size:13px;color:var(--mute);margin-top:14px}
+.spinehead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-top:56px}
+.spinehead h3{font-family:var(--display);font-weight:400;font-size:30px;margin:0}
+.spinehead p{margin:0;font-size:14px;color:var(--mute);max-width:56ch}
+.spine{overflow-x:auto;margin-top:10px;-webkit-overflow-scrolling:touch}
+.spine svg{display:block;overflow:visible}
+.spine svg text{font-family:var(--mono);font-size:11px;fill:var(--mute)}
+.spine svg .lbl text{font-family:var(--text);font-size:14.5px;fill:var(--ink)}
+.spine svg .hit{cursor:pointer}
+.spine svg .hit:focus{outline:none}
+.spine svg .hit:hover .lb,.spine svg .hit:focus-visible .lb,.spine svg .hit.on .lb{fill:var(--soft)}
+.spine svg .hit.on text{font-weight:600}
+.spine svg .hit.on circle.bt{stroke:var(--red);stroke-width:2.5}
+.spine svg .hit:focus-visible circle.bt{stroke:var(--red);stroke-width:2.5}
+.keyline{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:6px;font-size:13px;color:var(--mute)}
+.keyline span{display:inline-flex;align-items:center;gap:6px}
+.detail{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:8px 40px;border-top:1px solid var(--ink);margin-top:14px;padding-top:18px;min-height:190px}
+.detail .kind{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase}
+.detail h4{font-family:var(--display);font-weight:400;font-size:38px;line-height:1.1;margin:6px 0 0;text-wrap:balance}
+.detail .st{font-style:italic;color:var(--mute);margin-top:6px}
+.detail .dt{margin-top:8px;max-width:48ch}
+.detail .stepper{display:flex;gap:14px;margin-top:16px;font-size:14px}
+.detail .also{font-size:13.5px;color:var(--mute);margin-top:12px}
+.detail blockquote{margin:0 0 10px;padding:0 0 0 14px;border-left:2px solid var(--hair);font-size:15px;line-height:1.5}
+.detail blockquote .from{font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;margin-right:6px;color:var(--mute)}
+.reading{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-top:72px;border-top:3px solid var(--ink);padding-top:10px}
+.reading h3{font-family:var(--display);font-weight:400;font-size:30px;margin:0}
+.reading p{margin:0;font-size:14px;color:var(--mute)}
+@media (max-width:980px){ .top{grid-template-columns:1fr} .detail{grid-template-columns:1fr} }
+@media (max-width:620px){ .prose{font-size:20px} .detail h4{font-size:30px} .nostill q{font-size:20px} }
 @media (max-width:980px){
   .row{grid-template-columns:96px 46px minmax(0,1fr);gap:12px}
   .thumb{width:96px}
@@ -409,19 +404,6 @@ function tsec(s) { const m = /^(\d\d):(\d\d):(\d\d)/.exec(s || ""); return m ? +
 function timeOf(e) { if (e.source === "subtitles") return tsec(e.at); const m = (e.moments || []).find(m => m.source === "subtitles" && m.at); return m ? tsec(m.at) : null; }
 function sortedBeats(d) { return (d.dims.beats || []).map((e, i) => ({ ...e, _i: i })).sort((a, b) => (a.order ?? 999) - (b.order ?? 999)); }
 
-function specimen(d) {
-  return `<div class="spec">${DIMS.map(k => {
-    const es = d.dims[k] || [], ns = d.not_stated.includes(k);
-    if (!es.length) return `<button type="button" class="cell empty" data-jump="d-${k}"><span class="cl">${DN[k]}</span><span class="cv">${ns ? "Not stated in the plot" : "Nothing recorded"}</span></button>`;
-    let extra = "", head = esc(es[0].value);
-    if (k === "images") { head = `${es.length} images`; extra = `<span class="mini">${[...es].sort((a, b) => (a.role || "").localeCompare(b.role || "")).map(e => `<i style="${swatch(e.role)}" title="${esc(e.value)}"></i>`).join("")}</span>`; }
-    if (k === "beats") { const z = WHEN.map(w => es.filter(e => e.when === w).length), mx = Math.max(...z, 1); head = `${es.length} beats`;
-      extra = `<span class="zones" title="Beats per part of the film: ${WHEN.map((w, i) => w + " " + z[i]).join(", ")}">${z.map(n => `<i style="height:${n ? 4 + n / mx * 30 : 1}px;${n ? "" : "background:var(--hair)"}"></i>`).join("")}</span>`; }
-    if (k === "who_suffers") extra = `<span class="cn" style="margin-top:0">${[...new Set(es.map(e => e.relation_to_threat).filter(Boolean))].map(r => RELN[r]).join(" · ")}</span>`;
-    return `<button type="button" class="cell" data-jump="d-${k}"><span class="cl">${DN[k]}</span><span class="cv">${head}</span>${extra}<span class="cn">${k === "images" || k === "beats" ? "" : es.length > 1 ? `+${es.length - 1} more` : "1 entry"}</span></button>`;
-  }).join("")}</div>`;
-}
-
 function among(f) {
   const M = [["rt", "Runtime", v => Math.round(v) + " min"], ["wpm", "Words a minute", v => Math.round(v)], ["ds", "Runtime with dialogue", v => Math.round(v * 100) + "%"], ["nsc", "Jump scares logged", v => v], ["n", "Story entries", v => v]];
   return `<div class="among">${M.map(([k, name, fm]) => {
@@ -434,69 +416,6 @@ function among(f) {
   }).join("")}</div>`;
 }
 
-function glanceBlock(d) {
-  return `<div class="blockhead"><h3>The film at a glance</h3><p>Dialogue, jump scares, story beats and images laid along the running time. Point at or tap a mark to read it.</p></div>
-    <figure class="glance" id="glance" aria-label="Timeline of ${esc(d.title)}"></figure>
-    <p class="readout" id="readout"><span class="fp">Point at a mark to read it here. Click it to jump to its entry.</span></p>
-    <div class="legend"><span><span class="sw" style="background:var(--mute)"></span>words spoken each minute</span><span><span class="sw" style="background:var(--soft);outline:1px solid var(--hair)"></span>longest silences</span><span><span class="sw" style="background:var(--red);width:2px;height:12px"></span>jump scare</span>
-      <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="6" fill="var(--ink)"/></svg>timed from subtitles</span><span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5.5" fill="var(--paper)" stroke="var(--ink)"/></svg>placed by part of the film</span>
-      ${["omen","clue","threat","symbol","weapon","setting"].map(r => `<span><span class="sw" style="${swatch(r)}"></span>${r}</span>`).join("")}</div>`;
-}
-function drawGlance(d) {
-  const el = document.getElementById("glance"); if (!el) return;
-  const W = el.clientWidth, narrow = W < 640, L = narrow ? 10 : 96, iw = W - L - 12;
-  const series = d.wpm_series || [], sc = d.scares ? d.scares.scares.map(s => tsec(s.t)).filter(v => v != null) : [];
-  const beats = sortedBeats(d), imgs = (d.dims.images || []).map((e, i) => ({ ...e, _i: i }));
-  const timed = [...beats, ...imgs].map(timeOf).filter(v => v != null);
-  const T = Math.max(d.runtime || 0, series.length, ...sc.map(v => v / 60 + 1), ...timed.map(v => v / 60 + 1), 10);
-  const x = m => L + m / T * iw;
-  const place = (items) => { // exact time when known, otherwise spread inside its part of the film
-    const out = []; const byZone = {};
-    items.forEach(e => { const t = timeOf(e); if (t != null) out.push([e, t / 60, true]); else if (ZONE[e.when]) (byZone[e.when] = byZone[e.when] || []).push(e); });
-    for (const [w, es] of Object.entries(byZone)) { const [a, b] = ZONE[w]; es.forEach((e, j) => out.push([e, T * (a + (b - a) * (j + .5) / es.length), false])); }
-    return out.sort((p, q) => p[1] - q[1]);
-  };
-  const lanes = (pl, gap, n) => { const last = Array(n).fill(-1e9); return pl.map(p => { const px = x(p[1]); let l = last.findIndex(v => px - v >= gap); if (l < 0) l = last.indexOf(Math.min(...last)); last[l] = px; return [...p, l]; }); };
-  const rowH = { dia: 52, sc: 22, beats: 46, img: 40 }, lab = narrow ? 18 : 0;
-  let y = 0, h = "";
-  const row = (name, H) => { const top = y + lab; h += narrow ? `<text class="rowlab" x="0" y="${y + 12}">${name}</text>` : `<text class="rowlab" x="0" y="${top + H / 2 + 4}">${name}</text>`; y = top + H + 10; return top; };
-  // zones background
-  const zoneTop = 0;
-  // dialogue
-  let top = row("Dialogue", rowH.dia);
-  const en = d.dialogue.en;
-  if (en) for (const s of en.longest_silences || []) { const a = tsec(s.starts_at) / 60; h += `<rect x="${x(a)}" y="${top}" width="${Math.max(2, s.seconds / 60 / T * iw)}" height="${rowH.dia}" fill="var(--soft)" stroke="var(--hair)"/>`; }
-  if (series.length) { const bw = Math.max(1, iw / T - 1); series.forEach((n, m) => { const bh = Math.min(n, 240) / 240 * rowH.dia; if (bh > 0) h += `<rect x="${x(m)}" y="${top + rowH.dia - bh}" width="${bw}" height="${bh}" fill="var(--mute)"/>`; }); }
-  else h += `<text x="${L}" y="${top + rowH.dia / 2 + 4}">no usable English subtitles</text>`;
-  h += `<line x1="${L}" x2="${L + iw}" y1="${top + rowH.dia}" y2="${top + rowH.dia}" stroke="var(--hair)"/>`;
-  // scares
-  top = row("Jump scares", rowH.sc);
-  if (sc.length) d.scares.scares.forEach(s => { const t = tsec(s.t); if (t == null) return; h += `<g class="mk" data-tip="${esc(`<span class="tag">jump scare · ${s.t}</span>${s.d}`)}"><rect x="${x(t / 60) - 4}" y="${top - 2}" width="8" height="${rowH.sc + 4}" fill="transparent"/><line x1="${x(t / 60)}" x2="${x(t / 60)}" y1="${top}" y2="${top + rowH.sc}" stroke="var(--red)" stroke-width="2"/></g>`; });
-  else h += `<text x="${L}" y="${top + 15}">${d.scares ? "none logged" : "no jump-scare log for this film"}</text>`;
-  // beats
-  top = row("Beats", rowH.beats);
-  lanes(place(beats), 20, 2).forEach(([e, m, ex, l]) => { const n = beats.indexOf(e) + 1, cx = x(m), cy = top + 11 + l * 22;
-    h += `<g class="mk" data-jump="b-${e._i}" data-tip="${esc(`<span class="tag">beat ${n} · ${e.when || ""}${ex ? " · " + (e.at || (e.moments || []).find(q => q.source === "subtitles").at) : ""}</span><strong>${e.value}</strong>${e.detail ? " · " + e.detail : ""}`)}"><circle cx="${cx}" cy="${cy}" r="9.5" fill="${ex ? "var(--ink)" : "var(--paper)"}" stroke="var(--ink)"/><text x="${cx}" y="${cy + 3.5}" text-anchor="middle" style="fill:${ex ? "var(--on-ink)" : "var(--ink)"};font-size:10px">${n}</text></g>`; });
-  // images
-  top = row("Images", rowH.img);
-  lanes(place(imgs), 11, 3).forEach(([e, m, ex, l]) => { const cx = x(m), cy = top + 6 + l * 12, c = ROLE_C[e.role] || "var(--hair)", hol = HOLLOW.has(e.role);
-    h += `<g class="mk" data-jump="i-${e._i}" data-tip="${esc(`<span class="tag">image · ${e.role || "no role"} · ${e.when || ""}${ex ? " · timed" : ""}</span><strong>${e.value}</strong>${e.state ? " · " + e.state : ""}${e.detail ? " · " + e.detail : ""}`)}"><rect x="${cx - 4.5}" y="${cy - 4.5}" width="9" height="9" fill="${hol ? "var(--paper)" : c}" stroke="${c}" stroke-width="${hol ? 2 : 1}" ${ex ? "" : `stroke-dasharray="${hol ? "" : ""}"`}/></g>`; });
-  // axis and parts of the film
-  const ax = y;
-  const step = T > 150 ? 30 : T > 70 ? 15 : 10;
-  h += `<line x1="${L}" x2="${L + iw}" y1="${ax}" y2="${ax}" stroke="var(--ink)"/>`;
-  for (let m = 0; m <= T; m += step) h += `<line x1="${x(m)}" x2="${x(m)}" y1="${ax}" y2="${ax + 5}" stroke="var(--ink)"/><text x="${x(m)}" y="${ax + 17}" text-anchor="${m === 0 ? "start" : "middle"}">${m === 0 ? "0 min" : m}</text>`;
-  for (const w of WHEN) { const [a, b] = ZONE[w]; h += `<line x1="${x(T * a)}" x2="${x(T * a)}" y1="0" y2="${ax}" stroke="var(--rule)" stroke-dasharray="2 3"/>`;
-    if (!narrow || (b - a) > .15) h += `<text x="${x(T * (a + b) / 2)}" y="${ax + 34}" text-anchor="middle" style="letter-spacing:.08em">${w.toUpperCase()}</text>`; }
-  const H = ax + 42;
-  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" height="${H}" role="img" aria-label="Timeline of dialogue, jump scares, beats and images">${h}</svg>`;
-  const ro = document.getElementById("readout");
-  el.querySelectorAll(".mk").forEach(g => {
-    const show = () => { el.querySelectorAll(".mk.on").forEach(o => o.classList.remove("on")); g.classList.add("on"); ro.innerHTML = g.dataset.tip; };
-    g.addEventListener("mouseenter", show);
-    g.addEventListener("click", () => { show(); if (g.dataset.jump) flash(g.dataset.jump); });
-  });
-}
 function flash(id) {
   const t = document.getElementById(id); if (!t) return;
   if (t.parentElement && t.parentElement.hidden) t.parentElement.hidden = false;
@@ -528,27 +447,115 @@ function matrix(es) {
 }
 
 
-const S8 = ["threat","wants","trigger","wrong","origin","rules","who_suffers","ending"];
-function story8(d) {
-  return `<div class="story8">${S8.map(k => {
-    const es = d.dims[k] || [], ns = d.not_stated.includes(k);
-    if (!es.length) return `<button type="button" class="cell empty" data-jump="d-${k}"><span class="cl">${DN[k]}</span><span class="cv">${ns ? "Not stated in the plot" : "Nothing recorded"}</span></button>`;
-    const shown = es.slice(0, 3);
-    return `<button type="button" class="cell" data-jump="d-${k}"><span class="cl">${DN[k]}</span><span class="vals">${shown.map(e => `<span>${esc(e.value)}${k === "who_suffers" && e.relation_to_threat ? ` <span class="tag">${esc(e.relation_to_threat)}</span>` : ""}</span>`).join("")}</span>${es.length > 3 ? `<span class="cn">+${es.length - 3} more</span>` : ""}</button>`;
-  }).join("")}</div>`;
+
+function ruleWord(k) { return { threat: "", wants: "It wants", trigger: "It is set off by", wrong: "Underneath lies", origin: "It comes from", rules: "The rules:", who_suffers: "It falls on", ending: "It ends with" }[k]; }
+function prose(d) {
+  const v = (e, k) => `<button type="button" data-ev="${k}">${esc(e.value)}</button>${k === "who_suffers" && e.relation_to_threat ? ` <span class="rel">${esc(e.relation_to_threat)}</span>` : ""}`;
+  const list = (k, n = 3) => { const es = (d.dims[k] || []).slice(0, n); if (!es.length) return "";
+    const parts = es.map(e => v(e, k)); return parts.length > 1 ? parts.slice(0, -1).join(", ") + " <i>and</i> " + parts[parts.length - 1] : parts[0]; };
+  const s = [];
+  const th = d.dims.threat || [];
+  if (th.length) s.push(`<i>The threat is</i> ${v(th[0], "threat")}${th[0].detail ? `, <i>${esc(th[0].detail)}</i>` : ""}${th.length > 1 ? `<i>, alongside</i> ${th.slice(1, 3).map(e => v(e, "threat")).join(" <i>and</i> ")}` : ""}.`);
+  for (const k of ["wants", "trigger", "wrong", "origin", "rules", "who_suffers", "ending"]) { const l = list(k, k === "rules" ? 3 : 2); if (l) s.push(`<i>${ruleWord(k)}</i> ${l}.`); }
+  const missing = ["threat","wants","trigger","wrong","origin","rules","who_suffers","ending"].filter(k => !(d.dims[k] || []).length);
+  return `<p class="prose">${s.join(" ")}</p><p class="prose-note">Assembled from the first-pass story elements. Each underlined phrase opens its evidence.${missing.length ? ` The plot doesn't state ${missing.map(k => DN[k].toLowerCase()).join(", ")}.` : ""}</p>`;
 }
-function tray(d) {
-  const es = (d.dims.images || []).map((e, i) => ({ ...e, _i: i })).sort((a, b) => WHEN.indexOf(a.when) - WHEN.indexOf(b.when));
-  if (!es.length) return `<div class="ns">No images recorded.</div>`;
-  return `<div class="tray">${es.map(e => { const c = ROLE_C[e.role] || "var(--hair)";
-    return `<button type="button" class="icard" data-jump="i-${e._i}" style="border-top-color:${c}">
-      <span class="role" style="color:${c === "var(--hair)" ? "var(--mute)" : c}">${esc(e.role || "image")}${e.source && e.source !== "wikipedia" ? ` · from ${esc(e.source)}` : ""}</span>
-      <span class="iv">${esc(e.value)}</span>${e.state ? `<span class="st">${esc(e.state)}</span>` : ""}${e.detail ? `<span class="dt">${esc(e.detail)}</span>` : ""}
-      <span class="wbar" aria-label="appears in the ${esc(e.when || "")} part">${WHEN.map(w => `<i class="${w === e.when ? "on" : ""}"></i>`).join("")}</span><span class="wl"><span>start</span><span>${esc(e.when || "")}</span><span>end</span></span></button>`; }).join("")}</div>`;
+function topStill(d) {
+  if (!d.stills) { const q = (d.dims.threat || [])[0] || (d.dims.beats || [])[0];
+    return `<div class="nostill">${q ? `<q>${esc(q.quote)}</q><span>NO STILLS FOR THIS FILM · FROM THE ${q.source === "subtitles" ? "SUBTITLES" : "WIKIPEDIA PLOT"}</span>` : `<span>NO STILLS FOR THIS FILM</span>`}</div>`; }
+  const n = d.stills, pos = i => n === 1 ? "0 0" : `0 ${(i / (n - 1)) * 100}%`, tone = d.tones || [];
+  return `<div class="frame" id="frame" role="img" aria-label="Still from ${esc(d.title)}" style="background-image:url('stills/${d.id}.jpg');background-size:100% ${n * 100}%;background-position:${pos(0)}"></div>
+    ${n > 1 ? `<div class="thumbs">${Array.from({ length: n }, (_, i) => `<button type="button" aria-label="Show still ${i + 1} of ${n}" aria-current="${i === 0}" style="--tone:${tone[i] || "transparent"};background-image:url('stills/${d.id}.jpg');background-size:100% ${n * 100}%;background-position:${pos(i)}"></button>`).join("")}</div>` : ""}
+    <div class="caption" style="margin-top:12px">${n} stills from <a href="${esc(d.stills_source)}" target="_blank" rel="noopener">FILMGRAB</a>, in page order. The line under each is its prevailing colour.</div>`;
 }
-function beatseq(d) {
-  const b = sortedBeats(d); if (!b.length) return "";
-  return `<ol class="beatseq">${b.map((e, i) => `<li><span class="no">${i + 1}</span><span><button type="button" data-jump="b-${e._i}">${esc(e.value)}</button>${e.when ? `<span class="tag">${esc(e.when)}</span>` : ""}</span></li>`).join("")}</ol>`;
+
+/* the running time: images as labels above the line, beats on it, dialogue and scares below */
+function spineItems(d) {
+  const beats = sortedBeats(d).map((e, n) => ({ kind: "beat", e, n: n + 1, key: "b-" + e._i }));
+  const imgs = (d.dims.images || []).map((e, i) => ({ kind: "image", e, key: "i-" + i }));
+  return { beats, imgs };
+}
+function drawSpine(d, sel) {
+  const el = document.getElementById("spine"); if (!el) return;
+  const W = Math.max(el.clientWidth, 880), L = 8, iw = W - L - 8;
+  const series = d.wpm_series || [], sc = d.scares ? d.scares.scares.map(s => ({ t: tsec(s.t), s })).filter(x => x.t != null) : [];
+  const { beats, imgs } = spineItems(d);
+  const timed = [...beats, ...imgs].map(x => timeOf(x.e)).filter(v => v != null);
+  const T = Math.max(d.runtime || 0, series.length, ...sc.map(x => x.t / 60 + 1), ...timed.map(v => v / 60 + 1), 10);
+  const X = m => L + m / T * iw;
+  const at = list => { const by = {}; list.forEach(x => { const t = timeOf(x.e); if (t != null) { x.m = t / 60; x.exact = true; } else if (ZONE[x.e.when]) (by[x.e.when] = by[x.e.when] || []).push(x); else { x.m = T / 2; } });
+    for (const [w, xs] of Object.entries(by)) { const [a, b] = ZONE[w]; xs.forEach((x, j) => x.m = T * (a + (b - a) * (j + .5) / xs.length)); } };
+  at(beats); at(imgs);
+  // pack image labels into lanes above the line
+  const lanesEnd = [], LH = 26;
+  imgs.sort((a, b) => a.m - b.m).forEach(x => { const w = x.e.value.length * 7.4 + 26, x0 = Math.min(Math.max(X(x.m) - 8, 0), W - w);
+    let l = lanesEnd.findIndex(end => x0 > end + 8); if (l < 0) { l = lanesEnd.length; lanesEnd.push(0); } lanesEnd[l] = x0 + w; x.lane = l; x.x0 = x0; x.w = w; });
+  const nl = Math.max(lanesEnd.length, 1), top = 8, lineY = top + nl * LH + 22;
+  let h = "";
+  // parts of the film
+  for (const w of WHEN) { const [a, b] = ZONE[w]; h += `<line x1="${X(T * a)}" x2="${X(T * a)}" y1="${top}" y2="${lineY + 120}" stroke="var(--rule)" stroke-dasharray="2 4"/>`; }
+  // image labels with leaders down to the line
+  let leaders = "", labels = "";
+  imgs.forEach(x => { const y = top + (nl - 1 - x.lane) * LH, c = ROLE_C[x.e.role] || "var(--mute)", px = X(x.m), hol = HOLLOW.has(x.e.role);
+    leaders += `<line x1="${px}" x2="${px}" y1="${y + 20}" y2="${lineY - 4}" stroke="${c}" stroke-width="1" ${x.exact ? "" : `stroke-dasharray="2 2"`}/>`;
+    labels += `<g class="hit lbl" tabindex="0" role="button" data-key="${x.key}" aria-label="Image: ${esc(x.e.value)}, ${esc(x.e.role || "")}, ${esc(x.e.when || "")}">
+      <rect class="lb" x="${x.x0}" y="${y}" width="${x.w}" height="21" fill="var(--paper)"/>
+      <rect x="${x.x0 + 6}" y="${y + 6}" width="9" height="9" fill="${hol ? "var(--paper)" : c}" stroke="${c}" stroke-width="${hol ? 2 : 1}"/>
+      <text x="${x.x0 + 21}" y="${y + 15}">${esc(x.e.value)}</text></g>`; });
+  h += leaders + labels;
+  // the line and beats on it
+  h += `<line x1="${L}" x2="${L + iw}" y1="${lineY}" y2="${lineY}" stroke="var(--ink)" stroke-width="2"/>`;
+  const placed = []; beats.forEach(x => { let cx = X(x.m); while (placed.some(p => Math.abs(p - cx) < 21)) cx += 21; placed.push(cx);
+    h += `<g class="hit" tabindex="0" role="button" data-key="${x.key}" aria-label="Beat ${x.n}: ${esc(x.e.value)}"><circle class="bt" cx="${cx}" cy="${lineY}" r="10" fill="${x.exact ? "var(--ink)" : "var(--paper)"}" stroke="var(--ink)" stroke-width="1.5"/><text x="${cx}" y="${lineY + 3.6}" text-anchor="middle" style="font-size:10px;fill:${x.exact ? "var(--on-ink)" : "var(--ink)"}">${x.n}</text></g>`; });
+  // dialogue hanging below the line, silences shaded, scares as red ticks
+  const dy = lineY + 22, dh = 56;
+  const en = d.dialogue.en;
+  if (en) for (const s of en.longest_silences || []) { const a = tsec(s.starts_at) / 60; h += `<rect x="${X(a)}" y="${dy}" width="${Math.max(2, s.seconds / 60 / T * iw)}" height="${dh}" fill="var(--soft)"/><text x="${X(a) + 3}" y="${dy + dh - 4}" style="font-size:9.5px">${s.seconds}s</text>`; }
+  if (series.length) { const bw = Math.max(1, iw / T - 1.2); series.forEach((n, m) => { const bh = Math.min(n, 240) / 240 * dh; if (bh > 0) h += `<rect x="${X(m)}" y="${dy}" width="${bw}" height="${bh}" fill="var(--mute)" opacity=".75"/>`; }); }
+  else h += `<text x="${L}" y="${dy + 16}">no usable English subtitles, so no dialogue track</text>`;
+  sc.forEach(x => { h += `<g class="hit" tabindex="0" role="button" data-key="s-${x.t}" aria-label="Jump scare at ${esc(x.s.t)}"><rect x="${X(x.t / 60) - 5}" y="${dy - 4}" width="10" height="${dh + 8}" fill="transparent"/><line x1="${X(x.t / 60)}" x2="${X(x.t / 60)}" y1="${dy - 4}" y2="${dy + dh + 4}" stroke="var(--red)" stroke-width="2"/></g>`; });
+  // axis
+  const ay = dy + dh + 16, step = T > 150 ? 30 : T > 70 ? 15 : 10;
+  for (let m = 0; m <= T; m += step) h += `<text x="${X(m)}" y="${ay}" text-anchor="${m === 0 ? "start" : "middle"}">${m === 0 ? "0 min" : m}</text>`;
+  for (const w of WHEN) { const [a, b] = ZONE[w]; h += `<text x="${X(T * (a + b) / 2)}" y="${ay + 18}" text-anchor="middle" style="letter-spacing:.12em">${w.toUpperCase()}</text>`; }
+  const H = ay + 26;
+  el.innerHTML = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="group" aria-label="The running time of ${esc(d.title)}">${h}</svg>`;
+  el.querySelectorAll(".hit").forEach(g => {
+    const act = () => showDetail(d, g.dataset.key);
+    g.addEventListener("click", act);
+    g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); act(); } });
+  });
+  if (sel) mark(sel);
+}
+function mark(key) { document.querySelectorAll("#spine .hit").forEach(g => g.classList.toggle("on", g.dataset.key === key)); }
+function elsewhere(v, id) { const o = F.filter(f => f.id !== id && f.v.includes(v)); return o; }
+function showDetail(d, key) {
+  const P = document.getElementById("detail"); if (!P) return;
+  const { beats, imgs } = spineItems(d);
+  const order = [...imgs.map(x => ({ ...x, t: timeOf(x.e) ?? 1e9 * 0 + WHEN.indexOf(x.e.when) * 1e5 })), ...beats];
+  let h = "";
+  if (key.startsWith("s-")) {
+    const t = +key.slice(2), s = d.scares.scares.find(x => tsec(x.t) === t);
+    h = `<div><span class="kind" style="color:var(--red)">jump scare · ${esc(s.t)}</span><h4>${esc(s.d)}</h4></div><div><p class="small">Crowd-sourced timing from <a href="${esc(d.scares.source)}" target="_blank" rel="noopener">Where's the Jump</a>.</p></div>`;
+  } else {
+    const isImg = key.startsWith("i-"), list = isImg ? imgs : beats, idx = list.findIndex(x => x.key === key), x = list[idx], e = x.e;
+    const c = isImg ? (ROLE_C[e.role] || "var(--mute)") : "var(--ink)";
+    const tm = timeOf(e), when = [e.when, tm != null ? `at ${Math.floor(tm / 3600) ? Math.floor(tm / 3600) + ":" : ""}${String(Math.floor(tm % 3600 / 60)).padStart(2, "0")}:${String(tm % 60).padStart(2, "0")}` : "placed by part of the film"].filter(Boolean).join(" · ");
+    const other = elsewhere(e.value, d.id);
+    const nav = (j, lab) => list[j] ? `<button class="linkish" type="button" data-key="${list[j].key}">${lab}: ${esc(list[j].e.value)}</button>` : "";
+    h = `<div><span class="kind" style="color:${c === "var(--ink)" ? "var(--mute)" : c}">${isImg ? `image · ${esc(e.role || "no role")}` : `beat ${x.n} of ${list.length}`}${e.source && e.source !== "wikipedia" ? ` · found in the ${esc(e.source)}` : ""}</span>
+        <h4>${esc(e.value)}</h4>${e.state ? `<p class="st">${esc(e.state)}</p>` : ""}${e.detail ? `<p class="dt">${esc(e.detail)}</p>` : ""}
+        <p class="tag" style="margin-top:10px;display:block">${esc(when)}${primed(e.value) ? ` · <span class="red">example wording</span>` : ""}</p>
+        ${other.length ? `<p class="also">The same wording appears in ${other.slice(0, 4).map(f => `<button class="linkish" type="button" data-go="${f.id}">${esc(f.t)}</button>`).join(", ")}${other.length > 4 ? ` and ${other.length - 4} more` : ""}.</p>` : ""}
+        <div class="stepper">${nav(idx - 1, "Previous")}${nav(idx + 1, "Next")}</div></div>
+      <div>${[e, ...(e.moments || [])].map(m => `<blockquote>${from(m)}“${esc(m.quote)}”</blockquote>`).join("")}
+        <button class="linkish" type="button" data-full="${isImg ? "d-images" : "d-beats"}" style="font-size:14px">See all ${list.length} ${isImg ? "images" : "beats"} in the full reading</button></div>`;
+  }
+  P.innerHTML = h;
+  mark(key);
+  P.querySelectorAll("[data-key]").forEach(b => b.onclick = () => showDetail(d, b.dataset.key));
+  P.querySelectorAll("[data-go]").forEach(b => b.onclick = () => go(b.dataset.go));
+  P.querySelectorAll("[data-full]").forEach(b => b.onclick = () => flash(key.startsWith("i-") || key.startsWith("b-") ? key : b.dataset.full));
 }
 
 function entry(e, k, id) {
@@ -587,10 +594,10 @@ function sources(d, f) {
     ${row("V", !!d.stills, d.stills ? `${d.stills} stills` : "No stills")}
   </div>`;
 }
-function side(d) {
+function side(d, f) {
   const L = d.links, en = d.dialogue.en, other = Object.keys(d.dialogue).filter(l => l !== "en");
   const fact = (k, v) => v && (!Array.isArray(v) || v.length) ? `<dt>${k}</dt><dd>${esc(Array.isArray(v) ? v.join(", ") : v)}</dd>` : "";
-  let h = `<section><h4>Facts</h4><dl class="facts">
+  let h = `<section><h4>Among the 100</h4>${among(f)}</section><section><h4>Sources</h4>${sources(d, f)}</section><section><h4>Facts</h4><dl class="facts">
     ${fact("Directed by", d.directors)}${fact("Written by", d.writers)}${fact("Starring", d.cast)}${fact("Camera", d.dop)}${fact("Music", d.music)}${fact("Produced by", d.producers)}
     ${fact("Countries", d.countries)}${fact("Languages", d.languages)}${fact("Set in", d.set_in)}${fact("Shot in", d.shot_in)}${fact("Subjects", d.subjects)}
     ${d.budget ? `<dt>Budget</dt><dd class="mono">${fmt(d.budget)}</dd>` : ""}${d.box ? `<dt>Box office</dt><dd class="mono">${fmt(d.box)}</dd>` : ""}
@@ -633,8 +640,6 @@ async function renderFilm(id) {
   }
   if (location.hash.slice(1) !== id) return;
   const prev = F[(i + F.length - 1) % F.length], next = F[(i + 1) % F.length];
-  const t = d.dims.threat[0], en = d.dims.ending[0];
-  const lede = [t ? `The threat: ${esc(t.value)}${t.detail ? ` (${esc(t.detail)})` : ""}.` : "", en ? `The ending: ${esc(en.value)}.` : ""].filter(Boolean).join(" ");
   app.innerHTML = `
   <div class="nav"><button class="linkish" type="button" id="back">All 100 films</button>
     <span><button class="linkish" type="button" data-go="${prev.id}">Previous: ${esc(prev.t)}</button> · <button class="linkish" type="button" data-go="${next.id}">Next: ${esc(next.t)}</button></span></div>
@@ -645,42 +650,32 @@ async function renderFilm(id) {
     <p class="meta">${[d.runtime ? Math.round(d.runtime) + " min" : "", d.directors.length ? "dir. " + d.directors.join(", ") : "", d.languages.join(", ")].filter(Boolean).map(esc).join(" · ")}</p>
 
   </div>
-  <div class="blockhead" style="margin-top:28px"><h3>The story</h3><p>Eight parts of the story, read from the plot, subtitles and screenplay. Click a part to see the evidence.</p></div>
-  ${story8(d)}
-  <div class="blockhead"><h3>The images</h3><p>${(d.dims.images || []).length} concrete images, in the order they appear, coloured by what they do in the story.</p></div>
-  ${tray(d)}
-  <div class="blockhead"><h3>The beats</h3><p>${(d.dims.beats || []).length} key events in order.</p></div>
-  ${beatseq(d)}
-  ${glanceBlock(d).replace('<div class="blockhead"><h3>The film at a glance</h3>', '<div class="blockhead" style="margin-top:28px;border-top-width:1px"><h3 style="font-size:20px">Along the running time</h3>')}
-  <div class="blockhead"><h3>The film</h3><p>Stills, how it compares with the other 99, and what we hold on it.</p></div>
-  <div class="filmband">
-    <div>${stillsBlock(d)}</div>
-    <div class="complete">
-      <h4>Among the 100</h4>
-      ${among(f)}
-      <h4 style="margin-top:26px">Sources</h4>
-      ${sources(d, f)}
-    </div>
+  <div class="top">
+    <div>${topStill(d)}</div>
+    <div>${prose(d)}</div>
   </div>
-  <div class="blockhead"><h3>The evidence</h3><p>Every entry with the passage it was read from. ${f.f.length} of 10 parts filled, ${f.n} entries${d.plot_quality === "thin" ? ", from a thin plot" : ""}.</p></div>
+  <div class="spinehead"><h3>The running time</h3><p>Images sit above the line where they appear, beats sit on it, dialogue and jump scares hang below. Select anything to read it.</p></div>
+  <div class="spine" id="spine"></div>
+  <div class="keyline">${["omen","clue","threat","symbol","weapon","setting"].map(r => `<span><span class="sw" style="${swatch(r)}"></span>${r}</span>`).join("")}
+    <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="6" fill="var(--ink)"/></svg>timed from subtitles</span><span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5.5" fill="var(--paper)" stroke="var(--ink)"/></svg>placed by part of the film</span>
+    <span><span class="sw" style="background:var(--mute)"></span>words spoken each minute</span><span><span class="sw" style="background:var(--red);width:2px;height:12px"></span>jump scare</span></div>
+  <div class="detail" id="detail" aria-live="polite"></div>
+  <div class="reading"><h3>The full reading</h3><p>Every entry with the passage it was read from. ${f.f.length} of 10 parts filled, ${f.n} entries${d.plot_quality === "thin" ? ", from a thin plot" : ""}.</p></div>
   <div class="body" style="margin-top:18px">
     <div>
       ${DIMS.map(k => dimSection(d, k)).join("")}
       ${d.plot ? `<details class="plot"><summary>Plot, from Wikipedia</summary><div class="ptext">${d.plot.text.split(/\n\n+/).map(p => `<p>${esc(p)}</p>`).join("")}</div>
         <p class="small">${esc(d.plot.heading)} section of the ${d.plot.lang === "en" ? "English" : esc(d.plot.lang)} Wikipedia article, CC BY-SA. <a href="${esc(d.links.wikipedia)}" target="_blank" rel="noopener">Read the article</a>.</p></details>` : ""}
     </div>
-    <aside class="side">${side(d)}</aside>
+    <aside class="side">${side(d, f)}</aside>
   </div>
   <p class="foot">Story elements are Claude's first-pass reading, not yet reviewed. Values are written in the reader's own words and not merged, so similar ideas can appear under different wording. Entries marked “example wording” match phrases given to the readers as examples and may be over-used. Subtitles, screenplays and stills are held for private research only.</p>`;
   document.getElementById("back").onclick = () => go("");
   app.querySelectorAll("[data-go]").forEach(b => b.onclick = () => go(b.dataset.go));
   const frame = document.getElementById("frame");
-  const strip = [...app.querySelectorAll(".strip button")];
-  const pick = i => { if (!strip[i]) return; frame.style.backgroundPosition = strip[i].style.backgroundPosition; strip.forEach((x, j) => x.setAttribute("aria-current", j === i)); };
-  strip.forEach((b, i) => b.onclick = () => pick(i));
-  app.querySelectorAll(".tones button").forEach(b => b.onclick = () => pick(+b.dataset.i));
-  app.querySelectorAll(".cell[data-jump]").forEach(b => b.onclick = () => document.getElementById(b.dataset.jump).scrollIntoView({ block: "start" }));
-  app.querySelectorAll(".icard[data-jump], .beatseq [data-jump]").forEach(b => b.onclick = () => flash(b.dataset.jump));
+  const th = [...app.querySelectorAll(".thumbs button")];
+  th.forEach((b, i) => b.onclick = () => { frame.style.backgroundPosition = b.style.backgroundPosition; th.forEach((x, j) => x.setAttribute("aria-current", j === i)); });
+  app.querySelectorAll(".prose [data-ev]").forEach(b => b.onclick = () => flash("d-" + b.dataset.ev));
   const cells = [...app.querySelectorAll("[data-cell]")], all = document.getElementById("imgall");
   const filt = c => { cells.forEach(x => x.setAttribute("aria-pressed", x === c)); if (all) all.setAttribute("aria-pressed", !c);
     const [r, w] = c ? c.dataset.cell.split("|") : [];
@@ -688,8 +683,9 @@ async function renderFilm(id) {
     const note = document.getElementById("imgnote"); if (note) note.textContent = c ? `Showing ${r} images, ${w}.` : "Click a square group to show only those images."; };
   cells.forEach(c => c.onclick = () => filt(c.getAttribute("aria-pressed") === "true" ? null : c));
   if (all) all.onclick = () => filt(null);
-  drawGlance(d);
-  let rt; window.onresize = () => { clearTimeout(rt); rt = setTimeout(() => drawGlance(d), 150); };
+  const first = (d.dims.images || []).length ? "i-" + (d.dims.images || []).map((e, i) => [WHEN.indexOf(e.when), i]).sort((a, b) => a[0] - b[0])[0][1] : (d.dims.beats || []).length ? "b-" + sortedBeats(d)[0]._i : null;
+  drawSpine(d); if (first) showDetail(d, first);
+  let rt; window.onresize = () => { clearTimeout(rt); rt = setTimeout(() => drawSpine(d, document.querySelector("#spine .hit.on")?.dataset.key), 150); };
   window.scrollTo(0, 0);
   load(next.id).catch(() => {});
 }
