@@ -130,6 +130,41 @@ for fid in ids:
 json.dump({"films": index, "arch": {k: {"name": v["name"], "beat": v["beat"], "roots": v["roots"], "status": v["status"]} for k, v in arch.items()}},
           open(f"{OUT}/index.json", "w"), ensure_ascii=False, separators=(",", ":"))
 print(len(index), "films;", sum(1 for x in index if x["st"]), "with stills")
+
+# ---- the film as a node: its nearest neighbours among the chosen films, and what links them
+import math, collections
+PRIMED = ["vengeful ghost","serial killer","cult","possessing demon","person who died wronged","summoned by ritual","revenge","hunger","moving into a new home","must not look","cycle passes on","threat survives","threat destroyed","ambiguous","everyone dies","victim becomes threat","made by someone","unexplained","from nature","from outside","inherited"]
+def primed(v): return any(v == p or re.search(r"\b" + re.escape(p.rstrip("s")) + r"s?\b", v) for p in PRIMED)
+recs = {fid: json.load(open(f"{OUT}/data/{fid}.json")) for fid in ids}
+def feats(d):
+    out = {}
+    for k, es in d["dims"].items():
+        for e in es: out[f"el|{k}|{e['value']}"] = {"type": "element", "dim": k, "label": e["value"]}
+    for role, key, n in (("director", "directors", None), ("writer", "writers", None), ("actor", "cast", 8)):
+        for nm in (d[key][:n] if n else d[key]): out.setdefault(f"p|{nm}", {"type": "person", "label": nm, "roles": []})["roles"].append(role)
+    for c in d["arch"]: out[f"a|{c}"] = {"type": "archetype", "label": arch[c]["name"] if c in arch else c, "code": c}
+    return out
+FE = {fid: feats(r) for fid, r in recs.items()}
+count = collections.Counter(k for f in FE.values() for k in f)
+def weight(k, meta):
+    base = {"person": 3.0, "archetype": 1.0, "element": 1.6}[meta["type"]]
+    w = base / math.log2(1 + count[k])           # rarer links count for more
+    if meta["type"] == "element" and primed(meta["label"]): w *= 0.5   # example wording over-connects
+    return w
+for fid, r in recs.items():
+    mine = FE[fid]; nb = []
+    for o in ids:
+        if o == fid: continue
+        sh = [k for k in mine if k in FE[o]]
+        if sh: nb.append((sum(weight(k, mine[k]) for k in sh), o, sh))
+    nb.sort(key=lambda x: (-x[0], x[1]))
+    top = nb[:14]
+    used = sorted({k for _, _, sh in top for k in sh})
+    r["net"] = {"total": len(nb),
+        "links": [dict(mine[k], id=k, films_in_100=count[k] - 1, primed=mine[k]["type"] == "element" and primed(mine[k]["label"]),
+                       all=[o for o in ids if o != fid and k in FE[o]]) for k in used],
+        "films": [{"id": o, "score": round(sc, 2), "via": sh} for sc, o, sh in top]}
+    json.dump(r, open(f"{OUT}/data/{fid}.json", "w"), ensure_ascii=False, separators=(",", ":"))
 # assemble the page: the index is embedded so the ledger works before any film loads
 page = open("record/template.html").read().replace("__INDEX__", open(f"{OUT}/index.json").read().replace("</", "<\\/"))
 open(f"{OUT}/bloodline-record.html", "w").write(page)

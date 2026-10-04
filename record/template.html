@@ -226,6 +226,31 @@ ol.beats li.flash{background:var(--soft)}
 .reading p{margin:0;font-size:14px;color:var(--mute)}
 @media (max-width:980px){ .top{grid-template-columns:1fr} .detail{grid-template-columns:1fr} }
 @media (max-width:620px){ .prose{font-size:20px} .detail h4{font-size:30px} .nostill q{font-size:20px} }
+
+/* the film as a node */
+.netwrap > *{min-width:0}
+.netwrap{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:36px;margin-top:14px;align-items:start}
+.netsvg{overflow-x:auto}
+.netsvg svg{display:block;width:100%;min-width:520px;height:auto}
+.netsvg text{font-family:var(--text);font-size:14px;fill:var(--ink);paint-order:stroke;stroke:var(--paper);stroke-width:4px;stroke-linejoin:round}
+.netsvg text.fl{font-family:var(--display);font-size:17px}
+.netsvg text.ctr{font-family:var(--display);font-size:24px}
+.netsvg text.ty{font-family:var(--mono);font-size:10px;fill:var(--mute);letter-spacing:.08em}
+.netsvg .nd{cursor:pointer}
+.netsvg .nd:focus{outline:none}
+.netsvg .nd:focus-visible circle,.netsvg .nd:focus-visible rect,.netsvg .nd:focus-visible path{stroke:var(--red);stroke-width:2.5}
+.netsvg.dim .ed{opacity:.08}.netsvg.dim .nd{opacity:.25}
+.netsvg.dim .ed.hi{opacity:1}.netsvg.dim .nd.hi{opacity:1}
+ol.why{list-style:none;margin:0;padding:0;counter-reset:w}
+ol.why li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:8px;padding:9px 0;border-top:1px solid var(--rule)}
+ol.why li.hi{background:var(--soft)}
+ol.why .no{font-family:var(--mono);font-size:12px;color:var(--mute);padding-top:4px}
+ol.why .t{font-family:var(--display);font-size:18px}
+ol.why .r{font-size:13.5px;color:var(--mute);margin-top:2px}
+ol.why .r b{font-weight:600;color:var(--ink)}
+.strength{display:inline-block;height:5px;background:var(--ink);vertical-align:middle;margin-left:8px}
+.linkinfo{font-size:14px;margin-top:12px;min-height:22px}
+@media (max-width:980px){ .netwrap{grid-template-columns:1fr} }
 @media (max-width:980px){
   .row{grid-template-columns:96px 46px minmax(0,1fr);gap:12px}
   .thumb{width:96px}
@@ -558,6 +583,78 @@ function showDetail(d, key) {
   P.querySelectorAll("[data-full]").forEach(b => b.onclick = () => flash(key.startsWith("i-") || key.startsWith("b-") ? key : b.dataset.full));
 }
 
+
+const LT = { person: "var(--ink)", archetype: "var(--ochre)", element: "var(--teal)" };
+function linkWords(l) {
+  if (l.type === "person") return `${l.roles.join(" and ")}: <b>${esc(l.label)}</b>`;
+  if (l.type === "archetype") return `archetype: <b>${esc(l.label)}</b>`;
+  return `${DN[l.dim].toLowerCase()}: <b>${esc(l.label)}</b>${l.primed ? " (example wording)" : ""}`;
+}
+function netBlock(d) {
+  const n = d.net; if (!n || !n.films.length) return "";
+  return `<div class="spinehead"><h3>${esc(d.title)} as a node</h3><p>${n.total} of the other 99 films share at least one exact link: a person, an archetype, or the same story wording. The ${n.films.length} strongest are drawn. Rarer links count for more.</p></div>
+    <div class="netwrap"><div><div class="netsvg" id="net"></div>
+      <div class="keyline"><span><svg width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="var(--ink)"/></svg>person</span><span><svg width="12" height="12" aria-hidden="true"><path d="M6 0 L12 6 L6 12 L0 6Z" fill="var(--ochre)"/></svg>archetype</span><span><span class="sw" style="background:var(--teal)"></span>story element</span><span><span class="sw" style="background:var(--paper);box-shadow:inset 0 0 0 2px var(--teal)"></span>example wording</span><span>outer discs: films, filled with their own colour</span></div>
+      <p class="linkinfo" id="linkinfo"><span class="fp">Point at a link or a film to trace it. Click a film to open its record.</span></p></div>
+      <ol class="why" id="why">${n.films.map((f, i) => { const x = F.find(z => z.id === f.id), mx = n.films[0].score;
+        return `<li data-f="${f.id}"><span class="no">${i + 1}</span><div><button class="linkish t" type="button" data-go="${f.id}">${esc(x.t)}</button> <span class="tag">${x.y}</span><span class="strength" style="width:${Math.max(4, f.score / mx * 60)}px" title="link strength ${f.score}"></span>
+          <div class="r">${f.via.map(v => linkWords(n.links.find(l => l.id === v))).join(" · ")}</div></div></li>`; }).join("")}</ol></div>`;
+}
+function drawNet(d) {
+  const el = document.getElementById("net"); if (!el) return;
+  const n = d.net, c = 300, R1 = 140, R2 = 262;
+  const order = { person: 0, archetype: 1, element: 2 };
+  const links = [...n.links].sort((a, b) => order[a.type] - order[b.type] || (DIMS.indexOf(a.dim) - DIMS.indexOf(b.dim)) || a.label.localeCompare(b.label));
+  const L = Object.fromEntries(links.map(l => [l.id, l]));
+  const spread = () => links.forEach((l, i) => { l.a = -Math.PI / 2 + (i + .5) / links.length * 2 * Math.PI; l.x = c + R1 * Math.cos(l.a); l.y = c + R1 * Math.sin(l.a); });
+  const mean = as => Math.atan2(as.reduce((s, a) => s + Math.sin(a), 0), as.reduce((s, a) => s + Math.cos(a), 0));
+  spread();
+  let films = n.films.map(f => ({ ...f }));
+  for (let pass = 0; pass < 4; pass++) {   // place films by their links, then re-order links by their films, to cut crossings
+    films.forEach(f => f.a = mean(f.via.map(v => L[v].a)));
+    links.forEach(l => { const fa = films.filter(f => f.via.includes(l.id)).map(f => f.a); l.k = fa.length ? mean(fa) : l.a; });
+    links.sort((p, q) => ((p.k + 2.5 * Math.PI) % (2 * Math.PI)) - ((q.k + 2.5 * Math.PI) % (2 * Math.PI)));
+    spread();
+  }
+  films.forEach(f => f.a = mean(f.via.map(v => L[v].a)));
+  films.sort((p, q) => p.a - q.a);
+  const gap = 2 * Math.PI / films.length * .8;
+  for (let it = 0; it < 80; it++) for (let i = 0; i < films.length; i++) { const p = films[i], q = films[(i + 1) % films.length]; let df = q.a - p.a; if (i === films.length - 1) df += 2 * Math.PI; if (df < gap) { const m = (gap - df) / 2; p.a -= m; q.a += m; } }
+  const mx = n.films[0].score;
+  films.forEach(f => { f.x = c + R2 * Math.cos(f.a); f.y = c + R2 * Math.sin(f.a); f.r = 7 + Math.min(1, f.score / mx) * 9; });
+  const idx = Object.fromEntries(F.map(x => [x.id, x]));
+  let ed = "", nd = "";
+  links.forEach(l => ed += `<line class="ed" data-l="${esc(l.id)}" x1="${c}" y1="${c}" x2="${l.x}" y2="${l.y}" stroke="var(--hair)" stroke-width="1"/>`);
+  films.forEach(f => f.via.forEach(v => { const l = L[v]; const mx2 = (l.x + f.x) / 2 + (c - (l.x + f.x) / 2) * .15, my2 = (l.y + f.y) / 2 + (c - (l.y + f.y) / 2) * .15;
+    ed += `<path class="ed" data-l="${esc(v)}" data-f="${f.id}" d="M${l.x},${l.y} Q${mx2},${my2} ${f.x},${f.y}" fill="none" stroke="${LT[l.type]}" stroke-opacity=".55" stroke-width="${l.type === "person" ? 2 : 1.3}"/>`; }));
+  links.forEach(l => { const right = Math.cos(l.a) >= 0, lx = l.x + Math.cos(l.a) * 12, ly = l.y + Math.sin(l.a) * 12 + 4, col = LT[l.type];
+    const shape = l.type === "person" ? `<circle cx="${l.x}" cy="${l.y}" r="6" fill="${col}" stroke="var(--paper)" stroke-width="1.5"/>` : l.type === "archetype" ? `<path d="M${l.x} ${l.y - 7} L${l.x + 7} ${l.y} L${l.x} ${l.y + 7} L${l.x - 7} ${l.y}Z" fill="${col}"/>` : `<rect x="${l.x - 5.5}" y="${l.y - 5.5}" width="11" height="11" fill="${l.primed ? "var(--paper)" : col}" stroke="${col}" stroke-width="${l.primed ? 2 : 1}"/>`;
+    nd += `<g class="nd" tabindex="0" role="button" data-l="${esc(l.id)}" aria-label="${esc(l.label)}, shared with ${l.films_in_100} films">${shape}<text x="${lx}" y="${ly}" text-anchor="${right ? "start" : "end"}">${esc(l.label)}</text></g>`; });
+  films.forEach(f => { const x = idx[f.id], right = Math.cos(f.a) >= 0, lx = f.x + Math.cos(f.a) * (f.r + 8), ly = f.y + Math.sin(f.a) * (f.r + 8) + 5;
+    nd += `<g class="nd" tabindex="0" role="link" data-f="${f.id}" aria-label="${esc(x.t)}, ${x.y}"><circle cx="${f.x}" cy="${f.y}" r="${f.r}" fill="${x.tone || "var(--soft)"}" stroke="var(--ink)" stroke-width="1"/><text class="fl" x="${lx}" y="${ly}" text-anchor="${right ? "start" : "end"}">${esc(x.t)}</text></g>`; });
+  const me = idx[d.id];
+  nd += `<circle cx="${c}" cy="${c}" r="30" fill="${me.tone || "var(--ink)"}" stroke="var(--ink)" stroke-width="3"/><circle cx="${c}" cy="${c}" r="36" fill="none" stroke="var(--ink)" stroke-width="1"/><text class="ctr" x="${c}" y="${c + 58}" text-anchor="middle">${esc(d.title)}</text>`;
+  el.innerHTML = `<svg viewBox="-150 -6 900 612" role="group" aria-label="${esc(d.title)} and its nearest films">${ed}${nd}</svg>`;
+  const info = document.getElementById("linkinfo"), why = document.getElementById("why");
+  const clear = () => { el.classList.remove("dim"); el.querySelectorAll(".hi").forEach(x => x.classList.remove("hi")); why.querySelectorAll(".hi").forEach(x => x.classList.remove("hi")); };
+  const hiFilm = id => { clear(); el.classList.add("dim"); const f = films.find(z => z.id === id);
+    el.querySelectorAll(`[data-f="${id}"]`).forEach(x => x.classList.add("hi")); f.via.forEach(v => el.querySelectorAll(`[data-l="${CSS.escape(v)}"]`).forEach(x => { if (x.tagName !== "path" || x.dataset.f === id) x.classList.add("hi"); }));
+    why.querySelector(`[data-f="${id}"]`)?.classList.add("hi");
+    info.innerHTML = `<b>${esc(idx[id].t)}</b> shares ${f.via.map(v => linkWords(L[v])).join(" · ")}`; };
+  const hiLink = id => { clear(); el.classList.add("dim"); const l = L[id];
+    el.querySelectorAll(`[data-l="${CSS.escape(id)}"]`).forEach(x => x.classList.add("hi"));
+    films.filter(f => f.via.includes(id)).forEach(f => { el.querySelector(`.nd[data-f="${f.id}"]`).classList.add("hi"); why.querySelector(`[data-f="${f.id}"]`)?.classList.add("hi"); });
+    const others = l.all.map(o => idx[o]).filter(Boolean);
+    info.innerHTML = `${linkWords(l)} is shared with ${others.length} of the 100: ${others.map(x => `<button class="linkish" type="button" data-go="${x.id}">${esc(x.t)}</button>`).join(", ")}.`;
+    info.querySelectorAll("[data-go]").forEach(b => b.onclick = () => go(b.dataset.go)); };
+  el.querySelectorAll(".nd[data-f]").forEach(g => { g.addEventListener("mouseenter", () => hiFilm(g.dataset.f)); g.addEventListener("focus", () => hiFilm(g.dataset.f));
+    g.addEventListener("click", () => go(g.dataset.f)); g.addEventListener("keydown", e => { if (e.key === "Enter") go(g.dataset.f); }); });
+  el.querySelectorAll(".nd[data-l]").forEach(g => { const h = () => hiLink(g.dataset.l); g.addEventListener("mouseenter", h); g.addEventListener("focus", h); g.addEventListener("click", h); g.addEventListener("keydown", e => { if (e.key === "Enter") h(); }); });
+  el.querySelector("svg").addEventListener("mouseleave", () => clear());
+  why.querySelectorAll("li").forEach(li => li.addEventListener("mouseenter", () => hiFilm(li.dataset.f)));
+  why.querySelectorAll("[data-go]").forEach(b => b.onclick = () => go(b.dataset.go));
+}
+
 function entry(e, k, id) {
   return `<div class="entry"${id ? ` id="${id}"` : ""}><div><div class="v"><strong>${esc(e.value)}</strong>${tags(e, k)}</div>${e.detail ? `<div class="det">${esc(e.detail)}</div>` : ""}</div><div class="quotes">${quotes(e)}</div></div>`;
 }
@@ -660,6 +757,7 @@ async function renderFilm(id) {
     <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="6" fill="var(--ink)"/></svg>timed from subtitles</span><span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5.5" fill="var(--paper)" stroke="var(--ink)"/></svg>placed by part of the film</span>
     <span><span class="sw" style="background:var(--mute)"></span>words spoken each minute</span><span><span class="sw" style="background:var(--red);width:2px;height:12px"></span>jump scare</span></div>
   <div class="detail" id="detail" aria-live="polite"></div>
+  ${netBlock(d)}
   <div class="reading"><h3>The full reading</h3><p>Every entry with the passage it was read from. ${f.f.length} of 10 parts filled, ${f.n} entries${d.plot_quality === "thin" ? ", from a thin plot" : ""}.</p></div>
   <div class="body" style="margin-top:18px">
     <div>
@@ -684,7 +782,7 @@ async function renderFilm(id) {
   cells.forEach(c => c.onclick = () => filt(c.getAttribute("aria-pressed") === "true" ? null : c));
   if (all) all.onclick = () => filt(null);
   const first = (d.dims.images || []).length ? "i-" + (d.dims.images || []).map((e, i) => [WHEN.indexOf(e.when), i]).sort((a, b) => a[0] - b[0])[0][1] : (d.dims.beats || []).length ? "b-" + sortedBeats(d)[0]._i : null;
-  drawSpine(d); if (first) showDetail(d, first);
+  drawSpine(d); if (first) showDetail(d, first); drawNet(d);
   let rt; window.onresize = () => { clearTimeout(rt); rt = setTimeout(() => drawSpine(d, document.querySelector("#spine .hit.on")?.dataset.key), 150); };
   window.scrollTo(0, 0);
   load(next.id).catch(() => {});
