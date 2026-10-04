@@ -305,7 +305,15 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .ginfo .m{font-family:var(--mono);font-size:11.5px;color:var(--mute);margin-top:4px;letter-spacing:.03em}
 .ginfo .r{font-size:13.5px;margin-top:8px;line-height:1.45}
 .ginfo .r b{font-weight:600}
+.ginfo .gdesc{font-family:var(--display);font-size:16px;line-height:1.45;color:var(--ink)}
 .gzoom{position:absolute;right:0;top:12px;display:flex;gap:4px}
+/* the common threads, set quietly on the graph's lower right: lit when shown, faint when not; click to switch */
+.gthreads{position:absolute;right:0;bottom:16px;z-index:3;display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.gthreads button{all:unset;cursor:pointer;display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);opacity:.28;padding:2px 0;transition:opacity .2s}
+.gthreads button[aria-pressed="true"]{opacity:.9}.gthreads button:hover{opacity:1}.gthreads button:focus-visible{outline:1px solid var(--red);outline-offset:2px}
+.gthreads i{width:7px;height:7px;border-radius:50%;flex:none}
+.gthreads .h{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:4px}
+.gstage.hov .gthreads{opacity:.15;transition:opacity .3s}
 .gzoom button{all:unset;cursor:pointer;width:30px;height:30px;display:flex;align-items:center;justify-content:center;border:1px solid var(--ink);background:var(--paper);font-family:var(--mono);font-size:15px}
 .gzoom button:hover{background:var(--soft)}
 .gzoom button:focus-visible{outline:2px solid var(--red)}
@@ -638,8 +646,8 @@ function renderIndex() {
   </aside>
   <div class="status"><span class="active"><span id="count"></span><span id="pills"></span></span>
     ${state.view === "patterns" ? `<span class="key"><span>each dot is the share of films carrying the fear · hollow dots: fewer than 10 films, read with care</span></span>` : state.view === "graph" ? "" : `<span class="key"><span>the bar shows how much of each story is mapped</span></span>`}</div>
-  ${state.view === "graph" ? `<div class="gstage" id="gstage"><div class="gflash" id="gflash" aria-hidden="true"></div><div class="gbusy" role="status" aria-live="polite"><span class="geye" aria-hidden="true"><span class="lid"><i class="pupil"></i></span></span><span class="gbt">Something is moving</span></div>
-    <div class="ghero" id="ghero"><p class="overline">Bloodline · ${F.length} films · ${new Set(F.map(f => f.c)).size} countries · ${Math.min(...F.map(f => f.y))} to ${Math.max(...F.map(f => f.y))}</p><h1>Every culture tells the same few <em>nightmares</em></h1><p>Different monsters, different languages, and underneath them the same fears. Every point of light is a film or a fear; every thread, a fear they share.</p></div><div class="ginfo" id="ginfo"></div><div class="gmode viewtoggle" role="group" aria-label="Main nodes"><button type="button" data-primary="fears" aria-pressed="${state.primary === "fears"}">Fears</button><button type="button" data-primary="films" aria-pressed="${state.primary === "films"}">Films</button></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
+  ${state.view === "graph" ? `<div class="gstage" id="gstage"><div class="gflash" id="gflash" aria-hidden="true"></div><div class="gbusy" role="status" aria-live="polite"><span class="geye" aria-hidden="true"><span class="lid"><i class="pupil"></i></span></span><span class="gbt">Recharting</span></div>
+    <div class="ghero" id="ghero"><p class="overline">Bloodline · ${F.length} films · ${new Set(F.map(f => f.c)).size} countries · ${Math.min(...F.map(f => f.y))} to ${Math.max(...F.map(f => f.y))}</p><h1>Every culture tells the same few <em>nightmares</em></h1><p>Different monsters, different languages, and underneath them the same fears. Every point of light is a film or a fear; every thread, a fear they share.</p></div><div class="ginfo" id="ginfo"></div><div class="gthreads" id="gthreads" role="group" aria-label="Common threads shown"></div><div class="gmode viewtoggle" role="group" aria-label="Main nodes"><button type="button" data-primary="fears" aria-pressed="${state.primary === "fears"}">Fears</button><button type="button" data-primary="films" aria-pressed="${state.primary === "films"}">Films</button></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
     <div class="keyline" id="gkey" style="margin-top:10px"></div>` : state.view === "patterns" ? `<div class="pat" id="pat"></div>` : `<ol class="ledger" id="ledger"></ol>`}
   ${aboutBlock()}`;
   const q = document.getElementById("q");
@@ -922,7 +930,7 @@ function buildGraph() {
   let W = stage.clientWidth, H = stage.clientHeight;
   // two kinds of node: the 100 films, and the fears they carry (kinds chosen in the drawer, shared by at least two films)
   const films = F.map((f, i) => ({ kind: "film", i, f, id: f.id }));
-  const fearsAll = (IDX.fears || []).map(([lens, name, def], i) => ({ kind: "fear", i, lens, name, def, id: "fear:" + i, films: [] }));
+  const fearsAll = (IDX.fears || []).map(([lens, name, def, blurb], i) => ({ kind: "fear", i, lens, name, def, blurb, id: "fear:" + i, films: [] }));
   (IDX.ff || []).forEach((list, fi) => list.forEach(x => fearsAll[x] && fearsAll[x].films.push(films[fi])));
   const fears = fearsAll.filter(x => state.glenses.has(x.lens) && x.films.length >= 2);
   const nodes = [...films, ...fears];
@@ -993,6 +1001,13 @@ function buildGraph() {
     lSel.attr("fill", n => n.kind === "fear" && state.primary === "fears" ? LENSC[n.lens] : "var(--ink)").attr("y", n => n.y - rOf(n) - 5);
     nSel.filter(n => (state.primary === "films") === (n.kind === "film")).raise(); labels(); legend(); rest(); };
   const legend = () => { const key = document.getElementById("gkey"); if (!key) return;
+    const th = document.getElementById("gthreads");
+    if (th) { th.hidden = state.primary !== "fears";
+      th.innerHTML = `<span class="h">Common threads</span>` + LENS.map(([kk, nn]) => `<button type="button" data-thread="${kk}" aria-pressed="${state.glenses.has(kk)}">${nn}<i style="background:${LENSC[kk]}"></i></button>`).join("");
+      th.querySelectorAll("[data-thread]").forEach(b => b.onclick = () => { const kk = b.dataset.thread; state.glenses.has(kk) ? state.glenses.delete(kk) : state.glenses.add(kk);
+        document.querySelectorAll(`[data-glens="${kk}"]`).forEach(x => x.setAttribute("aria-pressed", state.glenses.has(kk)));
+        redraw(() => { buildGraph(); renderRows(); }); }); }
+    if (state.primary === "fears") { key.innerHTML = ""; return; }
     key.innerHTML = state.primary === "fears" ? LENS.filter(([kk]) => state.glenses.has(kk)).map(([kk, nn]) => `<span><span class="sw" style="background:${LENSC[kk]};border-radius:50%"></span>${nn}</span>`).join("") + `<span><span class="sw" style="background:var(--ink);border-radius:50%"></span>films</span>`
       : (state.colour === "region" ? REGIONS.map(r => `<span><span class="sw" style="background:var(--ink);border-radius:50%;box-shadow:0 0 0 2px ${REG_C[r]}"></span>${esc(r)}</span>`).join("") : state.colour === "era" ? ERAS.map(([e], i) => `<span><span class="sw" style="background:${ERA_C[i]};border-radius:50%"></span>${e}</span>`).join("") : state.colour === "still" ? `<span>Films are filled with the colour of their stills.</span>` : `<span><span class="sw" style="background:var(--ink);border-radius:50%"></span>films · region and era are in the filter drawer</span>`) + `<span><span class="sw" style="background:${GREY};border-radius:50%"></span>fears</span>`; };
   const zoom = d3.zoom().scaleExtent([.4, 7]).on("zoom", ev => { root.attr("transform", ev.transform); k = ev.transform.k; if (!hoverOn) labels(); });
@@ -1076,9 +1091,14 @@ function buildGraph() {
       info.innerHTML = `${thumb(n)}<div class="t">${esc(n.f.t)} <span style="color:var(--mute);font-size:.7em">(${n.f.y})</span></div><div class="m"><span style="color:${REG_C[n.f.r]}">●</span> ${esc(n.f.r)} · ${esc(n.f.c)}${n.f.dir.length ? " · " + esc(n.f.dir[0]) : ""}</div>
         <div class="r">${LENS.filter(([kk]) => by[kk]).map(([kk, nn]) => `<span style="color:${LENSC[kk]}">${nn}</span>: ${by[kk].map(esc).join(", ")}`).join("<br>") || "No shared fears shown with these settings."}</div>`;
     } else {
-      const vf = n.films.filter(m => visible.has(m.id));
-      info.innerHTML = `<div class="m" style="color:${LENSC[n.lens]}">${esc(LENSN[n.lens]).toUpperCase()}</div><div class="t">${esc(n.name)}</div>${n.def ? `<div class="r" style="font-style:italic;color:var(--mute)">${esc(n.def)}</div>` : ""}
-        <div class="r">${vf.length} of the ${F.length} films: ${vf.slice(0, 8).map(m => esc(m.f.t)).join(", ")}${vf.length > 8 ? ` and ${vf.length - 8} more` : ""}.</div>${arch.size ? `<div class="r"><span style="color:${LENSC.archetypes}">Primal fears inside</span>: ${[...arch].sort((a, b) => b[1] - a[1]).slice(0, 6).map(([x, c]) => `${esc(x.name)} ${c}`).join(", ")}</div>` : ""}<div class="m" style="margin-top:6px">CLICK TO OPEN ${n.lens === "nightmares" ? "THIS NIGHTMARE" : "THIS FEAR"}</div>`;
+      // what the fear is, in a sentence, and a few films it lives in; no counts
+      const kindName = { nightmares: "Nightmare", archetypes: "Primal fear" }[n.lens] || LENSN[n.lens], seen = near.slice(0, 3).map(m => `<i>${esc(m.f.t)}</i>`);
+      const list = xs => xs.length > 1 ? xs.slice(0, -1).join(", ") + " and " + xs[xs.length - 1] : xs[0] || "";
+      info.innerHTML = `<div class="m" style="color:${LENSC[n.lens]}">${esc(kindName).toUpperCase()}</div><div class="t">${esc(n.name)}</div>
+        ${n.blurb || n.def ? `<div class="r gdesc">${esc(n.blurb || n.def)}</div>` : ""}
+        ${seen.length ? `<div class="r" style="color:var(--mute)">Seen in ${list(seen)}.</div>` : ""}
+        ${arch.size ? `<div class="r" style="color:var(--mute)">Close kin: ${list([...arch].sort((a, b) => b[1] - a[1]).slice(0, 2).map(([x]) => `<span style="color:${LENSC.archetypes}">${esc(x.name)}</span>`))}.</div>` : ""}
+        <div class="m" style="margin-top:8px">OPEN ${n.lens === "nightmares" ? "THE NIGHTMARE" : "THE FEAR"} →</div>`;
     } };
   nSel.on("mouseenter focus", (ev, n) => hover(n)).on("mouseleave blur", () => rest())
     .on("click", (ev, n) => open(n)).on("keydown", (ev, n) => { if (ev.key === "Enter") open(n); });

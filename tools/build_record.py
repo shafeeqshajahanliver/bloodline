@@ -195,7 +195,13 @@ if os.path.exists(f"{OUT}/patterns.json"):
     for f in P["films"]:
         if f["id"] in pos:
             ff[pos[f["id"]]] = [fl.setdefault(f"{d}|{x}", len(fl)) for d in P["dims"] for x in f["g"].get(d, {}).get("f", []) if x != "unclear"]
-    IX["fears"] = [[k.split("|", 1)[0], k.split("|", 1)[1], P["fears"][k.split("|", 1)[0]].get(k.split("|", 1)[1], "")] for k in sorted(fl, key=fl.get)]
+    # a short description for each fear: the first sentence of its written narration, links stripped (else its definition)
+    def blurb(d, x):
+        t = (P.get("notes", {}).get(d, {}) or {}).get(x) or ""
+        t = re.sub(r"\[([^\]|]+)\|[^\]]+\]", r"\1", t).strip()
+        m = re.match(r"(.+?[.])(\s|$)", t)
+        return m.group(1) if m else t
+    IX["fears"] = [[k.split("|", 1)[0], k.split("|", 1)[1], P["fears"][k.split("|", 1)[0]].get(k.split("|", 1)[1], ""), blurb(*k.split("|", 1))] for k in sorted(fl, key=fl.get)]
     IX["ff"] = [ff.get(i, []) for i in range(len(ids))]
     nm = {f["id"]: f["g"]["nightmares"]["f"][0] for f in P["films"] if "nightmares" in f["g"]}
     IX["nm"] = [nm.get(fid, "") for fid in ids]   # each film's nightmare, for its page
