@@ -1171,7 +1171,7 @@ function drawSpine(d, sel) {
 function storyMap(d) {
   const COLS = [["Before", ["wrong", "origin"]], ["It begins", ["trigger"]], ["The threat", ["threat", "wants", "rules"]], ["It falls on", ["who_suffers"]], ["It ends", ["ending"]]];
   const col = ([head, ks]) => { const blocks = ks.map(k => { const es = d.dims[k] || []; if (!es.length) return "";
-      return `<div class="smk"><span class="smkl" style="color:${LENSC[k]}">${esc(LENSN[k])}</span>${es.map((e, i) => `<button type="button" class="smv" data-smkey="x-${k}-${i}" style="--c:${LENSC[k]}"><span class="sw" style="background:${LENSC[k]}"></span><span>${esc(e.value)}${k === "who_suffers" && e.relation_to_threat ? ` <em>${esc(e.relation_to_threat)}</em>` : ""}</span></button>`).join("")}</div>`; }).join("");
+      return `<div class="smk"><span class="smkl" style="color:${LENSC[k]}">${esc(LENSN[k])}</span>${es.map((e, i) => `<button type="button" class="smv" data-smkey="x-${k}-${i}" ${e.fear ? `data-fearlink="${k}|${esc(e.fear)}" title="${esc(e.fear)}"` : ""} style="--c:${LENSC[k]}"><span class="sw" style="background:${LENSC[k]}"></span><span>${esc(e.value)}${k === "who_suffers" && e.relation_to_threat ? ` <em>${esc(e.relation_to_threat)}</em>` : ""}</span></button>`).join("")}</div>`; }).join("");
     return `<div class="smc"><p class="smh">${head}</p>${blocks || `<p class="smn">not stated</p>`}</div>`; };
   return `<div class="spinehead"><h3>The shape of its fear</h3></div>
     <div class="smap">${COLS.map(col).join('<span class="sma" aria-hidden="true"></span>')}</div>`;
@@ -1421,7 +1421,7 @@ async function renderFilm(id) {
   if (all) all.onclick = () => filt(null);
   const first = (d.dims.images || []).length ? "i-" + (d.dims.images || []).map((e, i) => [WHEN.indexOf(e.when), i]).sort((a, b) => a[0] - b[0])[0][1] : (d.dims.beats || []).length ? "b-" + sortedBeats(d)[0]._i : null;
   drawSpine(d); if (first) showDetail(d, first);
-  app.querySelectorAll(".smv").forEach(b => b.onclick = () => { showDetail(d, b.dataset.smkey); document.getElementById("detail").scrollIntoView({ block: "center", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); });
+  app.querySelectorAll(".smv").forEach(b => b.onclick = () => { if (b.dataset.fearlink) { const [d2, n2] = b.dataset.fearlink.split("|"); go(fearHash(d2, n2)); } else { showDetail(d, b.dataset.smkey); document.getElementById("detail").scrollIntoView({ block: "center" }); } });
   app.querySelectorAll(".loose .hit").forEach(b => b.onclick = () => { showDetail(d, b.dataset.key); document.getElementById("detail").scrollIntoView({ block: "nearest", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); }); drawNet(d);
   let rt; window.onresize = () => { clearTimeout(rt); rt = setTimeout(() => drawSpine(d, document.querySelector("#spine .hit.on")?.dataset.key), 150); };
   window.scrollTo(0, 0);
