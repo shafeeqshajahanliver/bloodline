@@ -673,11 +673,11 @@ function renderRows() {
 function aboutBlock() {
   return `<section class="about" id="about"><h2>About this record</h2><div class="cols">
     <div><h3>How it was made</h3>
-      <p>Each film was read by Claude from its Wikipedia plot, and then from its subtitles and, where one exists, its screenplay. The reading describes ten parts of the story: the threat, where it came from, what it wants, the wrong underneath, what sets it off, its rules, who suffers, how it ends, the symbols and the key beats.</p>
-      <p>Every element carries the passage it was read from, so you can check it. Facts about cast and crew come from Wikidata. Stills come from FILMGRAB and jump-scare timings from Where's the Jump.</p></div>
+      <p>We assembled an archive of 497 horror films from 44 countries, made between 1913 and 2025: every Wikipedia plot, English subtitles for 440 films, 116 screenplays, 6,184 stills and crowd-sourced jump-scare timings for 189. Each film was then machine-read across ten parts of its story: the threat, where it comes from, what it wants, the wrong underneath, what sets it off, its rules, who suffers, how it ends, its symbols and its turning points. That produced 18,195 story elements, each pinned to the line of plot or dialogue it came from.</p>
+      <p>Nothing was decided in advance. The 9,122 different ways these films describe their horrors were grouped from the bottom up into 231 fears, and every film was joined to every fear it carries. The result is a graph of how a century of nightmares connect. Cast and crew come from Wikidata, stills from FILMGRAB, jump scares from Where's the Jump.</p></div>
     <div><h3>What to keep in mind</h3>
-      <p>This is a first reading and nobody has reviewed it yet. The wording is the reader's own and hasn't been merged, so the same idea can appear in different words. Some phrases were given to the readers as examples and turn up more often than they should; the evidence marks them as “example wording”.</p>
-      <p>Films are linked only when they share exactly the same wording, person or archetype, so some kinship is missed. 14 films have no stills. The archetypes are a separate, top-down lens still being tested.</p></div>
+      <p>This is a first reading and has not yet been checked by hand. The fears come from the films' own wording, so a few may still split or merge as the work is reviewed.</p>
+      <p>The 27 archetypes are the one top-down lens: old story shapes, many with roots in folklore, set against each film to test them against what the films themselves show. The graph and film pages cover 100 films from the archive in full depth; the trends draw on all 497. 14 of the 100 have no stills.</p></div>
     <div><h3>Reading the list</h3><div class="key">
       <span><span class="bar10" style="width:60px;display:inline-grid;grid-template-columns:repeat(3,1fr)"><i></i><i class="ns"></i><i class="no"></i></span> &nbsp;story mapped · not stated in the plot · nothing found</span>
       <span>${marks({ sub: 1, sp: 1, sc: 1, st: 1 })} &nbsp;plot · subtitles · screenplay · jump scares · stills</span></div>
