@@ -486,6 +486,22 @@ details.fothers summary{cursor:pointer;font-size:14px;color:var(--mute)}
 .filmfacts{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px 40px;margin-top:18px;align-items:start}
 .filmfacts section{border-top:1px solid var(--ink);padding-top:10px}
 @media (max-width:620px){ .lrow{grid-template-columns:1fr;gap:2px} }
+
+.smap{display:grid;grid-template-columns:minmax(0,1fr) 28px minmax(0,1fr) 28px minmax(0,1.25fr) 28px minmax(0,1fr) 28px minmax(0,1fr);margin-top:18px;align-items:stretch}
+.smc{border-top:2px solid var(--ink);padding-top:10px;min-width:0}
+.smh{font-family:var(--display);font-size:22px;margin:0 0 10px}
+.smk{margin-bottom:16px}
+.smkl{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.smv{all:unset;box-sizing:border-box;cursor:pointer;display:flex;gap:9px;align-items:baseline;padding:5px 0;width:100%;font-size:16px;line-height:1.3;border-bottom:1px solid var(--rule)}
+.smv .sw{flex:none;width:10px;height:10px;transform:translateY(1px)}
+.smv em{font-style:normal;font-family:var(--mono);font-size:11px;color:var(--mute)}
+.smv:hover,.smv.on{color:var(--c);border-bottom-color:var(--c)}
+.smv:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.smn{font-style:italic;color:var(--mute);font-size:15px}
+.sma{position:relative}
+.sma::before{content:"";position:absolute;left:6px;right:8px;top:21px;height:1px;background:var(--hair)}
+.sma::after{content:"";position:absolute;right:7px;top:17px;width:8px;height:8px;border-top:1px solid var(--hair);border-right:1px solid var(--hair);transform:rotate(45deg)}
+@media (max-width:900px){ .smap{grid-template-columns:1fr} .sma{height:26px} .sma::before{left:50%;right:auto;top:2px;bottom:6px;width:1px;height:auto} .sma::after{left:calc(50% - 4px);right:auto;top:auto;bottom:6px;transform:rotate(135deg)} }
 @media (max-width:980px){
   .row{grid-template-columns:96px minmax(0,1fr);gap:4px 14px}
   .thumb{width:96px;grid-row:span 3}
@@ -773,7 +789,7 @@ async function renderFear(id) {
   const shotCap = x => `From <button class="linkish" type="button" data-go="${x.id}">${esc(x.t)} (${x.y})</button>, still from FILMGRAB.`;
   const qline = q => `${q.rec ? `<button class="linkish" type="button" data-go="${q.id}">${esc(q.t)}</button>` : esc(q.t)} (${q.y})${q.src === "subtitles" && q.at ? ` · ${esc(q.at)}` : q.src === "wikipedia" ? " · from the plot" : ""}`;
   app.innerHTML = `<div class="fpage" style="--lc:${lc}">
-    <div class="nav"><button class="linkish" type="button" id="back">${state.view === "list" ? "Back to the list" : state.view === "patterns" ? "Back to the trends" : "Back to the graph"}</button><span class="tag" style="color:${lc}">${esc(LENSN[lens])}</span></div>
+    <div class="nav"><button class="linkish" type="button" id="back">${state.view === "list" ? "Back to the list" : state.view === "patterns" ? "Back to the trends" : "Back to the graph"}</button></div>
     <div class="head"><p class="overline" style="color:${lc}">${esc(LENSN[lens])} · ${fs.length} of ${all.length} films</p><h1 class="work">${esc(name)}</h1><hr class="dbl"></div>
     <div class="top">
       <div>${shots.length ? `<div class="frame" id="frame" role="img" aria-label="Still from ${esc(shots[0].t)}" style="${shotStyle(shots[0])}"></div>
@@ -1149,12 +1165,21 @@ function drawSpine(d, sel) {
   });
   if (sel) mark(sel);
 }
+// the shape of the film's fear: what came before, what starts it, the threat, who it falls on, how it ends
+function storyMap(d) {
+  const COLS = [["Before", ["wrong", "origin"]], ["It begins", ["trigger"]], ["The threat", ["threat", "wants", "rules"]], ["It falls on", ["who_suffers"]], ["It ends", ["ending"]]];
+  const col = ([head, ks]) => { const blocks = ks.map(k => { const es = d.dims[k] || []; if (!es.length) return "";
+      return `<div class="smk"><span class="smkl" style="color:${LENSC[k]}">${esc(LENSN[k])}</span>${es.map((e, i) => `<button type="button" class="smv" data-smkey="x-${k}-${i}" style="--c:${LENSC[k]}"><span class="sw" style="background:${LENSC[k]}"></span><span>${esc(e.value)}${k === "who_suffers" && e.relation_to_threat ? ` <em>${esc(e.relation_to_threat)}</em>` : ""}</span></button>`).join("")}</div>`; }).join("");
+    return `<div class="smc"><p class="smh">${head}</p>${blocks || `<p class="smn">not stated</p>`}</div>`; };
+  return `<div class="spinehead"><h3>The shape of its fear</h3><p>What came before, what sets it off, the threat and its rules, who it falls on, and how it ends. Tap any part to read where it comes from.</p></div>
+    <div class="smap">${COLS.map(col).join('<span class="sma" aria-hidden="true"></span>')}</div>`;
+}
 function looseBlock(d) {
   const L = spineItems(d).imgs.filter(x => x.loose); if (!L.length) return "";
   const by = {}; L.forEach(x => (by[x.k] = by[x.k] || []).push(x));
   return `<div class="loose"><p class="lh">The rest of its story, not tied to a moment</p>${Object.entries(by).map(([k, xs]) => `<div class="lrow"><span class="lk" style="color:${LENSC[k]}">${esc(LENSN[k])}</span><span class="lv">${xs.map(x => `<button type="button" class="hit" data-key="${x.key}"><span class="sw" style="background:${LENSC[k]}"></span>${esc(x.e.value)}</button>`).join("")}</span></div>`).join("")}</div>`;
 }
-function mark(key) { document.querySelectorAll("#spine .hit, .loose .hit").forEach(g => g.classList.toggle("on", g.dataset.key === key)); }
+function mark(key) { document.querySelectorAll("#spine .hit, .loose .hit").forEach(g => g.classList.toggle("on", g.dataset.key === key)); document.querySelectorAll(".smv").forEach(g => g.classList.toggle("on", g.dataset.smkey === key)); }
 function elsewhere(v, id) { const o = F.filter(f => f.id !== id && f.v.includes(v)); return o; }
 function showDetail(d, key) {
   const P = document.getElementById("detail"); if (!P) return;
@@ -1364,12 +1389,12 @@ async function renderFilm(id) {
     <div>${synopsis(d)}</div>
   </div>
   ${netBlock(d).replace('<div class="spinehead">', '<div class="spinehead" style="margin-top:64px">')}
+  ${storyMap(d)}
   <div class="spinehead"><h3>How the fear unfolds</h3><p>Its fears above the line, in the colours of their kinds, where the film speaks them; the turns of the story on it; the talk and the scares beneath. Tap anything.</p></div>
   <div class="spine" id="spine"></div>
   <div class="keyline">${[...new Set(spineItems(d).imgs.map(x => x.k))].map(k => `<span><span class="sw" style="background:${LENSC[k]}"></span>${esc(LENSN[k].toLowerCase())}</span>`).join("")}
     <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5.5" fill="var(--paper)" stroke="var(--ink)"/></svg>the turns of the story</span>
     <span><span class="sw" style="background:var(--mute)"></span>words spoken each minute</span><span><span class="sw" style="background:var(--ink);width:2px;height:12px"></span>jump scare</span><span>solid line: timed from the subtitles · dotted: placed by part of the film</span></div>
-  ${looseBlock(d)}
   <div class="detail" id="detail" aria-live="polite"></div>
   <div class="reading"><h3>The film</h3><p>Facts, figures and sources.</p></div>
   <div class="filmfacts">${side(d, f)}
@@ -1394,6 +1419,7 @@ async function renderFilm(id) {
   if (all) all.onclick = () => filt(null);
   const first = (d.dims.images || []).length ? "i-" + (d.dims.images || []).map((e, i) => [WHEN.indexOf(e.when), i]).sort((a, b) => a[0] - b[0])[0][1] : (d.dims.beats || []).length ? "b-" + sortedBeats(d)[0]._i : null;
   drawSpine(d); if (first) showDetail(d, first);
+  app.querySelectorAll(".smv").forEach(b => b.onclick = () => { showDetail(d, b.dataset.smkey); document.getElementById("detail").scrollIntoView({ block: "center", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); });
   app.querySelectorAll(".loose .hit").forEach(b => b.onclick = () => { showDetail(d, b.dataset.key); document.getElementById("detail").scrollIntoView({ block: "nearest", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); }); drawNet(d);
   let rt; window.onresize = () => { clearTimeout(rt); rt = setTimeout(() => drawSpine(d, document.querySelector("#spine .hit.on")?.dataset.key), 150); };
   window.scrollTo(0, 0);
