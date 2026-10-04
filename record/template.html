@@ -33,12 +33,6 @@ header.bar{display:flex;align-items:baseline;gap:8px 16px;flex-wrap:wrap;padding
 .linkish:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 
 /* index */
-.intro{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px 40px;align-items:end;padding-block:36px 26px}
-.intro h1{font-family:var(--display);font-weight:400;font-size:44px;line-height:1.05;margin:6px 0 0;text-wrap:balance}
-.intro p{max-width:62ch;margin:12px 0 0;color:var(--ink)}
-.intro .totals{display:flex;gap:28px}
-.totals .n{font-family:var(--mono);font-weight:700;font-size:28px;line-height:1;font-variant-numeric:tabular-nums}
-.totals .l{font-size:13px;color:var(--mute);margin-top:4px}
 .controls{margin-top:18px;border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);padding-block:12px;display:grid;gap:10px}
 .search{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 /* the toolbar stays quiet: hairline rules and borders, muted type, the current view only lightly marked */
@@ -70,11 +64,6 @@ ol.ledger{list-style:none;margin:0;padding:0}
 .row .sub{font-size:13.5px;color:var(--mute);margin-top:2px}
 .row .hits{font-size:13px;margin-top:4px}
 .row .hits b{font-weight:600}
-.bar10{display:grid;grid-template-columns:repeat(10,1fr);gap:2px;height:14px}
-.bar10 i{display:block;background:var(--ink)}
-.bar10 i.ns{background:repeating-linear-gradient(135deg,var(--hair) 0 2px,var(--paper) 2px 5px);outline:1px solid var(--hair);outline-offset:-1px}
-.bar10 i.no{background:var(--paper);outline:1px solid var(--hair);outline-offset:-1px}
-.bar10 i.thin{background:var(--mute)}
 .marks{display:flex;gap:3px}
 .marks b{font-family:var(--mono);font-weight:400;font-size:11.5px;width:20px;height:20px;display:flex;align-items:center;justify-content:center;border:1px solid var(--ink)}
 .marks b.on{background:var(--ink);color:var(--on-ink)}
@@ -96,24 +85,14 @@ ol.ledger{list-style:none;margin:0;padding:0}
 .archvs .bar{display:block;height:6px;background:var(--rule)}.archvs .bar i{display:block;height:100%;background:var(--lc);min-width:2px}
 .archvs .bar.b i{background:transparent;border:1px solid var(--lc);box-sizing:border-box}
 .archvs .bv{font-family:var(--mono);font-size:11px;color:var(--mute);white-space:nowrap}
-.lede{font-family:var(--display);font-style:italic;font-size:22px;line-height:1.35;margin:18px 0 0;max-width:46ch}
-.hero{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:28px;margin-top:24px;align-items:start}
 .frame{width:100%;aspect-ratio:16/9;background-color:var(--soft);background-repeat:no-repeat;background-size:100% auto}
 .frame.none{display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;color:var(--mute);font-style:italic;background:repeating-linear-gradient(135deg,var(--soft) 0 8px,var(--paper) 8px 16px)}
-.strip{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin-top:4px}
-.strip button{all:unset;cursor:pointer;aspect-ratio:16/9;background-repeat:no-repeat;background-size:100% auto;background-color:var(--soft);outline-offset:-2px}
-.strip button[aria-current="true"]{outline:2px solid var(--ink)}
-.strip button:focus-visible{outline:2px solid var(--red)}
 .caption{font-size:12.5px;color:var(--mute);margin-top:6px}
-.complete h4,.side h4,.filmfacts h4{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--mute);margin:0 0 8px;text-transform:uppercase}
-.complete .bar10{height:22px}
-.complete .labels{display:grid;grid-template-columns:repeat(10,1fr);gap:2px;margin-top:4px}
-.complete .labels span{font-size:10.5px;line-height:1.2;color:var(--mute);writing-mode:vertical-rl;transform:rotate(180deg);height:58px;text-align:left;white-space:nowrap}
-.complete .note{font-size:13px;color:var(--mute);margin-top:8px}
+.side h4, .filmfacts h4{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--mute);margin:0 0 8px;text-transform:uppercase}
 .srcs{margin-top:20px;display:grid;gap:6px}
 .srcs div{display:grid;grid-template-columns:22px minmax(0,1fr);gap:8px;align-items:start;font-size:14px}
 .srcs .marks b{width:20px}
-.body > *,.hero > *{min-width:0}
+.body > *{min-width:0}
 .body{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:48px;margin-top:40px}
 section.dim{margin-top:34px}
 section.dim:first-child{margin-top:0}
@@ -125,10 +104,6 @@ section.dim:first-child{margin-top:0}
 .entry .det{font-size:15px;margin-top:2px}
 .entry blockquote{margin:6px 0 0;padding:0 0 0 12px;border-left:2px solid var(--hair);font-size:14px;line-height:1.5;color:var(--mute)}
 .entry blockquote .from{font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;margin-right:6px;color:var(--ink)}
-.ns{font-family:var(--display);font-style:italic;color:var(--mute);font-size:16px;padding:8px 0;border-top:1px solid var(--rule)}
-.when5{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--ink);margin-top:6px}
-.when5 span{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);padding:4px 0 0;border-left:1px solid var(--hair);padding-left:6px}
-.when5 span:first-child{border-left:0;padding-left:0}
 ol.beats{list-style:none;margin:0;padding:0;counter-reset:b}
 ol.beats li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;padding:10px 0;border-top:1px solid var(--rule)}
 ol.beats .no{font-family:var(--mono);font-size:14px;color:var(--mute);padding-top:2px}
@@ -155,9 +130,6 @@ ul.plain li:first-child{border-top:0}
 .foot{font-size:12.5px;color:var(--mute);margin-top:48px;line-height:1.5;border-top:1px solid var(--hair);padding-top:12px;max-width:80ch}
 
 /* film page visuals */
-.blockhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;border-top:3px solid var(--ink);padding-top:10px;margin-top:44px}
-.blockhead h3{font-family:var(--display);font-weight:400;font-size:26px;margin:0;line-height:1.2}
-.blockhead p{margin:0;font-size:14px;color:var(--mute);max-width:60ch}
 .sw{display:inline-block;width:10px;height:10px}
 .tones{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px;margin-top:4px;height:14px}
 .tones button{all:unset;cursor:pointer;display:block}
@@ -239,7 +211,6 @@ ol.beats li.flash{background:var(--soft)}
 .detail h4{font-family:var(--display);font-weight:400;font-size:38px;line-height:1.1;margin:6px 0 0;text-wrap:balance}
 .detail .st{font-style:italic;color:var(--mute);margin-top:6px}
 .detail .dt{margin-top:8px;max-width:48ch}
-.detail .stepper{display:flex;gap:14px;margin-top:16px;font-size:14px}
 .detail .also{font-size:13.5px;color:var(--mute);margin-top:12px}
 .detail .fearlink{margin-top:14px;font-family:var(--display);font-size:20px}
 .detail blockquote{margin:0 0 10px;padding:0 0 0 14px;border-left:2px solid var(--hair);font-size:15px;line-height:1.5}
@@ -327,7 +298,6 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .gzoom button:hover{background:var(--soft)}
 .gzoom button:focus-visible{outline:2px solid var(--red)}
 .gmode{position:absolute;left:50%;top:12px;transform:translateX(-50%);z-index:3;background:var(--paper)}
-.gnote{font-size:13px;color:var(--mute);margin-top:10px;max-width:90ch}
 
 .about{margin-top:72px;border-top:3px solid var(--ink);padding-top:12px;scroll-margin-top:16px}
 .about h2{font-family:var(--display);font-weight:400;font-size:28px;margin:0}
@@ -335,7 +305,6 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .about h3{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:0 0 6px}
 .about p{margin:0 0 12px}
 .about .key{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
-.about .key .bar10{display:inline-grid;height:14px}
 @media (max-width:980px){ .about .cols{grid-template-columns:1fr} }
 
 /* filters drawer */
@@ -369,23 +338,17 @@ body::after{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:60;
   animation:grain 1.2s steps(5) infinite}
 @keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
 ::selection{background:var(--red);color:var(--ink)}
-.intro h1 em{font-style:italic;color:var(--red)}
-.intro h1{font-size:58px;line-height:1}
 .work .yrb,.ti .yrb{color:var(--mute);font-size:.62em;margin-left:.25em;font-style:italic}
 .gstage{background:radial-gradient(ellipse 70% 65% at 50% 50%, #15100e 0%, var(--paper) 75%)}
 .gstage::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 75% 70% at 50% 50%, transparent 55%, rgba(0,0,0,.75) 100%);z-index:1}
 .gstage svg{position:relative;z-index:2}
 .ginfo,.gzoom{z-index:3}
 .ginfo{background:transparent;text-shadow:0 0 8px var(--paper),0 0 2px var(--paper)}
-.gflash{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);aspect-ratio:16/9;background-repeat:no-repeat;opacity:0;z-index:0;pointer-events:none;
-  filter:grayscale(.75) contrast(1.35) brightness(.6) sepia(.25)}
-.gflash.on{animation:flick .7s steps(1) forwards}
-@keyframes flick{0%{opacity:0}8%{opacity:.75}14%{opacity:.08}22%{opacity:.6}30%{opacity:.2}42%{opacity:.62}100%{opacity:.5}}
 .gstage.hov .gn.hi circle{filter:drop-shadow(0 0 6px rgba(207,58,46,.9))}
 .thumb{filter:grayscale(.9) brightness(.8);transition:filter .3s}
 .row:hover .thumb{filter:none}
 .row:hover{background:var(--soft)}
-@media (prefers-reduced-motion:reduce){ body::after{animation:none} .gflash.on{animation:none;opacity:.5} .thumb{transition:none} }
+@media (prefers-reduced-motion:reduce){ body::after{animation:none} .thumb{transition:none} }
 
 /* patterns */
 .pat{display:block;margin-top:8px}
@@ -417,12 +380,6 @@ body::after{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:60;
 .pdot{display:inline-block;border-radius:50%;background:var(--lc,var(--red));vertical-align:middle;box-shadow:0 0 10px color-mix(in srgb, var(--lc,var(--red)) 45%, transparent)}
 .pdot.thin{background:transparent;box-shadow:inset 0 0 0 1.5px var(--lc,var(--red))}
 .pdot.zero{width:3px;height:3px;background:var(--hair);box-shadow:none}
-.pside{position:sticky;top:16px;border-top:3px solid var(--ink);padding-top:12px}
-.pside h3{font-family:var(--display);font-weight:400;font-size:32px;line-height:1.1;margin:4px 0 0;text-wrap:balance}
-.pside .def{font-style:italic;color:var(--mute);margin:8px 0 0}
-.pside h4{font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin:20px 0 8px}
-.verdict{font-family:var(--display);font-size:19px;margin-top:12px}
-.verdict b{color:var(--lc,var(--red));font-weight:400}
 .eras{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;align-items:end;height:84px}
 .eras div{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;gap:4px}
 .eras i{display:block;width:100%;background:var(--lc,var(--red));opacity:.85}
@@ -453,36 +410,13 @@ ul.kinds li span:last-child{font-family:var(--mono);font-size:11.5px;color:var(-
 
 /* a fear's own page */
 .fpage .work{color:var(--lc)}
-.fpage .lede{color:var(--mute)}
-.fverd{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 48px;margin-top:30px}
-.fverd p{font-family:var(--display);font-size:24px;line-height:1.3;margin:0}
-.fverd b{font-weight:400;color:var(--lc)}
 .fsec{margin-top:56px}
 .fsec h2{font-family:var(--display);font-weight:400;font-size:30px;margin:0 0 4px}
 .fsec .q2{font-size:14px;color:var(--mute);margin:0 0 18px}
-.bigeras{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:end;height:240px;border-bottom:1px solid var(--hair)}
-.bigeras div{display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;height:100%;gap:6px}
-.bigeras i{display:block;background:var(--lc);box-shadow:0 0 18px color-mix(in srgb, var(--lc) 35%, transparent)}
-.bigeras b{font-family:var(--mono);font-weight:700;font-size:20px;text-align:center}
-.bigeras small{font-family:var(--mono);font-size:11px;color:var(--mute);text-align:center}
-.eralab{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:8px;font-family:var(--mono);font-size:12px;color:var(--mute);text-align:center}
-.rbars{display:grid;gap:8px}
-.rbar{display:grid;grid-template-columns:200px minmax(0,1fr) 90px;gap:14px;align-items:center;font-size:15px}
-.rbar .tk{height:12px;background:var(--rule);position:relative}
-.rbar .tk i{position:absolute;left:0;top:0;bottom:0;background:var(--lc)}
-.rbar .tk i.thin{background:transparent;box-shadow:inset 0 0 0 1.5px var(--lc)}
-.rbar span:last-child{font-family:var(--mono);font-size:12px;color:var(--mute);text-align:right}
-.fkinds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 48px}
-.fkinds h3{font-family:var(--display);font-weight:400;font-size:22px;margin:0}
-.fkinds h3 span{font-family:var(--mono);font-size:12px;color:var(--mute);margin-left:8px}
-.fkinds p{margin:4px 0 0;font-style:italic;color:var(--mute);font-size:15px}
 .kin{display:flex;flex-wrap:wrap;gap:10px 12px}
 .kin button{all:unset;cursor:pointer;border:1px solid var(--hair);padding:8px 12px;display:flex;flex-direction:column;gap:2px;min-width:180px}
 .kin button:hover{border-color:var(--ink)}
 .kin button:focus-visible{outline:2px solid var(--red)}
-.kin .k1{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase}
-.kin .k2{font-family:var(--display);font-size:19px}
-.kin .k3{font-family:var(--mono);font-size:11px;color:var(--mute)}
 .fwall{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
 .fwall button{all:unset;cursor:pointer;display:flex;flex-direction:column;gap:6px}
 .fwall button:focus-visible{outline:2px solid var(--red);outline-offset:3px}
@@ -493,13 +427,6 @@ ul.kinds li span:last-child{font-family:var(--mono);font-size:11.5px;color:var(-
 .fwall .tt span{color:var(--mute);font-size:.85em}
 @media (max-width:760px){ .fverd,.fkinds{grid-template-columns:1fr} .rbar{grid-template-columns:120px minmax(0,1fr) 70px} .bigeras{height:180px} }
 
-.fquote{margin:34px 0 0;max-width:60ch}
-.fquote blockquote{margin:0;font-family:var(--display);font-style:italic;font-size:clamp(26px,3.2vw,40px);line-height:1.2;color:var(--ink);border-left:3px solid var(--lc);padding-left:22px}
-.fquote figcaption{margin:12px 0 0 25px;font-family:var(--mono);font-size:12px;color:var(--mute);letter-spacing:.03em}
-.fmore{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 40px;margin-top:28px}
-.fmore figure{margin:0}
-.fmore blockquote{margin:0;font-family:var(--display);font-style:italic;font-size:20px;line-height:1.35;border-left:2px solid var(--lc);padding-left:14px}
-.fmore figcaption{margin:6px 0 0 16px;font-family:var(--mono);font-size:11.5px;color:var(--mute)}
 details.fothers{margin-top:18px}
 details.fothers summary{cursor:pointer;font-size:14px;color:var(--mute)}
 .fstats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 48px;border-top:1px solid var(--hair);padding-top:18px}
@@ -521,13 +448,6 @@ details.fothers summary{cursor:pointer;font-size:14px;color:var(--mute)}
 
 .loose{margin-top:20px;display:grid;gap:8px}
 .loose .lh{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:0 0 2px}
-.lrow{display:grid;grid-template-columns:190px minmax(0,1fr);gap:12px;align-items:baseline}
-.lk{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
-.lv{display:flex;flex-wrap:wrap;gap:4px 16px}
-.lv button{all:unset;cursor:pointer;font-size:15px;display:inline-flex;align-items:center;gap:7px;border-bottom:1px solid transparent}
-.lv button:hover,.lv button.on{border-bottom-color:currentColor}
-.lv button:focus-visible{outline:2px solid var(--red);outline-offset:2px}
-.lv .sw{width:9px;height:9px}
 .filmfacts{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px 40px;margin-top:18px;align-items:start}
 .filmfacts section{border-top:1px solid var(--ink);padding-top:10px}
 @media (max-width:620px){ .lrow{grid-template-columns:1fr;gap:2px} }
@@ -550,20 +470,15 @@ details.fothers summary{cursor:pointer;font-size:14px;color:var(--mute)}
 @media (max-width:980px){
   .row{grid-template-columns:96px minmax(0,1fr);gap:4px 14px}
   .thumb{width:96px;grid-row:span 3}
-  .row .bar10,.row .marks{grid-column:2}
-  .row .bar10{max-width:200px}
+  .row .marks{grid-column:2}
   .body{grid-template-columns:1fr}
-  .hero{grid-template-columns:1fr}
 }
 @media (max-width:620px){
-  .intro{grid-template-columns:1fr;padding-block:24px 16px}
-  .intro h1{font-size:34px}
   .work{font-size:36px}
   .row{grid-template-columns:84px minmax(0,1fr)}
   .thumb{width:84px;grid-row:span 3}
   .row .yr{display:none}
-  .row .bar10,.row .marks{grid-column:2}
-  .strip{grid-template-columns:repeat(4,1fr)}
+  .row .marks{grid-column:2}
   .chips .lab{min-width:0;width:100%}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -597,19 +512,11 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;
 const fmt = n => n == null ? "" : n >= 1e6 ? "$" + (n / 1e6).toFixed(n >= 1e7 ? 0 : 1) + "m" : "$" + Math.round(n / 1e3) + "k";
 const app = document.getElementById("app");
 const cache = {};
-const state = { q: "", region: new Set(), era: new Set(), has: new Set(), sort: "year", view: "graph", pcomp: "time", primary: "fears", glenses: new Set(["nightmares", "archetypes"]), lens: "nightmares", psort: "rising", psel: null, arrange: "net", links: new Set(["p","a","e"]), colour: "plain" };
+const state = { q: "", region: new Set(), era: new Set(), has: new Set(), sort: "year", view: "graph", pcomp: "time", primary: "fears", glenses: new Set(["nightmares", "archetypes"]), lens: "nightmares", psort: "rising", psel: null, arrange: "net", colour: "plain" };
 try { const s = JSON.parse(localStorage.getItem("bl-r1") || "{}"); if (s.sort) state.sort = s.sort; } catch (e) {}
 
 function eraOf(y) { return ERAS.find(e => y >= e[1] && y <= e[2])[0]; }
-function bar(f) {
-  return `<span class="bar10" role="img" aria-label="${f.f.length} of 10 story dimensions filled">${DIMS.map(k =>
-    `<i class="${f.f.includes(k) ? (f.pq === "thin" ? "thin" : "") : f.ns.includes(k) ? "ns" : "no"}" title="${DN[k]}${f.f.includes(k) ? "" : f.ns.includes(k) ? ": not stated in the plot" : ": empty"}"></i>`).join("")}</span>`;
-}
 const MARKS = [["P","plot","Wikipedia plot"],["S","sub","English subtitles"],["C","sp","Screenplay"],["J","sc","Jump-scare timings"],["V","st","Stills"]];
-function marks(f) {
-  return `<span class="marks">${MARKS.map(([l, k, n]) => { const on = k === "plot" ? true : !!f[k];
-    return `<b class="${on ? "on" : "off"}" title="${n}${on ? "" : ": none"}">${l}</b>`; }).join("")}</span>`;
-}
 function thumb(f, cls) {
   if (!f.st) return `<span class="${cls} none">NO STILLS</span>`;
   return `<span class="${cls}" style="background-image:url('stills/${f.id}.jpg');background-size:100% ${f.st * 100}%;background-position:0 0"></span>`;
@@ -655,7 +562,7 @@ function renderIndex() {
   </aside>
   <div class="status"><span class="active"><span id="count"></span><span id="pills"></span></span>
     ${state.view === "patterns" ? `<span class="key"><span>each dot is the share of films carrying the fear · hollow dots: fewer than 10 films, read with care</span></span>` : state.view === "graph" ? "" : ""}</div>
-  ${state.view === "graph" ? `<div class="gstage" id="gstage"><div class="gflash" id="gflash" aria-hidden="true"></div><div class="gbusy" role="status" aria-live="polite"><span class="geye" aria-hidden="true"><span class="lid"><i class="pupil"></i></span></span><span class="gbt">Charting</span></div>
+  ${state.view === "graph" ? `<div class="gstage" id="gstage"><div class="gbusy" role="status" aria-live="polite"><span class="geye" aria-hidden="true"><span class="lid"><i class="pupil"></i></span></span><span class="gbt">Charting</span></div>
     <div class="ghero" id="ghero"><p class="overline"><span class="nw">Bloodline</span> · <span class="nw">${F.length} films</span> · <span class="nw">${new Set(F.map(f => f.c)).size} countries</span> · <span class="nw">${Math.min(...F.map(f => f.y))} to ${Math.max(...F.map(f => f.y))}</span></p><h1>Every culture tells the same few <em>nightmares</em></h1><p>Different monsters, different languages, and underneath them the same fears. Every point of light is a film or a fear; every thread, a fear they share.</p></div><div class="ginfo" id="ginfo"></div><div class="gthreads" id="gthreads" role="group" aria-label="Veins shown"></div><div class="gmode viewtoggle" role="group" aria-label="Main nodes"><button type="button" data-primary="fears" aria-pressed="${state.primary === "fears"}">Fears</button><button type="button" data-primary="films" aria-pressed="${state.primary === "films"}">Films</button></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
     <div class="keyline" id="gkey" style="margin-top:10px"></div>` : state.view === "patterns" ? `<div class="pat" id="pat"></div>` : `<ol class="ledger" id="ledger"></ol>`}
   ${aboutBlock()}`;
@@ -786,10 +693,6 @@ function wireTrends(el) {
   el.querySelectorAll("[data-pcomp]").forEach(b => b.onclick = () => { state.pcomp = b.dataset.pcomp; state.psort = PSORT[state.pcomp][0][0]; state.pcol = null; renderPatterns(); });
   const pl = document.getElementById("plens"); if (pl) pl.onclick = () => document.getElementById("openf").click();
 }
-function filmLinks(fs) {
-  const byR = {}; fs.forEach(f => (byR[f.r] = byR[f.r] || []).push(f));
-  return `<div class="pfilms">${Object.entries(byR).sort((a, b) => b[1].length - a[1].length).map(([r, xs]) => `<p><span class="rg">${esc(r)} · ${xs.length}</span>${xs.sort((a, b) => a.y - b.y).map(f => f.rec ? `<button type="button" data-go="${f.id}">${esc(f.t)} (${f.y})</button>` : `<span class="off">${esc(f.t)} (${f.y})</span>`).join(", ")}</p>`).join("")}</div>`;
-}
 /* ---------- a fear's own page ---------- */
 const slug = t => t.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const fearHash = (lens, name) => `f.${lens}.${slug(name)}`;
@@ -831,7 +734,6 @@ async function renderFear(id) {
   const shots = inRec.map(f => ({ f, x: F.find(z => z.id === f.id) })).filter(o => o.x && o.x.st).slice(0, 12).map((o, i) => ({ id: o.f.id, t: o.f.t, y: o.f.y, st: o.x.st, i: Math.floor(o.x.st / 2) }));
   const shotStyle = x => `background-image:url('stills/${x.id}.jpg');background-size:100% ${x.st * 100}%;background-position:${x.st === 1 ? "0 0" : `0 ${(x.i / (x.st - 1)) * 100}%`};background-repeat:no-repeat`;
   const shotCap = x => `From <button class="linkish" type="button" data-go="${x.id}">${esc(x.t)} (${x.y})</button>, still from FILMGRAB.`;
-  const qline = q => `${q.rec ? `<button class="linkish" type="button" data-go="${q.id}">${esc(q.t)}</button>` : esc(q.t)} (${q.y})${q.src === "subtitles" && q.at ? ` · ${esc(q.at)}` : q.src === "wikipedia" ? " · from the plot" : ""}`;
   // a nightmare against the top-down archetypes: how much of the nightmare each archetype covers, and how much of the archetype falls here
   const archVs = () => { const ac = {}, at = {};
     all.forEach(f => (f.g.archetypes?.f || []).forEach(a => { at[a] = (at[a] || 0) + 1; if (has(f)) ac[a] = (ac[a] || 0) + 1; }));
@@ -932,6 +834,7 @@ const GREY = "#4a413b";
 // show the busy state, let it paint, then do the heavy work
 function redraw(fn) { const st = document.getElementById("gstage"); if (!st) { fn(); return; }
   st.classList.add("busy"); requestAnimationFrame(() => requestAnimationFrame(() => { try { fn(); } finally { document.getElementById("gstage")?.classList.remove("busy"); } })); }
+const LAYOUTS = new Map(); let LAST = new Map();   // remembered graph layouts, by set of veins, and the latest one
 function buildGraph() {
   const stage = document.getElementById("gstage"); if (!stage || typeof d3 === "undefined") { if (stage) stage.innerHTML = `<p class="empty">The graph needs a script that didn't load. Reload the page to try again.</p>`; G = null; return; }
   let W = stage.clientWidth, H = stage.clientHeight;
@@ -950,7 +853,21 @@ function buildGraph() {
   const sim = d3.forceSimulation(nodes).force("link", d3.forceLink(edges).distance(e => e.lens === "nightmares" ? 55 : 85).strength(e => e.lens === "nightmares" ? .5 : 1 / Math.sqrt(e.target.films.length) * .45))
     .force("charge", d3.forceManyBody().strength(n => n.kind === "fear" ? -90 - n.films.length * 10 : -160).distanceMax(700))
     .force("collide", d3.forceCollide(n => (n.kind === "fear" ? n.r : n.fr) + 10).strength(.9)).force("x", d3.forceX(0).strength(.015)).force("y", d3.forceY(0).strength(.03)).stop();
-  for (let i = 0; i < 450; i++) sim.tick();
+  // the layout: reuse a remembered one for this set of veins; otherwise start from where things last were (new nodes
+  // beside their films) and settle briefly, or from scratch when there is nothing to start from. Stop once settled.
+  const key = [...state.glenses].sort().join(","), saved = LAYOUTS.get(key);
+  if (saved) nodes.forEach(n => { const p = saved.get(n.id); if (p) { n.x = p[0]; n.y = p[1]; } });
+  else {
+    const known = nodes.filter(n => LAST.has(n.id)).length;
+    if (known > nodes.length * .6) {
+      nodes.forEach(n => { const p = LAST.get(n.id); if (p) { n.x = p[0]; n.y = p[1]; } });
+      nodes.filter(n => !LAST.has(n.id) && n.kind === "fear").forEach(x => { const ps = x.films.map(f => LAST.get(f.id)).filter(Boolean); if (ps.length) { x.x = d3.mean(ps, p => p[0]) + Math.random() * 6; x.y = d3.mean(ps, p => p[1]) + Math.random() * 6; } });
+      sim.alpha(.3).alphaDecay(.05);
+    }
+    while (sim.alpha() > sim.alphaMin()) sim.tick();
+    LAYOUTS.set(key, new Map(nodes.map(n => [n.id, [n.x, n.y]])));
+  }
+  LAST = new Map(nodes.map(n => [n.id, [n.x, n.y]]));
   nodes.forEach(n => { n.nx = n.x; n.ny = n.y; });
   // the "through time" arrangement is only worked out when someone asks for it
   let yr = d3.scaleLinear().domain([1915, 2025]).range([-W * .45, W * .45]), timed = false;
@@ -960,7 +877,7 @@ function buildGraph() {
   const sim2 = d3.forceSimulation(nodes).force("link", d3.forceLink(edges).distance(40).strength(.05))
     .force("x", d3.forceX(n => yr(n.kind === "film" ? n.f.y : n.my)).strength(n => n.kind === "film" ? 3 : 1)).force("y", d3.forceY(0).strength(.05))
     .force("collide", d3.forceCollide(n => (n.kind === "fear" ? n.r : n.fr) + 3)).force("charge", d3.forceManyBody().strength(-25)).stop();
-  for (let i = 0; i < 350; i++) sim2.tick();
+  while (sim2.alpha() > sim2.alphaMin()) sim2.tick();
   nodes.forEach(n => { n.tx = n.x; n.ty = n.y; }); };
   if (state.arrange === "time") timeLayout();
   nodes.forEach(n => { n.x = state.arrange === "time" ? n.tx : n.nx; n.y = state.arrange === "time" ? n.ty : n.ny; });
@@ -979,7 +896,7 @@ function buildGraph() {
   const fillOf = n => { const prim = (state.primary === "films") === (n.kind === "film");
     if (!prim) return n.kind === "film" ? "var(--ink)" : GREY;
     if (n.kind === "fear") return LENSC[n.lens];
-    return state.colour === "era" ? ERA_C[ERAS.findIndex(e => e[0] === eraOf(n.f.y))] : state.colour === "still" ? (n.f.tone || "var(--soft)") : "var(--ink)"; };
+    return state.colour === "era" ? ERA_C[ERAS.findIndex(e => e[0] === eraOf(n.f.y))] : "var(--ink)"; };
   const ring = n => { const prim = (state.primary === "films") === (n.kind === "film"); if (!prim) return ["none", 0];
     return n.kind === "film" && state.colour === "region" ? [REG_C[n.f.r], 2.4] : ["var(--paper)", 1.2]; };
   const place = () => { eSel.attr("x1", e => e.source.x).attr("y1", e => e.source.y).attr("x2", e => e.target.x).attr("y2", e => e.target.y);
@@ -1016,7 +933,7 @@ function buildGraph() {
         redraw(() => { buildGraph(); renderRows(); }); }); }
     if (state.primary === "fears") { key.innerHTML = ""; return; }
     key.innerHTML = state.primary === "fears" ? LENS.filter(([kk]) => state.glenses.has(kk)).map(([kk, nn]) => `<span><span class="sw" style="background:${LENSC[kk]};border-radius:50%"></span>${nn}</span>`).join("") + `<span><span class="sw" style="background:var(--ink);border-radius:50%"></span>films</span>`
-      : (state.colour === "region" ? REGIONS.map(r => `<span><span class="sw" style="background:var(--ink);border-radius:50%;box-shadow:0 0 0 2px ${REG_C[r]}"></span>${esc(r)}</span>`).join("") : state.colour === "era" ? ERAS.map(([e], i) => `<span><span class="sw" style="background:${ERA_C[i]};border-radius:50%"></span>${e}</span>`).join("") : state.colour === "still" ? `<span>Films are filled with the colour of their stills.</span>` : `<span><span class="sw" style="background:var(--ink);border-radius:50%"></span>films · region and era are in the filter drawer</span>`) + `<span><span class="sw" style="background:${GREY};border-radius:50%"></span>fears</span>`; };
+      : (state.colour === "region" ? REGIONS.map(r => `<span><span class="sw" style="background:var(--ink);border-radius:50%;box-shadow:0 0 0 2px ${REG_C[r]}"></span>${esc(r)}</span>`).join("") : state.colour === "era" ? ERAS.map(([e], i) => `<span><span class="sw" style="background:${ERA_C[i]};border-radius:50%"></span>${e}</span>`).join("") : `<span><span class="sw" style="background:var(--ink);border-radius:50%"></span>films · region and era are in the filter drawer</span>`) + `<span><span class="sw" style="background:${GREY};border-radius:50%"></span>fears</span>`; };
   const zoom = d3.zoom().scaleExtent([.4, 7]).on("zoom", ev => { root.attr("transform", ev.transform); k = ev.transform.k; if (!hoverOn) labels(); });
   svg.call(zoom);
   const fit = (dur) => { const vis = nodes.filter(n => visible.has(n.id)); if (!vis.length) return;
@@ -1027,15 +944,10 @@ function buildGraph() {
   document.getElementById("zin").onclick = () => svg.call(zoom.scaleBy, 1.4);
   document.getElementById("zout").onclick = () => svg.call(zoom.scaleBy, 1 / 1.4);
   document.getElementById("zfit").onclick = () => fit(300);
-  const info = document.getElementById("ginfo"), flash = document.getElementById("gflash"); let flashes = 0;
+  const info = document.getElementById("ginfo"); let frames = 0;
   // a small still above the film's title in the side panel (a different frame each time you point at it)
-  const thumb = n => { if (!n.f.st) return ""; const i = (flashes++ * 5 + n.i) % n.f.st, pos = n.f.st === 1 ? "0 0" : `0 ${(i / (n.f.st - 1)) * 100}%`;
+  const thumb = n => { if (!n.f.st) return ""; const i = (frames++ * 5 + n.i) % n.f.st, pos = n.f.st === 1 ? "0 0" : `0 ${(i / (n.f.st - 1)) * 100}%`;
     return `<div class="gthumb" style="background-image:url('stills/${n.id}.jpg');background-size:100% ${n.f.st * 100}%;background-position:${pos}"></div>`; };
-  const showStill = n => { if (!flash) return; flash.classList.remove("on");
-    if (n.kind !== "film" || !n.f.st) { flash.style.backgroundImage = "none"; return; }
-    const i = (flashes++ * 5 + n.i) % n.f.st, pos = n.f.st === 1 ? "0 0" : `0 ${(i / (n.f.st - 1)) * 100}%`;
-    flash.style.backgroundImage = `url('stills/${n.id}.jpg')`; flash.style.backgroundSize = `100% ${n.f.st * 100}%`; flash.style.backgroundPosition = pos;
-    void flash.offsetWidth; flash.classList.add("on"); };
   // labels for whatever is lit: each tries above, below, right, then left of its node, avoiding the others
   const placeLit = (list, taken = []) => { const fs = 13 / Math.max(k, .6), boxes = [...taken, ...list.map(m => { const r = R(m); return [m.x - r, m.y - r, m.x + r, m.y + r]; })];
     const hit = b => boxes.some(c => b[0] < c[2] && b[2] > c[0] && b[1] < c[3] && b[3] > c[1]);
@@ -1067,11 +979,11 @@ function buildGraph() {
     return boxes; };
   let seq = []; const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const later = (f, ms) => seq.push(setTimeout(f, reduce ? 0 : ms));
-  const rest = () => { seq.forEach(clearTimeout); seq = []; leadG.selectAll("*").remove(); hoverOn = null; stage.classList.remove("hov"); flash?.classList.remove("on"); eSel.attr("stroke", "var(--mute)").attr("stroke-opacity", .22);
+  const rest = () => { seq.forEach(clearTimeout); seq = []; leadG.selectAll("*").remove(); hoverOn = null; stage.classList.remove("hov"); eSel.attr("stroke", "var(--mute)").attr("stroke-opacity", .22);
     stage.querySelectorAll(".hi").forEach(x => x.classList.remove("hi"));
     const vf = films.filter(n => visible.has(n.id)).length, vx = fears.filter(n => visible.has(n.id)).length;
     info.innerHTML = `<div class="r" style="color:var(--mute)">${state.primary === "films" ? "Point at a film to see the fears it carries." : "Point at a fear to see the films that carry it."}</div>`; labels(); };
-  const hover = n => { hoverOn = n; stage.classList.add("hov"); flash?.classList.remove("on");
+  const hover = n => { hoverOn = n; stage.classList.add("hov");
     // only the best-connected neighbours light up: a nightmare's 16 most connected films, anything else's 12
     const deg = m => m.kind === "film" ? m.fears.length : m.films.length;
     const near = (n.kind === "film" ? n.fears : n.films).filter(m => visible.has(m.id)).sort((a, b) => deg(b) - deg(a) || (a.f?.y || 0) - (b.f?.y || 0));
@@ -1127,7 +1039,7 @@ function buildGraph() {
     fit(500); };
   drawAxis(); place(); emphasis(); fit(0);
   // a new size (drawer, window) only needs a new frame and a refit, not a new layout
-  const resize = () => { W = stage.clientWidth; H = stage.clientHeight; svg.attr("viewBox", [-W / 2, -H / 2, W, H]); if (state.arrange === "time") { timed = false; redraw(arrange); } else fit(300); };
+  const resize = () => { const ow = W; W = stage.clientWidth; H = stage.clientHeight; svg.attr("viewBox", [-W / 2, -H / 2, W, H]); if (timed) { const k = W / ow; nodes.forEach(n => n.tx *= k); yr.range([-W * .45, W * .45]); } if (state.arrange === "time") arrange(); else fit(300); };
   G = { filter, arrange, recolour: emphasis, emphasis, resize };
   setTimeout(() => ready = true, 0);
 }
@@ -1310,11 +1222,6 @@ function storyMap(d) {
   return `<div class="spinehead"><h3>The shape of its fear</h3></div>
     <div class="smap">${COLS.map(col).join('<span class="sma" aria-hidden="true"></span>')}</div>`;
 }
-function looseBlock(d) {
-  const L = spineItems(d).imgs.filter(x => x.loose); if (!L.length) return "";
-  const by = {}; L.forEach(x => (by[x.k] = by[x.k] || []).push(x));
-  return `<div class="loose"><p class="lh">The rest of its story, not tied to a moment</p>${Object.entries(by).map(([k, xs]) => `<div class="lrow"><span class="lk" style="color:${LENSC[k]}">${esc(LENSN[k])}</span><span class="lv">${xs.map(x => `<button type="button" class="hit" data-key="${x.key}"><span class="sw" style="background:${LENSC[k]}"></span>${esc(x.e.value)}</button>`).join("")}</span></div>`).join("")}</div>`;
-}
 // timeline items: pointing at one shows its quotes below; clicking opens the fear it belongs to (turns and jump scares just show their quotes)
 function fearOfKey(d, key) { const x = spineItems(d).imgs.find(x => x.key === key); return x && x.e.fear && LENSN[x.k] ? fearHash(x.k, x.e.fear) : null; }
 function wireHit(d, g) {
@@ -1323,7 +1230,6 @@ function wireHit(d, g) {
   g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); act(); } });
 }
 function mark(key) { document.querySelectorAll("#spine .hit, .loose .hit").forEach(g => g.classList.toggle("on", g.dataset.key === key)); document.querySelectorAll(".smv").forEach(g => g.classList.toggle("on", g.dataset.smkey === key)); }
-function elsewhere(v, id) { const o = F.filter(f => f.id !== id && f.v.includes(v)); return o; }
 function showDetail(d, key) {
   const P = document.getElementById("detail"); if (!P) return;
   const { beats, imgs } = spineItems(d);
@@ -1427,28 +1333,6 @@ function drawNet(d) {
 
 function entry(e, k, id) {
   return `<div class="entry"${id ? ` id="${id}"` : ""}><div><div class="v"><strong>${esc(e.value)}</strong>${tags(e, k)}</div>${e.detail ? `<div class="det">${esc(e.detail)}</div>` : ""}</div><div class="quotes">${quotes(e)}</div></div>`;
-}
-function dimSection(d, k) {
-  const es = d.dims[k] || [];
-  let body;
-  if (!es.length) body = `<div class="ns">${d.not_stated.includes(k) ? "Not stated in the plot summary." : "Nothing recorded."}</div>`;
-  else if (k === "beats") {
-    const sorted = sortedBeats(d);
-    body = `<ol class="beats">${sorted.map((e, i) => `<li id="b-${e._i}"><span class="no">${i + 1}</span><div><div class="v" style="display:flex;gap:6px 12px;flex-wrap:wrap;align-items:baseline"><strong style="font-weight:600">${esc(e.value)}</strong>${e.when ? `<span class="tag">${esc(e.when)}</span>` : ""}${e.role ? `<span class="tag">${esc(e.role)}</span>` : ""}${e.source && e.source !== "wikipedia" ? `<span class="tag">added from ${esc(e.source)}</span>` : ""}${primed(e.value) ? `<span class="tag red">example wording</span>` : ""}</div>
-      ${e.when && WHEN.includes(e.when) ? `<div class="pos" aria-hidden="true"><i style="left:${WHEN.indexOf(e.when) * 20}%"></i></div>` : ""}
-      ${e.detail ? `<div class="det" style="font-size:15px;margin-top:4px">${esc(e.detail)}</div>` : ""}${quotes(e)}</div></li>`).join("")}</ol>`;
-  } else if (k === "images") {
-    body = matrix(es) + `<div id="imglist">${es.map((e, i) => ({ ...e, _i: i })).sort((a, b) => WHEN.indexOf(a.when) - WHEN.indexOf(b.when)).map(e => `<div data-r="${esc(e.role || "none")}" data-w="${esc(e.when || "")}">${entry(e, k, "i-" + e._i)}</div>`).join("")}</div>`;
-  } else body = (k === "who_suffers" ? rings(d) : "") + es.map(e => entry(e, k)).join("");
-  return `<section class="dim" id="d-${k}"><h2>${LENSC[k] ? `<span class="sw" style="background:${LENSC[k]};border-radius:50%;width:12px;height:12px;margin-right:10px;vertical-align:4px"></span>` : ""}${DN[k]}</h2><p class="q2">${DQ[k]}</p>${body}</section>`;
-}
-function stillsBlock(d) {
-  if (!d.stills) return `<div class="frame none">No stills found for this film. FILMGRAB, the only source used, has no page for it.</div>`;
-  const n = d.stills, pos = i => n === 1 ? "0 0" : `0 ${(i / (n - 1)) * 100}%`;
-  return `<div class="frame" id="frame" role="img" aria-label="Still from ${esc(d.title)}" style="background-image:url('stills/${d.id}.jpg');background-size:100% ${n * 100}%;background-position:${pos(0)}"></div>
-    ${n > 1 ? `<div class="strip">${Array.from({ length: n }, (_, i) => `<button type="button" aria-label="Show still ${i + 1} of ${n}" aria-current="${i === 0}" data-i="${i}" style="background-image:url('stills/${d.id}.jpg');background-size:100% ${n * 100}%;background-position:${pos(i)}"></button>`).join("")}</div>` : ""}
-    ${(d.tones || []).length > 1 ? `<div class="tones" aria-label="Prevailing colour of each still">${d.tones.map((c, i) => `<button type="button" data-i="${i}" style="background:${c}" aria-label="Show still ${i + 1}" title="${c}"></button>`).join("")}</div>` : ""}
-    <div class="caption">${n} stills from <a href="${esc(d.stills_source)}" target="_blank" rel="noopener">FILMGRAB</a>, in the order they appear on the page, not necessarily the film's order.</div>`;
 }
 function sources(d, f) {
   const row = (l, on, txt) => `<div><span class="marks"><b class="${on ? "on" : "off"}">${l}</b></span><span>${txt}</span></div>`;
