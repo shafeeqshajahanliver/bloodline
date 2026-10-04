@@ -77,6 +77,11 @@ for d in quotes:
             seen.add(q["id"]); out.append(q)
             if len(out) == 3: break
         quotes[d][fear] = out
+# hand-written narrations for each fear's page (reference/fear-notes/<lens>.json)
+notes = {}
+for d in list(vocab) + ["archetypes"]:
+    np_ = f"reference/fear-notes/{d}.json"
+    if os.path.exists(np_): notes[d] = {k: (v.get("text") if isinstance(v, dict) else v) for k, v in json.load(open(np_)).items()}
 os.makedirs("record/site", exist_ok=True)
-json.dump({"dims": list(vocab) + ["archetypes"], "fears": defs, "kinds": kinds, "quotes": quotes, "films": films}, open("record/site/patterns.json", "w"), ensure_ascii=False, separators=(",", ":"))
+json.dump({"dims": list(vocab) + ["archetypes"], "fears": defs, "kinds": kinds, "quotes": quotes, "notes": notes, "films": films}, open("record/site/patterns.json", "w"), ensure_ascii=False, separators=(",", ":"))
 print(f"{len(films)} films · dimensions grouped: {', '.join(vocab) or 'none yet'} · plus archetypes")

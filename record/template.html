@@ -783,7 +783,7 @@ async function renderFear(id) {
   const egoFilms = inRec.map(f => ({ f, via: kin.filter(x => carries(f, x.k)).map(x => x.k) })).sort((a, b) => b.via.length - a.via.length || a.f.y - b.f.y).slice(0, 14);
   const tile = f => { const x = F.find(z => z.id === f.id); return `<button type="button" data-go="${f.id}"><span class="th${x && x.st ? "" : " none"}" style="${x && x.st ? `background-image:url('stills/${f.id}.jpg');background-size:100% ${x.st * 100}%;background-position:0 0` : ""}"></span><span class="tt">${esc(f.t)} <span>(${f.y})</span></span></button>`; };
   const byR = {}; others.forEach(f => (byR[f.r] = byR[f.r] || []).push(f));
-  const qs = ((PAT.quotes || {})[lens] || {})[name] || [], q0 = qs[0];
+  const qs = ((PAT.quotes || {})[lens] || {})[name] || [], q0 = qs[0], note = ((PAT.notes || {})[lens] || {})[name];
   const shots = inRec.map(f => ({ f, x: F.find(z => z.id === f.id) })).filter(o => o.x && o.x.st).slice(0, 12).map((o, i) => ({ id: o.f.id, t: o.f.t, y: o.f.y, st: o.x.st, i: Math.floor(o.x.st / 2) }));
   const shotStyle = x => `background-image:url('stills/${x.id}.jpg');background-size:100% ${x.st * 100}%;background-position:${x.st === 1 ? "0 0" : `0 ${(x.i / (x.st - 1)) * 100}%`};background-repeat:no-repeat`;
   const shotCap = x => `From <button class="linkish" type="button" data-go="${x.id}">${esc(x.t)} (${x.y})</button>, still from FILMGRAB.`;
@@ -795,9 +795,9 @@ async function renderFear(id) {
       <div>${shots.length ? `<div class="frame" id="frame" role="img" aria-label="Still from ${esc(shots[0].t)}" style="${shotStyle(shots[0])}"></div>
         ${shots.length > 1 ? `<div class="thumbs">${shots.map((x, i) => `<button type="button" data-shot="${i}" aria-label="Show a still from ${esc(x.t)}" aria-current="${i === 0}" style="--tone:${lc};${shotStyle(x)}"></button>`).join("")}</div>` : ""}
         <div class="caption" style="margin-top:12px" id="shotcap">${shotCap(shots[0])}</div>` : `<div class="nostill"><span>NO STILLS FROM THESE FILMS</span></div>`}</div>
-      <div>${def ? `<p class="prose">${esc(def.charAt(0).toUpperCase() + def.slice(1))}</p>` : ""}
+      <div>${note ? `<p class="prose syn">${esc(note).replace(/\[([^\]|]+)\|([0-9a-z-]+)\]/g, (m, ph, fid) => `<button type="button" data-go="${fid}" style="--uc:${lc}">${ph}</button>`)}</p>` : def ? `<p class="prose">${esc(def.charAt(0).toUpperCase() + def.slice(1))}</p>` : ""}
         ${q0 ? `<figure class="fquote" style="margin-top:26px"><blockquote>“${esc(q0.q)}”</blockquote><figcaption>${qline(q0)}</figcaption></figure>` : ""}
-        <p class="prose-note">Stills from ${shots.length} of the films that carry it. Tap a frame to change it.</p></div>
+        </div>
     </div>
     ${kin.length ? `<section class="fsec" style="margin-top:64px"><div class="spinehead" style="margin-top:0"><h3>Its bloodline</h3><p>The fears it keeps company with, more often than chance, and the films in the record that carry them together.</p></div>
       <div class="netwrap"><div><div class="netsvg" id="fnet"></div>
