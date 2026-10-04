@@ -983,6 +983,7 @@ function tags(e, k) {
   if ((k === "images") && e.when) t.push(`<span class="tag">${esc(e.when)}</span>`);
   if (e.confidence === "observed") t.push(`<span class="tag">observed</span>`);
   if (e.source && e.source !== "wikipedia") t.push(`<span class="tag">added from ${esc(e.source)}</span>`);
+  if (e.fear) t.push(`<button class="linkish tag" type="button" data-fearlink="${k}|${esc(e.fear)}" style="color:${LENSC[k]}">${esc(e.fear)} →</button>`);
   if (primed(e.value)) t.push(`<span class="tag" title="This wording was one of the examples given to the readers, so it may be over-used. See About this record.">example wording</span>`);
   return t.join(" ");
 }
@@ -1140,6 +1141,7 @@ function showDetail(d, key) {
         <h4>${esc(e.value)}</h4>${e.state ? `<p class="st">${esc(e.state)}</p>` : ""}${e.detail ? `<p class="dt">${esc(e.detail)}</p>` : ""}
         <p class="tag" style="margin-top:10px;display:block">${esc(when)}</p>
         ${other.length ? `<p class="also">The same wording appears in ${other.slice(0, 4).map(f => `<button class="linkish" type="button" data-go="${f.id}">${esc(f.t)}</button>`).join(", ")}${other.length > 4 ? ` and ${other.length - 4} more` : ""}.</p>` : ""}
+        ${e.fear ? `<p class="also">Part of the fear <button class="linkish" type="button" data-fearlink="images|${esc(e.fear)}" style="color:${LENSC.images}">${esc(e.fear)}</button>, seen across the films.</p>` : ""}
         <div class="stepper">${nav(idx - 1, "Previous")}${nav(idx + 1, "Next")}</div></div>
       <div>${[e, ...(e.moments || [])].map(m => `<blockquote>${from(m)}“${esc(m.quote)}”</blockquote>`).join("")}
         <button class="linkish" type="button" data-full="${isImg ? "d-images" : "d-beats"}" style="font-size:14px">See all ${list.length} ${isImg ? "symbols" : "beats"} in the full reading</button></div>`;
@@ -1148,6 +1150,7 @@ function showDetail(d, key) {
   mark(key);
   P.querySelectorAll("[data-key]").forEach(b => b.onclick = () => showDetail(d, b.dataset.key));
   P.querySelectorAll("[data-go]").forEach(b => b.onclick = () => go(b.dataset.go));
+  P.querySelectorAll("[data-fearlink]").forEach(b => b.onclick = () => { const [d2, n2] = b.dataset.fearlink.split("|"); go(fearHash(d2, n2)); });
   P.querySelectorAll("[data-full]").forEach(b => b.onclick = () => flash(key.startsWith("i-") || key.startsWith("b-") ? key : b.dataset.full));
 }
 
@@ -1214,11 +1217,13 @@ function drawNet(d) {
     el.querySelectorAll(`[data-l="${CSS.escape(id)}"]`).forEach(x => x.classList.add("hi"));
     films.filter(f => f.via.includes(id)).forEach(f => { el.querySelector(`.nd[data-f="${f.id}"]`).classList.add("hi"); why.querySelector(`[data-f="${f.id}"]`)?.classList.add("hi"); });
     const others = l.all.map(o => idx[o]).filter(Boolean);
-    info.innerHTML = `${linkWords(l)} is shared with ${others.length} of the 100: ${others.map(x => `<button class="linkish" type="button" data-go="${x.id}">${esc(x.t)}</button>`).join(", ")}.`;
+    info.innerHTML = `${linkWords(l)}${l.fear ? ` <span class="tag" style="color:${LENSC[l.dim]}">part of “${esc(l.fear)}”, click to open</span>` : ""} is shared with ${others.length} of the 100: ${others.map(x => `<button class="linkish" type="button" data-go="${x.id}">${esc(x.t)}</button>`).join(", ")}.`;
     info.querySelectorAll("[data-go]").forEach(b => b.onclick = () => go(b.dataset.go)); };
   el.querySelectorAll(".nd[data-f]").forEach(g => { g.addEventListener("mouseenter", () => hiFilm(g.dataset.f)); g.addEventListener("focus", () => hiFilm(g.dataset.f));
     g.addEventListener("click", () => go(g.dataset.f)); g.addEventListener("keydown", e => { if (e.key === "Enter") go(g.dataset.f); }); });
-  el.querySelectorAll(".nd[data-l]").forEach(g => { const h = () => hiLink(g.dataset.l); g.addEventListener("mouseenter", h); g.addEventListener("focus", h); g.addEventListener("click", h); g.addEventListener("keydown", e => { if (e.key === "Enter") h(); }); });
+  el.querySelectorAll(".nd[data-l]").forEach(g => { const h = () => hiLink(g.dataset.l), l = L[g.dataset.l];
+    const open = () => { if (l.fear) go(fearHash(l.dim, l.fear)); else h(); };
+    g.addEventListener("mouseenter", h); g.addEventListener("focus", h); g.addEventListener("click", open); g.addEventListener("keydown", e => { if (e.key === "Enter") open(); }); });
   el.querySelector("svg").addEventListener("mouseleave", () => clear());
   why.querySelectorAll("li").forEach(li => li.addEventListener("mouseenter", () => hiFilm(li.dataset.f)));
   why.querySelectorAll("[data-go]").forEach(b => b.onclick = () => go(b.dataset.go));
@@ -1344,6 +1349,7 @@ async function renderFilm(id) {
   const th = [...app.querySelectorAll(".thumbs button")];
   th.forEach((b, i) => b.onclick = () => { frame.style.backgroundPosition = b.style.backgroundPosition; th.forEach((x, j) => x.setAttribute("aria-current", j === i)); });
   app.querySelectorAll(".prose [data-ev]").forEach(b => b.onclick = () => flash("d-" + b.dataset.ev));
+  app.querySelectorAll("[data-fearlink]").forEach(b => b.onclick = () => { const [d2, n2] = b.dataset.fearlink.split("|"); go(fearHash(d2, n2)); });
   const cells = [...app.querySelectorAll("[data-cell]")], all = document.getElementById("imgall");
   const filt = c => { cells.forEach(x => x.setAttribute("aria-pressed", x === c)); if (all) all.setAttribute("aria-pressed", !c);
     const [r, w] = c ? c.dataset.cell.split("|") : [];

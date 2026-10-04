@@ -73,6 +73,11 @@ def sheet(fid):
     src = json.load(open(f"films/{fid}/visuals/stills.json")) if os.path.exists(f"films/{fid}/visuals/stills.json") else {}
     return len(ims), src.get("source"), cols
 
+# the grouped vocabulary (reference/vocab), so each story element can point to its fear's page
+VOCAB = {}
+for d in ["threat", "origin", "wants", "wrong", "trigger", "rules", "who_suffers", "ending", "images"]:
+    vp = f"reference/vocab/{d}.tsv"
+    if os.path.exists(vp): VOCAB[d] = {r["value"]: r["fear"] for r in csv.DictReader(open(vp), delimiter="\t") if r.get("fear") and r["fear"] != "unclear"}
 index = []
 for fid in ids:
     r = rows[fid]; d = f"films/{fid}"
@@ -101,7 +106,7 @@ for fid in ids:
         if bad.get("script/screenplay.txt"): sp["note"] = "Scan is partly garbled; quotes only."
     pilot = json.load(open(f"{d}/story.json")) if os.path.exists(f"{d}/story.json") else None
     nst, stsrc, cols = sheet(fid)
-    dims = {k: se["dimensions"].get(k, []) for k in DIMS}
+    dims = {k: [dict(e, fear=VOCAB[k][e["value"]]) if e["value"] in VOCAB.get(k, {}) else e for e in se["dimensions"].get(k, [])] for k in DIMS}
     filled = [k for k in DIMS if dims[k]]
     wurl = w.get("wikipedia_url") or ""
     rec = {
@@ -162,7 +167,7 @@ for fid, r in recs.items():
     top = nb[:14]
     used = sorted({k for _, _, sh in top for k in sh})
     r["net"] = {"total": len(nb),
-        "links": [dict(mine[k], id=k, films_in_100=count[k] - 1, primed=mine[k]["type"] == "element" and primed(mine[k]["label"]),
+        "links": [dict(mine[k], id=k, films_in_100=count[k] - 1, fear=VOCAB.get(mine[k].get("dim"), {}).get(mine[k]["label"]) if mine[k]["type"] == "element" else None, primed=mine[k]["type"] == "element" and primed(mine[k]["label"]),
                        all=[o for o in ids if o != fid and k in FE[o]]) for k in used],
         "films": [{"id": o, "score": round(sc, 2), "via": sh} for sc, o, sh in top]}
     json.dump(r, open(f"{OUT}/data/{fid}.json", "w"), ensure_ascii=False, separators=(",", ":"))
