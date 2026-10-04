@@ -274,14 +274,20 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .viewtoggle button[aria-pressed="true"]{background:var(--ink);color:var(--on-ink)}
 .viewtoggle button:focus-visible{outline:2px solid var(--red);outline-offset:2px}
 .gstage{position:relative;height:min(82vh,880px);min-height:540px;border-bottom:1px solid var(--hair);overflow:hidden}
-/* while the graph recomputes: the threads dim and blur, a red line sweeps the top, a quiet label sits in the middle */
-.gbusy{position:absolute;inset:0;z-index:5;display:flex;align-items:center;justify-content:center;pointer-events:none;opacity:0;transition:opacity .35s}
-.gbusy .gbar{position:absolute;left:0;top:0;height:2px;width:30%;background:var(--red);box-shadow:0 0 12px var(--red);transform:translateX(-100%);animation:gsweep 1.1s cubic-bezier(.6,0,.4,1) infinite}
-.gbusy .gbt{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);padding:8px 14px;background:rgba(12,10,9,.7)}
-.gstage svg{transition:opacity .35s,filter .35s}
-.gstage.busy .gbusy{opacity:1;transition:none}.gstage.busy svg{opacity:.25;filter:blur(2px);transition:none}
-@keyframes gsweep{to{transform:translateX(340%)}}
-@media (prefers-reduced-motion: reduce){.gbusy .gbar{animation:none;transform:none;width:100%}}
+/* while the graph recomputes: the threads sink into the dark and flicker like a failing projector, and a single red eye
+   opens in the middle, looks around and blinks. Transform and opacity only, so it keeps moving while the page is busy. */
+.gbusy{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;gap:18px;align-items:center;justify-content:center;pointer-events:none;opacity:0;transition:opacity .45s}
+.gbusy .geye{width:64px;height:30px;display:grid;place-items:center;animation:gopen 2.6s cubic-bezier(.6,0,.3,1) infinite;will-change:transform}
+.gbusy .lid{width:34px;height:34px;border:1.5px solid var(--red);border-radius:80% 0;transform:rotate(45deg);display:grid;place-items:center;box-shadow:0 0 18px rgba(207,58,46,.35)}
+.gbusy .pupil{width:9px;height:9px;border-radius:50%;background:var(--red);box-shadow:0 0 10px var(--red);transform:rotate(-45deg);animation:glook 2.6s ease-in-out infinite;will-change:transform}
+.gbusy .gbt{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute);animation:gfade 2.6s ease-in-out infinite}
+.gstage svg{transition:opacity .45s,filter .45s}
+.gstage.busy .gbusy{opacity:1;transition:none}.gstage.busy svg{opacity:.18;filter:blur(2.5px);transition:none;animation:gflick 1.7s steps(1) infinite;will-change:opacity}
+@keyframes gopen{0%{transform:scaleY(.06)}18%{transform:scaleY(1)}62%{transform:scaleY(1)}68%{transform:scaleY(.06)}74%{transform:scaleY(1)}100%{transform:scaleY(.06)}}
+@keyframes glook{0%,20%{transform:rotate(-45deg) translate(0,0)}35%{transform:rotate(-45deg) translate(-7px,0)}55%{transform:rotate(-45deg) translate(7px,0)}70%,100%{transform:rotate(-45deg) translate(0,0)}}
+@keyframes gfade{0%,100%{opacity:.25}50%{opacity:.8}}
+@keyframes gflick{0%{opacity:.18}12%{opacity:.26}14%{opacity:.12}40%{opacity:.2}43%{opacity:.08}46%{opacity:.22}80%{opacity:.16}83%{opacity:.28}}
+@media (prefers-reduced-motion: reduce){.gbusy .geye,.gbusy .pupil,.gbusy .gbt,.gstage.busy svg{animation:none}}
 .gstage svg{display:block;width:100%;height:100%;cursor:grab;touch-action:none}
 .gstage svg:active{cursor:grabbing}
 .gstage text{font-family:var(--display);font-size:13px;fill:var(--ink);paint-order:stroke;stroke:var(--paper);stroke-width:4px;stroke-linejoin:round;pointer-events:none}
@@ -294,6 +300,8 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .gstage.hov .ge.hi{opacity:1}.gstage.hov .gn.hi{opacity:1}.gstage.hov text.lab.hi{opacity:1}
 .ginfo{position:absolute;left:0;top:12px;max-width:340px;background:var(--paper);padding:10px 14px 10px 0;pointer-events:none}
 .ginfo .t{font-family:var(--display);font-size:22px;line-height:1.15}
+.ginfo .gthumb{width:200px;aspect-ratio:16/9;background-color:var(--soft);background-repeat:no-repeat;margin-bottom:10px;box-shadow:0 0 0 1px var(--hair);animation:gthumbin .5s ease-out}
+@keyframes gthumbin{0%{opacity:0;filter:brightness(2.2) contrast(.6)}30%{opacity:1}45%{filter:brightness(.6)}100%{filter:none}}
 .ginfo .m{font-family:var(--mono);font-size:11.5px;color:var(--mute);margin-top:4px;letter-spacing:.03em}
 .ginfo .r{font-size:13.5px;margin-top:8px;line-height:1.45}
 .ginfo .r b{font-weight:600}
@@ -630,7 +638,7 @@ function renderIndex() {
   </aside>
   <div class="status"><span class="active"><span id="count"></span><span id="pills"></span></span>
     ${state.view === "patterns" ? `<span class="key"><span>each dot is the share of films carrying the fear · hollow dots: fewer than 10 films, read with care</span></span>` : state.view === "graph" ? "" : `<span class="key"><span>the bar shows how much of each story is mapped</span></span>`}</div>
-  ${state.view === "graph" ? `<div class="gstage" id="gstage"><div class="gflash" id="gflash" aria-hidden="true"></div><div class="gbusy" role="status" aria-live="polite"><span class="gbar"></span><span class="gbt">Redrawing the threads</span></div>
+  ${state.view === "graph" ? `<div class="gstage" id="gstage"><div class="gflash" id="gflash" aria-hidden="true"></div><div class="gbusy" role="status" aria-live="polite"><span class="geye" aria-hidden="true"><span class="lid"><i class="pupil"></i></span></span><span class="gbt">Something is moving</span></div>
     <div class="ghero" id="ghero"><p class="overline">Bloodline · ${F.length} films · ${new Set(F.map(f => f.c)).size} countries · ${Math.min(...F.map(f => f.y))} to ${Math.max(...F.map(f => f.y))}</p><h1>Every culture tells the same few <em>nightmares</em></h1><p>Different monsters, different languages, and underneath them the same fears. Every point of light is a film or a fear; every thread, a fear they share.</p></div><div class="ginfo" id="ginfo"></div><div class="gmode viewtoggle" role="group" aria-label="Main nodes"><button type="button" data-primary="fears" aria-pressed="${state.primary === "fears"}">Fears</button><button type="button" data-primary="films" aria-pressed="${state.primary === "films"}">Films</button></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
     <div class="keyline" id="gkey" style="margin-top:10px"></div>` : state.view === "patterns" ? `<div class="pat" id="pat"></div>` : `<ol class="ledger" id="ledger"></ol>`}
   ${aboutBlock()}`;
@@ -998,6 +1006,9 @@ function buildGraph() {
   document.getElementById("zout").onclick = () => svg.call(zoom.scaleBy, 1 / 1.4);
   document.getElementById("zfit").onclick = () => fit(300);
   const info = document.getElementById("ginfo"), flash = document.getElementById("gflash"); let flashes = 0;
+  // a small still above the film's title in the side panel (a different frame each time you point at it)
+  const thumb = n => { if (!n.f.st) return ""; const i = (flashes++ * 5 + n.i) % n.f.st, pos = n.f.st === 1 ? "0 0" : `0 ${(i / (n.f.st - 1)) * 100}%`;
+    return `<div class="gthumb" style="background-image:url('stills/${n.id}.jpg');background-size:100% ${n.f.st * 100}%;background-position:${pos}"></div>`; };
   const showStill = n => { if (!flash) return; flash.classList.remove("on");
     if (n.kind !== "film" || !n.f.st) { flash.style.backgroundImage = "none"; return; }
     const i = (flashes++ * 5 + n.i) % n.f.st, pos = n.f.st === 1 ? "0 0" : `0 ${(i / (n.f.st - 1)) * 100}%`;
@@ -1038,7 +1049,7 @@ function buildGraph() {
     stage.querySelectorAll(".hi").forEach(x => x.classList.remove("hi"));
     const vf = films.filter(n => visible.has(n.id)).length, vx = fears.filter(n => visible.has(n.id)).length;
     info.innerHTML = `<div class="m">${vf} FILMS · ${vx} FEARS</div><div class="r" style="color:var(--mute)">${state.primary === "films" ? "Point at a film to see the fears it carries." : "Point at a fear to see the films that carry it."}</div>`; labels(); };
-  const hover = n => { hoverOn = n; stage.classList.add("hov"); showStill(n);
+  const hover = n => { hoverOn = n; stage.classList.add("hov"); flash?.classList.remove("on");
     // only the best-connected neighbours light up: a nightmare's 16 most connected films, anything else's 12
     const deg = m => m.kind === "film" ? m.fears.length : m.films.length;
     const near = (n.kind === "film" ? n.fears : n.films).filter(m => visible.has(m.id)).sort((a, b) => deg(b) - deg(a) || (a.f?.y || 0) - (b.f?.y || 0));
@@ -1062,7 +1073,7 @@ function buildGraph() {
     else { show(null, m => nb.has(m.id)); eSel.classed("hi", lit); }
     if (n.kind === "film") {
       const by = {}; n.fears.filter(x => visible.has(x.id)).forEach(x => (by[x.lens] = by[x.lens] || []).push(x.name));
-      info.innerHTML = `<div class="t">${esc(n.f.t)} <span style="color:var(--mute);font-size:.7em">(${n.f.y})</span></div><div class="m"><span style="color:${REG_C[n.f.r]}">●</span> ${esc(n.f.r)} · ${esc(n.f.c)}${n.f.dir.length ? " · " + esc(n.f.dir[0]) : ""}</div>
+      info.innerHTML = `${thumb(n)}<div class="t">${esc(n.f.t)} <span style="color:var(--mute);font-size:.7em">(${n.f.y})</span></div><div class="m"><span style="color:${REG_C[n.f.r]}">●</span> ${esc(n.f.r)} · ${esc(n.f.c)}${n.f.dir.length ? " · " + esc(n.f.dir[0]) : ""}</div>
         <div class="r">${LENS.filter(([kk]) => by[kk]).map(([kk, nn]) => `<span style="color:${LENSC[kk]}">${nn}</span>: ${by[kk].map(esc).join(", ")}`).join("<br>") || "No shared fears shown with these settings."}</div>`;
     } else {
       const vf = n.films.filter(m => visible.has(m.id));
