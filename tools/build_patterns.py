@@ -38,6 +38,14 @@ for f in sorted(glob.glob("films/*/story_elements.json")):
     films.append({"id": fid, "t": r["title"], "y": int(r["year"]), "c": r["country"], "r": r["region"], "rec": fid in record,
                   "ns": se.get("not_stated", []), "g": g})
 defs = {d: {fear: meta[d].get(fear, "") for fear in sorted({v[0] for v in vocab[d].values()})} for d in vocab}
+# for each fear's page: its kinds, each with a few of the original phrasings (most used first)
+kinds = {}
+for d in vocab:
+    used = {r["value"]: int(r["films"]) for r in csv.DictReader(open(f"reference/vocab/input/{d}.tsv"), delimiter="\t")}
+    kd = {}
+    for v, (fear, kind) in vocab[d].items():
+        kd.setdefault(fear, {}).setdefault(kind, []).append((used.get(v, 0), v))
+    kinds[d] = {fear: {k: [v for _, v in sorted(vs, key=lambda x: (-x[0], x[1]))[:5]] for k, vs in ks.items()} for fear, ks in kd.items()}
 os.makedirs("record/site", exist_ok=True)
-json.dump({"dims": list(vocab), "fears": defs, "films": films}, open("record/site/patterns.json", "w"), ensure_ascii=False, separators=(",", ":"))
+json.dump({"dims": list(vocab), "fears": defs, "kinds": kinds, "films": films}, open("record/site/patterns.json", "w"), ensure_ascii=False, separators=(",", ":"))
 print(f"{len(films)} films · dimensions grouped: {', '.join(vocab) or 'none yet'}")
