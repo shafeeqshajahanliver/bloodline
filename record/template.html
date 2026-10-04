@@ -1391,7 +1391,7 @@ async function renderFilm(id) {
   </div>
   ${netBlock(d).replace('<div class="spinehead">', '<div class="spinehead" style="margin-top:64px">')}
   ${storyMap(d)}
-  <div class="spinehead"><h3>How the fear unfolds</h3><p>Its fears above the line, in the colours of their kinds, where the film speaks them; the turns of the story on it; the talk and the scares beneath. Tap anything.</p></div>
+  <div class="spinehead"><h3>How the fear unfolds</h3></div>
   <div class="spine" id="spine"></div>
   <div class="keyline">${[...new Set(spineItems(d).imgs.map(x => x.k))].map(k => `<span><span class="sw" style="background:${LENSC[k]}"></span>${esc(LENSN[k].toLowerCase())}</span>`).join("")}
     <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5.5" fill="var(--paper)" stroke="var(--ink)"/></svg>the turns of the story</span>
