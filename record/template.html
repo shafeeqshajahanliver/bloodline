@@ -1,14 +1,14 @@
 <meta charset="utf-8">
 <title>Bloodline Record</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Courier+Prime:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Libre+Caslon+Text:ital,wght@0,400;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Courier+Prime:wght@400;700&display=swap">
 <style>
-/* Layout: a ledger of 100 films (one row each, still, year, title, completeness bar, source marks) that opens into a full record page per film. Bloodline design system: paper, ink, one red; one theme by decision; radius 0. */
+/* Layout: a graph (or ledger) of 100 films that opens into a record per film. Direction: a night archive. Warm black, bone type set in an old printed face, one blood red, film grain over everything, stills that flicker up out of the dark. One dark theme by decision; radius 0. */
 :root{
-  --paper:#f7f3ea; --soft:#ece6d9; --hair:#d3cbb8; --rule:#e2dbcb; --ink:#17110e; --mute:#6b6052; --red:#9e2b22; --on-ink:#faf7f0; --teal:#00836d; --ochre:#a97400; --plum:#8c2d63;
-  --display:"Libre Caslon Text", Georgia, serif;
+  --paper:#0c0a09; --soft:#1a1513; --hair:#3a302a; --rule:#231c19; --ink:#e9e1d1; --mute:#9a8e7d; --red:#cf3a2e; --on-ink:#0c0a09; --teal:#3fb39a; --ochre:#d1a23c; --plum:#c0609a;
+  --display:"IM Fell English", "Libre Caslon Text", Georgia, serif;
   --text:"Source Serif 4", Georgia, "Times New Roman", serif;
   --mono:"Courier Prime", "Courier New", monospace;
-  color-scheme:light;
+  color-scheme:dark;
 }
 body{background:var(--paper);color:var(--ink);font-family:var(--text);font-size:16px;line-height:1.55;margin:0}
 *{box-sizing:border-box}
@@ -53,7 +53,7 @@ header.bar{display:flex;align-items:baseline;gap:8px 16px;flex-wrap:wrap;padding
 .key{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 .key span{display:inline-flex;gap:6px;align-items:center}
 ol.ledger{list-style:none;margin:0;padding:0}
-.row{display:grid;grid-template-columns:128px 52px minmax(0,1fr) 170px 118px;gap:18px;align-items:center;padding-block:10px;border-top:1px solid var(--rule);cursor:pointer}
+.row{display:grid;grid-template-columns:128px minmax(0,1fr) 170px 118px;gap:18px;align-items:center;padding-block:10px;border-top:1px solid var(--rule);cursor:pointer}
 .row:hover{background:var(--soft)}
 .row:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
 .thumb{width:128px;aspect-ratio:16/9;background-color:var(--soft);background-repeat:no-repeat;background-size:100% auto;position:relative}
@@ -187,7 +187,7 @@ ol.beats li.flash{background:var(--soft)}
 .thumbs button::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:3px;background:var(--tone,transparent)}
 .thumbs button[aria-current="true"]{outline:2px solid var(--ink);outline-offset:-2px}
 .thumbs button:focus-visible{outline:2px solid var(--red);outline-offset:-2px}
-.nostill{aspect-ratio:16/9;background:var(--ink);color:var(--on-ink);display:flex;flex-direction:column;justify-content:flex-end;padding:28px 30px}
+.nostill{aspect-ratio:16/9;background:var(--soft);color:var(--ink);display:flex;flex-direction:column;justify-content:flex-end;padding:28px 30px}
 .nostill q{font-family:var(--display);font-style:italic;font-size:26px;line-height:1.3;quotes:"“" "”"}
 .nostill span{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;opacity:.7;margin-top:14px}
 .prose{font-family:var(--display);font-size:24px;line-height:1.5;margin:0;text-wrap:pretty}
@@ -297,7 +297,7 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .drawer.open{transform:none}
 body{transition:padding-left .22s ease}
 @media (min-width:760px){ body.dopen{padding-left:340px} }
-@media (max-width:759px){ .drawer.open{box-shadow:0 0 0 100vmax rgba(23,17,14,.12)} }
+@media (max-width:759px){ .drawer.open{box-shadow:0 0 0 100vmax rgba(0,0,0,.55)} }
 .dhead{display:flex;justify-content:space-between;align-items:baseline;border-bottom:3px solid var(--ink);padding-bottom:8px}
 .dhead h2{font-family:var(--display);font-weight:400;font-size:26px;margin:0}
 .dnote{font-size:13.5px;color:var(--mute);margin:10px 0 0}
@@ -311,10 +311,34 @@ body{transition:padding-left .22s ease}
 .pill:focus-visible{outline:2px solid var(--red)}
 .pill b{font-weight:400;font-family:var(--mono);font-size:12px}
 @media (prefers-reduced-motion:reduce){ .drawer,body{transition:none} }
+
+/* night archive: grain, vignette, flicker */
+body::after{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:60;opacity:.085;mix-blend-mode:screen;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1.6 -.35'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grain 1.2s steps(5) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+::selection{background:var(--red);color:var(--ink)}
+.intro h1 em{font-style:italic;color:var(--red)}
+.intro h1{font-size:58px;line-height:1}
+.work .yrb,.ti .yrb{color:var(--mute);font-size:.62em;margin-left:.25em;font-style:italic}
+.gstage{background:radial-gradient(ellipse 70% 65% at 50% 50%, #15100e 0%, var(--paper) 75%)}
+.gstage::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 75% 70% at 50% 50%, transparent 55%, rgba(0,0,0,.75) 100%);z-index:1}
+.gstage svg{position:relative;z-index:2}
+.ginfo,.gzoom{z-index:3}
+.ginfo{background:transparent;text-shadow:0 0 8px var(--paper),0 0 2px var(--paper)}
+.gflash{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);aspect-ratio:16/9;background-repeat:no-repeat;opacity:0;z-index:0;pointer-events:none;
+  filter:grayscale(.75) contrast(1.35) brightness(.6) sepia(.25)}
+.gflash.on{animation:flick .7s steps(1) forwards}
+@keyframes flick{0%{opacity:0}8%{opacity:.75}14%{opacity:.08}22%{opacity:.6}30%{opacity:.2}42%{opacity:.62}100%{opacity:.5}}
+.gstage.hov .gn.hi circle{filter:drop-shadow(0 0 6px rgba(207,58,46,.9))}
+.thumb{filter:grayscale(.9) brightness(.8);transition:filter .3s}
+.row:hover .thumb{filter:none}
+.row:hover{background:var(--soft)}
+@media (prefers-reduced-motion:reduce){ body::after{animation:none} .gflash.on{animation:none;opacity:.5} .thumb{transition:none} }
 @media (max-width:980px){
-  .row{grid-template-columns:96px 46px minmax(0,1fr);gap:12px}
-  .thumb{width:96px}
-  .row .bar10,.row .marks{grid-column:3}
+  .row{grid-template-columns:96px minmax(0,1fr);gap:4px 14px}
+  .thumb{width:96px;grid-row:span 3}
+  .row .bar10,.row .marks{grid-column:2}
   .row .bar10{max-width:200px}
   .body{grid-template-columns:1fr}
   .hero{grid-template-columns:1fr}
@@ -400,7 +424,7 @@ function renderIndex() {
   <div class="intro">
     <div>
       <p class="overline">Bloodline</p>
-      <h1>Every culture tells the same few nightmares</h1>
+      <h1>Every culture tells the same few <em>nightmares</em></h1>
       <p>A hundred horror films from ${new Set(F.map(f => f.c)).size} countries and a century of cinema. Different monsters, different languages, and underneath them the same fears: the dead who were wronged, the family that turns on you, the stranger you let in. Follow the threads that bind them.</p>
     </div>
     <div class="totals">
@@ -429,7 +453,7 @@ function renderIndex() {
   </aside>
   <div class="status"><span class="active"><span id="count"></span><span id="pills"></span></span>
     ${state.view === "graph" ? `<span class="key"><span><span class="sw" style="background:var(--ink);width:14px;height:2px"></span>people</span><span><span class="sw" style="background:var(--ochre);width:14px;height:2px"></span>archetype</span><span><span class="sw" style="background:var(--teal);width:14px;height:2px"></span>story element</span><span>thicker line, closer kin · point at a film to see what binds it</span></span>` : `<span class="key"><span>the bar shows how much of each story is mapped</span></span>`}</div>
-  ${state.view === "graph" ? `<div class="gstage" id="gstage"><div class="ginfo" id="ginfo"></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
+  ${state.view === "graph" ? `<div class="gstage" id="gstage"><div class="gflash" id="gflash" aria-hidden="true"></div><div class="ginfo" id="ginfo"></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
     <div class="keyline" id="gkey" style="margin-top:10px"></div>
     <p class="gnote">Every line is something two films share: a fear, an image, a shape of story, or the people who made them. The rarer the thing, the closer it pulls them. Filter, and the films that fall away disappear. Click a film to step inside it.</p>` : `<ol class="ledger" id="ledger"></ol>`}
   ${aboutBlock()}`;
@@ -472,8 +496,7 @@ function renderRows() {
   if (!list.length) { L.innerHTML = `<li class="empty">No films match. Clear a filter or try another word.</li>`; return; }
   L.innerHTML = list.map(([f, hits]) => `<li class="row" tabindex="0" role="link" data-id="${f.id}" aria-label="${esc(f.t)}, ${f.y}">
     ${thumb(f, "thumb")}
-    <span class="yr">${f.y}</span>
-    <span><div class="ti">${esc(f.t)}</div><div class="sub">${esc(f.c)}${f.dir.length ? " · " + esc(f.dir.join(", ")) : ""}</div>
+    <span><div class="ti">${esc(f.t)}<span class="yrb">(${f.y})</span></div><div class="sub">${esc(f.c)}${f.dir.length ? " · " + esc(f.dir.join(", ")) : ""}</div>
       ${hits.length ? `<div class="hits"><span class="tag">matches</span> ${hits.slice(0, 5).map(h => `<b>${esc(h)}</b>`).join(", ")}${hits.length > 5 ? ` <span class="tag">+${hits.length - 5}</span>` : ""}</div>` : ""}</span>
     ${bar(f)}
     ${marks(f)}
@@ -501,8 +524,8 @@ function aboutBlock() {
 
 /* ---------- graph view ---------- */
 let G = null;
-const ERA_C = ["#d3cbb8", "#b3a68c", "#8a7a62", "#5b4d3f", "#17110e"];
-const REG_C = {"North America":"#17110e","Continental Europe":"#00836d","UK & Ireland":"#a97400","East Asia":"#9e2b22","Southeast Asia":"#8c2d63","Latin America":"#c4622d","South Asia":"#d4a017","Australia & NZ":"#4f7a8c","Middle East & North Africa":"#7b6aa6","Sub-Saharan Africa":"#5f8a3a"};
+const ERA_C = ["#4a3f37", "#6e6054", "#978672", "#c2b39c", "#efe6d4"];
+const REG_C = {"North America":"#e9e1d1","Continental Europe":"#3fb39a","UK & Ireland":"#d1a23c","East Asia":"#cf3a2e","Southeast Asia":"#c0609a","Latin America":"#e07a45","South Asia":"#e8c44e","Australia & NZ":"#6fa3b8","Middle East & North Africa":"#9d8ad0","Sub-Saharan Africa":"#86b35a"};
 const LINKC = { p: "var(--ink)", a: "var(--ochre)", e: "var(--teal)" };
 function buildGraph() {
   const stage = document.getElementById("gstage"); if (!stage || typeof d3 === "undefined") { if (stage) stage.innerHTML = `<p class="empty">The graph needs a script that didn't load. Reload the page to try again.</p>`; G = null; return; }
@@ -532,7 +555,7 @@ function buildGraph() {
   const eSel = eg.selectAll("line").data(edges).join("line").attr("class", "ge").attr("stroke", "var(--mute)").attr("stroke-opacity", e => .12 + Math.min(e.w, 4) * .07).attr("stroke-width", e => .5 + Math.min(e.w, 4) * .6);
   const nSel = ng.selectAll("g").data(nodes).join("g").attr("class", "gn").attr("tabindex", 0).attr("role", "link").attr("aria-label", n => `${n.f.t}, ${n.f.y}`);
   nSel.append("circle").attr("r", n => n.r).attr("stroke", "var(--ink)").attr("stroke-width", 1);
-  const lSel = lg.selectAll("text").data(nodes).join("text").attr("class", "lab").attr("text-anchor", "middle").text(n => n.f.t);
+  const lSel = lg.selectAll("text").data(nodes).join("text").attr("class", "lab").attr("text-anchor", "middle").text(n => `${n.f.t} (${n.f.y})`);
   const place = () => { eSel.attr("x1", e => e.source.x).attr("y1", e => e.source.y).attr("x2", e => e.target.x).attr("y2", e => e.target.y);
     nSel.attr("transform", n => `translate(${n.x},${n.y})`); lSel.attr("x", n => n.x).attr("y", n => n.y - n.r - 5); };
   const drawAxis = () => { axis.selectAll("*").remove(); if (state.arrange !== "time") return;
@@ -552,15 +575,21 @@ function buildGraph() {
   document.getElementById("zout").onclick = () => svg.call(zoom.scaleBy, 1 / 1.4);
   document.getElementById("zfit").onclick = () => fit(300);
   const info = document.getElementById("ginfo");
-  const rest = () => { stage.classList.remove("hov"); eSel.attr("stroke", "var(--mute)").attr("stroke-opacity", e => .12 + Math.min(e.w, 4) * .07); stage.querySelectorAll(".hi").forEach(x => x.classList.remove("hi"));
+  const rest = () => { stage.classList.remove("hov"); document.getElementById("gflash")?.classList.remove("on"); eSel.attr("stroke", "var(--mute)").attr("stroke-opacity", e => .12 + Math.min(e.w, 4) * .07); stage.querySelectorAll(".hi").forEach(x => x.classList.remove("hi"));
     info.innerHTML = `<div class="m">${visible.size} FILMS · ${eSel.filter(function () { return this.getAttribute("display") !== "none"; }).size()} LINKS</div><div class="r" style="color:var(--mute)">Point at a film to see what links it.</div>`; };
-  const hover = n => { stage.classList.add("hov");
+  const flash = document.getElementById("gflash"); let flashes = 0;
+  const showStill = n => { if (!flash) return; flash.classList.remove("on");
+    if (!n.f.st) { flash.style.backgroundImage = "none"; return; }
+    const i = (flashes++ * 5 + n.i) % n.f.st, pos = n.f.st === 1 ? "0 0" : `0 ${(i / (n.f.st - 1)) * 100}%`;
+    flash.style.backgroundImage = `url('stills/${n.id}.jpg')`; flash.style.backgroundSize = `100% ${n.f.st * 100}%`; flash.style.backgroundPosition = pos;
+    void flash.offsetWidth; flash.classList.add("on"); };
+  const hover = n => { stage.classList.add("hov"); showStill(n);
     const mine = edges.filter(e => (e.source === n || e.target === n) && edgeOn(e));
     const nb = new Set(mine.map(e => e.source === n ? e.target.id : e.source.id)); nb.add(n.id);
     nSel.classed("hi", m => nb.has(m.id)); lSel.classed("hi", m => nb.has(m.id)).attr("display", m => visible.has(m.id) && nb.has(m.id) ? null : (visible.has(m.id) && (m.big || k > 1.7) ? null : "none"));
     eSel.classed("hi", e => mine.includes(e)).attr("stroke", e => mine.includes(e) ? LINKC[e.main] : "var(--mute)").attr("stroke-opacity", e => mine.includes(e) ? .9 : .12 + Math.min(e.w, 4) * .07);
     const top = mine.sort((a, b) => b.w - a.w).slice(0, 4);
-    info.innerHTML = `<div class="t">${esc(n.f.t)}</div><div class="m">${n.f.y} · ${esc(n.f.c)}${n.f.dir.length ? " · " + esc(n.f.dir[0]) : ""}</div>
+    info.innerHTML = `<div class="t">${esc(n.f.t)} <span style="color:var(--mute);font-size:.7em">(${n.f.y})</span></div><div class="m">${esc(n.f.c)}${n.f.dir.length ? " · " + esc(n.f.dir[0]) : ""}</div>
       ${hits.get(n.id)?.length ? `<div class="r">matches <b>${hits.get(n.id).slice(0, 4).map(esc).join(", ")}</b></div>` : ""}
       <div class="r">${top.length ? top.map(e => { const o = e.source === n ? e.target : e.source; return `<b>${esc(o.f.t)}</b>: ${e.via.filter(v => state.links.has(v[0])).map(v => esc(v.slice(2))).join(", ")}`; }).join("<br>") : "No links shown with these settings."}</div>`; };
   nSel.on("mouseenter focus", (ev, n) => hover(n)).on("mouseleave blur", () => { rest(); labels(); })
@@ -933,7 +962,7 @@ async function renderFilm(id) {
     <span><button class="linkish" type="button" data-go="${prev.id}">Previous: ${esc(prev.t)}</button> · <button class="linkish" type="button" data-go="${next.id}">Next: ${esc(next.t)}</button></span></div>
   <div class="head">
     <p class="overline">${esc(d.region)} · ${esc(d.countries.join(", ") || d.country)} · ${d.year}</p>
-    <h1 class="work">${esc(d.title)}</h1>
+    <h1 class="work">${esc(d.title)}<span class="yrb">(${d.year})</span></h1>
     <hr class="dbl">
     <p class="meta">${[d.runtime ? Math.round(d.runtime) + " min" : "", d.directors.length ? "dir. " + d.directors.join(", ") : "", d.languages.join(", ")].filter(Boolean).map(esc).join(" · ")}</p>
 
