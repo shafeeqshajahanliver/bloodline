@@ -251,6 +251,32 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .strength{display:inline-block;height:5px;background:var(--ink);vertical-align:middle;margin-left:8px}
 .linkinfo{font-size:14px;margin-top:12px;min-height:22px}
 @media (max-width:980px){ .netwrap{grid-template-columns:1fr} }
+
+/* home graph */
+.viewtoggle{display:inline-flex;border:1px solid var(--ink)}
+.viewtoggle button{all:unset;cursor:pointer;padding:5px 16px;font-size:14.5px}
+.viewtoggle button[aria-pressed="true"]{background:var(--ink);color:var(--on-ink)}
+.viewtoggle button:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.gstage{position:relative;height:min(78vh,820px);min-height:520px;border-bottom:1px solid var(--hair);overflow:hidden}
+.gstage svg{display:block;width:100%;height:100%;cursor:grab;touch-action:none}
+.gstage svg:active{cursor:grabbing}
+.gstage text{font-family:var(--display);font-size:13px;fill:var(--ink);paint-order:stroke;stroke:var(--paper);stroke-width:4px;stroke-linejoin:round;pointer-events:none}
+.gstage text.ax{font-family:var(--mono);font-size:11px;fill:var(--mute);stroke-width:3px}
+.gstage .gn{cursor:pointer}
+.gstage .gn:focus{outline:none}
+.gstage .gn:focus-visible circle{stroke:var(--red);stroke-width:3}
+.gstage.hov .ge{opacity:.06}.gstage.hov .gn{opacity:.2}.gstage.hov text.lab{opacity:.15}
+.gstage.hov .ge.hi{opacity:1}.gstage.hov .gn.hi{opacity:1}.gstage.hov text.lab.hi{opacity:1}
+.ginfo{position:absolute;left:0;top:12px;max-width:340px;background:var(--paper);padding:10px 14px 10px 0;pointer-events:none}
+.ginfo .t{font-family:var(--display);font-size:22px;line-height:1.15}
+.ginfo .m{font-family:var(--mono);font-size:11.5px;color:var(--mute);margin-top:4px;letter-spacing:.03em}
+.ginfo .r{font-size:13.5px;margin-top:8px;line-height:1.45}
+.ginfo .r b{font-weight:600}
+.gzoom{position:absolute;right:0;top:12px;display:flex;gap:4px}
+.gzoom button{all:unset;cursor:pointer;width:30px;height:30px;display:flex;align-items:center;justify-content:center;border:1px solid var(--ink);background:var(--paper);font-family:var(--mono);font-size:15px}
+.gzoom button:hover{background:var(--soft)}
+.gzoom button:focus-visible{outline:2px solid var(--red)}
+.gnote{font-size:13px;color:var(--mute);margin-top:10px;max-width:90ch}
 @media (max-width:980px){
   .row{grid-template-columns:96px 46px minmax(0,1fr);gap:12px}
   .thumb{width:96px}
@@ -283,6 +309,7 @@ ol.why .r b{font-weight:600;color:var(--ink)}
   <main id="app"></main>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
 <script id="idx" type="application/json">__INDEX__</script>
 <script>
 const IDX = JSON.parse(document.getElementById("idx").textContent);
@@ -300,7 +327,7 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;
 const fmt = n => n == null ? "" : n >= 1e6 ? "$" + (n / 1e6).toFixed(n >= 1e7 ? 0 : 1) + "m" : "$" + Math.round(n / 1e3) + "k";
 const app = document.getElementById("app");
 const cache = {};
-const state = { q: "", region: new Set(), era: new Set(), has: new Set(), sort: "year" };
+const state = { q: "", region: new Set(), era: new Set(), has: new Set(), sort: "year", view: "list", arrange: "net", links: new Set(["p","a","e"]), colour: "region" };
 try { const s = JSON.parse(localStorage.getItem("bl-r1") || "{}"); if (s.sort) state.sort = s.sort; } catch (e) {}
 
 function eraOf(y) { return ERAS.find(e => y >= e[1] && y <= e[2])[0]; }
@@ -350,23 +377,34 @@ function renderIndex() {
   </div>
   <div class="controls">
     <div class="search"><input id="q" type="search" placeholder="Search a title, a director, or an element like dog, mirror, drowned" value="${esc(state.q)}" aria-label="Search films and story elements">
-      <span class="chips"><span class="lab">SORT</span>${[["year","Year"],["title","Title"],["n","Most entries"]].map(([k, n]) => `<button class="chip" type="button" data-sort="${k}" aria-pressed="${state.sort === k}">${n}</button>`).join("")}</span></div>
+      <span class="viewtoggle" role="group" aria-label="View"><button type="button" data-view="list" aria-pressed="${state.view === "list"}">List</button><button type="button" data-view="graph" aria-pressed="${state.view === "graph"}">Graph</button></span>
+      ${state.view === "list" ? `<span class="chips"><span class="lab">SORT</span>${[["year","Year"],["title","Title"],["n","Most entries"]].map(([k, n]) => `<button class="chip" type="button" data-sort="${k}" aria-pressed="${state.sort === k}">${n}</button>`).join("")}</span>` : ""}</div>
     <div class="chips"><span class="lab">REGION</span>${REGIONS.map(r => `<button class="chip" type="button" data-region="${esc(r)}" aria-pressed="${state.region.has(r)}">${esc(r)}<span class="k">${F.filter(f => f.r === r).length}</span></button>`).join("")}</div>
     <div class="chips"><span class="lab">ERA</span>${ERAS.map(([e]) => `<button class="chip" type="button" data-era="${e}" aria-pressed="${state.era.has(e)}">${e}<span class="k">${F.filter(f => eraOf(f.y) === e).length}</span></button>`).join("")}</div>
+    ${state.view === "graph" ? `<div class="chips"><span class="lab">ARRANGE</span>${[["net","By connection"],["time","Through time"]].map(([k, n]) => `<button class="chip" type="button" data-arrange="${k}" aria-pressed="${state.arrange === k}">${n}</button>`).join("")}
+      <span class="sep" style="width:1px;height:20px;background:var(--hair);margin-inline:8px"></span><span class="lab">LINKS</span>${[["p","People"],["a","Archetypes"],["e","Story elements"]].map(([k, n]) => `<button class="chip" type="button" data-link="${k}" aria-pressed="${state.links.has(k)}">${n}</button>`).join("")}
+      <span class="sep" style="width:1px;height:20px;background:var(--hair);margin-inline:8px"></span><span class="lab">COLOUR</span>${[["region","Region"],["era","Era"],["still","Still colour"]].map(([k, n]) => `<button class="chip" type="button" data-colour="${k}" aria-pressed="${state.colour === k}">${n}</button>`).join("")}</div>` : ""}
     <div class="chips"><span class="lab">HAS</span>${[["st","Stills"],["sp","Screenplay"],["sc","Jump scares"],["osub","Original-language subtitles"],["pl","Pilot lineage"]].map(([k, n]) => `<button class="chip" type="button" data-has="${k}" aria-pressed="${state.has.has(k)}">${n}<span class="k">${counts(k)}</span></button>`).join("")}</div>
   </div>
   <div class="status"><span id="count"></span>
-    <span class="key"><span><span class="bar10" style="width:30px;grid-template-columns:repeat(3,1fr)"><i></i><i class="ns"></i><i class="no"></i></span> filled · not stated · empty</span>
-    <span>${marks({sub:1,sp:1,sc:1,st:1})} plot · subtitles · screenplay · jumps · stills</span></span></div>
-  <ol class="ledger" id="ledger"></ol>`;
+    ${state.view === "graph" ? `<span class="key"><span><span class="sw" style="background:var(--ink);width:14px;height:2px"></span>people</span><span><span class="sw" style="background:var(--ochre);width:14px;height:2px"></span>archetype</span><span><span class="sw" style="background:var(--teal);width:14px;height:2px"></span>story element</span><span>thicker line, stronger link · bigger disc, more links · links take their colour when you point at a film</span></span>` : `<span class="key"><span><span class="bar10" style="width:30px;grid-template-columns:repeat(3,1fr)"><i></i><i class="ns"></i><i class="no"></i></span> filled · not stated · empty</span>
+    <span>${marks({sub:1,sp:1,sc:1,st:1})} plot · subtitles · screenplay · jumps · stills</span></span>`}</div>
+  ${state.view === "graph" ? `<div class="gstage" id="gstage"><div class="ginfo" id="ginfo"></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
+    <div class="keyline" id="gkey" style="margin-top:10px"></div>
+    <p class="gnote">Each film links to the films it shares most with: the same people, the same archetype, or the same story wording, weighted so rare links count more. Only each film's five strongest links are drawn. Filters hide films that don't match; the rest stay where they are. Click a film to open its record.</p>` : `<ol class="ledger" id="ledger"></ol>`}`;
   const q = document.getElementById("q");
   q.addEventListener("input", () => { state.q = q.value; renderRows(); });
   app.querySelectorAll("[data-region]").forEach(b => b.onclick = () => toggle(state.region, b.dataset.region, b));
   app.querySelectorAll("[data-era]").forEach(b => b.onclick = () => toggle(state.era, b.dataset.era, b));
   app.querySelectorAll("[data-has]").forEach(b => b.onclick = () => toggle(state.has, b.dataset.has, b));
+  app.querySelectorAll("[data-view]").forEach(b => b.onclick = () => { if (b.dataset.view !== state.view) go(b.dataset.view === "graph" ? "graph" : ""); });
+  app.querySelectorAll("[data-arrange]").forEach(b => b.onclick = () => { state.arrange = b.dataset.arrange; app.querySelectorAll("[data-arrange]").forEach(x => x.setAttribute("aria-pressed", x === b)); G && G.arrange(); });
+  app.querySelectorAll("[data-colour]").forEach(b => b.onclick = () => { state.colour = b.dataset.colour; app.querySelectorAll("[data-colour]").forEach(x => x.setAttribute("aria-pressed", x === b)); G && G.recolour(); });
+  app.querySelectorAll("[data-link]").forEach(b => b.onclick = () => { const k = b.dataset.link; state.links.has(k) ? state.links.delete(k) : state.links.add(k); b.setAttribute("aria-pressed", state.links.has(k)); renderRows(); });
   app.querySelectorAll("[data-sort]").forEach(b => b.onclick = () => {
     state.sort = b.dataset.sort; try { localStorage.setItem("bl-r1", JSON.stringify({ sort: state.sort })); } catch (e) {}
     app.querySelectorAll("[data-sort]").forEach(x => x.setAttribute("aria-pressed", x === b)); renderRows(); });
+  if (state.view === "graph") buildGraph();
   renderRows();
 }
 function toggle(set, v, b) { set.has(v) ? set.delete(v) : set.add(v); b.setAttribute("aria-pressed", set.has(v)); renderRows(); }
@@ -375,6 +413,7 @@ function renderRows() {
   const s = state.sort;
   list.sort((a, b) => s === "title" ? a[0].t.localeCompare(b[0].t) : s === "n" ? b[0].n - a[0].n : a[0].y - b[0].y || a[0].t.localeCompare(b[0].t));
   document.getElementById("count").textContent = `${list.length} of 100 films`;
+  if (state.view === "graph") { G && G.filter(new Map(list.map(([f, h]) => [f.id, h]))); return; }
   const L = document.getElementById("ledger");
   if (!list.length) { L.innerHTML = `<li class="empty">No films match. Clear a filter or try another word.</li>`; return; }
   L.innerHTML = list.map(([f, hits]) => `<li class="row" tabindex="0" role="link" data-id="${f.id}" aria-label="${esc(f.t)}, ${f.y}">
@@ -389,6 +428,86 @@ function renderRows() {
     r.onclick = () => go(r.dataset.id);
     r.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(r.dataset.id); } };
   });
+}
+
+/* ---------- graph view ---------- */
+let G = null;
+const ERA_C = ["#d3cbb8", "#b3a68c", "#8a7a62", "#5b4d3f", "#17110e"];
+const REG_C = {"North America":"#17110e","Continental Europe":"#00836d","UK & Ireland":"#a97400","East Asia":"#9e2b22","Southeast Asia":"#8c2d63","Latin America":"#c4622d","South Asia":"#d4a017","Australia & NZ":"#4f7a8c","Middle East & North Africa":"#7b6aa6","Sub-Saharan Africa":"#5f8a3a"};
+const LINKC = { p: "var(--ink)", a: "var(--ochre)", e: "var(--teal)" };
+function buildGraph() {
+  const stage = document.getElementById("gstage"); if (!stage || typeof d3 === "undefined") { if (stage) stage.innerHTML = `<p class="empty">The graph needs a script that didn't load. Reload the page to try again.</p>`; G = null; return; }
+  const W = stage.clientWidth, H = stage.clientHeight;
+  const nodes = F.map((f, i) => ({ i, f, id: f.id, deg: 0, str: 0 }));
+  const edges = IDX.edges.map(([a, b, w, via]) => { const types = new Set(via.map(v => v[0])); nodes[a].deg++; nodes[b].deg++; nodes[a].str += w; nodes[b].str += w;
+    const main = via.some(v => v[0] === "p") ? "p" : via.some(v => v[0] === "e") ? "e" : "a"; return { source: a, target: b, w, via, types, main }; });
+  nodes.forEach(n => n.r = 3.5 + Math.sqrt(n.str) * 2.1);
+  const byStr = [...nodes].sort((a, b) => b.str - a.str).slice(0, 18).map(n => n.id);
+  nodes.forEach(n => n.big = byStr.includes(n.id));
+  // two layouts, computed once without animation
+  const sim = d3.forceSimulation(nodes).force("link", d3.forceLink(edges).distance(e => 70 / Math.sqrt(e.w)).strength(e => Math.min(1, e.w / 3)))
+    .force("charge", d3.forceManyBody().strength(-260).distanceMax(400)).force("collide", d3.forceCollide(n => n.r + 4)).force("x", d3.forceX(0).strength(.05)).force("y", d3.forceY(0).strength(.07)).stop();
+  for (let i = 0; i < 500; i++) sim.tick();
+  nodes.forEach(n => { n.nx = n.x; n.ny = n.y; });
+  const yr = d3.scaleLinear().domain([1915, 2025]).range([-W * .45, W * .45]);
+  nodes.forEach(n => { n.x = yr(n.f.y); n.y = n.ny * .6; });
+  const sim2 = d3.forceSimulation(nodes).force("link", d3.forceLink(edges).distance(40).strength(e => Math.min(.25, e.w / 8)))
+    .force("x", d3.forceX(n => yr(n.f.y)).strength(3)).force("y", d3.forceY(0).strength(.06)).force("collide", d3.forceCollide(n => n.r + 3)).force("charge", d3.forceManyBody().strength(-30)).stop();
+  for (let i = 0; i < 400; i++) sim2.tick();
+  nodes.forEach(n => { n.tx = n.x; n.ty = n.y; n.x = state.arrange === "time" ? n.tx : n.nx; n.y = state.arrange === "time" ? n.ty : n.ny; });
+  stage.querySelector("svg")?.remove();
+  const svg = d3.select(stage).insert("svg", ".ginfo").attr("viewBox", [-W / 2, -H / 2, W, H]).attr("role", "group").attr("aria-label", "Graph of the 100 films");
+  const root = svg.append("g");
+  const axis = root.append("g").attr("class", "axis");
+  const eg = root.append("g"), ng = root.append("g"), lg = root.append("g");
+  const eSel = eg.selectAll("line").data(edges).join("line").attr("class", "ge").attr("stroke", "var(--mute)").attr("stroke-opacity", e => .12 + Math.min(e.w, 4) * .07).attr("stroke-width", e => .5 + Math.min(e.w, 4) * .6);
+  const nSel = ng.selectAll("g").data(nodes).join("g").attr("class", "gn").attr("tabindex", 0).attr("role", "link").attr("aria-label", n => `${n.f.t}, ${n.f.y}`);
+  nSel.append("circle").attr("r", n => n.r).attr("stroke", "var(--ink)").attr("stroke-width", 1);
+  const lSel = lg.selectAll("text").data(nodes).join("text").attr("class", "lab").attr("text-anchor", "middle").text(n => n.f.t);
+  const place = () => { eSel.attr("x1", e => e.source.x).attr("y1", e => e.source.y).attr("x2", e => e.target.x).attr("y2", e => e.target.y);
+    nSel.attr("transform", n => `translate(${n.x},${n.y})`); lSel.attr("x", n => n.x).attr("y", n => n.y - n.r - 5); };
+  const drawAxis = () => { axis.selectAll("*").remove(); if (state.arrange !== "time") return;
+    for (const y of [1920, 1940, 1960, 1980, 2000, 2020]) { axis.append("line").attr("x1", yr(y)).attr("x2", yr(y)).attr("y1", -H).attr("y2", H).attr("stroke", "var(--rule)").attr("stroke-dasharray", "2 4");
+      axis.append("text").attr("class", "ax").attr("x", yr(y) + 4).attr("y", d3.min(nodes, n => n.ty) - 24).text(y + "s"); } };
+  const recolour = () => { nSel.select("circle").attr("fill", n => state.colour === "era" ? ERA_C[ERAS.findIndex(e => e[0] === eraOf(n.f.y))] : state.colour === "region" ? REG_C[n.f.r] : (n.f.tone || "var(--soft)")).attr("stroke", "var(--paper)").attr("stroke-width", 1.5);
+    const key = document.getElementById("gkey"); if (key) key.innerHTML = state.colour === "region" ? REGIONS.map(r => `<span><span class="sw" style="background:${REG_C[r]};border-radius:50%"></span>${esc(r)}</span>`).join("") : state.colour === "era" ? ERAS.map(([e], i) => `<span><span class="sw" style="background:${ERA_C[i]};border-radius:50%"></span>${e}</span>`).join("") : `<span>Each disc is filled with the prevailing colour of its stills.</span>`; };
+  let k = 1, visible = new Set(nodes.map(n => n.id)), hits = new Map();
+  const labels = () => lSel.attr("display", n => visible.has(n.id) && (n.big || k > 1.7 || (hits.size && hits.get(n.id)?.length) || visible.size <= 30) ? null : "none");
+  const zoom = d3.zoom().scaleExtent([.4, 6]).on("zoom", ev => { root.attr("transform", ev.transform); k = ev.transform.k; labels(); });
+  svg.call(zoom);
+  const fit = (dur) => { const vis = nodes.filter(n => visible.has(n.id)); if (!vis.length) return;
+    const [x0, x1] = d3.extent(vis, n => n.x), [y0, y1] = d3.extent(vis, n => n.y), s = Math.min(3, .86 / Math.max((x1 - x0 + 80) / W, (y1 - y0 + 80) / H));
+    const t = d3.zoomIdentity.scale(s).translate(-(x0 + x1) / 2, -(y0 + y1) / 2);
+    (dur && !matchMedia("(prefers-reduced-motion: reduce)").matches ? svg.transition().duration(dur) : svg).call(zoom.transform, t); };
+  document.getElementById("zin").onclick = () => svg.call(zoom.scaleBy, 1.4);
+  document.getElementById("zout").onclick = () => svg.call(zoom.scaleBy, 1 / 1.4);
+  document.getElementById("zfit").onclick = () => fit(300);
+  const info = document.getElementById("ginfo");
+  const rest = () => { stage.classList.remove("hov"); eSel.attr("stroke", "var(--mute)").attr("stroke-opacity", e => .12 + Math.min(e.w, 4) * .07); stage.querySelectorAll(".hi").forEach(x => x.classList.remove("hi"));
+    info.innerHTML = `<div class="m">${visible.size} FILMS · ${eSel.filter(function () { return this.getAttribute("display") !== "none"; }).size()} LINKS</div><div class="r" style="color:var(--mute)">Point at a film to see what links it.</div>`; };
+  const hover = n => { stage.classList.add("hov");
+    const mine = edges.filter(e => (e.source === n || e.target === n) && edgeOn(e));
+    const nb = new Set(mine.map(e => e.source === n ? e.target.id : e.source.id)); nb.add(n.id);
+    nSel.classed("hi", m => nb.has(m.id)); lSel.classed("hi", m => nb.has(m.id)).attr("display", m => visible.has(m.id) && nb.has(m.id) ? null : (visible.has(m.id) && (m.big || k > 1.7) ? null : "none"));
+    eSel.classed("hi", e => mine.includes(e)).attr("stroke", e => mine.includes(e) ? LINKC[e.main] : "var(--mute)").attr("stroke-opacity", e => mine.includes(e) ? .9 : .12 + Math.min(e.w, 4) * .07);
+    const top = mine.sort((a, b) => b.w - a.w).slice(0, 4);
+    info.innerHTML = `<div class="t">${esc(n.f.t)}</div><div class="m">${n.f.y} · ${esc(n.f.c)}${n.f.dir.length ? " · " + esc(n.f.dir[0]) : ""}</div>
+      ${hits.get(n.id)?.length ? `<div class="r">matches <b>${hits.get(n.id).slice(0, 4).map(esc).join(", ")}</b></div>` : ""}
+      <div class="r">${top.length ? top.map(e => { const o = e.source === n ? e.target : e.source; return `<b>${esc(o.f.t)}</b>: ${e.via.filter(v => state.links.has(v[0])).map(v => esc(v.slice(2))).join(", ")}`; }).join("<br>") : "No links shown with these settings."}</div>`; };
+  nSel.on("mouseenter focus", (ev, n) => hover(n)).on("mouseleave blur", () => { rest(); labels(); })
+    .on("click", (ev, n) => go(n.id)).on("keydown", (ev, n) => { if (ev.key === "Enter") go(n.id); });
+  const edgeOn = e => visible.has(e.source.id) && visible.has(e.target.id) && [...e.types].some(t => state.links.has(t));
+  const filter = (m) => { hits = m; visible = new Set(m.keys());
+    nSel.attr("display", n => visible.has(n.id) ? null : "none");
+    eSel.attr("display", e => edgeOn(e) ? null : "none"); labels(); rest(); };
+  const arrange = () => { const to = state.arrange === "time" ? ["tx", "ty"] : ["nx", "ny"];
+    nodes.forEach(n => { n.x = n[to[0]]; n.y = n[to[1]]; }); drawAxis();
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) place();
+    else { eSel.transition().duration(500).attr("x1", e => e.source.x).attr("y1", e => e.source.y).attr("x2", e => e.target.x).attr("y2", e => e.target.y);
+      nSel.transition().duration(500).attr("transform", n => `translate(${n.x},${n.y})`); lSel.transition().duration(500).attr("x", n => n.x).attr("y", n => n.y - n.r - 5); }
+    fit(500); };
+  recolour(); drawAxis(); place(); fit(0); rest();
+  G = { filter, arrange, recolour };
 }
 
 /* ---------- record ---------- */
@@ -729,16 +848,16 @@ async function renderFilm(id) {
   if (!f) { location.hash = ""; return; }
   document.getElementById("crumb").textContent = `the record · ${f.y} · ${f.t}`;
   document.title = `${f.t} · Bloodline Record`;
-  app.innerHTML = `<div class="nav"><button class="linkish" type="button" id="back">All 100 films</button><span class="tag">loading</span></div>`;
+  app.innerHTML = `<div class="nav"><button class="linkish" type="button" id="back">${state.view === "graph" ? "Back to the graph" : "All 100 films"}</button><span class="tag">loading</span></div>`;
   let d;
   try { d = await load(id); } catch (e) {
-    app.innerHTML = `<div class="nav"><button class="linkish" type="button" id="back">All 100 films</button></div><p class="empty">This film's record didn't load. Reload the page to try again.</p>`;
-    document.getElementById("back").onclick = () => go(""); return;
+    app.innerHTML = `<div class="nav"><button class="linkish" type="button" id="back">${state.view === "graph" ? "Back to the graph" : "All 100 films"}</button></div><p class="empty">This film's record didn't load. Reload the page to try again.</p>`;
+    document.getElementById("back").onclick = () => go(state.view === "graph" ? "graph" : ""); return;
   }
   if (location.hash.slice(1) !== id) return;
   const prev = F[(i + F.length - 1) % F.length], next = F[(i + 1) % F.length];
   app.innerHTML = `
-  <div class="nav"><button class="linkish" type="button" id="back">All 100 films</button>
+  <div class="nav"><button class="linkish" type="button" id="back">${state.view === "graph" ? "Back to the graph" : "All 100 films"}</button>
     <span><button class="linkish" type="button" data-go="${prev.id}">Previous: ${esc(prev.t)}</button> · <button class="linkish" type="button" data-go="${next.id}">Next: ${esc(next.t)}</button></span></div>
   <div class="head">
     <p class="overline">${esc(d.region)} · ${esc(d.countries.join(", ") || d.country)} · ${d.year}</p>
@@ -768,7 +887,7 @@ async function renderFilm(id) {
     <aside class="side">${side(d, f)}</aside>
   </div>
   <p class="foot">Story elements are Claude's first-pass reading, not yet reviewed. Values are written in the reader's own words and not merged, so similar ideas can appear under different wording. Entries marked “example wording” match phrases given to the readers as examples and may be over-used. Subtitles, screenplays and stills are held for private research only.</p>`;
-  document.getElementById("back").onclick = () => go("");
+  document.getElementById("back").onclick = () => go(state.view === "graph" ? "graph" : "");
   app.querySelectorAll("[data-go]").forEach(b => b.onclick = () => go(b.dataset.go));
   const frame = document.getElementById("frame");
   const th = [...app.querySelectorAll(".thumbs button")];
@@ -790,8 +909,9 @@ async function renderFilm(id) {
 function cap(s) { s = esc(s); return s.charAt(0).toUpperCase() + s.slice(1); }
 function route() { window.onresize = null;
   routeInner(); }
-function routeInner() { const id = location.hash.slice(1); if (id && F.some(f => f.id === id)) renderFilm(id); else renderIndex(); }
+function routeInner() { const id = location.hash.slice(1); if (id && F.some(f => f.id === id)) { G = null; renderFilm(id); } else { state.view = id === "graph" ? "graph" : "list"; renderIndex(); } }
 document.getElementById("home").onclick = () => go("");
+let grt; window.addEventListener("resize", () => { if (state.view !== "graph" || !document.getElementById("gstage")) return; clearTimeout(grt); grt = setTimeout(() => { buildGraph(); renderRows(); }, 200); });
 window.addEventListener("hashchange", route);
 route();
 </script>

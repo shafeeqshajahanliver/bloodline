@@ -145,6 +145,7 @@ def feats(d):
     for c in d["arch"]: out[f"a|{c}"] = {"type": "archetype", "label": arch[c]["name"] if c in arch else c, "code": c}
     return out
 FE = {fid: feats(r) for fid, r in recs.items()}
+allnb = {}
 count = collections.Counter(k for f in FE.values() for k in f)
 def weight(k, meta):
     base = {"person": 3.0, "archetype": 1.0, "element": 1.6}[meta["type"]]
@@ -165,6 +166,19 @@ for fid, r in recs.items():
                        all=[o for o in ids if o != fid and k in FE[o]]) for k in used],
         "films": [{"id": o, "score": round(sc, 2), "via": sh} for sc, o, sh in top]}
     json.dump(r, open(f"{OUT}/data/{fid}.json", "w"), ensure_ascii=False, separators=(",", ":"))
+    allnb[fid] = nb
+# edges for the home-page graph: each film's 5 strongest links (weaker than 0.45 dropped), merged both ways
+allnb_edges = {}
+for fid, nb in allnb.items():
+    for sc, o, sh in nb[:5]:
+        if sc < 0.45: continue
+        k = tuple(sorted((fid, o)))
+        if k not in allnb_edges or allnb_edges[k][0] < sc:
+            allnb_edges[k] = (sc, [FE[fid][x]["type"][0] + "|" + FE[fid][x]["label"] for x in sh])
+pos = {fid: i for i, fid in enumerate(ids)}
+IX = json.load(open(f"{OUT}/index.json"))
+IX["edges"] = [[pos[a], pos[b], round(sc, 2), via] for (a, b), (sc, via) in sorted(allnb_edges.items())]
+json.dump(IX, open(f"{OUT}/index.json", "w"), ensure_ascii=False, separators=(",", ":"))
 # assemble the page: the index is embedded so the ledger works before any film loads
 page = open("record/template.html").read().replace("__INDEX__", open(f"{OUT}/index.json").read().replace("</", "<\\/"))
 open(f"{OUT}/bloodline-record.html", "w").write(page)
