@@ -1014,9 +1014,9 @@ function buildGraph() {
     return boxes; };
   // a nightmare's films are named in two columns either side of it, with a thin leader back to each film
   const FANMAX = 16;
-  const fanFilms = (n, flAll, taken = []) => { leadG.selectAll("*").remove(); if (!flAll.length) return [];
+  const fanFilms = (n, flAll, taken = [], total = flAll.length) => { leadG.selectAll("*").remove(); if (!flAll.length) return [];
     // a big nightmare names its 16 most connected films; the rest are counted at the foot of the column
-    const fl = [...flAll].sort((a, b) => b.fears.length - a.fears.length || a.f.y - b.f.y).slice(0, FANMAX), more = flAll.length - fl.length;
+    const fl = [...flAll].sort((a, b) => b.fears.length - a.fears.length || a.f.y - b.f.y).slice(0, FANMAX), more = total - fl.length;
     lSel.filter(z => flAll.includes(z) && !fl.includes(z)).attr("display", "none");
     const fs = 13 / Math.max(k, .6), lh = fs * 1.3, dmax = d3.max(fl, m => Math.hypot(m.x - n.x, m.y - n.y) + R(m)) + fs * 1.2, boxes = [];
     // one column, on the side facing the middle of the graph (where there is room); two only when the list is long and the nightmare sits central
@@ -1039,16 +1039,20 @@ function buildGraph() {
     const vf = films.filter(n => visible.has(n.id)).length, vx = fears.filter(n => visible.has(n.id)).length;
     info.innerHTML = `<div class="m">${vf} FILMS · ${vx} FEARS</div><div class="r" style="color:var(--mute)">${state.primary === "films" ? "Point at a film to see the fears it carries." : "Point at a fear to see the films that carry it."}</div>`; labels(); };
   const hover = n => { hoverOn = n; stage.classList.add("hov"); showStill(n);
-    const nb = new Set([n.id, ...(n.kind === "film" ? n.fears : n.films).filter(m => visible.has(m.id)).map(m => m.id)]);
-    // a nightmare also lights the archetypes its films carry, and the threads from those films to them
-    const arch = new Map();
-    if (n.lens === "nightmares") n.films.filter(m => visible.has(m.id)).forEach(m => m.fears.filter(x => x.lens === "archetypes" && visible.has(x.id)).forEach(x => { arch.set(x, (arch.get(x) || 0) + 1); nb.add(x.id); }));
-    const lit = e => e.source === n || e.target === n || (arch.has(e.target) && nb.has(e.source.id));
+    // only the best-connected neighbours light up: a nightmare's 16 most connected films, anything else's 12
+    const deg = m => m.kind === "film" ? m.fears.length : m.films.length;
+    const near = (n.kind === "film" ? n.fears : n.films).filter(m => visible.has(m.id)).sort((a, b) => deg(b) - deg(a) || (a.f?.y || 0) - (b.f?.y || 0));
+    const nb = new Set([n.id, ...near.slice(0, n.lens === "nightmares" ? 16 : 12).map(m => m.id)]);
+    // a nightmare also lights its six strongest primal fears (counted across all its films), joined to the films shown
+    const arch = new Map(), ac = new Map();
+    if (n.lens === "nightmares") { near.forEach(m => m.fears.filter(x => x.lens === "archetypes" && visible.has(x.id)).forEach(x => ac.set(x, (ac.get(x) || 0) + 1)));
+      [...ac].sort((a, b) => b[1] - a[1]).slice(0, 6).forEach(([x, c]) => { arch.set(x, c); nb.add(x.id); }); }
+    const lit = e => (e.source === n && nb.has(e.target.id)) || (e.target === n && nb.has(e.source.id)) || (arch.has(e.target) && nb.has(e.source.id));
     // everything lit is named; a nightmare reveals in steps: itself, then its archetypes, then its films and threads
     seq.forEach(clearTimeout); seq = [];
     const litN = nodes.filter(m => nb.has(m.id)).sort((a, b) => (b === n) - (a === n) || arch.has(b) - arch.has(a) || (b.kind === "fear") - (a.kind === "fear"));
     lSel.classed("hi", false).attr("display", m => nb.has(m.id) ? null : "none");
-    if (arch.size) { const fl = litN.filter(m => m.kind === "film"); fanFilms(n, fl, placeLit(litN.filter(m => m.kind !== "film"), fl.map(m => { const r = R(m); return [m.x - r, m.y - r, m.x + r, m.y + r]; })));
+    if (arch.size) { const fl = litN.filter(m => m.kind === "film"); fanFilms(n, fl, placeLit(litN.filter(m => m.kind !== "film"), fl.map(m => { const r = R(m); return [m.x - r, m.y - r, m.x + r, m.y + r]; })), near.length);
       leadG.style("opacity", 0); later(() => leadG.style("opacity", 1), 520); }
     else { leadG.selectAll("*").remove(); placeLit(litN); }
     eSel.classed("hi", false).attr("stroke", e => lit(e) ? LENSC[e.lens] : "var(--mute)").attr("stroke-opacity", e => lit(e) ? .85 : .06);
