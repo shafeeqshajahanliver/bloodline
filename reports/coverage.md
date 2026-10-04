@@ -1,6 +1,6 @@
 # Coverage: all 500 films
 
-Generated 2026-10-03.
+Generated 2026-10-04.
 
 | Layer | Films | Share |
 |---|---|---|

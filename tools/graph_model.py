@@ -11,7 +11,7 @@ DIM, LAYERS, EPOCHS, LR, REG, NEG = (float(os.environ.get(k, d)) for k, d in [("
 DIM, LAYERS, EPOCHS, NEG = int(DIM), int(LAYERS), int(EPOCHS), int(NEG)
 P = json.load(open("record/site/patterns.json"))
 films = P["films"]
-DROP = set(filter(None, os.environ.get("DROP", "archetypes").split(",")))   # default: learn from the bottom-up fears alone; the top-down archetypes are kept out and compared after (DROP= to include them)
+DROP = set(filter(None, os.environ.get("DROP", "archetypes,nightmares").split(",")))   # default: learn from the bottom-up fears alone; the top-down archetypes are kept out and compared after, and the nightmares (this model's own output) are never fed back in
 fears = sorted({(d, f) for x in films for d, v in x["g"].items() for f in v["f"] if d not in DROP})
 fi = {k: i for i, k in enumerate(fears)}
 NF, NX = len(films), len(fears)

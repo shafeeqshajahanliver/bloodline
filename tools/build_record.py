@@ -183,6 +183,11 @@ for fid, nb in allnb.items():
             allnb_edges[k] = (sc, [FE[fid][x]["type"][0] + "|" + FE[fid][x]["label"] for x in sh])
 pos = {fid: i for i, fid in enumerate(ids)}
 IX = json.load(open(f"{OUT}/index.json"))
+# per-film data bundled 25 to a file (data/pack-N.json), so the published page stays within the host's file limit
+PACK = 25
+for n in range(0, len(ids), PACK):
+    json.dump({fid: json.load(open(f"{OUT}/data/{fid}.json")) for fid in ids[n:n + PACK]}, open(f"{OUT}/data/pack-{n // PACK}.json", "w"), ensure_ascii=False, separators=(",", ":"))
+IX["pack"] = PACK
 IX["edges"] = [[pos[a], pos[b], round(sc, 2), via] for (a, b), (sc, via) in sorted(allnb_edges.items())]
 # fears as graph nodes: each chosen film's grouped fears, from patterns.json (run tools/build_patterns.py first)
 if os.path.exists(f"{OUT}/patterns.json"):
