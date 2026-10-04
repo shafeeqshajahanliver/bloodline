@@ -270,6 +270,9 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .gstage text{font-family:var(--display);font-size:13px;fill:var(--ink);paint-order:stroke;stroke:var(--paper);stroke-width:4px;stroke-linejoin:round;pointer-events:none}
 .gstage text.ax{font-family:var(--mono);font-size:11px;fill:var(--mute);stroke-width:3px}
 .gstage .gn{cursor:pointer}
+.gstage.famview .gn.fear,.gstage.famview .ge,.gstage.famview text.lab.fear{display:none}
+.gstage text.gfaml{display:none;font-family:var(--display);cursor:pointer;pointer-events:all;paint-order:stroke;stroke:var(--paper);stroke-width:4px;stroke-linejoin:round}
+.gstage.famview text.gfaml{display:inline}.gstage.hov .gfaml{opacity:.25}.gstage.hov .gfaml.hi{opacity:1}
 .gstage .gn:focus{outline:none}
 .gstage .gn:focus-visible circle{stroke:var(--red);stroke-width:3}
 .gstage.hov .ge{opacity:.06}.gstage.hov .gn{opacity:.2}.gstage.hov text.lab{opacity:.15}
@@ -279,6 +282,7 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .ginfo .m{font-family:var(--mono);font-size:11.5px;color:var(--mute);margin-top:4px;letter-spacing:.03em}
 .ginfo .r{font-size:13.5px;margin-top:8px;line-height:1.45}
 .ginfo .r b{font-weight:600}
+.ginfo button{pointer-events:auto}
 .gzoom{position:absolute;right:0;top:12px;display:flex;gap:4px}
 .gzoom button{all:unset;cursor:pointer;width:30px;height:30px;display:flex;align-items:center;justify-content:center;border:1px solid var(--ink);background:var(--paper);font-family:var(--mono);font-size:15px}
 .gzoom button:hover{background:var(--soft)}
@@ -604,7 +608,7 @@ function renderIndex() {
     <section><h3>Era</h3><div class="chips">${ERAS.map(([e]) => `<button class="chip" type="button" data-era="${e}" aria-pressed="${state.era.has(e)}">${e}${state.view === "patterns" ? "" : `<span class="k">${F.filter(f => eraOf(f.y) === e).length}</span>`}</button>`).join("")}</div></section>
     ${state.view === "graph" ? `<section><h3>Arrange</h3><div class="chips">${[["net","By connection"],["time","Through time"]].map(([k, n]) => `<button class="chip" type="button" data-arrange="${k}" aria-pressed="${state.arrange === k}">${n}</button>`).join("")}</div></section>
     <section><h3>Common threads</h3><div class="chips">${LENS.map(([k, n]) => `<button class="chip" type="button" data-glens="${k}" aria-pressed="${state.glenses.has(k)}"><span class="sw" style="background:${LENSC[k]};border-radius:50%;margin-right:6px"></span>${n}</button>`).join("")}</div></section>
-    <section id="filmsopt" ${state.primary === "fears" ? "hidden" : ""}><h3>Films</h3><div class="chips">${[["plain","Plain"],["region","Ring by region"],["era","Shade by era"]].map(([k, n]) => `<button class="chip" type="button" data-colour="${k}" aria-pressed="${state.colour === k}">${n}</button>`).join("")}</div></section>`
+    <section id="filmsopt" ${state.primary !== "films" ? "hidden" : ""}><h3>Films</h3><div class="chips">${[["plain","Plain"],["region","Ring by region"],["era","Shade by era"]].map(([k, n]) => `<button class="chip" type="button" data-colour="${k}" aria-pressed="${state.colour === k}">${n}</button>`).join("")}</div></section>`
     : state.view === "patterns" ? `<section><h3>Kind of fear</h3><div class="chips">${LENS.map(([k, n]) => `<button class="chip" type="button" data-lens="${k}" aria-pressed="${state.lens === k}"><span class="sw" style="background:${LENSC[k]};border-radius:50%;margin-right:6px"></span>${n}</button>`).join("")}</div></section>
     <section><h3>Order</h3><div class="chips" data-for="time">${PSORT.time.map(([k, n]) => `<button class="chip" type="button" data-psort="${k}" aria-pressed="${state.psort === k}">${n}</button>`).join("")}</div><div class="chips" data-for="region">${PSORT.region.map(([k, n]) => `<button class="chip" type="button" data-psort="${k}" aria-pressed="${state.psort === k}">${n}</button>`).join("")}</div></section>`
     : `<section><h3>Sort</h3><div class="chips">${[["year","Year"],["title","Title"],["n","Most entries"]].map(([k, n]) => `<button class="chip" type="button" data-sort="${k}" aria-pressed="${state.sort === k}">${n}</button>`).join("")}</div></section>`}
@@ -613,7 +617,7 @@ function renderIndex() {
   <div class="status"><span class="active"><span id="count"></span><span id="pills"></span></span>
     ${state.view === "patterns" ? `<span class="key"><span>each dot is the share of films carrying the fear · hollow dots: fewer than 10 films, read with care</span></span>` : state.view === "graph" ? "" : `<span class="key"><span>the bar shows how much of each story is mapped</span></span>`}</div>
   ${state.view === "graph" ? `<div class="gstage" id="gstage"><div class="gflash" id="gflash" aria-hidden="true"></div>
-    <div class="ghero" id="ghero"><p class="overline">Bloodline · ${F.length} films · ${new Set(F.map(f => f.c)).size} countries · ${Math.min(...F.map(f => f.y))} to ${Math.max(...F.map(f => f.y))}</p><h1>Every culture tells the same few <em>nightmares</em></h1><p>Different monsters, different languages, and underneath them the same fears. Every point of light is a film or a fear; every thread, a fear they share.</p></div><div class="ginfo" id="ginfo"></div><div class="gmode viewtoggle" role="group" aria-label="Main nodes"><button type="button" data-primary="fears" aria-pressed="${state.primary === "fears"}">Fears</button><button type="button" data-primary="films" aria-pressed="${state.primary === "films"}">Films</button></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
+    <div class="ghero" id="ghero"><p class="overline">Bloodline · ${F.length} films · ${new Set(F.map(f => f.c)).size} countries · ${Math.min(...F.map(f => f.y))} to ${Math.max(...F.map(f => f.y))}</p><h1>Every culture tells the same few <em>nightmares</em></h1><p>Different monsters, different languages, and underneath them the same fears. Every point of light is a film or a fear; every thread, a fear they share.</p></div><div class="ginfo" id="ginfo"></div><div class="gmode viewtoggle" role="group" aria-label="Main nodes"><button type="button" data-primary="fears" aria-pressed="${state.primary === "fears"}">Fears</button><button type="button" data-primary="films" aria-pressed="${state.primary === "films"}">Films</button><button type="button" data-primary="families" aria-pressed="${state.primary === "families"}">Families</button></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
     <div class="keyline" id="gkey" style="margin-top:10px"></div>` : state.view === "patterns" ? `<div class="pat" id="pat"></div>` : `<ol class="ledger" id="ledger"></ol>`}
   ${aboutBlock()}`;
   const q = document.getElementById("q");
@@ -632,7 +636,7 @@ function renderIndex() {
   app.querySelectorAll("[data-arrange]").forEach(b => b.onclick = () => { state.arrange = b.dataset.arrange; app.querySelectorAll("[data-arrange]").forEach(x => x.setAttribute("aria-pressed", x === b)); G && G.arrange(); });
   app.querySelectorAll("[data-colour]").forEach(b => b.onclick = () => { state.colour = b.dataset.colour; app.querySelectorAll("[data-colour]").forEach(x => x.setAttribute("aria-pressed", x === b)); G && G.recolour(); });
   app.querySelectorAll("[data-glens]").forEach(b => b.onclick = () => { const k = b.dataset.glens; state.glenses.has(k) ? state.glenses.delete(k) : state.glenses.add(k); b.setAttribute("aria-pressed", state.glenses.has(k)); buildGraph(); renderRows(); });
-  app.querySelectorAll("[data-primary]").forEach(b => b.onclick = () => { state.primary = b.dataset.primary; app.querySelectorAll("[data-primary]").forEach(x => x.setAttribute("aria-pressed", x === b)); const fo = document.getElementById("filmsopt"); if (fo) fo.hidden = state.primary === "fears"; G && G.emphasis(); });
+  app.querySelectorAll("[data-primary]").forEach(b => b.onclick = () => { state.primary = b.dataset.primary; app.querySelectorAll("[data-primary]").forEach(x => x.setAttribute("aria-pressed", x === b)); const fo = document.getElementById("filmsopt"); if (fo) fo.hidden = state.primary !== "films"; G && G.mode(); });
   app.querySelectorAll("[data-lens]").forEach(b => b.onclick = () => { state.lens = b.dataset.lens; state.psel = null; app.querySelectorAll("[data-lens]").forEach(x => x.setAttribute("aria-pressed", x === b)); renderRows(); });
   app.querySelectorAll("[data-psort]").forEach(b => b.onclick = () => { state.psort = b.dataset.psort; app.querySelectorAll("[data-psort]").forEach(x => x.setAttribute("aria-pressed", x === b)); renderRows(); });
   app.querySelectorAll("[data-sort]").forEach(b => b.onclick = () => {
@@ -674,9 +678,9 @@ function aboutBlock() {
   return `<section class="about" id="about"><h2>About this record</h2><div class="cols">
     <div><h3>How it was made</h3>
       <p>We assembled an archive of 497 horror films from 44 countries, made between 1913 and 2025: every Wikipedia plot, English subtitles for 440 films, 116 screenplays, 6,184 stills and crowd-sourced jump-scare timings for 189. Each film was then machine-read across ten parts of its story: the threat, where it comes from, what it wants, the wrong underneath, what sets it off, its rules, who suffers, how it ends, its symbols and its turning points. That produced 18,195 story elements, each pinned to the line of plot or dialogue it came from.</p>
-      <p>Nothing was decided in advance. The 9,122 different ways these films describe their horrors were grouped from the bottom up into 231 fears, and every film was joined to every fear it carries. The result is a graph of how a century of nightmares connect. Cast and crew come from Wikidata, stills from FILMGRAB, jump scares from Where's the Jump.</p></div>
+      <p>Nothing was decided in advance. The 9,122 different ways these films describe their horrors were grouped from the bottom up into 231 fears, and every film was joined to every fear it carries. We then trained a graph neural network on those 11,485 links. Without being shown the archetypes, it found 12 families of horror that cut across decades and continents. Cast and crew come from Wikidata, stills from FILMGRAB, jump scares from Where's the Jump.</p></div>
     <div><h3>What to keep in mind</h3>
-      <p>This is a first reading and has not yet been checked by hand. The fears come from the films' own wording, so a few may still split or merge as the work is reviewed.</p>
+      <p>This is a first reading and has not yet been checked by hand. The fears come from the films' own wording, so a few may still split or merge as the work is reviewed. The families' names are ours, and the model learns from the same first reading, so it inherits its gaps.</p>
       <p>The 27 archetypes are the one top-down lens: old story shapes, many with roots in folklore, set against each film to test them against what the films themselves show. The graph and film pages cover 100 films from the archive in full depth; the trends draw on all 497. 14 of the 100 have no stills.</p></div>
     <div><h3>Reading the list</h3><div class="key">
       <span><span class="bar10" style="width:60px;display:inline-grid;grid-template-columns:repeat(3,1fr)"><i></i><i class="ns"></i><i class="no"></i></span> &nbsp;story mapped · not stated in the plot · nothing found</span>
@@ -878,6 +882,7 @@ const REG_C = {"North America":"#e9e1d1","Continental Europe":"#3fb39a","UK & Ir
 const LENSC = { archetypes: "#cf3a2e", threat: "#ef8a80", origin: "#ec8a3c", wants: "#e8c44e", wrong: "#9cc74a", trigger: "#3fb39a", rules: "#4fa3d8", who_suffers: "#6f7fe6", ending: "#a77ad6", images: "#d066a8" };
 const LENSN = { threat: "What threatens", origin: "Where it comes from", wants: "What it wants", wrong: "The wrong underneath", trigger: "What sets it off", rules: "Rules", who_suffers: "Who suffers", ending: "How it ends", images: "Symbols", archetypes: "Archetypes" };
 const GREY = "#4a413b";
+const FAMC = ["#cf3a2e", "#ec8a3c", "#e8c44e", "#9cc74a", "#3fb39a", "#4fa3d8", "#6f7fe6", "#a77ad6", "#d066a8", "#ef8a80", "#c9a27a", "#7fd1c7"];
 function buildGraph() {
   const stage = document.getElementById("gstage"); if (!stage || typeof d3 === "undefined") { if (stage) stage.innerHTML = `<p class="empty">The graph needs a script that didn't load. Reload the page to try again.</p>`; G = null; return; }
   const W = stage.clientWidth, H = stage.clientHeight;
@@ -903,28 +908,43 @@ function buildGraph() {
     .force("x", d3.forceX(n => yr(n.kind === "film" ? n.f.y : n.my)).strength(n => n.kind === "film" ? 3 : 1)).force("y", d3.forceY(0).strength(.05))
     .force("collide", d3.forceCollide(n => (n.kind === "fear" ? n.r : n.fr) + 3)).force("charge", d3.forceManyBody().strength(-25)).stop();
   for (let i = 0; i < 350; i++) sim2.tick();
-  nodes.forEach(n => { n.tx = n.x; n.ty = n.y; n.x = state.arrange === "time" ? n.tx : n.nx; n.y = state.arrange === "time" ? n.ty : n.ny; });
+  nodes.forEach(n => { n.tx = n.x; n.ty = n.y; });
+  // families: films gather round their family (found by the graph model), families set round a ring
+  const FAMS = IDX.fams || [], famOf = n => (IDX.fam || [])[n.i] ?? -1, famMode = () => state.primary === "families" && FAMS.length;
+  const FR = Math.min(W, H) * .36, anc = FAMS.map((_, j) => [FR * 1.25 * Math.cos(-Math.PI / 2 + j / FAMS.length * 2 * Math.PI), FR * Math.sin(-Math.PI / 2 + j / FAMS.length * 2 * Math.PI)]);
+  films.forEach(n => { const a = anc[famOf(n)] || [0, 0]; n.x = a[0] + (n.nx % 30); n.y = a[1] + (n.ny % 30); });
+  const sim3 = d3.forceSimulation(films).force("x", d3.forceX(n => (anc[famOf(n)] || [0, 0])[0]).strength(.18)).force("y", d3.forceY(n => (anc[famOf(n)] || [0, 0])[1]).strength(.18))
+    .force("collide", d3.forceCollide(n => n.fr + 4)).force("charge", d3.forceManyBody().strength(-8)).stop();
+  for (let i = 0; i < 300; i++) sim3.tick();
+  films.forEach(n => { n.gx = n.x; n.gy = n.y; });
+  fears.forEach(x => { x.gx = d3.mean(x.films, m => m.gx); x.gy = d3.mean(x.films, m => m.gy); });
+  const posKey = () => famMode() ? ["gx", "gy"] : state.arrange === "time" ? ["tx", "ty"] : ["nx", "ny"];
+  nodes.forEach(n => { const [a, b] = posKey(); n.x = n[a]; n.y = n[b]; });
   stage.querySelector("svg")?.remove();
   const svg = d3.select(stage).insert("svg", ".ginfo").attr("viewBox", [-W / 2, -H / 2, W, H]).attr("role", "group").attr("aria-label", "Graph of films and the fears they share");
   const root = svg.append("g");
   const axis = root.append("g");
-  const eg = root.append("g"), ng = root.append("g"), lg = root.append("g");
+  const eg = root.append("g"), ng = root.append("g"), lg = root.append("g"), fg = root.append("g");
   const eSel = eg.selectAll("line").data(edges).join("line").attr("class", "ge").attr("stroke", "var(--mute)").attr("stroke-opacity", .22).attr("stroke-width", .7);
   const nSel = ng.selectAll("g").data(nodes).join("g").attr("class", n => "gn " + n.kind).attr("tabindex", 0).attr("role", n => n.kind === "film" ? "link" : "button")
     .attr("aria-label", n => n.kind === "film" ? `${n.f.t}, ${n.f.y}` : `${n.name}, ${LENSN[n.lens]}, ${n.films.length} films`);
   nSel.append("circle");
-  const lSel = lg.selectAll("text").data(nodes).join("text").attr("class", "lab").attr("text-anchor", "middle").text(n => n.kind === "film" ? `${n.f.t} (${n.f.y})` : n.name);
+  const fam = FAMS.map((f, j) => ({ ...f, j, films: films.filter(n => famOf(n) === j) }));
+  const fSel = fg.selectAll("text").data(fam).join("text").attr("class", "gfaml").style("fill", f => FAMC[f.j % FAMC.length]).attr("tabindex", 0).attr("role", "button").text(f => f.name);
+  const lSel = lg.selectAll("text").data(nodes).join("text").attr("class", n => "lab " + n.kind).attr("text-anchor", "middle").text(n => n.kind === "film" ? `${n.f.t} (${n.f.y})` : n.name);
   // films sized by how many of the shown fears they carry, as fears are sized by how many films carry them
-  const rOf = n => state.primary === "films" ? (n.kind === "film" ? n.fr : 2.6) : (n.kind === "fear" ? n.r : 1.6 + n.fr * .2);
-  const fillOf = n => { const prim = (state.primary === "films") === (n.kind === "film");
+  const filmsPrim = () => state.primary !== "fears";
+  const rOf = n => filmsPrim() ? (n.kind === "film" ? n.fr : 2.6) : (n.kind === "fear" ? n.r : 1.6 + n.fr * .2);
+  const fillOf = n => { const prim = filmsPrim() === (n.kind === "film");
     if (!prim) return GREY;
     if (n.kind === "fear") return LENSC[n.lens];
+    if (famMode()) return famOf(n) >= 0 ? FAMC[famOf(n) % FAMC.length] : GREY;
     return state.colour === "era" ? ERA_C[ERAS.findIndex(e => e[0] === eraOf(n.f.y))] : state.colour === "still" ? (n.f.tone || "var(--soft)") : "var(--ink)"; };
-  const ring = n => { const prim = (state.primary === "films") === (n.kind === "film"); if (!prim) return ["none", 0];
-    return n.kind === "film" && state.colour === "region" ? [REG_C[n.f.r], 2.4] : ["var(--paper)", 1.2]; };
+  const ring = n => { const prim = filmsPrim() === (n.kind === "film"); if (!prim) return ["none", 0];
+    return n.kind === "film" && state.colour === "region" && !famMode() ? [REG_C[n.f.r], 2.4] : ["var(--paper)", 1.2]; };
   const place = () => { eSel.attr("x1", e => e.source.x).attr("y1", e => e.source.y).attr("x2", e => e.target.x).attr("y2", e => e.target.y);
     nSel.attr("transform", n => `translate(${n.x},${n.y})`); lSel.attr("x", n => n.x).attr("y", n => n.y - rOf(n) - 5); };
-  const drawAxis = () => { axis.selectAll("*").remove(); if (state.arrange !== "time") return;
+  const drawAxis = () => { axis.selectAll("*").remove(); if (state.arrange !== "time" || famMode()) return;
     for (const y of [1920, 1940, 1960, 1980, 2000, 2020]) { axis.append("line").attr("x1", yr(y)).attr("x2", yr(y)).attr("y1", -H).attr("y2", H).attr("stroke", "var(--rule)").attr("stroke-dasharray", "2 4");
       axis.append("text").attr("class", "ax").attr("x", yr(y) + 4).attr("y", d3.min(nodes, n => n.ty) - 24).text(y + "s"); } };
   let k = 1, visible = new Set(nodes.map(n => n.id)), hits = new Map(), hoverOn = null;
@@ -932,28 +952,36 @@ function buildGraph() {
   const bigFears = new Set([...fears].sort((a, b) => b.films.length - a.films.length).slice(0, 22).map(n => n.id));
   const labels = () => {
     const fs = 13 / Math.max(k, .6), placed = [], show = new Set();
-    const prim = n => (state.primary === "films") === (n.kind === "film");
+    const prim = n => filmsPrim() === (n.kind === "film");
+    placeFams(fs);
     // fears view: at rest only the archetypes are named (the rest appear on hover); if archetypes are hidden, name the primary kind
     const archOn = state.primary === "fears" && nodes.some(n => n.lens === "archetypes" && visible.has(n.id));
-    const cand = nodes.filter(n => visible.has(n.id) && (archOn ? n.lens === "archetypes" : (prim(n) || k > 2.6))).sort((a, b) => (prim(b) - prim(a)) || rOf(b) - rOf(a));
+    const cand = famMode() ? [] : nodes.filter(n => visible.has(n.id) && (archOn ? n.lens === "archetypes" : (prim(n) || k > 2.6))).sort((a, b) => (prim(b) - prim(a)) || rOf(b) - rOf(a));
     for (const n of cand) { const txt = n.kind === "film" ? `${n.f.t} (${n.f.y})` : n.name, w = txt.length * fs * .5, h = fs * 1.15, r = R(n);
       const box = [n.x - w / 2 - fs * .3, n.y - r - fs * .4 - h, n.x + w / 2 + fs * .3, n.y - r - fs * .4];
       if (placed.some(b => box[0] < b[2] && box[2] > b[0] && box[1] < b[3] && box[3] > b[1])) continue;
       placed.push(box); show.add(n.id); }
     nSel.select("circle").attr("r", R); lSel.style("font-size", fs + "px").attr("y", n => n.y - R(n) - fs * .4).attr("display", n => show.has(n.id) ? null : "none"); };
   const R = n => rOf(n) * Math.min(1 / Math.max(k, .3), 1.5);
-  const emphasis = () => { nSel.select("circle").attr("r", R).attr("fill", fillOf).attr("stroke", n => ring(n)[0]).attr("stroke-width", n => ring(n)[1]);
+  // family names sit just outside their films, on the side away from the centre
+  const placeFams = fs => { if (!famMode()) return; fSel.each(function (f) { const vis = f.films.filter(n => visible.has(n.id));
+      const el = d3.select(this); if (!vis.length) { el.attr("display", "none"); return; }
+      const cx = d3.mean(vis, n => n.x), cy = d3.mean(vis, n => n.y), rr = d3.max(vis, n => Math.hypot(n.x - cx, n.y - cy) + R(n));
+      const a = Math.atan2(cy, cx / 1.25), ux = Math.cos(a), uy = Math.sin(a), d = rr + fs * .8;
+      el.attr("display", null).attr("x", cx + ux * d).attr("y", cy + uy * d + (uy > .5 ? fs : uy < -.5 ? 0 : fs * .45))
+        .attr("text-anchor", ux > .35 ? "start" : ux < -.35 ? "end" : "middle").style("font-size", fs * 1.45 + "px"); }); };
+  const emphasis = () => { stage.classList.toggle("famview", !!famMode()); nSel.select("circle").attr("r", R).attr("fill", fillOf).attr("stroke", n => ring(n)[0]).attr("stroke-width", n => ring(n)[1]);
     lSel.attr("fill", n => n.kind === "fear" && state.primary === "fears" ? LENSC[n.lens] : "var(--ink)").attr("y", n => n.y - rOf(n) - 5);
-    nSel.filter(n => (state.primary === "films") === (n.kind === "film")).raise(); labels(); legend(); rest(); };
+    nSel.filter(n => filmsPrim() === (n.kind === "film")).raise(); labels(); legend(); rest(); };
   const legend = () => { const key = document.getElementById("gkey"); if (!key) return;
-    key.innerHTML = state.primary === "fears" ? LENS.filter(([kk]) => state.glenses.has(kk)).map(([kk, nn]) => `<span><span class="sw" style="background:${LENSC[kk]};border-radius:50%"></span>${nn}</span>`).join("") + `<span><span class="sw" style="background:${GREY};border-radius:50%"></span>films</span>`
+    key.innerHTML = famMode() ? fam.map(f => `<span><span class="sw" style="background:${FAMC[f.j % FAMC.length]};border-radius:50%"></span>${esc(f.name)}</span>`).join("") : state.primary === "fears" ? LENS.filter(([kk]) => state.glenses.has(kk)).map(([kk, nn]) => `<span><span class="sw" style="background:${LENSC[kk]};border-radius:50%"></span>${nn}</span>`).join("") + `<span><span class="sw" style="background:${GREY};border-radius:50%"></span>films</span>`
       : (state.colour === "region" ? REGIONS.map(r => `<span><span class="sw" style="background:var(--ink);border-radius:50%;box-shadow:0 0 0 2px ${REG_C[r]}"></span>${esc(r)}</span>`).join("") : state.colour === "era" ? ERAS.map(([e], i) => `<span><span class="sw" style="background:${ERA_C[i]};border-radius:50%"></span>${e}</span>`).join("") : state.colour === "still" ? `<span>Films are filled with the colour of their stills.</span>` : `<span><span class="sw" style="background:var(--ink);border-radius:50%"></span>films · region and era are in the filter drawer</span>`) + `<span><span class="sw" style="background:${GREY};border-radius:50%"></span>fears</span>`; };
   const zoom = d3.zoom().scaleExtent([.4, 7]).on("zoom", ev => { root.attr("transform", ev.transform); k = ev.transform.k; if (!hoverOn) labels(); });
   svg.call(zoom);
-  const fit = (dur) => { const vis = nodes.filter(n => visible.has(n.id)); if (!vis.length) return;
+  const fit = (dur) => { const vis = nodes.filter(n => visible.has(n.id) && !(famMode() && n.kind === "fear")); if (!vis.length) return;
     const wide = W > 900 && document.getElementById("ghero"), aw = wide ? W * .6 : W, ox = wide ? W * .18 : 0;
-    const [x0, x1] = d3.extent(vis, n => n.x), [y0, y1] = d3.extent(vis, n => n.y), s = Math.min(3, .92 / Math.max((x1 - x0 + 60) / aw, (y1 - y0 + 60) / H));
-    const t = d3.zoomIdentity.translate(ox, 0).scale(s).translate(-(x0 + x1) / 2, -(y0 + y1) / 2);
+    const [x0, x1] = d3.extent(vis, n => n.x), [y0, y1] = d3.extent(vis, n => n.y), pad = famMode() ? 150 : 60, s = Math.min(3, .92 / Math.max((x1 - x0 + pad * 2.2) / aw, (y1 - y0 + pad) / H));
+    const t = d3.zoomIdentity.translate(ox, 0).scale(famMode() ? s * .86 : s).translate(-(x0 + x1) / 2, -(y0 + y1) / 2);
     (dur && !matchMedia("(prefers-reduced-motion: reduce)").matches ? svg.transition().duration(dur) : svg).call(zoom.transform, t); };
   document.getElementById("zin").onclick = () => svg.call(zoom.scaleBy, 1.4);
   document.getElementById("zout").onclick = () => svg.call(zoom.scaleBy, 1 / 1.4);
@@ -964,11 +992,26 @@ function buildGraph() {
     const i = (flashes++ * 5 + n.i) % n.f.st, pos = n.f.st === 1 ? "0 0" : `0 ${(i / (n.f.st - 1)) * 100}%`;
     flash.style.backgroundImage = `url('stills/${n.id}.jpg')`; flash.style.backgroundSize = `100% ${n.f.st * 100}%`; flash.style.backgroundPosition = pos;
     void flash.offsetWidth; flash.classList.add("on"); };
-  const rest = () => { hoverOn = null; stage.classList.remove("hov"); flash?.classList.remove("on"); eSel.attr("stroke", "var(--mute)").attr("stroke-opacity", .22);
+  // families: point at a name to see what binds it; click to keep it open (and follow its fears)
+  let pinned = null;
+  const famInfo = f => { const vis = f.films.filter(n => visible.has(n.id)), c = FAMC[f.j % FAMC.length];
+    return `<div class="m" style="color:${c}">FAMILY · ${f.n} OF ALL 497 FILMS</div><div class="t" style="color:${c}">${esc(f.name)}</div>
+      <div class="m" style="margin-top:10px">WHAT BINDS IT · SHARE IN THE FAMILY VS ALL FILMS</div><div class="r" style="margin-top:4px">${f.fears.map(([l, x, a, b]) => `<button class="linkish" type="button" data-fl="${l}|${esc(x)}"><span style="color:${LENSC[l]}">●</span> ${esc(x)}</button> <span style="color:var(--mute)">${Math.round(a * 100)}% vs ${Math.round(b * 100)}%</span>`).join("<br>")}</div>
+      ${f.arch.length ? `<div class="r" style="color:var(--mute)">Archetypes inside: ${f.arch.map(([a, x]) => `${esc(a)} ${Math.round(x * 100)}%`).join(", ")}</div>` : ""}
+      <div class="r">${vis.length ? `Here: ${vis.slice(0, 6).map(n => esc(n.f.t)).join(", ")}${vis.length > 6 ? ` and ${vis.length - 6} more` : ""}.` : "None of its films match the filters."}</div>${pinned === f ? "" : `<div class="m" style="margin-top:6px">CLICK TO KEEP OPEN</div>`}`; };
+  const showFam = f => { hoverOn = f; stage.classList.add("hov"); flash?.classList.remove("on");
+    nSel.classed("hi", n => n.kind === "film" && famOf(n) === f.j); fSel.classed("hi", g => g === f); lSel.attr("display", "none"); info.innerHTML = famInfo(f); };
+  info.addEventListener("click", ev => { const b = ev.target.closest("[data-fl]"); if (b) { const [l, x] = b.dataset.fl.split("|"); go(fearHash(l, x)); } });
+  const rest = () => { if (pinned && famMode()) { showFam(pinned); return; } hoverOn = null; stage.classList.remove("hov"); flash?.classList.remove("on"); eSel.attr("stroke", "var(--mute)").attr("stroke-opacity", .22);
     stage.querySelectorAll(".hi").forEach(x => x.classList.remove("hi"));
     const vf = films.filter(n => visible.has(n.id)).length, vx = fears.filter(n => visible.has(n.id)).length;
-    info.innerHTML = `<div class="m">${vf} FILMS · ${vx} FEARS</div><div class="r" style="color:var(--mute)">${state.primary === "films" ? "Point at a film to see the fears it carries." : "Point at a fear to see the films that carry it."}</div>`; labels(); };
-  const hover = n => { hoverOn = n; stage.classList.add("hov"); showStill(n);
+    info.innerHTML = famMode() ? `<div class="m">${vf} FILMS · ${fam.length} FAMILIES</div><div class="r" style="color:var(--mute)">Point at a family to see what binds it.</div>`
+      : `<div class="m">${vf} FILMS · ${vx} FEARS</div><div class="r" style="color:var(--mute)">${state.primary === "films" ? "Point at a film to see the fears it carries." : "Point at a fear to see the films that carry it."}</div>`; labels(); };
+  const hover = n => { if (famMode()) { if (n.kind !== "film") return; hoverOn = n; stage.classList.add("hov"); showStill(n);
+      const f = fam[famOf(n)]; nSel.classed("hi", m => m === n || (f && m.kind === "film" && famOf(m) === f.j)); fSel.classed("hi", g => g === f);
+      lSel.classed("hi", m => m === n).attr("display", m => m === n ? null : "none");
+      info.innerHTML = `<div class="t">${esc(n.f.t)} <span style="color:var(--mute);font-size:.7em">(${n.f.y})</span></div><div class="m">${esc(n.f.r)} · ${esc(n.f.c)}</div>${f ? `<div class="r">Family: <span style="color:${FAMC[f.j % FAMC.length]}">${esc(f.name)}</span></div>` : ""}`; return; }
+    hoverOn = n; stage.classList.add("hov"); showStill(n);
     const nb = new Set([n.id, ...(n.kind === "film" ? n.fears : n.films).filter(m => visible.has(m.id)).map(m => m.id)]);
     nSel.classed("hi", m => nb.has(m.id)); lSel.classed("hi", m => nb.has(m.id)).attr("display", m => nb.has(m.id) ? null : "none");
     eSel.classed("hi", e => e.source === n || e.target === n).attr("stroke", e => e.source === n || e.target === n ? LENSC[e.lens] : "var(--mute)").attr("stroke-opacity", e => e.source === n || e.target === n ? .85 : .06);
@@ -984,6 +1027,10 @@ function buildGraph() {
   nSel.on("mouseenter focus", (ev, n) => hover(n)).on("mouseleave blur", () => rest())
     .on("click", (ev, n) => open(n)).on("keydown", (ev, n) => { if (ev.key === "Enter") open(n); });
   const open = n => { if (n.kind === "film") go(n.id); else go(fearHash(n.lens, n.name)); };
+  fSel.on("mouseenter focus", (ev, f) => { if (!pinned) showFam(f); }).on("mouseleave blur", () => { if (!pinned) rest(); })
+    .on("click", (ev, f) => { ev.stopPropagation(); pinned = pinned === f ? null : f; pinned ? showFam(f) : rest(); })
+    .on("keydown", (ev, f) => { if (ev.key === "Enter") { pinned = pinned === f ? null : f; pinned ? showFam(f) : rest(); } });
+  svg.on("click", ev => { if (pinned && !ev.target.closest(".gn,.gfaml")) { pinned = null; rest(); } });
   let ready = false, fitT;
   const filter = (m) => { hits = m; const q = state.q.trim().toLowerCase();
     const okFilm = n => (!state.region.size || state.region.has(n.f.r)) && (!state.era.size || state.era.has(eraOf(n.f.y)));
@@ -993,14 +1040,14 @@ function buildGraph() {
     nSel.attr("display", n => visible.has(n.id) ? null : "none");
     eSel.attr("display", e => visible.has(e.source.id) && visible.has(e.target.id) ? null : "none"); rest();
     if (ready) { clearTimeout(fitT); fitT = setTimeout(() => fit(450), 120); } else fit(0); };
-  const arrange = () => { const to = state.arrange === "time" ? ["tx", "ty"] : ["nx", "ny"];
+  const arrange = () => { const to = posKey();
     nodes.forEach(n => { n.x = n[to[0]]; n.y = n[to[1]]; }); drawAxis();
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) place();
     else { eSel.transition().duration(500).attr("x1", e => e.source.x).attr("y1", e => e.source.y).attr("x2", e => e.target.x).attr("y2", e => e.target.y);
       nSel.transition().duration(500).attr("transform", n => `translate(${n.x},${n.y})`); lSel.transition().duration(500).attr("x", n => n.x).attr("y", n => n.y - rOf(n) - 5); }
-    fit(500); };
+    fit(500); labels(); };
   drawAxis(); place(); emphasis(); fit(0);
-  G = { filter, arrange, recolour: emphasis, emphasis };
+  G = { filter, arrange, recolour: emphasis, emphasis, mode: () => { pinned = null; arrange(); emphasis(); } };
   setTimeout(() => ready = true, 0);
 }
 
