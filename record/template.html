@@ -560,7 +560,7 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;
 const fmt = n => n == null ? "" : n >= 1e6 ? "$" + (n / 1e6).toFixed(n >= 1e7 ? 0 : 1) + "m" : "$" + Math.round(n / 1e3) + "k";
 const app = document.getElementById("app");
 const cache = {};
-const state = { q: "", region: new Set(), era: new Set(), has: new Set(), sort: "year", view: "graph", pcomp: "time", primary: "fears", glenses: new Set(["nightmares", "archetypes", "threat", "origin", "wants"]), lens: "nightmares", psort: "rising", psel: null, arrange: "net", links: new Set(["p","a","e"]), colour: "plain" };
+const state = { q: "", region: new Set(), era: new Set(), has: new Set(), sort: "year", view: "graph", pcomp: "time", primary: "fears", glenses: new Set(["nightmares", "archetypes"]), lens: "nightmares", psort: "rising", psel: null, arrange: "net", links: new Set(["p","a","e"]), colour: "plain" };
 try { const s = JSON.parse(localStorage.getItem("bl-r1") || "{}"); if (s.sort) state.sort = s.sort; } catch (e) {}
 
 function eraOf(y) { return ERAS.find(e => y >= e[1] && y <= e[2])[0]; }
@@ -889,7 +889,7 @@ function drawEgo(el, spec, info, list) {
 let G = null;
 const ERA_C = ["#4a3f37", "#6e6054", "#978672", "#c2b39c", "#efe6d4"];
 const REG_C = {"North America":"#e9e1d1","Continental Europe":"#3fb39a","UK & Ireland":"#d1a23c","East Asia":"#cf3a2e","Southeast Asia":"#c0609a","Latin America":"#e07a45","South Asia":"#e8c44e","Australia & NZ":"#6fa3b8","Middle East & North Africa":"#9d8ad0","Sub-Saharan Africa":"#86b35a"};
-const LENSC = { nightmares: "#f3ead8", archetypes: "#cf3a2e", threat: "#ef8a80", origin: "#ec8a3c", wants: "#e8c44e", wrong: "#9cc74a", trigger: "#3fb39a", rules: "#4fa3d8", who_suffers: "#6f7fe6", ending: "#a77ad6", images: "#d066a8" };
+const LENSC = { nightmares: "#cf3a2e", archetypes: "#e8c44e", threat: "#ec8a3c", origin: "#9cc74a", wants: "#3fb39a", wrong: "#4fa3d8", trigger: "#6f7fe6", rules: "#a77ad6", who_suffers: "#d066a8", ending: "#ff8fb8", images: "#7fd1c7" };
 const LENSN = { nightmares: "Nightmares", threat: "What threatens", origin: "Where it comes from", wants: "What it wants", wrong: "The wrong underneath", trigger: "What sets it off", rules: "Rules", who_suffers: "Who suffers", ending: "How it ends", images: "Symbols", archetypes: "Archetypes" };
 const GREY = "#4a413b";
 function buildGraph() {
@@ -931,7 +931,7 @@ function buildGraph() {
   // films sized by how many of the shown fears they carry, as fears are sized by how many films carry them
   const rOf = n => state.primary === "films" ? (n.kind === "film" ? n.fr : 2.6) : (n.kind === "fear" ? n.r : 1.6 + n.fr * .2);
   const fillOf = n => { const prim = (state.primary === "films") === (n.kind === "film");
-    if (!prim) return GREY;
+    if (!prim) return n.kind === "film" ? "var(--ink)" : GREY;
     if (n.kind === "fear") return LENSC[n.lens];
     return state.colour === "era" ? ERA_C[ERAS.findIndex(e => e[0] === eraOf(n.f.y))] : state.colour === "still" ? (n.f.tone || "var(--soft)") : "var(--ink)"; };
   const ring = n => { const prim = (state.primary === "films") === (n.kind === "film"); if (!prim) return ["none", 0];
@@ -961,7 +961,7 @@ function buildGraph() {
     lSel.attr("fill", n => n.kind === "fear" && state.primary === "fears" ? LENSC[n.lens] : "var(--ink)").attr("y", n => n.y - rOf(n) - 5);
     nSel.filter(n => (state.primary === "films") === (n.kind === "film")).raise(); labels(); legend(); rest(); };
   const legend = () => { const key = document.getElementById("gkey"); if (!key) return;
-    key.innerHTML = state.primary === "fears" ? LENS.filter(([kk]) => state.glenses.has(kk)).map(([kk, nn]) => `<span><span class="sw" style="background:${LENSC[kk]};border-radius:50%"></span>${nn}</span>`).join("") + `<span><span class="sw" style="background:${GREY};border-radius:50%"></span>films</span>`
+    key.innerHTML = state.primary === "fears" ? LENS.filter(([kk]) => state.glenses.has(kk)).map(([kk, nn]) => `<span><span class="sw" style="background:${LENSC[kk]};border-radius:50%"></span>${nn}</span>`).join("") + `<span><span class="sw" style="background:var(--ink);border-radius:50%"></span>films</span>`
       : (state.colour === "region" ? REGIONS.map(r => `<span><span class="sw" style="background:var(--ink);border-radius:50%;box-shadow:0 0 0 2px ${REG_C[r]}"></span>${esc(r)}</span>`).join("") : state.colour === "era" ? ERAS.map(([e], i) => `<span><span class="sw" style="background:${ERA_C[i]};border-radius:50%"></span>${e}</span>`).join("") : state.colour === "still" ? `<span>Films are filled with the colour of their stills.</span>` : `<span><span class="sw" style="background:var(--ink);border-radius:50%"></span>films · region and era are in the filter drawer</span>`) + `<span><span class="sw" style="background:${GREY};border-radius:50%"></span>fears</span>`; };
   const zoom = d3.zoom().scaleExtent([.4, 7]).on("zoom", ev => { root.attr("transform", ev.transform); k = ev.transform.k; if (!hoverOn) labels(); });
   svg.call(zoom);
