@@ -257,7 +257,7 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .viewtoggle button{all:unset;cursor:pointer;padding:5px 16px;font-size:14.5px}
 .viewtoggle button[aria-pressed="true"]{background:var(--ink);color:var(--on-ink)}
 .viewtoggle button:focus-visible{outline:2px solid var(--red);outline-offset:2px}
-.gstage{position:relative;height:min(78vh,820px);min-height:520px;border-bottom:1px solid var(--hair);overflow:hidden}
+.gstage{position:relative;height:min(82vh,880px);min-height:540px;border-bottom:1px solid var(--hair);overflow:hidden}
 .gstage svg{display:block;width:100%;height:100%;cursor:grab;touch-action:none}
 .gstage svg:active{cursor:grabbing}
 .gstage text{font-family:var(--display);font-size:13px;fill:var(--ink);paint-order:stroke;stroke:var(--paper);stroke-width:4px;stroke-linejoin:round;pointer-events:none}
@@ -293,6 +293,28 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .about .key{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
 .about .key .bar10{display:inline-grid;height:14px}
 @media (max-width:980px){ .about .cols{grid-template-columns:1fr} }
+
+/* filters drawer */
+.filterbtn{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--ink);padding:7px 14px;font-size:15px;background:var(--paper)}
+.filterbtn:hover{background:var(--soft)}
+.filterbtn:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.filterbtn .k{font-family:var(--mono);font-size:12px;background:var(--ink);color:var(--on-ink);padding:0 6px;line-height:18px}
+.filterbtn .k:empty{display:none}
+.drawer{position:fixed;left:0;top:0;bottom:0;width:min(360px,88vw);background:var(--paper);border-right:1px solid var(--ink);box-shadow:0 0 0 100vmax rgba(23,17,14,0);z-index:20;padding:calc(18px + env(safe-area-inset-top,0px)) 22px calc(24px + env(safe-area-inset-bottom,0px));overflow-y:auto;transform:translateX(-102%);transition:transform .22s ease, box-shadow .22s ease}
+.drawer.open{transform:none;box-shadow:0 0 0 100vmax rgba(23,17,14,.08)}
+.dhead{display:flex;justify-content:space-between;align-items:baseline;border-bottom:3px solid var(--ink);padding-bottom:8px}
+.dhead h2{font-family:var(--display);font-weight:400;font-size:26px;margin:0}
+.dnote{font-size:13.5px;color:var(--mute);margin:10px 0 0}
+.drawer section{margin-top:20px}
+.drawer h3{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:0 0 8px}
+.drawer .chips{gap:6px}
+.dfoot{margin-top:26px;border-top:1px solid var(--rule);padding-top:14px}
+.active{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+.pill{all:unset;cursor:pointer;font-size:13px;border:1px solid var(--ink);padding:1px 8px;display:inline-flex;gap:6px;align-items:center}
+.pill:hover{background:var(--soft)}
+.pill:focus-visible{outline:2px solid var(--red)}
+.pill b{font-weight:400;font-family:var(--mono);font-size:12px}
+@media (prefers-reduced-motion:reduce){ .drawer{transition:none} }
 @media (max-width:980px){
   .row{grid-template-columns:96px 46px minmax(0,1fr);gap:12px}
   .thumb{width:96px}
@@ -344,7 +366,7 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;
 const fmt = n => n == null ? "" : n >= 1e6 ? "$" + (n / 1e6).toFixed(n >= 1e7 ? 0 : 1) + "m" : "$" + Math.round(n / 1e3) + "k";
 const app = document.getElementById("app");
 const cache = {};
-const state = { q: "", region: new Set(), era: new Set(), has: new Set(), sort: "year", view: "list", arrange: "net", links: new Set(["p","a","e"]), colour: "region" };
+const state = { q: "", region: new Set(), era: new Set(), has: new Set(), sort: "year", view: "graph", arrange: "net", links: new Set(["p","a","e"]), colour: "region" };
 try { const s = JSON.parse(localStorage.getItem("bl-r1") || "{}"); if (s.sort) state.sort = s.sort; } catch (e) {}
 
 function eraOf(y) { return ERAS.find(e => y >= e[1] && y <= e[2])[0]; }
@@ -394,17 +416,25 @@ function renderIndex() {
   </div>
   <div class="threads"><span class="lab">START WITH A FEAR</span>${THREADS.map(([name, q]) => { const n = F.filter(f => f.v.some(v => v.includes(q))).length; return n ? `<button class="thread" type="button" data-thread="${esc(q)}">${esc(name)}<span class="k">${n}</span></button>` : ""; }).join("")}</div>
   <div class="controls">
-    <div class="search"><input id="q" type="search" placeholder="Search a fear, an image or a film. Try mirror, drowned, Get Out" value="${esc(state.q)}" aria-label="Search fears, images and films">
-      <span class="viewtoggle" role="group" aria-label="View"><button type="button" data-view="list" aria-pressed="${state.view === "list"}">List</button><button type="button" data-view="graph" aria-pressed="${state.view === "graph"}">Graph</button></span>
-      ${state.view === "list" ? `<span class="chips"><span class="lab">SORT</span>${[["year","Year"],["title","Title"],["n","Most entries"]].map(([k, n]) => `<button class="chip" type="button" data-sort="${k}" aria-pressed="${state.sort === k}">${n}</button>`).join("")}</span>` : ""}</div>
-    <div class="chips"><span class="lab">REGION</span>${REGIONS.map(r => `<button class="chip" type="button" data-region="${esc(r)}" aria-pressed="${state.region.has(r)}">${esc(r)}<span class="k">${F.filter(f => f.r === r).length}</span></button>`).join("")}</div>
-    <div class="chips"><span class="lab">ERA</span>${ERAS.map(([e]) => `<button class="chip" type="button" data-era="${e}" aria-pressed="${state.era.has(e)}">${e}<span class="k">${F.filter(f => eraOf(f.y) === e).length}</span></button>`).join("")}</div>
-    ${state.view === "graph" ? `<div class="chips"><span class="lab">ARRANGE</span>${[["net","By connection"],["time","Through time"]].map(([k, n]) => `<button class="chip" type="button" data-arrange="${k}" aria-pressed="${state.arrange === k}">${n}</button>`).join("")}
-      <span class="sep" style="width:1px;height:20px;background:var(--hair);margin-inline:8px"></span><span class="lab">LINKS</span>${[["p","People"],["a","Archetypes"],["e","Story elements"]].map(([k, n]) => `<button class="chip" type="button" data-link="${k}" aria-pressed="${state.links.has(k)}">${n}</button>`).join("")}
-      <span class="sep" style="width:1px;height:20px;background:var(--hair);margin-inline:8px"></span><span class="lab">COLOUR</span>${[["region","Region"],["era","Era"],["still","Still colour"]].map(([k, n]) => `<button class="chip" type="button" data-colour="${k}" aria-pressed="${state.colour === k}">${n}</button>`).join("")}</div>` : ""}
-    <div class="chips"><span class="lab">HAS</span>${[["st","Stills"],["sp","Screenplay"],["sc","Jump scares"],["osub","Original-language subtitles"],["pl","Pilot lineage"]].map(([k, n]) => `<button class="chip" type="button" data-has="${k}" aria-pressed="${state.has.has(k)}">${n}<span class="k">${counts(k)}</span></button>`).join("")}</div>
+    <div class="search">
+      <button class="filterbtn" type="button" id="openf" aria-expanded="false" aria-controls="drawer">Filters<span class="k" id="fcount"></span></button>
+      <input id="q" type="search" placeholder="Search a fear, an image or a film. Try mirror, drowned, Get Out" value="${esc(state.q)}" aria-label="Search fears, images and films">
+      <span class="viewtoggle" role="group" aria-label="View"><button type="button" data-view="graph" aria-pressed="${state.view === "graph"}">Graph</button><button type="button" data-view="list" aria-pressed="${state.view === "list"}">List</button></span>
+    </div>
   </div>
-  <div class="status"><span id="count"></span>
+  <aside class="drawer" id="drawer" aria-label="Filters" inert>
+    <div class="dhead"><h2>Filters</h2><button class="linkish" type="button" id="closef">Close</button></div>
+    <p class="dnote">Films that don't match fade from the ${state.view === "graph" ? "graph" : "list"} as you choose.</p>
+    <section><h3>Region</h3><div class="chips">${REGIONS.map(r => `<button class="chip" type="button" data-region="${esc(r)}" aria-pressed="${state.region.has(r)}">${esc(r)}<span class="k">${F.filter(f => f.r === r).length}</span></button>`).join("")}</div></section>
+    <section><h3>Era</h3><div class="chips">${ERAS.map(([e]) => `<button class="chip" type="button" data-era="${e}" aria-pressed="${state.era.has(e)}">${e}<span class="k">${F.filter(f => eraOf(f.y) === e).length}</span></button>`).join("")}</div></section>
+    <section><h3>Has</h3><div class="chips">${[["st","Stills"],["sp","Screenplay"],["sc","Jump scares"],["osub","Original-language subtitles"],["pl","Pilot lineage"]].map(([k, n]) => `<button class="chip" type="button" data-has="${k}" aria-pressed="${state.has.has(k)}">${n}<span class="k">${counts(k)}</span></button>`).join("")}</div></section>
+    ${state.view === "graph" ? `<section><h3>Arrange</h3><div class="chips">${[["net","By connection"],["time","Through time"]].map(([k, n]) => `<button class="chip" type="button" data-arrange="${k}" aria-pressed="${state.arrange === k}">${n}</button>`).join("")}</div></section>
+    <section><h3>Links</h3><div class="chips">${[["p","People"],["a","Archetypes"],["e","Story elements"]].map(([k, n]) => `<button class="chip" type="button" data-link="${k}" aria-pressed="${state.links.has(k)}">${n}</button>`).join("")}</div></section>
+    <section><h3>Colour</h3><div class="chips">${[["region","Region"],["era","Era"],["still","Still colour"]].map(([k, n]) => `<button class="chip" type="button" data-colour="${k}" aria-pressed="${state.colour === k}">${n}</button>`).join("")}</div></section>`
+    : `<section><h3>Sort</h3><div class="chips">${[["year","Year"],["title","Title"],["n","Most entries"]].map(([k, n]) => `<button class="chip" type="button" data-sort="${k}" aria-pressed="${state.sort === k}">${n}</button>`).join("")}</div></section>`}
+    <div class="dfoot"><button class="btn" type="button" id="clearf">Clear filters</button></div>
+  </aside>
+  <div class="status"><span class="active"><span id="count"></span><span id="pills"></span></span>
     ${state.view === "graph" ? `<span class="key"><span><span class="sw" style="background:var(--ink);width:14px;height:2px"></span>people</span><span><span class="sw" style="background:var(--ochre);width:14px;height:2px"></span>archetype</span><span><span class="sw" style="background:var(--teal);width:14px;height:2px"></span>story element</span><span>thicker line, closer kin · point at a film to see what binds it</span></span>` : `<span class="key"><span>the bar shows how much of each story is mapped</span></span>`}</div>
   ${state.view === "graph" ? `<div class="gstage" id="gstage"><div class="ginfo" id="ginfo"></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
     <div class="keyline" id="gkey" style="margin-top:10px"></div>
@@ -418,7 +448,14 @@ function renderIndex() {
   app.querySelectorAll("[data-region]").forEach(b => b.onclick = () => toggle(state.region, b.dataset.region, b));
   app.querySelectorAll("[data-era]").forEach(b => b.onclick = () => toggle(state.era, b.dataset.era, b));
   app.querySelectorAll("[data-has]").forEach(b => b.onclick = () => toggle(state.has, b.dataset.has, b));
-  app.querySelectorAll("[data-view]").forEach(b => b.onclick = () => { if (b.dataset.view !== state.view) go(b.dataset.view === "graph" ? "graph" : ""); });
+  app.querySelectorAll("[data-view]").forEach(b => b.onclick = () => { if (b.dataset.view !== state.view) go(b.dataset.view === "list" ? "list" : ""); });
+  const drawer = document.getElementById("drawer"), openf = document.getElementById("openf");
+  const setDrawer = open => { drawer.classList.toggle("open", open); open ? drawer.removeAttribute("inert") : drawer.setAttribute("inert", ""); openf.setAttribute("aria-expanded", open);
+    if (open) document.getElementById("closef").focus(); else openf.focus(); };
+  openf.onclick = () => setDrawer(!drawer.classList.contains("open"));
+  document.getElementById("closef").onclick = () => setDrawer(false);
+  document.onkeydown = e => { if (e.key === "Escape" && drawer.classList.contains("open")) setDrawer(false); };
+  document.getElementById("clearf").onclick = () => { state.region.clear(); state.era.clear(); state.has.clear(); drawer.querySelectorAll("[data-region],[data-era],[data-has]").forEach(b => b.setAttribute("aria-pressed", "false")); renderRows(); };
   app.querySelectorAll("[data-arrange]").forEach(b => b.onclick = () => { state.arrange = b.dataset.arrange; app.querySelectorAll("[data-arrange]").forEach(x => x.setAttribute("aria-pressed", x === b)); G && G.arrange(); });
   app.querySelectorAll("[data-colour]").forEach(b => b.onclick = () => { state.colour = b.dataset.colour; app.querySelectorAll("[data-colour]").forEach(x => x.setAttribute("aria-pressed", x === b)); G && G.recolour(); });
   app.querySelectorAll("[data-link]").forEach(b => b.onclick = () => { const k = b.dataset.link; state.links.has(k) ? state.links.delete(k) : state.links.add(k); b.setAttribute("aria-pressed", state.links.has(k)); renderRows(); });
@@ -434,6 +471,12 @@ function renderRows() {
   const s = state.sort;
   list.sort((a, b) => s === "title" ? a[0].t.localeCompare(b[0].t) : s === "n" ? b[0].n - a[0].n : a[0].y - b[0].y || a[0].t.localeCompare(b[0].t));
   document.getElementById("count").textContent = `${list.length} of 100 films`;
+  const act = [...[...state.region].map(v => ["region", v]), ...[...state.era].map(v => ["era", v]), ...[...state.has].map(v => ["has", v])];
+  const HASN = { st: "Stills", sp: "Screenplay", sc: "Jump scares", osub: "Original-language subtitles", pl: "Pilot lineage" };
+  const fc = document.getElementById("fcount"); if (fc) fc.textContent = act.length || "";
+  const pills = document.getElementById("pills");
+  if (pills) { pills.innerHTML = act.map(([k, v]) => `<button class="pill" type="button" data-pk="${k}" data-pv="${esc(v)}" aria-label="Remove ${esc(k === "has" ? HASN[v] : v)}">${esc(k === "has" ? HASN[v] : v)} <b>×</b></button>`).join("");
+    pills.querySelectorAll(".pill").forEach(b => b.onclick = () => { state[b.dataset.pk].delete(b.dataset.pv); document.querySelector(`[data-${b.dataset.pk}="${CSS.escape(b.dataset.pv)}"]`)?.setAttribute("aria-pressed", "false"); renderRows(); }); }
   if (state.view === "graph") { G && G.filter(new Map(list.map(([f, h]) => [f.id, h]))); return; }
   const L = document.getElementById("ledger");
   if (!list.length) { L.innerHTML = `<li class="empty">No films match. Clear a filter or try another word.</li>`; return; }
@@ -535,7 +578,9 @@ function buildGraph() {
   const edgeOn = e => visible.has(e.source.id) && visible.has(e.target.id) && [...e.types].some(t => state.links.has(t));
   const filter = (m) => { hits = m; visible = new Set(m.keys());
     nSel.attr("display", n => visible.has(n.id) ? null : "none");
-    eSel.attr("display", e => edgeOn(e) ? null : "none"); labels(); rest(); };
+    eSel.attr("display", e => edgeOn(e) ? null : "none"); labels(); rest();
+    if (ready) { clearTimeout(fitT); fitT = setTimeout(() => fit(450), 120); } };
+  let ready = false, fitT;
   const arrange = () => { const to = state.arrange === "time" ? ["tx", "ty"] : ["nx", "ny"];
     nodes.forEach(n => { n.x = n[to[0]]; n.y = n[to[1]]; }); drawAxis();
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) place();
@@ -544,6 +589,7 @@ function buildGraph() {
     fit(500); };
   recolour(); drawAxis(); place(); fit(0); rest();
   G = { filter, arrange, recolour };
+  setTimeout(() => ready = true, 0);
 }
 
 /* ---------- record ---------- */
@@ -884,16 +930,16 @@ async function renderFilm(id) {
   if (!f) { location.hash = ""; return; }
   document.getElementById("crumb").textContent = `${f.t} · ${f.y} · ${f.c}`;
   document.title = `${f.t} · Bloodline Record`;
-  app.innerHTML = `<div class="nav"><button class="linkish" type="button" id="back">${state.view === "graph" ? "Back to the graph" : "All 100 films"}</button><span class="tag">loading</span></div>`;
+  app.innerHTML = `<div class="nav"><button class="linkish" type="button" id="back">${state.view === "list" ? "Back to the list" : "Back to the graph"}</button><span class="tag">loading</span></div>`;
   let d;
   try { d = await load(id); } catch (e) {
-    app.innerHTML = `<div class="nav"><button class="linkish" type="button" id="back">${state.view === "graph" ? "Back to the graph" : "All 100 films"}</button></div><p class="empty">This film's record didn't load. Reload the page to try again.</p>`;
-    document.getElementById("back").onclick = () => go(state.view === "graph" ? "graph" : ""); return;
+    app.innerHTML = `<div class="nav"><button class="linkish" type="button" id="back">${state.view === "list" ? "Back to the list" : "Back to the graph"}</button></div><p class="empty">This film's record didn't load. Reload the page to try again.</p>`;
+    document.getElementById("back").onclick = () => go(state.view === "list" ? "list" : ""); return;
   }
   if (location.hash.slice(1) !== id) return;
   const prev = F[(i + F.length - 1) % F.length], next = F[(i + 1) % F.length];
   app.innerHTML = `
-  <div class="nav"><button class="linkish" type="button" id="back">${state.view === "graph" ? "Back to the graph" : "All 100 films"}</button>
+  <div class="nav"><button class="linkish" type="button" id="back">${state.view === "list" ? "Back to the list" : "Back to the graph"}</button>
     <span><button class="linkish" type="button" data-go="${prev.id}">Previous: ${esc(prev.t)}</button> · <button class="linkish" type="button" data-go="${next.id}">Next: ${esc(next.t)}</button></span></div>
   <div class="head">
     <p class="overline">${esc(d.region)} · ${esc(d.countries.join(", ") || d.country)} · ${d.year}</p>
@@ -923,7 +969,7 @@ async function renderFilm(id) {
     <aside class="side">${side(d, f)}</aside>
   </div>
   <p class="foot">A first reading by Claude of the film’s plot, subtitles and screenplay, not yet reviewed. <button class="linkish" type="button" id="foot-about">How this record was made</button>.</p>`;
-  document.getElementById("back").onclick = () => go(state.view === "graph" ? "graph" : "");
+  document.getElementById("back").onclick = () => go(state.view === "list" ? "list" : "");
   document.getElementById("foot-about").onclick = () => document.getElementById("about-link").click();
   app.querySelectorAll("[data-go]").forEach(b => b.onclick = () => go(b.dataset.go));
   const frame = document.getElementById("frame");
@@ -946,7 +992,7 @@ async function renderFilm(id) {
 function cap(s) { s = esc(s); return s.charAt(0).toUpperCase() + s.slice(1); }
 function route() { window.onresize = null;
   routeInner(); }
-function routeInner() { const id = location.hash.slice(1); if (id && F.some(f => f.id === id)) { G = null; renderFilm(id); } else { state.view = id === "graph" ? "graph" : "list"; renderIndex(); } }
+function routeInner() { const id = location.hash.slice(1); if (id && F.some(f => f.id === id)) { G = null; renderFilm(id); } else { state.view = id === "list" ? "list" : "graph"; renderIndex(); } }
 document.getElementById("home").onclick = () => go("");
 document.getElementById("about-link").onclick = () => { const a = document.getElementById("about"); if (a) a.scrollIntoView({ block: "start" }); else { go(""); setTimeout(() => document.getElementById("about")?.scrollIntoView({ block: "start" }), 60); } };
 let grt; window.addEventListener("resize", () => { if (state.view !== "graph" || !document.getElementById("gstage")) return; clearTimeout(grt); grt = setTimeout(() => { buildGraph(); renderRows(); }, 200); });
