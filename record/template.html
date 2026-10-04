@@ -684,10 +684,10 @@ function aboutBlock() {
   return `<section class="about" id="about"><h2>About this record</h2><div class="cols">
     <div><h3>How it was made</h3>
       <p>We assembled an archive of 497 horror films from 44 countries, made between 1913 and 2025: every Wikipedia plot, English subtitles for 440 films, 116 screenplays, 6,184 stills and crowd-sourced jump-scare timings for 189. Each film was then machine-read across ten parts of its story: the threat, where it comes from, what it wants, the wrong underneath, what sets it off, its rules, who suffers, how it ends, its symbols and its turning points. That produced 18,195 story elements, each pinned to the line of plot or dialogue it came from.</p>
-      <p>Nothing was decided in advance. The 9,122 different ways these films describe their horrors were grouped from the bottom up into 231 fears, and every film was joined to every fear it carries. We then trained a graph neural network on those 11,485 links. Without being shown the archetypes, it found 12 nightmares: groups of films that share a mix of fears, cutting across decades and continents. Cast and crew come from Wikidata, stills from FILMGRAB, jump scares from Where's the Jump.</p></div>
+      <p>Nothing was decided in advance. The 9,122 different ways these films describe their horrors were grouped from the bottom up into 231 fears, and every film was joined to every fear it carries. We then trained a graph neural network on those 11,485 links. Without being shown the primal fears, it found 12 nightmares: groups of films that share a mix of fears, cutting across decades and continents. Cast and crew come from Wikidata, stills from FILMGRAB, jump scares from Where's the Jump.</p></div>
     <div><h3>What to keep in mind</h3>
       <p>This is a first reading and has not yet been checked by hand. The fears come from the films' own wording, so a few may still split or merge as the work is reviewed. The nightmares' names are ours, and the model learns from the same first reading, so it inherits its gaps.</p>
-      <p>The 27 archetypes are the one top-down lens: old story shapes, many with roots in folklore, set against each film to test them against what the films themselves show. The graph and film pages cover 100 films from the archive in full depth; the trends draw on all 497. 14 of the 100 have no stills.</p></div>
+      <p>The 27 primal fears are the one top-down lens: archetypal story shapes, many with roots in folklore, set against each film to test them against what the films themselves show. The graph and film pages cover 100 films from the archive in full depth; the trends draw on all 497. 14 of the 100 have no stills.</p></div>
     <div><h3>Reading the list</h3><div class="key">
       <span><span class="bar10" style="width:60px;display:inline-grid;grid-template-columns:repeat(3,1fr)"><i></i><i class="ns"></i><i class="no"></i></span> &nbsp;story mapped · not stated in the plot · nothing found</span>
       <span>${marks({ sub: 1, sp: 1, sc: 1, st: 1 })} &nbsp;plot · subtitles · screenplay · jump scares · stills</span></div>
@@ -696,7 +696,7 @@ function aboutBlock() {
 }
 
 /* ---------- trends ---------- */
-const LENS = [["nightmares", "Nightmares"], ["archetypes", "Archetypes"], ["threat", "What threatens"], ["origin", "Where it comes from"], ["wants", "What it wants"], ["wrong", "The wrong underneath"], ["trigger", "What sets it off"], ["rules", "Rules"], ["who_suffers", "Who suffers"], ["ending", "How it ends"], ["images", "Symbols"]];
+const LENS = [["nightmares", "Nightmares"], ["archetypes", "Primal fears"], ["threat", "What threatens"], ["origin", "Where it comes from"], ["wants", "What it wants"], ["wrong", "The wrong underneath"], ["trigger", "What sets it off"], ["rules", "Rules"], ["who_suffers", "Who suffers"], ["ending", "How it ends"], ["images", "Symbols"]];
 const LENSQ = { nightmares: "Which nightmare does it belong to?", threat: "What do we fear will come for us?", origin: "Where do we believe evil comes from?", wants: "What does the thing in the dark want?", wrong: "What buried wrong comes back?", trigger: "What opens the door?", rules: "What rules do we tell ourselves?", who_suffers: "Who does fear fall on?", ending: "How do we let the story end?", images: "What do we see when we're afraid?", archetypes: "Which old story is it retelling?" };
 const RSHORT = { "North America": "N. America", "Continental Europe": "Europe", "UK & Ireland": "UK & Ire.", "East Asia": "E. Asia", "Southeast Asia": "SE Asia", "Latin America": "Lat. Am.", "South Asia": "S. Asia", "Australia & NZ": "Aus. & NZ", "Middle East & North Africa": "MENA", "Sub-Saharan Africa": "Africa" };
 const PSORT = { time: [["rising", "Rising"], ["common", "Most common"], ["falling", "Fading"]], region: [["travel", "Travels furthest"], ["common", "Most common"], ["local", "Most local"]] };
@@ -743,7 +743,7 @@ function renderPatterns() {
     return `<span class="pdot${tot[c] < 10 ? " thin" : ""}" style="width:${px}px;height:${px}px;opacity:${.45 + .55 * Math.sqrt(sv / maxShare)}" title="${r.by[c]} of ${tot[c]} films${T ? " from " : " in "}${esc(c)} (${Math.round(sv * 100)}%)"></span>`; };
   const trend = r => !enough(r) ? `<span>too few</span>` : r.change >= 1.5 ? `<span class="up">rising</span>` : r.change <= .67 ? `<span>fading</span>` : `<span>steady</span>`;
   el.innerHTML = `<div>${head}
-      <p class="psub">${rows.length} ${d === "images" ? "families of symbol" : d === "nightmares" ? "nightmares" : d === "archetypes" ? "archetypes" : "fears"} across ${films.length} films. Each dot is the share of ${T ? "an era's" : "a region's"} films that carry it; read across a row to see how it ${T ? "rises and fades through the century" : "travels"}. Click a column to sort by it, or a name to open it.</p>
+      <p class="psub">${rows.length} ${d === "images" ? "families of symbol" : d === "nightmares" ? "nightmares" : d === "archetypes" ? "primal fears" : "fears"} across ${films.length} films. Each dot is the share of ${T ? "an era's" : "a region's"} films that carry it; read across a row to see how it ${T ? "rises and fades through the century" : "travels"}. Click a column to sort by it, or a name to open it.</p>
       <div class="mx"><table><thead><tr><th class="fl">${d === "images" ? "Symbol" : "Fear"}</th>${cols.map(c => `<th><button type="button" data-col="${esc(c)}" aria-pressed="${state.pcol === c}" title="Sort by ${esc(c)}">${esc(short(c))}${state.pcol === c ? " ↓" : ""}</button><span class="n">${tot[c]}</span></th>`).join("")}<th>${T ? "trend" : "travels"}</th></tr></thead>
       <tbody>${rows.map(r => `<tr><td class="fl"><button type="button" data-fear="${esc(r.fear)}" title="Open ${esc(r.fear)}">${esc(r.fear)}</button></td>${cols.map(c => `<td>${dot(r, c)}</td>`).join("")}<td class="tr">${T ? trend(r) : `${r.present} of ${cols.length}`}</td></tr>`).join("") || `<tr><td class="fl" colspan="${cols.length + 2}"><span class="fp">Nothing matches that search.</span></td></tr>`}</tbody></table></div></div>
 `;
@@ -804,7 +804,7 @@ async function renderFear(id) {
     all.forEach(f => (f.g.archetypes?.f || []).forEach(a => { at[a] = (at[a] || 0) + 1; if (has(f)) ac[a] = (ac[a] || 0) + 1; }));
     const rows = Object.entries(ac).map(([a, c]) => ({ a, c, inside: c / fs.length, caught: c / at[a] })).sort((x, y) => y.inside - x.inside).slice(0, 5);
     if (!rows.length) return "";
-    return `<div><h4>Against the archetypes</h4><div class="archvs">${rows.map(r => `<div class="avr"><a class="pl t" href="#${fearHash("archetypes", r.a)}" style="--uc:var(--lc)">${esc(r.a)}</a>
+    return `<div><h4>Against the primal fears</h4><div class="archvs">${rows.map(r => `<div class="avr"><a class="pl t" href="#${fearHash("archetypes", r.a)}" style="--uc:var(--lc)">${esc(r.a)}</a>
       <span class="bar"><i style="width:${r.inside * 100}%"></i></span><span class="bv">${pct(r.inside)} of this nightmare</span>
       <span class="bar b"><i style="width:${r.caught * 100}%"></i></span><span class="bv">${pct(r.caught)} of its ${at[r.a]} films fall here</span></div>`).join("")}</div></div>`; };
   app.innerHTML = `<div class="fpage" style="--lc:${lc}">
@@ -894,7 +894,7 @@ let G = null;
 const ERA_C = ["#4a3f37", "#6e6054", "#978672", "#c2b39c", "#efe6d4"];
 const REG_C = {"North America":"#e9e1d1","Continental Europe":"#3fb39a","UK & Ireland":"#d1a23c","East Asia":"#cf3a2e","Southeast Asia":"#c0609a","Latin America":"#e07a45","South Asia":"#e8c44e","Australia & NZ":"#6fa3b8","Middle East & North Africa":"#9d8ad0","Sub-Saharan Africa":"#86b35a"};
 const LENSC = { nightmares: "#cf3a2e", archetypes: "#ef8a80", threat: "#e8c44e", origin: "#9cc74a", wants: "#3fb39a", wrong: "#4fa3d8", trigger: "#6f7fe6", rules: "#a77ad6", who_suffers: "#d066a8", ending: "#ff8fb8", images: "#7fd1c7" };
-const LENSN = { nightmares: "Nightmares", threat: "What threatens", origin: "Where it comes from", wants: "What it wants", wrong: "The wrong underneath", trigger: "What sets it off", rules: "Rules", who_suffers: "Who suffers", ending: "How it ends", images: "Symbols", archetypes: "Archetypes" };
+const LENSN = { nightmares: "Nightmares", threat: "What threatens", origin: "Where it comes from", wants: "What it wants", wrong: "The wrong underneath", trigger: "What sets it off", rules: "Rules", who_suffers: "Who suffers", ending: "How it ends", images: "Symbols", archetypes: "Primal fears" };
 const GREY = "#4a413b";
 function buildGraph() {
   const stage = document.getElementById("gstage"); if (!stage || typeof d3 === "undefined") { if (stage) stage.innerHTML = `<p class="empty">The graph needs a script that didn't load. Reload the page to try again.</p>`; G = null; return; }
@@ -1038,7 +1038,7 @@ function buildGraph() {
     } else {
       const vf = n.films.filter(m => visible.has(m.id));
       info.innerHTML = `<div class="m" style="color:${LENSC[n.lens]}">${esc(LENSN[n.lens]).toUpperCase()}</div><div class="t">${esc(n.name)}</div>${n.def ? `<div class="r" style="font-style:italic;color:var(--mute)">${esc(n.def)}</div>` : ""}
-        <div class="r">${vf.length} of the 100 films: ${vf.slice(0, 8).map(m => esc(m.f.t)).join(", ")}${vf.length > 8 ? ` and ${vf.length - 8} more` : ""}.</div>${arch.size ? `<div class="r"><span style="color:${LENSC.archetypes}">Archetypes inside</span>: ${[...arch].sort((a, b) => b[1] - a[1]).slice(0, 6).map(([x, c]) => `${esc(x.name)} ${c}`).join(", ")}</div>` : ""}<div class="m" style="margin-top:6px">CLICK TO OPEN ${n.lens === "nightmares" ? "THIS NIGHTMARE" : "THIS FEAR"}</div>`;
+        <div class="r">${vf.length} of the 100 films: ${vf.slice(0, 8).map(m => esc(m.f.t)).join(", ")}${vf.length > 8 ? ` and ${vf.length - 8} more` : ""}.</div>${arch.size ? `<div class="r"><span style="color:${LENSC.archetypes}">Primal fears inside</span>: ${[...arch].sort((a, b) => b[1] - a[1]).slice(0, 6).map(([x, c]) => `${esc(x.name)} ${c}`).join(", ")}</div>` : ""}<div class="m" style="margin-top:6px">CLICK TO OPEN ${n.lens === "nightmares" ? "THIS NIGHTMARE" : "THIS FEAR"}</div>`;
     } };
   nSel.on("mouseenter focus", (ev, n) => hover(n)).on("mouseleave blur", () => rest())
     .on("click", (ev, n) => open(n)).on("keydown", (ev, n) => { if (ev.key === "Enter") open(n); });
@@ -1278,7 +1278,7 @@ const LT = { person: "var(--mute)", archetype: "var(--mute)", element: "var(--te
 const linkC = l => l.type === "element" ? (LENSC[l.dim] || "var(--mute)") : l.type === "archetype" ? LENSC.archetypes : "var(--mute)";
 function linkWords(l) {
   if (l.type === "person") return `${l.roles.join(" and ")}: <b>${esc(l.label)}</b>`;
-  if (l.type === "archetype") return `archetype: <b>${esc(l.label)}</b>`;
+  if (l.type === "archetype") return `primal fear: <b>${esc(l.label)}</b>`;
   return `${DN[l.dim].toLowerCase()}: <b>${esc(l.label)}</b>`;
 }
 function topKin(net) {  // keep the five closest films and only the links they use
@@ -1290,7 +1290,7 @@ function netBlock(d) {
   const n = d.net = topKin(d.net); if (!n || !n.films.length) return "";
   return `<div class="spinehead"><h3>Its bloodline</h3><p>${n.total} of the other films share something with ${esc(d.title)}. These are the top ${n.films.length}.</p></div>
     <div class="netwrap"><div><div class="netsvg" id="net"></div>
-      <div class="keyline">${[...new Set(n.links.filter(l => l.type === "element").map(l => l.dim))].filter(k => LENSN[k]).map(k => `<span><span class="sw" style="background:${LENSC[k]};border-radius:50%"></span>${esc(LENSN[k].toLowerCase())}</span>`).join("")}<span><span class="sw" style="background:${LENSC.archetypes};border-radius:50%"></span>archetype</span><span><svg width="12" height="12" aria-hidden="true"><path d="M6 0.5 L11.5 6 L6 11.5 L0.5 6Z" fill="var(--mute)"/></svg>people</span></div>
+      <div class="keyline">${[...new Set(n.links.filter(l => l.type === "element").map(l => l.dim))].filter(k => LENSN[k]).map(k => `<span><span class="sw" style="background:${LENSC[k]};border-radius:50%"></span>${esc(LENSN[k].toLowerCase())}</span>`).join("")}<span><span class="sw" style="background:${LENSC.archetypes};border-radius:50%"></span>primal fear</span><span><svg width="12" height="12" aria-hidden="true"><path d="M6 0.5 L11.5 6 L6 11.5 L0.5 6Z" fill="var(--mute)"/></svg>people</span></div>
       <p class="linkinfo" id="linkinfo" hidden></p></div>
       <ol class="why" id="why">${n.films.map((f, i) => { const x = F.find(z => z.id === f.id), mx = n.films[0].score;
         return `<li data-f="${f.id}"><span class="no">${i + 1}</span><div><button class="linkish t" type="button" data-go="${f.id}">${esc(x.t)}</button> <span class="tag">${x.y}</span><span class="strength" style="width:${Math.max(4, f.score / mx * 60)}px" title="link strength ${f.score}"></span>
@@ -1341,7 +1341,7 @@ function drawNet(d) {
     el.querySelectorAll(`[data-l="${CSS.escape(id)}"]`).forEach(x => x.classList.add("hi"));
     films.filter(f => f.via.includes(id)).forEach(f => { el.querySelector(`.nd[data-f="${f.id}"]`).classList.add("hi"); why.querySelector(`[data-f="${f.id}"]`)?.classList.add("hi"); });
     const others = l.all.map(o => idx[o]).filter(Boolean);
-    info.innerHTML = `${linkWords(l)}${l.fear ? ` <span class="tag" style="color:${l.type === "archetype" ? LENSC.archetypes : LENSC[l.dim]}">${l.type === "archetype" ? "click to open the archetype" : `part of “${esc(l.fear)}”, click to open`}</span>` : ""} is shared with ${others.length} of the 100: ${others.map(x => `<button class="linkish" type="button" data-go="${x.id}">${esc(x.t)}</button>`).join(", ")}.`;
+    info.innerHTML = `${linkWords(l)}${l.fear ? ` <span class="tag" style="color:${l.type === "archetype" ? LENSC.archetypes : LENSC[l.dim]}">${l.type === "archetype" ? "click to open the primal fear" : `part of “${esc(l.fear)}”, click to open`}</span>` : ""} is shared with ${others.length} of the 100: ${others.map(x => `<button class="linkish" type="button" data-go="${x.id}">${esc(x.t)}</button>`).join(", ")}.`;
     info.querySelectorAll("[data-go]").forEach(b => b.onclick = () => go(b.dataset.go)); };
   el.querySelectorAll(".nd[data-f]").forEach(g => { g.addEventListener("mouseenter", () => hiFilm(g.dataset.f)); g.addEventListener("focus", () => hiFilm(g.dataset.f));
     g.addEventListener("click", () => go(g.dataset.f)); g.addEventListener("keydown", e => { if (e.key === "Enter") go(g.dataset.f); }); });
@@ -1397,7 +1397,7 @@ function side(d, f) {
     ${fact("Countries", d.countries)}${fact("Languages", d.languages)}${fact("Set in", d.set_in)}${fact("Shot in", d.shot_in)}${fact("Subjects", d.subjects)}
     ${d.budget ? `<dt>Budget</dt><dd class="mono">${fmt(d.budget)}</dd>` : ""}${d.box ? `<dt>Box office</dt><dd class="mono">${fmt(d.box)}</dd>` : ""}
   </dl><p class="small" style="margin:10px 0 0">From Wikidata.${d.removed.length ? " " + d.removed.map(r => `${esc(r.name)} removed from ${esc(r.field)}: ${esc(r.reason.split(".")[0])}.`).join(" ") : ""}</p></section>`;
-  h += `<section class="arch"><h4>Archetypes</h4><ul class="plain">${d.arch.map((c, i) => `<li><div class="nm"><button class="linkish" type="button" data-fearlink="archetypes|${esc(ARCH[c]?.name || c)}" style="color:${LENSC.archetypes}">${esc(ARCH[c]?.name || c)}</button></div><div class="small">${i === 0 ? "Primary" : "Secondary"} · ${esc(ARCH[c]?.beat || "")}</div><div class="small">Roots: ${esc(ARCH[c]?.roots || "")}</div></li>`).join("")}</ul>
+  h += `<section class="arch"><h4>Primal fears</h4><ul class="plain">${d.arch.map((c, i) => `<li><div class="nm"><button class="linkish" type="button" data-fearlink="archetypes|${esc(ARCH[c]?.name || c)}" style="color:${LENSC.archetypes}">${esc(ARCH[c]?.name || c)}</button></div><div class="small">${i === 0 ? "Primary" : "Secondary"} · ${esc(ARCH[c]?.beat || "")}</div><div class="small">Roots: ${esc(ARCH[c]?.roots || "")}</div></li>`).join("")}</ul>
     <p class="small" style="margin:8px 0 0">Top-down tags, to be tested against the story elements.</p></section>`;
   if (en || other.length) {
     const m = en || d.dialogue[other[0]];
