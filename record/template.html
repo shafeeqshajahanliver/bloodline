@@ -875,7 +875,7 @@ function drawEgo(el, spec, info, list) {
 let G = null;
 const ERA_C = ["#4a3f37", "#6e6054", "#978672", "#c2b39c", "#efe6d4"];
 const REG_C = {"North America":"#e9e1d1","Continental Europe":"#3fb39a","UK & Ireland":"#d1a23c","East Asia":"#cf3a2e","Southeast Asia":"#c0609a","Latin America":"#e07a45","South Asia":"#e8c44e","Australia & NZ":"#6fa3b8","Middle East & North Africa":"#9d8ad0","Sub-Saharan Africa":"#86b35a"};
-const LENSC = { archetypes: "#cf3a2e", threat: "#e07a45", origin: "#c0609a", wants: "#e8c44e", wrong: "#4f7cff", trigger: "#3fb39a", rules: "#6fa3b8", who_suffers: "#9d8ad0", ending: "#ff8fb8", images: "#86b35a" };
+const LENSC = { archetypes: "#cf3a2e", threat: "#ef8a80", origin: "#ec8a3c", wants: "#e8c44e", wrong: "#9cc74a", trigger: "#3fb39a", rules: "#4fa3d8", who_suffers: "#6f7fe6", ending: "#a77ad6", images: "#d066a8" };
 const LENSN = { threat: "What threatens", origin: "Where it comes from", wants: "What it wants", wrong: "The wrong underneath", trigger: "What sets it off", rules: "Rules", who_suffers: "Who suffers", ending: "How it ends", images: "Symbols", archetypes: "Archetypes" };
 const GREY = "#4a413b";
 function buildGraph() {
@@ -933,7 +933,9 @@ function buildGraph() {
   const labels = () => {
     const fs = 13 / Math.max(k, .6), placed = [], show = new Set();
     const prim = n => (state.primary === "films") === (n.kind === "film");
-    const cand = nodes.filter(n => visible.has(n.id) && (prim(n) || k > 2.6)).sort((a, b) => (prim(b) - prim(a)) || rOf(b) - rOf(a));
+    // fears view: at rest only the archetypes are named (the rest appear on hover); if archetypes are hidden, name the primary kind
+    const archOn = state.primary === "fears" && nodes.some(n => n.lens === "archetypes" && visible.has(n.id));
+    const cand = nodes.filter(n => visible.has(n.id) && (archOn ? n.lens === "archetypes" : (prim(n) || k > 2.6))).sort((a, b) => (prim(b) - prim(a)) || rOf(b) - rOf(a));
     for (const n of cand) { const txt = n.kind === "film" ? `${n.f.t} (${n.f.y})` : n.name, w = txt.length * fs * .5, h = fs * 1.15, r = R(n);
       const box = [n.x - w / 2 - fs * .3, n.y - r - fs * .4 - h, n.x + w / 2 + fs * .3, n.y - r - fs * .4];
       if (placed.some(b => box[0] < b[2] && box[2] > b[0] && box[1] < b[3] && box[3] > b[1])) continue;
@@ -1031,7 +1033,7 @@ function tags(e, k) {
   return t.join(" ");
 }
 
-const ROLE_C = new Proxy({}, { get: () => "#86b35a" });  // symbols share one colour everywhere; the role is named, not coloured
+const ROLE_C = new Proxy({}, { get: () => LENSC.images });  // symbols share one colour everywhere; the role is named, not coloured
 const HOLLOW = new Set();
 const ZONE = {opening:[0,.08],early:[.08,.3],middle:[.3,.7],late:[.7,.9],ending:[.9,1]};
 const RELS = ["self","family","lover","community","stranger","unknown"];
