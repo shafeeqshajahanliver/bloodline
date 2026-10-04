@@ -812,7 +812,7 @@ async function renderFear(id) {
         <div class="minieras">${eras.map(x => `<div title="${x.n} of ${x.t} films"><b>${x.t ? pct(x.s) : "–"}</b><i style="height:${x.t ? 2 + x.s / mx * 46 : 0}px"></i><span>${x.e}</span></div>`).join("")}</div></div>
       <div><h4>Across the world</h4><p class="fv">${travel}</p>
         <div class="minireg">${regs.map(x => `<div title="${x.n} of ${x.t} films"><span>${esc(RSHORT[x.g] || x.g)}</span><span class="tk"><i class="${x.t < 10 ? "thin" : ""}" style="width:${x.s / rmx * 100}%"></i></span><span>${x.n}/${x.t}</span></div>`).join("")}</div></div></section>
-    <p class="foot">Counted across ${all.length} films from a first reading by Claude, not yet reviewed, with the wording grouped into fears. Read it as a lead, not a finding. <button class="linkish" type="button" id="foot-about">How this record was made</button>.</p></div>`;
+    <p class="foot">Counted across ${all.length} films from a first machine reading, not yet reviewed, with the wording grouped into fears. Read it as a lead, not a finding. <button class="linkish" type="button" id="foot-about">How this record was made</button>.</p></div>`;
   document.getElementById("back").onclick = back;
   document.getElementById("foot-about").onclick = () => document.getElementById("about-link").click();
   app.querySelectorAll("[data-go]").forEach(b => b.onclick = () => go(b.dataset.go));
@@ -851,7 +851,7 @@ function drawEgo(el, spec, info, list) {
   links.forEach(l => ed += `<line class="ed" data-l="${esc(l.id)}" x1="${c}" y1="${c}" x2="${l.x}" y2="${l.y}" stroke="${l.colour}" stroke-opacity=".35" stroke-width="1"/>`);
   films.forEach(f => f.via.forEach(v => { const l = L[v]; const qx = (l.x + f.x) / 2 + (c - (l.x + f.x) / 2) * .15, qy = (l.y + f.y) / 2 + (c - (l.y + f.y) / 2) * .15;
     ed += `<path class="ed" data-l="${esc(v)}" data-f="${f.id}" d="M${l.x},${l.y} Q${qx},${qy} ${f.x},${f.y}" fill="none" stroke="${l.colour}" stroke-opacity=".55" stroke-width="1.3"/>`; }));
-  links.forEach(l => { const right = Math.cos(l.a) >= 0, r = 5 + l.films / lmx * 5;
+  links.forEach(l => { const right = Math.cos(l.a) >= 0, r = (5 + l.films / lmx * 5) * (l.id.startsWith("archetypes|") ? 1.6 : 1);
     nd += `<g class="nd" tabindex="0" role="button" data-l="${esc(l.id)}" aria-label="${esc(l.label)}"><circle cx="${l.x}" cy="${l.y}" r="${r}" fill="${l.colour}" stroke="var(--paper)" stroke-width="1.5"/><text x="${l.x + Math.cos(l.a) * (r + 7)}" y="${l.y + Math.sin(l.a) * (r + 7) + 4}" text-anchor="${right ? "start" : "end"}">${esc(l.label)}</text></g>`; });
   films.forEach(f => { const right = Math.cos(f.a) >= 0;
     nd += `<g class="nd" tabindex="0" role="link" data-f="${f.id}" aria-label="${esc(f.t)}"><circle cx="${f.x}" cy="${f.y}" r="${f.r}" fill="var(--ink)" stroke="var(--paper)" stroke-width="1.5"/><text class="fl" x="${f.x + Math.cos(f.a) * (f.r + 8)}" y="${f.y + Math.sin(f.a) * (f.r + 8) + 5}" text-anchor="${right ? "start" : "end"}">${esc(f.t)}</text></g>`; });
@@ -1264,8 +1264,8 @@ function drawNet(d) {
   links.forEach(l => ed += `<line class="ed" data-l="${esc(l.id)}" x1="${c}" y1="${c}" x2="${l.x}" y2="${l.y}" stroke="var(--hair)" stroke-width="1"/>`);
   films.forEach(f => f.via.forEach(v => { const l = L[v]; const mx2 = (l.x + f.x) / 2 + (c - (l.x + f.x) / 2) * .15, my2 = (l.y + f.y) / 2 + (c - (l.y + f.y) / 2) * .15;
     ed += `<path class="ed" data-l="${esc(v)}" data-f="${f.id}" d="M${l.x},${l.y} Q${mx2},${my2} ${f.x},${f.y}" fill="none" stroke="${linkC(l)}" stroke-opacity=".55" stroke-width="${l.type === "person" ? 2 : 1.3}"/>`; }));
-  links.forEach(l => { const right = Math.cos(l.a) >= 0, lx = l.x + Math.cos(l.a) * 12, ly = l.y + Math.sin(l.a) * 12 + 4, col = linkC(l);
-    const shape = l.type === "person" ? `<path d="M${l.x} ${l.y - 7.5} L${l.x + 7.5} ${l.y} L${l.x} ${l.y + 7.5} L${l.x - 7.5} ${l.y}Z" fill="${col}" stroke="var(--paper)" stroke-width="1.2"/>` : `<rect x="${l.x - 5.5}" y="${l.y - 5.5}" width="11" height="11" fill="${col}" stroke="var(--paper)" stroke-width="1"/>`;
+  links.forEach(l => { const right = Math.cos(l.a) >= 0, lx = l.x + Math.cos(l.a) * (l.type === "archetype" ? 15 : 12), ly = l.y + Math.sin(l.a) * (l.type === "archetype" ? 15 : 12) + 4, col = linkC(l);
+    const shape = l.type === "person" ? `<path d="M${l.x} ${l.y - 7.5} L${l.x + 7.5} ${l.y} L${l.x} ${l.y + 7.5} L${l.x - 7.5} ${l.y}Z" fill="${col}" stroke="var(--paper)" stroke-width="1.2"/>` : (h => `<rect x="${l.x - h}" y="${l.y - h}" width="${2 * h}" height="${2 * h}" fill="${col}" stroke="var(--paper)" stroke-width="1"/>`)(l.type === "archetype" ? 8.5 : 5.5);
     nd += `<g class="nd" tabindex="0" role="button" data-l="${esc(l.id)}" aria-label="${esc(l.label)}, shared with ${l.films_in_100} films">${shape}<text x="${lx}" y="${ly}" text-anchor="${right ? "start" : "end"}">${esc(l.label)}</text></g>`; });
   films.forEach(f => { const x = idx[f.id], right = Math.cos(f.a) >= 0, lx = f.x + Math.cos(f.a) * (f.r + 8), ly = f.y + Math.sin(f.a) * (f.r + 8) + 5;
     nd += `<g class="nd" tabindex="0" role="link" data-f="${f.id}" aria-label="${esc(x.t)}, ${x.y}"><circle cx="${f.x}" cy="${f.y}" r="${f.r}" fill="var(--ink)" stroke="var(--paper)" stroke-width="1.5"/><text class="fl" x="${lx}" y="${ly}" text-anchor="${right ? "start" : "end"}">${esc(x.t)}</text></g>`; });
@@ -1402,7 +1402,7 @@ async function renderFilm(id) {
   <div class="filmfacts">${side(d, f)}
     ${d.plot ? `<section><h4>Plot, from Wikipedia</h4><details class="plot" style="margin-top:0;border-top:0"><summary style="font-size:16px;padding-block:0">Read the plot</summary><div class="ptext">${d.plot.text.split(/\n\n+/).map(p => `<p>${esc(p)}</p>`).join("")}</div>
       <p class="small">${esc(d.plot.heading)} section of the ${d.plot.lang === "en" ? "English" : esc(d.plot.lang)} Wikipedia article, CC BY-SA. <a href="${esc(d.links.wikipedia)}" target="_blank" rel="noopener">Read the article</a>.</p></details></section>` : ""}</div>
-  <p class="foot">A first reading by Claude of the film’s plot, subtitles and screenplay, not yet reviewed. <button class="linkish" type="button" id="foot-about">How this record was made</button>.</p>`;
+  <p class="foot">A first machine reading of the film’s plot, subtitles and screenplay, not yet reviewed. <button class="linkish" type="button" id="foot-about">How this record was made</button>.</p>`;
   document.getElementById("back").onclick = () => go(state.view === "graph" ? "" : state.view === "patterns" ? "trends" : state.view);
   document.getElementById("foot-about").onclick = () => document.getElementById("about-link").click();
   app.querySelectorAll("[data-go]").forEach(b => b.onclick = () => go(b.dataset.go));
