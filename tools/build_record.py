@@ -167,7 +167,7 @@ for fid, r in recs.items():
     top = nb[:14]
     used = sorted({k for _, _, sh in top for k in sh})
     r["net"] = {"total": len(nb),
-        "links": [dict(mine[k], id=k, films_in_100=count[k] - 1, fear=VOCAB.get(mine[k].get("dim"), {}).get(mine[k]["label"]) if mine[k]["type"] == "element" else None, primed=mine[k]["type"] == "element" and primed(mine[k]["label"]),
+        "links": [dict(mine[k], id=k, films_in_100=count[k] - 1, fear=VOCAB.get(mine[k].get("dim"), {}).get(mine[k]["label"]) if mine[k]["type"] == "element" else mine[k]["label"] if mine[k]["type"] == "archetype" else None, primed=mine[k]["type"] == "element" and primed(mine[k]["label"]),
                        all=[o for o in ids if o != fid and k in FE[o]]) for k in used],
         "films": [{"id": o, "score": round(sc, 2), "via": sh} for sc, o, sh in top]}
     json.dump(r, open(f"{OUT}/data/{fid}.json", "w"), ensure_ascii=False, separators=(",", ":"))

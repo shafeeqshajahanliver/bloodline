@@ -651,8 +651,8 @@ function aboutBlock() {
 }
 
 /* ---------- trends ---------- */
-const LENS = [["threat", "What threatens"], ["origin", "Where it comes from"], ["wants", "What it wants"], ["wrong", "The wrong underneath"], ["trigger", "What sets it off"], ["rules", "Rules"], ["who_suffers", "Who suffers"], ["ending", "How it ends"], ["images", "Symbols"]];
-const LENSQ = { threat: "What do we fear will come for us?", origin: "Where do we believe evil comes from?", wants: "What does the thing in the dark want?", wrong: "What buried wrong comes back?", trigger: "What opens the door?", rules: "What rules do we tell ourselves?", who_suffers: "Who does fear fall on?", ending: "How do we let the story end?", images: "What do we see when we're afraid?" };
+const LENS = [["threat", "What threatens"], ["origin", "Where it comes from"], ["wants", "What it wants"], ["wrong", "The wrong underneath"], ["trigger", "What sets it off"], ["rules", "Rules"], ["who_suffers", "Who suffers"], ["ending", "How it ends"], ["images", "Symbols"], ["archetypes", "Archetypes"]];
+const LENSQ = { threat: "What do we fear will come for us?", origin: "Where do we believe evil comes from?", wants: "What does the thing in the dark want?", wrong: "What buried wrong comes back?", trigger: "What opens the door?", rules: "What rules do we tell ourselves?", who_suffers: "Who does fear fall on?", ending: "How do we let the story end?", images: "What do we see when we're afraid?", archetypes: "Which old story is it retelling?" };
 const RSHORT = { "North America": "N. America", "Continental Europe": "Europe", "UK & Ireland": "UK & Ire.", "East Asia": "E. Asia", "Southeast Asia": "SE Asia", "Latin America": "Lat. Am.", "South Asia": "S. Asia", "Australia & NZ": "Aus. & NZ", "Middle East & North Africa": "MENA", "Sub-Saharan Africa": "Africa" };
 const PSORT = { time: [["rising", "Rising"], ["common", "Most common"], ["falling", "Fading"]], region: [["travel", "Travels furthest"], ["common", "Most common"], ["local", "Most local"]] };
 let PAT = null, patLoad = null;
@@ -844,8 +844,8 @@ function drawEgo(el, spec, info, list) {
 let G = null;
 const ERA_C = ["#4a3f37", "#6e6054", "#978672", "#c2b39c", "#efe6d4"];
 const REG_C = {"North America":"#e9e1d1","Continental Europe":"#3fb39a","UK & Ireland":"#d1a23c","East Asia":"#cf3a2e","Southeast Asia":"#c0609a","Latin America":"#e07a45","South Asia":"#e8c44e","Australia & NZ":"#6fa3b8","Middle East & North Africa":"#9d8ad0","Sub-Saharan Africa":"#86b35a"};
-const LENSC = { threat: "#cf3a2e", origin: "#c0609a", wants: "#e07a45", wrong: "#d1a23c", trigger: "#3fb39a", rules: "#6fa3b8", who_suffers: "#9d8ad0", ending: "#efe6d4", images: "#86b35a" };
-const LENSN = { threat: "What threatens", origin: "Where it comes from", wants: "What it wants", wrong: "The wrong underneath", trigger: "What sets it off", rules: "Rules", who_suffers: "Who suffers", ending: "How it ends", images: "Symbols" };
+const LENSC = { threat: "#cf3a2e", origin: "#c0609a", wants: "#e07a45", wrong: "#d1a23c", trigger: "#3fb39a", rules: "#6fa3b8", who_suffers: "#9d8ad0", ending: "#ff8fb8", images: "#86b35a", archetypes: "#4f7cff" };
+const LENSN = { threat: "What threatens", origin: "Where it comes from", wants: "What it wants", wrong: "The wrong underneath", trigger: "What sets it off", rules: "Rules", who_suffers: "Who suffers", ending: "How it ends", images: "Symbols", archetypes: "Archetypes" };
 const GREY = "#4a413b";
 function buildGraph() {
   const stage = document.getElementById("gstage"); if (!stage || typeof d3 === "undefined") { if (stage) stage.innerHTML = `<p class="empty">The graph needs a script that didn't load. Reload the page to try again.</p>`; G = null; return; }
@@ -1156,7 +1156,7 @@ function showDetail(d, key) {
 
 
 const LT = { person: "var(--mute)", archetype: "var(--mute)", element: "var(--teal)" };
-const linkC = l => l.type === "element" ? (LENSC[l.dim] || "var(--mute)") : "var(--mute)";
+const linkC = l => l.type === "element" ? (LENSC[l.dim] || "var(--mute)") : l.type === "archetype" ? LENSC.archetypes : "var(--mute)";
 function linkWords(l) {
   if (l.type === "person") return `${l.roles.join(" and ")}: <b>${esc(l.label)}</b>`;
   if (l.type === "archetype") return `archetype: <b>${esc(l.label)}</b>`;
@@ -1166,7 +1166,7 @@ function netBlock(d) {
   const n = d.net; if (!n || !n.films.length) return "";
   return `<div class="spinehead"><h3>Its bloodline</h3><p>${n.total} of the other films share something with ${esc(d.title)}: a fear, a symbol, a shape of story, or the people who made it. These are its ${n.films.length} closest kin.</p></div>
     <div class="netwrap"><div><div class="netsvg" id="net"></div>
-      <div class="keyline">${[...new Set(n.links.filter(l => l.type === "element").map(l => l.dim))].filter(k => LENSN[k]).map(k => `<span><span class="sw" style="background:${LENSC[k]}"></span>${esc(LENSN[k].toLowerCase())}</span>`).join("")}<span><svg width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="var(--mute)"/></svg>people</span><span><svg width="12" height="12" aria-hidden="true"><path d="M6 1 L11 6 L6 11 L1 6Z" fill="none" stroke="var(--mute)" stroke-width="1.5"/></svg>archetype</span></div>
+      <div class="keyline">${[...new Set(n.links.filter(l => l.type === "element").map(l => l.dim))].filter(k => LENSN[k]).map(k => `<span><span class="sw" style="background:${LENSC[k]}"></span>${esc(LENSN[k].toLowerCase())}</span>`).join("")}<span><svg width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="var(--mute)"/></svg>people</span><span><svg width="12" height="12" aria-hidden="true"><path d="M6 1 L11 6 L6 11 L1 6Z" fill="none" stroke="${LENSC.archetypes}" stroke-width="1.5"/></svg>archetype</span></div>
       <p class="linkinfo" id="linkinfo"><span class="fp">Point at a link or a film to trace it. Click a film to open its record.</span></p></div>
       <ol class="why" id="why">${n.films.map((f, i) => { const x = F.find(z => z.id === f.id), mx = n.films[0].score;
         return `<li data-f="${f.id}"><span class="no">${i + 1}</span><div><button class="linkish t" type="button" data-go="${f.id}">${esc(x.t)}</button> <span class="tag">${x.y}</span><span class="strength" style="width:${Math.max(4, f.score / mx * 60)}px" title="link strength ${f.score}"></span>
@@ -1217,12 +1217,12 @@ function drawNet(d) {
     el.querySelectorAll(`[data-l="${CSS.escape(id)}"]`).forEach(x => x.classList.add("hi"));
     films.filter(f => f.via.includes(id)).forEach(f => { el.querySelector(`.nd[data-f="${f.id}"]`).classList.add("hi"); why.querySelector(`[data-f="${f.id}"]`)?.classList.add("hi"); });
     const others = l.all.map(o => idx[o]).filter(Boolean);
-    info.innerHTML = `${linkWords(l)}${l.fear ? ` <span class="tag" style="color:${LENSC[l.dim]}">part of “${esc(l.fear)}”, click to open</span>` : ""} is shared with ${others.length} of the 100: ${others.map(x => `<button class="linkish" type="button" data-go="${x.id}">${esc(x.t)}</button>`).join(", ")}.`;
+    info.innerHTML = `${linkWords(l)}${l.fear ? ` <span class="tag" style="color:${l.type === "archetype" ? LENSC.archetypes : LENSC[l.dim]}">${l.type === "archetype" ? "click to open the archetype" : `part of “${esc(l.fear)}”, click to open`}</span>` : ""} is shared with ${others.length} of the 100: ${others.map(x => `<button class="linkish" type="button" data-go="${x.id}">${esc(x.t)}</button>`).join(", ")}.`;
     info.querySelectorAll("[data-go]").forEach(b => b.onclick = () => go(b.dataset.go)); };
   el.querySelectorAll(".nd[data-f]").forEach(g => { g.addEventListener("mouseenter", () => hiFilm(g.dataset.f)); g.addEventListener("focus", () => hiFilm(g.dataset.f));
     g.addEventListener("click", () => go(g.dataset.f)); g.addEventListener("keydown", e => { if (e.key === "Enter") go(g.dataset.f); }); });
   el.querySelectorAll(".nd[data-l]").forEach(g => { const h = () => hiLink(g.dataset.l), l = L[g.dataset.l];
-    const open = () => { if (l.fear) go(fearHash(l.dim, l.fear)); else h(); };
+    const open = () => { if (l.fear) go(fearHash(l.type === "archetype" ? "archetypes" : l.dim, l.fear)); else h(); };
     g.addEventListener("mouseenter", h); g.addEventListener("focus", h); g.addEventListener("click", open); g.addEventListener("keydown", e => { if (e.key === "Enter") open(); }); });
   el.querySelector("svg").addEventListener("mouseleave", () => clear());
   why.querySelectorAll("li").forEach(li => li.addEventListener("mouseenter", () => hiFilm(li.dataset.f)));
@@ -1273,7 +1273,7 @@ function side(d, f) {
     ${fact("Countries", d.countries)}${fact("Languages", d.languages)}${fact("Set in", d.set_in)}${fact("Shot in", d.shot_in)}${fact("Subjects", d.subjects)}
     ${d.budget ? `<dt>Budget</dt><dd class="mono">${fmt(d.budget)}</dd>` : ""}${d.box ? `<dt>Box office</dt><dd class="mono">${fmt(d.box)}</dd>` : ""}
   </dl><p class="small" style="margin:10px 0 0">From Wikidata.${d.removed.length ? " " + d.removed.map(r => `${esc(r.name)} removed from ${esc(r.field)}: ${esc(r.reason.split(".")[0])}.`).join(" ") : ""}</p></section>`;
-  h += `<section class="arch"><h4>Archetypes</h4><ul class="plain">${d.arch.map((c, i) => `<li><div class="nm">${esc(ARCH[c]?.name || c)}</div><div class="small">${i === 0 ? "Primary" : "Secondary"} · ${esc(ARCH[c]?.beat || "")}</div><div class="small">Roots: ${esc(ARCH[c]?.roots || "")}</div></li>`).join("")}</ul>
+  h += `<section class="arch"><h4>Archetypes</h4><ul class="plain">${d.arch.map((c, i) => `<li><div class="nm"><button class="linkish" type="button" data-fearlink="archetypes|${esc(ARCH[c]?.name || c)}" style="color:${LENSC.archetypes}">${esc(ARCH[c]?.name || c)}</button></div><div class="small">${i === 0 ? "Primary" : "Secondary"} · ${esc(ARCH[c]?.beat || "")}</div><div class="small">Roots: ${esc(ARCH[c]?.roots || "")}</div></li>`).join("")}</ul>
     <p class="small" style="margin:8px 0 0">Top-down tags, to be tested against the story elements.</p></section>`;
   if (en || other.length) {
     const m = en || d.dialogue[other[0]];

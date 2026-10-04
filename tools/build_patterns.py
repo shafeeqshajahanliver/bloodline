@@ -39,6 +39,12 @@ for f in sorted(glob.glob("films/*/story_elements.json")):
     films.append({"id": fid, "t": r["title"], "y": int(r["year"]), "c": r["country"], "r": r["region"], "rec": fid in record,
                   "ns": se.get("not_stated", []), "g": g})
 defs = {d: {fear: meta[d].get(fear, "") for fear in sorted({v[0] for v in vocab[d].values()})} for d in vocab}
+# archetypes: the 27 top-down story shapes from archetypes.csv, tagged on every film (primary and secondary)
+ARCH = {r["code"]: r for r in csv.DictReader(open("archetypes.csv"))}
+for f in films:
+    r = rows[f["id"]]; got = [(c, role) for c, role in ((r["archetype_primary"], "the main story"), (r["archetype_secondary"], "a second thread")) if c in ARCH]
+    if got: f["g"]["archetypes"] = {"f": sorted({ARCH[c]["name"] for c, _ in got}), "k": sorted({f"{ARCH[c]['name']}|{role}" for c, role in got})}
+defs["archetypes"] = {a["name"]: f"{a['beat']}. Roots: {a['roots']}." for a in ARCH.values()}
 # for each fear's page: its kinds, each with a few of the original phrasings (most used first)
 kinds = {}
 for d in vocab:
@@ -47,6 +53,7 @@ for d in vocab:
     for v, (fear, kind) in vocab[d].items():
         kd.setdefault(fear, {}).setdefault(kind, []).append((used.get(v, 0), v))
     kinds[d] = {fear: {k: [v for _, v in sorted(vs, key=lambda x: (-x[0], x[1]))[:5]] for k, vs in ks.items()} for fear, ks in kd.items()}
+kinds["archetypes"] = {a["name"]: {"the main story": [], "a second thread": []} for a in ARCH.values()}
 # a few lines from the films for each fear's page: spoken lines first, then the plot, films in the record first
 quotes = {d: {} for d in vocab}
 for f in sorted(glob.glob("films/*/story_elements.json")):
@@ -71,5 +78,5 @@ for d in quotes:
             if len(out) == 3: break
         quotes[d][fear] = out
 os.makedirs("record/site", exist_ok=True)
-json.dump({"dims": list(vocab), "fears": defs, "kinds": kinds, "quotes": quotes, "films": films}, open("record/site/patterns.json", "w"), ensure_ascii=False, separators=(",", ":"))
-print(f"{len(films)} films · dimensions grouped: {', '.join(vocab) or 'none yet'}")
+json.dump({"dims": list(vocab) + ["archetypes"], "fears": defs, "kinds": kinds, "quotes": quotes, "films": films}, open("record/site/patterns.json", "w"), ensure_ascii=False, separators=(",", ":"))
+print(f"{len(films)} films · dimensions grouped: {', '.join(vocab) or 'none yet'} · plus archetypes")
