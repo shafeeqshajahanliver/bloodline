@@ -889,7 +889,7 @@ function buildGraph() {
   const nodes = [...films, ...fears];
   const edges = fears.flatMap(x => x.films.map(fm => ({ source: fm, target: x, lens: x.lens })));
   films.forEach(n => n.fears = []); edges.forEach(e => e.source.fears.push(e.target));
-  fears.forEach(x => x.r = x.lens === "archetypes" ? 14 + Math.sqrt(x.films.length) * 4 : 3 + Math.sqrt(x.films.length) * 2.6);
+  fears.forEach(x => x.r = x.lens === "archetypes" ? 6 + Math.sqrt(x.films.length) * 1.8 : 2.5 + Math.sqrt(x.films.length) * 1.4);
   const fmax = Math.max(1, ...films.map(n => n.fears.length)), fmin = Math.min(...films.map(n => n.fears.length));
   films.forEach(n => n.fr = 3 + Math.pow(fmax > fmin ? (n.fears.length - fmin) / (fmax - fmin) : .5, 1.3) * 12);
   const sim = d3.forceSimulation(nodes).force("link", d3.forceLink(edges).distance(85).strength(e => 1 / Math.sqrt(e.target.films.length) * .45))
@@ -909,7 +909,7 @@ function buildGraph() {
   const root = svg.append("g");
   const axis = root.append("g");
   const eg = root.append("g"), ng = root.append("g"), lg = root.append("g");
-  const eSel = eg.selectAll("line").data(edges).join("line").attr("class", "ge").attr("stroke", "var(--mute)").attr("stroke-opacity", .1).attr("stroke-width", .6);
+  const eSel = eg.selectAll("line").data(edges).join("line").attr("class", "ge").attr("stroke", "var(--mute)").attr("stroke-opacity", .22).attr("stroke-width", .7);
   const nSel = ng.selectAll("g").data(nodes).join("g").attr("class", n => "gn " + n.kind).attr("tabindex", 0).attr("role", n => n.kind === "film" ? "link" : "button")
     .attr("aria-label", n => n.kind === "film" ? `${n.f.t}, ${n.f.y}` : `${n.name}, ${LENSN[n.lens]}, ${n.films.length} films`);
   nSel.append("circle");
@@ -939,7 +939,7 @@ function buildGraph() {
       if (placed.some(b => box[0] < b[2] && box[2] > b[0] && box[1] < b[3] && box[3] > b[1])) continue;
       placed.push(box); show.add(n.id); }
     nSel.select("circle").attr("r", R); lSel.style("font-size", fs + "px").attr("y", n => n.y - R(n) - fs * .4).attr("display", n => show.has(n.id) ? null : "none"); };
-  const R = n => rOf(n) * Math.min(1 / Math.max(k, .3), 2.4);
+  const R = n => rOf(n) * Math.min(1 / Math.max(k, .3), 1.5);
   const emphasis = () => { nSel.select("circle").attr("r", R).attr("fill", fillOf).attr("stroke", n => ring(n)[0]).attr("stroke-width", n => ring(n)[1]);
     lSel.attr("fill", n => n.kind === "fear" && state.primary === "fears" ? LENSC[n.lens] : "var(--ink)").attr("y", n => n.y - rOf(n) - 5);
     nSel.filter(n => (state.primary === "films") === (n.kind === "film")).raise(); labels(); legend(); rest(); };
@@ -962,14 +962,14 @@ function buildGraph() {
     const i = (flashes++ * 5 + n.i) % n.f.st, pos = n.f.st === 1 ? "0 0" : `0 ${(i / (n.f.st - 1)) * 100}%`;
     flash.style.backgroundImage = `url('stills/${n.id}.jpg')`; flash.style.backgroundSize = `100% ${n.f.st * 100}%`; flash.style.backgroundPosition = pos;
     void flash.offsetWidth; flash.classList.add("on"); };
-  const rest = () => { hoverOn = null; stage.classList.remove("hov"); flash?.classList.remove("on"); eSel.attr("stroke", "var(--mute)").attr("stroke-opacity", .1);
+  const rest = () => { hoverOn = null; stage.classList.remove("hov"); flash?.classList.remove("on"); eSel.attr("stroke", "var(--mute)").attr("stroke-opacity", .22);
     stage.querySelectorAll(".hi").forEach(x => x.classList.remove("hi"));
     const vf = films.filter(n => visible.has(n.id)).length, vx = fears.filter(n => visible.has(n.id)).length;
     info.innerHTML = `<div class="m">${vf} FILMS · ${vx} FEARS</div><div class="r" style="color:var(--mute)">${state.primary === "films" ? "Point at a film to see the fears it carries." : "Point at a fear to see the films that carry it."}</div>`; labels(); };
   const hover = n => { hoverOn = n; stage.classList.add("hov"); showStill(n);
     const nb = new Set([n.id, ...(n.kind === "film" ? n.fears : n.films).filter(m => visible.has(m.id)).map(m => m.id)]);
     nSel.classed("hi", m => nb.has(m.id)); lSel.classed("hi", m => nb.has(m.id)).attr("display", m => nb.has(m.id) ? null : "none");
-    eSel.classed("hi", e => e.source === n || e.target === n).attr("stroke", e => e.source === n || e.target === n ? LENSC[e.lens] : "var(--mute)").attr("stroke-opacity", e => e.source === n || e.target === n ? .85 : .1);
+    eSel.classed("hi", e => e.source === n || e.target === n).attr("stroke", e => e.source === n || e.target === n ? LENSC[e.lens] : "var(--mute)").attr("stroke-opacity", e => e.source === n || e.target === n ? .85 : .06);
     if (n.kind === "film") {
       const by = {}; n.fears.filter(x => visible.has(x.id)).forEach(x => (by[x.lens] = by[x.lens] || []).push(x.name));
       info.innerHTML = `<div class="t">${esc(n.f.t)} <span style="color:var(--mute);font-size:.7em">(${n.f.y})</span></div><div class="m"><span style="color:${REG_C[n.f.r]}">●</span> ${esc(n.f.r)} · ${esc(n.f.c)}${n.f.dir.length ? " · " + esc(n.f.dir[0]) : ""}</div>
