@@ -4,7 +4,7 @@
 import csv, glob, json, re, sys
 rows = {r["id"]: r for r in csv.DictReader(open("films.csv"))}
 P = {f["id"]: f for f in json.load(open("record/site/patterns.json"))["films"]}
-KEEP = re.compile(r"^(lead|plot.*|synopsis|story|summary|premise|storyline|sinopsis|sinopse|trama|handlung|inhalt|intrigue|résumé)$", re.I)
+KEEP = re.compile(r"^(lead|plot.*|synopsis|story|summary|premise|storyline|sinopsis|sinopse|trama|handlung|inhalt|intrigue|résumé|hikâye|konu|jalan cerita|alur|plot cerita|cốt truyện|줄거리|あらすじ|ストーリー|剧情|劇情|情节|故事|कथानक|कहानी|الحبكة|القصة|ملخص|сюжет)$", re.I)
 for fid in sys.argv[1:]:
     r = rows[fid]; print(f"=================== {fid}\n{r['title']} ({r['year']}), {r['country']}")
     for f in sorted(glob.glob(f"films/{fid}/wikipedia.*.md"), key=lambda f: not f.endswith(".en.md"))[:1]:
