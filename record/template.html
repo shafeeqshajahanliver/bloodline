@@ -1173,7 +1173,7 @@ function storyMap(d) {
   const col = ([head, ks]) => { const blocks = ks.map(k => { const es = d.dims[k] || []; if (!es.length) return "";
       return `<div class="smk"><span class="smkl" style="color:${LENSC[k]}">${esc(LENSN[k])}</span>${es.map((e, i) => `<button type="button" class="smv" data-smkey="x-${k}-${i}" style="--c:${LENSC[k]}"><span class="sw" style="background:${LENSC[k]}"></span><span>${esc(e.value)}${k === "who_suffers" && e.relation_to_threat ? ` <em>${esc(e.relation_to_threat)}</em>` : ""}</span></button>`).join("")}</div>`; }).join("");
     return `<div class="smc"><p class="smh">${head}</p>${blocks || `<p class="smn">not stated</p>`}</div>`; };
-  return `<div class="spinehead"><h3>The shape of its fear</h3><p>What came before, what sets it off, the threat and its rules, who it falls on, and how it ends. Tap any part to read where it comes from.</p></div>
+  return `<div class="spinehead"><h3>The shape of its fear</h3></div>
     <div class="smap">${COLS.map(col).join('<span class="sma" aria-hidden="true"></span>')}</div>`;
 }
 function looseBlock(d) {
