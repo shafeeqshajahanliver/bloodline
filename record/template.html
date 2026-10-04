@@ -913,7 +913,10 @@ function buildGraph() {
     .attr("aria-label", n => n.kind === "film" ? `${n.f.t}, ${n.f.y}` : `${n.name}, ${LENSN[n.lens]}, ${n.films.length} films`);
   nSel.append("circle");
   const lSel = lg.selectAll("text").data(nodes).join("text").attr("class", "lab").attr("text-anchor", "middle").text(n => n.kind === "film" ? `${n.f.t} (${n.f.y})` : n.name);
-  const rOf = n => state.primary === "films" ? (n.kind === "film" ? 6 : 2.6) : (n.kind === "fear" ? n.r : 2.4);
+  // films sized by how many of the shown fears they carry, as fears are sized by how many films carry them
+  const fmax = Math.max(1, ...films.map(n => n.fears.length)), fmin = Math.min(...films.map(n => n.fears.length));
+  films.forEach(n => n.fr = 4 + (fmax > fmin ? (n.fears.length - fmin) / (fmax - fmin) : .5) * 5);
+  const rOf = n => state.primary === "films" ? (n.kind === "film" ? n.fr : 2.6) : (n.kind === "fear" ? n.r : 1.6 + n.fr * .2);
   const fillOf = n => { const prim = (state.primary === "films") === (n.kind === "film");
     if (!prim) return GREY;
     if (n.kind === "fear") return LENSC[n.lens];
@@ -1392,7 +1395,7 @@ async function renderFilm(id) {
   <div class="spine" id="spine"></div>
   <div class="keyline">${[...new Set(spineItems(d).imgs.map(x => x.k))].map(k => `<span><span class="sw" style="background:${LENSC[k]}"></span>${esc(LENSN[k].toLowerCase())}</span>`).join("")}
     <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5.5" fill="var(--paper)" stroke="var(--ink)"/></svg>the turns of the story</span>
-    <span><span class="sw" style="background:var(--mute)"></span>words spoken each minute</span><span><span class="sw" style="background:var(--ink);width:2px;height:12px"></span>jump scare</span><span>solid line: timed from the subtitles · dotted: placed by part of the film</span></div>
+    <span><span class="sw" style="background:var(--mute)"></span>words spoken each minute</span><span><span class="sw" style="background:var(--ink);width:2px;height:12px"></span>jump scare</span></div>
   <div class="detail" id="detail" aria-live="polite"></div>
   <div class="reading"><h3>The film</h3><p>Facts, figures and sources.</p></div>
   <div class="filmfacts">${side(d, f)}
