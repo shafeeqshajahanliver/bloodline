@@ -892,9 +892,9 @@ function buildGraph() {
   fears.forEach(x => x.r = 3 + Math.sqrt(x.films.length) * 3.1);
   const fmax = Math.max(1, ...films.map(n => n.fears.length)), fmin = Math.min(...films.map(n => n.fears.length));
   films.forEach(n => n.fr = 3 + Math.pow(fmax > fmin ? (n.fears.length - fmin) / (fmax - fmin) : .5, 1.3) * 12);
-  const sim = d3.forceSimulation(nodes).force("link", d3.forceLink(edges).distance(46).strength(e => 1 / Math.sqrt(e.target.films.length) * .6))
-    .force("charge", d3.forceManyBody().strength(n => n.kind === "fear" ? -40 - n.films.length * 6 : -70).distanceMax(420))
-    .force("collide", d3.forceCollide(n => (n.kind === "fear" ? n.r : n.fr) + 4)).force("x", d3.forceX(0).strength(.04)).force("y", d3.forceY(0).strength(.06)).stop();
+  const sim = d3.forceSimulation(nodes).force("link", d3.forceLink(edges).distance(85).strength(e => 1 / Math.sqrt(e.target.films.length) * .45))
+    .force("charge", d3.forceManyBody().strength(n => n.kind === "fear" ? -90 - n.films.length * 10 : -160).distanceMax(700))
+    .force("collide", d3.forceCollide(n => (n.kind === "fear" ? n.r : n.fr) + 10).strength(.9)).force("x", d3.forceX(0).strength(.015)).force("y", d3.forceY(0).strength(.03)).stop();
   for (let i = 0; i < 450; i++) sim.tick();
   nodes.forEach(n => { n.nx = n.x; n.ny = n.y; });
   const yr = d3.scaleLinear().domain([1915, 2025]).range([-W * .45, W * .45]);
@@ -934,12 +934,13 @@ function buildGraph() {
     const fs = 13 / Math.max(k, .6), placed = [], show = new Set();
     const prim = n => (state.primary === "films") === (n.kind === "film");
     const cand = nodes.filter(n => visible.has(n.id) && (prim(n) || k > 2.6)).sort((a, b) => (prim(b) - prim(a)) || rOf(b) - rOf(a));
-    for (const n of cand) { const txt = n.kind === "film" ? `${n.f.t} (${n.f.y})` : n.name, w = txt.length * fs * .5, h = fs * 1.15, r = rOf(n);
+    for (const n of cand) { const txt = n.kind === "film" ? `${n.f.t} (${n.f.y})` : n.name, w = txt.length * fs * .5, h = fs * 1.15, r = R(n);
       const box = [n.x - w / 2 - fs * .3, n.y - r - fs * .4 - h, n.x + w / 2 + fs * .3, n.y - r - fs * .4];
       if (placed.some(b => box[0] < b[2] && box[2] > b[0] && box[1] < b[3] && box[3] > b[1])) continue;
       placed.push(box); show.add(n.id); }
-    lSel.style("font-size", fs + "px").attr("y", n => n.y - rOf(n) - fs * .4).attr("display", n => show.has(n.id) ? null : "none"); };
-  const emphasis = () => { nSel.select("circle").attr("r", rOf).attr("fill", fillOf).attr("stroke", n => ring(n)[0]).attr("stroke-width", n => ring(n)[1]);
+    nSel.select("circle").attr("r", R); lSel.style("font-size", fs + "px").attr("y", n => n.y - R(n) - fs * .4).attr("display", n => show.has(n.id) ? null : "none"); };
+  const R = n => rOf(n) * Math.min(1 / Math.max(k, .3), 2.4);
+  const emphasis = () => { nSel.select("circle").attr("r", R).attr("fill", fillOf).attr("stroke", n => ring(n)[0]).attr("stroke-width", n => ring(n)[1]);
     lSel.attr("fill", n => n.kind === "fear" && state.primary === "fears" ? LENSC[n.lens] : "var(--ink)").attr("y", n => n.y - rOf(n) - 5);
     nSel.filter(n => (state.primary === "films") === (n.kind === "film")).raise(); labels(); legend(); rest(); };
   const legend = () => { const key = document.getElementById("gkey"); if (!key) return;
