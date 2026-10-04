@@ -772,7 +772,7 @@ async function renderFear(id) {
     ${kin.length ? `<section class="fsec" style="margin-top:64px"><div class="spinehead" style="margin-top:0"><h3>Its bloodline</h3><p>The fears it keeps company with, more often than chance, and the films in the record that carry them together.</p></div>
       <div class="netwrap"><div><div class="netsvg" id="fnet"></div>
         <div class="keyline">${[...new Set(kin.map(x => x.k.split("|")[0]))].map(k => `<span><span class="sw" style="background:${LENSC[k]};border-radius:50%"></span>${esc(LENSN[k].toLowerCase())}</span>`).join("")}</div>
-        <p class="linkinfo" id="flinkinfo"><span class="fp">Point at a fear or a film to trace it. Click to open it.</span></p></div>
+        <p class="linkinfo" id="flinkinfo" hidden></p></div>
         <ol class="why" id="fwhy">${kin.map((x, i) => { const [d2, n2] = x.k.split("|"); return `<li data-l="${esc(x.k)}"><span class="no">${i + 1}</span><div><button class="linkish t" type="button" data-fear2="${esc(x.k)}">${esc(n2)}</button><span class="strength" style="width:${Math.max(4, x.lift / kin[0].lift * 60)}px;background:${LENSC[d2]}"></span>
           <div class="r"><span style="color:${LENSC[d2]}">${esc(LENSN[d2])}</span> · ${x.lift.toFixed(1)}× as often · in ${x.c} of its ${fs.length} films</div></div></li>`; }).join("")}</ol></div></section>` : ""}
     <section class="fsec"><h2>What it looks like</h2><p class="q2">The shapes it takes, in the films' own words.</p>
@@ -1183,7 +1183,7 @@ function netBlock(d) {
   return `<div class="spinehead"><h3>Its bloodline</h3><p>${n.total} of the other films share something with ${esc(d.title)}. These are the top ${n.films.length}.</p></div>
     <div class="netwrap"><div><div class="netsvg" id="net"></div>
       <div class="keyline">${[...new Set(n.links.filter(l => l.type === "element").map(l => l.dim))].filter(k => LENSN[k]).map(k => `<span><span class="sw" style="background:${LENSC[k]}"></span>${esc(LENSN[k].toLowerCase())}</span>`).join("")}<span><span class="sw" style="background:${LENSC.archetypes}"></span>archetype</span><span><svg width="12" height="12" aria-hidden="true"><path d="M6 0.5 L11.5 6 L6 11.5 L0.5 6Z" fill="var(--mute)"/></svg>people</span></div>
-      <p class="linkinfo" id="linkinfo"><span class="fp">Point at a link or a film to trace it. Click a film to open its record.</span></p></div>
+      <p class="linkinfo" id="linkinfo" hidden></p></div>
       <ol class="why" id="why">${n.films.map((f, i) => { const x = F.find(z => z.id === f.id), mx = n.films[0].score;
         return `<li data-f="${f.id}"><span class="no">${i + 1}</span><div><button class="linkish t" type="button" data-go="${f.id}">${esc(x.t)}</button> <span class="tag">${x.y}</span><span class="strength" style="width:${Math.max(4, f.score / mx * 60)}px" title="link strength ${f.score}"></span>
           <div class="r">${f.via.map(v => linkWords(n.links.find(l => l.id === v))).join(" · ")}</div></div></li>`; }).join("")}</ol></div>`;
