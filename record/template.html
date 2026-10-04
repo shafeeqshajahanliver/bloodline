@@ -307,7 +307,7 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .ginfo .r b{font-weight:600}
 .ginfo .gdesc{font-family:var(--display);font-size:16px;line-height:1.45;color:var(--ink)}
 .gzoom{position:absolute;right:0;top:12px;display:flex;gap:4px}
-/* the lenses, set quietly on the graph's lower right: lit when shown, faint when not; click to switch */
+/* the veins, set quietly on the graph's lower right: lit when shown, faint when not; click to switch */
 .gthreads{position:absolute;right:0;bottom:16px;z-index:3;display:flex;flex-direction:column;align-items:flex-end;gap:2px}
 .gthreads button{all:unset;cursor:pointer;display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);opacity:.28;padding:2px 0;transition:opacity .2s}
 .gthreads button[aria-pressed="true"]{opacity:.9}.gthreads button:hover{opacity:1}.gthreads button:focus-visible{outline:1px solid var(--red);outline-offset:2px}
@@ -637,7 +637,7 @@ function renderIndex() {
     <section><h3>Region</h3><div class="chips">${REGIONS.map(r => `<button class="chip" type="button" data-region="${esc(r)}" aria-pressed="${state.region.has(r)}">${esc(r)}${state.view === "patterns" ? "" : `<span class="k">${F.filter(f => f.r === r).length}</span>`}</button>`).join("")}</div></section>
     <section><h3>Era</h3><div class="chips">${ERAS.map(([e]) => `<button class="chip" type="button" data-era="${e}" aria-pressed="${state.era.has(e)}">${e}${state.view === "patterns" ? "" : `<span class="k">${F.filter(f => eraOf(f.y) === e).length}</span>`}</button>`).join("")}</div></section>
     ${state.view === "graph" ? `<section><h3>Arrange</h3><div class="chips">${[["net","By connection"],["time","Through time"]].map(([k, n]) => `<button class="chip" type="button" data-arrange="${k}" aria-pressed="${state.arrange === k}">${n}</button>`).join("")}</div></section>
-    <section><h3>Lenses</h3><div class="chips">${LENS.map(([k, n]) => `<button class="chip" type="button" data-glens="${k}" aria-pressed="${state.glenses.has(k)}"><span class="sw" style="background:${LENSC[k]};border-radius:50%;margin-right:6px"></span>${n}</button>`).join("")}</div></section>
+    <section><h3>Veins</h3><div class="chips">${LENS.map(([k, n]) => `<button class="chip" type="button" data-glens="${k}" aria-pressed="${state.glenses.has(k)}"><span class="sw" style="background:${LENSC[k]};border-radius:50%;margin-right:6px"></span>${n}</button>`).join("")}</div></section>
     <section id="filmsopt" ${state.primary === "fears" ? "hidden" : ""}><h3>Films</h3><div class="chips">${[["plain","Plain"],["region","Ring by region"],["era","Shade by era"]].map(([k, n]) => `<button class="chip" type="button" data-colour="${k}" aria-pressed="${state.colour === k}">${n}</button>`).join("")}</div></section>`
     : state.view === "patterns" ? `<section><h3>Kind of fear</h3><div class="chips">${LENS.map(([k, n]) => `<button class="chip" type="button" data-lens="${k}" aria-pressed="${state.lens === k}"><span class="sw" style="background:${LENSC[k]};border-radius:50%;margin-right:6px"></span>${n}</button>`).join("")}</div></section>
     <section><h3>Order</h3><div class="chips" data-for="time">${PSORT.time.map(([k, n]) => `<button class="chip" type="button" data-psort="${k}" aria-pressed="${state.psort === k}">${n}</button>`).join("")}</div><div class="chips" data-for="region">${PSORT.region.map(([k, n]) => `<button class="chip" type="button" data-psort="${k}" aria-pressed="${state.psort === k}">${n}</button>`).join("")}</div></section>`
@@ -646,8 +646,8 @@ function renderIndex() {
   </aside>
   <div class="status"><span class="active"><span id="count"></span><span id="pills"></span></span>
     ${state.view === "patterns" ? `<span class="key"><span>each dot is the share of films carrying the fear · hollow dots: fewer than 10 films, read with care</span></span>` : state.view === "graph" ? "" : `<span class="key"><span>the bar shows how much of each story is mapped</span></span>`}</div>
-  ${state.view === "graph" ? `<div class="gstage" id="gstage"><div class="gflash" id="gflash" aria-hidden="true"></div><div class="gbusy" role="status" aria-live="polite"><span class="geye" aria-hidden="true"><span class="lid"><i class="pupil"></i></span></span><span class="gbt">Recharting</span></div>
-    <div class="ghero" id="ghero"><p class="overline">Bloodline · ${F.length} films · ${new Set(F.map(f => f.c)).size} countries · ${Math.min(...F.map(f => f.y))} to ${Math.max(...F.map(f => f.y))}</p><h1>Every culture tells the same few <em>nightmares</em></h1><p>Different monsters, different languages, and underneath them the same fears. Every point of light is a film or a fear; every thread, a fear they share.</p></div><div class="ginfo" id="ginfo"></div><div class="gthreads" id="gthreads" role="group" aria-label="Lenses shown"></div><div class="gmode viewtoggle" role="group" aria-label="Main nodes"><button type="button" data-primary="fears" aria-pressed="${state.primary === "fears"}">Fears</button><button type="button" data-primary="films" aria-pressed="${state.primary === "films"}">Films</button></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
+  ${state.view === "graph" ? `<div class="gstage" id="gstage"><div class="gflash" id="gflash" aria-hidden="true"></div><div class="gbusy" role="status" aria-live="polite"><span class="geye" aria-hidden="true"><span class="lid"><i class="pupil"></i></span></span><span class="gbt">Charting</span></div>
+    <div class="ghero" id="ghero"><p class="overline">Bloodline · ${F.length} films · ${new Set(F.map(f => f.c)).size} countries · ${Math.min(...F.map(f => f.y))} to ${Math.max(...F.map(f => f.y))}</p><h1>Every culture tells the same few <em>nightmares</em></h1><p>Different monsters, different languages, and underneath them the same fears. Every point of light is a film or a fear; every thread, a fear they share.</p></div><div class="ginfo" id="ginfo"></div><div class="gthreads" id="gthreads" role="group" aria-label="Veins shown"></div><div class="gmode viewtoggle" role="group" aria-label="Main nodes"><button type="button" data-primary="fears" aria-pressed="${state.primary === "fears"}">Fears</button><button type="button" data-primary="films" aria-pressed="${state.primary === "films"}">Films</button></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
     <div class="keyline" id="gkey" style="margin-top:10px"></div>` : state.view === "patterns" ? `<div class="pat" id="pat"></div>` : `<ol class="ledger" id="ledger"></ol>`}
   ${aboutBlock()}`;
   const q = document.getElementById("q");
@@ -708,10 +708,11 @@ function aboutBlock() {
     <div><h3>How it was made</h3>
       <p>Bloodline gathers close to five hundred horror films from every corner of the world and more than a century of cinema, with their plots, subtitles, screenplays and stills. Each film is read for what threatens, where it comes from, what it wants and how it ends, and every reading points back to the line it came from.</p>
       <p>Bloodline then trained a graph neural network on the threads between them. Nobody told it which films belong together. It found the nightmares on its own: a dozen stories that every culture keeps telling.</p></div>
-    <div><h3>The lenses</h3>
+    <div><h3>The veins</h3>
+      <p>Each vein is one way the films run into each other. Switch them on and off on the graph.</p>
       <p><b style="color:${LENSC.nightmares}">Nightmares</b> are the groups the graph model found: films that share the same mix of fears, wherever and whenever they were made. The model drew the groups; the names are ours.</p>
-      <p><b style="color:${LENSC.archetypes}">Primal fears</b> are old story shapes, many rooted in folklore, such as the bad host or the woman who comes back. They are the one lens set from the top down, tagged on each film and then held up against what the films themselves show.</p>
-      <p><b>What threatens</b>, where it comes from, what it wants, how it ends and the other lenses are read from each film's plot, subtitles and screenplay, each reading quoted. The many ways the films put these things are gathered into shared fears.</p>
+      <p><b style="color:${LENSC.archetypes}">Primal fears</b> are old story shapes, many rooted in folklore, such as the bad host or the woman who comes back. They are the one vein set from the top down, tagged on each film and then held up against what the films themselves show.</p>
+      <p><b>What threatens</b>, where it comes from, what it wants, how it ends and the other veins are read from each film's plot, subtitles and screenplay, each reading quoted. The many ways the films put these things are gathered into shared fears.</p>
       <p style="color:var(--mute)">All of it is a first reading, not yet checked by hand.</p></div>
     <div><h3>Rights</h3><p>Subtitles, screenplays and stills belong to their owners and are shown here for private research only. Wikipedia text is CC BY-SA; Wikidata facts are CC0.</p></div>
 </div>
@@ -1003,7 +1004,7 @@ function buildGraph() {
   const legend = () => { const key = document.getElementById("gkey"); if (!key) return;
     const th = document.getElementById("gthreads");
     if (th) { th.hidden = state.primary !== "fears";
-      th.innerHTML = `<span class="h">Lenses</span>` + LENS.map(([kk, nn]) => `<button type="button" data-thread="${kk}" aria-pressed="${state.glenses.has(kk)}">${nn}<i style="background:${LENSC[kk]}"></i></button>`).join("");
+      th.innerHTML = `<span class="h">Veins</span>` + LENS.map(([kk, nn]) => `<button type="button" data-thread="${kk}" aria-pressed="${state.glenses.has(kk)}">${nn}<i style="background:${LENSC[kk]}"></i></button>`).join("");
       th.querySelectorAll("[data-thread]").forEach(b => b.onclick = () => { const kk = b.dataset.thread; state.glenses.has(kk) ? state.glenses.delete(kk) : state.glenses.add(kk);
         document.querySelectorAll(`[data-glens="${kk}"]`).forEach(x => x.setAttribute("aria-pressed", state.glenses.has(kk)));
         redraw(() => { buildGraph(); renderRows(); }); }); }
