@@ -60,7 +60,7 @@ header.bar{display:flex;align-items:baseline;gap:8px 16px;flex-wrap:wrap;padding
 .key{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 .key span{display:inline-flex;gap:6px;align-items:center}
 ol.ledger{list-style:none;margin:0;padding:0}
-.row{display:grid;grid-template-columns:128px minmax(0,1fr) 170px 118px;gap:18px;align-items:center;padding-block:10px;border-top:1px solid var(--rule);cursor:pointer}
+.row{display:grid;grid-template-columns:128px minmax(0,1fr);gap:18px;align-items:center;padding-block:10px;border-top:1px solid var(--rule);cursor:pointer}
 .row:hover{background:var(--soft)}
 .row:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
 .thumb{width:128px;aspect-ratio:16/9;background-color:var(--soft);background-repeat:no-repeat;background-size:100% auto;position:relative}
@@ -654,7 +654,7 @@ function renderIndex() {
     <div class="dfoot"><button class="btn" type="button" id="clearf">Clear filters</button></div>
   </aside>
   <div class="status"><span class="active"><span id="count"></span><span id="pills"></span></span>
-    ${state.view === "patterns" ? `<span class="key"><span>each dot is the share of films carrying the fear · hollow dots: fewer than 10 films, read with care</span></span>` : state.view === "graph" ? "" : `<span class="key"><span>the bar shows how much of each story is mapped</span></span>`}</div>
+    ${state.view === "patterns" ? `<span class="key"><span>each dot is the share of films carrying the fear · hollow dots: fewer than 10 films, read with care</span></span>` : state.view === "graph" ? "" : ""}</div>
   ${state.view === "graph" ? `<div class="gstage" id="gstage"><div class="gflash" id="gflash" aria-hidden="true"></div><div class="gbusy" role="status" aria-live="polite"><span class="geye" aria-hidden="true"><span class="lid"><i class="pupil"></i></span></span><span class="gbt">Charting</span></div>
     <div class="ghero" id="ghero"><p class="overline"><span class="nw">Bloodline</span> · <span class="nw">${F.length} films</span> · <span class="nw">${new Set(F.map(f => f.c)).size} countries</span> · <span class="nw">${Math.min(...F.map(f => f.y))} to ${Math.max(...F.map(f => f.y))}</span></p><h1>Every culture tells the same few <em>nightmares</em></h1><p>Different monsters, different languages, and underneath them the same fears. Every point of light is a film or a fear; every thread, a fear they share.</p></div><div class="ginfo" id="ginfo"></div><div class="gthreads" id="gthreads" role="group" aria-label="Veins shown"></div><div class="gmode viewtoggle" role="group" aria-label="Main nodes"><button type="button" data-primary="fears" aria-pressed="${state.primary === "fears"}">Fears</button><button type="button" data-primary="films" aria-pressed="${state.primary === "films"}">Films</button></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
     <div class="keyline" id="gkey" style="margin-top:10px"></div>` : state.view === "patterns" ? `<div class="pat" id="pat"></div>` : `<ol class="ledger" id="ledger"></ol>`}
@@ -703,8 +703,6 @@ function renderRows() {
     ${thumb(f, "thumb")}
     <span><div class="ti">${esc(f.t)}<span class="yrb">(${f.y})</span></div><div class="sub">${esc(f.c)}${f.dir.length ? " · " + esc(f.dir.join(", ")) : ""}</div>
       ${hits.length ? `<div class="hits"><span class="tag">matches</span> ${hits.slice(0, 5).map(h => `<b>${esc(h)}</b>`).join(", ")}${hits.length > 5 ? ` <span class="tag">+${hits.length - 5}</span>` : ""}</div>` : ""}</span>
-    ${bar(f)}
-    ${marks(f)}
   </li>`).join("");
   L.querySelectorAll(".row").forEach(r => {
     r.onclick = () => go(r.dataset.id);
