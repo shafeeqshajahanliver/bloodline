@@ -651,7 +651,7 @@ function aboutBlock() {
 }
 
 /* ---------- trends ---------- */
-const LENS = [["threat", "What threatens"], ["origin", "Where it comes from"], ["wants", "What it wants"], ["wrong", "The wrong underneath"], ["trigger", "What sets it off"], ["rules", "The rules"], ["who_suffers", "Who suffers"], ["ending", "How it ends"], ["images", "The symbols"]];
+const LENS = [["threat", "What threatens"], ["origin", "Where it comes from"], ["wants", "What it wants"], ["wrong", "The wrong underneath"], ["trigger", "What sets it off"], ["rules", "Rules"], ["who_suffers", "Who suffers"], ["ending", "How it ends"], ["images", "Symbols"]];
 const LENSQ = { threat: "What do we fear will come for us?", origin: "Where do we believe evil comes from?", wants: "What does the thing in the dark want?", wrong: "What buried wrong comes back?", trigger: "What opens the door?", rules: "What rules do we tell ourselves?", who_suffers: "Who does fear fall on?", ending: "How do we let the story end?", images: "What do we see when we're afraid?" };
 const RSHORT = { "North America": "N. America", "Continental Europe": "Europe", "UK & Ireland": "UK & Ire.", "East Asia": "E. Asia", "Southeast Asia": "SE Asia", "Latin America": "Lat. Am.", "South Asia": "S. Asia", "Australia & NZ": "Aus. & NZ", "Middle East & North Africa": "MENA", "Sub-Saharan Africa": "Africa" };
 const PSORT = { time: [["rising", "Rising"], ["common", "Most common"], ["falling", "Fading"]], region: [["travel", "Travels furthest"], ["common", "Most common"], ["local", "Most local"]] };
@@ -845,7 +845,7 @@ let G = null;
 const ERA_C = ["#4a3f37", "#6e6054", "#978672", "#c2b39c", "#efe6d4"];
 const REG_C = {"North America":"#e9e1d1","Continental Europe":"#3fb39a","UK & Ireland":"#d1a23c","East Asia":"#cf3a2e","Southeast Asia":"#c0609a","Latin America":"#e07a45","South Asia":"#e8c44e","Australia & NZ":"#6fa3b8","Middle East & North Africa":"#9d8ad0","Sub-Saharan Africa":"#86b35a"};
 const LENSC = { threat: "#cf3a2e", origin: "#c0609a", wants: "#e07a45", wrong: "#d1a23c", trigger: "#3fb39a", rules: "#6fa3b8", who_suffers: "#9d8ad0", ending: "#efe6d4", images: "#86b35a" };
-const LENSN = { threat: "What threatens", origin: "Where it comes from", wants: "What it wants", wrong: "The wrong underneath", trigger: "What sets it off", rules: "The rules", who_suffers: "Who suffers", ending: "How it ends", images: "The symbols" };
+const LENSN = { threat: "What threatens", origin: "Where it comes from", wants: "What it wants", wrong: "The wrong underneath", trigger: "What sets it off", rules: "Rules", who_suffers: "Who suffers", ending: "How it ends", images: "Symbols" };
 const GREY = "#4a413b";
 function buildGraph() {
   const stage = document.getElementById("gstage"); if (!stage || typeof d3 === "undefined") { if (stage) stage.innerHTML = `<p class="empty">The graph needs a script that didn't load. Reload the page to try again.</p>`; G = null; return; }
