@@ -276,6 +276,7 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .gzoom button{all:unset;cursor:pointer;width:30px;height:30px;display:flex;align-items:center;justify-content:center;border:1px solid var(--ink);background:var(--paper);font-family:var(--mono);font-size:15px}
 .gzoom button:hover{background:var(--soft)}
 .gzoom button:focus-visible{outline:2px solid var(--red)}
+.gmode{position:absolute;left:50%;top:12px;transform:translateX(-50%);z-index:3;background:var(--paper)}
 .gnote{font-size:13px;color:var(--mute);margin-top:10px;max-width:90ch}
 
 .about{margin-top:72px;border-top:3px solid var(--ink);padding-top:12px;scroll-margin-top:16px}
@@ -426,9 +427,9 @@ ul.kinds li span:last-child{font-family:var(--mono);font-size:11.5px;color:var(-
 const IDX = JSON.parse(document.getElementById("idx").textContent);
 const F = IDX.films, ARCH = IDX.arch;
 const DIMS = ["threat","origin","wants","wrong","trigger","rules","who_suffers","ending","images","beats"];
-const DN = {threat:"Threat",origin:"Origin",wants:"What it wants",wrong:"The wrong underneath",trigger:"Trigger",rules:"Rules",who_suffers:"Who suffers",ending:"Ending",images:"Images",beats:"Beats"};
-const DQ = {threat:"What is the danger?",origin:"Where did it come from?",wants:"What drives it?",wrong:"What past act sits underneath?",trigger:"What sets the story off?",rules:"How does it work, and how can it be stopped?",who_suffers:"Who is endangered, and how are they tied to the threat?",ending:"How does it resolve?",images:"Concrete images, with when they appear and what they do.",beats:"Key events in order."};
-const SHORT = {threat:"Threat",origin:"Origin",wants:"Wants",wrong:"Wrong",trigger:"Trigger",rules:"Rules",who_suffers:"Suffers",ending:"Ending",images:"Images",beats:"Beats"};
+const DN = {threat:"Threat",origin:"Origin",wants:"What it wants",wrong:"The wrong underneath",trigger:"Trigger",rules:"Rules",who_suffers:"Who suffers",ending:"Ending",images:"Symbols",beats:"Beats"};
+const DQ = {threat:"What is the danger?",origin:"Where did it come from?",wants:"What drives it?",wrong:"What past act sits underneath?",trigger:"What sets the story off?",rules:"How does it work, and how can it be stopped?",who_suffers:"Who is endangered, and how are they tied to the threat?",ending:"How does it resolve?",images:"The symbols that recur: objects, animals, places, bodies, with when they appear and what they do.",beats:"Key events in order."};
+const SHORT = {threat:"Threat",origin:"Origin",wants:"Wants",wrong:"Wrong",trigger:"Trigger",rules:"Rules",who_suffers:"Suffers",ending:"Ending",images:"Symbols",beats:"Beats"};
 const WHEN = ["opening","early","middle","late","ending"];
 const ERAS = [["<1960",0,1959],["1960s–70s",1960,1979],["1980s–90s",1980,1999],["2000–14",2000,2014],["2015+",2015,9999]];
 const REGIONS = [...new Set(F.map(f => f.r))];
@@ -438,7 +439,7 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;
 const fmt = n => n == null ? "" : n >= 1e6 ? "$" + (n / 1e6).toFixed(n >= 1e7 ? 0 : 1) + "m" : "$" + Math.round(n / 1e3) + "k";
 const app = document.getElementById("app");
 const cache = {};
-const state = { q: "", region: new Set(), era: new Set(), has: new Set(), sort: "year", view: "graph", lens: "wrong", psort: "travel", psel: null, arrange: "net", links: new Set(["p","a","e"]), colour: "region" };
+const state = { q: "", region: new Set(), era: new Set(), has: new Set(), sort: "year", view: "graph", primary: "films", glenses: new Set(["threat", "wants", "wrong", "ending"]), lens: "wrong", psort: "travel", psel: null, arrange: "net", links: new Set(["p","a","e"]), colour: "region" };
 try { const s = JSON.parse(localStorage.getItem("bl-r1") || "{}"); if (s.sort) state.sort = s.sort; } catch (e) {}
 
 function eraOf(y) { return ERAS.find(e => y >= e[1] && y <= e[2])[0]; }
@@ -489,7 +490,7 @@ function renderIndex() {
   <div class="controls">
     <div class="search">
       <button class="filterbtn" type="button" id="openf" aria-expanded="false" aria-controls="drawer">Filters<span class="k" id="fcount"></span></button>
-      <input id="q" type="search" placeholder="Search a fear, an image or a film. Try mirror, drowned, Get Out" value="${esc(state.q)}" aria-label="Search fears, images and films">
+      <input id="q" type="search" placeholder="Search a fear, a symbol or a film. Try mirror, drowned, Get Out" value="${esc(state.q)}" aria-label="Search fears, symbols and films">
       <span class="viewtoggle" role="group" aria-label="View"><button type="button" data-view="graph" aria-pressed="${state.view === "graph"}">Graph</button><button type="button" data-view="patterns" aria-pressed="${state.view === "patterns"}">Patterns</button><button type="button" data-view="list" aria-pressed="${state.view === "list"}">List</button></span>
     </div>
   </div>
@@ -499,18 +500,18 @@ function renderIndex() {
     <section><h3>Region</h3><div class="chips">${REGIONS.map(r => `<button class="chip" type="button" data-region="${esc(r)}" aria-pressed="${state.region.has(r)}">${esc(r)}${state.view === "patterns" ? "" : `<span class="k">${F.filter(f => f.r === r).length}</span>`}</button>`).join("")}</div></section>
     <section><h3>Era</h3><div class="chips">${ERAS.map(([e]) => `<button class="chip" type="button" data-era="${e}" aria-pressed="${state.era.has(e)}">${e}${state.view === "patterns" ? "" : `<span class="k">${F.filter(f => eraOf(f.y) === e).length}</span>`}</button>`).join("")}</div></section>
     ${state.view === "graph" ? `<section><h3>Arrange</h3><div class="chips">${[["net","By connection"],["time","Through time"]].map(([k, n]) => `<button class="chip" type="button" data-arrange="${k}" aria-pressed="${state.arrange === k}">${n}</button>`).join("")}</div></section>
-    <section><h3>Links</h3><div class="chips">${[["p","People"],["a","Archetypes"],["e","Story elements"]].map(([k, n]) => `<button class="chip" type="button" data-link="${k}" aria-pressed="${state.links.has(k)}">${n}</button>`).join("")}</div></section>
-    <section><h3>Colour</h3><div class="chips">${[["region","Region"],["era","Era"],["still","Still colour"]].map(([k, n]) => `<button class="chip" type="button" data-colour="${k}" aria-pressed="${state.colour === k}">${n}</button>`).join("")}</div></section>`
+    <section><h3>Kinds of fear shown</h3><div class="chips">${LENS.map(([k, n]) => `<button class="chip" type="button" data-glens="${k}" aria-pressed="${state.glenses.has(k)}"><span class="sw" style="background:${LENSC[k]};border-radius:50%;margin-right:6px"></span>${n}</button>`).join("")}</div></section>
+    <section><h3>Film colour</h3><div class="chips">${[["region","Region"],["era","Era"],["still","Still colour"]].map(([k, n]) => `<button class="chip" type="button" data-colour="${k}" aria-pressed="${state.colour === k}">${n}</button>`).join("")}</div></section>`
     : state.view === "patterns" ? `<section><h3>Lens</h3><div class="chips">${LENS.map(([k, n]) => `<button class="chip" type="button" data-lens="${k}" aria-pressed="${state.lens === k}">${n}</button>`).join("")}</div></section>
     <section><h3>Order</h3><div class="chips">${[["travel","Travels furthest"],["common","Most common"],["local","Most local"]].map(([k, n]) => `<button class="chip" type="button" data-psort="${k}" aria-pressed="${state.psort === k}">${n}</button>`).join("")}</div></section>`
     : `<section><h3>Sort</h3><div class="chips">${[["year","Year"],["title","Title"],["n","Most entries"]].map(([k, n]) => `<button class="chip" type="button" data-sort="${k}" aria-pressed="${state.sort === k}">${n}</button>`).join("")}</div></section>`}
     <div class="dfoot"><button class="btn" type="button" id="clearf">Clear filters</button></div>
   </aside>
   <div class="status"><span class="active"><span id="count"></span><span id="pills"></span></span>
-    ${state.view === "patterns" ? `<span class="key"><span><span class="pdot" style="width:12px;height:12px"></span>share of a region's films carrying the fear</span><span><span class="pdot thin" style="width:12px;height:12px"></span>fewer than 10 films: read with care</span></span>` : state.view === "graph" ? `<span class="key"><span><span class="sw" style="background:var(--ink);width:14px;height:2px"></span>people</span><span><span class="sw" style="background:var(--ochre);width:14px;height:2px"></span>archetype</span><span><span class="sw" style="background:var(--teal);width:14px;height:2px"></span>story element</span><span>thicker line, closer kin · point at a film to see what binds it</span></span>` : `<span class="key"><span>the bar shows how much of each story is mapped</span></span>`}</div>
-  ${state.view === "graph" ? `<div class="gstage" id="gstage"><div class="gflash" id="gflash" aria-hidden="true"></div><div class="ginfo" id="ginfo"></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
+    ${state.view === "patterns" ? `<span class="key"><span><span class="pdot" style="width:12px;height:12px"></span>share of a region's films carrying the fear</span><span><span class="pdot thin" style="width:12px;height:12px"></span>fewer than 10 films: read with care</span></span>` : state.view === "graph" ? `<span class="key"><span>Each line joins a film to a fear it carries · point at anything to trace it</span></span>` : `<span class="key"><span>the bar shows how much of each story is mapped</span></span>`}</div>
+  ${state.view === "graph" ? `<div class="gstage" id="gstage"><div class="gflash" id="gflash" aria-hidden="true"></div><div class="ginfo" id="ginfo"></div><div class="gmode viewtoggle" role="group" aria-label="Main nodes"><button type="button" data-primary="films" aria-pressed="${state.primary === "films"}">Films</button><button type="button" data-primary="fears" aria-pressed="${state.primary === "fears"}">Fears</button></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
     <div class="keyline" id="gkey" style="margin-top:10px"></div>
-    <p class="gnote">Every line is something two films share: a fear, an image, a shape of story, or the people who made them. The rarer the thing, the closer it pulls them. Filter, and the films that fall away disappear. Click a film to step inside it.</p>` : state.view === "patterns" ? `<div class="pat" id="pat"></div>` : `<ol class="ledger" id="ledger"></ol>`}
+    <p class="gnote">Films and the fears they carry, drawn together. Switch between films and fears as the main thread; the other stays in grey. Films that share fears pull close; fears that travel sit at the centre. Click a film to step inside it, or a fear to see how far it travels.</p>` : state.view === "patterns" ? `<div class="pat" id="pat"></div>` : `<ol class="ledger" id="ledger"></ol>`}
   ${aboutBlock()}`;
   const q = document.getElementById("q");
   q.addEventListener("input", () => { state.q = q.value; renderRows(); });
@@ -527,7 +528,8 @@ function renderIndex() {
   document.getElementById("clearf").onclick = () => { state.region.clear(); state.era.clear(); state.has.clear(); drawer.querySelectorAll("[data-region],[data-era],[data-has]").forEach(b => b.setAttribute("aria-pressed", "false")); renderRows(); };
   app.querySelectorAll("[data-arrange]").forEach(b => b.onclick = () => { state.arrange = b.dataset.arrange; app.querySelectorAll("[data-arrange]").forEach(x => x.setAttribute("aria-pressed", x === b)); G && G.arrange(); });
   app.querySelectorAll("[data-colour]").forEach(b => b.onclick = () => { state.colour = b.dataset.colour; app.querySelectorAll("[data-colour]").forEach(x => x.setAttribute("aria-pressed", x === b)); G && G.recolour(); });
-  app.querySelectorAll("[data-link]").forEach(b => b.onclick = () => { const k = b.dataset.link; state.links.has(k) ? state.links.delete(k) : state.links.add(k); b.setAttribute("aria-pressed", state.links.has(k)); renderRows(); });
+  app.querySelectorAll("[data-glens]").forEach(b => b.onclick = () => { const k = b.dataset.glens; state.glenses.has(k) ? state.glenses.delete(k) : state.glenses.add(k); b.setAttribute("aria-pressed", state.glenses.has(k)); buildGraph(); renderRows(); });
+  app.querySelectorAll("[data-primary]").forEach(b => b.onclick = () => { state.primary = b.dataset.primary; app.querySelectorAll("[data-primary]").forEach(x => x.setAttribute("aria-pressed", x === b)); G && G.emphasis(); });
   app.querySelectorAll("[data-lens]").forEach(b => b.onclick = () => { state.lens = b.dataset.lens; state.psel = null; app.querySelectorAll("[data-lens]").forEach(x => x.setAttribute("aria-pressed", x === b)); renderRows(); });
   app.querySelectorAll("[data-psort]").forEach(b => b.onclick = () => { state.psort = b.dataset.psort; app.querySelectorAll("[data-psort]").forEach(x => x.setAttribute("aria-pressed", x === b)); renderRows(); });
   app.querySelectorAll("[data-sort]").forEach(b => b.onclick = () => {
@@ -568,7 +570,7 @@ function renderRows() {
 function aboutBlock() {
   return `<section class="about" id="about"><h2>About this record</h2><div class="cols">
     <div><h3>How it was made</h3>
-      <p>Each film was read by Claude from its Wikipedia plot, and then from its subtitles and, where one exists, its screenplay. The reading describes ten parts of the story: the threat, where it came from, what it wants, the wrong underneath, what sets it off, its rules, who suffers, how it ends, the images and the key beats.</p>
+      <p>Each film was read by Claude from its Wikipedia plot, and then from its subtitles and, where one exists, its screenplay. The reading describes ten parts of the story: the threat, where it came from, what it wants, the wrong underneath, what sets it off, its rules, who suffers, how it ends, the symbols and the key beats.</p>
       <p>Every element carries the passage it was read from, so you can check it. Facts about cast and crew come from Wikidata. Stills come from FILMGRAB and jump-scare timings from Where's the Jump.</p></div>
     <div><h3>What to keep in mind</h3>
       <p>This is a first reading and nobody has reviewed it yet. The wording is the reader's own and hasn't been merged, so the same idea can appear in different words. Some phrases were given to the readers as examples and turn up more often than they should; the evidence marks them as “example wording”.</p>
@@ -581,7 +583,7 @@ function aboutBlock() {
 }
 
 /* ---------- patterns ---------- */
-const LENS = [["threat", "What threatens"], ["origin", "Where it comes from"], ["wants", "What it wants"], ["wrong", "The wrong underneath"], ["trigger", "What sets it off"], ["rules", "The rules"], ["who_suffers", "Who suffers"], ["ending", "How it ends"], ["images", "The images"]];
+const LENS = [["threat", "What threatens"], ["origin", "Where it comes from"], ["wants", "What it wants"], ["wrong", "The wrong underneath"], ["trigger", "What sets it off"], ["rules", "The rules"], ["who_suffers", "Who suffers"], ["ending", "How it ends"], ["images", "The symbols"]];
 const LENSQ = { threat: "What do we fear will come for us?", origin: "Where do we believe evil comes from?", wants: "What does the thing in the dark want?", wrong: "What buried wrong comes back?", trigger: "What opens the door?", rules: "What rules do we tell ourselves?", who_suffers: "Who does fear fall on?", ending: "How do we let the story end?", images: "What do we see when we're afraid?" };
 const RSHORT = { "North America": "N. America", "Continental Europe": "Europe", "UK & Ireland": "UK & Ire.", "East Asia": "E. Asia", "Southeast Asia": "SE Asia", "Latin America": "Lat. Am.", "South Asia": "S. Asia", "Australia & NZ": "Aus. & NZ", "Middle East & North Africa": "MENA", "Sub-Saharan Africa": "Africa" };
 let PAT = null, patLoad = null;
@@ -615,8 +617,8 @@ function renderPatterns() {
     return `<span class="pdot${tot[g] < 10 ? " thin" : ""}" style="width:${px}px;height:${px}px;opacity:${.45 + .55 * Math.sqrt(s / maxShare)}" title="${r.by[g]} of ${tot[g]} films in ${esc(g)} (${Math.round(s * 100)}%)"></span>`; };
   el.innerHTML = `<div>${lensBar}
       <p class="pq">${LENSQ[d]}</p>
-      <p class="psub">${rows.length} ${d === "images" ? "families of image" : "fears"} in ${esc(lensName.toLowerCase())}, across ${films.length} films. Each dot is the share of a region's films that carry ${d === "images" ? "the image" : "the fear"}; read across a row to see how far it travels.</p>
-      <div class="mx"><table><thead><tr><th class="fl">${d === "images" ? "Image" : "Fear"}</th>${regs.map(g => `<th><button type="button" data-reg="${esc(g)}" aria-pressed="${state.psel?.type === "region" && state.psel.key === g}">${esc(RSHORT[g] || g)}</button><span class="n">${tot[g]}</span></th>`).join("")}<th>travels</th></tr></thead>
+      <p class="psub">${rows.length} ${d === "images" ? "families of symbol" : "fears"} in ${esc(lensName.toLowerCase())}, across ${films.length} films. Each dot is the share of a region's films that carry ${d === "images" ? "the symbol" : "the fear"}; read across a row to see how far it travels.</p>
+      <div class="mx"><table><thead><tr><th class="fl">${d === "images" ? "Symbol" : "Fear"}</th>${regs.map(g => `<th><button type="button" data-reg="${esc(g)}" aria-pressed="${state.psel?.type === "region" && state.psel.key === g}">${esc(RSHORT[g] || g)}</button><span class="n">${tot[g]}</span></th>`).join("")}<th>travels</th></tr></thead>
       <tbody>${rows.map(r => `<tr class="${state.psel?.type === "fear" && state.psel.key === r.fear ? "on" : ""}"><td class="fl"><button type="button" data-fear="${esc(r.fear)}">${esc(r.fear)}</button></td>${regs.map(g => `<td>${dot(r, g)}</td>`).join("")}<td class="tr">${r.present} of ${regs.length}</td></tr>`).join("") || `<tr><td class="fl" colspan="${regs.length + 2}"><span class="fp">No fear matches that search.</span></td></tr>`}</tbody></table></div></div>
     <aside class="pside" id="pside" aria-live="polite">${state.psel?.type === "region" ? regionPanel(state.psel.key, rows, regs, tot, films, d) : state.psel ? fearPanel(rows.find(r => r.fear === state.psel.key), regs, tot, films, d) : ""}</aside>`;
   wireLens(el);
@@ -661,46 +663,66 @@ function regionPanel(g, rows, regs, tot, films, d) {
 let G = null;
 const ERA_C = ["#4a3f37", "#6e6054", "#978672", "#c2b39c", "#efe6d4"];
 const REG_C = {"North America":"#e9e1d1","Continental Europe":"#3fb39a","UK & Ireland":"#d1a23c","East Asia":"#cf3a2e","Southeast Asia":"#c0609a","Latin America":"#e07a45","South Asia":"#e8c44e","Australia & NZ":"#6fa3b8","Middle East & North Africa":"#9d8ad0","Sub-Saharan Africa":"#86b35a"};
-const LINKC = { p: "var(--ink)", a: "var(--ochre)", e: "var(--teal)" };
+const LENSC = { threat: "#cf3a2e", origin: "#c0609a", wants: "#e07a45", wrong: "#d1a23c", trigger: "#3fb39a", rules: "#6fa3b8", who_suffers: "#9d8ad0", ending: "#efe6d4", images: "#86b35a" };
+const LENSN = { threat: "What threatens", origin: "Where it comes from", wants: "What it wants", wrong: "The wrong underneath", trigger: "What sets it off", rules: "The rules", who_suffers: "Who suffers", ending: "How it ends", images: "The symbols" };
+const GREY = "#4a413b";
 function buildGraph() {
   const stage = document.getElementById("gstage"); if (!stage || typeof d3 === "undefined") { if (stage) stage.innerHTML = `<p class="empty">The graph needs a script that didn't load. Reload the page to try again.</p>`; G = null; return; }
   const W = stage.clientWidth, H = stage.clientHeight;
-  const nodes = F.map((f, i) => ({ i, f, id: f.id, deg: 0, str: 0 }));
-  const edges = IDX.edges.map(([a, b, w, via]) => { const types = new Set(via.map(v => v[0])); nodes[a].deg++; nodes[b].deg++; nodes[a].str += w; nodes[b].str += w;
-    const main = via.some(v => v[0] === "p") ? "p" : via.some(v => v[0] === "e") ? "e" : "a"; return { source: a, target: b, w, via, types, main }; });
-  nodes.forEach(n => n.r = 3.5 + Math.sqrt(n.str) * 2.1);
-  const byStr = [...nodes].sort((a, b) => b.str - a.str).slice(0, 18).map(n => n.id);
-  nodes.forEach(n => n.big = byStr.includes(n.id));
-  // two layouts, computed once without animation
-  const sim = d3.forceSimulation(nodes).force("link", d3.forceLink(edges).distance(e => 70 / Math.sqrt(e.w)).strength(e => Math.min(1, e.w / 3)))
-    .force("charge", d3.forceManyBody().strength(-260).distanceMax(400)).force("collide", d3.forceCollide(n => n.r + 4)).force("x", d3.forceX(0).strength(.05)).force("y", d3.forceY(0).strength(.07)).stop();
-  for (let i = 0; i < 500; i++) sim.tick();
+  // two kinds of node: the 100 films, and the fears they carry (kinds chosen in the drawer, shared by at least two films)
+  const films = F.map((f, i) => ({ kind: "film", i, f, id: f.id }));
+  const fearsAll = (IDX.fears || []).map(([lens, name, def], i) => ({ kind: "fear", i, lens, name, def, id: "fear:" + i, films: [] }));
+  (IDX.ff || []).forEach((list, fi) => list.forEach(x => fearsAll[x] && fearsAll[x].films.push(films[fi])));
+  const fears = fearsAll.filter(x => state.glenses.has(x.lens) && x.films.length >= 2);
+  const nodes = [...films, ...fears];
+  const edges = fears.flatMap(x => x.films.map(fm => ({ source: fm, target: x, lens: x.lens })));
+  films.forEach(n => n.fears = []); edges.forEach(e => e.source.fears.push(e.target));
+  fears.forEach(x => x.r = 3 + Math.sqrt(x.films.length) * 2.2);
+  const sim = d3.forceSimulation(nodes).force("link", d3.forceLink(edges).distance(46).strength(e => 1 / Math.sqrt(e.target.films.length) * .6))
+    .force("charge", d3.forceManyBody().strength(n => n.kind === "fear" ? -40 - n.films.length * 6 : -70).distanceMax(420))
+    .force("collide", d3.forceCollide(n => (n.kind === "fear" ? n.r : 6) + 3)).force("x", d3.forceX(0).strength(.04)).force("y", d3.forceY(0).strength(.06)).stop();
+  for (let i = 0; i < 450; i++) sim.tick();
   nodes.forEach(n => { n.nx = n.x; n.ny = n.y; });
   const yr = d3.scaleLinear().domain([1915, 2025]).range([-W * .45, W * .45]);
-  nodes.forEach(n => { n.x = yr(n.f.y); n.y = n.ny * .6; });
-  const sim2 = d3.forceSimulation(nodes).force("link", d3.forceLink(edges).distance(40).strength(e => Math.min(.25, e.w / 8)))
-    .force("x", d3.forceX(n => yr(n.f.y)).strength(3)).force("y", d3.forceY(0).strength(.06)).force("collide", d3.forceCollide(n => n.r + 3)).force("charge", d3.forceManyBody().strength(-30)).stop();
-  for (let i = 0; i < 400; i++) sim2.tick();
+  fears.forEach(x => x.my = d3.mean(x.films, fm => fm.f.y));
+  const sim2 = d3.forceSimulation(nodes).force("link", d3.forceLink(edges).distance(40).strength(.05))
+    .force("x", d3.forceX(n => yr(n.kind === "film" ? n.f.y : n.my)).strength(n => n.kind === "film" ? 3 : 1)).force("y", d3.forceY(0).strength(.05))
+    .force("collide", d3.forceCollide(n => (n.kind === "fear" ? n.r : 6) + 2)).force("charge", d3.forceManyBody().strength(-25)).stop();
+  for (let i = 0; i < 350; i++) sim2.tick();
   nodes.forEach(n => { n.tx = n.x; n.ty = n.y; n.x = state.arrange === "time" ? n.tx : n.nx; n.y = state.arrange === "time" ? n.ty : n.ny; });
   stage.querySelector("svg")?.remove();
-  const svg = d3.select(stage).insert("svg", ".ginfo").attr("viewBox", [-W / 2, -H / 2, W, H]).attr("role", "group").attr("aria-label", "Graph of the 100 films");
+  const svg = d3.select(stage).insert("svg", ".ginfo").attr("viewBox", [-W / 2, -H / 2, W, H]).attr("role", "group").attr("aria-label", "Graph of films and the fears they share");
   const root = svg.append("g");
-  const axis = root.append("g").attr("class", "axis");
+  const axis = root.append("g");
   const eg = root.append("g"), ng = root.append("g"), lg = root.append("g");
-  const eSel = eg.selectAll("line").data(edges).join("line").attr("class", "ge").attr("stroke", "var(--mute)").attr("stroke-opacity", e => .12 + Math.min(e.w, 4) * .07).attr("stroke-width", e => .5 + Math.min(e.w, 4) * .6);
-  const nSel = ng.selectAll("g").data(nodes).join("g").attr("class", "gn").attr("tabindex", 0).attr("role", "link").attr("aria-label", n => `${n.f.t}, ${n.f.y}`);
-  nSel.append("circle").attr("r", n => n.r).attr("stroke", "var(--ink)").attr("stroke-width", 1);
-  const lSel = lg.selectAll("text").data(nodes).join("text").attr("class", "lab").attr("text-anchor", "middle").text(n => `${n.f.t} (${n.f.y})`);
+  const eSel = eg.selectAll("line").data(edges).join("line").attr("class", "ge").attr("stroke", "var(--mute)").attr("stroke-opacity", .1).attr("stroke-width", .6);
+  const nSel = ng.selectAll("g").data(nodes).join("g").attr("class", n => "gn " + n.kind).attr("tabindex", 0).attr("role", n => n.kind === "film" ? "link" : "button")
+    .attr("aria-label", n => n.kind === "film" ? `${n.f.t}, ${n.f.y}` : `${n.name}, ${LENSN[n.lens]}, ${n.films.length} films`);
+  nSel.append("circle");
+  const lSel = lg.selectAll("text").data(nodes).join("text").attr("class", "lab").attr("text-anchor", "middle").text(n => n.kind === "film" ? `${n.f.t} (${n.f.y})` : n.name);
+  const rOf = n => state.primary === "films" ? (n.kind === "film" ? 6 : 2.6) : (n.kind === "fear" ? n.r : 2.4);
+  const fillOf = n => { const prim = (state.primary === "films") === (n.kind === "film");
+    if (!prim) return GREY;
+    if (n.kind === "fear") return LENSC[n.lens];
+    return state.colour === "era" ? ERA_C[ERAS.findIndex(e => e[0] === eraOf(n.f.y))] : state.colour === "region" ? REG_C[n.f.r] : (n.f.tone || "var(--soft)"); };
   const place = () => { eSel.attr("x1", e => e.source.x).attr("y1", e => e.source.y).attr("x2", e => e.target.x).attr("y2", e => e.target.y);
-    nSel.attr("transform", n => `translate(${n.x},${n.y})`); lSel.attr("x", n => n.x).attr("y", n => n.y - n.r - 5); };
+    nSel.attr("transform", n => `translate(${n.x},${n.y})`); lSel.attr("x", n => n.x).attr("y", n => n.y - rOf(n) - 5); };
   const drawAxis = () => { axis.selectAll("*").remove(); if (state.arrange !== "time") return;
     for (const y of [1920, 1940, 1960, 1980, 2000, 2020]) { axis.append("line").attr("x1", yr(y)).attr("x2", yr(y)).attr("y1", -H).attr("y2", H).attr("stroke", "var(--rule)").attr("stroke-dasharray", "2 4");
       axis.append("text").attr("class", "ax").attr("x", yr(y) + 4).attr("y", d3.min(nodes, n => n.ty) - 24).text(y + "s"); } };
-  const recolour = () => { nSel.select("circle").attr("fill", n => state.colour === "era" ? ERA_C[ERAS.findIndex(e => e[0] === eraOf(n.f.y))] : state.colour === "region" ? REG_C[n.f.r] : (n.f.tone || "var(--soft)")).attr("stroke", "var(--paper)").attr("stroke-width", 1.5);
-    const key = document.getElementById("gkey"); if (key) key.innerHTML = state.colour === "region" ? REGIONS.map(r => `<span><span class="sw" style="background:${REG_C[r]};border-radius:50%"></span>${esc(r)}</span>`).join("") : state.colour === "era" ? ERAS.map(([e], i) => `<span><span class="sw" style="background:${ERA_C[i]};border-radius:50%"></span>${e}</span>`).join("") : `<span>Each disc is filled with the prevailing colour of its stills.</span>`; };
-  let k = 1, visible = new Set(nodes.map(n => n.id)), hits = new Map();
-  const labels = () => lSel.attr("display", n => visible.has(n.id) && (n.big || k > 1.7 || (hits.size && hits.get(n.id)?.length) || visible.size <= 30) ? null : "none");
-  const zoom = d3.zoom().scaleExtent([.4, 6]).on("zoom", ev => { root.attr("transform", ev.transform); k = ev.transform.k; labels(); });
+  let k = 1, visible = new Set(nodes.map(n => n.id)), hits = new Map(), hoverOn = null;
+  const bigFilms = new Set([...films].sort((a, b) => b.fears.length - a.fears.length).slice(0, 16).map(n => n.id));
+  const bigFears = new Set([...fears].sort((a, b) => b.films.length - a.films.length).slice(0, 22).map(n => n.id));
+  const labels = () => lSel.attr("display", n => { if (!visible.has(n.id)) return "none"; const prim = (state.primary === "films") === (n.kind === "film");
+    if (!prim) return k > 2.6 ? null : "none";
+    return (n.kind === "film" ? bigFilms : bigFears).has(n.id) || k > 1.7 || visible.size <= 40 ? null : "none"; });
+  const emphasis = () => { nSel.select("circle").attr("r", rOf).attr("fill", fillOf).attr("stroke", n => (state.primary === "films") === (n.kind === "film") ? "var(--paper)" : "none").attr("stroke-width", 1.2);
+    lSel.attr("fill", n => n.kind === "fear" && state.primary === "fears" ? LENSC[n.lens] : "var(--ink)").attr("y", n => n.y - rOf(n) - 5);
+    nSel.filter(n => (state.primary === "films") === (n.kind === "film")).raise(); labels(); legend(); rest(); };
+  const legend = () => { const key = document.getElementById("gkey"); if (!key) return;
+    key.innerHTML = state.primary === "fears" ? LENS.filter(([kk]) => state.glenses.has(kk)).map(([kk, nn]) => `<span><span class="sw" style="background:${LENSC[kk]};border-radius:50%"></span>${nn}</span>`).join("") + `<span><span class="sw" style="background:${GREY};border-radius:50%"></span>films</span>`
+      : (state.colour === "region" ? REGIONS.map(r => `<span><span class="sw" style="background:${REG_C[r]};border-radius:50%"></span>${esc(r)}</span>`).join("") : state.colour === "era" ? ERAS.map(([e], i) => `<span><span class="sw" style="background:${ERA_C[i]};border-radius:50%"></span>${e}</span>`).join("") : `<span>Films are filled with the colour of their stills.</span>`) + `<span><span class="sw" style="background:${GREY};border-radius:50%"></span>fears</span>`; };
+  const zoom = d3.zoom().scaleExtent([.4, 7]).on("zoom", ev => { root.attr("transform", ev.transform); k = ev.transform.k; if (!hoverOn) labels(); });
   svg.call(zoom);
   const fit = (dur) => { const vis = nodes.filter(n => visible.has(n.id)); if (!vis.length) return;
     const [x0, x1] = d3.extent(vis, n => n.x), [y0, y1] = d3.extent(vis, n => n.y), s = Math.min(3, .86 / Math.max((x1 - x0 + 80) / W, (y1 - y0 + 80) / H));
@@ -709,40 +731,49 @@ function buildGraph() {
   document.getElementById("zin").onclick = () => svg.call(zoom.scaleBy, 1.4);
   document.getElementById("zout").onclick = () => svg.call(zoom.scaleBy, 1 / 1.4);
   document.getElementById("zfit").onclick = () => fit(300);
-  const info = document.getElementById("ginfo");
-  const rest = () => { stage.classList.remove("hov"); document.getElementById("gflash")?.classList.remove("on"); eSel.attr("stroke", "var(--mute)").attr("stroke-opacity", e => .12 + Math.min(e.w, 4) * .07); stage.querySelectorAll(".hi").forEach(x => x.classList.remove("hi"));
-    info.innerHTML = `<div class="m">${visible.size} FILMS · ${eSel.filter(function () { return this.getAttribute("display") !== "none"; }).size()} LINKS</div><div class="r" style="color:var(--mute)">Point at a film to see what links it.</div>`; };
-  const flash = document.getElementById("gflash"); let flashes = 0;
+  const info = document.getElementById("ginfo"), flash = document.getElementById("gflash"); let flashes = 0;
   const showStill = n => { if (!flash) return; flash.classList.remove("on");
-    if (!n.f.st) { flash.style.backgroundImage = "none"; return; }
+    if (n.kind !== "film" || !n.f.st) { flash.style.backgroundImage = "none"; return; }
     const i = (flashes++ * 5 + n.i) % n.f.st, pos = n.f.st === 1 ? "0 0" : `0 ${(i / (n.f.st - 1)) * 100}%`;
     flash.style.backgroundImage = `url('stills/${n.id}.jpg')`; flash.style.backgroundSize = `100% ${n.f.st * 100}%`; flash.style.backgroundPosition = pos;
     void flash.offsetWidth; flash.classList.add("on"); };
-  const hover = n => { stage.classList.add("hov"); showStill(n);
-    const mine = edges.filter(e => (e.source === n || e.target === n) && edgeOn(e));
-    const nb = new Set(mine.map(e => e.source === n ? e.target.id : e.source.id)); nb.add(n.id);
-    nSel.classed("hi", m => nb.has(m.id)); lSel.classed("hi", m => nb.has(m.id)).attr("display", m => visible.has(m.id) && nb.has(m.id) ? null : (visible.has(m.id) && (m.big || k > 1.7) ? null : "none"));
-    eSel.classed("hi", e => mine.includes(e)).attr("stroke", e => mine.includes(e) ? LINKC[e.main] : "var(--mute)").attr("stroke-opacity", e => mine.includes(e) ? .9 : .12 + Math.min(e.w, 4) * .07);
-    const top = mine.sort((a, b) => b.w - a.w).slice(0, 4);
-    info.innerHTML = `<div class="t">${esc(n.f.t)} <span style="color:var(--mute);font-size:.7em">(${n.f.y})</span></div><div class="m">${esc(n.f.c)}${n.f.dir.length ? " · " + esc(n.f.dir[0]) : ""}</div>
-      ${hits.get(n.id)?.length ? `<div class="r">matches <b>${hits.get(n.id).slice(0, 4).map(esc).join(", ")}</b></div>` : ""}
-      <div class="r">${top.length ? top.map(e => { const o = e.source === n ? e.target : e.source; return `<b>${esc(o.f.t)}</b>: ${e.via.filter(v => state.links.has(v[0])).map(v => esc(v.slice(2))).join(", ")}`; }).join("<br>") : "No links shown with these settings."}</div>`; };
-  nSel.on("mouseenter focus", (ev, n) => hover(n)).on("mouseleave blur", () => { rest(); labels(); })
-    .on("click", (ev, n) => go(n.id)).on("keydown", (ev, n) => { if (ev.key === "Enter") go(n.id); });
-  const edgeOn = e => visible.has(e.source.id) && visible.has(e.target.id) && [...e.types].some(t => state.links.has(t));
-  const filter = (m) => { hits = m; visible = new Set(m.keys());
-    nSel.attr("display", n => visible.has(n.id) ? null : "none");
-    eSel.attr("display", e => edgeOn(e) ? null : "none"); labels(); rest();
-    if (ready) { clearTimeout(fitT); fitT = setTimeout(() => fit(450), 120); } else fit(0); };
+  const rest = () => { hoverOn = null; stage.classList.remove("hov"); flash?.classList.remove("on"); eSel.attr("stroke", "var(--mute)").attr("stroke-opacity", .1);
+    stage.querySelectorAll(".hi").forEach(x => x.classList.remove("hi"));
+    const vf = films.filter(n => visible.has(n.id)).length, vx = fears.filter(n => visible.has(n.id)).length;
+    info.innerHTML = `<div class="m">${vf} FILMS · ${vx} FEARS</div><div class="r" style="color:var(--mute)">${state.primary === "films" ? "Point at a film to see the fears it carries." : "Point at a fear to see the films that carry it."}</div>`; labels(); };
+  const hover = n => { hoverOn = n; stage.classList.add("hov"); showStill(n);
+    const nb = new Set([n.id, ...(n.kind === "film" ? n.fears : n.films).filter(m => visible.has(m.id)).map(m => m.id)]);
+    nSel.classed("hi", m => nb.has(m.id)); lSel.classed("hi", m => nb.has(m.id)).attr("display", m => nb.has(m.id) ? null : "none");
+    eSel.classed("hi", e => e.source === n || e.target === n).attr("stroke", e => e.source === n || e.target === n ? LENSC[e.lens] : "var(--mute)").attr("stroke-opacity", e => e.source === n || e.target === n ? .85 : .1);
+    if (n.kind === "film") {
+      const by = {}; n.fears.filter(x => visible.has(x.id)).forEach(x => (by[x.lens] = by[x.lens] || []).push(x.name));
+      info.innerHTML = `<div class="t">${esc(n.f.t)} <span style="color:var(--mute);font-size:.7em">(${n.f.y})</span></div><div class="m">${esc(n.f.c)}${n.f.dir.length ? " · " + esc(n.f.dir[0]) : ""}</div>
+        <div class="r">${LENS.filter(([kk]) => by[kk]).map(([kk, nn]) => `<span style="color:${LENSC[kk]}">${nn}</span>: ${by[kk].map(esc).join(", ")}`).join("<br>") || "No shared fears shown with these settings."}</div>`;
+    } else {
+      const vf = n.films.filter(m => visible.has(m.id));
+      info.innerHTML = `<div class="m" style="color:${LENSC[n.lens]}">${esc(LENSN[n.lens]).toUpperCase()}</div><div class="t">${esc(n.name)}</div>${n.def ? `<div class="r" style="font-style:italic;color:var(--mute)">${esc(n.def)}</div>` : ""}
+        <div class="r">${vf.length} of the 100 films: ${vf.slice(0, 8).map(m => esc(m.f.t)).join(", ")}${vf.length > 8 ? ` and ${vf.length - 8} more` : ""}.</div><div class="m" style="margin-top:6px">CLICK TO SEE HOW FAR IT TRAVELS</div>`;
+    } };
+  nSel.on("mouseenter focus", (ev, n) => hover(n)).on("mouseleave blur", () => rest())
+    .on("click", (ev, n) => open(n)).on("keydown", (ev, n) => { if (ev.key === "Enter") open(n); });
+  const open = n => { if (n.kind === "film") go(n.id); else { state.lens = n.lens; state.psel = { type: "fear", key: n.name }; go("patterns"); } };
   let ready = false, fitT;
+  const filter = (m) => { hits = m; const q = state.q.trim().toLowerCase();
+    const okFilm = n => (!state.region.size || state.region.has(n.f.r)) && (!state.era.size || state.era.has(eraOf(n.f.y)));
+    const qFears = q ? fears.filter(x => x.name.includes(q)) : [];
+    const vf = new Set(films.filter(n => m.has(n.id) || (qFears.length && okFilm(n) && n.fears.some(x => qFears.includes(x)))).map(n => n.id));
+    visible = new Set([...vf, ...fears.filter(x => x.films.some(fm => vf.has(fm.id))).map(x => x.id)]);
+    nSel.attr("display", n => visible.has(n.id) ? null : "none");
+    eSel.attr("display", e => visible.has(e.source.id) && visible.has(e.target.id) ? null : "none"); rest();
+    if (ready) { clearTimeout(fitT); fitT = setTimeout(() => fit(450), 120); } else fit(0); };
   const arrange = () => { const to = state.arrange === "time" ? ["tx", "ty"] : ["nx", "ny"];
     nodes.forEach(n => { n.x = n[to[0]]; n.y = n[to[1]]; }); drawAxis();
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) place();
     else { eSel.transition().duration(500).attr("x1", e => e.source.x).attr("y1", e => e.source.y).attr("x2", e => e.target.x).attr("y2", e => e.target.y);
-      nSel.transition().duration(500).attr("transform", n => `translate(${n.x},${n.y})`); lSel.transition().duration(500).attr("x", n => n.x).attr("y", n => n.y - n.r - 5); }
+      nSel.transition().duration(500).attr("transform", n => `translate(${n.x},${n.y})`); lSel.transition().duration(500).attr("x", n => n.x).attr("y", n => n.y - rOf(n) - 5); }
     fit(500); };
-  recolour(); drawAxis(); place(); fit(0); rest();
-  G = { filter, arrange, recolour };
+  drawAxis(); place(); emphasis(); fit(0);
+  G = { filter, arrange, recolour: emphasis, emphasis };
   setTimeout(() => ready = true, 0);
 }
 
@@ -822,8 +853,8 @@ function rings(d) {
 function matrix(es) {
   const roles = [...new Set(es.map(e => e.role || "none"))].sort((a, b) => es.filter(e => (e.role || "none") === b).length - es.filter(e => (e.role || "none") === a).length);
   return `<div class="matrix"><table><thead><tr><th>Role</th>${WHEN.map(w => `<th>${w}</th>`).join("")}</tr></thead><tbody>${roles.map(r => `<tr><td class="rn"><span class="sw" style="${swatch(r)}"></span>${esc(r)}</td>${WHEN.map(w => { const n = es.filter(e => (e.role || "none") === r && e.when === w);
-      return `<td>${n.length ? `<button type="button" data-cell="${esc(r)}|${w}" aria-pressed="false" aria-label="${n.length} ${esc(r)} images, ${w}">${n.map(e => `<i style="${swatch(r)}" title="${esc(e.value)}"></i>`).join("")}</button>` : ""}</td>`; }).join("")}</tr>`).join("")}</tbody></table></div>
-    <div class="imgfilter"><button class="chip" type="button" id="imgall" aria-pressed="true">Show all ${es.length} images</button><span class="small" id="imgnote">Click a square group to show only those images.</span></div>`;
+      return `<td>${n.length ? `<button type="button" data-cell="${esc(r)}|${w}" aria-pressed="false" aria-label="${n.length} ${esc(r)} symbols, ${w}">${n.map(e => `<i style="${swatch(r)}" title="${esc(e.value)}"></i>`).join("")}</button>` : ""}</td>`; }).join("")}</tr>`).join("")}</tbody></table></div>
+    <div class="imgfilter"><button class="chip" type="button" id="imgall" aria-pressed="true">Show all ${es.length} symbols</button><span class="small" id="imgnote">Click a square group to show only those symbols.</span></div>`;
 }
 
 
@@ -878,7 +909,7 @@ function drawSpine(d, sel) {
   let leaders = "", labels = "";
   imgs.forEach(x => { const y = top + (nl - 1 - x.lane) * LH, c = ROLE_C[x.e.role] || "var(--mute)", px = X(x.m), hol = HOLLOW.has(x.e.role);
     leaders += `<line x1="${px}" x2="${px}" y1="${y + 20}" y2="${lineY - 4}" stroke="${c}" stroke-width="1" ${x.exact ? "" : `stroke-dasharray="2 2"`}/>`;
-    labels += `<g class="hit lbl" tabindex="0" role="button" data-key="${x.key}" aria-label="Image: ${esc(x.e.value)}, ${esc(x.e.role || "")}, ${esc(x.e.when || "")}">
+    labels += `<g class="hit lbl" tabindex="0" role="button" data-key="${x.key}" aria-label="Symbol: ${esc(x.e.value)}, ${esc(x.e.role || "")}, ${esc(x.e.when || "")}">
       <rect class="lb" x="${x.x0}" y="${y}" width="${x.w}" height="21" fill="var(--paper)"/>
       <rect x="${x.x0 + 6}" y="${y + 6}" width="9" height="9" fill="${hol ? "var(--paper)" : c}" stroke="${c}" stroke-width="${hol ? 2 : 1}"/>
       <text x="${x.x0 + 21}" y="${y + 15}">${esc(x.e.value)}</text></g>`; });
@@ -923,13 +954,13 @@ function showDetail(d, key) {
     const tm = timeOf(e), when = [e.when, tm != null ? `at ${Math.floor(tm / 3600) ? Math.floor(tm / 3600) + ":" : ""}${String(Math.floor(tm % 3600 / 60)).padStart(2, "0")}:${String(tm % 60).padStart(2, "0")}` : "placed by part of the film"].filter(Boolean).join(" · ");
     const other = elsewhere(e.value, d.id);
     const nav = (j, lab) => list[j] ? `<button class="linkish" type="button" data-key="${list[j].key}">${lab}: ${esc(list[j].e.value)}</button>` : "";
-    h = `<div><span class="kind" style="color:${c === "var(--ink)" ? "var(--mute)" : c}">${isImg ? `image · ${esc(e.role || "no role")}` : `beat ${x.n} of ${list.length}`}${e.source && e.source !== "wikipedia" ? ` · found in the ${esc(e.source)}` : ""}</span>
+    h = `<div><span class="kind" style="color:${c === "var(--ink)" ? "var(--mute)" : c}">${isImg ? `symbol · ${esc(e.role || "no role")}` : `beat ${x.n} of ${list.length}`}${e.source && e.source !== "wikipedia" ? ` · found in the ${esc(e.source)}` : ""}</span>
         <h4>${esc(e.value)}</h4>${e.state ? `<p class="st">${esc(e.state)}</p>` : ""}${e.detail ? `<p class="dt">${esc(e.detail)}</p>` : ""}
         <p class="tag" style="margin-top:10px;display:block">${esc(when)}</p>
         ${other.length ? `<p class="also">The same wording appears in ${other.slice(0, 4).map(f => `<button class="linkish" type="button" data-go="${f.id}">${esc(f.t)}</button>`).join(", ")}${other.length > 4 ? ` and ${other.length - 4} more` : ""}.</p>` : ""}
         <div class="stepper">${nav(idx - 1, "Previous")}${nav(idx + 1, "Next")}</div></div>
       <div>${[e, ...(e.moments || [])].map(m => `<blockquote>${from(m)}“${esc(m.quote)}”</blockquote>`).join("")}
-        <button class="linkish" type="button" data-full="${isImg ? "d-images" : "d-beats"}" style="font-size:14px">See all ${list.length} ${isImg ? "images" : "beats"} in the full reading</button></div>`;
+        <button class="linkish" type="button" data-full="${isImg ? "d-images" : "d-beats"}" style="font-size:14px">See all ${list.length} ${isImg ? "symbols" : "beats"} in the full reading</button></div>`;
   }
   P.innerHTML = h;
   mark(key);
@@ -947,7 +978,7 @@ function linkWords(l) {
 }
 function netBlock(d) {
   const n = d.net; if (!n || !n.films.length) return "";
-  return `<div class="spinehead"><h3>Its bloodline</h3><p>${n.total} of the other films share something with ${esc(d.title)}: a fear, an image, a shape of story, or the people who made it. These are its ${n.films.length} closest kin.</p></div>
+  return `<div class="spinehead"><h3>Its bloodline</h3><p>${n.total} of the other films share something with ${esc(d.title)}: a fear, a symbol, a shape of story, or the people who made it. These are its ${n.films.length} closest kin.</p></div>
     <div class="netwrap"><div><div class="netsvg" id="net"></div>
       <div class="keyline"><span><svg width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="var(--ink)"/></svg>person</span><span><svg width="12" height="12" aria-hidden="true"><path d="M6 0 L12 6 L6 12 L0 6Z" fill="var(--ochre)"/></svg>archetype</span><span><span class="sw" style="background:var(--teal)"></span>story element</span><span><span class="sw" style="background:var(--paper);box-shadow:inset 0 0 0 2px var(--teal)"></span>very common wording</span><span>outer discs: films, filled with their own colour</span></div>
       <p class="linkinfo" id="linkinfo"><span class="fp">Point at a link or a film to trace it. Click a film to open its record.</span></p></div>
@@ -1106,7 +1137,7 @@ async function renderFilm(id) {
     <div>${topStill(d)}</div>
     <div>${prose(d)}</div>
   </div>
-  <div class="spinehead"><h3>How the fear unfolds</h3><p>The images that haunt it above the line, the turns of the story on it, the talk and the scares beneath. Tap anything.</p></div>
+  <div class="spinehead"><h3>How the fear unfolds</h3><p>The symbols that haunt it above the line, the turns of the story on it, the talk and the scares beneath. Tap anything.</p></div>
   <div class="spine" id="spine"></div>
   <div class="keyline">${["omen","clue","threat","symbol","weapon","setting"].map(r => `<span><span class="sw" style="${swatch(r)}"></span>${r}</span>`).join("")}
     <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="6" fill="var(--ink)"/></svg>timed from subtitles</span><span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5.5" fill="var(--paper)" stroke="var(--ink)"/></svg>placed by part of the film</span>
@@ -1134,7 +1165,7 @@ async function renderFilm(id) {
   const filt = c => { cells.forEach(x => x.setAttribute("aria-pressed", x === c)); if (all) all.setAttribute("aria-pressed", !c);
     const [r, w] = c ? c.dataset.cell.split("|") : [];
     document.querySelectorAll("#imglist > div").forEach(el => el.hidden = !!c && !(el.dataset.r === r && el.dataset.w === w));
-    const note = document.getElementById("imgnote"); if (note) note.textContent = c ? `Showing ${r} images, ${w}.` : "Click a square group to show only those images."; };
+    const note = document.getElementById("imgnote"); if (note) note.textContent = c ? `Showing ${r} symbols, ${w}.` : "Click a square group to show only those symbols."; };
   cells.forEach(c => c.onclick = () => filt(c.getAttribute("aria-pressed") === "true" ? null : c));
   if (all) all.onclick = () => filt(null);
   const first = (d.dims.images || []).length ? "i-" + (d.dims.images || []).map((e, i) => [WHEN.indexOf(e.when), i]).sort((a, b) => a[0] - b[0])[0][1] : (d.dims.beats || []).length ? "b-" + sortedBeats(d)[0]._i : null;

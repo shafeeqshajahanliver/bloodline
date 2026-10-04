@@ -1,7 +1,7 @@
 # Build the release-3 pattern data: every film with story elements (not just the 100 in the record), with each of its
 # elements mapped to the grouped vocabulary in reference/vocab/<dim>.tsv. Writes record/site/patterns.json.
 # Usage: PYTHONPATH=tools python3 tools/build_patterns.py
-import csv, glob, json, os
+import csv, glob, json, os, re
 DIMS = ["threat", "origin", "wants", "wrong", "trigger", "rules", "who_suffers", "ending", "images"]
 rows = {r["id"]: r for r in csv.DictReader(open("films.csv"))}
 record = set(json.load(open("record/films.json")))
@@ -13,13 +13,17 @@ for d in DIMS:
     want = {r["value"] for r in csv.DictReader(open(f"reference/vocab/input/{d}.tsv"), delimiter="\t")}
     if not want <= set(m): print(f"skipping {d}: grouping incomplete ({len(want - set(m))} values missing)"); continue
     vocab[d] = m
-    # one-line definitions from the .md, if the reader wrote them as "## fear" or "- **fear**: definition"
+    # one-line definitions from the .md: the first plain paragraph under each "## fear" heading
     defs = {}
     mdp = f"reference/vocab/{d}.md"
     if os.path.exists(mdp):
-        import re
-        for m in re.finditer(r"^(?:#+\s*|\-\s*\*\*)([a-z][^*\n:—–]+?)(?:\*\*)?\s*(?:[:—–-]\s*|\n+)([^\n#]+)", open(mdp).read(), re.M):
-            defs.setdefault(m.group(1).strip().lower(), m.group(2).strip())
+        cur = None
+        for line in open(mdp):
+            line = line.strip()
+            if line.startswith("## "):
+                cur = re.sub(r"\s*\(.*\)\s*$", "", line[3:]).strip().lower(); continue
+            if cur and line and not line.startswith(("-", "#", "|", "*")):
+                defs.setdefault(cur, line); cur = None
     meta[d] = defs
 films = []
 for f in sorted(glob.glob("films/*/story_elements.json")):

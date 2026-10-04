@@ -178,6 +178,14 @@ for fid, nb in allnb.items():
 pos = {fid: i for i, fid in enumerate(ids)}
 IX = json.load(open(f"{OUT}/index.json"))
 IX["edges"] = [[pos[a], pos[b], round(sc, 2), via] for (a, b), (sc, via) in sorted(allnb_edges.items())]
+# fears as graph nodes: each chosen film's grouped fears, from patterns.json (run tools/build_patterns.py first)
+if os.path.exists(f"{OUT}/patterns.json"):
+    P = json.load(open(f"{OUT}/patterns.json")); fl = {}; ff = {}
+    for f in P["films"]:
+        if f["id"] in pos:
+            ff[pos[f["id"]]] = [fl.setdefault(f"{d}|{x}", len(fl)) for d in P["dims"] for x in f["g"].get(d, {}).get("f", []) if x != "unclear"]
+    IX["fears"] = [[k.split("|", 1)[0], k.split("|", 1)[1], P["fears"][k.split("|", 1)[0]].get(k.split("|", 1)[1], "")] for k in sorted(fl, key=fl.get)]
+    IX["ff"] = [ff.get(i, []) for i in range(len(ids))]
 json.dump(IX, open(f"{OUT}/index.json", "w"), ensure_ascii=False, separators=(",", ":"))
 # assemble the page: the index is embedded so the ledger works before any film loads
 page = open("record/template.html").read().replace("__INDEX__", open(f"{OUT}/index.json").read().replace("</", "<\\/"))
