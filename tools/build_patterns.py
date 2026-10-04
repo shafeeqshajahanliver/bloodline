@@ -45,6 +45,17 @@ for f in films:
     r = rows[f["id"]]; got = [(c, role) for c, role in ((r["archetype_primary"], "the main story"), (r["archetype_secondary"], "a second thread")) if c in ARCH]
     if got: f["g"]["archetypes"] = {"f": sorted({ARCH[c]["name"] for c, _ in got}), "k": sorted({f"{ARCH[c]['name']}|{role}" for c, role in got})}
 defs["archetypes"] = {a["name"]: f"{a['beat']}. Roots: {a['roots']}." for a in ARCH.values()}
+# nightmares: the 12 groups of films found by the graph model (tools/graph_model.py), named in reference/model/family-names.json
+NIGHT = {}
+if os.path.exists("reference/model/families.json"):
+    names = json.load(open("reference/model/family-names.json")); byid = {f["id"]: f for f in films}
+    for fam in json.load(open("reference/model/families.json")):
+        name = names.get(fam["defining_fears"][0]["fear"], fam["defining_fears"][0]["fear"])
+        for m in fam["members"]:
+            if m in byid: byid[m]["g"]["nightmares"] = {"f": [name], "k": [f"{name}|a nightmare"]}
+        NIGHT[name] = {"n": fam["films"], "fears": [[x["lens"], x["fear"], x["share_inside"], x["share_overall"]] for x in fam["defining_fears"]],
+                       "arch": [[a["archetype"], a["share"]] for a in fam.get("archetypes_inside", [])], "core": fam["core_films"]}
+    defs["nightmares"] = {n: "Found by a graph model: films that carry " + ", ".join(x[1] for x in v["fears"][:3]) + " far more often than the rest." for n, v in NIGHT.items()}
 # for each fear's page: its kinds, each with a few of the original phrasings (most used first)
 kinds = {}
 for d in vocab:
@@ -54,6 +65,7 @@ for d in vocab:
         kd.setdefault(fear, {}).setdefault(kind, []).append((used.get(v, 0), v))
     kinds[d] = {fear: {k: [v for _, v in sorted(vs, key=lambda x: (-x[0], x[1]))[:5]] for k, vs in ks.items()} for fear, ks in kd.items()}
 kinds["archetypes"] = {a["name"]: {"the main story": [], "a second thread": []} for a in ARCH.values()}
+if NIGHT: kinds["nightmares"] = {n: {"a nightmare": []} for n in NIGHT}
 # a few lines from the films for each fear's page: spoken lines first, then the plot, films in the record first
 quotes = {d: {} for d in vocab}
 for f in sorted(glob.glob("films/*/story_elements.json")):
@@ -79,9 +91,9 @@ for d in quotes:
         quotes[d][fear] = out
 # hand-written narrations for each fear's page (reference/fear-notes/<lens>.json)
 notes = {}
-for d in list(vocab) + ["archetypes"]:
+for d in list(vocab) + ["archetypes", "nightmares"]:
     np_ = f"reference/fear-notes/{d}.json"
     if os.path.exists(np_): notes[d] = {k: (v.get("text") if isinstance(v, dict) else v) for k, v in json.load(open(np_)).items()}
 os.makedirs("record/site", exist_ok=True)
-json.dump({"dims": list(vocab) + ["archetypes"], "fears": defs, "kinds": kinds, "quotes": quotes, "notes": notes, "films": films}, open("record/site/patterns.json", "w"), ensure_ascii=False, separators=(",", ":"))
+json.dump({"dims": (["nightmares"] if NIGHT else []) + list(vocab) + ["archetypes"], "fears": defs, "nightmares": NIGHT, "kinds": kinds, "quotes": quotes, "notes": notes, "films": films}, open("record/site/patterns.json", "w"), ensure_ascii=False, separators=(",", ":"))
 print(f"{len(films)} films · dimensions grouped: {', '.join(vocab) or 'none yet'} · plus archetypes")

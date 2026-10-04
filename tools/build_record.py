@@ -192,15 +192,8 @@ if os.path.exists(f"{OUT}/patterns.json"):
             ff[pos[f["id"]]] = [fl.setdefault(f"{d}|{x}", len(fl)) for d in P["dims"] for x in f["g"].get(d, {}).get("f", []) if x != "unclear"]
     IX["fears"] = [[k.split("|", 1)[0], k.split("|", 1)[1], P["fears"][k.split("|", 1)[0]].get(k.split("|", 1)[1], "")] for k in sorted(fl, key=fl.get)]
     IX["ff"] = [ff.get(i, []) for i in range(len(ids))]
-# families of films found by the graph model (tools/graph_model.py), named in reference/model/family-names.json
-if os.path.exists("reference/model/families.json"):
-    FAMS = json.load(open("reference/model/families.json")); names = json.load(open("reference/model/family-names.json"))
-    IX["fams"] = [{"name": names.get(f["defining_fears"][0]["fear"], f["defining_fears"][0]["fear"]), "n": f["films"],
-                   "fears": [[x["lens"], x["fear"], x["share_inside"], x["share_overall"]] for x in f["defining_fears"][:5]],
-                   "arch": [[a["archetype"], a["share"]] for a in f.get("archetypes_inside", [])],
-                   "core": [m for m in f["members"] if m in pos][:6]} for f in FAMS]
-    fam_of = {m: j for j, f in enumerate(FAMS) for m in f["members"]}
-    IX["fam"] = [fam_of.get(fid, -1) for fid in ids]
+    nm = {f["id"]: f["g"]["nightmares"]["f"][0] for f in P["films"] if "nightmares" in f["g"]}
+    IX["nm"] = [nm.get(fid, "") for fid in ids]   # each film's nightmare, for its page
 json.dump(IX, open(f"{OUT}/index.json", "w"), ensure_ascii=False, separators=(",", ":"))
 # assemble the page: the index is embedded so the ledger works before any film loads
 page = open("record/template.html").read().replace("__INDEX__", open(f"{OUT}/index.json").read().replace("</", "<\\/"))
