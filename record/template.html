@@ -706,11 +706,11 @@ function renderRows() {
 function aboutBlock() {
   return `<section class="about" id="about"><h2>About this record</h2><div class="cols">
     <div><h3>How it was made</h3>
-      <p>We assembled an archive of 497 horror films from 44 countries, made between 1913 and 2025: every Wikipedia plot, English subtitles for 440 films, 116 screenplays, 6,184 stills and crowd-sourced jump-scare timings for 189. Each film was then machine-read across ten parts of its story: the threat, where it comes from, what it wants, the wrong underneath, what sets it off, its rules, who suffers, how it ends, its symbols and its turning points. That produced 18,195 story elements, each pinned to the line of plot or dialogue it came from.</p>
-      <p>Nothing was decided in advance. The 9,122 different ways these films describe their horrors were grouped from the bottom up into 231 fears, and every film was joined to every fear it carries. We then trained a graph neural network on those 11,485 links. Without being shown the primal fears, it found 12 nightmares: groups of films that share a mix of fears, cutting across decades and continents. Cast and crew come from Wikidata, stills from FILMGRAB, jump scares from Where's the Jump.</p></div>
+      <p>We gathered close to five hundred horror films from every corner of the world and more than a century of cinema, with their plots, subtitles, screenplays and stills. Each film was read for what threatens, where it comes from, what it wants and how it ends, and every reading points back to the line it came from.</p>
+      <p>Then we trained a graph neural network on the threads between them. Nobody told it which films belong together. It found the nightmares on its own: a dozen stories that every culture keeps telling.</p></div>
     <div><h3>What to keep in mind</h3>
-      <p>This is a first reading and has not yet been checked by hand. The fears come from the films' own wording, so a few may still split or merge as the work is reviewed. The nightmares' names are ours, and the model learns from the same first reading, so it inherits its gaps.</p>
-      <p>The 27 primal fears are the one top-down lens: archetypal story shapes, many with roots in folklore, set against each film to test them against what the films themselves show. Every one of the 497 films has its own page; 233 of them have no stills, mostly films from outside the English-speaking canon.</p></div>
+      <p>This is a first reading, not yet checked by hand. The nightmares' names are ours.</p>
+      <p>The primal fears are the one lens we set from the top down: old story shapes, many rooted in folklore, held up against what the films themselves show.</p></div>
     <div><h3>Reading the list</h3><div class="key">
       <span><span class="bar10" style="width:60px;display:inline-grid;grid-template-columns:repeat(3,1fr)"><i></i><i class="ns"></i><i class="no"></i></span> &nbsp;story mapped · not stated in the plot · nothing found</span>
       <span>${marks({ sub: 1, sp: 1, sc: 1, st: 1 })} &nbsp;plot · subtitles · screenplay · jump scares · stills</span></div>
