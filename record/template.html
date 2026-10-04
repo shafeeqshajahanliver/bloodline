@@ -807,9 +807,6 @@ async function renderFear(id) {
         <p class="linkinfo" id="flinkinfo" hidden></p></div>
         <ol class="why" id="fwhy">${kin.map((x, i) => { const [d2, n2] = x.k.split("|"); return `<li data-l="${esc(x.k)}"><span class="no">${i + 1}</span><div><button class="linkish t" type="button" data-fear2="${esc(x.k)}">${esc(n2)}</button><span class="strength" style="width:${Math.max(4, x.lift / kin[0].lift * 60)}px;background:${LENSC[d2]}"></span>
           <div class="r"><span style="color:${LENSC[d2]}">${esc(LENSN[d2])}</span> · ${x.lift.toFixed(1)}× as often · in ${x.c} of its ${fs.length} films</div></div></li>`; }).join("")}</ol></div></section>` : ""}
-    <section class="fsec"><h2>What it looks like</h2><p class="q2">The shapes it takes, in the films' own words.</p>
-      <div class="fkinds">${Object.entries(kinds).sort((a, b) => b[1] - a[1]).map(([k, n]) => `<div><h3>${esc(k)}<span>${n} films</span></h3><p>${((PAT.kinds[lens] || {})[name] || {})[k] ? PAT.kinds[lens][name][k].map(v => `“${esc(v)}”`).join(", ") : ""}</p></div>`).join("")}</div>
-      ${qs.length > 1 ? `<div class="fmore">${qs.slice(1).map(q => `<figure><blockquote>“${esc(q.q)}”</blockquote><figcaption>${qline(q)}</figcaption></figure>`).join("")}</div>` : ""}</section>
     <section class="fsec"><h2>The films</h2><p class="q2">${inRec.length} in the record${others.length ? `, and ${others.length} more from the full 500` : ""}.</p>
       ${inRec.length ? `<div class="fwall">${inRec.map(tile).join("")}</div>` : ""}
       ${others.length ? `<details class="fothers"><summary>The other ${others.length} films</summary><div class="pfilms">${Object.entries(byR).sort((a, b) => b[1].length - a[1].length).map(([r, xs]) => `<p><span class="rg">${esc(r)} · ${xs.length}</span>${xs.sort((a, b) => a.y - b.y).map(f => `<span class="off">${esc(f.t)} (${f.y})</span>`).join(", ")}</p>`).join("")}</div></details>` : ""}</section>
