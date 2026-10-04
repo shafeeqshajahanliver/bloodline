@@ -335,6 +335,59 @@ body::after{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:60;
 .row:hover .thumb{filter:none}
 .row:hover{background:var(--soft)}
 @media (prefers-reduced-motion:reduce){ body::after{animation:none} .gflash.on{animation:none;opacity:.5} .thumb{transition:none} }
+
+/* patterns */
+.pat{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:36px;align-items:start;margin-top:8px}
+.pat > *{min-width:0}
+.lenses{display:flex;flex-wrap:wrap;gap:4px 18px;margin:6px 0 18px}
+.lenses button{all:unset;cursor:pointer;font-family:var(--display);font-size:20px;color:var(--mute);border-bottom:1px solid transparent;padding-bottom:2px}
+.lenses button:hover{color:var(--ink)}
+.lenses button[aria-pressed="true"]{color:var(--ink);border-bottom-color:var(--red)}
+.lenses button:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.pq{font-family:var(--display);font-size:30px;line-height:1.15;margin:0 0 4px}
+.pq em{color:var(--red)}
+.psub{font-size:14px;color:var(--mute);margin:0 0 16px;max-width:70ch}
+.mx{overflow-x:auto}
+.mx table{border-collapse:collapse;width:100%;min-width:760px}
+.mx th{font-weight:400;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--mute);text-transform:uppercase;padding:0 2px 8px;vertical-align:bottom;text-align:center;line-height:1.25}
+.mx th button{all:unset;cursor:pointer}
+.mx th button:hover,.mx th button[aria-pressed="true"]{color:var(--ink)}
+.mx th button:focus-visible{outline:2px solid var(--red)}
+.mx th .n{display:block;color:var(--hair);margin-top:2px}
+.mx th.fl{text-align:left}
+.mx td{border-top:1px solid var(--rule);height:40px;text-align:center;padding:0 2px}
+.mx td.fl{text-align:left;padding-right:12px}
+.mx td.fl button{all:unset;cursor:pointer;font-family:var(--display);font-size:18px;line-height:1.2}
+.mx td.fl button:hover{color:var(--red)}
+.mx td.fl button:focus-visible{outline:2px solid var(--red)}
+.mx tr.on td{background:var(--soft)}
+.mx tr.on td.fl button{color:var(--red)}
+.mx td.tr{font-family:var(--mono);font-size:11.5px;color:var(--mute);white-space:nowrap;text-align:right}
+.pdot{display:inline-block;border-radius:50%;background:var(--red);vertical-align:middle;box-shadow:0 0 10px rgba(207,58,46,.45)}
+.pdot.thin{background:transparent;box-shadow:inset 0 0 0 1.5px var(--red)}
+.pdot.zero{width:3px;height:3px;background:var(--hair);box-shadow:none}
+.pside{position:sticky;top:16px;border-top:3px solid var(--ink);padding-top:12px}
+.pside h3{font-family:var(--display);font-weight:400;font-size:32px;line-height:1.1;margin:4px 0 0;text-wrap:balance}
+.pside .def{font-style:italic;color:var(--mute);margin:8px 0 0}
+.pside h4{font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin:20px 0 8px}
+.verdict{font-family:var(--display);font-size:19px;margin-top:12px}
+.verdict b{color:var(--red);font-weight:400}
+.eras{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;align-items:end;height:84px}
+.eras div{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;gap:4px}
+.eras i{display:block;width:100%;background:var(--red);opacity:.85}
+.eras span{font-family:var(--mono);font-size:10px;color:var(--mute);white-space:nowrap}
+.eras b{font-family:var(--mono);font-weight:400;font-size:11px}
+ul.kinds{list-style:none;margin:0;padding:0;font-size:14px}
+ul.kinds li{display:flex;justify-content:space-between;gap:10px;padding:4px 0;border-top:1px solid var(--rule)}
+ul.kinds li span:last-child{font-family:var(--mono);font-size:11.5px;color:var(--mute)}
+.pfilms{font-size:14px;line-height:1.6}
+.pfilms p{margin:0 0 8px}
+.pfilms .rg{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);display:block}
+.pfilms button{all:unset;cursor:pointer;border-bottom:1px solid var(--hair)}
+.pfilms button:hover{border-bottom-color:var(--red)}
+.pfilms button:focus-visible{outline:2px solid var(--red)}
+.pfilms .off{color:var(--mute)}
+@media (max-width:1100px){ .pat{grid-template-columns:1fr} .pside{position:static} }
 @media (max-width:980px){
   .row{grid-template-columns:96px minmax(0,1fr);gap:4px 14px}
   .thumb{width:96px;grid-row:span 3}
@@ -385,7 +438,7 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;
 const fmt = n => n == null ? "" : n >= 1e6 ? "$" + (n / 1e6).toFixed(n >= 1e7 ? 0 : 1) + "m" : "$" + Math.round(n / 1e3) + "k";
 const app = document.getElementById("app");
 const cache = {};
-const state = { q: "", region: new Set(), era: new Set(), has: new Set(), sort: "year", view: "graph", arrange: "net", links: new Set(["p","a","e"]), colour: "region" };
+const state = { q: "", region: new Set(), era: new Set(), has: new Set(), sort: "year", view: "graph", lens: "wrong", psort: "travel", psel: null, arrange: "net", links: new Set(["p","a","e"]), colour: "region" };
 try { const s = JSON.parse(localStorage.getItem("bl-r1") || "{}"); if (s.sort) state.sort = s.sort; } catch (e) {}
 
 function eraOf(y) { return ERAS.find(e => y >= e[1] && y <= e[2])[0]; }
@@ -437,31 +490,33 @@ function renderIndex() {
     <div class="search">
       <button class="filterbtn" type="button" id="openf" aria-expanded="false" aria-controls="drawer">Filters<span class="k" id="fcount"></span></button>
       <input id="q" type="search" placeholder="Search a fear, an image or a film. Try mirror, drowned, Get Out" value="${esc(state.q)}" aria-label="Search fears, images and films">
-      <span class="viewtoggle" role="group" aria-label="View"><button type="button" data-view="graph" aria-pressed="${state.view === "graph"}">Graph</button><button type="button" data-view="list" aria-pressed="${state.view === "list"}">List</button></span>
+      <span class="viewtoggle" role="group" aria-label="View"><button type="button" data-view="graph" aria-pressed="${state.view === "graph"}">Graph</button><button type="button" data-view="patterns" aria-pressed="${state.view === "patterns"}">Patterns</button><button type="button" data-view="list" aria-pressed="${state.view === "list"}">List</button></span>
     </div>
   </div>
   <aside class="drawer" id="drawer" aria-label="Filters" inert>
     <div class="dhead"><h2>Filters</h2><button class="linkish" type="button" id="closef">Close</button></div>
-    <p class="dnote">Films that don't match fade from the ${state.view === "graph" ? "graph" : "list"} as you choose.</p>
-    <section><h3>Region</h3><div class="chips">${REGIONS.map(r => `<button class="chip" type="button" data-region="${esc(r)}" aria-pressed="${state.region.has(r)}">${esc(r)}<span class="k">${F.filter(f => f.r === r).length}</span></button>`).join("")}</div></section>
-    <section><h3>Era</h3><div class="chips">${ERAS.map(([e]) => `<button class="chip" type="button" data-era="${e}" aria-pressed="${state.era.has(e)}">${e}<span class="k">${F.filter(f => eraOf(f.y) === e).length}</span></button>`).join("")}</div></section>
+    <p class="dnote">${state.view === "patterns" ? "Patterns count all 497 films. Region narrows the columns; era narrows the films counted." : `Films that don't match fade from the ${state.view === "graph" ? "graph" : "list"} as you choose.`}</p>
+    <section><h3>Region</h3><div class="chips">${REGIONS.map(r => `<button class="chip" type="button" data-region="${esc(r)}" aria-pressed="${state.region.has(r)}">${esc(r)}${state.view === "patterns" ? "" : `<span class="k">${F.filter(f => f.r === r).length}</span>`}</button>`).join("")}</div></section>
+    <section><h3>Era</h3><div class="chips">${ERAS.map(([e]) => `<button class="chip" type="button" data-era="${e}" aria-pressed="${state.era.has(e)}">${e}${state.view === "patterns" ? "" : `<span class="k">${F.filter(f => eraOf(f.y) === e).length}</span>`}</button>`).join("")}</div></section>
     ${state.view === "graph" ? `<section><h3>Arrange</h3><div class="chips">${[["net","By connection"],["time","Through time"]].map(([k, n]) => `<button class="chip" type="button" data-arrange="${k}" aria-pressed="${state.arrange === k}">${n}</button>`).join("")}</div></section>
     <section><h3>Links</h3><div class="chips">${[["p","People"],["a","Archetypes"],["e","Story elements"]].map(([k, n]) => `<button class="chip" type="button" data-link="${k}" aria-pressed="${state.links.has(k)}">${n}</button>`).join("")}</div></section>
     <section><h3>Colour</h3><div class="chips">${[["region","Region"],["era","Era"],["still","Still colour"]].map(([k, n]) => `<button class="chip" type="button" data-colour="${k}" aria-pressed="${state.colour === k}">${n}</button>`).join("")}</div></section>`
+    : state.view === "patterns" ? `<section><h3>Lens</h3><div class="chips">${LENS.map(([k, n]) => `<button class="chip" type="button" data-lens="${k}" aria-pressed="${state.lens === k}">${n}</button>`).join("")}</div></section>
+    <section><h3>Order</h3><div class="chips">${[["travel","Travels furthest"],["common","Most common"],["local","Most local"]].map(([k, n]) => `<button class="chip" type="button" data-psort="${k}" aria-pressed="${state.psort === k}">${n}</button>`).join("")}</div></section>`
     : `<section><h3>Sort</h3><div class="chips">${[["year","Year"],["title","Title"],["n","Most entries"]].map(([k, n]) => `<button class="chip" type="button" data-sort="${k}" aria-pressed="${state.sort === k}">${n}</button>`).join("")}</div></section>`}
     <div class="dfoot"><button class="btn" type="button" id="clearf">Clear filters</button></div>
   </aside>
   <div class="status"><span class="active"><span id="count"></span><span id="pills"></span></span>
-    ${state.view === "graph" ? `<span class="key"><span><span class="sw" style="background:var(--ink);width:14px;height:2px"></span>people</span><span><span class="sw" style="background:var(--ochre);width:14px;height:2px"></span>archetype</span><span><span class="sw" style="background:var(--teal);width:14px;height:2px"></span>story element</span><span>thicker line, closer kin · point at a film to see what binds it</span></span>` : `<span class="key"><span>the bar shows how much of each story is mapped</span></span>`}</div>
+    ${state.view === "patterns" ? `<span class="key"><span><span class="pdot" style="width:12px;height:12px"></span>share of a region's films carrying the fear</span><span><span class="pdot thin" style="width:12px;height:12px"></span>fewer than 10 films: read with care</span></span>` : state.view === "graph" ? `<span class="key"><span><span class="sw" style="background:var(--ink);width:14px;height:2px"></span>people</span><span><span class="sw" style="background:var(--ochre);width:14px;height:2px"></span>archetype</span><span><span class="sw" style="background:var(--teal);width:14px;height:2px"></span>story element</span><span>thicker line, closer kin · point at a film to see what binds it</span></span>` : `<span class="key"><span>the bar shows how much of each story is mapped</span></span>`}</div>
   ${state.view === "graph" ? `<div class="gstage" id="gstage"><div class="gflash" id="gflash" aria-hidden="true"></div><div class="ginfo" id="ginfo"></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
     <div class="keyline" id="gkey" style="margin-top:10px"></div>
-    <p class="gnote">Every line is something two films share: a fear, an image, a shape of story, or the people who made them. The rarer the thing, the closer it pulls them. Filter, and the films that fall away disappear. Click a film to step inside it.</p>` : `<ol class="ledger" id="ledger"></ol>`}
+    <p class="gnote">Every line is something two films share: a fear, an image, a shape of story, or the people who made them. The rarer the thing, the closer it pulls them. Filter, and the films that fall away disappear. Click a film to step inside it.</p>` : state.view === "patterns" ? `<div class="pat" id="pat"></div>` : `<ol class="ledger" id="ledger"></ol>`}
   ${aboutBlock()}`;
   const q = document.getElementById("q");
   q.addEventListener("input", () => { state.q = q.value; renderRows(); });
   app.querySelectorAll("[data-region]").forEach(b => b.onclick = () => toggle(state.region, b.dataset.region, b));
   app.querySelectorAll("[data-era]").forEach(b => b.onclick = () => toggle(state.era, b.dataset.era, b));
-  app.querySelectorAll("[data-view]").forEach(b => b.onclick = () => { if (b.dataset.view !== state.view) go(b.dataset.view === "list" ? "list" : ""); });
+  app.querySelectorAll("[data-view]").forEach(b => b.onclick = () => { if (b.dataset.view !== state.view) go(b.dataset.view === "graph" ? "" : b.dataset.view); });
   const drawer = document.getElementById("drawer"), openf = document.getElementById("openf");
   const setDrawer = open => { drawer.classList.toggle("open", open); document.body.classList.toggle("dopen", open);
     if (state.view === "graph") { clearTimeout(grt); grt = setTimeout(() => { buildGraph(); renderRows(); }, matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 240); } open ? drawer.removeAttribute("inert") : drawer.setAttribute("inert", ""); openf.setAttribute("aria-expanded", open);
@@ -473,6 +528,8 @@ function renderIndex() {
   app.querySelectorAll("[data-arrange]").forEach(b => b.onclick = () => { state.arrange = b.dataset.arrange; app.querySelectorAll("[data-arrange]").forEach(x => x.setAttribute("aria-pressed", x === b)); G && G.arrange(); });
   app.querySelectorAll("[data-colour]").forEach(b => b.onclick = () => { state.colour = b.dataset.colour; app.querySelectorAll("[data-colour]").forEach(x => x.setAttribute("aria-pressed", x === b)); G && G.recolour(); });
   app.querySelectorAll("[data-link]").forEach(b => b.onclick = () => { const k = b.dataset.link; state.links.has(k) ? state.links.delete(k) : state.links.add(k); b.setAttribute("aria-pressed", state.links.has(k)); renderRows(); });
+  app.querySelectorAll("[data-lens]").forEach(b => b.onclick = () => { state.lens = b.dataset.lens; state.psel = null; app.querySelectorAll("[data-lens]").forEach(x => x.setAttribute("aria-pressed", x === b)); renderRows(); });
+  app.querySelectorAll("[data-psort]").forEach(b => b.onclick = () => { state.psort = b.dataset.psort; app.querySelectorAll("[data-psort]").forEach(x => x.setAttribute("aria-pressed", x === b)); renderRows(); });
   app.querySelectorAll("[data-sort]").forEach(b => b.onclick = () => {
     state.sort = b.dataset.sort; try { localStorage.setItem("bl-r1", JSON.stringify({ sort: state.sort })); } catch (e) {}
     app.querySelectorAll("[data-sort]").forEach(x => x.setAttribute("aria-pressed", x === b)); renderRows(); });
@@ -491,6 +548,7 @@ function renderRows() {
   const pills = document.getElementById("pills");
   if (pills) { pills.innerHTML = act.map(([k, v]) => `<button class="pill" type="button" data-pk="${k}" data-pv="${esc(v)}" aria-label="Remove ${esc(k === "has" ? HASN[v] : v)}">${esc(k === "has" ? HASN[v] : v)} <b>×</b></button>`).join("");
     pills.querySelectorAll(".pill").forEach(b => b.onclick = () => { state[b.dataset.pk].delete(b.dataset.pv); document.querySelector(`[data-${b.dataset.pk}="${CSS.escape(b.dataset.pv)}"]`)?.setAttribute("aria-pressed", "false"); renderRows(); }); }
+  if (state.view === "patterns") { renderPatterns(); return; }
   if (state.view === "graph") { G && G.filter(new Map(list.map(([f, h]) => [f.id, h]))); return; }
   const L = document.getElementById("ledger");
   if (!list.length) { L.innerHTML = `<li class="empty">No films match. Clear a filter or try another word.</li>`; return; }
@@ -520,6 +578,83 @@ function aboutBlock() {
       <span>${marks({ sub: 1, sp: 1, sc: 1, st: 1 })} &nbsp;plot · subtitles · screenplay · jump scares · stills</span></div>
       <h3 style="margin-top:18px">Rights</h3><p>Subtitles, screenplays and stills belong to their owners and are shown here for private research only. Wikipedia text is CC BY-SA; Wikidata facts are CC0.</p></div>
   </div></section>`;
+}
+
+/* ---------- patterns ---------- */
+const LENS = [["threat", "What threatens"], ["origin", "Where it comes from"], ["wants", "What it wants"], ["wrong", "The wrong underneath"], ["trigger", "What sets it off"], ["rules", "The rules"], ["who_suffers", "Who suffers"], ["ending", "How it ends"], ["images", "The images"]];
+const LENSQ = { threat: "What do we fear will come for us?", origin: "Where do we believe evil comes from?", wants: "What does the thing in the dark want?", wrong: "What buried wrong comes back?", trigger: "What opens the door?", rules: "What rules do we tell ourselves?", who_suffers: "Who does fear fall on?", ending: "How do we let the story end?", images: "What do we see when we're afraid?" };
+const RSHORT = { "North America": "N. America", "Continental Europe": "Europe", "UK & Ireland": "UK & Ire.", "East Asia": "E. Asia", "Southeast Asia": "SE Asia", "Latin America": "Lat. Am.", "South Asia": "S. Asia", "Australia & NZ": "Aus. & NZ", "Middle East & North Africa": "MENA", "Sub-Saharan Africa": "Africa" };
+let PAT = null, patLoad = null;
+function renderPatterns() {
+  const el = document.getElementById("pat"); if (!el) return;
+  if (!PAT) { el.innerHTML = `<p class="empty">Gathering the fears…</p>`; patLoad = patLoad || fetch("patterns.json").then(r => { if (!r.ok) throw 0; return r.json(); }).then(d => { PAT = d; });
+    patLoad.then(renderPatterns).catch(() => { el.innerHTML = `<p class="empty">The patterns didn't load. Reload the page to try again.</p>`; patLoad = null; }); return; }
+  const d = state.lens, lensName = LENS.find(l => l[0] === d)[1];
+  const allRegs = [...new Set(PAT.films.map(f => f.r))].sort((a, b) => PAT.films.filter(f => f.r === b).length - PAT.films.filter(f => f.r === a).length);
+  const regs = state.region.size ? allRegs.filter(r => state.region.has(r)) : allRegs;
+  const films = PAT.films.filter(f => (!state.era.size || state.era.has(eraOf(f.y))) && regs.includes(f.r));
+  document.getElementById("count").textContent = `${films.length} films counted`;
+  const lensBar = `<div class="lenses" role="group" aria-label="Lens">${LENS.map(([k, n]) => `<button type="button" data-lens2="${k}" aria-pressed="${k === d}">${n}</button>`).join("")}</div>`;
+  if (!PAT.dims.includes(d)) { el.innerHTML = `<div>${lensBar}<p class="pq">${LENSQ[d]}</p><p class="psub">This lens is still being sorted into fears. Try another.</p></div><div></div>`; wireLens(el); return; }
+  const tot = Object.fromEntries(regs.map(r => [r, films.filter(f => f.r === r).length]));
+  const q = state.q.trim().toLowerCase();
+  let rows = Object.entries(PAT.fears[d]).map(([fear, def]) => {
+    const fs = films.filter(f => f.g[d] && f.g[d].f.includes(fear));
+    const by = Object.fromEntries(regs.map(r => [r, fs.filter(f => f.r === r).length]));
+    const share = Object.fromEntries(regs.map(r => [r, tot[r] ? by[r] / tot[r] : 0]));
+    const present = regs.filter(r => by[r] > 0).length, overall = films.length ? fs.length / films.length : 0;
+    const big = regs.filter(r => tot[r] >= 10), conc = overall ? Math.max(...big.map(r => share[r]), 0) / overall : 0;
+    return { fear, def, fs, by, share, present, overall, conc };
+  }).filter(r => r.fs.length && r.fear !== "unclear");
+  if (q) rows = rows.filter(r => r.fear.includes(q) || (r.def || "").toLowerCase().includes(q) || r.fs.some(f => f.g[d].k.some(k => k.includes(q))));
+  const S = state.psort;
+  rows.sort((a, b) => S === "common" ? b.fs.length - a.fs.length : S === "local" ? (b.fs.length >= 3) - (a.fs.length >= 3) || b.conc - a.conc : b.present - a.present || b.overall - a.overall);
+  if (!rows.some(r => r.fear === state.psel?.key) && state.psel?.type !== "region") state.psel = rows[0] ? { type: "fear", key: rows[0].fear } : null;
+  const maxShare = Math.max(...rows.flatMap(r => regs.map(g => r.share[g])), .01);
+  const dot = (r, g) => { const s = r.share[g]; if (!r.by[g]) return `<span class="pdot zero"></span>`; const px = 6 + Math.sqrt(s / maxShare) * 26;
+    return `<span class="pdot${tot[g] < 10 ? " thin" : ""}" style="width:${px}px;height:${px}px;opacity:${.45 + .55 * Math.sqrt(s / maxShare)}" title="${r.by[g]} of ${tot[g]} films in ${esc(g)} (${Math.round(s * 100)}%)"></span>`; };
+  el.innerHTML = `<div>${lensBar}
+      <p class="pq">${LENSQ[d]}</p>
+      <p class="psub">${rows.length} fears in ${esc(lensName.toLowerCase())}, across ${films.length} films. Each dot is the share of a region's films that carry the fear; read across a row to see how far it travels.</p>
+      <div class="mx"><table><thead><tr><th class="fl">Fear</th>${regs.map(g => `<th><button type="button" data-reg="${esc(g)}" aria-pressed="${state.psel?.type === "region" && state.psel.key === g}">${esc(RSHORT[g] || g)}</button><span class="n">${tot[g]}</span></th>`).join("")}<th>travels</th></tr></thead>
+      <tbody>${rows.map(r => `<tr class="${state.psel?.type === "fear" && state.psel.key === r.fear ? "on" : ""}"><td class="fl"><button type="button" data-fear="${esc(r.fear)}">${esc(r.fear)}</button></td>${regs.map(g => `<td>${dot(r, g)}</td>`).join("")}<td class="tr">${r.present} of ${regs.length}</td></tr>`).join("") || `<tr><td class="fl" colspan="${regs.length + 2}"><span class="fp">No fear matches that search.</span></td></tr>`}</tbody></table></div></div>
+    <aside class="pside" id="pside" aria-live="polite">${state.psel?.type === "region" ? regionPanel(state.psel.key, rows, regs, tot, films, d) : state.psel ? fearPanel(rows.find(r => r.fear === state.psel.key), regs, tot, films, d) : ""}</aside>`;
+  wireLens(el);
+  el.querySelectorAll("[data-fear]").forEach(b => b.onclick = () => { state.psel = { type: "fear", key: b.dataset.fear }; renderPatterns(); });
+  el.querySelectorAll("[data-reg]").forEach(b => b.onclick = () => { state.psel = state.psel?.type === "region" && state.psel.key === b.dataset.reg ? null : { type: "region", key: b.dataset.reg }; renderPatterns(); });
+  el.querySelectorAll("[data-go]").forEach(b => b.onclick = () => go(b.dataset.go));
+}
+function wireLens(el) { el.querySelectorAll("[data-lens2]").forEach(b => b.onclick = () => { state.lens = b.dataset.lens2; state.psel = null; document.querySelectorAll("[data-lens]").forEach(x => x.setAttribute("aria-pressed", x.dataset.lens === state.lens)); renderPatterns(); }); }
+function filmLinks(fs) {
+  const byR = {}; fs.forEach(f => (byR[f.r] = byR[f.r] || []).push(f));
+  return `<div class="pfilms">${Object.entries(byR).sort((a, b) => b[1].length - a[1].length).map(([r, xs]) => `<p><span class="rg">${esc(r)} · ${xs.length}</span>${xs.sort((a, b) => a.y - b.y).map(f => f.rec ? `<button type="button" data-go="${f.id}">${esc(f.t)} (${f.y})</button>` : `<span class="off">${esc(f.t)} (${f.y})</span>`).join(", ")}</p>`).join("")}</div>`;
+}
+function fearPanel(r, regs, tot, films, d) {
+  if (!r) return "";
+  const eras = ERAS.map(([e]) => { const ef = films.filter(f => eraOf(f.y) === e); const n = ef.filter(f => f.g[d] && f.g[d].f.includes(r.fear)).length; return { e, n, s: ef.length ? n / ef.length : 0, t: ef.length }; });
+  const mx = Math.max(...eras.map(x => x.s), .01);
+  const kinds = {}; r.fs.forEach(f => f.g[d].k.filter(k => k.startsWith(r.fear + "|")).forEach(k => { const kk = k.split("|")[1]; kinds[kk] = (kinds[kk] || 0) + 1; }));
+  const big = regs.filter(g => tot[g] >= 10), strong = big.filter(g => r.share[g] >= r.overall * .5 && r.by[g] > 0);
+  const verdict = r.present >= regs.length - 1 && strong.length >= big.length - 1 ? `<b>Travels everywhere.</b> Found in ${r.present} of ${regs.length} regions, and common in nearly all the large ones.`
+    : r.present >= Math.ceil(regs.length / 2) ? `<b>Travels widely</b>, found in ${r.present} of ${regs.length} regions, though stronger in some than others.`
+    : `<b>A local fear.</b> Concentrated in ${regs.filter(g => r.by[g]).map(g => esc(g)).join(", ")}.`;
+  return `<p class="overline">${esc(LENS.find(l => l[0] === d)[1])}</p><h3>${esc(r.fear)}</h3>${r.def ? `<p class="def">${esc(r.def)}</p>` : ""}
+    <p class="verdict">${verdict}</p>
+    <p class="small">${r.fs.length} of ${films.length} films (${Math.round(r.overall * 100)}%).</p>
+    <h4>Through time · share of each era's films</h4>
+    <div class="eras">${eras.map(x => `<div><b>${x.t ? Math.round(x.s * 100) + "%" : "–"}</b><i style="height:${x.t ? 2 + x.s / mx * 56 : 0}px"></i><span>${x.e}</span></div>`).join("")}</div>
+    <h4>What it looks like</h4><ul class="kinds">${Object.entries(kinds).sort((a, b) => b[1] - a[1]).slice(0, 8).map(([k, n]) => `<li><span>${esc(k)}</span><span>${n} films</span></li>`).join("")}</ul>
+    <h4>The films</h4>${filmLinks(r.fs)}`;
+}
+function regionPanel(g, rows, regs, tot, films, d) {
+  const rest = films.filter(f => f.r !== g), restN = rest.length;
+  const lean = rows.map(r => { const inR = r.by[g] || 0, sR = tot[g] ? inR / tot[g] : 0, sRest = restN ? (r.fs.length - inR) / restN : 0; return { r, inR, sR, sRest, ratio: (sR + .01) / (sRest + .01) }; });
+  const more = lean.filter(x => x.inR >= Math.min(3, Math.max(2, Math.ceil(tot[g] * .15))) && x.ratio >= 1.6).sort((a, b) => b.ratio - a.ratio).slice(0, 7);
+  const shared = lean.filter(x => x.inR > 0 && x.ratio < 1.6 && x.ratio > .6).sort((a, b) => b.sR - a.sR).slice(0, 5);
+  const line = x => `<li><span><button class="linkish" type="button" data-fear="${esc(x.r.fear)}">${esc(x.r.fear)}</button></span><span>${Math.round(x.sR * 100)}% here · ${Math.round(x.sRest * 100)}% elsewhere</span></li>`;
+  return `<p class="overline">A region</p><h3>${esc(g)}</h3><p class="def">${tot[g]} films${tot[g] < 10 ? ", too few to say much with confidence" : ""}.</p>
+    <h4>What it fears more than the rest of the world</h4><ul class="kinds">${more.map(line).join("") || `<li><span class="fp">Nothing stands out strongly.</span></li>`}</ul>
+    <h4>What it shares with everyone</h4><ul class="kinds">${shared.map(line).join("") || `<li><span class="fp">No clear shared fears in this lens.</span></li>`}</ul>`;
 }
 
 /* ---------- graph view ---------- */
@@ -949,16 +1084,16 @@ async function renderFilm(id) {
   if (!f) { location.hash = ""; return; }
   document.getElementById("crumb").textContent = `${f.t} · ${f.y} · ${f.c}`;
   document.title = `${f.t} · Bloodline Record`;
-  app.innerHTML = `<div class="nav"><button class="linkish" type="button" id="back">${state.view === "list" ? "Back to the list" : "Back to the graph"}</button><span class="tag">loading</span></div>`;
+  app.innerHTML = `<div class="nav"><button class="linkish" type="button" id="back">${state.view === "list" ? "Back to the list" : state.view === "patterns" ? "Back to the patterns" : "Back to the graph"}</button><span class="tag">loading</span></div>`;
   let d;
   try { d = await load(id); } catch (e) {
-    app.innerHTML = `<div class="nav"><button class="linkish" type="button" id="back">${state.view === "list" ? "Back to the list" : "Back to the graph"}</button></div><p class="empty">This film's record didn't load. Reload the page to try again.</p>`;
-    document.getElementById("back").onclick = () => go(state.view === "list" ? "list" : ""); return;
+    app.innerHTML = `<div class="nav"><button class="linkish" type="button" id="back">${state.view === "list" ? "Back to the list" : state.view === "patterns" ? "Back to the patterns" : "Back to the graph"}</button></div><p class="empty">This film's record didn't load. Reload the page to try again.</p>`;
+    document.getElementById("back").onclick = () => go(state.view === "graph" ? "" : state.view); return;
   }
   if (location.hash.slice(1) !== id) return;
   const prev = F[(i + F.length - 1) % F.length], next = F[(i + 1) % F.length];
   app.innerHTML = `
-  <div class="nav"><button class="linkish" type="button" id="back">${state.view === "list" ? "Back to the list" : "Back to the graph"}</button>
+  <div class="nav"><button class="linkish" type="button" id="back">${state.view === "list" ? "Back to the list" : state.view === "patterns" ? "Back to the patterns" : "Back to the graph"}</button>
     <span><button class="linkish" type="button" data-go="${prev.id}">Previous: ${esc(prev.t)}</button> · <button class="linkish" type="button" data-go="${next.id}">Next: ${esc(next.t)}</button></span></div>
   <div class="head">
     <p class="overline">${esc(d.region)} · ${esc(d.countries.join(", ") || d.country)} · ${d.year}</p>
@@ -988,7 +1123,7 @@ async function renderFilm(id) {
     <aside class="side">${side(d, f)}</aside>
   </div>
   <p class="foot">A first reading by Claude of the film’s plot, subtitles and screenplay, not yet reviewed. <button class="linkish" type="button" id="foot-about">How this record was made</button>.</p>`;
-  document.getElementById("back").onclick = () => go(state.view === "list" ? "list" : "");
+  document.getElementById("back").onclick = () => go(state.view === "graph" ? "" : state.view);
   document.getElementById("foot-about").onclick = () => document.getElementById("about-link").click();
   app.querySelectorAll("[data-go]").forEach(b => b.onclick = () => go(b.dataset.go));
   const frame = document.getElementById("frame");
@@ -1011,7 +1146,7 @@ async function renderFilm(id) {
 function cap(s) { s = esc(s); return s.charAt(0).toUpperCase() + s.slice(1); }
 function route() { window.onresize = null;
   routeInner(); }
-function routeInner() { document.body.classList.remove("dopen"); const id = location.hash.slice(1); if (id && F.some(f => f.id === id)) { G = null; renderFilm(id); } else { state.view = id === "list" ? "list" : "graph"; renderIndex(); } }
+function routeInner() { document.body.classList.remove("dopen"); const id = location.hash.slice(1); if (id && F.some(f => f.id === id)) { G = null; renderFilm(id); } else { state.view = id === "list" ? "list" : id === "patterns" ? "patterns" : "graph"; renderIndex(); } }
 document.getElementById("home").onclick = () => go("");
 document.getElementById("about-link").onclick = () => { const a = document.getElementById("about"); if (a) a.scrollIntoView({ block: "start" }); else { go(""); setTimeout(() => document.getElementById("about")?.scrollIntoView({ block: "start" }), 60); } };
 let grt; window.addEventListener("resize", () => { if (state.view !== "graph" || !document.getElementById("gstage")) return; clearTimeout(grt); grt = setTimeout(() => { buildGraph(); renderRows(); }, 200); });
