@@ -442,6 +442,32 @@ ul.kinds li span:last-child{font-family:var(--mono);font-size:11.5px;color:var(-
 .fwall .tt{font-family:var(--display);font-size:16px;line-height:1.2}
 .fwall .tt span{color:var(--mute);font-size:.85em}
 @media (max-width:760px){ .fverd,.fkinds{grid-template-columns:1fr} .rbar{grid-template-columns:120px minmax(0,1fr) 70px} .bigeras{height:180px} }
+
+.fquote{margin:34px 0 0;max-width:60ch}
+.fquote blockquote{margin:0;font-family:var(--display);font-style:italic;font-size:clamp(26px,3.2vw,40px);line-height:1.2;color:var(--ink);border-left:3px solid var(--lc);padding-left:22px}
+.fquote figcaption{margin:12px 0 0 25px;font-family:var(--mono);font-size:12px;color:var(--mute);letter-spacing:.03em}
+.fmore{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 40px;margin-top:28px}
+.fmore figure{margin:0}
+.fmore blockquote{margin:0;font-family:var(--display);font-style:italic;font-size:20px;line-height:1.35;border-left:2px solid var(--lc);padding-left:14px}
+.fmore figcaption{margin:6px 0 0 16px;font-family:var(--mono);font-size:11.5px;color:var(--mute)}
+details.fothers{margin-top:18px}
+details.fothers summary{cursor:pointer;font-size:14px;color:var(--mute)}
+.fstats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 48px;border-top:1px solid var(--hair);padding-top:18px}
+.fstats h4{font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin:0 0 6px}
+.fv{font-family:var(--display);font-size:18px;margin:0 0 12px}
+.fv b{font-weight:400;color:var(--lc)}
+.minieras{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;align-items:end;height:84px}
+.minieras div{display:flex;flex-direction:column;justify-content:flex-end;height:100%;gap:3px;align-items:stretch;text-align:center}
+.minieras i{display:block;background:var(--lc)}
+.minieras b{font-family:var(--mono);font-weight:400;font-size:11px}
+.minieras span{font-family:var(--mono);font-size:10px;color:var(--mute)}
+.minireg{display:grid;gap:3px}
+.minireg div{display:grid;grid-template-columns:78px minmax(0,1fr) 44px;gap:8px;align-items:center;font-size:12.5px}
+.minireg .tk{height:6px;background:var(--rule);position:relative}
+.minireg .tk i{position:absolute;left:0;top:0;bottom:0;background:var(--lc)}
+.minireg .tk i.thin{background:transparent;box-shadow:inset 0 0 0 1px var(--lc)}
+.minireg span:last-child{font-family:var(--mono);font-size:10.5px;color:var(--mute);text-align:right}
+@media (max-width:760px){ .fmore,.fstats{grid-template-columns:1fr} }
 @media (max-width:980px){
   .row{grid-template-columns:96px minmax(0,1fr);gap:4px 14px}
   .thumb{width:96px;grid-row:span 3}
@@ -695,7 +721,8 @@ const fearHash = (lens, name) => `f.${lens}.${slug(name)}`;
 async function renderFear(id) {
   const [, lens, sl] = id.split(".");
   app.innerHTML = `<div class="nav"><button class="linkish" type="button" id="back">Back</button><span class="tag">gathering</span></div>`;
-  document.getElementById("back").onclick = () => go(state.view === "graph" ? "" : state.view === "patterns" ? "trends" : state.view);
+  const back = () => go(state.view === "graph" ? "" : state.view === "patterns" ? "trends" : state.view);
+  document.getElementById("back").onclick = back;
   if (!PAT) { try { patLoad = patLoad || fetch("patterns.json").then(r => { if (!r.ok) throw 0; return r.json(); }).then(d => { PAT = d; }); await patLoad; } catch (e) { patLoad = null; app.innerHTML += `<p class="empty">This fear didn't load. Reload the page to try again.</p>`; return; } }
   if (location.hash.slice(1) !== id) return;
   const name = Object.keys(PAT.fears[lens] || {}).find(n => slug(n) === sl);
@@ -709,40 +736,97 @@ async function renderFear(id) {
   const early = sh(["<1960", "1960s–70s"]), late = sh(["2000–14", "2015+"]), change = (late + .01) / (early + .01), overall = fs.length / all.length;
   const regs = [...new Set(all.map(f => f.r))].map(g => { const rf = all.filter(f => f.r === g); return { g, n: rf.filter(has).length, t: rf.length }; }).map(x => ({ ...x, s: x.n / x.t })).sort((a, b) => b.s - a.s);
   const rmx = Math.max(...regs.map(x => x.s), .01), present = regs.filter(x => x.n).length, big = regs.filter(x => x.t >= 10), strong = big.filter(x => x.n && x.s >= overall * .5).length;
-  const time = fs.length < 5 ? "Too few films to read a trend through time." : change >= 1.5 ? `<b>Rising.</b> ${pct(early)} of films before 1980, ${pct(late)} since 2000.` : change <= .67 ? `<b>Fading.</b> ${pct(early)} of films before 1980, ${pct(late)} since 2000.` : `<b>Steady</b> across the century, in about ${pct(overall)} of films.`;
-  const travel = present >= regs.length - 1 && strong >= big.length - 1 ? `<b>Travels everywhere.</b> Found in ${present} of ${regs.length} regions.` : present >= Math.ceil(regs.length / 2) ? `<b>Travels widely.</b> Found in ${present} of ${regs.length} regions, stronger in some.` : `<b>A local fear.</b> Found mostly in ${regs.filter(x => x.n).slice(0, 3).map(x => esc(x.g)).join(", ")}.`;
-  // which other fears turn up alongside this one more often than usual
+  const time = fs.length < 5 ? "Too few films to read a trend." : change >= 1.5 ? `<b>Rising</b>: ${pct(early)} of films before 1980, ${pct(late)} since 2000.` : change <= .67 ? `<b>Fading</b>: ${pct(early)} of films before 1980, ${pct(late)} since 2000.` : `<b>Steady</b>, in about ${pct(overall)} of films across the century.`;
+  const travel = present >= regs.length - 1 && strong >= big.length - 1 ? `<b>Travels everywhere</b>: found in ${present} of ${regs.length} regions.` : present >= Math.ceil(regs.length / 2) ? `<b>Travels widely</b>: found in ${present} of ${regs.length} regions.` : `<b>A local fear</b>, found mostly in ${regs.filter(x => x.n).slice(0, 3).map(x => esc(x.g)).join(", ")}.`;
+  // the fears that keep company with this one, more often than chance
   const counts = {}; fs.forEach(f => Object.entries(f.g).forEach(([d2, v]) => v.f.forEach(n2 => { if (d2 === lens && n2 === name || n2 === "unclear") return; const k = d2 + "|" + n2; counts[k] = (counts[k] || 0) + 1; })));
   const base = {}; all.forEach(f => Object.entries(f.g).forEach(([d2, v]) => v.f.forEach(n2 => { const k = d2 + "|" + n2; base[k] = (base[k] || 0) + 1; })));
-  const kin = Object.entries(counts).filter(([k, c]) => c >= Math.max(4, fs.length * .12)).map(([k, c]) => ({ k, c, lift: (c / fs.length) / (base[k] / all.length) })).filter(x => x.lift >= 1.4).sort((a, b) => b.lift - a.lift).slice(0, 10);
+  const kin = Object.entries(counts).filter(([k, c]) => c >= Math.max(3, fs.length * .1)).map(([k, c]) => ({ k, c, lift: (c / fs.length) / (base[k] / all.length) })).filter(x => x.lift >= 1.3).sort((a, b) => b.lift - a.lift).slice(0, 10);
   const kinds = {}; fs.forEach(f => f.g[lens].k.filter(k => k.startsWith(name + "|")).forEach(k => { const kk = k.split("|")[1]; kinds[kk] = (kinds[kk] || 0) + 1; }));
   const inRec = fs.filter(f => f.rec).sort((a, b) => a.y - b.y), others = fs.filter(f => !f.rec);
+  const carries = (f, k) => { const [d2, n2] = k.split("|"); return f.g[d2] && f.g[d2].f.includes(n2); };
+  // films for the mini bloodline: those in the record, ranked by how many of the kin fears they also carry
+  const egoFilms = inRec.map(f => ({ f, via: kin.filter(x => carries(f, x.k)).map(x => x.k) })).sort((a, b) => b.via.length - a.via.length || a.f.y - b.f.y).slice(0, 14);
   const tile = f => { const x = F.find(z => z.id === f.id); return `<button type="button" data-go="${f.id}"><span class="th${x && x.st ? "" : " none"}" style="${x && x.st ? `background-image:url('stills/${f.id}.jpg');background-size:100% ${x.st * 100}%;background-position:0 0` : ""}"></span><span class="tt">${esc(f.t)} <span>(${f.y})</span></span></button>`; };
   const byR = {}; others.forEach(f => (byR[f.r] = byR[f.r] || []).push(f));
+  const qs = ((PAT.quotes || {})[lens] || {})[name] || [], q0 = qs[0];
+  const qline = q => `${q.rec ? `<button class="linkish" type="button" data-go="${q.id}">${esc(q.t)}</button>` : esc(q.t)} (${q.y})${q.src === "subtitles" && q.at ? ` · ${esc(q.at)}` : q.src === "wikipedia" ? " · from the plot" : ""}`;
   app.innerHTML = `<div class="fpage" style="--lc:${lc}">
     <div class="nav"><button class="linkish" type="button" id="back">${state.view === "list" ? "Back to the list" : state.view === "patterns" ? "Back to the trends" : "Back to the graph"}</button><span class="tag" style="color:${lc}">${esc(LENSN[lens])}</span></div>
     <div class="head"><p class="overline" style="color:${lc}">${esc(LENSN[lens])} · ${fs.length} of ${all.length} films</p><h1 class="work">${esc(name)}</h1><hr class="dbl">${def ? `<p class="lede">${esc(def)}</p>` : ""}</div>
-    <div class="fverd"><p>${time}</p><p>${travel}</p></div>
-    <section class="fsec"><h2>Through the century</h2><p class="q2">Share of each era's films that carry it.</p>
-      <div class="bigeras">${eras.map(x => `<div><b>${x.t ? pct(x.s) : "–"}</b><i style="height:${x.t ? 3 + x.s / mx * 170 : 0}px"></i><small>${x.n} of ${x.t}</small></div>`).join("")}</div>
-      <div class="eralab">${eras.map(x => `<span>${x.e}</span>`).join("")}</div></section>
-    <section class="fsec"><h2>Across the world</h2><p class="q2">Share of each region's films. Hollow bars: fewer than 10 films, read with care.</p>
-      <div class="rbars">${regs.map(x => `<div class="rbar"><span>${esc(x.g)}</span><span class="tk"><i class="${x.t < 10 ? "thin" : ""}" style="width:${x.s / rmx * 100}%"></i></span><span>${x.n} of ${x.t}</span></div>`).join("")}</div></section>
-    <section class="fsec"><h2>What it looks like</h2><p class="q2">The shapes it takes, with the original wording from the films.</p>
-      <div class="fkinds">${Object.entries(kinds).sort((a, b) => b[1] - a[1]).map(([k, n]) => `<div><h3>${esc(k)}<span>${n} films</span></h3><p>${((PAT.kinds[lens] || {})[name] || {})[k] ? PAT.kinds[lens][name][k].map(v => `“${esc(v)}”`).join(", ") : ""}</p></div>`).join("")}</div></section>
-    ${kin.length ? `<section class="fsec"><h2>It travels with</h2><p class="q2">Other fears that turn up alongside it more often than usual.</p>
-      <div class="kin">${kin.map(x => { const [d2, n2] = x.k.split("|"); return `<button type="button" data-fear2="${esc(x.k)}" style="border-top:3px solid ${LENSC[d2]}"><span class="k1" style="color:${LENSC[d2]}">${esc(LENSN[d2])}</span><span class="k2">${esc(n2)}</span><span class="k3">${x.lift.toFixed(1)}× as often · ${x.c} films</span></button>`; }).join("")}</div></section>` : ""}
+    ${kin.length ? `<section class="fsec" style="margin-top:28px"><div class="spinehead" style="margin-top:0"><h3>Its bloodline</h3><p>The fears it keeps company with, more often than chance, and the films in the record that carry them together.</p></div>
+      <div class="netwrap"><div><div class="netsvg" id="fnet"></div>
+        <div class="keyline">${[...new Set(kin.map(x => x.k.split("|")[0]))].map(k => `<span><span class="sw" style="background:${LENSC[k]};border-radius:50%"></span>${esc(LENSN[k].toLowerCase())}</span>`).join("")}</div>
+        <p class="linkinfo" id="flinkinfo"><span class="fp">Point at a fear or a film to trace it. Click to open it.</span></p></div>
+        <ol class="why" id="fwhy">${kin.map((x, i) => { const [d2, n2] = x.k.split("|"); return `<li data-l="${esc(x.k)}"><span class="no">${i + 1}</span><div><button class="linkish t" type="button" data-fear2="${esc(x.k)}">${esc(n2)}</button><span class="strength" style="width:${Math.max(4, x.lift / kin[0].lift * 60)}px;background:${LENSC[d2]}"></span>
+          <div class="r"><span style="color:${LENSC[d2]}">${esc(LENSN[d2])}</span> · ${x.lift.toFixed(1)}× as often · in ${x.c} of its ${fs.length} films</div></div></li>`; }).join("")}</ol></div></section>` : ""}
+    ${q0 ? `<figure class="fquote"><blockquote>“${esc(q0.q)}”</blockquote><figcaption>${qline(q0)}</figcaption></figure>` : ""}
+    <section class="fsec"><h2>What it looks like</h2><p class="q2">The shapes it takes, in the films' own words.</p>
+      <div class="fkinds">${Object.entries(kinds).sort((a, b) => b[1] - a[1]).map(([k, n]) => `<div><h3>${esc(k)}<span>${n} films</span></h3><p>${((PAT.kinds[lens] || {})[name] || {})[k] ? PAT.kinds[lens][name][k].map(v => `“${esc(v)}”`).join(", ") : ""}</p></div>`).join("")}</div>
+      ${qs.length > 1 ? `<div class="fmore">${qs.slice(1).map(q => `<figure><blockquote>“${esc(q.q)}”</blockquote><figcaption>${qline(q)}</figcaption></figure>`).join("")}</div>` : ""}</section>
     <section class="fsec"><h2>The films</h2><p class="q2">${inRec.length} in the record${others.length ? `, and ${others.length} more from the full 500` : ""}.</p>
       ${inRec.length ? `<div class="fwall">${inRec.map(tile).join("")}</div>` : ""}
-      ${others.length ? `<div class="pfilms" style="margin-top:22px">${Object.entries(byR).sort((a, b) => b[1].length - a[1].length).map(([r, xs]) => `<p><span class="rg">${esc(r)} · ${xs.length}</span>${xs.sort((a, b) => a.y - b.y).map(f => `<span class="off">${esc(f.t)} (${f.y})</span>`).join(", ")}</p>`).join("")}</div>` : ""}</section>
+      ${others.length ? `<details class="fothers"><summary>The other ${others.length} films</summary><div class="pfilms">${Object.entries(byR).sort((a, b) => b[1].length - a[1].length).map(([r, xs]) => `<p><span class="rg">${esc(r)} · ${xs.length}</span>${xs.sort((a, b) => a.y - b.y).map(f => `<span class="off">${esc(f.t)} (${f.y})</span>`).join(", ")}</p>`).join("")}</div></details>` : ""}</section>
+    <section class="fsec fstats"><div><h4>Through the century</h4><p class="fv">${time}</p>
+        <div class="minieras">${eras.map(x => `<div title="${x.n} of ${x.t} films"><b>${x.t ? pct(x.s) : "–"}</b><i style="height:${x.t ? 2 + x.s / mx * 46 : 0}px"></i><span>${x.e}</span></div>`).join("")}</div></div>
+      <div><h4>Across the world</h4><p class="fv">${travel}</p>
+        <div class="minireg">${regs.map(x => `<div title="${x.n} of ${x.t} films"><span>${esc(RSHORT[x.g] || x.g)}</span><span class="tk"><i class="${x.t < 10 ? "thin" : ""}" style="width:${x.s / rmx * 100}%"></i></span><span>${x.n}/${x.t}</span></div>`).join("")}</div></div></section>
     <p class="foot">Counted across ${all.length} films from a first reading by Claude, not yet reviewed, with the wording grouped into fears. Read it as a lead, not a finding. <button class="linkish" type="button" id="foot-about">How this record was made</button>.</p></div>`;
-  document.getElementById("back").onclick = () => go(state.view === "graph" ? "" : state.view === "patterns" ? "trends" : state.view);
+  document.getElementById("back").onclick = back;
   document.getElementById("foot-about").onclick = () => document.getElementById("about-link").click();
   app.querySelectorAll("[data-go]").forEach(b => b.onclick = () => go(b.dataset.go));
   app.querySelectorAll("[data-fear2]").forEach(b => b.onclick = () => { const [d2, n2] = b.dataset.fear2.split("|"); go(fearHash(d2, n2)); });
+  if (kin.length) drawEgo(document.getElementById("fnet"), { title: name, colour: lc,
+    links: kin.map(x => { const [d2, n2] = x.k.split("|"); return { id: x.k, label: n2, colour: LENSC[d2], films: inRec.filter(f => carries(f, x.k)).length }; }),
+    films: egoFilms.map(e => ({ id: e.f.id, t: e.f.t, via: e.via, score: e.via.length || .5 })) }, document.getElementById("flinkinfo"), document.getElementById("fwhy"));
   window.scrollTo(0, 0);
 }
-
+// a small radial graph: a centre, a ring of linked fears, an outer ring of films (white)
+function drawEgo(el, spec, info, list) {
+  if (!el) return;
+  const c = 300, R1 = 140, R2 = 262, links = spec.links.map(l => ({ ...l }));
+  const L = Object.fromEntries(links.map(l => [l.id, l]));
+  const spread = () => links.forEach((l, i) => { l.a = -Math.PI / 2 + (i + .5) / links.length * 2 * Math.PI; l.x = c + R1 * Math.cos(l.a); l.y = c + R1 * Math.sin(l.a); });
+  const mean = as => Math.atan2(as.reduce((s, a) => s + Math.sin(a), 0), as.reduce((s, a) => s + Math.cos(a), 0));
+  spread();
+  let films = spec.films.map(f => ({ ...f }));
+  for (let pass = 0; pass < 4; pass++) {
+    films.forEach(f => f.a = f.via.length ? mean(f.via.map(v => L[v].a)) : f.a ?? 0);
+    links.forEach(l => { const fa = films.filter(f => f.via.includes(l.id)).map(f => f.a); l.k = fa.length ? mean(fa) : l.a; });
+    links.sort((p, q) => ((p.k + 2.5 * Math.PI) % (2 * Math.PI)) - ((q.k + 2.5 * Math.PI) % (2 * Math.PI)));
+    spread();
+  }
+  films.forEach((f, i) => f.a = f.via.length ? mean(f.via.map(v => L[v].a)) : (i / Math.max(films.length, 1)) * 2 * Math.PI);
+  films.sort((p, q) => p.a - q.a);
+  const gap = 2 * Math.PI / Math.max(films.length, 1) * .8;
+  for (let it = 0; it < 80; it++) for (let i = 0; i < films.length; i++) { const p = films[i], q = films[(i + 1) % films.length]; let df = q.a - p.a; if (i === films.length - 1) df += 2 * Math.PI; if (df < gap) { const m = (gap - df) / 2; p.a -= m; q.a += m; } }
+  const mx = Math.max(...films.map(f => f.score), 1);
+  films.forEach(f => { f.x = c + R2 * Math.cos(f.a); f.y = c + R2 * Math.sin(f.a); f.r = 6 + Math.min(1, f.score / mx) * 8; });
+  const lmx = Math.max(...links.map(l => l.films), 1);
+  let ed = "", nd = "";
+  links.forEach(l => ed += `<line class="ed" data-l="${esc(l.id)}" x1="${c}" y1="${c}" x2="${l.x}" y2="${l.y}" stroke="${l.colour}" stroke-opacity=".35" stroke-width="1"/>`);
+  films.forEach(f => f.via.forEach(v => { const l = L[v]; const qx = (l.x + f.x) / 2 + (c - (l.x + f.x) / 2) * .15, qy = (l.y + f.y) / 2 + (c - (l.y + f.y) / 2) * .15;
+    ed += `<path class="ed" data-l="${esc(v)}" data-f="${f.id}" d="M${l.x},${l.y} Q${qx},${qy} ${f.x},${f.y}" fill="none" stroke="${l.colour}" stroke-opacity=".55" stroke-width="1.3"/>`; }));
+  links.forEach(l => { const right = Math.cos(l.a) >= 0, r = 5 + l.films / lmx * 5;
+    nd += `<g class="nd" tabindex="0" role="button" data-l="${esc(l.id)}" aria-label="${esc(l.label)}"><circle cx="${l.x}" cy="${l.y}" r="${r}" fill="${l.colour}" stroke="var(--paper)" stroke-width="1.5"/><text x="${l.x + Math.cos(l.a) * (r + 7)}" y="${l.y + Math.sin(l.a) * (r + 7) + 4}" text-anchor="${right ? "start" : "end"}">${esc(l.label)}</text></g>`; });
+  films.forEach(f => { const right = Math.cos(f.a) >= 0;
+    nd += `<g class="nd" tabindex="0" role="link" data-f="${f.id}" aria-label="${esc(f.t)}"><circle cx="${f.x}" cy="${f.y}" r="${f.r}" fill="var(--ink)" stroke="var(--paper)" stroke-width="1.5"/><text class="fl" x="${f.x + Math.cos(f.a) * (f.r + 8)}" y="${f.y + Math.sin(f.a) * (f.r + 8) + 5}" text-anchor="${right ? "start" : "end"}">${esc(f.t)}</text></g>`; });
+  nd += `<circle cx="${c}" cy="${c}" r="30" fill="${spec.colour}" stroke="var(--paper)" stroke-width="3"/><circle cx="${c}" cy="${c}" r="36" fill="none" stroke="${spec.colour}" stroke-width="1"/><text class="ctr" x="${c}" y="${c + 58}" text-anchor="middle">${esc(spec.title)}</text>`;
+  el.innerHTML = `<svg viewBox="-150 -6 900 612" role="group" aria-label="${esc(spec.title)} and the fears it keeps company with">${ed}${nd}</svg>`;
+  const clear = () => { el.classList.remove("dim"); el.querySelectorAll(".hi").forEach(x => x.classList.remove("hi")); list && list.querySelectorAll(".hi").forEach(x => x.classList.remove("hi")); };
+  const hiLink = id => { clear(); el.classList.add("dim"); el.querySelectorAll(`[data-l="${CSS.escape(id)}"]`).forEach(x => x.classList.add("hi"));
+    films.filter(f => f.via.includes(id)).forEach(f => el.querySelector(`.nd[data-f="${f.id}"]`)?.classList.add("hi"));
+    list?.querySelector(`[data-l="${CSS.escape(id)}"]`)?.classList.add("hi");
+    if (info) info.innerHTML = `<b>${esc(L[id].label)}</b>, carried with it by ${films.filter(f => f.via.includes(id)).map(f => esc(f.t)).join(", ") || "films outside the record"}.`; };
+  const hiFilm = id => { clear(); el.classList.add("dim"); const f = films.find(z => z.id === id);
+    el.querySelectorAll(`[data-f="${id}"]`).forEach(x => x.classList.add("hi")); f.via.forEach(v => el.querySelectorAll(`.nd[data-l="${CSS.escape(v)}"],line[data-l="${CSS.escape(v)}"]`).forEach(x => x.classList.add("hi")));
+    if (info) info.innerHTML = `<b>${esc(f.t)}</b> also carries ${f.via.map(v => esc(L[v].label)).join(", ") || "none of these"}.`; };
+  el.querySelectorAll(".nd[data-f]").forEach(g => { g.addEventListener("mouseenter", () => hiFilm(g.dataset.f)); g.addEventListener("focus", () => hiFilm(g.dataset.f)); g.addEventListener("click", () => go(g.dataset.f)); g.addEventListener("keydown", e => { if (e.key === "Enter") go(g.dataset.f); }); });
+  el.querySelectorAll(".nd[data-l]").forEach(g => { const open = () => { const [d2, n2] = g.dataset.l.split("|"); go(fearHash(d2, n2)); };
+    g.addEventListener("mouseenter", () => hiLink(g.dataset.l)); g.addEventListener("focus", () => hiLink(g.dataset.l)); g.addEventListener("click", open); g.addEventListener("keydown", e => { if (e.key === "Enter") open(); }); });
+  el.querySelector("svg").addEventListener("mouseleave", clear);
+  list?.querySelectorAll("li").forEach(li => li.addEventListener("mouseenter", () => hiLink(li.dataset.l)));
+}
 /* ---------- graph view ---------- */
 let G = null;
 const ERA_C = ["#4a3f37", "#6e6054", "#978672", "#c2b39c", "#efe6d4"];
@@ -1219,7 +1303,8 @@ async function renderFilm(id) {
     <p class="meta">${[d.runtime ? Math.round(d.runtime) + " min" : "", d.directors.length ? "dir. " + d.directors.join(", ") : "", d.languages.join(", ")].filter(Boolean).map(esc).join(" · ")}</p>
 
   </div>
-  <div class="top">
+  ${netBlock(d).replace('<div class="spinehead">', '<div class="spinehead" style="margin-top:28px">')}
+  <div class="top" style="margin-top:56px">
     <div>${topStill(d)}</div>
     <div>${prose(d)}</div>
   </div>
@@ -1229,7 +1314,6 @@ async function renderFilm(id) {
     <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="6" fill="var(--ink)"/></svg>timed from subtitles</span><span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5.5" fill="var(--paper)" stroke="var(--ink)"/></svg>placed by part of the film</span>
     <span><span class="sw" style="background:var(--mute)"></span>words spoken each minute</span><span><span class="sw" style="background:var(--red);width:2px;height:12px"></span>jump scare</span></div>
   <div class="detail" id="detail" aria-live="polite"></div>
-  ${netBlock(d)}
   <div class="reading"><h3>Where it comes from</h3><p>Every part of the story, with the passage it was read from: the plot, the subtitles or the screenplay.</p></div>
   <div class="body" style="margin-top:18px">
     <div>

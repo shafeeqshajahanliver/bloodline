@@ -2,6 +2,7 @@
 # elements mapped to the grouped vocabulary in reference/vocab/<dim>.tsv. Writes record/site/patterns.json.
 # Usage: PYTHONPATH=tools python3 tools/build_patterns.py
 import csv, glob, json, os, re
+from subs import tidy
 DIMS = ["threat", "origin", "wants", "wrong", "trigger", "rules", "who_suffers", "ending", "images"]
 rows = {r["id"]: r for r in csv.DictReader(open("films.csv"))}
 record = set(json.load(open("record/films.json")))
@@ -46,6 +47,29 @@ for d in vocab:
     for v, (fear, kind) in vocab[d].items():
         kd.setdefault(fear, {}).setdefault(kind, []).append((used.get(v, 0), v))
     kinds[d] = {fear: {k: [v for _, v in sorted(vs, key=lambda x: (-x[0], x[1]))[:5]] for k, vs in ks.items()} for fear, ks in kd.items()}
+# a few lines from the films for each fear's page: spoken lines first, then the plot, films in the record first
+quotes = {d: {} for d in vocab}
+for f in sorted(glob.glob("films/*/story_elements.json")):
+    se = json.load(open(f)); fid = se["film"]; r = rows.get(fid)
+    if not r: continue
+    for d in vocab:
+        for e in se["dimensions"].get(d, []):
+            if e["value"] not in vocab[d]: continue
+            fear = vocab[d][e["value"]][0]
+            for m in [e] + e.get("moments", []):
+                q = tidy((m.get("quote") or "").strip()); n = len(q.split())
+                if not 5 <= n <= 26: continue
+                src = m.get("source", "wikipedia")
+                score = (0 if src == "subtitles" else 1 if src == "screenplay" else 2, 0 if fid in record else 1, abs(n - 12))
+                quotes[d].setdefault(fear, []).append((score, {"id": fid, "t": r["title"], "y": int(r["year"]), "q": q, "src": src, "at": m.get("at", ""), "rec": fid in record}))
+for d in quotes:
+    for fear, qs in quotes[d].items():
+        seen, out = set(), []
+        for _, q in sorted(qs, key=lambda x: x[0]):
+            if q["id"] in seen: continue
+            seen.add(q["id"]); out.append(q)
+            if len(out) == 3: break
+        quotes[d][fear] = out
 os.makedirs("record/site", exist_ok=True)
-json.dump({"dims": list(vocab), "fears": defs, "kinds": kinds, "films": films}, open("record/site/patterns.json", "w"), ensure_ascii=False, separators=(",", ":"))
+json.dump({"dims": list(vocab), "fears": defs, "kinds": kinds, "quotes": quotes, "films": films}, open("record/site/patterns.json", "w"), ensure_ascii=False, separators=(",", ":"))
 print(f"{len(films)} films · dimensions grouped: {', '.join(vocab) or 'none yet'}")
