@@ -614,8 +614,7 @@ function renderIndex() {
     ${state.view === "patterns" ? `<span class="key"><span>each dot is the share of films carrying the fear · hollow dots: fewer than 10 films, read with care</span></span>` : state.view === "graph" ? "" : `<span class="key"><span>the bar shows how much of each story is mapped</span></span>`}</div>
   ${state.view === "graph" ? `<div class="gstage" id="gstage"><div class="gflash" id="gflash" aria-hidden="true"></div>
     <div class="ghero" id="ghero"><p class="overline">Bloodline · ${F.length} films · ${new Set(F.map(f => f.c)).size} countries · ${Math.min(...F.map(f => f.y))} to ${Math.max(...F.map(f => f.y))}</p><h1>Every culture tells the same few <em>nightmares</em></h1><p>Different monsters, different languages, and underneath them the same fears. Every point of light is a film or a fear; every thread, a fear they share.</p></div><div class="ginfo" id="ginfo"></div><div class="gmode viewtoggle" role="group" aria-label="Main nodes"><button type="button" data-primary="fears" aria-pressed="${state.primary === "fears"}">Fears</button><button type="button" data-primary="films" aria-pressed="${state.primary === "films"}">Films</button></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
-    <div class="keyline" id="gkey" style="margin-top:10px"></div>
-    <p class="gnote">Films and the fears they carry, drawn together. Switch between films and fears as the main thread; the other stays in grey. Films that share fears pull close; fears that travel sit at the centre. Click a film to step inside it, or a fear to see how far it travels.</p>` : state.view === "patterns" ? `<div class="pat" id="pat"></div>` : `<ol class="ledger" id="ledger"></ol>`}
+    <div class="keyline" id="gkey" style="margin-top:10px"></div>` : state.view === "patterns" ? `<div class="pat" id="pat"></div>` : `<ol class="ledger" id="ledger"></ol>`}
   ${aboutBlock()}`;
   const q = document.getElementById("q");
   q.addEventListener("input", () => { state.q = q.value; renderRows(); });
@@ -890,17 +889,19 @@ function buildGraph() {
   const nodes = [...films, ...fears];
   const edges = fears.flatMap(x => x.films.map(fm => ({ source: fm, target: x, lens: x.lens })));
   films.forEach(n => n.fears = []); edges.forEach(e => e.source.fears.push(e.target));
-  fears.forEach(x => x.r = 3 + Math.sqrt(x.films.length) * 2.2);
+  fears.forEach(x => x.r = 3 + Math.sqrt(x.films.length) * 3.1);
+  const fmax = Math.max(1, ...films.map(n => n.fears.length)), fmin = Math.min(...films.map(n => n.fears.length));
+  films.forEach(n => n.fr = 3 + Math.pow(fmax > fmin ? (n.fears.length - fmin) / (fmax - fmin) : .5, 1.3) * 12);
   const sim = d3.forceSimulation(nodes).force("link", d3.forceLink(edges).distance(46).strength(e => 1 / Math.sqrt(e.target.films.length) * .6))
     .force("charge", d3.forceManyBody().strength(n => n.kind === "fear" ? -40 - n.films.length * 6 : -70).distanceMax(420))
-    .force("collide", d3.forceCollide(n => (n.kind === "fear" ? n.r : 6) + 3)).force("x", d3.forceX(0).strength(.04)).force("y", d3.forceY(0).strength(.06)).stop();
+    .force("collide", d3.forceCollide(n => (n.kind === "fear" ? n.r : n.fr) + 4)).force("x", d3.forceX(0).strength(.04)).force("y", d3.forceY(0).strength(.06)).stop();
   for (let i = 0; i < 450; i++) sim.tick();
   nodes.forEach(n => { n.nx = n.x; n.ny = n.y; });
   const yr = d3.scaleLinear().domain([1915, 2025]).range([-W * .45, W * .45]);
   fears.forEach(x => x.my = d3.mean(x.films, fm => fm.f.y));
   const sim2 = d3.forceSimulation(nodes).force("link", d3.forceLink(edges).distance(40).strength(.05))
     .force("x", d3.forceX(n => yr(n.kind === "film" ? n.f.y : n.my)).strength(n => n.kind === "film" ? 3 : 1)).force("y", d3.forceY(0).strength(.05))
-    .force("collide", d3.forceCollide(n => (n.kind === "fear" ? n.r : 6) + 2)).force("charge", d3.forceManyBody().strength(-25)).stop();
+    .force("collide", d3.forceCollide(n => (n.kind === "fear" ? n.r : n.fr) + 3)).force("charge", d3.forceManyBody().strength(-25)).stop();
   for (let i = 0; i < 350; i++) sim2.tick();
   nodes.forEach(n => { n.tx = n.x; n.ty = n.y; n.x = state.arrange === "time" ? n.tx : n.nx; n.y = state.arrange === "time" ? n.ty : n.ny; });
   stage.querySelector("svg")?.remove();
@@ -914,8 +915,6 @@ function buildGraph() {
   nSel.append("circle");
   const lSel = lg.selectAll("text").data(nodes).join("text").attr("class", "lab").attr("text-anchor", "middle").text(n => n.kind === "film" ? `${n.f.t} (${n.f.y})` : n.name);
   // films sized by how many of the shown fears they carry, as fears are sized by how many films carry them
-  const fmax = Math.max(1, ...films.map(n => n.fears.length)), fmin = Math.min(...films.map(n => n.fears.length));
-  films.forEach(n => n.fr = 4 + (fmax > fmin ? (n.fears.length - fmin) / (fmax - fmin) : .5) * 5);
   const rOf = n => state.primary === "films" ? (n.kind === "film" ? n.fr : 2.6) : (n.kind === "fear" ? n.r : 1.6 + n.fr * .2);
   const fillOf = n => { const prim = (state.primary === "films") === (n.kind === "film");
     if (!prim) return GREY;
@@ -931,9 +930,15 @@ function buildGraph() {
   let k = 1, visible = new Set(nodes.map(n => n.id)), hits = new Map(), hoverOn = null;
   const bigFilms = new Set([...films].sort((a, b) => b.fears.length - a.fears.length).slice(0, 16).map(n => n.id));
   const bigFears = new Set([...fears].sort((a, b) => b.films.length - a.films.length).slice(0, 22).map(n => n.id));
-  const labels = () => lSel.attr("display", n => { if (!visible.has(n.id)) return "none"; const prim = (state.primary === "films") === (n.kind === "film");
-    if (!prim) return k > 2.6 ? null : "none";
-    return (n.kind === "film" ? bigFilms : bigFears).has(n.id) || k > 1.7 || visible.size <= 40 ? null : "none"; });
+  const labels = () => {
+    const fs = 13 / Math.max(k, .6), placed = [], show = new Set();
+    const prim = n => (state.primary === "films") === (n.kind === "film");
+    const cand = nodes.filter(n => visible.has(n.id) && (prim(n) || k > 2.6)).sort((a, b) => (prim(b) - prim(a)) || rOf(b) - rOf(a));
+    for (const n of cand) { const txt = n.kind === "film" ? `${n.f.t} (${n.f.y})` : n.name, w = txt.length * fs * .5, h = fs * 1.15, r = rOf(n);
+      const box = [n.x - w / 2 - fs * .3, n.y - r - fs * .4 - h, n.x + w / 2 + fs * .3, n.y - r - fs * .4];
+      if (placed.some(b => box[0] < b[2] && box[2] > b[0] && box[1] < b[3] && box[3] > b[1])) continue;
+      placed.push(box); show.add(n.id); }
+    lSel.style("font-size", fs + "px").attr("y", n => n.y - rOf(n) - fs * .4).attr("display", n => show.has(n.id) ? null : "none"); };
   const emphasis = () => { nSel.select("circle").attr("r", rOf).attr("fill", fillOf).attr("stroke", n => ring(n)[0]).attr("stroke-width", n => ring(n)[1]);
     lSel.attr("fill", n => n.kind === "fear" && state.primary === "fears" ? LENSC[n.lens] : "var(--ink)").attr("y", n => n.y - rOf(n) - 5);
     nSel.filter(n => (state.primary === "films") === (n.kind === "film")).raise(); labels(); legend(); rest(); };
