@@ -89,7 +89,7 @@ ol.ledger{list-style:none;margin:0;padding:0}
 .strip button[aria-current="true"]{outline:2px solid var(--ink)}
 .strip button:focus-visible{outline:2px solid var(--red)}
 .caption{font-size:12.5px;color:var(--mute);margin-top:6px}
-.complete h4,.side h4{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--mute);margin:0 0 8px;text-transform:uppercase}
+.complete h4,.side h4,.filmfacts h4{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--mute);margin:0 0 8px;text-transform:uppercase}
 .complete .bar10{height:22px}
 .complete .labels{display:grid;grid-template-columns:repeat(10,1fr);gap:2px;margin-top:4px}
 .complete .labels span{font-size:10.5px;line-height:1.2;color:var(--mute);writing-mode:vertical-rl;transform:rotate(180deg);height:58px;text-align:left;white-space:nowrap}
@@ -473,6 +473,19 @@ details.fothers summary{cursor:pointer;font-size:14px;color:var(--mute)}
 .minireg .tk i.thin{background:transparent;box-shadow:inset 0 0 0 1px var(--lc)}
 .minireg span:last-child{font-family:var(--mono);font-size:10.5px;color:var(--mute);text-align:right}
 @media (max-width:760px){ .fmore,.fstats{grid-template-columns:1fr} }
+
+.loose{margin-top:20px;display:grid;gap:8px}
+.loose .lh{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:0 0 2px}
+.lrow{display:grid;grid-template-columns:190px minmax(0,1fr);gap:12px;align-items:baseline}
+.lk{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.lv{display:flex;flex-wrap:wrap;gap:4px 16px}
+.lv button{all:unset;cursor:pointer;font-size:15px;display:inline-flex;align-items:center;gap:7px;border-bottom:1px solid transparent}
+.lv button:hover,.lv button.on{border-bottom-color:currentColor}
+.lv button:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.lv .sw{width:9px;height:9px}
+.filmfacts{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px 40px;margin-top:18px;align-items:start}
+.filmfacts section{border-top:1px solid var(--ink);padding-top:10px}
+@media (max-width:620px){ .lrow{grid-template-columns:1fr;gap:2px} }
 @media (max-width:980px){
   .row{grid-template-columns:96px minmax(0,1fr);gap:4px 14px}
   .thumb{width:96px;grid-row:span 3}
@@ -1080,15 +1093,15 @@ function spineItems(d) {
   const beats = sortedBeats(d).map((e, n) => ({ kind: "beat", e, n: n + 1, key: "b-" + e._i }));
   const KS = ["threat", "origin", "wants", "wrong", "trigger", "rules", "who_suffers", "ending", "images"], rt = (d.runtime || 100) * 60;
   const imgs = KS.flatMap(k => (d.dims[k] || []).map((e, i) => ({ kind: "element", k, e, key: k === "images" ? "i-" + i : `x-${k}-${i}` })))
-    .filter(x => x.k === "images" || timeOf(x.e) != null)
-    .map(x => ({ ...x, t: timeOf(x.e) ?? (ZONE[x.e.when] ? (ZONE[x.e.when][0] + ZONE[x.e.when][1]) / 2 * rt : rt / 2) })).sort((a, b) => a.t - b.t);
+    .map(x => ({ ...x, loose: x.k !== "images" && timeOf(x.e) == null }))
+    .map(x => ({ ...x, t: x.loose ? 1e9 : timeOf(x.e) ?? (ZONE[x.e.when] ? (ZONE[x.e.when][0] + ZONE[x.e.when][1]) / 2 * rt : rt / 2) })).sort((a, b) => a.t - b.t);
   return { beats, imgs };
 }
 function drawSpine(d, sel) {
   const el = document.getElementById("spine"); if (!el) return;
   const W = Math.max(el.clientWidth, 880), L = 8, iw = W - L - 8;
   const series = d.wpm_series || [], sc = d.scares ? d.scares.scares.map(s => ({ t: tsec(s.t), s })).filter(x => x.t != null) : [];
-  const { beats, imgs } = spineItems(d);
+  const { beats } = spineItems(d), imgs = spineItems(d).imgs.filter(x => !x.loose);
   const timed = [...beats, ...imgs].map(x => timeOf(x.e)).filter(v => v != null);
   const T = Math.max(d.runtime || 0, series.length, ...sc.map(x => x.t / 60 + 1), ...timed.map(v => v / 60 + 1), 10);
   const X = m => L + m / T * iw;
@@ -1136,7 +1149,12 @@ function drawSpine(d, sel) {
   });
   if (sel) mark(sel);
 }
-function mark(key) { document.querySelectorAll("#spine .hit").forEach(g => g.classList.toggle("on", g.dataset.key === key)); }
+function looseBlock(d) {
+  const L = spineItems(d).imgs.filter(x => x.loose); if (!L.length) return "";
+  const by = {}; L.forEach(x => (by[x.k] = by[x.k] || []).push(x));
+  return `<div class="loose"><p class="lh">The rest of its story, not tied to a moment</p>${Object.entries(by).map(([k, xs]) => `<div class="lrow"><span class="lk" style="color:${LENSC[k]}">${esc(LENSN[k])}</span><span class="lv">${xs.map(x => `<button type="button" class="hit" data-key="${x.key}"><span class="sw" style="background:${LENSC[k]}"></span>${esc(x.e.value)}</button>`).join("")}</span></div>`).join("")}</div>`;
+}
+function mark(key) { document.querySelectorAll("#spine .hit, .loose .hit").forEach(g => g.classList.toggle("on", g.dataset.key === key)); }
 function elsewhere(v, id) { const o = F.filter(f => f.id !== id && f.v.includes(v)); return o; }
 function showDetail(d, key) {
   const P = document.getElementById("detail"); if (!P) return;
@@ -1149,7 +1167,7 @@ function showDetail(d, key) {
   } else {
     const isImg = key.startsWith("i-") || key.startsWith("x-"), list = isImg ? imgs : beats, idx = list.findIndex(x => x.key === key), x = list[idx], e = x.e;
     const c = isImg ? (LENSC[x.k] || "var(--mute)") : "var(--ink)";
-    const tm = timeOf(e), when = [e.when, tm != null ? `at ${Math.floor(tm / 3600) ? Math.floor(tm / 3600) + ":" : ""}${String(Math.floor(tm % 3600 / 60)).padStart(2, "0")}:${String(tm % 60).padStart(2, "0")}` : "placed by part of the film"].filter(Boolean).join(" · ");
+    const tm = timeOf(e), when = x.loose ? "not tied to a moment in the film" : [e.when, tm != null ? `at ${Math.floor(tm / 3600) ? Math.floor(tm / 3600) + ":" : ""}${String(Math.floor(tm % 3600 / 60)).padStart(2, "0")}:${String(tm % 60).padStart(2, "0")}` : "placed by part of the film"].filter(Boolean).join(" · ");
     const other = elsewhere(e.value, d.id);
     const nav = (j, lab) => list[j] ? `<button class="linkish" type="button" data-key="${list[j].key}">${lab}: ${esc(list[j].e.value)}</button>` : "";
     h = `<div><span class="kind" style="color:${c === "var(--ink)" ? "var(--mute)" : c}">${isImg ? `${esc(LENSN[x.k])}${x.k === "images" && e.role ? ` · ${esc(e.role)}` : ""}` : `a turn of the story · ${x.n} of ${list.length}`}${e.source && e.source !== "wikipedia" ? ` · found in the ${esc(e.source)}` : ""}</span>
@@ -1159,7 +1177,7 @@ function showDetail(d, key) {
         ${isImg && e.fear ? `<p class="fearlink"><button class="linkish" type="button" data-fearlink="${x.k}|${esc(e.fear)}" style="color:${c}"><span class="sw" style="background:${c};margin-right:8px"></span>${esc(e.fear)} →</button></p>` : ""}
         <div class="stepper">${nav(idx - 1, "Previous")}${nav(idx + 1, "Next")}</div></div>
       <div>${[e, ...(e.moments || [])].map(m => `<blockquote>${from(m)}“${esc(m.quote)}”</blockquote>`).join("")}
-        <button class="linkish" type="button" data-full="${isImg ? "d-" + x.k : "d-beats"}" style="font-size:14px">${isImg ? `See all of ${esc(LENSN[x.k].toLowerCase())} in the full reading` : `See all ${list.length} turns in the full reading`}</button></div>`;
+</div>`;
   }
   P.innerHTML = h;
   mark(key);
@@ -1351,16 +1369,12 @@ async function renderFilm(id) {
   <div class="keyline">${[...new Set(spineItems(d).imgs.map(x => x.k))].map(k => `<span><span class="sw" style="background:${LENSC[k]}"></span>${esc(LENSN[k].toLowerCase())}</span>`).join("")}
     <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5.5" fill="var(--paper)" stroke="var(--ink)"/></svg>the turns of the story</span>
     <span><span class="sw" style="background:var(--mute)"></span>words spoken each minute</span><span><span class="sw" style="background:var(--ink);width:2px;height:12px"></span>jump scare</span><span>solid line: timed from the subtitles · dotted: placed by part of the film</span></div>
+  ${looseBlock(d)}
   <div class="detail" id="detail" aria-live="polite"></div>
-  <div class="reading"><h3>Where it comes from</h3><p>Every part of the story, with the passage it was read from: the plot, the subtitles or the screenplay.</p></div>
-  <div class="body" style="margin-top:18px">
-    <div>
-      ${DIMS.map(k => dimSection(d, k)).join("")}
-      ${d.plot ? `<details class="plot"><summary>Plot, from Wikipedia</summary><div class="ptext">${d.plot.text.split(/\n\n+/).map(p => `<p>${esc(p)}</p>`).join("")}</div>
-        <p class="small">${esc(d.plot.heading)} section of the ${d.plot.lang === "en" ? "English" : esc(d.plot.lang)} Wikipedia article, CC BY-SA. <a href="${esc(d.links.wikipedia)}" target="_blank" rel="noopener">Read the article</a>.</p></details>` : ""}
-    </div>
-    <aside class="side">${side(d, f)}</aside>
-  </div>
+  <div class="reading"><h3>The film</h3><p>Facts, figures and sources.</p></div>
+  <div class="filmfacts">${side(d, f)}
+    ${d.plot ? `<section><h4>Plot, from Wikipedia</h4><details class="plot" style="margin-top:0;border-top:0"><summary style="font-size:16px;padding-block:0">Read the plot</summary><div class="ptext">${d.plot.text.split(/\n\n+/).map(p => `<p>${esc(p)}</p>`).join("")}</div>
+      <p class="small">${esc(d.plot.heading)} section of the ${d.plot.lang === "en" ? "English" : esc(d.plot.lang)} Wikipedia article, CC BY-SA. <a href="${esc(d.links.wikipedia)}" target="_blank" rel="noopener">Read the article</a>.</p></details></section>` : ""}</div>
   <p class="foot">A first reading by Claude of the film’s plot, subtitles and screenplay, not yet reviewed. <button class="linkish" type="button" id="foot-about">How this record was made</button>.</p>`;
   document.getElementById("back").onclick = () => go(state.view === "graph" ? "" : state.view === "patterns" ? "trends" : state.view);
   document.getElementById("foot-about").onclick = () => document.getElementById("about-link").click();
@@ -1379,7 +1393,8 @@ async function renderFilm(id) {
   cells.forEach(c => c.onclick = () => filt(c.getAttribute("aria-pressed") === "true" ? null : c));
   if (all) all.onclick = () => filt(null);
   const first = (d.dims.images || []).length ? "i-" + (d.dims.images || []).map((e, i) => [WHEN.indexOf(e.when), i]).sort((a, b) => a[0] - b[0])[0][1] : (d.dims.beats || []).length ? "b-" + sortedBeats(d)[0]._i : null;
-  drawSpine(d); if (first) showDetail(d, first); drawNet(d);
+  drawSpine(d); if (first) showDetail(d, first);
+  app.querySelectorAll(".loose .hit").forEach(b => b.onclick = () => { showDetail(d, b.dataset.key); document.getElementById("detail").scrollIntoView({ block: "nearest", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); }); drawNet(d);
   let rt; window.onresize = () => { clearTimeout(rt); rt = setTimeout(() => drawSpine(d, document.querySelector("#spine .hit.on")?.dataset.key), 150); };
   window.scrollTo(0, 0);
   load(next.id).catch(() => {});
