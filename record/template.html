@@ -82,10 +82,13 @@ ol.ledger{list-style:none;margin:0;padding:0}
 .meta{font-family:var(--mono);font-size:13px;color:var(--mute);margin:10px 0 0;letter-spacing:.03em}
 .nmline{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin:14px 0 0}
 .nmline a.pl{font-family:var(--display);font-size:22px;letter-spacing:0;text-transform:none;color:var(--ink);margin-left:10px;--uc:var(--ink)}
-.archvs{display:grid;gap:14px;max-width:820px;margin-top:18px}
-.archvs .row{display:grid;grid-template-columns:minmax(0,15em) 1fr;gap:6px 24px;align-items:center}
-.archvs .bars{display:grid;gap:5px}.archvs .bar{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--mute)}
-.archvs .bar i{display:block;height:6px;background:var(--lc2,var(--red));min-width:2px}.archvs .bar.b i{background:transparent;border:1px solid var(--red);height:4px}
+.fstats.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.archvs{display:grid;gap:14px;margin-top:12px}
+.archvs .avr{display:grid;grid-template-columns:1fr auto;gap:3px 10px;align-items:center}
+.archvs .avr .t{grid-column:1/-1;text-align:left;font-family:var(--display);font-size:16px;padding:0;margin:0 0 2px;border:0;justify-self:start}
+.archvs .bar{display:block;height:6px;background:var(--rule)}.archvs .bar i{display:block;height:100%;background:var(--lc);min-width:2px}
+.archvs .bar.b i{background:transparent;border:1px solid var(--lc);box-sizing:border-box}
+.archvs .bv{font-family:var(--mono);font-size:11px;color:var(--mute);white-space:nowrap}
 .lede{font-family:var(--display);font-style:italic;font-size:22px;line-height:1.35;margin:18px 0 0;max-width:46ch}
 .hero{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:28px;margin-top:24px;align-items:start}
 .frame{width:100%;aspect-ratio:16/9;background-color:var(--soft);background-repeat:no-repeat;background-size:100% auto}
@@ -480,7 +483,7 @@ details.fothers summary{cursor:pointer;font-size:14px;color:var(--mute)}
 .minireg .tk i{position:absolute;left:0;top:0;bottom:0;background:var(--lc)}
 .minireg .tk i.thin{background:transparent;box-shadow:inset 0 0 0 1px var(--lc)}
 .minireg span:last-child{font-family:var(--mono);font-size:10.5px;color:var(--mute);text-align:right}
-@media (max-width:760px){ .fmore,.fstats{grid-template-columns:1fr} }
+@media (max-width:760px){ .fmore,.fstats,.fstats.three{grid-template-columns:1fr} }
 
 .loose{margin-top:20px;display:grid;gap:8px}
 .loose .lh{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:0 0 2px}
@@ -800,8 +803,9 @@ async function renderFear(id) {
     all.forEach(f => (f.g.archetypes?.f || []).forEach(a => { at[a] = (at[a] || 0) + 1; if (has(f)) ac[a] = (ac[a] || 0) + 1; }));
     const rows = Object.entries(ac).map(([a, c]) => ({ a, c, inside: c / fs.length, caught: c / at[a] })).sort((x, y) => y.inside - x.inside).slice(0, 5);
     if (!rows.length) return "";
-    return `<section class="fsec"><h2>Against the archetypes</h2><div class="archvs">${rows.map(r => `<div class="row"><button class="linkish t" type="button" data-fear2="archetypes|${esc(r.a)}" style="text-align:left;font-family:var(--display);font-size:19px">${esc(r.a)}</button>
-      <div class="bars"><span class="bar"><i style="width:${r.inside * 260}px"></i>${pct(r.inside)} of this nightmare</span><span class="bar b"><i style="width:${r.caught * 260}px"></i>${pct(r.caught)} of its ${at[r.a]} films fall here</span></div></div>`).join("")}</div></section>`; };
+    return `<div><h4>Against the archetypes</h4><div class="archvs">${rows.map(r => `<div class="avr"><a class="pl t" href="#${fearHash("archetypes", r.a)}" style="--uc:var(--lc)">${esc(r.a)}</a>
+      <span class="bar"><i style="width:${r.inside * 100}%"></i></span><span class="bv">${pct(r.inside)} of this nightmare</span>
+      <span class="bar b"><i style="width:${r.caught * 100}%"></i></span><span class="bv">${pct(r.caught)} of its ${at[r.a]} films fall here</span></div>`).join("")}</div></div>`; };
   app.innerHTML = `<div class="fpage" style="--lc:${lc}">
     <div class="nav"><button class="linkish" type="button" id="back">${state.view === "list" ? "Back to the list" : state.view === "patterns" ? "Back to the trends" : "Back to the graph"}</button></div>
     <div class="head"><p class="overline" style="color:${lc}">${lens === "nightmares" ? "Nightmare · one of " + Object.keys(PAT.fears.nightmares).length : esc(LENSN[lens])} · ${fs.length} of ${all.length} films</p><h1 class="work">${esc(name)}</h1><hr class="dbl"></div>
@@ -818,14 +822,13 @@ async function renderFear(id) {
         <p class="linkinfo" id="flinkinfo" hidden></p></div>
         <ol class="why" id="fwhy">${kin.map((x, i) => { const [d2, n2] = x.k.split("|"); return `<li data-l="${esc(x.k)}"><span class="no">${i + 1}</span><div><button class="linkish t" type="button" data-fear2="${esc(x.k)}">${esc(n2)}</button><span class="strength" style="width:${Math.max(4, x.lift / kin[0].lift * 60)}px;background:${LENSC[d2]}"></span>
           <div class="r"><span style="color:${LENSC[d2]}">${esc(LENSN[d2])}</span> · ${lens === "nightmares" ? `in ${pct(x.c / fs.length)} of these films, ${pct(base[x.k] / all.length)} of all films` : `${x.lift.toFixed(1)}× as often · in ${x.c} of its ${fs.length} films`}</div></div></li>`; }).join("")}</ol></div></section>` : ""}
-    ${lens === "nightmares" ? archVs() : ""}
     <section class="fsec"><h2>The films</h2><p class="q2">${inRec.length} in the record${others.length ? `, and ${others.length} more from the full 500` : ""}.</p>
       ${inRec.length ? `<div class="fwall">${inRec.map(tile).join("")}</div>` : ""}
       ${others.length ? `<details class="fothers"><summary>The other ${others.length} films</summary><div class="pfilms">${Object.entries(byR).sort((a, b) => b[1].length - a[1].length).map(([r, xs]) => `<p><span class="rg">${esc(r)} · ${xs.length}</span>${xs.sort((a, b) => a.y - b.y).map(f => `<span class="off">${esc(f.t)} (${f.y})</span>`).join(", ")}</p>`).join("")}</div></details>` : ""}</section>
-    <section class="fsec fstats"><div><h4>Through the century</h4><p class="fv">${time}</p>
+    <section class="fsec fstats${lens === "nightmares" ? " three" : ""}"><div><h4>Through the century</h4><p class="fv">${time}</p>
         <div class="minieras">${eras.map(x => `<div title="${x.n} of ${x.t} films"><b>${x.t ? pct(x.s) : "–"}</b><i style="height:${x.t ? 2 + x.s / mx * 46 : 0}px"></i><span>${x.e}</span></div>`).join("")}</div></div>
       <div><h4>Across the world</h4><p class="fv">${travel}</p>
-        <div class="minireg">${regs.map(x => `<div title="${x.n} of ${x.t} films"><span>${esc(RSHORT[x.g] || x.g)}</span><span class="tk"><i class="${x.t < 10 ? "thin" : ""}" style="width:${x.s / rmx * 100}%"></i></span><span>${x.n}/${x.t}</span></div>`).join("")}</div></div></section>
+        <div class="minireg">${regs.map(x => `<div title="${x.n} of ${x.t} films"><span>${esc(RSHORT[x.g] || x.g)}</span><span class="tk"><i class="${x.t < 10 ? "thin" : ""}" style="width:${x.s / rmx * 100}%"></i></span><span>${x.n}/${x.t}</span></div>`).join("")}</div></div>${lens === "nightmares" ? archVs() : ""}</section>
     <p class="foot">Counted across ${all.length} films from a first machine reading, not yet reviewed, with the wording grouped into fears. Read it as a lead, not a finding. <button class="linkish" type="button" id="foot-about">How this record was made</button>.</p></div>`;
   document.getElementById("back").onclick = back;
   document.getElementById("foot-about").onclick = () => document.getElementById("about-link").click();
@@ -889,7 +892,7 @@ function drawEgo(el, spec, info, list) {
 let G = null;
 const ERA_C = ["#4a3f37", "#6e6054", "#978672", "#c2b39c", "#efe6d4"];
 const REG_C = {"North America":"#e9e1d1","Continental Europe":"#3fb39a","UK & Ireland":"#d1a23c","East Asia":"#cf3a2e","Southeast Asia":"#c0609a","Latin America":"#e07a45","South Asia":"#e8c44e","Australia & NZ":"#6fa3b8","Middle East & North Africa":"#9d8ad0","Sub-Saharan Africa":"#86b35a"};
-const LENSC = { nightmares: "#cf3a2e", archetypes: "#e8c44e", threat: "#ec8a3c", origin: "#9cc74a", wants: "#3fb39a", wrong: "#4fa3d8", trigger: "#6f7fe6", rules: "#a77ad6", who_suffers: "#d066a8", ending: "#ff8fb8", images: "#7fd1c7" };
+const LENSC = { nightmares: "#cf3a2e", archetypes: "#ec8a3c", threat: "#e8c44e", origin: "#9cc74a", wants: "#3fb39a", wrong: "#4fa3d8", trigger: "#6f7fe6", rules: "#a77ad6", who_suffers: "#d066a8", ending: "#ff8fb8", images: "#7fd1c7" };
 const LENSN = { nightmares: "Nightmares", threat: "What threatens", origin: "Where it comes from", wants: "What it wants", wrong: "The wrong underneath", trigger: "What sets it off", rules: "Rules", who_suffers: "Who suffers", ending: "How it ends", images: "Symbols", archetypes: "Archetypes" };
 const GREY = "#4a413b";
 function buildGraph() {
@@ -985,8 +988,14 @@ function buildGraph() {
     info.innerHTML = `<div class="m">${vf} FILMS · ${vx} FEARS</div><div class="r" style="color:var(--mute)">${state.primary === "films" ? "Point at a film to see the fears it carries." : "Point at a fear to see the films that carry it."}</div>`; labels(); };
   const hover = n => { hoverOn = n; stage.classList.add("hov"); showStill(n);
     const nb = new Set([n.id, ...(n.kind === "film" ? n.fears : n.films).filter(m => visible.has(m.id)).map(m => m.id)]);
-    nSel.classed("hi", m => nb.has(m.id)); lSel.classed("hi", m => nb.has(m.id)).attr("display", m => nb.has(m.id) ? null : "none");
-    eSel.classed("hi", e => e.source === n || e.target === n).attr("stroke", e => e.source === n || e.target === n ? LENSC[e.lens] : "var(--mute)").attr("stroke-opacity", e => e.source === n || e.target === n ? .85 : .06);
+    // a nightmare also lights the archetypes its films carry, and the threads from those films to them
+    const arch = new Map();
+    if (n.lens === "nightmares") n.films.filter(m => visible.has(m.id)).forEach(m => m.fears.filter(x => x.lens === "archetypes" && visible.has(x.id)).forEach(x => { arch.set(x, (arch.get(x) || 0) + 1); nb.add(x.id); }));
+    const lit = e => e.source === n || e.target === n || (arch.has(e.target) && nb.has(e.source.id));
+    // when a nightmare is lit, its films stay unnamed (they are listed alongside) so the archetypes can be read
+    const named = m => nb.has(m.id) && !(arch.size && m.kind === "film");
+    nSel.classed("hi", m => nb.has(m.id)); lSel.classed("hi", named).attr("display", m => named(m) ? null : "none");
+    eSel.classed("hi", lit).attr("stroke", e => lit(e) ? LENSC[e.lens] : "var(--mute)").attr("stroke-opacity", e => lit(e) ? .85 : .06);
     if (n.kind === "film") {
       const by = {}; n.fears.filter(x => visible.has(x.id)).forEach(x => (by[x.lens] = by[x.lens] || []).push(x.name));
       info.innerHTML = `<div class="t">${esc(n.f.t)} <span style="color:var(--mute);font-size:.7em">(${n.f.y})</span></div><div class="m"><span style="color:${REG_C[n.f.r]}">●</span> ${esc(n.f.r)} · ${esc(n.f.c)}${n.f.dir.length ? " · " + esc(n.f.dir[0]) : ""}</div>
@@ -994,7 +1003,7 @@ function buildGraph() {
     } else {
       const vf = n.films.filter(m => visible.has(m.id));
       info.innerHTML = `<div class="m" style="color:${LENSC[n.lens]}">${esc(LENSN[n.lens]).toUpperCase()}</div><div class="t">${esc(n.name)}</div>${n.def ? `<div class="r" style="font-style:italic;color:var(--mute)">${esc(n.def)}</div>` : ""}
-        <div class="r">${vf.length} of the 100 films: ${vf.slice(0, 8).map(m => esc(m.f.t)).join(", ")}${vf.length > 8 ? ` and ${vf.length - 8} more` : ""}.</div><div class="m" style="margin-top:6px">CLICK TO OPEN THIS FEAR</div>`;
+        <div class="r">${vf.length} of the 100 films: ${vf.slice(0, 8).map(m => esc(m.f.t)).join(", ")}${vf.length > 8 ? ` and ${vf.length - 8} more` : ""}.</div>${arch.size ? `<div class="r"><span style="color:${LENSC.archetypes}">Archetypes inside</span>: ${[...arch].sort((a, b) => b[1] - a[1]).slice(0, 6).map(([x, c]) => `${esc(x.name)} ${c}`).join(", ")}</div>` : ""}<div class="m" style="margin-top:6px">CLICK TO OPEN ${n.lens === "nightmares" ? "THIS NIGHTMARE" : "THIS FEAR"}</div>`;
     } };
   nSel.on("mouseenter focus", (ev, n) => hover(n)).on("mouseleave blur", () => rest())
     .on("click", (ev, n) => open(n)).on("keydown", (ev, n) => { if (ev.key === "Enter") open(n); });
