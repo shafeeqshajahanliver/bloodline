@@ -223,6 +223,7 @@ ol.beats li.flash{background:var(--soft)}
 .detail .dt{margin-top:8px;max-width:48ch}
 .detail .stepper{display:flex;gap:14px;margin-top:16px;font-size:14px}
 .detail .also{font-size:13.5px;color:var(--mute);margin-top:12px}
+.detail .fearlink{margin-top:14px;font-family:var(--display);font-size:20px}
 .detail blockquote{margin:0 0 10px;padding:0 0 0 14px;border-left:2px solid var(--hair);font-size:15px;line-height:1.5}
 .detail blockquote .from{font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;margin-right:6px;color:var(--mute)}
 .reading{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-top:72px;border-top:3px solid var(--ink);padding-top:10px}
@@ -1077,7 +1078,10 @@ function topStill(d) {
 /* the running time: images as labels above the line, beats on it, dialogue and scares below */
 function spineItems(d) {
   const beats = sortedBeats(d).map((e, n) => ({ kind: "beat", e, n: n + 1, key: "b-" + e._i }));
-  const imgs = (d.dims.images || []).map((e, i) => ({ kind: "image", e, key: "i-" + i }));
+  const KS = ["threat", "origin", "wants", "wrong", "trigger", "rules", "who_suffers", "ending", "images"], rt = (d.runtime || 100) * 60;
+  const imgs = KS.flatMap(k => (d.dims[k] || []).map((e, i) => ({ kind: "element", k, e, key: k === "images" ? "i-" + i : `x-${k}-${i}` })))
+    .filter(x => x.k === "images" || timeOf(x.e) != null)
+    .map(x => ({ ...x, t: timeOf(x.e) ?? (ZONE[x.e.when] ? (ZONE[x.e.when][0] + ZONE[x.e.when][1]) / 2 * rt : rt / 2) })).sort((a, b) => a.t - b.t);
   return { beats, imgs };
 }
 function drawSpine(d, sel) {
@@ -1101,9 +1105,9 @@ function drawSpine(d, sel) {
   for (const w of WHEN) { const [a, b] = ZONE[w]; h += `<line x1="${X(T * a)}" x2="${X(T * a)}" y1="${top}" y2="${lineY + 120}" stroke="var(--rule)" stroke-dasharray="2 4"/>`; }
   // image labels with leaders down to the line
   let leaders = "", labels = "";
-  imgs.forEach(x => { const y = top + (nl - 1 - x.lane) * LH, c = ROLE_C[x.e.role] || "var(--mute)", px = X(x.m), hol = HOLLOW.has(x.e.role);
+  imgs.forEach(x => { const y = top + (nl - 1 - x.lane) * LH, c = LENSC[x.k] || "var(--mute)", px = X(x.m), hol = false;
     leaders += `<line x1="${px}" x2="${px}" y1="${y + 20}" y2="${lineY - 4}" stroke="${c}" stroke-width="1" ${x.exact ? "" : `stroke-dasharray="2 2"`}/>`;
-    labels += `<g class="hit lbl" tabindex="0" role="button" data-key="${x.key}" aria-label="Symbol: ${esc(x.e.value)}, ${esc(x.e.role || "")}, ${esc(x.e.when || "")}">
+    labels += `<g class="hit lbl" tabindex="0" role="button" data-key="${x.key}" aria-label="${esc(LENSN[x.k])}: ${esc(x.e.value)}">
       <rect class="lb" x="${x.x0}" y="${y}" width="${x.w}" height="21" fill="var(--paper)"/>
       <rect x="${x.x0 + 6}" y="${y + 6}" width="9" height="9" fill="${hol ? "var(--paper)" : c}" stroke="${c}" stroke-width="${hol ? 2 : 1}"/>
       <text x="${x.x0 + 21}" y="${y + 15}">${esc(x.e.value)}</text></g>`; });
@@ -1118,7 +1122,7 @@ function drawSpine(d, sel) {
   if (en) for (const s of en.longest_silences || []) { const a = tsec(s.starts_at) / 60; h += `<rect x="${X(a)}" y="${dy}" width="${Math.max(2, s.seconds / 60 / T * iw)}" height="${dh}" fill="var(--soft)"/><text x="${X(a) + 3}" y="${dy + dh - 4}" style="font-size:9.5px">${s.seconds}s</text>`; }
   if (series.length) { const bw = Math.max(1, iw / T - 1.2); series.forEach((n, m) => { const bh = Math.min(n, 240) / 240 * dh; if (bh > 0) h += `<rect x="${X(m)}" y="${dy}" width="${bw}" height="${bh}" fill="var(--mute)" opacity=".75"/>`; }); }
   else h += `<text x="${L}" y="${dy + 16}">no usable English subtitles, so no dialogue track</text>`;
-  sc.forEach(x => { h += `<g class="hit" tabindex="0" role="button" data-key="s-${x.t}" aria-label="Jump scare at ${esc(x.s.t)}"><rect x="${X(x.t / 60) - 5}" y="${dy - 4}" width="10" height="${dh + 8}" fill="transparent"/><line x1="${X(x.t / 60)}" x2="${X(x.t / 60)}" y1="${dy - 4}" y2="${dy + dh + 4}" stroke="var(--red)" stroke-width="2"/></g>`; });
+  sc.forEach(x => { h += `<g class="hit" tabindex="0" role="button" data-key="s-${x.t}" aria-label="Jump scare at ${esc(x.s.t)}"><rect x="${X(x.t / 60) - 5}" y="${dy - 4}" width="10" height="${dh + 8}" fill="transparent"/><line x1="${X(x.t / 60)}" x2="${X(x.t / 60)}" y1="${dy - 4}" y2="${dy + dh + 4}" stroke="var(--ink)" stroke-opacity=".85" stroke-width="1.5" stroke-dasharray="3 2"/></g>`; });
   // axis
   const ay = dy + dh + 16, step = T > 150 ? 30 : T > 70 ? 15 : 10;
   for (let m = 0; m <= T; m += step) h += `<text x="${X(m)}" y="${ay}" text-anchor="${m === 0 ? "start" : "middle"}">${m === 0 ? "0 min" : m}</text>`;
@@ -1141,21 +1145,21 @@ function showDetail(d, key) {
   let h = "";
   if (key.startsWith("s-")) {
     const t = +key.slice(2), s = d.scares.scares.find(x => tsec(x.t) === t);
-    h = `<div><span class="kind" style="color:var(--red)">jump scare · ${esc(s.t)}</span><h4>${esc(s.d)}</h4></div><div><p class="small">Crowd-sourced timing from <a href="${esc(d.scares.source)}" target="_blank" rel="noopener">Where's the Jump</a>.</p></div>`;
+    h = `<div><span class="kind" style="color:var(--mute)">jump scare · ${esc(s.t)}</span><h4>${esc(s.d)}</h4></div><div><p class="small">Crowd-sourced timing from <a href="${esc(d.scares.source)}" target="_blank" rel="noopener">Where's the Jump</a>.</p></div>`;
   } else {
-    const isImg = key.startsWith("i-"), list = isImg ? imgs : beats, idx = list.findIndex(x => x.key === key), x = list[idx], e = x.e;
-    const c = isImg ? (ROLE_C[e.role] || "var(--mute)") : "var(--ink)";
+    const isImg = key.startsWith("i-") || key.startsWith("x-"), list = isImg ? imgs : beats, idx = list.findIndex(x => x.key === key), x = list[idx], e = x.e;
+    const c = isImg ? (LENSC[x.k] || "var(--mute)") : "var(--ink)";
     const tm = timeOf(e), when = [e.when, tm != null ? `at ${Math.floor(tm / 3600) ? Math.floor(tm / 3600) + ":" : ""}${String(Math.floor(tm % 3600 / 60)).padStart(2, "0")}:${String(tm % 60).padStart(2, "0")}` : "placed by part of the film"].filter(Boolean).join(" · ");
     const other = elsewhere(e.value, d.id);
     const nav = (j, lab) => list[j] ? `<button class="linkish" type="button" data-key="${list[j].key}">${lab}: ${esc(list[j].e.value)}</button>` : "";
-    h = `<div><span class="kind" style="color:${c === "var(--ink)" ? "var(--mute)" : c}">${isImg ? `symbol · ${esc(e.role || "no role")}` : `beat ${x.n} of ${list.length}`}${e.source && e.source !== "wikipedia" ? ` · found in the ${esc(e.source)}` : ""}</span>
+    h = `<div><span class="kind" style="color:${c === "var(--ink)" ? "var(--mute)" : c}">${isImg ? `${esc(LENSN[x.k])}${x.k === "images" && e.role ? ` · ${esc(e.role)}` : ""}` : `a turn of the story · ${x.n} of ${list.length}`}${e.source && e.source !== "wikipedia" ? ` · found in the ${esc(e.source)}` : ""}</span>
         <h4>${esc(e.value)}</h4>${e.state ? `<p class="st">${esc(e.state)}</p>` : ""}${e.detail ? `<p class="dt">${esc(e.detail)}</p>` : ""}
         <p class="tag" style="margin-top:10px;display:block">${esc(when)}</p>
         ${other.length ? `<p class="also">The same wording appears in ${other.slice(0, 4).map(f => `<button class="linkish" type="button" data-go="${f.id}">${esc(f.t)}</button>`).join(", ")}${other.length > 4 ? ` and ${other.length - 4} more` : ""}.</p>` : ""}
-        ${e.fear ? `<p class="also">Part of the fear <button class="linkish" type="button" data-fearlink="images|${esc(e.fear)}" style="color:${LENSC.images}">${esc(e.fear)}</button>, seen across the films.</p>` : ""}
+        ${isImg && e.fear ? `<p class="fearlink"><button class="linkish" type="button" data-fearlink="${x.k}|${esc(e.fear)}" style="color:${c}"><span class="sw" style="background:${c};margin-right:8px"></span>${esc(e.fear)} →</button></p>` : ""}
         <div class="stepper">${nav(idx - 1, "Previous")}${nav(idx + 1, "Next")}</div></div>
       <div>${[e, ...(e.moments || [])].map(m => `<blockquote>${from(m)}“${esc(m.quote)}”</blockquote>`).join("")}
-        <button class="linkish" type="button" data-full="${isImg ? "d-images" : "d-beats"}" style="font-size:14px">See all ${list.length} ${isImg ? "symbols" : "beats"} in the full reading</button></div>`;
+        <button class="linkish" type="button" data-full="${isImg ? "d-" + x.k : "d-beats"}" style="font-size:14px">${isImg ? `See all of ${esc(LENSN[x.k].toLowerCase())} in the full reading` : `See all ${list.length} turns in the full reading`}</button></div>`;
   }
   P.innerHTML = h;
   mark(key);
@@ -1342,11 +1346,11 @@ async function renderFilm(id) {
     <div>${synopsis(d)}</div>
   </div>
   ${netBlock(d).replace('<div class="spinehead">', '<div class="spinehead" style="margin-top:64px">')}
-  <div class="spinehead"><h3>How the fear unfolds</h3><p>The symbols that haunt it above the line, the turns of the story on it, the talk and the scares beneath. Tap anything.</p></div>
+  <div class="spinehead"><h3>How the fear unfolds</h3><p>Its fears above the line, in the colours of their kinds, where the film speaks them; the turns of the story on it; the talk and the scares beneath. Tap anything.</p></div>
   <div class="spine" id="spine"></div>
-  <div class="keyline"><span><span class="sw" style="background:#86b35a"></span>symbols</span>
-    <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="6" fill="var(--ink)"/></svg>timed from subtitles</span><span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5.5" fill="var(--paper)" stroke="var(--ink)"/></svg>placed by part of the film</span>
-    <span><span class="sw" style="background:var(--mute)"></span>words spoken each minute</span><span><span class="sw" style="background:var(--red);width:2px;height:12px"></span>jump scare</span></div>
+  <div class="keyline">${[...new Set(spineItems(d).imgs.map(x => x.k))].map(k => `<span><span class="sw" style="background:${LENSC[k]}"></span>${esc(LENSN[k].toLowerCase())}</span>`).join("")}
+    <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5.5" fill="var(--paper)" stroke="var(--ink)"/></svg>the turns of the story</span>
+    <span><span class="sw" style="background:var(--mute)"></span>words spoken each minute</span><span><span class="sw" style="background:var(--ink);width:2px;height:12px"></span>jump scare</span><span>solid line: timed from the subtitles · dotted: placed by part of the film</span></div>
   <div class="detail" id="detail" aria-live="polite"></div>
   <div class="reading"><h3>Where it comes from</h3><p>Every part of the story, with the passage it was read from: the plot, the subtitles or the screenplay.</p></div>
   <div class="body" style="margin-top:18px">
