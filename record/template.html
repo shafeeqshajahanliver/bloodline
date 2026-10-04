@@ -518,7 +518,7 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;
 const fmt = n => n == null ? "" : n >= 1e6 ? "$" + (n / 1e6).toFixed(n >= 1e7 ? 0 : 1) + "m" : "$" + Math.round(n / 1e3) + "k";
 const app = document.getElementById("app");
 const cache = {};
-const state = { q: "", region: new Set(), era: new Set(), has: new Set(), sort: "year", view: "graph", pcomp: "time", primary: "films", glenses: new Set(["threat", "wants", "wrong", "ending"]), lens: "wrong", psort: "rising", psel: null, arrange: "net", links: new Set(["p","a","e"]), colour: "region" };
+const state = { q: "", region: new Set(), era: new Set(), has: new Set(), sort: "year", view: "graph", pcomp: "time", primary: "fears", glenses: new Set(["threat", "wants", "wrong", "ending"]), lens: "wrong", psort: "rising", psel: null, arrange: "net", links: new Set(["p","a","e"]), colour: "plain" };
 try { const s = JSON.parse(localStorage.getItem("bl-r1") || "{}"); if (s.sort) state.sort = s.sort; } catch (e) {}
 
 function eraOf(y) { return ERAS.find(e => y >= e[1] && y <= e[2])[0]; }
@@ -568,7 +568,7 @@ function renderIndex() {
     <section><h3>Era</h3><div class="chips">${ERAS.map(([e]) => `<button class="chip" type="button" data-era="${e}" aria-pressed="${state.era.has(e)}">${e}${state.view === "patterns" ? "" : `<span class="k">${F.filter(f => eraOf(f.y) === e).length}</span>`}</button>`).join("")}</div></section>
     ${state.view === "graph" ? `<section><h3>Arrange</h3><div class="chips">${[["net","By connection"],["time","Through time"]].map(([k, n]) => `<button class="chip" type="button" data-arrange="${k}" aria-pressed="${state.arrange === k}">${n}</button>`).join("")}</div></section>
     <section><h3>Kinds of fear shown</h3><div class="chips">${LENS.map(([k, n]) => `<button class="chip" type="button" data-glens="${k}" aria-pressed="${state.glenses.has(k)}"><span class="sw" style="background:${LENSC[k]};border-radius:50%;margin-right:6px"></span>${n}</button>`).join("")}</div></section>
-    <section><h3>Film colour</h3><div class="chips">${[["region","Region"],["era","Era"],["still","Still colour"]].map(([k, n]) => `<button class="chip" type="button" data-colour="${k}" aria-pressed="${state.colour === k}">${n}</button>`).join("")}</div></section>`
+    <section><h3>Films</h3><div class="chips">${[["plain","Plain"],["region","Ring by region"],["era","Shade by era"],["still","Still colour"]].map(([k, n]) => `<button class="chip" type="button" data-colour="${k}" aria-pressed="${state.colour === k}">${n}</button>`).join("")}</div></section>`
     : state.view === "patterns" ? `<section><h3>Kind of fear</h3><div class="chips">${LENS.map(([k, n]) => `<button class="chip" type="button" data-lens="${k}" aria-pressed="${state.lens === k}"><span class="sw" style="background:${LENSC[k]};border-radius:50%;margin-right:6px"></span>${n}</button>`).join("")}</div></section>
     <section><h3>Order</h3><div class="chips" data-for="time">${PSORT.time.map(([k, n]) => `<button class="chip" type="button" data-psort="${k}" aria-pressed="${state.psort === k}">${n}</button>`).join("")}</div><div class="chips" data-for="region">${PSORT.region.map(([k, n]) => `<button class="chip" type="button" data-psort="${k}" aria-pressed="${state.psort === k}">${n}</button>`).join("")}</div></section>`
     : `<section><h3>Sort</h3><div class="chips">${[["year","Year"],["title","Title"],["n","Most entries"]].map(([k, n]) => `<button class="chip" type="button" data-sort="${k}" aria-pressed="${state.sort === k}">${n}</button>`).join("")}</div></section>`}
@@ -577,7 +577,7 @@ function renderIndex() {
   <div class="status"><span class="active"><span id="count"></span><span id="pills"></span></span>
     ${state.view === "patterns" ? `<span class="key"><span>each dot is the share of films carrying the fear · hollow dots: fewer than 10 films, read with care</span></span>` : state.view === "graph" ? `<span class="key"><span>Each line joins a film to a fear it carries · point at anything to trace it</span></span>` : `<span class="key"><span>the bar shows how much of each story is mapped</span></span>`}</div>
   ${state.view === "graph" ? `<div class="gstage" id="gstage"><div class="gflash" id="gflash" aria-hidden="true"></div>
-    <div class="ghero" id="ghero"><p class="overline">Bloodline · ${F.length} films · ${new Set(F.map(f => f.c)).size} countries · ${Math.min(...F.map(f => f.y))} to ${Math.max(...F.map(f => f.y))}</p><h1>Every culture tells the same few <em>nightmares</em></h1><p>Different monsters, different languages, and underneath them the same fears. Every point of light is a film or a fear; every thread, a fear they share.</p></div><div class="ginfo" id="ginfo"></div><div class="gmode viewtoggle" role="group" aria-label="Main nodes"><button type="button" data-primary="films" aria-pressed="${state.primary === "films"}">Films</button><button type="button" data-primary="fears" aria-pressed="${state.primary === "fears"}">Fears</button></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
+    <div class="ghero" id="ghero"><p class="overline">Bloodline · ${F.length} films · ${new Set(F.map(f => f.c)).size} countries · ${Math.min(...F.map(f => f.y))} to ${Math.max(...F.map(f => f.y))}</p><h1>Every culture tells the same few <em>nightmares</em></h1><p>Different monsters, different languages, and underneath them the same fears. Every point of light is a film or a fear; every thread, a fear they share.</p></div><div class="ginfo" id="ginfo"></div><div class="gmode viewtoggle" role="group" aria-label="Main nodes"><button type="button" data-primary="fears" aria-pressed="${state.primary === "fears"}">Fears</button><button type="button" data-primary="films" aria-pressed="${state.primary === "films"}">Films</button></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
     <div class="keyline" id="gkey" style="margin-top:10px"></div>
     <p class="gnote">Films and the fears they carry, drawn together. Switch between films and fears as the main thread; the other stays in grey. Films that share fears pull close; fears that travel sit at the centre. Click a film to step inside it, or a fear to see how far it travels.</p>` : state.view === "patterns" ? `<div class="pat" id="pat"></div>` : `<ol class="ledger" id="ledger"></ol>`}
   ${aboutBlock()}`;
@@ -885,7 +885,9 @@ function buildGraph() {
   const fillOf = n => { const prim = (state.primary === "films") === (n.kind === "film");
     if (!prim) return GREY;
     if (n.kind === "fear") return LENSC[n.lens];
-    return state.colour === "era" ? ERA_C[ERAS.findIndex(e => e[0] === eraOf(n.f.y))] : state.colour === "region" ? REG_C[n.f.r] : (n.f.tone || "var(--soft)"); };
+    return state.colour === "era" ? ERA_C[ERAS.findIndex(e => e[0] === eraOf(n.f.y))] : state.colour === "still" ? (n.f.tone || "var(--soft)") : "var(--ink)"; };
+  const ring = n => { const prim = (state.primary === "films") === (n.kind === "film"); if (!prim) return ["none", 0];
+    return n.kind === "film" && state.colour === "region" ? [REG_C[n.f.r], 2.4] : ["var(--paper)", 1.2]; };
   const place = () => { eSel.attr("x1", e => e.source.x).attr("y1", e => e.source.y).attr("x2", e => e.target.x).attr("y2", e => e.target.y);
     nSel.attr("transform", n => `translate(${n.x},${n.y})`); lSel.attr("x", n => n.x).attr("y", n => n.y - rOf(n) - 5); };
   const drawAxis = () => { axis.selectAll("*").remove(); if (state.arrange !== "time") return;
@@ -897,12 +899,12 @@ function buildGraph() {
   const labels = () => lSel.attr("display", n => { if (!visible.has(n.id)) return "none"; const prim = (state.primary === "films") === (n.kind === "film");
     if (!prim) return k > 2.6 ? null : "none";
     return (n.kind === "film" ? bigFilms : bigFears).has(n.id) || k > 1.7 || visible.size <= 40 ? null : "none"; });
-  const emphasis = () => { nSel.select("circle").attr("r", rOf).attr("fill", fillOf).attr("stroke", n => (state.primary === "films") === (n.kind === "film") ? "var(--paper)" : "none").attr("stroke-width", 1.2);
+  const emphasis = () => { nSel.select("circle").attr("r", rOf).attr("fill", fillOf).attr("stroke", n => ring(n)[0]).attr("stroke-width", n => ring(n)[1]);
     lSel.attr("fill", n => n.kind === "fear" && state.primary === "fears" ? LENSC[n.lens] : "var(--ink)").attr("y", n => n.y - rOf(n) - 5);
     nSel.filter(n => (state.primary === "films") === (n.kind === "film")).raise(); labels(); legend(); rest(); };
   const legend = () => { const key = document.getElementById("gkey"); if (!key) return;
     key.innerHTML = state.primary === "fears" ? LENS.filter(([kk]) => state.glenses.has(kk)).map(([kk, nn]) => `<span><span class="sw" style="background:${LENSC[kk]};border-radius:50%"></span>${nn}</span>`).join("") + `<span><span class="sw" style="background:${GREY};border-radius:50%"></span>films</span>`
-      : (state.colour === "region" ? REGIONS.map(r => `<span><span class="sw" style="background:${REG_C[r]};border-radius:50%"></span>${esc(r)}</span>`).join("") : state.colour === "era" ? ERAS.map(([e], i) => `<span><span class="sw" style="background:${ERA_C[i]};border-radius:50%"></span>${e}</span>`).join("") : `<span>Films are filled with the colour of their stills.</span>`) + `<span><span class="sw" style="background:${GREY};border-radius:50%"></span>fears</span>`; };
+      : (state.colour === "region" ? REGIONS.map(r => `<span><span class="sw" style="background:var(--ink);border-radius:50%;box-shadow:0 0 0 2px ${REG_C[r]}"></span>${esc(r)}</span>`).join("") : state.colour === "era" ? ERAS.map(([e], i) => `<span><span class="sw" style="background:${ERA_C[i]};border-radius:50%"></span>${e}</span>`).join("") : state.colour === "still" ? `<span>Films are filled with the colour of their stills.</span>` : `<span><span class="sw" style="background:var(--ink);border-radius:50%"></span>films · region and era are in the filter drawer</span>`) + `<span><span class="sw" style="background:${GREY};border-radius:50%"></span>fears</span>`; };
   const zoom = d3.zoom().scaleExtent([.4, 7]).on("zoom", ev => { root.attr("transform", ev.transform); k = ev.transform.k; if (!hoverOn) labels(); });
   svg.call(zoom);
   const fit = (dur) => { const vis = nodes.filter(n => visible.has(n.id)); if (!vis.length) return;
@@ -929,7 +931,7 @@ function buildGraph() {
     eSel.classed("hi", e => e.source === n || e.target === n).attr("stroke", e => e.source === n || e.target === n ? LENSC[e.lens] : "var(--mute)").attr("stroke-opacity", e => e.source === n || e.target === n ? .85 : .1);
     if (n.kind === "film") {
       const by = {}; n.fears.filter(x => visible.has(x.id)).forEach(x => (by[x.lens] = by[x.lens] || []).push(x.name));
-      info.innerHTML = `<div class="t">${esc(n.f.t)} <span style="color:var(--mute);font-size:.7em">(${n.f.y})</span></div><div class="m">${esc(n.f.c)}${n.f.dir.length ? " · " + esc(n.f.dir[0]) : ""}</div>
+      info.innerHTML = `<div class="t">${esc(n.f.t)} <span style="color:var(--mute);font-size:.7em">(${n.f.y})</span></div><div class="m"><span style="color:${REG_C[n.f.r]}">●</span> ${esc(n.f.r)} · ${esc(n.f.c)}${n.f.dir.length ? " · " + esc(n.f.dir[0]) : ""}</div>
         <div class="r">${LENS.filter(([kk]) => by[kk]).map(([kk, nn]) => `<span style="color:${LENSC[kk]}">${nn}</span>: ${by[kk].map(esc).join(", ")}`).join("<br>") || "No shared fears shown with these settings."}</div>`;
     } else {
       const vf = n.films.filter(m => visible.has(m.id));
