@@ -421,7 +421,6 @@ function renderIndex() {
     <p class="dnote">Films that don't match fade from the ${state.view === "graph" ? "graph" : "list"} as you choose.</p>
     <section><h3>Region</h3><div class="chips">${REGIONS.map(r => `<button class="chip" type="button" data-region="${esc(r)}" aria-pressed="${state.region.has(r)}">${esc(r)}<span class="k">${F.filter(f => f.r === r).length}</span></button>`).join("")}</div></section>
     <section><h3>Era</h3><div class="chips">${ERAS.map(([e]) => `<button class="chip" type="button" data-era="${e}" aria-pressed="${state.era.has(e)}">${e}<span class="k">${F.filter(f => eraOf(f.y) === e).length}</span></button>`).join("")}</div></section>
-    <section><h3>Has</h3><div class="chips">${[["st","Stills"],["sp","Screenplay"],["sc","Jump scares"],["osub","Original-language subtitles"],["pl","Pilot lineage"]].map(([k, n]) => `<button class="chip" type="button" data-has="${k}" aria-pressed="${state.has.has(k)}">${n}<span class="k">${counts(k)}</span></button>`).join("")}</div></section>
     ${state.view === "graph" ? `<section><h3>Arrange</h3><div class="chips">${[["net","By connection"],["time","Through time"]].map(([k, n]) => `<button class="chip" type="button" data-arrange="${k}" aria-pressed="${state.arrange === k}">${n}</button>`).join("")}</div></section>
     <section><h3>Links</h3><div class="chips">${[["p","People"],["a","Archetypes"],["e","Story elements"]].map(([k, n]) => `<button class="chip" type="button" data-link="${k}" aria-pressed="${state.links.has(k)}">${n}</button>`).join("")}</div></section>
     <section><h3>Colour</h3><div class="chips">${[["region","Region"],["era","Era"],["still","Still colour"]].map(([k, n]) => `<button class="chip" type="button" data-colour="${k}" aria-pressed="${state.colour === k}">${n}</button>`).join("")}</div></section>`
@@ -438,7 +437,6 @@ function renderIndex() {
   q.addEventListener("input", () => { state.q = q.value; renderRows(); });
   app.querySelectorAll("[data-region]").forEach(b => b.onclick = () => toggle(state.region, b.dataset.region, b));
   app.querySelectorAll("[data-era]").forEach(b => b.onclick = () => toggle(state.era, b.dataset.era, b));
-  app.querySelectorAll("[data-has]").forEach(b => b.onclick = () => toggle(state.has, b.dataset.has, b));
   app.querySelectorAll("[data-view]").forEach(b => b.onclick = () => { if (b.dataset.view !== state.view) go(b.dataset.view === "list" ? "list" : ""); });
   const drawer = document.getElementById("drawer"), openf = document.getElementById("openf");
   const setDrawer = open => { drawer.classList.toggle("open", open); document.body.classList.toggle("dopen", open);
