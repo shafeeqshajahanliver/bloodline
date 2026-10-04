@@ -798,7 +798,6 @@ async function renderFear(id) {
         ${shots.length > 1 ? `<div class="thumbs">${shots.map((x, i) => `<button type="button" data-shot="${i}" aria-label="Show a still from ${esc(x.t)}" aria-current="${i === 0}" style="--tone:${lc};${shotStyle(x)}"></button>`).join("")}</div>` : ""}
         <div class="caption" style="margin-top:12px" id="shotcap">${shotCap(shots[0])}</div>` : `<div class="nostill"><span>NO STILLS FROM THESE FILMS</span></div>`}</div>
       <div>${note ? `<p class="prose syn">${esc(note).replace(/\[([^\]|]+)\|([0-9a-z-]+)\]/g, (m, ph, fid) => `<a class="pl" href="#${fid}" style="--uc:${lc}">${ph}</a>`)}</p>` : def ? `<p class="prose">${esc(def.charAt(0).toUpperCase() + def.slice(1))}</p>` : ""}
-        ${q0 ? `<figure class="fquote" style="margin-top:26px"><blockquote>“${esc(q0.q)}”</blockquote><figcaption>${qline(q0)}</figcaption></figure>` : ""}
         </div>
     </div>
     ${kin.length ? `<section class="fsec" style="margin-top:64px"><div class="spinehead" style="margin-top:0"><h3>Its bloodline</h3><p>The fears it keeps company with, more often than chance, and the films in the record that carry them together.</p></div>
