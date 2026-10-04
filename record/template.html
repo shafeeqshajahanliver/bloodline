@@ -1173,9 +1173,14 @@ function linkWords(l) {
   if (l.type === "archetype") return `archetype: <b>${esc(l.label)}</b>`;
   return `${DN[l.dim].toLowerCase()}: <b>${esc(l.label)}</b>`;
 }
+function topKin(net) {  // keep the five closest films and only the links they use
+  if (!net || net._top) return net;
+  const films = net.films.slice(0, 5), used = new Set(films.flatMap(f => f.via));
+  return { ...net, films, links: net.links.filter(l => used.has(l.id)), _top: true };
+}
 function netBlock(d) {
-  const n = d.net; if (!n || !n.films.length) return "";
-  return `<div class="spinehead"><h3>Its bloodline</h3><p>${n.total} of the other films share something with ${esc(d.title)}: a fear, a symbol, a shape of story, or the people who made it. These are its ${n.films.length} closest kin.</p></div>
+  const n = d.net = topKin(d.net); if (!n || !n.films.length) return "";
+  return `<div class="spinehead"><h3>Its bloodline</h3><p>${n.total} of the other films share something with ${esc(d.title)}. These are the top ${n.films.length}.</p></div>
     <div class="netwrap"><div><div class="netsvg" id="net"></div>
       <div class="keyline">${[...new Set(n.links.filter(l => l.type === "element").map(l => l.dim))].filter(k => LENSN[k]).map(k => `<span><span class="sw" style="background:${LENSC[k]}"></span>${esc(LENSN[k].toLowerCase())}</span>`).join("")}<span><svg width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="var(--mute)"/></svg>people</span><span><svg width="12" height="12" aria-hidden="true"><path d="M6 1 L11 6 L6 11 L1 6Z" fill="none" stroke="${LENSC.archetypes}" stroke-width="1.5"/></svg>archetype</span></div>
       <p class="linkinfo" id="linkinfo"><span class="fp">Point at a link or a film to trace it. Click a film to open its record.</span></p></div>
