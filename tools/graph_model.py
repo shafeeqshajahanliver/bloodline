@@ -176,9 +176,34 @@ def kmeans(D, k, seed=11, iters=100):
         if np.allclose(C, C2): break
         C = C2
     return lab, C
-lab, C = kmeans(F, 12)
+# how many nightmares: let the data decide. Two tests for each k from 4 to 20: stability (do eight runs from different
+# starts agree on the groups? mean adjusted Rand index) and silhouette (is each film closer to its own group than the
+# next?). The k with the most stable groups wins; ties go to fewer groups. Override with K=.
+def silhouette(D, lab):
+    dist = 1 - D @ D.T; ks = sorted(set(lab)); sc = []
+    for i in range(len(D)):
+        own = lab == lab[i]; n = own.sum() - 1
+        if n == 0: sc.append(0); continue
+        a = (dist[i, own].sum()) / n; b = min(dist[i, lab == c].mean() for c in ks if c != lab[i]); sc.append((b - a) / max(a, b))
+    return float(np.mean(sc))
+def ari(x, y):
+    from math import comb
+    ct = {}
+    for p_, q_ in zip(x, y): ct[(p_, q_)] = ct.get((p_, q_), 0) + 1
+    sa, sb = {}, {}
+    for (p_, q_), v in ct.items(): sa[p_] = sa.get(p_, 0) + v; sb[q_] = sb.get(q_, 0) + v
+    s_ = sum(comb(v, 2) for v in ct.values()); A = sum(comb(v, 2) for v in sa.values()); B = sum(comb(v, 2) for v in sb.values()); e = A * B / comb(len(x), 2)
+    return (s_ - e) / ((A + B) / 2 - e)
+KRANGE = range(4, 21); stab, sil = {}, {}
+for k in KRANGE:
+    labs = [kmeans(F, k, seed=s0)[0] for s0 in range(20, 28)]
+    stab[k] = round(float(np.mean([ari(labs[i], labs[j]) for i in range(8) for j in range(i + 1, 8)])), 3)
+    sil[k] = round(silhouette(F, labs[0]), 4)
+NK = int(os.environ.get("K", 0)) or max(stab, key=lambda k: (stab[k], -k))
+print("stability by k:", stab, "\nsilhouette by k:", sil, "-> k =", NK)
+lab, C = kmeans(F, NK)
 fams = []
-for c in range(12):
+for c in range(NK):
     mem = [u for u in range(NF) if lab[u] == c]
     if not mem: continue
     cn = C[c] / np.linalg.norm(C[c])
@@ -211,7 +236,7 @@ meta = {"method": "LightGCN graph neural network (He et al., 2020), BPR loss, nu
         "network": {"films": NF, "fears": NX, "links": len(edges), "left_out": sorted(DROP)},
         "tuning": "on one validation split (seed 100): depth 1 beat 0, 2 and 3 layers (3 layers collapsed to popularity); adding people, place, time, subject or original-wording nodes did not help (recall@10 0.264 to 0.267 vs 0.270 without)",
         "test": "fresh splits (seeds 200-202), 15% of each film's links hidden (films with 5+ links), mean of 3 splits; recall@10 = share of hidden fears ranked in the film's top 10 of the fears it doesn't visibly carry",
-        "results": summary, "trained": datetime.date.today().isoformat(),
+        "results": summary, "nightmares": {"k": NK, "chosen_by": "most stable groups over k = 4 to 20 (mean adjusted Rand index across 8 starts)" if not os.environ.get("K") else "set by hand", "stability_by_k": stab, "silhouette_by_k": sil}, "trained": datetime.date.today().isoformat(),
         "status": "first pass: model output from first-pass tags, unreviewed. Suggestions are a review queue, not facts."}
 for fn, obj in [("meta", meta), ("suggestions", suggest), ("kin", kin), ("fears_travel", travel), ("families", fams)]:
     json.dump(obj, open(f"{OUT}/{fn}.json", "w"), ensure_ascii=False, indent=1 if fn in ("meta", "families") else None, separators=None if fn in ("meta", "families") else (",", ":"))
@@ -240,6 +265,6 @@ if OUT == "reference/model":
               "Top-down archetypes inside: " + "; ".join(f"{a['archetype']} {a['share']:.0%}" for a in f["archetypes_inside"]) + ".", ""]
     L += ["## Caveats", "", "- It learns from first-pass, unreviewed tags, so it inherits their gaps and biases. The de-bias pass has not been run.",
           "- Suggested fears (`suggestions.json`) lean towards common fears; treat them as a review queue, never as facts.",
-          "- Family boundaries depend on asking for 12 families; the core films are stable, the edges less so."]
+          f"- The number of groups ({NK}) was chosen as the most stable across repeated runs; the core films are stable, the edges less so."]
     open("reports/graph-model.md", "w").write("\n".join(L) + "\n")
     print("wrote reports/graph-model.md")
