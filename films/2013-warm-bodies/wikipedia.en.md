@@ -1,0 +1,67 @@
+# Warm Bodies (film)
+
+Source: https://en.wikipedia.org/wiki/Warm_Bodies_%28film%29 (last edited Tue, 08 Sep 2026 08:47:23 GMT). Text CC BY-SA 4.0, retrieved 2026-10-04.
+
+## Lead
+
+Warm Bodies is a 2013 American zombie comedy film, written and directed by Jonathan Levine, based on the 2010 novel by Isaac Marion. The film stars Nicholas Hoult, Teresa Palmer, Rob Corddry, Dave Franco, Lio Tipton, Cory Hardrict, and John Malkovich. It focuses on the development of the relationship between Julie, a young woman, and R, a zombie, and their eventual romance, causing R to slowly return to life as a human.
+
+Warm Bodies premiered at the Cinema Adriano in Rome on January 16, 2013, and was released in the United States on February 1, 2013, by Summit Entertainment. The film received positive reviews from critics and grossed $117 million.
+
+## Plot
+
+About eight years after a zombie apocalypse, R, a zombie who cannot recall his name but believes it began with an "R", spends his days wandering around an airport which is now filled with his fellow undead, including M, who is his best friend. R and M achieve rudimentary communication with grunts and moans and occasional near-words. As a zombie, R does not have a heartbeat and constantly craves human flesh, especially brains, because he is able to "feel alive" through experiencing the victims' memories when he eats them.
+
+While R and a pack of zombies are hunting for food, they encounter Julie Grigio and a group of her friends, who were sent by Julie's father from a walled-off human enclave to recover medical supplies. R sees Julie and is drawn to her; his heart beats for the first time. After being shot in the chest by Julie's boyfriend, Perry, R kills him and eats his brain while Julie is distracted. Perry's memories increase R's attraction to Julie. He rescues her from the rest of the pack by wiping some zombie blood on her face, masking her scent, and takes her to an airplane he resides in to keep her safe.
+
+Julie is terrified of R and suspicious of his intentions. She starts trusting him after he rescues her during a failed escape attempt and finds food for her. R insists that Julie stay with him for a few days, until he deems it safe enough for her to leave. The two bond, listening to LP records and playing games to kill time, causing R to begin to come to life; his heart starts beating, and he is slowly able to communicate with more words. After a few days, Julie gets restless, and tries to return home, yet attracts swarms of zombies. After fending off a group including M, who is confused by R's actions, R decides to return her to the human enclave.
+
+On the way, R reveals to Julie that he killed Perry, prompting her to abandon him and return home alone. R begins making his way back to the airport, heartbroken. He discovers that M and other zombies are also showing signs of life, making them targets for the Boneys – skeletal zombies who, having lost their humanity, have shed their flesh and prey on anything with a heartbeat. R and M lead a group to the human enclave, where R sneaks inside the wall.
+
+R finds Julie and meets her friend Nora, who is shocked to see R in the territory and notices R's growing humanity. When R reveals that the other corpses are also coming back to life, the three of them attempt to tell Colonel Grigio, Julie's father and the leader of the survivors. Colonel Grigio dismisses them and threatens to kill R, stopping only when Nora pulls a gun on him. Julie and R escape to a baseball stadium where the rest of R's group is waiting but find themselves under attack by Boneys.
+
+While M and his gang of zombies square off against the Boneys, Julie and R run but find themselves trapped. Taking the only escape route, R jumps with Julie into a pool far below, shielding her from the impact. After Julie pulls R from the bottom of the pool, they kiss. Colonel Grigio arrives and shoots R in the shoulder without warning. Julie attempts to persuade him that R has changed when she notices that he is bleeding from his wound – revealing that he has completely revived and is human once more. The humans and zombies combine forces and kill most of the Boneys while the rest perish from starvation, as the zombies slowly come back to life and assimilate into human society. Later, a fully human R and Julie watch the wall surrounding the city being demolished, signifying the end of the apocalypse.
+
+## Cast
+
+Nicholas Hoult as R
+Teresa Palmer as Julie
+Lio Tipton as Nora
+Rob Corddry as M
+Dave Franco as Perry
+John Malkovich as Grigio
+Cory Hardrict as Kevin
+
+## Production
+
+The studio Summit Entertainment backed the film, which was produced by Bruna Papanadrea, David Hoberman, and Todd Lieberman and executive produced by Laurie Webb and Cori Shepherd Stern. The zombies can barely talk in the film, so extensive voice-overs were used to express their thoughts.
+
+Writer and director Jonathan Levine said even though this is a love story that involves zombies, he hoped people would not try to put the film into one category and zombie enthusiasts would be open to a new twist on the genre. "I think this movie takes the mythology in a different direction, and I think there is a lot there for die-hard zombie fans," he explained. "We're encouraging people to be open-minded, because it does take some liberties with the mythology, but at the same time, it's very grounded in the science of zombie-ism and uses that as a springboard for a more fantastical story. It may be divisive, but I think there's a lot there for zombie fans if they're open-minded to a new take on it, and I hope they can." Actress Teresa Palmer said, "For me, the core of the story is that love breathes life back into people. That human connection saves us. People who have had those lights dimmed inside them, when they fall in love they get brighter."
+
+Warm Bodies began shooting in Montreal, Quebec, Canada in September 2011 with its airport scenes being shot at Montreal-Mirabel International Airport.
+
+Levine told USA Today that R attempts "to do a lot of things to varying degrees of success. Driving, for instance. Let's just say his hand–eye coordination is not what it needs to be." Nicholas Hoult and other zombie actors practiced with circus performers to achieve the right body moves. Hoult explained, "There were some days with the Cirque du Soleil people and we would take our shoes off in a dance studio and we would kind of grow out of the wall and make our bodies feel very heavy. It's one of those things where you think about it a lot but you just have to try it out and see what works. Then Jonathan [Levine] would say either 'too much or little less', we didn't want to go over the top with it." Hoult told another reviewer that he "drew a lot of his inspiration from Tim Burton's Edward Scissorhands," saying he thought of that movie "as a zombie film, whether it was or not. Because you had to feel sorry for Edward... I was thinking of Edward when I did R."
+
+## Release
+
+Warm Bodies was released on January 31, 2013, in the Philippines, Greece, and Russia. It was released on February 1, 2013, in the United States and on February 8, 2013, in the United Kingdom. In its opening weekend it collected $20.3million. It has returned a box office of $66.4million within the US and an additional $50.6million internationally.
+
+## Reception
+
+Critical response
+Review aggregation website Rotten Tomatoes gives the film an  rating, based on reviews from  critics, with an average score of . The site's consensus reads: "Warm Bodies offers a sweet, well-acted spin on a genre that all too often lives down to its brain-dead protagonists." At Metacritic it has a score of 60 out of 100, based on reviews from 39 critics, indicating "mixed or average" reviews. Audiences polled by CinemaScore gave the film an average grade of B+ on an A+ to F scale.
+
+Richard Larson of Slant Magazine wrote "The ubiquity of Shakespeare's original template [of Romeo and Juliet] allows Warm Bodies some leeway in terms of believability, where otherwise it sometimes strains against its own logic. But the film's persistent charm encourages us to look past a few festering surface wounds and see the human heart beating inside, which is really what love is all about." Larson awarded the film three out of four stars. Richard Roeper of the Chicago Sun-Times deemed the film "a well-paced, nicely directed, post-apocalyptic love story with a terrific sense of humor and the, um, guts to be unabashedly romantic and unapologetically optimistic." He added that the movie "isn't perfect. It's a shame those Bonies are mediocre special-effects creations that run with a herky-jerky style... But those are minor drawbacks..." Mary Pols of Time called it "an inventive charmer that visits all the typical movie scenarios of young love amid chaos and disaster... There are so many clever lines and bits of physical comedy worth revisiting that the movie seems like a likely cult classic."
+
+Stella Papamichael at Digital Spy gave it three out of five stars and called it "a truly deadpan romantic comedy" and "a witty reinvention of the genre like Shaun of the Dead before it, drawing parallels between the apathy of youth and the zombie masses," adding, "Hoult gets to deliver a wickedly dry voiceover." Chris Packham of The Village Voice said in a negative review that "The film's intentions are way too good for its own good, producing bloodless romance and more shamefully bloodless carnage. Nobody kisses anyone else until it becomes clear that both parties have pulses, and everyone gets to keep all their limbs."
+
+Michael O'Sullivan said in his one-and-a-half star review for The Washington Post that the film is "Cute without being especially clever, it's as pallid and as brain-dead as its zombie antihero... It's less funny and self-aware than Shaun of the Dead, less swooningly romantic than Twilight and less scary than pretty much anything else out there with zombies in it."
+
+Rotten Tomatoes lists the film on its 100 Best Zombie Movies, ranked by Tomatometer.
+
+Home media
+
+Warm Bodies was released on DVD and Blu-ray on June 4, 2013. In celebration of the film's tenth anniversary, Lionsgate released an Ultra HD Blu-ray Steelbook on February 7, 2023.
+
+Accolades
+

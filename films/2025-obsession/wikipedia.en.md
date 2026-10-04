@@ -1,0 +1,101 @@
+# Obsession (2025 film)
+
+Source: https://en.wikipedia.org/wiki/Obsession_%282025_film%29 (last edited Sun, 04 Oct 2026 08:43:15 GMT). Text CC BY-SA 4.0, retrieved 2026-10-04.
+
+## Lead
+
+Obsession is a 2025 American supernatural horror film written, directed, and edited by Curry Barker. It follows the shop clerk Bear (Michael Johnston), whose friend Nikki (Inde Navarrette) falls dangerously in love with him after he makes a wish. Cooper Tomlinson, Megan Lawless, and Andy Richter appear in supporting roles.
+
+Barker uploaded his short horror film The Chair to YouTube in 2023. When producer James Harris approached him to adapt it into a feature film, Barker pitched Obsession. It was partly inspired by The Simpsons episode "Treehouse of Horror II". The film was shot in Los Angeles in October 2024 on a $750,000 budget. It is Barker's second feature-length film, after Milk & Serial (2024), and first to be released in theaters.
+
+Obsession premiered on September 5, 2025, at the Toronto International Film Festival (TIFF). Focus Features acquired the distribution rights for $14–15 million, the highest price commanded by a genre film in TIFF history, and Jason Blum joined as an executive producer under Blumhouse Productions. The film was theatrically released in the US on May 15, 2026 and received positive reviews. It grossed $519 million worldwide and set multiple box-office records as the tenth highest-grossing film of 2026 and fifth highest-grossing horror film of all time, unadjusted for inflation.
+
+## Plot
+
+Baron "Bear" Bailey, who harbors romantic feelings for his friend Nikki Freeman, works with her and their friends Ian and Sarah at a music store. He returns home one night to find his cat, Sandy, dead after consuming oxycodone. Bear visits a crystal shop to buy Nikki a replacement crystal necklace, but instead decides to buy her a One Wish Willow, a novelty toy that claims to grant one wish when broken. That night, when Nikki asks Bear whether he likes her, he is unable to admit his feelings. Frustrated, he breaks the One Wish Willow and wishes that Nikki loved him more than anyone in the world. She immediately reappears and asks to stay with Bear, saying her estranged father is dying of cancer. In bed, Nikki kisses Bear but screams and pulls back.
+
+The next day, Nikki creates a memorial with Sandy's remains, and explains her erratic behavior was the result of MDMA. After confessing her mutual feelings, the two begin happily dating. Ian calls Bear and reveals that Nikki had told Sarah that she saw Bear as her "little brother" shortly before they began dating, and that she lied about her father's cancer. When Bear questions Nikki, she reacts with defensiveness and anger. That night, Bear awakens to Nikki watching him sleep, and she cries hysterically, accusing him of not loving her.
+
+The next day, Bear discovers that Nikki has duct taped the front door shut and that the sandwich she prepared him contains Sandy's remains. When Bear calls One Wish Willow's customer service, the representative tells him the wish will only expire when he dies and puts a screaming Nikki on the line, causing Bear to hang up in panic. He returns home to find that Nikki stood in place all day waiting for him, covered in bodily fluids.
+
+Nikki insists on accompanying Bear to a party at Ian's house, against Ian's wishes. During a Jenga drinking game, Nikki recites a violent and incestuous retelling of "Hansel and Gretel" she has written. Bear draws a block daring him to kiss the person to his left, Sarah. Nikki moves Sarah and kisses Bear instead, then screams and stabs herself with a broken bottle. Bear drives Nikki to the hospital but brings her home after she refuses treatment.
+
+That night, Sarah texts Bear to meet at the park. As Bear attempts to leave, Nikki speaks, saying her obsessive personality is asleep and begs Bear to kill her. He refuses, offended that she would rather die than be with him. At the park, Sarah reveals that Ian and Nikki had been casually hooking up for two years and expresses concern that Nikki is using him for revenge against Ian. After Sarah hints that she is attracted to Bear, Nikki smashes through the car window and repeatedly slams Sarah's head into a brick, killing her. After they move the body, Nikki instructs Bear to go home while she disposes of it.
+
+Bear buys the remaining One Wish Willows from the shop to reverse his wish, but is unable to break one. He explains everything to Ian and begs him to undo the wish. Ian sarcastically wishes for a billion dollars instead, causing cash to rain from the ceiling. Bear returns home with the last One Wish Willow to have Nikki reverse his wish and discovers Sarah's mutilated corpse. Nikki, dressed like Sarah, threatens Bear and herself at gunpoint. Ian arrives and Nikki shoots him dead. Bear locks himself in the bathroom and prepares to shoot himself, but instead consumes the remaining oxycodone. He changes his mind and tries to induce vomiting just as Nikki breaks the last One Wish Willow. Under her wish's influence, Bear exits the bathroom and kisses Nikki before dying. Heartbroken, Nikki prepares to shoot herself, but Bear's death causes her to regain control of herself. Horrified by the carnage surrounding her, she wails hysterically.
+
+## Cast
+
+Michael Johnston as Bear, a shy music store employee
+Inde Navarrette as Nikki, Bear's co-worker and friend
+Cooper Tomlinson as Ian, Bear and Nikki's friend and co-worker
+Megan Lawless as Sarah, Bear and Nikki's friend and co-worker
+Andy Richter as Carter, the music store boss and Sarah's father
+Haley Fitzgerald as Viola, a crystal shop employee
+Darin Toonder as Harry, another crystal shop employee
+Curry Barker as the voice of the One Wish Willow customer service representative
+
+## Production
+
+Development
+Curry Barker, part of the YouTube sketch comedy duo That's a Bad Idea with Cooper Tomlinson, conceived Obsession as a film about a couple obsessed with one another. In July 2023, while gathered with friends to watch an episode of It's Always Sunny in Philadelphia in which he appeared, he watched a rerun of "Treehouse of Horror II", a 1991 episode of The Simpsons in which Homer Simpson interacts with a monkey's paw. This inspired him to incorporate the wish element.
+
+Earlier that year, Barker uploaded his short horror film The Chair to his YouTube channel, which impressed producer James Harris of Tea Shop Productions. Harris contacted Barker's manager to invite Barker to adapt The Chair into a feature film, an idea Barker had already written a script for. Barker took the opportunity to pitch Obsession, sending a draft, a one-pager, and a lookbook. He signed with the talent agency William Morris Endeavor and received an offer to direct Obsession with a $1 million budget. Around this time, he declined a $2 million offer to rewrite the script to make Bear a hero.
+
+Barker completed the screenplay over eight months while working at a coffee shop and corresponding with Tea Shop Productions. In the meantime, he released his first feature film, Milk & Serial, on YouTube in August 2024. Inspired by Aaron Sorkin's screenwriting MasterClass, Barker decided against expanding Nikki's backstory and the lore of the One Wish Willow. Barker developed the design of the One Wish Willow with his mother, a graphic art designer. Producer Haley Nicole Johnson helped him with the hiring of crew members. Obsession was funded by Capstone Studios, after Harris shared Barker's script with its founder, Christian Mercuri, who was familiar with Barker's work. Barker described the screenplay as primarily concerned with obsession rather than the supernatural wish, using the wish as a device to examine how fixation on another person can become destructive.
+
+Casting
+Barker considered casting himself as Bear. In late 2023 or early 2024, the crew shot a screen test for the scene where Bear drops Nikki off at her place and first makes the wish, in which Tomlinson, who had already been cast as Ian, stepped in to play Bear. Casting was underway by August 2024. Barker wrote Nikki as both a threat and a victim and sought an actress capable of playing both a normal young woman and a frightening supernatural presence. Amid a long casting process, Mercuri championed Inde Navarrette, who had appeared in three Capstone projects. Navarrette was cast as Nikki after Barker felt she "nailed" a balance between crazy and scary and brought a natural, "bro-y kind of sassy" personality to the role that helped make Nikki believable before the horror elements emerged and made "Bear feel so much like he's in the friend zone". After a chemistry read with Navarrette, Michael Johnston was cast as Bear.
+
+Obsession marked Navarrette's second film after Wander Darkly (2020) and television roles on 13 Reasons Why (2020) and Superman & Lois (2021–2024). Much of Nikki's physical behavior was developed through collaboration between Barker and Navarrette, and her screams, facial expressions, and vocal changes were performed without computer-generated imagery (CGI) or artificial intelligence. Scenes of Nikki lurking in the dark incorporated practical makeup effects, partly influenced by an uncanny valley makeup trend popularized by TikTok in 2023. Barker had the cast watch Hereditary (2018) and had Navarrette watch Midsommar (2019) and Pearl (2022). Navarrette credited Betty Gabriel in Get Out (2017), Toni Collette in Hereditary, and Mia Goth in Pearl as inspirations for her performance as Nikki.
+
+Filming
+To plan shots, minimize camera coverage, and achieve practical in-camera effects, Barker and cinematographer Taylor Clemons previsualized the film by 3D scanning locations and recreating them as digital models. They shot the film "center-composed" with "extra head space" to create shots that felt "uncomfortable". Principal photography began in late October 2024. It was filmed in 26 days, including reshoots after an initial 20-day shoot, in the Los Angeles area, covering five to six script pages daily. Scenes set in Bear's home, a house in Burbank remodeled by production designer Vivian Gray, were shot in the first week and a half. Other locations included the Cassell's Music store in San Fernando, which shut down a year after they wrapped, the Green Man crystal shop and Roguelike Tavern in Burbank, and Little Toni's pizzeria in North Hollywood. Scenes involving conversations in cars were shot on a soundstage using LED screen technology.
+
+Obsession underwent reshoots for a new opening scene and, according to Barker, to "do a better job of showing why [Bear] doesn't want to fix it right away", adding the scene where Bear confronts Nikki for cutting his hair to emphasize "that he wants to make it work". The production had to forgo reshoots of the party scene after the house where they filmed it burned down in the January 2025 Southern California wildfires. For the ending, they filmed one take of Bear trying to make himself throw up after ingesting the pills at Johnston's suggestion that it would fit Bear's cowardly nature. Barker initially wrote and filmed an ending inspired by Romeo and Juliet where Nikki kills herself after breaking free from Bear's wish. On the advice of his father (who contributed the "Hansel and Gretel" monologue), Tomlinson, and others, Barker shot one take of a version where Nikki survives, which he chose for the theatrical cut. According to Barker, the film's budget was at most $750,000.
+
+Post-production
+By March 2025, Obsession was in post-production. Barker edited the film on Adobe Premiere. He recorded his dialogue as the One Wish Willow customer service representative on his phone while editing from his bedroom, changing lines to fit the edit. After the film's festival premiere in September, the scene depicting Sarah getting her head smashed was cut down by "six or seven smashes" to avoid an NC-17 rating from the Motion Picture Association. Jason Blum joined the film as an executive producer under his Blumhouse Productions banner after the premiere; his involvement was revealed in December 2025 when the first teaser was released.
+Music
+Rock Burwell composed the score in his feature film debut. He met Barker in 2024 after a referral for a comedy song on the That's a Bad Idea channel. Back Lot Music digitally released the 18-track album on May 15, 2026, the same date as the film's release. Cassette tape, CD, and vinyl LP pressings of the soundtrack are set to release through independent label Waxwork Records in September 2026. Burwell cited Angelo Badalamenti (particularly his arrangement of the Twin Peaks soundtrack) as a key influence, linking it to the Obsession score's approach of "exploring the uncanny valley, finding the space where emotions get warped into something disorienting, where you're no longer sure what's real".
+
+## Release
+
+Theatrical
+
+Obsession premiered during the Midnight Madness block at the Toronto International Film Festival (TIFF) on September 5, 2025. Two days later, Focus Features entered talks to acquire distribution rights to the film for the world (excluding France, New Zealand, and Russia) for $14–$15 million, the highest price commanded by a genre film in TIFF history, with Universal Pictures International handling distribution outside the United States; the deal officially closed in October 2025, with a screening at the inaugural FocusFest on October 18 at the Universal Studios Lot. Other suitors for the film rights included A24, Neon, and Netflix. The film was theatrically released in the US on May 15, 2026.
+
+In June 2026, art director Sally Choi made a social media post calling for industry reform, noting that she made $300 a day on the non-union production while also serving as production assistant, set dresser, graphic designer, and background actor, and that some crew members were volunteers paid in gas and mileage.
+
+In September 2026, executive producer Leonora Ann Darby sued Tea Shop Productions' James Harris and Mark Lane, claiming a "seven-year pattern of unequal treatment and broken compensation" and a contractual failure to reward her promised profits from the theatrical success of Obsession.
+
+Home media
+Obsession was released in premium video on demand format on June 30, 2026. It included behind-the-scenes content and a director's commentary. The film had a physical media release on DVD, Blu-ray, and 4K UHD on July 14, and a streaming release via Peacock on July 17.
+
+## Reception
+
+Box office
+Obsession grossed $263 million in the United States and Canada, and $256 million in other territories, for a worldwide total of $519 million.
+
+In the United States and Canada, Obsession debuted with $17.2 million, finishing third at the box office behind holdovers Michael and The Devil Wears Prada 2. The film then made $32 million over the subsequent four-day Memorial Day frame, including $24 million over the second weekend (a 39% increase from its opening). Unprecedented for a wide release, especially in the horror genre, it marked the biggest second-weekend increase for a film playing in more than 2,500 theaters outside of the Christmas season. Word-of-mouth and turnout from the 18–34 demographic, making up 75% of audience members, led to its success.
+
+In its third weekend, the film made $27.4 million, becoming the first wide release outside of the Christmas season since E.T. the Extra-Terrestrial (1982) to increase its earnings for three consecutive weekends. With a total of $105.7 million at the time, it also became Focus Features' highest-grossing film within the United States and Canada, ahead of Downton Abbey (2019; $97 million). On the following Monday, Focus Features postponed its expected digital release of June 2. In its fourth weekend, the film became Focus Features' highest-grossing film of all time worldwide, surpassing Downton Abbey ($194.6 million). It outgrossed The Blair Witch Project (1999; $248.6 million) as the top-grossing festival acquisition title of all time in its fifth weekend, and crossed $300 million worldwide by its sixth.
+
+On June 28, it overtook Sinners (2025; $370.3 million) as the highest-grossing live-action English-language original film of the 2020s. On July 6, it surpassed Enter the Dragon (1973; $400 million) as the highest-grossing film with a budget under $1 million, unadjusted for inflation. On August 23, Obsession crossed $500 million, becoming the first English-language original film of the 2020s to do so and surpassing Elemental (2023; $496 million) in the process. Numerous outlets pointed to the film as a cultural phenomenon, particularly among Generation Z audiences who drove ticket sales. Disney's The Mandalorian and Grogu, a franchise tentpole released the weekend after Obsession, struggled against the film; the latter eventually surpassed the former's overall lifetime gross despite The Mandalorian and Grogus $98 million opening. This, alongside the overperformance of A24's Backrooms, released around the same time, sparked analysis over a potential renewed interest in original intellectual property from audiences.
+
+Critical response
+
+On the review aggregator website Rotten Tomatoes, 93% of 329 critics' reviews are positive, with an average rating of 8/10. The website's consensus reads: "Taking an icky conceit and twisting it to deviously crowd-pleasing ends, Obsession is dauntingly disturbing while also skillfully amusing and thrilling." Metacritic, which uses a weighted average, assigned the film a score of 77 out of 100, based on 38 critics, indicating "generally favorable" reviews. Audiences surveyed by CinemaScore gave the film an average grade of "A−" on an A+ to F scale, while 70% of those polled by PostTrak said they would "definitely recommend" it.
+
+Christian Zilko of IndieWire said it was "proof that the Cregger-ification of 2020s horror is in full effect, as its combination of sadistic violence, ironic needle drops, and comedy mined from people responding to tragedy in pathetically self-serving ways will merit plenty of comparisons to Barbarian and Weapons". IGN Matt Donato noted "familiar romance and monkey's paw tropes" but said "Barker's execution takes things to the next level". Lou Thomas of Empire called it "so fresh and exhilarating, one can forgive its familiar origins". In Compact, Matthew Schmitz said it defined the genre of "heteropessimist horror". Author Rob K. Henderson described it as a "morality tale" that encouraged young men to confess their romantic feelings instead of concealing them.
+
+Navarrette received critical acclaim for her performance. Louis Peitzman of Vulture called it a stand-out performance for Navarrette, especially as her first major role in the horror genre. Katie Rife of RogerEbert.com said her emotional scenes remind the audience of "the human being trapped inside" a body she no longer controls, making the character more tragic. Guy Lodge of Variety praised Navarrette for "acing one of the more physically and emotionally taxing horror leads to come down the pike in a while". Bill Bria of SlashFilm compared Nikki's impact to performances in 1970s horror films such as The Exorcist and Carrie. David Friend of The Canadian Press said Navarrette gives "somehow one of the funniest and most terrifying performances of the year."
+
+Benjamin Lee of The Guardian praised the "disturbing sound design" for intensifying the horror elements, while Marshall Shaffer of Slant Magazine complimented the film's audiovisual presentation. Some critiqued the film's handling of its themes, particularly for having a minimal Nikki perspective, with Odie Henderson of The Boston Globe writing that the story "tries to say something about female autonomy and male selfishness" but "plays like a ... riff on the old reliable stand-up routine subject 'girlfriends be crazy.
+
+Accolades
+
+## Future
+
+In 2025, Barker said the characters of Obsession are unlikely to appear in another film. In 2026, Barker said he was considering an anthology television series where each episode explores a new character making a wish, or a sequel, for which he has an idea. His next film, Anything but Ghosts, includes a reference to the events of Obsession in a news report. Obsessions character Nikki was featured at Universal's Halloween Horror Nights for the 2026 season.
+

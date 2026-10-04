@@ -1,0 +1,122 @@
+# Book of Shadows: Blair Witch 2
+
+Source: https://en.wikipedia.org/wiki/Book_of_Shadows%3A_Blair_Witch_2 (last edited Sat, 03 Oct 2026 05:40:34 GMT). Text CC BY-SA 4.0, retrieved 2026-10-04.
+
+## Lead
+
+Book of Shadows: Blair Witch 2 is a 2000 American horror film directed and co-written by Joe Berlinger and starring Jeffrey Donovan, Stephen Barker Turner, Kim Director, Erica Leerhsen, and Tristine Skyler. A sequel to The Blair Witch Project, its plot revolves around a group of people fascinated by the mythology surrounding The Blair Witch Project who venture into the Black Hills where it was filmed and experience supernatural phenomena and psychological unraveling. Unlike the original film, it is presented in a traditional narrative format rather than found footage.
+
+Originally conceived by Berlinger and co-writer Dick Beebe as a psychological thriller and meditation on mass hysteria, Book of Shadows: Blair Witch 2 was significantly altered in postproduction, which Berlinger would later claim compromised his original vision. Among the changes were a new soundtrack, additional editing, and the integration of entirely new sequences.
+
+The film was released in theaters on October 27, 2000, and was panned by critics. It grossed a worldwide total of $47.7 million against a budget of $15 million.
+
+## Plot
+
+In November 1999, tourists and fans of The Blair Witch Project descend on the small town of Burkittsville, Maryland, where the film was set. Local resident Jeff, a former psychiatric patient and obsessed fan, orchestrates a group tour of locations featured in the film. Among the group are graduate students Stephen and his pregnant girlfriend, Tristen, who are researching mythology and mass hysteria; Erica, the Wiccan daughter of an Episcopal minister; and Kim, a goth with psychic proclivities. They camp for the night in the ruins of Rustin Parr's house, where Jeff has placed surveillance cameras, hoping to capture supernatural occurrences. Jeff becomes unnerved when he notices a large tree located in the center of the house's foundation, claiming it was not there before. That night, another tour group arrives to camp at the ruins, but they are misdirected to Coffin Rock by Jeff and Stephen.
+
+After drinking and smoking marijuana all night, the group awakens in the morning to find Stephen and Tristen's research documents shredded and strewn through the woods and Jeff's cameras destroyed; his damaged tapes are uncovered beneath the house's foundation, the same spot the Blair Witch Project tapes were found in 1995. Tristen suffers a miscarriage, and they rush her to the Burkittsville hospital. In her hospital room, Tristen sees a young girl walking backward. After she is discharged, the group retreats to Jeff's home, an industrial building that was once a factory. While Tristen rests, the group reviews Jeff's tapes, which uncover an image of Erica circling around a tree, nude. Distraught, Erica claims she has no memory of such an event and goes to pray in another room. When Kim tries to console her, Erica reveals rash-like symbols covering her body and proclaims the group has been marked for death.
+
+Kim borrows Jeff's van to pick up coffee and alcohol in town. At the country store, she gets into an argument with the cashier. While driving away, she swerves to avoid a group of children in the road and crashes the van into a tree, denting the fender. The children disappear when she exits the van. Later, Kim finds a bloody nail file stuck among the bottles of beer she purchased. The following morning, Jeff looks outside and sees the front end of his van entirely caved in, to the point that it is undrivable; Kim insists that the accident was minor. The group realizes Erica is absent and searches the house. They attempt to call her father at his office but are told by his secretary that he has no children.
+
+Meanwhile, Tristen's disposition grows increasingly bizarre. The county sheriff, Cravens, calls Jeff, informing him the other tour group was found disemboweled on Coffin Rock, and threatens him. Later, while searching through a drawer, Kim finds a set of surveillance dossiers on herself and the others. She confronts Jeff, but he denies knowing the source of them. Shortly after, the group discovers Erica's corpse in a closet.
+
+Tristen begins chanting about widdershins and speaking backward; this leads Kim to suggest they play Jeff's tapes in reverse. Upon doing so, they find the footage shows the high and drunken group descending into a demonic ritual and frenzied orgy led by Tristen, culminating in the murder of the other tour group at Coffin Rock. When they confront Tristen, she alternately pleads and goads them. Jeff, convinced Tristen is possessed by the Blair Witch, begins filming the confrontation, attempting to elicit a confession for Erica's death. The three follow Tristen to the second floor, where she ties a rope around her neck and taunts Stephen, daring him to push her. In a fit of rage, he pushes her over the balcony, killing her.
+
+Later, Jeff, Stephen, and Kim are arrested and interrogated by police. Each claim that a possessed Tristen was responsible. Their accounts are contradicted by various video footage: Security cameras captured Kim murdering the store cashier with her own nail file, while Jeff's home monitors show him, nude, hiding Erica's body in the closet; the DV footage Jeff filmed during Tristen's confrontation shows her pleading for her life as they accuse her of being a witch, ending in Stephen mercilessly pushing her to her death. Meanwhile, as Jeff, Kim, and Stephen are shown this footage by police, funeral mourners arrive in the woods to remember the other tour group that was murdered.
+
+## Cast
+
+Additionally, Heather Donahue, Michael C. Williams and Joshua Leonard appear in archival footage as fictionalized versions of themselves; and Roger Ebert, Jay Leno, Conan O'Brien, and Andy Richter are shown in archival news and media footage pertaining to the release of the original film.
+
+## Production
+
+Development
+
+After the massive success of The Blair Witch Project, Artisan was eager to produce a sequel while the film's popularity was still at its peak. However, Haxan Films, who created the original film, was not ready to begin work on a follow-up, preferring to wait until the initial buzz had died down. In late 1999, Artisan decided to proceed without them, organizing script competition with four writers—Jon Bokenkamp, Neal Marshall Stevens, Robert Parigi and an unknown writer—to separately write four different scripts, planning to choose the best one or combine them together.
+
+Joe Berlinger, known for his work on true crime documentaries, was shown scripts. He rejected them due to not being interested in making found footage movies. Instead, he presented Artisan his own treatment focusing on new characters and omitting series mythology. Artisan continued developing other scripts before greenlighting the Berlinger treatment. Berlinger hired his previous collaborator Dick Beebe to co-write the script, which became more mythology-centered than originally pitched.
+
+In 2018, Parigi revealed the plot of his script on a podcast, which was inspired by a real story of a person wrongly convicted of murder. After his release he takes a camera and records everything around him in case he would be suspected in any crimes again for proof of his innocence: Heather reappears with witch symbols all over her body in front of two teens in a tent in the woods. She becomes a suspect in Mike and Josh's disappearances, develops PTSD and starts to take her camera everywhere. In hopes of proving her innocence and finding out what happened with her in the woods, she goes back there with a group of people. In the style of a whodunit, people in the group start disappearing and everyone becomes a suspect. Part of the group is revealed to be a cult trying to create a new Blair Witch through a ritual in an underground chamber using Heather and the male character.
+
+While developing the screenplay, Berlinger spent time in the real town of Burkittsville (the setting of The Blair Witch Project) undertaking research and interviewing locals on how the release of the film had impacted their lives. Many of the individuals Berlinger interviewed served as direct inspirations for the characters featured in the film. His core theme when composing the screenplay with Beebe was that the evil attributed to the Blair Witch may "be human in origin as opposed to supernatural". According to Berlinger, the character of Erica represented an aspect of this, specifically the frustrations that the Wiccan community voiced after the release of The Blair Witch Project, which some felt misconstrued the tenets of Wicca and showed their religion in a negative light.
+
+Berlinger was also inspired by the "lazy consumption of media" that led many to accept The Blair Witch Project as a true documentary; specifically, "how readily [the public is] willing to accept that something shot on video is real". He elaborated: "On one hand, Blair Witch 2 works as a standard horror movie...but it also is a meditation on violence in the media, and the nature of fanaticism and obsession...and the dangers of blurring the lines between reality and fiction". Additionally, Berlinger incorporated elements of real-life subjects and places featured in his 1996 true crime documentary Paradise Lost: The Child Murders at Robin Hood Hills, as well as narrative components of the stage play Six Characters in Search of an Author by Luigi Pirandello.
+
+Casting
+Berlinger based his casting decisions largely on group chemistry between the actors, as the film was anchored exclusively in their collective experience. The casting period, according to Berlinger, lasted for six weeks, in New York City. Originally, Tristine Skyler auditioned for the role played by Erica Leerhsen, while Leerhsen auditioned for the role played by Kim Director. Upon casting Leerhsen, who in reality was a short-haired blonde, Berlinger fitted her with hair extensions and had her hair dyed red for the part. Jeffrey Donovan had also originally auditioned for the role played by Stephen Barker Turner, but Berlinger felt him a better fit for the leader of the group.
+
+Filming
+
+Principal photography of Book of Shadows: Blair Witch 2 occurred over a period of 44 days in the spring of 2000 on location outside of Baltimore, Maryland by cinematographer Nancy Schreiber. The exposition scenes featuring the characters camping were filmed on location in Gwynns Falls Leakin Park, and the stone ruins of the Rustin Parr house were constructed there out of styrofoam. The scene featuring Tristen in the hospital was shot at an abandoned sanitarium in Baltimore. Jeff's loft house in the film is actually the Clipper Mill, located on the edge of Baltimore. The documentary footage that opens the film features interviews from real residents of Burkittsville, Maryland.
+
+Because the original film had been parodied so much since its release, Berlinger deliberately avoided using any shaky camerawork and "the [stylistic] clichés of bad documentary filmmaking", opting to maintain an aesthetic at odds with the documentary form.
+
+Post-production
+Stylistically, Book of Shadows was the direct opposite of its predecessor: though the film occasionally utilizes the point of view camcorder/pseudo-documentary format used in the first movie, Book of Shadows more closely resembles the glossy, big-budget special effects-laden horror films that Blair Witch was a counter to. Berlinger has stated that he originally made the film with more of an ambiguous tone that focused on the characters' psychological unraveling after their night spent in the Black Hills, but Artisan forced him to re-cut the film and re-shoot certain scenes to add more "traditional" horror movie elements, thus creating what they saw as a more "commercial" film. Namely, the footage of the main characters murdering the foreign tourists was shot in Berlinger's backyard weeks prior to the film's release date, and was incorporated in the film as flash cuts to add more visual violence. Furthermore, expository footage showing Jeff in a psychiatric hospital was also shot at the request of Artisan executives; these scenes were filmed at the Kirby Forensic Psychiatric Center on Randall's Island in New York City. Berlinger later stated that he felt the gory sequences incorporated into the film "fought against the ambiguity [he] tried to nurture".
+
+Additionally, the interrogation sequences which are intercut throughout the film were, per Berlinger's director's cut, arranged as a single eight-minute-long sequence bookending the film. Instead, the studio requested Berlinger cut the sequence into isolated vignettes and intercut them throughout the film. This compromised Berlinger's original vision of a "linear" narrative that begins "as a lighthearted romp in the woods...almost as a spoof of the [Blair Witch] phenomenon" before descending into a "downward spiral".
+
+The original cut of the film also featured Frank Sinatra's "Witchcraft" during the opening credits, but was replaced by the studio with "Disposable Teens" by  Marilyn Manson.
+
+## Music
+
+Carter Burwell composed the film's original score, which was released on October 24, 2000. Additionally, a soundtrack was released through Posthuman and Priority Records on October 17, 2000, featuring songs by several alternative rock groups.
+
+## Release
+
+Marketing
+Though Book of Shadows''' marketing campaign made no attempt to present the film as a "true story", a promotional "dossier" for the film, compiled by D.A. Stern, was released, including fabricated police reports and interviews surrounding the events in the film as if they were fact (a similar "dossier", also by Stern, was released as a companion piece to the first film). Additionally, similar to the first movie, each of the main characters retain the first names of their respective actors, though their surnames are changed slightly.
+
+On September 29, 2000, the film's teaser trailer was released on the internet, available for streaming exclusively on Yahoo!. The trailer shows a half-naked woman with a twana symbol behind her back, discovering Book of Shadows in the woods, before she is attacked by an unknown man.
+
+Beginning on October 18, a three-day online "Blair Witch Webfest" was launched, which included involvement from artist Marilyn Manson, whose music was featured on the film's soundtrack. The cyber-convention included a contest whose grand prize winner received tickets to the opening of Manson's tour in Minneapolis, as well as a private screening of Book of Shadows with Manson in attendance.
+
+On October 22, the Sci-Fi Channel premiered Shadow of the Blair Witch, a pseudo-documentary following Book of Shadowss protagonist, Jeff and others who are transfixed by the Blair Witch phenomenon. The documentary recontextualizes Book of Shadows as being a Hollywood film based upon actual events that happened in the Blair Witch universe. The fictional documentary charts both the mythology of the Blair Witch alongside Jeff's criminal prosecution for the murders depicted in the film.
+
+Home media
+Artisan Home Entertainment released Book of Shadows on VHS on February 20, 2001. Also on March 13, a double-sided DVD+CD package was released; the disc was marketed as being the "first ever DVD+CD". Side one (DVD) included the feature film along with audio commentaries, production notes, a live music video, and the "Secret of Esrever" featurette as bonus materials. Side 2 (CD) featured three tracks from the official soundtrack, as well as Carter Burwell's full musical score.
+
+Additionally, Artisan released a media package called "The Blair Witch Experience", which included the original film on DVD, the Book of Shadows DVD+CD, the three-piece Blair Witch PC game series, and a necklace of the stickman figures featured in the films.
+
+A Blu-ray version of the film has yet to be released in the United States, but versions have been released in Spain and Australia, in a double feature with the first film. The Spanish disc debuted on September 30, 2020 in a retro-themed VHS package. The disc contains only a handful of the extras found on the DVD. The Australian disc was released through Imprint Films on October 30, 2024 and contains new and archival extras.
+
+"The Secret of Esrever"
+Much like the first Blair Witch, Book of Shadows also featured a marketing gimmick, although this one centered on the film's video release, fully exploiting video technology. Both the DVD and VHS releases came with a featurette detailing "The Secret of Esrever" ("Esrever" is the word reverse'' spelled backwards), a number of near-subliminal messages in the form of hidden words and images that were placed throughout the film. The featurette encouraged viewers to watch certain scenes in reverse and/or frame-by-frame in order to decode the "secret", and, through scrambled letters flashed throughout the program, offered five clues to where they could be found: "door", "water", "mirror", "rug" and "grave". These images were not included in the theatrical cut of the film, and were rather added specifically for the original home video releases. Subsequent releases, particularly in digital formats, did not have the clues.
+
+An example of these messages can be seen in a scene early in the film where the main characters are in a graveyard, standing behind a tombstone inscribed with the word "Treacle". The shot briefly cuts away and then cuts back, though the same tombstone now reads "Further". This is seen for approximately one second until it cuts away again, and the tombstone once again reads "Treacle" for the remainder of the scene.
+
+When all of the clues were identified, the hidden words, when put in the correct order, spelled out "seek me no further", plus an extra hidden word, "or". Viewers could then go to the official Blair Witch website and type the words into a special search box: typing "seek me no further" would play an extra scene from the film, and typing "seek me no further or" would enable them to add their name to a list of people who had also decoded the message. When complete, the full message is "seek me no further or the children will again walk free". The second half of the message is delivered by Tristen herself - speaking in reverse - towards the end of the movie: "Eerf klaw niaga lliw nerdlihc eht." As of 2008, the Esrever website functions are no longer available.
+
+## Reception
+
+Box office
+Book of Shadows had its world premiere at the Grauman's Chinese Theatre in Los Angeles on October 24, 2000. It was released theatrically on 3,600 screens in six countriesincluding United States, Canada, and the United Kingdomon October 27.
+
+In the United States, the film debuted at number 2 at the box office, earning $13 million during its opening weekend playing on 3,317 screens. After eight weeks, it finished with a total domestic gross of $26,421,314. Overall, internationally the film grossed $47,737,094.
+
+Critical response
+Book of Shadows: Blair Witch 2 was poorly reviewed by critics.  Metacritic, which uses a weighted average, assigned the  a score of 15 out of 100, based on 34 critics, indicating "overwhelming dislike". Audiences polled by CinemaScore gave the film an average grade of "D−" on an A+ to F scale.
+
+In a review published in The Guardian: "Everything—and I mean everything—that made The Blair Witch Project a little indie masterpiece has been falsified and trashed in this spectacularly bad sequel". Roger Ebert, who gave the first film four stars (out of four), gave Book of Shadows two stars, calling it "a muddled, sometimes-atmospheric effort that could have come from many filmmakers" and "not a very lucid piece of filmmaking". Owen Gleiberman of Entertainment Weekly awarded the film a C−, calling it "a flat heebie jeebies thriller".
+
+Alternately Kirk Honeycutt of The Hollywood Reporter wrote that the film is "better made than the original, and its writing contains a subtlety and wit the original film lacked". Anwar Brett of the BBC rated the film three out of four stars, calling it "a chilling, highly effective journey made with intelligence and a handful of effective, goose-bump-inducing moments". Gene Armstrong, writing for the Arizona Daily Star, described the film as inventive and praising it for its exploration of themes such as individual perception and the psychological effects of popular folklore.
+
+Shawn Levy of The Oregonian wrote that there are moments of pleasure, humor, and terror in the film, adding that it has "some clever things to say about the media and pop culture." Luke Y. Thompson of the Dallas Observer said the film "deserves points for creativity" but is "not entirely successful". Margaret McGurk of The Cincinnati Enquirer noted prominent documentary influences present in the film, comparing elements of the psychiatric hospital sequences to Frederick Wiseman's Titicut Follies: "Even well-versed moviegoers may not catch some of the most interesting aspects of Book of Shadows: Blair Witch 2. That's because they refer to, draw upon and mimic documentaries, which as a genre represent the least-seen movies in America. No surprise there". Chris Kaltenbach of The Baltimore Sun noted that the film "gets credit for avoiding the easy path. Too bad the path it chooses doesn't lead us anywhere we want to be taken".
+
+Jack Mathews of the New York Daily News panned the film, awarding it a one-and-a-half star-rating and writing that "the characters are boring, the violence generic, the suspense nonexistent". Wesley Morris of The San Francisco Examiner called the film "throwaway megaplex fodder", while Melody Moss of Seattle's The Stranger wrote: "This film is so bad, no amount of high-priced marketing tools—glitzy trailers, live webcasts, star-studded soundtrack CDs—can save it. And the motivation behind this dreck is all too clear: pure and simple greed".
+
+Web reviewers such as Berge Garabedian of JoBlo.com gave the film a favorable review, calling it a "decent psychological mystery filled with paranoia and delusions, which messes with your head and demands that you keep thinking about it, even after you've left the theatre". Laura Clifford of Reeling Reviews also praised the film, writing: "It's a surprisingly intelligent and welcome addition to a genre that's usually a dumping ground for low budget efforts".
+
+Accolades
+
+Retrospective assessment
+Contemporary reviews of the film have been more positive. In a 2016 article published by Bloody Disgusting, Brendan Morrow defended the film, calling it "an excellent 'descent into madness film'" and noted the studio's intervention in post-production: "In Book of Shadows, Berlinger took his hatred of the first movie's dishonesty and made an entire film out of it, commenting on the danger of blurring the line between fiction and reality. Had Artisan stayed out of the edit bay and let the man do his job, perhaps Book of Shadows could have been something truly special". Another retrospective published by Collider noted: "One can see interesting ideas about possession, filmmaking, and belief littered throughout, but the [film's] narrative is overworked to the point that no concept or storyline really gains much momentum".
+
+In Movies in American History: An Encyclopedia (2011), film scholar Phillip Dimare notes: "While the film's premise of self-consciously examining the concept of cult films in general is an interesting example of intertextual play, the sequel lack[s] the aesthetic minimalism of the first film; instead, it tried to make the Blair Witch more tangible and sensationalistic... the horror of Book of Shadows was just too imagistically present".
+
+## Sequel
+
+In September 2009, Ed Sánchez and Daniel Myrick announced their intent to produce Blair Witch 3. The film would be a direct sequel to the first film, would potentially contain the actors from the first film in some context, and would not refer to any of the events from Book of Shadows, given the film's status as a film within a film. In 2011, Sánchez remarked that further development on a sequel depended on getting Lionsgate to approve the idea and for his and Myrick's schedule to match up. The film went into development hell.
+
+At San Diego Comic-Con in July 2016, a film The Woods turned out to be the sequel to The Blair Witch Project, entitled Blair Witch.
+

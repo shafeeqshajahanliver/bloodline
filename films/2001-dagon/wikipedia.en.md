@@ -1,0 +1,60 @@
+# Dagon (film)
+
+Source: https://en.wikipedia.org/wiki/Dagon_%28film%29 (last edited Sun, 20 Sep 2026 15:26:54 GMT). Text CC BY-SA 4.0, retrieved 2026-10-04.
+
+## Lead
+
+Dagon (, literally Dagon, the cult of the sea) is a 2001 Spanish Lovecraftian horror film directed by Stuart Gordon and written by Dennis Paoli, based on the 1919 short story of the same name and the 1936 novella The Shadow Over Innsmouth, both by author H. P. Lovecraft. Despite Gordon, Paoli and Lovecraft all being American, it is a fully Spanish production mixing English, Galician and Spanish languages, starring Ezra Godden, Francisco Rabal and Raquel Meroño.
+
+Based loosely on both original works (most prominently The Shadow Over Innsmouth), the film takes place in Imboca, a Spanish version of Innsmouth. It is the final film collaboration between Gordon and Paoli, who had worked together many times since the 1977 play Bleacher Bums; their previous collaborations had included the films Re-Animator (1985) and From Beyond (1986), both already based on works by Lovecraft, and their next and final collaborations on the television series Masters of Horror would include H. P. Lovecraft's Dreams in the Witch-House (2005), also starring Godden.
+
+The film received positive reviews and was the final role of Rabal, who died two months before its release.
+
+## Plot
+
+Paul Marsh dreams of encountering a mermaid with razor-sharp teeth while exploring an underwater cave. He awakens on a boat off the shores of Spain, where he is vacationing with his girlfriend Barbara and their friends Vicki and Howard. A sudden storm blows their boat against the rocks, pinning Vicki against the bed and flooding the boat. While Howard stays with her, Paul and Barbara take the lifeboat to the nearby fishing town of Imboca. During their absence, an unseen water creature attacks Howard and Vicki.
+
+Barbara and Paul venture through the seemingly deserted town and reach a church. There, they convince a priest to help them. Two fishermen at the docks volunteer to take one of them back to the boat. While Paul goes with the fishermen, Barbara stays to find a phone and call for help.
+
+After failing to find either Howard or Vicki, Paul goes to the hotel where Barbara supposedly stays, but she isn't there. He waits for her in an old, filthy hotel room, where he dreams of the mermaid again. Awakened by a large gathering of strange, fish-like people approaching the hotel, he is forced to flee. Hiding inside a tannery, Paul discovers Howard's skinned corpse. He escapes the tannery by starting a fire and finds momentary safety with an old drunkard named Ezequiel, the last full-blooded human in Imboca.
+
+Ezequiel explains that, many years ago, the village fell on lean, hard times. Captain Orpheus Cambarro (based on captain Obed Marsh) convinced the locals to worship Dagon rather than the Christian God. Orpheus's first offerings to Dagon brought Imboca enormous wealth in the form of fish and gold. This caused the locals to make him the high priest of the Church of Dagon, helping him dismantle the local Catholic church and killing the priest to establish the church in Dagon's honor (based on the Esoteric Order of Dagon). However, Dagon soon demanded blood sacrifices and human women to breed with, which the villagers and Cambarro blindly complied with. Ezequiel's father and mother, who resisted Orpheus' heretical practice, ended up as sacrifices. Over time, the people of Imboca began to die off, leaving only the half-fish descendants of Dagon. They kidnap unsuspecting visitors to either breed or sacrifice to Dagon. Ezequiel could only watch the village go to ruin and lament the villagers' foolishness in worshiping a demon for short-lived prosperity.
+
+Paul begs Ezequiel to help him escape. Ezequiel takes Paul to the mayor's manor, so he can steal the town's only car belonging to Xavier Cambarro, Orpheus's grandson. Paul sneaks into the car and tries to hot-wire it, but accidentally honks the horn. Cornered, he flees into the manor and finds a beautiful woman named Uxia, the mermaid from his dreams. She saves him and urges him to stay, but when he finds that instead of legs Uxia has tentacles, he flees in horror. Paul successfully starts the car and drives away, but crashes.
+
+Paul is captured and thrown into a barn, where he is reunited with Vicki, Ezequiel, and Barbara. The three plan to escape, but the attempt is foiled. The traumatized Vicki, having been impregnated by Dagon, kills herself. Paul and Ezequiel are chained up in a butchery and offered the last chance to worship Dagon, which they refuse. Paul apologizes to Ezequiel, who thanks Paul for helping him to remember his parents. Paul helplessly watches as the cult flays Ezequiel alive while the captives recite the 23rd Psalm together.
+
+Uxia talks down the cult and saves Paul. He offers to stay in exchange for Barbara's release, but Uxia insists that Barbara must bear Dagon's child. When Paul seems to concede, Uxia tells the priest of Dagon to make arrangements for their marriage. After Uxia leaves, Paul kills the guards and the priest and escapes.
+
+When Paul reaches the church, he discovers a hidden passage leading to an underground ritual chamber. As a congregation of Imbocans watches, Uxia offers a naked Barbara - who is wearing golden ceremonial jewelry - handcuffed and shackled to a trapeze to Dagon, lowering her into a deep pit leading to the sea. Paul sets several cultists on fire and winches Barbara back up. Barbara, having lost her mind to Dagon, begs him to let her go because she is pregnant. Paul refuses and he tries to untie Barbara, but he doesn't have the key to her handcuffs. Two large tentacles emerge from the water in the pit below and drag Barbara down into the water, leaving only her severed hands behind on the trapeze.
+
+The uninjured Imbocans attack Paul and attempt to beat him to death, but are halted by Uxia and a monstrously deformed Imbocan, who is revealed to be Xavier Cambarro; Uxia and Paul's father. Uxia explains that Paul's human mother escaped from Imboca years ago after being impregnated by Xavier, but now that Paul has returned, he will be her lover and they will dwell with Dagon and Barbara, who has now become his newly married bride. Trapped and shocked that he has been an abomination all along, Paul attempts to set himself on fire. Uxia grabs him and dives into the water, at which point, Paul sprouts gills on his chest. With no other option left, Paul embraces his fate and follows Uxia down into Dagon's undersea lair.
+
+## Production
+
+Stuart Gordon and Dennis Paoli began developing an adaptation of The Shadow over Innsmouth by H. P. Lovecraft in 1985 and it was intended to be Gordon's follow-up to Re-Animator after a Voodoo themed project the two had developed - titled Gris Gris - failed to find traction. Gordon and producer Brian Yuzna came close to setting up the film at Full Moon Features in the '90s, but this fell through as according to producer Charles Band:
+
+We were unable to get The Shadow over Innsmouth because the budget on it was too high. It didn't fit into your horror movie niche, it was a bigger project and it was so strange. What people kept saying to us was that if it was about vampires or werewolves, you would have no problem here, but since this is about people turning into fish, this is a little bit too weird for us to be able to put this kind of money into the project. Well, to me, that's what makes this interesting. You haven't seen this before.
+
+Gordon and Yuzna continued to try and find support for The Shadow over Innsmouth until the opportunity presented itself with the establishment of Yuzna's Spanish-based production company Fantastic Factory. The film was shot in the small Spanish coastal town of Combarro on the recommendation of local producer Julio Fernández with some of the locals being used as extras. The fictional village Combarro portrays in the film was named "Imboca" as a play-on-words referencing the original location of "Innsmouth" as the literal translation of "Imboca" translates to "in your mouth". The creature effects were created by David Marci a pupil of Dick Smith. The role of Barbara was originally written for an American actress until Raquel Meroño impressed Gordon with an audition resulting in the role to be rewritten for her. Ezra Godden's decision to play Paul with glasses came about from his admiration of Harold Lloyd.
+
+The film is a Castelao Produccions, Estudios Picasso and Fantastic Factory production. Asked if it was difficult to convince Raquel Meroño that she was going to be shackled and dangled nude by force as part of her role, Stuart Gordon said, "She had never done a nude scene before. She's a big television star in Spain, so for her to do this was very brave, and also very physically demanding.
+
+## Release
+
+Theatrical
+Dagon was released theatrically in Spain on November 8, 2001; opening in 117 theaters, ranking #20 on the charts on its opening weekend where it grossed $101,273 averaging at $860. The film would later gross $43,773 bringing its total to $145,046, or €212,699 in Spanish currency.
+
+Home media
+Dagon was released straight-to-video release in the United States by Lionsgate on July 23, 2002. and later that same year by Metrodome on October 7. The film was last released on DVD by Prism on February 2, 2004. On April 8, 2018, it was announced that the film would be released for the first time on Blu-ray, as a part of a collector's series by Vestron Video. This version was later released on July 24 that same year.
+
+## Reception
+
+On Rotten Tomatoes, Dagon holds an approval rating of 71% based on , with a weighted average rating of 6.0/10.
+
+Marjorie Baumgarten from Austin Chronicle gave the film 3 out of 5 stars, calling it "horror so extreme that it borders on camp", further stating that it was "hampered by some clunky scripting [...] and middling performances." AllMovie gave the film a slightly positive review, writing, "Though it's not perfect, Lovecraft fans will most likely be willing to forgive Dagon's shortcomings in favor of a film that obviously shows great respect and appreciation for its source materials."
+KJ Doughton of Film Threat rated the film 3 out of 5 stars, writing, "While not a perfect movie, Dagon crams its wild, over-the-top concepts down our throats with so much conviction that we can't help but get swept along for the ride." Scott Tobias from The A.V. Club gave the film a mostly positive review, commending the film's first half, which he felt "came alive" through its suggestive gothic ambiance and "well-placed jolts of violence". However, Tobias criticized the film's third act, which he felt downplayed the film's "distinctive flavor to ritualized nudity and gore". Ain't It Cool News gave the film a positive review, praising the film's atmosphere, tone, setting, and darker themes when compared to other adaptations of the author's works. HorrorNews.net criticized the film's low-budget special effects, and occasionally "hammy" acting. However, the reviewer concluded by stating, "Dagon comes across with a low budget, but it has a big heart and kind of a big bite to go with it." Nick Hartel from DVD Talk praised the film, calling it director Gordon's all-time best work, and the best Lovecraft adaptation.
+Reviewing the 2007 film Cthulhu, another adaptation of Lovecraft's story, Nick Pinkerton of LA Weekly stated that Dagon remained the better adaptation of the story.
+
+In their book Lurker in the Lobby: The Guide to the Cinema of H. P. Lovecraft, Andrew Migliore and John Strysik write that "Gordon nicely creates the decayed humanity of Lovecraft's Innsmouth" but also that the film's "relentlessness" is "draining and numbing." They conclude: "Dagon is a dark story well told, but for some Lovecraft lovers, it may be a fish that should have gotten away."
+

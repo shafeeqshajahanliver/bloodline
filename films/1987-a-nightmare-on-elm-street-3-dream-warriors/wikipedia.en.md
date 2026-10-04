@@ -1,0 +1,130 @@
+# A Nightmare on Elm Street 3: Dream Warriors
+
+Source: https://en.wikipedia.org/wiki/A_Nightmare_on_Elm_Street_3%3A_Dream_Warriors (last edited Sat, 03 Oct 2026 12:59:02 GMT). Text CC BY-SA 4.0, retrieved 2026-10-04.
+
+## Lead
+
+A Nightmare on Elm Street 3: Dream Warriors is a 1987 American fantasy slasher film directed by Chuck Russell in his feature directorial debut and written by Russell along with Wes Craven, Bruce Wagner, and Frank Darabont. It is the third installment in the Nightmare on Elm Street franchise and serves as a direct sequel to A Nightmare on Elm Street (1984). The film stars Heather Langenkamp, Patricia Arquette, Laurence Fishburne, Priscilla Pointer, Craig Wasson, and Robert Englund as Freddy Krueger. Nancy Thompson (Langenkamp), now a psychiatrist, and Kristen Parker (Arquette), a patient who can bring others into her own dreams, team up with other kids to launch a daring rescue into the dreamland and save a child from Freddy Krueger.
+
+After the mixed response to A Nightmare on Elm Street 2: Freddy's Revenge (1985), New Line Cinema sought out franchise creator Wes Craven to return to write the script for the third film, which he agreed to despite having a different idea for another Elm Street film.
+
+A Nightmare on Elm Street 3: Dream Warriors was theatrically released on February 27, 1987. The film grossed $44.8 million domestically on a budget of over $4 million and received positive reviews from critics, who considered it to be one of the best films in the A Nightmare on Elm Street series. It was followed by A Nightmare on Elm Street 4: The Dream Master, released in 1988.
+
+## Plot
+
+Kristen Parker dreams of Freddy Krueger, who attacks her and makes it look like she has slit her wrist in the real world. Believing Kristen to be suicidal, her mother Elaine admits her to Westin Hills Psychiatric Hospital, where she is placed under the care of Dr. Neil Gordon.
+
+At the hospital, Kristen fights the orderlies who try to sedate her because she fears falling asleep. Nancy Thompson, the new intern therapist who survived Freddy's killing spree six years prior, calms her down by reciting Freddy's nursery rhyme, helping her realize she is not alone. Nancy meets the rest of Dr. Gordon's patients: Phillip Anderson, a sleepwalker; Roland Kincaid, a tough kid from the streets; Jennifer Caulfield, a hopeful television actress; Will Stanton, who uses a wheelchair due to a prior suicide attempt; Taryn White, a recovering drug addict; and Joey Crusel, who is the youngest and too traumatized to speak. One night, Freddy attacks Kristen in her dreams; she unwittingly pulls Nancy into her dream, allowing them to escape.
+
+Kristen reveals that she has been able to pull people into her dreams since she was young. Over the next two nights, Freddy kills Phillip and Jennifer. Nancy reveals to the remaining patients that they are "the last of the Elm Street kids," the surviving children of those who burned Krueger to death years ago. They try group hypnosis so that they can experience a shared dream and discover their dream powers. In the dream, Freddy captures Joey, leaving him comatose in the real world. The dean is furious, and Nancy and Neil are relieved of their duties. A nun named Sister Mary Helena tells Neil that Freddy was the son of Amanda Krueger, a young woman on the Westin Hills hospital staff who was accidentally locked inside with hundreds of mental patients over the holidays. They raped her continually, causing Freddy to be born. The only way to stop him is to lay his bones to rest.
+
+Neil and Nancy ask her father, Officer Don Thompson, where the bones are hidden. Nancy rushes back to the hospital when she learns that Kristen has been sedated. Neil takes Don to help them find the bones. Nancy and the others again engage in group hypnosis to reunite with Kristen. Taryn and Will are killed by Freddy, while Kristen, Nancy, and Kincaid rescue Joey. Sensing that his remains have been found by Don and Neil, Freddy kills Don and incapacitates Neil. Don's ghost appears to Nancy, but he is revealed to be Freddy, who stabs Nancy. Freddy comes upon Kristen, but Nancy stabs him with his own glove. Neil purifies Freddy's bones, killing him, as Nancy dies in Kristen's arms.
+
+Neil, Kristen, Kincaid, and Joey attend Nancy and Don's funeral days later. During the funeral, Neil finds Amanda Krueger's tombstone and discovers that she is Sister Mary Helena. That evening, he goes to sleep with the Malaysian doll Nancy gave him and Kristen's papier-mâché house nearby. Suddenly, Kristen's house lights up from the inside, suggesting that Freddy is not defeated.
+
+## Production
+
+Development
+Following the critical failure of A Nightmare on Elm Street 2: Freddy's Revenge, New Line Cinema was unsure if it would continue with the series. Wes Craven, who wrote and directed the original A Nightmare on Elm Street, did not participate in the second film. He had not wanted the original to evolve into a franchise, but due to immense dissatisfaction with Freddy's Revenge, signed on to cowrite the screenplay for the third installment with the intention that it would end the series. However, the success of A Nightmare on Elm Street 3: Dream Warriors prompted a continuation of the series. Craven himself would be unavailable for directing, as he was tied up with filming Deadly Friend around the same time.
+
+Craven's first concept for the film was to have Freddy Krueger (Robert Englund) invade the real world: Krueger would haunt the actors filming a new Nightmare on Elm Street sequel. New Line Cinema rejected the metacinematic idea, but years later, Craven's concept was brought to the screen in Wes Craven's New Nightmare.
+
+Before the script was finalized, in 1986 John Saxon and Robert Englund wrote their own scripts for a third Nightmare film. In Saxon's script—a prequel story called How the Nightmare on Elm Street All Began—Freddy is ultimately innocent, or at least set up for the murders by the main culprits Charles Manson and the Manson Family. Freddy is forced by a mob of angry parents to confess to the crimes, which enrages them further. After lynching Freddy, he comes back to avenge his wrongful death by targeting the mob's children. In Englund's treatment, Freddy's Funhouse, the protagonist is Tina Gray (Amanda Wyss)'s older sister, who was away at college when Tina was murdered and returns to Springwood to investigate how she died. Freddy had claimed the 1428 Elm Street house for his own in the dreamworld, setting up booby traps like Nancy Thompson (Heather Langenkamp) had done against him. According to Englund, after the script had been unused for years, part of it was used in "No More Mr. Nice Guy", the pilot episode of Freddy's Nightmares.
+
+Writing
+Wes Craven has said, about the franchise's guidance by he and Bruce Wagner, that "we decided that it could no longer be one person fighting Freddy. It had to be a group, because the souls of Freddy's victims have made Freddy stronger". He also called Heather Langenkamp to ask her if he may include her character Nancy in the script, to which she agreed. In interviews with cast and crew in the DVD extras, it is revealed that the original idea for the film centered around the kids separately traveling to a specific location to die by suicide. Later it would be discovered that the common link between the youths was that they dreamed of Freddy Krueger. Since suicide was a taboo social issue, the storyline was abandoned. Some aspects of the idea remained in the film.
+
+In Craven's and Wagner's original script, the characters were somewhat different from what was eventually filmed. Nancy was neither a dream expert nor a mental health professional. Kristen (named Kirsten in this script) only stayed in the institution briefly; she had a father and her mother Elaine was named Alice. Neil's last name was Guinness instead and his character was much younger. Dr. Elizabeth Simms's last name was Maddalena, Taryn White was African-American, Joey Crusel was the one who built the model of a house and had trouble getting around (although he did not use a wheelchair), and Philip Anderson was a thirteen-year-old. Will Stanton's name was originally Laredo, he had long hair, did not use a wheelchair, and was the one who made the clay puppets. This script also described the ranch house where Krueger was born, and that is the house that shows up in the kids' dreams rather than the Elm Street house. Wes Craven specifies the house in his original script to be "an architectural portal to [Freddy's dreamscape]. It is virtually a limitless world of the human psyche in all of its dimensions ... So you can enter this other world through the house or dreams or madness or hallucinations or special psychic states that various people have".
+
+Contrary to the film, Donald Thompson knew from the start that Krueger was real and still alive. Krueger was missing and Nancy wanted to find him. When she finds him, Nancy learns that Krueger is obsessed with finding the house where he was born so he could burn it down. In the original script, there is a romance between Nancy and Neil and they have sex. There are scenes and lines that are reminiscent of the first film. There is no mention that Krueger's mother Amanda had been a nun or that Freddy was born of rape. Both Joey and Roland Kincaid are killed. The deaths in this script were more grotesque; Krueger was not as talkative and he was more vulgar. Freddy is killed by Nancy by using his own glove, not by holy water, and she sees through his shapeshifting trick even though she still dies.
+
+In Never Sleep Again: The Elm Street Legacy, director Chuck Russell states that Craven's original script was darker and more profane, and Rachel Talalay thought that the script seemed like a "$20 million script". Discussing the more humorous elements in the film, Russell said, "I looked at what [series creator] Wes Craven did and said, 'This is absolutely great and terrifying.' But I felt that by the time I came along on 3, the way to go was to make the whole idea of dreams and nightmares into a carnival and go further into the dreams and make Freddy Krueger more outrageous and add more of an element of dark humor. That worked and the series went in that direction from then on."
+
+One of the most memorable scenes in the film is the sequence that takes place in the junkyard during the film's climax. The junkyard sequence and the set itself were the product of art director Mick Strawn, who also handled some of the film's special effects sequences and became production designer on the sequel. The sequence was so popular that it appeared again in A Nightmare on Elm Street 4: The Dream Master. The junkyard sequence was filmed in Pacoima, California for both films.
+
+Casting
+Lisa Wilcox and Lezlie Deane, who would respectively be cast as Alice Johnson and Tracy Swan in later installments, have both reported to have auditioned for roles in Dream Warriors previously. Patricia Arquette was nearly recast early in the production, but Chuck Russell intervened and convinced the producers to allow her to stay. According to producer Sara Risher, the role that the producers spent the most time interviewing and auditioning for was Marcie (Stacey Alden), the 'sexy nurse' who seemingly seduces Joey (Rodney Eastman) in his dream but turns out to be Freddy. Nurse Marcie, while seducing Joey, was originally supposed to turn into a 'she-Freddy' with Alden wearing Freddy's mask; Roy H. Wagner had second thoughts about this after seeing how 'she-Freddy' looked in practice, stating that "Freddy with breasts, it was too off-kilter". The concept of 'she-Freddy' was substituted with having the nurse shoot prehensile tongues at Joey to trap him and then be switched with Englund-Freddy.
+
+In the shooting script, Sally Kellerman was supposed to appear on Dick Cavett's talkshow, but Cavett allegedly handpicked Zsa Zsa Gabor personally after being given the opportunity to choose who he thought should appear in his show and be slaughtered by Freddy. According to Robert Englund, all of her reactions and dialogue were completely improvised:
+
+Filming
+The storyboards for the shooting were supplied by Pete von Sholly. Russell originally hired a cinematographer whom line producer Rachel Talalay perceived to be "Eastern European"; Talalay had the cinematographer fired after he had insulted Penelope Sudrow and replaced him with Roy H. Wagner. The Royce Hall building on the University of California, Los Angeles campus was used for the exteriors of the Westin Hills Psychiatric Hospital, while St. Brendan Catholic Church was used for the church scenes. The scenes in Freddy's boiler room were filmed at a converted warehouse across the street from Los Angeles County Jail. Mark Shostrom, who was also doing work on the set of Evil Dead II, possibly smuggled the Freddy glove used in Dream Warriors and used it as a background prop for one day, explaining why the glove appeared in that film released the same year. The junkyard set is the only set used in more than one film (3 & 4). The set was built and filmed at the old Los Angeles City Dump (Puente Hills Landfill) at 13130 Crossroads Pkwy S, City of Industry, California 91746. The landfill closed in Oct 31, 2013.
+
+Special effects
+The special effects were created by a team led by Peter Chesney and included Kevin Yagher and Mark Shostrom. For the iconic death scene for Jennifer Caulfield (Sudrow), where her body is hoisted into the air, Shostrom created a dummy of Penelope Sudrow with fully flexible limbs out of fiberglass and urethane and then put a matching wig on the dummy. The team built five fake televisions, each with different functions, with one being equipped with a rubber membrane which a dummy of Freddy's head pushed up through, after which they substituted the dummy with Robert Englund. Another was equipped with the metal arms which included Freddy's fingerblades and vacuum tubes from real televisions. The line "welcome to prime time, bitch" was ad libbed by Robert Englund. For Taryn (Jennifer Rubin)'s death scene, the team had originally tried for an effect where her head explodes after being injected with drugs, but could not make this effect work; instead they put appliances on Jennifer Rubin's body to show the withering effects of the injection. The skeletal version of the girl that Kristen (Arquette) is holding in the intro sequence played by Kristen Clayton was originally a surreal mechanical corpse dummy created by Shostrom, but turned out to be too good for its purpose; Russell was so unnerved by its appearance that he did not dare to put it in the film, but had it replaced by a simpler "decayed skeleton". Shostrom went to the Simon Wiesenthal museum for inspiration, looking at photographs of burned children from the Auschwitz concentration camp and needed ten weeks to complete the original dummy, and its replacement was created within hours at Russell's insistence.
+
+Post-production
+Heather Langenkamp and co-star Craig Wasson refer to a deleted scene in which they kissed, with Wasson stating that "No, we didn't have sex, but there was this one real hot kiss that just about melted the camera lens. Too bad they cut it".
+
+## Music
+
+The theme song, "Dream Warriors", was written and performed by the American heavy metal band Dokken and later included on their album Back for the Attack. The single was a success and a decision was made to include heavy metal songs in the soundtrack of the sequels. The band's manager Cliff Burnstein was acquainted with Wes Craven and was able to obtain a copy of the film script as reference for the lyrics. Robert Englund as Freddy then helped providing unique footage with the band for the music video. Clips of Patricia Arquette as Kristen Parker were also used, with some notable changes such as her model house being built with Dokken fanzines instead of papier-mâché.
+
+The opening sequence of the original VHS release of the film has a hard rock instrumental version of the Joe Lamont song "Quiet Cool". The DVD instead has "Into the Fire" by Dokken which is in the original theatrical release.
+
+A Nightmare on Elm Street 3: Dream Warriors was scored by David Lynch's frequent collaborator and friend Angelo Badalamenti and released around three weeks prior to the film's theatrical release. The film score was rereleased alongside all the other soundtracks in the franchise in 2017 on the label Death Waltz Recording Company as a box set called A Nightmare on Elm Street: Box of Souls.
+
+## Release
+
+Marketing
+New Line Cinema's distributing partner Media Home Entertainment recorded a promo reel with Robert Englund as Freddy advertising the VHS release of the film primarily to video rental shop and other vendors, including a promised chance to one winner to appear in the sequel A Nightmare on Elm Street 4: The Dream Master.
+
+## Reception
+
+Box office
+The film was released theatrically in the United States by New Line Cinema in February 1987. It was its first film to open nationally, opening in 1,343 theaters and debuting at number one, with a weekend gross of $8.9 million, a record for an independent film at the time. It made $44,793,222 at the domestic box office making it both the highest-grossing film for the studio that year and the 24th highest-grossing film of 1987. It is the third highest-grossing film of the Nightmare on Elm Street franchise after Freddy vs. Jason and A Nightmare on Elm Street 4: The Dream Master. In the UK, the film spent two weeks at the top of the box office.
+
+In the Australian state of Queensland, the movie was banned by the Bjelke-Petersen government because of its drug references, specifically the scene where Freddy's glove becomes a row of syringes and he injects Taryn with an overdose. In 1990, the newly elected Goss government abolished the Queensland Film Board of Review and the film became available through normal market channels. The Australian public at the time thought the ban was absurd, as the film was not very graphic.
+
+Critical response
+On Rotten Tomatoes the film holds an approval rating of 68% based on 65 reviews, with an average rating of 5.9/10. The site's critics consensus reads, "A Nightmare on Elm Street 3: Dream Warriors offers an imaginative and surprisingly satisfying rebound for a franchise already starting to succumb to sequelitis." Metacritic, which uses a weighted average, assigned the  a score of 49 out of 100, based on 11 critics, indicating "mixed or average" reviews.
+
+Variety wrote that Russell's poor direction makes the film's intended and unintended humor difficult to differentiate. Roger Ebert of the Chicago Sun-Times rated it one and a half out of four stars; he liked the production values but said that it "never generated any sympathy for its characters". Janet Maslin of The New York Times wrote, "The film's dream sequences are ingenious, and they feature some remarkable nightmare images and special effects." Kim Newman wrote in Empire that the "film delivers amazing scenes in spades, bringing to life the sort of bizarre images which used to be found only on comic book covers" but believed that Langenkamp was "miscast here as the world's only teenage psychiatrist, and a white streak in her hair doesn't help her get away with it." Kevin Thomas of the Los Angeles Times praised the film's combination of horror and humour, particularly its fantasy sequences, special effects and "throwaway humor".
+
+Accolades
+
+1988 Saturn Awards
+Best Horror Film (nomination)
+Best Make-up (nomination)
+Best Supporting Actor – Robert Englund (nomination)
+Fantasporto Awards 1988
+International Fantasy Film Award Best Film – Chuck Russell (nomination)
+Critics Awards: Special Mention – Chuck Russell (won)
+
+## Home media
+
+This film was released on May 27, 1987, by Media Home Entertainment on video. It initially earned $12 million from sale of the videos. It was released again in 1990 in LP Mode distributed by Video Treasures. Another LP Mode version was released in Canada in 1989 by HGV Video Productions Inc.. In 1999 New Line Home Video released a 7 tape Box Set.
+
+This film was released on DVD on September 21, 1999, by New Line Home Video.
+
+The film was released in a 4K Blu-ray box set on October 27, 2025.
+
+## Legacy
+
+Dream Warriors has been cited as an influence on subsequent horror films and television series. Director Josh Boone named it among the principal influences on The New Mutants (2020), alongside One Flew Over the Cuckoo's Nest and The Shining.
+
+The film also influenced the Netflix horror series The Midnight Club (2022). Co-creator Leah Fong stated that Dream Warriors was screened at the first meeting of the series' writers' room and described it as "very influential" on the show. Heather Langenkamp, who played Nancy Thompson in Dream Warriors, was subsequently cast as the doctor overseeing the hospice in The Midnight Club.
+
+Filmmaker Damien Leone has cited Dream Warriors as an influence on Terrifier 2 (2022). Leone stated that he deliberately sought a Dream Warriors-like tone for the sequel, using the film as a reference point when expanding the supernatural and fantasy elements of the Terrifier series.
+
+Director Chuck Russell later regarded the film as a turning point in the characterization of Freddy Krueger. Russell said that he persuaded New Line Cinema to introduce more humour and more elaborate dream imagery, describing Dream Warriors as partly a "superhero prototype". He noted that subsequent installments developed Freddy's wisecracking personality even further.
+
+## Other media
+
+Film
+In the franchise, Westin Hills Psychiatric Hospital and the dream suppressing drug Hypnocil introduced in Dream Warriors reappear in Freddy vs. Jason, where it is shown that prolonged use of the drug results in irreversible coma. In the comics Freddy vs. Jason vs. Ash: The Nightmare Warriors, the drug is referenced when Maggie Burroughs taunts Dr. Neil Gordon for being a "Hypnocil junkie" and that if he hadn't been, he would have seen her betrayal and corruption by her demonic father coming. The drug appears in the film Stitches (2012), where the main character Tommy (Tommy Knight) takes a drug by that name to suppress visions of the undead killer clown Stitches (Ross Noble).
+An earlier screenplay by Michael Almereyda for what became Freddy's Dead: The Final Nightmare (1991) involved bringing back members of the Dream Warriors as a form of "dream police" to help Jacob Johnson in fighting Freddy. In Friday the 13th: The Game, from the Friday the 13th franchise, the "Tommy Tapes" hints at Tommy Jarvis being sent to Westin Hills Psychiatric Hospital, to be cared for by Dr. Neil Gordon. Roy H. Wagner re-created scenes from the film with Kristen and the "little girl" from her dreams in 2019 while using only an iPhone 11 Pro for the production.
+
+Literature
+The film was spoofed by MAD magazine in October 1987. A joint novelization of the first three films, The Nightmares on Elm Street Parts 1, 2, 3: The Continuing Story, was released in 1987, written by Jeffrey Cooper. In the Dream Warriors chapter, the original Craven and Wagner version of the Nightmare 3 script is adapted, rather than the Russell and Frank Darabont rewrite. As such, the book version of the story is notably different from the finished film.
+
+Comics
+Many characters from the Dream Warriors film appear in Andy Mangels' 1991 comic book story Nightmares on Elm Street which continues the "Dream Trilogy" and brings back most characters from Dream Warriors, with the Dream Warriors group sans Kristen appearing in the last two issues of the series. In the storyline, Kristen's psychic powers and her wish of putting Nancy into a "beautiful dream" allowed Nancy's soul to ascend to the positive side of the dream world, wherein her soul is free and able to oppose Freddy. Aside from Nancy and the Dream Warriors group, Nancy's father Donald, Dr. Simms and Dr. Neil Gordon also appear and Amanda Krueger is mentioned. In the 2009 comic book series Freddy vs. Jason vs. Ash: The Nightmare Warriors, Dr. Neil Gordon plays a major role while Nancy, Amanda Krueger and the Dream Warriors group makes cameo appearances after Jacob Johnson releases some of the spirits of Freddy Krueger's victims to help in defeating Freddy.
+
+Video games
+
+The two video games released for the franchise, the Commodore 64/IBM-PC (1989) and the NES adaption (1990), are independently based primarily on the Dream Warriors concept, characters, and film. The C64/IBM-PC game allows the player to play as one of the Dream Warriors characters, including Nancy who, unique to the game, has a "dream power" of freezing enemies. The NES game centers around collecting Freddy's scattered bones to destroy them (bury them in the original game concept) and Dream Warrior powers can be acquired through collecting power-ups.
+
+Merchandise
+Fright-Rags has released several limited edition Dream Warriors-themed clothing, including one design that is a pastiche of the cover of the first 1963 issue of Uncanny X-Men, substituting the X-Men with the Dream Warriors and Magneto with Freddy Krueger. They have also released a print inspired by their own earlier work on The Warriors (1979) design. Mondo created a printing for MondoCon 2016 based on the 1428 Elm Street house from the film. NECA released an adaptable 7 inch Freddy Krueger figure from the film in 2016 and another 18 inch figure in 2017. Sets including Elaine Parker's severed head and "Tuxedo Freddy" and of Kristen being devoured by the Freddy-snake were released as part of the Cinema of Fear series. A sleeping pill named Dream Warrior has been released, with one function being advertised as "Battle Sleeplessness" and promises the user to “Win Back Your Dreams”. A replica of Nancy Thompson's personal Hypnocil bottle from the film is one of the items released in the January 2018 Bam! Horror Box.
+
