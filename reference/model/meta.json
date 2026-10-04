@@ -2,29 +2,33 @@
  "method": "LightGCN graph neural network (He et al., 2020), BPR loss, numpy implementation in tools/graph_model.py",
  "settings": {
   "dimensions": 48,
-  "layers": 3,
-  "epochs": 400,
-  "learning_rate": 0.05,
+  "layers": 1,
+  "epochs": 250,
+  "learning_rate": 0.02,
   "negatives": 4
  },
  "network": {
   "films": 497,
-  "fears": 258,
-  "links": 12276
+  "fears": 231,
+  "links": 11485,
+  "left_out": [
+   "archetypes"
+  ]
  },
- "test": "15% of each film's links hidden (films with 5+ links), mean of 3 splits; recall@10 = share of hidden fears ranked in the film's top 10 of the fears it doesn't visibly carry",
+ "tuning": "on one validation split (seed 100): depth 1 beat 0, 2 and 3 layers (3 layers collapsed to popularity); adding people, place, time, subject or original-wording nodes did not help (recall@10 0.264 to 0.267 vs 0.270 without)",
+ "test": "fresh splits (seeds 200-202), 15% of each film's links hidden (films with 5+ links), mean of 3 splits; recall@10 = share of hidden fears ranked in the film's top 10 of the fears it doesn't visibly carry",
  "results": {
   "model": {
-   "recall_at_10": 0.221,
-   "auc": 0.75
+   "recall_at_10": 0.282,
+   "auc": 0.789
   },
   "co-occurrence": {
-   "recall_at_10": 0.254,
-   "auc": 0.79
+   "recall_at_10": 0.274,
+   "auc": 0.786
   },
   "popularity": {
-   "recall_at_10": 0.218,
-   "auc": 0.745
+   "recall_at_10": 0.242,
+   "auc": 0.757
   }
  },
  "trained": "2026-10-04",
