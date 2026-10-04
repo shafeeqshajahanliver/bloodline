@@ -554,7 +554,7 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;
 const fmt = n => n == null ? "" : n >= 1e6 ? "$" + (n / 1e6).toFixed(n >= 1e7 ? 0 : 1) + "m" : "$" + Math.round(n / 1e3) + "k";
 const app = document.getElementById("app");
 const cache = {};
-const state = { q: "", region: new Set(), era: new Set(), has: new Set(), sort: "year", view: "graph", pcomp: "time", primary: "fears", glenses: new Set(["threat", "wants", "wrong", "ending"]), lens: "wrong", psort: "rising", psel: null, arrange: "net", links: new Set(["p","a","e"]), colour: "plain" };
+const state = { q: "", region: new Set(), era: new Set(), has: new Set(), sort: "year", view: "graph", pcomp: "time", primary: "fears", glenses: new Set(["archetypes", "threat", "origin", "wants"]), lens: "archetypes", psort: "rising", psel: null, arrange: "net", links: new Set(["p","a","e"]), colour: "plain" };
 try { const s = JSON.parse(localStorage.getItem("bl-r1") || "{}"); if (s.sort) state.sort = s.sort; } catch (e) {}
 
 function eraOf(y) { return ERAS.find(e => y >= e[1] && y <= e[2])[0]; }
@@ -686,7 +686,7 @@ function aboutBlock() {
 }
 
 /* ---------- trends ---------- */
-const LENS = [["threat", "What threatens"], ["origin", "Where it comes from"], ["wants", "What it wants"], ["wrong", "The wrong underneath"], ["trigger", "What sets it off"], ["rules", "Rules"], ["who_suffers", "Who suffers"], ["ending", "How it ends"], ["images", "Symbols"], ["archetypes", "Archetypes"]];
+const LENS = [["archetypes", "Archetypes"], ["threat", "What threatens"], ["origin", "Where it comes from"], ["wants", "What it wants"], ["wrong", "The wrong underneath"], ["trigger", "What sets it off"], ["rules", "Rules"], ["who_suffers", "Who suffers"], ["ending", "How it ends"], ["images", "Symbols"]];
 const LENSQ = { threat: "What do we fear will come for us?", origin: "Where do we believe evil comes from?", wants: "What does the thing in the dark want?", wrong: "What buried wrong comes back?", trigger: "What opens the door?", rules: "What rules do we tell ourselves?", who_suffers: "Who does fear fall on?", ending: "How do we let the story end?", images: "What do we see when we're afraid?", archetypes: "Which old story is it retelling?" };
 const RSHORT = { "North America": "N. America", "Continental Europe": "Europe", "UK & Ireland": "UK & Ire.", "East Asia": "E. Asia", "Southeast Asia": "SE Asia", "Latin America": "Lat. Am.", "South Asia": "S. Asia", "Australia & NZ": "Aus. & NZ", "Middle East & North Africa": "MENA", "Sub-Saharan Africa": "Africa" };
 const PSORT = { time: [["rising", "Rising"], ["common", "Most common"], ["falling", "Fading"]], region: [["travel", "Travels furthest"], ["common", "Most common"], ["local", "Most local"]] };
@@ -875,7 +875,7 @@ function drawEgo(el, spec, info, list) {
 let G = null;
 const ERA_C = ["#4a3f37", "#6e6054", "#978672", "#c2b39c", "#efe6d4"];
 const REG_C = {"North America":"#e9e1d1","Continental Europe":"#3fb39a","UK & Ireland":"#d1a23c","East Asia":"#cf3a2e","Southeast Asia":"#c0609a","Latin America":"#e07a45","South Asia":"#e8c44e","Australia & NZ":"#6fa3b8","Middle East & North Africa":"#9d8ad0","Sub-Saharan Africa":"#86b35a"};
-const LENSC = { threat: "#cf3a2e", origin: "#c0609a", wants: "#e07a45", wrong: "#d1a23c", trigger: "#3fb39a", rules: "#6fa3b8", who_suffers: "#9d8ad0", ending: "#ff8fb8", images: "#86b35a", archetypes: "#4f7cff" };
+const LENSC = { archetypes: "#cf3a2e", threat: "#e07a45", origin: "#c0609a", wants: "#e8c44e", wrong: "#4f7cff", trigger: "#3fb39a", rules: "#6fa3b8", who_suffers: "#9d8ad0", ending: "#ff8fb8", images: "#86b35a" };
 const LENSN = { threat: "What threatens", origin: "Where it comes from", wants: "What it wants", wrong: "The wrong underneath", trigger: "What sets it off", rules: "Rules", who_suffers: "Who suffers", ending: "How it ends", images: "Symbols", archetypes: "Archetypes" };
 const GREY = "#4a413b";
 function buildGraph() {
@@ -889,7 +889,7 @@ function buildGraph() {
   const nodes = [...films, ...fears];
   const edges = fears.flatMap(x => x.films.map(fm => ({ source: fm, target: x, lens: x.lens })));
   films.forEach(n => n.fears = []); edges.forEach(e => e.source.fears.push(e.target));
-  fears.forEach(x => x.r = 3 + Math.sqrt(x.films.length) * 3.1);
+  fears.forEach(x => x.r = x.lens === "archetypes" ? 14 + Math.sqrt(x.films.length) * 4 : 3 + Math.sqrt(x.films.length) * 2.6);
   const fmax = Math.max(1, ...films.map(n => n.fears.length)), fmin = Math.min(...films.map(n => n.fears.length));
   films.forEach(n => n.fr = 3 + Math.pow(fmax > fmin ? (n.fears.length - fmin) / (fmax - fmin) : .5, 1.3) * 12);
   const sim = d3.forceSimulation(nodes).force("link", d3.forceLink(edges).distance(85).strength(e => 1 / Math.sqrt(e.target.films.length) * .45))
