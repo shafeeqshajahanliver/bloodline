@@ -277,6 +277,22 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .gzoom button:hover{background:var(--soft)}
 .gzoom button:focus-visible{outline:2px solid var(--red)}
 .gnote{font-size:13px;color:var(--mute);margin-top:10px;max-width:90ch}
+
+.threads{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:baseline;padding-block:0 26px}
+.threads .lab{font-size:11.5px;letter-spacing:.2em;color:var(--mute);margin-right:8px}
+.thread{all:unset;cursor:pointer;font-family:var(--display);font-style:italic;font-size:19px;line-height:1.3;border-bottom:1px solid var(--hair);padding-bottom:1px}
+.thread:hover{border-bottom-color:var(--red)}
+.thread[aria-pressed="true"]{color:var(--red);border-bottom-color:var(--red)}
+.thread:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.thread .k{font-family:var(--mono);font-style:normal;font-size:11px;color:var(--mute);margin-left:5px;vertical-align:2px}
+.about{margin-top:72px;border-top:3px solid var(--ink);padding-top:12px;scroll-margin-top:16px}
+.about h2{font-family:var(--display);font-weight:400;font-size:28px;margin:0}
+.about .cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 36px;margin-top:14px;font-size:14px;line-height:1.55;color:var(--ink)}
+.about h3{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:0 0 6px}
+.about p{margin:0 0 12px}
+.about .key{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.about .key .bar10{display:inline-grid;height:14px}
+@media (max-width:980px){ .about .cols{grid-template-columns:1fr} }
 @media (max-width:980px){
   .row{grid-template-columns:96px 46px minmax(0,1fr);gap:12px}
   .thumb{width:96px}
@@ -302,9 +318,9 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 <div class="wrap">
   <header class="bar">
     <button class="wordmark" id="home" type="button">Bloodline</button>
-    <span class="crumb" id="crumb">the record · 100 films · release 1</span>
+    <span class="crumb" id="crumb">the fears that connect us</span>
     <span class="spacer"></span>
-    <span class="tag">first pass · unreviewed</span>
+    <button class="linkish tag" type="button" id="about-link">About this record</button>
   </header>
   <main id="app"></main>
 </div>
@@ -319,6 +335,7 @@ const DN = {threat:"Threat",origin:"Origin",wants:"What it wants",wrong:"The wro
 const DQ = {threat:"What is the danger?",origin:"Where did it come from?",wants:"What drives it?",wrong:"What past act sits underneath?",trigger:"What sets the story off?",rules:"How does it work, and how can it be stopped?",who_suffers:"Who is endangered, and how are they tied to the threat?",ending:"How does it resolve?",images:"Concrete images, with when they appear and what they do.",beats:"Key events in order."};
 const SHORT = {threat:"Threat",origin:"Origin",wants:"Wants",wrong:"Wrong",trigger:"Trigger",rules:"Rules",who_suffers:"Suffers",ending:"Ending",images:"Images",beats:"Beats"};
 const WHEN = ["opening","early","middle","late","ending"];
+const THREADS = [["The dead who were wronged", "wronged"], ["Revenge from beyond", "revenge"], ["The stranger you invite in", "invit"], ["A new house", "new home"], ["Being replaced", "replace"], ["The hunger", "hunger"], ["What the mirror shows", "mirror"], ["Mothers", "mother"], ["Grief", "grief"], ["The dog that knows", "dog"], ["It isn't over", "survives"]];
 const ERAS = [["<1960",0,1959],["1960s–70s",1960,1979],["1980s–90s",1980,1999],["2000–14",2000,2014],["2015+",2015,9999]];
 const REGIONS = [...new Set(F.map(f => f.r))];
 const PRIMED = ["vengeful ghost","serial killer","cult","possessing demon","person who died wronged","summoned by ritual","revenge","hunger","moving into a new home","must not look","cycle passes on","threat survives","threat destroyed","ambiguous","everyone dies","victim becomes threat","made by someone","unexplained","from nature","from outside","inherited"];
@@ -360,23 +377,24 @@ function matches(f) {
 }
 function renderIndex() {
   document.title = "Bloodline Record";
-  document.getElementById("crumb").textContent = "the record · 100 films · release 1";
+  document.getElementById("crumb").textContent = "the fears that connect us";
   const counts = k => F.filter(f => f[k]).length;
   app.innerHTML = `
   <div class="intro">
     <div>
-      <p class="overline">Release 1 · the record</p>
-      <h1>One hundred horror films, read element by element</h1>
-      <p>Each film is described along ten story dimensions, every entry quoted from its Wikipedia plot, subtitles or screenplay. The wording is the reader's own and has not been merged or reviewed. Search covers titles, people and every story element.</p>
+      <p class="overline">Bloodline</p>
+      <h1>Every culture tells the same few nightmares</h1>
+      <p>A hundred horror films from ${new Set(F.map(f => f.c)).size} countries and a century of cinema. Different monsters, different languages, and underneath them the same fears: the dead who were wronged, the family that turns on you, the stranger you let in. Follow the threads that bind them.</p>
     </div>
     <div class="totals">
       <div><div class="n">100</div><div class="l">films</div></div>
-      <div><div class="n">${F.reduce((a, f) => a + f.n, 0).toLocaleString("en-GB")}</div><div class="l">story entries</div></div>
       <div><div class="n">${new Set(F.map(f => f.c)).size}</div><div class="l">countries</div></div>
+      <div><div class="n">${Math.max(...F.map(f => f.y)) - Math.min(...F.map(f => f.y)) + 1}</div><div class="l">years, ${Math.min(...F.map(f => f.y))} to ${Math.max(...F.map(f => f.y))}</div></div>
     </div>
   </div>
+  <div class="threads"><span class="lab">START WITH A FEAR</span>${THREADS.map(([name, q]) => { const n = F.filter(f => f.v.some(v => v.includes(q))).length; return n ? `<button class="thread" type="button" data-thread="${esc(q)}">${esc(name)}<span class="k">${n}</span></button>` : ""; }).join("")}</div>
   <div class="controls">
-    <div class="search"><input id="q" type="search" placeholder="Search a title, a director, or an element like dog, mirror, drowned" value="${esc(state.q)}" aria-label="Search films and story elements">
+    <div class="search"><input id="q" type="search" placeholder="Search a fear, an image or a film. Try mirror, drowned, Get Out" value="${esc(state.q)}" aria-label="Search fears, images and films">
       <span class="viewtoggle" role="group" aria-label="View"><button type="button" data-view="list" aria-pressed="${state.view === "list"}">List</button><button type="button" data-view="graph" aria-pressed="${state.view === "graph"}">Graph</button></span>
       ${state.view === "list" ? `<span class="chips"><span class="lab">SORT</span>${[["year","Year"],["title","Title"],["n","Most entries"]].map(([k, n]) => `<button class="chip" type="button" data-sort="${k}" aria-pressed="${state.sort === k}">${n}</button>`).join("")}</span>` : ""}</div>
     <div class="chips"><span class="lab">REGION</span>${REGIONS.map(r => `<button class="chip" type="button" data-region="${esc(r)}" aria-pressed="${state.region.has(r)}">${esc(r)}<span class="k">${F.filter(f => f.r === r).length}</span></button>`).join("")}</div>
@@ -387,13 +405,16 @@ function renderIndex() {
     <div class="chips"><span class="lab">HAS</span>${[["st","Stills"],["sp","Screenplay"],["sc","Jump scares"],["osub","Original-language subtitles"],["pl","Pilot lineage"]].map(([k, n]) => `<button class="chip" type="button" data-has="${k}" aria-pressed="${state.has.has(k)}">${n}<span class="k">${counts(k)}</span></button>`).join("")}</div>
   </div>
   <div class="status"><span id="count"></span>
-    ${state.view === "graph" ? `<span class="key"><span><span class="sw" style="background:var(--ink);width:14px;height:2px"></span>people</span><span><span class="sw" style="background:var(--ochre);width:14px;height:2px"></span>archetype</span><span><span class="sw" style="background:var(--teal);width:14px;height:2px"></span>story element</span><span>thicker line, stronger link · bigger disc, more links · links take their colour when you point at a film</span></span>` : `<span class="key"><span><span class="bar10" style="width:30px;grid-template-columns:repeat(3,1fr)"><i></i><i class="ns"></i><i class="no"></i></span> filled · not stated · empty</span>
-    <span>${marks({sub:1,sp:1,sc:1,st:1})} plot · subtitles · screenplay · jumps · stills</span></span>`}</div>
+    ${state.view === "graph" ? `<span class="key"><span><span class="sw" style="background:var(--ink);width:14px;height:2px"></span>people</span><span><span class="sw" style="background:var(--ochre);width:14px;height:2px"></span>archetype</span><span><span class="sw" style="background:var(--teal);width:14px;height:2px"></span>story element</span><span>thicker line, closer kin · point at a film to see what binds it</span></span>` : `<span class="key"><span>the bar shows how much of each story is mapped</span></span>`}</div>
   ${state.view === "graph" ? `<div class="gstage" id="gstage"><div class="ginfo" id="ginfo"></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
     <div class="keyline" id="gkey" style="margin-top:10px"></div>
-    <p class="gnote">Each film links to the films it shares most with: the same people, the same archetype, or the same story wording, weighted so rare links count more. Only each film's five strongest links are drawn. Filters hide films that don't match; the rest stay where they are. Click a film to open its record.</p>` : `<ol class="ledger" id="ledger"></ol>`}`;
+    <p class="gnote">Every line is something two films share: a fear, an image, a shape of story, or the people who made them. The rarer the thing, the closer it pulls them. Filter, and the films that fall away disappear. Click a film to step inside it.</p>` : `<ol class="ledger" id="ledger"></ol>`}
+  ${aboutBlock()}`;
   const q = document.getElementById("q");
-  q.addEventListener("input", () => { state.q = q.value; renderRows(); });
+  const syncThreads = () => app.querySelectorAll("[data-thread]").forEach(b => b.setAttribute("aria-pressed", state.q === b.dataset.thread));
+  q.addEventListener("input", () => { state.q = q.value; syncThreads(); renderRows(); });
+  app.querySelectorAll("[data-thread]").forEach(b => b.onclick = () => { state.q = state.q === b.dataset.thread ? "" : b.dataset.thread; q.value = state.q; syncThreads(); renderRows(); });
+  syncThreads();
   app.querySelectorAll("[data-region]").forEach(b => b.onclick = () => toggle(state.region, b.dataset.region, b));
   app.querySelectorAll("[data-era]").forEach(b => b.onclick = () => toggle(state.era, b.dataset.era, b));
   app.querySelectorAll("[data-has]").forEach(b => b.onclick = () => toggle(state.has, b.dataset.has, b));
@@ -428,6 +449,21 @@ function renderRows() {
     r.onclick = () => go(r.dataset.id);
     r.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(r.dataset.id); } };
   });
+}
+
+function aboutBlock() {
+  return `<section class="about" id="about"><h2>About this record</h2><div class="cols">
+    <div><h3>How it was made</h3>
+      <p>Each film was read by Claude from its Wikipedia plot, and then from its subtitles and, where one exists, its screenplay. The reading describes ten parts of the story: the threat, where it came from, what it wants, the wrong underneath, what sets it off, its rules, who suffers, how it ends, the images and the key beats.</p>
+      <p>Every element carries the passage it was read from, so you can check it. Facts about cast and crew come from Wikidata. Stills come from FILMGRAB and jump-scare timings from Where's the Jump.</p></div>
+    <div><h3>What to keep in mind</h3>
+      <p>This is a first reading and nobody has reviewed it yet. The wording is the reader's own and hasn't been merged, so the same idea can appear in different words. Some phrases were given to the readers as examples and turn up more often than they should; the evidence marks them as “example wording”.</p>
+      <p>Films are linked only when they share exactly the same wording, person or archetype, so some kinship is missed. 14 films have no stills. The archetypes are a separate, top-down lens still being tested. The fears offered as starting points are ways into the search, not findings.</p></div>
+    <div><h3>Reading the list</h3><div class="key">
+      <span><span class="bar10" style="width:60px;display:inline-grid;grid-template-columns:repeat(3,1fr)"><i></i><i class="ns"></i><i class="no"></i></span> &nbsp;story mapped · not stated in the plot · nothing found</span>
+      <span>${marks({ sub: 1, sp: 1, sc: 1, st: 1 })} &nbsp;plot · subtitles · screenplay · jump scares · stills</span></div>
+      <h3 style="margin-top:18px">Rights</h3><p>Subtitles, screenplays and stills belong to their owners and are shown here for private research only. Wikipedia text is CC BY-SA; Wikidata facts are CC0.</p></div>
+  </div></section>`;
 }
 
 /* ---------- graph view ---------- */
@@ -534,7 +570,7 @@ function tags(e, k) {
   if ((k === "images") && e.when) t.push(`<span class="tag">${esc(e.when)}</span>`);
   if (e.confidence === "observed") t.push(`<span class="tag">observed</span>`);
   if (e.source && e.source !== "wikipedia") t.push(`<span class="tag">added from ${esc(e.source)}</span>`);
-  if (primed(e.value)) t.push(`<span class="tag red" title="This wording was one of the examples given to the readers, so it may be over-used.">example wording</span>`);
+  if (primed(e.value)) t.push(`<span class="tag" title="This wording was one of the examples given to the readers, so it may be over-used. See About this record.">example wording</span>`);
   return t.join(" ");
 }
 
@@ -602,7 +638,7 @@ function prose(d) {
   if (th.length) s.push(`<i>The threat is</i> ${v(th[0], "threat")}${th[0].detail ? `, <i>${esc(th[0].detail)}</i>` : ""}${th.length > 1 ? `<i>, alongside</i> ${th.slice(1, 3).map(e => v(e, "threat")).join(" <i>and</i> ")}` : ""}.`);
   for (const k of ["wants", "trigger", "wrong", "origin", "rules", "who_suffers", "ending"]) { const l = list(k, k === "rules" ? 3 : 2); if (l) s.push(`<i>${ruleWord(k)}</i> ${l}.`); }
   const missing = ["threat","wants","trigger","wrong","origin","rules","who_suffers","ending"].filter(k => !(d.dims[k] || []).length);
-  return `<p class="prose">${s.join(" ")}</p><p class="prose-note">Assembled from the first-pass story elements. Each underlined phrase opens its evidence.${missing.length ? ` The plot doesn't state ${missing.map(k => DN[k].toLowerCase()).join(", ")}.` : ""}</p>`;
+  return `<p class="prose">${s.join(" ")}</p><p class="prose-note">Tap an underlined phrase to see the passage it comes from.</p>`;
 }
 function topStill(d) {
   if (!d.stills) { const q = (d.dims.threat || [])[0] || (d.dims.beats || [])[0];
@@ -689,7 +725,7 @@ function showDetail(d, key) {
     const nav = (j, lab) => list[j] ? `<button class="linkish" type="button" data-key="${list[j].key}">${lab}: ${esc(list[j].e.value)}</button>` : "";
     h = `<div><span class="kind" style="color:${c === "var(--ink)" ? "var(--mute)" : c}">${isImg ? `image · ${esc(e.role || "no role")}` : `beat ${x.n} of ${list.length}`}${e.source && e.source !== "wikipedia" ? ` · found in the ${esc(e.source)}` : ""}</span>
         <h4>${esc(e.value)}</h4>${e.state ? `<p class="st">${esc(e.state)}</p>` : ""}${e.detail ? `<p class="dt">${esc(e.detail)}</p>` : ""}
-        <p class="tag" style="margin-top:10px;display:block">${esc(when)}${primed(e.value) ? ` · <span class="red">example wording</span>` : ""}</p>
+        <p class="tag" style="margin-top:10px;display:block">${esc(when)}</p>
         ${other.length ? `<p class="also">The same wording appears in ${other.slice(0, 4).map(f => `<button class="linkish" type="button" data-go="${f.id}">${esc(f.t)}</button>`).join(", ")}${other.length > 4 ? ` and ${other.length - 4} more` : ""}.</p>` : ""}
         <div class="stepper">${nav(idx - 1, "Previous")}${nav(idx + 1, "Next")}</div></div>
       <div>${[e, ...(e.moments || [])].map(m => `<blockquote>${from(m)}“${esc(m.quote)}”</blockquote>`).join("")}
@@ -707,13 +743,13 @@ const LT = { person: "var(--ink)", archetype: "var(--ochre)", element: "var(--te
 function linkWords(l) {
   if (l.type === "person") return `${l.roles.join(" and ")}: <b>${esc(l.label)}</b>`;
   if (l.type === "archetype") return `archetype: <b>${esc(l.label)}</b>`;
-  return `${DN[l.dim].toLowerCase()}: <b>${esc(l.label)}</b>${l.primed ? " (example wording)" : ""}`;
+  return `${DN[l.dim].toLowerCase()}: <b>${esc(l.label)}</b>`;
 }
 function netBlock(d) {
   const n = d.net; if (!n || !n.films.length) return "";
-  return `<div class="spinehead"><h3>${esc(d.title)} as a node</h3><p>${n.total} of the other 99 films share at least one exact link: a person, an archetype, or the same story wording. The ${n.films.length} strongest are drawn. Rarer links count for more.</p></div>
+  return `<div class="spinehead"><h3>Its bloodline</h3><p>${n.total} of the other films share something with ${esc(d.title)}: a fear, an image, a shape of story, or the people who made it. These are its ${n.films.length} closest kin.</p></div>
     <div class="netwrap"><div><div class="netsvg" id="net"></div>
-      <div class="keyline"><span><svg width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="var(--ink)"/></svg>person</span><span><svg width="12" height="12" aria-hidden="true"><path d="M6 0 L12 6 L6 12 L0 6Z" fill="var(--ochre)"/></svg>archetype</span><span><span class="sw" style="background:var(--teal)"></span>story element</span><span><span class="sw" style="background:var(--paper);box-shadow:inset 0 0 0 2px var(--teal)"></span>example wording</span><span>outer discs: films, filled with their own colour</span></div>
+      <div class="keyline"><span><svg width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="var(--ink)"/></svg>person</span><span><svg width="12" height="12" aria-hidden="true"><path d="M6 0 L12 6 L6 12 L0 6Z" fill="var(--ochre)"/></svg>archetype</span><span><span class="sw" style="background:var(--teal)"></span>story element</span><span><span class="sw" style="background:var(--paper);box-shadow:inset 0 0 0 2px var(--teal)"></span>very common wording</span><span>outer discs: films, filled with their own colour</span></div>
       <p class="linkinfo" id="linkinfo"><span class="fp">Point at a link or a film to trace it. Click a film to open its record.</span></p></div>
       <ol class="why" id="why">${n.films.map((f, i) => { const x = F.find(z => z.id === f.id), mx = n.films[0].score;
         return `<li data-f="${f.id}"><span class="no">${i + 1}</span><div><button class="linkish t" type="button" data-go="${f.id}">${esc(x.t)}</button> <span class="tag">${x.y}</span><span class="strength" style="width:${Math.max(4, f.score / mx * 60)}px" title="link strength ${f.score}"></span>
@@ -813,12 +849,12 @@ function sources(d, f) {
 function side(d, f) {
   const L = d.links, en = d.dialogue.en, other = Object.keys(d.dialogue).filter(l => l !== "en");
   const fact = (k, v) => v && (!Array.isArray(v) || v.length) ? `<dt>${k}</dt><dd>${esc(Array.isArray(v) ? v.join(", ") : v)}</dd>` : "";
-  let h = `<section><h4>Among the 100</h4>${among(f)}</section><section><h4>Sources</h4>${sources(d, f)}</section><section><h4>Facts</h4><dl class="facts">
+  let h = `<section><h4>Beside the other 99</h4>${among(f)}</section><section><h4>Sources</h4>${sources(d, f)}</section><section><h4>Facts</h4><dl class="facts">
     ${fact("Directed by", d.directors)}${fact("Written by", d.writers)}${fact("Starring", d.cast)}${fact("Camera", d.dop)}${fact("Music", d.music)}${fact("Produced by", d.producers)}
     ${fact("Countries", d.countries)}${fact("Languages", d.languages)}${fact("Set in", d.set_in)}${fact("Shot in", d.shot_in)}${fact("Subjects", d.subjects)}
     ${d.budget ? `<dt>Budget</dt><dd class="mono">${fmt(d.budget)}</dd>` : ""}${d.box ? `<dt>Box office</dt><dd class="mono">${fmt(d.box)}</dd>` : ""}
   </dl><p class="small" style="margin:10px 0 0">From Wikidata.${d.removed.length ? " " + d.removed.map(r => `${esc(r.name)} removed from ${esc(r.field)}: ${esc(r.reason.split(".")[0])}.`).join(" ") : ""}</p></section>`;
-  h += `<section class="arch"><h4>Archetypes · first pass</h4><ul class="plain">${d.arch.map((c, i) => `<li><div class="nm">${esc(ARCH[c]?.name || c)}</div><div class="small">${i === 0 ? "Primary" : "Secondary"} · ${esc(ARCH[c]?.beat || "")}</div><div class="small">Roots: ${esc(ARCH[c]?.roots || "")}</div></li>`).join("")}</ul>
+  h += `<section class="arch"><h4>Archetypes</h4><ul class="plain">${d.arch.map((c, i) => `<li><div class="nm">${esc(ARCH[c]?.name || c)}</div><div class="small">${i === 0 ? "Primary" : "Secondary"} · ${esc(ARCH[c]?.beat || "")}</div><div class="small">Roots: ${esc(ARCH[c]?.roots || "")}</div></li>`).join("")}</ul>
     <p class="small" style="margin:8px 0 0">Top-down tags, to be tested against the story elements.</p></section>`;
   if (en || other.length) {
     const m = en || d.dialogue[other[0]];
@@ -846,7 +882,7 @@ function side(d, f) {
 async function renderFilm(id) {
   const i = F.findIndex(f => f.id === id), f = F[i];
   if (!f) { location.hash = ""; return; }
-  document.getElementById("crumb").textContent = `the record · ${f.y} · ${f.t}`;
+  document.getElementById("crumb").textContent = `${f.t} · ${f.y} · ${f.c}`;
   document.title = `${f.t} · Bloodline Record`;
   app.innerHTML = `<div class="nav"><button class="linkish" type="button" id="back">${state.view === "graph" ? "Back to the graph" : "All 100 films"}</button><span class="tag">loading</span></div>`;
   let d;
@@ -870,14 +906,14 @@ async function renderFilm(id) {
     <div>${topStill(d)}</div>
     <div>${prose(d)}</div>
   </div>
-  <div class="spinehead"><h3>The running time</h3><p>Images sit above the line where they appear, beats sit on it, dialogue and jump scares hang below. Select anything to read it.</p></div>
+  <div class="spinehead"><h3>How the fear unfolds</h3><p>The images that haunt it above the line, the turns of the story on it, the talk and the scares beneath. Tap anything.</p></div>
   <div class="spine" id="spine"></div>
   <div class="keyline">${["omen","clue","threat","symbol","weapon","setting"].map(r => `<span><span class="sw" style="${swatch(r)}"></span>${r}</span>`).join("")}
     <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="6" fill="var(--ink)"/></svg>timed from subtitles</span><span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5.5" fill="var(--paper)" stroke="var(--ink)"/></svg>placed by part of the film</span>
     <span><span class="sw" style="background:var(--mute)"></span>words spoken each minute</span><span><span class="sw" style="background:var(--red);width:2px;height:12px"></span>jump scare</span></div>
   <div class="detail" id="detail" aria-live="polite"></div>
   ${netBlock(d)}
-  <div class="reading"><h3>The full reading</h3><p>Every entry with the passage it was read from. ${f.f.length} of 10 parts filled, ${f.n} entries${d.plot_quality === "thin" ? ", from a thin plot" : ""}.</p></div>
+  <div class="reading"><h3>Where it comes from</h3><p>Every part of the story, with the passage it was read from: the plot, the subtitles or the screenplay.</p></div>
   <div class="body" style="margin-top:18px">
     <div>
       ${DIMS.map(k => dimSection(d, k)).join("")}
@@ -886,8 +922,9 @@ async function renderFilm(id) {
     </div>
     <aside class="side">${side(d, f)}</aside>
   </div>
-  <p class="foot">Story elements are Claude's first-pass reading, not yet reviewed. Values are written in the reader's own words and not merged, so similar ideas can appear under different wording. Entries marked “example wording” match phrases given to the readers as examples and may be over-used. Subtitles, screenplays and stills are held for private research only.</p>`;
+  <p class="foot">A first reading by Claude of the film’s plot, subtitles and screenplay, not yet reviewed. <button class="linkish" type="button" id="foot-about">How this record was made</button>.</p>`;
   document.getElementById("back").onclick = () => go(state.view === "graph" ? "graph" : "");
+  document.getElementById("foot-about").onclick = () => document.getElementById("about-link").click();
   app.querySelectorAll("[data-go]").forEach(b => b.onclick = () => go(b.dataset.go));
   const frame = document.getElementById("frame");
   const th = [...app.querySelectorAll(".thumbs button")];
@@ -911,6 +948,7 @@ function route() { window.onresize = null;
   routeInner(); }
 function routeInner() { const id = location.hash.slice(1); if (id && F.some(f => f.id === id)) { G = null; renderFilm(id); } else { state.view = id === "graph" ? "graph" : "list"; renderIndex(); } }
 document.getElementById("home").onclick = () => go("");
+document.getElementById("about-link").onclick = () => { const a = document.getElementById("about"); if (a) a.scrollIntoView({ block: "start" }); else { go(""); setTimeout(() => document.getElementById("about")?.scrollIntoView({ block: "start" }), 60); } };
 let grt; window.addEventListener("resize", () => { if (state.view !== "graph" || !document.getElementById("gstage")) return; clearTimeout(grt); grt = setTimeout(() => { buildGraph(); renderRows(); }, 200); });
 window.addEventListener("hashchange", route);
 route();
