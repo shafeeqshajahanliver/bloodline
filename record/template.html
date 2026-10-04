@@ -1167,11 +1167,7 @@ function drawSpine(d, sel) {
   for (const w of WHEN) { const [a, b] = ZONE[w]; h += `<text x="${X(T * (a + b) / 2)}" y="${ay + 18}" text-anchor="middle" style="letter-spacing:.12em">${w.toUpperCase()}</text>`; }
   const H = ay + 26;
   el.innerHTML = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="group" aria-label="The running time of ${esc(d.title)}">${h}</svg>`;
-  el.querySelectorAll(".hit").forEach(g => {
-    const act = () => showDetail(d, g.dataset.key);
-    g.addEventListener("click", act);
-    g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); act(); } });
-  });
+  el.querySelectorAll(".hit").forEach(g => wireHit(d, g));
   if (sel) mark(sel);
 }
 // the shape of the film's fear: what came before, what starts it, the threat, who it falls on, how it ends
@@ -1187,6 +1183,13 @@ function looseBlock(d) {
   const L = spineItems(d).imgs.filter(x => x.loose); if (!L.length) return "";
   const by = {}; L.forEach(x => (by[x.k] = by[x.k] || []).push(x));
   return `<div class="loose"><p class="lh">The rest of its story, not tied to a moment</p>${Object.entries(by).map(([k, xs]) => `<div class="lrow"><span class="lk" style="color:${LENSC[k]}">${esc(LENSN[k])}</span><span class="lv">${xs.map(x => `<button type="button" class="hit" data-key="${x.key}"><span class="sw" style="background:${LENSC[k]}"></span>${esc(x.e.value)}</button>`).join("")}</span></div>`).join("")}</div>`;
+}
+// timeline items: pointing at one shows its quotes below; clicking opens the fear it belongs to (turns and jump scares just show their quotes)
+function fearOfKey(d, key) { const x = spineItems(d).imgs.find(x => x.key === key); return x && x.e.fear && LENSN[x.k] ? fearHash(x.k, x.e.fear) : null; }
+function wireHit(d, g) {
+  const show = () => showDetail(d, g.dataset.key), act = () => { const h = fearOfKey(d, g.dataset.key); if (h) go(h); else show(); };
+  g.addEventListener("mouseenter", show); g.addEventListener("focus", show); g.addEventListener("click", act);
+  g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); act(); } });
 }
 function mark(key) { document.querySelectorAll("#spine .hit, .loose .hit").forEach(g => g.classList.toggle("on", g.dataset.key === key)); document.querySelectorAll(".smv").forEach(g => g.classList.toggle("on", g.dataset.smkey === key)); }
 function elsewhere(v, id) { const o = F.filter(f => f.id !== id && f.v.includes(v)); return o; }
@@ -1419,7 +1422,7 @@ async function renderFilm(id) {
   const first = (d.dims.images || []).length ? "i-" + (d.dims.images || []).map((e, i) => [WHEN.indexOf(e.when), i]).sort((a, b) => a[0] - b[0])[0][1] : (d.dims.beats || []).length ? "b-" + sortedBeats(d)[0]._i : null;
   drawSpine(d); if (first) showDetail(d, first);
   app.querySelectorAll(".smv").forEach(b => b.onclick = () => { if (b.dataset.fearlink) { const [d2, n2] = b.dataset.fearlink.split("|"); go(fearHash(d2, n2)); } else { showDetail(d, b.dataset.smkey); document.getElementById("detail").scrollIntoView({ block: "center" }); } });
-  app.querySelectorAll(".loose .hit").forEach(b => b.onclick = () => { showDetail(d, b.dataset.key); document.getElementById("detail").scrollIntoView({ block: "nearest", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); }); drawNet(d);
+  app.querySelectorAll(".loose .hit").forEach(b => wireHit(d, b)); drawNet(d);
   let rt; window.onresize = () => { clearTimeout(rt); rt = setTimeout(() => drawSpine(d, document.querySelector("#spine .hit.on")?.dataset.key), 150); };
   window.scrollTo(0, 0);
   load(next.id).catch(() => {});
