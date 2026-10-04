@@ -281,7 +281,8 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .gstage .gn{cursor:pointer}
 .gstage .gn:focus{outline:none}
 .gstage .gn:focus-visible circle{stroke:var(--red);stroke-width:3}
-.gstage.hov .ge{opacity:.06}.gstage.hov .gn{opacity:.2}.gstage.hov text.lab{opacity:.15}
+.gstage .ge,.gstage .gn,.gstage text.lab{transition:opacity .35s}
+.gstage.hov .ge{opacity:.06}.gstage.hov .gn{opacity:.2}.gstage.hov text.lab{opacity:0}
 .gstage.hov .ge.hi{opacity:1}.gstage.hov .gn.hi{opacity:1}.gstage.hov text.lab.hi{opacity:1}
 .ginfo{position:absolute;left:0;top:12px;max-width:340px;background:var(--paper);padding:10px 14px 10px 0;pointer-events:none}
 .ginfo .t{font-family:var(--display);font-size:22px;line-height:1.15}
@@ -892,7 +893,7 @@ function drawEgo(el, spec, info, list) {
 let G = null;
 const ERA_C = ["#4a3f37", "#6e6054", "#978672", "#c2b39c", "#efe6d4"];
 const REG_C = {"North America":"#e9e1d1","Continental Europe":"#3fb39a","UK & Ireland":"#d1a23c","East Asia":"#cf3a2e","Southeast Asia":"#c0609a","Latin America":"#e07a45","South Asia":"#e8c44e","Australia & NZ":"#6fa3b8","Middle East & North Africa":"#9d8ad0","Sub-Saharan Africa":"#86b35a"};
-const LENSC = { nightmares: "#cf3a2e", archetypes: "#ec8a3c", threat: "#e8c44e", origin: "#9cc74a", wants: "#3fb39a", wrong: "#4fa3d8", trigger: "#6f7fe6", rules: "#a77ad6", who_suffers: "#d066a8", ending: "#ff8fb8", images: "#7fd1c7" };
+const LENSC = { nightmares: "#cf3a2e", archetypes: "#ef8a80", threat: "#e8c44e", origin: "#9cc74a", wants: "#3fb39a", wrong: "#4fa3d8", trigger: "#6f7fe6", rules: "#a77ad6", who_suffers: "#d066a8", ending: "#ff8fb8", images: "#7fd1c7" };
 const LENSN = { nightmares: "Nightmares", threat: "What threatens", origin: "Where it comes from", wants: "What it wants", wrong: "The wrong underneath", trigger: "What sets it off", rules: "Rules", who_suffers: "Who suffers", ending: "How it ends", images: "Symbols", archetypes: "Archetypes" };
 const GREY = "#4a413b";
 function buildGraph() {
@@ -925,7 +926,7 @@ function buildGraph() {
   const svg = d3.select(stage).insert("svg", ".ginfo").attr("viewBox", [-W / 2, -H / 2, W, H]).attr("role", "group").attr("aria-label", "Graph of films and the fears they share");
   const root = svg.append("g");
   const axis = root.append("g");
-  const eg = root.append("g"), ng = root.append("g"), lg = root.append("g");
+  const eg = root.append("g"), ng = root.append("g"), leadG = root.append("g"), lg = root.append("g");
   const eSel = eg.selectAll("line").data(edges).join("line").attr("class", "ge").attr("stroke", "var(--mute)").attr("stroke-opacity", .22).attr("stroke-width", .7);
   const nSel = ng.selectAll("g").data(nodes).join("g").attr("class", n => "gn " + n.kind).attr("tabindex", 0).attr("role", n => n.kind === "film" ? "link" : "button")
     .attr("aria-label", n => n.kind === "film" ? `${n.f.t}, ${n.f.y}` : `${n.name}, ${LENSN[n.lens]}, ${n.films.length} films`);
@@ -958,7 +959,7 @@ function buildGraph() {
       const box = [n.x - w / 2 - f2 * .3, n.y - r - f2 * .4 - h, n.x + w / 2 + f2 * .3, n.y - r - f2 * .4];
       if (placed.some(b => box[0] < b[2] && box[2] > b[0] && box[1] < b[3] && box[3] > b[1])) continue;
       placed.push(box); show.add(n.id); }
-    nSel.select("circle").attr("r", R); lSel.style("font-size", n => fsz(n) + "px").attr("y", n => n.y - R(n) - fsz(n) * .4).attr("display", n => show.has(n.id) ? null : "none"); };
+    nSel.select("circle").attr("r", R); lSel.style("font-size", n => fsz(n) + "px").attr("x", n => n.x).attr("text-anchor", "middle").attr("y", n => n.y - R(n) - fsz(n) * .4).attr("display", n => show.has(n.id) ? null : "none"); };
   const R = n => rOf(n) * Math.min(1 / Math.max(k, .3), 1.5);
   const emphasis = () => { nSel.select("circle").attr("r", R).attr("fill", fillOf).attr("stroke", n => ring(n)[0]).attr("stroke-width", n => ring(n)[1]);
     lSel.attr("fill", n => n.kind === "fear" && state.primary === "fears" ? LENSC[n.lens] : "var(--ink)").attr("y", n => n.y - rOf(n) - 5);
@@ -982,7 +983,33 @@ function buildGraph() {
     const i = (flashes++ * 5 + n.i) % n.f.st, pos = n.f.st === 1 ? "0 0" : `0 ${(i / (n.f.st - 1)) * 100}%`;
     flash.style.backgroundImage = `url('stills/${n.id}.jpg')`; flash.style.backgroundSize = `100% ${n.f.st * 100}%`; flash.style.backgroundPosition = pos;
     void flash.offsetWidth; flash.classList.add("on"); };
-  const rest = () => { hoverOn = null; stage.classList.remove("hov"); flash?.classList.remove("on"); eSel.attr("stroke", "var(--mute)").attr("stroke-opacity", .22);
+  // labels for whatever is lit: each tries above, below, right, then left of its node, avoiding the others
+  const placeLit = (list, taken = []) => { const fs = 13 / Math.max(k, .6), boxes = [...taken, ...list.map(m => { const r = R(m); return [m.x - r, m.y - r, m.x + r, m.y + r]; })];
+    const hit = b => boxes.some(c => b[0] < c[2] && b[2] > c[0] && b[1] < c[3] && b[3] > c[1]);
+    for (const m of list) { const f2 = m.lens === "nightmares" ? fs * 1.4 : fs, txt = m.kind === "film" ? `${m.f.t} (${m.f.y})` : m.name, w = txt.length * f2 * .5, h = f2 * 1.1, r = R(m) + f2 * .25;
+      const opts = [["middle", m.x, m.y - r - f2 * .15, [m.x - w / 2, m.y - r - h, m.x + w / 2, m.y - r]], ["middle", m.x, m.y + r + h * .8, [m.x - w / 2, m.y + r, m.x + w / 2, m.y + r + h]],
+        ["start", m.x + r, m.y + f2 * .35, [m.x + r, m.y - h / 2, m.x + r + w, m.y + h / 2]], ["end", m.x - r, m.y + f2 * .35, [m.x - r - w, m.y - h / 2, m.x - r, m.y + h / 2]]];
+      const o = opts.find(o => !hit(o[3])) || opts[0]; boxes.push(o[3]);
+      lSel.filter(z => z === m).attr("text-anchor", o[0]).attr("x", o[1]).attr("y", o[2]); }
+    return boxes; };
+  // a nightmare's films are named in two columns either side of it, with a thin leader back to each film
+  const fanFilms = (n, fl, taken = []) => { leadG.selectAll("*").remove(); if (!fl.length) return [];
+    const fs = 13 / Math.max(k, .6), lh = fs * 1.3, dmax = d3.max(fl, m => Math.hypot(m.x - n.x, m.y - n.y) + R(m)) + fs * 1.2, boxes = [];
+    // one column, on the side facing the middle of the graph (where there is room); two only when the list is long and the nightmare sits central
+    const two = fl.length > 12 && Math.abs(n.x) < W * .12, inward = n.x > 0 ? -1 : 1;
+    for (const side of [-1, 1]) { const xs = fl.filter(m => two ? (m.x < n.x ? -1 : 1) === side : side === inward).sort((a, b) => a.y - b.y); if (!xs.length) continue;
+      const ys = xs.map(m => m.y); for (let i = 1; i < ys.length; i++) ys[i] = Math.max(ys[i], ys[i - 1] + lh);
+      const shift = (d3.mean(xs, m => m.y) - d3.mean(ys));
+      // clear of the archetypes already named on this side
+      const lx = side < 0 ? Math.min(n.x - dmax, d3.min(taken, b => b[0]) - fs) : Math.max(n.x + dmax, d3.max(taken, b => b[2]) + fs);
+      xs.forEach((m, i) => { const y = ys[i] + shift, w = `${m.f.t} (${m.f.y})`.length * fs * .5;
+        lSel.filter(z => z === m).attr("text-anchor", side < 0 ? "end" : "start").attr("x", lx).attr("y", y + fs * .35);
+        leadG.append("line").attr("class", "lead").attr("x1", m.x).attr("y1", m.y).attr("x2", lx - side * fs * .3).attr("y2", y).attr("stroke", "var(--mute)").attr("stroke-opacity", .6).attr("stroke-width", .7).attr("vector-effect", "non-scaling-stroke");
+        boxes.push(side < 0 ? [lx - w, y - lh / 2, lx, y + lh / 2] : [lx, y - lh / 2, lx + w, y + lh / 2]); }); }
+    return boxes; };
+  let seq = []; const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const later = (f, ms) => seq.push(setTimeout(f, reduce ? 0 : ms));
+  const rest = () => { seq.forEach(clearTimeout); seq = []; leadG.selectAll("*").remove(); hoverOn = null; stage.classList.remove("hov"); flash?.classList.remove("on"); eSel.attr("stroke", "var(--mute)").attr("stroke-opacity", .22);
     stage.querySelectorAll(".hi").forEach(x => x.classList.remove("hi"));
     const vf = films.filter(n => visible.has(n.id)).length, vx = fears.filter(n => visible.has(n.id)).length;
     info.innerHTML = `<div class="m">${vf} FILMS · ${vx} FEARS</div><div class="r" style="color:var(--mute)">${state.primary === "films" ? "Point at a film to see the fears it carries." : "Point at a fear to see the films that carry it."}</div>`; labels(); };
@@ -992,10 +1019,18 @@ function buildGraph() {
     const arch = new Map();
     if (n.lens === "nightmares") n.films.filter(m => visible.has(m.id)).forEach(m => m.fears.filter(x => x.lens === "archetypes" && visible.has(x.id)).forEach(x => { arch.set(x, (arch.get(x) || 0) + 1); nb.add(x.id); }));
     const lit = e => e.source === n || e.target === n || (arch.has(e.target) && nb.has(e.source.id));
-    // when a nightmare is lit, its films stay unnamed (they are listed alongside) so the archetypes can be read
-    const named = m => nb.has(m.id) && !(arch.size && m.kind === "film");
-    nSel.classed("hi", m => nb.has(m.id)); lSel.classed("hi", named).attr("display", m => named(m) ? null : "none");
-    eSel.classed("hi", lit).attr("stroke", e => lit(e) ? LENSC[e.lens] : "var(--mute)").attr("stroke-opacity", e => lit(e) ? .85 : .06);
+    // everything lit is named; a nightmare reveals in steps: itself, then its archetypes, then its films and threads
+    seq.forEach(clearTimeout); seq = [];
+    const litN = nodes.filter(m => nb.has(m.id)).sort((a, b) => (b === n) - (a === n) || arch.has(b) - arch.has(a) || (b.kind === "fear") - (a.kind === "fear"));
+    lSel.classed("hi", false).attr("display", m => nb.has(m.id) ? null : "none");
+    if (arch.size) { const fl = litN.filter(m => m.kind === "film"); fanFilms(n, fl, placeLit(litN.filter(m => m.kind !== "film"), fl.map(m => { const r = R(m); return [m.x - r, m.y - r, m.x + r, m.y + r]; })));
+      leadG.style("opacity", 0); later(() => leadG.style("opacity", 1), 520); }
+    else { leadG.selectAll("*").remove(); placeLit(litN); }
+    eSel.classed("hi", false).attr("stroke", e => lit(e) ? LENSC[e.lens] : "var(--mute)").attr("stroke-opacity", e => lit(e) ? .85 : .06);
+    const show = (sel, ok) => { nSel.filter(ok).classed("hi", true); lSel.filter(ok).classed("hi", true); };
+    nSel.classed("hi", false);
+    if (arch.size) { show(null, m => m === n); later(() => show(null, m => arch.has(m)), 140); later(() => { show(null, m => nb.has(m.id)); eSel.classed("hi", lit); }, 520); }
+    else { show(null, m => nb.has(m.id)); eSel.classed("hi", lit); }
     if (n.kind === "film") {
       const by = {}; n.fears.filter(x => visible.has(x.id)).forEach(x => (by[x.lens] = by[x.lens] || []).push(x.name));
       info.innerHTML = `<div class="t">${esc(n.f.t)} <span style="color:var(--mute);font-size:.7em">(${n.f.y})</span></div><div class="m"><span style="color:${REG_C[n.f.r]}">●</span> ${esc(n.f.r)} · ${esc(n.f.c)}${n.f.dir.length ? " · " + esc(n.f.dir[0]) : ""}</div>
