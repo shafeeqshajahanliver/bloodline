@@ -40,7 +40,9 @@ header.bar{display:flex;align-items:baseline;gap:8px 16px;flex-wrap:wrap;padding
 .totals .n{font-family:var(--mono);font-weight:700;font-size:28px;line-height:1;font-variant-numeric:tabular-nums}
 .totals .l{font-size:13px;color:var(--mute);margin-top:4px}
 .controls{margin-top:18px;border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);padding-block:12px;display:grid;gap:10px}
-.search{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.search{display:grid;grid-template-columns:1fr minmax(0,560px) 1fr;gap:10px;align-items:center}
+.search .filterbtn{justify-self:start}.search input{width:100%;max-width:none !important}.search .viewtoggle{justify-self:end}
+@media (max-width:760px){.search{grid-template-columns:auto 1fr}.search input{grid-column:1/-1;grid-row:2}}
 .search input{flex:1;min-width:0;max-width:520px;border:1px solid var(--ink);background:var(--paper);padding:7px 10px;border-radius:0;font-size:16px}
 .search input::placeholder{color:var(--mute)}
 .chips{display:flex;flex-wrap:wrap;gap:6px 6px;align-items:center}
