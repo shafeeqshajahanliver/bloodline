@@ -750,17 +750,27 @@ async function renderFear(id) {
   const tile = f => { const x = F.find(z => z.id === f.id); return `<button type="button" data-go="${f.id}"><span class="th${x && x.st ? "" : " none"}" style="${x && x.st ? `background-image:url('stills/${f.id}.jpg');background-size:100% ${x.st * 100}%;background-position:0 0` : ""}"></span><span class="tt">${esc(f.t)} <span>(${f.y})</span></span></button>`; };
   const byR = {}; others.forEach(f => (byR[f.r] = byR[f.r] || []).push(f));
   const qs = ((PAT.quotes || {})[lens] || {})[name] || [], q0 = qs[0];
+  const shots = inRec.map(f => ({ f, x: F.find(z => z.id === f.id) })).filter(o => o.x && o.x.st).slice(0, 12).map((o, i) => ({ id: o.f.id, t: o.f.t, y: o.f.y, st: o.x.st, i: Math.floor(o.x.st / 2) }));
+  const shotStyle = x => `background-image:url('stills/${x.id}.jpg');background-size:100% ${x.st * 100}%;background-position:${x.st === 1 ? "0 0" : `0 ${(x.i / (x.st - 1)) * 100}%`};background-repeat:no-repeat`;
+  const shotCap = x => `From <button class="linkish" type="button" data-go="${x.id}">${esc(x.t)} (${x.y})</button>, still from FILMGRAB.`;
   const qline = q => `${q.rec ? `<button class="linkish" type="button" data-go="${q.id}">${esc(q.t)}</button>` : esc(q.t)} (${q.y})${q.src === "subtitles" && q.at ? ` · ${esc(q.at)}` : q.src === "wikipedia" ? " · from the plot" : ""}`;
   app.innerHTML = `<div class="fpage" style="--lc:${lc}">
     <div class="nav"><button class="linkish" type="button" id="back">${state.view === "list" ? "Back to the list" : state.view === "patterns" ? "Back to the trends" : "Back to the graph"}</button><span class="tag" style="color:${lc}">${esc(LENSN[lens])}</span></div>
-    <div class="head"><p class="overline" style="color:${lc}">${esc(LENSN[lens])} · ${fs.length} of ${all.length} films</p><h1 class="work">${esc(name)}</h1><hr class="dbl">${def ? `<p class="lede">${esc(def)}</p>` : ""}</div>
-    ${kin.length ? `<section class="fsec" style="margin-top:28px"><div class="spinehead" style="margin-top:0"><h3>Its bloodline</h3><p>The fears it keeps company with, more often than chance, and the films in the record that carry them together.</p></div>
+    <div class="head"><p class="overline" style="color:${lc}">${esc(LENSN[lens])} · ${fs.length} of ${all.length} films</p><h1 class="work">${esc(name)}</h1><hr class="dbl"></div>
+    <div class="top">
+      <div>${shots.length ? `<div class="frame" id="frame" role="img" aria-label="Still from ${esc(shots[0].t)}" style="${shotStyle(shots[0])}"></div>
+        ${shots.length > 1 ? `<div class="thumbs">${shots.map((x, i) => `<button type="button" data-shot="${i}" aria-label="Show a still from ${esc(x.t)}" aria-current="${i === 0}" style="--tone:${lc};${shotStyle(x)}"></button>`).join("")}</div>` : ""}
+        <div class="caption" style="margin-top:12px" id="shotcap">${shotCap(shots[0])}</div>` : `<div class="nostill"><span>NO STILLS FROM THESE FILMS</span></div>`}</div>
+      <div>${def ? `<p class="prose">${esc(def.charAt(0).toUpperCase() + def.slice(1))}</p>` : ""}
+        ${q0 ? `<figure class="fquote" style="margin-top:26px"><blockquote>“${esc(q0.q)}”</blockquote><figcaption>${qline(q0)}</figcaption></figure>` : ""}
+        <p class="prose-note">Stills from ${shots.length} of the films that carry it. Tap a frame to change it.</p></div>
+    </div>
+    ${kin.length ? `<section class="fsec" style="margin-top:64px"><div class="spinehead" style="margin-top:0"><h3>Its bloodline</h3><p>The fears it keeps company with, more often than chance, and the films in the record that carry them together.</p></div>
       <div class="netwrap"><div><div class="netsvg" id="fnet"></div>
         <div class="keyline">${[...new Set(kin.map(x => x.k.split("|")[0]))].map(k => `<span><span class="sw" style="background:${LENSC[k]};border-radius:50%"></span>${esc(LENSN[k].toLowerCase())}</span>`).join("")}</div>
         <p class="linkinfo" id="flinkinfo"><span class="fp">Point at a fear or a film to trace it. Click to open it.</span></p></div>
         <ol class="why" id="fwhy">${kin.map((x, i) => { const [d2, n2] = x.k.split("|"); return `<li data-l="${esc(x.k)}"><span class="no">${i + 1}</span><div><button class="linkish t" type="button" data-fear2="${esc(x.k)}">${esc(n2)}</button><span class="strength" style="width:${Math.max(4, x.lift / kin[0].lift * 60)}px;background:${LENSC[d2]}"></span>
           <div class="r"><span style="color:${LENSC[d2]}">${esc(LENSN[d2])}</span> · ${x.lift.toFixed(1)}× as often · in ${x.c} of its ${fs.length} films</div></div></li>`; }).join("")}</ol></div></section>` : ""}
-    ${q0 ? `<figure class="fquote"><blockquote>“${esc(q0.q)}”</blockquote><figcaption>${qline(q0)}</figcaption></figure>` : ""}
     <section class="fsec"><h2>What it looks like</h2><p class="q2">The shapes it takes, in the films' own words.</p>
       <div class="fkinds">${Object.entries(kinds).sort((a, b) => b[1] - a[1]).map(([k, n]) => `<div><h3>${esc(k)}<span>${n} films</span></h3><p>${((PAT.kinds[lens] || {})[name] || {})[k] ? PAT.kinds[lens][name][k].map(v => `“${esc(v)}”`).join(", ") : ""}</p></div>`).join("")}</div>
       ${qs.length > 1 ? `<div class="fmore">${qs.slice(1).map(q => `<figure><blockquote>“${esc(q.q)}”</blockquote><figcaption>${qline(q)}</figcaption></figure>`).join("")}</div>` : ""}</section>
@@ -776,6 +786,9 @@ async function renderFear(id) {
   document.getElementById("foot-about").onclick = () => document.getElementById("about-link").click();
   app.querySelectorAll("[data-go]").forEach(b => b.onclick = () => go(b.dataset.go));
   app.querySelectorAll("[data-fear2]").forEach(b => b.onclick = () => { const [d2, n2] = b.dataset.fear2.split("|"); go(fearHash(d2, n2)); });
+  const frame = document.getElementById("frame"), cap = document.getElementById("shotcap");
+  app.querySelectorAll("[data-shot]").forEach(b => b.onclick = () => { const x = shots[+b.dataset.shot]; frame.setAttribute("style", shotStyle(x)); frame.setAttribute("aria-label", "Still from " + x.t);
+    app.querySelectorAll("[data-shot]").forEach(y => y.setAttribute("aria-current", y === b)); cap.innerHTML = shotCap(x); cap.querySelector("[data-go]").onclick = () => go(x.id); });
   if (kin.length) drawEgo(document.getElementById("fnet"), { title: name, colour: lc,
     links: kin.map(x => { const [d2, n2] = x.k.split("|"); return { id: x.k, label: n2, colour: LENSC[d2], films: inRec.filter(f => carries(f, x.k)).length }; }),
     films: egoFilms.map(e => ({ id: e.f.id, t: e.f.t, via: e.via, score: e.via.length || .5 })) }, document.getElementById("flinkinfo"), document.getElementById("fwhy"));
@@ -1303,11 +1316,11 @@ async function renderFilm(id) {
     <p class="meta">${[d.runtime ? Math.round(d.runtime) + " min" : "", d.directors.length ? "dir. " + d.directors.join(", ") : "", d.languages.join(", ")].filter(Boolean).map(esc).join(" · ")}</p>
 
   </div>
-  ${netBlock(d).replace('<div class="spinehead">', '<div class="spinehead" style="margin-top:28px">')}
-  <div class="top" style="margin-top:56px">
+  <div class="top">
     <div>${topStill(d)}</div>
     <div>${prose(d)}</div>
   </div>
+  ${netBlock(d).replace('<div class="spinehead">', '<div class="spinehead" style="margin-top:64px">')}
   <div class="spinehead"><h3>How the fear unfolds</h3><p>The symbols that haunt it above the line, the turns of the story on it, the talk and the scares beneath. Tap anything.</p></div>
   <div class="spine" id="spine"></div>
   <div class="keyline"><span><span class="sw" style="background:#86b35a"></span>symbols</span>
