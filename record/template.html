@@ -196,6 +196,8 @@ ol.beats li.flash{background:var(--soft)}
 .prose{font-family:var(--display);font-size:24px;line-height:1.5;margin:0;text-wrap:pretty}
 .prose i{font-style:italic;color:var(--mute)}
 .prose.syn{font-size:25px;line-height:1.5;color:var(--ink)}
+.prose a.pl{color:var(--ink);text-decoration:underline;text-decoration-color:var(--uc,var(--hair));text-decoration-thickness:1px;text-underline-offset:5px;border:0}
+.prose a.pl:hover{color:var(--uc,var(--ink))}
 .prose button{all:unset;cursor:pointer;color:var(--ink);background-image:linear-gradient(var(--uc,var(--hair)),var(--uc,var(--hair)));background-size:100% 1px;background-repeat:no-repeat;background-position:0 92%}
 .prose button:hover{background-image:linear-gradient(var(--red),var(--red))}
 .prose button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
@@ -795,7 +797,7 @@ async function renderFear(id) {
       <div>${shots.length ? `<div class="frame" id="frame" role="img" aria-label="Still from ${esc(shots[0].t)}" style="${shotStyle(shots[0])}"></div>
         ${shots.length > 1 ? `<div class="thumbs">${shots.map((x, i) => `<button type="button" data-shot="${i}" aria-label="Show a still from ${esc(x.t)}" aria-current="${i === 0}" style="--tone:${lc};${shotStyle(x)}"></button>`).join("")}</div>` : ""}
         <div class="caption" style="margin-top:12px" id="shotcap">${shotCap(shots[0])}</div>` : `<div class="nostill"><span>NO STILLS FROM THESE FILMS</span></div>`}</div>
-      <div>${note ? `<p class="prose syn">${esc(note).replace(/\[([^\]|]+)\|([0-9a-z-]+)\]/g, (m, ph, fid) => `<button type="button" data-go="${fid}" style="--uc:${lc}">${ph}</button>`)}</p>` : def ? `<p class="prose">${esc(def.charAt(0).toUpperCase() + def.slice(1))}</p>` : ""}
+      <div>${note ? `<p class="prose syn">${esc(note).replace(/\[([^\]|]+)\|([0-9a-z-]+)\]/g, (m, ph, fid) => `<a class="pl" href="#${fid}" style="--uc:${lc}">${ph}</a>`)}</p>` : def ? `<p class="prose">${esc(def.charAt(0).toUpperCase() + def.slice(1))}</p>` : ""}
         ${q0 ? `<figure class="fquote" style="margin-top:26px"><blockquote>“${esc(q0.q)}”</blockquote><figcaption>${qline(q0)}</figcaption></figure>` : ""}
         </div>
     </div>
@@ -1081,7 +1083,7 @@ function matrix(es) {
 function ruleWord(k) { return { threat: "", wants: "It wants", trigger: "It is set off by", wrong: "Underneath lies", origin: "It comes from", rules: "The rules:", who_suffers: "It falls on", ending: "It ends with" }[k]; }
 function synopsis(d) {
   if (!d.synopsis) return prose(d);
-  const html = esc(d.synopsis).replace(/\[([^\]|]+)\|([a-z_]+)\|([^\]]+)\]/g, (m, ph, lens, fear) => `<button type="button" data-fearlink="${lens}|${fear}" style="--uc:${LENSC[lens] || "var(--hair)"}" title="${esc(LENSN[lens] || lens)}: ${fear}">${ph}</button>`);
+  const html = esc(d.synopsis).replace(/\[([^\]|]+)\|([a-z_]+)\|([^\]]+)\]/g, (m, ph, lens, fear) => `<a class="pl" href="#${fearHash(lens, fear)}" style="--uc:${LENSC[lens] || "var(--hair)"}" title="${esc(LENSN[lens] || lens)}: ${fear}">${ph}</a>`);
   return `<p class="prose syn">${html}</p>`;
 }
 function prose(d) {
