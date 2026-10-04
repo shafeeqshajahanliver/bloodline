@@ -121,6 +121,7 @@ for fid in ids:
                   "letterboxd": f"https://letterboxd.com/film/{w['letterboxd_id']}/" if w.get("letterboxd_id") else None},
         "plot_quality": se.get("plot_quality"), "status": se.get("status"), "not_stated": se.get("not_stated", []),
         "dims": dims, "plot": plot(fid), "dialogue": dia, "scares": sc, "script": sp, "pilot": pilot,
+        "synopsis": (json.load(open(f"{d}/synopsis.json")).get("text") if os.path.exists(f"{d}/synopsis.json") else None),
         "stills": nst, "stills_source": stsrc, "tones": cols, "wpm_series": per_minute(fid, bad),
         "unusable": corr.get("unusable_sources", []), "removed": corr.get("remove", []),
     }

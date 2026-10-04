@@ -192,6 +192,7 @@ ol.beats li.flash{background:var(--soft)}
 .nostill span{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;opacity:.7;margin-top:14px}
 .prose{font-family:var(--display);font-size:24px;line-height:1.5;margin:0;text-wrap:pretty}
 .prose i{font-style:italic;color:var(--mute)}
+.prose.syn{font-size:25px;line-height:1.5;color:var(--ink)}
 .prose button{all:unset;cursor:pointer;color:var(--ink);background-image:linear-gradient(var(--uc,var(--hair)),var(--uc,var(--hair)));background-size:100% 1px;background-repeat:no-repeat;background-position:0 92%}
 .prose button:hover{background-image:linear-gradient(var(--red),var(--red))}
 .prose button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
@@ -1045,6 +1046,11 @@ function matrix(es) {
 
 
 function ruleWord(k) { return { threat: "", wants: "It wants", trigger: "It is set off by", wrong: "Underneath lies", origin: "It comes from", rules: "The rules:", who_suffers: "It falls on", ending: "It ends with" }[k]; }
+function synopsis(d) {
+  if (!d.synopsis) return prose(d);
+  const html = esc(d.synopsis).replace(/\[([^\]|]+)\|([a-z_]+)\|([^\]]+)\]/g, (m, ph, lens, fear) => `<button type="button" data-fearlink="${lens}|${fear}" style="--uc:${LENSC[lens] || "var(--hair)"}" title="${esc(LENSN[lens] || lens)}: ${fear}">${ph}</button>`);
+  return `<p class="prose syn">${html}</p><p class="prose-note">Each underlined phrase opens the fear it belongs to, in the colour of its kind.</p>`;
+}
 function prose(d) {
   const v = (e, k) => `<button type="button" data-ev="${k}" style="--uc:${LENSC[k] || "var(--hair)"}">${esc(e.value)}</button>${k === "who_suffers" && e.relation_to_threat ? ` <span class="rel">${esc(e.relation_to_threat)}</span>` : ""}`;
   const list = (k, n = 3) => { const es = (d.dims[k] || []).slice(0, n); if (!es.length) return "";
@@ -1315,7 +1321,7 @@ async function renderFilm(id) {
   const prev = F[(i + F.length - 1) % F.length], next = F[(i + 1) % F.length];
   app.innerHTML = `
   <div class="nav"><button class="linkish" type="button" id="back">${state.view === "list" ? "Back to the list" : state.view === "patterns" ? "Back to the trends" : "Back to the graph"}</button>
-    <span><button class="linkish" type="button" data-go="${prev.id}">Previous: ${esc(prev.t)}</button> · <button class="linkish" type="button" data-go="${next.id}">Next: ${esc(next.t)}</button></span></div>
+</div>
   <div class="head">
     <p class="overline">${esc(d.region)} · ${esc(d.countries.join(", ") || d.country)} · ${d.year}</p>
     <h1 class="work">${esc(d.title)}<span class="yrb">(${d.year})</span></h1>
@@ -1325,7 +1331,7 @@ async function renderFilm(id) {
   </div>
   <div class="top">
     <div>${topStill(d)}</div>
-    <div>${prose(d)}</div>
+    <div>${synopsis(d)}</div>
   </div>
   ${netBlock(d).replace('<div class="spinehead">', '<div class="spinehead" style="margin-top:64px">')}
   <div class="spinehead"><h3>How the fear unfolds</h3><p>The symbols that haunt it above the line, the turns of the story on it, the talk and the scares beneath. Tap anything.</p></div>
