@@ -184,7 +184,10 @@ ol.beats li.flash{background:var(--soft)}
 .frame{position:relative}
 .thumbs{display:flex;gap:3px;margin-top:3px}
 .thumbs button{all:unset;cursor:pointer;flex:1;aspect-ratio:16/10;background-repeat:no-repeat;background-color:var(--soft);position:relative;min-width:0}
-.thumbs button::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:3px;background:var(--tone,transparent)}
+.fpage .thumbs button::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:3px;background:var(--tone,transparent)}
+.dna{display:flex;gap:3px;margin-top:3px;height:56px}
+.dna button{all:unset;cursor:pointer;flex:1;min-width:0}
+.dna button:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
 .thumbs button[aria-current="true"]{outline:2px solid var(--ink);outline-offset:-2px}
 .thumbs button:focus-visible{outline:2px solid var(--red);outline-offset:-2px}
 .nostill{aspect-ratio:16/9;background:var(--soft);color:var(--ink);display:flex;flex-direction:column;justify-content:flex-end;padding:28px 30px}
@@ -1049,7 +1052,7 @@ function ruleWord(k) { return { threat: "", wants: "It wants", trigger: "It is s
 function synopsis(d) {
   if (!d.synopsis) return prose(d);
   const html = esc(d.synopsis).replace(/\[([^\]|]+)\|([a-z_]+)\|([^\]]+)\]/g, (m, ph, lens, fear) => `<button type="button" data-fearlink="${lens}|${fear}" style="--uc:${LENSC[lens] || "var(--hair)"}" title="${esc(LENSN[lens] || lens)}: ${fear}">${ph}</button>`);
-  return `<p class="prose syn">${html}</p><p class="prose-note">Each underlined phrase opens the fear it belongs to, in the colour of its kind.</p>`;
+  return `<p class="prose syn">${html}</p>`;
 }
 function prose(d) {
   const v = (e, k) => `<button type="button" data-ev="${k}" style="--uc:${LENSC[k] || "var(--hair)"}">${esc(e.value)}</button>${k === "who_suffers" && e.relation_to_threat ? ` <span class="rel">${esc(e.relation_to_threat)}</span>` : ""}`;
@@ -1068,7 +1071,7 @@ function topStill(d) {
   const n = d.stills, pos = i => n === 1 ? "0 0" : `0 ${(i / (n - 1)) * 100}%`, tone = d.tones || [];
   return `<div class="frame" id="frame" role="img" aria-label="Still from ${esc(d.title)}" style="background-image:url('stills/${d.id}.jpg');background-size:100% ${n * 100}%;background-position:${pos(0)}"></div>
     ${n > 1 ? `<div class="thumbs">${Array.from({ length: n }, (_, i) => `<button type="button" aria-label="Show still ${i + 1} of ${n}" aria-current="${i === 0}" style="--tone:${tone[i] || "transparent"};background-image:url('stills/${d.id}.jpg');background-size:100% ${n * 100}%;background-position:${pos(i)}"></button>`).join("")}</div>` : ""}
-    <div class="caption" style="margin-top:12px">${n} stills from <a href="${esc(d.stills_source)}" target="_blank" rel="noopener">FILMGRAB</a>, in page order. The line under each is its prevailing colour.</div>`;
+    ${tone.length ? `<div class="dna" aria-label="The film's colours, one band per still">${tone.map((c, i) => `<button type="button" data-dna="${i}" style="background:${c}" aria-label="Show still ${i + 1}"></button>`).join("")}</div>` : ""}`;
 }
 
 /* the running time: images as labels above the line, beats on it, dialogue and scares below */
@@ -1270,7 +1273,7 @@ function sources(d, f) {
     ${row("S", !!en, en ? "English subtitles" : "No usable English subtitles")}
     ${row("C", !!d.script, d.script ? `Screenplay, ${esc(d.script.site || "")}` : "No screenplay")}
     ${row("J", !!d.scares, d.scares ? `${d.scares.scares.length} jump scares logged` : "No jump-scare log")}
-    ${row("V", !!d.stills, d.stills ? `${d.stills} stills` : "No stills")}
+    ${row("V", !!d.stills, d.stills ? `${d.stills} stills from <a href="${esc(d.stills_source)}" target="_blank" rel="noopener">FILMGRAB</a>` : "No stills")}
   </div>`;
 }
 function side(d, f) {
@@ -1356,6 +1359,7 @@ async function renderFilm(id) {
   const frame = document.getElementById("frame");
   const th = [...app.querySelectorAll(".thumbs button")];
   th.forEach((b, i) => b.onclick = () => { frame.style.backgroundPosition = b.style.backgroundPosition; th.forEach((x, j) => x.setAttribute("aria-current", j === i)); });
+  app.querySelectorAll("[data-dna]").forEach(b => b.onclick = () => th[+b.dataset.dna]?.click());
   app.querySelectorAll(".prose [data-ev]").forEach(b => b.onclick = () => flash("d-" + b.dataset.ev));
   app.querySelectorAll("[data-fearlink]").forEach(b => b.onclick = () => { const [d2, n2] = b.dataset.fearlink.split("|"); go(fearHash(d2, n2)); });
   const cells = [...app.querySelectorAll("[data-cell]")], all = document.getElementById("imgall");
