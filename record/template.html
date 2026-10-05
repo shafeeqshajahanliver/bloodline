@@ -1079,7 +1079,19 @@ function buildGraph() {
   const rest = () => { seq.forEach(clearTimeout); seq = []; leadG.selectAll("*").remove(); hoverOn = null; stage.classList.remove("hov"); eSel.attr("stroke", "var(--mute)").attr("stroke-opacity", .22);
     stage.querySelectorAll(".hi").forEach(x => x.classList.remove("hi"));
     const vf = films.filter(n => visible.has(n.id)).length, vx = fears.filter(n => visible.has(n.id)).length;
-    info.innerHTML = `<div class="r" style="color:var(--mute)">${state.primary === "films" ? "Point at a film to see the fears it carries." : "Point at a fear to see the films that carry it."}</div>`; labels(); };
+    info.innerHTML = `<div class="r" style="color:var(--mute)">${state.primary === "films" ? "Point at a film to see the fears it carries." : "Point at a fear to see the films that carry it."}</div>`; labels(); if (srch) showSearch(); };
+  // a search lights its matches and their closest connections; everything else dims but stays in place
+  let srch = null;
+  const showSearch = () => { const lit = new Set(), core = new Set([...srch.fears, ...srch.films]);
+    srch.fears.forEach(x => { lit.add(x); [...x.films].filter(f => visible.has(f.id)).sort((a, b) => b.fears.length - a.fears.length).slice(0, 10).forEach(f => lit.add(f)); });
+    srch.films.forEach(f => { lit.add(f); f.fears.filter(x => visible.has(x.id) && (x.lens === "nightmares" || x.lens === "archetypes" || core.has(x))).forEach(x => lit.add(x)); });
+    if (!lit.size) { info.innerHTML = `<div class="r" style="color:var(--mute)">Nothing in the graph matches “${esc(state.q.trim())}”.</div>`; return; }
+    stage.classList.add("hov");
+    nSel.classed("hi", n => lit.has(n));
+    const on = e => lit.has(e.source) && lit.has(e.target) && (core.has(e.source) || core.has(e.target));
+    eSel.classed("hi", on).attr("stroke", e => on(e) ? LENSC[e.lens] : "var(--mute)").attr("stroke-opacity", e => on(e) ? .8 : .06);
+    const named = [...core, ...[...lit].filter(n => n.kind === "fear" && !core.has(n) && (n.lens === "nightmares" || n.lens === "archetypes"))], nm = new Set(named); lSel.classed("hi", n => nm.has(n)).attr("display", n => nm.has(n) ? null : "none"); placeLit(named);
+    info.innerHTML = `<div class="m">SEARCH · “${esc(state.q.trim()).toUpperCase()}”</div><div class="r">${srch.fears.length ? `Fears: ${srch.fears.map(x => `<span style="color:${LENSC[x.lens]}">${esc(cap1(x.name))}</span>`).join(", ")}` : ""}${srch.fears.length && srch.films.length ? "<br>" : ""}${srch.films.length ? `Films: ${srch.films.slice(0, 6).map(f => `<i>${esc(f.f.t)}</i>`).join(", ")}${srch.films.length > 6 ? " and more" : ""}` : ""}</div>`; };
   const hover = n => { hoverOn = n; stage.classList.add("hov");
     // only the best-connected neighbours light up: a nightmare's 16 most connected films, anything else's 12
     const deg = m => m.kind === "film" ? m.fears.length : m.films.length;
@@ -1122,12 +1134,16 @@ function buildGraph() {
   let ready = false, fitT;
   const filter = (m) => { hits = m; const q = state.q.trim().toLowerCase();
     const okFilm = n => (!state.region.size || state.region.has(n.f.r)) && (!state.era.size || state.era.has(eraOf(n.f.y)));
-    const qFears = q ? fears.filter(x => x.name.includes(q)) : [];
-    const vf = new Set(films.filter(n => m.has(n.id) || (qFears.length && okFilm(n) && n.fears.some(x => qFears.includes(x)))).map(n => n.id));
+    const qFears = q ? fears.filter(x => x.name.toLowerCase().includes(q)) : [];
+    const vf = new Set(films.filter(n => q ? okFilm(n) : m.has(n.id)).map(n => n.id));
+    // what the search points at: fears whose name matches (best first), films whose title or story matches
+    const fRank = x => (x.name.toLowerCase() === q ? 0 : x.name.toLowerCase().startsWith(q) ? 1 : 2);
+    srch = q ? { fears: qFears.filter(x => vf.has(x.films[0]?.id) || x.films.some(f => vf.has(f.id))).sort((a, b) => fRank(a) - fRank(b) || b.films.length - a.films.length).slice(0, 6),
+      films: films.filter(n => vf.has(n.id) && m.has(n.id)).sort((a, b) => (b.f.t.toLowerCase().includes(q)) - (a.f.t.toLowerCase().includes(q)) || b.fears.length - a.fears.length).slice(0, 12) } : null;
     visible = new Set([...vf, ...fears.filter(x => x.films.some(fm => vf.has(fm.id))).map(x => x.id)]);
     nSel.attr("display", n => visible.has(n.id) ? null : "none");
     eSel.attr("display", e => visible.has(e.source.id) && visible.has(e.target.id) ? null : "none"); rest();
-    if (ready) { clearTimeout(fitT); fitT = setTimeout(() => fit(450), 120); } else fit(0); };
+    if (!q) { if (ready) { clearTimeout(fitT); fitT = setTimeout(() => fit(450), 120); } else fit(0); } else if (!ready) fit(0); };
   const arrange = () => { if (state.arrange === "time") timeLayout(); const to = state.arrange === "time" ? ["tx", "ty"] : ["nx", "ny"];
     nodes.forEach(n => { n.x = n[to[0]]; n.y = n[to[1]]; }); drawAxis();
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) place();
