@@ -8,6 +8,7 @@ for lens in sys.argv[1:] or P["dims"]:
     p = f"reference/fear-notes/{lens}.json"
     if not os.path.exists(p): print(lens, "missing"); continue
     notes = json.load(open(p)); want = [x for x in P["fears"][lens] if x != "unclear"]
+    if lens == "archetypes": notes = {k[0] + k[1:].lower(): v for k, v in notes.items()}   # names are shown in sentence case
     for fear in want:
         total += 1; t = notes.get(fear, {}).get("text", "") if isinstance(notes.get(fear), dict) else notes.get(fear, ""); errs = []
         if not t: errs.append("missing")

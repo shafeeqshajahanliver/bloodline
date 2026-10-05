@@ -40,7 +40,7 @@ for f in sorted(glob.glob("films/*/story_elements.json")):
                   "ns": se.get("not_stated", []), "g": g})
 defs = {d: {fear: meta[d].get(fear, "") for fear in sorted({v[0] for v in vocab[d].values()})} for d in vocab}
 # archetypes: the 27 top-down story shapes from archetypes.csv, tagged on every film (primary and secondary)
-ARCH = {r["code"]: r for r in csv.DictReader(open("archetypes.csv"))}
+ARCH = {r["code"]: dict(r, name=r["name"][0] + r["name"][1:].lower()) for r in csv.DictReader(open("archetypes.csv"))}   # names in sentence case
 for f in films:
     r = rows[f["id"]]; got = [(c, role) for c, role in ((r["archetype_primary"], "the main story"), (r["archetype_secondary"], "a second thread")) if c in ARCH]
     if got: f["g"]["archetypes"] = {"f": sorted({ARCH[c]["name"] for c, _ in got}), "k": sorted({f"{ARCH[c]['name']}|{role}" for c, role in got})}
@@ -54,7 +54,7 @@ if os.path.exists("reference/model/families.json"):
         for m in fam["members"]:
             if m in byid: byid[m]["g"]["nightmares"] = {"f": [name], "k": [f"{name}|a nightmare"]}
         NIGHT[name] = {"n": fam["films"], "fears": [[x["lens"], x["fear"], x["share_inside"], x["share_overall"]] for x in fam["defining_fears"]],
-                       "arch": [[a["archetype"], a["share"]] for a in fam.get("archetypes_inside", [])], "core": fam["core_films"]}
+                       "arch": [[a["archetype"][0] + a["archetype"][1:].lower(), a["share"]] for a in fam.get("archetypes_inside", [])], "core": fam["core_films"]}
     defs["nightmares"] = {n: "Found by a graph model: films that carry " + ", ".join(x[1] for x in v["fears"][:3]) + " far more often than the rest." for n, v in NIGHT.items()}
 # for each fear's page: its kinds, each with a few of the original phrasings (most used first)
 kinds = {}
@@ -93,7 +93,7 @@ for d in quotes:
 notes = {}
 for d in list(vocab) + ["archetypes", "nightmares"]:
     np_ = f"reference/fear-notes/{d}.json"
-    if os.path.exists(np_): notes[d] = {k: (v.get("text") if isinstance(v, dict) else v) for k, v in json.load(open(np_)).items()}
+    if os.path.exists(np_): notes[d] = {(k[0] + k[1:].lower() if d == "archetypes" else k): (v.get("text") if isinstance(v, dict) else v) for k, v in json.load(open(np_)).items()}
 os.makedirs("record/site", exist_ok=True)
 json.dump({"dims": (["nightmares"] if NIGHT else []) + list(vocab) + ["archetypes"], "fears": defs, "nightmares": NIGHT, "kinds": kinds, "quotes": quotes, "notes": notes, "films": films}, open("record/site/patterns.json", "w"), ensure_ascii=False, separators=(",", ":"))
 print(f"{len(films)} films · dimensions grouped: {', '.join(vocab) or 'none yet'} · plus archetypes")

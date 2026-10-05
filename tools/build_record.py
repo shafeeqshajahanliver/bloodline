@@ -10,7 +10,8 @@ OUT = "record/site"
 os.makedirs(OUT + "/data", exist_ok=True); os.makedirs(OUT + "/stills", exist_ok=True)
 ids = json.load(open("record/films.json"))
 rows = {r["id"]: r for r in csv.DictReader(open("films.csv"))}
-arch = {r["code"]: r for r in csv.DictReader(open("archetypes.csv"))}
+# archetype names shown in sentence case ("The woman who comes back"); archetypes.csv keeps its own spelling
+arch = {r["code"]: dict(r, name=r["name"][0] + r["name"][1:].lower()) for r in csv.DictReader(open("archetypes.csv"))}
 DIMS = ["threat", "origin", "wants", "wrong", "trigger", "rules", "who_suffers", "ending", "images", "beats"]
 PLOT = re.compile(r"^(plot.*|synopsis|story|summary|premise|storyline|sinopsis|sinopse|trama|handlung|inhalt|intrigue|résumé|hikâye|konu|jalan cerita|alur|plot cerita|cốt truyện|줄거리|あらすじ|ストーリー|剧情|劇情|情节|故事|कथानक|कहानी|الحبكة|القصة|ملخص|сюжет)$", re.I)
 W = 560; MAXS = 12

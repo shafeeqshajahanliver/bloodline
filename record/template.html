@@ -682,7 +682,7 @@ function renderPatterns() {
   el.innerHTML = `<div>${head}
       <p class="psub">${rows.length} ${d === "images" ? "families of symbol" : d === "nightmares" ? "nightmares" : d === "archetypes" ? "archetypes" : "fears"} across ${films.length} films. Each dot is the share of ${T ? "an era's" : "a region's"} films that carry it; read across a row to see how it ${T ? "rises and fades through the century" : "travels"}. Click a column to sort by it, or a name to open it.</p>
       <div class="mx"><table><thead><tr><th class="fl">${d === "images" ? "Symbol" : "Fear"}</th>${cols.map(c => `<th><button type="button" data-col="${esc(c)}" aria-pressed="${state.pcol === c}" title="Sort by ${esc(c)}">${esc(short(c))}${state.pcol === c ? " ↓" : ""}</button><span class="n">${tot[c]}</span></th>`).join("")}<th>${T ? "trend" : "travels"}</th></tr></thead>
-      <tbody>${rows.map(r => `<tr><td class="fl"><button type="button" data-fear="${esc(r.fear)}" title="Open ${esc(r.fear)}">${esc(r.fear)}</button></td>${cols.map(c => `<td>${dot(r, c)}</td>`).join("")}<td class="tr">${T ? trend(r) : `${r.present} of ${cols.length}`}</td></tr>`).join("") || `<tr><td class="fl" colspan="${cols.length + 2}"><span class="fp">Nothing matches that search.</span></td></tr>`}</tbody></table></div></div>
+      <tbody>${rows.map(r => `<tr><td class="fl"><button type="button" data-fear="${esc(r.fear)}" title="Open ${esc(r.fear)}">${esc(cap1(r.fear))}</button></td>${cols.map(c => `<td>${dot(r, c)}</td>`).join("")}<td class="tr">${T ? trend(r) : `${r.present} of ${cols.length}`}</td></tr>`).join("") || `<tr><td class="fl" colspan="${cols.length + 2}"><span class="fp">Nothing matches that search.</span></td></tr>`}</tbody></table></div></div>
 `;
   wireTrends(el);
   el.querySelectorAll("[data-fear]").forEach(b => b.onclick = () => go(fearHash(d, b.dataset.fear)));
@@ -707,7 +707,7 @@ async function renderFear(id) {
   if (!name) { go(""); return; }
   const lc = LENSC[lens], def = PAT.fears[lens][name], all = PAT.films, has = f => f.g[lens] && f.g[lens].f.includes(name);
   const fs = all.filter(has), pct = v => Math.round(v * 100) + "%";
-  document.title = `${name} · Bloodline`; document.getElementById("crumb").textContent = `${LENSN[lens].toLowerCase()} · ${name}`;
+  document.title = `${cap1(name)} · Bloodline`; document.getElementById("crumb").textContent = `${LENSN[lens].toLowerCase()} · ${cap1(name)}`;
   const eras = ERAS.map(([e]) => { const ef = all.filter(f => eraOf(f.y) === e); const n = ef.filter(has).length; return { e, n, t: ef.length, s: ef.length ? n / ef.length : 0 }; });
   const mx = Math.max(...eras.map(x => x.s), .01);
   const sh = list => { const xs = all.filter(f => list.includes(eraOf(f.y))); return xs.length ? xs.filter(has).length / xs.length : 0; };
@@ -744,7 +744,7 @@ async function renderFear(id) {
       <span class="bar b"><i style="width:${r.caught * 100}%"></i></span><span class="bv">${pct(r.caught)} of its ${at[r.a]} films fall here</span></div>`).join("")}</div></div>`; };
   app.innerHTML = `<div class="fpage" style="--lc:${lc}">
     <div class="nav"><button class="linkish" type="button" id="back">${state.view === "list" ? "Back to the list" : state.view === "patterns" ? "Back to the trends" : "Back to the graph"}</button></div>
-    <div class="head"><p class="overline" style="color:${lc}">${lens === "nightmares" ? "Nightmare · one of " + Object.keys(PAT.fears.nightmares).length : esc(LENSN[lens])} · ${fs.length} of ${all.length} films</p><h1 class="work">${esc(name)}</h1><hr class="dbl"></div>
+    <div class="head"><p class="overline" style="color:${lc}">${lens === "nightmares" ? "Nightmare · one of " + Object.keys(PAT.fears.nightmares).length : esc(LENSN[lens])} · ${fs.length} of ${all.length} films</p><h1 class="work">${esc(cap1(name))}</h1><hr class="dbl"></div>
     <div class="top">
       <div>${shots.length ? `<div class="frame" id="frame" role="img" aria-label="Still from ${esc(shots[0].t)}" style="${shotStyle(shots[0])}"></div>
         ${shots.length > 1 ? `<div class="thumbs">${shots.map((x, i) => `<button type="button" data-shot="${i}" aria-label="Show a still from ${esc(x.t)}" aria-current="${i === 0}" style="--tone:${lc};${shotStyle(x)}"></button>`).join("")}</div>` : ""}
@@ -756,7 +756,7 @@ async function renderFear(id) {
       <div class="netwrap"><div><div class="netsvg" id="fnet"></div>
         <div class="keyline">${[...new Set(kin.map(x => x.k.split("|")[0]))].map(k => `<span><span class="sw" style="background:${LENSC[k]};border-radius:50%"></span>${esc(LENSN[k].toLowerCase())}</span>`).join("")}</div>
         <p class="linkinfo" id="flinkinfo" hidden></p></div>
-        <ol class="why" id="fwhy">${kin.map((x, i) => { const [d2, n2] = x.k.split("|"); return `<li data-l="${esc(x.k)}"><span class="no">${i + 1}</span><div><button class="linkish t" type="button" data-fear2="${esc(x.k)}">${esc(n2)}</button><span class="strength" style="width:${Math.max(4, x.lift / kin[0].lift * 60)}px;background:${LENSC[d2]}"></span>
+        <ol class="why" id="fwhy">${kin.map((x, i) => { const [d2, n2] = x.k.split("|"); return `<li data-l="${esc(x.k)}"><span class="no">${i + 1}</span><div><button class="linkish t" type="button" data-fear2="${esc(x.k)}">${esc(cap1(n2))}</button><span class="strength" style="width:${Math.max(4, x.lift / kin[0].lift * 60)}px;background:${LENSC[d2]}"></span>
           <div class="r"><span style="color:${LENSC[d2]}">${esc(LENSN[d2])}</span> · ${lens === "nightmares" ? `in ${pct(x.c / fs.length)} of these films, ${pct(base[x.k] / all.length)} of all films` : `${x.lift.toFixed(1)}× as often · in ${x.c} of its ${fs.length} films`}</div></div></li>`; }).join("")}</ol></div></section>` : ""}
     <section class="fsec"><h2>The films</h2><p class="q2">${fs.length} films.</p>
       ${wall.length ? `<div class="fwall">${wall.map(tile).join("")}</div>` : ""}
@@ -805,7 +805,7 @@ function drawEgo(el, spec, info, list) {
   films.forEach(f => f.via.forEach(v => { const l = L[v]; const qx = (l.x + f.x) / 2 + (c - (l.x + f.x) / 2) * .15, qy = (l.y + f.y) / 2 + (c - (l.y + f.y) / 2) * .15;
     ed += `<path class="ed" data-l="${esc(v)}" data-f="${f.id}" d="M${l.x},${l.y} Q${qx},${qy} ${f.x},${f.y}" fill="none" stroke="${l.colour}" stroke-opacity=".55" stroke-width="1.3"/>`; }));
   links.forEach(l => { const right = Math.cos(l.a) >= 0, r = (5 + l.films / lmx * 5) * (l.id.startsWith("archetypes|") ? 1.6 : 1);
-    nd += `<g class="nd" tabindex="0" role="button" data-l="${esc(l.id)}" aria-label="${esc(l.label)}"><circle cx="${l.x}" cy="${l.y}" r="${r}" fill="${l.colour}" stroke="var(--paper)" stroke-width="1.5"/><text x="${l.x + Math.cos(l.a) * (r + 7)}" y="${l.y + Math.sin(l.a) * (r + 7) + 4}" text-anchor="${right ? "start" : "end"}">${esc(l.label)}</text></g>`; });
+    nd += `<g class="nd" tabindex="0" role="button" data-l="${esc(l.id)}" aria-label="${esc(l.label)}"><circle cx="${l.x}" cy="${l.y}" r="${r}" fill="${l.colour}" stroke="var(--paper)" stroke-width="1.5"/><text x="${l.x + Math.cos(l.a) * (r + 7)}" y="${l.y + Math.sin(l.a) * (r + 7) + 4}" text-anchor="${right ? "start" : "end"}">${esc(cap1(l.label))}</text></g>`; });
   films.forEach(f => { const right = Math.cos(f.a) >= 0;
     nd += `<g class="nd" tabindex="0" role="link" data-f="${f.id}" aria-label="${esc(f.t)}"><circle cx="${f.x}" cy="${f.y}" r="${f.r}" fill="var(--ink)" stroke="var(--paper)" stroke-width="1.5"/><text class="fl" x="${f.x + Math.cos(f.a) * (f.r + 8)}" y="${f.y + Math.sin(f.a) * (f.r + 8) + 5}" text-anchor="${right ? "start" : "end"}">${esc(f.t)}</text></g>`; });
   nd += `<circle cx="${c}" cy="${c}" r="30" fill="${spec.colour}" stroke="var(--paper)" stroke-width="3"/><circle cx="${c}" cy="${c}" r="36" fill="none" stroke="${spec.colour}" stroke-width="1"/><text class="ctr" x="${c}" y="${c + 58}" text-anchor="middle">${esc(spec.title)}</text>`;
@@ -814,7 +814,7 @@ function drawEgo(el, spec, info, list) {
   const hiLink = id => { clear(); el.classList.add("dim"); el.querySelectorAll(`[data-l="${CSS.escape(id)}"]`).forEach(x => x.classList.add("hi"));
     films.filter(f => f.via.includes(id)).forEach(f => el.querySelector(`.nd[data-f="${f.id}"]`)?.classList.add("hi"));
     list?.querySelector(`[data-l="${CSS.escape(id)}"]`)?.classList.add("hi");
-    if (info) info.innerHTML = `<b>${esc(L[id].label)}</b>, carried with it by ${films.filter(f => f.via.includes(id)).map(f => esc(f.t)).join(", ") || "films outside the record"}.`; };
+    if (info) info.innerHTML = `<b>${esc(cap1(L[id].label))}</b>, carried with it by ${films.filter(f => f.via.includes(id)).map(f => esc(f.t)).join(", ") || "films outside the record"}.`; };
   const hiFilm = id => { clear(); el.classList.add("dim"); const f = films.find(z => z.id === id);
     el.querySelectorAll(`[data-f="${id}"]`).forEach(x => x.classList.add("hi")); f.via.forEach(v => el.querySelectorAll(`.nd[data-l="${CSS.escape(v)}"],line[data-l="${CSS.escape(v)}"]`).forEach(x => x.classList.add("hi")));
     if (info) info.innerHTML = `<b>${esc(f.t)}</b> also carries ${f.via.map(v => esc(L[v].label)).join(", ") || "none of these"}.`; };
@@ -890,7 +890,7 @@ function buildGraph() {
   const nSel = ng.selectAll("g").data(nodes).join("g").attr("class", n => "gn " + n.kind).attr("tabindex", 0).attr("role", n => n.kind === "film" ? "link" : "button")
     .attr("aria-label", n => n.kind === "film" ? `${n.f.t}, ${n.f.y}` : `${n.name}, ${LENSN[n.lens]}, ${n.films.length} films`);
   nSel.append("circle");
-  const lSel = lg.selectAll("text").data(nodes).join("text").attr("class", "lab").attr("text-anchor", "middle").text(n => n.kind === "film" ? `${n.f.t} (${n.f.y})` : n.name);
+  const lSel = lg.selectAll("text").data(nodes).join("text").attr("class", "lab").attr("text-anchor", "middle").text(n => n.kind === "film" ? `${n.f.t} (${n.f.y})` : cap1(n.name));
   // films sized by how many of the shown fears they carry, as fears are sized by how many films carry them
   const rOf = n => state.primary === "films" ? (n.kind === "film" ? n.fr : 1.4 + Math.sqrt(n.films.length) * .3) : (n.kind === "fear" ? n.r : 1 + n.fr * .4);   // bigger = more connections, for every kind of node
   const fillOf = n => { const prim = (state.primary === "films") === (n.kind === "film");
@@ -1013,7 +1013,7 @@ function buildGraph() {
       // what the fear is, in a sentence, and a few films it lives in; no counts
       const kindName = { nightmares: "Nightmare", archetypes: "Archetype" }[n.lens] || LENSN[n.lens], seen = near.slice(0, 3).map(m => `<i>${esc(m.f.t)}</i>`);
       const list = xs => xs.length > 1 ? xs.slice(0, -1).join(", ") + " and " + xs[xs.length - 1] : xs[0] || "";
-      info.innerHTML = `<div class="m" style="color:${LENSC[n.lens]}">${esc(kindName).toUpperCase()}</div><div class="t">${esc(n.name)}</div>
+      info.innerHTML = `<div class="m" style="color:${LENSC[n.lens]}">${esc(kindName).toUpperCase()}</div><div class="t">${esc(cap1(n.name))}</div>
         ${n.blurb || n.def ? `<div class="r gdesc">${esc(n.blurb || n.def)}</div>` : ""}
         ${seen.length ? `<div class="r" style="color:var(--mute)">Seen in ${list(seen)}.</div>` : ""}
         ${arch.size ? `<div class="r" style="color:var(--mute)">Close kin: ${list([...arch].sort((a, b) => b[1] - a[1]).slice(0, 2).map(([x]) => `<span style="color:${LENSC.archetypes}">${esc(x.name)}</span>`))}.</div>` : ""}
@@ -1303,7 +1303,7 @@ function drawNet(d) {
     ed += `<path class="ed" data-l="${esc(v)}" data-f="${f.id}" d="M${l.x},${l.y} Q${mx2},${my2} ${f.x},${f.y}" fill="none" stroke="${linkC(l)}" stroke-opacity=".55" stroke-width="${l.type === "person" ? 2 : 1.3}"/>`; }));
   links.forEach(l => { const right = Math.cos(l.a) >= 0, lx = l.x + Math.cos(l.a) * (l.type === "archetype" ? 15 : 12), ly = l.y + Math.sin(l.a) * (l.type === "archetype" ? 15 : 12) + 4, col = linkC(l);
     const shape = l.type === "person" ? `<path d="M${l.x} ${l.y - 7.5} L${l.x + 7.5} ${l.y} L${l.x} ${l.y + 7.5} L${l.x - 7.5} ${l.y}Z" fill="${col}" stroke="var(--paper)" stroke-width="1.2"/>` : `<circle cx="${l.x}" cy="${l.y}" r="${(3.5 + Math.min(Math.sqrt(l.films_in_100 || 1), 8) * .9) * (l.type === "archetype" ? 1.3 : 1)}" fill="${col}" stroke="var(--paper)" stroke-width="1"/>`;
-    nd += `<g class="nd" tabindex="0" role="button" data-l="${esc(l.id)}" aria-label="${esc(l.label)}, shared with ${l.films_in_100} films">${shape}<text x="${lx}" y="${ly}" text-anchor="${right ? "start" : "end"}">${esc(l.label)}</text></g>`; });
+    nd += `<g class="nd" tabindex="0" role="button" data-l="${esc(l.id)}" aria-label="${esc(l.label)}, shared with ${l.films_in_100} films">${shape}<text x="${lx}" y="${ly}" text-anchor="${right ? "start" : "end"}">${esc(cap1(l.label))}</text></g>`; });
   films.forEach(f => { const x = idx[f.id], right = Math.cos(f.a) >= 0, lx = f.x + Math.cos(f.a) * (f.r + 8), ly = f.y + Math.sin(f.a) * (f.r + 8) + 5;
     nd += `<g class="nd" tabindex="0" role="link" data-f="${f.id}" aria-label="${esc(x.t)}, ${x.y}"><circle cx="${f.x}" cy="${f.y}" r="${f.r}" fill="var(--ink)" stroke="var(--paper)" stroke-width="1.5"/><text class="fl" x="${lx}" y="${ly}" text-anchor="${right ? "start" : "end"}">${esc(x.t)}</text></g>`; });
   const me = idx[d.id];
@@ -1443,6 +1443,7 @@ async function renderFilm(id) {
   window.scrollTo(0, 0);
   load(next.id).catch(() => {});
 }
+const cap1 = s => s ? s.charAt(0).toUpperCase() + s.slice(1) : "";   // fear names as labels start with a capital
 function cap(s) { s = esc(s); return s.charAt(0).toUpperCase() + s.slice(1); }
 function route() { window.onresize = null;
   routeInner(); }

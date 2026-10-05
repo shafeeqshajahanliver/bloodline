@@ -13,9 +13,9 @@ for fid in ids:
     n = len(plain.split()); links = LINK.findall(t)
     if not 45 <= n <= 110: errs.append(f"{n} words")
     if not 3 <= len(links) <= 6: errs.append(f"{len(links)} links")
-    allowed = {(dm, x) for dm, v in P.get(fid, {}).get("g", {}).items() for x in v["f"]}
+    allowed = {(dm, x.lower()) for dm, v in P.get(fid, {}).get("g", {}).items() for x in v["f"]}   # archetype names change case for display
     for ph, lens, fear in links:
-        if (lens, fear) not in allowed: errs.append(f"unknown link {lens}|{fear}")
+        if (lens, fear.lower()) not in allowed: errs.append(f"unknown link {lens}|{fear}")
     if "—" in t or "–" in t: errs.append("dash")
     if "[" in LINK.sub("", t) or "]" in LINK.sub("", t): errs.append("broken link markup")
     for k in ("source", "basis", "written", "status"):
