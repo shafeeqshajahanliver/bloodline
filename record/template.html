@@ -299,6 +299,14 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .mbar .t i.dim{background:var(--mute);opacity:.5}
 .mbar b{color:var(--ink);font-weight:400;text-align:right;font-variant-numeric:tabular-nums}
 .trnote{font-size:13.5px;color:var(--mute);margin:14px 0 0;max-width:720px}
+.strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--hair);border:1px solid var(--hair);margin-top:22px}
+.sc{background:var(--paper);padding:16px 18px;display:grid;gap:4px;align-content:start}
+.sk{font-size:15px;margin:0}.sb{font-family:var(--display);font-size:38px;line-height:1;margin:4px 0 0;white-space:nowrap}.sb small{font-size:.42em;color:var(--mute)}
+.scap{font-size:13px;color:var(--mute);margin:0 0 8px}
+.sc .mini{max-width:100%}.sc .vsb{max-width:100%}
+.pg{display:flex;gap:16px;align-items:flex-end}.pg>div{display:grid;justify-items:start;gap:4px;opacity:.6}.pg>div.on{opacity:1}
+.pg .ugrid{width:70px}.pg span{font-family:var(--mono);font-size:11px;color:var(--mute)}
+@media (max-width:900px){.strip{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:560px){.strip{grid-template-columns:1fr}}
 .mir{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(2,minmax(0,1fr));gap:18px 28px;margin-top:26px;max-width:820px;align-items:center}
 .mh{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);text-align:center}
 .mh small{display:block;letter-spacing:.04em;text-transform:none;opacity:.7;margin-top:2px}
@@ -325,7 +333,10 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .trveins .chip{font-size:12px;padding:2px 7px;white-space:nowrap;flex:none;color:var(--mute);background:transparent}
 .trveins .chip[aria-pressed="true"]{color:var(--ink);background:var(--soft);border-color:var(--mute)}
 .trveins .chip .sw{width:7px;height:7px;margin-right:5px}
-.gveins{margin:0 0 10px}
+.gveins{position:absolute;left:0;right:0;bottom:14px;z-index:3;justify-content:safe center}
+.gstage .ginfo{bottom:52px !important}
+.gstage.hov .gveins{opacity:.2;transition:opacity .3s}
+@media (max-width:900px){.gveins{justify-content:flex-start}}
 .trsub{font-size:14.5px;color:var(--mute);max-width:720px;margin:14px 0 6px}
 .trmaps h3{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:26px 0 10px}
 .trmaps .scroll{overflow-x:auto;padding-bottom:6px}
@@ -608,8 +619,8 @@ function renderIndex() {
   </aside>
   <div class="status"><span class="active"><span id="count"></span><span id="pills"></span></span>
     ${state.view === "patterns" ? "" : state.view === "graph" ? "" : ""}</div>
-  ${state.view === "graph" ? `<div class="trveins gveins" id="gthreads" role="group" aria-label="Veins shown"></div><div class="gstage" id="gstage"><div class="gbusy" role="status" aria-live="polite"><span class="geye" aria-hidden="true"><span class="lid"><i class="pupil"></i></span></span><span class="gbt">Charting</span></div>
-    <div class="ghero" id="ghero"><p class="overline"><span class="nw">Bloodline</span> · <span class="nw">${F.length} films</span> · <span class="nw">${new Set(F.map(f => f.c)).size} countries</span> · <span class="nw">${Math.min(...F.map(f => f.y))} to ${Math.max(...F.map(f => f.y))}</span></p><h1>Every culture tells the same few <em>nightmares</em></h1><p>Different monsters, different languages, and underneath them the same fears. Every point of light is a film or a fear; every thread, a fear they share.</p></div><div class="ginfo" id="ginfo"></div><div class="gmode viewtoggle" role="group" aria-label="Main nodes"><button type="button" data-primary="fears" aria-pressed="${state.primary === "fears"}">Fears</button><button type="button" data-primary="films" aria-pressed="${state.primary === "films"}">Films</button></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
+  ${state.view === "graph" ? `<div class="gstage" id="gstage"><div class="gbusy" role="status" aria-live="polite"><span class="geye" aria-hidden="true"><span class="lid"><i class="pupil"></i></span></span><span class="gbt">Charting</span></div>
+    <div class="ghero" id="ghero"><p class="overline"><span class="nw">Bloodline</span> · <span class="nw">${F.length} films</span> · <span class="nw">${new Set(F.map(f => f.c)).size} countries</span> · <span class="nw">${Math.min(...F.map(f => f.y))} to ${Math.max(...F.map(f => f.y))}</span></p><h1>Every culture tells the same few <em>nightmares</em></h1><p>Different monsters, different languages, and underneath them the same fears. Every point of light is a film or a fear; every thread, a fear they share.</p></div><div class="ginfo" id="ginfo"></div><div class="trveins gveins" id="gthreads" role="group" aria-label="Veins shown"></div><div class="gmode viewtoggle" role="group" aria-label="Main nodes"><button type="button" data-primary="fears" aria-pressed="${state.primary === "fears"}">Fears</button><button type="button" data-primary="films" aria-pressed="${state.primary === "films"}">Films</button></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
     <div class="keyline" id="gkey" style="margin-top:10px"></div>` : state.view === "patterns" ? `<div class="pat" id="pat"></div>` : `<ol class="ledger" id="ledger"></ol>`}
   ${aboutBlock()}`;
   const q = document.getElementById("q");
@@ -701,24 +712,28 @@ function renderPatterns() {
   const ebars = (lens, nm) => { const v = eraShare(lens, nm), mx = Math.max(...v, .01), w = 260, h = 78, bw = 40, gap = (w - bw * 5) / 4;
     return `<svg class="mini" viewBox="0 0 ${w} ${h + 18}" aria-hidden="true">${v.map((x, i) => { const bh = Math.max(2, x / mx * (h - 16)), X = i * (bw + gap); return `<rect x="${X}" y="${h - bh}" width="${bw}" height="${bh}" rx="3" fill="${LENSC[lens]}" opacity="${i === 4 || i === 0 ? 1 : .45}"/>${i === 0 || i === 4 ? `<text x="${X + bw / 2}" y="${h - bh - 5}" text-anchor="middle" class="mv">${pct(x)}</text>` : ""}<text x="${X + bw / 2}" y="${h + 14}" text-anchor="middle" class="ml">${ERAS[i][0]}</text>`; }).join("")}</svg>`; };
   const slopes = (pairs) => { const w = 300, h = 78, xs = i => 14 + i * (w - 150) / 4, all2 = pairs.map(([l, nm, col]) => ({ nm, col, v: eraShare(l, nm) })), mx = Math.max(...all2.flatMap(p => p.v), .01), Y = v => 8 + (1 - v / mx) * (h - 16);
-    return `<svg class="mini" viewBox="0 0 ${w} ${h + 18}" aria-hidden="true">${all2.map(p => `<polyline points="${p.v.map((v, i) => `${xs(i)},${Y(v)}`).join(" ")}" fill="none" stroke="${p.col}" stroke-width="2.2" stroke-linejoin="round"/>${[0, 4].map(i => `<circle cx="${xs(i)}" cy="${Y(p.v[i])}" r="3.5" fill="${p.col}"/>`).join("")}<text x="${xs(4) + 8}" y="${Y(p.v[4]) + 4}" class="mv" fill="${p.col}">${pct(p.v[4])} ${esc(p.nm.toLowerCase())}</text>`).join("")}${[0, 4].map(i => `<text x="${xs(i)}" y="${h + 14}" text-anchor="middle" class="ml">${ERAS[i][0]}</text>`).join("")}</svg>`; };
+    return `<svg class="mini" viewBox="0 0 ${w} ${h + 18}" aria-hidden="true">${all2.map(p => `<polyline points="${p.v.map((v, i) => `${xs(i)},${Y(v)}`).join(" ")}" fill="none" stroke="${p.col}" stroke-width="2.2" stroke-linejoin="round"/>${[0, 4].map(i => `<circle cx="${xs(i)}" cy="${Y(p.v[i])}" r="3.5" fill="${p.col}"/>`).join("")}<text x="${xs(4) + 8}" y="${Y(p.v[4]) + 4}" class="mv" fill="${p.col}">${pct(p.v[4])} ${esc(p.nm.split(" ")[0].toLowerCase())}</text>`).join("")}${[0, 4].map(i => `<text x="${xs(i)}" y="${h + 14}" text-anchor="middle" class="ml">${ERAS[i][0]}</text>`).join("")}</svg>`; };
   const vs = (lab, [n, t], [n2, t2], col) => { const a1 = n / t, a2 = n2 / t2, mx = Math.max(a1, a2, .01);
     return `<div class="vsb"><div class="vr"><span>${lab}</span><span class="t"><i style="width:${a1 / mx * 100}%;background:${col}"></i></span><b>${pct(a1)}</b></div><div class="vr"><span>Everywhere</span><span class="t"><i class="dim" style="width:${a2 / mx * 100}%"></i></span><b>${pct(a2)}</b></div></div>`; };
   const ca = part("nightmares", "Cults and curses", inE("<1960")), cb = part("nightmares", "Cults and curses", inE("2015+"));
   const ps = part("nightmares", "Possession", inR(["Southeast Asia"])), pa = part("nightmares", "Possession", () => true);
   const vsU = part("archetypes", "The village needs blood", inR(["UK & Ireland"])), vsA = part("archetypes", "The village needs blood", () => true);
   const bdr = eraShare("nightmares", "Blood drinkers");
-  const finds = [
-    [`${fl("nightmares", "Cults and curses")} is rising`, `${cb[0]} <small>of ${cb[1]}</small>`, "films since 2015, from 1 in 41 before 1960. The group that turns on you, the dark god, the cursed thing passed on.", ebars("nightmares", "Cults and curses")],
-    ["The monsters are leaving", `${pct(bdr[0])} <small>→ ${pct(bdr[4])}</small>`, `${fl("nightmares", "Blood drinkers")} have nearly vanished, while ${fl("nightmares", "Doubles and impostors")} climb. The fear has moved inside.`, slopes([["nightmares", "Blood drinkers", "var(--mute)"], ["nightmares", "Doubles and impostors", LENSC.nightmares]])],
-    ["Southeast Asia is possessed", `${Math.round(ps[0] / ps[1] * 3) === 1 ? "1 in 3" : pct(ps[0] / ps[1])}`, `Southeast Asian horror films is about ${fl("nightmares", "Possession")}: something getting in.`, vs("SE Asia", ps, pa, LENSC.nightmares)],
-    ["Folk horror is British", `${(vsU[0] / vsU[1] / (vsA[0] / vsA[1])).toFixed(1)}×`, `as common in British and Irish films: ${fl("archetypes", "The village needs blood")}, the community as the threat.`, vs("UK & Ire.", vsU, vsA, LENSC.archetypes)]];
+  const kc = part("nightmares", "Killers and captives", inR(W)), kA = part("nightmares", "Killers and captives", inR(A));
+  const rA = part("nightmares", "The restless dead", inR(A)), rW = part("nightmares", "The restless dead", inR(W));
+  const cell = (k, big, cap, viz) => `<div class="sc"><p class="sk">${k}</p><p class="sb">${big}</p><p class="scap">${cap}</p>${viz}</div>`;
+  const pair = (hiLab, hi, loLab, lo) => `<div class="pg"><div class="on">${grid(hi[0] / hi[1], LENSC.nightmares)}<span>${hiLab} ${pct(hi[0] / hi[1])}</span></div><div>${grid(lo[0] / lo[1], "var(--mute)")}<span>${loLab} ${pct(lo[0] / lo[1])}</span></div></div>`;
+  const cells = [
+    cell(fl("nightmares", "Killers and captives"), `${pct(kc[0] / kc[1])} <small>West</small>`, `${Math.round((kc[0] / kc[1]) / (kA[0] / kA[1]))}× as common as in Asia`, pair("West", kc, "Asia", kA)),
+    cell(fl("nightmares", "The restless dead"), `${pct(rA[0] / rA[1])} <small>Asia</small>`, `${Math.round((rA[0] / rA[1]) / (rW[0] / rW[1]))}× as common as in the West`, pair("Asia", rA, "West", rW)),
+    cell(`${fl("nightmares", "Cults and curses")} rising`, `${cb[0]} <small>of ${cb[1]}</small>`, `films since 2015, from ${ca[0]} of ${ca[1]} before 1960`, ebars("nightmares", "Cults and curses")),
+    cell("The monsters leave", `${pct(bdr[0])} <small>→ ${pct(bdr[4])}</small>`, `blood drinkers fade as doubles and impostors climb`, slopes([["nightmares", "Blood drinkers", "var(--mute)"], ["nightmares", "Doubles and impostors", LENSC.nightmares]])),
+    cell(`SE Asia: ${fl("nightmares", "Possession")}`, `${pct(ps[0] / ps[1])}`, `of Southeast Asian films, ${pct(pa[0] / pa[1])} everywhere`, vs("SE Asia", ps, pa, LENSC.nightmares)),
+    cell(`UK folk horror`, `${(vsU[0] / vsU[1] / (vsA[0] / vsA[1])).toFixed(1)}×`, `${fl("archetypes", "The village needs blood")} in British and Irish films`, vs("UK & Ire.", vsU, vsA, LENSC.archetypes))];
   el.innerHTML = `<div class="tr">
-    ${mir.length === 2 ? `<section class="trlead"><p class="trk">The headline</p><h2>The West fears the <em>living</em>. Asia fears the <em>dead</em>.</h2>
-      <div class="mir"><div></div><div class="mh">West<small>${mir[0].w[1]} films</small></div><div class="mh">Asia<small>${mir[0].a[1]} films</small></div>
-      ${mir.map(m => `<div class="mn">${fl("nightmares", m.nm)}<small>${m.gloss}</small></div>${[[m.w, !m.i], [m.a, m.i]].map(([[n, t], hi]) => `<div class="mc${hi ? " hi" : ""}"><b>${pct(n / t)}</b>${grid(n / t, hi ? LENSC.nightmares : "var(--mute)")}<span>${n} of ${t}</span></div>`).join("")}`).join("")}</div>
-      <p class="trnote">Each grid is a hundred films; the lit squares carry the nightmare. West: North America, Europe, UK & Ireland, Australia & NZ. Asia: East, Southeast and South Asia.</p></section>` : ""}
-    <section class="trfinds">${finds.map(([k, big, t, viz]) => `<div class="fd"><p class="k">${k}</p><div class="fb"><p class="big">${big}</p><p class="ft">${t}</p></div>${viz}</div>`).join("")}</section>
+    <section class="trlead"><p class="trk">The headline</p><h2>The West fears the <em>living</em>. Asia fears the <em>dead</em>.</h2>
+      <div class="strip">${cells.join("")}</div>
+      <p class="trnote">Grids are a hundred films each. West: North America, Europe, UK & Ireland, Australia & NZ. Asia: East, Southeast and South Asia.</p></section>
     <section class="trmaps"><div class="trveins" role="group" aria-label="Vein">${LENS.filter(([k]) => PAT.dims.includes(k)).map(([k, n]) => `<button type="button" class="chip" data-tvein="${k}" aria-pressed="${k === d}"><span class="sw" style="background:${LENSC[k]};border-radius:50%;margin-right:6px"></span>${n}</button>`).join("")}</div>
       <p class="trsub">Each square is the share of a region's or an era's films carrying it; the deeper the colour, the more common. Outlined squares are at least 1.8 times as common as across all films, with five or more films behind them. Hatched columns have fewer than 15 films.</p>
       <h3>By region</h3><div class="scroll"><div class="hm" id="hm-reg"></div></div>
