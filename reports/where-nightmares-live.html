@@ -1,0 +1,183 @@
+<title>Where Nightmares Live</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Courier+Prime:wght@400;700&display=swap">
+<style>
+/* Layout: one reading column for the argument; the two heat maps run wider underneath, each with its own table view.
+   Dark-first, matching the Bloodline app (a night archive); a light paper version for light-mode readers. */
+:root{
+  --bg:#0c0a09; --panel:#151110; --ink:#e9e1d1; --mute:#9a8e7d; --hair:#2e2622; --cell:#1b1614; --hot:#e0453a; --hot-ink:#ff8a7e;
+  --display:"IM Fell English", Georgia, serif; --body:"Source Serif 4", Georgia, serif; --mono:"Courier Prime", "Courier New", monospace;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){ --bg:#f5f1eb; --panel:#ece6dd; --ink:#1d1714; --mute:#6f6255; --hair:#d6cdc1; --cell:#e7e0d6; --hot:#b8261c; --hot-ink:#a11f16; color-scheme:light } }
+:root[data-theme="light"]{ --bg:#f5f1eb; --panel:#ece6dd; --ink:#1d1714; --mute:#6f6255; --hair:#d6cdc1; --cell:#e7e0d6; --hot:#b8261c; --hot-ink:#a11f16; color-scheme:light }
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:20px;padding-block:48px 80px}
+.col{max-width:680px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin:0}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(40px,7vw,68px);line-height:1.02;margin:10px 0 14px;text-wrap:balance}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,4vw,38px);line-height:1.1;margin:0 0 8px;text-wrap:balance}
+h3{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:0 0 10px}
+.dek{font-size:20px;color:var(--mute);margin:0}
+.lead{margin-top:44px;padding-top:28px;border-top:1px solid var(--hair)}
+.lead h2 em{font-style:italic;color:var(--hot-ink)}
+/* the mirror: two nightmares, two halves of the world */
+.mirror{display:grid;gap:22px;margin-top:22px;max-width:680px}
+.mrow .lab{display:flex;justify-content:space-between;gap:12px;font-size:16px;margin-bottom:6px}
+.mrow .lab span{font-family:var(--mono);font-size:12px;color:var(--mute);letter-spacing:.06em}
+.mbars{display:grid;gap:6px}
+.mbar{display:grid;grid-template-columns:62px 1fr 48px;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;color:var(--mute)}
+.mbar .t{height:14px;background:var(--cell);position:relative}
+.mbar .t i{position:absolute;left:0;top:0;bottom:0;background:var(--hot);border-radius:0 4px 4px 0}
+.mbar .t i.dim{background:var(--mute);opacity:.55}
+.mbar b{color:var(--ink);font-weight:400;text-align:right;font-variant-numeric:tabular-nums}
+.note{font-size:14px;color:var(--mute);margin-top:14px}
+.finds{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr));gap:28px 40px;margin-top:48px;padding-top:28px;border-top:1px solid var(--hair)}
+.finds p{margin:0}
+.finds .k{font-family:var(--display);font-size:22px;line-height:1.2;margin-bottom:6px}
+.finds .fig{font-family:var(--mono);font-size:13px;color:var(--mute);margin-top:8px;font-variant-numeric:tabular-nums}
+section.maps{margin-top:64px;padding-top:28px;border-top:1px solid var(--hair)}
+.controls{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;margin:18px 0 8px}
+.seg{display:inline-flex;border:1px solid var(--hair)}
+.seg button{all:unset;cursor:pointer;padding:6px 16px;font-family:var(--body);font-size:15px;color:var(--mute)}
+.seg button[aria-pressed="true"]{background:var(--panel);color:var(--ink)}
+.seg button:focus-visible{outline:2px solid var(--hot);outline-offset:2px}
+.key{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;color:var(--mute)}
+.key .ramp{width:120px;height:10px;background:linear-gradient(90deg,var(--cell),var(--hot))}
+.chart{margin-top:30px}
+.chart .sub{font-size:15px;color:var(--mute);margin:0 0 14px;max-width:680px}
+.scroll{overflow-x:auto;padding-bottom:6px}
+.hm{display:grid;gap:2px;min-width:max-content;font-variant-numeric:tabular-nums}
+.hm .ch{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--mute);text-align:center;padding:0 2px 6px;line-height:1.25;align-self:end}
+.hm .ch small{display:block;opacity:.8}
+.hm .ch.thin{opacity:.55}
+.hm .rh{font-size:14.5px;padding-right:14px;display:flex;align-items:center;justify-content:space-between;gap:10px;white-space:nowrap}
+.hm .rh span{font-family:var(--mono);font-size:11px;color:var(--mute)}
+.hm .rh{position:sticky;left:0;z-index:1;background:var(--bg)}
+@media (max-width:600px){.hm .rh{font-size:13px;padding-right:8px}}
+.hm .c{height:30px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11.5px;color:var(--ink);position:relative;cursor:default}
+.hm .c.thin{background-image:repeating-linear-gradient(135deg,transparent 0 4px,color-mix(in oklab,var(--bg) 55%,transparent) 4px 6px)}
+.hm .c.hotlab{font-weight:700;outline:1.5px solid var(--ink);outline-offset:-1.5px}
+.hm .c:hover{outline:1.5px solid var(--ink);outline-offset:-1.5px}
+details{margin-top:12px}
+summary{cursor:pointer;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+table{border-collapse:collapse;font-size:13px;margin-top:10px;font-variant-numeric:tabular-nums}
+th,td{padding:4px 10px;border-bottom:1px solid var(--hair);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{font-family:var(--mono);font-weight:400;font-size:11px;color:var(--mute)}
+.tip{position:fixed;z-index:10;pointer-events:none;background:var(--panel);border:1px solid var(--hair);padding:8px 11px;font-size:13.5px;line-height:1.4;max-width:260px;opacity:0;transition:opacity .12s}
+.tip b{font-weight:600}.tip .m{font-family:var(--mono);font-size:12px;color:var(--mute)}
+section.method{margin-top:64px;padding-top:28px;border-top:1px solid var(--hair)}
+section.method ul{padding-left:18px;margin:10px 0 0;display:grid;gap:8px}
+section.method li{font-size:15.5px}
+@media (prefers-reduced-motion: reduce){.tip{transition:none}}
+</style>
+
+<div class="wrap">
+  <header class="col">
+    <p class="eyebrow">Bloodline · report · 497 films</p>
+    <h1>Where nightmares live</h1>
+    <p class="dek">Every culture keeps telling horror stories. This report asks which ones, where, and when: the twelve nightmares the graph model found, and the archetypes set from the top down, by region and by era.</p>
+  </header>
+
+  <section class="lead col">
+    <h3>The headline</h3>
+    <h2>The West fears the <em>living</em>. Asia fears the <em>dead</em>.</h2>
+    <p>Two nightmares split the world almost cleanly. Killers and captives, the fear of people who trap and kill, belongs to the West. The restless dead, the wronged who return, belongs to Asia.</p>
+    <div class="mirror" id="mirror"></div>
+    <p class="note">West: North America, Continental Europe, UK & Ireland, Australia & NZ (373 films). Asia: East, Southeast and South Asia (95 films). The archetypes, tagged by a different method, show the same split: the woman who comes back is in 20% of Asian films and 2% of Western ones.</p>
+  </section>
+
+  <section class="finds" aria-label="Findings">
+    <div><p class="k">Cults and curses is the rising nightmare</p><p>Almost absent before 1960, it is now the most common nightmare in new horror: the group that turns on you, the dark god, the cursed thing passed on.</p><p class="fig">1 of 41 films before 1960 → 26 of 147 since 2015</p></div>
+    <div><p class="k">The monsters are leaving</p><p>Blood drinkers have nearly vanished, and creatures make up a shrinking share of new horror. The fear has moved inside: doubles and impostors, and the voice inside, are climbing.</p><p class="fig">Blood drinkers 17% → 2% · Doubles and impostors 5% → 12%</p></div>
+    <div><p class="k">Southeast Asia is possessed</p><p>Possession turns up everywhere, but nowhere as often as in Southeast Asian horror, where a third of the films are about something getting in.</p><p class="fig">10 of 33 Southeast Asian films · 10% everywhere</p></div>
+    <div><p class="k">Folk horror is British</p><p>The village that needs blood, and cults and curses more broadly, gather in British and Irish films: the community as the threat.</p><p class="fig">The village needs blood: 6 of 58 UK & Irish films · 3% everywhere</p></div>
+  </section>
+
+  <section class="maps">
+    <h2>The full picture</h2>
+    <p class="col" style="margin:0;color:var(--mute)">Each square is the share of a region's or an era's films that carry the nightmare. The darker the red, the more common. Outlined squares are where it is at least 1.8 times as common as across all films, with at least five films behind it. Hatched columns have fewer than 15 films; read them with care.</p>
+    <div class="controls">
+      <span class="seg" role="group" aria-label="What to show"><button type="button" data-set="nightmares" aria-pressed="true">Nightmares</button><button type="button" data-set="archetypes" aria-pressed="false">Archetypes</button></span>
+      <span class="key"><span>rare</span><span class="ramp" aria-hidden="true"></span><span>common</span></span>
+    </div>
+    <div class="chart"><h3 id="t-reg">By region</h3><p class="sub" id="s-reg"></p><div class="scroll"><div class="hm" id="hm-reg" role="img"></div></div><details><summary>Show as a table</summary><div class="scroll" id="tb-reg"></div></details></div>
+    <div class="chart"><h3 id="t-era">By era</h3><p class="sub" id="s-era"></p><div class="scroll"><div class="hm" id="hm-era" role="img"></div></div><details><summary>Show as a table</summary><div class="scroll" id="tb-era"></div></details></div>
+  </section>
+
+  <section class="method col">
+    <h3>How to read this, and what to doubt</h3>
+    <ul>
+      <li><b>The films.</b> 497 horror films chosen for global breadth. It is a curated list, not a random or ranked sample, and it leans towards North America (223 films). Shares are within each region or era, so the larger groups do not drown the smaller ones, but a region's share is only as good as the films chosen for it.</li>
+      <li><b>Nightmares</b> are the twelve groups a graph model found from the fears the films share. Each film belongs to one. The model was not shown the regions, the eras or the archetypes.</li>
+      <li><b>Archetypes</b> are story shapes Bloodline classified from the top down. Here each film counts once, under its main archetype.</li>
+      <li><b>Thin groups.</b> South Asia (16 films), Latin America (18), Australia & NZ (15), the Middle East & North Africa (7) and Sub-Saharan Africa (4) are small. A single film moves their shares by several points.</li>
+      <li><b>First reading.</b> The fears behind the nightmares and the archetype tags are a first machine reading, not yet checked by hand. Treat every finding here as a strong lead.</li>
+    </ul>
+  </section>
+</div>
+<div class="tip" id="tip" role="tooltip"></div>
+
+<script>
+const D = {"n":497,"regions":[["North America",223],["Continental Europe",77],["UK & Ireland",58],["East Asia",46],["Southeast Asia",33],["South Asia",16],["Latin America",18],["Australia & NZ",15],["Middle East & North Africa",7],["Sub-Saharan Africa",4]],"eras":[["Before 1960",41],["1960s\u201370s",85],["1980s\u201390s",108],["2000\u201314",116],["Since 2015",147]],"nightmares":[{"name":"Killers and captives","n":63,"reg":[34,17,3,3,1,0,1,4,0,0],"era":[5,14,15,15,14]},{"name":"Cults and curses","n":56,"reg":[19,8,12,9,3,0,4,0,1,0],"era":[1,4,13,12,26]},{"name":"The restless dead","n":56,"reg":[11,4,2,12,13,9,3,1,0,1],"era":[4,6,13,20,13]},{"name":"Possession","n":52,"reg":[21,7,4,1,10,2,2,2,3,0],"era":[2,8,14,11,17]},{"name":"Places that swallow you","n":46,"reg":[16,6,9,8,2,1,0,2,1,1],"era":[0,8,8,15,15]},{"name":"Creatures and contagion","n":45,"reg":[28,3,5,5,0,0,1,2,0,1],"era":[8,10,8,10,9]},{"name":"The changing body","n":37,"reg":[22,6,0,4,2,1,2,0,0,0],"era":[5,4,7,6,15]},{"name":"Doubles and impostors","n":36,"reg":[18,8,5,0,0,0,2,2,1,0],"era":[2,5,3,8,18]},{"name":"The mind turns","n":34,"reg":[18,6,6,2,0,1,1,0,0,0],"era":[4,8,8,7,7]},{"name":"Blood drinkers","n":28,"reg":[15,4,4,0,2,1,1,1,0,0],"era":[7,4,10,4,3]},{"name":"Greed and its price","n":25,"reg":[13,4,5,2,0,1,0,0,0,0],"era":[3,8,5,2,7]},{"name":"Hungry love","n":19,"reg":[8,4,3,0,0,0,1,1,1,1],"era":[0,6,4,6,3]}],"archetypes":[{"name":"The witch at the edge of the woods","n":30,"reg":[11,10,3,0,3,2,0,0,1,0],"era":[2,7,5,3,13]},{"name":"The house remembers","n":29,"reg":[12,3,5,3,0,1,2,3,0,0],"era":[2,7,5,8,7]},{"name":"The one who feeds","n":29,"reg":[11,7,3,3,3,0,0,1,1,0],"era":[4,7,9,8,1]},{"name":"The woman who comes back","n":28,"reg":[3,3,1,7,8,4,2,0,0,0],"era":[2,2,6,9,9]},{"name":"The dead won't stay dead","n":27,"reg":[14,5,1,1,2,0,2,1,0,1],"era":[3,7,9,5,3]},{"name":"The bad host","n":25,"reg":[17,4,0,0,1,1,0,2,0,0],"era":[1,4,3,7,10]},{"name":"The voice inside","n":25,"reg":[7,1,1,2,4,4,2,0,3,1],"era":[0,2,3,7,13]},{"name":"You invited it in","n":25,"reg":[14,3,4,2,1,0,0,1,0,0],"era":[1,3,8,4,9]},{"name":"The thing outside","n":24,"reg":[13,3,0,3,0,0,1,2,0,2],"era":[6,4,5,5,4]},{"name":"The double","n":23,"reg":[11,7,3,1,0,0,0,1,0,0],"era":[3,8,5,4,3]},{"name":"The descent","n":22,"reg":[10,1,4,4,0,0,1,1,1,0],"era":[0,5,5,7,5]},{"name":"The wrong child","n":22,"reg":[7,4,6,3,0,0,2,0,0,0],"era":[0,6,1,4,11]},{"name":"The contagion","n":16,"reg":[7,3,3,3,0,0,0,0,0,0],"era":[0,3,2,5,6]},{"name":"The thing you took home","n":16,"reg":[5,0,5,2,1,2,1,0,0,0],"era":[1,2,4,5,4]},{"name":"The bargain","n":15,"reg":[5,3,1,0,3,1,1,1,0,0],"era":[2,4,3,0,6]},{"name":"The devouring mother","n":15,"reg":[7,2,1,1,0,0,2,2,0,0],"era":[0,3,2,5,5]},{"name":"The village needs blood","n":15,"reg":[7,2,6,0,0,0,0,0,0,0],"era":[1,2,0,5,7]},{"name":"Stray from the path","n":14,"reg":[12,2,0,0,0,0,0,0,0,0],"era":[0,4,5,2,3]},{"name":"The inherited curse","n":14,"reg":[3,0,0,6,3,1,0,0,1,0],"era":[0,0,2,7,5]},{"name":"The body betrays","n":13,"reg":[7,3,0,3,0,0,0,0,0,0],"era":[2,1,5,1,4]},{"name":"The rule","n":13,"reg":[7,2,1,0,3,0,0,0,0,0],"era":[0,1,3,5,4]},{"name":"Nobody believes her","n":12,"reg":[7,3,2,0,0,0,0,0,0,0],"era":[2,1,5,1,3]},{"name":"The beast within","n":12,"reg":[5,1,3,1,1,0,1,0,0,0],"era":[2,1,4,2,3]},{"name":"The hunger","n":11,"reg":[6,2,1,1,0,0,1,0,0,0],"era":[0,0,2,3,6]},{"name":"The thing we made","n":11,"reg":[8,2,1,0,0,0,0,0,0,0],"era":[6,1,1,2,1]},{"name":"The book you shouldn't read","n":8,"reg":[7,1,0,0,0,0,0,0,0,0],"era":[0,0,6,1,1]},{"name":"The endless night","n":3,"reg":[0,0,3,0,0,0,0,0,0,0],"era":[1,0,0,1,1]}]};
+const REG = D.regions.map(r => r[0]), RN = D.regions.map(r => r[1]);
+const ERA = D.eras.map(e => e[0]), EN = D.eras.map(e => e[1]);
+const SHORT = { "North America": "N. America", "Continental Europe": "Europe", "UK & Ireland": "UK & Ire.", "East Asia": "E. Asia", "Southeast Asia": "SE Asia", "South Asia": "S. Asia", "Latin America": "Lat. Am.", "Australia & NZ": "Aus. & NZ", "Middle East & North Africa": "MENA", "Sub-Saharan Africa": "Africa" };
+const pct = v => Math.round(v * 100) + "%";
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+
+// the mirror: two nightmares, West against Asia
+(() => {
+  const W = ["North America", "Continental Europe", "UK & Ireland", "Australia & NZ"], A = ["East Asia", "Southeast Asia", "South Asia"];
+  const grp = (row, g) => { const n = g.reduce((s, r) => s + row.reg[REG.indexOf(r)], 0), t = g.reduce((s, r) => s + RN[REG.indexOf(r)], 0); return [n, t]; };
+  const rows = ["Killers and captives", "The restless dead"].map(nm => D.nightmares.find(r => r.name === nm));
+  const max = Math.max(...rows.flatMap(r => [grp(r, W), grp(r, A)].map(([n, t]) => n / t)));
+  document.getElementById("mirror").innerHTML = rows.map((r, i) => {
+    const w = grp(r, W), a = grp(r, A), hiW = i === 0;
+    const bar = (lab, [n, t], hi) => `<div class="mbar"><span>${lab}</span><span class="t"><i class="${hi ? "" : "dim"}" style="width:${n / t / max * 100}%"></i></span><b>${pct(n / t)}</b></div>`;
+    return `<div class="mrow"><div class="lab">${esc(r.name)}<span>${w[0]} of ${w[1]} · ${a[0]} of ${a[1]}</span></div><div class="mbars">${bar("West", w, hiW)}${bar("Asia", a, !hiW)}</div></div>`;
+  }).join("");
+})();
+
+// heat maps
+const tip = document.getElementById("tip");
+function heat(id, rows, cols, totals, key, colLab) {
+  const el = document.getElementById(id), all = D.n;
+  const share = (r, j) => totals[j] ? r[key][j] / totals[j] : 0;
+  const max = Math.max(...rows.flatMap(r => cols.map((_, j) => totals[j] >= 15 ? share(r, j) : 0)), .01);
+  el.style.gridTemplateColumns = `minmax(min(220px,44vw),auto) repeat(${cols.length}, minmax(${key === "reg" ? 62 : 84}px,1fr))`;
+  let h = `<div></div>` + cols.map((c, j) => `<div class="ch${totals[j] < 15 ? " thin" : ""}">${esc(colLab(c))}<small>${totals[j]}</small></div>`).join("");
+  rows.forEach(r => {
+    const base = r.n / all;
+    h += `<div class="rh">${esc(r.name)}<span>${r.n}</span></div>`;
+    cols.forEach((c, j) => {
+      const s = share(r, j), n = r[key][j], thin = totals[j] < 15, lift = base ? s / base : 0;
+      const hot = !thin && n >= 5 && lift >= 1.8, mix = Math.round(Math.min(s / max, 1) * 100);
+      h += `<div class="c${thin ? " thin" : ""}${hot ? " hotlab" : ""}" style="background-color:color-mix(in oklab, var(--hot) ${mix}%, var(--cell))" data-t="${esc(r.name)}" data-c="${esc(c)}" data-n="${n}" data-of="${totals[j]}" data-l="${lift.toFixed(1)}" data-b="${pct(base)}">${hot ? pct(s) : ""}</div>`;
+    });
+  });
+  el.innerHTML = h;
+  el.setAttribute("aria-label", `Heat map of ${rows.length} rows by ${cols.length} columns; the table below gives every value.`);
+  // table view
+  document.getElementById(id.replace("hm", "tb")).innerHTML = `<table><thead><tr><th></th>${cols.map((c, j) => `<th>${esc(colLab(c))} (${totals[j]})</th>`).join("")}<th>All (${all})</th></tr></thead><tbody>${rows.map(r => `<tr><td>${esc(r.name)}</td>${cols.map((_, j) => `<td>${r[key][j]} · ${totals[j] ? pct(r[key][j] / totals[j]) : "–"}</td>`).join("")}<td>${r.n} · ${pct(r.n / all)}</td></tr>`).join("")}</tbody></table>`;
+}
+document.addEventListener("mousemove", e => {
+  const c = e.target.closest(".hm .c");
+  if (!c) { tip.style.opacity = 0; return; }
+  const d = c.dataset, s = d.of > 0 ? d.n / d.of : 0;
+  tip.innerHTML = `<b>${d.t}</b><br>${d.n} of ${d.of} films · ${d.c}<div class="m">${pct(s)} here · ${d.b} across all films${d.of >= 15 && d.n > 0 ? ` · ${d.l}× as common` : ""}</div>`;
+  const x = Math.min(e.clientX + 14, innerWidth - 280), y = Math.min(e.clientY + 14, innerHeight - 90);
+  tip.style.left = x + "px"; tip.style.top = y + "px"; tip.style.opacity = 1;
+});
+function show(set) {
+  const rows = set === "nightmares" ? D.nightmares : D.archetypes;
+  document.querySelectorAll("[data-set]").forEach(b => b.setAttribute("aria-pressed", b.dataset.set === set));
+  document.getElementById("s-reg").textContent = set === "nightmares" ? "Share of each region's films in each nightmare. Every film belongs to one nightmare, so each column adds up to 100%." : "Share of each region's films by main archetype. Each film counts once, under its main archetype.";
+  document.getElementById("s-era").textContent = set === "nightmares" ? "Share of each era's films in each nightmare." : "Share of each era's films by main archetype.";
+  heat("hm-reg", rows, REG, RN, "reg", c => SHORT[c] || c);
+  heat("hm-era", rows, ERA, EN, "era", c => c);
+}
+document.querySelectorAll("[data-set]").forEach(b => b.onclick = () => show(b.dataset.set));
+show("nightmares");
+</script>
