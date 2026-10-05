@@ -285,6 +285,39 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .ginfo .r b{font-weight:600}
 .nw{white-space:nowrap}
 .ghero .overline{white-space:nowrap}
+.tr{display:grid;gap:56px;margin-top:28px}
+.tr h2{font-family:var(--display);font-weight:400;font-size:clamp(30px,4.4vw,44px);line-height:1.08;margin:6px 0 0;text-wrap:balance}
+.tr h2 em{color:var(--red)}
+.trk{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:0}
+.mirror{display:grid;gap:20px;margin-top:22px;max-width:680px}
+.mrow .lab{display:flex;justify-content:space-between;gap:12px;font-size:17px;margin-bottom:6px}
+.mrow .lab span{font-family:var(--mono);font-size:12px;color:var(--mute)}
+.mbars{display:grid;gap:6px}
+.mbar{display:grid;grid-template-columns:52px 1fr 44px;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;color:var(--mute)}
+.mbar .t{height:14px;background:var(--soft);position:relative}
+.mbar .t i{position:absolute;left:0;top:0;bottom:0;background:var(--red);border-radius:0 4px 4px 0}
+.mbar .t i.dim{background:var(--mute);opacity:.5}
+.mbar b{color:var(--ink);font-weight:400;text-align:right;font-variant-numeric:tabular-nums}
+.trnote{font-size:13.5px;color:var(--mute);margin:12px 0 0}
+.trfinds{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr));gap:28px 44px;border-top:1px solid var(--hair);padding-top:28px}
+.trfinds p{margin:0}.trfinds .k{font-family:var(--display);font-size:22px;line-height:1.2;margin-bottom:6px}
+.trfinds .fig{font-family:var(--mono);font-size:12.5px;color:var(--mute);margin-top:8px;font-variant-numeric:tabular-nums}
+.trmaps{border-top:1px solid var(--hair);padding-top:28px}
+.trveins{display:flex;flex-wrap:wrap;gap:6px}
+.trsub{font-size:14.5px;color:var(--mute);max-width:720px;margin:14px 0 6px}
+.trmaps h3{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:26px 0 10px}
+.trmaps .scroll{overflow-x:auto;padding-bottom:6px}
+.hm{display:grid;gap:2px;min-width:max-content;font-variant-numeric:tabular-nums}
+.hm .ch{font-family:var(--mono);font-size:11px;color:var(--mute);text-align:center;padding:0 2px 6px;line-height:1.25;align-self:end}
+.hm .ch small{display:block;opacity:.8}.hm .ch.thin{opacity:.5}
+.hm .rh{all:unset;cursor:pointer;font-size:14.5px;padding-right:14px;white-space:nowrap;position:sticky;left:0;z-index:1;background:var(--paper);display:flex;align-items:center}
+.hm .rh:hover{color:var(--lc)}.hm .rh:focus-visible{outline:2px solid var(--red)}
+.hm .c{height:30px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11.5px;color:var(--ink)}
+.hm .c.thin{background-image:repeating-linear-gradient(135deg,transparent 0 4px,color-mix(in oklab,var(--paper) 55%,transparent) 4px 6px)}
+.hm .c.hot{font-weight:700;outline:1.5px solid var(--ink);outline-offset:-1.5px}
+.hm .c:hover{outline:1.5px solid var(--ink);outline-offset:-1.5px}
+.ptip{position:fixed;z-index:20;pointer-events:none;background:var(--soft);border:1px solid var(--hair);padding:8px 11px;font-size:13.5px;line-height:1.4;max-width:260px;opacity:0;transition:opacity .12s}
+.ptip .m{font-family:var(--mono);font-size:12px;color:var(--mute)}
 .ginfo .gdesc{font-family:var(--display);font-size:16px;line-height:1.45;color:var(--ink)}
 .gzoom{position:absolute;right:0;top:12px;display:flex;gap:4px}
 /* the veins, set quietly on the graph's lower right: lit when shown, faint when not; click to switch */
@@ -512,7 +545,7 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;
 const fmt = n => n == null ? "" : n >= 1e6 ? "$" + (n / 1e6).toFixed(n >= 1e7 ? 0 : 1) + "m" : "$" + Math.round(n / 1e3) + "k";
 const app = document.getElementById("app");
 const cache = {};
-const state = { q: "", region: new Set(), era: new Set(), has: new Set(), sort: "year", view: "graph", pcomp: "time", primary: "fears", glenses: new Set(["nightmares", "archetypes"]), lens: "nightmares", psort: "rising", psel: null, arrange: "net", colour: "plain" };
+const state = { q: "", region: new Set(), era: new Set(), has: new Set(), sort: "year", view: "graph", primary: "fears", glenses: new Set(["nightmares", "archetypes"]), lens: "nightmares", arrange: "net", colour: "plain" };
 try { const s = JSON.parse(localStorage.getItem("bl-r1") || "{}"); if (s.sort) state.sort = s.sort; } catch (e) {}
 
 function eraOf(y) { return ERAS.find(e => y >= e[1] && y <= e[2])[0]; }
@@ -549,19 +582,17 @@ function renderIndex() {
   </div>
   <aside class="drawer" id="drawer" aria-label="Filters" inert>
     <div class="dhead"><h2>Filters</h2><button class="linkish" type="button" id="closef">Close</button></div>
-    <p class="dnote">${state.view === "patterns" ? "Trends count all 497 films with a story reading. Region and era narrow what is counted." : `Films that don't match fade from the ${state.view === "graph" ? "graph" : "list"} as you choose.`}</p>
+    <p class="dnote">${state.view === "patterns" ? "Choosing eras narrows the region map; choosing regions narrows the era map." : `Films that don't match fade from the ${state.view === "graph" ? "graph" : "list"} as you choose.`}</p>
     <section><h3>Region</h3><div class="chips">${REGIONS.map(r => `<button class="chip" type="button" data-region="${esc(r)}" aria-pressed="${state.region.has(r)}">${esc(r)}${state.view === "patterns" ? "" : `<span class="k">${F.filter(f => f.r === r).length}</span>`}</button>`).join("")}</div></section>
     <section><h3>Era</h3><div class="chips">${ERAS.map(([e]) => `<button class="chip" type="button" data-era="${e}" aria-pressed="${state.era.has(e)}">${e}${state.view === "patterns" ? "" : `<span class="k">${F.filter(f => eraOf(f.y) === e).length}</span>`}</button>`).join("")}</div></section>
     ${state.view === "graph" ? `<section><h3>Arrange</h3><div class="chips">${[["net","By connection"],["time","Through time"]].map(([k, n]) => `<button class="chip" type="button" data-arrange="${k}" aria-pressed="${state.arrange === k}">${n}</button>`).join("")}</div></section>
     <section><h3>Veins</h3><div class="chips">${LENS.map(([k, n]) => `<button class="chip" type="button" data-glens="${k}" aria-pressed="${state.glenses.has(k)}"><span class="sw" style="background:${LENSC[k]};border-radius:50%;margin-right:6px"></span>${n}</button>`).join("")}</div></section>
     <section id="filmsopt" ${state.primary === "fears" ? "hidden" : ""}><h3>Films</h3><div class="chips">${[["plain","Plain"],["region","Ring by region"],["era","Shade by era"]].map(([k, n]) => `<button class="chip" type="button" data-colour="${k}" aria-pressed="${state.colour === k}">${n}</button>`).join("")}</div></section>`
-    : state.view === "patterns" ? `<section><h3>Kind of fear</h3><div class="chips">${LENS.map(([k, n]) => `<button class="chip" type="button" data-lens="${k}" aria-pressed="${state.lens === k}"><span class="sw" style="background:${LENSC[k]};border-radius:50%;margin-right:6px"></span>${n}</button>`).join("")}</div></section>
-    <section><h3>Order</h3><div class="chips" data-for="time">${PSORT.time.map(([k, n]) => `<button class="chip" type="button" data-psort="${k}" aria-pressed="${state.psort === k}">${n}</button>`).join("")}</div><div class="chips" data-for="region">${PSORT.region.map(([k, n]) => `<button class="chip" type="button" data-psort="${k}" aria-pressed="${state.psort === k}">${n}</button>`).join("")}</div></section>`
     : `<section><h3>Sort</h3><div class="chips">${[["year","Year"],["title","Title"],["n","Most entries"]].map(([k, n]) => `<button class="chip" type="button" data-sort="${k}" aria-pressed="${state.sort === k}">${n}</button>`).join("")}</div></section>`}
     <div class="dfoot"><button class="btn" type="button" id="clearf">Clear filters</button></div>
   </aside>
   <div class="status"><span class="active"><span id="count"></span><span id="pills"></span></span>
-    ${state.view === "patterns" ? `<span class="key"><span>each dot is the share of films carrying the fear · hollow dots: fewer than 10 films, read with care</span></span>` : state.view === "graph" ? "" : ""}</div>
+    ${state.view === "patterns" ? "" : state.view === "graph" ? "" : ""}</div>
   ${state.view === "graph" ? `<div class="gstage" id="gstage"><div class="gbusy" role="status" aria-live="polite"><span class="geye" aria-hidden="true"><span class="lid"><i class="pupil"></i></span></span><span class="gbt">Charting</span></div>
     <div class="ghero" id="ghero"><p class="overline"><span class="nw">Bloodline</span> · <span class="nw">${F.length} films</span> · <span class="nw">${new Set(F.map(f => f.c)).size} countries</span> · <span class="nw">${Math.min(...F.map(f => f.y))} to ${Math.max(...F.map(f => f.y))}</span></p><h1>Every culture tells the same few <em>nightmares</em></h1><p>Different monsters, different languages, and underneath them the same fears. Every point of light is a film or a fear; every thread, a fear they share.</p></div><div class="ginfo" id="ginfo"></div><div class="gthreads" id="gthreads" role="group" aria-label="Veins shown"></div><div class="gmode viewtoggle" role="group" aria-label="Main nodes"><button type="button" data-primary="fears" aria-pressed="${state.primary === "fears"}">Fears</button><button type="button" data-primary="films" aria-pressed="${state.primary === "films"}">Films</button></div><div class="gzoom"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zfit" aria-label="Fit all">⤢</button></div></div>
     <div class="keyline" id="gkey" style="margin-top:10px"></div>` : state.view === "patterns" ? `<div class="pat" id="pat"></div>` : `<ol class="ledger" id="ledger"></ol>`}
@@ -583,8 +614,6 @@ function renderIndex() {
   app.querySelectorAll("[data-colour]").forEach(b => b.onclick = () => { state.colour = b.dataset.colour; app.querySelectorAll("[data-colour]").forEach(x => x.setAttribute("aria-pressed", x === b)); G && G.recolour(); });
   app.querySelectorAll("[data-glens]").forEach(b => b.onclick = () => { const k = b.dataset.glens; state.glenses.has(k) ? state.glenses.delete(k) : state.glenses.add(k); b.setAttribute("aria-pressed", state.glenses.has(k)); redraw(() => { buildGraph(); renderRows(); }); });
   app.querySelectorAll("[data-primary]").forEach(b => b.onclick = () => { state.primary = b.dataset.primary; app.querySelectorAll("[data-primary]").forEach(x => x.setAttribute("aria-pressed", x === b)); const fo = document.getElementById("filmsopt"); if (fo) fo.hidden = state.primary === "fears"; G && G.emphasis(); });
-  app.querySelectorAll("[data-lens]").forEach(b => b.onclick = () => { state.lens = b.dataset.lens; state.psel = null; app.querySelectorAll("[data-lens]").forEach(x => x.setAttribute("aria-pressed", x === b)); renderRows(); });
-  app.querySelectorAll("[data-psort]").forEach(b => b.onclick = () => { state.psort = b.dataset.psort; app.querySelectorAll("[data-psort]").forEach(x => x.setAttribute("aria-pressed", x === b)); renderRows(); });
   app.querySelectorAll("[data-sort]").forEach(b => b.onclick = () => {
     state.sort = b.dataset.sort; try { localStorage.setItem("bl-r1", JSON.stringify({ sort: state.sort })); } catch (e) {}
     app.querySelectorAll("[data-sort]").forEach(x => x.setAttribute("aria-pressed", x === b)); renderRows(); });
@@ -636,62 +665,69 @@ function aboutBlock() {
 const LENS = [["nightmares", "Nightmares"], ["archetypes", "Archetypes"], ["threat", "What threatens"], ["origin", "Where it comes from"], ["wants", "What it wants"], ["wrong", "The wrong underneath"], ["trigger", "What sets it off"], ["rules", "Rules"], ["who_suffers", "Who suffers"], ["ending", "How it ends"], ["images", "Symbols"]];
 const LENSQ = { nightmares: "Which nightmare does it belong to?", threat: "What do we fear will come for us?", origin: "Where do we believe evil comes from?", wants: "What does the thing in the dark want?", wrong: "What buried wrong comes back?", trigger: "What opens the door?", rules: "What rules do we tell ourselves?", who_suffers: "Who does fear fall on?", ending: "How do we let the story end?", images: "What do we see when we're afraid?", archetypes: "Which old story is it retelling?" };
 const RSHORT = { "North America": "N. America", "Continental Europe": "Europe", "UK & Ireland": "UK & Ire.", "East Asia": "E. Asia", "Southeast Asia": "SE Asia", "Latin America": "Lat. Am.", "South Asia": "S. Asia", "Australia & NZ": "Aus. & NZ", "Middle East & North Africa": "MENA", "Sub-Saharan Africa": "Africa" };
-const PSORT = { time: [["rising", "Rising"], ["common", "Most common"], ["falling", "Fading"]], region: [["travel", "Travels furthest"], ["common", "Most common"], ["local", "Most local"]] };
 let PAT = null, patLoad = null;
 function renderPatterns() {
   const el = document.getElementById("pat"); if (!el) return;
   if (!PAT) { el.innerHTML = `<p class="empty">Gathering the fears…</p>`; patLoad = patLoad || fetch("patterns.json").then(r => { if (!r.ok) throw 0; return r.json(); }).then(d => { PAT = d; });
     patLoad.then(renderPatterns).catch(() => { el.innerHTML = `<p class="empty">The trends didn't load. Reload the page to try again.</p>`; patLoad = null; }); return; }
-  const d = state.lens, lensName = LENS.find(l => l[0] === d)[1], lc = LENSC[d], T = state.pcomp === "time";
-  if (!PSORT[state.pcomp].some(x => x[0] === state.psort)) state.psort = PSORT[state.pcomp][0][0];
-  document.querySelectorAll("[data-for]").forEach(x => x.hidden = x.dataset.for !== state.pcomp);
-  document.querySelectorAll("[data-psort]").forEach(x => x.setAttribute("aria-pressed", x.dataset.psort === state.psort));
+  const all = PAT.films, d = PAT.dims.includes(state.lens) ? state.lens : "nightmares", lc = LENSC[d];
+  const pct = v => Math.round(v * 100) + "%", has = (f, lens, nm) => f.g[lens] && f.g[lens].f.includes(nm);
+  const regs = [...new Set(all.map(f => f.r))].sort((x, y) => all.filter(f => f.r === y).length - all.filter(f => f.r === x).length);
+  document.getElementById("count").textContent = `${all.length} films`;
+  // the headline and the findings are always read across every film
+  const W = ["North America", "Continental Europe", "UK & Ireland", "Australia & NZ"], A = ["East Asia", "Southeast Asia", "South Asia"];
+  const part = (lens, nm, keep) => { const xs = all.filter(keep); return [xs.filter(f => has(f, lens, nm)).length, xs.length]; };
+  const inR = g => f => g.includes(f.r), inE = e => f => eraOf(f.y) === e;
+  const mir = [["Killers and captives", 0], ["The restless dead", 1]].filter(([nm]) => PAT.fears.nightmares?.[nm] !== undefined).map(([nm, i]) => ({ nm, i, w: part("nightmares", nm, inR(W)), a: part("nightmares", nm, inR(A)) }));
+  const mmax = Math.max(...mir.flatMap(m => [m.w[0] / m.w[1], m.a[0] / m.a[1]]), .01);
+  const mbar = (lab, [n, t], hi) => `<div class="mbar"><span>${lab}</span><span class="t"><i class="${hi ? "" : "dim"}" style="width:${n / t / mmax * 100}%"></i></span><b>${pct(n / t)}</b></div>`;
+  const fl = (lens, nm) => PAT.fears[lens]?.[nm] !== undefined ? `<a class="pl" href="#${fearHash(lens, nm)}" style="--uc:${LENSC[lens]}">${esc(cap1(nm))}</a>` : esc(cap1(nm));
+  const ca = part("nightmares", "Cults and curses", inE("<1960")), cb = part("nightmares", "Cults and curses", inE("2015+"));
+  const ba = part("nightmares", "Blood drinkers", inE("<1960")), bb = part("nightmares", "Blood drinkers", inE("2015+"));
+  const da = part("nightmares", "Doubles and impostors", inE("<1960")), db = part("nightmares", "Doubles and impostors", inE("2015+"));
+  const ps = part("nightmares", "Possession", inR(["Southeast Asia"])), pa = part("nightmares", "Possession", () => true);
+  const vs = part("archetypes", "The village needs blood", inR(["UK & Ireland"])), va = part("archetypes", "The village needs blood", () => true);
+  const finds = [
+    [`${fl("nightmares", "Cults and curses")} is rising`, "Almost absent before 1960, it is now the most common nightmare in new horror: the group that turns on you, the dark god, the cursed thing passed on.", `${ca[0]} of ${ca[1]} films before 1960 → ${cb[0]} of ${cb[1]} since 2015`],
+    ["The monsters are leaving", `${fl("nightmares", "Blood drinkers")} have nearly vanished. The fear has moved inside, and ${fl("nightmares", "Doubles and impostors")} are climbing.`, `Blood drinkers ${pct(ba[0] / ba[1])} → ${pct(bb[0] / bb[1])} · Doubles and impostors ${pct(da[0] / da[1])} → ${pct(db[0] / db[1])}`],
+    ["Southeast Asia is possessed", `${fl("nightmares", "Possession")} turns up everywhere, but nowhere as often as in Southeast Asian horror.`, `${ps[0]} of ${ps[1]} Southeast Asian films · ${pct(pa[0] / pa[1])} everywhere`],
+    ["Folk horror is British", `${fl("archetypes", "The village needs blood")}, and cults and curses more broadly, gather in British and Irish films: the community as the threat.`, `${vs[0]} of ${vs[1]} UK & Irish films · ${pct(va[0] / va[1])} everywhere`]];
+  el.innerHTML = `<div class="tr">
+    ${mir.length === 2 ? `<section class="trlead"><p class="trk">The headline</p><h2>The West fears the <em>living</em>. Asia fears the <em>dead</em>.</h2>
+      <div class="mirror">${mir.map(m => `<div class="mrow"><div class="lab">${fl("nightmares", m.nm)}<span>${m.w[0]} of ${m.w[1]} · ${m.a[0]} of ${m.a[1]}</span></div><div class="mbars">${mbar("West", m.w, !m.i)}${mbar("Asia", m.a, m.i)}</div></div>`).join("")}</div>
+      <p class="trnote">West: North America, Europe, UK & Ireland, Australia & NZ. Asia: East, Southeast and South Asia.</p></section>` : ""}
+    <section class="trfinds">${finds.map(([k, t, f]) => `<div><p class="k">${k}</p><p>${t}</p><p class="fig">${f}</p></div>`).join("")}</section>
+    <section class="trmaps"><div class="trveins" role="group" aria-label="Vein">${LENS.filter(([k]) => PAT.dims.includes(k)).map(([k, n]) => `<button type="button" class="chip" data-tvein="${k}" aria-pressed="${k === d}"><span class="sw" style="background:${LENSC[k]};border-radius:50%;margin-right:6px"></span>${n}</button>`).join("")}</div>
+      <p class="trsub">Each square is the share of a region's or an era's films carrying it; the deeper the colour, the more common. Outlined squares are at least 1.8 times as common as across all films, with five or more films behind them. Hatched columns have fewer than 15 films.</p>
+      <h3>By region</h3><div class="scroll"><div class="hm" id="hm-reg"></div></div>
+      <h3>By era</h3><div class="scroll"><div class="hm" id="hm-era"></div></div></section></div>`;
   el.style.setProperty("--lc", lc);
-  const allRegs = [...new Set(PAT.films.map(f => f.r))].sort((a, b) => PAT.films.filter(f => f.r === b).length - PAT.films.filter(f => f.r === a).length);
-  const films = PAT.films.filter(f => (!state.era.size || state.era.has(eraOf(f.y))) && (!state.region.size || state.region.has(f.r)));
-  const cols = T ? ERAS.map(e => e[0]).filter(e => !state.era.size || state.era.has(e)) : allRegs.filter(r => !state.region.size || state.region.has(r));
-  const colOf = f => T ? eraOf(f.y) : f.r, short = c => T ? c : (RSHORT[c] || c);
-  document.getElementById("count").textContent = `${films.length} films counted`;
-  const head = `<div class="phead"><div><p class="pover" style="color:${lc}">${esc(lensName)}<button type="button" id="plens">change</button></p><p class="pq">${LENSQ[d]}</p></div>
-    <span class="viewtoggle" role="group" aria-label="Compare"><button type="button" data-pcomp="time" aria-pressed="${T}">Through time</button><button type="button" data-pcomp="region" aria-pressed="${!T}">Across regions</button></span></div>`;
-  if (!PAT.dims.includes(d)) { el.innerHTML = `<div>${head}<p class="psub">This kind of fear is still being sorted. Try another.</p></div><div></div>`; wireTrends(el); return; }
-  const tot = Object.fromEntries(cols.map(c => [c, films.filter(f => colOf(f) === c).length]));
-  const q = state.q.trim().toLowerCase();
-  let rows = Object.entries(PAT.fears[d]).map(([fear, def]) => {
-    const fs = films.filter(f => f.g[d] && f.g[d].f.includes(fear));
-    const by = Object.fromEntries(cols.map(c => [c, fs.filter(f => colOf(f) === c).length]));
-    const share = Object.fromEntries(cols.map(c => [c, tot[c] ? by[c] / tot[c] : 0]));
-    const present = cols.filter(c => by[c] > 0).length, overall = films.length ? fs.length / films.length : 0;
-    const big = cols.filter(c => tot[c] >= 10), conc = overall ? Math.max(...big.map(c => share[c]), 0) / overall : 0;
-    // through time: compare the films since 2000 with those before 1980
-    const sh = list => { const xs = films.filter(f => list.includes(eraOf(f.y))); return xs.length ? xs.filter(f => fs.includes(f)).length / xs.length : 0; };
-    const early = sh(["<1960", "1960s–70s"]), late = sh(["2000–14", "2015+"]), change = (late + .01) / (early + .01);
-    return { fear, def, fs, by, share, present, overall, conc, early, late, change };
-  }).filter(r => r.fs.length && r.fear !== "unclear");
-  if (q) rows = rows.filter(r => r.fear.includes(q) || (r.def || "").toLowerCase().includes(q) || r.fs.some(f => f.g[d].k.some(k => k.includes(q))));
-  const S = state.psort, enough = r => r.fs.length >= 5;
-  rows.sort((a, b) => S === "common" ? b.fs.length - a.fs.length
-    : S === "rising" ? enough(b) - enough(a) || b.change - a.change : S === "falling" ? enough(b) - enough(a) || a.change - b.change
-    : S === "local" ? (b.fs.length >= 3) - (a.fs.length >= 3) || b.conc - a.conc : b.present - a.present || b.overall - a.overall);
-  if (state.pcol && !cols.includes(state.pcol)) state.pcol = null;
-  if (state.pcol) rows.sort((a, b) => b.share[state.pcol] - a.share[state.pcol]);
-  const maxShare = Math.max(...rows.flatMap(r => cols.map(c => r.share[c])), .01);
-  const dot = (r, c) => { const sv = r.share[c]; if (!r.by[c]) return `<span class="pdot zero"></span>`; const px = 6 + Math.sqrt(sv / maxShare) * 26;
-    return `<span class="pdot${tot[c] < 10 ? " thin" : ""}" style="width:${px}px;height:${px}px;opacity:${.45 + .55 * Math.sqrt(sv / maxShare)}" title="${r.by[c]} of ${tot[c]} films${T ? " from " : " in "}${esc(c)} (${Math.round(sv * 100)}%)"></span>`; };
-  const trend = r => !enough(r) ? `<span>too few</span>` : r.change >= 1.5 ? `<span class="up">rising</span>` : r.change <= .67 ? `<span>fading</span>` : `<span>steady</span>`;
-  el.innerHTML = `<div>${head}
-      <p class="psub">${rows.length} ${d === "images" ? "families of symbol" : d === "nightmares" ? "nightmares" : d === "archetypes" ? "archetypes" : "fears"} across ${films.length} films. Each dot is the share of ${T ? "an era's" : "a region's"} films that carry it; read across a row to see how it ${T ? "rises and fades through the century" : "travels"}. Click a column to sort by it, or a name to open it.</p>
-      <div class="mx"><table><thead><tr><th class="fl">${d === "images" ? "Symbol" : "Fear"}</th>${cols.map(c => `<th><button type="button" data-col="${esc(c)}" aria-pressed="${state.pcol === c}" title="Sort by ${esc(c)}">${esc(short(c))}${state.pcol === c ? " ↓" : ""}</button><span class="n">${tot[c]}</span></th>`).join("")}<th>${T ? "trend" : "travels"}</th></tr></thead>
-      <tbody>${rows.map(r => `<tr><td class="fl"><button type="button" data-fear="${esc(r.fear)}" title="Open ${esc(r.fear)}">${esc(cap1(r.fear))}</button></td>${cols.map(c => `<td>${dot(r, c)}</td>`).join("")}<td class="tr">${T ? trend(r) : `${r.present} of ${cols.length}`}</td></tr>`).join("") || `<tr><td class="fl" colspan="${cols.length + 2}"><span class="fp">Nothing matches that search.</span></td></tr>`}</tbody></table></div></div>
-`;
-  wireTrends(el);
+  // heat maps: the region map counts films in the chosen eras, the era map films from the chosen regions
+  const fReg = all.filter(f => !state.era.size || state.era.has(eraOf(f.y))), fEra = all.filter(f => !state.region.size || state.region.has(f.r));
+  const names = Object.keys(PAT.fears[d]).filter(n => n !== "unclear").map(nm => ({ nm, n: all.filter(f => has(f, d, nm)).length })).filter(r => r.n).sort((x, y) => y.n - x.n);
+  const heat = (id, films, cols, colOf, lab) => {
+    const tot = cols.map(c => films.filter(f => colOf(f) === c).length), N = films.length;
+    const cnt = names.map(r => cols.map(c => films.filter(f => colOf(f) === c && has(f, d, r.nm)).length));
+    const max = Math.max(...cnt.flatMap(row => row.map((v, j) => tot[j] >= 15 ? v / tot[j] : 0)), .01);
+    let h = `<div></div>` + cols.map((c, j) => `<div class="ch${tot[j] < 15 ? " thin" : ""}">${esc(lab(c))}<small>${tot[j]}</small></div>`).join("");
+    names.forEach((r, i) => {
+      const base = films.filter(f => has(f, d, r.nm)).length / (N || 1);
+      h += `<button type="button" class="rh" data-fear="${esc(r.nm)}">${esc(cap1(r.nm))}</button>`;
+      cols.forEach((c, j) => { const n = cnt[i][j], s = tot[j] ? n / tot[j] : 0, thin = tot[j] < 15, lift = base ? s / base : 0, hot = !thin && n >= 5 && lift >= 1.8;
+        h += `<div class="c${thin ? " thin" : ""}${hot ? " hot" : ""}" style="background-color:color-mix(in oklab, var(--lc) ${Math.round(Math.min(s / max, 1) * 100)}%, var(--soft))" data-t="${esc(cap1(r.nm))}" data-c="${esc(c)}" data-n="${n}" data-of="${tot[j]}" data-b="${pct(base)}" data-l="${lift.toFixed(1)}">${hot ? pct(s) : ""}</div>`; });
+    });
+    const g = document.getElementById(id); g.style.gridTemplateColumns = `minmax(min(240px,42vw),auto) repeat(${cols.length}, minmax(${cols.length > 6 ? 58 : 80}px,1fr))`; g.innerHTML = h;
+    g.setAttribute("role", "img"); g.setAttribute("aria-label", `${LENSN[d]} by ${id === "hm-reg" ? "region" : "era"}: share of films carrying each, as a heat map`);
+  };
+  heat("hm-reg", fReg, regs, f => f.r, c => RSHORT[c] || c);
+  heat("hm-era", fEra, ERAS.map(e => e[0]), f => eraOf(f.y), c => c);
   el.querySelectorAll("[data-fear]").forEach(b => b.onclick = () => go(fearHash(d, b.dataset.fear)));
-  el.querySelectorAll("[data-col]").forEach(b => b.onclick = () => { state.pcol = state.pcol === b.dataset.col ? null : b.dataset.col; renderPatterns(); });
-  el.querySelectorAll("[data-go]").forEach(b => b.onclick = () => go(b.dataset.go));
-}
-function wireTrends(el) {
-  el.querySelectorAll("[data-pcomp]").forEach(b => b.onclick = () => { state.pcomp = b.dataset.pcomp; state.psort = PSORT[state.pcomp][0][0]; state.pcol = null; renderPatterns(); });
-  const pl = document.getElementById("plens"); if (pl) pl.onclick = () => document.getElementById("openf").click();
+  el.querySelectorAll("[data-tvein]").forEach(b => b.onclick = () => { state.lens = b.dataset.tvein; renderPatterns(); });
+  let tip = document.getElementById("ptip"); if (!tip) { tip = document.createElement("div"); tip.id = "ptip"; tip.className = "ptip"; document.body.appendChild(tip); }
+  el.onmousemove = e => { const c = e.target.closest(".hm .c"); if (!c) { tip.style.opacity = 0; return; } const x = c.dataset, sv = x.of > 0 ? x.n / x.of : 0;
+    tip.innerHTML = `<b>${x.t}</b><br>${x.n} of ${x.of} films · ${x.c}<div class="m">${pct(sv)} here · ${x.b} across all${x.of >= 15 && x.n > 0 ? ` · ${x.l}× as common` : ""}</div>`;
+    tip.style.left = Math.min(e.clientX + 14, innerWidth - 280) + "px"; tip.style.top = Math.min(e.clientY + 14, innerHeight - 90) + "px"; tip.style.opacity = 1; };
+  el.onmouseleave = () => { tip.style.opacity = 0; };
 }
 /* ---------- a fear's own page ---------- */
 const slug = t => t.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
