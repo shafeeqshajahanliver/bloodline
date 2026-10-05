@@ -1,7 +1,7 @@
 {
   "framework": null,
-  "installCommand": "python3 -m pip install -r requirements.txt",
-  "buildCommand": "PYTHONPATH=tools python3 tools/build_patterns.py && PYTHONPATH=tools python3 tools/build_record.py",
+  "installCommand": "python3 -m venv .venv && .venv/bin/pip install --quiet Pillow",
+  "buildCommand": "PYTHONPATH=tools .venv/bin/python tools/build_patterns.py && PYTHONPATH=tools .venv/bin/python tools/build_record.py",
   "outputDirectory": "record/site",
   "rewrites": [{ "source": "/", "destination": "/bloodline-record.html" }]
 }
