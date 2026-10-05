@@ -205,5 +205,5 @@ _au = open("record/author.jpg", "rb").read() if os.path.exists("record/author.jp
 if _au.startswith(b"version https://git-lfs"): _au = b""   # a Git LFS pointer, not the picture (LFS not fetched)
 page = page.replace("__AUTHOR__", base64.b64encode(_au).decode())
 open(f"{OUT}/bloodline-record.html", "w").write(page)
-open(f"{OUT}/index.html", "w").write(page)   # the same page as the site root, for static hosts such as Vercel
+open(f"{OUT}/index.html", "w").write('<!doctype html>\n<html lang="en">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' + page)   # the same page as the site root, for static hosts such as Vercel
 os.remove(f"{OUT}/index.json")   # only needed while building; it is embedded in the page
