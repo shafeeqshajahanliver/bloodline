@@ -200,4 +200,6 @@ if os.path.exists(f"{OUT}/patterns.json"):
 json.dump(IX, open(f"{OUT}/index.json", "w"), ensure_ascii=False, separators=(",", ":"))
 # assemble the page: the index is embedded so the ledger works before any film loads
 page = open("record/template.html").read().replace("__INDEX__", open(f"{OUT}/index.json").read().replace("</", "<\\/"))
+import base64
+page = page.replace("__AUTHOR__", base64.b64encode(open("record/author.jpg", "rb").read()).decode() if os.path.exists("record/author.jpg") else "")
 open(f"{OUT}/bloodline-record.html", "w").write(page)

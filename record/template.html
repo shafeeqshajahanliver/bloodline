@@ -351,6 +351,9 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .hm .c:hover{outline:1.5px solid var(--ink);outline-offset:-1.5px}
 .ptip{position:fixed;z-index:20;pointer-events:none;background:var(--soft);border:1px solid var(--hair);padding:8px 11px;font-size:13.5px;line-height:1.4;max-width:260px;opacity:0;transition:opacity .12s}
 .ptip .m{font-family:var(--mono);font-size:12px;color:var(--mute)}
+.author{display:flex;gap:16px;align-items:center;margin-top:36px;padding-top:20px;border-top:1px solid var(--hair);max-width:760px}
+.author img{width:56px;height:56px;border-radius:50%;flex:none;opacity:.85;filter:contrast(1.05) sepia(.15)}
+.author p{margin:0;font-size:14px;line-height:1.55;color:var(--mute)}.author b{color:var(--ink);font-weight:400}
 .ginfo .gdesc{font-family:var(--display);font-size:16px;line-height:1.45;color:var(--ink)}
 .gzoom{position:absolute;right:0;top:12px;display:flex;gap:4px}
 .gzoom button{all:unset;cursor:pointer;width:30px;height:30px;display:flex;align-items:center;justify-content:center;border:1px solid var(--ink);background:var(--paper);font-family:var(--mono);font-size:15px}
@@ -684,6 +687,8 @@ function aboutBlock() {
       <p>${(() => { const ks = LENS.filter(([k]) => k !== "nightmares" && k !== "archetypes").map(([k, n], i) => `<b style="color:${LENSC[k]}">${i ? n.charAt(0).toLowerCase() + n.slice(1) : n}</b>`); return ks.slice(0, -1).join(", ") + " and " + ks[ks.length - 1]; })()} are read from each film's plot, subtitles and screenplay, each reading quoted. The many ways the films put these things are gathered into shared fears.</p></div>
     <div><h3>Rights</h3><p>Subtitles, screenplays and stills belong to their owners and are shown here for private research only. Wikipedia text is CC BY-SA; Wikidata facts are CC0.</p></div>
 </div>
+    <div class="author"><img src="data:image/jpeg;base64,__AUTHOR__" alt="Shafeeq Shajahan" width="56" height="56">
+      <p><b>Made by Shafeeq Shajahan</b>, co-founder of Liver &amp; Lung and an AI product leader, currently VP Product at Intent HQ, where the work is turning human behaviour into signals people can act on. Bloodline is the same instinct pointed at the oldest data set there is: the stories people tell to frighten each other, read closely enough to find the patterns underneath.</p></div>
   </div></section>`;
 }
 
