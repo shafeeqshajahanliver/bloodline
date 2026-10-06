@@ -1,6 +1,6 @@
 # Data quality
 
-Generated 2026-10-03 from `films/*/corrections.json`. Source files are never edited; problems are recorded per film and the tools skip what is marked unusable (coverage, era figures, the story-layer validator and search tools).
+Generated 2026-10-06 from `films/*/corrections.json`. Source files are never edited; problems are recorded per film and the tools skip what is marked unusable (coverage, era figures, the story-layer validator and search tools).
 
 ## Unusable or damaged source files
 

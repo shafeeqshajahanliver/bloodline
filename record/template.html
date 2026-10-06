@@ -755,7 +755,7 @@ function renderPatterns() {
         return cell(`British humiliation`, `${(uk[0] / uk[1] / (al[0] / al[1])).toFixed(1)}×`, `as common in British and Irish films: ${fli("trigger", "being spurned or shamed")} sets it off`, vs("UK & Ire.", uk, al, LENSC.trigger)); });
       return out; })()];
   el.innerHTML = `<div class="tr">
-    <section class="trlead"><p class="trk">The headline</p><h2>The West fears the <em>living</em>. Asia fears the <em>dead</em>.</h2>
+    <section class="trlead"><p class="trk">The headline</p><h2>Asia fears the <em>dead</em>. The West fears the <em>living</em> more.</h2>
       <div class="strip">${cells.join("")}</div>
       <p class="trnote">Changes over time compare films before 1980 with films since 2000. Grids are a hundred films each. West: North America, Europe, UK & Ireland, Australia & NZ. Asia: East, Southeast and South Asia.</p></section>
     <section class="trmaps"><div class="trveins" role="group" aria-label="Vein">${LENS.filter(([k]) => PAT.dims.includes(k)).map(([k, n]) => `<button type="button" class="chip" data-tvein="${k}" aria-pressed="${k === d}"><span class="sw" style="background:${LENSC[k]};border-radius:50%;margin-right:6px"></span>${n}</button>`).join("")}</div>

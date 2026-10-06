@@ -8,9 +8,9 @@
   "negatives": 4
  },
  "network": {
-  "films": 497,
+  "films": 498,
   "fears": 231,
-  "links": 11485,
+  "links": 11507,
   "left_out": [
    "archetypes",
    "nightmares"
@@ -20,7 +20,7 @@
  "test": "fresh splits (seeds 200-202), 15% of each film's links hidden (films with 5+ links), mean of 3 splits; recall@10 = share of hidden fears ranked in the film's top 10 of the fears it doesn't visibly carry",
  "results": {
   "model": {
-   "recall_at_10": 0.282,
+   "recall_at_10": 0.277,
    "auc": 0.789
   },
   "co-occurrence": {
@@ -29,9 +29,57 @@
   },
   "popularity": {
    "recall_at_10": 0.242,
-   "auc": 0.757
+   "auc": 0.756
   }
  },
- "trained": "2026-10-04",
+ "nightmares": {
+  "k": 12,
+  "chosen_by": "kept from the previous run; films new to the archive placed in the nearest family",
+  "placed": {
+   "2025-obsession": {
+    "family": "wealth and ambition",
+    "closeness": 0.718
+   }
+  },
+  "stability_by_k": {
+   "4": 0.496,
+   "5": 0.513,
+   "6": 0.527,
+   "7": 0.493,
+   "8": 0.546,
+   "9": 0.536,
+   "10": 0.438,
+   "11": 0.414,
+   "12": 0.387,
+   "13": 0.387,
+   "14": 0.375,
+   "15": 0.383,
+   "16": 0.365,
+   "17": 0.353,
+   "18": 0.32,
+   "19": 0.339,
+   "20": 0.334
+  },
+  "silhouette_by_k": {
+   "4": 0.1333,
+   "5": 0.1313,
+   "6": 0.1266,
+   "7": 0.1338,
+   "8": 0.1277,
+   "9": 0.1265,
+   "10": 0.1068,
+   "11": 0.1128,
+   "12": 0.1157,
+   "13": 0.1055,
+   "14": 0.116,
+   "15": 0.1199,
+   "16": 0.111,
+   "17": 0.1103,
+   "18": 0.1104,
+   "19": 0.1081,
+   "20": 0.1089
+  }
+ },
+ "trained": "2026-10-06",
  "status": "first pass: model output from first-pass tags, unreviewed. Suggestions are a review queue, not facts."
 }

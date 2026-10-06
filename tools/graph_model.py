@@ -1,5 +1,5 @@
 # Train a graph model on the film-fear network and write what it learns to reference/model/.
-# The network: 497 films joined to the fears (and archetypes) they carry, from record/site/patterns.json.
+# The network: the films joined to the fears (and archetypes) they carry, from record/site/patterns.json.
 # The model: LightGCN (He et al., 2020), a graph neural network that learns a position for every film and fear by
 # passing information along the links, trained to rank a film's real fears above ones it doesn't carry (BPR loss).
 # Written in plain numpy so it runs anywhere and reproduces exactly (fixed seeds).
@@ -202,10 +202,24 @@ for k in KRANGE:
 NK = int(os.environ.get("K", 0)) or max(stab, key=lambda k: (stab[k], -k))
 print("stability by k:", stab, "\nsilhouette by k:", sil, "-> k =", NK)
 lab, C = kmeans(F, NK)
-fams = []
+# KEEP=1: keep the nightmares already in reference/model/families.json and place any film new to the archive in the
+# family whose centre (in the newly learned positions) it sits closest to, so adding a film does not redraw the groups
+PLACED = {}
+if os.environ.get("KEEP"):
+    old = json.load(open("reference/model/families.json")); fid = {x["id"]: u for u, x in enumerate(films)}
+    lab = np.full(NF, -1)
+    for c, fam in enumerate(old):
+        for m in fam["members"]:
+            if m in fid: lab[fid[m]] = c
+    NK = len(old); C = np.array([F[lab == c].mean(0) for c in range(NK)]); Cn = C / np.linalg.norm(C, axis=1, keepdims=True)
+    for u in np.where(lab < 0)[0]:
+        lab[u] = int(np.argmax(Cn @ F[u])); PLACED[films[u]["id"]] = {"family": int(lab[u]), "closeness": round(float(np.max(Cn @ F[u])), 3)}
+    print("kept", NK, "families; placed", PLACED)
+fams, cids = [], []
 for c in range(NK):
     mem = [u for u in range(NF) if lab[u] == c]
     if not mem: continue
+    cids.append(c)
     cn = C[c] / np.linalg.norm(C[c])
     # the fears that define the family: carried far more often inside it than across the archive
     inside = np.zeros(NX); base = np.zeros(NX)
@@ -219,6 +233,7 @@ for c in range(NK):
                  "core_films": [films[u]["id"] for u in core[:8]], "members": [films[u]["id"] for u in core],
                  "regions": {r: sum(films[u]["r"] == r for u in mem) for r in sorted({films[u]["r"] for u in mem})},
                  "decades": {d: sum(films[u]["y"] // 10 * 10 == d for u in mem) for d in sorted({films[u]["y"] // 10 * 10 for u in mem})}})
+fam_fear = {c: f["defining_fears"][0]["fear"] for c, f in zip(cids, fams)}   # cluster -> its defining fear, for placed films
 fams.sort(key=lambda f: -f["films"])
 # how the families found from the bottom up line up with the top-down archetypes tagged on the same films
 import csv
@@ -236,7 +251,7 @@ meta = {"method": "LightGCN graph neural network (He et al., 2020), BPR loss, nu
         "network": {"films": NF, "fears": NX, "links": len(edges), "left_out": sorted(DROP)},
         "tuning": "on one validation split (seed 100): depth 1 beat 0, 2 and 3 layers (3 layers collapsed to popularity); adding people, place, time, subject or original-wording nodes did not help (recall@10 0.264 to 0.267 vs 0.270 without)",
         "test": "fresh splits (seeds 200-202), 15% of each film's links hidden (films with 5+ links), mean of 3 splits; recall@10 = share of hidden fears ranked in the film's top 10 of the fears it doesn't visibly carry",
-        "results": summary, "nightmares": {"k": NK, "chosen_by": "most stable groups over k = 4 to 20 (mean adjusted Rand index across 8 starts)" if not os.environ.get("K") else "set by hand", "stability_by_k": stab, "silhouette_by_k": sil}, "trained": datetime.date.today().isoformat(),
+        "results": summary, "nightmares": {"k": NK, "chosen_by": "kept from the previous run; films new to the archive placed in the nearest family" if os.environ.get("KEEP") else "most stable groups over k = 4 to 20 (mean adjusted Rand index across 8 starts)" if not os.environ.get("K") else "set by hand", "placed": {k: dict(v, family=fam_fear[v["family"]]) for k, v in PLACED.items()}, "stability_by_k": stab, "silhouette_by_k": sil}, "trained": datetime.date.today().isoformat(),
         "status": "first pass: model output from first-pass tags, unreviewed. Suggestions are a review queue, not facts."}
 for fn, obj in [("meta", meta), ("suggestions", suggest), ("kin", kin), ("fears_travel", travel), ("families", fams)]:
     json.dump(obj, open(f"{OUT}/{fn}.json", "w"), ensure_ascii=False, indent=1 if fn in ("meta", "families") else None, separators=None if fn in ("meta", "families") else (",", ":"))
