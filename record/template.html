@@ -558,6 +558,25 @@ details.fothers summary{cursor:pointer;font-size:14px;color:var(--mute)}
   .chips .lab{min-width:0;width:100%}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+/* How Bloodline works: the film sits in the text, with the columns beside it and Rights beneath */
+.aboutgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) minmax(0,1fr);gap:18px 36px;margin-top:18px;align-items:start}
+.aboutgrid>.aboutfilm{grid-column:1;grid-row:1;margin:0;max-width:none}
+.aboutgrid>.cols{display:contents}
+.aboutgrid>.cols>div:nth-child(1){grid-column:2;grid-row:1/span 2}
+.aboutgrid>.cols>div:nth-child(2){grid-column:3;grid-row:1/span 2}
+.aboutgrid>.cols>div:nth-child(3){grid-column:1;grid-row:2}
+@media (max-width:980px){.aboutgrid{grid-template-columns:1fr}.aboutgrid>.aboutfilm,.aboutgrid>.cols>div{grid-column:1 !important;grid-row:auto !important}}
+/* the controls, as light as the veins: no boxes, the active choice underlined */
+.controls .filterbtn{border:0 !important;padding:6px 0 !important;margin-right:8px}
+.controls .search input{border:0 !important;border-bottom:1px solid var(--hair) !important;padding:6px 2px !important}
+.controls .search input:focus{outline:none;border-bottom-color:var(--ink) !important}
+.viewtoggle{border:0 !important;gap:20px}
+.viewtoggle button{padding:5px 0 !important;background:transparent !important;color:var(--mute) !important;border-bottom:1px solid transparent !important}
+.viewtoggle button:hover{color:var(--ink) !important}
+.viewtoggle button[aria-pressed="true"]{color:var(--ink) !important;border-bottom-color:var(--ink) !important}
+.gmode{background:transparent !important}
+.gzoom button{border:0 !important;background:transparent !important;color:var(--mute)}
+.gzoom button:hover{color:var(--ink)}
 </style>
 
 <div class="wrap">
@@ -691,7 +710,7 @@ function renderRows() {
 
 function aboutBlock() {
   return `<section class="about" id="about"><h2>How Bloodline works</h2>
-    <figure class="aboutfilm"><div class="frame16"><button type="button" class="play" aria-label="Play the Bloodline film" onclick="this.outerHTML='<iframe src=&quot;https://www.youtube-nocookie.com/embed/w0VpMHeFc_I?rel=0&amp;autoplay=1&quot; title=&quot;Bloodline, the film&quot; allow=&quot;autoplay; encrypted-media; picture-in-picture; fullscreen&quot; allowfullscreen referrerpolicy=&quot;strict-origin-when-cross-origin&quot;></iframe>'"><img src="data:image/jpeg;base64,__FILMPOSTER__" alt=""><span aria-hidden="true"></span></button></div>
+    <div class="aboutgrid"><figure class="aboutfilm"><div class="frame16"><button type="button" class="play" aria-label="Play the Bloodline film" onclick="this.outerHTML='<iframe src=&quot;https://www.youtube-nocookie.com/embed/w0VpMHeFc_I?rel=0&amp;autoplay=1&quot; title=&quot;Bloodline, the film&quot; allow=&quot;autoplay; encrypted-media; picture-in-picture; fullscreen&quot; allowfullscreen referrerpolicy=&quot;strict-origin-when-cross-origin&quot;></iframe>'"><img src="data:image/jpeg;base64,__FILMPOSTER__" alt=""><span aria-hidden="true"></span></button></div>
       <figcaption>Bloodline in 82 seconds. <a class="pl" href="https://youtu.be/w0VpMHeFc_I" target="_blank" rel="noopener">Watch on YouTube</a></figcaption></figure><div class="cols">
     <div><h3>How it was made</h3>
       <p>Bloodline gathers close to five hundred horror films from every corner of the world and more than a century of cinema, with their plots, subtitles, screenplays and stills. Each film is read for what threatens, where it comes from, what it wants and how it ends, and every reading points back to the line it came from.</p>
@@ -702,7 +721,7 @@ function aboutBlock() {
       <p><b style="color:${LENSC.archetypes}">Archetypes</b> are story shapes Bloodline classified, many rooted in folklore, such as the bad host or the woman who comes back. They are the one vein set from the top down, tagged on each film and then held up against what the films themselves show.</p>
       <p>${(() => { const ks = LENS.filter(([k]) => k !== "nightmares" && k !== "archetypes").map(([k, n], i) => `<b style="color:${LENSC[k]}">${i ? n.charAt(0).toLowerCase() + n.slice(1) : n}</b>`); return ks.slice(0, -1).join(", ") + " and " + ks[ks.length - 1]; })()} are read from each film's plot, subtitles and screenplay, each reading quoted. The many ways the films put these things are gathered into shared fears.</p></div>
     <div><h3>Rights</h3><p>Subtitles, screenplays and stills belong to their owners and are shown here for private research only. Wikipedia text is CC BY-SA; Wikidata facts are CC0.</p></div>
-</div>
+</div></div>
     <div class="author"><img src="data:image/jpeg;base64,__AUTHOR__" alt="Shafeeq Shajahan" width="56" height="56">
       <p><b>Made by Shafeeq Shajahan</b>, co-founder of <a class="pl" href="https://www.liverandlung.com" target="_blank" rel="noopener">Liver &amp; Lung</a> and an AI leader who builds state-of-the-art products that read people. Bloodline points that work at the oldest archive we have: a century of nightmares, taken apart until the patterns in what we fear begin to show.</p><a class="ghlink" href="https://github.com/shafeeqshajahanliver/bloodline" target="_blank" rel="noopener" aria-label="Bloodline on GitHub" title="Bloodline on GitHub"><svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a></div>
   </div></section>`;
