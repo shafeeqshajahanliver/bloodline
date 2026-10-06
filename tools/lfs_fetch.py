@@ -5,7 +5,7 @@ import glob, os, sys, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 REPO = os.environ.get("LFS_REPO", "shafeeqshajahanliver/bloodline")
 REF = os.environ.get("VERCEL_GIT_COMMIT_SHA") or os.environ.get("LFS_REF", "claude/loving-lovelace-8awtad")
-files = glob.glob("films/*/visuals/stills/*.jpg") + ["record/author.jpg"]
+files = glob.glob("films/*/visuals/stills/*.jpg") + ["record/author.jpg", "record/film-poster.jpg"]
 def is_pointer(p):
     try:
         with open(p, "rb") as f: return f.read(40).startswith(b"version https://git-lfs")
