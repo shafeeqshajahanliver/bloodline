@@ -8,9 +8,9 @@
   "negatives": 4
  },
  "network": {
-  "films": 498,
+  "films": 503,
   "fears": 231,
-  "links": 11507,
+  "links": 11623,
   "left_out": [
    "archetypes",
    "nightmares"
@@ -20,12 +20,12 @@
  "test": "fresh splits (seeds 200-202), 15% of each film's links hidden (films with 5+ links), mean of 3 splits; recall@10 = share of hidden fears ranked in the film's top 10 of the fears it doesn't visibly carry",
  "results": {
   "model": {
-   "recall_at_10": 0.277,
-   "auc": 0.789
+   "recall_at_10": 0.276,
+   "auc": 0.788
   },
   "co-occurrence": {
-   "recall_at_10": 0.274,
-   "auc": 0.786
+   "recall_at_10": 0.271,
+   "auc": 0.785
   },
   "popularity": {
    "recall_at_10": 0.242,
@@ -36,48 +36,64 @@
   "k": 12,
   "chosen_by": "kept from the previous run; films new to the archive placed in the nearest family",
   "placed": {
-   "2025-obsession": {
-    "family": "wealth and ambition",
-    "closeness": 0.718
+   "2023-infinity-pool": {
+    "family": "a mind turning on itself",
+    "closeness": 0.554
+   },
+   "2023-renfield": {
+    "family": "blood drinkers",
+    "closeness": 0.72
+   },
+   "2023-the-boogeyman": {
+    "family": "evil places",
+    "closeness": 0.63
+   },
+   "2023-the-exorcist-believer": {
+    "family": "a way into life",
+    "closeness": 0.749
+   },
+   "2023-the-popes-exorcist": {
+    "family": "a way into life",
+    "closeness": 0.772
    }
   },
   "stability_by_k": {
-   "4": 0.496,
-   "5": 0.513,
-   "6": 0.527,
-   "7": 0.493,
-   "8": 0.546,
-   "9": 0.536,
-   "10": 0.438,
-   "11": 0.414,
-   "12": 0.387,
-   "13": 0.387,
-   "14": 0.375,
-   "15": 0.383,
-   "16": 0.365,
-   "17": 0.353,
-   "18": 0.32,
-   "19": 0.339,
-   "20": 0.334
+   "4": 0.63,
+   "5": 0.55,
+   "6": 0.484,
+   "7": 0.479,
+   "8": 0.468,
+   "9": 0.418,
+   "10": 0.422,
+   "11": 0.401,
+   "12": 0.398,
+   "13": 0.407,
+   "14": 0.377,
+   "15": 0.368,
+   "16": 0.363,
+   "17": 0.357,
+   "18": 0.345,
+   "19": 0.361,
+   "20": 0.314
   },
   "silhouette_by_k": {
-   "4": 0.1333,
-   "5": 0.1313,
-   "6": 0.1266,
-   "7": 0.1338,
-   "8": 0.1277,
-   "9": 0.1265,
-   "10": 0.1068,
-   "11": 0.1128,
-   "12": 0.1157,
-   "13": 0.1055,
-   "14": 0.116,
-   "15": 0.1199,
-   "16": 0.111,
-   "17": 0.1103,
-   "18": 0.1104,
-   "19": 0.1081,
-   "20": 0.1089
+   "4": 0.137,
+   "5": 0.1345,
+   "6": 0.1287,
+   "7": 0.1322,
+   "8": 0.1214,
+   "9": 0.1154,
+   "10": 0.1211,
+   "11": 0.1125,
+   "12": 0.1066,
+   "13": 0.1097,
+   "14": 0.1099,
+   "15": 0.1158,
+   "16": 0.1053,
+   "17": 0.1091,
+   "18": 0.1146,
+   "19": 0.1119,
+   "20": 0.1095
   }
  },
  "trained": "2026-10-06",

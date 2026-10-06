@@ -1,33 +1,33 @@
 # Story elements: first pass
 
-Generated 2026-10-06 from `films/*/story_elements.json` (498 films, 18225 quoted entries). Values are raw, as written by the reader: near-duplicates are not merged yet, so counts understate how common each idea is. Every entry is a first pass, unreviewed. Schema: `docs/story-elements.md`.
+Generated 2026-10-06 from `films/*/story_elements.json` (503 films, 18394 quoted entries). Values are raw, as written by the reader: near-duplicates are not merged yet, so counts understate how common each idea is. Every entry is a first pass, unreviewed. Schema: `docs/story-elements.md`.
 
-Plot quality: 487 full, 11 thin, 0 lead only. Confidence: 17526 entries stated directly in the article, 699 read from it.
+Plot quality: 492 full, 11 thin, 0 lead only. Confidence: 17643 entries stated directly in the article, 751 read from it.
 
 ## How often each dimension could be filled
 
 | Dimension | Films with at least one entry | Marked not stated |
 |---|---|---|
-| Threat | 498 | 0 |
-| Origin of the threat | 490 | 8 |
-| What it wants | 489 | 9 |
-| The wrong underneath | 406 | 92 |
-| Trigger | 497 | 1 |
-| Rules | 491 | 7 |
-| Who suffers | 498 | 0 |
-| Ending | 496 | 2 |
-| Images | 498 | 0 |
-| Beats | 498 | 0 |
+| Threat | 503 | 0 |
+| Origin of the threat | 495 | 8 |
+| What it wants | 494 | 9 |
+| The wrong underneath | 411 | 92 |
+| Trigger | 502 | 1 |
+| Rules | 496 | 7 |
+| Who suffers | 503 | 0 |
+| Ending | 501 | 2 |
+| Images | 503 | 0 |
+| Beats | 503 | 0 |
 
 ## Threat: most common values
 
-the self (44), vengeful ghost (23), cult (22), vampire (21), possessing demon (20), serial killer (20), witch (18), zombies (16), possessing spirit (16), ghosts (12), cursed object (12), haunted house (10), masked killer (8), demon (8), curse (7), child ghost (7), mad scientist (6), ghost (6), devil (6), unseen force (6), vampires (6), werewolf (5), vengeful ghosts (5), demons (5), other survivors (5)
+the self (45), vengeful ghost (23), possessing demon (22), vampire (22), cult (22), serial killer (20), witch (18), zombies (16), possessing spirit (16), ghosts (12), cursed object (12), haunted house (10), masked killer (8), demon (8), curse (7), child ghost (7), mad scientist (6), ghost (6), devil (6), unseen force (6), vampires (6), werewolf (5), vengeful ghosts (5), demons (5), other survivors (5)
 
 650 distinct values in total.
 
 ## Origin of the threat: most common values
 
-unexplained (50), person who died wronged (48), made by someone (24), summoned by ritual (21), from outside (13), from nature (13), from outer space (12), inherited (12), childhood trauma (9), folk legend (9), pact with the devil (8), local legend (4), folklore (4), made by science (4), grief (4), accident (3), greed (3), mental illness (3), people who died wronged (3), inherited curse (2), wish granted by magic (2), person who died waiting (2), made by human science (2), sent by a sorcerer (2), abused child (2)
+unexplained (50), person who died wronged (48), made by someone (24), summoned by ritual (22), from outside (13), from nature (13), from outer space (12), inherited (12), childhood trauma (9), folk legend (9), pact with the devil (8), local legend (4), folklore (4), made by science (4), grief (4), accident (3), greed (3), mental illness (3), people who died wronged (3), random strangers (3), from a foreign land (2), inherited curse (2), wish granted by magic (2), person who died waiting (2), made by human science (2)
 
 449 distinct values in total.
 
@@ -39,49 +39,49 @@ revenge (78), hunger (56), to spread (37), blood (22), to replace someone (21), 
 
 ## The wrong underneath: most common values
 
-murder (26), adultery (19), child abuse (15), rape (13), domestic abuse (6), incest (6), theft (5), broken promise (5), bullying (5), greed (5), scientific hubris (4), grave robbing (4), betrayal (4), murder of a spouse (4), parent kills family (4), family massacre (4), domestic violence (4), infidelity (4), abandoned child (4), child murder (4), deception (3), murder of a child (3), rape and murder (3), mass murder (3), colonial crime (3)
+murder (26), adultery (19), child abuse (15), rape (13), domestic abuse (7), incest (6), theft (5), broken promise (5), bullying (5), greed (5), scientific hubris (4), grave robbing (4), betrayal (4), murder of a spouse (4), parent kills family (4), family massacre (4), domestic violence (4), infidelity (4), abandoned child (4), child murder (4), deception (3), murder of a child (3), rape and murder (3), mass murder (3), colonial crime (3)
 
 510 distinct values in total.
 
 ## Trigger: most common values
 
-moving into a new home (37), a journey (31), an invitation (20), taking an object (12), returning home (7), warning ignored (5), watching something (5), car accident (4), breaking a rule (4), abduction (4), falling in love (4), watching a cursed object (4), scientific experiment (3), sexual encounter (3), witnessing a murder (3), car breaks down (3), anniversary (3), playing a recording (3), returning to ancestral home (3), returning to childhood home (3), taking a job (3), taking in a stranger (3), death of a parent (3), creating life (2), accident (2)
+moving into a new home (37), a journey (31), an invitation (20), taking an object (12), returning home (7), warning ignored (6), watching something (5), car accident (5), breaking a rule (4), abduction (4), falling in love (4), watching a cursed object (4), scientific experiment (3), a stranger arrives (3), moving to a new city (3), witnessing a murder (3), sexual encounter (3), car breaks down (3), anniversary (3), playing a recording (3), returning to ancestral home (3), witnessing a suicide (3), returning to childhood home (3), taking a job (3), a disappearance (3)
 
 594 distinct values in total.
 
 ## Rules: most common values
 
-must be invited (7), destroyed by fire (7), destroyed by sunlight (6), no way out (6), killed by sunlight (6), must not look (5), cannot leave (5), cannot be stopped (5), no reflection (4), bite infects (4), burned by sunlight (4), survive by passing it on (4), stake through the heart (3), cannot be killed (3), no escape (3), warning ignored (3), cannot leave the house (3), punishes disobedience (2), killed by stake through heart (2), repelled by crucifix (2), afraid of fire (2), conventional weapons fail (2), repelled by cross (2), must not eat (2), ends when summoner dies (2)
+must be invited (7), destroyed by fire (7), destroyed by sunlight (6), no way out (6), killed by sunlight (6), must not look (5), cannot leave (5), cannot be stopped (5), no reflection (4), bite infects (4), burned by sunlight (4), survive by passing it on (4), stake through the heart (3), cannot be killed (3), no escape (3), warning ignored (3), weak to sunlight (3), cannot leave the house (3), punishes disobedience (2), killed by stake through heart (2), repelled by crucifix (2), afraid of fire (2), conventional weapons fail (2), the chosen must not be defended (2), repelled by cross (2)
 
 1602 distinct values in total.
 
 ## Who suffers: most common values
 
-family (36), mother (31), wife (29), investigator (27), child (26), friends (23), lover (22), husband (22), father (21), young woman (19), couple (19), daughter (15), townspeople (15), children (15), fiancée (12), sister (12), siblings (12), villagers (11), son (11), teenagers (10), pregnant woman (10), friend (10), parents (9), investigators (8), boyfriend (8)
+family (36), mother (31), wife (30), investigator (27), child (26), friends (24), lover (22), husband (22), father (22), young woman (19), couple (19), daughter (16), children (16), townspeople (15), fiancée (12), sister (12), siblings (12), villagers (11), son (11), teenagers (10), pregnant woman (10), friend (10), parents (9), best friend (9), investigators (8)
 
 751 distinct values in total.
 
 ## Ending: most common values
 
-threat survives (109), threat destroyed (100), ambiguous (45), everyone dies (39), victim becomes threat (36), cycle passes on (33), false resolution (14), protagonist dies (13), self-sacrifice (12), final girl survives (7), lone survivor (7), house destroyed (6), guilty punished (6), threat killed (5), threat contained (5), family destroyed (5), victim freed (4), victim restored (4), victim dies (4), killer caught (4), threat wins (4), threat spreads (4), ghost laid to rest (4), cycle repeats (4), order restored (3)
+threat survives (109), threat destroyed (101), ambiguous (46), everyone dies (39), victim becomes threat (36), cycle passes on (33), false resolution (14), protagonist dies (13), self-sacrifice (12), final girl survives (7), lone survivor (7), house destroyed (6), guilty punished (6), threat killed (5), threat contained (5), family destroyed (5), victim freed (4), victim restored (4), victim dies (4), killer caught (4), threat wins (4), threat spreads (4), ghost laid to rest (4), cycle repeats (4), order restored (3)
 
 549 distinct values in total.
 
 ## Images: most common values
 
-dog (58), mirror (42), fire (38), blood (35), axe (28), cat (25), knife (24), coffin (17), rats (15), gun (15), severed head (14), camera (14), bathtub (13), doll (13), well (13), lake (12), grave (12), door (11), mask (11), corpse (11), water (11), shotgun (11), hair (10), noose (10), train (10)
+dog (58), mirror (42), fire (39), blood (37), axe (28), cat (25), knife (24), coffin (17), rats (15), gun (15), severed head (14), camera (14), well (14), grave (13), bathtub (13), doll (13), lake (12), shotgun (12), door (11), mask (11), corpse (11), water (11), basement (11), hair (10), sunlight (10)
 
 3525 distinct values in total.
 
 ## Beats: most common values
 
-first death (27), closing sting (26), past crime revealed (22), warning ignored (15), friend killed (8), legend told (8), first murder (6), first transformation (5), monster revealed (5), trapped inside (5), family secret revealed (5), first kill (5), father killed (4), child dies (4), lover killed (4), baby stolen (4), exorcism (4), friends killed one by one (4), massacre (4), failed exorcism (4), leader killed (4), rescuer killed (4), child endangered (4), monstrous birth (4), rule broken (4)
+closing sting (29), first death (28), past crime revealed (22), warning ignored (15), friend killed (8), legend told (8), first murder (6), first transformation (5), monster revealed (5), trapped inside (5), family secret revealed (5), first kill (5), father killed (4), child dies (4), lover killed (4), baby stolen (4), exorcism (4), friends killed one by one (4), massacre (4), failed exorcism (4), leader killed (4), rescuer killed (4), final confrontation (4), child endangered (4), failed escape (4)
 
-4565 distinct values in total.
+4594 distinct values in total.
 
 ## Who suffers: relation to the threat
 
-stranger (668), family (295), community (227), lover (131), self (109), unknown (17)
+stranger (680), family (296), community (227), lover (131), self (110), unknown (18)
 
 ## Images used as omens
 
