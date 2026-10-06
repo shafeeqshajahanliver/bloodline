@@ -334,11 +334,15 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .trfinds p{margin:0}.trfinds .k{font-family:var(--display);font-size:22px;line-height:1.2;margin-bottom:6px}
 .trfinds .fig{font-family:var(--mono);font-size:12.5px;color:var(--mute);margin-top:8px;font-variant-numeric:tabular-nums}
 .trmaps{border-top:1px solid var(--hair);padding-top:28px}
-.trveins{display:flex;flex-wrap:nowrap;gap:4px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.trveins{display:flex;flex-wrap:nowrap;align-items:center;gap:2px 4px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
 .trveins::-webkit-scrollbar{display:none}
-.trveins .chip{font-size:12px;padding:2px 7px;white-space:nowrap;flex:none;color:var(--mute);background:transparent}
-.trveins .chip[aria-pressed="true"]{color:var(--ink);background:var(--soft);border-color:var(--mute)}
-.trveins .chip .sw{width:7px;height:7px;margin-right:5px}
+.trveins .vlab{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);white-space:nowrap;margin-right:8px;flex:none}
+.trveins .chip{font-size:12px;padding:3px 5px;white-space:nowrap;flex:none;border:0;background:transparent;color:var(--mute);transition:color .2s}
+.trveins .chip:hover{color:var(--ink);border:0}
+.trveins .chip[aria-pressed="true"]{color:var(--ink);background:transparent;border:0}
+.trveins .chip .sw{width:7px;height:7px;margin-right:5px;opacity:.3;transition:opacity .2s}
+.trveins .chip[aria-pressed="true"] .sw{opacity:1}
+.trveins .chip:hover .sw{opacity:.75}
 .gveins{position:absolute;left:48px;right:48px;bottom:18px;z-index:3;justify-content:center;flex-wrap:wrap;row-gap:4px}
 .gstage .ginfo{bottom:52px !important}
 .gstage.hov .gveins{opacity:.2;transition:opacity .3s}
@@ -768,7 +772,7 @@ function renderPatterns() {
     <section class="trlead"><p class="trk">The headline</p><h2>Asia fears the <em>dead</em>. The West fears the <em>living</em> more.</h2>
       <div class="strip">${cells.join("")}</div>
       <p class="trnote">Changes over time compare films before 1980 with films since 2000. Grids are a hundred films each. West: North America, Europe, UK & Ireland, Australia & NZ. Asia: East, Southeast and South Asia.</p></section>
-    <section class="trmaps"><div class="trveins" role="group" aria-label="Vein">${LENS.filter(([k]) => PAT.dims.includes(k)).map(([k, n]) => `<button type="button" class="chip" data-tvein="${k}" aria-pressed="${k === d}"><span class="sw" style="background:${LENSC[k]};border-radius:50%;margin-right:6px"></span>${n}</button>`).join("")}</div>
+    <section class="trmaps"><div class="trveins" role="group" aria-label="Vein"><span class="vlab">Show by vein</span>${LENS.filter(([k]) => PAT.dims.includes(k)).map(([k, n]) => `<button type="button" class="chip" data-tvein="${k}" aria-pressed="${k === d}"><span class="sw" style="background:${LENSC[k]};border-radius:50%;margin-right:6px"></span>${n}</button>`).join("")}</div>
       <p class="trsub">Each square is the share of a region's or an era's films carrying it; the deeper the colour, the more common. Outlined squares are at least 1.8 times as common as across all films, with five or more films behind them. Hatched columns have fewer than 15 films.</p>
       <h3>By region</h3><div class="scroll"><div class="hm" id="hm-reg"></div></div>
       <h3>By era</h3><div class="scroll"><div class="hm" id="hm-era"></div></div></section></div>`;
@@ -1034,7 +1038,7 @@ function buildGraph() {
   const legend = () => { const key = document.getElementById("gkey"); if (!key) return;
     const th = document.getElementById("gthreads");
     if (th) { th.hidden = state.primary !== "fears";
-      th.innerHTML = LENS.map(([kk, nn]) => `<button type="button" class="chip" data-thread="${kk}" aria-pressed="${state.glenses.has(kk)}"><span class="sw" style="background:${LENSC[kk]};border-radius:50%"></span>${nn}</button>`).join("");
+      th.innerHTML = `<span class="vlab" title="Tap a vein to show or hide it">Veins</span>` + LENS.map(([kk, nn]) => `<button type="button" class="chip" data-thread="${kk}" aria-pressed="${state.glenses.has(kk)}"><span class="sw" style="background:${LENSC[kk]};border-radius:50%"></span>${nn}</button>`).join("");
       th.querySelectorAll("[data-thread]").forEach(b => b.onclick = () => { const kk = b.dataset.thread; state.glenses.has(kk) ? state.glenses.delete(kk) : state.glenses.add(kk);
         document.querySelectorAll(`[data-glens="${kk}"]`).forEach(x => x.setAttribute("aria-pressed", state.glenses.has(kk)));
         redraw(() => { buildGraph(); renderRows(); }); }); }
