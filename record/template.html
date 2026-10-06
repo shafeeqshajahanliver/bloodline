@@ -349,6 +349,27 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .gstage.hov .gveins{opacity:.2;transition:opacity .3s}
 @media (max-width:900px){.gveins{left:16px;right:16px}}
 .trsub{font-size:14.5px;color:var(--mute);max-width:720px;margin:14px 0 6px}
+/* then and now: each fear's share before 1980 (hollow dot) and since 2000 (arrowhead) */
+.dmb{display:grid;gap:0;margin-top:4px;max-width:980px}
+.dmb .dk{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin:16px 0 2px}
+.dmr{display:grid;grid-template-columns:minmax(120px,230px) minmax(0,1fr);gap:16px;align-items:center;min-height:34px;width:100%;background:none;border:0;padding:0;text-align:left;color:inherit;font:inherit;cursor:pointer}
+.dmr .lab{font-size:15px;text-align:right;color:var(--ink);line-height:1.2}
+.dmr:hover .lab{text-decoration:underline;text-decoration-color:var(--hair);text-underline-offset:3px}
+.dmr .trk,.dmax .trk{position:relative;height:30px;margin:0 40px;background-image:linear-gradient(to right,var(--rule) 1px,transparent 1px);background-size:var(--step) 100%}
+.dmax{display:grid;grid-template-columns:minmax(120px,230px) minmax(0,1fr);gap:16px}
+.dmax .trk{height:18px;background:none}
+.dmax span{position:absolute;transform:translateX(-50%);font-family:var(--mono);font-size:10.5px;color:var(--mute)}
+.dmr i{position:absolute;top:50%;display:block}
+.dmr .ln{height:2px;margin-top:-1px}
+.dmr .d0{width:11px;height:11px;margin:-5.5px 0 0 -5.5px;border:2px solid var(--ink);border-radius:50%;background:var(--paper);box-sizing:border-box}
+.dmr .ah{width:0;height:0;margin-top:-6px;border-top:6px solid transparent;border-bottom:6px solid transparent}
+.dmr .ah.up{border-left:11px solid var(--c);margin-left:-9px}.dmr .ah.dn{border-right:11px solid var(--c);margin-left:-2px}
+.dmr b{position:absolute;top:50%;transform:translateY(-50%);font-family:var(--mono);font-size:11.5px;font-weight:400;white-space:nowrap}
+.dmr b.v0{color:var(--mute)}.dmr b.v1{color:var(--c)}
+.dmlegend{display:flex;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;color:var(--mute);margin:4px 0 0}
+.dmlegend .o{display:inline-block;width:9px;height:9px;border:2px solid var(--ink);border-radius:50%;margin-right:6px;vertical-align:-1px}
+.dmlegend .a{display:inline-block;width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:9px solid var(--lc);margin-right:6px;vertical-align:0}
+@media (max-width:620px){.dmr,.dmax{grid-template-columns:minmax(0,1fr);gap:0}.dmr{min-height:0;padding:6px 0 0}.dmr .lab{text-align:left;font-size:14px}.dmax>div:first-child{display:none}.dmr .trk,.dmax .trk{margin:0 36px}}
 .trmaps h3{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:26px 0 10px}
 .trmaps .scroll{overflow-x:auto;padding-bottom:6px}
 .hm{display:grid;gap:2px;min-width:max-content;font-variant-numeric:tabular-nums}
@@ -794,6 +815,7 @@ function renderPatterns() {
       <p class="trnote">Changes over time compare films before 1980 with films since 2000. Grids are a hundred films each. West: North America, Europe, UK & Ireland, Australia & NZ. Asia: East, Southeast and South Asia.</p></section>
     <section class="trmaps"><div class="trveins" role="group" aria-label="Vein"><span class="vlab">Show by vein:</span>${LENS.filter(([k]) => PAT.dims.includes(k)).map(([k, n]) => `<button type="button" class="chip" data-tvein="${k}" aria-pressed="${k === d}"><span class="sw" style="background:${LENSC[k]};border-radius:50%;margin-right:6px"></span>${n}</button>`).join("")}</div>
       <p class="trsub">Each square is the share of a region's or an era's films carrying it; the deeper the colour, the more common. Outlined squares are at least 1.8 times as common as across all films, with five or more films behind them. Hatched columns have fewer than 15 films.</p>
+      <h3>Then and now</h3><div id="dmb"></div>
       <h3>By region</h3><div class="scroll"><div class="hm" id="hm-reg"></div></div>
       <h3>By era</h3><div class="scroll"><div class="hm" id="hm-era"></div></div></section></div>`;
   el.style.setProperty("--lc", lc);
@@ -816,6 +838,21 @@ function renderPatterns() {
   };
   heat("hm-reg", fReg, regs, f => f.r, c => RSHORT[c] || c);
   heat("hm-era", fEra, ERAS.map(e => e[0]), f => eraOf(f.y), c => c);
+  // then and now: the fears that rose and fell most between films before 1980 and films since 2000 (in the chosen regions)
+  { const early = fEra.filter(f => f.y < 1980), late = fEra.filter(f => f.y >= 2000), box = document.getElementById("dmb");
+    const rows = names.map(r => { const a = early.filter(f => has(f, d, r.nm)).length, b = late.filter(f => has(f, d, r.nm)).length;
+      return { nm: r.nm, a, b, sa: early.length ? a / early.length : 0, sb: late.length ? b / late.length : 0 }; })
+      .filter(r => r.a + r.b >= 8).map(r => ({ ...r, dl: r.sb - r.sa })).filter(r => Math.abs(r.dl) >= .03);
+    const up = rows.filter(r => r.dl > 0).sort((x, y) => y.dl - x.dl).slice(0, 6), dn = rows.filter(r => r.dl < 0).sort((x, y) => x.dl - y.dl).slice(0, 6);
+    if (early.length < 15 || late.length < 15 || !(up.length + dn.length)) box.innerHTML = `<p class="trsub">Too few films in the chosen regions to compare the eras.</p>`;
+    else { const mx = Math.max(...[...up, ...dn].flatMap(r => [r.sa, r.sb])), M = Math.max(10, Math.ceil(mx * 10) * 10), X = v => v * 100 / M * 100, st = `--step:${1000 / M}%`;
+      const row = (r, col) => { const x0 = X(r.sa), x1 = X(r.sb), rise = x1 > x0, lo = Math.min(x0, x1);
+        return `<button type="button" class="dmr" data-fear="${esc(r.nm)}" title="${esc(cap1(r.nm))}: ${r.a} of ${early.length} films before 1980, ${r.b} of ${late.length} since 2000" style="--c:${col}"><span class="lab">${esc(cap1(r.nm))}</span><span class="trk" style="${st}">`
+          + `<i class="ln" style="left:${lo}%;width:${Math.abs(x1 - x0)}%;background:${col}"></i><i class="d0" style="left:${x0}%"></i><i class="ah ${rise ? "up" : "dn"}" style="left:${x1}%"></i>`
+          + `<b class="v0" style="left:${x0}%;transform:translate(${rise ? "calc(-100% - 10px)" : "10px"},-50%)">${pct(r.sa)}</b><b class="v1" style="left:${x1}%;transform:translate(${rise ? "8px" : "calc(-100% - 8px)"},-50%)">${pct(r.sb)}</b></span></button>`; };
+      const ax = `<div class="dmax"><div></div><div class="trk">${Array.from({ length: M / 10 + 1 }, (_, i) => `<span style="left:${i * 1000 / M}%">${i * 10}%</span>`).join("")}</div></div>`;
+      box.innerHTML = `<p class="dmlegend"><span><span class="o"></span>before 1980 · ${early.length} films</span><span><span class="a"></span>since 2000 · ${late.length} films</span></p>`
+        + `<div class="dmb">${ax}${up.length ? `<p class="dk" style="color:${lc}">Rising</p>${up.map(r => row(r, lc)).join("")}` : ""}${dn.length ? `<p class="dk" style="color:var(--mute)">Falling</p>${dn.map(r => row(r, "var(--mute)")).join("")}` : ""}</div>`; } }
   el.querySelectorAll("[data-fear]").forEach(b => b.onclick = () => go(fearHash(d, b.dataset.fear)));
   el.querySelectorAll("[data-tvein]").forEach(b => b.onclick = () => { state.lens = b.dataset.tvein; renderPatterns(); });
   let tip = document.getElementById("ptip"); if (!tip) { tip = document.createElement("div"); tip.id = "ptip"; tip.className = "ptip"; document.body.appendChild(tip); }
