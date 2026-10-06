@@ -208,5 +208,11 @@ _fp = open("record/film-poster.jpg", "rb").read() if os.path.exists("record/film
 if _fp.startswith(b"version https://git-lfs"): _fp = b""
 page = page.replace("__FILMPOSTER__", base64.b64encode(_fp).decode())
 open(f"{OUT}/bloodline-record.html", "w").write(page)
-open(f"{OUT}/index.html", "w").write('<!doctype html>\n<html lang="en">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' + page)   # the same page as the site root, for static hosts such as Vercel
+# favicons: a red nightmare node ringed by films (record/icons), inlined so the single page carries them
+def _icon(f):
+    b = open(f, "rb").read() if os.path.exists(f) else b""
+    return "" if not b or b.startswith(b"version https://git-lfs") else base64.b64encode(b).decode()
+_fav, _touch = _icon("record/icons/favicon-32.png"), _icon("record/icons/apple-touch-icon.png")
+_icons = (f'<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,{_fav}">\n' if _fav else "") + (f'<link rel="apple-touch-icon" href="data:image/png;base64,{_touch}">\n' if _touch else "")
+open(f"{OUT}/index.html", "w").write('<!doctype html>\n<html lang="en">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' + _icons + page)   # the same page as the site root, for static hosts such as Vercel
 os.remove(f"{OUT}/index.json")   # only needed while building; it is embedded in the page
