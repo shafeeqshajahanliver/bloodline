@@ -252,6 +252,12 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .viewtoggle button[aria-pressed="true"]{background:var(--ink);color:var(--on-ink)}
 .viewtoggle button:focus-visible{outline:2px solid var(--red);outline-offset:2px}
 .gstage{position:relative;height:min(82vh,880px);min-height:540px;border-bottom:1px solid var(--hair);overflow:hidden}
+/* the launch film in How Bloodline works: a poster frame and play button, swapped for the YouTube player on click */
+.aboutfilm{margin:18px 0 30px;max-width:560px}.aboutfilm .frame16{position:relative;aspect-ratio:16/9;background:var(--soft);border:1px solid var(--hair)}
+.aboutfilm iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.aboutfilm .play{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;border-radius:0;background:#000;cursor:pointer}.aboutfilm .play img{width:100%;height:100%;object-fit:cover;display:block;opacity:.88;transition:opacity .3s}
+.aboutfilm .play span{position:absolute;left:50%;top:56%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:var(--red);box-shadow:0 0 24px rgba(207,58,46,.55)}.aboutfilm .play span::after{content:"";position:absolute;left:23px;top:17px;border-left:17px solid var(--ink);border-top:12px solid transparent;border-bottom:12px solid transparent}
+.aboutfilm .play:hover img,.aboutfilm .play:focus-visible img{opacity:1}.aboutfilm figcaption{margin-top:9px;font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--mute)}
 /* while the graph recomputes: the threads sink into the dark and flicker like a failing projector, and a small red
    film camera turns its reels in the middle. Transform and opacity only, so it keeps moving while the page is busy. */
 .gbusy{position:absolute;inset:0;z-index:5;display:flex;align-items:center;justify-content:center;pointer-events:none;opacity:0;transition:opacity .45s}
@@ -550,7 +556,7 @@ details.fothers summary{cursor:pointer;font-size:14px;color:var(--mute)}
 <div class="wrap">
   <header class="bar">
     <button class="wordmark" id="home" type="button">Bloodline</button>
-    <span class="crumb" id="crumb">the fears that connect us</span>
+    <span class="crumb" id="crumb"></span>
     <span class="spacer"></span>
     <button class="linkish tag" type="button" id="about-link">How Bloodline works</button>
   </header>
@@ -600,7 +606,7 @@ function matches(f) {
 }
 function renderIndex() {
   document.title = "Bloodline Record";
-  document.getElementById("crumb").textContent = "the fears that connect us";
+  document.getElementById("crumb").textContent = "";
   const counts = k => F.filter(f => f[k]).length;
   app.innerHTML = `
   <div class="controls">
