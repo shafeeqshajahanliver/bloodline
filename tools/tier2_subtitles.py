@@ -42,6 +42,7 @@ idx={r["id"]:r for r in csv.DictReader(open("films.csv"))}
 targets=sys.argv[1:] or sorted(d for d in os.listdir("films"))
 for fid in targets:
     wd=json.load(open(f"films/{fid}/wikidata.json")); imdb=wd.get("imdb_id"); rt=wd.get("duration_min")
+    if isinstance(rt, list): rt = float(rt[0]["amount"]) if rt else None   # several runtimes listed: take the first (usually the theatrical cut)
     if not imdb: print(fid,"no IMDb id"); continue
     langs=["en"]; n=NATIVE.get(idx[fid]["country"])
     if n and n!="en": langs.append(n)
