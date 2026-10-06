@@ -339,10 +339,10 @@ ol.why .r b{font-weight:600;color:var(--ink)}
 .trveins .chip{font-size:12px;padding:2px 7px;white-space:nowrap;flex:none;color:var(--mute);background:transparent}
 .trveins .chip[aria-pressed="true"]{color:var(--ink);background:var(--soft);border-color:var(--mute)}
 .trveins .chip .sw{width:7px;height:7px;margin-right:5px}
-.gveins{position:absolute;left:0;right:0;bottom:14px;z-index:3;justify-content:safe center}
+.gveins{position:absolute;left:32px;right:32px;bottom:16px;z-index:3;justify-content:center;flex-wrap:wrap;row-gap:4px}
 .gstage .ginfo{bottom:52px !important}
 .gstage.hov .gveins{opacity:.2;transition:opacity .3s}
-@media (max-width:900px){.gveins{justify-content:flex-start}}
+@media (max-width:900px){.gveins{justify-content:flex-start;flex-wrap:nowrap;left:16px;right:16px}}
 .trsub{font-size:14.5px;color:var(--mute);max-width:720px;margin:14px 0 6px}
 .trmaps h3{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:26px 0 10px}
 .trmaps .scroll{overflow-x:auto;padding-bottom:6px}
@@ -468,14 +468,16 @@ ul.kinds li span:last-child{font-family:var(--mono);font-size:11.5px;color:var(-
 
 /* graph as hero */
 .gstage{height:calc(100vh - 170px);min-height:560px}
-.ghero{position:absolute;left:0;top:64px;max-width:min(560px,46%);z-index:3;pointer-events:none;transition:opacity .3s}
+.ghero{position:absolute;left:32px;top:68px;max-width:min(540px,42%);z-index:3;pointer-events:none;transition:opacity .3s}
 .ghero h1{font-family:var(--display);font-weight:400;font-size:clamp(40px,5.4vw,76px);line-height:.98;margin:8px 0 0;text-wrap:balance;text-shadow:0 0 24px var(--paper),0 0 4px var(--paper)}
 .ghero h1 em{font-style:italic;color:var(--red)}
 .ghero p{margin:14px 0 0;max-width:44ch;color:var(--ink);text-shadow:0 0 10px var(--paper),0 0 3px var(--paper)}
 .ghero .overline{margin:0}
 .gstage.hov .ghero{opacity:0}
 .ginfo{top:auto;bottom:16px}
-@media (max-width:760px){ .ghero{max-width:100%;top:56px} .ghero p{display:none} }
+.gstage .ginfo{left:32px}
+@media (max-width:760px){.gstage .ginfo{left:16px}}
+@media (max-width:760px){ .ghero{max-width:calc(100% - 32px);left:16px;top:56px} .ghero p{display:none} }
 
 /* a fear's own page */
 .fpage .work{color:var(--lc)}
@@ -1042,9 +1044,13 @@ function buildGraph() {
   const zoom = d3.zoom().scaleExtent([.4, 7]).on("zoom", ev => { root.attr("transform", ev.transform); k = ev.transform.k; if (!hoverOn) labels(); });
   svg.call(zoom);
   const fit = (dur) => { const vis = nodes.filter(n => visible.has(n.id)); if (!vis.length) return;
-    const wide = W > 900 && document.getElementById("ghero"), aw = wide ? W * .6 : W, ox = wide ? W * .18 : 0;
-    const [x0, x1] = d3.extent(vis, n => n.x), [y0, y1] = d3.extent(vis, n => n.y), s = Math.min(3, .92 / Math.max((x1 - x0 + 60) / aw, (y1 - y0 + 60) / H));
-    const t = d3.zoomIdentity.translate(ox, 0).scale(s).translate(-(x0 + x1) / 2, -(y0 + y1) / 2);
+    // fit into the free part of the stage: clear of the headline, the Fears/Films toggle, the hint line and the row of veins
+    const sr = stage.getBoundingClientRect(), hero = document.getElementById("ghero"), th = document.getElementById("gthreads"), PAD = 40;
+    let L = PAD, R = W - PAD, T = 76, B = H - PAD - 34 - (th && !th.hidden ? th.offsetHeight + 14 : 0);
+    const gi = document.getElementById("ginfo"); if (gi) gi.style.setProperty("bottom", (th && !th.hidden ? th.offsetHeight + 26 : 16) + "px", "important");
+    if (W > 900 && hero && getComputedStyle(hero).display !== "none") L = Math.max(L, hero.getBoundingClientRect().right - sr.left + 48);
+    const [x0, x1] = d3.extent(vis, n => n.x), [y0, y1] = d3.extent(vis, n => n.y), s = Math.min(3, (R - L) / (x1 - x0 + 80), (B - T) / (y1 - y0 + 70));
+    const t = d3.zoomIdentity.translate((L + R) / 2 - W / 2, (T + B) / 2 - H / 2 + 8).scale(s).translate(-(x0 + x1) / 2, -(y0 + y1) / 2);
     (dur && !matchMedia("(prefers-reduced-motion: reduce)").matches ? svg.transition().duration(dur) : svg).call(zoom.transform, t); };
   document.getElementById("zin").onclick = () => svg.call(zoom.scaleBy, 1.4);
   document.getElementById("zout").onclick = () => svg.call(zoom.scaleBy, 1 / 1.4);
