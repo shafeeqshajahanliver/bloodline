@@ -77,9 +77,9 @@ header{position:fixed;left:0;right:0;top:0;height:var(--head);z-index:20;display
 .cues div{display:grid;grid-template-columns:76px 1fr;gap:10px;color:var(--ink)}
 .cues span{font-family:var(--mono);font-size:12px;color:var(--c);padding-top:2px}
 .cues i{color:var(--mute)}
-.spark{display:flex;align-items:flex-end;gap:2px;height:70px}
+.spark{display:flex;align-items:flex-end;gap:2px;height:70px;flex:none}
 .spark b{flex:1 1 0;background:var(--c);opacity:.85;min-height:1px}
-.sheet{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.sheet{flex:none;display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
 .sheet div{aspect-ratio:16/9;background-repeat:no-repeat;filter:saturate(.75) contrast(1.05);border:1px solid var(--rule)}
 .tag{border-top:1px solid var(--rule);padding-top:10px;display:grid;gap:4px}
 .tag .k{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--c)}
@@ -88,9 +88,14 @@ header{position:fixed;left:0;right:0;top:0;height:var(--head);z-index:20;display
 .kin{width:100%;flex:1 1 auto;min-height:180px}
 
 /* III. the map */
-.map svg{position:absolute;inset:calc(var(--head) + 270px) 0 0 0;width:100%;height:calc(100% - var(--head) - 270px)}
+.map svg{position:absolute;inset:calc(var(--head) + 250px) 0 0 0;width:100%;height:calc(100% - var(--head) - 250px)}
 .map .over{position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
 
+.hero{font-family:var(--display);font-weight:400;font-size:clamp(48px,min(5vw,8.6vh),92px);line-height:1;letter-spacing:-.8px}
+.map .btns{display:flex;gap:12px;flex-wrap:wrap}
+.mhead{display:flex;gap:calc(var(--pad) * 1.5);align-items:center;justify-content:flex-start}
+.mhead h2{flex:0 1 auto;max-width:1300px}
+.mhead .film{flex:0 0 min(22vw,340px);display:grid;gap:8px}
 /* IV. twelve nightmares */
 .cards{display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:1fr 1fr;gap:0;flex:1 1 auto;min-height:0;border-top:1px solid var(--hair);border-left:1px solid var(--hair)}
 .card{border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:16px 16px 14px;display:flex;flex-direction:column;gap:8px;text-decoration:none;min-height:0;overflow:hidden;transition:background .25s}
@@ -160,7 +165,7 @@ header{position:fixed;left:0;right:0;top:0;height:var(--head);z-index:20;display
   .dots{display:none}.cue{display:none}
   header{padding:0 18px}.brand span{display:none}.cta{font-size:10.5px;padding:8px 10px;letter-spacing:.12em}
   .map svg{inset:auto 0 0 0;height:calc(100% - 340px)}
-  .inv{flex-direction:column}
+  .mhead{flex-direction:column;align-items:stretch}.mhead .film{flex:none}
   .cols,.finds{flex-direction:column;display:flex;margin:0 -18px}
   .col,.find{border-left:0;border-top:1px solid var(--rule);padding:28px 18px}
   .cards{grid-template-columns:repeat(2,1fr);grid-template-rows:none}
@@ -173,58 +178,48 @@ header{position:fixed;left:0;right:0;top:0;height:var(--head);z-index:20;display
 <script id="idx" type="application/json">__INDEX__</script>
 
 <header>
-  <a class="brand" href="#i"><b>Bloodline</b><span>by Liver &amp; Lung</span></a>
-  <nav class="dots" aria-label="Acts"><span class="lab now" id="now">I · Invocation</span></nav>
+  <a class="brand" href="#map"><b>Bloodline</b><span>by Liver &amp; Lung</span></a>
+  <nav class="dots" aria-label="Acts"><span class="lab now" id="now">I · The map</span></nav>
   <a class="cta" href="#encore">Find your nightmare</a>
 </header>
-<a class="cue" id="cue" href="#method">Scroll →</a>
+<a class="cue" id="cue" href="#nightmares">Scroll →</a>
 
 <main class="row" id="row">
 
-<section class="act inv" id="i" data-name="Invocation" style="--w:78vw">
-  <div class="txt">
-    <svg class="cam" viewBox="0 0 64 44" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="14" cy="12" r="9"/><circle cx="34" cy="12" r="9"/><rect x="6" y="22" width="36" height="18"/><path d="M42 27l14-7v22l-14-7z"/></svg>
-    <p class="lab">Liver &amp; Lung presents</p>
-    <h1>What if you read every line of <em>500</em> horror films?</h1>
-    <p class="lede">Every line of dialogue, every frame, every fear. A century of horror from every corner of the world, read closely, then handed to a model that nobody told which films belong together.</p>
-    <div class="btns"><a class="btn solid" href="#method">Begin</a><a class="btn" href="index.html">Explore the map</a></div>
-  </div>
-  <figure class="film">
-    <div class="frame16" style="background-image:url(data:image/jpeg;base64,__FILMPOSTER__)"><button type="button" class="play" aria-label="Play the Bloodline film" onclick="this.outerHTML='<iframe src=&quot;https://www.youtube-nocookie.com/embed/w0VpMHeFc_I?rel=0&amp;autoplay=1&quot; title=&quot;Bloodline, the film&quot; allow=&quot;autoplay; encrypted-media; picture-in-picture; fullscreen&quot; allowfullscreen></iframe>'"></button></div>
-    <figcaption class="lab">Bloodline in 82 seconds</figcaption>
-  </figure>
-</section>
-
-<section class="act" id="method" data-name="The method" style="--w:200vw">
-  <p class="lab">Act II · How it was read</p>
-  <h2>Take one film. <em>A Quiet Place.</em> Then do it five hundred times.</h2>
-  <div class="cols" id="cols"></div>
-</section>
-
-<section class="act map" id="map" data-name="The map" style="--w:130vw">
+<section class="act map" id="map" data-name="The map" style="--w:150vw">
   <div class="over">
-    <div><p class="lab">Act III · The map</p><h2>Bloodline is a map of <em>films</em><br>and the <em>fears</em> they share.</h2></div>
-    <a class="btn solid" href="index.html">Explore the map</a>
+    <div><p class="lab">Liver &amp; Lung presents · 500 horror films · 1913–2025</p><h1 class="hero">Bloodline is a map of <em>films</em><br>and the <em>fears</em> they share.</h1></div>
+    <div class="btns"><a class="btn solid" href="index.html">Explore the map</a><a class="btn" href="#nightmares">Begin</a></div>
   </div>
-  <p class="lede" style="position:relative;z-index:2">Each dot is a film, joined to the nightmare it belongs to. The faint threads join films that share fears across nightmares.</p>
+  <p class="lede" style="position:relative;z-index:2">Every line of dialogue, every frame, every fear, from a century of horror and every corner of the world. Each dot is a film. Nobody told the model which films belong together.</p>
   <svg id="net" aria-label="Five hundred films in twelve clusters"></svg>
 </section>
 
 <section class="act" id="nightmares" data-name="Twelve nightmares" style="--w:210vw">
-  <p class="lab">Act IV · What the model found</p>
+  <p class="lab">Act II · What the model found</p>
   <h2>We found that films across the world share <em>12</em> nightmares.</h2>
   <div class="cards" id="cards"></div>
 </section>
+<section class="act" id="method" data-name="The method" style="--w:200vw">
+  <p class="lab">Act III · How it was read</p>
+  <div class="mhead"><h2>Take one film. <em>A Quiet Place.</em> Then do it five hundred times.</h2>
+  <figure class="film"><div class="frame16" style="background-image:url(data:image/jpeg;base64,__FILMPOSTER__)"><button type="button" class="play" aria-label="Play the Bloodline film" onclick="this.outerHTML='<iframe src=&quot;https://www.youtube-nocookie.com/embed/w0VpMHeFc_I?rel=0&amp;autoplay=1&quot; title=&quot;Bloodline, the film&quot; allow=&quot;autoplay; encrypted-media; picture-in-picture; fullscreen&quot; allowfullscreen></iframe>'"></button></div><figcaption class="lab">Bloodline in 82 seconds</figcaption></figure></div>
+  <div class="cols" id="cols"></div>
+</section>
+
+
+
+
 
 <section class="act" id="found" data-name="What it found" style="--w:250vw">
-  <p class="lab">Act V · What they're trying to tell us</p>
+  <p class="lab">Act IV · What they're trying to tell us</p>
   <h2>Asia fears the <em>dead</em>. The West fears the <em>living</em>. And horror keeps moving home.</h2>
   <div class="tl" id="tl"></div>
   <div class="finds" id="finds"><p class="lede">Gathering the fears…</p></div>
 </section>
 
 <section class="act ledger" id="ledger" data-name="The ledger" style="--w:105vw">
-  <p class="lab">Act VI · The ledger</p>
+  <p class="lab">Act V · The ledger</p>
   <h2>Then and <em>now</em>.</h2>
   <p class="lede">Each fear's share of films made before 1980 (hollow dot) and since 2000 (arrow). Switch the vein to read a different question.</p>
   <div class="chips" id="chips"></div>
