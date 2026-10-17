@@ -96,17 +96,29 @@ header{position:fixed;left:0;right:0;top:0;height:var(--head);z-index:20;display
 .mhead{display:flex;gap:calc(var(--pad) * 1.5);align-items:center;justify-content:flex-start}
 .mhead h2{flex:0 1 auto;max-width:1300px}
 .mhead .film{flex:0 0 min(22vw,340px);display:grid;gap:8px}
-.map{flex-direction:row;gap:0;padding-right:0;padding-bottom:0}
 .mtxt{flex:0 0 min(32vw,480px);display:flex;flex-direction:column;justify-content:center;gap:22px;padding-right:var(--pad)}
 .mtxt .hero{font-size:clamp(44px,min(4.2vw,8vh),84px)}
 .how{list-style:none;display:grid;gap:6px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--mute)}
 .how li::before{content:"→ ";color:var(--red)}
-.mframe{flex:1 1 auto;min-width:0;position:relative;margin-top:-28px;border-left:1px solid var(--rule)}
 .mframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:var(--paper)}
 .shield{position:absolute;inset:0;background:transparent;border:0;cursor:pointer;display:flex;align-items:flex-end;justify-content:center;padding-bottom:90px}
 .shield span{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;background:var(--red);color:var(--ink);padding:12px 18px;opacity:0;transition:opacity .25s}
 .shield:hover span,.shield:focus-visible span{opacity:1}
 .shield[hidden]{display:none}
+.cover{padding:0;overflow:hidden;justify-content:center}
+.wall{position:absolute;inset:0;display:grid;grid-template-columns:repeat(8,1fr);grid-auto-rows:calc(100vw / 8 * 9 / 16);gap:2px;opacity:.38;filter:saturate(.55) contrast(1.05)}
+.wall div{background-repeat:no-repeat;animation:flick 9s infinite;animation-delay:var(--d)}
+@keyframes flick{0%,92%,100%{opacity:1}94%{opacity:.35}96%{opacity:.9}}
+.cover::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 75% 70% at 30% 55%,rgba(12,10,9,.92) 0%,rgba(12,10,9,.75) 45%,rgba(12,10,9,.35) 100%)}
+.ctxt{position:relative;z-index:2;display:flex;flex-direction:column;gap:22px;padding:calc(var(--head) + 20px) var(--pad) var(--pad);max-width:900px}
+.word{font-family:var(--display);font-weight:400;font-size:clamp(90px,min(11vw,19vh),210px);line-height:.9;letter-spacing:-2px;text-shadow:0 0 40px rgba(207,58,46,.25)}
+.ctag{font-family:var(--display);font-size:clamp(26px,min(2.6vw,4.6vh),44px);line-height:1.15;max-width:760px}
+.map{flex-direction:column;gap:10px;padding-left:0;padding-right:0;padding-bottom:0;padding-top:var(--head)}
+.mbar{display:flex;gap:24px;align-items:baseline;padding:0 var(--pad);flex-wrap:wrap}
+.mbar .how{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--mute)}
+.mframe{flex:1 1 auto;min-height:0;position:relative;border-top:1px solid var(--rule)}
+.film{align-items:center;justify-content:center;text-align:center}
+.bigfilm{width:min(100%,calc((100vh - var(--head) - 230px) * 16 / 9));margin:0 auto}
 /* IV. twelve nightmares */
 .cards{display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:1fr 1fr;gap:0;flex:1 1 auto;min-height:0;border-top:1px solid var(--hair);border-left:1px solid var(--hair)}
 .card{border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:16px 16px 14px;display:flex;flex-direction:column;gap:8px;text-decoration:none;min-height:0;overflow:hidden;transition:background .25s}
@@ -180,7 +192,7 @@ header{position:fixed;left:0;right:0;top:0;height:var(--head);z-index:20;display
   .col,.find{border-left:0;border-top:1px solid var(--rule);padding:28px 18px}
   .cards{grid-template-columns:repeat(2,1fr);grid-template-rows:none}
   .card .ph{min-height:110px}
-  .map{flex-direction:column;min-height:0;padding-right:18px}.mtxt{flex:none;padding:0}.mframe{margin:18px -18px 0;height:85vh;flex:none;border:0}
+  .map{padding:calc(var(--head) + 10px) 0 0}.mframe{height:85vh;flex:none}.cover{min-height:100vh}.wall{grid-template-columns:repeat(4,1fr);grid-auto-rows:calc(100vw / 4 * 9 / 16)}.ctxt{padding:calc(var(--head) + 40px) 18px 40px}
   .ledger .arw .r{grid-template-columns:1fr}.ledger .arw .r span{text-align:left}
 }
 </style>
@@ -188,35 +200,45 @@ header{position:fixed;left:0;right:0;top:0;height:var(--head);z-index:20;display
 <script id="idx" type="application/json">__INDEX__</script>
 
 <header>
-  <a class="brand" href="#map"><b>Bloodline</b><span>by Liver &amp; Lung</span></a>
-  <nav class="dots" aria-label="Acts"><span class="lab now" id="now">I · The map</span></nav>
+  <a class="brand" href="#cover"><b>Bloodline</b><span>by Liver &amp; Lung</span></a>
+  <nav class="dots" aria-label="Acts"><span class="lab now" id="now">I · Bloodline</span></nav>
   <a class="cta" href="#encore">Find your nightmare</a>
 </header>
-<a class="cue" id="cue" href="#nightmares">Scroll →</a>
+<a class="cue" id="cue" href="#map">Scroll →</a>
 
 <main class="row" id="row">
 
-<section class="act map" id="map" data-name="The map" style="--w:100vw">
-  <div class="mtxt">
-    <p class="lab">Liver &amp; Lung presents · 500 horror films · 1913–2025</p>
-    <h1 class="hero">Bloodline is a map of <em>films</em> and the <em>fears</em> they share.</h1>
-    <p class="lede">Every line of dialogue, every frame, every fear, from a century of horror and every corner of the world. Nobody told the model which films belong together.</p>
-    <ul class="how"><li>Drag to move, scroll to zoom</li><li>Switch between films and fears</li><li>Turn the veins on and off along the bottom</li><li>Click a film to open its record</li></ul>
-    <a class="btn" href="#nightmares" style="align-self:flex-start">Begin</a>
+<section class="act cover" id="cover" data-name="Bloodline" style="--w:100vw">
+  <div class="wall" id="wall" aria-hidden="true"></div>
+  <div class="ctxt">
+    <p class="lab">Liver &amp; Lung presents</p>
+    <h1 class="word">Bloodline</h1>
+    <p class="ctag">A map of <em>500</em> horror films and the <em>fears</em> they share.</p>
+    <p class="lede">Every line of dialogue, every frame, every fear, from a century of horror and every corner of the world.</p>
+    <a class="btn solid" href="#map" style="align-self:flex-start">Enter the map</a>
   </div>
+</section>
+
+<section class="act map" id="map" data-name="The map" style="--w:100vw">
+  <div class="mbar"><span class="lab" style="color:var(--red)">Act II · The map</span><span class="how">Drag to move · scroll to zoom · switch films and fears · turn the veins on along the bottom · click a film to open it</span></div>
   <div class="mframe"><iframe id="frame" src="index.html?embed=1" title="The Bloodline map" loading="eager"></iframe>
     <button type="button" class="shield" id="shield"><span>Click to explore the map</span></button></div>
 </section>
 
+<section class="act film" id="film" data-name="The film" style="--w:100vw">
+  <p class="lab">Act III · The film</p>
+  <h2>Bloodline in <em>82</em> seconds.</h2>
+  <div class="bigfilm"><div class="frame16" style="background-image:url(data:image/jpeg;base64,__FILMPOSTER__)"><button type="button" class="play" aria-label="Play the Bloodline film" onclick="this.outerHTML='<iframe src=&quot;https://www.youtube-nocookie.com/embed/w0VpMHeFc_I?rel=0&amp;autoplay=1&quot; title=&quot;Bloodline, the film&quot; allow=&quot;autoplay; encrypted-media; picture-in-picture; fullscreen&quot; allowfullscreen></iframe>'"></button></div></div>
+</section>
+
 <section class="act" id="nightmares" data-name="Twelve nightmares" style="--w:210vw">
-  <p class="lab">Act II · What the model found</p>
+  <p class="lab">Act IV · What the model found</p>
   <h2>We found that films across the world share <em>12</em> nightmares.</h2>
   <div class="cards" id="cards"></div>
 </section>
 <section class="act" id="method" data-name="The method" style="--w:200vw">
-  <p class="lab">Act III · How it was read</p>
-  <div class="mhead"><h2>Take one film. <em>A Quiet Place.</em> Then do it five hundred times.</h2>
-  <figure class="film"><div class="frame16" style="background-image:url(data:image/jpeg;base64,__FILMPOSTER__)"><button type="button" class="play" aria-label="Play the Bloodline film" onclick="this.outerHTML='<iframe src=&quot;https://www.youtube-nocookie.com/embed/w0VpMHeFc_I?rel=0&amp;autoplay=1&quot; title=&quot;Bloodline, the film&quot; allow=&quot;autoplay; encrypted-media; picture-in-picture; fullscreen&quot; allowfullscreen></iframe>'"></button></div><figcaption class="lab">Bloodline in 82 seconds</figcaption></figure></div>
+  <p class="lab">Act V · How it was read</p>
+  <h2>Take one film. <em>A Quiet Place.</em> Then do it five hundred times.</h2>
   <div class="cols" id="cols"></div>
 </section>
 
@@ -225,14 +247,14 @@ header{position:fixed;left:0;right:0;top:0;height:var(--head);z-index:20;display
 
 
 <section class="act" id="found" data-name="What it found" style="--w:250vw">
-  <p class="lab">Act IV · What they're trying to tell us</p>
+  <p class="lab">Act VI · What they're trying to tell us</p>
   <h2>Asia fears the <em>dead</em>. The West fears the <em>living</em>. And horror keeps moving home.</h2>
   <div class="tl" id="tl"></div>
   <div class="finds" id="finds"><p class="lede">Gathering the fears…</p></div>
 </section>
 
 <section class="act ledger" id="ledger" data-name="The ledger" style="--w:105vw">
-  <p class="lab">Act V · The ledger</p>
+  <p class="lab">Act VII · The ledger</p>
   <h2>Then and <em>now</em>.</h2>
   <p class="lede">Each fear's share of films made before 1980 (hollow dot) and since 2000 (arrow). Switch the vein to read a different question.</p>
   <div class="chips" id="chips"></div>
@@ -272,7 +294,7 @@ const PICK = { "Killers and captives": ["Psycho", "Halloween", "Scream", "The Te
 const film = (t, nm) => F.find(f => f.t === t && (!nm || f.nm === nm));
 
 /* ---------- the row: wheel moves it sideways, the header follows the act in view ---------- */
-const row = document.getElementById("row"), acts = [...document.querySelectorAll(".act")], ROMAN = ["I", "II", "III", "IV", "V", "VI", "✦"];
+const row = document.getElementById("row"), acts = [...document.querySelectorAll(".act")], ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "✦"];
 const dots = document.querySelector(".dots");
 acts.forEach((a, i) => { const d = document.createElement("a"); d.href = "#" + a.id; d.setAttribute("aria-label", a.dataset.name); dots.appendChild(d); });
 const wide = () => matchMedia("(min-width:821px)").matches;
@@ -382,6 +404,8 @@ const search = () => { const s = q.value.trim().toLowerCase(); const hits = (s ?
 q.addEventListener("input", search); search();
 
 cards();
+{ const withSt = F.filter(f => f.st > 2), pick = []; for (let i = 0; i < 96 && withSt.length; i++) pick.push(withSt[(i * 37) % withSt.length]);
+  document.getElementById("wall").innerHTML = pick.map((f, i) => `<div style="${frame(f, (i * 5) % f.st)};--d:${(i * 1.7) % 9}s"></div>`).join(""); }
 fetch("patterns.json").then(r => r.json()).then(d => { P = d; found(); ledger(); }).catch(() => { document.getElementById("finds").innerHTML = `<p class="lede">The findings didn't load. Reload the page to try again.</p>`; });
 </script>
 </body>
