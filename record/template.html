@@ -598,6 +598,11 @@ details.fothers summary{cursor:pointer;font-size:14px;color:var(--mute)}
 .gmode{background:transparent !important}
 .gzoom button{border:0 !important;background:transparent !important;color:var(--mute)}
 .gzoom button:hover{color:var(--ink)}
+/* embed: the graph and the records alone, for the Bloodline story page (story.html?embed=1 frames index.html?embed=1) */
+html.embed .wrap{max-width:none;padding:0 24px 40px}
+html.embed header.bar,html.embed .status,html.embed #about,html.embed .ghero{display:none}
+html.embed .controls{margin-top:14px}
+html.embed .gstage{height:calc(100vh - 78px);min-height:0;border:0;margin:0 -24px}
 </style>
 
 <div class="wrap">
@@ -617,6 +622,7 @@ details.fothers summary{cursor:pointer;font-size:14px;color:var(--mute)}
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
 <script>
+if (/[?&]embed\b/.test(location.search)) document.documentElement.classList.add("embed");
 const IDX = JSON.parse(document.getElementById("idx").textContent);
 const F = IDX.films, ARCH = IDX.arch;
 const DIMS = ["threat","origin","wants","wrong","trigger","rules","who_suffers","ending","images","beats"];

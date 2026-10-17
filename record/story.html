@@ -96,6 +96,17 @@ header{position:fixed;left:0;right:0;top:0;height:var(--head);z-index:20;display
 .mhead{display:flex;gap:calc(var(--pad) * 1.5);align-items:center;justify-content:flex-start}
 .mhead h2{flex:0 1 auto;max-width:1300px}
 .mhead .film{flex:0 0 min(22vw,340px);display:grid;gap:8px}
+.map{flex-direction:row;gap:0;padding-right:0;padding-bottom:0}
+.mtxt{flex:0 0 min(32vw,480px);display:flex;flex-direction:column;justify-content:center;gap:22px;padding-right:var(--pad)}
+.mtxt .hero{font-size:clamp(44px,min(4.2vw,8vh),84px)}
+.how{list-style:none;display:grid;gap:6px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--mute)}
+.how li::before{content:"→ ";color:var(--red)}
+.mframe{flex:1 1 auto;min-width:0;position:relative;margin-top:-28px;border-left:1px solid var(--rule)}
+.mframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:var(--paper)}
+.shield{position:absolute;inset:0;background:transparent;border:0;cursor:pointer;display:flex;align-items:flex-end;justify-content:center;padding-bottom:90px}
+.shield span{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;background:var(--red);color:var(--ink);padding:12px 18px;opacity:0;transition:opacity .25s}
+.shield:hover span,.shield:focus-visible span{opacity:1}
+.shield[hidden]{display:none}
 /* IV. twelve nightmares */
 .cards{display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:1fr 1fr;gap:0;flex:1 1 auto;min-height:0;border-top:1px solid var(--hair);border-left:1px solid var(--hair)}
 .card{border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:16px 16px 14px;display:flex;flex-direction:column;gap:8px;text-decoration:none;min-height:0;overflow:hidden;transition:background .25s}
@@ -164,13 +175,12 @@ header{position:fixed;left:0;right:0;top:0;height:var(--head);z-index:20;display
   .act{height:auto;min-height:auto;border-right:0;border-bottom:1px solid var(--rule);padding:calc(var(--head) + 18px) 18px 40px}
   .dots{display:none}.cue{display:none}
   header{padding:0 18px}.brand span{display:none}.cta{font-size:10.5px;padding:8px 10px;letter-spacing:.12em}
-  .map svg{inset:auto 0 0 0;height:calc(100% - 340px)}
   .mhead{flex-direction:column;align-items:stretch}.mhead .film{flex:none}
   .cols,.finds{flex-direction:column;display:flex;margin:0 -18px}
   .col,.find{border-left:0;border-top:1px solid var(--rule);padding:28px 18px}
   .cards{grid-template-columns:repeat(2,1fr);grid-template-rows:none}
   .card .ph{min-height:110px}
-  .map{min-height:1650px}
+  .map{flex-direction:column;min-height:0;padding-right:18px}.mtxt{flex:none;padding:0}.mframe{margin:18px -18px 0;height:85vh;flex:none;border:0}
   .ledger .arw .r{grid-template-columns:1fr}.ledger .arw .r span{text-align:left}
 }
 </style>
@@ -186,13 +196,16 @@ header{position:fixed;left:0;right:0;top:0;height:var(--head);z-index:20;display
 
 <main class="row" id="row">
 
-<section class="act map" id="map" data-name="The map" style="--w:150vw">
-  <div class="over">
-    <div><p class="lab">Liver &amp; Lung presents · 500 horror films · 1913–2025</p><h1 class="hero">Bloodline is a map of <em>films</em><br>and the <em>fears</em> they share.</h1></div>
-    <div class="btns"><a class="btn solid" href="index.html">Explore the map</a><a class="btn" href="#nightmares">Begin</a></div>
+<section class="act map" id="map" data-name="The map" style="--w:100vw">
+  <div class="mtxt">
+    <p class="lab">Liver &amp; Lung presents · 500 horror films · 1913–2025</p>
+    <h1 class="hero">Bloodline is a map of <em>films</em> and the <em>fears</em> they share.</h1>
+    <p class="lede">Every line of dialogue, every frame, every fear, from a century of horror and every corner of the world. Nobody told the model which films belong together.</p>
+    <ul class="how"><li>Drag to move, scroll to zoom</li><li>Switch between films and fears</li><li>Turn the veins on and off along the bottom</li><li>Click a film to open its record</li></ul>
+    <a class="btn" href="#nightmares" style="align-self:flex-start">Begin</a>
   </div>
-  <p class="lede" style="position:relative;z-index:2">Every line of dialogue, every frame, every fear, from a century of horror and every corner of the world. Each dot is a film. Nobody told the model which films belong together.</p>
-  <svg id="net" aria-label="Five hundred films in twelve clusters"></svg>
+  <div class="mframe"><iframe id="frame" src="index.html?embed=1" title="The Bloodline map" loading="eager"></iframe>
+    <button type="button" class="shield" id="shield"><span>Click to explore the map</span></button></div>
 </section>
 
 <section class="act" id="nightmares" data-name="Twelve nightmares" style="--w:210vw">
@@ -310,32 +323,13 @@ function kin(near) {
 }
 method(null); packOf("2018-a-quiet-place").then(method).catch(() => {});
 
-/* ---------- III. the map: every film, clustered by its nightmare ---------- */
-function map() {
-  const svg = d3.select("#net"), box = svg.node().getBoundingClientRect(), W = box.width, H = Math.max(box.height, 500);
-  svg.attr("viewBox", `0 0 ${W} ${H}`);
-  const narrow = W < 700, cols = narrow ? 2 : 6, rows = 12 / cols, cw = W / cols, rh = H / rows, fs = narrow ? 16 : 22;
-  const hubs = NM.map((name, i) => { const c = i % cols, r = Math.floor(i / cols), x = cw * (c + .5), y = rh * (r + .4) + (narrow ? 0 : c % 2 ? 26 : -26); return { hub: true, name, x, y, fx: x, fy: y }; });
-  const H_ = Object.fromEntries(hubs.map(h => [h.name, h]));
-  const nodes = F.filter(f => H_[f.nm]).map(f => ({ f, x: H_[f.nm].x + (Math.random() - .5) * 30, y: H_[f.nm].y + (Math.random() - .5) * 30 }));
-  const links = nodes.map(n => ({ source: n, target: H_[n.f.nm] }));
-  const sim = d3.forceSimulation([...nodes, ...hubs]).force("l", d3.forceLink(links).distance(28).strength(.7)).force("c", d3.forceCollide(d => d.hub ? 24 : 4.8)).force("m", d3.forceManyBody().strength(d => d.hub ? -30 : -5)).stop();
-  for (let k = 0; k < 360; k++) sim.tick();
-  // threads between films of different nightmares that share the most fears (from each film's fear list)
-  const ff = IDX.ff, idx = new Map(F.map((f, i) => [f.id, i])), th = [];
-  for (let a = 0; a < nodes.length; a += 3) { const A = new Set(ff[idx.get(nodes[a].f.id)]); let best = null, bs = 0;
-    for (let b = 0; b < nodes.length; b += 7) { if (nodes[b].f.nm === nodes[a].f.nm) continue; let s = 0; for (const x of ff[idx.get(nodes[b].f.id)]) if (A.has(x)) s++; if (s > bs) { bs = s; best = nodes[b]; } }
-    if (best) th.push([nodes[a], best]); }
-  svg.append("g").selectAll("line").data(th).join("line").attr("x1", d => d[0].x).attr("y1", d => d[0].y).attr("x2", d => d[1].x).attr("y2", d => d[1].y).attr("stroke", "#e9e1d1").attr("stroke-opacity", .06);
-  svg.append("g").selectAll("line").data(links).join("line").attr("x1", d => d.source.x).attr("y1", d => d.source.y).attr("x2", d => d.target.x).attr("y2", d => d.target.y).attr("stroke", LENSC.nightmares).attr("stroke-opacity", .2);
-  const named = new Set(Object.entries(PICK).flatMap(([nm, ts]) => ts.slice(0, 2).map(t => film(t, nm)?.id)));
-  svg.append("g").selectAll("a").data(nodes).join("a").attr("href", d => "index.html#" + d.f.id).append("circle").attr("cx", d => d.x).attr("cy", d => d.y).attr("r", d => named.has(d.f.id) ? 4.2 : 2.9).attr("fill", d => named.has(d.f.id) ? "#e9e1d1" : "#b5aa98").attr("fill-opacity", d => named.has(d.f.id) ? 1 : .55).append("title").text(d => `${d.f.t} (${d.f.y})`);
-  svg.append("g").selectAll("circle").data(hubs).join("circle").attr("cx", d => d.x).attr("cy", d => d.y).attr("r", 8).attr("fill", LENSC.nightmares).attr("stroke", "#0c0a09").attr("stroke-width", 3);
-  hubs.forEach(h => { const down = Math.max(...nodes.filter(n => n.f.nm === h.name).map(n => n.y - h.y), 20);
-    const g = svg.append("a").attr("href", fearHash("nightmares", h.name)).append("g").attr("transform", `translate(${h.x},${h.y + down + 26})`);
-    g.append("text").attr("text-anchor", "middle").attr("font-family", "IM Fell English").attr("font-size", fs).attr("fill", "#e9e1d1").attr("paint-order", "stroke").attr("stroke", "#0c0a09").attr("stroke-width", 5).text(h.name);
-    g.append("text").attr("y", 19).attr("text-anchor", "middle").attr("font-family", "Source Serif 4").attr("font-size", 13).attr("fill", "#9a8e7d").attr("paint-order", "stroke").attr("stroke", "#0c0a09").attr("stroke-width", 4).text(narrow ? PICK[h.name].slice(0, 1).join("") : PICK[h.name].slice(0, 2).filter(t => film(t, h.name)).join(" · ")); });
-}
+/* ---------- III. the map: the app's own graph, framed. A shield keeps the wheel moving the row until you click in ---------- */
+const frameEl = document.getElementById("frame"), shield = document.getElementById("shield");
+shield.onclick = () => { shield.hidden = true; frameEl.focus(); };
+document.getElementById("map").addEventListener("mouseleave", () => { shield.hidden = false; });
+// every film, fear and trend opens in the framed app, here on this page
+const openHere = hash => { frameEl.src = "index.html?embed=1" + hash; shield.hidden = true; const m = document.getElementById("map"); if (wide()) row.scrollTo({ left: m.offsetLeft, behavior: "smooth" }); else m.scrollIntoView({ behavior: "smooth" }); };
+document.addEventListener("click", e => { const a = e.target.closest('a[href^="index.html"]'); if (!a) return; e.preventDefault(); const h = a.getAttribute("href").replace(/^index\.html/, ""); openHere(h || ""); });
 
 /* ---------- IV. twelve nightmares ---------- */
 function cards() {
@@ -388,7 +382,6 @@ const search = () => { const s = q.value.trim().toLowerCase(); const hits = (s ?
 q.addEventListener("input", search); search();
 
 cards();
-requestAnimationFrame(() => { map(); });
 fetch("patterns.json").then(r => r.json()).then(d => { P = d; found(); ledger(); }).catch(() => { document.getElementById("finds").innerHTML = `<p class="lede">The findings didn't load. Reload the page to try again.</p>`; });
 </script>
 </body>
