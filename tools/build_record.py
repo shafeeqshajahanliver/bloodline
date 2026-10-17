@@ -215,4 +215,9 @@ def _icon(f):
 _fav, _touch = _icon("record/icons/favicon-32.png"), _icon("record/icons/apple-touch-icon.png")
 _icons = (f'<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,{_fav}">\n' if _fav else "") + (f'<link rel="apple-touch-icon" href="data:image/png;base64,{_touch}">\n' if _touch else "")
 open(f"{OUT}/index.html", "w").write('<!doctype html>\n<html lang="en">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' + _icons + page)   # the same page as the site root, for static hosts such as Vercel
+# the story: Bloodline as a row of acts (record/story.html), the front door to the app, sharing its index, stills and packs
+if os.path.exists("record/story.html"):
+    story = open("record/story.html").read().replace("__INDEX__", open(f"{OUT}/index.json").read().replace("</", "<\\/"))
+    story = story.replace("__AUTHOR__", base64.b64encode(_au).decode()).replace("__FILMPOSTER__", base64.b64encode(_fp).decode())
+    open(f"{OUT}/story.html", "w").write(story)
 os.remove(f"{OUT}/index.json")   # only needed while building; it is embedded in the page

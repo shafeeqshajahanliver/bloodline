@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bloodline</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Courier+Prime:wght@400;700&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<style>
+/* Bloodline as acts: one horizontal row, each act a single idea, read left to right like the Lunatics page.
+   Same night archive as the app: warm black, bone type in an old printed face, one blood red, grain over everything, radius 0. */
+:root{
+  --paper:#0c0a09; --soft:#1a1513; --hair:#3a302a; --rule:#231c19; --ink:#e9e1d1; --mute:#9a8e7d; --red:#cf3a2e;
+  --display:"IM Fell English", Georgia, serif; --text:"Source Serif 4", Georgia, serif; --mono:"Courier Prime", "Courier New", monospace;
+  --pad:clamp(28px, 3.2vw, 56px); --head:64px; color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--paper);color:var(--ink);font-family:var(--text)}
+body{overflow:hidden}
+a{color:inherit}
+body::after{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:60;opacity:.085;mix-blend-mode:screen;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1.6 -.35'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grain 1.2s steps(5) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+::selection{background:var(--red);color:var(--ink)}
+.lab{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+em{font-style:italic;color:var(--red)}
+
+/* header: brand, the act you're in, a dot per act, one call to action */
+header{position:fixed;left:0;right:0;top:0;height:var(--head);z-index:20;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 var(--pad);background:linear-gradient(var(--paper) 70%,transparent)}
+.brand{display:flex;align-items:baseline;gap:12px;text-decoration:none}
+.brand b{font-family:var(--display);font-weight:400;font-size:26px}
+.brand span{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
+.dots{display:flex;align-items:center;gap:13px}
+.dots .now{min-width:210px;text-align:right;color:var(--red)}
+.dots a{width:7px;height:7px;border:1px solid var(--red);border-radius:50%;transition:all .3s}
+.dots a.on{width:11px;height:11px;background:var(--red)}
+.cta{font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:10px 16px;border:1px solid var(--red);color:var(--ink)}
+.cta:hover{background:var(--red)}
+.cue{position:fixed;right:var(--pad);bottom:28px;z-index:20;font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;background:var(--red);color:var(--ink);padding:12px 16px;text-decoration:none;transition:opacity .4s}
+.cue.gone{opacity:0;pointer-events:none}
+
+/* the row of acts */
+.row{display:flex;height:100vh;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;scroll-behavior:smooth}
+.row::-webkit-scrollbar{display:none}
+.act{flex:0 0 var(--w);height:100%;padding:calc(var(--head) + 28px) var(--pad) var(--pad);border-right:1px solid var(--rule);position:relative;display:flex;flex-direction:column;gap:22px;min-width:0}
+.act h2{font-family:var(--display);font-weight:400;font-size:clamp(40px,min(4.2vw,7.4vh),72px);line-height:1.02;letter-spacing:-.4px}
+.act .lede{font-size:clamp(17px,min(1.3vw,2.3vh),21px);line-height:1.5;color:var(--mute);max-width:640px}
+
+/* I. invocation */
+.inv{flex-direction:row;gap:var(--pad);align-items:stretch}
+.inv .txt{flex:1 1 52%;display:flex;flex-direction:column;justify-content:center;gap:26px}
+.inv h1{font-family:var(--display);font-weight:400;font-size:clamp(52px,min(5.6vw,10vh),104px);line-height:.98;letter-spacing:-1px}
+.inv .btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:15px 20px;border:1px solid var(--red)}
+.btn.solid{background:var(--red)}
+.inv .film{flex:1 1 48%;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.frame16{position:relative;aspect-ratio:16/9;width:100%;background:#000 center/cover no-repeat;border:1px solid var(--hair)}
+.frame16 .play{position:absolute;inset:0;margin:auto;width:84px;height:84px;border-radius:50%;border:0;background:var(--red);cursor:pointer;display:grid;place-items:center;box-shadow:0 0 40px rgba(207,58,46,.45)}
+.frame16 .play::after{content:"";border-left:24px solid var(--ink);border-top:15px solid transparent;border-bottom:15px solid transparent;margin-left:6px}
+.frame16 iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.cam{width:46px;height:auto;color:var(--red)}
+
+/* II. the method: four columns, each opening on a question, the accent walking through the veins */
+.cols{display:flex;flex:1 1 auto;min-height:0;margin:0 calc(-1 * var(--pad)) calc(-1 * var(--pad))}
+.col{flex:1 1 0;min-width:0;padding:var(--pad);border-left:1px solid color-mix(in oklab,var(--c) 30%,transparent);display:flex;flex-direction:column;gap:18px;color:var(--c)}
+.col:first-child{border-left:0}
+.col h3{font-family:var(--display);font-weight:400;font-size:clamp(34px,min(3vw,5.4vh),52px);line-height:1;color:var(--c);text-shadow:0 0 28px color-mix(in oklab,var(--c) 35%,transparent)}
+.col .num{font-family:var(--display);font-size:clamp(44px,min(4vw,7vh),70px);line-height:1;color:var(--ink)}
+.col .num small{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);display:block;margin-top:8px}
+.col p{font-size:15.5px;line-height:1.55;color:var(--ink)}
+.col .cap{font-size:13.5px;color:var(--mute);line-height:1.45}
+.cues{display:grid;gap:7px;font-size:15px}
+.cues div{display:grid;grid-template-columns:76px 1fr;gap:10px;color:var(--ink)}
+.cues span{font-family:var(--mono);font-size:12px;color:var(--c);padding-top:2px}
+.cues i{color:var(--mute)}
+.spark{display:flex;align-items:flex-end;gap:2px;height:70px}
+.spark b{flex:1 1 0;background:var(--c);opacity:.85;min-height:1px}
+.sheet{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.sheet div{aspect-ratio:16/9;background-repeat:no-repeat;filter:saturate(.75) contrast(1.05);border:1px solid var(--rule)}
+.tag{border-top:1px solid var(--rule);padding-top:10px;display:grid;gap:4px}
+.tag .k{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--c)}
+.tag .v{font-family:var(--display);font-size:22px;color:var(--ink)}
+.tag q{font-size:14px;line-height:1.45;color:var(--mute);font-style:italic}
+.kin{width:100%;flex:1 1 auto;min-height:180px}
+
+/* III. the map */
+.map svg{position:absolute;inset:calc(var(--head) + 270px) 0 0 0;width:100%;height:calc(100% - var(--head) - 270px)}
+.map .over{position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
+
+/* IV. twelve nightmares */
+.cards{display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:1fr 1fr;gap:0;flex:1 1 auto;min-height:0;border-top:1px solid var(--hair);border-left:1px solid var(--hair)}
+.card{border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:16px 16px 14px;display:flex;flex-direction:column;gap:8px;text-decoration:none;min-height:0;overflow:hidden;transition:background .25s}
+.card:hover{background:var(--soft)}
+.card .n{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--red)}
+.card .ph{flex:1 1 auto;min-height:70px;background:#000 center/cover no-repeat;filter:saturate(.7);border:1px solid var(--rule);transition:filter .3s}
+.card:hover .ph{filter:none}
+.card h3{font-family:var(--display);font-weight:400;font-size:clamp(20px,min(1.7vw,3vh),28px);line-height:1.05}
+.card p{font-size:13px;line-height:1.4;color:var(--mute)}
+
+/* V. what it found: a timeline across the top, findings set along it like phases */
+.tl{position:relative;height:56px;margin:4px 0 0}
+.tl::before{content:"";position:absolute;left:0;right:0;top:20px;height:1px;background:var(--hair)}
+.tl span{position:absolute;top:28px;transform:translateX(-50%);font-family:var(--mono);font-size:11px;color:var(--mute)}
+.tl i{position:absolute;top:16px;width:9px;height:9px;margin-left:-4.5px;border-radius:50%;background:var(--paper);border:1px solid var(--mute)}
+.finds{display:grid;grid-template-columns:repeat(5,1fr);flex:1 1 auto;min-height:0;margin:0 calc(-1 * var(--pad)) calc(-1 * var(--pad))}
+.find{padding:var(--pad);border-left:1px solid var(--rule);display:flex;flex-direction:column;gap:14px;min-width:0}
+.find:first-child{border-left:0}
+.find h3{font-family:var(--display);font-weight:400;font-size:clamp(28px,min(2.4vw,4.4vh),40px);line-height:1.04}
+.find .big{font-family:var(--display);font-size:clamp(56px,min(5vw,9vh),92px);line-height:1;color:var(--red)}
+.find .big small{font-size:.42em;color:var(--mute)}
+.find p{font-size:15px;line-height:1.5;color:var(--mute)}
+.ug{display:grid;grid-template-columns:repeat(10,1fr);gap:3px;width:118px}
+.ug b{aspect-ratio:1;border-radius:1.5px;background:var(--hair)}.ug b.on{background:var(--red)}.ug.dim b.on{background:var(--mute)}
+.pair{display:flex;gap:22px}.pair figcaption{font-family:var(--mono);font-size:11px;color:var(--mute);margin-top:6px}
+.arw{display:grid;gap:12px}
+.arw .r{display:grid;gap:4px}
+.arw .r span{font-size:14px;color:var(--ink)}
+.arw .t{position:relative;height:22px;margin:0 34px;background-image:linear-gradient(to right,var(--rule) 1px,transparent 1px);background-size:20% 100%}
+.arw .t i{position:absolute;top:50%;display:block}
+.arw .ln{height:2px;margin-top:-1px}
+.arw .d0{width:11px;height:11px;margin:-5.5px 0 0 -5.5px;border:2px solid var(--ink);border-radius:50%;background:var(--paper)}
+.arw .ah{width:0;height:0;margin-top:-6px;border-top:6px solid transparent;border-bottom:6px solid transparent}
+.arw .ah.up{border-left:11px solid var(--c);margin-left:-9px}.arw .ah.dn{border-right:11px solid var(--c);margin-left:-2px}
+.arw b{position:absolute;top:50%;font-family:var(--mono);font-size:12px;font-weight:400;white-space:nowrap}
+.bars{display:flex;align-items:flex-end;gap:8px;height:110px}
+.bars div{flex:1 1 0;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:4px;height:100%}
+.bars b{width:100%;background:var(--c)}
+.bars span{font-family:var(--mono);font-size:10px;color:var(--mute);white-space:nowrap}
+
+/* VI. the ledger */
+.ledger .arw{max-width:900px}
+.ledger .arw .r{grid-template-columns:240px 1fr;align-items:center}
+.ledger .arw .r span{text-align:right;font-size:16px}
+.chips{display:flex;gap:4px 14px;flex-wrap:wrap}
+.chips button{font:inherit;font-size:13px;background:none;border:0;color:var(--mute);cursor:pointer;padding:3px 0;display:flex;align-items:center;gap:6px}
+.chips button i{width:7px;height:7px;border-radius:50%;opacity:.35}
+.chips button[aria-pressed="true"]{color:var(--ink)}.chips button[aria-pressed="true"] i{opacity:1}
+
+/* encore */
+.enc{justify-content:space-between}
+.search{display:flex;border-bottom:1px solid var(--ink);max-width:560px}
+.search input{flex:1;background:none;border:0;color:var(--ink);font:inherit;font-family:var(--display);font-size:28px;padding:10px 0;outline:none}
+.res{display:grid;gap:2px;max-width:560px;min-height:160px}
+.res a{display:flex;justify-content:space-between;gap:16px;text-decoration:none;padding:7px 0;border-bottom:1px solid var(--rule);font-size:16px}
+.res a span{font-family:var(--mono);font-size:11px;color:var(--red);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.author{display:flex;gap:18px;align-items:center;max-width:620px;border-top:1px solid var(--rule);padding-top:20px}
+.author img{width:56px;height:56px;border-radius:50%;filter:grayscale(1)}
+.author p{font-size:14.5px;line-height:1.55;color:var(--mute)}.author b{color:var(--ink);font-weight:400}
+.fine{font-size:12.5px;color:var(--mute);max-width:620px;line-height:1.5}
+
+/* phones: the acts stack, as on the Lunatics page */
+@media (max-width:820px){
+  body{overflow:auto}
+  .row{display:block;height:auto;overflow:visible}
+  .act{height:auto;min-height:auto;border-right:0;border-bottom:1px solid var(--rule);padding:calc(var(--head) + 18px) 18px 40px}
+  .dots{display:none}.cue{display:none}
+  header{padding:0 18px}.brand span{display:none}.cta{font-size:10.5px;padding:8px 10px;letter-spacing:.12em}
+  .map svg{inset:auto 0 0 0;height:calc(100% - 340px)}
+  .inv{flex-direction:column}
+  .cols,.finds{flex-direction:column;display:flex;margin:0 -18px}
+  .col,.find{border-left:0;border-top:1px solid var(--rule);padding:28px 18px}
+  .cards{grid-template-columns:repeat(2,1fr);grid-template-rows:none}
+  .card .ph{min-height:110px}
+  .map{min-height:1650px}
+  .ledger .arw .r{grid-template-columns:1fr}.ledger .arw .r span{text-align:left}
+}
+</style>
+<body>
+<script id="idx" type="application/json">__INDEX__</script>
+
+<header>
+  <a class="brand" href="#i"><b>Bloodline</b><span>by Liver &amp; Lung</span></a>
+  <nav class="dots" aria-label="Acts"><span class="lab now" id="now">I · Invocation</span></nav>
+  <a class="cta" href="#encore">Find your nightmare</a>
+</header>
+<a class="cue" id="cue" href="#method">Scroll →</a>
+
+<main class="row" id="row">
+
+<section class="act inv" id="i" data-name="Invocation" style="--w:78vw">
+  <div class="txt">
+    <svg class="cam" viewBox="0 0 64 44" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="14" cy="12" r="9"/><circle cx="34" cy="12" r="9"/><rect x="6" y="22" width="36" height="18"/><path d="M42 27l14-7v22l-14-7z"/></svg>
+    <p class="lab">Liver &amp; Lung presents</p>
+    <h1>What if you read every line of <em>500</em> horror films?</h1>
+    <p class="lede">Every line of dialogue, every frame, every fear. A century of horror from every corner of the world, read closely, then handed to a model that nobody told which films belong together.</p>
+    <div class="btns"><a class="btn solid" href="#method">Begin</a><a class="btn" href="index.html">Explore the map</a></div>
+  </div>
+  <figure class="film">
+    <div class="frame16" style="background-image:url(data:image/jpeg;base64,__FILMPOSTER__)"><button type="button" class="play" aria-label="Play the Bloodline film" onclick="this.outerHTML='<iframe src=&quot;https://www.youtube-nocookie.com/embed/w0VpMHeFc_I?rel=0&amp;autoplay=1&quot; title=&quot;Bloodline, the film&quot; allow=&quot;autoplay; encrypted-media; picture-in-picture; fullscreen&quot; allowfullscreen></iframe>'"></button></div>
+    <figcaption class="lab">Bloodline in 82 seconds</figcaption>
+  </figure>
+</section>
+
+<section class="act" id="method" data-name="The method" style="--w:200vw">
+  <p class="lab">Act II · How it was read</p>
+  <h2>Take one film. <em>A Quiet Place.</em> Then do it five hundred times.</h2>
+  <div class="cols" id="cols"></div>
+</section>
+
+<section class="act map" id="map" data-name="The map" style="--w:130vw">
+  <div class="over">
+    <div><p class="lab">Act III · The map</p><h2>Bloodline is a map of <em>films</em><br>and the <em>fears</em> they share.</h2></div>
+    <a class="btn solid" href="index.html">Explore the map</a>
+  </div>
+  <p class="lede" style="position:relative;z-index:2">Each dot is a film, joined to the nightmare it belongs to. The faint threads join films that share fears across nightmares.</p>
+  <svg id="net" aria-label="Five hundred films in twelve clusters"></svg>
+</section>
+
+<section class="act" id="nightmares" data-name="Twelve nightmares" style="--w:210vw">
+  <p class="lab">Act IV · What the model found</p>
+  <h2>We found that films across the world share <em>12</em> nightmares.</h2>
+  <div class="cards" id="cards"></div>
+</section>
+
+<section class="act" id="found" data-name="What it found" style="--w:250vw">
+  <p class="lab">Act V · What they're trying to tell us</p>
+  <h2>Asia fears the <em>dead</em>. The West fears the <em>living</em>. And horror keeps moving home.</h2>
+  <div class="tl" id="tl"></div>
+  <div class="finds" id="finds"><p class="lede">Gathering the fears…</p></div>
+</section>
+
+<section class="act ledger" id="ledger" data-name="The ledger" style="--w:105vw">
+  <p class="lab">Act VI · The ledger</p>
+  <h2>Then and <em>now</em>.</h2>
+  <p class="lede">Each fear's share of films made before 1980 (hollow dot) and since 2000 (arrow). Switch the vein to read a different question.</p>
+  <div class="chips" id="chips"></div>
+  <div class="arw" id="led"></div>
+  <a class="btn" href="index.html#trends" style="align-self:flex-start;margin-top:auto">Open every trend</a>
+</section>
+
+<section class="act enc" id="encore" data-name="Encore" style="--w:72vw">
+  <div style="display:grid;gap:22px">
+    <p class="lab">Encore</p>
+    <h2>Find where your <em>nightmare</em> comes from.</h2>
+    <label class="search"><input id="q" type="search" placeholder="Type a horror film" autocomplete="off" aria-label="Search the films"></label>
+    <div class="res" id="res"></div>
+  </div>
+  <div style="display:grid;gap:16px">
+    <div class="author"><img src="data:image/jpeg;base64,__AUTHOR__" alt="Shafeeq Shajahan">
+      <p><b>Made by Shafeeq Shajahan</b>, co-founder of <a href="https://www.liverandlung.com" target="_blank" rel="noopener">Liver &amp; Lung</a>. A century of nightmares, taken apart until the patterns in what we fear begin to show. <a href="https://github.com/shafeeqshajahanliver/bloodline" target="_blank" rel="noopener">The code and data</a>.</p></div>
+    <p class="fine">Subtitles, screenplays and stills belong to their owners and are shown here for private research only. Wikipedia text is CC BY-SA; Wikidata facts are CC0. Tags are a first pass, each backed by a quote from the film's plot.</p>
+  </div>
+</section>
+
+</main>
+
+<script>
+const IDX = JSON.parse(document.getElementById("idx").textContent), F = IDX.films;
+F.forEach((f, i) => f.nm = IDX.nm[i]);
+const LENSC = { nightmares: "#cf3a2e", archetypes: "#ef8a80", threat: "#e8c44e", origin: "#9cc74a", wants: "#3fb39a", wrong: "#4fa3d8", trigger: "#6f7fe6", rules: "#a77ad6", who_suffers: "#d066a8", ending: "#ff8fb8", images: "#7fd1c7" };
+const LENSN = { nightmares: "Nightmares", threat: "What threatens", origin: "Where it comes from", wants: "What it wants", wrong: "The wrong underneath", trigger: "What sets it off", rules: "Rules", who_suffers: "Who suffers", ending: "How it ends", images: "Symbols", archetypes: "Archetypes" };
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const slug = t => t.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const fearHash = (l, n) => `index.html#f.${l}.${slug(n)}`;
+const pct = v => Math.round(v * 100) + "%";
+const frame = (f, i) => f && f.st ? `background-image:url('stills/${f.id}.jpg');background-size:100% ${f.st * 100}%;background-position:0 ${f.st > 1 ? (i % f.st) / (f.st - 1) * 100 : 0}%` : "";
+const byT = (t, y) => F.find(f => f.t === t && (!y || f.y === y));
+const NM = ["Killers and captives", "The restless dead", "Cults and curses", "Possession", "Places that swallow you", "Creatures and contagion", "The changing body", "Doubles and impostors", "The mind turns", "Blood drinkers", "Greed and its price", "Hungry love"];
+const PICK = { "Killers and captives": ["Psycho", "Halloween", "Scream", "The Texas Chain Saw Massacre"], "The restless dead": ["Ringu", "The Sixth Sense", "The Orphanage", "Shutter"], "Cults and curses": ["The Wicker Man", "Midsommar", "The Witch", "Suspiria"], "Possession": ["The Exorcist", "Hereditary", "The Conjuring", "Talk to Me"], "Places that swallow you": ["The Shining", "The Haunting", "Poltergeist", "The Others"], "Creatures and contagion": ["Alien", "Jaws", "Train to Busan", "28 Days Later"], "The changing body": ["The Fly", "Raw", "The Substance", "Ginger Snaps"], "Doubles and impostors": ["The Thing", "Us", "The Babadook", "Invasion of the Body Snatchers"], "The mind turns": ["Rosemary's Baby", "Repulsion", "Saint Maud", "Perfect Blue"], "Blood drinkers": ["Nosferatu", "Dracula", "The Lost Boys", "30 Days of Night"], "Greed and its price": ["A Nightmare on Elm Street", "Ready or Not", "Re-Animator", "X"], "Hungry love": ["Let the Right One In", "Carrie", "It Follows", "The Descent"] };
+const film = (t, nm) => F.find(f => f.t === t && (!nm || f.nm === nm));
+
+/* ---------- the row: wheel moves it sideways, the header follows the act in view ---------- */
+const row = document.getElementById("row"), acts = [...document.querySelectorAll(".act")], ROMAN = ["I", "II", "III", "IV", "V", "VI", "✦"];
+const dots = document.querySelector(".dots");
+acts.forEach((a, i) => { const d = document.createElement("a"); d.href = "#" + a.id; d.setAttribute("aria-label", a.dataset.name); dots.appendChild(d); });
+const wide = () => matchMedia("(min-width:821px)").matches;
+row.addEventListener("wheel", e => {
+  if (!wide() || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+  row.style.scrollBehavior = "auto"; row.scrollLeft += e.deltaY; row.style.scrollBehavior = ""; e.preventDefault();
+}, { passive: false });
+addEventListener("keydown", e => { if (!wide() || e.target.tagName === "INPUT") return; if (e.key === "ArrowRight" || e.key === "PageDown") row.scrollLeft += innerWidth * .8; if (e.key === "ArrowLeft" || e.key === "PageUp") row.scrollLeft -= innerWidth * .8; });
+document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener("click", e => { const t = document.getElementById(a.getAttribute("href").slice(1)); if (!t) return; e.preventDefault(); if (wide()) row.scrollTo({ left: t.offsetLeft, behavior: "smooth" }); else t.scrollIntoView({ behavior: "smooth" }); }));
+const onScroll = () => { const x = row.scrollLeft + innerWidth * .4; let k = 0; acts.forEach((a, i) => { if (a.offsetLeft <= x) k = i; });
+  document.getElementById("now").textContent = `${ROMAN[k]} · ${acts[k].dataset.name}`; dots.querySelectorAll("a").forEach((d, i) => d.classList.toggle("on", i === k));
+  document.getElementById("cue").classList.toggle("gone", row.scrollLeft > 60); };
+row.addEventListener("scroll", onScroll); onScroll();
+
+/* ---------- II. the method, on one film ---------- */
+const AQP = F.find(f => f.id === "2018-a-quiet-place");
+const CUES = [["00:03:15", "He's okay."], ["00:06:34", "Too loud."], ["00:09:33", "(TOY BEEPING)"], ["00:18:59", "(WHISPERING) One, two, three, four, five, six, seven, eight."], ["00:27:56", "I'm not a child! I won't make a sound!"], ["00:43:43", "(CREATURE SCREECHING)"], ["01:14:49", "I love you."]];
+const packOf = id => { const i = F.findIndex(f => f.id === id); return fetch(`data/pack-${Math.floor(i / IDX.pack)}.json`).then(r => r.json()).then(p => p[id]); };
+function method(d) {
+  const C = [LENSC.threat, LENSC.origin, LENSC.wrong, LENSC.nightmares];
+  const wpm = d?.dialogue?.en ? null : null, ws = d?.wpm_series || [], mx = Math.max(...ws, 1);
+  const tags = d ? [["threat", "What threatens"], ["rules", "The rules"], ["who_suffers", "Who suffers"], ["ending", "How it ends"]].map(([k, n]) => { const e = (d.dims[k] || [])[0]; return e ? `<div class="tag"><span class="k">${n}</span><span class="v">${esc(e.value)}</span><q>${esc(e.quote)}</q></div>` : ""; }).join("") : "";
+  const dl = d?.dialogue?.en;
+  document.getElementById("cols").innerHTML = `
+  <div class="col" style="--c:${C[0]}"><h3>What did they say?</h3><p class="num">440,000<small>lines of dialogue · 444 films</small></p>
+    <div class="cues">${CUES.map(([t, l]) => `<div><span>${t}</span>${/^\(/.test(l) ? `<i>${esc(l)}</i>` : esc(l)}</div>`).join("")}</div>
+    ${ws.length ? `<div class="spark" aria-hidden="true">${ws.map(v => `<b style="height:${v / mx * 100}%"></b>`).join("")}</div><p class="cap">A Quiet Place, words per minute across its ${ws.length} minutes. Someone speaks for ${dl ? pct(dl.share_of_runtime_with_dialogue) : "a fifth"} of the film; the typical horror film talks for 38%.</p>` : ""}</div>
+  <div class="col" style="--c:${C[1]}"><h3>What did they show?</h3><p class="num">6,500<small>stills · 269 films</small></p>
+    <div class="sheet">${AQP && AQP.st ? Array.from({ length: Math.min(12, AQP.st) }, (_, i) => `<div style="${frame(AQP, i)}"></div>`).join("") : ""}</div>
+    <p class="cap">Twelve frames from A Quiet Place: the sand paths, the lamp light, the red bulbs that mean run.</p>
+    <p>Stills sit beside every record, so a film is read for how it looks as well as what happens in it.</p></div>
+  <div class="col" style="--c:${C[2]}"><h3>What were they afraid of?</h3><p class="num">11<small>questions asked of every film</small></p>
+    ${tags}<p class="cap">Every answer carries the line of the plot it came from. A first pass, under review.</p></div>
+  <div class="col" style="--c:${C[3]}"><h3>What did they share?</h3><p class="num">${d?.net?.total ?? "196"}<small>films share a fear with A Quiet Place</small></p>
+    <svg class="kin" id="kin" aria-label="A Quiet Place and its nearest films"></svg>
+    <p class="cap">Its closest kin, by the fears they share. Across all five hundred, a model joined the threads, and nobody told it which films belong together.</p></div>`;
+  if (d?.net) kin(d.net.films.slice(0, 9));
+}
+function kin(near) {
+  const s = d3.select("#kin"), box = s.node().getBoundingClientRect(), w = box.width, h = Math.max(box.height, 200), cx = w / 2, cy = h / 2, r = Math.min(w, h) / 2 - 30;
+  s.attr("viewBox", `0 0 ${w} ${h}`);
+  near.forEach((n, i) => { const a = -Math.PI / 2 + i / near.length * 2 * Math.PI, x = cx + r * Math.cos(a), y = cy + r * .9 * Math.sin(a), f = F.find(z => z.id === n.id);
+    s.append("line").attr("x1", cx).attr("y1", cy).attr("x2", x).attr("y2", y).attr("stroke", LENSC.nightmares).attr("stroke-opacity", .25 + .5 * n.score / near[0].score).attr("stroke-width", 1 + 2 * n.score / near[0].score);
+    s.append("circle").attr("cx", x).attr("cy", y).attr("r", 4.5).attr("fill", "#e9e1d1");
+    s.append("text").attr("x", x).attr("y", y + (Math.sin(a) > .2 ? 18 : -10)).attr("dx", Math.cos(a) > .3 ? 6 : Math.cos(a) < -.3 ? -6 : 0).attr("text-anchor", Math.cos(a) > .3 ? "start" : Math.cos(a) < -.3 ? "end" : "middle").attr("font-family", "Source Serif 4").attr("font-size", 12.5).attr("fill", "#9a8e7d").text(f ? f.t : n.id); });
+  s.append("circle").attr("cx", cx).attr("cy", cy).attr("r", 10).attr("fill", LENSC.nightmares);
+  s.append("text").attr("x", cx).attr("y", cy + 28).attr("text-anchor", "middle").attr("font-family", "IM Fell English").attr("font-size", 18).attr("fill", "#e9e1d1").text("A Quiet Place");
+}
+method(null); packOf("2018-a-quiet-place").then(method).catch(() => {});
+
+/* ---------- III. the map: every film, clustered by its nightmare ---------- */
+function map() {
+  const svg = d3.select("#net"), box = svg.node().getBoundingClientRect(), W = box.width, H = Math.max(box.height, 500);
+  svg.attr("viewBox", `0 0 ${W} ${H}`);
+  const narrow = W < 700, cols = narrow ? 2 : 6, rows = 12 / cols, cw = W / cols, rh = H / rows, fs = narrow ? 16 : 22;
+  const hubs = NM.map((name, i) => { const c = i % cols, r = Math.floor(i / cols), x = cw * (c + .5), y = rh * (r + .4) + (narrow ? 0 : c % 2 ? 26 : -26); return { hub: true, name, x, y, fx: x, fy: y }; });
+  const H_ = Object.fromEntries(hubs.map(h => [h.name, h]));
+  const nodes = F.filter(f => H_[f.nm]).map(f => ({ f, x: H_[f.nm].x + (Math.random() - .5) * 30, y: H_[f.nm].y + (Math.random() - .5) * 30 }));
+  const links = nodes.map(n => ({ source: n, target: H_[n.f.nm] }));
+  const sim = d3.forceSimulation([...nodes, ...hubs]).force("l", d3.forceLink(links).distance(28).strength(.7)).force("c", d3.forceCollide(d => d.hub ? 24 : 4.8)).force("m", d3.forceManyBody().strength(d => d.hub ? -30 : -5)).stop();
+  for (let k = 0; k < 360; k++) sim.tick();
+  // threads between films of different nightmares that share the most fears (from each film's fear list)
+  const ff = IDX.ff, idx = new Map(F.map((f, i) => [f.id, i])), th = [];
+  for (let a = 0; a < nodes.length; a += 3) { const A = new Set(ff[idx.get(nodes[a].f.id)]); let best = null, bs = 0;
+    for (let b = 0; b < nodes.length; b += 7) { if (nodes[b].f.nm === nodes[a].f.nm) continue; let s = 0; for (const x of ff[idx.get(nodes[b].f.id)]) if (A.has(x)) s++; if (s > bs) { bs = s; best = nodes[b]; } }
+    if (best) th.push([nodes[a], best]); }
+  svg.append("g").selectAll("line").data(th).join("line").attr("x1", d => d[0].x).attr("y1", d => d[0].y).attr("x2", d => d[1].x).attr("y2", d => d[1].y).attr("stroke", "#e9e1d1").attr("stroke-opacity", .06);
+  svg.append("g").selectAll("line").data(links).join("line").attr("x1", d => d.source.x).attr("y1", d => d.source.y).attr("x2", d => d.target.x).attr("y2", d => d.target.y).attr("stroke", LENSC.nightmares).attr("stroke-opacity", .2);
+  const named = new Set(Object.entries(PICK).flatMap(([nm, ts]) => ts.slice(0, 2).map(t => film(t, nm)?.id)));
+  svg.append("g").selectAll("a").data(nodes).join("a").attr("href", d => "index.html#" + d.f.id).append("circle").attr("cx", d => d.x).attr("cy", d => d.y).attr("r", d => named.has(d.f.id) ? 4.2 : 2.9).attr("fill", d => named.has(d.f.id) ? "#e9e1d1" : "#b5aa98").attr("fill-opacity", d => named.has(d.f.id) ? 1 : .55).append("title").text(d => `${d.f.t} (${d.f.y})`);
+  svg.append("g").selectAll("circle").data(hubs).join("circle").attr("cx", d => d.x).attr("cy", d => d.y).attr("r", 8).attr("fill", LENSC.nightmares).attr("stroke", "#0c0a09").attr("stroke-width", 3);
+  hubs.forEach(h => { const down = Math.max(...nodes.filter(n => n.f.nm === h.name).map(n => n.y - h.y), 20);
+    const g = svg.append("a").attr("href", fearHash("nightmares", h.name)).append("g").attr("transform", `translate(${h.x},${h.y + down + 26})`);
+    g.append("text").attr("text-anchor", "middle").attr("font-family", "IM Fell English").attr("font-size", fs).attr("fill", "#e9e1d1").attr("paint-order", "stroke").attr("stroke", "#0c0a09").attr("stroke-width", 5).text(h.name);
+    g.append("text").attr("y", 19).attr("text-anchor", "middle").attr("font-family", "Source Serif 4").attr("font-size", 13).attr("fill", "#9a8e7d").attr("paint-order", "stroke").attr("stroke", "#0c0a09").attr("stroke-width", 4).text(narrow ? PICK[h.name].slice(0, 1).join("") : PICK[h.name].slice(0, 2).filter(t => film(t, h.name)).join(" · ")); });
+}
+
+/* ---------- IV. twelve nightmares ---------- */
+function cards() {
+  const blurb = Object.fromEntries(IDX.fears.filter(x => x[0] === "nightmares").map(x => [x[1], x[3] || x[2]]));
+  document.getElementById("cards").innerHTML = NM.map((nm, i) => { const n = F.filter(f => f.nm === nm).length, ex = PICK[nm].map(t => film(t, nm)).filter(Boolean), face = ex.find(f => f.st) || F.find(f => f.nm === nm && f.st);
+    return `<a class="card" href="${fearHash("nightmares", nm)}"><span class="n">${String(i + 1).padStart(2, "0")} · ${n} films</span><div class="ph" style="${frame(face, 2)}"></div><h3>${esc(nm)}</h3><p>${esc(blurb[nm] || "")}</p><p style="color:#cfc6b6">${ex.slice(0, 3).map(f => esc(f.t)).join(" · ")}</p></a>`; }).join("");
+}
+
+/* ---------- V. what it found, and VI. the ledger: read from patterns.json ---------- */
+let P = null;
+const has = (f, l, nm) => f.g[l] && f.g[l].f.includes(nm);
+const share = (xs, l, nm) => xs.length ? xs.filter(f => has(f, l, nm)).length / xs.length : 0;
+const ug = (v, dim) => `<div class="ug${dim ? " dim" : ""}">${Array.from({ length: 100 }, (_, i) => { const x = i % 10, y = 9 - Math.floor(i / 10); return `<b class="${y * 10 + x < Math.round(v * 100) ? "on" : ""}" style="grid-row:${10 - y}"></b>`; }).join("")}</div>`;
+const arrows = (rows, M) => rows.map(([lab, a, b, c, href]) => { const X = v => v / M * 100, up = b > a, lo = Math.min(a, b);
+  return `<div class="r" style="--c:${c}"><span>${href ? `<a href="${href}" style="text-decoration:none">${esc(lab)}</a>` : esc(lab)}</span><div class="t"><i class="ln" style="left:${X(lo)}%;width:${X(Math.abs(b - a))}%;background:${c}"></i><i class="d0" style="left:${X(a)}%"></i><i class="ah ${up ? "up" : "dn"}" style="left:${X(b)}%"></i><b style="left:${X(a)}%;color:var(--mute);transform:translate(${up ? "calc(-100% - 10px)" : "10px"},-50%)">${pct(a)}</b><b style="left:${X(b)}%;color:${c};transform:translate(${up ? "8px" : "calc(-100% - 8px)"},-50%)">${pct(b)}</b></div></div>`; }).join("");
+const ERAS = [["<1960", 0, 1959], ["60s–70s", 1960, 1979], ["80s–90s", 1980, 1999], ["2000–14", 2000, 2014], ["2015+", 2015, 9999]];
+const ebars = (l, nm, c) => { const v = ERAS.map(([, a, b]) => share(P.films.filter(f => f.y >= a && f.y <= b), l, nm)), mx = Math.max(...v, .01);
+  return `<div class="bars" style="--c:${c}">${v.map((x, i) => `<div><span>${pct(x)}</span><b style="height:${Math.max(2, x / mx * 80)}%;opacity:${i === 4 || i === 0 ? 1 : .45}"></b><span>${ERAS[i][0]}</span></div>`).join("")}</div>`; };
+function found() {
+  const A = P.films, E = A.filter(f => f.y < 1980), L = A.filter(f => f.y >= 2000);
+  const W = ["North America", "Continental Europe", "UK & Ireland", "Australia & NZ"], AS = ["East Asia", "Southeast Asia", "South Asia"];
+  const w = A.filter(f => W.includes(f.r)), a = A.filter(f => AS.includes(f.r));
+  const rd = [share(a, "nightmares", "The restless dead"), share(w, "nightmares", "The restless dead")], kc = [share(w, "nightmares", "Killers and captives"), share(a, "nightmares", "Killers and captives")];
+  const R = (l, nm) => [share(E, l, nm), share(L, l, nm)];
+  const fam = R("who_suffers", "families and parents"), lov = R("who_suffers", "spouses and lovers"), bd = R("nightmares", "Blood drinkers"), mad = R("archetypes", "The thing we made"), des = R("ending", "the evil is destroyed"), hand = R("ending", "the evil is handed on"), gr = R("who_suffers", "the grieving");
+  document.getElementById("finds").innerHTML = `
+  <div class="find"><span class="lab">1913 onward · Asia</span><h3>Asia fears the dead.</h3><p class="big">${pct(rd[0])} <small>vs ${pct(rd[1])} in the West</small></p><p>of Asian films are driven by the restless dead: the wronged who come back.</p><div class="pair"><figure>${ug(rd[0])}<figcaption>Asia</figcaption></figure><figure>${ug(rd[1], 1)}<figcaption>West</figcaption></figure></div><p style="color:#cfc6b6">Kwaidan · Ringu · Shutter · The Eye</p></div>
+  <div class="find"><span class="lab">1913 onward · the West</span><h3>The West fears the living.</h3><p class="big">${pct(kc[0])} <small>vs ${pct(kc[1])} in Asia</small></p><p>of Western films turn on killers and captives: people who trap and kill.</p><div class="pair"><figure>${ug(kc[0])}<figcaption>West</figcaption></figure><figure>${ug(kc[1], 1)}<figcaption>Asia</figcaption></figure></div><p style="color:#cfc6b6">Psycho · The Texas Chain Saw Massacre · Halloween · Scream</p></div>
+  <div class="find"><span class="lab">Before 1980 → since 2000</span><h3>The monsters leave.</h3><p class="big">${pct(bd[0])} <small>→ ${pct(bd[1])}</small></p><p>Blood drinkers fade, and the made monster nearly vanishes. The threat stops coming from a castle.</p><div class="arw">${arrows([["Blood drinkers", ...bd, "var(--mute)"], ["The thing we made", ...mad, "var(--mute)"]], .5)}</div></div>
+  <div class="find"><span class="lab">Before 1980 → since 2000</span><h3>Horror moves home.</h3><p class="big">${pct(fam[1])} <small>from ${pct(fam[0])}</small></p><p>of films now fall on families and parents, while horror that hunts lovers halves.</p><div class="arw">${arrows([["Families and parents", ...fam, LENSC.nightmares], ["Spouses and lovers", ...lov, "var(--mute)"], ["The grieving", ...gr, LENSC.nightmares]], .5)}</div><p style="color:#cfc6b6">The Babadook · Hereditary · Relic · Talk to Me</p></div>
+  <div class="find"><span class="lab">Before 1980 → since 2000</span><h3>The evil gets away.</h3><p class="big">${pct(des[1])} <small>from ${pct(des[0])}</small></p><p>of films end with the evil destroyed. More and more, it's passed on to the next one instead.</p><div class="arw">${arrows([["The evil is destroyed", ...des, "var(--mute)"], ["The evil is passed on", ...hand, LENSC.nightmares]], .5)}</div>${ebars("wants", "a child to take or have", LENSC.wants)}<p class="cap" style="color:var(--mute);font-size:13px">And the newest fear: it wants a child. Share of films, by era.</p></div>`;
+  const tl = document.getElementById("tl"), X = y => (y - 1913) / (2025 - 1913) * 100;
+  tl.innerHTML = [1913, 1930, 1950, 1970, 1980, 2000, 2015, 2025].map(y => `<i style="left:${X(y)}%"></i><span style="left:${X(y)}%">${y}</span>`).join("") + `<b style="position:absolute;top:19px;height:3px;left:${X(1913)}%;width:${X(1980)}%;background:var(--mute)"></b><b style="position:absolute;top:19px;height:3px;left:${X(2000)}%;right:0;background:var(--red)"></b>`;
+}
+let lens = "who_suffers";
+function ledger() {
+  const A = P.films, E = A.filter(f => f.y < 1980), L = A.filter(f => f.y >= 2000), c = LENSC[lens];
+  document.getElementById("chips").innerHTML = ["nightmares", "threat", "origin", "wants", "trigger", "rules", "who_suffers", "ending", "images"].filter(k => P.dims.includes(k)).map(k => `<button type="button" data-l="${k}" aria-pressed="${k === lens}"><i style="background:${LENSC[k]}"></i>${LENSN[k]}</button>`).join("");
+  document.querySelectorAll("#chips button").forEach(b => b.onclick = () => { lens = b.dataset.l; ledger(); });
+  const rows = Object.keys(P.fears[lens]).filter(n => n !== "unclear").map(nm => { const a = E.filter(f => has(f, lens, nm)).length, b = L.filter(f => has(f, lens, nm)).length; return { nm, a, b, sa: a / E.length, sb: b / L.length }; })
+    .filter(r => r.a + r.b >= 8 && Math.abs(r.sb - r.sa) >= .03).sort((x, y) => (y.sb - y.sa) - (x.sb - x.sa));
+  const pick = [...rows.filter(r => r.sb > r.sa).slice(0, 5), ...rows.filter(r => r.sb < r.sa).slice(-5)], M = Math.max(.1, Math.ceil(Math.max(...pick.flatMap(r => [r.sa, r.sb])) * 10) / 10);
+  document.getElementById("led").innerHTML = arrows(pick.map(r => [r.nm.charAt(0).toUpperCase() + r.nm.slice(1), r.sa, r.sb, r.sb > r.sa ? c : "var(--mute)", fearHash(lens, r.nm)]), M);
+}
+
+/* ---------- encore: search ---------- */
+const q = document.getElementById("q"), res = document.getElementById("res");
+const search = () => { const s = q.value.trim().toLowerCase(); const hits = (s ? F.filter(f => f.t.toLowerCase().includes(s)) : NM.map(nm => film(PICK[nm][0], nm)).filter(Boolean)).slice(0, 8);
+  res.innerHTML = hits.length ? hits.map(f => `<a href="index.html#${f.id}"><em style="color:var(--ink);font-style:normal">${esc(f.t)} <i style="color:var(--mute);font-style:normal">(${f.y})</i></em><span>${esc(f.nm || "")}</span></a>`).join("") : `<p class="fine">Not in the five hundred yet.</p>`; };
+q.addEventListener("input", search); search();
+
+cards();
+requestAnimationFrame(() => { map(); });
+fetch("patterns.json").then(r => r.json()).then(d => { P = d; found(); ledger(); }).catch(() => { document.getElementById("finds").innerHTML = `<p class="lede">The findings didn't load. Reload the page to try again.</p>`; });
+</script>
+</body>
+</html>
